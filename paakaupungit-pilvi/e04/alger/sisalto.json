@@ -10,10 +10,10 @@
       "johdanto": "Valkean rantakaupungin takana alkaa Casbah, jossa talot kääntyvät sisäpihojensa ympärille.",
       "kansikuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "ISS064-E-411 - View of Earth.jpg",
+          "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+          "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+          "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "",
@@ -60,18 +60,18 @@
           "otsikko": "Puutarhan nimessä on koe",
           "teksti": "Jardin d’essai du Hamma on koepuutarha myös nimeltään: ranskan essai tarkoittaa kokeilua. Puutarha perustettiin 1800-luvun alkupuolella alueelle, jonka suomaata kuivattiin malliviljelmää ja kasvikokeita varten. Siitä kehittyi hallinnon taimitarha, joka tuotti puita julkisiin istutuksiin ja siirtomaakauden uudisasukkaille. Puutarha laajeni jo ennen vuotta 1873. Nykyinen kasvitieteellinen vierailukohde kasvoi siis myös käytännön työpaikasta, jossa viljeltiin ja lisättiin kasveja.",
           "wiki": "Botanical Garden Hamma",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Botanical Garden of Hamma.jpg",
+          "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+          "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+          "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
       "matkailijalle": {
         "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+          "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+          "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+          "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)"
         },
         "kappale": "Algerissa rannikon bulevardit ja Casbahin rinnekujat tarjoavat erilaiset kävelyreitit. Metro tuo vanhankaupungin alareunaan. Kujille kannattaa ottaa paikallinen opas ja lähteä päiväsaikaan. Hamma-puutarha ja kukkulakirkko ovat omia retkiään keskustan ulkopuolella. Matka edellyttää huolellista suunnittelua ja maahantuloehtojen tarkistamista.",
         "artikkeli": {
@@ -104,10 +104,10 @@
               "otsikko": "Rannalta Hammaan",
               "teksti": "Raïsien palatsit kertovat vanhan merenrantakorttelin historiasta. Hamma-puutarha on Belouizdadin kaupunginosassa, erillään Casbahista. Kaupungin pohjoispuolen kukkulalla on Notre-Dame d’Afrique ja näkymä lahdelle. Älä rakenna retkeä vanhoihin tietoihin kaapelihissistä: yhteyden toimintaa ei voi niiden perusteella luvata.",
               "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
+                "tiedosto": "Algiers Hamma Botanical Garden plant.jpg",
+                "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+                "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+                "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)"
               }
             },
             {
@@ -480,10 +480,11 @@
     }
   },
   "valokuva": {
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": ""
+    "tiedosto": "Botanical garden in Algiers.jpg",
+    "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+    "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+    "lahde": "Red amine, Commons (CC BY-SA 3.0)",
+    "vuosi": "2014"
   },
   "saatiedot": null
 }

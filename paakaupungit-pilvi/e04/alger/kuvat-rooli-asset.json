@@ -1,0 +1,2784 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e04",
+  "city": "alger",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+  "assets": [
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "alger-o4-bourek-20261012-v1",
+      "galleryImageID": "alger-o4-bourek-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva algerialaisista bourek-leivonnaisista, joiden ohut dyoul-taikina kätkee suolaisen täytteen.",
+        "lyhyt": "Mitä täällä syödään."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva algerialaisista bourek-leivonnaisista, joiden ohut dyoul-taikina kätkee suolaisen täytteen.",
+        "lyhyt": "Mitä täällä syödään."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
+      "exportSHA256": "6a47059fd683c605379175e72444f69e3e8742b185dbdd6637ec250312014328",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "6470869a793aadeae8559ca64d9b93c79153e1d39ee0a5365e80c2fe540214ca",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen itse muodostettu ruokahavainne tavallisella nimeämättömällä astialla; ei valokuvan kopiointia, suojattua teosta, rakennusta tai nimeämätöntä oikeaa henkilöä. Ei aito valokuva, metadata type illustration.",
+          "QA": {
+            "type": "illustration",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-o4-bourek-20261012-v1/bourek.png",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bourek_(Algerian_cuisine)",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Bourek_(Algerian_cuisine).txt",
+                "facts": "Ohut dyoul, peruna/sipuli/kumina/paprika, kolmion muotoinen variantti, paistettu kullanruskeaksi."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-evidence/bourek-first-pass.json",
+                "facts": "Rajattu CC-ensihaku vapautti O4:n."
+              }
+            ],
+            "rightsEvidence": "Yleinen itse muodostettu ruokahavainne tavallisella nimeämättömällä astialla; ei valokuvan kopiointia, suojattua teosta, rakennusta tai nimeämätöntä oikeaa henkilöä. Ei aito valokuva, metadata type illustration.",
+            "captionFi": "Havainnekuva algerialaisista bourek-leivonnaisista, joiden ohut dyoul-taikina kätkee suolaisen täytteen.",
+            "checkedAt": "2026-10-12T17:42:31.778521+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Itse katsottu valmis1536×1024-kuva: kolme kolmikulmaista kullanruskeaa bourek-leivonnaista, yksi avattu peruna-sipulitäyte. Ohuet epätasaiset rapeat taikinareunat, ehjä lautanen, luontevat varjot ja materiaalit. Ei kasvoja, lisättyä tekstiä, logoa, vesileimaa tai suojattua teosta. Aihe vastaa O4-ruokatekstiä ja tallennetun Bourek-artikkelin kolmikulmaista varianttia. Rehellisesti havainnekuvaksi nimetty."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva algerialaisista bourek-leivonnaisista, joiden ohut dyoul-taikina kätkee suolaisen täytteen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "alger-o4-bourek-20261012-v1",
+          "commonsFile": null,
+          "sha256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
+          "verdict": "accepted",
+          "reason": "Itse katsottu valmis1536×1024-kuva: kolme kolmikulmaista kullanruskeaa bourek-leivonnaista, yksi avattu peruna-sipulitäyte. Ohuet epätasaiset rapeat taikinareunat, ehjä lautanen, luontevat varjot ja materiaalit. Ei kasvoja, lisättyä tekstiä, logoa, vesileimaa tai suojattua teosta. Aihe vastaa O4-ruokatekstiä ja tallennetun Bourek-artikkelin kolmikulmaista varianttia. Rehellisesti havainnekuvaksi nimetty.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "type": "illustration",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-o4-bourek-20261012-v1/bourek.png",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bourek_(Algerian_cuisine)",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Bourek_(Algerian_cuisine).txt",
+                "facts": "Ohut dyoul, peruna/sipuli/kumina/paprika, kolmion muotoinen variantti, paistettu kullanruskeaksi."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-evidence/bourek-first-pass.json",
+                "facts": "Rajattu CC-ensihaku vapautti O4:n."
+              }
+            ],
+            "rightsEvidence": "Yleinen itse muodostettu ruokahavainne tavallisella nimeämättömällä astialla; ei valokuvan kopiointia, suojattua teosta, rakennusta tai nimeämätöntä oikeaa henkilöä. Ei aito valokuva, metadata type illustration.",
+            "captionFi": "Havainnekuva algerialaisista bourek-leivonnaisista, joiden ohut dyoul-taikina kätkee suolaisen täytteen.",
+            "checkedAt": "2026-10-12T17:42:31.778521+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "additionalIndependentReviews": [
+            {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/extra-aef632959bc3a4837b69de466a5fde0be34321f281fa0a21deadcd4831ef4fa2.json",
+              "sourceSHA256": "aef632959bc3a4837b69de466a5fde0be34321f281fa0a21deadcd4831ef4fa2",
+              "assetID": "alger-o4-bourek-20261012-v1",
+              "nativeSHA256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Aihe, havainnekuvateksti, natiivi PNG ja luonnollinen toteutus täyttävät O4-paikan vaatimukset.",
+              "reviewedAt": "2026-10-12T18:14:32.931144+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-o4-bourek-20261012-v1/bourek.png",
+                "nativeSHA256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Kolme kolmikulmaista kullanruskeaa ohutkuorista leivonnaista, avatussa peruna-sipulitäyte. Rapean kuoren epätasaisuus, lautanen, varjot ja puupinta uskottavat. Ei ihmisiä, lisättyä tekstiä, logoa, vesileimaa tai kehystä.",
+                "captionFi": "Havainnekuva algerialaisista bourek-leivonnaisista, joiden ohut dyoul-taikina kätkee suolaisen täytteen.",
+                "sourceAndTargetCheckFi": "Ajantasainen O4 Mitä täällä syödään kertoo dyoul-bourekista ja perunatäytteestä. Luettu paikallinen Bourek_(Algerian_cuisine).txt vahvistaa ohuet levyt, kolmion, perunan/sipulin ja paistetun kuoren. CaptionFi sanoo Havainnekuva, ei nimetyn ravintolan valokuva.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "url": "https://en.wikipedia.org/wiki/Bourek_(Algerian_cuisine)",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Bourek_(Algerian_cuisine).txt",
+                    "facts": "Ohut dyoul, peruna/sipuli/kumina/paprika, kolmion muotoinen variantti, paistettu kullanruskeaksi."
+                  },
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-evidence/bourek-first-pass.json",
+                    "facts": "Rajattu CC-ensihaku vapautti O4:n."
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png?t=6a47059fd683c605",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+        "sha256": "6a47059fd683c605379175e72444f69e3e8742b185dbdd6637ec250312014328",
+        "bytes": 2302928,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "alger-o4-bourek-20261012-v1",
+        "nativeSHA256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "alger",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T17:55:55.626205+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-o4-bourek-20261012-v1-de5b2256ad08.png",
+        "sha256": "6a47059fd683c605379175e72444f69e3e8742b185dbdd6637ec250312014328",
+        "bytes": 2302928,
+        "SHAReadAt": "2026-10-12T18:29:40.096495+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
+        "rgbPixelSHA256": "3fd5bef47127c2710b5ff31a480a745f489a92c5c70dd20179264f5b20da0094",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "6470869a793aadeae8559ca64d9b93c79153e1d39ee0a5365e80c2fe540214ca"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "alger-k2-kuorma-aasi-20261012-v1",
+      "galleryImageID": "alger-k2-kuorma-aasi-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti.",
+        "lyhyt": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti.",
+        "lyhyt": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+      "exportSHA256": "9c35970035ce83f2e7669b7e96324ddfc2002610f4c880e93fb84a35465060e5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+        "semanticContextSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+        "subjectTitle": "Kaupunki, joka nousee portaita",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen yleinen eläin-/arkikäyttöhavainne, ei nimetyn eläimen, kuvataiteen, valokuvan, koristekuvion tai kaupunkiasettelun jäljennös.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/extra-d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9.json",
+              "sourceSHA256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9",
+              "assetID": "alger-k2-kuorma-aasi-20261012-v1",
+              "nativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Kuorma-aasin yleishavainne vastaa K2:n kuljetusaihetta.",
+              "reviewedAt": "2026-10-12T19:11:10.156428+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-k2-kuorma-aasi-20261012-v1/image.png",
+                "nativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Aasi, neljä uskottavaa jalkaa/kaviota, pitkät korvat ja tavallinen sivulaukku. Turkki, valjaat ja kuorman tuki luontevat; ei ihmisiä tai merkintöjä.",
+                "captionFi": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti.",
+                "sourceAndTargetCheckFi": "K2 ja Casbah_of_Algiers.txt nimeävät aasikuljetukset. CaptionFi havainne ja ei Casbahin toimituksen dokumentti; ei kaupunkiasettelun tai historiallisen tapahtuman väitettä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "url": "https://en.wikipedia.org/wiki/Casbah_of_Algiers",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Casbah_of_Algiers.txt",
+                    "facts": "Kapeat mutkittelevat kujat ovat autoton ympäristö; toimituksia ja jätekeräystä on tehty aaseilla."
+                  },
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                    "facts": "K2 kertoo kujaverkon kuljetustavoista ja aaseista."
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-k2-kuorma-aasi-20261012-v1/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "checkedAt": "2026-10-12T19:19:46.572225+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Kuorma-aasin yleishavainne vastaa K2:n kuljetusaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "alger-k2-kuorma-aasi-20261012-v1",
+          "commonsFile": null,
+          "sha256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Kuorma-aasin yleishavainne vastaa K2:n kuljetusaihetta.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/extra-d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9.json",
+              "sourceSHA256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9",
+              "assetID": "alger-k2-kuorma-aasi-20261012-v1",
+              "nativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Kuorma-aasin yleishavainne vastaa K2:n kuljetusaihetta.",
+              "reviewedAt": "2026-10-12T19:11:10.156428+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-k2-kuorma-aasi-20261012-v1/image.png",
+                "nativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Aasi, neljä uskottavaa jalkaa/kaviota, pitkät korvat ja tavallinen sivulaukku. Turkki, valjaat ja kuorman tuki luontevat; ei ihmisiä tai merkintöjä.",
+                "captionFi": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti.",
+                "sourceAndTargetCheckFi": "K2 ja Casbah_of_Algiers.txt nimeävät aasikuljetukset. CaptionFi havainne ja ei Casbahin toimituksen dokumentti; ei kaupunkiasettelun tai historiallisen tapahtuman väitettä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "url": "https://en.wikipedia.org/wiki/Casbah_of_Algiers",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Casbah_of_Algiers.txt",
+                    "facts": "Kapeat mutkittelevat kujat ovat autoton ympäristö; toimituksia ja jätekeräystä on tehty aaseilla."
+                  },
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                    "facts": "K2 kertoo kujaverkon kuljetustavoista ja aaseista."
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-k2-kuorma-aasi-20261012-v1/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "checkedAt": "2026-10-12T19:19:46.572225+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png?t=9c35970035ce83f2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+        "sha256": "9c35970035ce83f2e7669b7e96324ddfc2002610f4c880e93fb84a35465060e5",
+        "bytes": 2430026,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "alger-k2-kuorma-aasi-20261012-v1",
+        "nativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "alger",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T19:12:02.480994+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
+        "sha256": "9c35970035ce83f2e7669b7e96324ddfc2002610f4c880e93fb84a35465060e5",
+        "bytes": 2430026,
+        "SHAReadAt": "2026-10-12T19:31:59.995849+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+        "rgbPixelSHA256": "ca645556a9d1b23c3760eb31ffee180b31573f2fb465e3abd288923384a52fa6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+      "contextAfterSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "alger-l1-kulkuovi-20261012-v1",
+      "galleryImageID": "alger-l1-kulkuovi-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös.",
+        "lyhyt": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös.",
+        "lyhyt": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+      "exportSHA256": "e02a2169d59181a99f7a115098256bf73d338a10980ca239fbd44e2abd0add9c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+        "semanticContextSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+        "subjectTitle": "Isossa ovessa pieni ovi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen koristelematon yleinen toiminnallinen ovi, ei nimetyn palatsin oven, kuvakkeen, koristepinnan, valokuvan tai arkkitehtuurin jäljennös. Todellisen palatsin teos-/kuvaoikeusportti säilyy avoinna.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/extra-d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9.json",
+              "sourceSHA256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9",
+              "assetID": "alger-l1-kulkuovi-20261012-v1",
+              "nativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Yleinen funktionaalinen kulkuovi havainnollistaa L1:n periaatetta; ei nimetyn palatsin oven muoto-/koristejäljennös.",
+              "reviewedAt": "2026-10-12T19:05:49.806893+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-l1-kulkuovi-20261012-v1/image.png",
+                "nativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Tavallinen suuri puinen pariovi, oikeassa ovilehdessä auki oleva pieni kulkuovi. Saranat, kahva, kynnys ja aukeamisen geometria uskottavat, puunsyyt/metallicpinnat luontevat. Ei koristekuviota, logoja, tekstiä tai ihmisiä.",
+                "captionFi": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös.",
+                "sourceAndTargetCheckFi": "Luettu L1 Isossa ovessa pieni ovi ja faktapohjan T1/MU-MM suureen ovilehteen sovitettu kulkuovi. CaptionFi Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös. Hyväksyntä koskee tätä yleistä toimintaperiaatetta, ei Dar Mustapha Pachan todellisen oven ulkonäköä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/faktapohja.md",
+                    "facts": "L1/MU/MM: Dar Mustapha Pachan suureen oveen sovitettu pieni kulkuovi; kuvitetaan vain yleinen toiminnallinen periaate."
+                  },
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                    "facts": "Nykyisen L1:n ensimmäinen virke kertoo pienestä kulkuovesta suuressa pääovessa."
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-l1-kulkuovi-20261012-v1/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "checkedAt": "2026-10-12T19:19:46.565205+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Yleinen funktionaalinen kulkuovi havainnollistaa L1:n periaatetta; ei nimetyn palatsin oven muoto-/koristejäljennös."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "alger-l1-kulkuovi-20261012-v1",
+          "commonsFile": null,
+          "sha256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Yleinen funktionaalinen kulkuovi havainnollistaa L1:n periaatetta; ei nimetyn palatsin oven muoto-/koristejäljennös.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/extra-d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9.json",
+              "sourceSHA256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9",
+              "assetID": "alger-l1-kulkuovi-20261012-v1",
+              "nativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Yleinen funktionaalinen kulkuovi havainnollistaa L1:n periaatetta; ei nimetyn palatsin oven muoto-/koristejäljennös.",
+              "reviewedAt": "2026-10-12T19:05:49.806893+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-l1-kulkuovi-20261012-v1/image.png",
+                "nativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Tavallinen suuri puinen pariovi, oikeassa ovilehdessä auki oleva pieni kulkuovi. Saranat, kahva, kynnys ja aukeamisen geometria uskottavat, puunsyyt/metallicpinnat luontevat. Ei koristekuviota, logoja, tekstiä tai ihmisiä.",
+                "captionFi": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös.",
+                "sourceAndTargetCheckFi": "Luettu L1 Isossa ovessa pieni ovi ja faktapohjan T1/MU-MM suureen ovilehteen sovitettu kulkuovi. CaptionFi Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös. Hyväksyntä koskee tätä yleistä toimintaperiaatetta, ei Dar Mustapha Pachan todellisen oven ulkonäköä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/faktapohja.md",
+                    "facts": "L1/MU/MM: Dar Mustapha Pachan suureen oveen sovitettu pieni kulkuovi; kuvitetaan vain yleinen toiminnallinen periaate."
+                  },
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                    "facts": "Nykyisen L1:n ensimmäinen virke kertoo pienestä kulkuovesta suuressa pääovessa."
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-l1-kulkuovi-20261012-v1/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "checkedAt": "2026-10-12T19:19:46.565205+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png?t=e02a2169d59181a9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+        "sha256": "e02a2169d59181a99f7a115098256bf73d338a10980ca239fbd44e2abd0add9c",
+        "bytes": 2769968,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "alger-l1-kulkuovi-20261012-v1",
+        "nativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "alger",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T19:06:29.799018+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
+        "sha256": "e02a2169d59181a99f7a115098256bf73d338a10980ca239fbd44e2abd0add9c",
+        "bytes": 2769968,
+        "SHAReadAt": "2026-10-12T19:32:01.049266+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+        "rgbPixelSHA256": "a8a89c6e70a5b7c1fbd803428b992e1edd9eafbfd26987b262d7e35a647e361f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+      "contextAfterSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "alger-l4-keramiikkaputket-20261012-v1",
+      "galleryImageID": "alger-l4-keramiikkaputket-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva yhteen sovitettavista keraamisista putkiosista; kuva ei esitä nimettyä Casbahin viemäriä.",
+        "lyhyt": "Katto, kaivo ja kujan vesipiste."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva yhteen sovitettavista keraamisista putkiosista; kuva ei esitä nimettyä Casbahin viemäriä.",
+        "lyhyt": "Katto, kaivo ja kujan vesipiste."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
+      "exportSHA256": "29858b7889374ec98b81038b143911a59f6d84d8b8525b9436c6609a5b93fb40",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+        "semanticContextSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+        "subjectTitle": "Katto, kaivo ja kujan vesipiste",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen yleinen toiminnallisten koristelemattomien keramiikkaputkien havainne. Ei nimetyn paikan arkkitehtuurin, suihkulähteen, koristeen tai valokuvan jäljennös.",
+          "QA": {
+            "type": "illustration",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-l4-keramiikkaputket-20261012-v1/image.png",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "sourceEvidenceRead": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Casbah_of_Algiers.txt",
+                "line": 424,
+                "supports": "Sewer connections made with interlocking pottery elements"
+              }
+            ],
+            "sourceEvidenceProducer": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Casbah_of_Algiers",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Casbah_of_Algiers.txt",
+                "facts": "Viemäriverkoston liitokset yhteen sovitettavista keramiikkaosista; nykyinen L4 kertoo samasta materiaalista."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-status.json",
+                "facts": {
+                  "subject": "General plain functional terracotta pipe sections and water, no named fountain/ornament or imagined historic Casbah building.",
+                  "ccCheck": "Earlier limited B waterpoint candidates were wrong-sized or required unresolved architecture/art ornament rights.",
+                  "source": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/faktapohja.md water-network section; current L4 text names interlocking ceramic sewer sections.",
+                  "captionBoundary": "Must be labelled a general material/functional illustration, not a photograph of a named Casbah conduit or 1873 scene."
+                }
+              }
+            ],
+            "rightsEvidence": "Alkuperäinen yleinen toiminnallisten koristelemattomien keramiikkaputkien havainne. Ei nimetyn paikan arkkitehtuurin, suihkulähteen, koristeen tai valokuvan jäljennös.",
+            "captionFi": "Havainnekuva yhteen sovitettavista keraamisista putkiosista; kuva ei esitä nimettyä Casbahin viemäriä.",
+            "checkedAt": "2026-10-12T17:50:05.996474+00:00",
+            "colourSpace": "Native RGB PNG; embedded ICC/sRGB tag not independently confirmed, no ICC verification claim",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Itse katsottu alkuperäinen kuva: koristelemattomia terrakottaputkia, etualan kaksi osaa koaksiaalisessa muhviliitoksessa ja erillinen avoin putkiosa. Savipinta ja lohkeamat, ainepaksuus, varjot ja maa näyttävät fyysisesti johdonmukaisilta. Ei tekstiä, logoja, kasvoja, rakennusta tai koristetaidetta. Materiaalihavainne vastaa Casbah-lähteen yhteen sovitettavia keramiikkaliitoksia; ei nimetyn viemärin dokumenttikuva eikä keksitty1873-asennus."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva yhteen sovitettavista keraamisista putkiosista; kuva ei esitä nimettyä Casbahin viemäriä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "alger-l4-keramiikkaputket-20261012-v1",
+          "commonsFile": null,
+          "sha256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
+          "verdict": "accepted",
+          "reason": "Itse katsottu alkuperäinen kuva: koristelemattomia terrakottaputkia, etualan kaksi osaa koaksiaalisessa muhviliitoksessa ja erillinen avoin putkiosa. Savipinta ja lohkeamat, ainepaksuus, varjot ja maa näyttävät fyysisesti johdonmukaisilta. Ei tekstiä, logoja, kasvoja, rakennusta tai koristetaidetta. Materiaalihavainne vastaa Casbah-lähteen yhteen sovitettavia keramiikkaliitoksia; ei nimetyn viemärin dokumenttikuva eikä keksitty1873-asennus.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "type": "illustration",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-l4-keramiikkaputket-20261012-v1/image.png",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "sourceEvidenceRead": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Casbah_of_Algiers.txt",
+                "line": 424,
+                "supports": "Sewer connections made with interlocking pottery elements"
+              }
+            ],
+            "sourceEvidenceProducer": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Casbah_of_Algiers",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Casbah_of_Algiers.txt",
+                "facts": "Viemäriverkoston liitokset yhteen sovitettavista keramiikkaosista; nykyinen L4 kertoo samasta materiaalista."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-status.json",
+                "facts": {
+                  "subject": "General plain functional terracotta pipe sections and water, no named fountain/ornament or imagined historic Casbah building.",
+                  "ccCheck": "Earlier limited B waterpoint candidates were wrong-sized or required unresolved architecture/art ornament rights.",
+                  "source": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/faktapohja.md water-network section; current L4 text names interlocking ceramic sewer sections.",
+                  "captionBoundary": "Must be labelled a general material/functional illustration, not a photograph of a named Casbah conduit or 1873 scene."
+                }
+              }
+            ],
+            "rightsEvidence": "Alkuperäinen yleinen toiminnallisten koristelemattomien keramiikkaputkien havainne. Ei nimetyn paikan arkkitehtuurin, suihkulähteen, koristeen tai valokuvan jäljennös.",
+            "captionFi": "Havainnekuva yhteen sovitettavista keraamisista putkiosista; kuva ei esitä nimettyä Casbahin viemäriä.",
+            "checkedAt": "2026-10-12T17:50:05.996474+00:00",
+            "colourSpace": "Native RGB PNG; embedded ICC/sRGB tag not independently confirmed, no ICC verification claim",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "additionalIndependentReviews": [
+            {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/extra-aef632959bc3a4837b69de466a5fde0be34321f281fa0a21deadcd4831ef4fa2.json",
+              "sourceSHA256": "aef632959bc3a4837b69de466a5fde0be34321f281fa0a21deadcd4831ef4fa2",
+              "assetID": "alger-l4-keramiikkaputket-20261012-v1",
+              "nativeSHA256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Yleinen keramiikkaputkien havainne vastaa L4:n viemäriliitosaihetta; kuvateksti rajaa nimetyn paikan pois.",
+              "reviewedAt": "2026-10-12T18:14:47.821231+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/assets/alger-l4-keramiikkaputket-20261012-v1/image.png",
+                "nativeSHA256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Kaksi samansuuntaista terrakottaputkea liittyvät muhvilla, irrallisen osan aukko ja seinämä näkyvät. Matta savipinta, kulumat ja epäsäännöllinen maa luontevat; ei anatomiaa, tekstiä tai koriste-/rakennusjäljennöstä.",
+                "captionFi": "Havainnekuva yhteen sovitettavista keraamisista putkiosista; kuva ei esitä nimettyä Casbahin viemäriä.",
+                "sourceAndTargetCheckFi": "L4 Katto, kaivo ja kujan vesipiste on edelleen olemassa. Casbah_of_Algiers.txt luettu viemäriosasta: tiiliverkoston yhteen sovitettavat pottery elements. CaptionFi Havainnekuva eikä nimetty Casbahin viemäri.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "url": "https://en.wikipedia.org/wiki/Casbah_of_Algiers",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-A/Casbah_of_Algiers.txt",
+                    "facts": "Viemäriverkoston liitokset yhteen sovitettavista keramiikkaosista; nykyinen L4 kertoo samasta materiaalista."
+                  },
+                  {
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-status.json",
+                    "facts": {
+                      "subject": "General plain functional terracotta pipe sections and water, no named fountain/ornament or imagined historic Casbah building.",
+                      "ccCheck": "Earlier limited B waterpoint candidates were wrong-sized or required unresolved architecture/art ornament rights.",
+                      "source": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/faktapohja.md water-network section; current L4 text names interlocking ceramic sewer sections.",
+                      "captionBoundary": "Must be labelled a general material/functional illustration, not a photograph of a named Casbah conduit or 1873 scene."
+                    }
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png?t=29858b7889374ec9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+        "sha256": "29858b7889374ec98b81038b143911a59f6d84d8b8525b9436c6609a5b93fb40",
+        "bytes": 3043612,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "alger-l4-keramiikkaputket-20261012-v1",
+        "nativeSHA256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "alger",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T17:55:57.239486+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/alger/alger-l4-keramiikkaputket-20261012-v1-8451d8d057ab.png",
+        "sha256": "29858b7889374ec98b81038b143911a59f6d84d8b8525b9436c6609a5b93fb40",
+        "bytes": 3043612,
+        "SHAReadAt": "2026-10-12T18:29:40.230792+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
+        "rgbPixelSHA256": "e210f4644070a9ed8da7506e8630ac8a17bb73ba6735a3a38c7ba8c63f968fa1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+      "contextAfterSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e04-alger-photo-c2eb1d11378a5204",
+      "galleryImageID": "capital-cc-e04-alger-photo-c2eb1d11378a5204",
+      "commonsFile": "Botanical garden in Algiers.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
+        "suora": true,
+        "lahde": "Red amine, Commons (CC BY-SA 3.0)",
+        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "tiedosto": "Botanical garden in Algiers.jpg",
+        "vuosi": "2014"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Red amine, Commons (CC BY-SA 3.0)",
+        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "tiedosto": "Botanical garden in Algiers.jpg",
+        "vuosi": "2014"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
+        "suora": true,
+        "lahde": "Red amine, Commons (CC BY-SA 3.0)",
+        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "tiedosto": "Botanical garden in Algiers.jpg",
+        "vuosi": "2014"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+      "exportSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-PHOTO.jpg",
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+        "semanticContextSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+        "subjectTitle": "alger — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Red amine",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_garden_in_Algiers.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Botanical_garden_in_Algiers.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "depictedSubject": "Naturally growing vegetation and ordinary water/path; no protected architectural/artistic principal subject visible.",
+            "photographLicense": "https://commons.wikimedia.org/wiki/File:Botanical_garden_in_Algiers.jpg",
+            "primaryLaw": "https://www.joradp.dz/FTP/jo-francais/2003/F2003044.pdf",
+            "sourceLawText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/law-2003-fr.txt",
+            "scope": "No general FOP approval for classified Casbah sites; natural plant subject distinct from artwork reproduction.",
+            "sourceMetadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-evidence/metadata-44.json",
+            "authorFieldSource": "Author table"
+          },
+          "QA": {
+            "author": "Red amine",
+            "license": "CC BY-SA 3.0",
+            "width": 1536,
+            "height": 2048,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-PHOTO.jpg",
+            "nativeSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/61484e48e4157540bc8b6483577e7a8878cf7ce45b63e9ed823ca5a4e596b638.html",
+            "sourceSnapshotSHA256": "61484e48e4157540bc8b6483577e7a8878cf7ce45b63e9ed823ca5a4e596b638",
+            "sourceRowsRead": {
+              "Description Botanical garden in Algiers.jpg": "Français : Il s'agit d'une belle prise d'un petit lac au contours verdoyants à l’intérieur du jardin d'essai d'Alger.",
+              "Date": "14 June 2014",
+              "Source": "Own work",
+              "Author": "Red amine"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,536",
+              "2,048"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-PHOTO.jpg\n  pixelWidth: 1536\n  pixelHeight: 2048\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "14 June 2014",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Kasvillisuus ja pieni lampi, lähde sitoo Algerin Jardin d’essai -puutarhaan. Ei ihmisiä, overlayta tai pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-PHOTO.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_garden_in_Algiers.jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "14 June 2014",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Botanical_garden_in_Algiers.jpg",
+            "captionFi": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+            "checkedAt": "2026-10-12T19:30:03.311128+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Botanical garden in Algiers.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/5/51/Botanical_garden_in_Algiers.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Kasvillisuus ja pieni lampi, lähde sitoo Algerin Jardin d’essai -puutarhaan. Ei ihmisiä, overlayta tai pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "assetID": null,
+          "commonsFile": "Botanical garden in Algiers.jpg",
+          "sha256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Kasvillisuus ja pieni lampi, lähde sitoo Algerin Jardin d’essai -puutarhaan. Ei ihmisiä, overlayta tai pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Red amine",
+            "license": "CC BY-SA 3.0",
+            "width": 1536,
+            "height": 2048,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-PHOTO.jpg",
+            "nativeSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/61484e48e4157540bc8b6483577e7a8878cf7ce45b63e9ed823ca5a4e596b638.html",
+            "sourceSnapshotSHA256": "61484e48e4157540bc8b6483577e7a8878cf7ce45b63e9ed823ca5a4e596b638",
+            "sourceRowsRead": {
+              "Description Botanical garden in Algiers.jpg": "Français : Il s'agit d'une belle prise d'un petit lac au contours verdoyants à l’intérieur du jardin d'essai d'Alger.",
+              "Date": "14 June 2014",
+              "Source": "Own work",
+              "Author": "Red amine"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,536",
+              "2,048"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-PHOTO.jpg\n  pixelWidth: 1536\n  pixelHeight: 2048\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "14 June 2014",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Kasvillisuus ja pieni lampi, lähde sitoo Algerin Jardin d’essai -puutarhaan. Ei ihmisiä, overlayta tai pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-PHOTO.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_garden_in_Algiers.jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "14 June 2014",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Botanical_garden_in_Algiers.jpg",
+            "captionFi": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+            "checkedAt": "2026-10-12T19:30:03.311128+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Botanical garden in Algiers.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/5/51/Botanical_garden_in_Algiers.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "previousCandidateReviews": [
+            {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "assetID": null,
+              "commonsFile": "Botanical garden in Algiers.jpg",
+              "verdict": "accepted",
+              "reason": "Itse katsottu aito Hamma-puutarhan kasvi- ja vesiaiheinen CC-valokuva, leveys vähintään1200. Ei kasvoja, lisättyä tekstiä, logoa, vesileimaa tai suojattua teosta pääaiheena. Aiempi pelkkään vaaka-oletukseen perustuva hylkäys oikaistu inventaarion korjauksen jälkeen; alkuperäinen kuva ja lähteet säilyvät. Kuvausvuosi2014 ilmoitetaan; kuvaa ei nimetä tuoreeksi, mutta PHOTO ei edellytä tuoretta kuvaa.",
+              "required": true,
+              "status": "reviewed",
+              "evidence": {
+                "legacyB": true,
+                "visuallyReviewed": true,
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/preview-44.jpg",
+                "viewedSHA256": "5d72dc0631228e707b9e87117d778973b640310ef07baa45c389e7cda835ea98",
+                "previewViewed": true,
+                "originalPixelsViewed": false,
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_garden_in_Algiers.jpg",
+                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/candidate-44.html",
+                "sourceSnapshotSHA256": "61484e48e4157540bc8b6483577e7a8878cf7ce45b63e9ed823ca5a4e596b638",
+                "author": "Red amine",
+                "authorBasis": "Commonsin Author-kenttä itse parsittu, ei uploader-arvausta",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+                "width": 1536,
+                "height": 2048,
+                "ratio": 0.75,
+                "photoDate": "14 June 2014",
+                "description": "Français : Il s'agit d'une belle prise d'un petit lac au contours verdoyants à l’intérieur du jardin d'essai d'Alger.",
+                "alreadyInGame": false,
+                "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+                "checkedAt": "2026-10-12T17:44:45.149248+00:00",
+                "rightsLayer": "Kuvassa luonnollinen kasvillisuus, tavallinen polku tai vesi; ei toistettua arkkitehtuuri-/kuvataide-/kansantaideteosta pääaiheena. Algerian perintökohteen yleistä FOP-lupaa ei väitetä; tämä päätös koskee vain nähtyä luonnonaihetta.",
+                "ccLayoutCorrectionVerified": true,
+                "gameReuseIndependentlyChecked": true,
+                "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+                "gameReuseFilesRead": 373,
+                "gameReuseMatches": [],
+                "gameReuseRecheckedAt": "2026-10-12T19:22:24.526165+00:00"
+              },
+              "reviewCorrections": [
+                {
+                  "at": "2026-10-12T17:44:45.149248+00:00",
+                  "previousVerdict": "rejected",
+                  "previousReason": "Itse katsottu aito Hamma-valokuva, mutta 1536×2048 on pysty (0.750). PHOTO-inventaario vaatii vaakakuvan. Kuvausvuosi 2014 ei ole tuore kuva; aitoa vaakavalokuvaa tarvitaan, PHOTO ei siirry AI-jonoon.",
+                  "basis": "Juurisession12.10.2026 inventaario-oikaisu: pystyvaatimus vainTRAVELER; muutCC eivät vaadi vaakaformaattia, PHOTO ei vaadi tuoreutta."
+                }
+              ]
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "alger",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Botanical garden in Algiers.jpg",
+        "sha256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_garden_in_Algiers.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Botanical_garden_in_Algiers.jpg",
+        "author": "Red amine",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 1536,
+        "height": 2048,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
+        "bytes": 2138412,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:02:19.632474+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Botanical garden in Algiers.jpg",
+        "lahde": "Red amine, Commons (CC BY-SA 3.0)",
+        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "vuosi": "2014"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Red amine, Commons (CC BY-SA 3.0)",
+        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "tiedosto": "Botanical garden in Algiers.jpg",
+        "vuosi": "2014"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+      "contextAfterSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-alger-c1-e2b365d26138f19e",
+      "galleryImageID": "capital-cc-e04-alger-c1-e2b365d26138f19e",
+      "commonsFile": "ISS064-E-411 - View of Earth.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "tiedosto": "ISS064-E-411 - View of Earth.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "tiedosto": "ISS064-E-411 - View of Earth.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "tiedosto": "ISS064-E-411 - View of Earth.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+      "exportSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/96e68e4f222fb51976ffe9f4c23cd827505f025360fead3808b9ed0fa7225444-original.jpg",
+      "dimensions": [
+        5568,
+        3712
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+        "semanticContextSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+        "subjectTitle": "Alger",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS064-E-411_-_View_of_Earth.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/ISS064-E-411_-_View_of_Earth.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "kind": "NASA-natural-and-urban-regional-view",
+            "licenseModelVerified": "PD-USGov-NASA",
+            "photoAuthorSource": "Alkuperäisen tiedostosivun Author-kenttä, ei uploader.",
+            "publicDomainGround": "Tiedostokohtainen PD-USGov-NASA-malli: solely created by NASA.",
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/nasa-media-policy.html",
+            "placeEvidence": "Alkuperäisen tiedostosivun kategoriat: Coasts of Algiers Province, Port of Algiers ja Satellite pictures of Algiers. Kuvassa näkyy kyseinen lahden ja kaupungin alueellinen asettelu.",
+            "originalNASARecordURL": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS064&roll=E&frame=411",
+            "originalNASARecordStatus": "23 tavun SQL-error-vastaus säilytetty; sitä ei käytetä positiivisena paikkatodisteena.",
+            "depictedWorksAssessmentFi": "Maanpinnan, lahden, sataman, katuverkon ja asutusalueiden laaja kokonaisuus. Yksittäisen rakennus- tai taideteoksen omaa ilmaisua ei eroteta pääaiheeksi. Ei Casbahin luokiteltuun rakennuskohteeseen perustuvaa FOP- tai rakennusikälupaa; ei NASA-logoa, henkilöä tai kolmannen osapuolen tekijämerkintää."
+          },
+          "QA": {
+            "author": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+            "license": "Public domain",
+            "width": 5568,
+            "height": 3712,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/96e68e4f222fb51976ffe9f4c23cd827505f025360fead3808b9ed0fa7225444-original.jpg",
+            "nativeSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/d12d5c9db91da4e23c149910dee407221681beda64a192f1576dc6f1c1b35485.html",
+            "sourceSnapshotSHA256": "d12d5c9db91da4e23c149910dee407221681beda64a192f1576dc6f1c1b35485",
+            "sourceRowsRead": {
+              "Description ISS064-E-411 - View of Earth.jpg": "English: View of Earth taken during ISS Expedition 64.",
+              "Date": "25 October 2020, 11:24:49",
+              "Source": "JSC Gateway to Astronaut Photography of Earth",
+              "Author": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+              "Camera location": "35° 06′ N, 4° 48′ E"
+            },
+            "licenseTemplatesRead": [
+              "Public domain"
+            ],
+            "sourceOriginalFileDimensions": [
+              "5,568",
+              "3,712"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/96e68e4f222fb51976ffe9f4c23cd827505f025360fead3808b9ed0fa7225444-original.jpg\n  pixelWidth: 5568\n  pixelHeight: 3712\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              5568,
+              3712
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              5568,
+              3712
+            ],
+            "sourceDateRaw": "25 October 2020, 11:24:49",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito laaja avaruudesta otettu Algerin lahden ja kaupunkialueen asettelun kuva. Lahden muoto, satama, katuverkko ja lentoaseman runko erottuvat; kuva vaalean utuinen mutta paikan kokonaisuus luettavissa. Ei kasvoja, overlayta, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen omaa ilmaisua pääaiheena. Commonsin tiedostokohtaiset kategoriat Coasts of Algiers Province, Port of Algiers ja Satellite pictures of Algiers luettu itse paikkasidonnaksi. Camera location on avaruusaseman kamera, sitä ei käytetä maanpinnan kohdekoordinaattina. Author Earth Science and Remote Sensing Unit,NASA Johnson Space Center ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -lisenssiteksti luettu itse. NASAn ensisijainen mediaohje tukee tosiasiallista informatiivista käyttöä ilman tuotesuositusväitettä ja edellyttää NASA-kreditin; kolmannen osapuolen poikkeuksia ei poisteta yleissäännöllä. Tässä ei yksilöityä kolmannen osapuolen merkintää. Original NASA recordin SQL-error ei positiivinen paikkatodiste. Native5568×3712/SHA, kuvaus25.10.2020. Rajattu päätös tälle aluenäkymälle, ei Algerin Casbahin/julkisivujen yleistä FOP-/ikä-/perintölupaa.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "sourceCategoriesPersonallyRead": [
+              "Coasts of Algiers Province",
+              "Port of Algiers",
+              "Satellite pictures of Algiers"
+            ],
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicySnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/nasa-media-policy-e613807c37b56a9d658d5b94b3625298fbad6ff727dd48d653703b8af9ee3792.html",
+            "primaryMediaPolicySHA256": "e613807c37b56a9d658d5b94b3625298fbad6ff727dd48d653703b8af9ee3792",
+            "publicDomainScope": "PD-USGov-NASA, public domain in the United States; NASA factual editorial/informational permission separately read",
+            "NASAcreditRequired": true,
+            "noEndorsementClaim": true,
+            "originalNASARecordUnavailable": true,
+            "rightsScope": "Vain katsottu kaupunkialueen/meren laaja asettelu; ei rakennuskoristetta/perintöteosta pääaiheena.",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS064-E-411_-_View_of_Earth.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap-selection.json",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "25 October 2020, 11:24:49",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/ISS064-E-411_-_View_of_Earth.jpg",
+            "captionFi": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+            "checkedAt": "2026-10-12T19:48:56.493418+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "ISS064-E-411 - View of Earth.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/00/ISS064-E-411_-_View_of_Earth.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma natiivin silmätarkistus: aito laaja avaruudesta otettu Algerin lahden ja kaupunkialueen asettelun kuva. Lahden muoto, satama, katuverkko ja lentoaseman runko erottuvat; kuva vaalean utuinen mutta paikan kokonaisuus luettavissa. Ei kasvoja, overlayta, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen omaa ilmaisua pääaiheena. Commonsin tiedostokohtaiset kategoriat Coasts of Algiers Province, Port of Algiers ja Satellite pictures of Algiers luettu itse paikkasidonnaksi. Camera location on avaruusaseman kamera, sitä ei käytetä maanpinnan kohdekoordinaattina. Author Earth Science and Remote Sensing Unit,NASA Johnson Space Center ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -lisenssiteksti luettu itse. NASAn ensisijainen mediaohje tukee tosiasiallista informatiivista käyttöä ilman tuotesuositusväitettä ja edellyttää NASA-kreditin; kolmannen osapuolen poikkeuksia ei poisteta yleissäännöllä. Tässä ei yksilöityä kolmannen osapuolen merkintää. Original NASA recordin SQL-error ei positiivinen paikkatodiste. Native5568×3712/SHA, kuvaus25.10.2020. Rajattu päätös tälle aluenäkymälle, ei Algerin Casbahin/julkisivujen yleistä FOP-/ikä-/perintölupaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "assetID": null,
+          "commonsFile": "ISS064-E-411 - View of Earth.jpg",
+          "sha256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: aito laaja avaruudesta otettu Algerin lahden ja kaupunkialueen asettelun kuva. Lahden muoto, satama, katuverkko ja lentoaseman runko erottuvat; kuva vaalean utuinen mutta paikan kokonaisuus luettavissa. Ei kasvoja, overlayta, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen omaa ilmaisua pääaiheena. Commonsin tiedostokohtaiset kategoriat Coasts of Algiers Province, Port of Algiers ja Satellite pictures of Algiers luettu itse paikkasidonnaksi. Camera location on avaruusaseman kamera, sitä ei käytetä maanpinnan kohdekoordinaattina. Author Earth Science and Remote Sensing Unit,NASA Johnson Space Center ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -lisenssiteksti luettu itse. NASAn ensisijainen mediaohje tukee tosiasiallista informatiivista käyttöä ilman tuotesuositusväitettä ja edellyttää NASA-kreditin; kolmannen osapuolen poikkeuksia ei poisteta yleissäännöllä. Tässä ei yksilöityä kolmannen osapuolen merkintää. Original NASA recordin SQL-error ei positiivinen paikkatodiste. Native5568×3712/SHA, kuvaus25.10.2020. Rajattu päätös tälle aluenäkymälle, ei Algerin Casbahin/julkisivujen yleistä FOP-/ikä-/perintölupaa.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+            "license": "Public domain",
+            "width": 5568,
+            "height": 3712,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/96e68e4f222fb51976ffe9f4c23cd827505f025360fead3808b9ed0fa7225444-original.jpg",
+            "nativeSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/d12d5c9db91da4e23c149910dee407221681beda64a192f1576dc6f1c1b35485.html",
+            "sourceSnapshotSHA256": "d12d5c9db91da4e23c149910dee407221681beda64a192f1576dc6f1c1b35485",
+            "sourceRowsRead": {
+              "Description ISS064-E-411 - View of Earth.jpg": "English: View of Earth taken during ISS Expedition 64.",
+              "Date": "25 October 2020, 11:24:49",
+              "Source": "JSC Gateway to Astronaut Photography of Earth",
+              "Author": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+              "Camera location": "35° 06′ N, 4° 48′ E"
+            },
+            "licenseTemplatesRead": [
+              "Public domain"
+            ],
+            "sourceOriginalFileDimensions": [
+              "5,568",
+              "3,712"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/96e68e4f222fb51976ffe9f4c23cd827505f025360fead3808b9ed0fa7225444-original.jpg\n  pixelWidth: 5568\n  pixelHeight: 3712\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              5568,
+              3712
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              5568,
+              3712
+            ],
+            "sourceDateRaw": "25 October 2020, 11:24:49",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito laaja avaruudesta otettu Algerin lahden ja kaupunkialueen asettelun kuva. Lahden muoto, satama, katuverkko ja lentoaseman runko erottuvat; kuva vaalean utuinen mutta paikan kokonaisuus luettavissa. Ei kasvoja, overlayta, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen omaa ilmaisua pääaiheena. Commonsin tiedostokohtaiset kategoriat Coasts of Algiers Province, Port of Algiers ja Satellite pictures of Algiers luettu itse paikkasidonnaksi. Camera location on avaruusaseman kamera, sitä ei käytetä maanpinnan kohdekoordinaattina. Author Earth Science and Remote Sensing Unit,NASA Johnson Space Center ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -lisenssiteksti luettu itse. NASAn ensisijainen mediaohje tukee tosiasiallista informatiivista käyttöä ilman tuotesuositusväitettä ja edellyttää NASA-kreditin; kolmannen osapuolen poikkeuksia ei poisteta yleissäännöllä. Tässä ei yksilöityä kolmannen osapuolen merkintää. Original NASA recordin SQL-error ei positiivinen paikkatodiste. Native5568×3712/SHA, kuvaus25.10.2020. Rajattu päätös tälle aluenäkymälle, ei Algerin Casbahin/julkisivujen yleistä FOP-/ikä-/perintölupaa.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "sourceCategoriesPersonallyRead": [
+              "Coasts of Algiers Province",
+              "Port of Algiers",
+              "Satellite pictures of Algiers"
+            ],
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicySnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/nasa-media-policy-e613807c37b56a9d658d5b94b3625298fbad6ff727dd48d653703b8af9ee3792.html",
+            "primaryMediaPolicySHA256": "e613807c37b56a9d658d5b94b3625298fbad6ff727dd48d653703b8af9ee3792",
+            "publicDomainScope": "PD-USGov-NASA, public domain in the United States; NASA factual editorial/informational permission separately read",
+            "NASAcreditRequired": true,
+            "noEndorsementClaim": true,
+            "originalNASARecordUnavailable": true,
+            "rightsScope": "Vain katsottu kaupunkialueen/meren laaja asettelu; ei rakennuskoristetta/perintöteosta pääaiheena.",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS064-E-411_-_View_of_Earth.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap-selection.json",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "25 October 2020, 11:24:49",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/ISS064-E-411_-_View_of_Earth.jpg",
+            "captionFi": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+            "checkedAt": "2026-10-12T19:48:56.493418+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "ISS064-E-411 - View of Earth.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/00/ISS064-E-411_-_View_of_Earth.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "alger",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "ISS064-E-411 - View of Earth.jpg",
+        "sha256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS064-E-411_-_View_of_Earth.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/ISS064-E-411_-_View_of_Earth.jpg",
+        "author": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "width": 5568,
+        "height": 3712,
+        "originalSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
+        "bytes": 2605679,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:49:43.471885+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "ISS064-E-411 - View of Earth.jpg",
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "tiedosto": "ISS064-E-411 - View of Earth.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+      "contextAfterSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "TRAVELER",
+      "type": "commons",
+      "assetID": "capital-cc-e04-alger-traveler-a05e4c410fb09e36",
+      "galleryImageID": "capital-cc-e04-alger-traveler-a05e4c410fb09e36",
+      "commonsFile": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
+        "suora": true,
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
+        "suora": true,
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+      "exportSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-TRAVELER.jpg",
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0c509a2f001fd819d7334e28587763cd42ec82d45d72306eeb92e3327e30c8e5",
+        "semanticContextSHA256": "2d4153470720a34258e02e0b48c219eb5f905ec2f19f1e2737551da2174aa468",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Muhammed amine benloulou",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:A_path_in_the_Hamma_Botanical_Garden_(Garden_in_Algiers).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/A_path_in_the_Hamma_Botanical_Garden_%28Garden_in_Algiers%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "depictedSubject": "Naturally growing vegetation and ordinary water/path; no protected architectural/artistic principal subject visible.",
+            "photographLicense": "https://commons.wikimedia.org/wiki/File:A_path_in_the_Hamma_Botanical_Garden_(Garden_in_Algiers).jpg",
+            "primaryLaw": "https://www.joradp.dz/FTP/jo-francais/2003/F2003044.pdf",
+            "sourceLawText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/law-2003-fr.txt",
+            "scope": "No general FOP approval for classified Casbah sites; natural plant subject distinct from artwork reproduction.",
+            "sourceMetadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-evidence/metadata-07.json",
+            "authorFieldSource": "Author table"
+          },
+          "QA": {
+            "author": "Muhammed amine benloulou",
+            "license": "CC BY-SA 4.0",
+            "width": 1536,
+            "height": 2048,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-TRAVELER.jpg",
+            "nativeSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/97d5c5af7b349f3fd5852d361e2ea1a0abba0598a7d5cf6167a4b4a5ac2b37c7.html",
+            "sourceSnapshotSHA256": "97d5c5af7b349f3fd5852d361e2ea1a0abba0598a7d5cf6167a4b4a5ac2b37c7",
+            "sourceRowsRead": {
+              "Description A path in the Hamma Botanical Garden (Garden in Algiers).jpg": "English: A path in the Hamma Botanical Garden (Garden in Algiers) ",
+              "Date": "23 May 2023 (according to Exif data)",
+              "Source": "Own work",
+              "Author": "Muhammed amine benloulou",
+              "Camera location": "36° 44′ 49.78″ N, 3° 04′ 35.55″ E"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,536",
+              "2,048"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-TRAVELER.jpg\n  pixelWidth: 1536\n  pixelHeight: 2048\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "23 May 2023 (according to Exif data)",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Puuston reunustama luonnollinen polku, sivulla pienet käyttövalaisimet ja penkit. Ei kasvoja tai nimettyä suojattua teosta. Toteutunut suhde0.75. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-TRAVELER.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:A_path_in_the_Hamma_Botanical_Garden_(Garden_in_Algiers).jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "23 May 2023 (according to Exif data)",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/A_path_in_the_Hamma_Botanical_Garden_%28Garden_in_Algiers%29.jpg",
+            "captionFi": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+            "checkedAt": "2026-10-12T19:30:02.822399+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/6/62/A_path_in_the_Hamma_Botanical_Garden_%28Garden_in_Algiers%29.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Puuston reunustama luonnollinen polku, sivulla pienet käyttövalaisimet ja penkit. Ei kasvoja tai nimettyä suojattua teosta. Toteutunut suhde0.75. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": null,
+          "commonsFile": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+          "sha256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Puuston reunustama luonnollinen polku, sivulla pienet käyttövalaisimet ja penkit. Ei kasvoja tai nimettyä suojattua teosta. Toteutunut suhde0.75. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Muhammed amine benloulou",
+            "license": "CC BY-SA 4.0",
+            "width": 1536,
+            "height": 2048,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-TRAVELER.jpg",
+            "nativeSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/97d5c5af7b349f3fd5852d361e2ea1a0abba0598a7d5cf6167a4b4a5ac2b37c7.html",
+            "sourceSnapshotSHA256": "97d5c5af7b349f3fd5852d361e2ea1a0abba0598a7d5cf6167a4b4a5ac2b37c7",
+            "sourceRowsRead": {
+              "Description A path in the Hamma Botanical Garden (Garden in Algiers).jpg": "English: A path in the Hamma Botanical Garden (Garden in Algiers) ",
+              "Date": "23 May 2023 (according to Exif data)",
+              "Source": "Own work",
+              "Author": "Muhammed amine benloulou",
+              "Camera location": "36° 44′ 49.78″ N, 3° 04′ 35.55″ E"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,536",
+              "2,048"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-TRAVELER.jpg\n  pixelWidth: 1536\n  pixelHeight: 2048\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "23 May 2023 (according to Exif data)",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Puuston reunustama luonnollinen polku, sivulla pienet käyttövalaisimet ja penkit. Ei kasvoja tai nimettyä suojattua teosta. Toteutunut suhde0.75. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-TRAVELER.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:A_path_in_the_Hamma_Botanical_Garden_(Garden_in_Algiers).jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "23 May 2023 (according to Exif data)",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/A_path_in_the_Hamma_Botanical_Garden_%28Garden_in_Algiers%29.jpg",
+            "captionFi": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+            "checkedAt": "2026-10-12T19:30:02.822399+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/6/62/A_path_in_the_Hamma_Botanical_Garden_%28Garden_in_Algiers%29.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "previousCandidateReviews": [
+            {
+              "slot": "TRAVELER",
+              "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+              "assetID": null,
+              "commonsFile": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+              "verdict": "accepted",
+              "reason": "Itse katsottu: puiden reunustama puistopolku, tavallista kalustoa sivussa; ei kasvoja, lisättyä tekstiä, logoa tai suojattua teosta pääaiheena. Pysty 0.750 täyttää 0.60–0.85. Kuvausvuosi 2023 kirjataan, ei tämän päivän kuvausväitettä.",
+              "required": true,
+              "status": "reviewed",
+              "evidence": {
+                "legacyB": true,
+                "visuallyReviewed": true,
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/preview-07.jpg",
+                "viewedSHA256": "f22667384a2ad5688c74908f32cba6ece2908ef5dc882015b72f5dfb7ab12199",
+                "previewViewed": true,
+                "originalPixelsViewed": false,
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:A_path_in_the_Hamma_Botanical_Garden_(Garden_in_Algiers).jpg",
+                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/candidate-07.html",
+                "sourceSnapshotSHA256": "97d5c5af7b349f3fd5852d361e2ea1a0abba0598a7d5cf6167a4b4a5ac2b37c7",
+                "author": "Muhammed amine benloulou",
+                "authorBasis": "Commonsin Author-kenttä itse parsittu, ei uploader-arvausta",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+                "width": 1536,
+                "height": 2048,
+                "ratio": 0.75,
+                "photoDate": "23 May 2023 (according to Exif data)",
+                "description": "English: A path in the Hamma Botanical Garden (Garden in Algiers)",
+                "alreadyInGame": false,
+                "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+                "checkedAt": "2026-10-12T17:40:55.005617+00:00",
+                "rightsLayer": "Kuvassa luonnollinen kasvillisuus, tavallinen polku tai vesi; ei toistettua arkkitehtuuri-/kuvataide-/kansantaideteosta pääaiheena. Algerian perintökohteen yleistä FOP-lupaa ei väitetä; tämä päätös koskee vain nähtyä luonnonaihetta.",
+                "gameReuseIndependentlyChecked": true,
+                "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+                "gameReuseFilesRead": 373,
+                "gameReuseMatches": [],
+                "gameReuseRecheckedAt": "2026-10-12T19:22:24.480921+00:00"
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "alger",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "commonsFile": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+        "sha256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:A_path_in_the_Hamma_Botanical_Garden_(Garden_in_Algiers).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/A_path_in_the_Hamma_Botanical_Garden_%28Garden_in_Algiers%29.jpg",
+        "author": "Muhammed amine benloulou",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1536,
+        "height": 2048,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
+        "bytes": 2522365,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:02:15.632822+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "0c509a2f001fd819d7334e28587763cd42ec82d45d72306eeb92e3327e30c8e5",
+      "contextAfterSHA256": "2d4153470720a34258e02e0b48c219eb5f905ec2f19f1e2737551da2174aa468"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "O3",
+      "type": "commons",
+      "assetID": "capital-cc-e04-alger-o3-239e39b54527a38d",
+      "galleryImageID": "capital-cc-e04-alger-o3-239e39b54527a38d",
+      "commonsFile": "Algiers Hamma Botanical Garden plant.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
+        "suora": true,
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
+        "suora": true,
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+      "exportSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-O3.jpg",
+      "dimensions": [
+        1537,
+        2048
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "761308b40875f125e34de09d548c4cd1cb7b8791a9c455ca096c9b6237b7b423",
+        "semanticContextSHA256": "57ad39cda86064e784836139505bbf90ec89d0420fb5abe50a3ba530238f6eee",
+        "subjectTitle": "Rannalta Hammaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Muhammed amine benloulou",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Algiers_Hamma_Botanical_Garden_plant.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Algiers_Hamma_Botanical_Garden_plant.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "depictedSubject": "Naturally growing vegetation and ordinary water/path; no protected architectural/artistic principal subject visible.",
+            "photographLicense": "https://commons.wikimedia.org/wiki/File:Algiers_Hamma_Botanical_Garden_plant.jpg",
+            "primaryLaw": "https://www.joradp.dz/FTP/jo-francais/2003/F2003044.pdf",
+            "sourceLawText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/law-2003-fr.txt",
+            "scope": "No general FOP approval for classified Casbah sites; natural plant subject distinct from artwork reproduction.",
+            "sourceMetadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-evidence/metadata-32.json",
+            "authorFieldSource": "Author table"
+          },
+          "QA": {
+            "author": "Muhammed amine benloulou",
+            "license": "CC BY-SA 4.0",
+            "width": 1537,
+            "height": 2048,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-O3.jpg",
+            "nativeSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/d1a28e01ae0268bb313d9fbdc0976b8f6cd7184713e796e5943eface0e9a2956.html",
+            "sourceSnapshotSHA256": "d1a28e01ae0268bb313d9fbdc0976b8f6cd7184713e796e5943eface0e9a2956",
+            "sourceRowsRead": {
+              "Description Algiers Hamma Botanical Garden plant.jpg": "English: Algiers Hamma Botanical Garden plant",
+              "Date": "23 May 2023 (according to Exif data)",
+              "Source": "Own work",
+              "Author": "Muhammed amine benloulou",
+              "Camera location": "36° 44′ 46.4″ N, 3° 04′ 34.31″ E"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,537",
+              "2,048"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-O3.jpg\n  pixelWidth: 1537\n  pixelHeight: 2048\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "23 May 2023 (according to Exif data)",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Läheinen kasvien ja lehtien kuva, ei lajimääritystä eikä pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-O3.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Algiers_Hamma_Botanical_Garden_plant.jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "23 May 2023 (according to Exif data)",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Algiers_Hamma_Botanical_Garden_plant.jpg",
+            "captionFi": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+            "checkedAt": "2026-10-12T19:30:03.053326+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Algiers Hamma Botanical Garden plant.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Algiers_Hamma_Botanical_Garden_plant.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Läheinen kasvien ja lehtien kuva, ei lajimääritystä eikä pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": null,
+          "commonsFile": "Algiers Hamma Botanical Garden plant.jpg",
+          "sha256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Läheinen kasvien ja lehtien kuva, ei lajimääritystä eikä pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Muhammed amine benloulou",
+            "license": "CC BY-SA 4.0",
+            "width": 1537,
+            "height": 2048,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-O3.jpg",
+            "nativeSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/d1a28e01ae0268bb313d9fbdc0976b8f6cd7184713e796e5943eface0e9a2956.html",
+            "sourceSnapshotSHA256": "d1a28e01ae0268bb313d9fbdc0976b8f6cd7184713e796e5943eface0e9a2956",
+            "sourceRowsRead": {
+              "Description Algiers Hamma Botanical Garden plant.jpg": "English: Algiers Hamma Botanical Garden plant",
+              "Date": "23 May 2023 (according to Exif data)",
+              "Source": "Own work",
+              "Author": "Muhammed amine benloulou",
+              "Camera location": "36° 44′ 46.4″ N, 3° 04′ 34.31″ E"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,537",
+              "2,048"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-O3.jpg\n  pixelWidth: 1537\n  pixelHeight: 2048\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "23 May 2023 (according to Exif data)",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Läheinen kasvien ja lehtien kuva, ei lajimääritystä eikä pääaiheena ihmisteosta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-O3.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Algiers_Hamma_Botanical_Garden_plant.jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "23 May 2023 (according to Exif data)",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Algiers_Hamma_Botanical_Garden_plant.jpg",
+            "captionFi": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+            "checkedAt": "2026-10-12T19:30:03.053326+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Algiers Hamma Botanical Garden plant.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Algiers_Hamma_Botanical_Garden_plant.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "previousCandidateReviews": [
+            {
+              "slot": "O3",
+              "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+              "assetID": null,
+              "commonsFile": "Algiers Hamma Botanical Garden plant.jpg",
+              "verdict": "accepted",
+              "reason": "Itse katsottu aito Hamma-puutarhan kasvi- ja vesiaiheinen CC-valokuva, leveys vähintään1200. Ei kasvoja, lisättyä tekstiä, logoa, vesileimaa tai suojattua teosta pääaiheena. Aiempi pelkkään vaaka-oletukseen perustuva hylkäys oikaistu inventaarion korjauksen jälkeen; alkuperäinen kuva ja lähteet säilyvät.",
+              "required": true,
+              "status": "reviewed",
+              "evidence": {
+                "legacyB": true,
+                "visuallyReviewed": true,
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/preview-32.jpg",
+                "viewedSHA256": "2430d0f469efd28a86e0905a4ceb63a351303b3748e5cb3cfc73c3b93083ae4c",
+                "previewViewed": true,
+                "originalPixelsViewed": false,
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Algiers_Hamma_Botanical_Garden_plant.jpg",
+                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/candidate-32.html",
+                "sourceSnapshotSHA256": "d1a28e01ae0268bb313d9fbdc0976b8f6cd7184713e796e5943eface0e9a2956",
+                "author": "Muhammed amine benloulou",
+                "authorBasis": "Commonsin Author-kenttä itse parsittu, ei uploader-arvausta",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+                "width": 1537,
+                "height": 2048,
+                "ratio": 0.75048828125,
+                "photoDate": "23 May 2023 (according to Exif data)",
+                "description": "English: Algiers Hamma Botanical Garden plant",
+                "alreadyInGame": false,
+                "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+                "checkedAt": "2026-10-12T17:44:45.149248+00:00",
+                "rightsLayer": "Kuvassa luonnollinen kasvillisuus, tavallinen polku tai vesi; ei toistettua arkkitehtuuri-/kuvataide-/kansantaideteosta pääaiheena. Algerian perintökohteen yleistä FOP-lupaa ei väitetä; tämä päätös koskee vain nähtyä luonnonaihetta.",
+                "ccLayoutCorrectionVerified": true,
+                "gameReuseIndependentlyChecked": true,
+                "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+                "gameReuseFilesRead": 373,
+                "gameReuseMatches": [],
+                "gameReuseRecheckedAt": "2026-10-12T19:22:24.505013+00:00"
+              },
+              "reviewCorrections": [
+                {
+                  "at": "2026-10-12T17:44:45.149248+00:00",
+                  "previousVerdict": "rejected",
+                  "previousReason": "Itse katsottu aito kasvillisuuskuva, mutta 1537×2048 on pysty (0.7505). O3-inventaario vaatii vaakakuvan; ei hyväksytä tähän paikkaan.",
+                  "basis": "Juurisession12.10.2026 inventaario-oikaisu: pystyvaatimus vainTRAVELER; muutCC eivät vaadi vaakaformaattia, PHOTO ei vaadi tuoreutta."
+                }
+              ]
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "alger",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "commonsFile": "Algiers Hamma Botanical Garden plant.jpg",
+        "sha256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Algiers_Hamma_Botanical_Garden_plant.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Algiers_Hamma_Botanical_Garden_plant.jpg",
+        "author": "Muhammed amine benloulou",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1537,
+        "height": 2048,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
+        "bytes": 2604321,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:02:18.028891+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Algiers Hamma Botanical Garden plant.jpg",
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "761308b40875f125e34de09d548c4cd1cb7b8791a9c455ca096c9b6237b7b423",
+      "contextAfterSHA256": "57ad39cda86064e784836139505bbf90ec89d0420fb5abe50a3ba530238f6eee"
+    },
+    {
+      "era": "e04",
+      "city": "alger",
+      "slot": "K4",
+      "type": "commons",
+      "assetID": "capital-cc-e04-alger-k4-1209f2268a6b02f6",
+      "galleryImageID": "capital-cc-e04-alger-k4-1209f2268a6b02f6",
+      "commonsFile": "Botanical Garden of Hamma.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
+        "suora": true,
+        "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "tiedosto": "Botanical Garden of Hamma.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "tiedosto": "Botanical Garden of Hamma.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
+        "suora": true,
+        "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "tiedosto": "Botanical Garden of Hamma.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+      "exportSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-K4.jpg",
+      "dimensions": [
+        2677,
+        2000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
+      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+        "semanticContextSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+        "subjectTitle": "Puutarhan nimessä on koe",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "MariaArch",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_of_Hamma.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Botanical_Garden_of_Hamma.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "depictedSubject": "Naturally growing vegetation and ordinary water/path; no protected architectural/artistic principal subject visible.",
+            "photographLicense": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_of_Hamma.jpg",
+            "primaryLaw": "https://www.joradp.dz/FTP/jo-francais/2003/F2003044.pdf",
+            "sourceLawText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/law-2003-fr.txt",
+            "scope": "No general FOP approval for classified Casbah sites; natural plant subject distinct from artwork reproduction.",
+            "sourceMetadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-evidence/metadata-46.json",
+            "authorFieldSource": "Author table"
+          },
+          "QA": {
+            "author": "MariaArch",
+            "license": "CC BY-SA 4.0",
+            "width": 2677,
+            "height": 2000,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-K4.jpg",
+            "nativeSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/e8a3def8c11d0c9fffd5e3a0edde7d6dbbdffe79117946b4462d66c5492869ea.html",
+            "sourceSnapshotSHA256": "e8a3def8c11d0c9fffd5e3a0edde7d6dbbdffe79117946b4462d66c5492869ea",
+            "sourceRowsRead": {
+              "Description Botanical Garden of Hamma.jpg": "English: Lake inside the Botanical Garden of Hamma (Jardin d'essai)",
+              "Date": "22 August 2015, 13:11:53",
+              "Source": "Own work",
+              "Author": "MariaArch"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "2,677",
+              "2,000"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-K4.jpg\n  pixelWidth: 2677\n  pixelHeight: 2000\n  format: jpeg\n  profile: Adobe RGB (1998)\n",
+            "sourceDateRaw": "22 August 2015, 13:11:53",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Vesi, puut, ilmajuuret ja aluskasvillisuus. Ei kasvoja tai nimettyä taide-/arkkitehtuuripääaihetta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-K4.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_of_Hamma.jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "22 August 2015, 13:11:53",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Botanical_Garden_of_Hamma.jpg",
+            "captionFi": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+            "checkedAt": "2026-10-12T19:30:02.605499+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Botanical Garden of Hamma.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Botanical_Garden_of_Hamma.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Vesi, puut, ilmajuuret ja aluskasvillisuus. Ei kasvoja tai nimettyä taide-/arkkitehtuuripääaihetta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+        "fileSHA256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": null,
+          "commonsFile": "Botanical Garden of Hamma.jpg",
+          "sha256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Vesi, puut, ilmajuuret ja aluskasvillisuus. Ei kasvoja tai nimettyä taide-/arkkitehtuuripääaihetta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "MariaArch",
+            "license": "CC BY-SA 4.0",
+            "width": 2677,
+            "height": 2000,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-K4.jpg",
+            "nativeSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/e8a3def8c11d0c9fffd5e3a0edde7d6dbbdffe79117946b4462d66c5492869ea.html",
+            "sourceSnapshotSHA256": "e8a3def8c11d0c9fffd5e3a0edde7d6dbbdffe79117946b4462d66c5492869ea",
+            "sourceRowsRead": {
+              "Description Botanical Garden of Hamma.jpg": "English: Lake inside the Botanical Garden of Hamma (Jardin d'essai)",
+              "Date": "22 August 2015, 13:11:53",
+              "Source": "Own work",
+              "Author": "MariaArch"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "2,677",
+              "2,000"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-K4.jpg\n  pixelWidth: 2677\n  pixelHeight: 2000\n  format: jpeg\n  profile: Adobe RGB (1998)\n",
+            "sourceDateRaw": "22 August 2015, 13:11:53",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visualReview": "Alkuperäinen Commons-tiedosto ladattu sallittu_haku-väylällä omaan QA-aineistoon ja katsottu nyt itse: Vesi, puut, ilmajuuret ja aluskasvillisuus. Ei kasvoja tai nimettyä taide-/arkkitehtuuripääaihetta. Alkuperäismitat ja natiivin SHA tarkistettu. Valokuvaajan tekijä-/lisenssitiedot ja kuvauspäivä luettu jälleen lähdesivulta. Luonnonaiheen rajattu teoskerrosarvio, ei Algerian perintökohteiden yleistä FOP-lupaa. Aiempi esikatselutarkistus ja kuvasuhdetulkinnan korjaus säilyvät historiassa.",
+            "legacyPreviewReviewUpgraded": true,
+            "originalDownloadReceipt": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa-evidence/native-K4.receipt.json",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_of_Hamma.jpg",
+            "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+            "photoDate": "22 August 2015, 13:11:53",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Botanical_Garden_of_Hamma.jpg",
+            "captionFi": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+            "checkedAt": "2026-10-12T19:30:02.605499+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Botanical Garden of Hamma.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Botanical_Garden_of_Hamma.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "previousCandidateReviews": [
+            {
+              "slot": "K4",
+              "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+              "assetID": null,
+              "commonsFile": "Botanical Garden of Hamma.jpg",
+              "verdict": "accepted",
+              "reason": "Itse katsottu: luonnollisia puunrunkoja, riippuvia juuria ja pieni vesialue; ei ihmisiä, lisättyä tekstiä, logoa tai teospääaihetta. Aito Hamma-kuva, vaaka sopii koepuutarhan nostoon.",
+              "required": true,
+              "status": "reviewed",
+              "evidence": {
+                "legacyB": true,
+                "visuallyReviewed": true,
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/preview-46.jpg",
+                "viewedSHA256": "6234c3648bc5e506495c574de033596e31541c317ec99edff26815d381a1fadb",
+                "previewViewed": true,
+                "originalPixelsViewed": false,
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_of_Hamma.jpg",
+                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/alger-B/candidate-46.html",
+                "sourceSnapshotSHA256": "e8a3def8c11d0c9fffd5e3a0edde7d6dbbdffe79117946b4462d66c5492869ea",
+                "author": "MariaArch",
+                "authorBasis": "Commonsin Author-kenttä itse parsittu, ei uploader-arvausta",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+                "width": 2677,
+                "height": 2000,
+                "ratio": 1.3385,
+                "photoDate": "22 August 2015, 13:11:53",
+                "description": "English: Lake inside the Botanical Garden of Hamma (Jardin d'essai)",
+                "alreadyInGame": false,
+                "currentContentSHA256": "d16d4050829570795aa6d29cb77b75e03b3a986e839c8eb30c8db2af89acb9e2",
+                "checkedAt": "2026-10-12T17:40:55.005617+00:00",
+                "rightsLayer": "Kuvassa luonnollinen kasvillisuus, tavallinen polku tai vesi; ei toistettua arkkitehtuuri-/kuvataide-/kansantaideteosta pääaiheena. Algerian perintökohteen yleistä FOP-lupaa ei väitetä; tämä päätös koskee vain nähtyä luonnonaihetta.",
+                "gameReuseIndependentlyChecked": true,
+                "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/js/packs",
+                "gameReuseFilesRead": 373,
+                "gameReuseMatches": [],
+                "gameReuseRecheckedAt": "2026-10-12T19:22:24.463992+00:00"
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/qa.json",
+            "sha256": "1ef1bce14924e5df204de5d5c72367d7f4d74413878341e9dea60bf4e763d853"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/illustration-qa-extra.json",
+            "sha256": "d88e23ff7a37fa6d3237c286a4b7f46a8f6f4ea8a01d95d9ba56c8d3bf1f56a9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "alger",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "commonsFile": "Botanical Garden of Hamma.jpg",
+        "sha256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_of_Hamma.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Botanical_Garden_of_Hamma.jpg",
+        "author": "MariaArch",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 2677,
+        "height": 2000,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
+        "bytes": 4834053,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:02:13.202780+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Botanical Garden of Hamma.jpg",
+        "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "tiedosto": "Botanical Garden of Hamma.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "targetAfterSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+      "contextAfterSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

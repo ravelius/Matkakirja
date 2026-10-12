@@ -202,10 +202,10 @@
               "otsikko": "Chellah ja joen suu",
               "teksti": "Chellahin muurein rajattu raunioalue on historiallisen ytimen eteläpuolella. Katsele rinnakkain antiikin rakennusjäännöksiä ja marinidien uskonnollisen kompleksin rakenteita. Haikaroita pesii alueen puissa ja minareetissa, vaikka lintuja ei voi luvata näkyviin jokaisella käynnillä. Joen suulle palatessa kasbahista avautuu näkymä Bou Regregille, Saléen ja Atlantille. Rannan maisema ja uimapaikka ovat eri asioita: ui vain merkityillä uimarannoilla ja huomioi merivirrat sekä aallot.",
               "kuva": {
-                "tiedosto": "Roman Ruins Kasbah Chellah Rabat Morocco 094600 (49679359096).jpg",
-                "lyhyt": "Chellahin antiikin kortteleita on kaivettu näkyviin.",
-                "selite": "Chellahin nykyinen kaivausalue tuo näkyviin muinaisen Salan rakennusjäännöksiä, joiden avoin näkymä on myöhemmän arkeologisen työn tulosta.",
-                "lahde": "bobistraveling, Wikimedia Commons (CC BY 2.0)"
+                "tiedosto": "Interior Stork Zawiya Chellah Rabat Nov25 A7CR 08934.jpg",
+                "lyhyt": "Haikara Chellahin Zawiyan rauniosisätilan yllä Rabatissa marraskuussa2025.",
+                "selite": "Haikara Chellahin Zawiyan rauniosisätilan yllä Rabatissa marraskuussa2025.",
+                "lahde": "Timothy A. Gonsalves, Wikimedia Commons (CC BY-SA 4.0)"
               }
             },
             {
@@ -327,7 +327,7 @@
     "numeroympyrat": true,
     "esittely": "Rabatin vanha ydin ulottuu kasbahista medinan muureille ja joen suistoon. Chellahissa antiikin kaupunki ja keskiaikainen hautausmaa ovat saman aitauksen sisällä.",
     "rajat": {
-      "pohjoinen": 34.03460,
+      "pohjoinen": 34.0346,
       "etela": 34.00397,
       "lansi": -6.84089,
       "ita": -6.81703
@@ -341,7 +341,7 @@
       {
         "nimi": "Bou Regreg -joen suisto",
         "tyyppi": "luonto",
-        "lat": 34.03190,
+        "lat": 34.0319,
         "lon": -6.83083
       },
       {
@@ -377,10 +377,10 @@
       "teksti": "Udayan kasbah on kukkulalle rakennettu linnoitettu kaupunginosa Bou Regreg -joen suulla. Almohadit rakensivat sitä 1100-luvulla aiempien tukikohtien paikalle. Rakennushankkeeseen kuuluivat palatsi, moskeija ja maanalainen vesikanava, joka toi vettä alueelle. Suuri Bab Oudaya -portti liittyy myöhempään almohadien rakennusvaiheeseen.\n\nKasbahin sisällä pohjoisen keskiaikainen ydin ja etelän myöhemmät lisäykset kuuluvat eri aikoihin. Moulay Ismailin paviljonki tuli eteläosaan vasta myöhemmin. Nykyiset sinivalkoiset talot ovat osa asuttua kaupunginosaa, ja Rue Jamaa johtaa suuren portin suunnasta kohti joelle avautuvaa näkymää. Medina on kasbahin vieressä, Salé joen toisella puolella.\n\nVuonna 1873 kasbah, sen vanha portti ja paviljonki olivat jo olemassa. Nykyistä Andalusialaista puutarhaa ja paviljongin museokäyttöä ei vielä ollut. Vanha linnoitus on siis säilynyt, mutta sen sisällä olevien paikkojen tehtävät ovat muuttuneet.",
       "kuvat": [
         {
-          "tiedosto": "Kasbah Oudayas exterior.jpg",
-          "lyhyt": "Bab Oudaya on kasbahin suuri keskiaikainen portti.",
-          "selite": "Bab Oudaya on Udayan kasbahin monumentaalinen almohadiaikainen portti, joka liittyy linnoitetun kaupunginosan keskiaikaiseen rakennushistoriaan.",
-          "lahde": "Davide Cesare Veniani, Wikimedia Commons (CC BY-SA 3.0)"
+          "tiedosto": "Kasbah des Oudaias P1060323.JPG",
+          "lyhyt": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+          "selite": "Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.",
+          "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
       "lahde": "Wikipedia"
@@ -403,10 +403,10 @@
       "teksti": "Andalusialainen muuri rajaa Rabatin medinan eteläreunaa. Se rakennettiin 1600-luvun alkupuolella keskiaikaisen almohadikaupungin sisään. Ulomman kaupunginmuurin sisäpuolella oli ollut myös harvaan asuttuja ja avoimia alueita; myöhempi muuri rajasi tiiviimmän asutuksen oman kokonaisuutensa sisään.\n\nEspanjasta karkotettuja moriskoja asettui tälle alueelle. Muurin portit yhdistivät kaupunginosan eri suuntiin: Bab Mellah liittyi vanhaan juutalaiskortteliin, ja Bab Chellah sai monumentaalisen nykyasunsa 1800-luvun alun uudelleenrakennuksessa. Muurin jokipäässä on Borj Sidi Makhlouf -linnake. Kaikki nämä rakenteet eivät siis ole samasta rakennusvaiheesta.\n\nVuonna 1873 muuri ja Bab Chellahin uudelleenrakennettu asu olivat jo paikalla. Nykyisessä kaupungissa muuri auttaa edelleen tunnistamaan medinan reunan. Sen kohdalla näkyy hyvin, kuinka vanhemman kaupunkisuunnitelman sisään syntyi myöhempi kaupunginosa omine rajoineen.",
       "kuvat": [
         {
-          "tiedosto": "Enceinte de la Medina de Rabat P1060367.JPG",
-          "lyhyt": "Andalusialainen muuri päättyy joen puolella linnakkeeseen.",
-          "selite": "Andalusialainen muuri rajaa medinaa, ja sen Bou Regreg -joen puoleiseen päähän liittyy Borj Sidi Makhlouf -linnake.",
-          "lahde": "Pline, Wikimedia Commons (CC BY-SA 3.0)"
+          "tiedosto": "Muraille des Andalous 2 - Rabat.JPG",
+          "lyhyt": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+          "selite": "Andalusialainen muuri Rabatin medinan reunalla vuonna2013.",
+          "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
       "lahde": "Wikipedia"
@@ -416,10 +416,10 @@
       "teksti": "Moulay Slimanen moskeija sijaitsee Rabatin medinassa Andalusialaisen muurin pohjoispuolella. Sulttaani Moulay Slimane rakennutti sen 1800-luvun alussa, ja rakennus kantaa hänen nimeään. Paikka on Souika Streetin ja Sidi Fateh Streetin risteyksessä lähellä Bab Bouiba -porttia. Moskeija kuuluu siten vanhojen katujen ja porttien muodostamaan kaupunkiympäristöön.\n\nRakennuksen sisällä on perinteinen avoin piha, sahn, ja rukoussalin tilaa jakavat pylväät ja kaaret. Kokonaisuuteen kuuluu myös minareetti. Rakennuksen historia ulottuu varhaista medinaa myöhempään aikaan: keskiaikaiseen kaupunkiin tuli uusi uskonnollinen rakennus jo kauan ennen nykyistä uutta kaupunginosaa.\n\nVuonna 1873 moskeija oli jo olemassa. Nykykävijälle sen ulkoarkkitehtuuri on tapa tutustua medinan historiaan, sillä ei-islamilaisten pääsyä moskeijoihin on rajoitettu. Rakennuksen näkeminen katutasosta ei siis edellytä käyntiä rukoussalissa.",
       "kuvat": [
         {
-          "tiedosto": "Moulay slimane mosque rabat DSCF7479.jpg",
-          "lyhyt": "Moulay Slimanen moskeija rakennettiin 1800-luvun alussa.",
-          "selite": "Moulay Slimanen moskeija on sulttaaninsa mukaan nimetty medinan rukouspaikka, joka sijaitsee Andalusialaisen muurin pohjoispuolella.",
-          "lahde": "Robert Prazeres, Wikimedia Commons (CC BY-SA 4.0)"
+          "tiedosto": "Moulay Slimane Mosque.jpg",
+          "lyhyt": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+          "selite": "Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.",
+          "lahde": "Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
       "lahde": "Wikipedia"

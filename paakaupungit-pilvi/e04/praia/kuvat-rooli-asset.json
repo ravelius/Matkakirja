@@ -1,0 +1,2273 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e04",
+  "city": "praia",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+  "assets": [
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "praia-o4-cachupa-20261012-v1",
+      "galleryImageID": "praia-o4-cachupa-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin.",
+        "lyhyt": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin.",
+        "lyhyt": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "81a84f41b5b0dad95d145257cd50adea65ceb61f2d7bc0e0ae363037ccd9a40e",
+      "exportSHA256": "2c032205b74d06b704b24903ba849cbd21e43ccf604c4f834e599f73a1b00111",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9",
+        "subjectTitle": "Maissi, pavut ja kala",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Uusi yleinen ruokahavainne tavallisessa koristeettomassa astiassa. Ei nimettyä ravintola-annosta, valokuvasommittelun kopiota, museoesinettä, nykytaideteosta tai rakennusta.",
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-o4-cachupa-20261012-v1/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "sourceContentSha256": "61a54b3406647d2eaa4a8a425c45fdcc1a167a7aa1e8112db0689a1b74f8761d",
+            "sourceContentExcerpt": "Kapverdeläisessä keittiössä maissi ja pavut ovat perustavia raaka-aineita. Cachupa on maissiin ja muihin aineksiin perustuva pataruoka, josta on eri versioita. Kala ja merenelävät kuuluvat saariston ruokaan. Praian torit ovat myös ruokakaupan paikkoja; kyse on koko maan ruokataustasta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
+                "facts": "Maissi/pavut perusaineita, kala tärkeää, cachupa maissipohjainen pataruoka ja makea peruna/sipuli mahdollisia aineksia; eri versioita."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/cc-status.json",
+                "facts": {
+                  "boundedCheck": [
+                    "Cachupa guisada com peixe.jpg",
+                    "Cachupa frita.jpg",
+                    "Cachupa em Sal Rei.jpg"
+                  ],
+                  "visuallyViewed": [
+                    "valiaikainen/praia-B/preview-18.jpg",
+                    "valiaikainen/praia-B/preview-35.jpg",
+                    "valiaikainen/praia-B/preview-42.jpg"
+                  ],
+                  "reason": "Oma kuvakatselu: salaman valaisema, pehmeä ja vähäkontrastinen ruoka, osassa voimakas puhkipalaminen. Ei valita vain lisenssin perusteella. Ei automaattista luonnollisen tuotemerkinnän hylkäystä.",
+                  "safeSubject": "Cachupa-ruoka: maissi, pavut ja kala; tavallinen koristeeton astia, havainnekuva, ei nimetyn ravintolan annos.",
+                  "sourceContent": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]"
+                }
+              }
+            ],
+            "rightsEvidence": "Uusi yleinen ruokahavainne tavallisessa koristeettomassa astiassa. Ei nimettyä ravintola-annosta, valokuvasommittelun kopiota, museoesinettä, nykytaideteosta tai rakennusta.",
+            "captionFi": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin.",
+            "independentOfProducer": true
+          },
+          "qaReason": "Havainnekuva sopii O4:n cachupa-aiheeseen: maissi ja pavut dominoivat, mukana kalaa ja lähteen sallimia pehmeitä kasviksia. Kulho, ruoan rakenne, kosteus ja valo luontevia; ei ihmiskehoa, tekstiä, logoja, pakkausta tai suojattua esinettä. CaptionFi kertoo havainnekuvasta, ei tietyn ravintolan todellisesta annoksesta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "praia-o4-cachupa-20261012-v1",
+          "sha256": "81a84f41b5b0dad95d145257cd50adea65ceb61f2d7bc0e0ae363037ccd9a40e",
+          "verdict": "accepted",
+          "reason": "Havainnekuva sopii O4:n cachupa-aiheeseen: maissi ja pavut dominoivat, mukana kalaa ja lähteen sallimia pehmeitä kasviksia. Kulho, ruoan rakenne, kosteus ja valo luontevia; ei ihmiskehoa, tekstiä, logoja, pakkausta tai suojattua esinettä. CaptionFi kertoo havainnekuvasta, ei tietyn ravintolan todellisesta annoksesta.",
+          "reviewedAt": "2026-10-12T17:56:45.338592+00:00",
+          "required": true,
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-o4-cachupa-20261012-v1/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "sourceContentSha256": "61a54b3406647d2eaa4a8a425c45fdcc1a167a7aa1e8112db0689a1b74f8761d",
+            "sourceContentExcerpt": "Kapverdeläisessä keittiössä maissi ja pavut ovat perustavia raaka-aineita. Cachupa on maissiin ja muihin aineksiin perustuva pataruoka, josta on eri versioita. Kala ja merenelävät kuuluvat saariston ruokaan. Praian torit ovat myös ruokakaupan paikkoja; kyse on koko maan ruokataustasta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Cape_Verdean_cuisine",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/Cape_Verdean_cuisine.txt",
+                "facts": "Maissi/pavut perusaineita, kala tärkeää, cachupa maissipohjainen pataruoka ja makea peruna/sipuli mahdollisia aineksia; eri versioita."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/cc-status.json",
+                "facts": {
+                  "boundedCheck": [
+                    "Cachupa guisada com peixe.jpg",
+                    "Cachupa frita.jpg",
+                    "Cachupa em Sal Rei.jpg"
+                  ],
+                  "visuallyViewed": [
+                    "valiaikainen/praia-B/preview-18.jpg",
+                    "valiaikainen/praia-B/preview-35.jpg",
+                    "valiaikainen/praia-B/preview-42.jpg"
+                  ],
+                  "reason": "Oma kuvakatselu: salaman valaisema, pehmeä ja vähäkontrastinen ruoka, osassa voimakas puhkipalaminen. Ei valita vain lisenssin perusteella. Ei automaattista luonnollisen tuotemerkinnän hylkäystä.",
+                  "safeSubject": "Cachupa-ruoka: maissi, pavut ja kala; tavallinen koristeeton astia, havainnekuva, ei nimetyn ravintolan annos.",
+                  "sourceContent": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]"
+                }
+              }
+            ],
+            "rightsEvidence": "Uusi yleinen ruokahavainne tavallisessa koristeettomassa astiassa. Ei nimettyä ravintola-annosta, valokuvasommittelun kopiota, museoesinettä, nykytaideteosta tai rakennusta.",
+            "captionFi": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin.",
+            "independentOfProducer": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png?t=2c032205b74d06b7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+        "sha256": "2c032205b74d06b704b24903ba849cbd21e43ccf604c4f834e599f73a1b00111",
+        "bytes": 2459891,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "praia-o4-cachupa-20261012-v1",
+        "nativeSHA256": "81a84f41b5b0dad95d145257cd50adea65ceb61f2d7bc0e0ae363037ccd9a40e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "praia",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T17:57:14.341970+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
+        "sha256": "2c032205b74d06b704b24903ba849cbd21e43ccf604c4f834e599f73a1b00111",
+        "bytes": 2459891,
+        "SHAReadAt": "2026-10-12T18:29:42.818041+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "81a84f41b5b0dad95d145257cd50adea65ceb61f2d7bc0e0ae363037ccd9a40e",
+        "rgbPixelSHA256": "19d3562ed8eae14e83f49458fd7fc24de9f8c37453adf31acf3d46115d01b809",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "praia-k2-arjen-tyovalineet-20261012-v1",
+      "galleryImageID": "praia-k2-arjen-tyovalineet-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tavallisesta huhmareesta, survimesta ja käsimyllystä; ei Praian museon esineiden tai näyttelyn jäljennös.",
+        "lyhyt": "Arjen esineistä tuli aineistoa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tavallisesta huhmareesta, survimesta ja käsimyllystä; ei Praian museon esineiden tai näyttelyn jäljennös.",
+        "lyhyt": "Arjen esineistä tuli aineistoa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f5bf9e0234b445a883b6c6d949fcca4ff2dddd4fc62cf91b4130ed1fdbc8c7f1",
+      "exportSHA256": "8abf9c017d33e8c8c0419779835bc2af494fdd66c60c61400699f3ba170bc51a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+        "semanticContextSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+        "subjectTitle": "Arjen esineistä tuli aineistoa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Itse muodostettu yleinen koristelemattomien toiminnallisten puu-/kivivälineiden havainnollistus. Ei PD-museoesineen kopiointia, yksittäistä suunnittelua tai kansanperinteen koristekuviota. CPV:n esinevalokuvan oikeusporttia ei oleteta ratkaistuksi.",
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-k2-arjen-tyovalineet-20261012-v1/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "sourceContentSha256": "61a54b3406647d2eaa4a8a425c45fdcc1a167a7aa1e8112db0689a1b74f8761d",
+            "sourceContentExcerpt": "Praian etnografinen museo toimii Plateaulla 1800-luvun talossa, mutta sen aineisto on kerätty eri Kap Verden saarilta. Kokoelmat kertovat arjen taidoista: maataloudesta, karjanhoidosta, kalastuksesta ja käsitöistä. Kudonta, korinpunonta ja keramiikka kuuluvat museon aiheisiin. Säilytettävä perintö ei rajoitu tavaroihin, sillä myös kertomuksia ja arvoituksia on tallennettu. Museo syntyi myöhäisen 1900-luvun kulttuuriperintöhankkeesta. Vanhan talon sisälle koottiin siten monen saaren muisti, ei vain pääkaupungin historia.",
+            "sourceEvidence": [
+              {
+                "url": "https://ipc.cv/museus/museu-etnografico-da-praia/",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/museum-ipc.txt",
+                "facts": "Museon aineisto käsittelee maataloutta, arjen taitoja ja perinteistä kodin/keittiön toimintaa."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/cc-status.json",
+                "facts": {
+                  "boundedCheck": [
+                    "Pilão & moinho.jpg",
+                    "Praia-Musée ethnographique (1).jpg",
+                    "Museu Etnográfico, Praia, Cape Verde.jpg"
+                  ],
+                  "visuallyViewed": [
+                    "valiaikainen/praia-B/preview-05.jpg"
+                  ],
+                  "reason": "Paikallinen museoesinekuva PD-self; CPV art34:n kaupallisen PD-käytön lupa/maksuperuste ei selvitetty. Museorakennuksen pääkuva ei ratkea CC-valokuvalla.",
+                  "safeSubject": "Tavallinen koristeeton puinen survain ja huhmare sekä luonnonkivinen käsimylly; maatalouden arjen työvälineiden yleishavainnollistus. Ei museon todellisen esineen kopiota, ei koristekuvioita, ei väitettä aidosta museoasetelmasta.",
+                  "sourceContent": "$.kaupunkilehti[0].nostot[1]"
+                }
+              }
+            ],
+            "rightsEvidence": "Itse muodostettu yleinen koristelemattomien toiminnallisten puu-/kivivälineiden havainnollistus. Ei PD-museoesineen kopiointia, yksittäistä suunnittelua tai kansanperinteen koristekuviota. CPV:n esinevalokuvan oikeusporttia ei oleteta ratkaistuksi.",
+            "captionFi": "Havainnekuva tavallisesta huhmareesta, survimesta ja käsimyllystä; ei Praian museon esineiden tai näyttelyn jäljennös.",
+            "independentOfProducer": true
+          },
+          "qaReason": "Huhmareen avoin syvennys, erillinen survain ja käsimyllyn kaksi kiekkoa/syöttöaukko/kääntövarsi ovat rakenteellisesti johdonmukaisia. Puun ja kiven pinnat luontevia, ei kaiverrettua mallia, logoja, tekstiä, kasvoja tai nimetyn museoesineen kopiointia. CaptionFi nimeää tavalliset välineet yleishavainnoksi, ei Praian museon todelliseksi näyttelyksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva tavallisesta huhmareesta, survimesta ja käsimyllystä; ei Praian museon esineiden tai näyttelyn jäljennös.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "praia-k2-arjen-tyovalineet-20261012-v1",
+          "sha256": "f5bf9e0234b445a883b6c6d949fcca4ff2dddd4fc62cf91b4130ed1fdbc8c7f1",
+          "verdict": "accepted",
+          "reason": "Huhmareen avoin syvennys, erillinen survain ja käsimyllyn kaksi kiekkoa/syöttöaukko/kääntövarsi ovat rakenteellisesti johdonmukaisia. Puun ja kiven pinnat luontevia, ei kaiverrettua mallia, logoja, tekstiä, kasvoja tai nimetyn museoesineen kopiointia. CaptionFi nimeää tavalliset välineet yleishavainnoksi, ei Praian museon todelliseksi näyttelyksi.",
+          "reviewedAt": "2026-10-12T17:56:45.338592+00:00",
+          "required": true,
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/assets/praia-k2-arjen-tyovalineet-20261012-v1/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "sourceContentSha256": "61a54b3406647d2eaa4a8a425c45fdcc1a167a7aa1e8112db0689a1b74f8761d",
+            "sourceContentExcerpt": "Praian etnografinen museo toimii Plateaulla 1800-luvun talossa, mutta sen aineisto on kerätty eri Kap Verden saarilta. Kokoelmat kertovat arjen taidoista: maataloudesta, karjanhoidosta, kalastuksesta ja käsitöistä. Kudonta, korinpunonta ja keramiikka kuuluvat museon aiheisiin. Säilytettävä perintö ei rajoitu tavaroihin, sillä myös kertomuksia ja arvoituksia on tallennettu. Museo syntyi myöhäisen 1900-luvun kulttuuriperintöhankkeesta. Vanhan talon sisälle koottiin siten monen saaren muisti, ei vain pääkaupungin historia.",
+            "sourceEvidence": [
+              {
+                "url": "https://ipc.cv/museus/museu-etnografico-da-praia/",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-A/museum-ipc.txt",
+                "facts": "Museon aineisto käsittelee maataloutta, arjen taitoja ja perinteistä kodin/keittiön toimintaa."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/cc-status.json",
+                "facts": {
+                  "boundedCheck": [
+                    "Pilão & moinho.jpg",
+                    "Praia-Musée ethnographique (1).jpg",
+                    "Museu Etnográfico, Praia, Cape Verde.jpg"
+                  ],
+                  "visuallyViewed": [
+                    "valiaikainen/praia-B/preview-05.jpg"
+                  ],
+                  "reason": "Paikallinen museoesinekuva PD-self; CPV art34:n kaupallisen PD-käytön lupa/maksuperuste ei selvitetty. Museorakennuksen pääkuva ei ratkea CC-valokuvalla.",
+                  "safeSubject": "Tavallinen koristeeton puinen survain ja huhmare sekä luonnonkivinen käsimylly; maatalouden arjen työvälineiden yleishavainnollistus. Ei museon todellisen esineen kopiota, ei koristekuvioita, ei väitettä aidosta museoasetelmasta.",
+                  "sourceContent": "$.kaupunkilehti[0].nostot[1]"
+                }
+              }
+            ],
+            "rightsEvidence": "Itse muodostettu yleinen koristelemattomien toiminnallisten puu-/kivivälineiden havainnollistus. Ei PD-museoesineen kopiointia, yksittäistä suunnittelua tai kansanperinteen koristekuviota. CPV:n esinevalokuvan oikeusporttia ei oleteta ratkaistuksi.",
+            "captionFi": "Havainnekuva tavallisesta huhmareesta, survimesta ja käsimyllystä; ei Praian museon esineiden tai näyttelyn jäljennös.",
+            "independentOfProducer": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png?t=8abf9c017d33e8c8",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+        "sha256": "8abf9c017d33e8c8c0419779835bc2af494fdd66c60c61400699f3ba170bc51a",
+        "bytes": 2482904,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "praia-k2-arjen-tyovalineet-20261012-v1",
+        "nativeSHA256": "f5bf9e0234b445a883b6c6d949fcca4ff2dddd4fc62cf91b4130ed1fdbc8c7f1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "praia",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T17:57:16.455404+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/praia/praia-k2-arjen-tyovalineet-20261012-v1-f5bf9e0234b4.png",
+        "sha256": "8abf9c017d33e8c8c0419779835bc2af494fdd66c60c61400699f3ba170bc51a",
+        "bytes": 2482904,
+        "SHAReadAt": "2026-10-12T18:29:42.924393+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f5bf9e0234b445a883b6c6d949fcca4ff2dddd4fc62cf91b4130ed1fdbc8c7f1",
+        "rgbPixelSHA256": "07fdf699fae97096b2814ae055c6a728b611630e31e6e433752cf2de1de8a3b5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+      "contextAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e04-praia-photo-c25190feb67e0468",
+      "galleryImageID": "capital-cc-e04-praia-photo-c25190feb67e0468",
+      "commonsFile": "Praia-Plage de Gamboa (5).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
+        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (5).jpg",
+        "vuosi": "2012"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
+        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (5).jpg",
+        "vuosi": "2012"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
+        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (5).jpg",
+        "vuosi": "2012"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+      "exportSHA256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-45.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+        "semanticContextSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+        "subjectTitle": "praia — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(5).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Praia-Plage_de_Gamboa_%285%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/8227",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.txt",
+            "basis": "CPV DL1/2009 art62.1(d) luettu itse WIPO-lain kokonaisesta tekstistä. Yksittäinen pysyvästi julkisessa paikassa oleva arkkitehtuuri-/taide-/taideteollinen teos ei ole näiden kaupunki/ranta/luoton yleisnäkymien pääaihe. Sivuosaperuste ei anna lupaa poimia rakennusta tai maalattua pintaa omaksi pääkuvakseen. Art33/34 kaupallisen PD/folklore-käytön maksut/lupa ei ohiteta rakennuksen ikäoletuksella. CC-lisenssi Author-riviltä ja linkistä varmennettu uudelleen."
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-45.jpg",
+            "viewSha256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(5).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-45.html",
+            "sourcePageSha256": "3d58fb26420c66d3fe64bf5ac9297c5250d1f415c4b98385a4d1334fd020a9bd",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Praia-Plage_de_Gamboa_%285%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-45.jpg",
+            "nativeSha256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "qaReason": "Aito Gamboan rantaa ja lahtea esittävä paikkavalokuva. Alkuperäinen tarkastettu: etualan henkilön kasvot eivät näytä tunnistettavia piirteitä ja muut henkilöt etäisiä. Yksittäinen suojattu arkkitehtuuriteos ei ole pääaihe. Vuosi 2012 kirjataan; PHOTOlle ei vaadita vuoden 2026 tuoreutta, vaakamuotoa tai panoraamaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Praia-Plage de Gamboa (5).jpg",
+          "verdict": "accepted",
+          "reason": "Aito Gamboan rantaa ja lahtea esittävä paikkavalokuva. Alkuperäinen tarkastettu: etualan henkilön kasvot eivät näytä tunnistettavia piirteitä ja muut henkilöt etäisiä. Yksittäinen suojattu arkkitehtuuriteos ei ole pääaihe. Vuosi 2012 kirjataan; PHOTOlle ei vaadita vuoden 2026 tuoreutta, vaakamuotoa tai panoraamaa.",
+          "required": true,
+          "source": "retained-praia-B-selection",
+          "reviewedAt": "2026-10-12T17:56:45.126420+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-45.jpg",
+            "viewSha256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(5).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-45.html",
+            "sourcePageSha256": "3d58fb26420c66d3fe64bf5ac9297c5250d1f415c4b98385a4d1334fd020a9bd",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Praia-Plage_de_Gamboa_%285%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-45.jpg",
+            "nativeSha256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "sha256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "praia",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Praia-Plage de Gamboa (5).jpg",
+        "sha256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(5).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Praia-Plage_de_Gamboa_%285%29.jpg",
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3648,
+        "height": 2736,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
+        "bytes": 2095747,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:49.161134+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Praia-Plage de Gamboa (5).jpg",
+        "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
+        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "vuosi": "2012"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
+        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (5).jpg",
+        "vuosi": "2012"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+      "contextAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-praia-c1-63588d9f67bbb79c",
+      "galleryImageID": "capital-cc-e04-praia-c1-63588d9f67bbb79c",
+      "commonsFile": "Praia-Plage de Gamboa (6).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (6).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (6).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (6).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+      "exportSHA256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-22.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+        "semanticContextSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+        "subjectTitle": "Praia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(6).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Praia-Plage_de_Gamboa_%286%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/8227",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.txt",
+            "basis": "CPV DL1/2009 art62.1(d) luettu itse WIPO-lain kokonaisesta tekstistä. Yksittäinen pysyvästi julkisessa paikassa oleva arkkitehtuuri-/taide-/taideteollinen teos ei ole näiden kaupunki/ranta/luoton yleisnäkymien pääaihe. Sivuosaperuste ei anna lupaa poimia rakennusta tai maalattua pintaa omaksi pääkuvakseen. Art33/34 kaupallisen PD/folklore-käytön maksut/lupa ei ohiteta rakennuksen ikäoletuksella. CC-lisenssi Author-riviltä ja linkistä varmennettu uudelleen."
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-22.jpg",
+            "viewSha256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(6).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-22.html",
+            "sourcePageSha256": "6ecf5648fed535265dd77fb4b61d4768718d8533427bd4bcc1ffa82d09cbc926",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Praia-Plage_de_Gamboa_%286%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-22.jpg",
+            "nativeSha256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "qaReason": "Aito laaja Gamboan/Plateaun näkymä. Alkuperäiset pikselit tarkastettu: ihmiskasvoista ei erotu tunnistettavia piirteitä. Seinän kaukaiset fyysiset mainokset ovat sivuosia, eivät kuvan päälle lisättyä tekstiä tai kuvan pääaihe. Vain kokonaisena maisemana; vuosi 2012."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Praia-Plage de Gamboa (6).jpg",
+          "verdict": "accepted",
+          "reason": "Aito laaja Gamboan/Plateaun näkymä. Alkuperäiset pikselit tarkastettu: ihmiskasvoista ei erotu tunnistettavia piirteitä. Seinän kaukaiset fyysiset mainokset ovat sivuosia, eivät kuvan päälle lisättyä tekstiä tai kuvan pääaihe. Vain kokonaisena maisemana; vuosi 2012.",
+          "required": true,
+          "source": "retained-praia-B-selection",
+          "reviewedAt": "2026-10-12T17:56:45.126420+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-22.jpg",
+            "viewSha256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(6).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-22.html",
+            "sourcePageSha256": "6ecf5648fed535265dd77fb4b61d4768718d8533427bd4bcc1ffa82d09cbc926",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Praia-Plage_de_Gamboa_%286%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-22.jpg",
+            "nativeSha256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "sha256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "praia",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Praia-Plage de Gamboa (6).jpg",
+        "sha256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Plage_de_Gamboa_(6).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Praia-Plage_de_Gamboa_%286%29.jpg",
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3648,
+        "height": 2736,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
+        "bytes": 2449997,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:44.333061+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Praia-Plage de Gamboa (6).jpg",
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "tiedosto": "Praia-Plage de Gamboa (6).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+      "contextAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e04-praia-c2-b3ab7f8f7d02d997",
+      "galleryImageID": "capital-cc-e04-praia-c2-b3ab7f8f7d02d997",
+      "commonsFile": "Praia coast Cape Verde.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
+        "suora": true,
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "tiedosto": "Praia coast Cape Verde.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "tiedosto": "Praia coast Cape Verde.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
+        "suora": true,
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "tiedosto": "Praia coast Cape Verde.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+      "exportSHA256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/praia/0e87d61a9ccd21771376ce1ceed6af8d8470d1ff306d06e47412885787785e13.jpg",
+      "dimensions": [
+        4146,
+        2036
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+        "semanticContextSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+        "subjectTitle": "Praia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Cayambe",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Praia_coast_Cape_Verde.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/8227",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.txt",
+            "basis": "CPV DL1/2009 art62.1(d) luettu itse WIPO-lain kokonaisesta tekstistä. Yksittäinen pysyvästi julkisessa paikassa oleva arkkitehtuuri-/taide-/taideteollinen teos ei ole näiden kaupunki/ranta/luoton yleisnäkymien pääaihe. Sivuosaperuste ei anna lupaa poimia rakennusta tai maalattua pintaa omaksi pääkuvakseen. Art33/34 kaupallisen PD/folklore-käytön maksut/lupa ei ohiteta rakennuksen ikäoletuksella. CC-lisenssi Author-riviltä ja linkistä varmennettu uudelleen."
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-c2.jpg",
+            "viewSha256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-46.html",
+            "sourcePageSha256": "032b73acdb3455f2818d242fa1ffcca6baf51f1f432c4e6aa93399ebdc48e6e0",
+            "author": "Cayambe",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 4146,
+            "height": 2036,
+            "photoYear": "2011",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Praia_coast_Cape_Verde.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-c2.jpg",
+            "nativeSha256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+            "nativeActualDimensions": [
+              4146,
+              2036
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "qaReason": "Aito Gamboan lahden ja Santa Marian luodon laaja näkymä. Ei luettavia kasvopiirteitä, lisättyä tekstiä tai vesileimaa. Kaupunkirakennukset maiseman sivuosia; ei rakennuksen pääkuvaksi. Valokuva 2011, ei nykytilanteen todiste."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Praia coast Cape Verde.jpg",
+          "verdict": "accepted",
+          "reason": "Aito Gamboan lahden ja Santa Marian luodon laaja näkymä. Ei luettavia kasvopiirteitä, lisättyä tekstiä tai vesileimaa. Kaupunkirakennukset maiseman sivuosia; ei rakennuksen pääkuvaksi. Valokuva 2011, ei nykytilanteen todiste.",
+          "required": true,
+          "source": "retained-praia-B-selection",
+          "reviewedAt": "2026-10-12T17:56:45.126420+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-c2.jpg",
+            "viewSha256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-46.html",
+            "sourcePageSha256": "032b73acdb3455f2818d242fa1ffcca6baf51f1f432c4e6aa93399ebdc48e6e0",
+            "author": "Cayambe",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 4146,
+            "height": 2036,
+            "photoYear": "2011",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Praia_coast_Cape_Verde.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-c2.jpg",
+            "nativeSha256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+            "nativeActualDimensions": [
+              4146,
+              2036
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "sha256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "praia",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Praia coast Cape Verde.jpg",
+        "sha256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Praia_coast_Cape_Verde.jpg",
+        "author": "Cayambe",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 4146,
+        "height": 2036,
+        "originalSHA256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
+        "bytes": 8799166,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:10:44.319484+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Praia coast Cape Verde.jpg",
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "tiedosto": "Praia coast Cape Verde.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+      "contextAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "L1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-praia-l1-19fb258fa2844e63",
+      "galleryImageID": "capital-cc-e04-praia-l1-19fb258fa2844e63",
+      "commonsFile": "Praia coast Cape Verde 2011.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
+        "suora": true,
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "tiedosto": "Praia coast Cape Verde 2011.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "tiedosto": "Praia coast Cape Verde 2011.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
+        "suora": true,
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "tiedosto": "Praia coast Cape Verde 2011.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+      "exportSHA256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/praia/f008a2572a07c1405a3b7173cbd5b90b09832b440c37365fb61638fd37c2dc5a.jpg",
+      "dimensions": [
+        4077,
+        2119
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+        "semanticContextSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+        "subjectTitle": "Laiva tarvitsi vettä ja ruokaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Cayambe",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde_2011.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Praia_coast_Cape_Verde_2011.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/8227",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.txt",
+            "basis": "CPV DL1/2009 art62.1(d) luettu itse WIPO-lain kokonaisesta tekstistä. Yksittäinen pysyvästi julkisessa paikassa oleva arkkitehtuuri-/taide-/taideteollinen teos ei ole näiden kaupunki/ranta/luoton yleisnäkymien pääaihe. Sivuosaperuste ei anna lupaa poimia rakennusta tai maalattua pintaa omaksi pääkuvakseen. Art33/34 kaupallisen PD/folklore-käytön maksut/lupa ei ohiteta rakennuksen ikäoletuksella. CC-lisenssi Author-riviltä ja linkistä varmennettu uudelleen."
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l1.jpg",
+            "viewSha256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde_2011.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-23.html",
+            "sourcePageSha256": "be2ddb332f6c36e67dc0530841fd437f8c241de941139c0fd734c7f5ed38ac07",
+            "author": "Cayambe",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 4077,
+            "height": 2119,
+            "photoYear": "2011",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Praia_coast_Cape_Verde_2011.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l1.jpg",
+            "nativeSha256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+            "nativeActualDimensions": [
+              4077,
+              2119
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "qaReason": "Laaja aito Gamboan luonnonlahden maisema. Ihmiset etäisiä pisteitä; rakennukset/laituriosat sivuosassa. Lahden yleiskuva historianostoon; ei vuoden 1873 näkymä eikä historiallisen laivahuoltotapahtuman kuva. Kuvausvuosi 2011."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "commonsFile": "Praia coast Cape Verde 2011.jpg",
+          "verdict": "accepted",
+          "reason": "Laaja aito Gamboan luonnonlahden maisema. Ihmiset etäisiä pisteitä; rakennukset/laituriosat sivuosassa. Lahden yleiskuva historianostoon; ei vuoden 1873 näkymä eikä historiallisen laivahuoltotapahtuman kuva. Kuvausvuosi 2011.",
+          "required": true,
+          "source": "retained-praia-B-selection",
+          "reviewedAt": "2026-10-12T17:56:45.126420+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l1.jpg",
+            "viewSha256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde_2011.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-23.html",
+            "sourcePageSha256": "be2ddb332f6c36e67dc0530841fd437f8c241de941139c0fd734c7f5ed38ac07",
+            "author": "Cayambe",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 4077,
+            "height": 2119,
+            "photoYear": "2011",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Praia_coast_Cape_Verde_2011.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l1.jpg",
+            "nativeSha256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+            "nativeActualDimensions": [
+              4077,
+              2119
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "sha256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "praia",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "commonsFile": "Praia coast Cape Verde 2011.jpg",
+        "sha256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_coast_Cape_Verde_2011.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Praia_coast_Cape_Verde_2011.jpg",
+        "author": "Cayambe",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 4077,
+        "height": 2119,
+        "originalSHA256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
+        "bytes": 6626729,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:10:54.196573+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Praia coast Cape Verde 2011.jpg",
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "tiedosto": "Praia coast Cape Verde 2011.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+      "contextAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "L2",
+      "type": "commons",
+      "assetID": "capital-cc-e04-praia-l2-d5b04ec5c7368a05",
+      "galleryImageID": "capital-cc-e04-praia-l2-d5b04ec5c7368a05",
+      "commonsFile": "Praia-Ilhéu de Santa Maria (2).jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+      "exportSHA256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-10.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+        "semanticContextSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+        "subjectTitle": "Luoto varastoi ja eristi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Praia-Ilh%C3%A9u_de_Santa_Maria_%282%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/8227",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.txt",
+            "basis": "CPV DL1/2009 art62.1(d) luettu itse WIPO-lain kokonaisesta tekstistä. Yksittäinen pysyvästi julkisessa paikassa oleva arkkitehtuuri-/taide-/taideteollinen teos ei ole näiden kaupunki/ranta/luoton yleisnäkymien pääaihe. Sivuosaperuste ei anna lupaa poimia rakennusta tai maalattua pintaa omaksi pääkuvakseen. Art33/34 kaupallisen PD/folklore-käytön maksut/lupa ei ohiteta rakennuksen ikäoletuksella. CC-lisenssi Author-riviltä ja linkistä varmennettu uudelleen."
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-10.jpg",
+            "viewSha256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(2).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-10.html",
+            "sourcePageSha256": "6636a863591e0214b3b16c92016a44771b9abd0920ef675b931a1aae54cfa4e3",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Praia-Ilh%C3%A9u_de_Santa_Maria_%282%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-10.jpg",
+            "nativeSha256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "qaReason": "Oikea Santa Marian luoto ja ranta. Alkuperäiset pikselit tarkastettu: lähimpien henkilöiden kasvot ovat selin, peittyneitä tai vailla tunnistettavia piirteitä. Rauniot ja seinämaalaukset maiseman sivuosassa; hyväksyntä ei kata niiden erillistä pääkuvaa tai kuvan rajaamista teokseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "commonsFile": "Praia-Ilhéu de Santa Maria (2).jpg",
+          "verdict": "accepted",
+          "reason": "Oikea Santa Marian luoto ja ranta. Alkuperäiset pikselit tarkastettu: lähimpien henkilöiden kasvot ovat selin, peittyneitä tai vailla tunnistettavia piirteitä. Rauniot ja seinämaalaukset maiseman sivuosassa; hyväksyntä ei kata niiden erillistä pääkuvaa tai kuvan rajaamista teokseen.",
+          "required": true,
+          "source": "retained-praia-B-selection",
+          "reviewedAt": "2026-10-12T17:56:45.126420+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-10.jpg",
+            "viewSha256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(2).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-10.html",
+            "sourcePageSha256": "6636a863591e0214b3b16c92016a44771b9abd0920ef675b931a1aae54cfa4e3",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Praia-Ilh%C3%A9u_de_Santa_Maria_%282%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/original-10.jpg",
+            "nativeSha256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "sha256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "praia",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "commonsFile": "Praia-Ilhéu de Santa Maria (2).jpg",
+        "sha256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Praia-Ilh%C3%A9u_de_Santa_Maria_%282%29.jpg",
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3648,
+        "height": 2736,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
+        "bytes": 2430377,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:46.182156+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg",
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+      "contextAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "L3",
+      "type": "commons",
+      "assetID": "capital-cc-e04-praia-l3-8d08589b29396607",
+      "galleryImageID": "capital-cc-e04-praia-l3-8d08589b29396607",
+      "commonsFile": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
+        "suora": true,
+        "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
+        "suora": true,
+        "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+      "exportSHA256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/praia/142031cbe40e63f78e9ed31daf397c72b88ed1e9c4883a980f110da802fd6d4f.jpg",
+      "dimensions": [
+        2849,
+        2000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+        "semanticContextSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+        "subjectTitle": "Simpukankuori mustan kiven välissä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "James St. John",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Coquina_(Anastasia_Formation,_Pleistocene_or_Holocene%3B_Cayo_Costa_Island,_Florida,_USA)_(26032505336).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Coquina_%28Anastasia_Formation%2C_Pleistocene_or_Holocene%3B_Cayo_Costa_Island%2C_Florida%2C_USA%29_%2826032505336%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "basis": "Luonnollinen geologinen materiaali, ei teos. Lähde nimeää Cayo Costa Island, Florida, USA; caption rajaa yleiseksi materiaalikuvaksi. James St. John / CC BY2.0 varmennettu uudelleen lähdesivulta."
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l3.jpg",
+            "viewSha256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Coquina_(Anastasia_Formation,_Pleistocene_or_Holocene%3B_Cayo_Costa_Island,_Florida,_USA)_(26032505336).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-61.html",
+            "sourcePageSha256": "114a0f094123a3849afe31d43ef4a613ad6bc414281b8b1dc451cabb7e4214d1",
+            "author": "James St. John",
+            "authorFieldVerified": true,
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "width": 2849,
+            "height": 2000,
+            "photoYear": "2009",
+            "existingGameUseHits": [],
+            "rightsEvidence": "James St. Johnin valokuvan CC BY 2.0 lähdesivulla; luonnollinen simpukkakivi, ei kuvattavan ihmisteoksen oikeuskerrosta. Floridan näyte, ei Praian paikka. CPV:n arkkitehtuuripoikkeusta ei tarvita eikä sovelleta tähän kuvaan.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-61.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Coquina_%28Anastasia_Formation%2C_Pleistocene_or_Holocene%3B_Cayo_Costa_Island%2C_Florida%2C_USA%29_%2826032505336%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l3.jpg",
+            "nativeSha256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+            "nativeActualDimensions": [
+              2849,
+              2000
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "qaReason": "Aito luonnollisen simpukkakiven lähikuva, ei kasvoja/logoja/ihmisteosta. Vain yleisenä geologisena esimerkkinä L3:ssa. Kuvatekstissä Florida/Cayo Costa pakollinen: ei Praian kerrostuma, Darwinin näyte tai paikkavalokuva Praiasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "commonsFile": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg",
+          "verdict": "accepted",
+          "reason": "Aito luonnollisen simpukkakiven lähikuva, ei kasvoja/logoja/ihmisteosta. Vain yleisenä geologisena esimerkkinä L3:ssa. Kuvatekstissä Florida/Cayo Costa pakollinen: ei Praian kerrostuma, Darwinin näyte tai paikkavalokuva Praiasta.",
+          "required": true,
+          "source": "retained-praia-B-selection",
+          "reviewedAt": "2026-10-12T17:56:45.126420+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l3.jpg",
+            "viewSha256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Coquina_(Anastasia_Formation,_Pleistocene_or_Holocene%3B_Cayo_Costa_Island,_Florida,_USA)_(26032505336).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-61.html",
+            "sourcePageSha256": "114a0f094123a3849afe31d43ef4a613ad6bc414281b8b1dc451cabb7e4214d1",
+            "author": "James St. John",
+            "authorFieldVerified": true,
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "width": 2849,
+            "height": 2000,
+            "photoYear": "2009",
+            "existingGameUseHits": [],
+            "rightsEvidence": "James St. Johnin valokuvan CC BY 2.0 lähdesivulla; luonnollinen simpukkakivi, ei kuvattavan ihmisteoksen oikeuskerrosta. Floridan näyte, ei Praian paikka. CPV:n arkkitehtuuripoikkeusta ei tarvita eikä sovelleta tähän kuvaan.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-61.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Coquina_%28Anastasia_Formation%2C_Pleistocene_or_Holocene%3B_Cayo_Costa_Island%2C_Florida%2C_USA%29_%2826032505336%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-l3.jpg",
+            "nativeSha256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+            "nativeActualDimensions": [
+              2849,
+              2000
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "sha256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "praia",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "commonsFile": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg",
+        "sha256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Coquina_(Anastasia_Formation,_Pleistocene_or_Holocene%3B_Cayo_Costa_Island,_Florida,_USA)_(26032505336).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Coquina_%28Anastasia_Formation%2C_Pleistocene_or_Holocene%3B_Cayo_Costa_Island%2C_Florida%2C_USA%29_%2826032505336%29.jpg",
+        "author": "James St. John",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 2849,
+        "height": 2000,
+        "originalSHA256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
+        "bytes": 3556393,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:10:56.577554+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg",
+        "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+      "contextAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720"
+    },
+    {
+      "era": "e04",
+      "city": "praia",
+      "slot": "N5",
+      "type": "commons",
+      "assetID": "capital-cc-e04-praia-n5-796444495293c437",
+      "galleryImageID": "capital-cc-e04-praia-n5-796444495293c437",
+      "commonsFile": "Praia-Ilhéu de Santa Maria (3).jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Santa Marian luoto\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Santa Marian luoto",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
+        "suora": true,
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+      "exportSHA256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/praia/267ff9acc24736fde57ae884f0fa22ab101568e2109b4a678d12ae7f9c33822d.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
+      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "136a7037b1be20bd9fdce9c3d78e6dd283fd4c2f6f7e594de889d5b6c53a41e1",
+        "semanticContextSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a",
+        "subjectTitle": "Santa Marian luoto",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(3).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Praia-Ilh%C3%A9u_de_Santa_Maria_%283%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "primaryLawUrl": "https://www.wipo.int/wipolex/en/legislation/details/8227",
+            "primaryLawSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.txt",
+            "basis": "CPV DL1/2009 art62.1(d) luettu itse WIPO-lain kokonaisesta tekstistä. Yksittäinen pysyvästi julkisessa paikassa oleva arkkitehtuuri-/taide-/taideteollinen teos ei ole näiden kaupunki/ranta/luoton yleisnäkymien pääaihe. Sivuosaperuste ei anna lupaa poimia rakennusta tai maalattua pintaa omaksi pääkuvakseen. Art33/34 kaupallisen PD/folklore-käytön maksut/lupa ei ohiteta rakennuksen ikäoletuksella. CC-lisenssi Author-riviltä ja linkistä varmennettu uudelleen."
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-n5.jpg",
+            "viewSha256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(3).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-41.html",
+            "sourcePageSha256": "1f2aded212600233d9134bf6a94ed9ac5d2f5f15fd592a017d61e5d19547bdca",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Praia-Ilh%C3%A9u_de_Santa_Maria_%283%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-n5.jpg",
+            "nativeSha256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "qaReason": "Oikea luonnollinen Santa Marian luoto. Rauniot/maalaukset pieniä kokonaisuuden osia; ei teospääaihe eikä yksittäisen maalauksen kuva. Ihmiset etäisiä eikä esikatselussa ole tunnistettavia kasvopiirteitä. Vuosi 2012; ei nykyisen hotellin tai sillan todiste."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+        "fileSHA256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1",
+        "item": {
+          "slot": "N5",
+          "targetJsonPath": "$.nahtavyydet[\"Santa Marian luoto\"].kuvat[0]",
+          "commonsFile": "Praia-Ilhéu de Santa Maria (3).jpg",
+          "verdict": "accepted",
+          "reason": "Oikea luonnollinen Santa Marian luoto. Rauniot/maalaukset pieniä kokonaisuuden osia; ei teospääaihe eikä yksittäisen maalauksen kuva. Ihmiset etäisiä eikä esikatselussa ole tunnistettavia kasvopiirteitä. Vuosi 2012; ei nykyisen hotellin tai sillan todiste.",
+          "required": true,
+          "source": "retained-praia-B-selection",
+          "reviewedAt": "2026-10-12T17:56:45.126420+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-n5.jpg",
+            "viewSha256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(3).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/candidate-41.html",
+            "sourcePageSha256": "1f2aded212600233d9134bf6a94ed9ac5d2f5f15fd592a017d61e5d19547bdca",
+            "author": "Ji-Elle",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 3648,
+            "height": 2736,
+            "photoYear": "2012",
+            "existingGameUseHits": [],
+            "rightsEvidence": "Täsmäkuvan pääaihe on kokonainen ranta-/luoto-/kalliomaisema tai laaja kaupunkikokonaisuus. Katselussa ei yksilöity itsenäisenä toisinnettua suojattua nykyteosta; mahdolliset pienet rakennus-/maalausosat eivät ole erillinen pääaihe. Hyväksyntä koskee tätä kokonaista rajautumaa. Vuoden2009 Art62 on historiallista taustanäyttöä; vuoden2017 vaikutus avoin, eikä siitä väitetä ajantasaista FOP-lupaa. Ei lupaa erottaa kuvan rakennusta/taidetta omaksi kohdekuvaksi.",
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/wipo-law-2009.html",
+            "formatRule": "Only TRAVELER requires 0.60–0.85; PHOTO/O/N/K/L portrait permitted. PHOTO need not be panorama; place evidence required.",
+            "naturalMarkingRule": "CC:n fyysinen mallikilpi/kyltti ei yksin hylkää; päälle lisätty teksti/vesileima ja pääaiheinen mainoskuva eri arvio. AI:n logot/teksti kielletty.",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Praia-Ilh%C3%A9u_de_Santa_Maria_%283%29.jpg",
+            "retainedSelectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/praia-B/selected.json",
+            "rightsReviewHistory": [
+              {
+                "previousEvidence": "Luontopääaihe tai yksittäisten teosten sivuosat; WIPO Lex 8227 Art.62(1)(d) luettu alkuperäisestä HTML-lakitekstistä. Ei rakennuksen PD-vanhuusoletusta eikä yksittäisen suojatun teoksen pääkuvan lupaa.",
+                "recordedAt": "2026-10-12T19:16:46.248425+00:00"
+              }
+            ],
+            "currentLawVerified": false,
+            "rightsSupportMemo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/afrikka/afrikka-rights-praia.json",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa-evidence/native-retained-n5.jpg",
+            "nativeSha256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+            "nativeActualDimensions": [
+              3648,
+              2736
+            ],
+            "nativeCheckedAt": "2026-10-12T19:24:18.062381+00:00"
+          },
+          "sha256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/qa.json",
+            "sha256": "cdb7e1c8c880cfea21494f9a9f2da2bbed301e4cf6948dd9c75b682ff77182c1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/praia/illustration-qa-extra.json",
+            "sha256": "b84565e6a03a5115f1dc501bd4943f3c6a7fb3e37207c880e3844f0bc2a7b899"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "praia",
+        "slot": "N5",
+        "targetJsonPath": "$.nahtavyydet[\"Santa Marian luoto\"].kuvat[0]",
+        "commonsFile": "Praia-Ilhéu de Santa Maria (3).jpg",
+        "sha256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia-Ilh%C3%A9u_de_Santa_Maria_(3).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Praia-Ilh%C3%A9u_de_Santa_Maria_%283%29.jpg",
+        "author": "Ji-Elle",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3648,
+        "height": 2736,
+        "originalSHA256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
+        "bytes": 2162675,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:10:58.396768+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg",
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "targetAfterSHA256": "136a7037b1be20bd9fdce9c3d78e6dd283fd4c2f6f7e594de889d5b6c53a41e1",
+      "contextAfterSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

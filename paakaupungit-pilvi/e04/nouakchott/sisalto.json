@@ -10,16 +10,16 @@
       "johdanto": "Saharan laidalle suunniteltu pääkaupunki kasvoi toreista ja työpaikoista; Atlantin rannassa jatkuu kalastuksen arki.",
       "kansikuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "15-Nouakchott-eH-R0058185.jpg",
+          "lyhyt": "Nouakchottin keskustan katuverkko vuoden2017 ilmakuvassa.",
+          "selite": "Nouakchottin keskustan katuverkko vuoden2017 ilmakuvassa.",
+          "lahde": "Laminesall96, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Nouakchott.jpg",
+          "lyhyt": "Nouakchottin asutusta ja puustoista aluetta vuoden2017 ilmakuvassa.",
+          "selite": "Nouakchottin asutusta ja puustoista aluetta vuoden2017 ilmakuvassa.",
+          "lahde": "Laminesall96, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "",
@@ -51,10 +51,10 @@
           "otsikko": "Avaruuskivi kauppatiskillä",
           "teksti": "Nouakchottissa myydään myös Saharan alueelta löydettyjä meteoriitteja. Taivaalla näkyvä valoilmiö on meteori, mutta maahan asti päätynyt kappale on meteoriitti. Se voi olla kivinen, rautapitoinen tai näiden yhdistelmä. Paljaalla kivitasangolla tumma kappale voi erottua ympäristöstään. Kaupassa sillä ei silti aina ole mukana tarkkaa löytöpaikkaa: monen Luoteis-Afrikan meteoriitin löytötiedot puuttuvat. Kiven myyntipaikka ei kerro sen putoamispaikkaa, eikä pelkkä kauppanimi todista kappaleen aitoutta.",
           "wiki": "Nouakchott",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "NWA Chondrite.jpg",
+          "lyhyt": "Luoteis-Afrikan kondriitin leikattu pinta, meteoriitin yleiskuva.",
+          "selite": "Luoteis-Afrikan kondriitin leikattu pinta, meteoriitin yleiskuva. Ei Nouakchottissa myydyksi väitetty kappale.",
+          "lahde": "Geo Lightspeed7, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "otsikko": "Teen vaahto tehdään kaatamalla",
@@ -218,10 +218,10 @@
           "otsikko": "Rannikkokasvin täytyy kestää suolaa",
           "teksti": "Rannikon ja sisämaan dyyneille ei Nouakchottin hankkeessa valittu automaattisesti samoja kasveja. Rannikkoistutuksissa tarvittiin suolaisuutta kestäviä lajeja, kuten Nitraria retusaa ja tamariskeja. Istuttaminen ajoitettiin maan kostumiseen, ja taimia kasteltiin tarvittaessa. Kuljetuksen aikana niitä suojattiin kuivattavalta auringolta ja tuulelta. Kasvin valinta oli siis vain osa työtä: myös siirtäminen, oikea kasvupaikka ja taimien hoito kuuluivat istutusten perustamiseen. Tämä kuvaa hanketta, ei kaikkien dyynien yleistä ohjetta.",
           "wiki": "Nouakchott",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Nitraria retusa Djerba Tunisia.JPG",
+          "lyhyt": "Rannikkokasvin täytyy kestää suolaa.",
+          "selite": "Nitraria retusan kukkia ja lehtiä Djerballa Tunisiassa vuonna2013; lajin yleiskuva, ei Nouakchottin istutus.",
+          "lahde": "MurielBendel, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
       "tehtava": {
@@ -374,10 +374,11 @@
     }
   },
   "valokuva": {
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": ""
+    "tiedosto": "Mauritania periferia della capitale.jpg",
+    "lyhyt": "Nouakchottin laidalla oleva katu ja aurinkosähköllä toimivat valaisimet vuonna2020.",
+    "selite": "Nouakchottin laidalla oleva katu ja aurinkosähköllä toimivat valaisimet vuonna2020.",
+    "lahde": "Cooperazione, Commons (CC BY-SA 4.0)",
+    "vuosi": "2020"
   },
   "saatiedot": null
 }
