@@ -27,6 +27,12 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   lokit/todistus-houkuttimet-iphone-182d-20261011-1652/arkki-houkuttimet-iphone.jpg (+ ipad-182d-1654).
   Avoin (ei pyydetty): tavalliset himmeät pisteet jäävät iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle.
 
+## SÄÄNTÖ 12.10. 10.3x (omistaja, Raamattu ASEMATAULU: VAATII TOIMIA, PR #4489)
+- Kun omistajan pitää toimia (lupaikkuna/vastaus LS1:n ikkunassa, kirjautuminen, ostos, vain hänen päätöksensä): heti Asemataululle
+  ArtifactData set url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix, kokoelma "talo", doc_id "toimi-linssiseppa",
+  data {rooli: "Linssiseppä", kysymys: "<yksi rivi>", ts: <ms>}; epäonnistuessa Postivahdille "VAATII TOIMIA: Linssiseppä: <asia>".
+  Hoidettu → get + delete if_version.
+
 ## Lisäys 12.10. 09.3x (184-pilotit; JULKAISU VASTA OMISTAJAN PYYNNÖSTÄ)
 - **Lähestyminen → 184** (PT 07.5x): proto linssiseppa/museo-lahestyminen-183 (wt proto-linssiseppa-lahestyminen) **52ad8fedd**
   (⊃ 95% -portti cf32bd1b6, QA "museo lahestyminen odotus <s>" 98d11e333, lataus lokiin/s, pelin kartta pois Googlen kuvasta).
