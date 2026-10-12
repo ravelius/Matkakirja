@@ -45,3 +45,14 @@ crons = ["17 4 * * *"]
 # SALAISUUKSIA EI ASETETA. Sähkeworkerilla ei ole pääavainta: jokainen
 # jäsen saa oman avaimensa liittyessään, ja tietokannassa on vain sen
 # tiiviste.
+
+# PALLOT NÄKYVIIN (juna 185, suunnitelma #4501): yksi Durable Object -huone retkikuntaa ja kaupunkia kohden,
+# WebSocket hibernation -rajapinnalla. SQLite-pohjainen luokka (new_sqlite_classes) toimii Workers Free -tasolla
+# ilman ostoa (Julkaisija 12.10.: 100 000 pyyntöä/vrk; ylitys = virhe, ei laskua). Sijainteja ei tallenneta.
+[[durable_objects.bindings]]
+name = "PALLOT"
+class_name = "PalloHuone"
+
+[[migrations]]
+tag = "v1-pallot"
+new_sqlite_classes = ["PalloHuone"]

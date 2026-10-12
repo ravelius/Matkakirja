@@ -169,6 +169,10 @@ details.juna .runko-tl .teksti { flex: 1 1 220px; min-width: 0; }
 .tf-paneeli { padding-left: 0; }
 .tf-paneeli { font-size: 0.85rem; gap: 4px; }
 .tf-paneeli .teksti { white-space: pre-line; }
+.osio-otsikko { font-weight: 700; color: var(--muste); }
+/* Työlista (omistaja 12.10. 15.1x): leipäteksti samankokoisena kuin junassa, otsikot vain vähän leipätekstiä isompina. */
+#tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti, #valmistuneet .runko .tilanne { font-size: 0.85rem; }
+#tyolista details.juna.iso .otsikko { font-size: 0.95rem; }
 .rooli, .rooli.sonnet { background: var(--t-lepo); }
 .rooli.tila-tyo { background: var(--t-tyo); }
 .rooli.tila-odottaa { background: var(--t-odottaa); }
@@ -209,6 +213,13 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 /* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
 #tyolista details.juna { margin-left: 0.8em; }
 #tyolista details.juna .runko { padding-left: 2.1em; }
+/* Rivitys (omistaja 12.10. 12.3x: "tee paremmin toimiva rivitys"): väkänen pysyy vasemmalla, pitkä otsikko rivittyy omassa
+   sarakkeessaan ja edistyspalkki pysyy ensimmäisen rivin oikeassa reunassa; mikään osa ei putoa omalle rivilleen. */
+#tyolista details.juna > summary { flex-wrap: nowrap; align-items: flex-start; }
+#tyolista details.juna > summary::before { flex: none; line-height: 1.35; }
+#tyolista details.juna > summary .otsikko { flex: 1 1 auto; min-width: 0; line-height: 1.35; overflow-wrap: anywhere; }
+#tyolista details.juna > summary .symboli { flex: none; line-height: 1.35; }
+#tyolista details.juna > summary .edistys { flex: none; align-self: flex-start; margin-top: 0.22em; }
 /* Rivinvaihdot säilyvät (Bugikorjaukset-paketin vika per rivi, omistaja 10.10. 17.0x) */
 #tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti { white-space: pre-line; }
 /* Valmistuneet työlistan alla (omistaja 10.10. 16.3x) */
@@ -350,7 +361,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
       d.append(su);
       var runko = luo('div', 'runko' + (aktiivinen ? ' runko-tl' : ''));
       if (r.teksti) runko.append(luo('div', 'teksti', r.teksti));
-      if (r.tilanne) runko.append(luo('div', 'tilanne', r.tilanne));
+      var tl = r.tilanne ? jasennelty('tilanne', r.tilanne, true) : null;
+      if (tl) runko.append(tl);
       if (r.lisa && aktiivinen) {
         var vs = luo('div', 'vastuut');
         String(r.lisa).split(',').map(function (x) { return x.trim(); }).filter(Boolean).forEach(function (n) {
@@ -385,6 +397,55 @@ section:not(.kiinni) .yhteenveto { display: none; }
   // Sinulle-osion auki/kiinni muistetaan katsojan selaimessa (vain mukavuus; ilman tallennusta kiinni).
   var viestitAuki = false;
   try { viestitAuki = localStorage.getItem('sinulle-auki') === '1'; } catch (e) { viestitAuki = false; }
+  // Osio-otsikot (omistaja 12.10. 14.5x: "valmiina ja työn alla saa olla boldattuna ja laita työn alla ylimmäiseksi ja lisää yksi
+  // tyhjä rivi ennen valmiina riviä"): rivin alun Työn alla / Valmiina / Korjatut / Uutta / Junassa N lihavoituna, Työn alla -osio
+  // ensimmäisenä ja osioiden väliin tyhjä rivi. Kirjoittajat jatkavat entisellä muodolla; järjestys tehdään vain näytöllä.
+  // Otsikko voi jatkua ennen kaksoispistettä, esim. "Valmiina junassa 183 (julkaistaan pyynnöstäsi):".
+  var OSIO_OTSIKKO = /^\s*(Työn alla|Valmiina|Korjatut|Uutta|Junassa\s+\d+)\b[^:\n]{0,60}:/i;
+  var TYON_ALLA = /^\s*Työn alla/i;
+  // Työlistassa vain keskeneräiset (omistaja 12.10. 15.1x: "valmiita ei tarvitse näyttää, vain keskeneräiset"): rivi, jonka tilanteessa
+  // on osio-otsikoita mutta ei Työn alla -osiota, on valmis ja siirtyy Valmistuneisiin.
+  function vainValmiita(r) {
+    var otsikot = String(r.tilanne || '').split('\n').filter(function (x) { return OSIO_OTSIKKO.test(x); });
+    return otsikot.length > 0 && !otsikot.some(function (x) { return TYON_ALLA.test(x); });
+  }
+  function jasennelty(luokka, teksti, vainKesken) {
+    var e = luo('div', luokka);
+    var rivit = String(teksti).split('\n');
+    var alku = [], osiot = [];
+    rivit.forEach(function (rivi) {
+      if (OSIO_OTSIKKO.test(rivi)) osiot.push([rivi]);
+      else if (osiot.length) osiot[osiot.length - 1].push(rivi);
+      else alku.push(rivi);
+    });
+    if (!osiot.length) { e.textContent = String(teksti); return e; }
+    if (vainKesken) {
+      osiot = osiot.filter(function (o) { return TYON_ALLA.test(o[0]); });
+      while (alku.length && !alku[alku.length - 1].trim()) alku.pop();
+      if (!osiot.length && !alku.length) return null;
+    }
+    var tyonAlla = function (o) { return TYON_ALLA.test(o[0]) ? 0 : 1; };
+    osiot = osiot.map(function (o, i) { return { o: o, i: i }; })
+      .sort(function (a, b) { return tyonAlla(a.o) - tyonAlla(b.o) || a.i - b.i; })
+      .map(function (x) { return x.o; });
+    var ensimmainen = true;
+    var lisaa = function (rivi) {
+      if (!ensimmainen) e.append(document.createTextNode('\n'));
+      ensimmainen = false;
+      var m = rivi.match(OSIO_OTSIKKO);
+      if (m) {
+        e.append(luo('strong', 'osio-otsikko', rivi.slice(0, m[0].length).trim()));
+        if (rivi.length > m[0].length) e.append(document.createTextNode(rivi.slice(m[0].length)));
+      } else e.append(document.createTextNode(rivi));
+    };
+    alku.forEach(lisaa);
+    osiot.forEach(function (o, i) {
+      while (o.length > 1 && !o[o.length - 1].trim()) o.pop();
+      if (i > 0 || alku.length) lisaa('');
+      o.forEach(lisaa);
+    });
+    return e;
+  }
   // Linkit napautettaviksi (https://…); muu teksti sellaisenaan, ei HTML:ää.
   function linkitetty(teksti) {
     var f = document.createDocumentFragment();
@@ -435,7 +496,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
         sailio.append(solu);
       } else sailio.append(b);
       if (valittuJuna === nimi) {
-        if (r.teksti) paneeli.append(luo('div', 'teksti', r.teksti));
+        if (r.teksti) paneeli.append(jasennelty('teksti', r.teksti));
         if (r.lisa) paneeli.append(luo('div', 'lisa', r.lisa));
       }
     });
@@ -547,7 +608,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     kyL.hidden = !(kysymysAuki && kyN && Array.isArray(ky));
     // Valmistuneet erikseen työlistan alle; otsikon napautus näyttää ne (omistaja 10.10. 16.3x).
     var tlRivit = (t && t.rivit) || [];
-    var onValmis = function (r) { return /^valmis/i.test(String(r.tila || '')); };
+    var onValmis = function (r) { return /^valmis/i.test(String(r.tila || '')) || vainValmiita(r); };
     taittuvat($('tyolista'), tlRivit.filter(function (r) { return !onValmis(r); }), 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
     var valmiitTl = tlRivit.filter(onValmis);
     $('valmistuneet-otsikko').hidden = valmiitTl.length === 0;
@@ -568,7 +629,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
       d.append(su);
       var runko = luo('div', 'runko');
       if (r.teksti) runko.append(luo('div', 'teksti', r.teksti));
-      if (r.tilanne) runko.append(luo('div', 'tilanne', r.tilanne));
+      if (r.tilanne) runko.append(jasennelty('tilanne', r.tilanne));
       d.append(runko);
       vs.append(d);
     });
@@ -658,7 +719,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     ro.append(ruudukko);
 
     // Pienennetyn osion yhteenveto otsikkorivillä (omistaja 11.10. 19.3x).
-    var tyonAlla = tlRivit.filter(function (x) { return /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
+    var tyonAlla = tlRivit.filter(function (x) { return !onValmis(x) && /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
     $('tyolista-yhteenveto').textContent = '(työn alla ' + tyonAlla + ')';
     // Laitteiden käyttö prosentteina (omistaja 12.10. 10.3x): nimi ja prosessorin käyttö, kun Postivahti on mitannut sen.
     var kaytossaP = lr.filter(function (x) { return x.tila === 'käytössä'; }).map(function (x) {

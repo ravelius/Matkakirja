@@ -37,6 +37,7 @@ import { ISO2 } from '../tools/vienti/iso2.mjs';
 import { PAAKAUPUNGIT } from '../tools/vienti/paakaupungit.mjs';
 import { PULMAGENERAATTORIT } from '../js/pulmageneraattorit.js';
 import { taytaPohja } from '../js/tekstipohja.js';
+import { SEA_FEE } from '../js/rules.js';
 
 const { tiedostot, manifest, nimiavaruudet } = await kokoaVienti();
 const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json'));
@@ -426,7 +427,7 @@ test('skeema 1.9: luennat valmiilla ääniosoitteella', async () => {
   assert.match(rivit.get('intro').url, /\?v=2$/);
   const pariisi = rivit.get('matkakirja:pariisi');
   assert.ok(pariisi && /^https:\/\//.test(pariisi.url) && pariisi.teksti && pariisi.paikkarivi);
-  assert.equal(rivit.size, 47);
+  assert.equal(rivit.size, 52); // 47 + Bryssel, Košice, Ljubljana, Luxemburg, Valletta (11.10.2026)
   assert.ok([...rivit.values()].filter((r) => r.kesto).length >= 40, 'kestot Horatio-kuiteista');
 });
 
@@ -1086,7 +1087,7 @@ test('skeema 1.30: äänitaulut, reittien maksu ja laattatyyppien suomenkieliset
   assert.ok(a.filter((x) => x.laji === 'siirtyma').every((x) => x.ryhma === x.data.ryhma && 'nousuMs' in x));
   assert.ok(a.filter((x) => x.laji === 'tilaraita' || x.laji === 'paikkaraita').every((x) => x.tunnus));
   const r = k('reitit');
-  assert.ok(r.filter((x) => x.laji === 'sea').every((x) => x.maksu === 100));
+  assert.ok(r.filter((x) => x.laji === 'sea').every((x) => x.maksu === SEA_FEE)); // juna 183: 200
   assert.ok(r.filter((x) => x.laji !== 'sea').every((x) => x.maksu === 0));
   const [l] = k('laatat');
   assert.equal(l.tyypit.star.nimi, l.tyypit.star.name);
