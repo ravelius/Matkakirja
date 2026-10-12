@@ -307,11 +307,12 @@ export const PAIKALLISAARTEET = {
     isoAarre: {
       name: 'Florentiner-timantti',
       kuva: 'assets/aarteet/paikallis/aut-iso.jpg',
-      fakta: 'Florentiner oli 137 karaatin keltainen timantti ja Habsburgien '
-        + 'kruununjalokivi. Keisariperhe otti sen mukaan maanpakoon 1918, ja '
-        + 'Sveitsissä kivi katosi; sen uskotaan päätyneen varkaan mukana '
-        + 'valtameren taakse ja mahdollisesti hiotun uudelleen tunnistamattomaksi. '
-        + 'Julkisesti sitä ei ole nähty sadan vuoden aikana.',
+      fakta: 'Florentiner on 137 karaatin keltainen timantti ja entinen '
+        + 'Habsburgien kruununjalokivi. Keisariperhe lähti maanpakoon 1918, ja '
+        + 'kiven jäljet katosivat julkisuudesta sadaksi vuodeksi. Marraskuussa '
+        + '2025 kerrottiin, että se oli säilytyslokerossa kanadalaisessa pankissa '
+        + 'Québecin maakunnassa, ja syyskuusta 2026 se on ollut esillä Québecin '
+        + 'taidemuseossa. Omistuksesta ei ole vielä ratkaisua.',
     },
   },
   CHE: {
