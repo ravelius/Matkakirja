@@ -1844,6 +1844,8 @@ const SHELL = [
   './assets/kartat/kosice-varikartta.png',
   './assets/kartat/sisilia-keskusta.png',
   './assets/kartat/sisilia-varikartta.png',
+  './assets/kartat/lappi-keskusta.png',
+  './assets/kartat/lappi-varikartta.png',
   './assets/kartat/valletta-keskusta.png',
   './assets/kartat/valletta-varikartta.png',
   './assets/kartat/tampere-varikartta.png',
