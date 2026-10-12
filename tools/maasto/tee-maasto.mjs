@@ -249,10 +249,15 @@ export function kaksiLahdetta({ glo30 = null, glo90 = null, kynnys = GLO30_KYNNY
 }
 
 /** Yksi laatta tavuiksi (gzip). */
-/** Ruudukko tasolle z, kun näyteväli on tason `naytetaso` (null = sama ruudukko kaikille). */
+/**
+ * Ruudukko tasolle z, kun näyteväli on tason `naytetaso` (null = sama ruudukko kaikille). Yläraja
+ * RUUDUKKO_MAX (2049, z10 tasolla 15): pilotti 4:n diagnoosi (LS2 12.10.) näytti, että myös z10–z11
+ * leijuivat vuonon yllä satoja metrejä, joten tasaus ulotetaan karkeille tasoille; z9:llä väli on 2 × z10.
+ */
+export const RUUDUKKO_MAX = 2049;
 export function ruudukkoTasolle(n, z, naytetaso = null) {
   if (naytetaso === null || z >= naytetaso) return n;
-  return (n - 1) * 2 ** (naytetaso - z) + 1;
+  return Math.min(RUUDUKKO_MAX, (n - 1) * 2 ** (naytetaso - z) + 1);
 }
 
 /*
@@ -261,24 +266,25 @@ export function ruudukkoTasolle(n, z, naytetaso = null) {
  * rajalle tulee varjostussauma. Tässä normaali lasketaan näyteruudukon keskeisdifferensseistä yhden
  * näytteen reunuksella laatan ulkopuolelta, jolloin vierekkäiset laatat saavat rajalla saman normaalin.
  */
-export function ruudukonNormaalit(dem, a, n, vali, h) {
+export function ruudukonNormaalit(dem, a, n, vali, h, pisteet = null) {
+  // pisteet = [[i, j], …] laskee vain verkon pisteille (ruudukko 2049² olisi muuten 4 M vektoria).
   const reunus = (i, j) => (i >= 0 && i < n && j >= 0 && j < n ? h[j * n + i] : dem.korkeus(a.west + i * vali, a.north - j * vali, vali));
   const r = Math.PI / 180; const R = 6371008.8; const dN = vali * r * R;
-  const out = new Array(n * n);
-  for (let j = 0; j < n; j += 1) {
+  const normaali = (i, j) => {
     const lat = (a.north - j * vali) * r; const sf = Math.sin(lat); const cf = Math.cos(lat); const dE = dN * cf;
-    for (let i = 0; i < n; i += 1) {
-      const lon = (a.west + i * vali) * r; const sl = Math.sin(lon); const cl = Math.cos(lon);
-      const gE = (reunus(i + 1, j) - reunus(i - 1, j)) / (2 * dE);
-      const gN = (reunus(i, j - 1) - reunus(i, j + 1)) / (2 * dN);
-      // ENU (−gE, −gN, 1) → ECEF
-      const ex = -gE * -sl + -gN * -sf * cl + cf * cl;
-      const ey = -gE * cl + -gN * -sf * sl + cf * sl;
-      const ez = -gN * cf + sf;
-      const l = Math.hypot(ex, ey, ez);
-      out[j * n + i] = [ex / l, ey / l, ez / l];
-    }
-  }
+    const lon = (a.west + i * vali) * r; const sl = Math.sin(lon); const cl = Math.cos(lon);
+    const gE = (reunus(i + 1, j) - reunus(i - 1, j)) / (2 * dE);
+    const gN = (reunus(i, j - 1) - reunus(i, j + 1)) / (2 * dN);
+    // ENU (−gE, −gN, 1) → ECEF
+    const ex = -gE * -sl + -gN * -sf * cl + cf * cl;
+    const ey = -gE * cl + -gN * -sf * sl + cf * sl;
+    const ez = -gN * cf + sf;
+    const l = Math.hypot(ex, ey, ez);
+    return [ex / l, ey / l, ez / l];
+  };
+  if (pisteet) return pisteet.map(([i, j]) => normaali(i, j));
+  const out = new Array(n * n);
+  for (let j = 0; j < n; j += 1) for (let i = 0; i < n; i += 1) out[j * n + i] = normaali(i, j);
   return out;
 }
 
@@ -301,8 +307,8 @@ export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5, { demNormaal
     const [ax, ay] = P[p]; const [bx, by] = P[q]; const [cx, cy] = P[r];
     return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax) >= 0 ? [p, q, r] : [p, r, q];
   });
-  const G = demNormaalit ? ruudukonNormaalit(dem, a, n, vali, h) : null;
-  const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T, pisteNormaalit: G && pisteet.map(([i, j]) => G[j * n + i]) });
+  const G = demNormaalit ? ruudukonNormaalit(dem, a, n, vali, h, pisteet) : null;
+  const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T, pisteNormaalit: G });
   return { tavut: gzipSync(raaka, { level: 9 }), pisteita: P.length, kolmioita: T.length, hMax: h.reduce((m, v) => (v > m ? v : m), -Infinity) };
 }
 
