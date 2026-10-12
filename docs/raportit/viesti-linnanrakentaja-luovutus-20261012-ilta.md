@@ -82,3 +82,5 @@ Vientiketju: worktree `/Users/Shared/Claude/wt/linnanrakentaja-linna-v45k` (haar
   → laituri (#4417-korjaukset samalla). Siirtyy: HDR-yöleivonta (albedo + irradianssi + luotaimet), PBR-esineet, tulisijat/liekit (v3e),
   KCD2-tiheys, detaljit/savuverho. Budjetti per huone = keittiö (huippu ≤ 150 k / kevyt ≤ 40 k, 8k albedo + 4k irr), iPad-muistiajo
   jokaisesta erästä. Jokaisesta erästä PT:lle ennen | jälkeen -pari samasta kulmasta → Siirtosepän botti. LS2 varjostimet, Siirtoseppä kytkentä.
+- **PORTTIKÄYTÄVÄ (laajennuksen 1. erä, PT 23.2x: v9d hyväksytty):** kartoitus + työsuunnitelma `docs/raportit/linnanrakentaja-porttikaytava-suunnitelma-20261012.md`.
+  LS2 tekee natiiviin tilakohtaisen tasokuvauksen (tila-id porttikaytava-t102). Palatsin ihralampuilla ei liekki:-solmuja → kynttilaliekit erässä 3.
