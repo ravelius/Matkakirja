@@ -1,0 +1,50 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Kokoelma \"alueellisetpiilotukset\": Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas piilotetaan vain Kreikan App Storessa (GRC), PT/omistaja 12.10.2026, Raamattu #4493. Päälista. Harkinnanvaraiset kohteet erillisessä tiedostossa ja raportissa.",
+  "alkiot": [
+    {
+      "maa": "GRC",
+      "kohteet": [
+        "opas:ateena",
+        "opas:kreeta",
+        "tehtava:ateena:katso",
+        "tehtava:ateena:aikajana",
+        "kuva:herokoe/hero-ateena-akropoliskallio",
+        "kuva:herokoe/hero-ateena-aamu",
+        "kuva:herokoe/hero-ateena-keskipaiva",
+        "kuva:herokoe/hero-ateena-ilta",
+        "kuva:Atenas,_03",
+        "kuva:The_Acropolis_from_Mount_Hymettus_on_February_9,_2020",
+        "kuva:Athens_at_night_on_September_28,_2022",
+        "kuva:The_West_Facade_of_the_Parthenon_on_May_19,_2020",
+        "kuva:Odeon_of_Herodes_Atticus_2019",
+        "kuva:The_Panathenaic_Stadium_in_Athens_on_2_October_2018",
+        "kuva:Athènes._L'_Acropole_et_le_Temple_de_Thesée_LCCN2017658103",
+        "kuva:The_Acropolis_of_Athens_with_the_Parthenon,_the_Erecththeion_and_the_Mycenean_Fountain_from_Monastiraki_Square_on_March_11,_2020",
+        "kuva:Caryatids_from_the_Erechtheion_on_the_Acropolis,_Acropolis_Museum,_Athens_(13889706087)",
+        "kuva:The_Upper_Part_of_the_Tower_of_the_Winds_(Horologion_of_Andronikos_Kyrrhestes)",
+        "kuva:Tower_of_the_Winds,_Athens,_20240531_0912_9419",
+        "kuva:The_olive_tree_on_the_Acropolis_of_Athens,_28_April_2021",
+        "kuva:Acròpoli_d'Atenes_-_Temple_de_Nike_Àptera",
+        "kuva:Atenes_-_Temple_de_Nike_Àptera",
+        "kuva:Terracotta_Pipes_from_an_Aqueduct_-_Syntagma_Metro_Station_Archaeological_Collection_by_Joy_of_Museum",
+        "kuva:Athens_Acropolis_Propylaea_(28411780906)",
+        "kuva:Acropolis,_Athens-13",
+        "kuva:Erechtheum_Acropolis_Athens",
+        "kuva:Panathenaic_stadium_panorama",
+        "kuva:Parthenon_from_south",
+        "kuva:1011_Temple_of_Olympian_Zeus_in_Athens_Photo_by_Giles_Laurent",
+        "kuva:Temple_of_Olympian_Zeus,_Athens_-_panoramio",
+        "kuva:Bema,_Pnyx",
+        "kuva:herokoe/hero-kreeta-keskipaiva",
+        "kuva:herokoe/hero-kreeta-ilta",
+        "kuva:Ruins_of_the_Minoan_Palace_in_Knossos",
+        "kuva:Cnossus_-_room_of_(?),_columns_-_north_entrance_-_DPLA_-_156faa906e3d69e9b9c71702853f1b8a",
+        "kuva:Bull_leaping_minoan_fresco_archmus_Heraklion",
+        "kuva:Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums",
+        "kuva:Venetian_Fortress_of_Koules_in_Heraklion,_Crete_003"
+      ]
+    }
+  ]
+}
