@@ -1,0 +1,442 @@
+{
+  "taskId": "arrival-life-events-correction-20261012",
+  "preparedAt": "2026-10-12T16:57:34.330645+00:00",
+  "sourceCommit": "1106174af4b4dbb757e4a479882c3f1f2c894dd1",
+  "sourceBlob": "d82e1e9a93ba50c19afa23faa93223e69007ce7a",
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+  "ownerReconfirmation": "Joo tuo on se uusin",
+  "newImageCount": 1,
+  "actualNewGenerationCalls": 1,
+  "reusedImageCount": 2,
+  "requestedCorrectionSlots": 9,
+  "deliveredCorrectionSlots": 8,
+  "omittedCities": [
+    "stockholm"
+  ],
+  "earlierRevisionPhaseActualCalls": 26,
+  "combinedActualRevisionCalls": 29,
+  "supersededFoodIDs": [
+    "paris-6-boulangerie-interior-v3",
+    "stockholm-6-fika-cafe-display-v3",
+    "athens-6-koulouri-bakery-display-v4",
+    "amsterdam-6-cheese-shop-display-v4",
+    "lisbon-6-pastel-nata-cafe-display-v4"
+  ],
+  "previousVersionsPreserved": true,
+  "currentEuropeGalleryCount": 18,
+  "capitalGalleryCount": 18,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "reviewSitePublished": true,
+  "reviewSiteURL": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site?category=havainnekuvat-20261012",
+  "reviewSiteDeploymentId": "appgdep_6acd1286f7b48191bcd574e615ddfc3d",
+  "reviewSiteVersionId": "appgprj_6a95d7decd848191b2ee8a680b8c8263~appgver_dd617d28c770819198f0e8a656fb4ce4",
+  "reviewSiteSourceCommit": "9bdecc05080b01f3cd1a1143ce5647b4f9bf05ca",
+  "rootR2AllDeliveredByteExact": true,
+  "city": "athens",
+  "assets": [
+    {
+      "id": "athens-8-akropolis-1873-bw-v2",
+      "replaces": "athens-8-akropolis-1873",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "caption": "Akropolis Filopappou-kukkulalta vuonna 1873; uusi mustavalkoinen rekonstruktio ja Frankkien torni Propylaian vieressä. Havainnekuva.",
+      "prompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: Matkakirja Athens arrival illustration, year 1873, ONE completely NEW camera-looking opaque landscape image, 1536 x 1024.\nPrimary request: a NEUTRAL BLACK-AND-WHITE documentary photographic reconstruction of the Acropolis seen northeast from the southwest slope of Philopappou Hill in 1873. Generate the entire new scene from scratch. This is not a conversion, filter, edit or recoloring of a previous image; retain no earlier pixels.\nInput images: reference1 is an earlier generated1873 Athens illustration; use ONLY its southwest camera location, overall landmark scale and framing as a loose factual/composition guide. Reference2 is a Getty book page with Dimitrios Constantin's ca1860–1865 southwest Acropolis photograph; use ONLY the factual ruined geometry and Frankish Tower location in its photo, never its printed captions, border or sepia tone. Reference3 is William J. Stillman's Getty1870 Musaeum Hill historical photo; use ONLY period factual topography, tower position and open bare slope. These are factual references, not stylistic image-edit targets. Do not copy source pixels or paper artifacts.\nScene and period: dry rocky Philopappou slope with a naturally worn unpaved route, one sparse irregular olive tree to the left and a few low wild shrubs. The Acropolis dominates the middle distance. Propylaea western gateway is on the LEFT; roofless damaged Parthenon is right of center. Lycabettus hill may appear far right. Small old Athens has scattered low one- and two-storey plaster houses with tiled roofs, mostly to the right below and beyond the rock; no present-day city sprawl. South slopes are largely bare with period masonry ruins and rubble.\nCRITICAL archaeological geometry: a tall plain rectangular medieval Frankish Tower stands at the southwest/southern wing of the Propylaea western gateway, at the FAR LEFT END of the Acropolis and far LEFT of the Parthenon, matching the historical photograph references. Simple near-flat top, plain masonry, no elaborate battlements, domes or pointed roof. Temple of Athena Nike is a small temple on the southwest bastion next to/in front of that western gateway cluster in its first rebuilt1835–1836 form. Parthenon is ROOFLESS and visibly broken, with west columns and the long southern colonnade having large missing middle sections and irregular broken entablature, not a continuous restored row; no later marble infills or rebuilt columns. Do not invent intact Classical architecture.\nCamera and monochrome: a real camera-looking view, ordinary45mm perspective, subdued natural late-afternoon daylight rendered solely as clean neutral grayscale. ALL tones must be achromatic neutral black, white and gray, with equal red/green/blue component values; ABSOLUTELY NO sepia, brown, warm tint, blue tint, tinted highlights, color, duotone or color wash. Full rich grayscale detail without heavy fake aging, scratches, print borders, HDR or theatrical contrast. Natural optical softness and irregular limestone, bark and vegetation textures; no stamped organic patterns.\nYear1873 exclusions: no Zappeion, modern apartments, Acropolis Museum, automobiles, asphalt, electricity wires/poles/lamps, floodlights, antennas, solar panels, cranes, scaffolding, modern rails, concretepaths, modern restorations or modern clothes. No people needed. No text, letters, numbers, signs, logos, watermarks, frame or collage. No museum-artifact replica, painterly rendering or CGI.",
+      "generationPrompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: Matkakirja Athens arrival illustration, year 1873, ONE completely NEW camera-looking opaque landscape image, 1536 x 1024.\nPrimary request: a NEUTRAL BLACK-AND-WHITE documentary photographic reconstruction of the Acropolis seen northeast from the southwest slope of Philopappou Hill in 1873. Generate the entire new scene from scratch. This is not a conversion, filter, edit or recoloring of a previous image; retain no earlier pixels.\nInput images: reference1 is an earlier generated1873 Athens illustration; use ONLY its southwest camera location, overall landmark scale and framing as a loose factual/composition guide. Reference2 is a Getty book page with Dimitrios Constantin's ca1860–1865 southwest Acropolis photograph; use ONLY the factual ruined geometry and Frankish Tower location in its photo, never its printed captions, border or sepia tone. Reference3 is William J. Stillman's Getty1870 Musaeum Hill historical photo; use ONLY period factual topography, tower position and open bare slope. These are factual references, not stylistic image-edit targets. Do not copy source pixels or paper artifacts.\nScene and period: dry rocky Philopappou slope with a naturally worn unpaved route, one sparse irregular olive tree to the left and a few low wild shrubs. The Acropolis dominates the middle distance. Propylaea western gateway is on the LEFT; roofless damaged Parthenon is right of center. Lycabettus hill may appear far right. Small old Athens has scattered low one- and two-storey plaster houses with tiled roofs, mostly to the right below and beyond the rock; no present-day city sprawl. South slopes are largely bare with period masonry ruins and rubble.\nCRITICAL archaeological geometry: a tall plain rectangular medieval Frankish Tower stands at the southwest/southern wing of the Propylaea western gateway, at the FAR LEFT END of the Acropolis and far LEFT of the Parthenon, matching the historical photograph references. Simple near-flat top, plain masonry, no elaborate battlements, domes or pointed roof. Temple of Athena Nike is a small temple on the southwest bastion next to/in front of that western gateway cluster in its first rebuilt1835–1836 form. Parthenon is ROOFLESS and visibly broken, with west columns and the long southern colonnade having large missing middle sections and irregular broken entablature, not a continuous restored row; no later marble infills or rebuilt columns. Do not invent intact Classical architecture.\nCamera and monochrome: a real camera-looking view, ordinary45mm perspective, subdued natural late-afternoon daylight rendered solely as clean neutral grayscale. ALL tones must be achromatic neutral black, white and gray, with equal red/green/blue component values; ABSOLUTELY NO sepia, brown, warm tint, blue tint, tinted highlights, color, duotone or color wash. Full rich grayscale detail without heavy fake aging, scratches, print borders, HDR or theatrical contrast. Natural optical softness and irregular limestone, bark and vegetation textures; no stamped organic patterns.\nYear1873 exclusions: no Zappeion, modern apartments, Acropolis Museum, automobiles, asphalt, electricity wires/poles/lamps, floodlights, antennas, solar panels, cranes, scaffolding, modern rails, concretepaths, modern restorations or modern clothes. No people needed. No text, letters, numbers, signs, logos, watermarks, frame or collage. No museum-artifact replica, painterly rendering or CGI.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-30c08db3-b1d2-47fb-8c24-372028634b1d.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/raw/athens-8-akropolis-1873-bw-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/final/athens-8-akropolis-1873-bw-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/final/athens-8-akropolis-1873-bw-v2.png",
+      "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+      "rawSHA256": "8330997162669c0cde2e4456cce6b74fc2bc8e402295d501f844acdf1ab85815",
+      "bytes": 3133937,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "label": "View of the Acropolis from the Musaeum Hill",
+          "url": "https://www.getty.edu/art/collection/object/106RZN"
+        },
+        {
+          "label": "Antiquity & Photography: Early Views of Ancient Mediterranean Sites",
+          "url": "https://d2aohiyo3d3idm.cloudfront.net/publications/virtuallibrary/0892368055.pdf"
+        },
+        {
+          "label": "Athena Nike Temple. East frieze. Corner block a",
+          "url": "https://www.theacropolismuseum.gr/en/athena-nike-temple-east-frieze-corner-block"
+        },
+        {
+          "label": "Temple of Athena Nike",
+          "url": "https://www.ysma.gr/en/monuments/temple-of-athena-nike/"
+        },
+        {
+          "label": "Church of Agios Georgios Lycabettus",
+          "url": "https://www.thisisathens.org/attractions/agios-georgios-lycabettus-church"
+        }
+      ],
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/final/athens-8-akropolis-1873.png",
+          "sha256": "6362004fa8ad7fa5dab636f7c14327814fe44be61a3d69ecca4919a59a6bb55b",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/references/getty-139.png",
+          "sha256": "c191012ed3e512468253a634e6663f4f46875b902e80bd38d7d2c4ff2242c685",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/references/getty-stillman-1870.jpg",
+          "sha256": "a3beb2df1cd55dd66aa7c0d72e688fcf617cb4c0eefd2274c9daaa31ff898d80",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        }
+      ],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "30c08db3-b1d2-47fb-8c24-372028634b1d",
+        "entireNewGenerationRequested": true,
+        "pixelsUnchangedFromNative": true,
+        "grayscaleConversionPerformed": false
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/bw-gateway-parthenon.png",
+          "qa/bw-town-hill.png",
+          "qa/bw-bark-rocks.png"
+        ],
+        "photorealismPassed": true,
+        "neutralBWVisualPassed": true,
+        "exactEqualRGB": false,
+        "chromaMeasurement": {
+          "metric": "max(R,G,B)-min(R,G,B) per native pixel; analysis only, no conversion",
+          "nativeRGB": true,
+          "equalRGBPixelPercent": 16.542879740397133,
+          "meanChannelSpread": 2.030008316040039,
+          "p99ChannelSpread": 7.0,
+          "maxChannelSpread": 20,
+          "pixelsWithSpreadGreaterThan2": 504804,
+          "grayscaleConversionPerformed": false,
+          "nativePixelsPreserved": true
+        },
+        "historicalObservations": [
+          "Frankish Tower on western-left Propylaea gateway cluster, left of Parthenon",
+          "Athena Nike temple present at western bastion",
+          "Roofless damaged Parthenon with substantial missing southern colonnade sections",
+          "Small low-rise old town, bare unpaved slopes; no established modern lamps/vehicles/scaffolding/apartments observed",
+          "Irregular rocks, bark and vegetation without repeating stamped pattern"
+        ],
+        "limits": [
+          "Archival-guided reconstruction, not a measured archaeological survey",
+          "Native low RGB differences are measured explicitly; no grayscale conversion or retouch performed"
+        ]
+      },
+      "rootReviewPending": false,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png?t=39af8718dc223976",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+        "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+        "bytes": 3133937,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png?t=39af8718dc223976",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+        "bytes": 3133937,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T14:00:57.273679+00:00"
+      },
+      "rootReview": {
+        "independentFullNativeImageViewed": true,
+        "acceptedForOwnerReview": true,
+        "scope": "visual neutral black-and-white, period geometry",
+        "rawChromaDifferenceDisclosed": true,
+        "exactEqualRGBClaimed": false,
+        "grayscaleConversionPerformed": false,
+        "note": "Source86 requests pure grayscale. Native low channel differences remain disclosed in workerQA; no visible sepia/color observed; root authorized no additional generation."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "id": "athens-7-lycabettus-rooftops-v2",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "replaces": "athens-7-akropolis-soir",
+      "caption": "Ateenan katot sinisellä hetkellä Lykavittos-kukkulalta; Akropolis kaukana kuvan reunassa. Havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens evening-city arrival illustration, ONE completely NEW opaque landscape photograph,1536 x 1024.\nPrimary request: the rooftops and lights of present-day Athens at BLUE HOUR, seen downhill from a pine-covered path/slope of Lycabettus Hill, with no people.\nCorrect viewpoint: Lycabettus lies NORTHEAST of the Acropolis. Camera is on Lycabettus looking outward SOUTH/SOUTHWEST across the city from appreciably higher and further away than the Acropolis. A wide carpet of pale Athens residential blocks and rooftops fills the valley below. The Acropolis rock is a SMALL DISTANT warm-lit feature near the RIGHT EDGE of the frame, not a close dominant rock. From this northeast-side vantage the distant Parthenon shows a coherent northeast/eastward perspective rather than a southwest Philopappou facade. Keep its roofless ancient columns small at this distance; no scaffolding. Do not show Lycabettus itself as a separate distant hill because the photographer is standing on it. This is NOT an Areopagus or southwest Philopappou view.\nComposition: a few sparse natural pine branches and rocky slope edge occupy the immediate lower/left foreground; the broad white/cream city rooftops, ordinary balconies and some warm window lights below are the main subject. They recede naturally toward a quiet distant horizon under a blue evening sky. Acropolis illumination is simple subdued generic warm light, not a reproduction of any named modern lighting show or designed light installation. No recognisable modern signature landmark or protected modern artwork is featured.\nCamera/style: an authentic35mm travel photograph from standing eye height on the slope, coherent perspective and city scale, sensible optical softness at long distance. Cool blue-hour ambient light mixed with gentle warm ordinary windows, restrained color and contrast, plausible low-light exposure without extreme glowing yellow lighting. Real irregular pine needles, branches, bark and rock; buildings varied, not repeating stamp rows. Documentary photography, no dramatic fantasy skyline, cinematic HDR, hyper-detailed miniature city or painterly CGI.\nStrict constraints: no people, identifiable faces, text, Greek letters, numbers, advertisements, restaurant signs, logos, branded rooftop equipment, billboards, watermarks or frame. No visible Parthenon scaffolding, no giant foreground Acropolis, invented towers or extra temples. No collage or use of old image pixels. Keep city and skyline legible, not abstract bokeh.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-db25e255-e837-4397-a63b-9d0798a91b64.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/raw/athens-7-lycabettus-rooftops-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "rawSHA256": "f8f58e453a1ef25ee23a33250543567b2e6a0e5c44907f334bd3258429264324",
+      "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+      "bytes": 2769797,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "title": "Lycabettus Hill",
+          "url": "https://www.thisisathens.org/sights/lycabettus-hill",
+          "publisher": "Official Athens Guide",
+          "role": "Lycabettus elevated city panorama; read live12Oct2026"
+        },
+        {
+          "title": "Great City Walks to do in Athens",
+          "url": "https://www.thisisathens.org/activities/sports-outdoors/city-walks",
+          "publisher": "Official Athens Guide",
+          "role": "Lycabettus northeast of Acropolis and paths through pine/cypress/eucalyptus; read live12Oct2026"
+        },
+        {
+          "title": "Pinned feedback86",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/source.md",
+          "commit": "12a76cb745373a5c352c7d5ad7f723660d43df86",
+          "blob": "b3b54728c303d893cd0bdb0d1df16cf6ac6bf463",
+          "role": "Exact blue-hour rooftop city from Lycabettus slope, small warm-lit Acropolis at frame edge"
+        }
+      ],
+      "references": [],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "db25e255-e837-4397-a63b-9d0798a91b64",
+        "actualRequest": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens evening-city arrival illustration, ONE completely NEW opaque landscape photograph,1536 x 1024.\nPrimary request: the rooftops and lights of present-day Athens at BLUE HOUR, seen downhill from a pine-covered path/slope of Lycabettus Hill, with no people.\nCorrect viewpoint: Lycabettus lies NORTHEAST of the Acropolis. Camera is on Lycabettus looking outward SOUTH/SOUTHWEST across the city from appreciably higher and further away than the Acropolis. A wide carpet of pale Athens residential blocks and rooftops fills the valley below. The Acropolis rock is a SMALL DISTANT warm-lit feature near the RIGHT EDGE of the frame, not a close dominant rock. From this northeast-side vantage the distant Parthenon shows a coherent northeast/eastward perspective rather than a southwest Philopappou facade. Keep its roofless ancient columns small at this distance; no scaffolding. Do not show Lycabettus itself as a separate distant hill because the photographer is standing on it. This is NOT an Areopagus or southwest Philopappou view.\nComposition: a few sparse natural pine branches and rocky slope edge occupy the immediate lower/left foreground; the broad white/cream city rooftops, ordinary balconies and some warm window lights below are the main subject. They recede naturally toward a quiet distant horizon under a blue evening sky. Acropolis illumination is simple subdued generic warm light, not a reproduction of any named modern lighting show or designed light installation. No recognisable modern signature landmark or protected modern artwork is featured.\nCamera/style: an authentic35mm travel photograph from standing eye height on the slope, coherent perspective and city scale, sensible optical softness at long distance. Cool blue-hour ambient light mixed with gentle warm ordinary windows, restrained color and contrast, plausible low-light exposure without extreme glowing yellow lighting. Real irregular pine needles, branches, bark and rock; buildings varied, not repeating stamp rows. Documentary photography, no dramatic fantasy skyline, cinematic HDR, hyper-detailed miniature city or painterly CGI.\nStrict constraints: no people, identifiable faces, text, Greek letters, numbers, advertisements, restaurant signs, logos, branded rooftop equipment, billboards, watermarks or frame. No visible Parthenon scaffolding, no giant foreground Acropolis, invented towers or extra temples. No collage or use of old image pixels. Keep city and skyline legible, not abstract bokeh.",
+          "transparent_background": false
+        },
+        "inputImageCount": 0,
+        "wholeNewGeneration": true,
+        "nativeCopyByteExact": true,
+        "pixelsUnchangedFromNative": true,
+        "creativeEditsPerformed": false
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/lycabettus-acropolis.png",
+          "qa/lycabettus-pine-rock.png",
+          "qa/lycabettus-city.png"
+        ],
+        "photorealismPassed": true,
+        "naturalOrganicTexturePassed": true,
+        "noEstablishedTextPassed": true,
+        "noPeopleObserved": true,
+        "viewpointPassed": true,
+        "passedForDelivery": true,
+        "observations": [
+          "Elevated Lycabettus northeast vantage across pale city rooftops toward southwest; Acropolis distant at right edge",
+          "Blue-hour sky, pine branches and irregular rocky slope foreground, warm ordinary windows",
+          "No visible Parthenon scaffolding, readable signs, faces, invented foreground Lycabettus or large close Acropolis",
+          "Individual city blocks, pine needles and rocks show coherent photographic detail, without stamped repetition"
+        ]
+      },
+      "rootReviewPending": false,
+      "selected": true,
+      "omitted": false,
+      "omitReason": null,
+      "r2Uploaded": true,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png?t=6a0357837e30bbec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+        "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+        "bytes": 2769797,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png?t=6a0357837e30bbec",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+        "bytes": 2769797,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T14:07:41.789641+00:00"
+      },
+      "replacementScope": "New gallery addition for prior omitted pilot role7; not replacing an earlier delivered live asset",
+      "rootReview": {
+        "wholeFrameInspected": true,
+        "passedForOwnerReview": true,
+        "nativeCropWorkerEvidenceRetained": true
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "id": "athens-6-psyrri-juhla-v5",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "caption": "Iloinen kesäilta Ateenan Psyrrin kujalla, kun nuoret aikuiset viettävät iltaa ystäviensä kanssa. Havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival image6, ONE entirely new opaque RGB landscape photograph,1536 x1024.\nPrimary request: a joyful candid summer evening with young adult friends on the narrow terrace-lined alleys of Psyrri, Athens. This is a natural documentary street-life photograph, not a food image or posed fashion shoot.\nScene: an ordinary narrow Athens/Psyrri alley with simple anonymous two- and three-storey plaster facades, plain small balconies/shutters, textured paving and modest cafe terrace tables. A few simple strings of small warm bulbs hang across the alley, with believable cables and attachments. Young adults gather at terrace tables and along the street, chatting and laughing. Ordinary clear water glasses may sit incidentally on a table, but no alcohol or bottles are featured. Blue summer-evening ambient daylight remains in a little strip of sky; restrained warm practical lights mingle with it.\nForeground person: ONE entirely fictional Greek young adult woman in her mid-twenties, shown from head to waist, mid-laugh with close friends beside her. She has plausible everyday Mediterranean/Greek appearance, dark naturally wavy hair and realistic skin. She is slightly turned toward her friends, not performing for the camera. Contemporary stylish unbranded clothes: a simple terracotta sleeveless summer top and light trousers, ordinary small jewelry. Her friends are nearby at a real shared depth, in similarly generic fashionable summer clothes; additional young adults in their twenties/thirties naturally populate the tables and receding street. Everyone is clearly an adult. Invent unique ordinary people from scratch: no public figures, named people, celebrity lookalikes or photographic identity references. Foreground arms can be naturally relaxed and partly cropped near the waist; any visible hands must have believable fingers, wrists and joints.\nCamera and realism: a single real-camera-looking documentary exposure at human eye level, normal35mm perspective, casual balanced composition with the foreground person integrated physically into the street and group. Skin pores, natural teeth/eyes, small hair flyaways, folds of cloth, plaster wear and shadows all follow the same local light and lens rendering. Moderate depth of field aroundf/5.6, background people/street coherent but normally softer than nearby subjects; no hard cutout edges, pasted portrait, studio key light, beauty retouching, plastic skin, exaggerated HDR, focus stacking or cinematic color grading. Genuine spontaneous friendship and relaxed happy summer atmosphere.\nABSOLUTE monument exclusion: there is NOT A SINGLE MONUMENT anywhere in the frame, including distant background, reflections or skyline. NO Acropolis, Parthenon, ancient ruins, statues, temple, landmark church or recognizable memorial. The alley is tightly framed by ordinary generic facades only; the tiny sky strip is empty of landmarks.\nOther strict exclusions: NO text, letters, Greek writing, digits, house/address plaques, signs, menus, posters, logos, clothing prints, brand marks, branded packages, graffiti/street art, copyrighted modern artworks, watermarks or border anywhere. No identifiable named modern building, artwork or designed lighting show. No violence, intoxication or alcohol as subject. Produce the complete new scene from scratch without editing or reusing any previous image pixels.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival image6, ONE entirely new opaque RGB landscape photograph,1536 x1024.\nPrimary request: a joyful candid summer evening with young adult friends on the narrow terrace-lined alleys of Psyrri, Athens. This is a natural documentary street-life photograph, not a food image or posed fashion shoot.\nScene: an ordinary narrow Athens/Psyrri alley with simple anonymous two- and three-storey plaster facades, plain small balconies/shutters, textured paving and modest cafe terrace tables. A few simple strings of small warm bulbs hang across the alley, with believable cables and attachments. Young adults gather at terrace tables and along the street, chatting and laughing. Ordinary clear water glasses may sit incidentally on a table, but no alcohol or bottles are featured. Blue summer-evening ambient daylight remains in a little strip of sky; restrained warm practical lights mingle with it.\nForeground person: ONE entirely fictional Greek young adult woman in her mid-twenties, shown from head to waist, mid-laugh with close friends beside her. She has plausible everyday Mediterranean/Greek appearance, dark naturally wavy hair and realistic skin. She is slightly turned toward her friends, not performing for the camera. Contemporary stylish unbranded clothes: a simple terracotta sleeveless summer top and light trousers, ordinary small jewelry. Her friends are nearby at a real shared depth, in similarly generic fashionable summer clothes; additional young adults in their twenties/thirties naturally populate the tables and receding street. Everyone is clearly an adult. Invent unique ordinary people from scratch: no public figures, named people, celebrity lookalikes or photographic identity references. Foreground arms can be naturally relaxed and partly cropped near the waist; any visible hands must have believable fingers, wrists and joints.\nCamera and realism: a single real-camera-looking documentary exposure at human eye level, normal35mm perspective, casual balanced composition with the foreground person integrated physically into the street and group. Skin pores, natural teeth/eyes, small hair flyaways, folds of cloth, plaster wear and shadows all follow the same local light and lens rendering. Moderate depth of field aroundf/5.6, background people/street coherent but normally softer than nearby subjects; no hard cutout edges, pasted portrait, studio key light, beauty retouching, plastic skin, exaggerated HDR, focus stacking or cinematic color grading. Genuine spontaneous friendship and relaxed happy summer atmosphere.\nABSOLUTE monument exclusion: there is NOT A SINGLE MONUMENT anywhere in the frame, including distant background, reflections or skyline. NO Acropolis, Parthenon, ancient ruins, statues, temple, landmark church or recognizable memorial. The alley is tightly framed by ordinary generic facades only; the tiny sky strip is empty of landmarks.\nOther strict exclusions: NO text, letters, Greek writing, digits, house/address plaques, signs, menus, posters, logos, clothing prints, brand marks, branded packages, graffiti/street art, copyrighted modern artworks, watermarks or border anywhere. No identifiable named modern building, artwork or designed lighting show. No violence, intoxication or alcohol as subject. Produce the complete new scene from scratch without editing or reusing any previous image pixels.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-39543ce8-56f7-4daf-a8dc-fb530453ab61.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/raw/athens-6-psyrri-juhla-v5.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/final/athens-6-psyrri-juhla-v5.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/final/athens-6-psyrri-juhla-v5.png",
+      "sha256": "e8ed068cc7829242b3d7c178a62463839e09cf71759cb9efbfa5e73f01066fa5",
+      "rawSHA256": "43188741323f39007c653ccf9e646ed671553b3081d77d3bfceb30750f139a5b",
+      "bytes": 2253998,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "type": "Pinned full source read; latest correction2/17.4x applies",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/sources/source-1106174.md",
+          "commit": "1106174af4b4dbb757e4a479882c3f1f2c894dd1",
+          "blob": "d82e1e9a93ba50c19afa23faa93223e69007ce7a",
+          "sha256": "b3d118368ac156372c37b5e8205ae822119896f7beac55986f726a1e106d3fb7",
+          "ownerReconfirmation": "Joo tuo on se uusin",
+          "sourceLatestConfirmedByOwner": true
+        }
+      ],
+      "references": [],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "39543ce8-56f7-4daf-a8dc-fb530453ab61",
+        "actualRequest": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival image6, ONE entirely new opaque RGB landscape photograph,1536 x1024.\nPrimary request: a joyful candid summer evening with young adult friends on the narrow terrace-lined alleys of Psyrri, Athens. This is a natural documentary street-life photograph, not a food image or posed fashion shoot.\nScene: an ordinary narrow Athens/Psyrri alley with simple anonymous two- and three-storey plaster facades, plain small balconies/shutters, textured paving and modest cafe terrace tables. A few simple strings of small warm bulbs hang across the alley, with believable cables and attachments. Young adults gather at terrace tables and along the street, chatting and laughing. Ordinary clear water glasses may sit incidentally on a table, but no alcohol or bottles are featured. Blue summer-evening ambient daylight remains in a little strip of sky; restrained warm practical lights mingle with it.\nForeground person: ONE entirely fictional Greek young adult woman in her mid-twenties, shown from head to waist, mid-laugh with close friends beside her. She has plausible everyday Mediterranean/Greek appearance, dark naturally wavy hair and realistic skin. She is slightly turned toward her friends, not performing for the camera. Contemporary stylish unbranded clothes: a simple terracotta sleeveless summer top and light trousers, ordinary small jewelry. Her friends are nearby at a real shared depth, in similarly generic fashionable summer clothes; additional young adults in their twenties/thirties naturally populate the tables and receding street. Everyone is clearly an adult. Invent unique ordinary people from scratch: no public figures, named people, celebrity lookalikes or photographic identity references. Foreground arms can be naturally relaxed and partly cropped near the waist; any visible hands must have believable fingers, wrists and joints.\nCamera and realism: a single real-camera-looking documentary exposure at human eye level, normal35mm perspective, casual balanced composition with the foreground person integrated physically into the street and group. Skin pores, natural teeth/eyes, small hair flyaways, folds of cloth, plaster wear and shadows all follow the same local light and lens rendering. Moderate depth of field aroundf/5.6, background people/street coherent but normally softer than nearby subjects; no hard cutout edges, pasted portrait, studio key light, beauty retouching, plastic skin, exaggerated HDR, focus stacking or cinematic color grading. Genuine spontaneous friendship and relaxed happy summer atmosphere.\nABSOLUTE monument exclusion: there is NOT A SINGLE MONUMENT anywhere in the frame, including distant background, reflections or skyline. NO Acropolis, Parthenon, ancient ruins, statues, temple, landmark church or recognizable memorial. The alley is tightly framed by ordinary generic facades only; the tiny sky strip is empty of landmarks.\nOther strict exclusions: NO text, letters, Greek writing, digits, house/address plaques, signs, menus, posters, logos, clothing prints, brand marks, branded packages, graffiti/street art, copyrighted modern artworks, watermarks or border anywhere. No identifiable named modern building, artwork or designed lighting show. No violence, intoxication or alcohol as subject. Produce the complete new scene from scratch without editing or reusing any previous image pixels.",
+          "transparent_background": false
+        },
+        "inputImageCount": 0,
+        "wholeNewGeneration": true,
+        "nativeCopyByteExact": true,
+        "pixelsUnchangedFromNative": true,
+        "creativePixelEditsPerformed": false,
+        "noCLIImageAPIOrRunwayUsed": true
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/face-hair-skin.png",
+          "qa/background-roof-street.png",
+          "qa/background-hands-faces.png",
+          "qa/foreground-arms-cloth.png",
+          "qa/materials-wall-leaves.png"
+        ],
+        "passedForOwnerReview": true,
+        "facesAllowedByLatestSource": true,
+        "fictionalAdultPeopleRequested": true,
+        "noIdentityOrCelebrityReferenceUsed": true,
+        "foregroundFaceAnatomyPassed": true,
+        "handsAndArmsPassedAtResolvableScale": true,
+        "naturalMaterialsPassed": true,
+        "coherentSceneLightPerspectivePassed": true,
+        "noEstablishedTextSignsLogosObserved": true,
+        "noMonumentObservedIncludingBackground": true,
+        "alcoholNotPrimarySubject": true,
+        "observations": [
+          "Foreground fictional young adult woman from head to waist, laughing toward nearby friends, generic fashionable summer clothes",
+          "Natural skin, teeth, eyes, hair, fabric folds and ordinary mixed evening light observed in native crops",
+          "Foreground hand naturally in trouser pocket/cropped; resolvable background limbs/hands plausible, no established extra fingers or fused limbs",
+          "Narrow ordinary plaster facades, terrace tables, string bulbs, adult groups chatting; no food hero, stage, graffiti or branding",
+          "Background crop inspected specifically for absolute Greek monument exclusion: ordinary low roofline and small generic roof stub only, no identifiable Acropolis, Parthenon, ancient ruin, statue or landmark church",
+          "Organic leaves and ordinary wall material retain natural optical detail; no repeating embossed surface pattern established",
+          "Foreground subject and friends share lens rendering, local light and perspective with street; no pasted portrait boundary observed"
+        ],
+        "limits": [
+          "Anonymous illustrative Psyrri alley rather than an exact address; identities are invented by prompt with no identity-reference images",
+          "Not an exhaustive real-person resemblance search or confirmation of unresolved fingers in far background"
+        ]
+      },
+      "rootReviewPending": true,
+      "selected": true,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png?t=e8ed068cc7829242",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+        "sha256": "e8ed068cc7829242b3d7c178a62463839e09cf71759cb9efbfa5e73f01066fa5",
+        "bytes": 2253998,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png?t=e8ed068cc7829242",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "e8ed068cc7829242b3d7c178a62463839e09cf71759cb9efbfa5e73f01066fa5",
+        "bytes": 2253998,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T16:53:24.717441+00:00"
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/manifest.json",
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false
+    }
+  ]
+}

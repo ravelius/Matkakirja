@@ -1,0 +1,1192 @@
+{
+  "taskId": "arrival-life-events-correction-20261012",
+  "preparedAt": "2026-10-12T16:57:34.330645+00:00",
+  "sourceCommit": "1106174af4b4dbb757e4a479882c3f1f2c894dd1",
+  "sourceBlob": "d82e1e9a93ba50c19afa23faa93223e69007ce7a",
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+  "ownerReconfirmation": "Joo tuo on se uusin",
+  "newImageCount": 2,
+  "actualNewGenerationCalls": 3,
+  "reusedImageCount": 6,
+  "requestedCorrectionSlots": 9,
+  "deliveredCorrectionSlots": 8,
+  "omittedCities": [
+    "stockholm"
+  ],
+  "earlierRevisionPhaseActualCalls": 26,
+  "combinedActualRevisionCalls": 29,
+  "supersededFoodIDs": [
+    "paris-6-boulangerie-interior-v3",
+    "stockholm-6-fika-cafe-display-v3",
+    "athens-6-koulouri-bakery-display-v4",
+    "amsterdam-6-cheese-shop-display-v4",
+    "lisbon-6-pastel-nata-cafe-display-v4"
+  ],
+  "previousVersionsPreserved": true,
+  "currentEuropeGalleryCount": 18,
+  "capitalGalleryCount": 18,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "assets": [
+    {
+      "id": "stockholm-8-strommen-1873-bw-v2",
+      "replaces": "stockholm-8-strommen-1873",
+      "city": "stockholm",
+      "cityFi": "Tukholma",
+      "historical": true,
+      "caption": "Strömmen, Gamla stan ja Kuninkaanlinna vuonna 1873, mustavalkoinen historiallinen rekonstruktio. Havainnekuva.",
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: completely NEW Stockholm1873 arrival reconstruction, opaque1536x1024 landscape, PURE NEUTRAL BLACK AND WHITE PHOTOGRAPH.\nPrimary request: Generate a new photographic reconstruction of Strömmen, Gamla stan and the Royal Palace in STOCKHOLM IN THE EXACT YEAR1873. Entire output must be genuinely neutral monochrome: black, white and neutral grays ONLY, with equal R,G,B values everywhere. ZERO sepia, yellowing, brown, cyan, blue, warm-gray or color tint. Do not imitate an aged stained print or tinted paper. This is a newly generated scene, not a grayscale filter or recoloring of an existing image.\nCamera: Use precisely the same western Skeppsholmen waterfront eye-level direction as Image1, looking west-northwest, same50mm perspective and level horizon. Old-town waterfront runs horizontally across the middle. Massive Royal Palace is at far right. Water fills lower half, with diagonal near stone quay appearing only in bottom right.\nInput images: Image1 is my modern blue-hour illustration ONLY for camera/framing; NEVER copy any modern vessel, lamps, street fittings, electrical glow, roofs altered after1873 or present-day Tyska tower from it. Image2 is a native crop of Carl Johan Billmark's1868 Stadsmuseet lithograph: factual pre1873 old-town skyline and building-massing context ONLY. Do not copy lithograph style, aerial viewpoint, inscriptions, brown color, damaged paper, canvas or border. Historical constraints override all modern reference details.\nRequired1873 architecture: Dense old Skeppsbron merchant-house waterfront with compact1870s façades and pitched roofs. Low massive eighteenth-century Royal Palace east/southeast face at far right, stopping the frame there. Storkyrkan's pale square old tower behind northern roofs. Riddarholmskyrkan farther left BEHIND old-town roofs, with correct slender open cast-iron Gothic lattice needle, tiny corner pinnacles and partly occluded brick shaft; do not relocate it to the quay. If Tyska church is visible, it must be the smaller PRE1878 seventeenth-century timber/copper spire, largely lost among distant roofs as in1868 reference, NEVER today's much taller1880s tower.\nHarbour: Modest unmarked nineteenth-century steam passenger vessel with low hull, simple funnel, sparse smoke, period rigging and no modern enclosed ferry superstructure. Small working sailboat farther left and tiny wooden rowboat at distance. Near quay at bottom right has only a few ordinary closed timber crates and wooden barrels, with two tiny1870s dockworkers far along quay seen from behind, plain dark coats/trousers/caps, no distinguishable faces.\nPhotographic treatment: Real-camera-looking high-detail NEUTRAL BLACK AND WHITE reconstruction in soft daylight, photographic gray tonal separation, plausible old plaster and wood, irregular modest water ripples and reflections, light harbor haze. No drawing, lithograph, painting, illustration, CGI, embossed repetitive textures, heavy grain, HDR or fake antique paper.\nABSOLUTE1873 exclusions: NO City Hall/Stadshuset1923, Grand Hôtel, any Blasieholmen buildings, modern parliament, present-day tall Tyska spire, late nineteenth-century new towers, high-rise, automobiles, buses, motorcycles, modern ferry, motorboat, asphalt, electric streetlamps, wires, electric illumination, glowing windows, neon, illuminated sign, modern railing or contemporary bollard. Right edge stops at Royal Palace; no Blasieholmen. Daylight only, no lit gas or electric lamps. NO text, letters, signs, numbers, labels, logos, branded objects, watermark, frame, modern protected artwork or copied museum artifact. Photographic neutral grayscale only, entire1536x1024 composition.",
+      "prompt": "Use case: historical-scene.\nAsset type: completely NEW Stockholm1873 arrival reconstruction, opaque1536x1024 landscape, PURE NEUTRAL BLACK AND WHITE PHOTOGRAPH.\nPrimary request: Generate a new photographic reconstruction of Strömmen, Gamla stan and the Royal Palace in STOCKHOLM IN THE EXACT YEAR1873. Entire output must be genuinely neutral monochrome: black, white and neutral grays ONLY, with equal R,G,B values everywhere. ZERO sepia, yellowing, brown, cyan, blue, warm-gray or color tint. Do not imitate an aged stained print or tinted paper. This is a newly generated scene, not a grayscale filter or recoloring of an existing image.\nCamera: Use precisely the same western Skeppsholmen waterfront eye-level direction as Image1, looking west-northwest, same50mm perspective and level horizon. Old-town waterfront runs horizontally across the middle. Massive Royal Palace is at far right. Water fills lower half, with diagonal near stone quay appearing only in bottom right.\nInput images: Image1 is my modern blue-hour illustration ONLY for camera/framing; NEVER copy any modern vessel, lamps, street fittings, electrical glow, roofs altered after1873 or present-day Tyska tower from it. Image2 is a native crop of Carl Johan Billmark's1868 Stadsmuseet lithograph: factual pre1873 old-town skyline and building-massing context ONLY. Do not copy lithograph style, aerial viewpoint, inscriptions, brown color, damaged paper, canvas or border. Historical constraints override all modern reference details.\nRequired1873 architecture: Dense old Skeppsbron merchant-house waterfront with compact1870s façades and pitched roofs. Low massive eighteenth-century Royal Palace east/southeast face at far right, stopping the frame there. Storkyrkan's pale square old tower behind northern roofs. Riddarholmskyrkan farther left BEHIND old-town roofs, with correct slender open cast-iron Gothic lattice needle, tiny corner pinnacles and partly occluded brick shaft; do not relocate it to the quay. If Tyska church is visible, it must be the smaller PRE1878 seventeenth-century timber/copper spire, largely lost among distant roofs as in1868 reference, NEVER today's much taller1880s tower.\nHarbour: Modest unmarked nineteenth-century steam passenger vessel with low hull, simple funnel, sparse smoke, period rigging and no modern enclosed ferry superstructure. Small working sailboat farther left and tiny wooden rowboat at distance. Near quay at bottom right has only a few ordinary closed timber crates and wooden barrels, with two tiny1870s dockworkers far along quay seen from behind, plain dark coats/trousers/caps, no distinguishable faces.\nPhotographic treatment: Real-camera-looking high-detail NEUTRAL BLACK AND WHITE reconstruction in soft daylight, photographic gray tonal separation, plausible old plaster and wood, irregular modest water ripples and reflections, light harbor haze. No drawing, lithograph, painting, illustration, CGI, embossed repetitive textures, heavy grain, HDR or fake antique paper.\nABSOLUTE1873 exclusions: NO City Hall/Stadshuset1923, Grand Hôtel, any Blasieholmen buildings, modern parliament, present-day tall Tyska spire, late nineteenth-century new towers, high-rise, automobiles, buses, motorcycles, modern ferry, motorboat, asphalt, electric streetlamps, wires, electric illumination, glowing windows, neon, illuminated sign, modern railing or contemporary bollard. Right edge stops at Royal Palace; no Blasieholmen. Daylight only, no lit gas or electric lamps. NO text, letters, signs, numbers, labels, logos, branded objects, watermark, frame, modern protected artwork or copied museum artifact. Photographic neutral grayscale only, entire1536x1024 composition.",
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: historical-scene.\nAsset type: completely NEW Stockholm1873 arrival reconstruction, opaque1536x1024 landscape, PURE NEUTRAL BLACK AND WHITE PHOTOGRAPH.\nPrimary request: Generate a new photographic reconstruction of Strömmen, Gamla stan and the Royal Palace in STOCKHOLM IN THE EXACT YEAR1873. Entire output must be genuinely neutral monochrome: black, white and neutral grays ONLY, with equal R,G,B values everywhere. ZERO sepia, yellowing, brown, cyan, blue, warm-gray or color tint. Do not imitate an aged stained print or tinted paper. This is a newly generated scene, not a grayscale filter or recoloring of an existing image.\nCamera: Use precisely the same western Skeppsholmen waterfront eye-level direction as Image1, looking west-northwest, same50mm perspective and level horizon. Old-town waterfront runs horizontally across the middle. Massive Royal Palace is at far right. Water fills lower half, with diagonal near stone quay appearing only in bottom right.\nInput images: Image1 is my modern blue-hour illustration ONLY for camera/framing; NEVER copy any modern vessel, lamps, street fittings, electrical glow, roofs altered after1873 or present-day Tyska tower from it. Image2 is a native crop of Carl Johan Billmark's1868 Stadsmuseet lithograph: factual pre1873 old-town skyline and building-massing context ONLY. Do not copy lithograph style, aerial viewpoint, inscriptions, brown color, damaged paper, canvas or border. Historical constraints override all modern reference details.\nRequired1873 architecture: Dense old Skeppsbron merchant-house waterfront with compact1870s façades and pitched roofs. Low massive eighteenth-century Royal Palace east/southeast face at far right, stopping the frame there. Storkyrkan's pale square old tower behind northern roofs. Riddarholmskyrkan farther left BEHIND old-town roofs, with correct slender open cast-iron Gothic lattice needle, tiny corner pinnacles and partly occluded brick shaft; do not relocate it to the quay. If Tyska church is visible, it must be the smaller PRE1878 seventeenth-century timber/copper spire, largely lost among distant roofs as in1868 reference, NEVER today's much taller1880s tower.\nHarbour: Modest unmarked nineteenth-century steam passenger vessel with low hull, simple funnel, sparse smoke, period rigging and no modern enclosed ferry superstructure. Small working sailboat farther left and tiny wooden rowboat at distance. Near quay at bottom right has only a few ordinary closed timber crates and wooden barrels, with two tiny1870s dockworkers far along quay seen from behind, plain dark coats/trousers/caps, no distinguishable faces.\nPhotographic treatment: Real-camera-looking high-detail NEUTRAL BLACK AND WHITE reconstruction in soft daylight, photographic gray tonal separation, plausible old plaster and wood, irregular modest water ripples and reflections, light harbor haze. No drawing, lithograph, painting, illustration, CGI, embossed repetitive textures, heavy grain, HDR or fake antique paper.\nABSOLUTE1873 exclusions: NO City Hall/Stadshuset1923, Grand Hôtel, any Blasieholmen buildings, modern parliament, present-day tall Tyska spire, late nineteenth-century new towers, high-rise, automobiles, buses, motorcycles, modern ferry, motorboat, asphalt, electric streetlamps, wires, electric illumination, glowing windows, neon, illuminated sign, modern railing or contemporary bollard. Right edge stops at Royal Palace; no Blasieholmen. Daylight only, no lit gas or electric lamps. NO text, letters, signs, numbers, labels, logos, branded objects, watermark, frame, modern protected artwork or copied museum artifact. Photographic neutral grayscale only, entire1536x1024 composition.",
+          "transparent_background": false,
+          "referenced_image_paths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/final/stockholm-7-strommen-soir.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/references/billmark-oldtown-inspection.png"
+          ]
+        }
+      },
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Underlying tool request ID not exposed; actual output execution UUID and native path preserved.",
+      "generationOutputExecutionId": "fe9e8dc0-a9f5-46f3-a636-5d341214372f",
+      "generationCallsForAsset": 1,
+      "builtinDefaultOutputPath": "/Users/samireivinen/.codex/generated_images/01a13027-00b0-7af1-b2e4-9b601509dd59/exec-fe9e8dc0-a9f5-46f3-a636-5d341214372f.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/native/stockholm-8-strommen-1873-bw-v2.png",
+      "nativeSHA256": "0151414d054688355884e8134b64939485f19c6954199ad1f0f923063efa0a93",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/final/stockholm-8-strommen-1873-bw-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/final/stockholm-8-strommen-1873-bw-v2.png",
+      "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+      "bytes": 2138527,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "mode": "RGB",
+      "iccProfile": "sRGB",
+      "pixelsUnchanged": true,
+      "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "chromaMeasurement": {
+        "definition": "per pixel max(R,G,B)-min(R,G,B); unaltered generated pixels",
+        "maxChannelSpan": 9,
+        "meanChannelSpan": 0.8533293406168619,
+        "equalRGBFraction": 0.333981196085612,
+        "spanAtMost1Fraction": 0.8426926930745443,
+        "spanAtMost3Fraction": 0.9958120981852213,
+        "RGBMeans": [
+          148.76673952738443,
+          148.4062410990397,
+          148.4490737915039
+        ],
+        "exactNeutralMonochrome": false,
+        "noLocalGrayscaleConversion": true
+      },
+      "sources": [
+        {
+          "label": "Panorama över Stockholm på 1860-talet (Fogelvue över Stockholm)",
+          "url": "https://stockholmskallan.stockholm.se/post/33295"
+        },
+        {
+          "label": "Riddarholmskyrkan",
+          "url": "https://www.sfv.se/vara-fastigheter/sverige/stockholms-lan/riddarholmen/riddarholms-kyrkan"
+        },
+        {
+          "label": "History – The Royal Palace",
+          "url": "https://www.kungligaslotten.se/english/royal-palaces-and-sites/the-royal-palace/history.html"
+        },
+        {
+          "label": "Stadshusets invigning",
+          "url": "https://stadshuset.stockholm/utforska-stadshuset/stadshusets-historia/stadshusets-invigning/"
+        },
+        {
+          "label": "14 juni på Grand Hôtel",
+          "url": "https://grandhotel.se/14-juni-pa-grand-hotel"
+        },
+        {
+          "label": "Tyska S:ta Gertruds kyrka",
+          "url": "https://www.svenskakyrkan.se/Sve/Bin%C3%A4rfiler/Filer/C066B8F8-94F9-4CBE-B77F-1FEF4BAAFFDA.pdf"
+        }
+      ],
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/final/stockholm-7-strommen-soir.png",
+          "role": "Image1: previously generated modern camera/framing reference ONLY; no modern detail authority",
+          "license": "Own previous AI illustrative candidate",
+          "sourceURL": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-7-strommen-soir.png",
+          "passedToGeneration": true,
+          "viewedBeforeUse": true
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/references/billmark-oldtown-inspection.png",
+          "role": "Image2: native crop of Billmark1868 lithograph, skyline/massing facts ONLY; not composition/artistic style/colour",
+          "license": "CC-BY as stated by collection; artist died1870; source credits retained",
+          "author": "Carl Johan Billmark (1804–1870)",
+          "title": "Panorama över Stockholm på1860-talet (Fogelvue över Stockholm)",
+          "date": 1868,
+          "collection": "Stadsmuseet",
+          "sourceURL": "https://stockholmskallan.stockholm.se/post/33295",
+          "passedToGeneration": true,
+          "viewedBeforeUse": true,
+          "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/references/stockholmskallan-33295-1868.jpg",
+          "originalSHA256": "d315b4f98e95b0ef5e86ad36863fe4970b7a4fed65ab9edceadf49e38f1ec6b1"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/references/sfv-riddarholmskyrkan-inspection.jpg",
+          "role": "Factual spire morphology inspection only; not supplied to generation",
+          "license": "No reuse licence asserted; inspection only",
+          "author": "Alexandru Babos",
+          "sourceURL": "https://www.sfv.se/vara-fastigheter/sverige/stockholms-lan/riddarholmen/riddarholms-kyrkan",
+          "passedToGeneration": false,
+          "viewedBeforeUse": true
+        }
+      ],
+      "workerQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "nativeCropsInspected": [
+          "lower",
+          "skyline",
+          "steamship",
+          "spire",
+          "cargo"
+        ],
+        "photorealistic": true,
+        "historicalConstraintsReviewed": true,
+        "noVisibleTextOrModernObjectsIdentified": true,
+        "neutralMonochromeVisualReview": true,
+        "noSepiaOrVisibleColourCast": true,
+        "chromaMeasurementRecordedWithoutEditing": true,
+        "bitExactNeutralRGB": false,
+        "chromaLimitNote": "Visually neutral; tiny generated RGB channel variation remains and is fully recorded, no local grayscale conversion. Parent decides final chroma acceptance.",
+        "observations": "Same western Skeppsholmen direction as modern framing reference. Low RoyalPalace on right; slender Gothic lattice spire behind old town, pale Storkyrkan tower; small far-left pre1878Tyska-like spire rather than tall modern tower. Period-looking low steamship, sail/rowing boats, workers from behind; no modern electrical or motor objects identified. Rough crates, barrels and water look naturally varied."
+      },
+      "createdAt": "2026-10-12T14:01:36.388015+00:00",
+      "ownerReviewPending": true,
+      "gameIntegrationVerified": false,
+      "publicationVerified": false,
+      "selectionStatus": "worker-passed-parent-review-pending",
+      "sharedWithOrder86WithoutDuplicateGeneration": true,
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png?t=e3a15cece00fefec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+        "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+        "bytes": 2138527,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:30:10.225226+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+          "bytes": 2138527,
+          "byteExactReadback": true
+        }
+      },
+      "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png?t=e3a15cece00fefec",
+      "r2ByteExactVerified": true,
+      "previousR2OwnerFeedbackDelivery": {
+        "r2Key": "julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png?t=e3a15cece00fefec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png",
+        "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+        "bytes": 2138527,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:04:50.110844+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "bytes": 2138527,
+          "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+          "byteExactReadback": true
+        }
+      },
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "rootReviewedForOwnerPreview": true,
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "id": "athens-8-akropolis-1873-bw-v2",
+      "replaces": "athens-8-akropolis-1873",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "caption": "Akropolis Filopappou-kukkulalta vuonna 1873; uusi mustavalkoinen rekonstruktio ja Frankkien torni Propylaian vieressä. Havainnekuva.",
+      "prompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: Matkakirja Athens arrival illustration, year 1873, ONE completely NEW camera-looking opaque landscape image, 1536 x 1024.\nPrimary request: a NEUTRAL BLACK-AND-WHITE documentary photographic reconstruction of the Acropolis seen northeast from the southwest slope of Philopappou Hill in 1873. Generate the entire new scene from scratch. This is not a conversion, filter, edit or recoloring of a previous image; retain no earlier pixels.\nInput images: reference1 is an earlier generated1873 Athens illustration; use ONLY its southwest camera location, overall landmark scale and framing as a loose factual/composition guide. Reference2 is a Getty book page with Dimitrios Constantin's ca1860–1865 southwest Acropolis photograph; use ONLY the factual ruined geometry and Frankish Tower location in its photo, never its printed captions, border or sepia tone. Reference3 is William J. Stillman's Getty1870 Musaeum Hill historical photo; use ONLY period factual topography, tower position and open bare slope. These are factual references, not stylistic image-edit targets. Do not copy source pixels or paper artifacts.\nScene and period: dry rocky Philopappou slope with a naturally worn unpaved route, one sparse irregular olive tree to the left and a few low wild shrubs. The Acropolis dominates the middle distance. Propylaea western gateway is on the LEFT; roofless damaged Parthenon is right of center. Lycabettus hill may appear far right. Small old Athens has scattered low one- and two-storey plaster houses with tiled roofs, mostly to the right below and beyond the rock; no present-day city sprawl. South slopes are largely bare with period masonry ruins and rubble.\nCRITICAL archaeological geometry: a tall plain rectangular medieval Frankish Tower stands at the southwest/southern wing of the Propylaea western gateway, at the FAR LEFT END of the Acropolis and far LEFT of the Parthenon, matching the historical photograph references. Simple near-flat top, plain masonry, no elaborate battlements, domes or pointed roof. Temple of Athena Nike is a small temple on the southwest bastion next to/in front of that western gateway cluster in its first rebuilt1835–1836 form. Parthenon is ROOFLESS and visibly broken, with west columns and the long southern colonnade having large missing middle sections and irregular broken entablature, not a continuous restored row; no later marble infills or rebuilt columns. Do not invent intact Classical architecture.\nCamera and monochrome: a real camera-looking view, ordinary45mm perspective, subdued natural late-afternoon daylight rendered solely as clean neutral grayscale. ALL tones must be achromatic neutral black, white and gray, with equal red/green/blue component values; ABSOLUTELY NO sepia, brown, warm tint, blue tint, tinted highlights, color, duotone or color wash. Full rich grayscale detail without heavy fake aging, scratches, print borders, HDR or theatrical contrast. Natural optical softness and irregular limestone, bark and vegetation textures; no stamped organic patterns.\nYear1873 exclusions: no Zappeion, modern apartments, Acropolis Museum, automobiles, asphalt, electricity wires/poles/lamps, floodlights, antennas, solar panels, cranes, scaffolding, modern rails, concretepaths, modern restorations or modern clothes. No people needed. No text, letters, numbers, signs, logos, watermarks, frame or collage. No museum-artifact replica, painterly rendering or CGI.",
+      "generationPrompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: Matkakirja Athens arrival illustration, year 1873, ONE completely NEW camera-looking opaque landscape image, 1536 x 1024.\nPrimary request: a NEUTRAL BLACK-AND-WHITE documentary photographic reconstruction of the Acropolis seen northeast from the southwest slope of Philopappou Hill in 1873. Generate the entire new scene from scratch. This is not a conversion, filter, edit or recoloring of a previous image; retain no earlier pixels.\nInput images: reference1 is an earlier generated1873 Athens illustration; use ONLY its southwest camera location, overall landmark scale and framing as a loose factual/composition guide. Reference2 is a Getty book page with Dimitrios Constantin's ca1860–1865 southwest Acropolis photograph; use ONLY the factual ruined geometry and Frankish Tower location in its photo, never its printed captions, border or sepia tone. Reference3 is William J. Stillman's Getty1870 Musaeum Hill historical photo; use ONLY period factual topography, tower position and open bare slope. These are factual references, not stylistic image-edit targets. Do not copy source pixels or paper artifacts.\nScene and period: dry rocky Philopappou slope with a naturally worn unpaved route, one sparse irregular olive tree to the left and a few low wild shrubs. The Acropolis dominates the middle distance. Propylaea western gateway is on the LEFT; roofless damaged Parthenon is right of center. Lycabettus hill may appear far right. Small old Athens has scattered low one- and two-storey plaster houses with tiled roofs, mostly to the right below and beyond the rock; no present-day city sprawl. South slopes are largely bare with period masonry ruins and rubble.\nCRITICAL archaeological geometry: a tall plain rectangular medieval Frankish Tower stands at the southwest/southern wing of the Propylaea western gateway, at the FAR LEFT END of the Acropolis and far LEFT of the Parthenon, matching the historical photograph references. Simple near-flat top, plain masonry, no elaborate battlements, domes or pointed roof. Temple of Athena Nike is a small temple on the southwest bastion next to/in front of that western gateway cluster in its first rebuilt1835–1836 form. Parthenon is ROOFLESS and visibly broken, with west columns and the long southern colonnade having large missing middle sections and irregular broken entablature, not a continuous restored row; no later marble infills or rebuilt columns. Do not invent intact Classical architecture.\nCamera and monochrome: a real camera-looking view, ordinary45mm perspective, subdued natural late-afternoon daylight rendered solely as clean neutral grayscale. ALL tones must be achromatic neutral black, white and gray, with equal red/green/blue component values; ABSOLUTELY NO sepia, brown, warm tint, blue tint, tinted highlights, color, duotone or color wash. Full rich grayscale detail without heavy fake aging, scratches, print borders, HDR or theatrical contrast. Natural optical softness and irregular limestone, bark and vegetation textures; no stamped organic patterns.\nYear1873 exclusions: no Zappeion, modern apartments, Acropolis Museum, automobiles, asphalt, electricity wires/poles/lamps, floodlights, antennas, solar panels, cranes, scaffolding, modern rails, concretepaths, modern restorations or modern clothes. No people needed. No text, letters, numbers, signs, logos, watermarks, frame or collage. No museum-artifact replica, painterly rendering or CGI.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-30c08db3-b1d2-47fb-8c24-372028634b1d.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/raw/athens-8-akropolis-1873-bw-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/final/athens-8-akropolis-1873-bw-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/final/athens-8-akropolis-1873-bw-v2.png",
+      "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+      "rawSHA256": "8330997162669c0cde2e4456cce6b74fc2bc8e402295d501f844acdf1ab85815",
+      "bytes": 3133937,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "label": "View of the Acropolis from the Musaeum Hill",
+          "url": "https://www.getty.edu/art/collection/object/106RZN"
+        },
+        {
+          "label": "Antiquity & Photography: Early Views of Ancient Mediterranean Sites",
+          "url": "https://d2aohiyo3d3idm.cloudfront.net/publications/virtuallibrary/0892368055.pdf"
+        },
+        {
+          "label": "Athena Nike Temple. East frieze. Corner block a",
+          "url": "https://www.theacropolismuseum.gr/en/athena-nike-temple-east-frieze-corner-block"
+        },
+        {
+          "label": "Temple of Athena Nike",
+          "url": "https://www.ysma.gr/en/monuments/temple-of-athena-nike/"
+        },
+        {
+          "label": "Church of Agios Georgios Lycabettus",
+          "url": "https://www.thisisathens.org/attractions/agios-georgios-lycabettus-church"
+        }
+      ],
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/final/athens-8-akropolis-1873.png",
+          "sha256": "6362004fa8ad7fa5dab636f7c14327814fe44be61a3d69ecca4919a59a6bb55b",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/references/getty-139.png",
+          "sha256": "c191012ed3e512468253a634e6663f4f46875b902e80bd38d7d2c4ff2242c685",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/references/getty-stillman-1870.jpg",
+          "sha256": "a3beb2df1cd55dd66aa7c0d72e688fcf617cb4c0eefd2274c9daaa31ff898d80",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        }
+      ],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "30c08db3-b1d2-47fb-8c24-372028634b1d",
+        "entireNewGenerationRequested": true,
+        "pixelsUnchangedFromNative": true,
+        "grayscaleConversionPerformed": false
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/bw-gateway-parthenon.png",
+          "qa/bw-town-hill.png",
+          "qa/bw-bark-rocks.png"
+        ],
+        "photorealismPassed": true,
+        "neutralBWVisualPassed": true,
+        "exactEqualRGB": false,
+        "chromaMeasurement": {
+          "metric": "max(R,G,B)-min(R,G,B) per native pixel; analysis only, no conversion",
+          "nativeRGB": true,
+          "equalRGBPixelPercent": 16.542879740397133,
+          "meanChannelSpread": 2.030008316040039,
+          "p99ChannelSpread": 7.0,
+          "maxChannelSpread": 20,
+          "pixelsWithSpreadGreaterThan2": 504804,
+          "grayscaleConversionPerformed": false,
+          "nativePixelsPreserved": true
+        },
+        "historicalObservations": [
+          "Frankish Tower on western-left Propylaea gateway cluster, left of Parthenon",
+          "Athena Nike temple present at western bastion",
+          "Roofless damaged Parthenon with substantial missing southern colonnade sections",
+          "Small low-rise old town, bare unpaved slopes; no established modern lamps/vehicles/scaffolding/apartments observed",
+          "Irregular rocks, bark and vegetation without repeating stamped pattern"
+        ],
+        "limits": [
+          "Archival-guided reconstruction, not a measured archaeological survey",
+          "Native low RGB differences are measured explicitly; no grayscale conversion or retouch performed"
+        ]
+      },
+      "rootReviewPending": false,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png?t=39af8718dc223976",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+        "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+        "bytes": 3133937,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png?t=39af8718dc223976",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+        "bytes": 3133937,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T14:00:57.273679+00:00"
+      },
+      "rootReview": {
+        "independentFullNativeImageViewed": true,
+        "acceptedForOwnerReview": true,
+        "scope": "visual neutral black-and-white, period geometry",
+        "rawChromaDifferenceDisclosed": true,
+        "exactEqualRGBClaimed": false,
+        "grayscaleConversionPerformed": false,
+        "note": "Source86 requests pure grayscale. Native low channel differences remain disclosed in workerQA; no visible sepia/color observed; root authorized no additional generation."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "folder": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history",
+      "id": "paris-8-pont-royal-1873-bw-v2",
+      "replaces": null,
+      "city": "paris",
+      "cityFi": "Pariisi",
+      "sourcePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ca798535-822a-448f-9966-333bcedba819.png",
+      "prompt": "Use case: historical-scene.\nAsset type: Matkakirja Paris arrival image number 8, a new BLACK AND WHITE photograph-like reconstruction of Pont Royal and the Tuileries ruins in the year 1873. One image only, 1536x1024 opaque.\nImage roles: Image1 is my generated present-day Pont Royal river view, used ONLY to match the left-bank eye-level camera position and five-arch bridge/river framing. Its restored far-right Louvre/Pavillon roof is NOT historical evidence and MUST NOT be retained. Image2 is Pierre Emonts's July1871 public-domain/CC0 Musée Carnavalet photo PH17352: factual source for the burnt Pavillon de Flore and adjacent Tuileries ruin, especially its exposed burnt open roof framework and surviving chimney masonry. Image3 is Carnavalet PH34628 from1883: factual supporting evidence for standing roofless Tuileries walls only; do not copy1883 demolition work or its camera angle. All are visual/factual references, not images to edit. No source pixels, museum photo framing, annotations, paper border, sepia or text reproduced.\nCamera and scene: the same general LEFT BANK river position as Image1 looking across the Seine at Pont Royal, eye height about3m above low-quay level, normal40mm lens. Five real modest low stone arches aligned horizontally across the middle of frame, river foreground, diagonal simple stone quay lower right, opposite riverbank and the old Tuileries site behind. Plausible small wood workboat or unmarked nineteenth-century steam launch is enough, no modern boats; no people or faces necessary.\nCRITICAL YEAR1873 ROOF CONDITION: behind the opposite-bank trees the standing Tuileries palace wings are an abandoned burnt ruin after the1871 fire, long old masonry walls with black empty window openings, collapsed floors, broken parapets and NO INTACT ROOF. The taller PAVILLON DE FLORE AT THE FAR RIGHT MUST ALSO HAVE A BURNT-DAMAGED ROOF: open skeletal partly collapsed old roof rafters and standing large pale chimney stacks as in Image2, gaps clearly exposing pale sky through the missing roofing. Do NOT draw the smooth intact high slate mansard roof, clean continuous roof slopes, decorative intact ridge, completed restored roof or modern Louvre silhouette from Image1. This is before1874–1876 restoration. The surviving pavilion facade can stand but its roof is distinctly incomplete and wrecked, not restored. The original long central Tuileries ruins remain present in1873; no claim that demolition has already removed them.\nPhotographic medium: genuinely camera-like mid-nineteenth-century collodion/albumen-photo feel in NEUTRAL BLACK AND WHITE ONLY. All rendered pixels should be black, white, achromatic neutral gray, no brown/sepia/blue/green tint, no coloured foliage or water. Soft restrained contrast, very subtle fine photographic grain and barely perceptible natural lens-edge darkening; not old paper, damage, heavy vignetting or an illustration. Quiet pale natural daylight with believable soft shadows, organic irregular stone, wood and water ripple textures, mild period harbour haze.\nRestrictions: no intact restored far-right roof, no1890s/modern urban details, Eiffel Tower, modern museum/glass pyramid, motorboats, modern tourists, automobiles, modern streetlamps, cables, advertising or signs. No visible letters, words, numbers, logos, brands, watermarks, borders, faces, modern protected artwork or named designer objects. Completely new whole-scene generation, no local editing or recolouring of any reference. Retain full1536x1024 landscape.",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/final/paris-5-pont-royal.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH17352-1871.jpg",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH34628-1883.jpg"
+      ],
+      "generationCalls": 1,
+      "selected": true,
+      "historical": true,
+      "taskNumber": 86,
+      "caption": "Pont Royal ja katottomat Tuileries’n rauniot Seinen rannalla vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+      "sources": [
+        {
+          "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/palais-des-tuileries-angle-sud-de-la-facade-sur-le-jardin-pavillon-de-flore",
+          "title": "Musée Carnavalet PH17352, July1871",
+          "license": "CC0 Paris Musées",
+          "role": "factual burnt roof geometry"
+        },
+        {
+          "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/facade-en-ruines-du-palais-des-tuileries-sur-le-jardin-des-tuileriers-1er",
+          "title": "Musée Carnavalet PH34628,1883",
+          "license": "CC0 Paris Musées",
+          "role": "roofless surviving wall geometry only; not1883 demolition state"
+        }
+      ],
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/native/paris-8-pont-royal-1873-bw-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/final/paris-8-pont-royal-1873-bw-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/final/paris-8-pont-royal-1873-bw-v2.png",
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationOutputExecutionId": "ca798535-822a-448f-9966-333bcedba819",
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Underlying request identifier not exposed; actual returned native execution id recorded.",
+      "referenceImagesPassed": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/final/paris-5-pont-royal.png",
+          "sha256": "9151481502be550c1488a968f7c045b2d00fcfad2e9e9876090f3807da9607d7",
+          "visuallyInspected": true
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH17352-1871.jpg",
+          "sha256": "8bffa5c66c003b43c46854796cf38a45de7b56bb978e286b801a404e1521bc78",
+          "visuallyInspected": true
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH34628-1883.jpg",
+          "sha256": "9148059fe0bd50360b75c4fda7611ad479efd3c0b847d4aafb137c62c14d3514",
+          "visuallyInspected": true
+        }
+      ],
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: historical-scene.\nAsset type: Matkakirja Paris arrival image number 8, a new BLACK AND WHITE photograph-like reconstruction of Pont Royal and the Tuileries ruins in the year 1873. One image only, 1536x1024 opaque.\nImage roles: Image1 is my generated present-day Pont Royal river view, used ONLY to match the left-bank eye-level camera position and five-arch bridge/river framing. Its restored far-right Louvre/Pavillon roof is NOT historical evidence and MUST NOT be retained. Image2 is Pierre Emonts's July1871 public-domain/CC0 Musée Carnavalet photo PH17352: factual source for the burnt Pavillon de Flore and adjacent Tuileries ruin, especially its exposed burnt open roof framework and surviving chimney masonry. Image3 is Carnavalet PH34628 from1883: factual supporting evidence for standing roofless Tuileries walls only; do not copy1883 demolition work or its camera angle. All are visual/factual references, not images to edit. No source pixels, museum photo framing, annotations, paper border, sepia or text reproduced.\nCamera and scene: the same general LEFT BANK river position as Image1 looking across the Seine at Pont Royal, eye height about3m above low-quay level, normal40mm lens. Five real modest low stone arches aligned horizontally across the middle of frame, river foreground, diagonal simple stone quay lower right, opposite riverbank and the old Tuileries site behind. Plausible small wood workboat or unmarked nineteenth-century steam launch is enough, no modern boats; no people or faces necessary.\nCRITICAL YEAR1873 ROOF CONDITION: behind the opposite-bank trees the standing Tuileries palace wings are an abandoned burnt ruin after the1871 fire, long old masonry walls with black empty window openings, collapsed floors, broken parapets and NO INTACT ROOF. The taller PAVILLON DE FLORE AT THE FAR RIGHT MUST ALSO HAVE A BURNT-DAMAGED ROOF: open skeletal partly collapsed old roof rafters and standing large pale chimney stacks as in Image2, gaps clearly exposing pale sky through the missing roofing. Do NOT draw the smooth intact high slate mansard roof, clean continuous roof slopes, decorative intact ridge, completed restored roof or modern Louvre silhouette from Image1. This is before1874–1876 restoration. The surviving pavilion facade can stand but its roof is distinctly incomplete and wrecked, not restored. The original long central Tuileries ruins remain present in1873; no claim that demolition has already removed them.\nPhotographic medium: genuinely camera-like mid-nineteenth-century collodion/albumen-photo feel in NEUTRAL BLACK AND WHITE ONLY. All rendered pixels should be black, white, achromatic neutral gray, no brown/sepia/blue/green tint, no coloured foliage or water. Soft restrained contrast, very subtle fine photographic grain and barely perceptible natural lens-edge darkening; not old paper, damage, heavy vignetting or an illustration. Quiet pale natural daylight with believable soft shadows, organic irregular stone, wood and water ripple textures, mild period harbour haze.\nRestrictions: no intact restored far-right roof, no1890s/modern urban details, Eiffel Tower, modern museum/glass pyramid, motorboats, modern tourists, automobiles, modern streetlamps, cables, advertising or signs. No visible letters, words, numbers, logos, brands, watermarks, borders, faces, modern protected artwork or named designer objects. Completely new whole-scene generation, no local editing or recolouring of any reference. Retain full1536x1024 landscape.",
+          "transparent_background": false,
+          "referenced_image_paths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/final/paris-5-pont-royal.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH17352-1871.jpg",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH34628-1883.jpg"
+          ]
+        }
+      },
+      "nativeSHA256": "a5e937ff4bf578ab431f0d490a85036c79f9386283ac32eee7b18952bb021f98",
+      "sha256": "4279006c44d25d64fd1105b94d92431040ec65cc46a2077645769b5e92f86932",
+      "bytes": 2432467,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "iccProfile": "sRGB",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "pixelsChangedByExport": false,
+      "nativeChroma": {
+        "meanChannelSpread": 1.56365966796875,
+        "maximumChannelSpread": 18,
+        "pctSpreadAtMost3": 92.15621948242188,
+        "allChannelsIdentical": false,
+        "localGrayscaleConversion": false
+      },
+      "workerVisualQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "visualMonochromeNeutral": true,
+        "rootNativeQAComplete": true,
+        "rootWholeFrameReviewed": true,
+        "rootNativeCropReviewed": true
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "createdAt": "2026-10-12T14:10:35.952432+00:00",
+      "rootReviewNote": "Far-right Pavillon roof is visibly burnt and open; chimney stacks and framework match1871 factual source; central standing walls roofless. Five arches, period vessel, no modern objects. Native roof and water reviewed; visually neutral monochrome, numeric channels not identical and no local grayscale conversion.",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png?t=4279006c44d25d64",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+        "sha256": "4279006c44d25d64fd1105b94d92431040ec65cc46a2077645769b5e92f86932",
+        "bytes": 2432467,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "bytes": 2432467,
+          "sha256": "4279006c44d25d64fd1105b94d92431040ec65cc46a2077645769b5e92f86932",
+          "byteExactReadback": true,
+          "checkedAt": "2026-10-12T14:12:31.234171+00:00"
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png?t=4279006c44d25d64",
+      "r2ByteExactVerified": true,
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "generationPrompt": "Use case: historical-scene.\nAsset type: Matkakirja Paris arrival image number 8, a new BLACK AND WHITE photograph-like reconstruction of Pont Royal and the Tuileries ruins in the year 1873. One image only, 1536x1024 opaque.\nImage roles: Image1 is my generated present-day Pont Royal river view, used ONLY to match the left-bank eye-level camera position and five-arch bridge/river framing. Its restored far-right Louvre/Pavillon roof is NOT historical evidence and MUST NOT be retained. Image2 is Pierre Emonts's July1871 public-domain/CC0 Musée Carnavalet photo PH17352: factual source for the burnt Pavillon de Flore and adjacent Tuileries ruin, especially its exposed burnt open roof framework and surviving chimney masonry. Image3 is Carnavalet PH34628 from1883: factual supporting evidence for standing roofless Tuileries walls only; do not copy1883 demolition work or its camera angle. All are visual/factual references, not images to edit. No source pixels, museum photo framing, annotations, paper border, sepia or text reproduced.\nCamera and scene: the same general LEFT BANK river position as Image1 looking across the Seine at Pont Royal, eye height about3m above low-quay level, normal40mm lens. Five real modest low stone arches aligned horizontally across the middle of frame, river foreground, diagonal simple stone quay lower right, opposite riverbank and the old Tuileries site behind. Plausible small wood workboat or unmarked nineteenth-century steam launch is enough, no modern boats; no people or faces necessary.\nCRITICAL YEAR1873 ROOF CONDITION: behind the opposite-bank trees the standing Tuileries palace wings are an abandoned burnt ruin after the1871 fire, long old masonry walls with black empty window openings, collapsed floors, broken parapets and NO INTACT ROOF. The taller PAVILLON DE FLORE AT THE FAR RIGHT MUST ALSO HAVE A BURNT-DAMAGED ROOF: open skeletal partly collapsed old roof rafters and standing large pale chimney stacks as in Image2, gaps clearly exposing pale sky through the missing roofing. Do NOT draw the smooth intact high slate mansard roof, clean continuous roof slopes, decorative intact ridge, completed restored roof or modern Louvre silhouette from Image1. This is before1874–1876 restoration. The surviving pavilion facade can stand but its roof is distinctly incomplete and wrecked, not restored. The original long central Tuileries ruins remain present in1873; no claim that demolition has already removed them.\nPhotographic medium: genuinely camera-like mid-nineteenth-century collodion/albumen-photo feel in NEUTRAL BLACK AND WHITE ONLY. All rendered pixels should be black, white, achromatic neutral gray, no brown/sepia/blue/green tint, no coloured foliage or water. Soft restrained contrast, very subtle fine photographic grain and barely perceptible natural lens-edge darkening; not old paper, damage, heavy vignetting or an illustration. Quiet pale natural daylight with believable soft shadows, organic irregular stone, wood and water ripple textures, mild period harbour haze.\nRestrictions: no intact restored far-right roof, no1890s/modern urban details, Eiffel Tower, modern museum/glass pyramid, motorboats, modern tourists, automobiles, modern streetlamps, cables, advertising or signs. No visible letters, words, numbers, logos, brands, watermarks, borders, faces, modern protected artwork or named designer objects. Completely new whole-scene generation, no local editing or recolouring of any reference. Retain full1536x1024 landscape.",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "id": "paris-4-luxembourg-candid-v2",
+      "city": "paris",
+      "cityFi": "Pariisi",
+      "caption": "Lukijoita Jardin du Luxembourgin keskialtaan äärellä Pariisissa. Havainnekuva.",
+      "historical": false,
+      "sources": [
+        {
+          "title": "Authorized task86 addition – Luxembourg everyday life",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/../source.md",
+          "support": "Central basin, green metal chairs, back-facing readers, distant child, chestnut trees, eye-height soft-afternoon view."
+        },
+        {
+          "title": "Sénat – Official Jardin du Luxembourg visitor brochure",
+          "url": "https://jardin.senat.fr/fileadmin/Jardin/Accueil_Jardin/Brochure_Jardin_maj2022.pdf",
+          "support": "Official park map and grand basin context, mobile seating and tree-lined garden. Factual/context source only; no source photograph passed or copied."
+        },
+        {
+          "title": "Jardin du Luxembourg official site",
+          "url": "https://jardin.senat.fr/",
+          "support": "Verified garden identity and outdoor setting, no exhibition art reproduced."
+        }
+      ],
+      "refs": [],
+      "prompt": "Use case: photorealistic-natural. Generate one completely NEW original full-colour present-day candid documentary photograph, visibly real-camera quality, landscape 1536 x 1024 opaque RGB sRGB PNG. Natural subdued colours, ordinary human eye-level perspective, plausible single-camera geometry, realistic scale and physical textures. No food advertising look or posed product still-life. Natural irregular detail rather than cloned/embossed vegetation, repeating stamped organic surfaces, CGI, illustration, artificial HDR or cinematic grading. No text, letters, digits, signage, menus, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Do not depict protected contemporary artworks/design products or reproduce an existing photograph.\nScene: a quiet ordinary afternoon beside the broad shallow octagonal central basin of Jardin du Luxembourg, Paris, viewed from its pale stone rim at normal standing eye height, 35mm camera. Primary subject: everyday readers relaxing near the basin. Three or four simple ANONYMOUS OLD-FASHIONED green painted iron garden chairs are informally scattered on pale gravel; one back-facing adult sits in the nearer left chair reading a small blank-covered book mostly hidden by their body, another back-facing adult sits farther away, and a tiny child well in the distance by the opposite rim is seen from behind. No faces anywhere. Chair construction MUST be generic straight iron geometry that predates modern designer products: slender tubular/rod iron frame, simple straight four legs, narrow VERTICAL round iron rods in the back, plain functional seat, NO broad curved horizontal back/seat slats, NO contemporary ergonomic design-chair shapes, NO brands or logos. This is an anonymous illustrative historical-type park chair, not a replica of the actual branded present-day chairs. Natural worn green paint and very modest rust, no ornate decorative designs. The basin occupies the middle/right of frame, with believable shallow water and low clipped simple stone rim; its straight octagonal edges appear correctly foreshortened from eye height. Broad garden paths and mature chestnut trees provide the upper background, soft dappled late-afternoon light, natural irregular leaves and branches. Face the camera toward the tree-lined part of the garden so the Luxembourg Palace, sculpted statues, plinths and decorative artworks are ALL OUT OF FRAME. No kiosks, signs, awnings or printed clothing. A calm spontaneous park photograph with credible chair/person scale and varied gravel/tree/water texture, not a formal symmetrical postcard.",
+      "sourceSHA256": "f0d9964a17cd15a314d6230aca9eaa0b8e1e4c8df1fbf888eeeab7c175ed167c",
+      "generatedDefaultPath": "/Users/samireivinen/.codex/generated_images/01a13028-0737-70a0-8d6a-6c29ad607efc/exec-6aa418aa-67ca-4961-9c62-0df1370a4420.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/native/paris-4-luxembourg-candid-v2.png",
+      "nativeSHA256": "405dfd7e264bfef16cde4e4bb55d4d22c671676e70d8adc992e18e5560eae726",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/final/paris-4-luxembourg-candid-v2.png",
+      "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+      "bytes": 2994469,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "format": "PNG",
+      "icc": "sRGB",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "pixelArrayPreserved": true,
+      "tool": "builtin image_gen",
+      "actualRequestIDFromSavedOutput": "exec-6aa418aa-67ca-4961-9c62-0df1370a4420",
+      "copiedNativeOriginal": true,
+      "copiedAt": "2026-10-12T14:06:31.646468+00:00",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/final/paris-4-luxembourg-candid-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/native/paris-4-luxembourg-candid-v2.png",
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "actualRequestId": "exec-6aa418aa-67ca-4961-9c62-0df1370a4420",
+        "referenceImagesPassed": 0,
+        "wholeNewImage": true,
+        "noCropRetouchStretch": true,
+        "pixelArrayPreserved": true
+      },
+      "workerQA": {
+        "id": "paris-4-luxembourg-candid-v2",
+        "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+        "passedForOwnerReview": true,
+        "wholeFrameReviewed": true,
+        "nativeCrops": [
+          "texture-left",
+          "texture-right",
+          "center-detail"
+        ],
+        "anonymousHistoricalTypeChairs": true,
+        "modernDesignReproductionObserved": false,
+        "notes": "Anonymous generic straight tubular iron frames and vertical rod backs, rather than modern designer-chair horizontal flat slats. Near readers face away; tiny background heads have no identifiable facial features in native crops. Credible person/chair scale, varied natural gravel/foliage/trunk/water textures. Octagonal rim is partly foreshortened/cropped, palace and sculptures excluded; no named chair-product or exact photographic reconstruction claimed."
+      },
+      "status": "R2-delivered-owner-review-pending",
+      "omitted": false,
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png?t=c192f95c08fc92e9",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+        "bytes": 2994469,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadbackHttp": 200,
+        "canonicalByteExact": true,
+        "canonicalMIME": "image/png",
+        "canonicalCORS": "https://matkakirja.app"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "sitePublicationVerified": false,
+      "delivery": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png?t=c192f95c08fc92e9",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+        "bytes": 2994469,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadbackHttp": 200,
+        "canonicalByteExact": true,
+        "canonicalMIME": "image/png",
+        "canonicalCORS": "https://matkakirja.app"
+      },
+      "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png?t=c192f95c08fc92e9",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+      "rootVisualReview": {
+        "decision": "PASS for owner review",
+        "source": "Parent collaboration review message",
+        "wholeFrameViewed": true,
+        "reason": "Anonymous vertical-rod chairs and no identifiable facial features."
+      },
+      "generationPrompt": "Use case: photorealistic-natural. Generate one completely NEW original full-colour present-day candid documentary photograph, visibly real-camera quality, landscape 1536 x 1024 opaque RGB sRGB PNG. Natural subdued colours, ordinary human eye-level perspective, plausible single-camera geometry, realistic scale and physical textures. No food advertising look or posed product still-life. Natural irregular detail rather than cloned/embossed vegetation, repeating stamped organic surfaces, CGI, illustration, artificial HDR or cinematic grading. No text, letters, digits, signage, menus, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Do not depict protected contemporary artworks/design products or reproduce an existing photograph.\nScene: a quiet ordinary afternoon beside the broad shallow octagonal central basin of Jardin du Luxembourg, Paris, viewed from its pale stone rim at normal standing eye height, 35mm camera. Primary subject: everyday readers relaxing near the basin. Three or four simple ANONYMOUS OLD-FASHIONED green painted iron garden chairs are informally scattered on pale gravel; one back-facing adult sits in the nearer left chair reading a small blank-covered book mostly hidden by their body, another back-facing adult sits farther away, and a tiny child well in the distance by the opposite rim is seen from behind. No faces anywhere. Chair construction MUST be generic straight iron geometry that predates modern designer products: slender tubular/rod iron frame, simple straight four legs, narrow VERTICAL round iron rods in the back, plain functional seat, NO broad curved horizontal back/seat slats, NO contemporary ergonomic design-chair shapes, NO brands or logos. This is an anonymous illustrative historical-type park chair, not a replica of the actual branded present-day chairs. Natural worn green paint and very modest rust, no ornate decorative designs. The basin occupies the middle/right of frame, with believable shallow water and low clipped simple stone rim; its straight octagonal edges appear correctly foreshortened from eye height. Broad garden paths and mature chestnut trees provide the upper background, soft dappled late-afternoon light, natural irregular leaves and branches. Face the camera toward the tree-lined part of the garden so the Luxembourg Palace, sculpted statues, plinths and decorative artworks are ALL OUT OF FRAME. No kiosks, signs, awnings or printed clothing. A calm spontaneous park photograph with credible chair/person scale and varied gravel/tree/water texture, not a formal symmetrical postcard.",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "id": "athens-7-lycabettus-rooftops-v2",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "replaces": "athens-7-akropolis-soir",
+      "caption": "Ateenan katot sinisellä hetkellä Lykavittos-kukkulalta; Akropolis kaukana kuvan reunassa. Havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens evening-city arrival illustration, ONE completely NEW opaque landscape photograph,1536 x 1024.\nPrimary request: the rooftops and lights of present-day Athens at BLUE HOUR, seen downhill from a pine-covered path/slope of Lycabettus Hill, with no people.\nCorrect viewpoint: Lycabettus lies NORTHEAST of the Acropolis. Camera is on Lycabettus looking outward SOUTH/SOUTHWEST across the city from appreciably higher and further away than the Acropolis. A wide carpet of pale Athens residential blocks and rooftops fills the valley below. The Acropolis rock is a SMALL DISTANT warm-lit feature near the RIGHT EDGE of the frame, not a close dominant rock. From this northeast-side vantage the distant Parthenon shows a coherent northeast/eastward perspective rather than a southwest Philopappou facade. Keep its roofless ancient columns small at this distance; no scaffolding. Do not show Lycabettus itself as a separate distant hill because the photographer is standing on it. This is NOT an Areopagus or southwest Philopappou view.\nComposition: a few sparse natural pine branches and rocky slope edge occupy the immediate lower/left foreground; the broad white/cream city rooftops, ordinary balconies and some warm window lights below are the main subject. They recede naturally toward a quiet distant horizon under a blue evening sky. Acropolis illumination is simple subdued generic warm light, not a reproduction of any named modern lighting show or designed light installation. No recognisable modern signature landmark or protected modern artwork is featured.\nCamera/style: an authentic35mm travel photograph from standing eye height on the slope, coherent perspective and city scale, sensible optical softness at long distance. Cool blue-hour ambient light mixed with gentle warm ordinary windows, restrained color and contrast, plausible low-light exposure without extreme glowing yellow lighting. Real irregular pine needles, branches, bark and rock; buildings varied, not repeating stamp rows. Documentary photography, no dramatic fantasy skyline, cinematic HDR, hyper-detailed miniature city or painterly CGI.\nStrict constraints: no people, identifiable faces, text, Greek letters, numbers, advertisements, restaurant signs, logos, branded rooftop equipment, billboards, watermarks or frame. No visible Parthenon scaffolding, no giant foreground Acropolis, invented towers or extra temples. No collage or use of old image pixels. Keep city and skyline legible, not abstract bokeh.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-db25e255-e837-4397-a63b-9d0798a91b64.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/raw/athens-7-lycabettus-rooftops-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "rawSHA256": "f8f58e453a1ef25ee23a33250543567b2e6a0e5c44907f334bd3258429264324",
+      "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+      "bytes": 2769797,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "title": "Lycabettus Hill",
+          "url": "https://www.thisisathens.org/sights/lycabettus-hill",
+          "publisher": "Official Athens Guide",
+          "role": "Lycabettus elevated city panorama; read live12Oct2026"
+        },
+        {
+          "title": "Great City Walks to do in Athens",
+          "url": "https://www.thisisathens.org/activities/sports-outdoors/city-walks",
+          "publisher": "Official Athens Guide",
+          "role": "Lycabettus northeast of Acropolis and paths through pine/cypress/eucalyptus; read live12Oct2026"
+        },
+        {
+          "title": "Pinned feedback86",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/source.md",
+          "commit": "12a76cb745373a5c352c7d5ad7f723660d43df86",
+          "blob": "b3b54728c303d893cd0bdb0d1df16cf6ac6bf463",
+          "role": "Exact blue-hour rooftop city from Lycabettus slope, small warm-lit Acropolis at frame edge"
+        }
+      ],
+      "references": [],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "db25e255-e837-4397-a63b-9d0798a91b64",
+        "actualRequest": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens evening-city arrival illustration, ONE completely NEW opaque landscape photograph,1536 x 1024.\nPrimary request: the rooftops and lights of present-day Athens at BLUE HOUR, seen downhill from a pine-covered path/slope of Lycabettus Hill, with no people.\nCorrect viewpoint: Lycabettus lies NORTHEAST of the Acropolis. Camera is on Lycabettus looking outward SOUTH/SOUTHWEST across the city from appreciably higher and further away than the Acropolis. A wide carpet of pale Athens residential blocks and rooftops fills the valley below. The Acropolis rock is a SMALL DISTANT warm-lit feature near the RIGHT EDGE of the frame, not a close dominant rock. From this northeast-side vantage the distant Parthenon shows a coherent northeast/eastward perspective rather than a southwest Philopappou facade. Keep its roofless ancient columns small at this distance; no scaffolding. Do not show Lycabettus itself as a separate distant hill because the photographer is standing on it. This is NOT an Areopagus or southwest Philopappou view.\nComposition: a few sparse natural pine branches and rocky slope edge occupy the immediate lower/left foreground; the broad white/cream city rooftops, ordinary balconies and some warm window lights below are the main subject. They recede naturally toward a quiet distant horizon under a blue evening sky. Acropolis illumination is simple subdued generic warm light, not a reproduction of any named modern lighting show or designed light installation. No recognisable modern signature landmark or protected modern artwork is featured.\nCamera/style: an authentic35mm travel photograph from standing eye height on the slope, coherent perspective and city scale, sensible optical softness at long distance. Cool blue-hour ambient light mixed with gentle warm ordinary windows, restrained color and contrast, plausible low-light exposure without extreme glowing yellow lighting. Real irregular pine needles, branches, bark and rock; buildings varied, not repeating stamp rows. Documentary photography, no dramatic fantasy skyline, cinematic HDR, hyper-detailed miniature city or painterly CGI.\nStrict constraints: no people, identifiable faces, text, Greek letters, numbers, advertisements, restaurant signs, logos, branded rooftop equipment, billboards, watermarks or frame. No visible Parthenon scaffolding, no giant foreground Acropolis, invented towers or extra temples. No collage or use of old image pixels. Keep city and skyline legible, not abstract bokeh.",
+          "transparent_background": false
+        },
+        "inputImageCount": 0,
+        "wholeNewGeneration": true,
+        "nativeCopyByteExact": true,
+        "pixelsUnchangedFromNative": true,
+        "creativeEditsPerformed": false
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/lycabettus-acropolis.png",
+          "qa/lycabettus-pine-rock.png",
+          "qa/lycabettus-city.png"
+        ],
+        "photorealismPassed": true,
+        "naturalOrganicTexturePassed": true,
+        "noEstablishedTextPassed": true,
+        "noPeopleObserved": true,
+        "viewpointPassed": true,
+        "passedForDelivery": true,
+        "observations": [
+          "Elevated Lycabettus northeast vantage across pale city rooftops toward southwest; Acropolis distant at right edge",
+          "Blue-hour sky, pine branches and irregular rocky slope foreground, warm ordinary windows",
+          "No visible Parthenon scaffolding, readable signs, faces, invented foreground Lycabettus or large close Acropolis",
+          "Individual city blocks, pine needles and rocks show coherent photographic detail, without stamped repetition"
+        ]
+      },
+      "rootReviewPending": false,
+      "selected": true,
+      "omitted": false,
+      "omitReason": null,
+      "r2Uploaded": true,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png?t=6a0357837e30bbec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+        "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+        "bytes": 2769797,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png?t=6a0357837e30bbec",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+        "bytes": 2769797,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T14:07:41.789641+00:00"
+      },
+      "replacementScope": "New gallery addition for prior omitted pilot role7; not replacing an earlier delivered live asset",
+      "rootReview": {
+        "wholeFrameInspected": true,
+        "passedForOwnerReview": true,
+        "nativeCropWorkerEvidenceRetained": true
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "id": "stockholm-4-monteliusvagen-v2",
+      "taskNumber": 86,
+      "city": "stockholm",
+      "cityFi": "Tukholma",
+      "caption": "Monteliusvägenin puinen reitti ja näkymä Riddarfjärdenin yli Riddarholmenille. Havainnekuva.",
+      "sourceOrderPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/source.md",
+      "sourceOrderSHA256": "f0d9964a17cd15a314d6230aca9eaa0b8e1e4c8df1fbf888eeeab7c175ed167c",
+      "sourceReadFully": true,
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Stockholm everyday city arrival illustration,1536x1024 opaque landscape.\nPrimary request: A convincing real-camera documentary view from the start of a wooden-deck section of MONTELIUSVÄGEN on MARIABERGET, Södermalm, Stockholm, with two people seen ONLY FROM BEHIND stopping to look across Riddarfjärden toward Riddarholmen and Gamla stan. Contemporary representative city illustration, not a claim of exact live restoration conditions on a particular date.\nGeographic camera: Eye-height about1.6m on the cliff path from the western section, looking EAST-NORTHEAST toward Riddarholmen and Gamla stan. This is the SOUTH shore/cliff of the lake. When looking east, the lake and waterside safety railing are on the LEFT; hillside private gardens and old house edges are on the RIGHT. The pathway curves naturally forward along the cliff. Keep real level water horizon and elevated view down to the water, not a flat quay at water level.\nForeground/path: Narrow plausible weathered timber boardwalk/deck section with rough stone/cliff and natural shrubs below, a simple weathered wooden top safety rail with unobtrusive dark mesh infill along the lakeside. Hint of plain historic garden fence/hill vegetation on the landward side, not a row of novel luxury houses. Do not copy any exact source photograph composition or protected artwork.\nPeople: Two ordinary adults farther down the path at middle distance, plain anonymous jackets, both fully turned away and looking across the water, with credible quiet posture and correct anatomy. They are a small part of the photograph and do not block the whole skyline. No visible faces or profile faces, no posing for camera, no branded clothing.\nCity backdrop/geometry: Across broad Mälaren/Riddarfjärden water, Riddarholmen appears to the LEFT of Gamla stan, with compact historic stone/plaster buildings, brick church shaft and slender historic Riddarholmskyrkan Gothic open-lattice spire above the island's roofs. Gamla stan's denser old roofs and distant old church towers recede farther RIGHT. Correct island/water alignment from Södermalm, not a Skeppsholmen viewpoint, not an east-side Skeppsbron waterfront facsimile. Exclude Kungsholmen's City Hall sector by aiming east/northeast.\nLighting/photo: Warm but restrained late-afternoon natural daylight, highly photorealistic35mm full-frame travel-documentary camera look with moderate/deep f/8 focus, natural unposed walking composition. Same single physical exposure for foreground, people, water and city; plausible shadow directions and scale, natural water ripples, imperfect weathered wood and ordinary leaves without repeated embossed organic texture. No HDR, hyper-polish, fake blur, illustration, painting, CGI or pasted-in skyline.\nABSOLUTE exclusions: NO STOCKHOLM CITY HALL/Stadshuset tower anywhere, not even on the far edge. No Börshuset sign, route sign, graffiti, lettering, labels, digits, logos, advertising, menu, plaque, watermark, border or frame anywhere. No visible identifiable faces, no contemporary protected artworks or named modern designs. Avoid unnecessary boats or foreground props. Full1536x1024 landscape, opaque.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Stockholm everyday city arrival illustration,1536x1024 opaque landscape.\nPrimary request: A convincing real-camera documentary view from the start of a wooden-deck section of MONTELIUSVÄGEN on MARIABERGET, Södermalm, Stockholm, with two people seen ONLY FROM BEHIND stopping to look across Riddarfjärden toward Riddarholmen and Gamla stan. Contemporary representative city illustration, not a claim of exact live restoration conditions on a particular date.\nGeographic camera: Eye-height about1.6m on the cliff path from the western section, looking EAST-NORTHEAST toward Riddarholmen and Gamla stan. This is the SOUTH shore/cliff of the lake. When looking east, the lake and waterside safety railing are on the LEFT; hillside private gardens and old house edges are on the RIGHT. The pathway curves naturally forward along the cliff. Keep real level water horizon and elevated view down to the water, not a flat quay at water level.\nForeground/path: Narrow plausible weathered timber boardwalk/deck section with rough stone/cliff and natural shrubs below, a simple weathered wooden top safety rail with unobtrusive dark mesh infill along the lakeside. Hint of plain historic garden fence/hill vegetation on the landward side, not a row of novel luxury houses. Do not copy any exact source photograph composition or protected artwork.\nPeople: Two ordinary adults farther down the path at middle distance, plain anonymous jackets, both fully turned away and looking across the water, with credible quiet posture and correct anatomy. They are a small part of the photograph and do not block the whole skyline. No visible faces or profile faces, no posing for camera, no branded clothing.\nCity backdrop/geometry: Across broad Mälaren/Riddarfjärden water, Riddarholmen appears to the LEFT of Gamla stan, with compact historic stone/plaster buildings, brick church shaft and slender historic Riddarholmskyrkan Gothic open-lattice spire above the island's roofs. Gamla stan's denser old roofs and distant old church towers recede farther RIGHT. Correct island/water alignment from Södermalm, not a Skeppsholmen viewpoint, not an east-side Skeppsbron waterfront facsimile. Exclude Kungsholmen's City Hall sector by aiming east/northeast.\nLighting/photo: Warm but restrained late-afternoon natural daylight, highly photorealistic35mm full-frame travel-documentary camera look with moderate/deep f/8 focus, natural unposed walking composition. Same single physical exposure for foreground, people, water and city; plausible shadow directions and scale, natural water ripples, imperfect weathered wood and ordinary leaves without repeated embossed organic texture. No HDR, hyper-polish, fake blur, illustration, painting, CGI or pasted-in skyline.\nABSOLUTE exclusions: NO STOCKHOLM CITY HALL/Stadshuset tower anywhere, not even on the far edge. No Börshuset sign, route sign, graffiti, lettering, labels, digits, logos, advertising, menu, plaque, watermark, border or frame anywhere. No visible identifiable faces, no contemporary protected artworks or named modern designs. Avoid unnecessary boats or foreground props. Full1536x1024 landscape, opaque.",
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Stockholm everyday city arrival illustration,1536x1024 opaque landscape.\nPrimary request: A convincing real-camera documentary view from the start of a wooden-deck section of MONTELIUSVÄGEN on MARIABERGET, Södermalm, Stockholm, with two people seen ONLY FROM BEHIND stopping to look across Riddarfjärden toward Riddarholmen and Gamla stan. Contemporary representative city illustration, not a claim of exact live restoration conditions on a particular date.\nGeographic camera: Eye-height about1.6m on the cliff path from the western section, looking EAST-NORTHEAST toward Riddarholmen and Gamla stan. This is the SOUTH shore/cliff of the lake. When looking east, the lake and waterside safety railing are on the LEFT; hillside private gardens and old house edges are on the RIGHT. The pathway curves naturally forward along the cliff. Keep real level water horizon and elevated view down to the water, not a flat quay at water level.\nForeground/path: Narrow plausible weathered timber boardwalk/deck section with rough stone/cliff and natural shrubs below, a simple weathered wooden top safety rail with unobtrusive dark mesh infill along the lakeside. Hint of plain historic garden fence/hill vegetation on the landward side, not a row of novel luxury houses. Do not copy any exact source photograph composition or protected artwork.\nPeople: Two ordinary adults farther down the path at middle distance, plain anonymous jackets, both fully turned away and looking across the water, with credible quiet posture and correct anatomy. They are a small part of the photograph and do not block the whole skyline. No visible faces or profile faces, no posing for camera, no branded clothing.\nCity backdrop/geometry: Across broad Mälaren/Riddarfjärden water, Riddarholmen appears to the LEFT of Gamla stan, with compact historic stone/plaster buildings, brick church shaft and slender historic Riddarholmskyrkan Gothic open-lattice spire above the island's roofs. Gamla stan's denser old roofs and distant old church towers recede farther RIGHT. Correct island/water alignment from Södermalm, not a Skeppsholmen viewpoint, not an east-side Skeppsbron waterfront facsimile. Exclude Kungsholmen's City Hall sector by aiming east/northeast.\nLighting/photo: Warm but restrained late-afternoon natural daylight, highly photorealistic35mm full-frame travel-documentary camera look with moderate/deep f/8 focus, natural unposed walking composition. Same single physical exposure for foreground, people, water and city; plausible shadow directions and scale, natural water ripples, imperfect weathered wood and ordinary leaves without repeated embossed organic texture. No HDR, hyper-polish, fake blur, illustration, painting, CGI or pasted-in skyline.\nABSOLUTE exclusions: NO STOCKHOLM CITY HALL/Stadshuset tower anywhere, not even on the far edge. No Börshuset sign, route sign, graffiti, lettering, labels, digits, logos, advertising, menu, plaque, watermark, border or frame anywhere. No visible identifiable faces, no contemporary protected artworks or named modern designs. Avoid unnecessary boats or foreground props. Full1536x1024 landscape, opaque.",
+          "transparent_background": false
+        }
+      },
+      "generationOutputExecutionId": "50a15e3e-0cbc-46b2-aeac-666da659226d",
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Underlying request ID not exposed; actual output execution UUID/native file recorded.",
+      "generationCallsForAsset": 1,
+      "builtinDefaultOutputPath": "/Users/samireivinen/.codex/generated_images/01a13027-00b0-7af1-b2e4-9b601509dd59/exec-50a15e3e-0cbc-46b2-aeac-666da659226d.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/native/stockholm-4-monteliusvagen-v2.png",
+      "nativeSHA256": "952458343fedc9d7ce50ed830b8e7ae30a5cb37d3f8af558675da5216bd182d1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/final/stockholm-4-monteliusvagen-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/final/stockholm-4-monteliusvagen-v2.png",
+      "sha256": "0d58b8b1d287fd1855eaed0629a9525f5e8d1a27a6b0f097fb95682f09ff6315",
+      "bytes": 2992118,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "mode": "RGB",
+      "iccProfile": "sRGB",
+      "pixelsUnchanged": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/sa-arbetar-staden/natur-parker-och-gronomraden/parkplan-sodermalm-del-2---grona-gaturum-och-parkstrak-del-1.pdf",
+          "role": "Stockholm city primary parkplan, printed pages216–217 / PDF20–21: route lies south of lake, crosses partly wooden decks, from Kattgrändwest to Skolgrändeast, cliff vegetation and mixed gravel/decks/rails, view to Riddarfjärden and old town. Text/map/photo factual inspection only, not sent to image generation."
+        },
+        {
+          "url": "https://www.visitstockholm.com/o/monteliusvagen/",
+          "role": "Official city tourism source confirms Mälaren/Riddarholmen view and safety railing; camera excludes CityHall by turning east/northeast."
+        }
+      ],
+      "references": [
+        {
+          "sourceURL": "https://start.stockholm/globalassets/start/om-stockholms-stad/sa-arbetar-staden/natur-parker-och-gronomraden/parkplan-sodermalm-del-2---grona-gaturum-och-parkstrak-del-1.pdf",
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/references/parkplan-sodermalm.pdf",
+          "sha256": "83cc6ed5ca6318da0384354592bc0d647924395931cab3beb1f8f03ad2b0c542",
+          "role": "Stockholm city primary parkplan, printed pages216–217 / PDF20–21: route lies south of lake, crosses partly wooden decks, from Kattgrändwest to Skolgrändeast, cliff vegetation and mixed gravel/decks/rails, view to Riddarfjärden and old town. Text/map/photo factual inspection only, not sent to image generation.",
+          "license": "No reuse licence asserted; inspection only",
+          "passedToGeneration": false,
+          "viewedBeforeUse": true,
+          "renderedPagesViewed": [
+            20,
+            21
+          ],
+          "geometryInference": "City map has lake north of path, Kattgrändwest/Skolgrändeast. Camera from west looking east/northeast puts lake left and hill/gardens right. Riddarholmen lies west/left of Gamlastan; CityHall on Kungsholmen northwest is excluded by east/northeast framing."
+        },
+        {
+          "sourceURL": "https://www.visitstockholm.com/o/monteliusvagen/",
+          "role": "Official city tourism source confirms Mälaren/Riddarholmen view and safety railing; camera excludes CityHall by turning east/northeast.",
+          "passedToGeneration": false,
+          "liveRead20261012": true
+        }
+      ],
+      "referenceImagesPassed": [],
+      "workerQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "nativeCropsInspected": [
+          "wood",
+          "people-close",
+          "island",
+          "leaves-stone"
+        ],
+        "geometryCheckedAgainstPrimarySource": true,
+        "geometry": "Wooden deck at elevated south shore, lake/rail left, land/garden right while looking east/northeast; Riddarholmen church island left of Gamlastan. CityHall northwest sector not in frame.",
+        "noCityHallIdentified": true,
+        "facesOnlyBacks": true,
+        "noTextOrSignsIdentified": true,
+        "surfaceTextureNatural": true,
+        "cameraLooking": true,
+        "limits": "Representative contemporary illustrative skyline, not live proof of2026 church restoration conditions."
+      },
+      "ownerReviewPending": true,
+      "parentRootReviewPending": true,
+      "gameIntegrationVerified": false,
+      "publicationVerified": false,
+      "createdAt": "2026-10-12T14:18:10.086632+00:00",
+      "selectionStatus": "worker-passed-parent-review-pending",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png?t=0d58b8b1d287fd18",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+        "sha256": "0d58b8b1d287fd1855eaed0629a9525f5e8d1a27a6b0f097fb95682f09ff6315",
+        "bytes": 2992118,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:19:23.740785+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "bytes": 2992118,
+          "sha256": "0d58b8b1d287fd1855eaed0629a9525f5e8d1a27a6b0f097fb95682f09ff6315",
+          "byteExactReadback": true
+        }
+      },
+      "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png?t=0d58b8b1d287fd18",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+      "r2ByteExactVerified": true,
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/manifest.json",
+      "reusedWithoutNewGeneration": true
+    },
+    {
+      "city": "paris",
+      "id": "paris-6-canal-saint-martin-juhla-v5",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/source.md",
+      "sourceCommit": "1106174af4b4dbb757e4a479882c3f1f2c894dd1",
+      "sourceBlob": "d82e1e9a93ba50c19afa23faa93223e69007ce7a",
+      "sourceSHA256": "b3d118368ac156372c37b5e8205ae822119896f7beac55986f726a1e106d3fb7",
+      "latestHumanContinueInstruction": "jatka; then confirms 17:50 source as latest",
+      "mode": "RGB",
+      "maximumNewCalls": 1,
+      "additionalVariantsAllowed": false,
+      "existingHistoricalAndCityImagesReusedNoNewGeneration": true,
+      "format": "PNG",
+      "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "R2prefix": "julisteet/saapumisintro/paris/20261012-v5/",
+      "ownerReconfirmation": "Joo tuo on se uusin",
+      "fullSourceRead": true,
+      "actualSourceSHA256": "b3d118368ac156372c37b5e8205ae822119896f7beac55986f726a1e106d3fb7",
+      "prompt": "Use case: photorealistic-natural. Generate a COMPLETELY NEW original documentary travel photograph, colour 1536 x 1024 opaque RGB sRGB PNG, visibly photographed with a real camera during an ordinary happy summer evening beside Canal Saint-Martin in Paris. Not a food image. One coherent physical scene, not a pasted portrait, collage, fashion advertising image or composited background.\nScene and framing: narrow straight canal, old worn stone/quay paving and leafy plane trees, small relaxed groups of young adults sitting on the canal-edge paving with their friends. A modest generic acoustic guitar is played quietly by a friend farther along the bank; small warm anonymous lanterns and a subtle short string of plain lights decorate the gathering, with plenty of natural late-evening sky light still present. No large landmarks, no Eiffel Tower, no Notre-Dame, no sculptures/artworks, commercial façades, posters or storefronts.\nPrimary foreground subject: ONE entirely fictional woman about 26 years old, naturally laughing with her friends rather than posing for the photographer. Waist-up or half-body view in the nearer RIGHT third, at about two metres from the camera, turned slightly LEFT toward a friend sitting beside her. She has an ordinary human face with fine real skin texture, small natural asymmetries and a spontaneous gentle open-mouth laugh, normal teeth and expressive eyes; no beauty retouch, waxy/plastic smoothness or glamour lighting. A plain contemporary cotton overshirt over a simple fashionable neutral top, no distinctive designer style or label. Her body, arms and any visible hands are naturally supported by the quay seating, with plausible elbows/wrists/fingers, not detached or unnaturally gripping props. Several friends about 22–32 years old in varied ordinary modern unbranded summer clothing occupy the same bank at middle distance, interacting naturally. All people are fictional adults, no real-person/celebrity likeness or references, plausibly ordinary contemporary Paris locals with natural individual variation rather than stereotypes.\nCamera: observer eye height around 1.5m, a 35mm lens around f/5.6, ISO about 1000, subtle normal documentary grain; moderate natural depth of field lets the environment and friends remain substantial and readable, no artificial extreme portrait bokeh, edge halos, separate subject spotlights or focus stacking. Foreground skin/clothing and friends/bank share the SAME soft twilight illumination, slight warm lantern spill only near the actual lanterns, realistic contact shadows and appropriate object scales. The canal leads away through the frame, its small water ripples/reflections physically irregular; tree bark/leaves/stone have varied natural detail, no repetitive embossed, stamped or cloned patterns. Authentic candid social atmosphere, quiet acoustic music, laughter and conversation.\nConstraints: no text, letters, digits, signs, notices, menus, logos, brands, printed clothing, named modern design products, watermarks, frame or source-photograph reproduction. Guitar is a plain anonymous traditional acoustic instrument without lettering or brand-shaped headstock. No alcohol bottles or alcohol-focused props; if any small plain glass is present it is secondary water/lemonade, not the main subject. No children, no violence, no dramatic concert stage, no cinematic HDR grading, cartoon/painterly/CGI appearance. Create the FULL image fresh; no input images or reuse of any old food/event candidate.",
+      "caption": "Kesäillan musiikkia ja ystävien naurua Canal Saint-Martinin rannalla Pariisissa. Havainnekuva.",
+      "sources": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/source.md",
+          "sourceCommit": "1106174af4b4dbb757e4a479882c3f1f2c894dd1",
+          "sourceBlob": "d82e1e9a93ba50c19afa23faa93223e69007ce7a",
+          "sha256": "b3d118368ac156372c37b5e8205ae822119896f7beac55986f726a1e106d3fb7",
+          "support": "Latest owner-confirmed source correction2, fictional adults permitted, slot6 life/event replaces food."
+        }
+      ],
+      "refs": [],
+      "generatedDefaultPath": "/Users/samireivinen/.codex/generated_images/01a13028-0737-70a0-8d6a-6c29ad607efc/exec-8b3c233a-2eeb-48d7-a545-f5ff198614ec.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/paris/native/paris-6-canal-saint-martin-juhla-v5.png",
+      "nativeSHA256": "47571a2f2b6fa39611d57b2d8b3b1db964f489503ca94b62379ee2816209b30a",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/paris/final/paris-6-canal-saint-martin-juhla-v5.png",
+      "sha256": "4f23c987f3e518ec13b81559bdc1967eaceb92c3c74c54b4469fa4421b53bd68",
+      "bytes": 2352845,
+      "width": 1536,
+      "height": 1024,
+      "icc": "sRGB",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "pixelArrayPreserved": true,
+      "tool": "builtin image_gen",
+      "actualRequestIDFromSavedOutput": "exec-8b3c233a-2eeb-48d7-a545-f5ff198614ec",
+      "copiedNativeOriginal": true,
+      "copiedAt": "2026-10-12T16:52:36.390808+00:00",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/paris/final/paris-6-canal-saint-martin-juhla-v5.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/paris/native/paris-6-canal-saint-martin-juhla-v5.png",
+      "generationPrompt": "Use case: photorealistic-natural. Generate a COMPLETELY NEW original documentary travel photograph, colour 1536 x 1024 opaque RGB sRGB PNG, visibly photographed with a real camera during an ordinary happy summer evening beside Canal Saint-Martin in Paris. Not a food image. One coherent physical scene, not a pasted portrait, collage, fashion advertising image or composited background.\nScene and framing: narrow straight canal, old worn stone/quay paving and leafy plane trees, small relaxed groups of young adults sitting on the canal-edge paving with their friends. A modest generic acoustic guitar is played quietly by a friend farther along the bank; small warm anonymous lanterns and a subtle short string of plain lights decorate the gathering, with plenty of natural late-evening sky light still present. No large landmarks, no Eiffel Tower, no Notre-Dame, no sculptures/artworks, commercial façades, posters or storefronts.\nPrimary foreground subject: ONE entirely fictional woman about 26 years old, naturally laughing with her friends rather than posing for the photographer. Waist-up or half-body view in the nearer RIGHT third, at about two metres from the camera, turned slightly LEFT toward a friend sitting beside her. She has an ordinary human face with fine real skin texture, small natural asymmetries and a spontaneous gentle open-mouth laugh, normal teeth and expressive eyes; no beauty retouch, waxy/plastic smoothness or glamour lighting. A plain contemporary cotton overshirt over a simple fashionable neutral top, no distinctive designer style or label. Her body, arms and any visible hands are naturally supported by the quay seating, with plausible elbows/wrists/fingers, not detached or unnaturally gripping props. Several friends about 22–32 years old in varied ordinary modern unbranded summer clothing occupy the same bank at middle distance, interacting naturally. All people are fictional adults, no real-person/celebrity likeness or references, plausibly ordinary contemporary Paris locals with natural individual variation rather than stereotypes.\nCamera: observer eye height around 1.5m, a 35mm lens around f/5.6, ISO about 1000, subtle normal documentary grain; moderate natural depth of field lets the environment and friends remain substantial and readable, no artificial extreme portrait bokeh, edge halos, separate subject spotlights or focus stacking. Foreground skin/clothing and friends/bank share the SAME soft twilight illumination, slight warm lantern spill only near the actual lanterns, realistic contact shadows and appropriate object scales. The canal leads away through the frame, its small water ripples/reflections physically irregular; tree bark/leaves/stone have varied natural detail, no repetitive embossed, stamped or cloned patterns. Authentic candid social atmosphere, quiet acoustic music, laughter and conversation.\nConstraints: no text, letters, digits, signs, notices, menus, logos, brands, printed clothing, named modern design products, watermarks, frame or source-photograph reproduction. Guitar is a plain anonymous traditional acoustic instrument without lettering or brand-shaped headstock. No alcohol bottles or alcohol-focused props; if any small plain glass is present it is secondary water/lemonade, not the main subject. No children, no violence, no dramatic concert stage, no cinematic HDR grading, cartoon/painterly/CGI appearance. Create the FULL image fresh; no input images or reuse of any old food/event candidate.",
+      "selected": true,
+      "workerQA": {
+        "id": "paris-6-canal-saint-martin-juhla-v5",
+        "sha256": "4f23c987f3e518ec13b81559bdc1967eaceb92c3c74c54b4469fa4421b53bd68",
+        "passedForOwnerReview": true,
+        "wholeFrameViewed": true,
+        "nativeCropsViewed": [
+          "face",
+          "guitar-anatomy",
+          "group-hands"
+        ],
+        "fictionalAdultsIntent": true,
+        "realPersonReferencesPassed": false,
+        "naturalFaceSkinTexture": true,
+        "naturalBodyHandPlacement": true,
+        "singleCameraSpatialIntegration": true,
+        "pastedForegroundObserved": false,
+        "consistentTwilightLight": true,
+        "materialTexturesNatural": true,
+        "textSignsLogosObserved": false,
+        "namedLandmarksObserved": false,
+        "alcoholMainSubject": false,
+        "notes": "One laughing fictional adult in near half-body view interacting with friends; believable eyes, teeth, skin texture and expression. Friends/guitar/quay share natural twilight and local light spill. Guitar hands plausible at environmental-photo scale, far fine fingering/strings intentionally not asserted as exact technique. Blank traditional instrument and anonymous clothes, ordinary water reflections/stone/leaf textures. Secondary plain glasses are not a beverage feature. Source requests fictional adults; no real identity or existing portrait supplied, no exact named-person likeness claim."
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png?t=4f23c987f3e518ec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png",
+        "sha256": "4f23c987f3e518ec13b81559bdc1967eaceb92c3c74c54b4469fa4421b53bd68",
+        "bytes": 2352845,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadbackHttp": 200,
+        "canonicalByteExact": true,
+        "canonicalMIME": "image/png",
+        "canonicalCORS": "https://matkakirja.app"
+      },
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "actualRequestId": "exec-8b3c233a-2eeb-48d7-a545-f5ff198614ec",
+        "actualCallsThisPhase": 1,
+        "maximumNewCalls": 1,
+        "variants": 0,
+        "wholeNew": true,
+        "inputImageReferencesPassed": 0,
+        "noCreativeEditCropStretch": true,
+        "nativePixelArrayPreserved": true
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "sitePublicationVerified": false,
+      "delivery": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png?t=4f23c987f3e518ec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png",
+        "sha256": "4f23c987f3e518ec13b81559bdc1967eaceb92c3c74c54b4469fa4421b53bd68",
+        "bytes": 2352845,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadbackHttp": 200,
+        "canonicalByteExact": true,
+        "canonicalMIME": "image/png",
+        "canonicalCORS": "https://matkakirja.app"
+      },
+      "r2Key": "julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png?t=4f23c987f3e518ec",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png",
+      "status": "ready-R2-owner-review-pending",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/paris/manifest.json",
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "gameIntegrated": false
+    },
+    {
+      "id": "athens-6-psyrri-juhla-v5",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "caption": "Iloinen kesäilta Ateenan Psyrrin kujalla, kun nuoret aikuiset viettävät iltaa ystäviensä kanssa. Havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival image6, ONE entirely new opaque RGB landscape photograph,1536 x1024.\nPrimary request: a joyful candid summer evening with young adult friends on the narrow terrace-lined alleys of Psyrri, Athens. This is a natural documentary street-life photograph, not a food image or posed fashion shoot.\nScene: an ordinary narrow Athens/Psyrri alley with simple anonymous two- and three-storey plaster facades, plain small balconies/shutters, textured paving and modest cafe terrace tables. A few simple strings of small warm bulbs hang across the alley, with believable cables and attachments. Young adults gather at terrace tables and along the street, chatting and laughing. Ordinary clear water glasses may sit incidentally on a table, but no alcohol or bottles are featured. Blue summer-evening ambient daylight remains in a little strip of sky; restrained warm practical lights mingle with it.\nForeground person: ONE entirely fictional Greek young adult woman in her mid-twenties, shown from head to waist, mid-laugh with close friends beside her. She has plausible everyday Mediterranean/Greek appearance, dark naturally wavy hair and realistic skin. She is slightly turned toward her friends, not performing for the camera. Contemporary stylish unbranded clothes: a simple terracotta sleeveless summer top and light trousers, ordinary small jewelry. Her friends are nearby at a real shared depth, in similarly generic fashionable summer clothes; additional young adults in their twenties/thirties naturally populate the tables and receding street. Everyone is clearly an adult. Invent unique ordinary people from scratch: no public figures, named people, celebrity lookalikes or photographic identity references. Foreground arms can be naturally relaxed and partly cropped near the waist; any visible hands must have believable fingers, wrists and joints.\nCamera and realism: a single real-camera-looking documentary exposure at human eye level, normal35mm perspective, casual balanced composition with the foreground person integrated physically into the street and group. Skin pores, natural teeth/eyes, small hair flyaways, folds of cloth, plaster wear and shadows all follow the same local light and lens rendering. Moderate depth of field aroundf/5.6, background people/street coherent but normally softer than nearby subjects; no hard cutout edges, pasted portrait, studio key light, beauty retouching, plastic skin, exaggerated HDR, focus stacking or cinematic color grading. Genuine spontaneous friendship and relaxed happy summer atmosphere.\nABSOLUTE monument exclusion: there is NOT A SINGLE MONUMENT anywhere in the frame, including distant background, reflections or skyline. NO Acropolis, Parthenon, ancient ruins, statues, temple, landmark church or recognizable memorial. The alley is tightly framed by ordinary generic facades only; the tiny sky strip is empty of landmarks.\nOther strict exclusions: NO text, letters, Greek writing, digits, house/address plaques, signs, menus, posters, logos, clothing prints, brand marks, branded packages, graffiti/street art, copyrighted modern artworks, watermarks or border anywhere. No identifiable named modern building, artwork or designed lighting show. No violence, intoxication or alcohol as subject. Produce the complete new scene from scratch without editing or reusing any previous image pixels.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival image6, ONE entirely new opaque RGB landscape photograph,1536 x1024.\nPrimary request: a joyful candid summer evening with young adult friends on the narrow terrace-lined alleys of Psyrri, Athens. This is a natural documentary street-life photograph, not a food image or posed fashion shoot.\nScene: an ordinary narrow Athens/Psyrri alley with simple anonymous two- and three-storey plaster facades, plain small balconies/shutters, textured paving and modest cafe terrace tables. A few simple strings of small warm bulbs hang across the alley, with believable cables and attachments. Young adults gather at terrace tables and along the street, chatting and laughing. Ordinary clear water glasses may sit incidentally on a table, but no alcohol or bottles are featured. Blue summer-evening ambient daylight remains in a little strip of sky; restrained warm practical lights mingle with it.\nForeground person: ONE entirely fictional Greek young adult woman in her mid-twenties, shown from head to waist, mid-laugh with close friends beside her. She has plausible everyday Mediterranean/Greek appearance, dark naturally wavy hair and realistic skin. She is slightly turned toward her friends, not performing for the camera. Contemporary stylish unbranded clothes: a simple terracotta sleeveless summer top and light trousers, ordinary small jewelry. Her friends are nearby at a real shared depth, in similarly generic fashionable summer clothes; additional young adults in their twenties/thirties naturally populate the tables and receding street. Everyone is clearly an adult. Invent unique ordinary people from scratch: no public figures, named people, celebrity lookalikes or photographic identity references. Foreground arms can be naturally relaxed and partly cropped near the waist; any visible hands must have believable fingers, wrists and joints.\nCamera and realism: a single real-camera-looking documentary exposure at human eye level, normal35mm perspective, casual balanced composition with the foreground person integrated physically into the street and group. Skin pores, natural teeth/eyes, small hair flyaways, folds of cloth, plaster wear and shadows all follow the same local light and lens rendering. Moderate depth of field aroundf/5.6, background people/street coherent but normally softer than nearby subjects; no hard cutout edges, pasted portrait, studio key light, beauty retouching, plastic skin, exaggerated HDR, focus stacking or cinematic color grading. Genuine spontaneous friendship and relaxed happy summer atmosphere.\nABSOLUTE monument exclusion: there is NOT A SINGLE MONUMENT anywhere in the frame, including distant background, reflections or skyline. NO Acropolis, Parthenon, ancient ruins, statues, temple, landmark church or recognizable memorial. The alley is tightly framed by ordinary generic facades only; the tiny sky strip is empty of landmarks.\nOther strict exclusions: NO text, letters, Greek writing, digits, house/address plaques, signs, menus, posters, logos, clothing prints, brand marks, branded packages, graffiti/street art, copyrighted modern artworks, watermarks or border anywhere. No identifiable named modern building, artwork or designed lighting show. No violence, intoxication or alcohol as subject. Produce the complete new scene from scratch without editing or reusing any previous image pixels.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-39543ce8-56f7-4daf-a8dc-fb530453ab61.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/raw/athens-6-psyrri-juhla-v5.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/final/athens-6-psyrri-juhla-v5.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/final/athens-6-psyrri-juhla-v5.png",
+      "sha256": "e8ed068cc7829242b3d7c178a62463839e09cf71759cb9efbfa5e73f01066fa5",
+      "rawSHA256": "43188741323f39007c653ccf9e646ed671553b3081d77d3bfceb30750f139a5b",
+      "bytes": 2253998,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "type": "Pinned full source read; latest correction2/17.4x applies",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/sources/source-1106174.md",
+          "commit": "1106174af4b4dbb757e4a479882c3f1f2c894dd1",
+          "blob": "d82e1e9a93ba50c19afa23faa93223e69007ce7a",
+          "sha256": "b3d118368ac156372c37b5e8205ae822119896f7beac55986f726a1e106d3fb7",
+          "ownerReconfirmation": "Joo tuo on se uusin",
+          "sourceLatestConfirmedByOwner": true
+        }
+      ],
+      "references": [],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "39543ce8-56f7-4daf-a8dc-fb530453ab61",
+        "actualRequest": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival image6, ONE entirely new opaque RGB landscape photograph,1536 x1024.\nPrimary request: a joyful candid summer evening with young adult friends on the narrow terrace-lined alleys of Psyrri, Athens. This is a natural documentary street-life photograph, not a food image or posed fashion shoot.\nScene: an ordinary narrow Athens/Psyrri alley with simple anonymous two- and three-storey plaster facades, plain small balconies/shutters, textured paving and modest cafe terrace tables. A few simple strings of small warm bulbs hang across the alley, with believable cables and attachments. Young adults gather at terrace tables and along the street, chatting and laughing. Ordinary clear water glasses may sit incidentally on a table, but no alcohol or bottles are featured. Blue summer-evening ambient daylight remains in a little strip of sky; restrained warm practical lights mingle with it.\nForeground person: ONE entirely fictional Greek young adult woman in her mid-twenties, shown from head to waist, mid-laugh with close friends beside her. She has plausible everyday Mediterranean/Greek appearance, dark naturally wavy hair and realistic skin. She is slightly turned toward her friends, not performing for the camera. Contemporary stylish unbranded clothes: a simple terracotta sleeveless summer top and light trousers, ordinary small jewelry. Her friends are nearby at a real shared depth, in similarly generic fashionable summer clothes; additional young adults in their twenties/thirties naturally populate the tables and receding street. Everyone is clearly an adult. Invent unique ordinary people from scratch: no public figures, named people, celebrity lookalikes or photographic identity references. Foreground arms can be naturally relaxed and partly cropped near the waist; any visible hands must have believable fingers, wrists and joints.\nCamera and realism: a single real-camera-looking documentary exposure at human eye level, normal35mm perspective, casual balanced composition with the foreground person integrated physically into the street and group. Skin pores, natural teeth/eyes, small hair flyaways, folds of cloth, plaster wear and shadows all follow the same local light and lens rendering. Moderate depth of field aroundf/5.6, background people/street coherent but normally softer than nearby subjects; no hard cutout edges, pasted portrait, studio key light, beauty retouching, plastic skin, exaggerated HDR, focus stacking or cinematic color grading. Genuine spontaneous friendship and relaxed happy summer atmosphere.\nABSOLUTE monument exclusion: there is NOT A SINGLE MONUMENT anywhere in the frame, including distant background, reflections or skyline. NO Acropolis, Parthenon, ancient ruins, statues, temple, landmark church or recognizable memorial. The alley is tightly framed by ordinary generic facades only; the tiny sky strip is empty of landmarks.\nOther strict exclusions: NO text, letters, Greek writing, digits, house/address plaques, signs, menus, posters, logos, clothing prints, brand marks, branded packages, graffiti/street art, copyrighted modern artworks, watermarks or border anywhere. No identifiable named modern building, artwork or designed lighting show. No violence, intoxication or alcohol as subject. Produce the complete new scene from scratch without editing or reusing any previous image pixels.",
+          "transparent_background": false
+        },
+        "inputImageCount": 0,
+        "wholeNewGeneration": true,
+        "nativeCopyByteExact": true,
+        "pixelsUnchangedFromNative": true,
+        "creativePixelEditsPerformed": false,
+        "noCLIImageAPIOrRunwayUsed": true
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/face-hair-skin.png",
+          "qa/background-roof-street.png",
+          "qa/background-hands-faces.png",
+          "qa/foreground-arms-cloth.png",
+          "qa/materials-wall-leaves.png"
+        ],
+        "passedForOwnerReview": true,
+        "facesAllowedByLatestSource": true,
+        "fictionalAdultPeopleRequested": true,
+        "noIdentityOrCelebrityReferenceUsed": true,
+        "foregroundFaceAnatomyPassed": true,
+        "handsAndArmsPassedAtResolvableScale": true,
+        "naturalMaterialsPassed": true,
+        "coherentSceneLightPerspectivePassed": true,
+        "noEstablishedTextSignsLogosObserved": true,
+        "noMonumentObservedIncludingBackground": true,
+        "alcoholNotPrimarySubject": true,
+        "observations": [
+          "Foreground fictional young adult woman from head to waist, laughing toward nearby friends, generic fashionable summer clothes",
+          "Natural skin, teeth, eyes, hair, fabric folds and ordinary mixed evening light observed in native crops",
+          "Foreground hand naturally in trouser pocket/cropped; resolvable background limbs/hands plausible, no established extra fingers or fused limbs",
+          "Narrow ordinary plaster facades, terrace tables, string bulbs, adult groups chatting; no food hero, stage, graffiti or branding",
+          "Background crop inspected specifically for absolute Greek monument exclusion: ordinary low roofline and small generic roof stub only, no identifiable Acropolis, Parthenon, ancient ruin, statue or landmark church",
+          "Organic leaves and ordinary wall material retain natural optical detail; no repeating embossed surface pattern established",
+          "Foreground subject and friends share lens rendering, local light and perspective with street; no pasted portrait boundary observed"
+        ],
+        "limits": [
+          "Anonymous illustrative Psyrri alley rather than an exact address; identities are invented by prompt with no identity-reference images",
+          "Not an exhaustive real-person resemblance search or confirmation of unresolved fingers in far background"
+        ]
+      },
+      "rootReviewPending": true,
+      "selected": true,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png?t=e8ed068cc7829242",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+        "sha256": "e8ed068cc7829242b3d7c178a62463839e09cf71759cb9efbfa5e73f01066fa5",
+        "bytes": 2253998,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png?t=e8ed068cc7829242",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "e8ed068cc7829242b3d7c178a62463839e09cf71759cb9efbfa5e73f01066fa5",
+        "bytes": 2253998,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T16:53:24.717441+00:00"
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-juhlat-20261012/athens/manifest.json",
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false
+    }
+  ],
+  "reviewSitePublished": true,
+  "reviewSiteURL": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site?category=havainnekuvat-20261012",
+  "reviewSiteDeploymentId": "appgdep_6acd1286f7b48191bcd574e615ddfc3d",
+  "reviewSiteVersionId": "appgprj_6a95d7decd848191b2ee8a680b8c8263~appgver_dd617d28c770819198f0e8a656fb4ce4",
+  "reviewSiteSourceCommit": "9bdecc05080b01f3cd1a1143ce5647b4f9bf05ca",
+  "rootR2AllDeliveredByteExact": true
+}
