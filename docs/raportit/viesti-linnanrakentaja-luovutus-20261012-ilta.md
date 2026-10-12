@@ -77,3 +77,8 @@ Vientiketju: worktree `/Users/Shared/Claude/wt/linnanrakentaja-linna-v45k` (haar
   mh_kevenna.py + vie_v48s.zsh-mallilla (MH-silmukka) → Siirtoseppä kuvaa v48s | v48v (myös soutaja, vartija2) → PT → juna 186.
 - **Koehuone LS2:lle:** v3d/ajo2 (pelissä hyvä), v3e/ajo1 (tuhka tummaksi, hehkusaumat ohuiksi; liite v3d). LUEMINUT-v3e.md.
 - **LS1:** YV-pylväs v1 viety v6-saliin.
+- **LINNA KEITTIÖN TASOLLE (omistaja 23.0x, PT hyväksyi suunnitelman):** kun keittiö v9d hyväksytty + v48v viety: huone kerrallaan
+  porttikäytävä → pikkupiha → linnantupa + Kuninkaansali → Tott-kammio → kirkkotorni-portaat → kappeli → muurikäytävät → fatabuuri → tyrmä
+  → laituri (#4417-korjaukset samalla). Siirtyy: HDR-yöleivonta (albedo + irradianssi + luotaimet), PBR-esineet, tulisijat/liekit (v3e),
+  KCD2-tiheys, detaljit/savuverho. Budjetti per huone = keittiö (huippu ≤ 150 k / kevyt ≤ 40 k, 8k albedo + 4k irr), iPad-muistiajo
+  jokaisesta erästä. Jokaisesta erästä PT:lle ennen | jälkeen -pari samasta kulmasta → Siirtosepän botti. LS2 varjostimet, Siirtoseppä kytkentä.
