@@ -1,5 +1,5 @@
 {
-  "icons": 27,
+  "icons": 64,
   "sizes": [
     48,
     24,
@@ -1094,6 +1094,1486 @@
       "passed": true
     },
     {
+      "name": "kertoja",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 672,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 146,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 178,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 272,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 593,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 178,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 130,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 141,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 237,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 654,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 212,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 156,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 181,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 269,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 388,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 94,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 110,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 161,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 356,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 82,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 91,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 588,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 206,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 129,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 157,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 245,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 626,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 194,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 156,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 240,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 844,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 248,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 220,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 258,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 336,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 523,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 155,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 124,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 138,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 215,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 785,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 238,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 178,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 298,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 377,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 119,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 106,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 149,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 538,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 161,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 127,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 145,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 211,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 902,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 256,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 236,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 352,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 700,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 236,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 200,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 288,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 826,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 233,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 212,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 251,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 352,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 752,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 248,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 180,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 272,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 672,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 206,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 144,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 185,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 254,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 403,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 125,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 94,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 162,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 690,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 187,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 189,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 212,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 297,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 676,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 218,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 176,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 291,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 925,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 322,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 220,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 264,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 392,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 813,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 247,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 240,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 344,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 526,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 158,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 122,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 197,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 856,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 278,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 194,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 253,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 354,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 801,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 255,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 189,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 220,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 333,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 644,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 201,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 254,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 432,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 100,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 115,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 170,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 622,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 182,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 140,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 166,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 256,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 443,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 136,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 104,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 173,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 411,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 131,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 101,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 117,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 174,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 777,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 262,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 166,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 204,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 318,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 575,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 179,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 130,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 232,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 762,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 229,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 167,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 296,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 488,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 111,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 131,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 198,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 613,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 179,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 148,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 173,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 250,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 809,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 255,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 183,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 318,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 490,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 153,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 115,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 135,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 194,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
       "name": "ratas",
       "theme": "dark",
       "size": 48,
@@ -2170,6 +3650,1486 @@
       "theme": "dark",
       "size": 28,
       "nonzeroAlphaPixels": 49,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 672,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 146,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 178,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kertoja",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 272,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 593,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 178,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 130,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 141,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "musiikki",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 237,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 654,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 212,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 156,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 181,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aanimaisema",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 269,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 388,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 94,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 110,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "pieni-liike",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 161,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 356,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 82,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 91,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kuljettu-reitti",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 588,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 206,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 129,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 157,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "puhekupla",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 245,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 626,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 194,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 156,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "mikrofoni",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 240,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 844,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 248,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 220,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 258,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "nappaimisto",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 336,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 523,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 155,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 124,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 138,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kyna",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 215,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 785,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 238,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 178,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kasi",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 298,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 377,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 119,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 86,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 106,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "heittokaari",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 149,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 538,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 161,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 127,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 145,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "liekki",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 211,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 902,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 256,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 236,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "maapallo",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 352,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 700,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 236,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 152,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 200,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "arkku",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 288,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 826,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 233,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 212,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 251,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 352,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 752,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 248,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 180,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "aarremerkki",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 272,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 672,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 206,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 144,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 185,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 254,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 403,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 125,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 94,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaki",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 162,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 690,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 187,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 189,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 212,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-pinta-ala",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 297,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 676,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 218,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 176,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tunnus-vaaka",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 291,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 925,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 322,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 220,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 264,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kaupunkilehti",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 392,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 813,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 247,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 192,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 240,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilannelehti",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 344,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 526,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 158,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 122,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "poiminnat",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 197,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 856,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 278,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 194,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 253,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "tilastot",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 354,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 801,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 255,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 189,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 220,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "grafiikka",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 333,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 644,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 196,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 142,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 201,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "lukijoilta",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 254,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 432,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 128,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 100,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 115,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ajattelijat",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 170,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 622,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 182,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 140,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 166,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-kuumailmapallo",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 256,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 443,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 136,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 104,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 120,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 173,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 411,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 131,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 101,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 117,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-ihmisen-matka-2",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 174,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 777,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 262,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 166,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 204,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-astronautin-kamera",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 318,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 575,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 179,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 130,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-isoisa",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 232,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 762,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 229,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 167,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-lontoo",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 296,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 488,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 154,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 111,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 131,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-tahtitaivas",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 198,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 613,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 179,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 148,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 173,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-topografia",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 250,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 809,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 255,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 183,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 208,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-maapallon-vuosi",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 318,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 490,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 153,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 115,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 135,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "linssi-yokartta",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 194,
       "edgePixels": 0,
       "passed": true
     }
