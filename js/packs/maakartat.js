@@ -4454,6 +4454,7 @@ export const KAUPUNKIKARTAT = {
   },
   barcelona: {
     polku: 'assets/kartat/barcelona-keskusta.png',
+    varikartta: 'assets/kartat/barcelona-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
     /*
@@ -4511,6 +4512,7 @@ export const KAUPUNKIKARTAT = {
   },
   granada: {
     polku: 'assets/kartat/granada-keskusta.png',
+    varikartta: 'assets/kartat/granada-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
     /*
@@ -4584,6 +4586,7 @@ export const KAUPUNKIKARTAT = {
   },
   edinburgh: {
     polku: 'assets/kartat/edinburgh-keskusta.png',
+    varikartta: 'assets/kartat/edinburgh-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
     /*
@@ -4640,6 +4643,7 @@ export const KAUPUNKIKARTAT = {
   },
   marseille: {
     polku: 'assets/kartat/marseille-keskusta.png',
+    varikartta: 'assets/kartat/marseille-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
     /*
@@ -6444,6 +6448,7 @@ export const KAUPUNKIKARTAT = {
      * yläkulmaan ison tyhjän laguunin.
      */
     polku: 'assets/kartat/venetsia-keskusta.png',
+    varikartta: 'assets/kartat/venetsia-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
     /*
@@ -6662,6 +6667,7 @@ export const KAUPUNKIKARTAT = {
   },
   krakova: {
     polku: 'assets/kartat/krakova-keskusta.png',
+    varikartta: 'assets/kartat/krakova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
@@ -6791,6 +6797,7 @@ export const KAUPUNKIKARTAT = {
   },
   tallinna: {
     polku: 'assets/kartat/tallinna-keskusta.png',
+    varikartta: 'assets/kartat/tallinna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
     /*
@@ -7114,6 +7121,7 @@ export const KAUPUNKIKARTAT = {
   },
   sarajevo: {
     polku: 'assets/kartat/sarajevo-keskusta.png',
+    varikartta: 'assets/kartat/sarajevo-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
     /*
@@ -7274,6 +7282,7 @@ export const KAUPUNKIKARTAT = {
   },
   pietari: {
     polku: 'assets/kartat/pietari-keskusta.png',
+    varikartta: 'assets/kartat/pietari-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
     /*
@@ -7465,6 +7474,7 @@ export const KAUPUNKIKARTAT = {
   },
   odessa: {
     polku: 'assets/kartat/odessa-keskusta.png',
+    varikartta: 'assets/kartat/odessa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
     /*
@@ -7655,6 +7665,7 @@ export const KAUPUNKIKARTAT = {
    */
   sevilla: {
     polku: 'assets/kartat/sevilla-keskusta.png',
+    varikartta: 'assets/kartat/sevilla-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
       pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
@@ -8751,6 +8762,7 @@ export const KAUPUNKIKARTAT = {
   },
   dubrovnik: {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
+    varikartta: 'assets/kartat/dubrovnik-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
     /*
@@ -8801,6 +8813,7 @@ export const KAUPUNKIKARTAT = {
   },
   riika: {
     polku: 'assets/kartat/riika-keskusta.png',
+    varikartta: 'assets/kartat/riika-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
     /*
@@ -8841,6 +8854,7 @@ export const KAUPUNKIKARTAT = {
   },
   vilna: {
     polku: 'assets/kartat/vilna-keskusta.png',
+    varikartta: 'assets/kartat/vilna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
     /*
@@ -8899,6 +8913,7 @@ export const KAUPUNKIKARTAT = {
   },
   tromssa: {
     polku: 'assets/kartat/tromssa-keskusta.png',
+    varikartta: 'assets/kartat/tromssa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
     /*
@@ -14703,6 +14718,7 @@ export const KAUPUNKIKARTAT = {
    */
   bergen: {
     polku: 'assets/kartat/bergen-keskusta.png',
+    varikartta: 'assets/kartat/bergen-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
     esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
@@ -16545,6 +16561,7 @@ export const KAUPUNKIKARTAT = {
    */
   belgrad: {
     polku: 'assets/kartat/belgrad-keskusta.png',
+    varikartta: 'assets/kartat/belgrad-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Belgradin ydin on kahden joen yhtymäkohdan kalliolla. Kohteet kulkevat linnoituksesta ja sen puistosta pääkaupungin 1800-luvun keskustaan, Vračarin kukkulalle ja joen saarelle.',
@@ -16603,6 +16620,7 @@ export const KAUPUNKIKARTAT = {
   },
   bratislava: {
     polku: 'assets/kartat/bratislava-keskusta.png',
+    varikartta: 'assets/kartat/bratislava-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Bratislavan vanhan ytimen kohteet kertovat kaupungin eri aikakausista: Unkarin kruunajaiskaupungista, 1700-luvun palatseista ja 1900-luvun alun jugendista. Linna ja tuomiokirkko vartioivat Tonavaa, raatihuone ja aukiot ovat kaupungin arjen keskus, ja Mikaelin portti on säilynyt keskiaikaisen muurin ajalta.',
@@ -16653,6 +16671,7 @@ export const KAUPUNKIKARTAT = {
   },
   chisinau: {
     polku: 'assets/kartat/chisinau-keskusta.png',
+    varikartta: 'assets/kartat/chisinau-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Chișinăun historiallinen ydin muotoutui 1800-luvulla: katedraali ja riemukaari muodostavat akselin, keskuspuisto perustettiin vuonna 1818 ja vanhin kirkko on vuodelta 1752. Kohteet ovat kävellen ulottuvilla, Ciuflea itäisimpänä.',
@@ -16703,6 +16722,7 @@ export const KAUPUNKIKARTAT = {
   },
   minsk: {
     polku: 'assets/kartat/minsk-keskusta.png',
+    varikartta: 'assets/kartat/minsk-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Minskin historiallinen ydin on Svislač-joen varrella, jossa Yläkaupungin barokkikirkot ja Kolminaisuuden esikaupunki kertovat vanhasta Minskistä. Vanhan Minskin kohteet ovat Niamiha- ja Kastryčnickaja-asemien tuntumassa, ja Voitonaukio ja Gorki-puisto Pieramohi-aseman lähellä.',
@@ -16755,6 +16775,7 @@ export const KAUPUNKIKARTAT = {
   },
   podgorica: {
     polku: 'assets/kartat/podgorica-keskusta.png',
+    varikartta: 'assets/kartat/podgorica-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Vanha ja uusi Podgorica ovat kävelymatkan päässä toisistaan. Ribnican rannalla seisovat kellotorni ja linnoituksen muurit, ja Moračan yli vie nykyajan silta, jonka toisella puolella kohoaa katedraali.',
@@ -16800,6 +16821,7 @@ export const KAUPUNKIKARTAT = {
   },
   skopje: {
     polku: 'assets/kartat/skopje-keskusta.png',
+    varikartta: 'assets/kartat/skopje-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Skopjen historiallinen ydin kokoontuu Kivisillan ympärille: Vanhassa basaarissa on hamameja, karavaanisarajeja ja moskeijoita, ja Kale-linnoitus kohoaa kaupungin korkeimmalle kohdalle. Silta on yli 500 vuotta vanha ja kaupungin vaakunan pääaihe.',
@@ -16851,6 +16873,7 @@ export const KAUPUNKIKARTAT = {
   },
   tirana: {
     polku: 'assets/kartat/tirana-keskusta.png',
+    varikartta: 'assets/kartat/tirana-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Tiranan historiallinen ydin on tiivis: samalla noin kilometrin säteellä ovat 1700- ja 1800-luvun moskeijat ja silta, kellotorni, linnoituksen muuri ja 1900-luvun pääkaupunkisuunnitelman aukio. Kauempana ydintä kohoavat pyramidi ja puisto näyttävät, miten kaupunki on sen jälkeen kasvanut.',
@@ -16907,6 +16930,7 @@ export const KAUPUNKIKARTAT = {
   },
   zagreb: {
     polku: 'assets/kartat/zagreb-keskusta.png',
+    varikartta: 'assets/kartat/zagreb-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Historiallinen ydin on Yläkaupunki ja Kaptol sekä niiden alapuolella oleva keskusaukio. Alakaupunki jatkuu etelään vihreän hevosenkengän aukioina. Kohteet ovat kävelymatkan sisällä toisistaan.',
@@ -16947,6 +16971,7 @@ export const KAUPUNKIKARTAT = {
   },
   andorralavella: {
     polku: 'assets/kartat/andorralavella-keskusta.png',
+    varikartta: 'assets/kartat/andorralavella-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kartan ydin on Gran Valiran laakso, jossa vanha keskusta ja Santa Coloma ovat rinnakkain. Mukana on myös Escaldesin kylpylä.',
@@ -16981,6 +17006,7 @@ export const KAUPUNKIKARTAT = {
   },
   bern: {
     polku: 'assets/kartat/bern-keskusta.png',
+    varikartta: 'assets/kartat/bern-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Bernin ydin kulkee Aaren niemekkeen harjalla Bundesplatzilta Zytgloggen ja tuomiokirkon ohi karhukuopalle. Kohteet ovat parin kilometrin kävelyn sisällä toisistaan.',
@@ -17020,6 +17046,7 @@ export const KAUPUNKIKARTAT = {
   },
   monaco: {
     polku: 'assets/kartat/monaco-keskusta.png',
+    varikartta: 'assets/kartat/monaco-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Monacon vanha kaupunki, ruhtinaanlinna ja katedraali ovat kalliolla, jonka vieressä on Port Hercule -satama. Satamasta itään rinne nousee Monte Carloon, jossa sijaitsevat kasino ja oopperasali.',
@@ -17071,6 +17098,7 @@ export const KAUPUNKIKARTAT = {
   },
   reykjavik: {
     polku: 'assets/kartat/reykjavik-keskusta.png',
+    varikartta: 'assets/kartat/reykjavik-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Reykjavíkin kohteet ovat lähellä toisiaan Seltjarnarnesin niemen pohjoisrannalla ja kukkuloilla. Lammen, aukion ja kukkulalla seisovan kirkon lisäksi mukana ovat Harpa, Höfði ja Perlan.',
@@ -17117,6 +17145,7 @@ export const KAUPUNKIKARTAT = {
   },
   sanmarino: {
     polku: 'assets/kartat/sanmarino-keskusta.png',
+    varikartta: 'assets/kartat/sanmarino-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'San Marinon historiallinen keskusta ja Monte Titanon harja kuuluvat UNESCOn maailmanperintöön. Mukana ovat kolme tornia, kaupungin hallinnon ja uskonnon keskukset sekä itse vuori.',
@@ -17168,14 +17197,17 @@ export const KAUPUNKIKARTAT = {
   },
   vaduz: {
     polku: 'assets/kartat/vaduz-keskusta.png',
+    varikartta: 'assets/kartat/vaduz-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Vaduzin ydin on pieni: linna, katedraali ja kaksi museota ovat lyhyen kävelymatkan päässä toisistaan.',
+    // PT 12.10.2026: rajaus länteen Reinille ja Sevelenin sillalle, linna rinteessä
+    // (oli 47.1421 / 47.1335 / 9.5185 / 9.5284).
     rajat: {
-      pohjoinen: 47.1421,
-      etela: 47.1335,
-      lansi: 9.5185,
-      ita: 9.5284,
+      pohjoinen: 47.145,
+      etela: 47.131,
+      lansi: 9.4985,
+      ita: 9.53,
     },
     kohteet: [
       {
@@ -19634,6 +19666,7 @@ export const KAUPUNKIKARTAT = {
   // VATIKAANI (Karttaseppä 11.10.2026, PT, juna 183): kohteet Wikipediasta ja OSM:stä, tekstit myöhemmin.
   vatikaanivaltio: {
     polku: 'assets/kartat/vatikaanivaltio-keskusta.png',
+    varikartta: 'assets/kartat/vatikaanivaltio-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     rajat: {

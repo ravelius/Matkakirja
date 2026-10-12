@@ -6140,7 +6140,7 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 43.9396, etela: 43.9274, lansi: 12.443, ita: 12.4563 },
   },
   vaduz: {
-    rajat: { pohjoinen: 47.1421, etela: 47.1335, lansi: 9.5185, ita: 9.5284 },
+    rajat: { pohjoinen: 47.145, etela: 47.131, lansi: 9.4985, ita: 9.53 }, // PT 12.10.2026: länteen Reinille ja Sevelenin sillalle, linna rinteessä (oli 47.1421/47.1335/9.5185/9.5284)
   },
   /*
    * PÄÄKAUPUNKIPISTEET e03 (Päätoimittaja 11.10.2026, Kaukasus ja Lähi-itä): rajat sisalto.json:n kohdekartasta. Rannikolla meri-lippu.
