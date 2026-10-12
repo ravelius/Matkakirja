@@ -1,0 +1,873 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e14",
+  "city": "ngerulmud",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+  "assets": [
+    {
+      "era": "e14",
+      "city": "ngerulmud",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e14-ngerulmud-traveler-v1-20261012",
+      "galleryImageID": "e14-ngerulmud-traveler-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taro kuuluu kylien viljelykasveihin; yleinen havainnekuva.",
+        "lyhyt": "Taro kuuluu kylien viljelykasveihin; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taro kuuluu kylien viljelykasveihin; yleinen havainnekuva.",
+        "lyhyt": "Taro kuuluu kylien viljelykasveihin; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "721f4879e48cd45add10047cd76aa4b444a24d23d162a67604d815e97369628c",
+      "exportSHA256": "99872bf6c96ae78f6c8cd614a32060ccd04d152258a9da9b5f7755218de44a2d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/ngerulmud/sisalto.json",
+      "sourceContentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "85eb4437924e5f5cc0630628a675bab115aa6580b54e169d73e2b3a1d60dba5d",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen luonnon/ruoan/materiaalin havainnollistus, ei todellinen paikkavalokuva, tunnistettava rakennus, henkilö, logo tai suojatun teoksen kopio.",
+          "QA": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Kolme erimuotoista ruskeaa kuituista taron mukulaa puupinnalla, pehmeässä taustassa suuri vihreä sydänmäinen lehti. Kuorilaikut, kasvurenkaat ja ohuet kuidut vaihtelevat luonnollisesti; ei tekstiä, logoa, ihmisiä tai kylän näkymää.",
+            "topicMatchFi": "Melekeokin taropuutarhat ja taro mainitaan L4:ssa ja O4:ssa. Selite nimeää yleisen kasvin havainnollistuksen eikä todellista Melekeokin satoa tai puutarhaa.",
+            "sourceEvidence": [
+              "faktapohja N2 Melekeokin taropuutarhat ja kyläviljely"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Oma taroon rajattu pystytiedosto; L4:n vaakakuva näyttää usean kasvin ryhmän.",
+            "rightsScopeFi": "Yleinen kasvi.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Taron mukulat ja sydänmäinen lehti havainnollistavat kyläviljelyä luontevasti. Native-pysty 1024×1536 täyttää TRAVELER-vaatimuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Taro kuuluu kylien viljelykasveihin; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+        "fileSHA256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e14-ngerulmud-traveler-v1-20261012",
+          "sha256": "721f4879e48cd45add10047cd76aa4b444a24d23d162a67604d815e97369628c",
+          "verdict": "accepted",
+          "reason": "Taron mukulat ja sydänmäinen lehti havainnollistavat kyläviljelyä luontevasti. Native-pysty 1024×1536 täyttää TRAVELER-vaatimuksen.",
+          "evidence": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Kolme erimuotoista ruskeaa kuituista taron mukulaa puupinnalla, pehmeässä taustassa suuri vihreä sydänmäinen lehti. Kuorilaikut, kasvurenkaat ja ohuet kuidut vaihtelevat luonnollisesti; ei tekstiä, logoa, ihmisiä tai kylän näkymää.",
+            "topicMatchFi": "Melekeokin taropuutarhat ja taro mainitaan L4:ssa ja O4:ssa. Selite nimeää yleisen kasvin havainnollistuksen eikä todellista Melekeokin satoa tai puutarhaa.",
+            "sourceEvidence": [
+              "faktapohja N2 Melekeokin taropuutarhat ja kyläviljely"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Oma taroon rajattu pystytiedosto; L4:n vaakakuva näyttää usean kasvin ryhmän.",
+            "rightsScopeFi": "Yleinen kasvi.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:57:36.203010+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/qa.json",
+            "sha256": "ab83c7d640029702948bd56fd1268b7197202bab6b535e855f7229ad632f6f0a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+            "sha256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png?t=99872bf6c96ae78f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+        "sha256": "99872bf6c96ae78f6c8cd614a32060ccd04d152258a9da9b5f7755218de44a2d",
+        "bytes": 2390200,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-ngerulmud-traveler-v1-20261012",
+        "nativeSHA256": "721f4879e48cd45add10047cd76aa4b444a24d23d162a67604d815e97369628c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "ngerulmud",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:58:57.337960+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-traveler-v1-20261012-721f4879e48c.png",
+        "sha256": "99872bf6c96ae78f6c8cd614a32060ccd04d152258a9da9b5f7755218de44a2d",
+        "bytes": 2390200,
+        "SHAReadAt": "2026-10-12T19:03:44.946682+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "721f4879e48cd45add10047cd76aa4b444a24d23d162a67604d815e97369628c",
+        "rgbPixelSHA256": "b4623d675464f402ad954af106f560ffb1da2d5ff32f381d3aeddeca1a089ac8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "85eb4437924e5f5cc0630628a675bab115aa6580b54e169d73e2b3a1d60dba5d"
+    },
+    {
+      "era": "e14",
+      "city": "ngerulmud",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e14-ngerulmud-o4-v2-20261012",
+      "galleryImageID": "e14-ngerulmud-o4-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Bento havainnollistaa ruokapaikkojen japanilaistyylisiä lounaita; yleinen havainnekuva.",
+        "lyhyt": "Bento havainnollistaa ruokapaikkojen japanilaistyylisiä lounaita; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Bento havainnollistaa ruokapaikkojen japanilaistyylisiä lounaita; yleinen havainnekuva.",
+        "lyhyt": "Bento havainnollistaa ruokapaikkojen japanilaistyylisiä lounaita; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "dd74c229efa5925944b7d1355fccd8b55126db1fe86a1339de076b5b3fe00696",
+      "exportSHA256": "ae80b413bed98a3ed330d2e9a8dce1319ee22d0027860113f65774d35bf8a472",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/ngerulmud/sisalto.json",
+      "sourceContentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f81415f821997408d49b81c077507bde10d0e8e0dae3c6de844d32b2eca22c96",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Riisiä, kypsä kalapala ja pienet tavanomaiset lisukkeet yksinkertaisessa puisessa lounasrasiassa. Rasian sauman tummat neliöt ovat liitoskohtia, eivät kirjaimia tai logoa. Luontevat riisinjyvät, kalapinta ja puunsyy; ei ihmisiä, maisemaa tai merkintöjä.",
+            "topicMatchFi": "O4 mainitsee japanilaistyyliset bento-lounaat. Selite ilmoittaa yleisen havainnekuvan eikä nimeä tätä todelliseksi Kororin annokseksi tai Palau-reseptiksi.",
+            "sourceEvidence": [
+              "e14/paakaupungit-pilvi/e14/ngerulmud/sisalto.json, opasjaksot[3]"
+            ],
+            "rightsScopeFi": "Yleinen ruoka ja tavallinen astia.",
+            "replacesRejectedAssetID": "e14-ngerulmud-o4-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-o4-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Uuden v2:n tausta on neutraali pöytä ja seinä. Bento-lounas on luonteva yleishavainnollistus ilman lähteetöntä saaripanoraamaa tai ravintolaväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Bento havainnollistaa ruokapaikkojen japanilaistyylisiä lounaita; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+        "fileSHA256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e14-ngerulmud-o4-v2-20261012",
+          "sha256": "dd74c229efa5925944b7d1355fccd8b55126db1fe86a1339de076b5b3fe00696",
+          "verdict": "accepted",
+          "reason": "Uuden v2:n tausta on neutraali pöytä ja seinä. Bento-lounas on luonteva yleishavainnollistus ilman lähteetöntä saaripanoraamaa tai ravintolaväitettä.",
+          "evidence": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Riisiä, kypsä kalapala ja pienet tavanomaiset lisukkeet yksinkertaisessa puisessa lounasrasiassa. Rasian sauman tummat neliöt ovat liitoskohtia, eivät kirjaimia tai logoa. Luontevat riisinjyvät, kalapinta ja puunsyy; ei ihmisiä, maisemaa tai merkintöjä.",
+            "topicMatchFi": "O4 mainitsee japanilaistyyliset bento-lounaat. Selite ilmoittaa yleisen havainnekuvan eikä nimeä tätä todelliseksi Kororin annokseksi tai Palau-reseptiksi.",
+            "sourceEvidence": [
+              "e14/paakaupungit-pilvi/e14/ngerulmud/sisalto.json, opasjaksot[3]"
+            ],
+            "rightsScopeFi": "Yleinen ruoka ja tavallinen astia.",
+            "replacesRejectedAssetID": "e14-ngerulmud-o4-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-o4-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:43:42.278658+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/qa.json",
+            "sha256": "ab83c7d640029702948bd56fd1268b7197202bab6b535e855f7229ad632f6f0a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+            "sha256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png?t=ae80b413bed98a3e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+        "sha256": "ae80b413bed98a3ed330d2e9a8dce1319ee22d0027860113f65774d35bf8a472",
+        "bytes": 1995299,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-ngerulmud-o4-v2-20261012",
+        "nativeSHA256": "dd74c229efa5925944b7d1355fccd8b55126db1fe86a1339de076b5b3fe00696",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "ngerulmud",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:44:35.412854+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-o4-v2-20261012-dd74c229efa5.png",
+        "sha256": "ae80b413bed98a3ed330d2e9a8dce1319ee22d0027860113f65774d35bf8a472",
+        "bytes": 1995299,
+        "SHAReadAt": "2026-10-12T18:44:30.112409+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "dd74c229efa5925944b7d1355fccd8b55126db1fe86a1339de076b5b3fe00696",
+        "rgbPixelSHA256": "8d261d3ecb6ac3cf471724b27304d9a5ff2634c3197e2bc6da31f33e47fe0ff1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f81415f821997408d49b81c077507bde10d0e8e0dae3c6de844d32b2eca22c96"
+    },
+    {
+      "era": "e14",
+      "city": "ngerulmud",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e14-ngerulmud-l2-v1-20261012",
+      "galleryImageID": "e14-ngerulmud-l2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Crocodylus porosus voi elää myös makean veden ympäristössä; yleinen havainnekuva.",
+        "lyhyt": "Crocodylus porosus voi elää myös makean veden ympäristössä; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Crocodylus porosus voi elää myös makean veden ympäristössä; yleinen havainnekuva.",
+        "lyhyt": "Crocodylus porosus voi elää myös makean veden ympäristössä; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "57267d17eb49c894b0fc2cd7f99e69d22bcb144c0a9d61e07ee88b6d0bb0088e",
+      "exportSHA256": "4710a13897f99e4051e46307c8e42937b57d7b1cd0060e85f2f742097b1f2416",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/ngerulmud/sisalto.json",
+      "sourceContentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "04c5e35b2fba85072cc447e0a10c28631f7717e99a21d184c10249c243b09763",
+        "semanticContextSHA256": "04c5e35b2fba85072cc447e0a10c28631f7717e99a21d184c10249c243b09763",
+        "subjectTitle": "Krokotiilille reitti mereltä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Pitkä krokotiili mudassa veden rajalla, suljettu leveähkö kuono, koholla silmä ja nenäaukot, kaksi lähikyljen lyhyttä raajaa sekä vasemmalle jatkuva häntä. Vastakkaiset raajat peittyvät vartalon taakse. Suomujen koko ja muoto vaihtelevat; ei ylimääräisiä raajoja, henkilöitä, logoa tai tekstiä.",
+            "topicMatchFi": "L2 käsittelee Crocodylus porosuksen elämää Ngardokin makean veden ympäristössä. Selite kertoo yleisestä eläinhavainnollistuksesta eikä todellisesta havaintokuvasta tai järven tarkasta asettelusta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Lake_Ngardok and https://rsis.ramsar.org/ris/1232"
+            ],
+            "rightsScopeFi": "Yleinen eläin ja kosteikko.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Krokotiilin vartalo, näkyvät raajat, suomut ja häntään jatkuva rakenne ovat uskottavat; eläin makean veden rannassa vastaa L2-aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Crocodylus porosus voi elää myös makean veden ympäristössä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+        "fileSHA256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e14-ngerulmud-l2-v1-20261012",
+          "sha256": "57267d17eb49c894b0fc2cd7f99e69d22bcb144c0a9d61e07ee88b6d0bb0088e",
+          "verdict": "accepted",
+          "reason": "Krokotiilin vartalo, näkyvät raajat, suomut ja häntään jatkuva rakenne ovat uskottavat; eläin makean veden rannassa vastaa L2-aihetta.",
+          "evidence": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Pitkä krokotiili mudassa veden rajalla, suljettu leveähkö kuono, koholla silmä ja nenäaukot, kaksi lähikyljen lyhyttä raajaa sekä vasemmalle jatkuva häntä. Vastakkaiset raajat peittyvät vartalon taakse. Suomujen koko ja muoto vaihtelevat; ei ylimääräisiä raajoja, henkilöitä, logoa tai tekstiä.",
+            "topicMatchFi": "L2 käsittelee Crocodylus porosuksen elämää Ngardokin makean veden ympäristössä. Selite kertoo yleisestä eläinhavainnollistuksesta eikä todellisesta havaintokuvasta tai järven tarkasta asettelusta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Lake_Ngardok and https://rsis.ramsar.org/ris/1232"
+            ],
+            "rightsScopeFi": "Yleinen eläin ja kosteikko.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:35:02.206631+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/qa.json",
+            "sha256": "ab83c7d640029702948bd56fd1268b7197202bab6b535e855f7229ad632f6f0a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+            "sha256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png?t=4710a13897f99e40",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+        "sha256": "4710a13897f99e4051e46307c8e42937b57d7b1cd0060e85f2f742097b1f2416",
+        "bytes": 3030314,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-ngerulmud-l2-v1-20261012",
+        "nativeSHA256": "57267d17eb49c894b0fc2cd7f99e69d22bcb144c0a9d61e07ee88b6d0bb0088e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "ngerulmud",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:35:45.007897+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-l2-v1-20261012-57267d17eb49.png",
+        "sha256": "4710a13897f99e4051e46307c8e42937b57d7b1cd0060e85f2f742097b1f2416",
+        "bytes": 3030314,
+        "SHAReadAt": "2026-10-12T18:35:36.497409+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "57267d17eb49c894b0fc2cd7f99e69d22bcb144c0a9d61e07ee88b6d0bb0088e",
+        "rgbPixelSHA256": "95b9ccc043c2087e7f598a014ad057066ef1ace3cb9cdac9b2c2646185fdbeee",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "targetAfterSHA256": "04c5e35b2fba85072cc447e0a10c28631f7717e99a21d184c10249c243b09763",
+      "contextAfterSHA256": "04c5e35b2fba85072cc447e0a10c28631f7717e99a21d184c10249c243b09763"
+    },
+    {
+      "era": "e14",
+      "city": "ngerulmud",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e14-ngerulmud-l4-v1-20261012",
+      "galleryImageID": "e14-ngerulmud-l4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taro, leipäpuu, banaani ja kookos kuuluvat kyläpuutarhojen kasveihin; havainnekuva.",
+        "lyhyt": "Taro, leipäpuu, banaani ja kookos kuuluvat kyläpuutarhojen kasveihin; havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taro, leipäpuu, banaani ja kookos kuuluvat kyläpuutarhojen kasveihin; havainnekuva.",
+        "lyhyt": "Taro, leipäpuu, banaani ja kookos kuuluvat kyläpuutarhojen kasveihin; havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "77ce3f0f3f0e20a572a370d6075847dd8029f33547937930480e625cdda8ef50",
+      "exportSHA256": "eece8425cbb8d2f1d1a5beddb6a27f0f72bbe71905bae8e1ffa4b35101d9211b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/ngerulmud/sisalto.json",
+      "sourceContentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5e1c2c7f2d6c3d1fa8337e06b89347f2e0d775c539393fb41bea32baf6770422",
+        "semanticContextSHA256": "5e1c2c7f2d6c3d1fa8337e06b89347f2e0d775c539393fb41bea32baf6770422",
+        "subjectTitle": "Puutarha ei pääty yhteen kasviin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Kuituisia multaisia taron mukuloita, vihreä leipäpuun hedelmä, erikokoisia banaaneja ja kuituinen kookos, alla suuria lehtiä. Luontevat kuoret, kasvulinjat ja lehtisuonet; ei tekstiä, logoja, ihmisiä tai nimettyä kylän rakennusta.",
+            "topicMatchFi": "L4 mainitsee kaikki neljä kylien viljelykasveina. Selite nimeää ne havainnekuvana ilman väitettä todellisen Melekeokin puutarhan, tilan tai sadon valokuvasta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Melekeok, Geography"
+            ],
+            "rightsScopeFi": "Yleiset luonnontuotteet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Taro, leipäpuun hedelmä, banaanit ja kookos vastaavat L4:n viljelykasveja. Kasvien muodot ja pintarakenteet vaihtelevat luonnollisesti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Taro, leipäpuu, banaani ja kookos kuuluvat kyläpuutarhojen kasveihin; havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+        "fileSHA256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e14-ngerulmud-l4-v1-20261012",
+          "sha256": "77ce3f0f3f0e20a572a370d6075847dd8029f33547937930480e625cdda8ef50",
+          "verdict": "accepted",
+          "reason": "Taro, leipäpuun hedelmä, banaanit ja kookos vastaavat L4:n viljelykasveja. Kasvien muodot ja pintarakenteet vaihtelevat luonnollisesti.",
+          "evidence": {
+            "contentSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+            "visualObservationFi": "Kuituisia multaisia taron mukuloita, vihreä leipäpuun hedelmä, erikokoisia banaaneja ja kuituinen kookos, alla suuria lehtiä. Luontevat kuoret, kasvulinjat ja lehtisuonet; ei tekstiä, logoja, ihmisiä tai nimettyä kylän rakennusta.",
+            "topicMatchFi": "L4 mainitsee kaikki neljä kylien viljelykasveina. Selite nimeää ne havainnekuvana ilman väitettä todellisen Melekeokin puutarhan, tilan tai sadon valokuvasta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Melekeok, Geography"
+            ],
+            "rightsScopeFi": "Yleiset luonnontuotteet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/assets/e14-ngerulmud-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:41:47.486299+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/qa.json",
+            "sha256": "ab83c7d640029702948bd56fd1268b7197202bab6b535e855f7229ad632f6f0a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/ngerulmud/illustration-qa-extra.json",
+            "sha256": "3fc1bfc53f5f4fd897cf0e19422313eb739526b0ad38d0b37d34d5d4848f10a5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png?t=eece8425cbb8d2f1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+        "sha256": "eece8425cbb8d2f1d1a5beddb6a27f0f72bbe71905bae8e1ffa4b35101d9211b",
+        "bytes": 2842131,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-ngerulmud-l4-v1-20261012",
+        "nativeSHA256": "77ce3f0f3f0e20a572a370d6075847dd8029f33547937930480e625cdda8ef50",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "ngerulmud",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:42:45.574293+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/ngerulmud/e14-ngerulmud-l4-v1-20261012-77ce3f0f3f0e.png",
+        "sha256": "eece8425cbb8d2f1d1a5beddb6a27f0f72bbe71905bae8e1ffa4b35101d9211b",
+        "bytes": 2842131,
+        "SHAReadAt": "2026-10-12T18:41:50.359545+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "77ce3f0f3f0e20a572a370d6075847dd8029f33547937930480e625cdda8ef50",
+        "rgbPixelSHA256": "9352547fdf4f1fc4128443744e252f9d1f2ad9772a5d7cef4440fef13bf32004",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7f8a95bf887aa8ac0a19b2641a118becaea2798d8981f51023b465110bdea0c1",
+      "targetAfterSHA256": "5e1c2c7f2d6c3d1fa8337e06b89347f2e0d775c539393fb41bea32baf6770422",
+      "contextAfterSHA256": "5e1c2c7f2d6c3d1fa8337e06b89347f2e0d775c539393fb41bea32baf6770422"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

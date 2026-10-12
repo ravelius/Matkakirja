@@ -1,0 +1,2439 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e14",
+  "city": "nukualofa",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+  "assets": [
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e14-nukualofa-traveler-v1-20261012",
+      "galleryImageID": "e14-nukualofa-traveler-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuorikangas ja sen materiaali havainnollistavat käsityötä; yleinen havainnekuva.",
+        "lyhyt": "Kuorikangas ja sen materiaali havainnollistavat käsityötä; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuorikangas ja sen materiaali havainnollistavat käsityötä; yleinen havainnekuva.",
+        "lyhyt": "Kuorikangas ja sen materiaali havainnollistavat käsityötä; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+      "exportSHA256": "0d1494f81a2a2e8d6be48f89a901066cd5c05c22a3f1388d8d61ef84b1a870bd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "dfae2da736c4bdfba8a3a90ae663e951346ae8fcce0adb4b20ab54b7caa49f93",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen luonnon/ruoan/materiaalin havainnollistus, ei todellinen paikkavalokuva, tunnistettava rakennus, henkilö, logo tai suojatun teoksen kopio.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-traveler-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+            "nativeGeometry": {
+              "rawWidth": 1024,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 1024,
+              "height": 1536
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/50ff973a7912-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "d1e256e859f2742644467de6c6548cd3daa6c779b80d268e50be9b424299977a",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-traveler-v1-20261012",
+              "nativeSHA256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuorikangas, kuorikaistaleet ja nuija ovat luonteva materiaalihavainnollistus; native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epätasaisesta kuitupinnasta koostuva kuorikangasrulla, vieressä irtokaistaleita ja tavallinen puunuija. Materiaali ei ole kudottu ruudukko; luontevat kerrokset, repeämät ja puunsyy. Ei ornamenttia, tekstiä, logoja, käsiä tai työpajan tunnuksia.",
+                "topicMatchFi": "Matkailijaosio ohjaa käsityökeskukseen, L1 käsittelee kuorikankaan valmistusta. Selite nimeää yleisen materiaalihavainnollistuksen eikä tietyn ngatu-teoksen tai valmistajan työtä.",
+                "sourceEvidence": [
+                  "faktapohja L6/L8, paperimulperin sisäkuori ja valmistustekniikka"
+                ],
+                "aspectRatio": 0.6666666666666666,
+                "subjectReuseFi": "Sama materiaaliryhmä kuin L1:ssa, mutta rulla ja oma pystykuva matkailijaosion käsityöaiheelle.",
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-traveler-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1024,
+                  1536
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "a718e95938db948110e360004a05cdea2c357cf03405ec97fbf6bf7453ce4ed5",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/d1e256e859f2742644467de6c6548cd3daa6c779b80d268e50be9b424299977a.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Kuorikangas ja sen materiaali havainnollistavat käsityötä; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Koristelematon kuorikangas, kuorikaistaleet ja nuija ovat luonteva materiaalihavainnollistus; native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kuorikangas ja sen materiaali havainnollistavat käsityötä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e14-nukualofa-traveler-v1-20261012",
+          "sha256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Koristelematon kuorikangas, kuorikaistaleet ja nuija ovat luonteva materiaalihavainnollistus; native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-traveler-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+            "nativeGeometry": {
+              "rawWidth": 1024,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 1024,
+              "height": 1536
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/50ff973a7912-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "d1e256e859f2742644467de6c6548cd3daa6c779b80d268e50be9b424299977a",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-traveler-v1-20261012",
+              "nativeSHA256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuorikangas, kuorikaistaleet ja nuija ovat luonteva materiaalihavainnollistus; native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epätasaisesta kuitupinnasta koostuva kuorikangasrulla, vieressä irtokaistaleita ja tavallinen puunuija. Materiaali ei ole kudottu ruudukko; luontevat kerrokset, repeämät ja puunsyy. Ei ornamenttia, tekstiä, logoja, käsiä tai työpajan tunnuksia.",
+                "topicMatchFi": "Matkailijaosio ohjaa käsityökeskukseen, L1 käsittelee kuorikankaan valmistusta. Selite nimeää yleisen materiaalihavainnollistuksen eikä tietyn ngatu-teoksen tai valmistajan työtä.",
+                "sourceEvidence": [
+                  "faktapohja L6/L8, paperimulperin sisäkuori ja valmistustekniikka"
+                ],
+                "aspectRatio": 0.6666666666666666,
+                "subjectReuseFi": "Sama materiaaliryhmä kuin L1:ssa, mutta rulla ja oma pystykuva matkailijaosion käsityöaiheelle.",
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-traveler-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1024,
+                  1536
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "a718e95938db948110e360004a05cdea2c357cf03405ec97fbf6bf7453ce4ed5",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/d1e256e859f2742644467de6c6548cd3daa6c779b80d268e50be9b424299977a.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Kuorikangas ja sen materiaali havainnollistavat käsityötä; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "d1e256e859f2742644467de6c6548cd3daa6c779b80d268e50be9b424299977a",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-traveler-v1-20261012",
+              "nativeSHA256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuorikangas, kuorikaistaleet ja nuija ovat luonteva materiaalihavainnollistus; native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epätasaisesta kuitupinnasta koostuva kuorikangasrulla, vieressä irtokaistaleita ja tavallinen puunuija. Materiaali ei ole kudottu ruudukko; luontevat kerrokset, repeämät ja puunsyy. Ei ornamenttia, tekstiä, logoja, käsiä tai työpajan tunnuksia.",
+                "topicMatchFi": "Matkailijaosio ohjaa käsityökeskukseen, L1 käsittelee kuorikankaan valmistusta. Selite nimeää yleisen materiaalihavainnollistuksen eikä tietyn ngatu-teoksen tai valmistajan työtä.",
+                "sourceEvidence": [
+                  "faktapohja L6/L8, paperimulperin sisäkuori ja valmistustekniikka"
+                ],
+                "aspectRatio": 0.6666666666666666,
+                "subjectReuseFi": "Sama materiaaliryhmä kuin L1:ssa, mutta rulla ja oma pystykuva matkailijaosion käsityöaiheelle.",
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-traveler-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1024,
+                  1536
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "a718e95938db948110e360004a05cdea2c357cf03405ec97fbf6bf7453ce4ed5",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/d1e256e859f2742644467de6c6548cd3daa6c779b80d268e50be9b424299977a.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:53:59.078956+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png?t=0d1494f81a2a2e8d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+        "sha256": "0d1494f81a2a2e8d6be48f89a901066cd5c05c22a3f1388d8d61ef84b1a870bd",
+        "bytes": 2362574,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-nukualofa-traveler-v1-20261012",
+        "nativeSHA256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:51:31.742167+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-traveler-v1-20261012-80a44078b6cc.png",
+        "sha256": "0d1494f81a2a2e8d6be48f89a901066cd5c05c22a3f1388d8d61ef84b1a870bd",
+        "bytes": 2362574,
+        "SHAReadAt": "2026-10-12T19:03:45.165208+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+        "rgbPixelSHA256": "2da03df5b25f8a913ad20bcc89556bfd58d16bbf3a7d7b3a60b75beee031a746",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "dfae2da736c4bdfba8a3a90ae663e951346ae8fcce0adb4b20ab54b7caa49f93"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e14-nukualofa-o3-v1-20261012",
+      "galleryImageID": "e14-nukualofa-o3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuorikankaan raaka-aineita ja väline havainnollistavat valmistusta; yleinen havainnekuva.",
+        "lyhyt": "Kuorikankaan raaka-aineita ja väline havainnollistavat valmistusta; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuorikankaan raaka-aineita ja väline havainnollistavat valmistusta; yleinen havainnekuva.",
+        "lyhyt": "Kuorikankaan raaka-aineita ja väline havainnollistavat valmistusta; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+      "exportSHA256": "2cc04986219e46c5b5ec86a12147179d036553e6365d5d1a2a364e172d9fa609",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "d20a7dab5d406de9defd4ac4037a59d387fb9d0605319388d3e1759f132e3354",
+        "subjectTitle": "Käsityön tekijän jäljille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o3-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/bacd3969444b-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o3-v1-20261012",
+              "nativeSHA256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuorikangas, kuidut ja nuija ovat luontevat ja vastaavat O3:n valmistustekniikka-aihetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea ja ruskea epätasainen kuitulevy, irtokuorisuikaleita ja tavallinen puunuija. Ei kudottua ruudukkoa, kopioitua ornamenttia, tekstiä, logoa tai käsiä.",
+                "topicMatchFi": "O3 ohjaa tutustumaan ngatun ja punonnan valmistukseen. Selite on yleinen materiaalihavainne eikä Ancient Tongan, gallerian tai nimetyn tekijän aito työ.",
+                "sourceEvidence": [
+                  "https://www.tongatourism.travel/discover/people-and-culture/authentic-handicrafts"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja työkalu.",
+                "subjectReuseFi": "Eri materiaalin värivaihteluun rajattu vaakakuva; L1:ssa kuitujen hakkaamisen ja TRAVELERissä rullan aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o3-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "b32fbbc8ecc0f1da6cab9ec682753e95d64055a2c0e90c27b20e3514d88077f8",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Kuorikankaan raaka-aineita ja väline havainnollistavat valmistusta; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Koristelematon kuorikangas, kuidut ja nuija ovat luontevat ja vastaavat O3:n valmistustekniikka-aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kuorikankaan raaka-aineita ja väline havainnollistavat valmistusta; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e14-nukualofa-o3-v1-20261012",
+          "sha256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Koristelematon kuorikangas, kuidut ja nuija ovat luontevat ja vastaavat O3:n valmistustekniikka-aihetta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o3-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/bacd3969444b-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o3-v1-20261012",
+              "nativeSHA256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuorikangas, kuidut ja nuija ovat luontevat ja vastaavat O3:n valmistustekniikka-aihetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea ja ruskea epätasainen kuitulevy, irtokuorisuikaleita ja tavallinen puunuija. Ei kudottua ruudukkoa, kopioitua ornamenttia, tekstiä, logoa tai käsiä.",
+                "topicMatchFi": "O3 ohjaa tutustumaan ngatun ja punonnan valmistukseen. Selite on yleinen materiaalihavainne eikä Ancient Tongan, gallerian tai nimetyn tekijän aito työ.",
+                "sourceEvidence": [
+                  "https://www.tongatourism.travel/discover/people-and-culture/authentic-handicrafts"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja työkalu.",
+                "subjectReuseFi": "Eri materiaalin värivaihteluun rajattu vaakakuva; L1:ssa kuitujen hakkaamisen ja TRAVELERissä rullan aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o3-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "b32fbbc8ecc0f1da6cab9ec682753e95d64055a2c0e90c27b20e3514d88077f8",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Kuorikankaan raaka-aineita ja väline havainnollistavat valmistusta; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o3-v1-20261012",
+              "nativeSHA256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuorikangas, kuidut ja nuija ovat luontevat ja vastaavat O3:n valmistustekniikka-aihetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea ja ruskea epätasainen kuitulevy, irtokuorisuikaleita ja tavallinen puunuija. Ei kudottua ruudukkoa, kopioitua ornamenttia, tekstiä, logoa tai käsiä.",
+                "topicMatchFi": "O3 ohjaa tutustumaan ngatun ja punonnan valmistukseen. Selite on yleinen materiaalihavainne eikä Ancient Tongan, gallerian tai nimetyn tekijän aito työ.",
+                "sourceEvidence": [
+                  "https://www.tongatourism.travel/discover/people-and-culture/authentic-handicrafts"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja työkalu.",
+                "subjectReuseFi": "Eri materiaalin värivaihteluun rajattu vaakakuva; L1:ssa kuitujen hakkaamisen ja TRAVELERissä rullan aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o3-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "b32fbbc8ecc0f1da6cab9ec682753e95d64055a2c0e90c27b20e3514d88077f8",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T19:18:49.983613+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png?t=2cc04986219e46c5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+        "sha256": "2cc04986219e46c5b5ec86a12147179d036553e6365d5d1a2a364e172d9fa609",
+        "bytes": 2577081,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-nukualofa-o3-v1-20261012",
+        "nativeSHA256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:14:50.609211+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-o3-v1-20261012-31cbc46da067.png",
+        "sha256": "2cc04986219e46c5b5ec86a12147179d036553e6365d5d1a2a364e172d9fa609",
+        "bytes": 2577081,
+        "SHAReadAt": "2026-10-12T19:32:14.147292+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+        "rgbPixelSHA256": "9e15aef9e30c857aeb89d78d652cf917b1813a98f3ac0c1d2b857e8c4035b7ce",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "d20a7dab5d406de9defd4ac4037a59d387fb9d0605319388d3e1759f132e3354"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e14-nukualofa-o4-v1-20261012",
+      "galleryImageID": "e14-nukualofa-o4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kala, sitrus ja kookoskerma havainnollistavat ʻota ʻikaa; havainnekuva.",
+        "lyhyt": "Kala, sitrus ja kookoskerma havainnollistavat ʻota ʻikaa; havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kala, sitrus ja kookoskerma havainnollistavat ʻota ʻikaa; havainnekuva.",
+        "lyhyt": "Kala, sitrus ja kookoskerma havainnollistavat ʻota ʻikaa; havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+      "exportSHA256": "9ab5467d338b131fb756c9a278b95891a27e4d1e8974ed81a32636435cf0036a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "2396ded8e0eb62e66ddb529c21b2252a9c417258d5d104da5a01c076428588fc",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o4-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/879378f05b39-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o4-v1-20261012",
+              "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+              "verdict": "accepted",
+              "reason": "Kala, kookoskerma ja sitruuna vastaavat O4:n ʻota ʻika -aineksia. Kostea kalapinta ja astia ovat uskottavat, havannemerkintä rehellinen.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epäsäännöllisiä vaaleita ja hieman vaaleanpunaisia kalapaloja valkoisessa kookoskermassa, vieressä kokonainen ja puolikas sitruuna. Luonteva lihaskuitu, kosteus ja sitruunan hedelmäliha; ei ylimääräisiä keksittyjä ainesosia, tekstiä tai ihmisiä.",
+                "topicMatchFi": "O4 mainitsee raa'an kalan, sitruunan ja kookoskerman. Selite havainnollistaa näitä eikä todellisen Nukuʻalofan ravintolan annosta.",
+                "sourceEvidence": [
+                  "e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json, opasjaksot[3]"
+                ],
+                "rightsScopeFi": "Yleinen ruoka-aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Kala, sitrus ja kookoskerma havainnollistavat ʻota ʻikaa; havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Kala, kookoskerma ja sitruuna vastaavat O4:n ʻota ʻika -aineksia. Kostea kalapinta ja astia ovat uskottavat, havannemerkintä rehellinen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kala, sitrus ja kookoskerma havainnollistavat ʻota ʻikaa; havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e14-nukualofa-o4-v1-20261012",
+          "sha256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Kala, kookoskerma ja sitruuna vastaavat O4:n ʻota ʻika -aineksia. Kostea kalapinta ja astia ovat uskottavat, havannemerkintä rehellinen.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o4-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/879378f05b39-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o4-v1-20261012",
+              "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+              "verdict": "accepted",
+              "reason": "Kala, kookoskerma ja sitruuna vastaavat O4:n ʻota ʻika -aineksia. Kostea kalapinta ja astia ovat uskottavat, havannemerkintä rehellinen.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epäsäännöllisiä vaaleita ja hieman vaaleanpunaisia kalapaloja valkoisessa kookoskermassa, vieressä kokonainen ja puolikas sitruuna. Luonteva lihaskuitu, kosteus ja sitruunan hedelmäliha; ei ylimääräisiä keksittyjä ainesosia, tekstiä tai ihmisiä.",
+                "topicMatchFi": "O4 mainitsee raa'an kalan, sitruunan ja kookoskerman. Selite havainnollistaa näitä eikä todellisen Nukuʻalofan ravintolan annosta.",
+                "sourceEvidence": [
+                  "e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json, opasjaksot[3]"
+                ],
+                "rightsScopeFi": "Yleinen ruoka-aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Kala, sitrus ja kookoskerma havainnollistavat ʻota ʻikaa; havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o4-v1-20261012",
+              "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+              "verdict": "accepted",
+              "reason": "Kala, kookoskerma ja sitruuna vastaavat O4:n ʻota ʻika -aineksia. Kostea kalapinta ja astia ovat uskottavat, havannemerkintä rehellinen.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epäsäännöllisiä vaaleita ja hieman vaaleanpunaisia kalapaloja valkoisessa kookoskermassa, vieressä kokonainen ja puolikas sitruuna. Luonteva lihaskuitu, kosteus ja sitruunan hedelmäliha; ei ylimääräisiä keksittyjä ainesosia, tekstiä tai ihmisiä.",
+                "topicMatchFi": "O4 mainitsee raa'an kalan, sitruunan ja kookoskerman. Selite havainnollistaa näitä eikä todellisen Nukuʻalofan ravintolan annosta.",
+                "sourceEvidence": [
+                  "e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json, opasjaksot[3]"
+                ],
+                "rightsScopeFi": "Yleinen ruoka-aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o4-v1-20261012",
+              "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+              "verdict": "accepted",
+              "reason": "Kala, kookoskerma ja sitruuna vastaavat O4:n ʻota ʻika -aineksia. Kostea kalapinta ja astia ovat uskottavat, havainnemerkintä rehellinen.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epäsäännöllisiä vaaleita ja hieman vaaleanpunaisia kalapaloja valkoisessa kookoskermassa, vieressä kokonainen ja puolikas sitruuna. Luonteva lihaskuitu, kosteus ja sitruunan hedelmäliha; ei ylimääräisiä keksittyjä ainesosia, tekstiä tai ihmisiä.",
+                "topicMatchFi": "O4 mainitsee raa'an kalan, sitruunan ja kookoskerman. Selite havainnollistaa näitä eikä todellisen Nukuʻalofan ravintolan annosta.",
+                "sourceEvidence": [
+                  "e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json, opasjaksot[3]"
+                ],
+                "rightsScopeFi": "Yleinen ruoka-aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-o4-v1-20261012",
+              "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+              "verdict": "accepted",
+              "reason": "Kala, kookoskerma ja sitruuna vastaavat O4:n ʻota ʻika -aineksia. Kostea kalapinta ja astia ovat uskottavat, havainnemerkintä rehellinen.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Epäsäännöllisiä vaaleita ja hieman vaaleanpunaisia kalapaloja valkoisessa kookoskermassa, vieressä kokonainen ja puolikas sitruuna. Luonteva lihaskuitu, kosteus ja sitruunan hedelmäliha; ei ylimääräisiä keksittyjä ainesosia, tekstiä tai ihmisiä.",
+                "topicMatchFi": "O4 mainitsee raa'an kalan, sitruunan ja kookoskerman. Selite havainnollistaa näitä eikä todellisen Nukuʻalofan ravintolan annosta.",
+                "sourceEvidence": [
+                  "e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json, opasjaksot[3]"
+                ],
+                "rightsScopeFi": "Yleinen ruoka-aihe.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-o4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "2b3594cf1607df437be8956e162579530ee5ec48e6c1860298417c2f78ba0acd",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:48:21.118206+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png?t=9ab5467d338b131f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+        "sha256": "9ab5467d338b131fb756c9a278b95891a27e4d1e8974ed81a32636435cf0036a",
+        "bytes": 2394967,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-nukualofa-o4-v1-20261012",
+        "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:23:24.694695+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-o4-v1-20261012-e498ec677412.png",
+        "sha256": "9ab5467d338b131fb756c9a278b95891a27e4d1e8974ed81a32636435cf0036a",
+        "bytes": 2394967,
+        "SHAReadAt": "2026-10-12T18:30:07.405504+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+        "rgbPixelSHA256": "3b8f2c7a43b6fc2599c58825a2c4a454a5bc3f74900f861a0bf81889925d3835",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "2396ded8e0eb62e66ddb529c21b2252a9c417258d5d104da5a01c076428588fc"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e14-nukualofa-l1-v1-20261012",
+      "galleryImageID": "e14-nukualofa-l1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Pehmennetty kuorikuitu on kuorikankaan raaka-ainetta; yleinen havainnekuva.",
+        "lyhyt": "Pehmennetty kuorikuitu on kuorikankaan raaka-ainetta; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Pehmennetty kuorikuitu on kuorikankaan raaka-ainetta; yleinen havainnekuva.",
+        "lyhyt": "Pehmennetty kuorikuitu on kuorikankaan raaka-ainetta; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+      "exportSHA256": "e3bd9a013049784d88ef2e116337a1e9f985f1a7bb0a081c2728cea778a59fe8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
+        "semanticContextSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
+        "subjectTitle": "Puun kuoresta lahjaksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l1-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/220afabe0bd0-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l1-v1-20261012",
+              "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuituinen kuorimateriaali ja nuija vastaavat L1:n valmistustekniikkaa; materiaali ei näytä kudotulta kankaalta eikä jäljennä ngatu-teosta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea epäsäännöllinen kuitulevy, pitkiä irronneita kuorikaistaleita ja kulunut puunuija puualustalla. Kuidut risteävät ja repeilevät luontevasti ilman kudoksen ruudukkoa. Ei käsiä, tekstiä, logoa tai koristeltua valmista kuorikangasta.",
+                "topicMatchFi": "L1 kuvaa sisäkuoren pehmentämistä, hakkaamista ja yhdistämistä. Kuvateksti nimeää raaka-aineen yleisenä havainnekuvana eikä tietyn käsityöläisen työnä tai työpajana.",
+                "sourceEvidence": [
+                  "https://collections.tepapa.govt.nz/topic/1098, valmistustekniikka"
+                ],
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l1-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Pehmennetty kuorikuitu on kuorikankaan raaka-ainetta; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Koristelematon kuituinen kuorimateriaali ja nuija vastaavat L1:n valmistustekniikkaa; materiaali ei näytä kudotulta kankaalta eikä jäljennä ngatu-teosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Pehmennetty kuorikuitu on kuorikankaan raaka-ainetta; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e14-nukualofa-l1-v1-20261012",
+          "sha256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Koristelematon kuituinen kuorimateriaali ja nuija vastaavat L1:n valmistustekniikkaa; materiaali ei näytä kudotulta kankaalta eikä jäljennä ngatu-teosta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l1-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/220afabe0bd0-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l1-v1-20261012",
+              "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuituinen kuorimateriaali ja nuija vastaavat L1:n valmistustekniikkaa; materiaali ei näytä kudotulta kankaalta eikä jäljennä ngatu-teosta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea epäsäännöllinen kuitulevy, pitkiä irronneita kuorikaistaleita ja kulunut puunuija puualustalla. Kuidut risteävät ja repeilevät luontevasti ilman kudoksen ruudukkoa. Ei käsiä, tekstiä, logoa tai koristeltua valmista kuorikangasta.",
+                "topicMatchFi": "L1 kuvaa sisäkuoren pehmentämistä, hakkaamista ja yhdistämistä. Kuvateksti nimeää raaka-aineen yleisenä havainnekuvana eikä tietyn käsityöläisen työnä tai työpajana.",
+                "sourceEvidence": [
+                  "https://collections.tepapa.govt.nz/topic/1098, valmistustekniikka"
+                ],
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l1-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Pehmennetty kuorikuitu on kuorikankaan raaka-ainetta; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l1-v1-20261012",
+              "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuituinen kuorimateriaali ja nuija vastaavat L1:n valmistustekniikkaa; materiaali ei näytä kudotulta kankaalta eikä jäljennä ngatu-teosta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea epäsäännöllinen kuitulevy, pitkiä irronneita kuorikaistaleita ja kulunut puunuija puualustalla. Kuidut risteävät ja repeilevät luontevasti ilman kudoksen ruudukkoa. Ei käsiä, tekstiä, logoa tai koristeltua valmista kuorikangasta.",
+                "topicMatchFi": "L1 kuvaa sisäkuoren pehmentämistä, hakkaamista ja yhdistämistä. Kuvateksti nimeää raaka-aineen yleisenä havainnekuvana eikä tietyn käsityöläisen työnä tai työpajana.",
+                "sourceEvidence": [
+                  "https://collections.tepapa.govt.nz/topic/1098, valmistustekniikka"
+                ],
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l1-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l1-v1-20261012",
+              "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuituinen kuorimateriaali ja nuija vastaavat L1:n valmistustekniikkaa; materiaali ei näytä kudotulta kankaalta eikä jäljennä ngatu-teosta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea epäsäännöllinen kuitulevy, pitkiä irronneita kuorikaistaleita ja kulunut puunuija puualustalla. Kuidut risteävät ja repeilevät luontevasti ilman kudoksen ruudukkoa. Ei käsiä, tekstiä, logoa tai koristeltua valmista kuorikangasta.",
+                "topicMatchFi": "L1 kuvaa sisäkuoren pehmentämistä, hakkaamista ja yhdistämistä. Kuvateksti nimeää raaka-aineen yleisenä havainnekuvana eikä tietyn käsityöläisen työnä tai työpajana.",
+                "sourceEvidence": [
+                  "https://collections.tepapa.govt.nz/topic/1098, valmistustekniikka"
+                ],
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l1-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l1-v1-20261012",
+              "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+              "verdict": "accepted",
+              "reason": "Koristelematon kuituinen kuorimateriaali ja nuija vastaavat L1:n valmistustekniikkaa; materiaali ei näytä kudotulta kankaalta eikä jäljennä ngatu-teosta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Vaalea epäsäännöllinen kuitulevy, pitkiä irronneita kuorikaistaleita ja kulunut puunuija puualustalla. Kuidut risteävät ja repeilevät luontevasti ilman kudoksen ruudukkoa. Ei käsiä, tekstiä, logoa tai koristeltua valmista kuorikangasta.",
+                "topicMatchFi": "L1 kuvaa sisäkuoren pehmentämistä, hakkaamista ja yhdistämistä. Kuvateksti nimeää raaka-aineen yleisenä havainnekuvana eikä tietyn käsityöläisen työnä tai työpajana.",
+                "sourceEvidence": [
+                  "https://collections.tepapa.govt.nz/topic/1098, valmistustekniikka"
+                ],
+                "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l1-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "8d3697f1eefe81c09985bfefa7e352a932229715ff47d94bb353fa6596c820c1",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:48:21.118141+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png?t=e3bd9a013049784d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+        "sha256": "e3bd9a013049784d88ef2e116337a1e9f985f1a7bb0a081c2728cea778a59fe8",
+        "bytes": 2581534,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-nukualofa-l1-v1-20261012",
+        "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:23:20.139538+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l1-v1-20261012-72f06347fc5e.png",
+        "sha256": "e3bd9a013049784d88ef2e116337a1e9f985f1a7bb0a081c2728cea778a59fe8",
+        "bytes": 2581534,
+        "SHAReadAt": "2026-10-12T18:30:07.193473+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+        "rgbPixelSHA256": "ca3a585d02e5fbf88f8429e425f5a2e5052641c94e87896fa91ca9461ded4a2f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
+      "contextAfterSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e14-nukualofa-l3-v1-20261012",
+      "galleryImageID": "e14-nukualofa-l3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Matto ja sidontanauha pukeutumisaiheen havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Matto ja sidontanauha pukeutumisaiheen havainnollistuksena; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Matto ja sidontanauha pukeutumisaiheen havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Matto ja sidontanauha pukeutumisaiheen havainnollistuksena; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+      "exportSHA256": "702fd77bfa49e7d9357d153bf4d6ad20de6f1eb31599c18bacc254b5b0e116c7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c86de5418e59114ebeab75805514e3d5b75228dcdfb56089098db3dc42551eee",
+        "semanticContextSHA256": "c86de5418e59114ebeab75805514e3d5b75228dcdfb56089098db3dc42551eee",
+        "subjectTitle": "Matto kuuluu juhlapukuun",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l3-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/c417b645ad83-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l3-v1-20261012",
+              "nativeSHA256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+              "verdict": "accepted",
+              "reason": "Yleinen matto ja sidontamateriaali ovat fyysisesti uskottavat; selite rajaa ne pukeutumisaiheen havainnollistukseksi ilman aidon taʻovalan tai kafa-nauhan väitettä.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Koristelematon kuitumatto rullalla ja kierretty kuitunyöri. Punonta, rullan kerrokset ja nyörin säikeet ovat luontevia; ei kopioitua ornamenttia, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L3 kertoo maton pukemisesta ja sitomisesta. Tämä hyväksytään vain yleisten materiaalien havainnollistuksena; kuvan karkeaa mattoa ja nyöriä ei saa nimetä aidoksi tongalaiseksi juhla-asuksi tai kafa-esineeksi.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala"
+                ],
+                "rightsScopeFi": "Yleiset materiaalit; ei nimetyn tekijän perinne-esine.",
+                "captionRestrictionFi": "Säilytä nykyinen yleishavainnollistuksen rajaus; älä muuta kuvatekstiä aidon taʻovalan tai kafa-nauhan tunnistukseksi.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l3-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "e3c2bc3f71c2e98a8140f3d82b71eeea4afa2824c57be8612271d9c1f6fe0e6c",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Matto ja sidontanauha pukeutumisaiheen havainnollistuksena; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen matto ja sidontamateriaali ovat fyysisesti uskottavat; selite rajaa ne pukeutumisaiheen havainnollistukseksi ilman aidon taʻovalan tai kafa-nauhan väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Matto ja sidontanauha pukeutumisaiheen havainnollistuksena; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e14-nukualofa-l3-v1-20261012",
+          "sha256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen matto ja sidontamateriaali ovat fyysisesti uskottavat; selite rajaa ne pukeutumisaiheen havainnollistukseksi ilman aidon taʻovalan tai kafa-nauhan väitettä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l3-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/c417b645ad83-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l3-v1-20261012",
+              "nativeSHA256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+              "verdict": "accepted",
+              "reason": "Yleinen matto ja sidontamateriaali ovat fyysisesti uskottavat; selite rajaa ne pukeutumisaiheen havainnollistukseksi ilman aidon taʻovalan tai kafa-nauhan väitettä.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Koristelematon kuitumatto rullalla ja kierretty kuitunyöri. Punonta, rullan kerrokset ja nyörin säikeet ovat luontevia; ei kopioitua ornamenttia, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L3 kertoo maton pukemisesta ja sitomisesta. Tämä hyväksytään vain yleisten materiaalien havainnollistuksena; kuvan karkeaa mattoa ja nyöriä ei saa nimetä aidoksi tongalaiseksi juhla-asuksi tai kafa-esineeksi.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala"
+                ],
+                "rightsScopeFi": "Yleiset materiaalit; ei nimetyn tekijän perinne-esine.",
+                "captionRestrictionFi": "Säilytä nykyinen yleishavainnollistuksen rajaus; älä muuta kuvatekstiä aidon taʻovalan tai kafa-nauhan tunnistukseksi.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l3-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "e3c2bc3f71c2e98a8140f3d82b71eeea4afa2824c57be8612271d9c1f6fe0e6c",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Matto ja sidontanauha pukeutumisaiheen havainnollistuksena; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l3-v1-20261012",
+              "nativeSHA256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+              "verdict": "accepted",
+              "reason": "Yleinen matto ja sidontamateriaali ovat fyysisesti uskottavat; selite rajaa ne pukeutumisaiheen havainnollistukseksi ilman aidon taʻovalan tai kafa-nauhan väitettä.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Koristelematon kuitumatto rullalla ja kierretty kuitunyöri. Punonta, rullan kerrokset ja nyörin säikeet ovat luontevia; ei kopioitua ornamenttia, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L3 kertoo maton pukemisesta ja sitomisesta. Tämä hyväksytään vain yleisten materiaalien havainnollistuksena; kuvan karkeaa mattoa ja nyöriä ei saa nimetä aidoksi tongalaiseksi juhla-asuksi tai kafa-esineeksi.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala"
+                ],
+                "rightsScopeFi": "Yleiset materiaalit; ei nimetyn tekijän perinne-esine.",
+                "captionRestrictionFi": "Säilytä nykyinen yleishavainnollistuksen rajaus; älä muuta kuvatekstiä aidon taʻovalan tai kafa-nauhan tunnistukseksi.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l3-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "e3c2bc3f71c2e98a8140f3d82b71eeea4afa2824c57be8612271d9c1f6fe0e6c",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T19:18:49.983643+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "c86de5418e59114ebeab75805514e3d5b75228dcdfb56089098db3dc42551eee"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png?t=702fd77bfa49e7d9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+        "sha256": "702fd77bfa49e7d9357d153bf4d6ad20de6f1eb31599c18bacc254b5b0e116c7",
+        "bytes": 2562865,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-nukualofa-l3-v1-20261012",
+        "nativeSHA256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:16:42.437765+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l3-v1-20261012-534c47b8e649.png",
+        "sha256": "702fd77bfa49e7d9357d153bf4d6ad20de6f1eb31599c18bacc254b5b0e116c7",
+        "bytes": 2562865,
+        "SHAReadAt": "2026-10-12T19:32:14.290022+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+        "rgbPixelSHA256": "f348ab63ae91fe48ea8018ec4929f28c6e75ed30fefb2e699d5567cb25a99927",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "c86de5418e59114ebeab75805514e3d5b75228dcdfb56089098db3dc42551eee",
+      "contextAfterSHA256": "c86de5418e59114ebeab75805514e3d5b75228dcdfb56089098db3dc42551eee"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e14-nukualofa-l4-v1-20261012",
+      "galleryImageID": "e14-nukualofa-l4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kierrätettyjä muovinauhoja voi käyttää punonnan materiaalina; yleinen havainnekuva.",
+        "lyhyt": "Kierrätettyjä muovinauhoja voi käyttää punonnan materiaalina; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kierrätettyjä muovinauhoja voi käyttää punonnan materiaalina; yleinen havainnekuva.",
+        "lyhyt": "Kierrätettyjä muovinauhoja voi käyttää punonnan materiaalina; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+      "exportSHA256": "43baf44e84baac17588a5e0f1578ec37e2920ce2739e0a6eaf6ea8ff792d2e81",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
+        "semanticContextSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
+        "subjectTitle": "Jauhosäkille uusi tehtävä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l4-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/92321c4e91a9-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l4-v1-20261012",
+              "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+              "verdict": "accepted",
+              "reason": "Muovisäkistä leikatut nauhat ja keskeneräinen punonta vastaavat L4:n materiaaliesimerkkiä. Kuvassa ei ole valmista nimettyä käsityötä tai kopioitua koristetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Valkoisia taittuneita muovinauhoja, pieni keskeneräinen risteävä punonta ja irtonauhoja puisella pöydällä. Nauhoissa kulumia ja hieno alkuperäisen säkin kudos; ei painatusta, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L4 kertoo jauhosäkkien muovin käytöstä taʻovalan raaka-aineena. Selite puhuu yleisesti kierrätetystä punontamateriaalista eikä esitä tätä aitona valmistuneena juhla-asuna.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala, Materials"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja yksinkertainen keskeneräinen punonta.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Kierrätettyjä muovinauhoja voi käyttää punonnan materiaalina; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Muovisäkistä leikatut nauhat ja keskeneräinen punonta vastaavat L4:n materiaaliesimerkkiä. Kuvassa ei ole valmista nimettyä käsityötä tai kopioitua koristetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kierrätettyjä muovinauhoja voi käyttää punonnan materiaalina; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e14-nukualofa-l4-v1-20261012",
+          "sha256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-4 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Muovisäkistä leikatut nauhat ja keskeneräinen punonta vastaavat L4:n materiaaliesimerkkiä. Kuvassa ei ole valmista nimettyä käsityötä tai kopioitua koristetta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l4-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/92321c4e91a9-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l4-v1-20261012",
+              "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+              "verdict": "accepted",
+              "reason": "Muovisäkistä leikatut nauhat ja keskeneräinen punonta vastaavat L4:n materiaaliesimerkkiä. Kuvassa ei ole valmista nimettyä käsityötä tai kopioitua koristetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Valkoisia taittuneita muovinauhoja, pieni keskeneräinen risteävä punonta ja irtonauhoja puisella pöydällä. Nauhoissa kulumia ja hieno alkuperäisen säkin kudos; ei painatusta, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L4 kertoo jauhosäkkien muovin käytöstä taʻovalan raaka-aineena. Selite puhuu yleisesti kierrätetystä punontamateriaalista eikä esitä tätä aitona valmistuneena juhla-asuna.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala, Materials"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja yksinkertainen keskeneräinen punonta.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Kierrätettyjä muovinauhoja voi käyttää punonnan materiaalina; yleinen havainnekuva.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "24a72ff9a5dc53fb15ecb25fbec9ec075659cf94356c2839d9dac548cdb2e179",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l4-v1-20261012",
+              "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+              "verdict": "accepted",
+              "reason": "Muovisäkistä leikatut nauhat ja keskeneräinen punonta vastaavat L4:n materiaaliesimerkkiä. Kuvassa ei ole valmista nimettyä käsityötä tai kopioitua koristetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Valkoisia taittuneita muovinauhoja, pieni keskeneräinen risteävä punonta ja irtonauhoja puisella pöydällä. Nauhoissa kulumia ja hieno alkuperäisen säkin kudos; ei painatusta, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L4 kertoo jauhosäkkien muovin käytöstä taʻovalan raaka-aineena. Selite puhuu yleisesti kierrätetystä punontamateriaalista eikä esitä tätä aitona valmistuneena juhla-asuna.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala, Materials"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja yksinkertainen keskeneräinen punonta.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l4-v1-20261012",
+              "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+              "verdict": "accepted",
+              "reason": "Muovisäkistä leikatut nauhat ja keskeneräinen punonta vastaavat L4:n materiaaliesimerkkiä. Kuvassa ei ole valmista nimettyä käsityötä tai kopioitua koristetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Valkoisia taittuneita muovinauhoja, pieni keskeneräinen risteävä punonta ja irtonauhoja puisella pöydällä. Nauhoissa kulumia ja hieno alkuperäisen säkin kudos; ei painatusta, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L4 kertoo jauhosäkkien muovin käytöstä taʻovalan raaka-aineena. Selite puhuu yleisesti kierrätetystä punontamateriaalista eikä esitä tätä aitona valmistuneena juhla-asuna.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala, Materials"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja yksinkertainen keskeneräinen punonta.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+              "sha256": "83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4",
+              "reviewerGroup": "kuvitus-4",
+              "assetID": "e14-nukualofa-l4-v1-20261012",
+              "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+              "verdict": "accepted",
+              "reason": "Muovisäkistä leikatut nauhat ja keskeneräinen punonta vastaavat L4:n materiaaliesimerkkiä. Kuvassa ei ole valmista nimettyä käsityötä tai kopioitua koristetta.",
+              "evidence": {
+                "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+                "visualObservationFi": "Valkoisia taittuneita muovinauhoja, pieni keskeneräinen risteävä punonta ja irtonauhoja puisella pöydällä. Nauhoissa kulumia ja hieno alkuperäisen säkin kudos; ei painatusta, tekstiä, logoa tai ihmisiä.",
+                "topicMatchFi": "L4 kertoo jauhosäkkien muovin käytöstä taʻovalan raaka-aineena. Selite puhuu yleisesti kierrätetystä punontamateriaalista eikä esitä tätä aitona valmistuneena juhla-asuna.",
+                "sourceEvidence": [
+                  "https://en.wikipedia.org/wiki/Ta%CA%BBovala, Materials"
+                ],
+                "rightsScopeFi": "Yleinen materiaali ja yksinkertainen keskeneräinen punonta.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/assets/e14-nukualofa-l4-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "opinionSHA256": "1e9c28da7d376b02f5f3e41dd4155c3cb9bd042e6bfe283222ef39701a8285c8",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/extra-review-snapshots/83f4dbd66136a07211a550335cc24d4baf5ef59b05ae21ca6356c1e79652b8e4.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:48:21.118190+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png?t=43baf44e84baac17",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+        "sha256": "43baf44e84baac17588a5e0f1578ec37e2920ce2739e0a6eaf6ea8ff792d2e81",
+        "bytes": 2542296,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-nukualofa-l4-v1-20261012",
+        "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:23:22.292223+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/nukualofa/e14-nukualofa-l4-v1-20261012-379d6e93bbac.png",
+        "sha256": "43baf44e84baac17588a5e0f1578ec37e2920ce2739e0a6eaf6ea8ff792d2e81",
+        "bytes": 2542296,
+        "SHAReadAt": "2026-10-12T18:30:07.300468+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+        "rgbPixelSHA256": "9415dc9aa7c0db20653c6ff99457d69b0827158995c530c7da90a99f523e0e17",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
+      "contextAfterSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e14-nukualofa-photo-e39f269b83b88bbf",
+      "galleryImageID": "capital-cc-e14-nukualofa-photo-e39f269b83b88bbf",
+      "commonsFile": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
+        "suora": true,
+        "lahde": "David Broad, Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "lyhyt": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "David Broad, Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "lyhyt": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
+        "suora": true,
+        "lahde": "David Broad, Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "lyhyt": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+      "exportSHA256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/nukualofa/88affa2931e5de1d1d858aeeaa632f025bc52d30377d38ae50053dea5fdb77e7.jpg",
+      "dimensions": [
+        2592,
+        1936
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "876e3f0de3cef7b48a32809f899adfd88663d1cf0429687925e6a05082a90473",
+        "semanticContextSHA256": "876e3f0de3cef7b48a32809f899adfd88663d1cf0429687925e6a05082a90473",
+        "subjectTitle": "nukualofa — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "David Broad",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(3).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Nuku%27alofa_harbor%2C_north_coast_of_Tongatapu_island%2C_Kingdom_of_Tonga_-_panoramio_%283%29.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuvan tekijä David Broad, CC BY 3.0 ja Panoramio-lisenssivarmennus lähdesivulta. Pääaihe sataman koko vesinäkymä ja käytännölliset alukset; ei veistosta, taideteosta, kirkkoa/palatsia tai merkittävää yksittäistä nykyarkkitehtuuria pääaiheena.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/15d4e4edb6a4-original.jpg",
+            "width": 2592,
+            "height": 1936,
+            "sha256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(3).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/6c132b278edd59ae4c4fdb163324f39ba0d91fe46b76e54f1447add59324e98b.html",
+            "sourcePageSHA256": "6c132b278edd59ae4c4fdb163324f39ba0d91fe46b76e54f1447add59324e98b",
+            "sourceFields": {
+              "Date": "Taken on 8 October 2014",
+              "Source": "https://web.archive.org/web/20161030181642/http://www.panoramio.com/photo/114310920",
+              "Author": "David Broad"
+            },
+            "authors": [
+              "David Broad"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 3.0"
+            ],
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/15d4e4edb6a4-technical-source.json",
+            "sourceDescription": [
+              "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga"
+            ],
+            "visualViewedByThisSession": true,
+            "visualObservation": "Todellinen laaja Nukuʻalofan sataman vesinäkymä, lähteessä nimetty paikka ja kamerakoordinaatit; David Broad/CC BY 3.0, 8.10.2014. Katsottu alkuperäinen: tavallisia käytännöllisiä aluksia, laiturit ja etäiset yksinkertaiset varastot. Ei luettavia kasvoja tai lisättyjä merkintöjä. Varaston luontainen yhtiökyltti on osa ympäristöä. Vuosi säilyy eikä kuvaa kutsuta nykyiseksi.",
+            "workLayerAssessment": "Todellinen laaja Nukuʻalofan sataman vesinäkymä, lähteessä nimetty paikka ja kamerakoordinaatit; David Broad/CC BY 3.0, 8.10.2014. Katsottu alkuperäinen: tavallisia käytännöllisiä aluksia, laiturit ja etäiset yksinkertaiset varastot. Ei luettavia kasvoja tai lisättyjä merkintöjä. Varaston luontainen yhtiökyltti on osa ympäristöä. Vuosi säilyy eikä kuvaa kutsuta nykyiseksi.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/7a478220ba263a2d4cc88559592a51d26b01e267346b0b37dce4b51477668a82.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Todellinen laaja Nukuʻalofan sataman vesinäkymä, lähteessä nimetty paikka ja kamerakoordinaatit; David Broad/CC BY 3.0, 8.10.2014. Katsottu alkuperäinen: tavallisia käytännöllisiä aluksia, laiturit ja etäiset yksinkertaiset varastot. Ei luettavia kasvoja tai lisättyjä merkintöjä. Varaston luontainen yhtiökyltti on osa ympäristöä. Vuosi säilyy eikä kuvaa kutsuta nykyiseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg",
+          "type": "commons",
+          "sha256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+          "verdict": "accepted",
+          "reason": "Todellinen laaja Nukuʻalofan sataman vesinäkymä, lähteessä nimetty paikka ja kamerakoordinaatit; David Broad/CC BY 3.0, 8.10.2014. Katsottu alkuperäinen: tavallisia käytännöllisiä aluksia, laiturit ja etäiset yksinkertaiset varastot. Ei luettavia kasvoja tai lisättyjä merkintöjä. Varaston luontainen yhtiökyltti on osa ympäristöä. Vuosi säilyy eikä kuvaa kutsuta nykyiseksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/15d4e4edb6a4-original.jpg",
+            "width": 2592,
+            "height": 1936,
+            "sha256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(3).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/6c132b278edd59ae4c4fdb163324f39ba0d91fe46b76e54f1447add59324e98b.html",
+            "sourcePageSHA256": "6c132b278edd59ae4c4fdb163324f39ba0d91fe46b76e54f1447add59324e98b",
+            "sourceFields": {
+              "Date": "Taken on 8 October 2014",
+              "Source": "https://web.archive.org/web/20161030181642/http://www.panoramio.com/photo/114310920",
+              "Author": "David Broad"
+            },
+            "authors": [
+              "David Broad"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 3.0"
+            ],
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/15d4e4edb6a4-technical-source.json",
+            "sourceDescription": [
+              "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga"
+            ],
+            "visualViewedByThisSession": true,
+            "visualObservation": "Todellinen laaja Nukuʻalofan sataman vesinäkymä, lähteessä nimetty paikka ja kamerakoordinaatit; David Broad/CC BY 3.0, 8.10.2014. Katsottu alkuperäinen: tavallisia käytännöllisiä aluksia, laiturit ja etäiset yksinkertaiset varastot. Ei luettavia kasvoja tai lisättyjä merkintöjä. Varaston luontainen yhtiökyltti on osa ympäristöä. Vuosi säilyy eikä kuvaa kutsuta nykyiseksi.",
+            "workLayerAssessment": "Todellinen laaja Nukuʻalofan sataman vesinäkymä, lähteessä nimetty paikka ja kamerakoordinaatit; David Broad/CC BY 3.0, 8.10.2014. Katsottu alkuperäinen: tavallisia käytännöllisiä aluksia, laiturit ja etäiset yksinkertaiset varastot. Ei luettavia kasvoja tai lisättyjä merkintöjä. Varaston luontainen yhtiökyltti on osa ympäristöä. Vuosi säilyy eikä kuvaa kutsuta nykyiseksi.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/7a478220ba263a2d4cc88559592a51d26b01e267346b0b37dce4b51477668a82.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.862112+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg",
+        "sha256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(3).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Nuku%27alofa_harbor%2C_north_coast_of_Tongatapu_island%2C_Kingdom_of_Tonga_-_panoramio_%283%29.jpg",
+        "author": "David Broad",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 2592,
+        "height": 1936,
+        "originalSHA256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
+        "bytes": 1909620,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:30:02.903105+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg",
+        "lahde": "David Broad, Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "lyhyt": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "David Broad, Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "lyhyt": "Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "876e3f0de3cef7b48a32809f899adfd88663d1cf0429687925e6a05082a90473",
+      "contextAfterSHA256": "876e3f0de3cef7b48a32809f899adfd88663d1cf0429687925e6a05082a90473"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e14-nukualofa-c1-05592e01aec6532a",
+      "galleryImageID": "capital-cc-e14-nukualofa-c1-05592e01aec6532a",
+      "commonsFile": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
+        "suora": true,
+        "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "lyhyt": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "lyhyt": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
+        "suora": true,
+        "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "lyhyt": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+      "exportSHA256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/nukualofa/87276f1276e2e1f72f3b16b6277d3aa774ffa7e33971ec9f0c9c40ab949c38e1.jpg",
+      "dimensions": [
+        2592,
+        1936
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cb22bf2eec51d430bbfc1157f88b3a554b6767ae995a0517af89949b51aff55e",
+        "semanticContextSHA256": "cb22bf2eec51d430bbfc1157f88b3a554b6767ae995a0517af89949b51aff55e",
+        "subjectTitle": "Nukuʻalofa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "David Broad",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Nuku%27alofa_harbor%2C_north_coast_of_Tongatapu_island%2C_Kingdom_of_Tonga_-_panoramio_%281%29.jpg",
+        "rightsEvidence": {
+          "selection": "CC BY 3.0 valokuva, Source/Author/lisenssin linkki ja Panoramio-review. Sataman kokonaisnäkymä ilman yksittäistä luovaa teospääaihetta; tavalliset käytännölliset veneet/varastot ja laiturit eivät naamioi suojattua palatsia tai nykytaidetta.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/3b30b4611434-original.jpg",
+            "width": 2592,
+            "height": 1936,
+            "sha256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(1).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/edafaf01c32846bc06cd63bf672710b41020cfc3ee042e0baa18d5e000617a32.html",
+            "sourcePageSHA256": "edafaf01c32846bc06cd63bf672710b41020cfc3ee042e0baa18d5e000617a32",
+            "sourceFields": {
+              "Date": "Taken on 8 October 2014",
+              "Source": "https://web.archive.org/web/20161102053615/http://www.panoramio.com/photo/114310900",
+              "Author": "David Broad"
+            },
+            "authors": [
+              "David Broad"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 3.0"
+            ],
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/3b30b4611434-technical-source.json",
+            "sourceDescription": [
+              "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga"
+            ],
+            "visualViewedByThisSession": true,
+            "visualObservation": "Aito kaupungin satama-asettelua näyttävä laaja näkymä, Nukuʻalofa vahvistettu lähdesivun kuvauksesta ja koordinaateista. David Broad/CC BY 3.0, 8.10.2014. Yksittäinen taideteos tai luova maamerkkirakennus ei ole pääaihe; ranta, tavanomaiset alukset ja pienet satamavarastot. Oikean laidan veneen etäisistä ihmisistä ei erotu kasvonpiirteitä. Ei lisättyä tekstiä/kehystä. Historiallinen päiväys säilyy.",
+            "workLayerAssessment": "Aito kaupungin satama-asettelua näyttävä laaja näkymä, Nukuʻalofa vahvistettu lähdesivun kuvauksesta ja koordinaateista. David Broad/CC BY 3.0, 8.10.2014. Yksittäinen taideteos tai luova maamerkkirakennus ei ole pääaihe; ranta, tavanomaiset alukset ja pienet satamavarastot. Oikean laidan veneen etäisistä ihmisistä ei erotu kasvonpiirteitä. Ei lisättyä tekstiä/kehystä. Historiallinen päiväys säilyy.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/16b045991b6edf1e5436ba0db9662ebcc06434c817d62f8314507273a7b18f61.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Aito kaupungin satama-asettelua näyttävä laaja näkymä, Nukuʻalofa vahvistettu lähdesivun kuvauksesta ja koordinaateista. David Broad/CC BY 3.0, 8.10.2014. Yksittäinen taideteos tai luova maamerkkirakennus ei ole pääaihe; ranta, tavanomaiset alukset ja pienet satamavarastot. Oikean laidan veneen etäisistä ihmisistä ei erotu kasvonpiirteitä. Ei lisättyä tekstiä/kehystä. Historiallinen päiväys säilyy."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg",
+          "type": "commons",
+          "sha256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+          "verdict": "accepted",
+          "reason": "Aito kaupungin satama-asettelua näyttävä laaja näkymä, Nukuʻalofa vahvistettu lähdesivun kuvauksesta ja koordinaateista. David Broad/CC BY 3.0, 8.10.2014. Yksittäinen taideteos tai luova maamerkkirakennus ei ole pääaihe; ranta, tavanomaiset alukset ja pienet satamavarastot. Oikean laidan veneen etäisistä ihmisistä ei erotu kasvonpiirteitä. Ei lisättyä tekstiä/kehystä. Historiallinen päiväys säilyy.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/3b30b4611434-original.jpg",
+            "width": 2592,
+            "height": 1936,
+            "sha256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(1).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/edafaf01c32846bc06cd63bf672710b41020cfc3ee042e0baa18d5e000617a32.html",
+            "sourcePageSHA256": "edafaf01c32846bc06cd63bf672710b41020cfc3ee042e0baa18d5e000617a32",
+            "sourceFields": {
+              "Date": "Taken on 8 October 2014",
+              "Source": "https://web.archive.org/web/20161102053615/http://www.panoramio.com/photo/114310900",
+              "Author": "David Broad"
+            },
+            "authors": [
+              "David Broad"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 3.0"
+            ],
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/3b30b4611434-technical-source.json",
+            "sourceDescription": [
+              "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga"
+            ],
+            "visualViewedByThisSession": true,
+            "visualObservation": "Aito kaupungin satama-asettelua näyttävä laaja näkymä, Nukuʻalofa vahvistettu lähdesivun kuvauksesta ja koordinaateista. David Broad/CC BY 3.0, 8.10.2014. Yksittäinen taideteos tai luova maamerkkirakennus ei ole pääaihe; ranta, tavanomaiset alukset ja pienet satamavarastot. Oikean laidan veneen etäisistä ihmisistä ei erotu kasvonpiirteitä. Ei lisättyä tekstiä/kehystä. Historiallinen päiväys säilyy.",
+            "workLayerAssessment": "Aito kaupungin satama-asettelua näyttävä laaja näkymä, Nukuʻalofa vahvistettu lähdesivun kuvauksesta ja koordinaateista. David Broad/CC BY 3.0, 8.10.2014. Yksittäinen taideteos tai luova maamerkkirakennus ei ole pääaihe; ranta, tavanomaiset alukset ja pienet satamavarastot. Oikean laidan veneen etäisistä ihmisistä ei erotu kasvonpiirteitä. Ei lisättyä tekstiä/kehystä. Historiallinen päiväys säilyy.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/16b045991b6edf1e5436ba0db9662ebcc06434c817d62f8314507273a7b18f61.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.862139+00:00",
+          "contentSHA256": "c7b5a1e4cbaaaa329171469611e25b19cb9f285d232928f4258de9a289444af6",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg",
+        "sha256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_harbor,_north_coast_of_Tongatapu_island,_Kingdom_of_Tonga_-_panoramio_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Nuku%27alofa_harbor%2C_north_coast_of_Tongatapu_island%2C_Kingdom_of_Tonga_-_panoramio_%281%29.jpg",
+        "author": "David Broad",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 2592,
+        "height": 1936,
+        "originalSHA256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
+        "bytes": 1934079,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:30:04.289564+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg",
+        "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "lyhyt": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "lyhyt": "Nukuʻalofan satama, pienalusten laitureita ja rantakaupungin ympäristöä vuonna 2014.",
+        "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "targetAfterSHA256": "cb22bf2eec51d430bbfc1157f88b3a554b6767ae995a0517af89949b51aff55e",
+      "contextAfterSHA256": "cb22bf2eec51d430bbfc1157f88b3a554b6767ae995a0517af89949b51aff55e"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

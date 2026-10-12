@@ -1,0 +1,1183 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e14",
+  "city": "yaren",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+  "assets": [
+    {
+      "era": "e14",
+      "city": "yaren",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e14-yaren-traveler-v1-20261012",
+      "galleryImageID": "e14-yaren-traveler-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva.",
+        "lyhyt": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva.",
+        "lyhyt": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5d003a9244d5b9275579256631af66e4113abd667980f141795ad97b33f60114",
+      "exportSHA256": "491cf84b60572b6c3ef154847c287c7a6a8930aec07a1ab163aae01b5132531d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "7932c16731d96f519220bfeaca027ecb47307ef51079118dbd23501e37e2a76b",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen luonnon/ruoan/materiaalin havainnollistus, ei todellinen paikkavalokuva, tunnistettava rakennus, henkilö, logo tai suojatun teoksen kopio.",
+          "QA": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Yksi kala vinossa pystysommittelussa, pieni suu ja ehjä kiduskansi, kolmionmuotoinen selkäevä, luonnolliset alaevät ja haarapyrstö. Suomujen sävy ja heijastus vaihtelevat, plain vedenalainen tausta; ei tekstiä, logoa, ihmisiä tai tilapian piikkievää.",
+            "topicMatchFi": "Yarenin L4 ja tallennettu Buada-lähde käsittelevät ibijaa/milkfishiä. Selite on yleinen ravintohistorian havainnollistus ilman todellisen järven havainto- tai nykytilaväitettä.",
+            "sourceEvidence": [
+              "faktapohja Y2/Y5, ibija ja Buadan kalankasvatus"
+            ],
+            "sourceEvidenceVerified": [
+              "valiaikainen/nopea-e14-yaren/buada.txt:724"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Eri pystytiedosto matkailijaosion tunnusaiheelle, L4:ssa eläinryhmän vaakakuva.",
+            "rightsScopeFi": "Yleinen eläinaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Milkfishin hoikka hopeinen vartalo, yhtenäiset evät ja syvähaarainen pyrstö ovat uskottavat. Native-pysty 1024×1536 täyttää TRAVELER-vaatimuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Milkfish-kala havainnollistaa ravintohistoriaa; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+        "fileSHA256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e14-yaren-traveler-v1-20261012",
+          "sha256": "5d003a9244d5b9275579256631af66e4113abd667980f141795ad97b33f60114",
+          "verdict": "accepted",
+          "reason": "Milkfishin hoikka hopeinen vartalo, yhtenäiset evät ja syvähaarainen pyrstö ovat uskottavat. Native-pysty 1024×1536 täyttää TRAVELER-vaatimuksen.",
+          "evidence": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Yksi kala vinossa pystysommittelussa, pieni suu ja ehjä kiduskansi, kolmionmuotoinen selkäevä, luonnolliset alaevät ja haarapyrstö. Suomujen sävy ja heijastus vaihtelevat, plain vedenalainen tausta; ei tekstiä, logoa, ihmisiä tai tilapian piikkievää.",
+            "topicMatchFi": "Yarenin L4 ja tallennettu Buada-lähde käsittelevät ibijaa/milkfishiä. Selite on yleinen ravintohistorian havainnollistus ilman todellisen järven havainto- tai nykytilaväitettä.",
+            "sourceEvidence": [
+              "faktapohja Y2/Y5, ibija ja Buadan kalankasvatus"
+            ],
+            "sourceEvidenceVerified": [
+              "valiaikainen/nopea-e14-yaren/buada.txt:724"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Eri pystytiedosto matkailijaosion tunnusaiheelle, L4:ssa eläinryhmän vaakakuva.",
+            "rightsScopeFi": "Yleinen eläinaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:56:54.682394+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa.json",
+            "sha256": "682e7488410d08931d3744acb707f82befe91d18c2e4dd0fec9a586fbc1e2b29"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+            "sha256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png?t=491cf84b60572b6c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+        "sha256": "491cf84b60572b6c3ef154847c287c7a6a8930aec07a1ab163aae01b5132531d",
+        "bytes": 1941252,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-yaren-traveler-v1-20261012",
+        "nativeSHA256": "5d003a9244d5b9275579256631af66e4113abd667980f141795ad97b33f60114",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "yaren",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:58:58.947553+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-traveler-v1-20261012-5d003a9244d5.png",
+        "sha256": "491cf84b60572b6c3ef154847c287c7a6a8930aec07a1ab163aae01b5132531d",
+        "bytes": 1941252,
+        "SHAReadAt": "2026-10-12T19:03:45.773783+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5d003a9244d5b9275579256631af66e4113abd667980f141795ad97b33f60114",
+        "rgbPixelSHA256": "b24a4d964bc08eb485fd7479a4f6df7c62c15a521f9dd64d9853cf9261fef6c0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "7932c16731d96f519220bfeaca027ecb47307ef51079118dbd23501e37e2a76b"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e14-yaren-o4-v1-20261012",
+      "galleryImageID": "e14-yaren-o4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva.",
+        "lyhyt": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva.",
+        "lyhyt": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d51cd1bf6ddde9ceeae9594d5d90035201468eb432bca3b72c2e3e7d3b68dad3",
+      "exportSHA256": "8d7278f540213568323d065abc9595ef36468b60333c7a7eda8604f62d66962c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "d090d47428af38fadc9cba5e3ba9dd8c3c795ff549598fa88015af9898ff717f",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Riisikulhon rinnalla paistettu kalapala, luonnolliset valkoiset lohkeavat lihassyyt ja ruskea paistopinta, pieni vihannes- ja sitruunalisuke. Tavalliset astiat, luontevat varjot ja riisinjyvät; ei tekstiä, logoa, käsiä tai kasvoja.",
+            "topicMatchFi": "O4 mainitsee kalan ja riisiruoat. Selite on yleinen aterian havainne eikä tietyn Yarenin ravintolan, milkfish-annoksen tai kansallisreseptin aito valokuva.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Nauru, Eat"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-o4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kypsä kala ja riisi vastaavat O4:n yleistä ruokatarjontaa. Luonteva ruoka- ja astiakuva ilman nimettyä kansallisannosta tai ravintolaväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kala ja riisi havainnollistavat tavallista ateriaa; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+        "fileSHA256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e14-yaren-o4-v1-20261012",
+          "sha256": "d51cd1bf6ddde9ceeae9594d5d90035201468eb432bca3b72c2e3e7d3b68dad3",
+          "verdict": "accepted",
+          "reason": "Kypsä kala ja riisi vastaavat O4:n yleistä ruokatarjontaa. Luonteva ruoka- ja astiakuva ilman nimettyä kansallisannosta tai ravintolaväitettä.",
+          "evidence": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Riisikulhon rinnalla paistettu kalapala, luonnolliset valkoiset lohkeavat lihassyyt ja ruskea paistopinta, pieni vihannes- ja sitruunalisuke. Tavalliset astiat, luontevat varjot ja riisinjyvät; ei tekstiä, logoa, käsiä tai kasvoja.",
+            "topicMatchFi": "O4 mainitsee kalan ja riisiruoat. Selite on yleinen aterian havainne eikä tietyn Yarenin ravintolan, milkfish-annoksen tai kansallisreseptin aito valokuva.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Nauru, Eat"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-o4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:35:38.201044+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa.json",
+            "sha256": "682e7488410d08931d3744acb707f82befe91d18c2e4dd0fec9a586fbc1e2b29"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+            "sha256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png?t=8d7278f540213568",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+        "sha256": "8d7278f540213568323d065abc9595ef36468b60333c7a7eda8604f62d66962c",
+        "bytes": 2237961,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-yaren-o4-v1-20261012",
+        "nativeSHA256": "d51cd1bf6ddde9ceeae9594d5d90035201468eb432bca3b72c2e3e7d3b68dad3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "yaren",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:36:43.679410+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-o4-v1-20261012-d51cd1bf6ddd.png",
+        "sha256": "8d7278f540213568323d065abc9595ef36468b60333c7a7eda8604f62d66962c",
+        "bytes": 2237961,
+        "SHAReadAt": "2026-10-12T18:35:45.670004+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d51cd1bf6ddde9ceeae9594d5d90035201468eb432bca3b72c2e3e7d3b68dad3",
+        "rgbPixelSHA256": "fdd612546b13654d167a832cecd6e8029c097dc8b107d074c01d58df6a5c12b6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "d090d47428af38fadc9cba5e3ba9dd8c3c795ff549598fa88015af9898ff717f"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e14-yaren-l2-v2-20261012",
+      "galleryImageID": "e14-yaren-l2-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva.",
+        "lyhyt": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva.",
+        "lyhyt": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9e69d1cff5986ec361138b50781a9062f779ca9407c1ca1bcfa6b163fd3e5c79",
+      "exportSHA256": "2f711bebabd2216f08079618661f7e330710edca3000c2a179afda7544ec26c4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+        "semanticContextSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+        "subjectTitle": "Vettä katolta, vettä merestä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Yhtenäinen metalliputken pää, painovoiman mukainen vesivirta, erillisiä pisaroita ja pieniä renkaita pyöreässä metallisäiliössä. Reunassa ei ole kirjain- tai logokuvioita. Metallin epätasaiset sävyt ja veden heijastukset ovat luontevat; ei ihmisiä tai tunnistettavaa rakennusta.",
+            "topicMatchFi": "L2 mainitsee katolta kerättävän sadeveden. Selite on yleinen havainnekuva, ei todellinen Naurun säiliö tai käyttöveden puhtautta koskeva väite.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Nauru, rainwater collection"
+            ],
+            "rightsScopeFi": "Yleinen vedenkeräyksen mekanismi.",
+            "replacesRejectedAssetID": "e14-yaren-l2-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-l2-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kokonaan uusi v2 on merkitön: metalliputki johtaa vettä yksinkertaiseen astiaan, luonnollinen virtaus ja roiskeet. L2:n yleishavainnollistus täyttyy."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Katon sadevesi voidaan johtaa säiliöön; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+        "fileSHA256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e14-yaren-l2-v2-20261012",
+          "sha256": "9e69d1cff5986ec361138b50781a9062f779ca9407c1ca1bcfa6b163fd3e5c79",
+          "verdict": "accepted",
+          "reason": "Kokonaan uusi v2 on merkitön: metalliputki johtaa vettä yksinkertaiseen astiaan, luonnollinen virtaus ja roiskeet. L2:n yleishavainnollistus täyttyy.",
+          "evidence": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Yhtenäinen metalliputken pää, painovoiman mukainen vesivirta, erillisiä pisaroita ja pieniä renkaita pyöreässä metallisäiliössä. Reunassa ei ole kirjain- tai logokuvioita. Metallin epätasaiset sävyt ja veden heijastukset ovat luontevat; ei ihmisiä tai tunnistettavaa rakennusta.",
+            "topicMatchFi": "L2 mainitsee katolta kerättävän sadeveden. Selite on yleinen havainnekuva, ei todellinen Naurun säiliö tai käyttöveden puhtautta koskeva väite.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Nauru, rainwater collection"
+            ],
+            "rightsScopeFi": "Yleinen vedenkeräyksen mekanismi.",
+            "replacesRejectedAssetID": "e14-yaren-l2-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-l2-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:33:01.770812+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa.json",
+            "sha256": "682e7488410d08931d3744acb707f82befe91d18c2e4dd0fec9a586fbc1e2b29"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+            "sha256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png?t=2f711bebabd2216f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+        "sha256": "2f711bebabd2216f08079618661f7e330710edca3000c2a179afda7544ec26c4",
+        "bytes": 2397327,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-yaren-l2-v2-20261012",
+        "nativeSHA256": "9e69d1cff5986ec361138b50781a9062f779ca9407c1ca1bcfa6b163fd3e5c79",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "yaren",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:33:52.600624+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-l2-v2-20261012-9e69d1cff598.png",
+        "sha256": "2f711bebabd2216f08079618661f7e330710edca3000c2a179afda7544ec26c4",
+        "bytes": 2397327,
+        "SHAReadAt": "2026-10-12T18:33:45.102185+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9e69d1cff5986ec361138b50781a9062f779ca9407c1ca1bcfa6b163fd3e5c79",
+        "rgbPixelSHA256": "7962d7c3a22df6eaa01a66c2cfb62fcdce2ff10b22e210967f363eedfe036b0e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "targetAfterSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db",
+      "contextAfterSHA256": "d274616d4c8f18549241c392320962d1d6dd2aeddb1b8640aaa71c39297128db"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e14-yaren-l4-v1-20261012",
+      "galleryImageID": "e14-yaren-l4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva.",
+        "lyhyt": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva.",
+        "lyhyt": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "245577037631f06581c68e31d19fdf04662499ea3ef4df295b6221e8d6d90d22",
+      "exportSHA256": "6a7a959e5ef586adc4598bf735a365c327926d3178dd7a309b8611e9a857aa29",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+        "semanticContextSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+        "subjectTitle": "Kalalle toinen kasvupaikka",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Yksi hoikka hopeinen kala kylkiasennossa, pieni suu, ehjä kiduskansi, rinta- ja vatsaeviä sekä syvähaarainen pyrstö. Suomujen kirkkaus ja näkyvyys vaihtuvat vartalolla, veden valossa ei toistuvaa laattapintaa. Ei kalastajaa, tekstiä, logoa tai järven tunnuksia.",
+            "topicMatchFi": "L4 kertoo ibijan eli milkfishin kasvattamisesta sisämaan vedessä. Selite sanoo yleinen havainnekuva eikä todellinen Buadan järven havainto, vedenlaatu tai kasvatuksen nykytila.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Buada_Lagoon, Fish"
+            ],
+            "rightsScopeFi": "Yleinen eläinaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Hoikka hopeinen milkfish-kala, yksi kolmionmuotoinen selkäevä ja syvästi haarainen pyrstö vastaavat aihetta; anatomia on yhtenäinen eikä kalassa ole tilapian piikkievää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Milkfish-kalaa on kasvatettu sisämaan vedessä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+        "fileSHA256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e14-yaren-l4-v1-20261012",
+          "sha256": "245577037631f06581c68e31d19fdf04662499ea3ef4df295b6221e8d6d90d22",
+          "verdict": "accepted",
+          "reason": "Hoikka hopeinen milkfish-kala, yksi kolmionmuotoinen selkäevä ja syvästi haarainen pyrstö vastaavat aihetta; anatomia on yhtenäinen eikä kalassa ole tilapian piikkievää.",
+          "evidence": {
+            "contentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "visualObservationFi": "Yksi hoikka hopeinen kala kylkiasennossa, pieni suu, ehjä kiduskansi, rinta- ja vatsaeviä sekä syvähaarainen pyrstö. Suomujen kirkkaus ja näkyvyys vaihtuvat vartalolla, veden valossa ei toistuvaa laattapintaa. Ei kalastajaa, tekstiä, logoa tai järven tunnuksia.",
+            "topicMatchFi": "L4 kertoo ibijan eli milkfishin kasvattamisesta sisämaan vedessä. Selite sanoo yleinen havainnekuva eikä todellinen Buadan järven havainto, vedenlaatu tai kasvatuksen nykytila.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Buada_Lagoon, Fish"
+            ],
+            "rightsScopeFi": "Yleinen eläinaihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/assets/e14-yaren-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:34:03.598767+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa.json",
+            "sha256": "682e7488410d08931d3744acb707f82befe91d18c2e4dd0fec9a586fbc1e2b29"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+            "sha256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png?t=6a7a959e5ef586ad",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+        "sha256": "6a7a959e5ef586adc4598bf735a365c327926d3178dd7a309b8611e9a857aa29",
+        "bytes": 2209861,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-yaren-l4-v1-20261012",
+        "nativeSHA256": "245577037631f06581c68e31d19fdf04662499ea3ef4df295b6221e8d6d90d22",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "yaren",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:34:47.090501+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/yaren/e14-yaren-l4-v1-20261012-245577037631.png",
+        "sha256": "6a7a959e5ef586adc4598bf735a365c327926d3178dd7a309b8611e9a857aa29",
+        "bytes": 2209861,
+        "SHAReadAt": "2026-10-12T18:34:41.522168+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "245577037631f06581c68e31d19fdf04662499ea3ef4df295b6221e8d6d90d22",
+        "rgbPixelSHA256": "8fb6eb96eae73bab721fc8379249006f68685d4998c95300092fba8efcba7466",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "targetAfterSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198",
+      "contextAfterSHA256": "7a59ab9c1fb96d332c4af4bd12713fa47d9b03333e72623857054665121a8198"
+    },
+    {
+      "era": "e14",
+      "city": "yaren",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e14-yaren-photo-e50906e443d4cd1f",
+      "galleryImageID": "capital-cc-e14-yaren-photo-e50906e443d4cd1f",
+      "commonsFile": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
+        "suora": true,
+        "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
+        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
+        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
+        "suora": true,
+        "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
+        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+      "exportSHA256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa-evidence/original-photo-b6124eb9b900.jpg",
+      "dimensions": [
+        5184,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/yaren/sisalto.json",
+      "sourceContentSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+        "semanticContextSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+        "subjectTitle": "yaren — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Department of Foreign Affairs and Trade",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Waves_crash_against_the_wall_at_the_end_of_Nauru_International_Airprot%27s_runway._Rising_sea_levels_pose_a_serious_risk_coastal_erosion_for_small_Pacific_island_countries,_4_June_2013._Photo-_Matt_Robertson_-_DFAT_(12045534665).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Waves_crash_against_the_wall_at_the_end_of_Nauru_International_Airprot%27s_runway._Rising_sea_levels_pose_a_serious_risk_coastal_erosion_for_small_Pacific_island_countries%2C_4_June_2013._Photo-_Matt_Robertson_-_DFAT_%2812045534665%29.jpg",
+        "rightsEvidence": {
+          "selection": "Commons Author Department of Foreign Affairs and Trade, Source-rivin nimenomainen Photo: Matt Robertson / DFAT; CC BY 2.0 ja Flickrin lisenssitarkistus. Aallot ja tavallinen tekninen rantamuuri ovat pääaihe; ei teossuojaoletusta koko maan rakennuksista.",
+          "QA": {
+            "rows": [
+              [
+                "Description Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg",
+                "Waves crash against the wall at the end of Nauru International Airport's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo: Matt Robertson / DFAT"
+              ],
+              [
+                "Date",
+                "4 June 2013, 15:02"
+              ],
+              [
+                "Source",
+                "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo: Matt Robertson / DFAT"
+              ],
+              [
+                "Author",
+                "Department of Foreign Affairs and Trade"
+              ]
+            ],
+            "licenses": [
+              "CC BY 2.0"
+            ],
+            "pageDimensions": [
+              5184,
+              3456
+            ],
+            "actualDimensions": [
+              5184,
+              3456
+            ],
+            "pageSha256": "a15e83059bc18125e22e8a97798104fbd770650a4dd08b431a8826e610e81a6b",
+            "nativeSha256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Waves_crash_against_the_wall_at_the_end_of_Nauru_International_Airprot%27s_runway._Rising_sea_levels_pose_a_serious_risk_coastal_erosion_for_small_Pacific_island_countries,_4_June_2013._Photo-_Matt_Robertson_-_DFAT_(12045534665).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa-evidence/source-photo-b6124eb9b900.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa-evidence/original-photo-b6124eb9b900.jpg",
+            "localMatchesManifestSHA": null,
+            "manifestNativeSHADeclared": null,
+            "originalFetchedByThisJob": true,
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/cc-selection.json",
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa-evidence/source-photo-b6124eb9b900.json",
+            "author": "Department of Foreign Affairs and Trade",
+            "authorFieldVerified": true,
+            "photographerCredit": "Matt Robertson / DFAT",
+            "photographerCreditEvidence": "Explicit Source/Description Photo credit; not upload history or inferred account identity",
+            "licensingOrganization": "Department of Foreign Affairs and Trade",
+            "requiredCreditFi": "Matt Robertson / DFAT (Department of Foreign Affairs and Trade), CC BY 2.0",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+            "sourceContentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "placeContextEvidence": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e14-yaren/yaren.txt",
+              "sha256": "2e7c0d62c229b12126ba89b178f2644c72fef9205a4ac76831af3a777f243e1f",
+              "sourceURL": "https://en.wikipedia.org/wiki/Yaren",
+              "relevantLines": [
+                942,
+                1094
+              ],
+              "preciseRunwayEndWithinYarenAsserted": false
+            },
+            "rightsScope": "Luonnonmeri ja aallot sekä tavallinen toiminnallinen rantamuuri/tuulipussi; ei suojattua taidetta tai luovaa arkkitehtuuripääaihetta. Valokuvan kaupallinen CC BY2.0 varmistettu alkuperäisestä Licensing-osiosta."
+          },
+          "qaReason": "Aito Naurun lentoaseman kiitotien päädyn rantamuurin valokuva: alkuperäisen Description/Source yksilöivät paikan. Yarenin Y1-lähde sitoo lentoaseman Yarenin paikalliskontekstiin; caption käyttää lähialuetta eikä sijoita nimeämätöntä kiitotien päätä varmaksi hallintopiirirajan sisään. Aallot, meri, luonnonkivet, tavallinen tekninen rantamuuri ja tuulipussi näkyvät; ei ihmisiä, lisättyä tekstiä/logoja tai taideteospääaihetta.4.6.2013 ja5184×3456 varmennettu. Source/Description nimeävät kuvaajan Matt Robertson / DFAT; Author-rivi Department of Foreign Affairs and Trade on organisaation krediitti/lisenssikerros, ei uploaderista arvattu kuvaaja. Molemmat krediitit säilytetään toimituksessa. Ei päätellä kuvan perusteella eroosion määrää, tämänhetkistä merenpintaa tai lentoaseman nykyistä kuntoa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa.json",
+        "fileSHA256": "682e7488410d08931d3744acb707f82befe91d18c2e4dd0fec9a586fbc1e2b29",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg",
+          "sha256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+          "verdict": "accepted",
+          "reason": "Aito Naurun lentoaseman kiitotien päädyn rantamuurin valokuva: alkuperäisen Description/Source yksilöivät paikan. Yarenin Y1-lähde sitoo lentoaseman Yarenin paikalliskontekstiin; caption käyttää lähialuetta eikä sijoita nimeämätöntä kiitotien päätä varmaksi hallintopiirirajan sisään. Aallot, meri, luonnonkivet, tavallinen tekninen rantamuuri ja tuulipussi näkyvät; ei ihmisiä, lisättyä tekstiä/logoja tai taideteospääaihetta.4.6.2013 ja5184×3456 varmennettu. Source/Description nimeävät kuvaajan Matt Robertson / DFAT; Author-rivi Department of Foreign Affairs and Trade on organisaation krediitti/lisenssikerros, ei uploaderista arvattu kuvaaja. Molemmat krediitit säilytetään toimituksessa. Ei päätellä kuvan perusteella eroosion määrää, tämänhetkistä merenpintaa tai lentoaseman nykyistä kuntoa.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:53:08.068729+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg",
+                "Waves crash against the wall at the end of Nauru International Airport's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo: Matt Robertson / DFAT"
+              ],
+              [
+                "Date",
+                "4 June 2013, 15:02"
+              ],
+              [
+                "Source",
+                "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo: Matt Robertson / DFAT"
+              ],
+              [
+                "Author",
+                "Department of Foreign Affairs and Trade"
+              ]
+            ],
+            "licenses": [
+              "CC BY 2.0"
+            ],
+            "pageDimensions": [
+              5184,
+              3456
+            ],
+            "actualDimensions": [
+              5184,
+              3456
+            ],
+            "pageSha256": "a15e83059bc18125e22e8a97798104fbd770650a4dd08b431a8826e610e81a6b",
+            "nativeSha256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Waves_crash_against_the_wall_at_the_end_of_Nauru_International_Airprot%27s_runway._Rising_sea_levels_pose_a_serious_risk_coastal_erosion_for_small_Pacific_island_countries,_4_June_2013._Photo-_Matt_Robertson_-_DFAT_(12045534665).jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa-evidence/source-photo-b6124eb9b900.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa-evidence/original-photo-b6124eb9b900.jpg",
+            "localMatchesManifestSHA": null,
+            "manifestNativeSHADeclared": null,
+            "originalFetchedByThisJob": true,
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/cc-selection.json",
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa-evidence/source-photo-b6124eb9b900.json",
+            "author": "Department of Foreign Affairs and Trade",
+            "authorFieldVerified": true,
+            "photographerCredit": "Matt Robertson / DFAT",
+            "photographerCreditEvidence": "Explicit Source/Description Photo credit; not upload history or inferred account identity",
+            "licensingOrganization": "Department of Foreign Affairs and Trade",
+            "requiredCreditFi": "Matt Robertson / DFAT (Department of Foreign Affairs and Trade), CC BY 2.0",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+            "sourceContentSHA256": "ea37c9539c0effdae1602c64eabba48f204589d23e14ce053f88914d0c69e24e",
+            "placeContextEvidence": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e14-yaren/yaren.txt",
+              "sha256": "2e7c0d62c229b12126ba89b178f2644c72fef9205a4ac76831af3a777f243e1f",
+              "sourceURL": "https://en.wikipedia.org/wiki/Yaren",
+              "relevantLines": [
+                942,
+                1094
+              ],
+              "preciseRunwayEndWithinYarenAsserted": false
+            },
+            "rightsScope": "Luonnonmeri ja aallot sekä tavallinen toiminnallinen rantamuuri/tuulipussi; ei suojattua taidetta tai luovaa arkkitehtuuripääaihetta. Valokuvan kaupallinen CC BY2.0 varmistettu alkuperäisestä Licensing-osiosta."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/qa.json",
+            "sha256": "682e7488410d08931d3744acb707f82befe91d18c2e4dd0fec9a586fbc1e2b29"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/yaren/illustration-qa-extra.json",
+            "sha256": "fb5c7577fef7748a79ff20922875c13dcf8492ca98e95bb15a636de06f8c3bfa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "yaren",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg",
+        "sha256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Waves_crash_against_the_wall_at_the_end_of_Nauru_International_Airprot%27s_runway._Rising_sea_levels_pose_a_serious_risk_coastal_erosion_for_small_Pacific_island_countries,_4_June_2013._Photo-_Matt_Robertson_-_DFAT_(12045534665).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Waves_crash_against_the_wall_at_the_end_of_Nauru_International_Airprot%27s_runway._Rising_sea_levels_pose_a_serious_risk_coastal_erosion_for_small_Pacific_island_countries%2C_4_June_2013._Photo-_Matt_Robertson_-_DFAT_%2812045534665%29.jpg",
+        "author": "Department of Foreign Affairs and Trade",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 5184,
+        "height": 3456,
+        "originalSHA256": "e50906e443d4cd1faa68a78a9f7c413f167000be521bbc0e9652e4f427393722",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg",
+        "bytes": 6594454,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:53:42.542627+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg",
+        "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
+        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Department of Foreign Affairs and Trade, Commons (CC BY 2.0)",
+        "selite": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "lyhyt": "Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.",
+        "tiedosto": "Waves crash against the wall at the end of Nauru International Airprot's runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "fda860a4062220e17a1b43bdb96aee87faff7928952526a64335d91a6c4399a2",
+      "targetAfterSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944",
+      "contextAfterSHA256": "a62b7c2829c15724925a4b56a3419543781394c42cab8dfb79a782bab9395944"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

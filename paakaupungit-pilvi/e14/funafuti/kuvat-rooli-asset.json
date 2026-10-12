@@ -1,0 +1,3001 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e14",
+  "city": "funafuti",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+  "assets": [
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e14-funafuti-traveler-v1-20261012",
+      "galleryImageID": "e14-funafuti-traveler-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Merikilpikonna riuttaympäristössä; yleinen havainnekuva.",
+        "lyhyt": "Merikilpikonna riuttaympäristössä; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Merikilpikonna riuttaympäristössä; yleinen havainnekuva.",
+        "lyhyt": "Merikilpikonna riuttaympäristössä; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ce8183319e8780e1ca56bd6ec37b99c320b13c93214710210cb9a57c67500c16",
+      "exportSHA256": "392f413eda0a1f02a01df623cfce2031473a12845e5de5a4f5fff91df82a825e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "587407fe2e8b085cd4570530ffba512c635c951a40761e6f89db660b3f206d6e",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen luonnon/ruoan/materiaalin havainnollistus, ei todellinen paikkavalokuva, tunnistettava rakennus, henkilö, logo tai suojatun teoksen kopio.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Yksi merikilpikonna vinosti riutan yllä, kaksi suurta eturäpylää ja kaksi pienempää takaräpylää. Vaihteleva oliivinruskea kilpi, ehjä kaula ja kuono, epäsäännölliset korallit ja veden pinta; ei ylimääräisiä raajoja, tekstiä tai ihmisiä.",
+            "topicMatchFi": "Funafutin faktapohja ja L4 käsittelevät riuttaympäristön merikilpikonnia. Selite ilmoittaa yleisen havainnollistuksen ilman todellisen Te Namon havainto- tai vedenlaatuväitettä.",
+            "sourceEvidence": [
+              "faktapohja F3/F9, merikilpikonnien suojeluympäristö"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Eri tiedosto ja oma pystysommittelu matkailijaosion luontoaiheelle, L4:ssa saman eläinryhmän vaakakuva.",
+            "rightsScopeFi": "Yleinen eläin ja riuttaluonto.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Merikilpikonnan kilpi ja neljä räpylää muodostavat yhtenäisen anatomian, riutta ja vesi ovat luonnolliset. Native-pysty 1024×1536 täyttää TRAVELER-vaatimuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Merikilpikonna riuttaympäristössä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e14-funafuti-traveler-v1-20261012",
+          "sha256": "ce8183319e8780e1ca56bd6ec37b99c320b13c93214710210cb9a57c67500c16",
+          "verdict": "accepted",
+          "reason": "Merikilpikonnan kilpi ja neljä räpylää muodostavat yhtenäisen anatomian, riutta ja vesi ovat luonnolliset. Native-pysty 1024×1536 täyttää TRAVELER-vaatimuksen.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Yksi merikilpikonna vinosti riutan yllä, kaksi suurta eturäpylää ja kaksi pienempää takaräpylää. Vaihteleva oliivinruskea kilpi, ehjä kaula ja kuono, epäsäännölliset korallit ja veden pinta; ei ylimääräisiä raajoja, tekstiä tai ihmisiä.",
+            "topicMatchFi": "Funafutin faktapohja ja L4 käsittelevät riuttaympäristön merikilpikonnia. Selite ilmoittaa yleisen havainnollistuksen ilman todellisen Te Namon havainto- tai vedenlaatuväitettä.",
+            "sourceEvidence": [
+              "faktapohja F3/F9, merikilpikonnien suojeluympäristö"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Eri tiedosto ja oma pystysommittelu matkailijaosion luontoaiheelle, L4:ssa saman eläinryhmän vaakakuva.",
+            "rightsScopeFi": "Yleinen eläin ja riuttaluonto.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:52:25.880162+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png?t=392f413eda0a1f02",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+        "sha256": "392f413eda0a1f02a01df623cfce2031473a12845e5de5a4f5fff91df82a825e",
+        "bytes": 2619020,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-traveler-v1-20261012",
+        "nativeSHA256": "ce8183319e8780e1ca56bd6ec37b99c320b13c93214710210cb9a57c67500c16",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:52:56.272334+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-traveler-v1-20261012-ce8183319e87.png",
+        "sha256": "392f413eda0a1f02a01df623cfce2031473a12845e5de5a4f5fff91df82a825e",
+        "bytes": 2619020,
+        "SHAReadAt": "2026-10-12T19:03:44.635244+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ce8183319e8780e1ca56bd6ec37b99c320b13c93214710210cb9a57c67500c16",
+        "rgbPixelSHA256": "f665c140955fece5f4f08034f8bb5e9518615999776e30fad0c097d3af3dbc25",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "587407fe2e8b085cd4570530ffba512c635c951a40761e6f89db660b3f206d6e"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e14-funafuti-o2-v1-20261012",
+      "galleryImageID": "e14-funafuti-o2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Koralliriutan yksityiskohta merisuojelun aiheen havainnekuvana.",
+        "lyhyt": "Koralliriutan yksityiskohta merisuojelun aiheen havainnekuvana."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Koralliriutan yksityiskohta merisuojelun aiheen havainnekuvana.",
+        "lyhyt": "Koralliriutan yksityiskohta merisuojelun aiheen havainnekuvana."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0795ad3b63287b3c6df435fb062d64435612b23fa56b8db6351de022be4783ea",
+      "exportSHA256": "c52995401529e05adece34ed6a339221623abd1f6b9d006d4bae6b2dfdcde0f6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e0e446deaf728f54340087792e7c106e13aadec6a4a1d15f7bf59b2eae587051",
+        "subjectTitle": "Te Namo ja suojellut saaret",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Lähteen koralliaihe, yleinen luonnon tai luonnonmateriaalin havainnekuva. Ei nimetyn kohteen visuaalisen asettelun rekonstruktio, suojattu teos, historiallinen tapahtuma tai todellisen vedenlaadun kuvaus.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Haarautuvia ja pallomaisia koralleja eri kokoisina, yhtenäinen vedenalainen valo ja epäsäännölliset pinnat. Ei monistuvaa korallilaatoitusta, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O2 käsittelee merisuojelua. Selite on riuttahavainne, ei Te Namon todellinen snorklauspaikka tai nykyinen vedenlaatu.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Funafuti_Conservation_Area"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-o2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Riutan erilaiset korallirakenteet ja veden valo ovat luontevat."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Koralliriutan yksityiskohta merisuojelun aiheen havainnekuvana.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e14-funafuti-o2-v1-20261012",
+          "sha256": "0795ad3b63287b3c6df435fb062d64435612b23fa56b8db6351de022be4783ea",
+          "verdict": "accepted",
+          "reason": "Riutan erilaiset korallirakenteet ja veden valo ovat luontevat.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Haarautuvia ja pallomaisia koralleja eri kokoisina, yhtenäinen vedenalainen valo ja epäsäännölliset pinnat. Ei monistuvaa korallilaatoitusta, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O2 käsittelee merisuojelua. Selite on riuttahavainne, ei Te Namon todellinen snorklauspaikka tai nykyinen vedenlaatu.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Funafuti_Conservation_Area"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-o2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:51:24.239162+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png?t=c52995401529e05a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+        "sha256": "c52995401529e05adece34ed6a339221623abd1f6b9d006d4bae6b2dfdcde0f6",
+        "bytes": 2950577,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-o2-v1-20261012",
+        "nativeSHA256": "0795ad3b63287b3c6df435fb062d64435612b23fa56b8db6351de022be4783ea",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-12T19:51:37.458531+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o2-v1-20261012-0795ad3b6328.png",
+        "sha256": "c52995401529e05adece34ed6a339221623abd1f6b9d006d4bae6b2dfdcde0f6",
+        "bytes": 2950577,
+        "SHAReadAt": "2026-10-12T19:51:32.307685+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0795ad3b63287b3c6df435fb062d64435612b23fa56b8db6351de022be4783ea",
+        "rgbPixelSHA256": "a540afa13e2c5ecc7dc5c592b7741fd2fc015e7505886fd39b4ee0f6729a8dbd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "e0e446deaf728f54340087792e7c106e13aadec6a4a1d15f7bf59b2eae587051"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e14-funafuti-o3-v1-20261012",
+      "galleryImageID": "e14-funafuti-o3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirja ja arkistopaperit kirjastoaiheen havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Kirja ja arkistopaperit kirjastoaiheen havainnollistuksena; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirja ja arkistopaperit kirjastoaiheen havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Kirja ja arkistopaperit kirjastoaiheen havainnollistuksena; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f546f13053d760ea0496bea487453dd5314ce5417743a7fe4eed9cfb98ad128f",
+      "exportSHA256": "6a40f926ce90a6bef0074fa856602f59380853362f9e9ba164b62e0748ca7526",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "a4828e56285762bfe5c9ebea4bded2300a38c780730ad6128b780de0c1e76cf5",
+        "subjectTitle": "Kirjastoon, käsityöpaikkaan ja postimerkkien luo",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Suljettu merkitsemätön kirja, taiteltuja tyhjiä papereita ja tavallinen pöytä. Luontevat sivut, paperipoimut ja varjot; ei tekstiä, logoa, ihmisiä tai alkuperäistä asiakirjaa.",
+            "topicMatchFi": "O3 käsittelee kansalliskirjastoa ja arkistoa. Selite ilmoittaa havainnekuvan, ei Tuvalun todellista kokoelmaa tai kirjaston sisätilaa.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Tuvalu_National_Library_and_Archives"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-o3-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kirja ja tyhjät arkistopaperit ovat luonnollinen yleishavainnollistus kirjasto- ja arkistoaiheelle."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirja ja arkistopaperit kirjastoaiheen havainnollistuksena; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e14-funafuti-o3-v1-20261012",
+          "sha256": "f546f13053d760ea0496bea487453dd5314ce5417743a7fe4eed9cfb98ad128f",
+          "verdict": "accepted",
+          "reason": "Kirja ja tyhjät arkistopaperit ovat luonnollinen yleishavainnollistus kirjasto- ja arkistoaiheelle.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Suljettu merkitsemätön kirja, taiteltuja tyhjiä papereita ja tavallinen pöytä. Luontevat sivut, paperipoimut ja varjot; ei tekstiä, logoa, ihmisiä tai alkuperäistä asiakirjaa.",
+            "topicMatchFi": "O3 käsittelee kansalliskirjastoa ja arkistoa. Selite ilmoittaa havainnekuvan, ei Tuvalun todellista kokoelmaa tai kirjaston sisätilaa.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Tuvalu_National_Library_and_Archives"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-o3-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:20:33.616243+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png?t=6a40f926ce90a6be",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+        "sha256": "6a40f926ce90a6bef0074fa856602f59380853362f9e9ba164b62e0748ca7526",
+        "bytes": 2234792,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-o3-v1-20261012",
+        "nativeSHA256": "f546f13053d760ea0496bea487453dd5314ce5417743a7fe4eed9cfb98ad128f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:21:23.846888+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o3-v1-20261012-f546f13053d7.png",
+        "sha256": "6a40f926ce90a6bef0074fa856602f59380853362f9e9ba164b62e0748ca7526",
+        "bytes": 2234792,
+        "SHAReadAt": "2026-10-12T19:32:13.503415+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f546f13053d760ea0496bea487453dd5314ce5417743a7fe4eed9cfb98ad128f",
+        "rgbPixelSHA256": "a11504a9da63885d3f474f2d4eae5940b49f1b06812f0f3083bea75e589cf696",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "a4828e56285762bfe5c9ebea4bded2300a38c780730ad6128b780de0c1e76cf5"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e14-funafuti-o4-v1-20261012",
+      "galleryImageID": "e14-funafuti-o4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kala-ateria havainnollistaa oppaan ruokailuaihetta; yleinen havainnekuva.",
+        "lyhyt": "Kala-ateria havainnollistaa oppaan ruokailuaihetta; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kala-ateria havainnollistaa oppaan ruokailuaihetta; yleinen havainnekuva.",
+        "lyhyt": "Kala-ateria havainnollistaa oppaan ruokailuaihetta; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "42636cd0667da9f1732a054c592279a04031724c8d2d6e63b954316fff73743d",
+      "exportSHA256": "e96684f0913b319b7a123a21a53238bc31eaf24f62f7230ee025caa260bfca67",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "074fc9e276ff82d4b8c0eee79bf03873cc880a85feaa5894721a6f7f3045fc03",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Kypsä kalapala, riisiä, vihreä lisuke ja sitruuna tavallisella lautasella. Luonteva kalakuitu ja paistopinta, riisinjyvät ja astia; ei logoja, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O4 mainitsee kalan ja erilaiset ruokapaikat. Selite sanoo yleinen havainnekuva eikä esitä annosta todellisen Funafutin majoituksen valokuvana.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Tuvalu"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-o4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kala-ateria on luonnollinen ja vastaa O4:n yleistä ruokailuaihetta ilman tietyn paikan reseptiväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kala-ateria havainnollistaa oppaan ruokailuaihetta; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e14-funafuti-o4-v1-20261012",
+          "sha256": "42636cd0667da9f1732a054c592279a04031724c8d2d6e63b954316fff73743d",
+          "verdict": "accepted",
+          "reason": "Kala-ateria on luonnollinen ja vastaa O4:n yleistä ruokailuaihetta ilman tietyn paikan reseptiväitettä.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Kypsä kalapala, riisiä, vihreä lisuke ja sitruuna tavallisella lautasella. Luonteva kalakuitu ja paistopinta, riisinjyvät ja astia; ei logoja, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O4 mainitsee kalan ja erilaiset ruokapaikat. Selite sanoo yleinen havainnekuva eikä esitä annosta todellisen Funafutin majoituksen valokuvana.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Tuvalu"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-o4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:21:48.651374+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png?t=e96684f0913b319b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+        "sha256": "e96684f0913b319b7a123a21a53238bc31eaf24f62f7230ee025caa260bfca67",
+        "bytes": 2176024,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-o4-v1-20261012",
+        "nativeSHA256": "42636cd0667da9f1732a054c592279a04031724c8d2d6e63b954316fff73743d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T19:22:47.066739+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-o4-v1-20261012-42636cd0667d.png",
+        "sha256": "e96684f0913b319b7a123a21a53238bc31eaf24f62f7230ee025caa260bfca67",
+        "bytes": 2176024,
+        "SHAReadAt": "2026-10-12T19:32:13.638462+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "42636cd0667da9f1732a054c592279a04031724c8d2d6e63b954316fff73743d",
+        "rgbPixelSHA256": "7f3c6156fa1e026417a1674e6218fd3479f153ab675ecb46c3f3f5b6cc9a716f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "074fc9e276ff82d4b8c0eee79bf03873cc880a85feaa5894721a6f7f3045fc03"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e14-funafuti-k3-v2-20261012",
+      "galleryImageID": "e14-funafuti-k3-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mikrofilmikela havainnollistaa arkistoaineiston säilyttämistä; yleinen havainnekuva.",
+        "lyhyt": "Mikrofilmikela havainnollistaa arkistoaineiston säilyttämistä; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mikrofilmikela havainnollistaa arkistoaineiston säilyttämistä; yleinen havainnekuva.",
+        "lyhyt": "Mikrofilmikela havainnollistaa arkistoaineiston säilyttämistä; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c411211eb2cb79e12c6791215e652cf722c4a76a04e2cd58200d69957582a6a0",
+      "exportSHA256": "9567b0b8adc33daea704112cab0a28298110b6db9b758ed9621b5d2333d2ece9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f",
+        "semanticContextSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f",
+        "subjectTitle": "Kirjat ja arkistot saman katon alla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Musta yhtenäinen puolakela, sileäreunainen tumma filminauha ja merkitsemätön säilytyskotelo. Luontevat materiaalit ja varjot; ei syöttöreikiä, luettavaa dokumenttia, etikettiä, logoa tai ihmisiä.",
+            "topicMatchFi": "K3 käsittelee asiakirjojen mikrofilmausta. Selite on yleinen mikrofilmikelan havainne eikä Tuvalun arkiston todellinen tallenne tai dokumentin jäljennös.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Tuvalu_National_Library_and_Archives",
+              "https://en.wikipedia.org/wiki/Microform"
+            ],
+            "rightsScopeFi": "Yleinen arkistomateriaali.",
+            "replacesRejectedAssetID": "e14-funafuti-k3-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-k3-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Uusi v2 näyttää yksinkertaisen arkistofilmikelan rei'ittämättömällä nauhalla ja korjaa v1:n elokuvafilmiin viittaavan tyypin."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mikrofilmikela havainnollistaa arkistoaineiston säilyttämistä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e14-funafuti-k3-v2-20261012",
+          "sha256": "c411211eb2cb79e12c6791215e652cf722c4a76a04e2cd58200d69957582a6a0",
+          "verdict": "accepted",
+          "reason": "Uusi v2 näyttää yksinkertaisen arkistofilmikelan rei'ittämättömällä nauhalla ja korjaa v1:n elokuvafilmiin viittaavan tyypin.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Musta yhtenäinen puolakela, sileäreunainen tumma filminauha ja merkitsemätön säilytyskotelo. Luontevat materiaalit ja varjot; ei syöttöreikiä, luettavaa dokumenttia, etikettiä, logoa tai ihmisiä.",
+            "topicMatchFi": "K3 käsittelee asiakirjojen mikrofilmausta. Selite on yleinen mikrofilmikelan havainne eikä Tuvalun arkiston todellinen tallenne tai dokumentin jäljennös.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Tuvalu_National_Library_and_Archives",
+              "https://en.wikipedia.org/wiki/Microform"
+            ],
+            "rightsScopeFi": "Yleinen arkistomateriaali.",
+            "replacesRejectedAssetID": "e14-funafuti-k3-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-k3-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:17:57.264419+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png?t=9567b0b8adc33dae",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+        "sha256": "9567b0b8adc33daea704112cab0a28298110b6db9b758ed9621b5d2333d2ece9",
+        "bytes": 2083422,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-k3-v2-20261012",
+        "nativeSHA256": "c411211eb2cb79e12c6791215e652cf722c4a76a04e2cd58200d69957582a6a0",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T19:18:47.093690+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-k3-v2-20261012-c411211eb2cb.png",
+        "sha256": "9567b0b8adc33daea704112cab0a28298110b6db9b758ed9621b5d2333d2ece9",
+        "bytes": 2083422,
+        "SHAReadAt": "2026-10-12T19:32:13.224118+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c411211eb2cb79e12c6791215e652cf722c4a76a04e2cd58200d69957582a6a0",
+        "rgbPixelSHA256": "09043ab403857877ce9d05cb3c0716463dda26d23fb5ab16d6348d1b2f9278ca",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f",
+      "contextAfterSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e14-funafuti-k4-v1-20261012",
+      "galleryImageID": "e14-funafuti-k4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Suurennuslasi ja keräilijän välineet filatelian havainnekuvana.",
+        "lyhyt": "Suurennuslasi ja keräilijän välineet filatelian havainnekuvana."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Suurennuslasi ja keräilijän välineet filatelian havainnekuvana.",
+        "lyhyt": "Suurennuslasi ja keräilijän välineet filatelian havainnekuvana."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b73b61445b8861fc26a042c8b0602b6c0e3d3c5e843053364b88f4c7fd76be9e",
+      "exportSHA256": "b02be076de77e721c53f005dea74e625d99bb4f45b0f90d28e90b8a2c7563c5a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7",
+        "semanticContextSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7",
+        "subjectTitle": "Postimerkki kulkee kokoelmaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Ehjä suurennuslasi metallirenkaalla ja puukahvalla, kaksihaaraiset pinsetit ja merkitsemättömiä ohuita kuoria pöydällä. Luontevat materiaalit ja heijastukset; ei tekstiä, logoa, postimerkkitaidetta tai ihmisiä.",
+            "topicMatchFi": "K4 käsittelee filateelista toimistoa ja keräilyä. Selite nimeää yleiset välineet havainnekuvaksi, ei Tuvalun aitoa merkkijulkaisua tai toimiston esineitä.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Tuvalu_Philatelic_Bureau"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-k4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Suurennuslasi, pinsetit ja tyhjät suojakuoret sopivat filatelian välinehavainnollistukseen jäljentämättä postimerkkejä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Suurennuslasi ja keräilijän välineet filatelian havainnekuvana.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e14-funafuti-k4-v1-20261012",
+          "sha256": "b73b61445b8861fc26a042c8b0602b6c0e3d3c5e843053364b88f4c7fd76be9e",
+          "verdict": "accepted",
+          "reason": "Suurennuslasi, pinsetit ja tyhjät suojakuoret sopivat filatelian välinehavainnollistukseen jäljentämättä postimerkkejä.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Ehjä suurennuslasi metallirenkaalla ja puukahvalla, kaksihaaraiset pinsetit ja merkitsemättömiä ohuita kuoria pöydällä. Luontevat materiaalit ja heijastukset; ei tekstiä, logoa, postimerkkitaidetta tai ihmisiä.",
+            "topicMatchFi": "K4 käsittelee filateelista toimistoa ja keräilyä. Selite nimeää yleiset välineet havainnekuvaksi, ei Tuvalun aitoa merkkijulkaisua tai toimiston esineitä.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Tuvalu_Philatelic_Bureau"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-k4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:19:09.294171+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png?t=b02be076de77e721",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+        "sha256": "b02be076de77e721c53f005dea74e625d99bb4f45b0f90d28e90b8a2c7563c5a",
+        "bytes": 2324417,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-k4-v1-20261012",
+        "nativeSHA256": "b73b61445b8861fc26a042c8b0602b6c0e3d3c5e843053364b88f4c7fd76be9e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T19:19:56.391488+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-k4-v1-20261012-b73b61445b88.png",
+        "sha256": "b02be076de77e721c53f005dea74e625d99bb4f45b0f90d28e90b8a2c7563c5a",
+        "bytes": 2324417,
+        "SHAReadAt": "2026-10-12T19:32:13.358841+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b73b61445b8861fc26a042c8b0602b6c0e3d3c5e843053364b88f4c7fd76be9e",
+        "rgbPixelSHA256": "b60ce2f17f86c6521b763f6d9ff0bca42777bdcd4e4167bcb950c0fcc76c9d6a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7",
+      "contextAfterSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e14-funafuti-l1-v1-20261012",
+      "galleryImageID": "e14-funafuti-l1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Koralliluusto atollin syntyaiheen havainnekuvana.",
+        "lyhyt": "Koralliluusto atollin syntyaiheen havainnekuvana."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Koralliluusto atollin syntyaiheen havainnekuvana.",
+        "lyhyt": "Koralliluusto atollin syntyaiheen havainnekuvana."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "952d324bea20d7a36f534943088e2a71f2c2f8bec71d205affe775fb3f6e3060",
+      "exportSHA256": "aa8307ff81ca171ff1822e6e4a2131b7dc41cb0bb2dda95ea378f2d217b963a4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983",
+        "semanticContextSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983",
+        "subjectTitle": "Teoria vajonneesta saaresta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Lähteen koralliaihe, yleinen luonnon tai luonnonmateriaalin havainnekuva. Ei nimetyn kohteen visuaalisen asettelun rekonstruktio, suojattu teos, historiallinen tapahtuma tai todellisen vedenlaadun kuvaus.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Vaalea epäsäännöllinen koralliluuston kappale, erikokoisia huokosia ja kennon sisäisiä säteittäisiä rakenteita. Ei kopioitua pintalaattaa, tekstiä tai ihmisiä.",
+            "topicMatchFi": "L1 käsittelee koralliriuttaa. Selite on materiaalihavainne, ei Funafutin porausnäyte tai tietty korallilaji.",
+            "sourceEvidence": [
+              "https://iugs-geoheritage.org/geoheritage_sites/funafuti-atoll-tuvalu/"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l1-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Koralliluuston kennot ja huokoisuus vaihtelevat luonnollisesti ja sopivat atollin materiaaliaiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Koralliluusto atollin syntyaiheen havainnekuvana.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e14-funafuti-l1-v1-20261012",
+          "sha256": "952d324bea20d7a36f534943088e2a71f2c2f8bec71d205affe775fb3f6e3060",
+          "verdict": "accepted",
+          "reason": "Koralliluuston kennot ja huokoisuus vaihtelevat luonnollisesti ja sopivat atollin materiaaliaiheeseen.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Vaalea epäsäännöllinen koralliluuston kappale, erikokoisia huokosia ja kennon sisäisiä säteittäisiä rakenteita. Ei kopioitua pintalaattaa, tekstiä tai ihmisiä.",
+            "topicMatchFi": "L1 käsittelee koralliriuttaa. Selite on materiaalihavainne, ei Funafutin porausnäyte tai tietty korallilaji.",
+            "sourceEvidence": [
+              "https://iugs-geoheritage.org/geoheritage_sites/funafuti-atoll-tuvalu/"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l1-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:50:50.265502+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png?t=aa8307ff81ca171f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+        "sha256": "aa8307ff81ca171ff1822e6e4a2131b7dc41cb0bb2dda95ea378f2d217b963a4",
+        "bytes": 2265390,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-l1-v1-20261012",
+        "nativeSHA256": "952d324bea20d7a36f534943088e2a71f2c2f8bec71d205affe775fb3f6e3060",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T19:51:38.949544+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l1-v1-20261012-952d324bea20.png",
+        "sha256": "aa8307ff81ca171ff1822e6e4a2131b7dc41cb0bb2dda95ea378f2d217b963a4",
+        "bytes": 2265390,
+        "SHAReadAt": "2026-10-12T19:51:32.114466+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "952d324bea20d7a36f534943088e2a71f2c2f8bec71d205affe775fb3f6e3060",
+        "rgbPixelSHA256": "204f59bfc011211468c059ed5940de65012cb34b09e695c4467be6b4d1dd30ef",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983",
+      "contextAfterSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e14-funafuti-l2-v1-20261012",
+      "galleryImageID": "e14-funafuti-l2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Onkaloinen korallikivi ja irtohiekka vaikeuttivat porausta; yleinen havainnekuva.",
+        "lyhyt": "Onkaloinen korallikivi ja irtohiekka vaikeuttivat porausta; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Onkaloinen korallikivi ja irtohiekka vaikeuttivat porausta; yleinen havainnekuva.",
+        "lyhyt": "Onkaloinen korallikivi ja irtohiekka vaikeuttivat porausta; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "40a2f1687318a2856bc5dce26a11d4864f2290599270704959a67fa76724b0af",
+      "exportSHA256": "865c293216eb9917b225bdf49a41b537b192b16c5eb44aa3d4a96ad2e8a2d436",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235",
+        "semanticContextSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235",
+        "subjectTitle": "Pora vastaan korallikivi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Lieriömäinen vaalea kairausnäyte, erikokoisia huokosia, hiekkaa ja kivimuruja alustalla sekä ontto metallinen porankruunu. Kivessä ja metallissa vaihtelevat kulumat ja yhtenäiset varjot; ei tekstimerkintöjä tai ihmisiä.",
+            "topicMatchFi": "L2 käsittelee onkaloisen korallikiven ja hiekan vaikutusta poraukseen. Selite kertoo yleisestä havainnekuvasta. Taustan yleistä rantaa, laitetta tai näytettä ei pidetä Funafutin todellisen porauspaikan tai vuoden 1896 kaluston todisteena.",
+            "sourceEvidence": [
+              "https://www.royalsociety.org/blog/2024/09/boring-old-coral/"
+            ],
+            "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+            "locationLimitationFi": "Hyväksyntä koskee materiaalihavainnollistusta, ei taustan paikan aitoutta.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Huokoinen korallikivinäyte, irtoaine ja yleinen kairan kärki havainnollistavat L2:n porausvaikeuksia; materiaalipinta on luonnollisesti vaihteleva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Onkaloinen korallikivi ja irtohiekka vaikeuttivat porausta; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e14-funafuti-l2-v1-20261012",
+          "sha256": "40a2f1687318a2856bc5dce26a11d4864f2290599270704959a67fa76724b0af",
+          "verdict": "accepted",
+          "reason": "Huokoinen korallikivinäyte, irtoaine ja yleinen kairan kärki havainnollistavat L2:n porausvaikeuksia; materiaalipinta on luonnollisesti vaihteleva.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Lieriömäinen vaalea kairausnäyte, erikokoisia huokosia, hiekkaa ja kivimuruja alustalla sekä ontto metallinen porankruunu. Kivessä ja metallissa vaihtelevat kulumat ja yhtenäiset varjot; ei tekstimerkintöjä tai ihmisiä.",
+            "topicMatchFi": "L2 käsittelee onkaloisen korallikiven ja hiekan vaikutusta poraukseen. Selite kertoo yleisestä havainnekuvasta. Taustan yleistä rantaa, laitetta tai näytettä ei pidetä Funafutin todellisen porauspaikan tai vuoden 1896 kaluston todisteena.",
+            "sourceEvidence": [
+              "https://www.royalsociety.org/blog/2024/09/boring-old-coral/"
+            ],
+            "rightsScopeFi": "Yleinen luonnonmateriaali ja työkalu.",
+            "locationLimitationFi": "Hyväksyntä koskee materiaalihavainnollistusta, ei taustan paikan aitoutta.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:21:31.561360+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png?t=865c293216eb9917",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+        "sha256": "865c293216eb9917b225bdf49a41b537b192b16c5eb44aa3d4a96ad2e8a2d436",
+        "bytes": 2653606,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-l2-v1-20261012",
+        "nativeSHA256": "40a2f1687318a2856bc5dce26a11d4864f2290599270704959a67fa76724b0af",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:23:15.177054+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l2-v1-20261012-40a2f1687318.png",
+        "sha256": "865c293216eb9917b225bdf49a41b537b192b16c5eb44aa3d4a96ad2e8a2d436",
+        "bytes": 2653606,
+        "SHAReadAt": "2026-10-12T18:30:06.570237+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "40a2f1687318a2856bc5dce26a11d4864f2290599270704959a67fa76724b0af",
+        "rgbPixelSHA256": "5913259ad3f811a5334891e5ce47608f8a98fdfe11852fd80a15d743ff5c81d0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235",
+      "contextAfterSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e14-funafuti-l3-v1-20261012",
+      "galleryImageID": "e14-funafuti-l3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Varaosa voi ratkaista koneen toiminnan jatkumisen; yleinen havainnekuva.",
+        "lyhyt": "Varaosa voi ratkaista koneen toiminnan jatkumisen; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Varaosa voi ratkaista koneen toiminnan jatkumisen; yleinen havainnekuva.",
+        "lyhyt": "Varaosa voi ratkaista koneen toiminnan jatkumisen; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1112db38dcc39bf97073ed6bfa19239da27988bd9a0b76f06936ae849f176f96",
+      "exportSHA256": "640c5bc4c0458474f0a77392f9227703c0272de6d2f767025638ffa2f5bc85a9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8",
+        "semanticContextSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8",
+        "subjectTitle": "Varaosa saarelta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Rengasmainen paksu hammasratas keskiaukolla ja koko ulkokehän hampailla, vaihtelevaa patinaa ja kuluneita reunoja työpöydällä. Rakenne ja varjot ovat yhtenäiset; ei merkintöjä, logoja, käsiä tai historialliseksi nimettyä tilaa.",
+            "topicMatchFi": "L3 kertoo rikkoutuneesta hammasrattaasta ja varaosasta. Selite on yleinen varaosan havainne eikä Funafutin säilyneen esineen valokuva.",
+            "sourceEvidence": [
+              "https://www.royalsociety.org/blog/2024/09/boring-old-coral/"
+            ],
+            "rightsScopeFi": "Yleinen toiminnallinen arkiesine.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l3-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Yhtenäinen hammasratas havainnollistaa varaosan merkitystä. Metallin kuluma ja hampaiden rakenne ovat uskottavat, eikä kuvaa nimetä retkikunnan alkuperäisesineeksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Varaosa voi ratkaista koneen toiminnan jatkumisen; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e14-funafuti-l3-v1-20261012",
+          "sha256": "1112db38dcc39bf97073ed6bfa19239da27988bd9a0b76f06936ae849f176f96",
+          "verdict": "accepted",
+          "reason": "Yhtenäinen hammasratas havainnollistaa varaosan merkitystä. Metallin kuluma ja hampaiden rakenne ovat uskottavat, eikä kuvaa nimetä retkikunnan alkuperäisesineeksi.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Rengasmainen paksu hammasratas keskiaukolla ja koko ulkokehän hampailla, vaihtelevaa patinaa ja kuluneita reunoja työpöydällä. Rakenne ja varjot ovat yhtenäiset; ei merkintöjä, logoja, käsiä tai historialliseksi nimettyä tilaa.",
+            "topicMatchFi": "L3 kertoo rikkoutuneesta hammasrattaasta ja varaosasta. Selite on yleinen varaosan havainne eikä Funafutin säilyneen esineen valokuva.",
+            "sourceEvidence": [
+              "https://www.royalsociety.org/blog/2024/09/boring-old-coral/"
+            ],
+            "rightsScopeFi": "Yleinen toiminnallinen arkiesine.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l3-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:21:55.513665+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png?t=640c5bc4c0458474",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+        "sha256": "640c5bc4c0458474f0a77392f9227703c0272de6d2f767025638ffa2f5bc85a9",
+        "bytes": 2456355,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-l3-v1-20261012",
+        "nativeSHA256": "1112db38dcc39bf97073ed6bfa19239da27988bd9a0b76f06936ae849f176f96",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:23:16.741987+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l3-v1-20261012-1112db38dcc3.png",
+        "sha256": "640c5bc4c0458474f0a77392f9227703c0272de6d2f767025638ffa2f5bc85a9",
+        "bytes": 2456355,
+        "SHAReadAt": "2026-10-12T18:30:06.674251+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "1112db38dcc39bf97073ed6bfa19239da27988bd9a0b76f06936ae849f176f96",
+        "rgbPixelSHA256": "91005d5ccc11eb4516e1af1fe3013b51786bc4c0ccf7aea6fe4e13072338724e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8",
+      "contextAfterSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e14-funafuti-l4-v1-20261012",
+      "galleryImageID": "e14-funafuti-l4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Merikilpikonna kuuluu saarten ja riutan elinympäristöön; yleinen havainnekuva.",
+        "lyhyt": "Merikilpikonna kuuluu saarten ja riutan elinympäristöön; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Merikilpikonna kuuluu saarten ja riutan elinympäristöön; yleinen havainnekuva.",
+        "lyhyt": "Merikilpikonna kuuluu saarten ja riutan elinympäristöön; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "14863e469eb756d2de0c378a829e2eee5b7e8c28e8bb1d031e9cc16bedcbc68b",
+      "exportSHA256": "f3198fe6e7e6abea2fb123d4983274c3c5675eddbf79dbf3ebd8d62c204d75f6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406",
+        "semanticContextSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406",
+        "subjectTitle": "Mereen kuuluu kuivaakin maata",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Yksi merikilpikonna riutan yllä, suuri eturäpylä edessä, toinen eturäpylä kauempana ja pienet takaräpylät kilven takana. Vaihteleva kilven väritys, luonteva silmä ja tylppä kuono; epäsäännöllisiä koralleja ja pintavaloa, ei lisäraajoja tai tekstiä.",
+            "topicMatchFi": "L4 käsittelee suojelualueen merikilpikonnia ja riuttaelinympäristöä. Selite on yleinen havainne eikä Funafutin eläinhavainto tai laguunin nykyisen vedenlaadun kuvaus.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Funafuti_Conservation_Area, sea turtles"
+            ],
+            "rightsScopeFi": "Yleinen eläin ja riuttaluonto.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Merikilpikonnalla on yhtenäinen kilpi, kaksi etu- ja kaksi takaräpylää sekä luonteva pää; riutta ja vesi vaihtelevat luonnollisesti. L4-aihe ja havainnemerkintä täyttyvät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Merikilpikonna kuuluu saarten ja riutan elinympäristöön; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+        "fileSHA256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e14-funafuti-l4-v1-20261012",
+          "sha256": "14863e469eb756d2de0c378a829e2eee5b7e8c28e8bb1d031e9cc16bedcbc68b",
+          "verdict": "accepted",
+          "reason": "Merikilpikonnalla on yhtenäinen kilpi, kaksi etu- ja kaksi takaräpylää sekä luonteva pää; riutta ja vesi vaihtelevat luonnollisesti. L4-aihe ja havainnemerkintä täyttyvät.",
+          "evidence": {
+            "contentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "visualObservationFi": "Yksi merikilpikonna riutan yllä, suuri eturäpylä edessä, toinen eturäpylä kauempana ja pienet takaräpylät kilven takana. Vaihteleva kilven väritys, luonteva silmä ja tylppä kuono; epäsäännöllisiä koralleja ja pintavaloa, ei lisäraajoja tai tekstiä.",
+            "topicMatchFi": "L4 käsittelee suojelualueen merikilpikonnia ja riuttaelinympäristöä. Selite on yleinen havainne eikä Funafutin eläinhavainto tai laguunin nykyisen vedenlaadun kuvaus.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Funafuti_Conservation_Area, sea turtles"
+            ],
+            "rightsScopeFi": "Yleinen eläin ja riuttaluonto.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/assets/e14-funafuti-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:22:15.207856+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png?t=f3198fe6e7e6abea",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+        "sha256": "f3198fe6e7e6abea2fb123d4983274c3c5675eddbf79dbf3ebd8d62c204d75f6",
+        "bytes": 2577818,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-funafuti-l4-v1-20261012",
+        "nativeSHA256": "14863e469eb756d2de0c378a829e2eee5b7e8c28e8bb1d031e9cc16bedcbc68b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:23:18.606954+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/funafuti/e14-funafuti-l4-v1-20261012-14863e469eb7.png",
+        "sha256": "f3198fe6e7e6abea2fb123d4983274c3c5675eddbf79dbf3ebd8d62c204d75f6",
+        "bytes": 2577818,
+        "SHAReadAt": "2026-10-12T18:30:06.779676+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "14863e469eb756d2de0c378a829e2eee5b7e8c28e8bb1d031e9cc16bedcbc68b",
+        "rgbPixelSHA256": "e0325a53aa5ce40a5f6708a33d2a7e861a534bf0741d1dadf5023edff921fe1d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406",
+      "contextAfterSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e14-funafuti-photo-ba07af6b72eabfe5",
+      "galleryImageID": "capital-cc-e14-funafuti-photo-ba07af6b72eabfe5",
+      "commonsFile": "Northern Funafuti.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
+        "suora": true,
+        "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "lyhyt": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "tiedosto": "Northern Funafuti.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "lyhyt": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "tiedosto": "Northern Funafuti.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
+        "suora": true,
+        "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "lyhyt": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "tiedosto": "Northern Funafuti.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ba07af6b72eabfe50e96f91d670ffec2d0232c39b17714f0840b59b8fd667bac",
+      "exportSHA256": "ba07af6b72eabfe50e96f91d670ffec2d0232c39b17714f0840b59b8fd667bac",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/funafuti/422752aaafe879b0c4865a159cf25fd58b434e5d206bbb722dfe1fbeeb4ae95d.jpg",
+      "dimensions": [
+        3888,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "65ca3c38085559dbf547061ed1067bdd5fd52cc64266202444c21b76a2e82b78",
+        "semanticContextSHA256": "65ca3c38085559dbf547061ed1067bdd5fd52cc64266202444c21b76a2e82b78",
+        "subjectTitle": "funafuti — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Davidarfonjones",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Northern_Funafuti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Northern_Funafuti.jpg",
+        "rightsEvidence": {
+          "selection": "Tekijä Davidarfonjones ja CC BY-SA 3.0 vahvistettu Commonsin Author/Licensing-riveistä. Pääaihe luonnonmaakaistale/meri ja käytännöllinen tie; ei kuvaan sisältyvää taideteos- tai arkkitehtuuripääaihetta. Photo source Northern Funafuti sitoo paikkaan.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/cc-work/north.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              3888,
+              2592
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Northern_Funafuti.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c95040873ded2a4f7afd39dd1b9f3fc7cfd785e8f9fc411a06e7759d5de914d1.html",
+            "sourceSHA256": "20cb0dbc0473d31a9f250283da00e72b0a768ddb99088c30a694e661cf12d86b",
+            "authorsFromSource": [
+              "Davidarfonjones"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Northern Funafuti.jpg",
+                "English: Funafuti in Tuvalu looking south. Français : Route à Funafuti aux Tuvalu. A gauche, l'océan pacifique, à droite le lagon. Lëtzebuergesch: Strooss op engem enke Landstréch tëscht dem Mier (lénks) an der Lagun (riets) nërdlech vum Atoll vu Funafuti."
+              ],
+              [
+                "Date",
+                "17 July 2011"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Davidarfonjones"
+              ],
+              [
+                "Camera location",
+                "8° 28′ 17.9″ S, 179° 11′ 21.44″ E"
+              ],
+              [
+                "Date and time of data generation",
+                "14:10, 17 July 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "14:10, 17 July 2011"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+            "currentContentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "cae01bc0d4ba519dc4f0615295dd5ce48873d71b377bbaf369879e23e1a6f706",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.303325+00:00"
+          },
+          "qaReason": "Aito Funafutin pohjoisosan maakaistale, tie, puut, valtameri vasemmalla ja laguuni oikealla. Kuva katsottu, terävyys ja luonnolliset pinnat riittävät, ei kasvoja/lisättyjä merkintöjä/teospääaihetta. Description ja Camera location sitovat paikkaan; vuoden 2011 kuvateksti on rehellinen. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+        "fileSHA256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Northern Funafuti.jpg",
+          "sha256": "ba07af6b72eabfe50e96f91d670ffec2d0232c39b17714f0840b59b8fd667bac",
+          "verdict": "accepted",
+          "reason": "Aito Funafutin pohjoisosan maakaistale, tie, puut, valtameri vasemmalla ja laguuni oikealla. Kuva katsottu, terävyys ja luonnolliset pinnat riittävät, ei kasvoja/lisättyjä merkintöjä/teospääaihetta. Description ja Camera location sitovat paikkaan; vuoden 2011 kuvateksti on rehellinen. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/cc-work/north.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              3888,
+              2592
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Northern_Funafuti.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c95040873ded2a4f7afd39dd1b9f3fc7cfd785e8f9fc411a06e7759d5de914d1.html",
+            "sourceSHA256": "20cb0dbc0473d31a9f250283da00e72b0a768ddb99088c30a694e661cf12d86b",
+            "authorsFromSource": [
+              "Davidarfonjones"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Northern Funafuti.jpg",
+                "English: Funafuti in Tuvalu looking south. Français : Route à Funafuti aux Tuvalu. A gauche, l'océan pacifique, à droite le lagon. Lëtzebuergesch: Strooss op engem enke Landstréch tëscht dem Mier (lénks) an der Lagun (riets) nërdlech vum Atoll vu Funafuti."
+              ],
+              [
+                "Date",
+                "17 July 2011"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Davidarfonjones"
+              ],
+              [
+                "Camera location",
+                "8° 28′ 17.9″ S, 179° 11′ 21.44″ E"
+              ],
+              [
+                "Date and time of data generation",
+                "14:10, 17 July 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "14:10, 17 July 2011"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+            "currentContentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "cae01bc0d4ba519dc4f0615295dd5ce48873d71b377bbaf369879e23e1a6f706",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.303325+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Northern Funafuti.jpg",
+        "sha256": "ba07af6b72eabfe50e96f91d670ffec2d0232c39b17714f0840b59b8fd667bac",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Northern_Funafuti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Northern_Funafuti.jpg",
+        "author": "Davidarfonjones",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3888,
+        "height": 2592,
+        "originalSHA256": "ba07af6b72eabfe50e96f91d670ffec2d0232c39b17714f0840b59b8fd667bac",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
+        "bytes": 4383575,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:40.880417+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Northern Funafuti.jpg",
+        "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "lyhyt": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "lyhyt": "Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.",
+        "tiedosto": "Northern Funafuti.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "65ca3c38085559dbf547061ed1067bdd5fd52cc64266202444c21b76a2e82b78",
+      "contextAfterSHA256": "65ca3c38085559dbf547061ed1067bdd5fd52cc64266202444c21b76a2e82b78"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e14-funafuti-c1-513721fbeabf7d59",
+      "galleryImageID": "capital-cc-e14-funafuti-c1-513721fbeabf7d59",
+      "commonsFile": "Ocean side Funafuti.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
+        "suora": true,
+        "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "lyhyt": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "tiedosto": "Ocean side Funafuti.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "lyhyt": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "tiedosto": "Ocean side Funafuti.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
+        "suora": true,
+        "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "lyhyt": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "tiedosto": "Ocean side Funafuti.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "513721fbeabf7d597b0c72994ca4c74d4bae930edc10307d4b564b8a02fe6635",
+      "exportSHA256": "513721fbeabf7d597b0c72994ca4c74d4bae930edc10307d4b564b8a02fe6635",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/funafuti/37bb9f44b8395ddf528521ab4ea43a84491aa69828251daaf16193f9de0d0650.jpg",
+      "dimensions": [
+        3888,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ea2706035b77ba268dfab3d150741fadab03216569bd0b3a36cd0871ccfbad52",
+        "semanticContextSHA256": "ea2706035b77ba268dfab3d150741fadab03216569bd0b3a36cd0871ccfbad52",
+        "subjectTitle": "Funafuti",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Davidarfonjones",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ocean_side_Funafuti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Ocean_side_Funafuti.jpg",
+        "rightsEvidence": {
+          "selection": "Tekijä Davidarfonjones, CC BY-SA 3.0. Luonnonranta ilman kuvassa näkyvän taideteoksen/arkkitehtuurin oikeuskerrosta. Alkuperäinen lähde Ocean side Funafuti ja sen maantieteellinen konteksti.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/cc-work/c3.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              3888,
+              2592
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ocean_side_Funafuti.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9c7d252ab55db65f290354ec4163d90e41876a4631534492144bf6b6565a0f12.html",
+            "sourceSHA256": "3995dee0828c4fef39476620eca1ee0cf104a6b7ff1ee48ccf6fa68773057c3b",
+            "authorsFromSource": [
+              "Davidarfonjones"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Ocean side Funafuti.jpg",
+                "English: Ocean side of Funafuti looking south."
+              ],
+              [
+                "Date",
+                "14 July 2011"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Davidarfonjones"
+              ],
+              [
+                "Date and time of data generation",
+                "12:47, 14 July 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "12:47, 14 July 2011"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+            "currentContentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "04f7cc30eb57cdc55c61754968c3275ccd338733c6fcdc850c2217f6bfea37fc",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.303346+00:00"
+          },
+          "qaReason": "Aito laaja Funafutin avomeren puoleinen rantamaisema; aallot, kivinen ranta ja puusto näyttävät todellista paikallista asettelua. Description nimeää Ocean side of Funafuti looking south. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kuvattua teospääaihetta. Heinäkuu 2011 säilyy kuvatekstissä. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+        "fileSHA256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Ocean side Funafuti.jpg",
+          "sha256": "513721fbeabf7d597b0c72994ca4c74d4bae930edc10307d4b564b8a02fe6635",
+          "verdict": "accepted",
+          "reason": "Aito laaja Funafutin avomeren puoleinen rantamaisema; aallot, kivinen ranta ja puusto näyttävät todellista paikallista asettelua. Description nimeää Ocean side of Funafuti looking south. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kuvattua teospääaihetta. Heinäkuu 2011 säilyy kuvatekstissä. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/cc-work/c3.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              3888,
+              2592
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ocean_side_Funafuti.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9c7d252ab55db65f290354ec4163d90e41876a4631534492144bf6b6565a0f12.html",
+            "sourceSHA256": "3995dee0828c4fef39476620eca1ee0cf104a6b7ff1ee48ccf6fa68773057c3b",
+            "authorsFromSource": [
+              "Davidarfonjones"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Ocean side Funafuti.jpg",
+                "English: Ocean side of Funafuti looking south."
+              ],
+              [
+                "Date",
+                "14 July 2011"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Davidarfonjones"
+              ],
+              [
+                "Date and time of data generation",
+                "12:47, 14 July 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "12:47, 14 July 2011"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+            "currentContentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "04f7cc30eb57cdc55c61754968c3275ccd338733c6fcdc850c2217f6bfea37fc",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.303346+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Ocean side Funafuti.jpg",
+        "sha256": "513721fbeabf7d597b0c72994ca4c74d4bae930edc10307d4b564b8a02fe6635",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ocean_side_Funafuti.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Ocean_side_Funafuti.jpg",
+        "author": "Davidarfonjones",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3888,
+        "height": 2592,
+        "originalSHA256": "513721fbeabf7d597b0c72994ca4c74d4bae930edc10307d4b564b8a02fe6635",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
+        "bytes": 3877442,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:42.657289+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Ocean side Funafuti.jpg",
+        "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "lyhyt": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "lyhyt": "Funafutin avomeren puoleinen kivinen ranta heinäkuussa 2011.",
+        "tiedosto": "Ocean side Funafuti.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "ea2706035b77ba268dfab3d150741fadab03216569bd0b3a36cd0871ccfbad52",
+      "contextAfterSHA256": "ea2706035b77ba268dfab3d150741fadab03216569bd0b3a36cd0871ccfbad52"
+    },
+    {
+      "era": "e14",
+      "city": "funafuti",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e14-funafuti-c3-346e1c7a6284086c",
+      "galleryImageID": "capital-cc-e14-funafuti-c3-346e1c7a6284086c",
+      "commonsFile": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
+        "suora": true,
+        "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "lyhyt": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "lyhyt": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
+        "suora": true,
+        "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "lyhyt": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "346e1c7a6284086cd48052833639c25caf8a9a64181b70571724015daac23c7b",
+      "exportSHA256": "346e1c7a6284086cd48052833639c25caf8a9a64181b70571724015daac23c7b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/funafuti/3f360f7559bd24823f447141bbd88c932d1daec629e3cae34380d3340128ccab.jpg",
+      "dimensions": [
+        5184,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+      "sourceContentSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b298a7d39df8cb0be84a5c11efdcb2ba4d9c5572e32e9e2af24de5b895827efa",
+        "semanticContextSHA256": "b298a7d39df8cb0be84a5c11efdcb2ba4d9c5572e32e9e2af24de5b895827efa",
+        "subjectTitle": "Funafuti",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Department of Foreign Affairs and Trade",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Landscape,_Tuvalu,_2011._Photo-_DFAT_(12779525995).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Landscape%2C_Tuvalu%2C_2011._Photo-_DFAT_%2812779525995%29.jpg",
+        "rightsEvidence": {
+          "selection": "Department of Foreign Affairs and Trade, CC BY 2.0 lisenssi ja ensikäden virallinen Photo: DFAT -credit tarkistettu. Pääaihe luonnonranta ja toiminnallinen tie; ei nykytaide-/monumenttipääaihetta.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/cc-work/landscape.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5184,
+              3456
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Landscape,_Tuvalu,_2011._Photo-_DFAT_(12779525995).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/2c939dd056b4351ee31897a87d41c11e37b5eb2f771a28a522ff27718462914c.html",
+            "sourceSHA256": "1e1e547152011072e27c6d0bc05c9318f0c51f6187e01104c5bc7cd92e7dcf0e",
+            "authorsFromSource": [
+              "Department of Foreign Affairs and Trade"
+            ],
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
+                "Landscape, Tuvalu, 2011. Photo: DFAT"
+              ],
+              [
+                "Date",
+                "12 October 2011, 15:26 (according to Exif data)"
+              ],
+              [
+                "Source",
+                "Landscape, Tuvalu, 2011. Photo: DFAT"
+              ],
+              [
+                "Author",
+                "Department of Foreign Affairs and Trade"
+              ],
+              [
+                "Camera location",
+                "8° 28′ 17.9″ S, 179° 11′ 21.44″ E"
+              ],
+              [
+                "Date and time of data generation",
+                "15:26, 12 October 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "15:26, 12 October 2011"
+              ],
+              [
+                "DateTime subseconds",
+                "00"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "00"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "00"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+            "currentContentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "c7cf56df2db01ebe23affc73c84e10618b49481d1e6aee2b18548ba44532b748",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.303373+00:00"
+          },
+          "qaReason": "Laaja aito Funafutin maakaistaleen tie-/rantamaisema katsottu. Lähdesivun koordinaatit8°28′17.9″S179°11′21.44″E vastaavat Northern Funafuti -lähdekuvaa; myös tien reunat, puuryhmä ja merenpuolet täsmäävät. Eri valokuva/rajaus kuin PHOTO, ei sama tiedosto kahdessa roolissa. Department of Foreign Affairs and Trade, CC BY2.0,5184×3456 varmennettu; ei kasvoja, lisättyä tekstiä tai teospääaihetta. Vuosi2011 säilyy kuvatekstissä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+        "fileSHA256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
+          "sha256": "346e1c7a6284086cd48052833639c25caf8a9a64181b70571724015daac23c7b",
+          "verdict": "accepted",
+          "reason": "Laaja aito Funafutin maakaistaleen tie-/rantamaisema katsottu. Lähdesivun koordinaatit8°28′17.9″S179°11′21.44″E vastaavat Northern Funafuti -lähdekuvaa; myös tien reunat, puuryhmä ja merenpuolet täsmäävät. Eri valokuva/rajaus kuin PHOTO, ei sama tiedosto kahdessa roolissa. Department of Foreign Affairs and Trade, CC BY2.0,5184×3456 varmennettu; ei kasvoja, lisättyä tekstiä tai teospääaihetta. Vuosi2011 säilyy kuvatekstissä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/cc-work/landscape.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5184,
+              3456
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Landscape,_Tuvalu,_2011._Photo-_DFAT_(12779525995).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/2c939dd056b4351ee31897a87d41c11e37b5eb2f771a28a522ff27718462914c.html",
+            "sourceSHA256": "1e1e547152011072e27c6d0bc05c9318f0c51f6187e01104c5bc7cd92e7dcf0e",
+            "authorsFromSource": [
+              "Department of Foreign Affairs and Trade"
+            ],
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
+                "Landscape, Tuvalu, 2011. Photo: DFAT"
+              ],
+              [
+                "Date",
+                "12 October 2011, 15:26 (according to Exif data)"
+              ],
+              [
+                "Source",
+                "Landscape, Tuvalu, 2011. Photo: DFAT"
+              ],
+              [
+                "Author",
+                "Department of Foreign Affairs and Trade"
+              ],
+              [
+                "Camera location",
+                "8° 28′ 17.9″ S, 179° 11′ 21.44″ E"
+              ],
+              [
+                "Date and time of data generation",
+                "15:26, 12 October 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "15:26, 12 October 2011"
+              ],
+              [
+                "DateTime subseconds",
+                "00"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "00"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "00"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
+            "currentContentSHA256": "7552b56f249557449044b5b2b4b99601cc7a4f5ed81123c47f317c4b38792dda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "c7cf56df2db01ebe23affc73c84e10618b49481d1e6aee2b18548ba44532b748",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.303373+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/qa.json",
+            "sha256": "4fcc2783301815b86e020dadb9d6d7634338da8061086fe5f56c0714db9fd63d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/funafuti/illustration-qa-extra.json",
+            "sha256": "363129b35f4c66315e5c6862f82d897b6b522fcdcddd7532aae2e657c944d688"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "funafuti",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
+        "sha256": "346e1c7a6284086cd48052833639c25caf8a9a64181b70571724015daac23c7b",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Landscape,_Tuvalu,_2011._Photo-_DFAT_(12779525995).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Landscape%2C_Tuvalu%2C_2011._Photo-_DFAT_%2812779525995%29.jpg",
+        "author": "Department of Foreign Affairs and Trade",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 5184,
+        "height": 3456,
+        "originalSHA256": "346e1c7a6284086cd48052833639c25caf8a9a64181b70571724015daac23c7b",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
+        "bytes": 9998400,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:55:57.734741+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
+        "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "lyhyt": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "lyhyt": "Funafutin kapea rantakaistale ja tie kahden merenpuolen välissä vuonna 2011.",
+        "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "26ce99949f46573e7665c3b477523b2489f212352adc1a630557320052aec2cc",
+      "targetAfterSHA256": "b298a7d39df8cb0be84a5c11efdcb2ba4d9c5572e32e9e2af24de5b895827efa",
+      "contextAfterSHA256": "b298a7d39df8cb0be84a5c11efdcb2ba4d9c5572e32e9e2af24de5b895827efa"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

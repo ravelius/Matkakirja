@@ -1,0 +1,2356 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e14",
+  "city": "apia",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+  "assets": [
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e14-apia-traveler-v1-20261012",
+      "galleryImageID": "e14-apia-traveler-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Palusami-lehtikäärö havainnollistaa ruoka-aihetta; yleinen havainnekuva.",
+        "lyhyt": "Palusami-lehtikäärö havainnollistaa ruoka-aihetta; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Palusami-lehtikäärö havainnollistaa ruoka-aihetta; yleinen havainnekuva.",
+        "lyhyt": "Palusami-lehtikäärö havainnollistaa ruoka-aihetta; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2392d510a35f2a763648296f2c5502bb94dc84fbf02f9c92fa982071594a6cd7",
+      "exportSHA256": "f54dd5a09c176b6490cc48883d5a6a2d56c727b72ff5455b0e8b549fb39cec73",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "35b7c557446da092e64d3646c582de9df39d92064877c8bf442fc4761f80fe26",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleinen luonnon/ruoan/materiaalin havainnollistus, ei todellinen paikkavalokuva, tunnistettava rakennus, henkilö, logo tai suojatun teoksen kopio.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Tavallinen kulho, avattu oliivinvihreä kypsä lehtikäärö ja valkoista kookoskermaa. Luonteva kosteus ja lehtien poimuttuminen, neutraali pöytätausta; ei tekstiä, logoa, käsiä tai maisemaa.",
+            "topicMatchFi": "Matkailijaosio ohjaa maistamaan samoalaista ruokaa, ja O4 mainitsee palusamin. Selite nimeää yleisen havainnollistuksen eikä tietyn Fugalein myyjän annosta. Eri tiedosto kuin O4:n vaakakuva.",
+            "sourceEvidence": [
+              "sisalto.json O4, palusami ja kookoskerma"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Sama palusami-aihe kuin O4:ssa, mutta oma pystykuva matkailijaosion tunnusaiheelle.",
+            "rightsScopeFi": "Yleinen ruoka ja astia.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Palusamin pehmeät lehtipoimut ja kookoskerma ovat luontevat. Native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667 ilman lähteetöntä paikkataustaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Palusami-lehtikäärö havainnollistaa ruoka-aihetta; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e14-apia-traveler-v1-20261012",
+          "sha256": "2392d510a35f2a763648296f2c5502bb94dc84fbf02f9c92fa982071594a6cd7",
+          "verdict": "accepted",
+          "reason": "Palusamin pehmeät lehtipoimut ja kookoskerma ovat luontevat. Native-pysty 1024×1536 täyttää TRAVELER-suhteen 0,667 ilman lähteetöntä paikkataustaa.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Tavallinen kulho, avattu oliivinvihreä kypsä lehtikäärö ja valkoista kookoskermaa. Luonteva kosteus ja lehtien poimuttuminen, neutraali pöytätausta; ei tekstiä, logoa, käsiä tai maisemaa.",
+            "topicMatchFi": "Matkailijaosio ohjaa maistamaan samoalaista ruokaa, ja O4 mainitsee palusamin. Selite nimeää yleisen havainnollistuksen eikä tietyn Fugalein myyjän annosta. Eri tiedosto kuin O4:n vaakakuva.",
+            "sourceEvidence": [
+              "sisalto.json O4, palusami ja kookoskerma"
+            ],
+            "aspectRatio": 0.6666666666666666,
+            "subjectReuseFi": "Sama palusami-aihe kuin O4:ssa, mutta oma pystykuva matkailijaosion tunnusaiheelle.",
+            "rightsScopeFi": "Yleinen ruoka ja astia.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-traveler-v1-20261012/image.png",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:50:45.409603+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png?t=f54dd5a09c176b64",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+        "sha256": "f54dd5a09c176b6490cc48883d5a6a2d56c727b72ff5455b0e8b549fb39cec73",
+        "bytes": 2194823,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-traveler-v1-20261012",
+        "nativeSHA256": "2392d510a35f2a763648296f2c5502bb94dc84fbf02f9c92fa982071594a6cd7",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:51:30.162347+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-traveler-v1-20261012-2392d510a35f.png",
+        "sha256": "f54dd5a09c176b6490cc48883d5a6a2d56c727b72ff5455b0e8b549fb39cec73",
+        "bytes": 2194823,
+        "SHAReadAt": "2026-10-12T19:03:43.879920+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2392d510a35f2a763648296f2c5502bb94dc84fbf02f9c92fa982071594a6cd7",
+        "rgbPixelSHA256": "97e6207fc05d920d4805106ad33a3867a92a460f28b2eb6da4fbd73247335a66",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "35b7c557446da092e64d3646c582de9df39d92064877c8bf442fc4761f80fe26"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e14-apia-o2-v1-20261012",
+      "galleryImageID": "e14-apia-o2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Punonnan materiaaleja käsityöaiheen havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Punonnan materiaaleja käsityöaiheen havainnollistuksena; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Punonnan materiaaleja käsityöaiheen havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Punonnan materiaaleja käsityöaiheen havainnollistuksena; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9deb0967b4234ceed829ad751e4724893ad9e3063fba67f1c2bddaad01351b35",
+      "exportSHA256": "4b5ed0351fd8c22fc820bac7a9b5f48f9a9e279803315dfc4bcf3919eb1c23c2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f967c9b9c0f9b6c8bf619c3673cca171e905c87cb8f019fd4da4f6f988283738",
+        "subjectTitle": "Satama ja torit",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Keskeneräinen vaalea kori, eri levyisiä kasviperäisiä suikaleita ja irrallisia kaistaleita pöydällä. Luontevat kuitureunat ja risteävät suikaleet; ei valmista koristekuviota, tekstiä, logoa tai käsiä.",
+            "topicMatchFi": "O2 mainitsee korinpunonnan kulttuurikylän aiheena. Selite nimeää vain materiaalihavainnollistuksen, ei Samoa Cultural Villagen aitoa esinettä tai työvaihetta.",
+            "sourceEvidence": [
+              "https://www.samoa.travel/discover/the-islands-of-samoa/upolu-island/apia/"
+            ],
+            "rightsScopeFi": "Yleiset luonnonmateriaalit ja yksinkertainen punonta.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-o2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Punontasuikaleet ja keskeneräinen tavallinen kori havainnollistavat O2:n käsityöaihetta ilman nimetyn teoksen tai työpajan väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Punonnan materiaaleja käsityöaiheen havainnollistuksena; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e14-apia-o2-v1-20261012",
+          "sha256": "9deb0967b4234ceed829ad751e4724893ad9e3063fba67f1c2bddaad01351b35",
+          "verdict": "accepted",
+          "reason": "Punontasuikaleet ja keskeneräinen tavallinen kori havainnollistavat O2:n käsityöaihetta ilman nimetyn teoksen tai työpajan väitettä.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Keskeneräinen vaalea kori, eri levyisiä kasviperäisiä suikaleita ja irrallisia kaistaleita pöydällä. Luontevat kuitureunat ja risteävät suikaleet; ei valmista koristekuviota, tekstiä, logoa tai käsiä.",
+            "topicMatchFi": "O2 mainitsee korinpunonnan kulttuurikylän aiheena. Selite nimeää vain materiaalihavainnollistuksen, ei Samoa Cultural Villagen aitoa esinettä tai työvaihetta.",
+            "sourceEvidence": [
+              "https://www.samoa.travel/discover/the-islands-of-samoa/upolu-island/apia/"
+            ],
+            "rightsScopeFi": "Yleiset luonnonmateriaalit ja yksinkertainen punonta.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-o2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:03:15.198137+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png?t=4b5ed0351fd8c22f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+        "sha256": "4b5ed0351fd8c22fc820bac7a9b5f48f9a9e279803315dfc4bcf3919eb1c23c2",
+        "bytes": 2088405,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-o2-v1-20261012",
+        "nativeSHA256": "9deb0967b4234ceed829ad751e4724893ad9e3063fba67f1c2bddaad01351b35",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-12T19:03:34.901753+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o2-v1-20261012-9deb0967b423.png",
+        "sha256": "4b5ed0351fd8c22fc820bac7a9b5f48f9a9e279803315dfc4bcf3919eb1c23c2",
+        "bytes": 2088405,
+        "SHAReadAt": "2026-10-12T19:03:43.998811+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9deb0967b4234ceed829ad751e4724893ad9e3063fba67f1c2bddaad01351b35",
+        "rgbPixelSHA256": "40091e9b3c936d2c31029f698f661f0341b1371e3d559901e6ccf8d223656747",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f967c9b9c0f9b6c8bf619c3673cca171e905c87cb8f019fd4da4f6f988283738"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e14-apia-o3-v2-20261012",
+      "galleryImageID": "e14-apia-o3-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Juomapullo ja kävelykeppi retken havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Juomapullo ja kävelykeppi retken havainnollistuksena; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Juomapullo ja kävelykeppi retken havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Juomapullo ja kävelykeppi retken havainnollistuksena; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "343a3397bf22c4c889125a8113de1bbf6fc311482aaaf7b667f15f3f61637fb6",
+      "exportSHA256": "ff193cf5fb733be2ae813abf4919f3e0362dd8d5b876e0568768b607f6c37374",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "50115d463e019f05b202e8037a7e454b0d7668b5b0451b8b4307c9c597176dc0",
+        "subjectTitle": "Vailimasta Mount Vaealle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Pystyssä ehjä metallipullo, puinen kävelykeppi ja luonnollinen kostea karike. Vesi ja materiaalit luontevat; ei logoa, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O3:n retkivesiaihe täyttyy. Taustan pieni yleinen puro ei ole Papase'ean tai nimetyn reitin paikkakuva.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Apia"
+            ],
+            "replacesRejectedAssetID": "e14-apia-o3-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-o3-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Uusi v2 on merkitön: pullon sivu ja korkki ovat täysin ilman kirjain- tai tunnuspintaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Juomapullo ja kävelykeppi retken havainnollistuksena; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e14-apia-o3-v2-20261012",
+          "sha256": "343a3397bf22c4c889125a8113de1bbf6fc311482aaaf7b667f15f3f61637fb6",
+          "verdict": "accepted",
+          "reason": "Uusi v2 on merkitön: pullon sivu ja korkki ovat täysin ilman kirjain- tai tunnuspintaa.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Pystyssä ehjä metallipullo, puinen kävelykeppi ja luonnollinen kostea karike. Vesi ja materiaalit luontevat; ei logoa, tekstiä tai ihmisiä.",
+            "topicMatchFi": "O3:n retkivesiaihe täyttyy. Taustan pieni yleinen puro ei ole Papase'ean tai nimetyn reitin paikkakuva.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Apia"
+            ],
+            "replacesRejectedAssetID": "e14-apia-o3-v1-20261012",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-o3-v2-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:46:02.374122+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png?t=ff193cf5fb733be2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+        "sha256": "ff193cf5fb733be2ae813abf4919f3e0362dd8d5b876e0568768b607f6c37374",
+        "bytes": 2848487,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-o3-v2-20261012",
+        "nativeSHA256": "343a3397bf22c4c889125a8113de1bbf6fc311482aaaf7b667f15f3f61637fb6",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:46:45.887023+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o3-v2-20261012-343a3397bf22.png",
+        "sha256": "ff193cf5fb733be2ae813abf4919f3e0362dd8d5b876e0568768b607f6c37374",
+        "bytes": 2848487,
+        "SHAReadAt": "2026-10-12T19:46:37.107800+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "343a3397bf22c4c889125a8113de1bbf6fc311482aaaf7b667f15f3f61637fb6",
+        "rgbPixelSHA256": "0acab1fa954eaea38eba30cf2a414d7309afba68acf0b603e38fbafe5e15700a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "50115d463e019f05b202e8037a7e454b0d7668b5b0451b8b4307c9c597176dc0"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e14-apia-o4-v1-20261012",
+      "galleryImageID": "e14-apia-o4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kookoskermainen taronlehtikäärö havainnollistaa palusamia; havainnekuva.",
+        "lyhyt": "Kookoskermainen taronlehtikäärö havainnollistaa palusamia; havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kookoskermainen taronlehtikäärö havainnollistaa palusamia; havainnekuva.",
+        "lyhyt": "Kookoskermainen taronlehtikäärö havainnollistaa palusamia; havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0a83a65f05623175e7f22c64bf482683ef7a585a68bf9b4ef92648b62e6a9442",
+      "exportSHA256": "962a68c518535a0e5c21718584232721239f59a6a13e8432b8c36681c1db8702",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "5eac3eadeb5efa7f2719778fc73af3d47b9a9c83ea2f0473cbe371f4361b22ed",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Avattu pehmeä oliivinvihreä lehtikäärö tavallisessa kulhossa, valkoista kermaista täytettä ja pieniä valumia; taustalla kookos ja leveä taromainen lehti. Lehtien poimut, kastike ja astia näyttävät luonnollisilta; ei tekstiä, logoja, käsiä tai tunnistettavaa paikkaa.",
+            "topicMatchFi": "O4 kuvaa palusamin kookoskermasta valmistettuna lehtikäärönä. Selite nimeää havainnollistuksen eikä todellista Apian annosta tai ravintolaa.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Apia, Eat"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-o4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kypsennetty lehtikäärö ja valkoinen kookoskermatäyte havainnollistavat palusamia luontevasti. Selite ilmoittaa havainnekuvan ilman ravintolaväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kookoskermainen taronlehtikäärö havainnollistaa palusamia; havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e14-apia-o4-v1-20261012",
+          "sha256": "0a83a65f05623175e7f22c64bf482683ef7a585a68bf9b4ef92648b62e6a9442",
+          "verdict": "accepted",
+          "reason": "Kypsennetty lehtikäärö ja valkoinen kookoskermatäyte havainnollistavat palusamia luontevasti. Selite ilmoittaa havainnekuvan ilman ravintolaväitettä.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Avattu pehmeä oliivinvihreä lehtikäärö tavallisessa kulhossa, valkoista kermaista täytettä ja pieniä valumia; taustalla kookos ja leveä taromainen lehti. Lehtien poimut, kastike ja astia näyttävät luonnollisilta; ei tekstiä, logoja, käsiä tai tunnistettavaa paikkaa.",
+            "topicMatchFi": "O4 kuvaa palusamin kookoskermasta valmistettuna lehtikäärönä. Selite nimeää havainnollistuksen eikä todellista Apian annosta tai ravintolaa.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Apia, Eat"
+            ],
+            "rightsScopeFi": "Yleinen ruoka-aihe.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-o4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:18:52.346341+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png?t=962a68c518535a0e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+        "sha256": "962a68c518535a0e5c21718584232721239f59a6a13e8432b8c36681c1db8702",
+        "bytes": 2355935,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-o4-v1-20261012",
+        "nativeSHA256": "0a83a65f05623175e7f22c64bf482683ef7a585a68bf9b4ef92648b62e6a9442",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:19:58.453877+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-o4-v1-20261012-0a83a65f0562.png",
+        "sha256": "962a68c518535a0e5c21718584232721239f59a6a13e8432b8c36681c1db8702",
+        "bytes": 2355935,
+        "SHAReadAt": "2026-10-12T18:30:04.570086+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0a83a65f05623175e7f22c64bf482683ef7a585a68bf9b4ef92648b62e6a9442",
+        "rgbPixelSHA256": "5549df4cbfc721f0eddf93f1a1c621c2a942a3544709c153a99ad2f5039de51a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "5eac3eadeb5efa7f2719778fc73af3d47b9a9c83ea2f0473cbe371f4361b22ed"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e14-apia-k4-v1-20261012",
+      "galleryImageID": "e14-apia-k4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taro, leipäpuun hedelmät ja kookos kuuluvat torin tuotteisiin; yleinen havainnekuva.",
+        "lyhyt": "Taro, leipäpuun hedelmät ja kookos kuuluvat torin tuotteisiin; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Taro, leipäpuun hedelmät ja kookos kuuluvat torin tuotteisiin; yleinen havainnekuva.",
+        "lyhyt": "Taro, leipäpuun hedelmät ja kookos kuuluvat torin tuotteisiin; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6d1554a1b9c54d6991097fd9d86187b345629223a1e000ba3cbb4dbb03f84c8a",
+      "exportSHA256": "4ac0f7388299b6974d686a1de2ecceaa11b1430035239f600525415eb89a9189",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1",
+        "semanticContextSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1",
+        "subjectTitle": "Torilta oppii muutakin kuin ostamaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Ruskeita kuituisia taron mukuloita, kaksi vihreää leipäpuun hedelmää ja kuituinen kookos sekä valkoista hedelmälihaa näyttävä puolikas puisella pöydällä. Hedelmäpinnan luonnolliset monikulmiot vaihtelevat; ei tekstiä, logoja, ihmisiä tai torikojujen tunnuksia.",
+            "topicMatchFi": "K4 luettelee samat torituotteet. Selite ei väitä Fugalein todellista torikuvaa. Pehmeä yleinen kasvillisuus ja kaukainen luonnonmaisema eivät esitä nimettyä kaupunkia tai rakennusta.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Apia, Buy/Eat"
+            ],
+            "rightsScopeFi": "Yleiset luonnontuotteet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-k4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Taro, leipäpuun hedelmät ja kookos vastaavat K4:n torituotteita. Kasvipinnat vaihtelevat luonnollisesti; selite rajaa kuvan yleishavainnollistukseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Taro, leipäpuun hedelmät ja kookos kuuluvat torin tuotteisiin; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e14-apia-k4-v1-20261012",
+          "sha256": "6d1554a1b9c54d6991097fd9d86187b345629223a1e000ba3cbb4dbb03f84c8a",
+          "verdict": "accepted",
+          "reason": "Taro, leipäpuun hedelmät ja kookos vastaavat K4:n torituotteita. Kasvipinnat vaihtelevat luonnollisesti; selite rajaa kuvan yleishavainnollistukseksi.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Ruskeita kuituisia taron mukuloita, kaksi vihreää leipäpuun hedelmää ja kuituinen kookos sekä valkoista hedelmälihaa näyttävä puolikas puisella pöydällä. Hedelmäpinnan luonnolliset monikulmiot vaihtelevat; ei tekstiä, logoja, ihmisiä tai torikojujen tunnuksia.",
+            "topicMatchFi": "K4 luettelee samat torituotteet. Selite ei väitä Fugalein todellista torikuvaa. Pehmeä yleinen kasvillisuus ja kaukainen luonnonmaisema eivät esitä nimettyä kaupunkia tai rakennusta.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Apia, Buy/Eat"
+            ],
+            "rightsScopeFi": "Yleiset luonnontuotteet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-k4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:19:06.896752+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png?t=4ac0f7388299b697",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+        "sha256": "4ac0f7388299b6974d686a1de2ecceaa11b1430035239f600525415eb89a9189",
+        "bytes": 2736642,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-k4-v1-20261012",
+        "nativeSHA256": "6d1554a1b9c54d6991097fd9d86187b345629223a1e000ba3cbb4dbb03f84c8a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:23:11.673326+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-k4-v1-20261012-6d1554a1b9c5.png",
+        "sha256": "4ac0f7388299b6974d686a1de2ecceaa11b1430035239f600525415eb89a9189",
+        "bytes": 2736642,
+        "SHAReadAt": "2026-10-12T18:30:04.674203+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6d1554a1b9c54d6991097fd9d86187b345629223a1e000ba3cbb4dbb03f84c8a",
+        "rgbPixelSHA256": "53a77415f837c300aa03c5545bdb09b642d09fdbc173d22da34d8a2cba6151f1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1",
+      "contextAfterSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e14-apia-l1-v1-20261012",
+      "galleryImageID": "e14-apia-l1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Merkitsemättömät kirjat havainnollistavat kirjallisuusaihetta; yleinen havainnekuva.",
+        "lyhyt": "Merkitsemättömät kirjat havainnollistavat kirjallisuusaihetta; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Merkitsemättömät kirjat havainnollistavat kirjallisuusaihetta; yleinen havainnekuva.",
+        "lyhyt": "Merkitsemättömät kirjat havainnollistavat kirjallisuusaihetta; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e54cc227cd6f5878707d7577d2a12a6143af582a4b3f53ce6255ddf68d85bc82",
+      "exportSHA256": "321537d97c7a6954b3d86fe69c8e5677f3a9255586f2a777c86baaafadfed197",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d",
+        "semanticContextSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d",
+        "subjectTitle": "Aarresaari tuli ennen Samoa-vuosia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Avoin kirja täysin tyhjillä sivuilla ja suljettu kulunut kirja puupöydällä. Luontevat sivukerrokset ja selän liitos, ei tekstiä, kansitaidetta, logoa tai ihmisiä.",
+            "topicMatchFi": "L1 käsittelee Stevensonin kirjojen suhdetta Samoa-vuosiin. Selite nimeää yleisen kirjallisuushavainnollistuksen eikä kirjailijan alkuperäistä esinettä tai Vailiman huonetta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-l1-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Tavalliset merkitsemättömät kirjat havainnollistavat kirjallisuusaihetta ilman kirjan kannen tai tekstin jäljennöstä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Merkitsemättömät kirjat havainnollistavat kirjallisuusaihetta; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e14-apia-l1-v1-20261012",
+          "sha256": "e54cc227cd6f5878707d7577d2a12a6143af582a4b3f53ce6255ddf68d85bc82",
+          "verdict": "accepted",
+          "reason": "Tavalliset merkitsemättömät kirjat havainnollistavat kirjallisuusaihetta ilman kirjan kannen tai tekstin jäljennöstä.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Avoin kirja täysin tyhjillä sivuilla ja suljettu kulunut kirja puupöydällä. Luontevat sivukerrokset ja selän liitos, ei tekstiä, kansitaidetta, logoa tai ihmisiä.",
+            "topicMatchFi": "L1 käsittelee Stevensonin kirjojen suhdetta Samoa-vuosiin. Selite nimeää yleisen kirjallisuushavainnollistuksen eikä kirjailijan alkuperäistä esinettä tai Vailiman huonetta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-l1-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:08:33.160433+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png?t=321537d97c7a6954",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+        "sha256": "321537d97c7a6954b3d86fe69c8e5677f3a9255586f2a777c86baaafadfed197",
+        "bytes": 2165627,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-l1-v1-20261012",
+        "nativeSHA256": "e54cc227cd6f5878707d7577d2a12a6143af582a4b3f53ce6255ddf68d85bc82",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T19:09:18.672618+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l1-v1-20261012-e54cc227cd6f.png",
+        "sha256": "321537d97c7a6954b3d86fe69c8e5677f3a9255586f2a777c86baaafadfed197",
+        "bytes": 2165627,
+        "SHAReadAt": "2026-10-12T19:32:12.929854+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e54cc227cd6f5878707d7577d2a12a6143af582a4b3f53ce6255ddf68d85bc82",
+        "rgbPixelSHA256": "a293ea1fec7c96eab2173cbdd803d6a51698faee42fe6987469c8871629fb1bb",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d",
+      "contextAfterSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e14-apia-l2-v1-20261012",
+      "galleryImageID": "e14-apia-l2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjoitusvälineet tarinankertojan työn havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Kirjoitusvälineet tarinankertojan työn havainnollistuksena; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjoitusvälineet tarinankertojan työn havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Kirjoitusvälineet tarinankertojan työn havainnollistuksena; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "224e2a721a0a72e0e08199f674fd36e92fe9902964dca5fe454f4c077064daad",
+      "exportSHA256": "47e94d017f6f02315aded0ae1f355e3602a324b8b6f252fe74225f790d131c52",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888",
+        "semanticContextSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888",
+        "subjectTitle": "Tusitala oli paikallinen nimi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Ehjä puuvartinen kynä metalliterällä, avoin mustepullo ja täysin tyhjä paperi. Luontevat varjot, lasi ja paperi; ei kirjaimia, logoja, allekirjoitusta, henkilöitä tai nimetyn huoneen näkymää.",
+            "topicMatchFi": "L2 käsittelee Tusitalaa tarinankertojana. Selite nimeää välineet havainnekuvaksi, ei Stevensonin aitoa kirjoituspöytää tai tuotantoa.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+            ],
+            "rightsScopeFi": "Yleiset kirjoitusvälineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Kynä, mustepullo ja tyhjä paperi sopivat tarinankertojan työn yleishavainnollistukseen ilman alkuperäisen tekstin tai esineen väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirjoitusvälineet tarinankertojan työn havainnollistuksena; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e14-apia-l2-v1-20261012",
+          "sha256": "224e2a721a0a72e0e08199f674fd36e92fe9902964dca5fe454f4c077064daad",
+          "verdict": "accepted",
+          "reason": "Kynä, mustepullo ja tyhjä paperi sopivat tarinankertojan työn yleishavainnollistukseen ilman alkuperäisen tekstin tai esineen väitettä.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Ehjä puuvartinen kynä metalliterällä, avoin mustepullo ja täysin tyhjä paperi. Luontevat varjot, lasi ja paperi; ei kirjaimia, logoja, allekirjoitusta, henkilöitä tai nimetyn huoneen näkymää.",
+            "topicMatchFi": "L2 käsittelee Tusitalaa tarinankertojana. Selite nimeää välineet havainnekuvaksi, ei Stevensonin aitoa kirjoituspöytää tai tuotantoa.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+            ],
+            "rightsScopeFi": "Yleiset kirjoitusvälineet.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T19:09:30.502156+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png?t=47e94d017f6f0231",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+        "sha256": "47e94d017f6f02315aded0ae1f355e3602a324b8b6f252fe74225f790d131c52",
+        "bytes": 2023966,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-l2-v1-20261012",
+        "nativeSHA256": "224e2a721a0a72e0e08199f674fd36e92fe9902964dca5fe454f4c077064daad",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T19:10:14.047928+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l2-v1-20261012-224e2a721a0a.png",
+        "sha256": "47e94d017f6f02315aded0ae1f355e3602a324b8b6f252fe74225f790d131c52",
+        "bytes": 2023966,
+        "SHAReadAt": "2026-10-12T19:32:13.072944+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "224e2a721a0a72e0e08199f674fd36e92fe9902964dca5fe454f4c077064daad",
+        "rgbPixelSHA256": "0269b4b53ad0b4f480c64bf025c9c7f6c379d9664fdcf8f18bb8c58f65ca9e0e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888",
+      "contextAfterSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e14-apia-l4-v1-20261012",
+      "galleryImageID": "e14-apia-l4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjeet pitivät yllä kirjallisia yhteyksiä; yleinen havainnekuva.",
+        "lyhyt": "Kirjeet pitivät yllä kirjallisia yhteyksiä; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kirjeet pitivät yllä kirjallisia yhteyksiä; yleinen havainnekuva.",
+        "lyhyt": "Kirjeet pitivät yllä kirjallisia yhteyksiä; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f886dd1c3a160415f172f3cdc98d915718a0e3d9b9ec8c96320845d7432e3e85",
+      "exportSHA256": "d9c658f2427853796768f514fba00e5cfb6deef9355319572e9f98089d1e77a2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4d487660ea956970f308aa1fe551769ac87f017e38d6f071cb7069c79f470cc2",
+        "semanticContextSHA256": "4d487660ea956970f308aa1fe551769ac87f017e38d6f071cb7069c79f470cc2",
+        "subjectTitle": "Kutsu, joka jäi kirjeeseen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Tyhjiä taitettuja papereita, suljettu merkitön kuori, tavallinen kulunut kirja, ehjä kynänterä ja mustepullo pöydällä. Paperin poimut ja esineiden varjot ovat luontevat. Ei kirjoitusta, allekirjoituksia, muotokuvaa, logoa tai kirjan kansiteosta.",
+            "topicMatchFi": "L4 käsittelee Stevensonin kirjeenvaihtoa. Selite puhuu kirjallisista yhteyksistä yleisenä havainnekuvana; esineitä tai ikkunan yleistä luonnonmaisemaa ei nimetä historiallisiksi alkuperäisiksi tai Vailiman dokumentiksi.",
+            "sourceEvidence": [
+              "e14/paakaupungit-pilvi/e14/apia/sisalto.json, kirjallisuusteeman kirjeenvaihtonosto"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet, ei teoksen tai historiallisen näkymän jäljennöstä.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Merkitön kirjekuori, taitetut paperit ja kirjoitusvälineet sopivat kirjeenvaihtoaiheeseen ilman alkuperäisten dokumenttien tai Vailiman sisätilan väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kirjeet pitivät yllä kirjallisia yhteyksiä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+        "fileSHA256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e14-apia-l4-v1-20261012",
+          "sha256": "f886dd1c3a160415f172f3cdc98d915718a0e3d9b9ec8c96320845d7432e3e85",
+          "verdict": "accepted",
+          "reason": "Merkitön kirjekuori, taitetut paperit ja kirjoitusvälineet sopivat kirjeenvaihtoaiheeseen ilman alkuperäisten dokumenttien tai Vailiman sisätilan väitettä.",
+          "evidence": {
+            "contentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "visualObservationFi": "Tyhjiä taitettuja papereita, suljettu merkitön kuori, tavallinen kulunut kirja, ehjä kynänterä ja mustepullo pöydällä. Paperin poimut ja esineiden varjot ovat luontevat. Ei kirjoitusta, allekirjoituksia, muotokuvaa, logoa tai kirjan kansiteosta.",
+            "topicMatchFi": "L4 käsittelee Stevensonin kirjeenvaihtoa. Selite puhuu kirjallisista yhteyksistä yleisenä havainnekuvana; esineitä tai ikkunan yleistä luonnonmaisemaa ei nimetä historiallisiksi alkuperäisiksi tai Vailiman dokumentiksi.",
+            "sourceEvidence": [
+              "e14/paakaupungit-pilvi/e14/apia/sisalto.json, kirjallisuusteeman kirjeenvaihtonosto"
+            ],
+            "rightsScopeFi": "Yleiset arkiesineet, ei teoksen tai historiallisen näkymän jäljennöstä.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/assets/e14-apia-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:19:27.141791+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png?t=d9c658f242785379",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+        "sha256": "d9c658f2427853796768f514fba00e5cfb6deef9355319572e9f98089d1e77a2",
+        "bytes": 2143132,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-apia-l4-v1-20261012",
+        "nativeSHA256": "f886dd1c3a160415f172f3cdc98d915718a0e3d9b9ec8c96320845d7432e3e85",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "apia",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:23:13.348186+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/apia/e14-apia-l4-v1-20261012-f886dd1c3a16.png",
+        "sha256": "d9c658f2427853796768f514fba00e5cfb6deef9355319572e9f98089d1e77a2",
+        "bytes": 2143132,
+        "SHAReadAt": "2026-10-12T18:30:04.777582+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f886dd1c3a160415f172f3cdc98d915718a0e3d9b9ec8c96320845d7432e3e85",
+        "rgbPixelSHA256": "adbc8b133692c2eb257e39a157c42e789275a59034116bb616f4414132175c2e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "4d487660ea956970f308aa1fe551769ac87f017e38d6f071cb7069c79f470cc2",
+      "contextAfterSHA256": "4d487660ea956970f308aa1fe551769ac87f017e38d6f071cb7069c79f470cc2"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e14-apia-photo-12e1b116153b908b",
+      "galleryImageID": "capital-cc-e14-apia-photo-12e1b116153b908b",
+      "commonsFile": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
+        "suora": true,
+        "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
+        "selite": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "lyhyt": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
+        "selite": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "lyhyt": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
+        "suora": true,
+        "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
+        "selite": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "lyhyt": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+      "exportSHA256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/apia/78c210f9b6a5279496916f69ce8f187bff0f305c02e2c9de9a3882aa5f6711a3.jpg",
+      "dimensions": [
+        2112,
+        2816
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c5a816b98925a965d6aa29777c8ad6dfab647e3d4d0d80b35224d0cf937280d2",
+        "semanticContextSHA256": "c5a816b98925a965d6aa29777c8ad6dfab647e3d4d0d80b35224d0cf937280d2",
+        "subjectTitle": "apia — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Peter Gill / UK",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuvan tekijä Peter Gill / UK ja CC BY 3.0 tarkistettu Commonsin Author/Licensing-kentistä sekä Panoramio-license review -merkinnästä. Kuvan pääaihe vesi/kivet/metsä, ei taideteos, muistomerkki tai luova rakennus. Commonsin Camera location -13.865242,-171.766745 sitoo vesipaikan Vailiman puutarhan alueeseen Apian lähialueella. Ei suojatun teoksen kuvittamista nimestä, ei oletettua luontokohteen nykytilaa vuoden 2007 kuvan perusteella.",
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+              "author": "Peter Gill / UK",
+              "license": "CC BY 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+              "width": 2112,
+              "height": 2816,
+              "captionFi": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+              "rightsEvidence": "Valokuvan tekijä Peter Gill / UK ja CC BY 3.0 tarkistettu Commonsin Author/Licensing-kentistä sekä Panoramio-license review -merkinnästä. Kuvan pääaihe vesi/kivet/metsä, ei taideteos, muistomerkki tai luova rakennus. Commonsin Camera location -13.865242,-171.766745 sitoo vesipaikan Vailiman puutarhan alueeseen Apian lähialueella. Ei suojatun teoksen kuvittamista nimestä, ei oletettua luontokohteen nykytilaa vuoden 2007 kuvan perusteella.",
+              "reviewState": "candidate",
+              "dateTaken": "13 February 2007",
+              "visualReview": "Alkuperäinen katsottu: virtaava vesi ja kivinen luonnonallas/rajattu vesiuoma, kasvillisuus ja vaatimattomat portaat; ei kasvoja, vesileimaa, lisättyä tekstiä tai kehystä. Ei kutsuta tuoreeksi eikä käytetä nykyoppaan/TRAVELER-paikassa.",
+              "previewNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/traveler.jpg",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c393e83e235b38062b2f8622e5c2eeec5f9939792ba9ae05a1880d13ae36a9df.html",
+              "locationEvidence": "Camera location -13.865242,-171.766745; File source Panoramio 17305709; Category Apia; Vailima/Stevenson puutarha maantieteellisessä lähialueessa."
+            },
+            "candidateFingerprintSHA256": "419bdb8448c73e9d2ad038627e2fa74cb33cfa098e90bbc27b7ba850dc640e4a",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+            "currentContentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 2112×2816: vesi, kivet, metsäkasvillisuus ja funktionaalinen vaatimaton porras/kaide. Ei ihmisiä, luovaa rakennusta tai taideteosta pääaiheena, tekstiä tai vesileimaa.",
+            "reviewedAt": "2026-10-12T18:22:09.334531+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/traveler.jpg",
+            "pixelSHA256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c393e83e235b38062b2f8622e5c2eeec5f9939792ba9ae05a1880d13ae36a9df.html",
+            "sourceMetadata": {
+              "author": [
+                "Peter Gill / UK"
+              ],
+              "licenses": [
+                "CC BY 3.0"
+              ],
+              "dimensions": [
+                2112,
+                2816
+              ],
+              "sourceSHA256": "7b5f380ee6db60bd80b4ec66c88dea940bc6ae720fa1d3601a98d65b26689ed9"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by/3.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M51760966\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-13.865242,\"lon\":-171.766745},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjec",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"143fd50a-bff1-4398-b5bd-e90b8a4c16a7\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg\",\"wgTitle\":\"Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg\",\"wgCurRevisionId\":1053944483,\"wgRevisionId\":1053944483,\"wgArticleId\":51760966,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Samoa photographs taken on 2007-02-13\",\"CC-BY-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Media needing category review as of 26 September 2016\",\"Panoramio files uploaded by Panoramio upload bot\",\"Apia\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPag",
+            "sourceAuthorExcerpt": "Author Peter Gill / UK Permission ( Reusing this file ) This file is licensed under the Creative Commons Attribution 3.0 Unported license. Attribution: Peter Gill / UK You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/3.0 CC BY 3.0 Creative Commons Attribution 3.0 true true .mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);color:inherit}.mw-parser-output .panoramioreview-failed{background-color:var(--background-color-error-subtle,#fcc);color:inherit}.mw-parser-output .panoramioreview-passed{background-color:var(--",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 13° 51′ 54.87″ S, 171° 46′ 00.28″ W View this and other nearby images on: OpenStreetMap -13.865242; -171.766745 The categories of this image need checking. You can do so here . Please remove redundant categories and try to put this image in the most specific category/categories. You can remove this template by clicking here (or on the first line). File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 13:12, 26 September 2016 2,112 × 2,816 (3.98 MB) Panoramio upload bot ( talk | contribs ) {{Information |description=Bathing Pool dam created by Robert Louis Stevenson |date={{Taken on|2007-02-13}} |source=http://www.panoramio.com/photo/17305709 |author=[http://www.panoramio.com/user/2532373?with_photo_id=17305709 Peter Gill | UK] |permissi... You cannot overwrite this file. File usage on Commons There are no pages that use this file. Metadata This file contains additional information such as Exif",
+            "placeBoundary": "Original source title links bathing pool to Stevenson; source camera location -13.865242,-171.766745 in Vailima near Apia. Caption is limited to the local waterside in 2007."
+          },
+          "qaReason": "Peter Gill / UK, CC BY 3.0 ja Panoramion lisenssitarkistus varmistuvat tiedostosivulta. Nimetty vesipaikka ja koordinaatit sitovat kuvan Apian Vailiman lähialueeseen; vuosi 2007 kirjattu. PHOTOssa pystykuva sallitaan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+        "fileSHA256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg",
+          "verdict": "accepted",
+          "reason": "Peter Gill / UK, CC BY 3.0 ja Panoramion lisenssitarkistus varmistuvat tiedostosivulta. Nimetty vesipaikka ja koordinaatit sitovat kuvan Apian Vailiman lähialueeseen; vuosi 2007 kirjattu. PHOTOssa pystykuva sallitaan.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+              "author": "Peter Gill / UK",
+              "license": "CC BY 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+              "width": 2112,
+              "height": 2816,
+              "captionFi": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+              "rightsEvidence": "Valokuvan tekijä Peter Gill / UK ja CC BY 3.0 tarkistettu Commonsin Author/Licensing-kentistä sekä Panoramio-license review -merkinnästä. Kuvan pääaihe vesi/kivet/metsä, ei taideteos, muistomerkki tai luova rakennus. Commonsin Camera location -13.865242,-171.766745 sitoo vesipaikan Vailiman puutarhan alueeseen Apian lähialueella. Ei suojatun teoksen kuvittamista nimestä, ei oletettua luontokohteen nykytilaa vuoden 2007 kuvan perusteella.",
+              "reviewState": "candidate",
+              "dateTaken": "13 February 2007",
+              "visualReview": "Alkuperäinen katsottu: virtaava vesi ja kivinen luonnonallas/rajattu vesiuoma, kasvillisuus ja vaatimattomat portaat; ei kasvoja, vesileimaa, lisättyä tekstiä tai kehystä. Ei kutsuta tuoreeksi eikä käytetä nykyoppaan/TRAVELER-paikassa.",
+              "previewNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/traveler.jpg",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c393e83e235b38062b2f8622e5c2eeec5f9939792ba9ae05a1880d13ae36a9df.html",
+              "locationEvidence": "Camera location -13.865242,-171.766745; File source Panoramio 17305709; Category Apia; Vailima/Stevenson puutarha maantieteellisessä lähialueessa."
+            },
+            "candidateFingerprintSHA256": "419bdb8448c73e9d2ad038627e2fa74cb33cfa098e90bbc27b7ba850dc640e4a",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+            "currentContentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 2112×2816: vesi, kivet, metsäkasvillisuus ja funktionaalinen vaatimaton porras/kaide. Ei ihmisiä, luovaa rakennusta tai taideteosta pääaiheena, tekstiä tai vesileimaa.",
+            "reviewedAt": "2026-10-12T18:22:09.334531+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/traveler.jpg",
+            "pixelSHA256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c393e83e235b38062b2f8622e5c2eeec5f9939792ba9ae05a1880d13ae36a9df.html",
+            "sourceMetadata": {
+              "author": [
+                "Peter Gill / UK"
+              ],
+              "licenses": [
+                "CC BY 3.0"
+              ],
+              "dimensions": [
+                2112,
+                2816
+              ],
+              "sourceSHA256": "7b5f380ee6db60bd80b4ec66c88dea940bc6ae720fa1d3601a98d65b26689ed9"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by/3.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M51760966\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-13.865242,\"lon\":-171.766745},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjec",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"143fd50a-bff1-4398-b5bd-e90b8a4c16a7\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg\",\"wgTitle\":\"Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg\",\"wgCurRevisionId\":1053944483,\"wgRevisionId\":1053944483,\"wgArticleId\":51760966,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Samoa photographs taken on 2007-02-13\",\"CC-BY-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Media needing category review as of 26 September 2016\",\"Panoramio files uploaded by Panoramio upload bot\",\"Apia\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPag",
+            "sourceAuthorExcerpt": "Author Peter Gill / UK Permission ( Reusing this file ) This file is licensed under the Creative Commons Attribution 3.0 Unported license. Attribution: Peter Gill / UK You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/3.0 CC BY 3.0 Creative Commons Attribution 3.0 true true .mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);color:inherit}.mw-parser-output .panoramioreview-failed{background-color:var(--background-color-error-subtle,#fcc);color:inherit}.mw-parser-output .panoramioreview-passed{background-color:var(--",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 13° 51′ 54.87″ S, 171° 46′ 00.28″ W View this and other nearby images on: OpenStreetMap -13.865242; -171.766745 The categories of this image need checking. You can do so here . Please remove redundant categories and try to put this image in the most specific category/categories. You can remove this template by clicking here (or on the first line). File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 13:12, 26 September 2016 2,112 × 2,816 (3.98 MB) Panoramio upload bot ( talk | contribs ) {{Information |description=Bathing Pool dam created by Robert Louis Stevenson |date={{Taken on|2007-02-13}} |source=http://www.panoramio.com/photo/17305709 |author=[http://www.panoramio.com/user/2532373?with_photo_id=17305709 Peter Gill | UK] |permissi... You cannot overwrite this file. File usage on Commons There are no pages that use this file. Metadata This file contains additional information such as Exif",
+            "placeBoundary": "Original source title links bathing pool to Stevenson; source camera location -13.865242,-171.766745 in Vailima near Apia. Caption is limited to the local waterside in 2007."
+          },
+          "reviewedAt": "2026-10-12T18:22:09.464206+00:00",
+          "sha256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "apia",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg",
+        "sha256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Bathing_Pool_dam_created_by_Robert_Louis_Stevenson_-_panoramio.jpg",
+        "author": "Peter Gill / UK",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "width": 2112,
+        "height": 2816,
+        "originalSHA256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
+        "bytes": 4170007,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:25:01.239469+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg",
+        "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
+        "selite": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "lyhyt": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
+        "selite": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "lyhyt": "Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.",
+        "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "c5a816b98925a965d6aa29777c8ad6dfab647e3d4d0d80b35224d0cf937280d2",
+      "contextAfterSHA256": "c5a816b98925a965d6aa29777c8ad6dfab647e3d4d0d80b35224d0cf937280d2"
+    },
+    {
+      "era": "e14",
+      "city": "apia",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e14-apia-c1-f2b3548738b0884d",
+      "galleryImageID": "capital-cc-e14-apia-c1-f2b3548738b0884d",
+      "commonsFile": "Apia's Black Beach (30299738875).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
+        "suora": true,
+        "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "lyhyt": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "tiedosto": "Apia's Black Beach (30299738875).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "lyhyt": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "tiedosto": "Apia's Black Beach (30299738875).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
+        "suora": true,
+        "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "lyhyt": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "tiedosto": "Apia's Black Beach (30299738875).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+      "exportSHA256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/apia/9e2b12d0550ba68035790a73675266f087767fbb9255a17999d010107e6eb1a0.jpg",
+      "dimensions": [
+        1600,
+        1103
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+      "sourceContentSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5d3b00f7a2686e449bfd8655f25b258d50619c8ccdbcbb21b7e05a2f7e6e87ed",
+        "semanticContextSHA256": "5d3b00f7a2686e449bfd8655f25b258d50619c8ccdbcbb21b7e05a2f7e6e87ed",
+        "subjectTitle": "Apia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Michael Coghlan from Adelaide, Australia",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Apia%27s_Black_Beach_(30299738875).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Apia%27s_Black_Beach_%2830299738875%29.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuvan Author-kenttä ja CC BY-SA 2.0 tarkistettu lähdesivulta. Pääaihe laaja luonnonranta/meri/palmut; taustalla tavanomaista kaupunkirakennetta, ei temppelin, hallintotalon, muistomerkin tai taideteoksen pääaihetta. Samoan Copyright Act 1998–2011 §8c koskee teosten satunnaista sisällyttämistä kuvaan; Commons-country-kooste luettu ja tallennettu. WIPO-primäärihaun robots palautti 301 eikä sitä voitu kuitata onnistuneeksi; teoskerroksen lopullinen QA tarkistus jää riippumattomalle tarkistajalle, ei yleistä Samoa-FOP-väitettä.",
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Apia's Black Beach (30299738875).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Apia%27s_Black_Beach_(30299738875).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Apia%27s_Black_Beach_%2830299738875%29.jpg",
+              "author": "Michael Coghlan from Adelaide, Australia",
+              "license": "CC BY-SA 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+              "width": 1600,
+              "height": 1103,
+              "captionFi": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+              "rightsEvidence": "Valokuvan Author-kenttä ja CC BY-SA 2.0 tarkistettu lähdesivulta. Pääaihe laaja luonnonranta/meri/palmut; taustalla tavanomaista kaupunkirakennetta, ei temppelin, hallintotalon, muistomerkin tai taideteoksen pääaihetta. Samoan Copyright Act 1998–2011 §8c koskee teosten satunnaista sisällyttämistä kuvaan; Commons-country-kooste luettu ja tallennettu. WIPO-primäärihaun robots palautti 301 eikä sitä voitu kuitata onnistuneeksi; teoskerroksen lopullinen QA tarkistus jää riippumattomalle tarkistajalle, ei yleistä Samoa-FOP-väitettä.",
+              "reviewState": "candidate",
+              "dateTaken": "17 September 2016, 12:04",
+              "visualReview": "Alkuperäinen katsottu: laaja merenranta, tumma hiekka, rantakasvillisuus, taustan taloja; kaukaiset rannalla olevat ihmiset eivät ole kasvoiltaan tunnistettavia. Ei vesileimaa tai päälle lisättyä tekstiä/kehystä.",
+              "previewNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/c3.jpg",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b4970469fc69e5a11dca9aa2932006d32adf9dc3090090008a8c4a1a25a84c5b.html",
+              "locationEvidence": "Tekijän Flickr-kuvan lähdeotsikko Apia’s Black Beach, Commons Category Apia; ei yleisestä Samoa-otsikosta päätelty kaupunki."
+            },
+            "candidateFingerprintSHA256": "f76432065307f93fb2708d30dda45fa06042e4d5610fe5dd4e736406e92992f3",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+            "currentContentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 1600×1103: rantaviiva, palmut, meri ja sivuosassa tavallinen asutus. Rannalla selin olevia kaukaisia ihmisiä ilman yksilöitäviä kasvonpiirteitä. Ei lisättyä tekstiä/vesileimaa.",
+            "reviewedAt": "2026-10-12T18:22:09.558892+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/c3.jpg",
+            "pixelSHA256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b4970469fc69e5a11dca9aa2932006d32adf9dc3090090008a8c4a1a25a84c5b.html",
+            "sourceMetadata": {
+              "author": [
+                "Michael Coghlan from Adelaide, Australia"
+              ],
+              "licenses": [
+                "CC BY-SA 2.0"
+              ],
+              "dimensions": [
+                1600,
+                1103
+              ],
+              "sourceSHA256": "a8b2ab982570869a52178bd64588fd0bd57b81ab1bc22df01e903fdb83f45a3b"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M58863274\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-13.833314,\"lon\":-171.76245},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"28c2ed12-4a49-46fe-9f2d-74f5769436d4\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Apia's_Black_Beach_(30299738875).jpg\",\"wgTitle\":\"Apia's Black Beach (30299738875).jpg\",\"wgCurRevisionId\":1056334100,\"wgRevisionId\":1056334100,\"wgArticleId\":58863274,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-2.0\",\"Flickr images reviewed by FlickreviewR\",\"Apia\",\"2016 in Samoa\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Apia's_Black_Beach_(30299738875).jpg\",\"wgRelevantArticleId\":58863274,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgR",
+            "sourceAuthorExcerpt": "Author Michael Coghlan from Adelaide, Australia Camera location 13° 49′ 59.93″ S, 171° 45′ 44.82″ W View this and other nearby images on: OpenStreetMap -13.833314; -171.762450 Licensing [ edit ] This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/2.0 CC BY-SA 2.0 Creative Commons Attribution-Share Alike 2.0 true true This image was originally posted to Flickr by mikecogh at https://flickr.com/photo",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Apia's Black Beach (30299738875).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 662 pixels . Other resolutions: 330 × 227 pixels | 1,280 × 882 pixels | 1,600 × 1,103 pixels . Original file (1,600 × 1,103 pixels, file size: 810 KB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Apia's Black Beach (30299738875).jpg Apia's Black Beach Date 17 September 2016, 12:04 Source Apia's Black Beach Author Michael Coghlan from Adela",
+            "sourceCameralocationExcerpt": "Camera location 13° 49′ 59.93″ S, 171° 45′ 44.82″ W View this and other nearby images on: OpenStreetMap -13.833314; -171.762450 Licensing [ edit ] This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/2.0 CC BY-SA 2.0 Creative Commons Attribution-Share Alike 2.0 true true This image was originally posted to Flickr by mikecogh at https://flickr.com/photos/89165847@N00/30299738875 . It was reviewed on ",
+            "workLayerScope": "ordinary broad shoreline scene; no individual protected artwork or named creative contemporary building is the main subject; no blanket Samoa FOP claim",
+            "primaryLawReview": {
+              "memoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/amerikat-oseania-rights-006.json",
+              "memoSHA256": "c2a0cbb4e6eb6be70783aebe85ea6cc60f04374dc69083c285843bae224cb876",
+              "originalLawURL": "https://www.mcil.gov.ws/sites/default/files/documents/1998-01/Copyright-Act-1998.pdf",
+              "localOriginalPDF": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/Copyright-Act-1998-Samoa.pdf",
+              "originalPDFSHA256": "cc44e2a6582ee6c7183cc7a5a02d789427f0280826f41bf7778c6b3b81e5a50b",
+              "textEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/Copyright-Act-1998-Samoa.txt",
+              "originalPageImagesPersonallyViewed": [
+                "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/samoa-act-p11.png",
+                "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/samoa-act-p29.png"
+              ],
+              "section": "Copyright Act s8C(1)-(2), amendment commenced 11 October 2011",
+              "version": "Official revision as at 31 December 2022 distributed by ministry on 12 October 2026",
+              "caseAssessment": "The 2016 photo has beach, water and palms as the principal subject. Background buildings and the partial edge building are incidental to the wide shoreline view; no singled-out contemporary protected work or traditional cultural expression is being reproduced as the subject. No general Samoa FOP permission is claimed.",
+              "checkedAt": "2026-10-12T18:38:18.505483+00:00"
+            }
+          },
+          "qaReason": "Michael Coghlanin CC BY-SA 2.0 -valokuva näyttää Apian nimetyn rannan ja todellista rantakaupungin ympäristöä. Laaja luonto-/kaupunkiympäristö, ei yksittäinen moderni suojattu teos pääaiheena; ei koko maata koskevaa FOP-väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+        "fileSHA256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Apia's Black Beach (30299738875).jpg",
+          "verdict": "accepted",
+          "reason": "Michael Coghlanin CC BY-SA 2.0 -valokuva näyttää Apian nimetyn rannan ja todellista rantakaupungin ympäristöä. Laaja luonto-/kaupunkiympäristö, ei yksittäinen moderni suojattu teos pääaiheena; ei koko maata koskevaa FOP-väitettä.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Apia's Black Beach (30299738875).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Apia%27s_Black_Beach_(30299738875).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Apia%27s_Black_Beach_%2830299738875%29.jpg",
+              "author": "Michael Coghlan from Adelaide, Australia",
+              "license": "CC BY-SA 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+              "width": 1600,
+              "height": 1103,
+              "captionFi": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+              "rightsEvidence": "Valokuvan Author-kenttä ja CC BY-SA 2.0 tarkistettu lähdesivulta. Pääaihe laaja luonnonranta/meri/palmut; taustalla tavanomaista kaupunkirakennetta, ei temppelin, hallintotalon, muistomerkin tai taideteoksen pääaihetta. Samoan Copyright Act 1998–2011 §8c koskee teosten satunnaista sisällyttämistä kuvaan; Commons-country-kooste luettu ja tallennettu. WIPO-primäärihaun robots palautti 301 eikä sitä voitu kuitata onnistuneeksi; teoskerroksen lopullinen QA tarkistus jää riippumattomalle tarkistajalle, ei yleistä Samoa-FOP-väitettä.",
+              "reviewState": "candidate",
+              "dateTaken": "17 September 2016, 12:04",
+              "visualReview": "Alkuperäinen katsottu: laaja merenranta, tumma hiekka, rantakasvillisuus, taustan taloja; kaukaiset rannalla olevat ihmiset eivät ole kasvoiltaan tunnistettavia. Ei vesileimaa tai päälle lisättyä tekstiä/kehystä.",
+              "previewNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/c3.jpg",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b4970469fc69e5a11dca9aa2932006d32adf9dc3090090008a8c4a1a25a84c5b.html",
+              "locationEvidence": "Tekijän Flickr-kuvan lähdeotsikko Apia’s Black Beach, Commons Category Apia; ei yleisestä Samoa-otsikosta päätelty kaupunki."
+            },
+            "candidateFingerprintSHA256": "f76432065307f93fb2708d30dda45fa06042e4d5610fe5dd4e736406e92992f3",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
+            "currentContentSHA256": "814e2d64a767091e99edecf281d0491748fabd8371d1ed7da741cbcf3fc36472",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 1600×1103: rantaviiva, palmut, meri ja sivuosassa tavallinen asutus. Rannalla selin olevia kaukaisia ihmisiä ilman yksilöitäviä kasvonpiirteitä. Ei lisättyä tekstiä/vesileimaa.",
+            "reviewedAt": "2026-10-12T18:22:09.558892+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/cc-work/c3.jpg",
+            "pixelSHA256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/b4970469fc69e5a11dca9aa2932006d32adf9dc3090090008a8c4a1a25a84c5b.html",
+            "sourceMetadata": {
+              "author": [
+                "Michael Coghlan from Adelaide, Australia"
+              ],
+              "licenses": [
+                "CC BY-SA 2.0"
+              ],
+              "dimensions": [
+                1600,
+                1103
+              ],
+              "sourceSHA256": "a8b2ab982570869a52178bd64588fd0bd57b81ab1bc22df01e903fdb83f45a3b"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M58863274\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":-13.833314,\"lon\":-171.76245},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"28c2ed12-4a49-46fe-9f2d-74f5769436d4\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Apia's_Black_Beach_(30299738875).jpg\",\"wgTitle\":\"Apia's Black Beach (30299738875).jpg\",\"wgCurRevisionId\":1056334100,\"wgRevisionId\":1056334100,\"wgArticleId\":58863274,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-2.0\",\"Flickr images reviewed by FlickreviewR\",\"Apia\",\"2016 in Samoa\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Apia's_Black_Beach_(30299738875).jpg\",\"wgRelevantArticleId\":58863274,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgR",
+            "sourceAuthorExcerpt": "Author Michael Coghlan from Adelaide, Australia Camera location 13° 49′ 59.93″ S, 171° 45′ 44.82″ W View this and other nearby images on: OpenStreetMap -13.833314; -171.762450 Licensing [ edit ] This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/2.0 CC BY-SA 2.0 Creative Commons Attribution-Share Alike 2.0 true true This image was originally posted to Flickr by mikecogh at https://flickr.com/photo",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : Apia's Black Beach (30299738875).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 662 pixels . Other resolutions: 330 × 227 pixels | 1,280 × 882 pixels | 1,600 × 1,103 pixels . Original file (1,600 × 1,103 pixels, file size: 810 KB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Apia's Black Beach (30299738875).jpg Apia's Black Beach Date 17 September 2016, 12:04 Source Apia's Black Beach Author Michael Coghlan from Adela",
+            "sourceCameralocationExcerpt": "Camera location 13° 49′ 59.93″ S, 171° 45′ 44.82″ W View this and other nearby images on: OpenStreetMap -13.833314; -171.762450 Licensing [ edit ] This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/2.0 CC BY-SA 2.0 Creative Commons Attribution-Share Alike 2.0 true true This image was originally posted to Flickr by mikecogh at https://flickr.com/photos/89165847@N00/30299738875 . It was reviewed on ",
+            "workLayerScope": "ordinary broad shoreline scene; no individual protected artwork or named creative contemporary building is the main subject; no blanket Samoa FOP claim",
+            "primaryLawReview": {
+              "memoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/amerikat-oseania-rights-006.json",
+              "memoSHA256": "c2a0cbb4e6eb6be70783aebe85ea6cc60f04374dc69083c285843bae224cb876",
+              "originalLawURL": "https://www.mcil.gov.ws/sites/default/files/documents/1998-01/Copyright-Act-1998.pdf",
+              "localOriginalPDF": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/Copyright-Act-1998-Samoa.pdf",
+              "originalPDFSHA256": "cc44e2a6582ee6c7183cc7a5a02d789427f0280826f41bf7778c6b3b81e5a50b",
+              "textEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/Copyright-Act-1998-Samoa.txt",
+              "originalPageImagesPersonallyViewed": [
+                "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/samoa-act-p11.png",
+                "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/samoa-act-p29.png"
+              ],
+              "section": "Copyright Act s8C(1)-(2), amendment commenced 11 October 2011",
+              "version": "Official revision as at 31 December 2022 distributed by ministry on 12 October 2026",
+              "caseAssessment": "The 2016 photo has beach, water and palms as the principal subject. Background buildings and the partial edge building are incidental to the wide shoreline view; no singled-out contemporary protected work or traditional cultural expression is being reproduced as the subject. No general Samoa FOP permission is claimed.",
+              "checkedAt": "2026-10-12T18:38:18.505483+00:00"
+            }
+          },
+          "reviewedAt": "2026-10-12T18:22:09.652027+00:00",
+          "sha256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/qa.json",
+            "sha256": "d0e2ef807dac1304b172eb3443438345698462c2df417705e6bd60dcfe5f389e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/apia/illustration-qa-extra.json",
+            "sha256": "ef8278f455c09d30ea86c3973f5b481e4898b4d5223f2cf16380aba4ac823ff9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "apia",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Apia's Black Beach (30299738875).jpg",
+        "sha256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Apia%27s_Black_Beach_(30299738875).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Apia%27s_Black_Beach_%2830299738875%29.jpg",
+        "author": "Michael Coghlan from Adelaide, Australia",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 1600,
+        "height": 1103,
+        "originalSHA256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
+        "bytes": 829203,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:25:02.763807+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Apia's Black Beach (30299738875).jpg",
+        "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "lyhyt": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "lyhyt": "Apian tummahiekkainen ranta ja rantakaupungin ympäristö syyskuussa 2016.",
+        "tiedosto": "Apia's Black Beach (30299738875).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "af5db1d4c6bccbd3508b7410eb44de73f1fa9356efe80ccc14fd25b99fc2dc82",
+      "targetAfterSHA256": "5d3b00f7a2686e449bfd8655f25b258d50619c8ccdbcbb21b7e05a2f7e6e87ed",
+      "contextAfterSHA256": "5d3b00f7a2686e449bfd8655f25b258d50619c8ccdbcbb21b7e05a2f7e6e87ed"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
