@@ -13948,3 +13948,7 @@ Omistaja 12.10.2026 klo 10.3x (kuvakaappaus Asemataulun otsikoista "Laitteet (k�
 ## SIIRTOPROMPTI 50 %:SSA OMISTAJAN PÄÄTILILLÄ (12.10.2026 klo 10.31)
 
 Omistaja 12.10.2026 klo 10.3x, sanatarkasti: "tee siirtoprompti kun tämän tilin käyttö on 50%, vaihdan silloin toiselle tilille. Tarvitsen tätä tiliä myös muihin juttuihin viikon aikana, mutta muut tilit ovat pelkkää koodausta varten, joten siksi tämä erikoisjärjestely." → Päätoimittaja kirjoittaa siirtopromptin, kun tämän tilin viikkokäyttö on 50 %, ja kertoo siitä omistajalle yhdellä rivillä; Postivahti hälyttää 50 %:ssa. Muilla tileillä raja on edelleen 99 %. Linjaus Raamatun VIIKKOKIINTIÖ-kohdassa.
+
+## UI-POHJAT: AARRETEHTÄVÄN ARVIOKORTIN SÄÄDINRIVI PERGAMENTILLA (12.10.2026 klo 10.33)
+
+Päätoimittaja 12.10.2026 klo 05.3x (UI-POHJAT, omistajan tarkennus 9.10. vastaava tilanne): aarretehtävien arviokortti VISA-nostossa käyttää säädinriviä (mk-saadinrivi); nimen ja arvon paperimuunnos laajennetaan olemassa olevasta päävalikon pergamenttisäännöstä (.mk-paavalikko--pergamentti → var(--map-ink-85)) valitsimeen .mk-nosto-visa .mk-saadinrivi__nimi/__arvo; ei uutta tyyliä (NUI:n kysymys, PT hyväksyi; omistajalle kerrottu jälkikäteen aamun yhteenvedossa 12.10. klo 09.5x).
