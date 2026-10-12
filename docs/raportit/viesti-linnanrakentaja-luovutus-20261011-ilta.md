@@ -127,3 +127,19 @@ SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb 
   SK:n aineisto _tyo/sisaltokirjuri/vertailu/linnan-keittio-1499/, äänimaisema olavinlinna-keittio-aanimaisema-vienti-20261012.
   Koehuoneen leivonta pid 46922 TAUOTETTU (kill -STOP) Julkaisijan hiljaisen ikkunan ajaksi → jatka kill -CONT 46922.
 - Jonossa: LS1:n museopilotin mallinnusapu (holvikatto, Cuypersin listat) linnatöiden jälkeen; MH-kevennys (sivuhahmojen tekstuurit 512).
+
+## JATKO 12.10. ~10.5x
+- SÄÄNTÖ (omistaja 12.10., Raamattu ASEMATAULU: VAATII TOIMIA, PR #4489): omistajan toimia vaativa kysymys/pyyntö heti Asemataululle:
+  ArtifactData set url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix, kokoelma "talo", doc_id "toimi-linnanrakentaja",
+  data {rooli: "Linnanrakentaja", kysymys: "<yksi rivi>", ts: <ms>}; ei onnistu → Postivahdille "VAATII TOIMIA: Linnanrakentaja: …";
+  hoidettu → get + delete if_version.
+- VIETY: v48l (MH v3), v48m (isoille esineille törmäys, tyokalut-lr/esine_tormays.py: 1499 5b6233733a9496db / NYKY 9bb1bf514e5bd5f4),
+  v48o = v48m + keittiön tulisijan ja padan törmäys (esine_tormays.py VAIN_LISA=1 LISA="osa:x0,x1,z0,z1,y0,y1:nimi"):
+  1499 3e5e938d7957d540 / NYKY 33468a6d087b503f. Siirtoseppä: LT:n uusinta. Sali 72 = botin nopeus (Siirtoseppä korjaa).
+- v48n (MH-kevennys, EI viety): tyokalut-lr/mh_kevenna.py (vain natiivin 32 ARKit-muotoa, harvat muodot, varakuvat 256 px):
+  glb 101 → 44 Mt, lähikuvat pikselilleen samat. Tulokset _valmiit/olavinlinna-kavely-v1/v48n-tyo/, vienti scratchpad vie_v48n.zsh.
+  → yhdistetään asujen kanssa v48p:hen (PT).
+- KESKEN: OMISTAJAN PALAUTE 09.38 (apulaisen asu outo, kaikki vaatteet liian tiukkoja): agentti tekee 1500-luvun väljät asut
+  (linna-hahmot/vaatteet-v1/; pilotti apulainen + soutaja → pilotti-arkki.jpg, sitten kaikki 11 → kaikki-arkki.jpg PT:lle ennen
+  vientiä). Sen jälkeen mh_kevenna.py uusille glb:ille ja v48p (asut + kevennys). Tavoite juna 183.
+- Keittiön koehuone v2 valmis ja LS2:lla (947d84827); päiväleivonta KESKEYTETTY (jatkokomennot koehuoneen LUEMINUT.md:n lopussa).
