@@ -1,0 +1,405 @@
+{
+  "taskNumber": 80,
+  "task": "saapumisintro-pilotti-20261012",
+  "city": "athens",
+  "date": "2026-10-12",
+  "requestedImages": 5,
+  "deliveredImages": 4,
+  "generationLimit": 5,
+  "generationCalls": 5,
+  "generationRequestsIssued": 5,
+  "issuedIds": [
+    "athens-4-plaka",
+    "athens-5-filopappou",
+    "athens-6-kreikkalainen-kahvi",
+    "athens-7-akropolis-soir",
+    "athens-8-akropolis-1873"
+  ],
+  "oneCallPerId": true,
+  "variantsOrRetries": 0,
+  "builtInOnly": true,
+  "nasOnlyProduction": true,
+  "assets": [
+    {
+      "id": "athens-4-plaka",
+      "file": "athens-4-plaka.png",
+      "r2Key": "julisteet/saapumisintro/athens/20261012/athens-4-plaka.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-4-plaka.png?t=83a79de3a6f2f8ff",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-4-plaka.png",
+      "sha256": "83a79de3a6f2f8ffdba7524e8eb726e4f601aa7b80520f5935e28f9ab1a8fa85",
+      "bytes": 2979085,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "canonicalHttp": 200,
+      "canonicalByteExactReadback": true,
+      "canonicalCors": "https://matkakirja.app",
+      "canonicalSha256": "83a79de3a6f2f8ffdba7524e8eb726e4f601aa7b80520f5935e28f9ab1a8fa85",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "colorSpace": "sRGB",
+      "mode": "RGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: arrival illustration for Athens, modern day. Create one completely new image, landscape 3:2, 1536 × 1024 pixels.\nPrimary request: a quiet narrow Plaka café and taverna alley in Athens, photographed along the alley at ordinary eye level. Simple outdoor wooden tables and woven café chairs line its edges. White and pale ochre old plaster walls, a naturally growing magenta bougainvillea vine on a white wall. A modest distant glimpse of the limestone Acropolis cliff terminates the alley; it is a small background glimpse, not a giant monument looming over the street. A few small distant adults sit or walk with their backs to the camera; all faces fully hidden and unrecognizable.\nStyle: believable unposed natural camera photograph, 40mm lens, soft late-afternoon daylight, restrained Greek daylight colors, normal contrast and slight atmospheric softness. Real irregular plaster, worn paving, varied foliage. Texture must look organic at native resolution, with no repetitive micro-patterns, excessive edge clarity or hyper-detailed foliage.\nConstraints: present day, traditional ordinary anonymous architecture and café furniture; no distinctive recent architecture or protected artworks. No lettering anywhere: no restaurant signs, labels, menus, price cards, graffiti, logos, watermarks, border or frame. No front-facing people, visible faces, banners or modern brands. No HDR, cinematic glow, oversaturation, painting, CGI, synthetic sharpness or dramatic lighting. Opaque image.",
+      "generationTool": "built-in image_gen",
+      "generationCallsForId": 1,
+      "caption": "Plakan kapealla kujalla kahvilapöydät ja bougainvillea reunustavat näkymää kohti Akropoliin kalliota. Havainnekuva.",
+      "references": [
+        {
+          "title": "Plaka Neighbourhood Guide",
+          "url": "https://www.thisisathens.org/neighbourhoods/plaka-guide",
+          "publisher": "Official Athens Guide",
+          "role": "Factual neighborhood context; no source photo supplied to generation",
+          "accessedDate": "2026-10-12"
+        }
+      ],
+      "rawSHA256": "fda0a5a35fb71e9f44dbc9a19af45a6ad8acda1084aa2fdc9d165e5f47f0cc84",
+      "QAObservations": [
+        "Plausible eye-level Plaka alley; café tables and bougainvillea present; distant Acropolis cliff view.",
+        "All people seen from behind, no identifiable face.",
+        "Organic varied foliage and irregular stone/plaster; no repetitive synthetic micro-pattern observed in native crops.",
+        "No visible lettering, menus, signs, logos, artwork or watermark."
+      ],
+      "technicalQA": {
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "icc": "sRGB",
+        "metadataVerified": true
+      },
+      "rootVisuallyReviewed": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "athens-5-filopappou",
+      "file": "athens-5-filopappou.png",
+      "r2Key": "julisteet/saapumisintro/athens/20261012/athens-5-filopappou.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-5-filopappou.png?t=1c9015f47b887814",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-5-filopappou.png",
+      "sha256": "1c9015f47b887814e4dba5e622fd7c000ffd62eeadbd6ae0176eb4f4e22b8f75",
+      "bytes": 3127406,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "canonicalHttp": 200,
+      "canonicalByteExactReadback": true,
+      "canonicalCors": "https://matkakirja.app",
+      "canonicalSha256": "1c9015f47b887814e4dba5e622fd7c000ffd62eeadbd6ae0176eb4f4e22b8f75",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "colorSpace": "sRGB",
+      "mode": "RGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: modern Athens arrival illustration. One completely new landscape image, 1536 × 1024 pixels, 3:2.\nPrimary request: a believable camera photograph from a natural rocky slope of Philopappou Hill in Athens, southwest of the Acropolis, looking northeast toward the entire Acropolis. Two naturally irregular olive trees and dry Mediterranean shrubs frame the near foreground; an informal worn earth trail threads through rough limestone and grasses, not a designed mosaic or patterned pavement. The long south side of the Acropolis rock runs across the middle distance, the Propylaea at the western left end and the Parthenon above the right-center. Mount Lycabettus is a distant modest hill toward the right background. A restrained glimpse of present-day anonymous ordinary white low-rise city blocks lies farther below and beyond, softened by distance.\nComposition: human eye level from the slope, ordinary 45mm lens, wide landscape framing. Olive foliage and rocky slope fill the lower third; monuments remain realistically distant rather than towering unnaturally. Late-afternoon sunset sunlight softly warms ancient marble and limestone, olive greens muted, natural dusty soil and pale blue hazy sky.\nTexture: credible varied olive bark, non-repeating leaves and irregular stone; normal camera softness at native resolution. Avoid hyper-detail, HDR, crunchy clarity, dramatic grading, overly golden glow, CGI and painterliness.\nConstraints: modern day, ancient monuments in their current ruined form, no scaffolding, no text, logos, signs, graffiti, identifiable faces, people, electric show or recent landmark buildings. Do not reproduce Dimitris Pikionis's designed paths or any identifiable protected landscape design. Opaque RGB image.",
+      "generationTool": "built-in image_gen",
+      "generationCallsForId": 1,
+      "caption": "Oliivipuita ja kallioinen polku Filopappou-kukkulalla, taustalla Akropolis auringonlaskun valossa. Havainnekuva.",
+      "references": [
+        {
+          "title": "Philopappou Monument",
+          "url": "https://www.thisisathens.org/attractions/philopappou-monument",
+          "publisher": "Official Athens Guide",
+          "role": "Factual viewpoint location; no protected designed paving reproduced",
+          "accessedDate": "2026-10-12"
+        },
+        {
+          "title": "View of the Acropolis from the Musaeum Hill",
+          "url": "https://www.getty.edu/art/collection/object/106RZN",
+          "publisher": "J. Paul Getty Museum",
+          "creator": "William J. Stillman (1828–1901)",
+          "date": "1870",
+          "license": "CC0 1.0",
+          "role": "Inspected primary historical photo: southwest viewing direction and Frankish Tower position",
+          "accessedDate": "2026-10-12",
+          "archiveIdentifier": "84.XO.766.4.2"
+        }
+      ],
+      "rawSHA256": "54e8526cd5cb4d733a6e9760fce96b7d5d209f7cf43c3f4b5767cea9d78f0205",
+      "QAObservations": [
+        "Plausible southwest Philopappou view toward northeast; west Propylaea left, Parthenon right-center and distant Lycabettus right.",
+        "Informal earth path, natural limestone and irregular olive vegetation; designed Pikionis paving not reproduced.",
+        "White anonymous modern city buildings below and beyond; no signs, faces or scaffolding.",
+        "Native crop textures vary organically; no repeating synthetic material pattern observed."
+      ],
+      "technicalQA": {
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "icc": "sRGB",
+        "metadataVerified": true
+      },
+      "rootVisuallyReviewed": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "athens-6-kreikkalainen-kahvi",
+      "file": "athens-6-kreikkalainen-kahvi.png",
+      "r2Key": "julisteet/saapumisintro/athens/20261012/athens-6-kreikkalainen-kahvi.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-6-kreikkalainen-kahvi.png?t=7dd54a93129c9922",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-6-kreikkalainen-kahvi.png",
+      "sha256": "7dd54a93129c9922a94c5abf0cbab09d8171c975084c9f6033f045a59db5b15c",
+      "bytes": 2165973,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "canonicalHttp": 200,
+      "canonicalByteExactReadback": true,
+      "canonicalCors": "https://matkakirja.app",
+      "canonicalSha256": "7dd54a93129c9922a94c5abf0cbab09d8171c975084c9f6033f045a59db5b15c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "colorSpace": "sRGB",
+      "mode": "RGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: modern Athens local detail arrival illustration. Generate one completely new opaque image, landscape 3:2, 1536 × 1024 pixels.\nPrimary request: a small plain white demitasse cup holding traditional Greek coffee with a modest thin foam, on a matching plain saucer, beside a simple functional copper briki coffee pot, a clear unbranded water glass and three small pieces of rose loukoum dusted lightly with powdered sugar on a plain small plate. No people. The briki is a small traditional single-serving tapered open-topped pot with a long slender practical handle and a tiny pouring lip, showing modest handmade wear; not an ornate vase. A quiet café still life on an ordinary pale off-white marble slab table.\nComposition: close photograph from diagonally above, approximately 45 degree angle, ordinary 55mm lens, cup and briki together, room around the objects. Soft natural daylight from a nearby window; restrained copper warmth, realistic glass reflections, coffee dark brown, loukoum pale pink. Background softly out of focus.\nMaterials: subtle irregular marble veins, naturally tarnished plain copper, slight wear on ceramic and table, believable translucent sweets. Comfortable camera detail without repetitive artificial microtexture or sharpened glare.\nConstraints: current day, anonymous traditional objects; no identifiable branded or designer objects, no lettering on cup, pot, glass, plate, table or background, no labels, logos, menus, café name, watermarks, border or frame. No hands, no faces. No HDR, excessive saturation, cinematic glow, exaggerated steam, CGI, illustration, overly polished food advertisement or unnatural hyper-detail.",
+      "generationTool": "built-in image_gen",
+      "generationCallsForId": 1,
+      "caption": "Kreikkalainen kahvi, kuparinen briki, vesilasi ja loukoumia kahvilapöydällä. Havainnekuva.",
+      "references": [
+        {
+          "title": "The Lowdown on Athens Coffee Culture",
+          "url": "https://www.thisisathens.org/cafes-bakeries/athenian-coffee-shop-culture",
+          "publisher": "Official Athens Guide",
+          "role": "Traditional Greek coffee and copper briki factual reference",
+          "accessedDate": "2026-10-12"
+        }
+      ],
+      "rawSHA256": "2ba84b3c84b011af7be47fa8ac29cd4fcaf5d42f225472ca6785c6b6509b2e80",
+      "QAObservations": [
+        "Copper briki with functional long handle, small coffee cup, water glass and three loukoum pieces present.",
+        "Plausible café table close-up with soft daylight and ordinary objects.",
+        "Native metal tarnish, foam, powdered sugar and marble veining show irregular natural detail without repeating microtexture.",
+        "No people, text, brands, logos, frame or watermark."
+      ],
+      "technicalQA": {
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "icc": "sRGB",
+        "metadataVerified": true
+      },
+      "rootVisuallyReviewed": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "athens-8-akropolis-1873",
+      "file": "athens-8-akropolis-1873.png",
+      "r2Key": "julisteet/saapumisintro/athens/20261012/athens-8-akropolis-1873.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-8-akropolis-1873.png?t=6362004fa8ad7fa5",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012/athens-8-akropolis-1873.png",
+      "sha256": "6362004fa8ad7fa5dab636f7c14327814fe44be61a3d69ecca4919a59a6bb55b",
+      "bytes": 3155607,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "canonicalHttp": 200,
+      "canonicalByteExactReadback": true,
+      "canonicalCors": "https://matkakirja.app",
+      "canonicalSha256": "6362004fa8ad7fa5dab636f7c14327814fe44be61a3d69ecca4919a59a6bb55b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "colorSpace": "sRGB",
+      "mode": "RGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationPrompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: Athens arrival illustration, same direction and viewpoint as the contemporary Philopappou landscape, but year 1873. Create ONE completely new landscape image from scratch, 1536 × 1024 pixels, opaque 3:2. Do not edit or retain source-image pixels.\nInput images: Reference 1 is the generated modern Philopappou view; use only its camera position, northeast viewing direction from southwest of the Acropolis, landscape framing and approximate scale. References 2 and 3 are public-domain historical museum photographs, the 1870 William J. Stillman Musaeum Hill view and the ca.1860–1865 Dimitrios Constantin south-west view reproduced in a Getty book page. Use them only for factual 19th-century Acropolis geometry and period ruin condition. Do not copy their photographic composition, sepia tone, borders, book labels or paper.\nScene: a dry rocky slope on Philopappou Hill in 1873, with a naturally worn dirt route, one irregular sparse olive tree at the left and a few low wild shrubs and dry grasses. Far less vegetation than a modern landscaped park, no modern planted grove or designed pavement. The Acropolis dominates the middle distance as in reference 1. The Propylaea western entrance is screen-left, Parthenon is right of center, distant Lycabettus at far right. Only a small old Athens with scattered one- or two-storey plaster houses and red tile roofs appears below and beyond; the open south slopes remain mostly bare.\nCritical historical geometry: the tall plain rectangular medieval Frankish Tower MUST stand attached to the southwest/southern wing of the Propylaea at the western left end of the Acropolis, far LEFT of the Parthenon, in exactly the tower location demonstrated by historical references. It has plain irregular masonry, a simple nearly flat top, no ornate battlements, no domed or pointed roof. The small Temple of Athena Nike is present on its southwest bastion immediately beside/in front of that western gateway cluster, in its 1835–1836 first rebuilt form. Show the Parthenon roofless and damaged as in the historical reference: preserved west columns, a visibly incomplete long south colonnade with substantial missing middle sections, uneven broken entablature, no later marble infills or reconstructed columns. Keep old fortification masonry and period rubble on slopes where appropriate. No falsely intact Classical reconstruction.\nLight/style: quiet natural late-afternoon sunset daylight, modest warmth and soft haze matching reference 1's time of day; documentary camera photograph, realistic color rather than sepia, ordinary 45mm lens, muted olive greens and dusty limestone. Organic bark, leaves and rocks with natural camera softness; no synthetic repetitive micro-pattern or hyper-detail.\nYear 1873 exclusions: NO Zappeion, modern white apartment blocks, Acropolis Museum, cars, asphalt, electricity poles, wires, electric lamps, floodlights, antennas, solar panels, cranes, scaffolding, modern rails, concrete paths, modern restorations, modern clothing or modern street objects. No people are necessary. No text, signs, logos, watermarks, picture border, frame, artwork replicas or faces. No HDR, CGI, painting, cinematic oversaturation or dramatic lighting.",
+      "generationTool": "built-in image_gen",
+      "generationCallsForId": 1,
+      "caption": "Akropolis Filopappou-kukkulalta vuonna 1873, kun Frankkien torni vielä seisoi Propylaian vieressä. Havainnekuva.",
+      "references": [
+        {
+          "title": "View of the Acropolis from the Musaeum Hill",
+          "url": "https://www.getty.edu/art/collection/object/106RZN",
+          "publisher": "J. Paul Getty Museum",
+          "creator": "William J. Stillman (1828–1901)",
+          "date": "1870",
+          "license": "CC0 1.0",
+          "role": "Inspected primary historical photo: southwest viewing direction and Frankish Tower position",
+          "accessedDate": "2026-10-12",
+          "archiveIdentifier": "84.XO.766.4.2"
+        },
+        {
+          "title": "Antiquity & Photography: Early Views of Ancient Mediterranean Sites",
+          "url": "https://d2aohiyo3d3idm.cloudfront.net/publications/virtuallibrary/0892368055.pdf",
+          "publisher": "J. Paul Getty Museum",
+          "role": "PDF page 139, figure 10: Dimitrios Constantin ca.1860–1865 southwest Acropolis photograph; period ruins and tower geometry inspected",
+          "accessedDate": "2026-10-12"
+        },
+        {
+          "title": "Athena Nike Temple. East frieze. Corner block a",
+          "url": "https://www.theacropolismuseum.gr/en/athena-nike-temple-east-frieze-corner-block",
+          "publisher": "Acropolis Museum",
+          "role": "1835–1836 first reconstruction chronology only; no museum artifact replica",
+          "accessedDate": "2026-10-12"
+        },
+        {
+          "title": "Temple of Athena Nike",
+          "url": "https://www.ysma.gr/en/monuments/temple-of-athena-nike/",
+          "publisher": "Acropolis Restoration Service",
+          "role": "Southwest bastion position and separation of early and later restorations",
+          "accessedDate": "2026-10-12"
+        },
+        {
+          "title": "Church of Agios Georgios Lycabettus",
+          "url": "https://www.thisisathens.org/attractions/agios-georgios-lycabettus-church",
+          "publisher": "Official Athens Guide",
+          "role": "Old chapel chronology and exclusion of 1902 bell tower",
+          "accessedDate": "2026-10-12"
+        }
+      ],
+      "rawSHA256": "93a64e1923f41c6f3101b2f940b06460f0a6d9bbe19be2b1d8ca54468dda0a4a",
+      "QAObservations": [
+        "Same southwest Philopappou viewpoint and general framing as #5; sparse dry 1873 slope replaces modern landscaped vegetation.",
+        "Frankish Tower stands on west-left side at Propylaea cluster, left of Parthenon, matching inspected Getty 1870 photograph; Nike temple is present in western bastion group.",
+        "Roofless Parthenon has large missing middle sections of south colonnade and broken entablature, unlike restored current row.",
+        "Small low-rise plaster and red-tile-roof houses, unpaved ways and open bare slopes; no Zappeion, modern apartments, museum, vehicles, lights or scaffolding observed.",
+        "Lycabettus distant chapel silhouette has no resolved tall 1902 belfry; old chapel is permitted by official historical source.",
+        "Natural varied bark, grasses and limestone in native crops; no synthetic repeating material pattern observed.",
+        "Historical image is an illustration guided by archives; exact archaeological reconstruction and content acceptance remain unverified."
+      ],
+      "technicalQA": {
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "icc": "sRGB",
+        "metadataVerified": true
+      },
+      "historicalQA": {
+        "period": 1873,
+        "primaryHistoricalView": "Getty William J. Stillman, View of the Acropolis from the Musaeum Hill, 1870; Getty 106RZN, CC0",
+        "towerPositionVerified": true,
+        "nikePresent": true,
+        "modernRestorationsAbsentObserved": true,
+        "excludedAnachronismsAbsentObserved": true
+      },
+      "rootVisuallyReviewed": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "athens-7-akropolis-soir",
+      "generationIssued": true,
+      "reason": "Requested Areopagus viewpoint was not verified: comparison with the British School at Athens archival Areopagus view shows a dominant near western Propylaea entrance, Nike temple to its screen-right, and a north-wall ridge extending left. The generated candidate instead resembles the broad south-cliff/southern-slope composition from Philopappou, with the entrance cluster far left and large unobscured Parthenon upper-right. No retry was permitted; omitted before R2 upload.",
+      "r2Uploaded": false,
+      "references": [
+        {
+          "title": "Athens Acropolis: View from the Areopagus",
+          "url": "https://digital.bsa.ac.uk/results.php?irn=142178",
+          "publisher": "British School at Athens",
+          "archiveIdentifier": "BSA SPHS/1/0281.1507",
+          "date": "before 1897",
+          "creator": "Walter Leaf, donor/creator as cataloged",
+          "role": "Inspected actual Areopagus viewpoint for omission QA only; not supplied to generation",
+          "accessedDate": "2026-10-12"
+        }
+      ],
+      "canonicalHttpAfterOmission": 404,
+      "cacheBustedHttpAfterOmission": 404
+    }
+  ],
+  "sourceVersions": {
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-pilotti-20261012.md",
+    "sourceCommit": "06bfbb9df7fd1801cd80349df67a552b3e3e11be",
+    "sourceBlob": "60fa5a010975f3954aff11073da44aa9a5f93d15",
+    "sourceSHA256": "2b1f770c31ca57a09192303f03a0e9c12199b5aa1f8d38a1af7a19b855557537",
+    "sourceReadInFull": true
+  },
+  "allReadbacksByteExact": true,
+  "cacheBustedAndCanonicalReadbacksVerified": true,
+  "editorAcceptance": false,
+  "contentAcceptance": false,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "mailboxHandoffPerformed": false,
+  "gitCommitPerformed": false,
+  "state": "athens-complete-four-delivered-one-omitted-pending-root-owner-review",
+  "updatedAt": "2026-10-12T09:53:22.025289+00:00",
+  "intendedMailboxManifest": "posti/kuvatoimitus-saapumisintro-athens-20261012.json",
+  "intendedMailboxReport": "posti/codex-fable-saapumisintro-athens-20261012.md",
+  "imageCount": 4,
+  "rootVisuallyReviewed": true,
+  "productionComplete": true,
+  "allReturnedImagesProcessed": true,
+  "contentAcceptanceVerified": false
+}
