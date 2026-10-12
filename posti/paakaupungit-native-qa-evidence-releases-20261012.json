@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-12T21:35:12.747820+00:00",
+  "updatedAt": "2026-10-12T22:25:52.764188+00:00",
   "sourceSnapshot": "batch-0016",
   "sourceSnapshotRoleBindings": 829,
-  "releaseCount": 3,
+  "releaseCount": 6,
   "assets": [
     {
       "era": "e04",
@@ -228,9 +228,58 @@
       "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
       "sourceBranch": "paakaupungit-e04-codex",
       "nativeQAHashResolved": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
-      "nativeQAHashSource": "qaEvidence.item.evidence.originalSHA256",
+      "nativeQAHashSource": "evidence.originalSHA256",
       "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
       "existingOriginalQAReused": true,
+      "currentPrimaryQA": {
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg",
+        "verdict": "accepted",
+        "reason": "Koko alkuperäinen 3456×2304-kuva katsottu. Ihmiset ovat pieniä ja kasvojen hienopiirteet pikselöityneitä/epätarkkoja; ei tunnistettavaa lähikasvoa. Aito medinan yleisnäkymä ja vanha muuri, credit/lisenssi vastaavat alkuperäislähdettä.",
+        "evidence": {
+          "visualViewed": true,
+          "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-02.jpg",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Late-Afternoon_View_over_Medina_(Old_City)_-_From_Hotel_Majestic_-_Rabat_-_Morocco.jpg",
+          "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-02.html",
+          "sourceHTMLSHA256": "3720e5817e3322944f338cb409592c23cb7c69e435074e8797c614d3d3d18833",
+          "author": "Adam Jones, Ph.D.",
+          "license": "CC BY-SA 3.0",
+          "licenseUrls": [
+            "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "https://creativecommons.org/licenses/by-sa/4.0/",
+            "https://creativecommons.org/publicdomain/zero/1.0/"
+          ],
+          "width": 3456,
+          "height": 2304,
+          "ratio": 1.5,
+          "date": [
+            "6 June 2010, 10:37:22"
+          ],
+          "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+          "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+          "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+          "originalSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436"
+        },
+        "auditTrail": [
+          {
+            "at": "2026-10-12T18:02:06.762511+00:00",
+            "previousVerdict": "blocked",
+            "previousReason": "Kansikuva nähty myös koko alkuperäisessä 3456×2304-kuvassa. Katutason väkijoukossa on kameran suuntaan katsovia henkilöitä; kasvojen luettavuus tarvitsee vielä päätöksen alkuperäisistä pikseleistä ennen hyväksyntää.",
+            "changeReason": "Alkuperäiset pikselit katsottu turvallisessa checkpointissa"
+          }
+        ],
+        "sha256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+        "nativeSHAResolution": {
+          "sourceField": "evidence.originalSHA256",
+          "sourceOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+          "sourceItemSHA256": null,
+          "existingOriginalQAReused": true
+        }
+      },
+      "currentPrimaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "currentPrimaryQAFileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
       "deliveryR2Reads": [
         {
           "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
@@ -251,7 +300,1429 @@
           "byteExact": true
         }
       ],
-      "previousHoldCause": "sha256 field absent; originalSHA256 and originalViewedPath were already recorded"
+      "previousHoldCause": "Exact original QA proof was recorded under a different field or completed after the immutable snapshot."
+    },
+    {
+      "era": "e11",
+      "city": "washington",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e11-washington-c3-722e6c73b8e95cda",
+      "galleryImageID": "capital-cc-e11-washington-c3-722e6c73b8e95cda",
+      "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
+        "suora": true,
+        "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "lyhyt": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "lyhyt": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
+        "suora": true,
+        "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "lyhyt": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+      "exportSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e11/washington/6c48bbd93d5bcefb0adb5985b9c1998066baf91101d9b5b2bfcf3da454fa082f.jpg",
+      "dimensions": [
+        4377,
+        3283
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+      "sourceContentSHA256": "f2601a0a9f9f515ca8abae74392bc2caad1cd800011c179dcef4a58e64966256",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
+        "semanticContextSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
+        "subjectTitle": "Washington",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Sdkb",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+            "workLayer": "Aito C&O-kanavan Georgetown-osuuden kaupunkinäkymä; luonnollinen kasvillisuus/vesi ja käytännöllinen kanavaväylä. Ympäröivä kaduilta näkyvä rakennettu ympäristö §120(a). Ei nimettyä modernia suojattua muistomerkkiä tai taideteosta kuvan pääkohteena. Paikka Commonsin nimeämänä ja verrattu kaupungin kanavalähteeseen.",
+            "sources": [
+              "https://www.law.cornell.edu/uscode/text/17/120",
+              "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+              "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+              "https://en.wikipedia.org/wiki/Henry_Bacon",
+              "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+              "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+              "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+              "https://en.wikipedia.org/wiki/Caspar_Buberl",
+              "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+              "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+            ],
+            "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+            "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C3",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+              "type": "commons",
+              "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+              "author": "Sdkb",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 4377,
+              "height": 3283,
+              "captionFi": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+              "captureDate": "6 May 2019, 18:08:44",
+              "rightsEvidence": {
+                "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+                "workLayer": "Aito C&O-kanavan Georgetown-osuuden kaupunkinäkymä; luonnollinen kasvillisuus/vesi ja käytännöllinen kanavaväylä. Ympäröivä kaduilta näkyvä rakennettu ympäristö §120(a). Ei nimettyä modernia suojattua muistomerkkiä tai taideteosta kuvan pääkohteena. Paikka Commonsin nimeämänä ja verrattu kaupungin kanavalähteeseen.",
+                "sources": [
+                  "https://www.law.cornell.edu/uscode/text/17/120",
+                  "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                  "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                  "https://en.wikipedia.org/wiki/Henry_Bacon",
+                  "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                  "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                  "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                  "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                  "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                  "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+                ],
+                "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+                "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-preview.jpg",
+              "reviewState": "candidate"
+            },
+            "candidateFingerprintSHA256": "673a14d328da98358903fdc302e1ea779aac6534749496ac208d2a1e57b7b0e1",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+            "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 4377×3283: kanava, tavalliset kivirakenteet, kasvillisuus ja ympäröivät rakennukset. Etäinen kulkija selin, ei tunnistettavia kasvoja, lisättyä tekstiä tai vesileimaa.",
+            "reviewedAt": "2026-10-12T18:22:06.102497+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-preview.jpg",
+            "pixelSHA256": "051540ec598040fdcbf996821de306124e574aee09a58ceca1b700696decb258",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/59f16728f14d50ec6d746bc867737a7b62d0d4a5400b070acc68d7c2d601a33e.html",
+            "sourceMetadata": {
+              "author": [
+                "Sdkb"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                4377,
+                3283
+              ],
+              "sourceSHA256": "6a1fa0a2a80eb2240e288206ed163cb7d782c6f7d262a317bc3466b786c9277a"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":500,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M79271581\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.903303,\"lon\":-77.065261},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"89be5687-cdec-4000-9488-137864db5a54\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:C\\u0026O_Canal_in_Georgetown_in_Spring_2019.jpg\",\"wgTitle\":\"C\\u0026O Canal in Georgetown in Spring 2019.jpg\",\"wgCurRevisionId\":840612343,\"wgRevisionId\":840612343,\"wgArticleId\":79271581,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Images taken by Sdkb\",\"Chesapeake \\u0026 Ohio Canal National Historical Park\",\"2019 in Washington, D.C.\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:C\\u0026O_Canal_in_Georgetown_in_Spring_2019.jpg\",\"wgRelevantArticleId\":79271581",
+            "sourceAuthorExcerpt": "Author Sdkb Camera location 38° 54′ 11.89″ N, 77° 03′ 54.94″ W View this and other nearby images on: OpenStreetMap 38.903303; -77.065261 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/t",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : C&O Canal in Georgetown in Spring 2019.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,377 × 3,283 pixels, file size: 5.01 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English The Chesapeake and Ohio Canal in the Georgetown neighborhood of Washington, D.C. USA Summary [ edit ] Description C&O Canal in Georgetown in Spring 2019.jpg English: The Chesapeake and Ohio Canal",
+            "sourceCameralocationExcerpt": "Camera location 38° 54′ 11.89″ N, 77° 03′ 54.94″ W View this and other nearby images on: OpenStreetMap 38.903303; -77.065261 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view ",
+            "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/C3-original.jpg",
+            "originalPixelSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+            "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+            "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art"
+          },
+          "qaReason": "Sdkb:n CC BY-SA 4.0 -valokuva on todellinen Georgetownin laaja kanava- ja korttelinäkymä. Kaupunkiympäristön arkkitehtuurikuvaan soveltuva §120(a) luettu; ei moderni taideteos pääaiheena."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+        "fileSHA256": "a3d8cda3366cb1e85f0516c493cdeb9e8f4001105cef66003e4d289b8c0d6ae0",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+          "verdict": "accepted",
+          "reason": "Sdkb:n CC BY-SA 4.0 -valokuva on todellinen Georgetownin laaja kanava- ja korttelinäkymä. Kaupunkiympäristön arkkitehtuurikuvaan soveltuva §120(a) luettu; ei moderni taideteos pääaiheena.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C3",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+              "type": "commons",
+              "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+              "author": "Sdkb",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 4377,
+              "height": 3283,
+              "captionFi": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+              "captureDate": "6 May 2019, 18:08:44",
+              "rightsEvidence": {
+                "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+                "workLayer": "Aito C&O-kanavan Georgetown-osuuden kaupunkinäkymä; luonnollinen kasvillisuus/vesi ja käytännöllinen kanavaväylä. Ympäröivä kaduilta näkyvä rakennettu ympäristö §120(a). Ei nimettyä modernia suojattua muistomerkkiä tai taideteosta kuvan pääkohteena. Paikka Commonsin nimeämänä ja verrattu kaupungin kanavalähteeseen.",
+                "sources": [
+                  "https://www.law.cornell.edu/uscode/text/17/120",
+                  "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                  "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                  "https://en.wikipedia.org/wiki/Henry_Bacon",
+                  "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                  "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                  "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                  "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                  "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                  "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+                ],
+                "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+                "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-preview.jpg",
+              "reviewState": "candidate"
+            },
+            "candidateFingerprintSHA256": "673a14d328da98358903fdc302e1ea779aac6534749496ac208d2a1e57b7b0e1",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+            "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 4377×3283: kanava, tavalliset kivirakenteet, kasvillisuus ja ympäröivät rakennukset. Etäinen kulkija selin, ei tunnistettavia kasvoja, lisättyä tekstiä tai vesileimaa.",
+            "reviewedAt": "2026-10-12T18:22:06.102497+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-preview.jpg",
+            "pixelSHA256": "051540ec598040fdcbf996821de306124e574aee09a58ceca1b700696decb258",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/59f16728f14d50ec6d746bc867737a7b62d0d4a5400b070acc68d7c2d601a33e.html",
+            "sourceMetadata": {
+              "author": [
+                "Sdkb"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                4377,
+                3283
+              ],
+              "sourceSHA256": "6a1fa0a2a80eb2240e288206ed163cb7d782c6f7d262a317bc3466b786c9277a"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":500,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M79271581\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.903303,\"lon\":-77.065261},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"89be5687-cdec-4000-9488-137864db5a54\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:C\\u0026O_Canal_in_Georgetown_in_Spring_2019.jpg\",\"wgTitle\":\"C\\u0026O Canal in Georgetown in Spring 2019.jpg\",\"wgCurRevisionId\":840612343,\"wgRevisionId\":840612343,\"wgArticleId\":79271581,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Images taken by Sdkb\",\"Chesapeake \\u0026 Ohio Canal National Historical Park\",\"2019 in Washington, D.C.\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:C\\u0026O_Canal_in_Georgetown_in_Spring_2019.jpg\",\"wgRelevantArticleId\":79271581",
+            "sourceAuthorExcerpt": "Author Sdkb Camera location 38° 54′ 11.89″ N, 77° 03′ 54.94″ W View this and other nearby images on: OpenStreetMap 38.903303; -77.065261 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/t",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : C&O Canal in Georgetown in Spring 2019.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,377 × 3,283 pixels, file size: 5.01 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English The Chesapeake and Ohio Canal in the Georgetown neighborhood of Washington, D.C. USA Summary [ edit ] Description C&O Canal in Georgetown in Spring 2019.jpg English: The Chesapeake and Ohio Canal",
+            "sourceCameralocationExcerpt": "Camera location 38° 54′ 11.89″ N, 77° 03′ 54.94″ W View this and other nearby images on: OpenStreetMap 38.903303; -77.065261 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view ",
+            "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/C3-original.jpg",
+            "originalPixelSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+            "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+            "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art"
+          },
+          "reviewedAt": "2026-10-12T18:22:06.136626+00:00",
+          "sha256": "051540ec598040fdcbf996821de306124e574aee09a58ceca1b700696decb258"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+            "sha256": "a3d8cda3366cb1e85f0516c493cdeb9e8f4001105cef66003e4d289b8c0d6ae0"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
+            "sha256": "f69f1506c096f5ae461b4bdc093556a2539d26059a4d4d22206372e466723aea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "washington",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+        "sha256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+        "author": "Sdkb",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4377,
+        "height": 3283,
+        "originalSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
+        "bytes": 5253752,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:29:54.667827+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg",
+        "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "lyhyt": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "lyhyt": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+        "tiedosto": "C&O Canal in Georgetown in Spring 2019.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "targetAfterSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
+      "contextAfterSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
+      "sourceCommit": "1ac854d7d3250015fe73aeb84d12526aa8d0bfb4",
+      "sourceBranch": "paakaupungit-e11-codex",
+      "nativeQAHashResolved": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+      "nativeQAHashSource": "evidence.originalPixelSHA256",
+      "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/C3-original.jpg",
+      "existingOriginalQAReused": true,
+      "currentPrimaryQA": {
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+        "verdict": "accepted",
+        "reason": "Sdkb:n CC BY-SA 4.0 -valokuva on todellinen Georgetownin laaja kanava- ja korttelinäkymä. Kaupunkiympäristön arkkitehtuurikuvaan soveltuva §120(a) luettu; ei moderni taideteos pääaiheena.",
+        "evidence": {
+          "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+          "candidateSnapshot": {
+            "slot": "C3",
+            "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+            "type": "commons",
+            "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/C%26O_Canal_in_Georgetown_in_Spring_2019.jpg",
+            "author": "Sdkb",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4377,
+            "height": 3283,
+            "captionFi": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+            "captureDate": "6 May 2019, 18:08:44",
+            "rightsEvidence": {
+              "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+              "workLayer": "Aito C&O-kanavan Georgetown-osuuden kaupunkinäkymä; luonnollinen kasvillisuus/vesi ja käytännöllinen kanavaväylä. Ympäröivä kaduilta näkyvä rakennettu ympäristö §120(a). Ei nimettyä modernia suojattua muistomerkkiä tai taideteosta kuvan pääkohteena. Paikka Commonsin nimeämänä ja verrattu kaupungin kanavalähteeseen.",
+              "sources": [
+                "https://www.law.cornell.edu/uscode/text/17/120",
+                "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                "https://en.wikipedia.org/wiki/Henry_Bacon",
+                "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+              ],
+              "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+              "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+            },
+            "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-meta.json",
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-preview.jpg",
+            "reviewState": "candidate",
+            "nasOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-original.jpg",
+            "originalSha256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+            "originalBytes": 5253752
+          },
+          "candidateFingerprintSHA256": "b2386ffd890ee54b4a8401b7ad12152fc93f3155cd652386693c8edf162e65bf",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+          "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+          "targetExists": true,
+          "currentTargetContent": {
+            "tiedosto": "",
+            "lyhyt": "",
+            "selite": "",
+            "lahde": ""
+          },
+          "visualObservation": "Alkuperäinen 4377×3283: kanava, tavalliset kivirakenteet, kasvillisuus ja ympäröivät rakennukset. Etäinen kulkija selin, ei tunnistettavia kasvoja, lisättyä tekstiä tai vesileimaa.",
+          "reviewedAt": "2026-10-12T18:22:06.102497+00:00",
+          "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-original.jpg",
+          "pixelSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+          "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/59f16728f14d50ec6d746bc867737a7b62d0d4a5400b070acc68d7c2d601a33e.html",
+          "sourceMetadata": {
+            "author": [
+              "Sdkb"
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "dimensions": [
+              4377,
+              3283
+            ],
+            "sourceSHA256": "6a1fa0a2a80eb2240e288206ed163cb7d782c6f7d262a317bc3466b786c9277a"
+          },
+          "sourceLicenseLinks": [
+            "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+            "https://creativecommons.org/publicdomain/zero/1.0/",
+            "https://creativecommons.org/licenses/by-sa/4.0/"
+          ],
+          "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":500,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M79271581\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.903303,\"lon\":-77.065261},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+          "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"89be5687-cdec-4000-9488-137864db5a54\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:C\\u0026O_Canal_in_Georgetown_in_Spring_2019.jpg\",\"wgTitle\":\"C\\u0026O Canal in Georgetown in Spring 2019.jpg\",\"wgCurRevisionId\":840612343,\"wgRevisionId\":840612343,\"wgArticleId\":79271581,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Images taken by Sdkb\",\"Chesapeake \\u0026 Ohio Canal National Historical Park\",\"2019 in Washington, D.C.\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:C\\u0026O_Canal_in_Georgetown_in_Spring_2019.jpg\",\"wgRelevantArticleId\":79271581",
+          "sourceAuthorExcerpt": "Author Sdkb Camera location 38° 54′ 11.89″ N, 77° 03′ 54.94″ W View this and other nearby images on: OpenStreetMap 38.903303; -77.065261 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/t",
+          "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : C&O Canal in Georgetown in Spring 2019.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,377 × 3,283 pixels, file size: 5.01 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English The Chesapeake and Ohio Canal in the Georgetown neighborhood of Washington, D.C. USA Summary [ edit ] Description C&O Canal in Georgetown in Spring 2019.jpg English: The Chesapeake and Ohio Canal",
+          "sourceCameralocationExcerpt": "Camera location 38° 54′ 11.89″ N, 77° 03′ 54.94″ W View this and other nearby images on: OpenStreetMap 38.903303; -77.065261 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view ",
+          "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/C3-original.jpg",
+          "originalPixelSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+          "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+          "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art",
+          "currentContentVersionCheck": {
+            "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+            "checkedAt": "2026-10-12T22:20:15.200175+00:00",
+            "personallyViewedAgain": false,
+            "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
+            "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "matches": true,
+            "method": "exact archived content SHA and full nonmedia comparison",
+            "reviewedNonmediaSHA256": "ec0924fd975f145f062772927ea6af4d164f2e8fee34b070387de3ab47ec9414",
+            "currentNonmediaSHA256": "ec0924fd975f145f062772927ea6af4d164f2e8fee34b070387de3ab47ec9414",
+            "imageFieldsExcludedOnlyAtInventoriedSlots": true
+          },
+          "currentBindingMetadataCheck": {
+            "checkedAt": "2026-10-12T22:20:15.274804+00:00",
+            "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+            "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
+            "captionFi": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
+            "credit": "Sdkb, Wikimedia Commons (CC BY-SA 4.0)",
+            "captionMatchesReviewed": true,
+            "personallyViewedAgain": false
+          },
+          "metadataRevisionReviews": [
+            {
+              "reviewedAt": "2026-10-12T21:01:46.504745+00:00",
+              "changedFields": [
+                "nasOriginalPath",
+                "originalBytes",
+                "originalSha256"
+              ],
+              "previousPixelPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-preview.jpg",
+              "previousPixelSHA256": "051540ec598040fdcbf996821de306124e574aee09a58ceca1b700696decb258",
+              "newNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-original.jpg",
+              "newNativeSHA256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+              "actualDimensions": [
+                4377,
+                3283
+              ],
+              "originalBytes": 5253752,
+              "previouslyViewedNativeSHAConfirmed": true,
+              "newVisualReviewPerformed": false,
+              "observation": "Aiemmin itse tarkistettu alkuperäinen on byte-tarkasti sama SHA-versio.",
+              "verdictChanged": false
+            }
+          ],
+          "previewPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/e5c9c04200ac-preview.jpg",
+          "previewPixelSHA256": "051540ec598040fdcbf996821de306124e574aee09a58ceca1b700696decb258",
+          "actualDimensions": [
+            4377,
+            3283
+          ],
+          "nativeIdentityCheckedAt": "2026-10-12T21:01:46.504811+00:00"
+        },
+        "reviewedAt": "2026-10-12T18:22:06.136626+00:00",
+        "sha256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc"
+      },
+      "currentPrimaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+      "currentPrimaryQAFileSHA256": "8b057a7b22bd6e17339924332a96ee9b4f543ad327f9b82e8ec0ec040e6e79e1",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg",
+          "http": 200,
+          "sha256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+          "bytes": 5253752,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/c3-722e6c73b8e95cdae963.jpg?gallery-verify=722e6c73b8e95cda-1791843252587208000",
+          "http": 200,
+          "sha256": "722e6c73b8e95cdae9634a89983d6844aa137020ad27cc6c0180de9a89689dbc",
+          "bytes": 5253752,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Exact original QA proof was recorded under a different field or completed after the immutable snapshot."
+    },
+    {
+      "era": "e11",
+      "city": "washington",
+      "slot": "TRAVELER",
+      "type": "commons",
+      "assetID": "capital-cc-e11-washington-traveler-c4f473b9acdedc90",
+      "galleryImageID": "capital-cc-e11-washington-traveler-c4f473b9acdedc90",
+      "commonsFile": "Washington Monument 2022.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
+        "suora": true,
+        "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "lyhyt": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "tiedosto": "Washington Monument 2022.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "lyhyt": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "tiedosto": "Washington Monument 2022.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
+        "suora": true,
+        "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "lyhyt": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "tiedosto": "Washington Monument 2022.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+      "exportSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e11/washington/37a0ac99722f89afbd6cae698e75e45336de7c9feed5ea5d3463679501985e47.jpg",
+      "dimensions": [
+        3024,
+        4032
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+      "sourceContentSHA256": "f2601a0a9f9f515ca8abae74392bc2caad1cd800011c179dcef4a58e64966256",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "344ecb3f40dffd7d7d9c1674b51a1303fcc65a434005de6eda90c48cfbe45dc0",
+        "semanticContextSHA256": "ffbae66c039b517fa1067f7464a28ed175655d5e60f1897f8a1becaa88a72cf1",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Greyfiveys",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Washington_Monument_2022.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Washington_Monument_2022.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+            "workLayer": "Washington-monumentin päätyö Robert Mills (NPS: kuoli 1855), toteutus Thomas Lincoln Casey (kuoli 1896). Pieni moderni julkiselta alueelta näkyvä lasinen sisäänkäynti osana rakennusta: §120(a) valokuvausoikeus, ei sen designin kopiointia AI:lla tai itsenäistä kuva-aihetta. Ei modernia erillistä veistosta. Pysty 3024/4032=0.75. Kuvattu 2022, ei vuoden 2026 hetkikuvaa tai isoisän historiallista näkymää.",
+            "sources": [
+              "https://www.law.cornell.edu/uscode/text/17/120",
+              "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+              "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+              "https://en.wikipedia.org/wiki/Henry_Bacon",
+              "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+              "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+              "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+              "https://en.wikipedia.org/wiki/Caspar_Buberl",
+              "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+              "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+            ],
+            "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+            "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "TRAVELER",
+              "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+              "type": "commons",
+              "commonsFile": "Washington Monument 2022.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Washington_Monument_2022.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Washington_Monument_2022.jpg",
+              "author": "Greyfiveys",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 3024,
+              "height": 4032,
+              "captionFi": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+              "captureDate": "5 June 2022, 10:23:56",
+              "rightsEvidence": {
+                "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+                "workLayer": "Washington-monumentin päätyö Robert Mills (NPS: kuoli 1855), toteutus Thomas Lincoln Casey (kuoli 1896). Pieni moderni julkiselta alueelta näkyvä lasinen sisäänkäynti osana rakennusta: §120(a) valokuvausoikeus, ei sen designin kopiointia AI:lla tai itsenäistä kuva-aihetta. Ei modernia erillistä veistosta. Pysty 3024/4032=0.75. Kuvattu 2022, ei vuoden 2026 hetkikuvaa tai isoisän historiallista näkymää.",
+                "sources": [
+                  "https://www.law.cornell.edu/uscode/text/17/120",
+                  "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                  "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                  "https://en.wikipedia.org/wiki/Henry_Bacon",
+                  "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                  "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                  "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                  "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                  "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                  "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+                ],
+                "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+                "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-preview.jpg",
+              "reviewState": "candidate"
+            },
+            "candidateFingerprintSHA256": "25ed6a5dc63e61cdd249230c2e51199dbbbba99a10ceb845b41c4c2434f8f258",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+            "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "targetExists": true,
+            "currentTargetContent": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "Aloita National Mallin museoista ja varaa Georgetownille oma kävelynsä. Metro auttaa siirtymissä, mutta leveiden puistojen ja katujen äärellä kaupunkia oppii myös kulkemalla jalan. Museoiden kokoelmat ovat hyvin erilaisia, joten valitse omaan kiinnostukseesi sopivat kohteet. Kasvitieteellinen puutarha tarjoaa elävän kokoelman kirjojen ja esineiden rinnalle. U Streetillä paikallinen half-smoke tuo ruokaperinteen mukaan päivään. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi.",
+              "artikkeli": {
+                "nimi": "Matkailijan Washington",
+                "taitto": "opas",
+                "teksti": "Yhdistä museopäivään kanavaranta ja tutki, miten erilaiset kaupungit mahtuvat saman pääkaupungin sisään.",
+                "nosto": "National Mall on hyvä lähtökohta museoille, Georgetown vanhan sataman ja kanavan historialle.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille ja liikkeelle",
+                    "teksti": "Kansainvälisillä lennoilla käytetään Washington Dullesin lentoasemaa, jolta Silver Line -metro jatkaa kaupunkiin. Ronald Reagan Washington National sijaitsee Potomacin vastarannalla Virginiassa ja palvelee pääosin kotimaan liikennettä. Union Station on junamatkan solmukohta. Kaupungissa metro ja kävely täydentävät toisiaan. Tarkista osoitteesta myös ilmansuuntalyhenne: NW ja SE voivat erottaa samannimiset katuosuudet toisistaan.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Museoita puiston ympärillä",
+                    "teksti": "National Mallin laidalla on Smithsonianin museoita, joissa aihe vaihtuu luonnonhistoriasta ilmailuun ja taiteeseen. Perusvierailu Smithsonianin museoihin on maksuton, mutta käyntijärjestelyt ja mahdollinen ennakkovaraus kannattaa tarkistaa valitulta museolta. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi. Kasvitieteellinen puutarha Kapitolin lähellä tarjoaa erilaisen kokoelman: siellä näyttelyesineet kasvavat.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Georgetownin toinen mittakaava",
+                    "teksti": "Georgetownissa vanhat talot, kaupat ja ravintolat muodostavat toisenlaisen ympäristön kuin National Mallin leveät näkymät. Old Stone House kertoo 1700-luvun asumisesta ja työnteosta. C&O-kanavan rantareitti puolestaan seuraa entistä vetotietä. Tutki niiden avulla kaupunkia, joka oli olemassa ennen liittovaltion pääkaupunkia. Kanava yhdistää kävelyn tavaraliikenteen historiaan ilman, että jokaisen rakennuksen tarvitsee olla suuri muistomerkki.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Washingtonin oma klassikko on half-smoke, mausteinen ja melko karkeaksi jauhettu makkara, jota tarjoillaan usein sämpylässä sipulin ja chilikastikkeen kanssa. Resepti vaihtelee tekijän mukaan, eikä nimi takaa yhtä lihasekoitusta. U Street tunnetaan Ben’s Chili Bowlista ja paikallisesta ruokahistoriasta. Shaw’n alueella on lisäksi etiopialaisia ravintoloita. Ruokakierroksella pääkaupunki saa aivan eri mittakaavan kuin museosalissa.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Milloin kannattaa tulla",
+                    "teksti": "Kevät ja syksy sopivat pitkiin kävelyihin. Kevään kirsikankukat vetävät kävijöitä Tidal Basinin ympärille, joten vilkkaus kuuluu kukinta-aikaan. Kesä voi olla kuuma ja kostea; museovierailu ja ulkokävely kannattaa lomittaa. Talvella sää on viileä ja lunta voi esiintyä. Kukintaa ei kannata sitoa matkan suunnittelussa yhteen varmaan päivään, sillä ajankohta vaihtelee.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [
+                    {
+                      "mita": "National Mallin museot",
+                      "tahdet": 3,
+                      "selite": "Kokoelmien aihe vaihtuu lyhyen kävelyn aikana luonnontieteestä kulttuuriin."
+                    },
+                    {
+                      "mita": "Georgetown ja C&O-kanava",
+                      "tahdet": 3,
+                      "selite": "Vanha satamakaupunginosa ja vetotie avaavat tavaraliikenteen historian."
+                    },
+                    {
+                      "mita": "Kasvitieteellinen puutarha",
+                      "tahdet": 2,
+                      "selite": "Konservatorion kokoelmaa katsotaan elävien kasvien kautta."
+                    },
+                    {
+                      "mita": "Thomas Jefferson -kirjastotalo",
+                      "tahdet": 3,
+                      "selite": "Kirjastorakennus kertoo tiedon säilyttämisestä ja sen näyttävästä kehyksestä."
+                    },
+                    {
+                      "mita": "U Streetin ruokapaikat",
+                      "tahdet": 2,
+                      "selite": "Half-smoke tuo kaupungin oman ruokatavan museopäivän rinnalle."
+                    }
+                  ],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Katuosoitteen loppu ratkaisee",
+                      "teksti": "Pidä NW-, NE-, SW- tai SE-lyhenne mukana osoitteessa ja karttahaussa."
+                    },
+                    {
+                      "otsikko": "Maksuttomuus ja varaus",
+                      "teksti": "Smithsonianin perusvierailut ovat maksuttomia, mutta tarkista museokohtaiset käyntijärjestelyt."
+                    },
+                    {
+                      "otsikko": "Linnan peruskorjaus",
+                      "teksti": "Smithsonianin linnan sisätiloihin ei pääse peruskorjauksen aikana."
+                    },
+                    {
+                      "otsikko": "Lentoasema voi olla osavaltion puolella",
+                      "teksti": "Dulles ja Reagan National sijaitsevat Virginiassa, eivät Washingtonin liittovaltiopiirissä."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "visualObservation": "Alkuperäinen ja 1:1 alareunan tarkastelukaista katsottu. Ihmiset pieniä, pääosin selin/sivuttain; kasvonpiirteet eivät ole yksilöitävissä. Obeliski, tavalliset liput ja puisto, ei lisättyä tekstiä/logoja.",
+            "reviewedAt": "2026-10-12T18:22:06.359564+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-preview.jpg",
+            "pixelSHA256": "bd7b69e1d86907da161d29f5010d7197fe0140ac023d9870b22ad57d4cd58831",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/a7977c1e0692fc02ee8256cdb92df9825d784554b851dc2dc2d20881433b08cb.html",
+            "sourceMetadata": {
+              "author": [
+                "Greyfiveys"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3024,
+                4032
+              ],
+              "sourceSHA256": "b8b8f0eadfac7e23798eecb98b9d74ac2aebeac801d940b08175effbd239f12b"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M119108276\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.890139,\"lon\":-77.034125},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"fd2bb8cd-6fd2-4396-9598-3a163cd4a60b\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Washington_Monument_2022.jpg\",\"wgTitle\":\"Washington Monument 2022.jpg\",\"wgCurRevisionId\":1013802499,\"wgRevisionId\":1013802499,\"wgArticleId\":119108276,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"On OSM\",\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Photographs of flags of the United States at the Washington Monument\",\"Washington Monument in 2022\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Washington_Monument_2022.jpg\",\"wgRelevantArticleId\":119108276,\"wgTempUserName\":null,\"wgIsProbablyEditable\":tru",
+            "sourceAuthorExcerpt": "Author Greyfiveys OpenStreetMap InfoField Way 766761337 Object location 38° 53′ 22.09″ N, 77° 02′ 06.9″ W View this and other nearby images on: OpenStreetMap 38.889470; -77.035250 Camera location 38° 53′ 24.5″ N, 77° 02′ 02.85″ W View this and other nearby images on: OpenStreetMap 38.890139; -77.034125 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible lic",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Washington Monument 2022.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 500 × 667 pixels . Other resolutions: 250 × 333 pixels | 960 × 1,280 pixels | 1,920 × 2,560 pixels . Original file (3,024 × 4,032 pixels, file size: 1.79 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Washington Monument in Washington DC's National Mall Parks and Memorials Persian بنای یادبود واشنگتن در محوطه ملی واشنگتن دی‌سی Summary [ edit ] Description Washington Monument 2022.jpg English: Washington Mon",
+            "sourceCameralocationExcerpt": "Camera location 38° 53′ 24.5″ N, 77° 02′ 02.85″ W View this and other nearby images on: OpenStreetMap 38.890139; -77.034125 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view t",
+            "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/TRAVELER-original.jpg",
+            "originalPixelSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+            "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+            "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art",
+            "detailInspection": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/traveler-people.png",
+            "effectiveDimensions": [
+              3024,
+              4032
+            ],
+            "workLayerEvidence": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-D-e11-washington/thomas-casey.txt"
+            ]
+          },
+          "qaReason": "Greyfiveysin CC BY-SA 4.0 -kuva, lähteen ja EXIF-käännön mukainen pysty 3024×4032, suhde 0.75. Historialliset Mills/Casey-päätyöt varmistettu; pieni julkiselta alueelta näkyvä sisäänkäyntirakenne arkkitehtuuripoikkeuksen piirissä. Kuva on vuodelta 2022."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+        "fileSHA256": "a3d8cda3366cb1e85f0516c493cdeb9e8f4001105cef66003e4d289b8c0d6ae0",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "commonsFile": "Washington Monument 2022.jpg",
+          "verdict": "accepted",
+          "reason": "Greyfiveysin CC BY-SA 4.0 -kuva, lähteen ja EXIF-käännön mukainen pysty 3024×4032, suhde 0.75. Historialliset Mills/Casey-päätyöt varmistettu; pieni julkiselta alueelta näkyvä sisäänkäyntirakenne arkkitehtuuripoikkeuksen piirissä. Kuva on vuodelta 2022.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "TRAVELER",
+              "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+              "type": "commons",
+              "commonsFile": "Washington Monument 2022.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Washington_Monument_2022.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Washington_Monument_2022.jpg",
+              "author": "Greyfiveys",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "width": 3024,
+              "height": 4032,
+              "captionFi": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+              "captureDate": "5 June 2022, 10:23:56",
+              "rightsEvidence": {
+                "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+                "workLayer": "Washington-monumentin päätyö Robert Mills (NPS: kuoli 1855), toteutus Thomas Lincoln Casey (kuoli 1896). Pieni moderni julkiselta alueelta näkyvä lasinen sisäänkäynti osana rakennusta: §120(a) valokuvausoikeus, ei sen designin kopiointia AI:lla tai itsenäistä kuva-aihetta. Ei modernia erillistä veistosta. Pysty 3024/4032=0.75. Kuvattu 2022, ei vuoden 2026 hetkikuvaa tai isoisän historiallista näkymää.",
+                "sources": [
+                  "https://www.law.cornell.edu/uscode/text/17/120",
+                  "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                  "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                  "https://en.wikipedia.org/wiki/Henry_Bacon",
+                  "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                  "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                  "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                  "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                  "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                  "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+                ],
+                "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+                "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-preview.jpg",
+              "reviewState": "candidate"
+            },
+            "candidateFingerprintSHA256": "25ed6a5dc63e61cdd249230c2e51199dbbbba99a10ceb845b41c4c2434f8f258",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+            "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "targetExists": true,
+            "currentTargetContent": {
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "kappale": "Aloita National Mallin museoista ja varaa Georgetownille oma kävelynsä. Metro auttaa siirtymissä, mutta leveiden puistojen ja katujen äärellä kaupunkia oppii myös kulkemalla jalan. Museoiden kokoelmat ovat hyvin erilaisia, joten valitse omaan kiinnostukseesi sopivat kohteet. Kasvitieteellinen puutarha tarjoaa elävän kokoelman kirjojen ja esineiden rinnalle. U Streetillä paikallinen half-smoke tuo ruokaperinteen mukaan päivään. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi.",
+              "artikkeli": {
+                "nimi": "Matkailijan Washington",
+                "taitto": "opas",
+                "teksti": "Yhdistä museopäivään kanavaranta ja tutki, miten erilaiset kaupungit mahtuvat saman pääkaupungin sisään.",
+                "nosto": "National Mall on hyvä lähtökohta museoille, Georgetown vanhan sataman ja kanavan historialle.",
+                "jaksot": [
+                  {
+                    "otsikko": "Perille ja liikkeelle",
+                    "teksti": "Kansainvälisillä lennoilla käytetään Washington Dullesin lentoasemaa, jolta Silver Line -metro jatkaa kaupunkiin. Ronald Reagan Washington National sijaitsee Potomacin vastarannalla Virginiassa ja palvelee pääosin kotimaan liikennettä. Union Station on junamatkan solmukohta. Kaupungissa metro ja kävely täydentävät toisiaan. Tarkista osoitteesta myös ilmansuuntalyhenne: NW ja SE voivat erottaa samannimiset katuosuudet toisistaan.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Museoita puiston ympärillä",
+                    "teksti": "National Mallin laidalla on Smithsonianin museoita, joissa aihe vaihtuu luonnonhistoriasta ilmailuun ja taiteeseen. Perusvierailu Smithsonianin museoihin on maksuton, mutta käyntijärjestelyt ja mahdollinen ennakkovaraus kannattaa tarkistaa valitulta museolta. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi. Kasvitieteellinen puutarha Kapitolin lähellä tarjoaa erilaisen kokoelman: siellä näyttelyesineet kasvavat.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Georgetownin toinen mittakaava",
+                    "teksti": "Georgetownissa vanhat talot, kaupat ja ravintolat muodostavat toisenlaisen ympäristön kuin National Mallin leveät näkymät. Old Stone House kertoo 1700-luvun asumisesta ja työnteosta. C&O-kanavan rantareitti puolestaan seuraa entistä vetotietä. Tutki niiden avulla kaupunkia, joka oli olemassa ennen liittovaltion pääkaupunkia. Kanava yhdistää kävelyn tavaraliikenteen historiaan ilman, että jokaisen rakennuksen tarvitsee olla suuri muistomerkki.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Washingtonin oma klassikko on half-smoke, mausteinen ja melko karkeaksi jauhettu makkara, jota tarjoillaan usein sämpylässä sipulin ja chilikastikkeen kanssa. Resepti vaihtelee tekijän mukaan, eikä nimi takaa yhtä lihasekoitusta. U Street tunnetaan Ben’s Chili Bowlista ja paikallisesta ruokahistoriasta. Shaw’n alueella on lisäksi etiopialaisia ravintoloita. Ruokakierroksella pääkaupunki saa aivan eri mittakaavan kuin museosalissa.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  {
+                    "otsikko": "Milloin kannattaa tulla",
+                    "teksti": "Kevät ja syksy sopivat pitkiin kävelyihin. Kevään kirsikankukat vetävät kävijöitä Tidal Basinin ympärille, joten vilkkaus kuuluu kukinta-aikaan. Kesä voi olla kuuma ja kostea; museovierailu ja ulkokävely kannattaa lomittaa. Talvella sää on viileä ja lunta voi esiintyä. Kukintaa ei kannata sitoa matkan suunnittelussa yhteen varmaan päivään, sillä ajankohta vaihtelee.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  }
+                ],
+                "matkailu": {
+                  "parasta": [
+                    {
+                      "mita": "National Mallin museot",
+                      "tahdet": 3,
+                      "selite": "Kokoelmien aihe vaihtuu lyhyen kävelyn aikana luonnontieteestä kulttuuriin."
+                    },
+                    {
+                      "mita": "Georgetown ja C&O-kanava",
+                      "tahdet": 3,
+                      "selite": "Vanha satamakaupunginosa ja vetotie avaavat tavaraliikenteen historian."
+                    },
+                    {
+                      "mita": "Kasvitieteellinen puutarha",
+                      "tahdet": 2,
+                      "selite": "Konservatorion kokoelmaa katsotaan elävien kasvien kautta."
+                    },
+                    {
+                      "mita": "Thomas Jefferson -kirjastotalo",
+                      "tahdet": 3,
+                      "selite": "Kirjastorakennus kertoo tiedon säilyttämisestä ja sen näyttävästä kehyksestä."
+                    },
+                    {
+                      "mita": "U Streetin ruokapaikat",
+                      "tahdet": 2,
+                      "selite": "Half-smoke tuo kaupungin oman ruokatavan museopäivän rinnalle."
+                    }
+                  ],
+                  "hyvaTietaa": [
+                    {
+                      "otsikko": "Katuosoitteen loppu ratkaisee",
+                      "teksti": "Pidä NW-, NE-, SW- tai SE-lyhenne mukana osoitteessa ja karttahaussa."
+                    },
+                    {
+                      "otsikko": "Maksuttomuus ja varaus",
+                      "teksti": "Smithsonianin perusvierailut ovat maksuttomia, mutta tarkista museokohtaiset käyntijärjestelyt."
+                    },
+                    {
+                      "otsikko": "Linnan peruskorjaus",
+                      "teksti": "Smithsonianin linnan sisätiloihin ei pääse peruskorjauksen aikana."
+                    },
+                    {
+                      "otsikko": "Lentoasema voi olla osavaltion puolella",
+                      "teksti": "Dulles ja Reagan National sijaitsevat Virginiassa, eivät Washingtonin liittovaltiopiirissä."
+                    }
+                  ]
+                },
+                "lahde": "Wikipedia"
+              }
+            },
+            "visualObservation": "Alkuperäinen ja 1:1 alareunan tarkastelukaista katsottu. Ihmiset pieniä, pääosin selin/sivuttain; kasvonpiirteet eivät ole yksilöitävissä. Obeliski, tavalliset liput ja puisto, ei lisättyä tekstiä/logoja.",
+            "reviewedAt": "2026-10-12T18:22:06.359564+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-preview.jpg",
+            "pixelSHA256": "bd7b69e1d86907da161d29f5010d7197fe0140ac023d9870b22ad57d4cd58831",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/a7977c1e0692fc02ee8256cdb92df9825d784554b851dc2dc2d20881433b08cb.html",
+            "sourceMetadata": {
+              "author": [
+                "Greyfiveys"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                3024,
+                4032
+              ],
+              "sourceSHA256": "b8b8f0eadfac7e23798eecb98b9d74ac2aebeac801d940b08175effbd239f12b"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M119108276\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.890139,\"lon\":-77.034125},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"fd2bb8cd-6fd2-4396-9598-3a163cd4a60b\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Washington_Monument_2022.jpg\",\"wgTitle\":\"Washington Monument 2022.jpg\",\"wgCurRevisionId\":1013802499,\"wgRevisionId\":1013802499,\"wgArticleId\":119108276,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"On OSM\",\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Photographs of flags of the United States at the Washington Monument\",\"Washington Monument in 2022\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Washington_Monument_2022.jpg\",\"wgRelevantArticleId\":119108276,\"wgTempUserName\":null,\"wgIsProbablyEditable\":tru",
+            "sourceAuthorExcerpt": "Author Greyfiveys OpenStreetMap InfoField Way 766761337 Object location 38° 53′ 22.09″ N, 77° 02′ 06.9″ W View this and other nearby images on: OpenStreetMap 38.889470; -77.035250 Camera location 38° 53′ 24.5″ N, 77° 02′ 02.85″ W View this and other nearby images on: OpenStreetMap 38.890139; -77.034125 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible lic",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Washington Monument 2022.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 500 × 667 pixels . Other resolutions: 250 × 333 pixels | 960 × 1,280 pixels | 1,920 × 2,560 pixels . Original file (3,024 × 4,032 pixels, file size: 1.79 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Washington Monument in Washington DC's National Mall Parks and Memorials Persian بنای یادبود واشنگتن در محوطه ملی واشنگتن دی‌سی Summary [ edit ] Description Washington Monument 2022.jpg English: Washington Mon",
+            "sourceCameralocationExcerpt": "Camera location 38° 53′ 24.5″ N, 77° 02′ 02.85″ W View this and other nearby images on: OpenStreetMap 38.890139; -77.034125 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view t",
+            "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/TRAVELER-original.jpg",
+            "originalPixelSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+            "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+            "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art",
+            "detailInspection": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/traveler-people.png",
+            "effectiveDimensions": [
+              3024,
+              4032
+            ],
+            "workLayerEvidence": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-D-e11-washington/thomas-casey.txt"
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:22:06.391171+00:00",
+          "sha256": "bd7b69e1d86907da161d29f5010d7197fe0140ac023d9870b22ad57d4cd58831"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+            "sha256": "a3d8cda3366cb1e85f0516c493cdeb9e8f4001105cef66003e4d289b8c0d6ae0"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
+            "sha256": "f69f1506c096f5ae461b4bdc093556a2539d26059a4d4d22206372e466723aea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "washington",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "commonsFile": "Washington Monument 2022.jpg",
+        "sha256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Washington_Monument_2022.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Washington_Monument_2022.jpg",
+        "author": "Greyfiveys",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3024,
+        "height": 4032,
+        "originalSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
+        "bytes": 1875397,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:29:55.947736+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Washington Monument 2022.jpg",
+        "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "lyhyt": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "lyhyt": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+        "tiedosto": "Washington Monument 2022.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "targetAfterSHA256": "344ecb3f40dffd7d7d9c1674b51a1303fcc65a434005de6eda90c48cfbe45dc0",
+      "contextAfterSHA256": "ffbae66c039b517fa1067f7464a28ed175655d5e60f1897f8a1becaa88a72cf1",
+      "sourceCommit": "1ac854d7d3250015fe73aeb84d12526aa8d0bfb4",
+      "sourceBranch": "paakaupungit-e11-codex",
+      "nativeQAHashResolved": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+      "nativeQAHashSource": "evidence.originalPixelSHA256",
+      "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/TRAVELER-original.jpg",
+      "existingOriginalQAReused": true,
+      "currentPrimaryQA": {
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "commonsFile": "Washington Monument 2022.jpg",
+        "verdict": "accepted",
+        "reason": "Greyfiveysin CC BY-SA 4.0 -kuva, lähteen ja EXIF-käännön mukainen pysty 3024×4032, suhde 0.75. Historialliset Mills/Casey-päätyöt varmistettu; pieni julkiselta alueelta näkyvä sisäänkäyntirakenne arkkitehtuuripoikkeuksen piirissä. Kuva on vuodelta 2022.",
+        "evidence": {
+          "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+          "candidateSnapshot": {
+            "slot": "TRAVELER",
+            "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+            "type": "commons",
+            "commonsFile": "Washington Monument 2022.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Washington_Monument_2022.jpg",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Washington_Monument_2022.jpg",
+            "author": "Greyfiveys",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 3024,
+            "height": 4032,
+            "captionFi": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+            "captureDate": "5 June 2022, 10:23:56",
+            "rightsEvidence": {
+              "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+              "workLayer": "Washington-monumentin päätyö Robert Mills (NPS: kuoli 1855), toteutus Thomas Lincoln Casey (kuoli 1896). Pieni moderni julkiselta alueelta näkyvä lasinen sisäänkäynti osana rakennusta: §120(a) valokuvausoikeus, ei sen designin kopiointia AI:lla tai itsenäistä kuva-aihetta. Ei modernia erillistä veistosta. Pysty 3024/4032=0.75. Kuvattu 2022, ei vuoden 2026 hetkikuvaa tai isoisän historiallista näkymää.",
+              "sources": [
+                "https://www.law.cornell.edu/uscode/text/17/120",
+                "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                "https://en.wikipedia.org/wiki/Henry_Bacon",
+                "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+              ],
+              "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+              "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan.",
+              "dimensionEvidence": "JPEG-raaka4032x3024, EXIFOrientation6; oikein näytetty3024x4032, ratio0.75. Alkuperäinen tiedosto säilytetty muuttamatta; Commons-mitat ovat näyttömitat."
+            },
+            "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-meta.json",
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-preview.jpg",
+            "reviewState": "candidate",
+            "nasOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-original.jpg",
+            "originalSha256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+            "originalBytes": 1875397,
+            "storedWidth": 4032,
+            "storedHeight": 3024,
+            "exifOrientation": 6
+          },
+          "candidateFingerprintSHA256": "83a229d0bc84edc4fe09201848bd19358f30033ee84885ca302dead6e1c185dc",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+          "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+          "targetExists": true,
+          "currentTargetContent": {
+            "kuva": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "kappale": "Aloita National Mallin museoista ja varaa Georgetownille oma kävelynsä. Metro auttaa siirtymissä, mutta leveiden puistojen ja katujen äärellä kaupunkia oppii myös kulkemalla jalan. Museoiden kokoelmat ovat hyvin erilaisia, joten valitse omaan kiinnostukseesi sopivat kohteet. Kasvitieteellinen puutarha tarjoaa elävän kokoelman kirjojen ja esineiden rinnalle. U Streetillä paikallinen half-smoke tuo ruokaperinteen mukaan päivään. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi.",
+            "artikkeli": {
+              "nimi": "Matkailijan Washington",
+              "taitto": "opas",
+              "teksti": "Yhdistä museopäivään kanavaranta ja tutki, miten erilaiset kaupungit mahtuvat saman pääkaupungin sisään.",
+              "nosto": "National Mall on hyvä lähtökohta museoille, Georgetown vanhan sataman ja kanavan historialle.",
+              "jaksot": [
+                {
+                  "otsikko": "Perille ja liikkeelle",
+                  "teksti": "Kansainvälisillä lennoilla käytetään Washington Dullesin lentoasemaa, jolta Silver Line -metro jatkaa kaupunkiin. Ronald Reagan Washington National sijaitsee Potomacin vastarannalla Virginiassa ja palvelee pääosin kotimaan liikennettä. Union Station on junamatkan solmukohta. Kaupungissa metro ja kävely täydentävät toisiaan. Tarkista osoitteesta myös ilmansuuntalyhenne: NW ja SE voivat erottaa samannimiset katuosuudet toisistaan.",
+                  "kuva": {
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": ""
+                  }
+                },
+                {
+                  "otsikko": "Museoita puiston ympärillä",
+                  "teksti": "National Mallin laidalla on Smithsonianin museoita, joissa aihe vaihtuu luonnonhistoriasta ilmailuun ja taiteeseen. Perusvierailu Smithsonianin museoihin on maksuton, mutta käyntijärjestelyt ja mahdollinen ennakkovaraus kannattaa tarkistaa valitulta museolta. Smithsonianin linnarakennus on suljettu peruskorjauksen ajaksi. Kasvitieteellinen puutarha Kapitolin lähellä tarjoaa erilaisen kokoelman: siellä näyttelyesineet kasvavat.",
+                  "kuva": {
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": ""
+                  }
+                },
+                {
+                  "otsikko": "Georgetownin toinen mittakaava",
+                  "teksti": "Georgetownissa vanhat talot, kaupat ja ravintolat muodostavat toisenlaisen ympäristön kuin National Mallin leveät näkymät. Old Stone House kertoo 1700-luvun asumisesta ja työnteosta. C&O-kanavan rantareitti puolestaan seuraa entistä vetotietä. Tutki niiden avulla kaupunkia, joka oli olemassa ennen liittovaltion pääkaupunkia. Kanava yhdistää kävelyn tavaraliikenteen historiaan ilman, että jokaisen rakennuksen tarvitsee olla suuri muistomerkki.",
+                  "kuva": {
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": ""
+                  }
+                },
+                {
+                  "otsikko": "Mitä täällä syödään",
+                  "teksti": "Washingtonin oma klassikko on half-smoke, mausteinen ja melko karkeaksi jauhettu makkara, jota tarjoillaan usein sämpylässä sipulin ja chilikastikkeen kanssa. Resepti vaihtelee tekijän mukaan, eikä nimi takaa yhtä lihasekoitusta. U Street tunnetaan Ben’s Chili Bowlista ja paikallisesta ruokahistoriasta. Shaw’n alueella on lisäksi etiopialaisia ravintoloita. Ruokakierroksella pääkaupunki saa aivan eri mittakaavan kuin museosalissa.",
+                  "kuva": {
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": ""
+                  }
+                },
+                {
+                  "otsikko": "Milloin kannattaa tulla",
+                  "teksti": "Kevät ja syksy sopivat pitkiin kävelyihin. Kevään kirsikankukat vetävät kävijöitä Tidal Basinin ympärille, joten vilkkaus kuuluu kukinta-aikaan. Kesä voi olla kuuma ja kostea; museovierailu ja ulkokävely kannattaa lomittaa. Talvella sää on viileä ja lunta voi esiintyä. Kukintaa ei kannata sitoa matkan suunnittelussa yhteen varmaan päivään, sillä ajankohta vaihtelee.",
+                  "kuva": {
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": ""
+                  }
+                }
+              ],
+              "matkailu": {
+                "parasta": [
+                  {
+                    "mita": "National Mallin museot",
+                    "tahdet": 3,
+                    "selite": "Kokoelmien aihe vaihtuu lyhyen kävelyn aikana luonnontieteestä kulttuuriin."
+                  },
+                  {
+                    "mita": "Georgetown ja C&O-kanava",
+                    "tahdet": 3,
+                    "selite": "Vanha satamakaupunginosa ja vetotie avaavat tavaraliikenteen historian."
+                  },
+                  {
+                    "mita": "Kasvitieteellinen puutarha",
+                    "tahdet": 2,
+                    "selite": "Konservatorion kokoelmaa katsotaan elävien kasvien kautta."
+                  },
+                  {
+                    "mita": "Thomas Jefferson -kirjastotalo",
+                    "tahdet": 3,
+                    "selite": "Kirjastorakennus kertoo tiedon säilyttämisestä ja sen näyttävästä kehyksestä."
+                  },
+                  {
+                    "mita": "U Streetin ruokapaikat",
+                    "tahdet": 2,
+                    "selite": "Half-smoke tuo kaupungin oman ruokatavan museopäivän rinnalle."
+                  }
+                ],
+                "hyvaTietaa": [
+                  {
+                    "otsikko": "Katuosoitteen loppu ratkaisee",
+                    "teksti": "Pidä NW-, NE-, SW- tai SE-lyhenne mukana osoitteessa ja karttahaussa."
+                  },
+                  {
+                    "otsikko": "Maksuttomuus ja varaus",
+                    "teksti": "Smithsonianin perusvierailut ovat maksuttomia, mutta tarkista museokohtaiset käyntijärjestelyt."
+                  },
+                  {
+                    "otsikko": "Linnan peruskorjaus",
+                    "teksti": "Smithsonianin linnan sisätiloihin ei pääse peruskorjauksen aikana."
+                  },
+                  {
+                    "otsikko": "Lentoasema voi olla osavaltion puolella",
+                    "teksti": "Dulles ja Reagan National sijaitsevat Virginiassa, eivät Washingtonin liittovaltiopiirissä."
+                  }
+                ]
+              },
+              "lahde": "Wikipedia"
+            }
+          },
+          "visualObservation": "Alkuperäinen ja 1:1 alareunan tarkastelukaista katsottu. Ihmiset pieniä, pääosin selin/sivuttain; kasvonpiirteet eivät ole yksilöitävissä. Obeliski, tavalliset liput ja puisto, ei lisättyä tekstiä/logoja.",
+          "reviewedAt": "2026-10-12T18:22:06.359564+00:00",
+          "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-original.jpg",
+          "pixelSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+          "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/a7977c1e0692fc02ee8256cdb92df9825d784554b851dc2dc2d20881433b08cb.html",
+          "sourceMetadata": {
+            "author": [
+              "Greyfiveys"
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "dimensions": [
+              3024,
+              4032
+            ],
+            "sourceSHA256": "b8b8f0eadfac7e23798eecb98b9d74ac2aebeac801d940b08175effbd239f12b"
+          },
+          "sourceLicenseLinks": [
+            "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+            "https://creativecommons.org/publicdomain/zero/1.0/",
+            "https://creativecommons.org/licenses/by-sa/4.0/"
+          ],
+          "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M119108276\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.890139,\"lon\":-77.034125},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+          "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"fd2bb8cd-6fd2-4396-9598-3a163cd4a60b\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Washington_Monument_2022.jpg\",\"wgTitle\":\"Washington Monument 2022.jpg\",\"wgCurRevisionId\":1013802499,\"wgRevisionId\":1013802499,\"wgArticleId\":119108276,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"On OSM\",\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Photographs of flags of the United States at the Washington Monument\",\"Washington Monument in 2022\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Washington_Monument_2022.jpg\",\"wgRelevantArticleId\":119108276,\"wgTempUserName\":null,\"wgIsProbablyEditable\":tru",
+          "sourceAuthorExcerpt": "Author Greyfiveys OpenStreetMap InfoField Way 766761337 Object location 38° 53′ 22.09″ N, 77° 02′ 06.9″ W View this and other nearby images on: OpenStreetMap 38.889470; -77.035250 Camera location 38° 53′ 24.5″ N, 77° 02′ 02.85″ W View this and other nearby images on: OpenStreetMap 38.890139; -77.034125 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible lic",
+          "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Washington Monument 2022.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 500 × 667 pixels . Other resolutions: 250 × 333 pixels | 960 × 1,280 pixels | 1,920 × 2,560 pixels . Original file (3,024 × 4,032 pixels, file size: 1.79 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Washington Monument in Washington DC's National Mall Parks and Memorials Persian بنای یادبود واشنگتن در محوطه ملی واشنگتن دی‌سی Summary [ edit ] Description Washington Monument 2022.jpg English: Washington Mon",
+          "sourceCameralocationExcerpt": "Camera location 38° 53′ 24.5″ N, 77° 02′ 02.85″ W View this and other nearby images on: OpenStreetMap 38.890139; -77.034125 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view t",
+          "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/TRAVELER-original.jpg",
+          "originalPixelSHA256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+          "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+          "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art",
+          "detailInspection": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/traveler-people.png",
+          "effectiveDimensions": [
+            3024,
+            4032
+          ],
+          "workLayerEvidence": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-D-e11-washington/thomas-casey.txt"
+          ],
+          "currentContentVersionCheck": {
+            "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+            "checkedAt": "2026-10-12T20:47:59.834203+00:00",
+            "personallyViewedAgain": false,
+            "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
+            "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "matches": true,
+            "method": "exact archived content SHA and full nonmedia comparison",
+            "reviewedNonmediaSHA256": "ec0924fd975f145f062772927ea6af4d164f2e8fee34b070387de3ab47ec9414",
+            "currentNonmediaSHA256": "ec0924fd975f145f062772927ea6af4d164f2e8fee34b070387de3ab47ec9414",
+            "imageFieldsExcludedOnlyAtInventoriedSlots": true
+          },
+          "currentBindingMetadataCheck": {
+            "checkedAt": "2026-10-12T20:47:59.862528+00:00",
+            "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+            "commonsFile": "Washington Monument 2022.jpg",
+            "captionFi": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
+            "credit": "Greyfiveys, Wikimedia Commons (CC BY-SA 4.0)",
+            "captionMatchesReviewed": true,
+            "personallyViewedAgain": false
+          },
+          "metadataRevisionReviews": [
+            {
+              "reviewedAt": "2026-10-12T20:47:58.120899+00:00",
+              "changedFields": [
+                "exifOrientation",
+                "nasOriginalPath",
+                "originalBytes",
+                "originalSha256",
+                "rightsEvidence",
+                "storedHeight",
+                "storedWidth"
+              ],
+              "previousPreviewSHA256": "bd7b69e1d86907da161d29f5010d7197fe0140ac023d9870b22ad57d4cd58831",
+              "originalSHA256Verified": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+              "previouslyVisuallyReviewedOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/TRAVELER-original.jpg",
+              "newOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-original.jpg",
+              "encodedDimensions": [
+                4032,
+                3024
+              ],
+              "exifOrientation": 6,
+              "effectiveDimensions": [
+                3024,
+                4032
+              ],
+              "ratio": 0.75,
+              "assessment": "New original-file locators and dimension/orientation explanation match the exact original already personally reviewed. QA identity SHA now anchors that original rather than its preview. No new pixels or new visual review.",
+              "personallyViewedAgain": false
+            }
+          ],
+          "previewPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/26a8803d281f-preview.jpg",
+          "previewPixelSHA256": "bd7b69e1d86907da161d29f5010d7197fe0140ac023d9870b22ad57d4cd58831",
+          "encodedDimensions": [
+            4032,
+            3024
+          ],
+          "actualDimensions": [
+            3024,
+            4032
+          ],
+          "exifOrientation": 6
+        },
+        "reviewedAt": "2026-10-12T18:22:06.391171+00:00",
+        "sha256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1"
+      },
+      "currentPrimaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+      "currentPrimaryQAFileSHA256": "8b057a7b22bd6e17339924332a96ee9b4f543ad327f9b82e8ec0ec040e6e79e1",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg",
+          "http": 200,
+          "sha256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+          "bytes": 1875397,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/traveler-c4f473b9acdedc90d197.jpg?gallery-verify=c4f473b9acdedc90-1791840303189645000",
+          "http": 200,
+          "sha256": "c4f473b9acdedc90d19759be0096efaf67ee478ffe7d903d7ab59692c93155b1",
+          "bytes": 1875397,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Exact original QA proof was recorded under a different field or completed after the immutable snapshot."
     },
     {
       "era": "e04",
@@ -496,9 +1967,67 @@
       "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
       "sourceBranch": "paakaupungit-e04-codex",
       "nativeQAHashResolved": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
-      "nativeQAHashSource": "qaEvidence.item.evidence.originalSHA256",
+      "nativeQAHashSource": "evidence.originalSHA256",
       "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/L3-original.jpg",
       "existingOriginalQAReused": true,
+      "currentPrimaryQA": {
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "commonsFile": "Sala Colonia, Morocco (32853576932).jpg",
+        "verdict": "accepted",
+        "reason": "Alkuperäinen kuva katsottu. Raunioiden takana olevat vierailijat ovat etäällä, selin/sivuttain; kasvot eivät erotu tunnistettavasti. Sala Colonian rakenteet vastaavat aihetta. CC-pysty/asento ei hylkäysperuste.",
+        "evidence": {
+          "visualViewed": true,
+          "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-54.jpg",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/L3-original.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Sala_Colonia,_Morocco_(32853576932).jpg",
+          "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-54.html",
+          "sourceHTMLSHA256": "531406c1ecf1891347ae4e6150ce5caa52da853d61b0aaed1af77d6de5915107",
+          "author": "Carole Raddato from FRANKFURT, Germany",
+          "license": "CC BY-SA 2.0",
+          "licenseUrls": [
+            "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "https://creativecommons.org/licenses/by-sa/4.0/",
+            "https://creativecommons.org/publicdomain/zero/1.0/"
+          ],
+          "width": 3177,
+          "height": 4805,
+          "ratio": 0.6611862643080125,
+          "date": [
+            "15 February 2017, 13:19"
+          ],
+          "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+          "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+          "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+          "originalSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+          "jpegExifOrientation": 6,
+          "nativeDisplayedDimensions": [
+            4805,
+            3177
+          ],
+          "sourceEncodedDimensions": [
+            3177,
+            4805
+          ]
+        },
+        "auditTrail": [
+          {
+            "at": "2026-10-12T18:02:06.762511+00:00",
+            "previousVerdict": "blocked",
+            "previousReason": "Sala Colonian arkeologinen rakenne ja palmu vastaavat nostoa. Taustan vierailijoiden kasvo-/profiilipäätös tehdään vielä alkuperäisessä 3177×4805-kuvassa. Pysty 0.661 ei itsessään hylkäysperuste.",
+            "changeReason": "Alkuperäiset pikselit katsottu turvallisessa checkpointissa"
+          }
+        ],
+        "sha256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+        "nativeSHAResolution": {
+          "sourceField": "evidence.originalSHA256",
+          "sourceOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/L3-original.jpg",
+          "sourceItemSHA256": null,
+          "existingOriginalQAReused": true
+        }
+      },
+      "currentPrimaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "currentPrimaryQAFileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
       "deliveryR2Reads": [
         {
           "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
@@ -519,7 +2048,7 @@
           "byteExact": true
         }
       ],
-      "previousHoldCause": "sha256 field absent; originalSHA256 and originalViewedPath were already recorded"
+      "previousHoldCause": "Exact original QA proof was recorded under a different field or completed after the immutable snapshot."
     },
     {
       "era": "e04",
@@ -745,9 +2274,58 @@
       "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
       "sourceBranch": "paakaupungit-e04-codex",
       "nativeQAHashResolved": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
-      "nativeQAHashSource": "qaEvidence.item.evidence.originalSHA256",
+      "nativeQAHashSource": "evidence.originalSHA256",
       "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/N2-original.jpg",
       "existingOriginalQAReused": true,
+      "currentPrimaryQA": {
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Bou Regreg -joen suisto\"].kuvat[0]",
+        "commonsFile": "Boats in Bouregreg (2).jpg",
+        "verdict": "accepted",
+        "reason": "Alkuperäisessä 3872×2592-kuvassa oikean reunan veneilijän kasvot jäävät lippalakin varjoon ja suuntautuvat alas; ei luettavaa kasvonpiirteiden kokonaisuutta. Veneet ja Bou Regregin kasbah-ympäristö vastaavat suistoaihetta.",
+        "evidence": {
+          "visualViewed": true,
+          "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-18.jpg",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/N2-original.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Boats_in_Bouregreg_(2).jpg",
+          "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-18.html",
+          "sourceHTMLSHA256": "adb85653031cb648d8a1cd7a04e724a492ff6e4dc916de858792cb0eda6d6947",
+          "author": "MarwanAndrew",
+          "license": "CC BY-SA 4.0",
+          "licenseUrls": [
+            "https://creativecommons.org/licenses/by-sa/4.0/",
+            "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "https://creativecommons.org/publicdomain/zero/1.0/"
+          ],
+          "width": 3872,
+          "height": 2592,
+          "ratio": 1.4938271604938271,
+          "date": [
+            "1 January 2009, 05:50:09"
+          ],
+          "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+          "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+          "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+          "originalSHA256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326"
+        },
+        "auditTrail": [
+          {
+            "at": "2026-10-12T18:02:06.762511+00:00",
+            "previousVerdict": "blocked",
+            "previousReason": "Veneet Bou Regregillä ja kasbah taustalla vastaavat suistoaihetta, ei modernia siltaa päämotiivina. Oikean reunan veneilijän kasvoprofiili tarvitsee alkuperäiskoon tarkistuksen.",
+            "changeReason": "Alkuperäiset pikselit katsottu turvallisessa checkpointissa"
+          }
+        ],
+        "sha256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
+        "nativeSHAResolution": {
+          "sourceField": "evidence.originalSHA256",
+          "sourceOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/N2-original.jpg",
+          "sourceItemSHA256": null,
+          "existingOriginalQAReused": true
+        }
+      },
+      "currentPrimaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+      "currentPrimaryQAFileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
       "deliveryR2Reads": [
         {
           "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
@@ -768,13 +2346,553 @@
           "byteExact": true
         }
       ],
-      "previousHoldCause": "sha256 field absent; originalSHA256 and originalViewedPath were already recorded"
+      "previousHoldCause": "Exact original QA proof was recorded under a different field or completed after the immutable snapshot."
+    },
+    {
+      "era": "e11",
+      "city": "washington",
+      "slot": "N2",
+      "type": "commons",
+      "assetID": "capital-cc-e11-washington-n2-a14ff8a7fcbe4a88",
+      "galleryImageID": "capital-cc-e11-washington-n2-a14ff8a7fcbe4a88",
+      "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Smithsonianin linna",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
+        "suora": true,
+        "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "lyhyt": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "lyhyt": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
+        "suora": true,
+        "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "lyhyt": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+      "exportSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e11/washington/5fe6b6789bd5d7d5a34e5a44b64b29217f7a79adb74061ef5b7643bb9513bd89.jpg",
+      "dimensions": [
+        4792,
+        3594
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+      "sourceContentSHA256": "f2601a0a9f9f515ca8abae74392bc2caad1cd800011c179dcef4a58e64966256",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "465494bd22809aa5b14b9c15287fad14158c24997c28638273e6751518fab48f",
+        "semanticContextSHA256": "1eebe0a534ca57d6331680e058924cc8a1cf6c8c1184fee162fbeb3d37406322",
+        "subjectTitle": "Smithsonianin linna",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Smithsonian_Institution_Building_(53831938398).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Smithsonian_Institution_Building_%2853831938398%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+            "workLayer": "Smithsonianin linnan historiallinen Renwick-massa (James Renwick Jr. kuoli 1895). Pieni Joseph Henry -veistos: William Wetmore Story, kuoli 1895; taiteilija tarkistettu erillisestä lähteestä. Julkinen arkkitehtuuri §120(a), modernit käytännölliset työmaa-/liikenneosat eivät itsenäisiä teosaiheita. Ei Haupt-puutarhan modernia porttia pääaiheena.",
+            "sources": [
+              "https://www.law.cornell.edu/uscode/text/17/120",
+              "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+              "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+              "https://en.wikipedia.org/wiki/Henry_Bacon",
+              "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+              "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+              "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+              "https://en.wikipedia.org/wiki/Caspar_Buberl",
+              "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+              "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+            ],
+            "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+            "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "N2",
+              "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
+              "type": "commons",
+              "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Smithsonian_Institution_Building_(53831938398).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Smithsonian_Institution_Building_%2853831938398%29.jpg",
+              "author": "ajay_suresh",
+              "license": "CC BY 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "width": 4792,
+              "height": 3594,
+              "captionFi": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+              "captureDate": "21 June 2024, 06:16",
+              "rightsEvidence": {
+                "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+                "workLayer": "Smithsonianin linnan historiallinen Renwick-massa (James Renwick Jr. kuoli 1895). Pieni Joseph Henry -veistos: William Wetmore Story, kuoli 1895; taiteilija tarkistettu erillisestä lähteestä. Julkinen arkkitehtuuri §120(a), modernit käytännölliset työmaa-/liikenneosat eivät itsenäisiä teosaiheita. Ei Haupt-puutarhan modernia porttia pääaiheena.",
+                "sources": [
+                  "https://www.law.cornell.edu/uscode/text/17/120",
+                  "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                  "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                  "https://en.wikipedia.org/wiki/Henry_Bacon",
+                  "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                  "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                  "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                  "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                  "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                  "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+                ],
+                "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+                "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-preview.jpg",
+              "reviewState": "candidate"
+            },
+            "candidateFingerprintSHA256": "42371e62e79aa35c979f014ae3f8ff00c7384e9daad9dadf3bf44b9abf116dd6",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+            "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 4792×3594 katsottu: linnan julkisivu, pieni historiallinen Joseph Henry -veistos, tie ja puutarha. Ei tunnistettavia kasvoja, lisättyä vesileimaa tai itsenäistä suojattua nykyteosta.",
+            "reviewedAt": "2026-10-12T18:22:06.661050+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-preview.jpg",
+            "pixelSHA256": "d7c346d34e14ae5b6edb7f3a8ecb0faa4ace7939a3582a8fe0d5801d30ee8076",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0f47cc587621fcd954c2c4af7024bb749a11bfb53a95f609b6e20adf305c2198.html",
+            "sourceMetadata": {
+              "author": [
+                "ajay_suresh",
+                "Ajay Suresh"
+              ],
+              "licenses": [
+                "CC BY 2.0"
+              ],
+              "dimensions": [
+                4792,
+                3594
+              ],
+              "sourceSHA256": "b8e2b8581d1c63b25d70215a771a7377b8c5bec8f3a0f16d09365d075f68dd57"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by/2.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M149951604\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.889347,\"lon\":-77.025864},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"fb65b545-b8e2-4510-be67-2537bb39debd\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Smithsonian_Institution_Building_(53831938398).jpg\",\"wgTitle\":\"Smithsonian Institution Building (53831938398).jpg\",\"wgCurRevisionId\":1079581177,\"wgRevisionId\":1079581177,\"wgArticleId\":149951604,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-2.0\",\"Flickr images reviewed by FlickreviewR 2\",\"Smithsonian Institution Building\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Smithsonian_Institution_Building_(53831938398).jpg\",\"wgRelevantArticleId\":149951604,\"wgTempUserName\":null,\"wgIsProbablyEdit",
+            "sourceAuthorExcerpt": "Author ajay_suresh Camera location 38° 53′ 21.65″ N, 77° 01′ 33.11″ W View this and other nearby images on: OpenStreetMap 38.889347; -77.025864 Licensing [ edit ] This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/2.0 CC BY 2.0 Creative Commons Attribution 2.0 true true This image was originally posted to Flickr by ajay_suresh at https://flickr.com/photos/83136374@N05/53831938398 . It was reviewed on 3 July 2024 by FlickreviewR 2 and was confirmed to be licensed under the terms of the cc-by-2.0. 3 July 2024 File history Click on a date/time to view the file as it appea",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Smithsonian Institution Building (53831938398).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,792 × 3,594 pixels, file size: 15.89 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Smithsonian Institution Building (53831938398).jpg Washington, DC Date 21 June 2024, 06:16 Source Smi",
+            "sourceCameralocationExcerpt": "Camera location 38° 53′ 21.65″ N, 77° 01′ 33.11″ W View this and other nearby images on: OpenStreetMap 38.889347; -77.025864 Licensing [ edit ] This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/2.0 CC BY 2.0 Creative Commons Attribution 2.0 true true This image was originally posted to Flickr by ajay_suresh at https://flickr.com/photos/83136374@N05/53831938398 . It was reviewed on 3 July 2024 by FlickreviewR 2 and was confirmed to be licensed under the terms of the cc-by-2.0. 3 July 2024 File history Click on a date/time to view the file as it appeared at that time. D",
+            "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/N2-original.jpg",
+            "originalPixelSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+            "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+            "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art",
+            "workLayerEvidence": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/Renwick.txt",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/Story.txt"
+            ]
+          },
+          "qaReason": "Ajay Sureshin CC BY 2.0 -valokuva näyttää nimetyn linnan. Renwick (1895) ja näkyvän Joseph Henry -veistoksen William Wetmore Story (1895) tarkistettu tallennetuista tekijälähteistä; nykytyömaarakenteet tavallista infrastruktuuria."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+        "fileSHA256": "a3d8cda3366cb1e85f0516c493cdeb9e8f4001105cef66003e4d289b8c0d6ae0",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
+          "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+          "verdict": "accepted",
+          "reason": "Ajay Sureshin CC BY 2.0 -valokuva näyttää nimetyn linnan. Renwick (1895) ja näkyvän Joseph Henry -veistoksen William Wetmore Story (1895) tarkistettu tallennetuista tekijälähteistä; nykytyömaarakenteet tavallista infrastruktuuria.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "N2",
+              "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
+              "type": "commons",
+              "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Smithsonian_Institution_Building_(53831938398).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Smithsonian_Institution_Building_%2853831938398%29.jpg",
+              "author": "ajay_suresh",
+              "license": "CC BY 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+              "width": 4792,
+              "height": 3594,
+              "captionFi": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+              "captureDate": "21 June 2024, 06:16",
+              "rightsEvidence": {
+                "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+                "workLayer": "Smithsonianin linnan historiallinen Renwick-massa (James Renwick Jr. kuoli 1895). Pieni Joseph Henry -veistos: William Wetmore Story, kuoli 1895; taiteilija tarkistettu erillisestä lähteestä. Julkinen arkkitehtuuri §120(a), modernit käytännölliset työmaa-/liikenneosat eivät itsenäisiä teosaiheita. Ei Haupt-puutarhan modernia porttia pääaiheena.",
+                "sources": [
+                  "https://www.law.cornell.edu/uscode/text/17/120",
+                  "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                  "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                  "https://en.wikipedia.org/wiki/Henry_Bacon",
+                  "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                  "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                  "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                  "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                  "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                  "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+                ],
+                "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+                "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+              },
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-meta.json",
+              "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-preview.jpg",
+              "reviewState": "candidate"
+            },
+            "candidateFingerprintSHA256": "42371e62e79aa35c979f014ae3f8ff00c7384e9daad9dadf3bf44b9abf116dd6",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+            "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Alkuperäinen 4792×3594 katsottu: linnan julkisivu, pieni historiallinen Joseph Henry -veistos, tie ja puutarha. Ei tunnistettavia kasvoja, lisättyä vesileimaa tai itsenäistä suojattua nykyteosta.",
+            "reviewedAt": "2026-10-12T18:22:06.661050+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-preview.jpg",
+            "pixelSHA256": "d7c346d34e14ae5b6edb7f3a8ecb0faa4ace7939a3582a8fe0d5801d30ee8076",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0f47cc587621fcd954c2c4af7024bb749a11bfb53a95f609b6e20adf305c2198.html",
+            "sourceMetadata": {
+              "author": [
+                "ajay_suresh",
+                "Ajay Suresh"
+              ],
+              "licenses": [
+                "CC BY 2.0"
+              ],
+              "dimensions": [
+                4792,
+                3594
+              ],
+              "sourceSHA256": "b8e2b8581d1c63b25d70215a771a7377b8c5bec8f3a0f16d09365d075f68dd57"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by/2.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M149951604\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.889347,\"lon\":-77.025864},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"fb65b545-b8e2-4510-be67-2537bb39debd\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Smithsonian_Institution_Building_(53831938398).jpg\",\"wgTitle\":\"Smithsonian Institution Building (53831938398).jpg\",\"wgCurRevisionId\":1079581177,\"wgRevisionId\":1079581177,\"wgArticleId\":149951604,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-2.0\",\"Flickr images reviewed by FlickreviewR 2\",\"Smithsonian Institution Building\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Smithsonian_Institution_Building_(53831938398).jpg\",\"wgRelevantArticleId\":149951604,\"wgTempUserName\":null,\"wgIsProbablyEdit",
+            "sourceAuthorExcerpt": "Author ajay_suresh Camera location 38° 53′ 21.65″ N, 77° 01′ 33.11″ W View this and other nearby images on: OpenStreetMap 38.889347; -77.025864 Licensing [ edit ] This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/2.0 CC BY 2.0 Creative Commons Attribution 2.0 true true This image was originally posted to Flickr by ajay_suresh at https://flickr.com/photos/83136374@N05/53831938398 . It was reviewed on 3 July 2024 by FlickreviewR 2 and was confirmed to be licensed under the terms of the cc-by-2.0. 3 July 2024 File history Click on a date/time to view the file as it appea",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Smithsonian Institution Building (53831938398).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,792 × 3,594 pixels, file size: 15.89 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Smithsonian Institution Building (53831938398).jpg Washington, DC Date 21 June 2024, 06:16 Source Smi",
+            "sourceCameralocationExcerpt": "Camera location 38° 53′ 21.65″ N, 77° 01′ 33.11″ W View this and other nearby images on: OpenStreetMap 38.889347; -77.025864 Licensing [ edit ] This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/2.0 CC BY 2.0 Creative Commons Attribution 2.0 true true This image was originally posted to Flickr by ajay_suresh at https://flickr.com/photos/83136374@N05/53831938398 . It was reviewed on 3 July 2024 by FlickreviewR 2 and was confirmed to be licensed under the terms of the cc-by-2.0. 3 July 2024 File history Click on a date/time to view the file as it appeared at that time. D",
+            "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/N2-original.jpg",
+            "originalPixelSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+            "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+            "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art",
+            "workLayerEvidence": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/Renwick.txt",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/Story.txt"
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:22:06.682193+00:00",
+          "sha256": "d7c346d34e14ae5b6edb7f3a8ecb0faa4ace7939a3582a8fe0d5801d30ee8076"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+            "sha256": "a3d8cda3366cb1e85f0516c493cdeb9e8f4001105cef66003e4d289b8c0d6ae0"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
+            "sha256": "f69f1506c096f5ae461b4bdc093556a2539d26059a4d4d22206372e466723aea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "washington",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
+        "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+        "sha256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Smithsonian_Institution_Building_(53831938398).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Smithsonian_Institution_Building_%2853831938398%29.jpg",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 4792,
+        "height": 3594,
+        "originalSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
+        "bytes": 16660070,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:29:58.942737+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Smithsonian Institution Building (53831938398).jpg",
+        "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "lyhyt": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "lyhyt": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+        "tiedosto": "Smithsonian Institution Building (53831938398).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "targetAfterSHA256": "465494bd22809aa5b14b9c15287fad14158c24997c28638273e6751518fab48f",
+      "contextAfterSHA256": "1eebe0a534ca57d6331680e058924cc8a1cf6c8c1184fee162fbeb3d37406322",
+      "sourceCommit": "1ac854d7d3250015fe73aeb84d12526aa8d0bfb4",
+      "sourceBranch": "paakaupungit-e11-codex",
+      "nativeQAHashResolved": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+      "nativeQAHashSource": "evidence.originalPixelSHA256",
+      "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/N2-original.jpg",
+      "existingOriginalQAReused": true,
+      "currentPrimaryQA": {
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
+        "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+        "verdict": "accepted",
+        "reason": "Ajay Sureshin CC BY 2.0 -valokuva näyttää nimetyn linnan. Renwick (1895) ja näkyvän Joseph Henry -veistoksen William Wetmore Story (1895) tarkistettu tallennetuista tekijälähteistä; nykytyömaarakenteet tavallista infrastruktuuria.",
+        "evidence": {
+          "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-selection.json",
+          "candidateSnapshot": {
+            "slot": "N2",
+            "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
+            "type": "commons",
+            "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Smithsonian_Institution_Building_(53831938398).jpg",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Smithsonian_Institution_Building_%2853831938398%29.jpg",
+            "author": "ajay_suresh",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "width": 4792,
+            "height": 3594,
+            "captionFi": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+            "captureDate": "21 June 2024, 06:16",
+            "rightsEvidence": {
+              "photo": "Valittu Commons-tiedostosivun nimenomaisen Author/Artist-rivin ja lisenssitemplaten perusteella; ei uploaderista arvaamista.",
+              "workLayer": "Smithsonianin linnan historiallinen Renwick-massa (James Renwick Jr. kuoli 1895). Pieni Joseph Henry -veistos: William Wetmore Story, kuoli 1895; taiteilija tarkistettu erillisestä lähteestä. Julkinen arkkitehtuuri §120(a), modernit käytännölliset työmaa-/liikenneosat eivät itsenäisiä teosaiheita. Ei Haupt-puutarhan modernia porttia pääaiheena.",
+              "sources": [
+                "https://www.law.cornell.edu/uscode/text/17/120",
+                "https://www.nps.gov/wamo/learn/historyculture/index.htm",
+                "https://en.wikipedia.org/wiki/Thomas_Lincoln_Casey_Sr.",
+                "https://en.wikipedia.org/wiki/Henry_Bacon",
+                "https://en.wikipedia.org/wiki/James_Renwick_Jr.",
+                "https://en.wikipedia.org/wiki/William_Wetmore_Story",
+                "https://en.wikipedia.org/wiki/Montgomery_C._Meigs",
+                "https://en.wikipedia.org/wiki/Caspar_Buberl",
+                "https://en.wikipedia.org/wiki/Paul_J._Pelz",
+                "https://en.wikipedia.org/wiki/John_L._Smithmeyer"
+              ],
+              "visualReview": "Katsottu itse 960px-esikatselu. Ei päälle lisättyä tekstiä, vesileimaa, kehyksiä tai mainos-/pakkausaihetta; henkilöt vain pieninä etäisinä hahmoina tai puuttuvat. Historiallisen keittiön luonnolliset opasteet eri asia kuin päälle lisätty mainos.",
+              "reuseCheck": "e11/js: tiedostonimeä ei löydy; uusi tiedosto vain tähän paikkaan."
+            },
+            "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-meta.json",
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-preview.jpg",
+            "reviewState": "candidate",
+            "nasOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-original.jpg",
+            "originalSha256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+            "originalBytes": 16660070
+          },
+          "candidateFingerprintSHA256": "1add84261e93e6f75f24cc2ea50b4e31351b4ed33e54a2f048f51a38cfe86d16",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
+          "currentContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+          "targetExists": true,
+          "currentTargetContent": {
+            "tiedosto": "",
+            "lyhyt": "",
+            "selite": "",
+            "lahde": ""
+          },
+          "visualObservation": "Alkuperäinen 4792×3594 katsottu: linnan julkisivu, pieni historiallinen Joseph Henry -veistos, tie ja puutarha. Ei tunnistettavia kasvoja, lisättyä vesileimaa tai itsenäistä suojattua nykyteosta.",
+          "reviewedAt": "2026-10-12T18:22:06.661050+00:00",
+          "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-original.jpg",
+          "pixelSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+          "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0f47cc587621fcd954c2c4af7024bb749a11bfb53a95f609b6e20adf305c2198.html",
+          "sourceMetadata": {
+            "author": [
+              "ajay_suresh",
+              "Ajay Suresh"
+            ],
+            "licenses": [
+              "CC BY 2.0"
+            ],
+            "dimensions": [
+              4792,
+              3594
+            ],
+            "sourceSHA256": "b8e2b8581d1c63b25d70215a771a7377b8c5bec8f3a0f16d09365d075f68dd57"
+          },
+          "sourceLicenseLinks": [
+            "//creativecommons.org/licenses/by/2.0/deed.en",
+            "https://creativecommons.org/publicdomain/zero/1.0/",
+            "https://creativecommons.org/licenses/by-sa/4.0/"
+          ],
+          "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M149951604\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":38.889347,\"lon\":-77.025864},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subject",
+          "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"fb65b545-b8e2-4510-be67-2537bb39debd\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Smithsonian_Institution_Building_(53831938398).jpg\",\"wgTitle\":\"Smithsonian Institution Building (53831938398).jpg\",\"wgCurRevisionId\":1079581177,\"wgRevisionId\":1079581177,\"wgArticleId\":149951604,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Files with coordinates missing SDC location of creation\",\"CC-BY-2.0\",\"Flickr images reviewed by FlickreviewR 2\",\"Smithsonian Institution Building\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Smithsonian_Institution_Building_(53831938398).jpg\",\"wgRelevantArticleId\":149951604,\"wgTempUserName\":null,\"wgIsProbablyEdit",
+          "sourceAuthorExcerpt": "Author ajay_suresh Camera location 38° 53′ 21.65″ N, 77° 01′ 33.11″ W View this and other nearby images on: OpenStreetMap 38.889347; -77.025864 Licensing [ edit ] This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/2.0 CC BY 2.0 Creative Commons Attribution 2.0 true true This image was originally posted to Flickr by ajay_suresh at https://flickr.com/photos/83136374@N05/53831938398 . It was reviewed on 3 July 2024 by FlickreviewR 2 and was confirmed to be licensed under the terms of the cc-by-2.0. 3 July 2024 File history Click on a date/time to view the file as it appea",
+          "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Smithsonian Institution Building (53831938398).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,792 × 3,594 pixels, file size: 15.89 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Smithsonian Institution Building (53831938398).jpg Washington, DC Date 21 June 2024, 06:16 Source Smi",
+          "sourceCameralocationExcerpt": "Camera location 38° 53′ 21.65″ N, 77° 01′ 33.11″ W View this and other nearby images on: OpenStreetMap 38.889347; -77.025864 Licensing [ edit ] This file is licensed under the Creative Commons Attribution 2.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/2.0 CC BY 2.0 Creative Commons Attribution 2.0 true true This image was originally posted to Flickr by ajay_suresh at https://flickr.com/photos/83136374@N05/53831938398 . It was reviewed on 3 July 2024 by FlickreviewR 2 and was confirmed to be licensed under the terms of the cc-by-2.0. 3 July 2024 File history Click on a date/time to view the file as it appeared at that time. D",
+          "originalPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa-evidence/N2-original.jpg",
+          "originalPixelSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+          "architectureLawEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/uscode-LII120.txt",
+          "architectureLawScope": "17 USC 120(a) public-place-visible building representations; does not itself authorize independent sculpture or art",
+          "workLayerEvidence": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/Renwick.txt",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/Story.txt"
+          ],
+          "currentContentVersionCheck": {
+            "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+            "checkedAt": "2026-10-12T22:20:15.200175+00:00",
+            "personallyViewedAgain": false,
+            "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
+            "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
+            "matches": true,
+            "method": "exact archived content SHA and full nonmedia comparison",
+            "reviewedNonmediaSHA256": "ec0924fd975f145f062772927ea6af4d164f2e8fee34b070387de3ab47ec9414",
+            "currentNonmediaSHA256": "ec0924fd975f145f062772927ea6af4d164f2e8fee34b070387de3ab47ec9414",
+            "imageFieldsExcludedOnlyAtInventoriedSlots": true
+          },
+          "currentBindingMetadataCheck": {
+            "checkedAt": "2026-10-12T22:20:15.327854+00:00",
+            "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+            "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
+            "captionFi": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
+            "credit": "ajay_suresh, Wikimedia Commons (CC BY 2.0)",
+            "captionMatchesReviewed": true,
+            "personallyViewedAgain": false
+          },
+          "metadataRevisionReviews": [
+            {
+              "reviewedAt": "2026-10-12T21:01:46.636847+00:00",
+              "changedFields": [
+                "nasOriginalPath",
+                "originalBytes",
+                "originalSha256"
+              ],
+              "previousPixelPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-preview.jpg",
+              "previousPixelSHA256": "d7c346d34e14ae5b6edb7f3a8ecb0faa4ace7939a3582a8fe0d5801d30ee8076",
+              "newNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-original.jpg",
+              "newNativeSHA256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+              "actualDimensions": [
+                4792,
+                3594
+              ],
+              "originalBytes": 16660070,
+              "previouslyViewedNativeSHAConfirmed": true,
+              "newVisualReviewPerformed": false,
+              "observation": "Aiemmin itse tarkistettu alkuperäinen on byte-tarkasti sama SHA-versio.",
+              "verdictChanged": false
+            }
+          ],
+          "previewPixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/cc-work/9911390caaf8-preview.jpg",
+          "previewPixelSHA256": "d7c346d34e14ae5b6edb7f3a8ecb0faa4ace7939a3582a8fe0d5801d30ee8076",
+          "actualDimensions": [
+            4792,
+            3594
+          ],
+          "nativeIdentityCheckedAt": "2026-10-12T21:01:46.636917+00:00"
+        },
+        "reviewedAt": "2026-10-12T18:22:06.682193+00:00",
+        "sha256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4"
+      },
+      "currentPrimaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
+      "currentPrimaryQAFileSHA256": "8b057a7b22bd6e17339924332a96ee9b4f543ad327f9b82e8ec0ec040e6e79e1",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg",
+          "http": 200,
+          "sha256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+          "bytes": 16660070,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg?gallery-verify=a14ff8a7fcbe4a88-1791843252854034000",
+          "http": 200,
+          "sha256": "a14ff8a7fcbe4a88f6db24b1ab802123b9fb6bbe1be0537e38cb9a44417a1fd4",
+          "bytes": 16660070,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Exact original QA proof was recorded under a different field or completed after the immutable snapshot."
     }
   ],
-  "effectiveQualifiedOriginalSnapshotBindings": 758,
-  "effectiveRemainingOriginalSnapshotHolds": 71,
+  "effectiveQualifiedOriginalSnapshotBindings": 775,
+  "effectiveRemainingOriginalSnapshotHolds": 54,
   "instructions": [
-    "Add only these three exact-version Rabat runtime bindings to the previously qualified755 snapshot handoff.",
+    "Add only these exact-version runtime bindings to the previously qualified755 snapshot handoff and independently inspected supplemental releases.",
     "This reuses existing full-original QA evidence and corrects a schema join; it does not approve preview-only QA.",
     "The exact Bissau PHOTO rights hold and other remaining snapshot holds continue. Preserve text, maps and other media."
   ],
