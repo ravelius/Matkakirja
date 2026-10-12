@@ -1,0 +1,1478 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e05",
+  "city": "ndjamena",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+  "assets": [
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e05-ndjamena-o4-v1-20261012T175508Z",
+      "galleryImageID": "e05-ndjamena-o4-v1-20261012T175508Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: taateleita.",
+        "lyhyt": "Havainnekuva: taateleita."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: taateleita.",
+        "lyhyt": "Havainnekuva: taateleita."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3b50f46b215da0bc1e910223d338f60660f03805878a444b8295581ac69adcd8",
+      "exportSHA256": "051d3804460e4a0243c534cfdf0d8e052c53d9dc95bc67a0ca09bfc8e92f370a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e2ba910b1fbbac2dc63d1587f3861237cff559e1aa7e90fb6cea8c71e54a02ae",
+        "subjectTitle": "Torit ja ruokapaikat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-food-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:02:05.328461+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/assets/e05-ndjamena-o4-v1-20261012T175508Z/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://en.wikipedia.org/wiki/N%27Djamena",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e05/lahteet/en.wikipedia.org_N_27Djamena.txt",
+              "savedSHA256": "26527f00d07b288c8d86cecf66a5db86944517940fb72a3baaec73ad30cdcb0c",
+              "line": 293,
+              "sourceText": "regional market for livestock, salt, dates, and grains"
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "Havainnekuva: taateleita.",
+            "rights": "Yleistetty generoitu ruoka ja tavallinen koristeeton astia; ei tunnistettavaa suojattua teosta tai CC-valokuvan väitettä.",
+            "duplicateInCity": false
+          },
+          "qaReason": "Silmin tarkistettu yleinen taatelien havainnekuva sopii nykyiseen O4-tekstiin, jossa taatelit mainitaan kaupungin kauppatavarana. Vaihtelevat hedelmämuodot, kuoren epäsäännölliset rypyt, kannanjäänteet ja matta keramiikkakulho ovat luontevia. Ei ihmisiä, kasvoja, lisättyä tekstiä, logoja, vesileimaa, kehystä tai mainospakkausta. Kuvateksti nimeää havainnekuvan eikä väitä tiettyä myyjää tai markkinapaikkaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: taateleita.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e05-ndjamena-o4-v1-20261012T175508Z",
+          "sha256": "3b50f46b215da0bc1e910223d338f60660f03805878a444b8295581ac69adcd8",
+          "verdict": "accepted",
+          "reason": "Silmin tarkistettu yleinen taatelien havainnekuva sopii nykyiseen O4-tekstiin, jossa taatelit mainitaan kaupungin kauppatavarana. Vaihtelevat hedelmämuodot, kuoren epäsäännölliset rypyt, kannanjäänteet ja matta keramiikkakulho ovat luontevia. Ei ihmisiä, kasvoja, lisättyä tekstiä, logoja, vesileimaa, kehystä tai mainospakkausta. Kuvateksti nimeää havainnekuvan eikä väitä tiettyä myyjää tai markkinapaikkaa.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:02:05.328461+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/assets/e05-ndjamena-o4-v1-20261012T175508Z/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://en.wikipedia.org/wiki/N%27Djamena",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e05/lahteet/en.wikipedia.org_N_27Djamena.txt",
+              "savedSHA256": "26527f00d07b288c8d86cecf66a5db86944517940fb72a3baaec73ad30cdcb0c",
+              "line": 293,
+              "sourceText": "regional market for livestock, salt, dates, and grains"
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "Havainnekuva: taateleita.",
+            "rights": "Yleistetty generoitu ruoka ja tavallinen koristeeton astia; ei tunnistettavaa suojattua teosta tai CC-valokuvan väitettä.",
+            "duplicateInCity": false
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png?t=051d3804460e4a02",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+        "sha256": "051d3804460e4a0243c534cfdf0d8e052c53d9dc95bc67a0ca09bfc8e92f370a",
+        "bytes": 2529202,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-ndjamena-o4-v1-20261012T175508Z",
+        "nativeSHA256": "3b50f46b215da0bc1e910223d338f60660f03805878a444b8295581ac69adcd8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:04:39.626182+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-o4-v1-20261012T175508Z-3b50f46b215d.png",
+        "sha256": "051d3804460e4a0243c534cfdf0d8e052c53d9dc95bc67a0ca09bfc8e92f370a",
+        "bytes": 2529202,
+        "SHAReadAt": "2026-10-12T18:29:44.917112+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3b50f46b215da0bc1e910223d338f60660f03805878a444b8295581ac69adcd8",
+        "rgbPixelSHA256": "ea7c226913ddc67b9f78ea5167a876788fa522a2acd73f0bb5c9ad538c183c72",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "e2ba910b1fbbac2dc63d1587f3861237cff559e1aa7e90fb6cea8c71e54a02ae"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e05-ndjamena-k2-v1-20261012T184057Z",
+      "galleryImageID": "e05-ndjamena-k2-v1-20261012T184057Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: suola torituotteena.",
+        "lyhyt": "Havainnekuva: suola torituotteena."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: suola torituotteena.",
+        "lyhyt": "Havainnekuva: suola torituotteena."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "dfbabd883102cdc501b914f554a85c158bd71ded39d760529e20e02232c259b7",
+      "exportSHA256": "39ffdc120afe39bdb24de7931952a76421cd5c11663db324a4d431f5421ec68d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
+        "semanticContextSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
+        "subjectTitle": "Tori kokoaa seudun tuotteita",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/assets/e05-ndjamena-k2-v1-20261012T184057Z/image.png",
+            "nativeSHA256": "dfbabd883102cdc501b914f554a85c158bd71ded39d760529e20e02232c259b7",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisessa kulhossa karkeaa vaaleaa suolaa ja irrallisia rakeita, taateleita taustalla. Rakeet eri kokoisia/särmäisiä, astia/hedelmät luontevat, ei lisättyä tekstiä, merkkiä tai ihmisiä.",
+            "captionFi": "Havainnekuva: suola torituotteena.",
+            "sourceAndTargetCheckFi": "Luettu K2 Tori kokoaa seudun tuotteita ja faktapohjan K2 suolan/taatelien kauppa. CaptionFi Havainnekuva: suola torituotteena ei esitä tietyn N’Djamenan torin suolaa, alkuperää tai pakkausta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+              "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/faktapohja.md",
+              "sourceFactSheetSHA256": "1a4db2a37ba828203cc701a2a19903c848cce3d2b71a2be42211911e632ec4f9",
+              "contentExcerpt": "N’Djamena on karjan, suolan, taatelien ja viljan kauppapaikka. Kaupungin elinkeinoihin liittyy myös kalan, lihan ja puuvillan jalostusta. Eri markkinat palvelevat kaupungin arkea ja sen yhteyksiä ympäröivään seutuun. Tavaroiden valikoima kertoo monista työn vaiheista: kasvatuksesta, viljelystä, kuljetuksesta ja tuotteiden valmistamisesta myyntiin. Pääkaupungin kauppa ei siten ole yksi yhtenäinen toimiala. Torin ympärillä kohtaavat erilaiset tuotteet ja ihmiset, joiden työ tuo ne kaupungin ostajien ulottuville."
+            }
+          },
+          "qaReason": "Suolan torituotehavainne vastaa K2:n kauppatavaroita."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: suola torituotteena.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+        "fileSHA256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e05-ndjamena-k2-v1-20261012T184057Z",
+          "sha256": "dfbabd883102cdc501b914f554a85c158bd71ded39d760529e20e02232c259b7",
+          "verdict": "accepted",
+          "reason": "Suolan torituotehavainne vastaa K2:n kauppatavaroita.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/assets/e05-ndjamena-k2-v1-20261012T184057Z/image.png",
+            "nativeSHA256": "dfbabd883102cdc501b914f554a85c158bd71ded39d760529e20e02232c259b7",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisessa kulhossa karkeaa vaaleaa suolaa ja irrallisia rakeita, taateleita taustalla. Rakeet eri kokoisia/särmäisiä, astia/hedelmät luontevat, ei lisättyä tekstiä, merkkiä tai ihmisiä.",
+            "captionFi": "Havainnekuva: suola torituotteena.",
+            "sourceAndTargetCheckFi": "Luettu K2 Tori kokoaa seudun tuotteita ja faktapohjan K2 suolan/taatelien kauppa. CaptionFi Havainnekuva: suola torituotteena ei esitä tietyn N’Djamenan torin suolaa, alkuperää tai pakkausta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+              "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/faktapohja.md",
+              "sourceFactSheetSHA256": "1a4db2a37ba828203cc701a2a19903c848cce3d2b71a2be42211911e632ec4f9",
+              "contentExcerpt": "N’Djamena on karjan, suolan, taatelien ja viljan kauppapaikka. Kaupungin elinkeinoihin liittyy myös kalan, lihan ja puuvillan jalostusta. Eri markkinat palvelevat kaupungin arkea ja sen yhteyksiä ympäröivään seutuun. Tavaroiden valikoima kertoo monista työn vaiheista: kasvatuksesta, viljelystä, kuljetuksesta ja tuotteiden valmistamisesta myyntiin. Pääkaupungin kauppa ei siten ole yksi yhtenäinen toimiala. Torin ympärillä kohtaavat erilaiset tuotteet ja ihmiset, joiden työ tuo ne kaupungin ostajien ulottuville."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:51:25.099275+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png?t=39ffdc120afe39bd",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+        "sha256": "39ffdc120afe39bdb24de7931952a76421cd5c11663db324a4d431f5421ec68d",
+        "bytes": 2401758,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-ndjamena-k2-v1-20261012T184057Z",
+        "nativeSHA256": "dfbabd883102cdc501b914f554a85c158bd71ded39d760529e20e02232c259b7",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:52:48.512775+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-k2-v1-20261012T184057Z-dfbabd883102.png",
+        "sha256": "39ffdc120afe39bdb24de7931952a76421cd5c11663db324a4d431f5421ec68d",
+        "bytes": 2401758,
+        "SHAReadAt": "2026-10-12T19:03:31.274129+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "dfbabd883102cdc501b914f554a85c158bd71ded39d760529e20e02232c259b7",
+        "rgbPixelSHA256": "58b9c2d070e07777b5dae264c76529f77572f27c5ab0bea3030b06de2bf0c5f8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "targetAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
+      "contextAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e05-ndjamena-k4-v1-20261012T191901Z",
+      "galleryImageID": "e05-ndjamena-k4-v1-20261012T191901Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: moottoripyörän satula ja käyttöosat.",
+        "lyhyt": "Havainnekuva: moottoripyörän satula ja käyttöosat."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: moottoripyörän satula ja käyttöosat.",
+        "lyhyt": "Havainnekuva: moottoripyörän satula ja käyttöosat."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6f578e938711618b178d0471cf1240a1515c390fb40605f27232c72272418912",
+      "exportSHA256": "ae7bf6cd1a618e1e3c00d6d66eedf767904a0b20c1add8b75852bdda344e4c77",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
+        "semanticContextSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
+        "subjectTitle": "Jokiväylästä lentoasemalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-object-or-material",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/assets/e05-ndjamena-k4-v1-20261012T191901Z/image.png",
+            "nativeSHA256": "6f578e938711618b178d0471cf1240a1515c390fb40605f27232c72272418912",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Satula, takapyörä, jousitus ja jalkatappi. Saumat, kumi/metalli ja liittymät uskottavia; ei näkyvää tekstiä, logoa tai ihmisiä.",
+            "captionFi": "Havainnekuva: moottoripyörän satula ja käyttöosat.",
+            "sourceAndTargetCheckFi": "K4/faktapohjan moottoripyörätaksit luettu. CaptionFi havainne, ei N’Djamenan nimetyn taksin, mallin tai liikennepalvelun kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+              "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/faktapohja.md",
+              "sourceFactSheetSHA256": "1a4db2a37ba828203cc701a2a19903c848cce3d2b71a2be42211911e632ec4f9",
+              "contentExcerpt": "Charilla ja Logonella kuljettiin historiallisesti jokiveneillä. N’Djamena on myös tieverkon solmukohta, ja nykyinen kansainvälinen lentoasema yhdistää kaupungin kauemmas. Kaupungin sisäiseen liikkumiseen käytetään takseja ja moottoripyörätakseja. Kulkuyhteyksien kuvaan kuuluu näin eri aikakausia ja matkan pituuksia: joen vanha väylä, maanteiden verkosto ja kaupungin kaduilla kulkeva kyyti. Historiallinen veneily ei kuitenkaan yksin kerro, että joella olisi nykyinen säännöllinen matkustajapalvelu.",
+              "supportsFi": "Jokiväylästä lentoasemalle",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "qaReason": "Moottoripyörän yleinen yksityiskohtahavainne vastaa K4:n kulkuvälineaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: moottoripyörän satula ja käyttöosat.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+        "fileSHA256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e05-ndjamena-k4-v1-20261012T191901Z",
+          "sha256": "6f578e938711618b178d0471cf1240a1515c390fb40605f27232c72272418912",
+          "verdict": "accepted",
+          "reason": "Moottoripyörän yleinen yksityiskohtahavainne vastaa K4:n kulkuvälineaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/assets/e05-ndjamena-k4-v1-20261012T191901Z/image.png",
+            "nativeSHA256": "6f578e938711618b178d0471cf1240a1515c390fb40605f27232c72272418912",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Satula, takapyörä, jousitus ja jalkatappi. Saumat, kumi/metalli ja liittymät uskottavia; ei näkyvää tekstiä, logoa tai ihmisiä.",
+            "captionFi": "Havainnekuva: moottoripyörän satula ja käyttöosat.",
+            "sourceAndTargetCheckFi": "K4/faktapohjan moottoripyörätaksit luettu. CaptionFi havainne, ei N’Djamenan nimetyn taksin, mallin tai liikennepalvelun kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+              "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/faktapohja.md",
+              "sourceFactSheetSHA256": "1a4db2a37ba828203cc701a2a19903c848cce3d2b71a2be42211911e632ec4f9",
+              "contentExcerpt": "Charilla ja Logonella kuljettiin historiallisesti jokiveneillä. N’Djamena on myös tieverkon solmukohta, ja nykyinen kansainvälinen lentoasema yhdistää kaupungin kauemmas. Kaupungin sisäiseen liikkumiseen käytetään takseja ja moottoripyörätakseja. Kulkuyhteyksien kuvaan kuuluu näin eri aikakausia ja matkan pituuksia: joen vanha väylä, maanteiden verkosto ja kaupungin kaduilla kulkeva kyyti. Historiallinen veneily ei kuitenkaan yksin kerro, että joella olisi nykyinen säännöllinen matkustajapalvelu.",
+              "supportsFi": "Jokiväylästä lentoasemalle",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "reviewedAt": "2026-10-12T19:41:39.978269+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png?t=ae7bf6cd1a618e1e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+        "sha256": "ae7bf6cd1a618e1e3c00d6d66eedf767904a0b20c1add8b75852bdda344e4c77",
+        "bytes": 2470420,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-ndjamena-k4-v1-20261012T191901Z",
+        "nativeSHA256": "6f578e938711618b178d0471cf1240a1515c390fb40605f27232c72272418912",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T19:42:23.776017+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/ndjamena/e05-ndjamena-k4-v1-20261012T191901Z-6f578e938711.png",
+        "sha256": "ae7bf6cd1a618e1e3c00d6d66eedf767904a0b20c1add8b75852bdda344e4c77",
+        "bytes": 2470420,
+        "SHAReadAt": "2026-10-12T19:42:01.827157+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6f578e938711618b178d0471cf1240a1515c390fb40605f27232c72272418912",
+        "rgbPixelSHA256": "4d21ab8934b052860cbca1dcd0b6b17b361c8d71ab636f3c81b89f23a4d2205c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "targetAfterSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
+      "contextAfterSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e05-ndjamena-photo-ca89f59711370139",
+      "galleryImageID": "capital-cc-e05-ndjamena-photo-ca89f59711370139",
+      "commonsFile": "ISS021-E-26414 - View of Chad.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "lyhyt": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
+        "vuosi": "2009"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "lyhyt": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
+        "vuosi": "2009"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "lyhyt": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
+        "vuosi": "2009"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ca89f59711370139212958bd9e26e9278fae6b642b50a1ca6b96ce8073a872c0",
+      "exportSHA256": "ca89f59711370139212958bd9e26e9278fae6b642b50a1ca6b96ce8073a872c0",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-af971d152a567c.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
+        "semanticContextSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
+        "subjectTitle": "ndjamena — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26414_-_View_of_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/ISS021-E-26414_-_View_of_Chad.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:ISS021-E-26414_-_View_of_Chad.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "licenseSourceSha256": "cedaa3f5268a3c1d36bee103630046db3c89725fb2ec67a28b84098b1b6b1f9a",
+            "depictedWorkLayer": "US-government NASA -valokuva alkuperäisen Commons-PD-lisenssimerkinnän mukaan, kuvaajayksikkö täsmälleen Author-kentästä. Pääaihe maantieteellinen yleiskuva; yksittäisen suojatun nykyteoksen taide-/arkkitehtuuripiirteitä ei erotu, ei FOP-/rakennusiän PD-oletusta.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [
+              " 12.200000;   15.100000",
+              " 12.600000;   15.200000"
+            ],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:53:26.738928+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-af971d152a567c.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26414_-_View_of_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0206096c3c1e02c8c2a9a3a3031288f783fa05ed07a0eb4dff18d6903d48c175.html",
+            "savedSourceSHA256": "cedaa3f5268a3c1d36bee103630046db3c89725fb2ec67a28b84098b1b6b1f9a",
+            "authorVerified": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "14 November 2009, 13:02:24",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "N’Djamenan seutua avaruudesta kuvattuna.",
+            "depictedWorkLayer": "Valokuvan Commons-lisenssimalli on nimenomaisesti PD-USGov-NASA: solely created by NASA. Author-kentän tekijäyksikkö on Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, ei uploader. NASAn alkuperäinen mediakäyttöohje on luettu: NASA-kuvia voi yleisesti käyttää toimituksellisesti julkaistuissa teoksissa, ilman NASA-suosituksen väitettä; kolmannen osapuolen tekijänoikeudella merkityt aineistot erotetaan. Tässä kuvassa ei ole NASA-logoa, ihmisiä tai kolmannen osapuolen tekijämerkintää. Maanpinta ja kaupunkirakenne ovat pääaiheena; erillisen yksilöidyn suojatun nykyteoksen piirteitä ei erotu. Rakennusikään perustuvaa PD- tai FOP-päätelmää ei tehdä.",
+            "duplicateInCity": false,
+            "licenseModelVerified": "PD-USGov-NASA",
+            "publicDomainGround": "Commonsin tiedostokohtainen PD-USGov-NASA-malli, solely created by NASA; ei yleinen alatunnistelupa.",
+            "placeEvidence": {
+              "sourcePageFeatureField": "NDJAMENA, ROADS, CANAL, FLOODED AREAS",
+              "objectLocation": [
+                12.2,
+                15.1
+              ],
+              "cameraLocation": [
+                12.6,
+                15.2
+              ],
+              "category": "N’Djamena",
+              "originalNASALinkStatus": "Tuottajan tallentama NASA photo.pl SQL-error ei ole positiivinen paikkatodiste; paikkatiedot luettu itse Commonsin tehtäväkohtaisesta metadatasta."
+            },
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+            "primaryMediaPolicySHA256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+            "qualityNote": "Vaalea ja utuinen, mutta asutuksen, tieverkon, kiitotien ja vesialueiden alueelliset muodot erottuvat; ei väitettä talokohtaisesta terävyydestä.",
+            "captureDateAsStated": "14 November 2009, 13:02:24"
+          },
+          "qaReason": "Silmin katsottu alkuperäinen avaruusvalokuva: laaja asutus, tieverkko, kiitotie ja vesialueet näkyvät selvästi alueellisina muotoina. Kuva on vaalea ja utuinen; yksittäisten talojen tarkkoja piirteitä ei väitetä näkyviksi. Ei kasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä. Itse luetun Commons-sivun Features-rivi on NDJAMENA, ROADS, CANAL, FLOODED AREAS ja Object location 12.2 N / 15.1 E; kuva ei siten nojaa pelkkään yleiseen Chad-otsikkoon. Camera location 12.6 N / 15.2 E on eri tieto. Nykyinen artikkeli käsittelee kaupungin alueellista maantiedettä, tieverkkoa ja lentoasemaa; kuvateksti sanoo seutua eikä väitä nykyistä keskustaa tai jokien täsmällistä yhtymäkohtaa. Vuoden 2009 kuvaa ei merkitä tuoreeksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "ISS021-E-26414 - View of Chad.jpg",
+          "sha256": "ca89f59711370139212958bd9e26e9278fae6b642b50a1ca6b96ce8073a872c0",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen avaruusvalokuva: laaja asutus, tieverkko, kiitotie ja vesialueet näkyvät selvästi alueellisina muotoina. Kuva on vaalea ja utuinen; yksittäisten talojen tarkkoja piirteitä ei väitetä näkyviksi. Ei kasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä. Itse luetun Commons-sivun Features-rivi on NDJAMENA, ROADS, CANAL, FLOODED AREAS ja Object location 12.2 N / 15.1 E; kuva ei siten nojaa pelkkään yleiseen Chad-otsikkoon. Camera location 12.6 N / 15.2 E on eri tieto. Nykyinen artikkeli käsittelee kaupungin alueellista maantiedettä, tieverkkoa ja lentoasemaa; kuvateksti sanoo seutua eikä väitä nykyistä keskustaa tai jokien täsmällistä yhtymäkohtaa. Vuoden 2009 kuvaa ei merkitä tuoreeksi.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:53:26.738928+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-af971d152a567c.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26414_-_View_of_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0206096c3c1e02c8c2a9a3a3031288f783fa05ed07a0eb4dff18d6903d48c175.html",
+            "savedSourceSHA256": "cedaa3f5268a3c1d36bee103630046db3c89725fb2ec67a28b84098b1b6b1f9a",
+            "authorVerified": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "14 November 2009, 13:02:24",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "N’Djamenan seutua avaruudesta kuvattuna.",
+            "depictedWorkLayer": "Valokuvan Commons-lisenssimalli on nimenomaisesti PD-USGov-NASA: solely created by NASA. Author-kentän tekijäyksikkö on Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, ei uploader. NASAn alkuperäinen mediakäyttöohje on luettu: NASA-kuvia voi yleisesti käyttää toimituksellisesti julkaistuissa teoksissa, ilman NASA-suosituksen väitettä; kolmannen osapuolen tekijänoikeudella merkityt aineistot erotetaan. Tässä kuvassa ei ole NASA-logoa, ihmisiä tai kolmannen osapuolen tekijämerkintää. Maanpinta ja kaupunkirakenne ovat pääaiheena; erillisen yksilöidyn suojatun nykyteoksen piirteitä ei erotu. Rakennusikään perustuvaa PD- tai FOP-päätelmää ei tehdä.",
+            "duplicateInCity": false,
+            "licenseModelVerified": "PD-USGov-NASA",
+            "publicDomainGround": "Commonsin tiedostokohtainen PD-USGov-NASA-malli, solely created by NASA; ei yleinen alatunnistelupa.",
+            "placeEvidence": {
+              "sourcePageFeatureField": "NDJAMENA, ROADS, CANAL, FLOODED AREAS",
+              "objectLocation": [
+                12.2,
+                15.1
+              ],
+              "cameraLocation": [
+                12.6,
+                15.2
+              ],
+              "category": "N’Djamena",
+              "originalNASALinkStatus": "Tuottajan tallentama NASA photo.pl SQL-error ei ole positiivinen paikkatodiste; paikkatiedot luettu itse Commonsin tehtäväkohtaisesta metadatasta."
+            },
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+            "primaryMediaPolicySHA256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+            "qualityNote": "Vaalea ja utuinen, mutta asutuksen, tieverkon, kiitotien ja vesialueiden alueelliset muodot erottuvat; ei väitettä talokohtaisesta terävyydestä.",
+            "captureDateAsStated": "14 November 2009, 13:02:24"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "ISS021-E-26414 - View of Chad.jpg",
+        "sha256": "ca89f59711370139212958bd9e26e9278fae6b642b50a1ca6b96ce8073a872c0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26414_-_View_of_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/ISS021-E-26414_-_View_of_Chad.jpg",
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "ca89f59711370139212958bd9e26e9278fae6b642b50a1ca6b96ce8073a872c0",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg",
+        "bytes": 1307707,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:09.403041+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "lyhyt": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "vuosi": "2009"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "lyhyt": "N’Djamenan seutua avaruudesta kuvattuna.",
+        "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
+        "vuosi": "2009"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "targetAfterSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
+      "contextAfterSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-ndjamena-c1-bad6fffdaf8c1833",
+      "galleryImageID": "capital-cc-e05-ndjamena-c1-bad6fffdaf8c1833",
+      "commonsFile": "NDjamena, Chad.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c1-bad6fffdaf8c183384fb.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "lyhyt": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "tiedosto": "NDjamena, Chad.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "lyhyt": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "tiedosto": "NDjamena, Chad.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c1-bad6fffdaf8c183384fb.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "lyhyt": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "tiedosto": "NDjamena, Chad.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "bad6fffdaf8c183384fbd453a9d6a55e2692821b647d82d2e166608a9e0734f1",
+      "exportSHA256": "bad6fffdaf8c183384fbd453a9d6a55e2692821b647d82d2e166608a9e0734f1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c1-bad6fffdaf8c183384fb.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c1-bad6fffdaf8c183384fb.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-6e4de1f0e51785.jpg",
+      "dimensions": [
+        4256,
+        2832
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
+        "semanticContextSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
+        "subjectTitle": "N'Djamena",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NDjamena,_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/NDjamena%2C_Chad.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:NDjamena,_Chad.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "NASA Astronauts",
+            "licenseSourceSha256": "06685943b1cd8fda151b9058946c3cb7c651db50369998e826956ad3df4e30c5",
+            "depictedWorkLayer": "NASAn astronauttien valokuva, alkuperäissivun PD-NASA-vapautus ja virallinen ISS023-E-45788 lähdeviite; ei valokuvan tekijäksi arvattua uploaderia. Pääaihe kaupungin koko katu-/alueasettelu ja luonnolliset jokivarret, yksittäisen suojatun rakennuksen tai taideteoksen tunnistettava toisinto ei pääaiheena. Ei arkkitehtuurin FOP/ikäoletusta.",
+            "sourcePlaceDescription": "English: Astronaut Photo of NDjamena, Chad taken from the International Space Station (ISS) during Expedition 23 on May 18, 2010.",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:27:37.247311+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-6e4de1f0e51785.jpg",
+            "actualWidth": 4256,
+            "actualHeight": 2832,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4256,
+            "nativePixelHeight": 2832,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NDjamena,_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/64134e85e5dd846d8593073cb54efb3e7daafb53d20246de04176a4acd3dba5c.html",
+            "savedSourceSHA256": "06685943b1cd8fda151b9058946c3cb7c651db50369998e826956ad3df4e30c5",
+            "authorVerified": "NASA Astronauts",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "Taken on 18 May 2010",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+            "depictedWorkLayer": "Valokuvan alkuperäisen Author-taulukon tekijä on NASA Astronauts. Erillinen tiedostokohtainen PD-lisenssimalli nimeää NASAn Johnson Space Centerin Image Science & Analysis Laboratoryn ja ISS023-E-45788-lähdekuvan; NASA-ID-tagia ei käytetä yksin lisenssiperustana. NASAn mediakäyttöohje on aiemmin luettu alkuperäisestä NASA-lähteestä: toimituksellinen factual käyttö ilman NASA-suosituksen väitettä, kolmannen osapuolen merkityt sisällöt erotellen. Kuvassa ei ole logoa, identifioitavia ihmisiä tai kolmannen osapuolen tekijämerkintää. Kuvattu teoskerros on yleinen koko kaupungin maantieteellinen/katuasettelu ja jokivarsi; yksittäisen suojatun modernin teoksen ilmaisua ei erotu. Ei FOP-, rakennusikä- tai kuolinvuosi-PD-oletusta.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "06685943b1cd8fda151b9058946c3cb7c651db50369998e826956ad3df4e30c5",
+            "captureDateAsStated": "Taken on18 May2010",
+            "placeEvidence": "Description: Astronaut Photo of NDjamena, Chad taken from ISS during Expedition23 on May18,2010. Tehtäväkohtainen ISS023-E-45788.",
+            "publicDomainGround": "Tiedostokohtainen NASA/Johnson Space Center Image Science & Analysis Laboratory PD-malli; ei pelkkä NASA-ID-tag tai Commonsin yleinen alatunnistelupa.",
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+            "primaryMediaPolicySHA256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+            "qualityNote": "Reunojen lievä pehmeys, keskeinen kaupungin/katujen asettelu silti luettava; ei talokohtaista tarkkuuslupausta."
+          },
+          "qaReason": "Silmin katsottu alkuperäinen4256×2832 avaruusvalokuva: laaja kaupungin katuverkko, asutus, kiitotie ja jokien haarautuva ympäristö näkyvät. Reunojen lievä pehmeys ei estä laajan kaupunkiasettelun lukemista, keskialan katuverkko erottuu. Ei ihmiskasvoja, lisättyä tekstiä, NASA-logoa, vesileimaa tai kehystä. Commonsin Description yksilöi N’Djamenan, ISS Expedition23:n ja päivän18.5.2010. Nykyinen artikkeli kertoo Charin/Logonen yhtymäkohdasta, tieverkosta ja lentoasemasta. Kuvateksti kertoo vuoden2010 eikä väitä tämän päivän tilannetta. Eri tiedosto/kuvausvuosi kuin hyväksytty vuoden2009 PHOTO."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "NDjamena, Chad.jpg",
+          "sha256": "bad6fffdaf8c183384fbd453a9d6a55e2692821b647d82d2e166608a9e0734f1",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen4256×2832 avaruusvalokuva: laaja kaupungin katuverkko, asutus, kiitotie ja jokien haarautuva ympäristö näkyvät. Reunojen lievä pehmeys ei estä laajan kaupunkiasettelun lukemista, keskialan katuverkko erottuu. Ei ihmiskasvoja, lisättyä tekstiä, NASA-logoa, vesileimaa tai kehystä. Commonsin Description yksilöi N’Djamenan, ISS Expedition23:n ja päivän18.5.2010. Nykyinen artikkeli kertoo Charin/Logonen yhtymäkohdasta, tieverkosta ja lentoasemasta. Kuvateksti kertoo vuoden2010 eikä väitä tämän päivän tilannetta. Eri tiedosto/kuvausvuosi kuin hyväksytty vuoden2009 PHOTO.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:27:37.247311+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-6e4de1f0e51785.jpg",
+            "actualWidth": 4256,
+            "actualHeight": 2832,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4256,
+            "nativePixelHeight": 2832,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NDjamena,_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/64134e85e5dd846d8593073cb54efb3e7daafb53d20246de04176a4acd3dba5c.html",
+            "savedSourceSHA256": "06685943b1cd8fda151b9058946c3cb7c651db50369998e826956ad3df4e30c5",
+            "authorVerified": "NASA Astronauts",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "Taken on 18 May 2010",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+            "depictedWorkLayer": "Valokuvan alkuperäisen Author-taulukon tekijä on NASA Astronauts. Erillinen tiedostokohtainen PD-lisenssimalli nimeää NASAn Johnson Space Centerin Image Science & Analysis Laboratoryn ja ISS023-E-45788-lähdekuvan; NASA-ID-tagia ei käytetä yksin lisenssiperustana. NASAn mediakäyttöohje on aiemmin luettu alkuperäisestä NASA-lähteestä: toimituksellinen factual käyttö ilman NASA-suosituksen väitettä, kolmannen osapuolen merkityt sisällöt erotellen. Kuvassa ei ole logoa, identifioitavia ihmisiä tai kolmannen osapuolen tekijämerkintää. Kuvattu teoskerros on yleinen koko kaupungin maantieteellinen/katuasettelu ja jokivarsi; yksittäisen suojatun modernin teoksen ilmaisua ei erotu. Ei FOP-, rakennusikä- tai kuolinvuosi-PD-oletusta.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "06685943b1cd8fda151b9058946c3cb7c651db50369998e826956ad3df4e30c5",
+            "captureDateAsStated": "Taken on18 May2010",
+            "placeEvidence": "Description: Astronaut Photo of NDjamena, Chad taken from ISS during Expedition23 on May18,2010. Tehtäväkohtainen ISS023-E-45788.",
+            "publicDomainGround": "Tiedostokohtainen NASA/Johnson Space Center Image Science & Analysis Laboratory PD-malli; ei pelkkä NASA-ID-tag tai Commonsin yleinen alatunnistelupa.",
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+            "primaryMediaPolicySHA256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+            "qualityNote": "Reunojen lievä pehmeys, keskeinen kaupungin/katujen asettelu silti luettava; ei talokohtaista tarkkuuslupausta."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "NDjamena, Chad.jpg",
+        "sha256": "bad6fffdaf8c183384fbd453a9d6a55e2692821b647d82d2e166608a9e0734f1",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NDjamena,_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/NDjamena%2C_Chad.jpg",
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "width": 4256,
+        "height": 2832,
+        "originalSHA256": "bad6fffdaf8c183384fbd453a9d6a55e2692821b647d82d2e166608a9e0734f1",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c1-bad6fffdaf8c183384fb.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c1-bad6fffdaf8c183384fb.jpg",
+        "bytes": 4711410,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:28:15.787825+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "NDjamena, Chad.jpg",
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "lyhyt": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "lyhyt": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+        "tiedosto": "NDjamena, Chad.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "targetAfterSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
+      "contextAfterSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "TRAVELER",
+      "type": "commons",
+      "assetID": "capital-cc-e05-ndjamena-traveler-557cea7c2044f78b",
+      "galleryImageID": "capital-cc-e05-ndjamena-traveler-557cea7c2044f78b",
+      "commonsFile": "La verdure autour du fleuve Chari de N'Djamena.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
+        "suora": true,
+        "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
+        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "lyhyt": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
+        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "lyhyt": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
+        "suora": true,
+        "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
+        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "lyhyt": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "557cea7c2044f78bef070e789257045acd73e6a3dd710c5327dc0e29a3821b93",
+      "exportSHA256": "557cea7c2044f78bef070e789257045acd73e6a3dd710c5327dc0e29a3821b93",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-ab7f8feb062b57.jpg",
+      "dimensions": [
+        3048,
+        4064
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d431bdea397390928bf678f86bb7a40b56158b8a95f52edc0ec263839ac77cbb",
+        "semanticContextSHA256": "beabc746c6c6933d2e10a12ff3f3419697b3cfa8d7340360ed65576248831420",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "MAKIA ANNAELLE Hyacinthe",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:La_verdure_autour_du_fleuve_Chari_de_N%27Djamena.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/La_verdure_autour_du_fleuve_Chari_de_N%27Djamena.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:La_verdure_autour_du_fleuve_Chari_de_N%27Djamena.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "MAKIA ANNAELLE Hyacinthe",
+            "licenseSourceSha256": "62b01b2e461cfdc02b80667b23462665e9c83fe6b364dfe1e117bd7c733df32a",
+            "depictedWorkLayer": "Luonnonvesi ja kasvit, ei tunnistettavaa suojattua arkkitehtuuri-/taideteosta. CC0 ja todellinen Author-kenttä MAKIA ANNAELLE Hyacinthe; ei kaupallisen teoskerroksen oletusta nimetylle rakennukselle.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:37:36.771003+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-ab7f8feb062b57.jpg",
+            "actualWidth": 3048,
+            "actualHeight": 4064,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3048,
+            "nativePixelHeight": 4064,
+            "exifOrientation": 0,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:La_verdure_autour_du_fleuve_Chari_de_N%27Djamena.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1ce00a324db5796a00d4905d90eba69ea4ff89646e4906f0d719965eee38d474.html",
+            "savedSourceSHA256": "62b01b2e461cfdc02b80667b23462665e9c83fe6b364dfe1e117bd7c733df32a",
+            "authorVerified": "MAKIA ANNAELLE Hyacinthe",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "captureDate": "19 September 2026",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+            "depictedWorkLayer": "Kasvit, vesi, maa ja kaukainen tavallinen vene; ei erillistä suojattua arkkitehtuuri-/taideteosta havaittu.",
+            "duplicateInCity": false,
+            "placeVerified": "Original Commons Description: La vue d un coucher de soleil sur le fleuve Chari de N Djamena.",
+            "aspectRatio": 0.75,
+            "dateQualification": "19 September2026 is the source date; no claim about today s water level or water safety."
+          },
+          "qaReason": "Alkuperäinen pystykuva näyttää kasvillisuuden ja Chari-joen rannan; nykyinen opaskappale kertoo kaupungin jokimaisemasta. Commonsin oma kuvaus nimeää Chari de N Djamena, kuvausajan19.9.2026 ja tekijän MAKIA ANNAELLE Hyacinthe. CC0 1.0 Universal on luettu itse. Silmin ei kasvoja, lisättyä tekstiä, logoa, vesileimaa tai kehystä; taustan pieni koristeeton vene on tavallinen käyttöesine. Korostuneita vihreitä sävyjä ja kirkasta taivasta, mutta pääaihe on tunnistettava ja käyttökelpoinen. Natiivi pysty3048×4064, suhde0.75 täyttää TRAVELERin vaatimuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "commonsFile": "La verdure autour du fleuve Chari de N'Djamena.jpg",
+          "sha256": "557cea7c2044f78bef070e789257045acd73e6a3dd710c5327dc0e29a3821b93",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen pystykuva näyttää kasvillisuuden ja Chari-joen rannan; nykyinen opaskappale kertoo kaupungin jokimaisemasta. Commonsin oma kuvaus nimeää Chari de N Djamena, kuvausajan19.9.2026 ja tekijän MAKIA ANNAELLE Hyacinthe. CC0 1.0 Universal on luettu itse. Silmin ei kasvoja, lisättyä tekstiä, logoa, vesileimaa tai kehystä; taustan pieni koristeeton vene on tavallinen käyttöesine. Korostuneita vihreitä sävyjä ja kirkasta taivasta, mutta pääaihe on tunnistettava ja käyttökelpoinen. Natiivi pysty3048×4064, suhde0.75 täyttää TRAVELERin vaatimuksen.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:37:36.771003+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-ab7f8feb062b57.jpg",
+            "actualWidth": 3048,
+            "actualHeight": 4064,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3048,
+            "nativePixelHeight": 4064,
+            "exifOrientation": 0,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:La_verdure_autour_du_fleuve_Chari_de_N%27Djamena.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/1ce00a324db5796a00d4905d90eba69ea4ff89646e4906f0d719965eee38d474.html",
+            "savedSourceSHA256": "62b01b2e461cfdc02b80667b23462665e9c83fe6b364dfe1e117bd7c733df32a",
+            "authorVerified": "MAKIA ANNAELLE Hyacinthe",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "captureDate": "19 September 2026",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "4d2fb28507b250272b9e23eb143d3dabfc23453dc4d58e363bafadea455bab8a",
+            "captionFi": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+            "depictedWorkLayer": "Kasvit, vesi, maa ja kaukainen tavallinen vene; ei erillistä suojattua arkkitehtuuri-/taideteosta havaittu.",
+            "duplicateInCity": false,
+            "placeVerified": "Original Commons Description: La vue d un coucher de soleil sur le fleuve Chari de N Djamena.",
+            "aspectRatio": 0.75,
+            "dateQualification": "19 September2026 is the source date; no claim about today s water level or water safety."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "commonsFile": "La verdure autour du fleuve Chari de N'Djamena.jpg",
+        "sha256": "557cea7c2044f78bef070e789257045acd73e6a3dd710c5327dc0e29a3821b93",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:La_verdure_autour_du_fleuve_Chari_de_N%27Djamena.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/La_verdure_autour_du_fleuve_Chari_de_N%27Djamena.jpg",
+        "author": "MAKIA ANNAELLE Hyacinthe",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "width": 3048,
+        "height": 4064,
+        "originalSHA256": "557cea7c2044f78bef070e789257045acd73e6a3dd710c5327dc0e29a3821b93",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/traveler-557cea7c2044f78bef07.jpg",
+        "bytes": 8981234,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:37:50.475460+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg",
+        "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
+        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "lyhyt": "Kasvillisuutta Chari-joen rannalla N’Djamenassa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)",
+        "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "lyhyt": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+        "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "targetAfterSHA256": "d431bdea397390928bf678f86bb7a40b56158b8a95f52edc0ec263839ac77cbb",
+      "contextAfterSHA256": "beabc746c6c6933d2e10a12ff3f3419697b3cfa8d7340360ed65576248831420"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

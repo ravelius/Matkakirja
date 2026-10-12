@@ -95,11 +95,11 @@
     "FESPACOn näytösten rinnalla järjestetään työpajoja ja ammattilaisten tapaamisia."
   ],
   "valokuva": {
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": "",
-    "vuosi": ""
+    "tiedosto": "Crocodile BangrWeoogoPark.JPG",
+    "lyhyt": "Krokotiili Bangr Weogon puistossa Ouagadougoussa.",
+    "selite": "Krokotiili Bangr Weogon puistossa Ouagadougoussa.",
+    "lahde": "Yann Fauché & Alma Mulalic, Commons (CC BY-SA 3.0)",
+    "vuosi": "2011"
   },
   "kaupunkilehti": [
     {
@@ -108,22 +108,22 @@
       "johdanto": "Hovi, torit ja kaupunkimetsä kuuluvat samaan pääkaupunkiin. Valkokankaiden takana kohtaavat myös elokuvan tekijät ja levittäjät.",
       "kansikuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Ouaga aerial view.jpg",
+          "lyhyt": "Ouagadougoun Cissinin kortteleita ilmasta joulukuussa 2007.",
+          "selite": "Ouagadougoun Cissinin kortteleita ilmasta joulukuussa 2007.",
+          "lahde": "kyselak, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Aerialview ouaga.png",
+          "lyhyt": "Ouagadougoun Secteur 17:n kaupunkirakennetta ilmasta vuonna 2008.",
+          "selite": "Ouagadougoun Secteur 17:n kaupunkirakennetta ilmasta vuonna 2008.",
+          "lahde": "Neonstar, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Ouagaaerialview.png",
+          "lyhyt": "Ouagadougoun lounaisosan kortteleita ilmasta joulukuussa 2007.",
+          "selite": "Ouagadougoun lounaisosan kortteleita ilmasta joulukuussa 2007.",
+          "lahde": "Neonstar, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
       "nostot": [
@@ -308,10 +308,10 @@
         {
           "otsikko": "Elokuvan matka jatkuu salin ovella",
           "teksti": "Valmis elokuva tarvitsee myös katsojia ja paikkoja, joissa se voidaan esittää. FESPACOn toimintaan kuuluu MICA, elokuva- ja televisiomarkkina, jossa alan ammattilaiset voivat tavata ja esitellä työtään. Festivaalissa järjestetään lisäksi työpajoja ja ajatustenvaihtoa. Yleisö katsoo valkokangasta, mutta salin ulkopuolella rakennetaan työn seuraavia mahdollisuuksia. Katsominen ja levittäminen ovat näin eri vaiheita saman elokuvan elämässä, eikä festivaali ole pelkästään lista toisistaan irrallisia näytöksiä.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
+          "tiedosto": "16 mm Film Projector From Japan.jpg",
+          "lyhyt": "Kelallinen filmiprojektori elokuvien esittämiseen.",
+          "selite": "Kelallinen filmiprojektori elokuvien esittämiseen.",
+          "lahde": "পাপৰি বৰা, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Panafrican Film and Television Festival of Ouagadougou"
         },
         {
@@ -363,7 +363,14 @@
     "Bangr Weogon kaupunkimetsä": {
       "aika": "Vanha metsäympäristö, nykyinen kaupunkipuisto myöhempi",
       "teksti": "Bangr Weogo on Ouagadougoun kaupunkimetsä, joka kuului ennen siirtomaakautta mossipäälliköiden hallitsemaan ympäristöön. Metsään liittyi pyhinä koettuja paikkoja, eläimiä ja pyhiä esineitä. Vuonna 1873 paikalla oli jo tämä paikalliseen perinteeseen liittyvä metsäkerros, mutta nykyistä puistopalvelua ei pidä siirtää sellaisenaan menneisyyteen.\n\nKaupungin hallinnoima puisto toimii nykyisin myös ympäristökasvatuksessa ja virkistyksessä. Sen nimellä on lähteen mukaan tiedon metsän merkitys. Kävely- ja juoksupolut ovat nykyisiä tapoja käyttää metsää, kun taas vanha paikallinen historia muistuttaa alueen aikaisemmista rooleista. Sama metsä voi kantaa eri aikojen merkityksiä ilman, että jokainen sen rakennus tai esine olisi yhtä vanha. Puiston nykyiset käyntijärjestelyt ovat erillinen asia.",
-      "kuvat": [],
+      "kuvat": [
+        {
+          "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
+          "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+          "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+          "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
+        }
+      ],
       "lahde": "Wikipedia"
     },
     "Kansakunnan aukion vanha markkinapaikka": {

@@ -1,0 +1,2040 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e05",
+  "city": "lome",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+  "assets": [
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e05-lome-traveler-v1-20261012T182837Z",
+      "galleryImageID": "e05-lome-traveler-v1-20261012T182837Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kookospalmun hedelmät ja lehvä.",
+        "lyhyt": "Havainnekuva: kookospalmun hedelmät ja lehvä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kookospalmun hedelmät ja lehvä.",
+        "lyhyt": "Havainnekuva: kookospalmun hedelmät ja lehvä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5b3577a1df8586a5097311355849c779d69fd49a461f6a60be6e6e711ff5ccae",
+      "exportSHA256": "e4598c785f1ba9dfcbfe730b2075e8dd832f7d9be06fb86a40c757b9c1768329",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "70507ecae26512bf198150a28dcd26026522628edb2da2f4e8d389a19550af9f",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-natural-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-traveler-v1-20261012T182837Z/image.png",
+            "nativeSHA256": "5b3577a1df8586a5097311355849c779d69fd49a461f6a60be6e6e711ff5ccae",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kookospalmun runko, lehvästö ja hedelmäryhmiä alhaalta katsottuna. Lehtien ja terttujen kiinnitys, rungon lehtiarvet, kuidut ja hedelmäkuoret luontevat; ei lisättyä tekstiä, kasvoja tai brändiä.",
+            "captionFi": "Havainnekuva: kookospalmun hedelmät ja lehvä.",
+            "sourceAndTargetCheckFi": "Luettu TRAVELER:n meriranta/kasvillisuus sekä faktapohjan rannikon kookospuita. CaptionFi Havainnekuva: kookospalmun hedelmät ja lehvä ei paikanna puuyksilöä Loméhen. L2:n erillinen vaakalehtikuva ja tämä pysty koko latvuston kuva käsittelevät rannikkokasvillisuutta eri taittoroolissa, ei sama tiedosto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén markkinat ja meriranta näyttävät kaksi puolta rannikkokaupungin arjesta. Grand Marchéssa myydään kankaiden lisäksi ruokatarvikkeita ja käyttöesineitä. Palatsin puutarhan kasvillisuus avaa Guineanlahden luontoa. Meressä voi olla voimakkaita virtauksia, joten rantakäyntiä ei pidä ajatella automaattisena uimaretkenä.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "qaReason": "Natiivi 1024×1536 pysty (0.667) sopii TRAVELER:n rannikkokasvillisuuden aiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: kookospalmun hedelmät ja lehvä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e05-lome-traveler-v1-20261012T182837Z",
+          "sha256": "5b3577a1df8586a5097311355849c779d69fd49a461f6a60be6e6e711ff5ccae",
+          "verdict": "accepted",
+          "reason": "Natiivi 1024×1536 pysty (0.667) sopii TRAVELER:n rannikkokasvillisuuden aiheeseen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-traveler-v1-20261012T182837Z/image.png",
+            "nativeSHA256": "5b3577a1df8586a5097311355849c779d69fd49a461f6a60be6e6e711ff5ccae",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kookospalmun runko, lehvästö ja hedelmäryhmiä alhaalta katsottuna. Lehtien ja terttujen kiinnitys, rungon lehtiarvet, kuidut ja hedelmäkuoret luontevat; ei lisättyä tekstiä, kasvoja tai brändiä.",
+            "captionFi": "Havainnekuva: kookospalmun hedelmät ja lehvä.",
+            "sourceAndTargetCheckFi": "Luettu TRAVELER:n meriranta/kasvillisuus sekä faktapohjan rannikon kookospuita. CaptionFi Havainnekuva: kookospalmun hedelmät ja lehvä ei paikanna puuyksilöä Loméhen. L2:n erillinen vaakalehtikuva ja tämä pysty koko latvuston kuva käsittelevät rannikkokasvillisuutta eri taittoroolissa, ei sama tiedosto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén markkinat ja meriranta näyttävät kaksi puolta rannikkokaupungin arjesta. Grand Marchéssa myydään kankaiden lisäksi ruokatarvikkeita ja käyttöesineitä. Palatsin puutarhan kasvillisuus avaa Guineanlahden luontoa. Meressä voi olla voimakkaita virtauksia, joten rantakäyntiä ei pidä ajatella automaattisena uimaretkenä.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "reviewedAt": "2026-10-12T18:31:38.392541+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png?t=e4598c785f1ba9df",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+        "sha256": "e4598c785f1ba9dfcbfe730b2075e8dd832f7d9be06fb86a40c757b9c1768329",
+        "bytes": 2827748,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-lome-traveler-v1-20261012T182837Z",
+        "nativeSHA256": "5b3577a1df8586a5097311355849c779d69fd49a461f6a60be6e6e711ff5ccae",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "lome",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:32:43.209082+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-traveler-v1-20261012T182837Z-5b3577a1df85.png",
+        "sha256": "e4598c785f1ba9dfcbfe730b2075e8dd832f7d9be06fb86a40c757b9c1768329",
+        "bytes": 2827748,
+        "SHAReadAt": "2026-10-12T18:31:53.005556+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5b3577a1df8586a5097311355849c779d69fd49a461f6a60be6e6e711ff5ccae",
+        "rgbPixelSHA256": "0a00c7af6bcd32447e3ae62d17ae12a126b91c1beda0940504011a9c715e1169",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "70507ecae26512bf198150a28dcd26026522628edb2da2f4e8d389a19550af9f"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e05-lome-o4-v1-20261012T175235Z",
+      "galleryImageID": "e05-lome-o4-v1-20261012T175235Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: limet ja mausteet.",
+        "lyhyt": "Havainnekuva: limet ja mausteet."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: limet ja mausteet.",
+        "lyhyt": "Havainnekuva: limet ja mausteet."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0f2642cf0bd836a3bddeba3faa19f0703662a40616115a79b96c1230f4d8e694",
+      "exportSHA256": "b60449a3c2e353647e6a20d8dce83d94e26e96b5c223a8d0b6825801a56a8093",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "7b056bbe8dfc4bd76e5ba738b2af5d24da68aa7e69c1ebc01813511656076459",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-food-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-o4-v1-20261012T175235Z/image.png",
+            "width": 1536,
+            "height": 1024,
+            "visuallyInspected": true,
+            "inspectionDetail": "whole image; original detail",
+            "captionFi": "Havainnekuva: limet ja mausteet.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Katumyynnissä tarjotaan riisiä ja pâtea. Kaupungin ravintolatarjontaan kuuluu paikallisia sekä kansainvälisiä ruokia. Torikaupan valikoimassa näkyvät myös mausteet, lime ja kuivattu kala.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Togo",
+                "https://en.wikipedia.org/wiki/Lom%C3%A9",
+                "https://en.wikipedia.org/wiki/Lom%C3%A9%E2%80%93Tokoin_International_Airport",
+                "https://en.wikipedia.org/wiki/Lom%C3%A9_Grand_Market",
+                "https://en.wikipedia.org/wiki/Nana_Benz",
+                "https://en.wikipedia.org/wiki/Sacred_Heart_Cathedral,_Lom%C3%A9",
+                "https://en.wikivoyage.org/wiki/Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/B%C3%A8",
+                "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_du_Sacr%C3%A9-C%C5%93ur_de_Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Palais_de_Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Plages_de_Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Wharf_de_Lom%C3%A9",
+                "https://www.gov.uk/foreign-travel-advice/togo"
+              ]
+            },
+            "rightsEvidence": {
+              "kind": "generated-generalized-food-illustration",
+              "noProtectedWorkDepicted": true,
+              "namedPlaceAppearanceClaimed": false
+            },
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "colorProfile": "Native RGB PNG; embedded ICC/sRGB not independently verified, no profile claim",
+            "scope": "independent image QA; no owner acceptance/integration/publication"
+          },
+          "qaReason": "Katsottu koko valmis PNG: limet, halkaistut hedelmät ja nimetön jauhettu mauste näyttävät luontevilta. Hedelmien rakenne, kuoripinta, astiat ja päivänvalo uskottavia; ei kasvoja, tekstiä, logoa tai nimettyä markkinapaikkaa. Yleinen ruoka-aiheen havainne vastaa nykyisen O4-tekstin lime/mauste-mainintaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: limet ja mausteet.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+        "fileSHA256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e05-lome-o4-v1-20261012T175235Z",
+          "sha256": "0f2642cf0bd836a3bddeba3faa19f0703662a40616115a79b96c1230f4d8e694",
+          "verdict": "accepted",
+          "reason": "Katsottu koko valmis PNG: limet, halkaistut hedelmät ja nimetön jauhettu mauste näyttävät luontevilta. Hedelmien rakenne, kuoripinta, astiat ja päivänvalo uskottavia; ei kasvoja, tekstiä, logoa tai nimettyä markkinapaikkaa. Yleinen ruoka-aiheen havainne vastaa nykyisen O4-tekstin lime/mauste-mainintaa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-o4-v1-20261012T175235Z/image.png",
+            "width": 1536,
+            "height": 1024,
+            "visuallyInspected": true,
+            "inspectionDetail": "whole image; original detail",
+            "captionFi": "Havainnekuva: limet ja mausteet.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Katumyynnissä tarjotaan riisiä ja pâtea. Kaupungin ravintolatarjontaan kuuluu paikallisia sekä kansainvälisiä ruokia. Torikaupan valikoimassa näkyvät myös mausteet, lime ja kuivattu kala.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Togo",
+                "https://en.wikipedia.org/wiki/Lom%C3%A9",
+                "https://en.wikipedia.org/wiki/Lom%C3%A9%E2%80%93Tokoin_International_Airport",
+                "https://en.wikipedia.org/wiki/Lom%C3%A9_Grand_Market",
+                "https://en.wikipedia.org/wiki/Nana_Benz",
+                "https://en.wikipedia.org/wiki/Sacred_Heart_Cathedral,_Lom%C3%A9",
+                "https://en.wikivoyage.org/wiki/Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/B%C3%A8",
+                "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_du_Sacr%C3%A9-C%C5%93ur_de_Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Palais_de_Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Plages_de_Lom%C3%A9",
+                "https://fr.wikipedia.org/wiki/Wharf_de_Lom%C3%A9",
+                "https://www.gov.uk/foreign-travel-advice/togo"
+              ]
+            },
+            "rightsEvidence": {
+              "kind": "generated-generalized-food-illustration",
+              "noProtectedWorkDepicted": true,
+              "namedPlaceAppearanceClaimed": false
+            },
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "colorProfile": "Native RGB PNG; embedded ICC/sRGB not independently verified, no profile claim",
+            "scope": "independent image QA; no owner acceptance/integration/publication"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png?t=b60449a3c2e35364",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+        "sha256": "b60449a3c2e353647e6a20d8dce83d94e26e96b5c223a8d0b6825801a56a8093",
+        "bytes": 2739337,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-lome-o4-v1-20261012T175235Z",
+        "nativeSHA256": "0f2642cf0bd836a3bddeba3faa19f0703662a40616115a79b96c1230f4d8e694",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "lome",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:04:38.238743+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-o4-v1-20261012T175235Z-0f2642cf0bd8.png",
+        "sha256": "b60449a3c2e353647e6a20d8dce83d94e26e96b5c223a8d0b6825801a56a8093",
+        "bytes": 2739337,
+        "SHAReadAt": "2026-10-12T18:29:44.512480+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0f2642cf0bd836a3bddeba3faa19f0703662a40616115a79b96c1230f4d8e694",
+        "rgbPixelSHA256": "970a9100bbda84fc84cdca81fd8421c332937e1000231014388a906a77a776d7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "7b056bbe8dfc4bd76e5ba738b2af5d24da68aa7e69c1ebc01813511656076459"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e05-lome-k3-v1-20261012T182356Z",
+      "galleryImageID": "e05-lome-k3-v1-20261012T182356Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kuivattu kala torituotteena.",
+        "lyhyt": "Havainnekuva: kuivattu kala torituotteena."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kuivattu kala torituotteena.",
+        "lyhyt": "Havainnekuva: kuivattu kala torituotteena."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c56160e6c5f41b6fa506a8381966d8e9991b4ea4ba4dcc2095222ab55a45756d",
+      "exportSHA256": "81fd5072d25f23aca07c6b4edb503f002af86e9e09438dcc99f81fee182ce380",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84",
+        "semanticContextSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84",
+        "subjectTitle": "Markkina täyttää korttelin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-k3-v1-20261012T182356Z/image.png",
+            "nativeSHA256": "c56160e6c5f41b6fa506a8381966d8e9991b4ea4ba4dcc2095222ab55a45756d",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisella punotulla vadilla pieniä kuivattuja kaloja, limejä vieressä. Etualan kalojen päät, silmät, evät ja pyrstöt uskottavat; kuiva hopeanruskea nahka vaihtelee, ei kopioituja identtisiä kalahahmoja. Ei kasvoja, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva: kuivattu kala torituotteena.",
+            "sourceAndTargetCheckFi": "Luettu K3 Markkina täyttää korttelin ja faktapohjan K3 kuivatun kalan/limejen myynti. CaptionFi Havainnekuva: kuivattu kala torituotteena, ei Grand Marchén todellisen myyntipöydän valokuva tai nimetty kalalaji.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén Grand Marché sijaitsee keskustassa katedraalin lähellä. Korttelin laajuiseen kauppapaikkaan kuuluu Atipoji-, Asigame- ja Assivito-nimisiä osia. Valikoimassa on mausteita, limeä, kuivattua kalaa ja arkisia käyttöesineitä, ja naiskauppiaat ovat näkyvä osa kaupankäyntiä. Tori kokoaa siis yhteen hyvin erilaisten ostosten tekijät. Sama käynti voi koskea ruoka-aineita tai kotiin tarvittavaa tavaraa. Torin osien nimet antavat lisäksi omia osoitteita kauppapaikassa, jota yksi nimi, Grand Marché, kokoaa yhteen."
+            }
+          },
+          "qaReason": "Kuivattu kala torituotteena havainnollistaa K3:n lähteistettyä valikoimaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: kuivattu kala torituotteena.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e05-lome-k3-v1-20261012T182356Z",
+          "sha256": "c56160e6c5f41b6fa506a8381966d8e9991b4ea4ba4dcc2095222ab55a45756d",
+          "verdict": "accepted",
+          "reason": "Kuivattu kala torituotteena havainnollistaa K3:n lähteistettyä valikoimaa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-k3-v1-20261012T182356Z/image.png",
+            "nativeSHA256": "c56160e6c5f41b6fa506a8381966d8e9991b4ea4ba4dcc2095222ab55a45756d",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisella punotulla vadilla pieniä kuivattuja kaloja, limejä vieressä. Etualan kalojen päät, silmät, evät ja pyrstöt uskottavat; kuiva hopeanruskea nahka vaihtelee, ei kopioituja identtisiä kalahahmoja. Ei kasvoja, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva: kuivattu kala torituotteena.",
+            "sourceAndTargetCheckFi": "Luettu K3 Markkina täyttää korttelin ja faktapohjan K3 kuivatun kalan/limejen myynti. CaptionFi Havainnekuva: kuivattu kala torituotteena, ei Grand Marchén todellisen myyntipöydän valokuva tai nimetty kalalaji.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén Grand Marché sijaitsee keskustassa katedraalin lähellä. Korttelin laajuiseen kauppapaikkaan kuuluu Atipoji-, Asigame- ja Assivito-nimisiä osia. Valikoimassa on mausteita, limeä, kuivattua kalaa ja arkisia käyttöesineitä, ja naiskauppiaat ovat näkyvä osa kaupankäyntiä. Tori kokoaa siis yhteen hyvin erilaisten ostosten tekijät. Sama käynti voi koskea ruoka-aineita tai kotiin tarvittavaa tavaraa. Torin osien nimet antavat lisäksi omia osoitteita kauppapaikassa, jota yksi nimi, Grand Marché, kokoaa yhteen."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:27:51.953202+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png?t=81fd5072d25f23ac",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+        "sha256": "81fd5072d25f23aca07c6b4edb503f002af86e9e09438dcc99f81fee182ce380",
+        "bytes": 2858785,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-lome-k3-v1-20261012T182356Z",
+        "nativeSHA256": "c56160e6c5f41b6fa506a8381966d8e9991b4ea4ba4dcc2095222ab55a45756d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "lome",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:31:02.035792+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-k3-v1-20261012T182356Z-c56160e6c5f4.png",
+        "sha256": "81fd5072d25f23aca07c6b4edb503f002af86e9e09438dcc99f81fee182ce380",
+        "bytes": 2858785,
+        "SHAReadAt": "2026-10-12T18:29:44.664961+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c56160e6c5f41b6fa506a8381966d8e9991b4ea4ba4dcc2095222ab55a45756d",
+        "rgbPixelSHA256": "dde0e5ecffc6b4e652cc71cef967e359933300fe9b33dac4ed79b106781a96ef",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84",
+      "contextAfterSHA256": "9aeeb68cce6e25e50bcecab6ec689f4e76b068d32e6d18f6e10876fe1a94dc84"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e05-lome-l2-v1-20261012T182522Z",
+      "galleryImageID": "e05-lome-l2-v1-20261012T182522Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kookospalmun lehti.",
+        "lyhyt": "Havainnekuva: kookospalmun lehti."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kookospalmun lehti.",
+        "lyhyt": "Havainnekuva: kookospalmun lehti."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c04ed4d9040203eea9ab64a9390b5a7293a4f32856c57dd27189ff745631aeac",
+      "exportSHA256": "62959fe4f9492f00ecbfdba1fb5dc59d8a7b3a92e31d863c3786406a6f25a1f4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1",
+        "semanticContextSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1",
+        "subjectTitle": "Rannalla tehdään työtä ja vietetään aikaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-l2-v1-20261012T182522Z/image.png",
+            "nativeSHA256": "c04ed4d9040203eea9ab64a9390b5a7293a4f32856c57dd27189ff745631aeac",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kookospalmun lehtilapoja, vihreitä hedelmiä ja rungon kuituisia lehtikantoja. Lehtiosat kiinnittyvät keskisuoneen, hedelmäkuoren kolhut ja kuidut luonnollisia. Ei synteettistä kuoripintaa, ihmisiä tai logoja.",
+            "captionFi": "Havainnekuva: kookospalmun lehti.",
+            "sourceAndTargetCheckFi": "Luettu L2 Rannalla tehdään työtä ja vietetään aikaa sekä faktapohjan rannikko/kookospuita-osuma. CaptionFi Havainnekuva: kookospalmun lehti kuvaa näkyvää lehteä; kuvassa myös hedelmiä. Ei nimetyn Lomén rannan paikkavalokuva tai maisemarekonstruktio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén hiekkaranta kuuluu Guineanlahden rannikkoon. Siellä harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, myös rantaurheilun parissa. Hiekka, dyynit ja kookospuiden kasvillisuus kuuluvat rannikon maisemaan. Meri on siis sekä elinkeinon ympäristö että julkisen elämän paikka. Sen olosuhteisiin kuuluvat myös aallokko ja voimakkaat virtaukset, jotka voivat vaikeuttaa uimista. Rannalla oleskelu ja meressä uiminen ovat siksi eri asioita, vaikka ne sijoittuvat samaan maisemaan."
+            }
+          },
+          "qaReason": "Kookospalmun lehti-/kasvihavainne vastaa L2:n rannikkokasvillisuutta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: kookospalmun lehti.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e05-lome-l2-v1-20261012T182522Z",
+          "sha256": "c04ed4d9040203eea9ab64a9390b5a7293a4f32856c57dd27189ff745631aeac",
+          "verdict": "accepted",
+          "reason": "Kookospalmun lehti-/kasvihavainne vastaa L2:n rannikkokasvillisuutta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-l2-v1-20261012T182522Z/image.png",
+            "nativeSHA256": "c04ed4d9040203eea9ab64a9390b5a7293a4f32856c57dd27189ff745631aeac",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kookospalmun lehtilapoja, vihreitä hedelmiä ja rungon kuituisia lehtikantoja. Lehtiosat kiinnittyvät keskisuoneen, hedelmäkuoren kolhut ja kuidut luonnollisia. Ei synteettistä kuoripintaa, ihmisiä tai logoja.",
+            "captionFi": "Havainnekuva: kookospalmun lehti.",
+            "sourceAndTargetCheckFi": "Luettu L2 Rannalla tehdään työtä ja vietetään aikaa sekä faktapohjan rannikko/kookospuita-osuma. CaptionFi Havainnekuva: kookospalmun lehti kuvaa näkyvää lehteä; kuvassa myös hedelmiä. Ei nimetyn Lomén rannan paikkavalokuva tai maisemarekonstruktio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén hiekkaranta kuuluu Guineanlahden rannikkoon. Siellä harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, myös rantaurheilun parissa. Hiekka, dyynit ja kookospuiden kasvillisuus kuuluvat rannikon maisemaan. Meri on siis sekä elinkeinon ympäristö että julkisen elämän paikka. Sen olosuhteisiin kuuluvat myös aallokko ja voimakkaat virtaukset, jotka voivat vaikeuttaa uimista. Rannalla oleskelu ja meressä uiminen ovat siksi eri asioita, vaikka ne sijoittuvat samaan maisemaan."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:29:16.886200+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png?t=62959fe4f9492f00",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+        "sha256": "62959fe4f9492f00ecbfdba1fb5dc59d8a7b3a92e31d863c3786406a6f25a1f4",
+        "bytes": 2639479,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-lome-l2-v1-20261012T182522Z",
+        "nativeSHA256": "c04ed4d9040203eea9ab64a9390b5a7293a4f32856c57dd27189ff745631aeac",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "lome",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:31:03.670606+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l2-v1-20261012T182522Z-c04ed4d90402.png",
+        "sha256": "62959fe4f9492f00ecbfdba1fb5dc59d8a7b3a92e31d863c3786406a6f25a1f4",
+        "bytes": 2639479,
+        "SHAReadAt": "2026-10-12T18:29:44.794314+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c04ed4d9040203eea9ab64a9390b5a7293a4f32856c57dd27189ff745631aeac",
+        "rgbPixelSHA256": "2d8e8a3e6e4cafe201054f914e80fba72407e6daa84dfe3984c77df9db35b075",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1",
+      "contextAfterSHA256": "a61a4a212c49e9bb7055f9a61f868f948ea12371966d8d0ac7898f7dc6a8aea1"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e05-lome-l3-v1-20261012T191437Z",
+      "galleryImageID": "e05-lome-l3-v1-20261012T191437Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: puutarhan kasviaihe.",
+        "lyhyt": "Havainnekuva: puutarhan kasviaihe."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: puutarhan kasviaihe.",
+        "lyhyt": "Havainnekuva: puutarhan kasviaihe."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5b2f3297c1d9d50ed52829d2b592581c368a84c996593bdebbad52b132305fd7",
+      "exportSHA256": "0c1ea1fbab5289252739e340c31d05fa350eaa9751113a10ab2f35ddefc40f34",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e31e2abd1a6dc1caab61006ebc0f5c64efa4bac8a2d86bba83e39297e83d0a89",
+        "semanticContextSHA256": "e31e2abd1a6dc1caab61006ebc0f5c64efa4bac8a2d86bba83e39297e83d0a89",
+        "subjectTitle": "Puutarha vanhan palatsin ympärillä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-object-or-material",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-l3-v1-20261012T191437Z/image.png",
+            "nativeSHA256": "5b2f3297c1d9d50ed52829d2b592581c368a84c996593bdebbad52b132305fd7",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Avautuva vihreä lehti ja suurempia lehtiä. Suonitus, taipuma ja läpivalo luontevia; ei tekstiä, logoa, ihmisiä tai rakennusta.",
+            "captionFi": "Havainnekuva: puutarhan kasviaihe.",
+            "sourceAndTargetCheckFi": "L3 ja faktapohjan puutarha/kasvillisuus luettu. CaptionFi havainne, ei Palais de Lomén todellinen kasvilaji, puutarhan asettelu tai suojattu puistoteos.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Palais de Lomén ympärillä on puisto, joka kuuluu nykyiseen kasvitieteelliseen puutarhakokonaisuuteen. Siellä kasvaa Guineanlahden alueen kasveja ja elää lintuja, ja meri on lähellä. Paikassa on samalla vanhan rakennuksen ja kasvillisuuden historiaa. Kasveihin tutustuminen avaa rannikon luontoa kaupunkiympäristössä, jossa puutarha ja rakennus ovat eri kohteita. Puutarhan lajistoa voi tarkastella omana aiheena ilman, että jokainen sen teos tai rakennelma muuttuu osaksi luonnonpaikan kuvausta.",
+              "supportsFi": "Puutarha vanhan palatsin ympärillä",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "qaReason": "Kasviaiheen yleishavainne vastaa L3:n puutarhakasvillisuutta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: puutarhan kasviaihe.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e05-lome-l3-v1-20261012T191437Z",
+          "sha256": "5b2f3297c1d9d50ed52829d2b592581c368a84c996593bdebbad52b132305fd7",
+          "verdict": "accepted",
+          "reason": "Kasviaiheen yleishavainne vastaa L3:n puutarhakasvillisuutta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-l3-v1-20261012T191437Z/image.png",
+            "nativeSHA256": "5b2f3297c1d9d50ed52829d2b592581c368a84c996593bdebbad52b132305fd7",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Avautuva vihreä lehti ja suurempia lehtiä. Suonitus, taipuma ja läpivalo luontevia; ei tekstiä, logoa, ihmisiä tai rakennusta.",
+            "captionFi": "Havainnekuva: puutarhan kasviaihe.",
+            "sourceAndTargetCheckFi": "L3 ja faktapohjan puutarha/kasvillisuus luettu. CaptionFi havainne, ei Palais de Lomén todellinen kasvilaji, puutarhan asettelu tai suojattu puistoteos.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Palais de Lomén ympärillä on puisto, joka kuuluu nykyiseen kasvitieteelliseen puutarhakokonaisuuteen. Siellä kasvaa Guineanlahden alueen kasveja ja elää lintuja, ja meri on lähellä. Paikassa on samalla vanhan rakennuksen ja kasvillisuuden historiaa. Kasveihin tutustuminen avaa rannikon luontoa kaupunkiympäristössä, jossa puutarha ja rakennus ovat eri kohteita. Puutarhan lajistoa voi tarkastella omana aiheena ilman, että jokainen sen teos tai rakennelma muuttuu osaksi luonnonpaikan kuvausta.",
+              "supportsFi": "Puutarha vanhan palatsin ympärillä",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "reviewedAt": "2026-10-12T19:34:37.063335+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png?t=0c1ea1fbab528925",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+        "sha256": "0c1ea1fbab5289252739e340c31d05fa350eaa9751113a10ab2f35ddefc40f34",
+        "bytes": 2023879,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-lome-l3-v1-20261012T191437Z",
+        "nativeSHA256": "5b2f3297c1d9d50ed52829d2b592581c368a84c996593bdebbad52b132305fd7",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "lome",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:34:50.931189+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l3-v1-20261012T191437Z-5b2f3297c1d9.png",
+        "sha256": "0c1ea1fbab5289252739e340c31d05fa350eaa9751113a10ab2f35ddefc40f34",
+        "bytes": 2023879,
+        "SHAReadAt": "2026-10-12T19:34:45.885514+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5b2f3297c1d9d50ed52829d2b592581c368a84c996593bdebbad52b132305fd7",
+        "rgbPixelSHA256": "516451b0aa5b7d1027d070c5611cad87d2d02b5fbf865e489dac2ad733961c72",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "e31e2abd1a6dc1caab61006ebc0f5c64efa4bac8a2d86bba83e39297e83d0a89",
+      "contextAfterSHA256": "e31e2abd1a6dc1caab61006ebc0f5c64efa4bac8a2d86bba83e39297e83d0a89"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e05-lome-l4-v1-20261012T182657Z",
+      "galleryImageID": "e05-lome-l4-v1-20261012T182657Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: vihannesten viljely.",
+        "lyhyt": "Havainnekuva: vihannesten viljely."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: vihannesten viljely.",
+        "lyhyt": "Havainnekuva: vihannesten viljely."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4f4259bcb7ccb4a4d20c9ca39e4ea00cfe763eb9862e228be6a828a646f50dc7",
+      "exportSHA256": "2e18ac978302570bf6674ad6b692990cc76cb3fb107fc8be50b8a8fee7552d49",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499",
+        "semanticContextSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499",
+        "subjectTitle": "Vihanneksia kaupungissa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-l4-v1-20261012T182657Z/image.png",
+            "nativeSHA256": "4f4259bcb7ccb4a4d20c9ca39e4ea00cfe763eb9862e228be6a828a646f50dc7",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreitä lehtivihanneksia mullassa ja tavallinen metallikastelukannu. Lehtisuonet, ruodit, maa ja kannun kahva/nokka uskottavat; ei monistettua synteettistä pintaa, käsiä, tekstiä tai brändiä.",
+            "captionFi": "Havainnekuva: vihannesten viljely.",
+            "sourceAndTargetCheckFi": "Luettu L4 Vihanneksia kaupungissa ja faktapohjan kaupunkiviljely-/kasvisaihe. CaptionFi Havainnekuva: vihannesten viljely ei yksilöi kasvilajeja, Lomén viljelypalstaa tai paikallista maaperää. Kuva havainnollistaa toimintaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén elinkeinoihin kuuluu kaupunkiviljelyä. Vihanneksia kasvatetaan kaupungin pohjoispuolella ja myös rannikon puolella, ja niille on paikallista kysyntää. Viljelyalueiden ympärille istutetaan suojaavia pensasaitoja. Rannikkokaupungin ruokataloudessa on näin kalastajien ja kauppiaiden ohella kasvisten tuottajia. Viljely tuo pääkaupungin maisemaan oman työympäristönsä: kasvavat vihannekset, niitä hoitavat ihmiset ja viljelyalueita rajaava kasvillisuus kuuluvat kaupungin arkisten elinkeinojen verkostoon."
+            }
+          },
+          "qaReason": "Vihannesviljelyn yleishavainne vastaa L4:n kaupunkielinkeinon aihetta ilman paikka-/lajiväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: vihannesten viljely.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e05-lome-l4-v1-20261012T182657Z",
+          "sha256": "4f4259bcb7ccb4a4d20c9ca39e4ea00cfe763eb9862e228be6a828a646f50dc7",
+          "verdict": "accepted",
+          "reason": "Vihannesviljelyn yleishavainne vastaa L4:n kaupunkielinkeinon aihetta ilman paikka-/lajiväitettä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-l4-v1-20261012T182657Z/image.png",
+            "nativeSHA256": "4f4259bcb7ccb4a4d20c9ca39e4ea00cfe763eb9862e228be6a828a646f50dc7",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreitä lehtivihanneksia mullassa ja tavallinen metallikastelukannu. Lehtisuonet, ruodit, maa ja kannun kahva/nokka uskottavat; ei monistettua synteettistä pintaa, käsiä, tekstiä tai brändiä.",
+            "captionFi": "Havainnekuva: vihannesten viljely.",
+            "sourceAndTargetCheckFi": "Luettu L4 Vihanneksia kaupungissa ja faktapohjan kaupunkiviljely-/kasvisaihe. CaptionFi Havainnekuva: vihannesten viljely ei yksilöi kasvilajeja, Lomén viljelypalstaa tai paikallista maaperää. Kuva havainnollistaa toimintaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Lomén elinkeinoihin kuuluu kaupunkiviljelyä. Vihanneksia kasvatetaan kaupungin pohjoispuolella ja myös rannikon puolella, ja niille on paikallista kysyntää. Viljelyalueiden ympärille istutetaan suojaavia pensasaitoja. Rannikkokaupungin ruokataloudessa on näin kalastajien ja kauppiaiden ohella kasvisten tuottajia. Viljely tuo pääkaupungin maisemaan oman työympäristönsä: kasvavat vihannekset, niitä hoitavat ihmiset ja viljelyalueita rajaava kasvillisuus kuuluvat kaupungin arkisten elinkeinojen verkostoon."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:30:50.158479+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png?t=2e18ac978302570b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+        "sha256": "2e18ac978302570bf6674ad6b692990cc76cb3fb107fc8be50b8a8fee7552d49",
+        "bytes": 2872471,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-lome-l4-v1-20261012T182657Z",
+        "nativeSHA256": "4f4259bcb7ccb4a4d20c9ca39e4ea00cfe763eb9862e228be6a828a646f50dc7",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "lome",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:31:06.189691+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-l4-v1-20261012T182657Z-4f4259bcb7cc.png",
+        "sha256": "2e18ac978302570bf6674ad6b692990cc76cb3fb107fc8be50b8a8fee7552d49",
+        "bytes": 2872471,
+        "SHAReadAt": "2026-10-12T18:30:55.394661+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4f4259bcb7ccb4a4d20c9ca39e4ea00cfe763eb9862e228be6a828a646f50dc7",
+        "rgbPixelSHA256": "a877c112c942e896716783921ce93a03eb72cc4531022f0b5aa9a65df6ad74b5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499",
+      "contextAfterSHA256": "a04a77a78416b18387eda3fa8b8cff4d2324e0c816fd535f9b82549be47e1499"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e05-lome-photo-0bd321e7faeadfe5",
+      "galleryImageID": "capital-cc-e05-lome-photo-0bd321e7faeadfe5",
+      "commonsFile": "Aboukey Mangrove5.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
+        "suora": true,
+        "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
+        "selite": "Mangrovekasvillisuutta Loméssa.",
+        "lyhyt": "Mangrovekasvillisuutta Loméssa.",
+        "tiedosto": "Aboukey Mangrove5.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
+        "selite": "Mangrovekasvillisuutta Loméssa.",
+        "lyhyt": "Mangrovekasvillisuutta Loméssa.",
+        "tiedosto": "Aboukey Mangrove5.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
+        "suora": true,
+        "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
+        "selite": "Mangrovekasvillisuutta Loméssa.",
+        "lyhyt": "Mangrovekasvillisuutta Loméssa.",
+        "tiedosto": "Aboukey Mangrove5.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0bd321e7faeadfe5720cdcd9d954371f0d6e8d58ae8918b4a54e0ca87b3afe5e",
+      "exportSHA256": "0bd321e7faeadfe5720cdcd9d954371f0d6e8d58ae8918b4a54e0ca87b3afe5e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/cc-evidence/candidate-2325866a4c9687.jpg",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1ea5074da93b5da9c3a38e64d1dbb1f0eaf2152733e3067c45fc70163da10c9f",
+        "semanticContextSHA256": "1ea5074da93b5da9c3a38e64d1dbb1f0eaf2152733e3067c45fc70163da10c9f",
+        "subjectTitle": "lome — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Aboukey",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aboukey_Mangrove5.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Aboukey_Mangrove5.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Aboukey_Mangrove5.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Aboukey",
+            "licenseSourceSha256": "d12d7226db16efc9a7b551b644e647af4cc2fb53e7350d21b5b921408b14b96a",
+            "depictedWorkLayer": "Luonnonpuut, juuristo ja maa pääaihe; taustan käyttökerros ei erillinen nimetty arkkitehtuuriteos. CC BY-SA4.0 ja Aboukey suoraan lähteen Author/license -kentistä; ei koko maan FOP-/PD-oletusta.",
+            "sourcePlaceDescription": "English: Mangrove",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/cc-evidence/candidate-2325866a4c9687.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              4608,
+              3456
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Aboukey_Mangrove5.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/ab17e93319b8f5dfa3df33a6078f81203fd0051cf3e75cf1d16cc90054a3ec1d.html",
+            "sourceSHA256": "d12d7226db16efc9a7b551b644e647af4cc2fb53e7350d21b5b921408b14b96a",
+            "authorsFromSource": [
+              "Aboukey"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceFields": [
+              [
+                "Description Aboukey Mangrove5.jpg",
+                "English: Mangrove"
+              ],
+              [
+                "Date",
+                "2 February 2022, 08:26:09"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Aboukey"
+              ],
+              [
+                "Date and time of data generation",
+                "08:26, 2 February 2022"
+              ],
+              [
+                "Date and time of digitizing",
+                "08:26, 2 February 2022"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSourceCategory": "Category:Lomé",
+            "reviewedCandidateRecordSHA256": "1a60ed2fc8adb1f27e6bad1efc0b2bcc1f102b3240dfc71e164f048b44122459",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.217539+00:00"
+          },
+          "qaReason": "Aito mangrove-/kosteikkovalokuva katsottu. Juuret, puut ja mutapinta erottuvat; etäiset puut vaaleassa luonnonvalossa, ei luettavia kasvoja, lisättyä tekstiä tai watermarkia. Taustan tavallinen pieni talo ei ole arkkitehtuuriteoksen päämotiivi. Commonsin täsmällinen Lomé-luokka sitoo kuvauspaikan kaupunkiin; Descriptionin yleinen Mangrove ei yksin olisi paikkatodiste. Kuvateksti rajautuu mangrovekasvillisuuteen, eikä arvaa laguunia/puutarhaa tai lajia. Aboukey, oma valokuva, CC BY-SA4.0,4608×3456 ja2.2.2022 varmennettu. PHOTOssa ei panoraama- tai tuoreuspakkoa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mangrovekasvillisuutta Loméssa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+        "fileSHA256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Aboukey Mangrove5.jpg",
+          "sha256": "0bd321e7faeadfe5720cdcd9d954371f0d6e8d58ae8918b4a54e0ca87b3afe5e",
+          "verdict": "accepted",
+          "reason": "Aito mangrove-/kosteikkovalokuva katsottu. Juuret, puut ja mutapinta erottuvat; etäiset puut vaaleassa luonnonvalossa, ei luettavia kasvoja, lisättyä tekstiä tai watermarkia. Taustan tavallinen pieni talo ei ole arkkitehtuuriteoksen päämotiivi. Commonsin täsmällinen Lomé-luokka sitoo kuvauspaikan kaupunkiin; Descriptionin yleinen Mangrove ei yksin olisi paikkatodiste. Kuvateksti rajautuu mangrovekasvillisuuteen, eikä arvaa laguunia/puutarhaa tai lajia. Aboukey, oma valokuva, CC BY-SA4.0,4608×3456 ja2.2.2022 varmennettu. PHOTOssa ei panoraama- tai tuoreuspakkoa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/cc-evidence/candidate-2325866a4c9687.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              4608,
+              3456
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Aboukey_Mangrove5.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/ab17e93319b8f5dfa3df33a6078f81203fd0051cf3e75cf1d16cc90054a3ec1d.html",
+            "sourceSHA256": "d12d7226db16efc9a7b551b644e647af4cc2fb53e7350d21b5b921408b14b96a",
+            "authorsFromSource": [
+              "Aboukey"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceFields": [
+              [
+                "Description Aboukey Mangrove5.jpg",
+                "English: Mangrove"
+              ],
+              [
+                "Date",
+                "2 February 2022, 08:26:09"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Aboukey"
+              ],
+              [
+                "Date and time of data generation",
+                "08:26, 2 February 2022"
+              ],
+              [
+                "Date and time of digitizing",
+                "08:26, 2 February 2022"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSourceCategory": "Category:Lomé",
+            "reviewedCandidateRecordSHA256": "1a60ed2fc8adb1f27e6bad1efc0b2bcc1f102b3240dfc71e164f048b44122459",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.217539+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "lome",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Aboukey Mangrove5.jpg",
+        "sha256": "0bd321e7faeadfe5720cdcd9d954371f0d6e8d58ae8918b4a54e0ca87b3afe5e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aboukey_Mangrove5.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Aboukey_Mangrove5.jpg",
+        "author": "Aboukey",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4608,
+        "height": 3456,
+        "originalSHA256": "0bd321e7faeadfe5720cdcd9d954371f0d6e8d58ae8918b4a54e0ca87b3afe5e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg",
+        "bytes": 5911520,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:59:05.185649+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Aboukey Mangrove5.jpg",
+        "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
+        "selite": "Mangrovekasvillisuutta Loméssa.",
+        "lyhyt": "Mangrovekasvillisuutta Loméssa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Aboukey, Commons (CC BY-SA 4.0)",
+        "selite": "Mangrovekasvillisuutta Loméssa.",
+        "lyhyt": "Mangrovekasvillisuutta Loméssa.",
+        "tiedosto": "Aboukey Mangrove5.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "1ea5074da93b5da9c3a38e64d1dbb1f0eaf2152733e3067c45fc70163da10c9f",
+      "contextAfterSHA256": "1ea5074da93b5da9c3a38e64d1dbb1f0eaf2152733e3067c45fc70163da10c9f"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-lome-c1-001f398fbfba77ec",
+      "galleryImageID": "capital-cc-e05-lome-c1-001f398fbfba77ec",
+      "commonsFile": "Lac Ouest – Lomé.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
+        "suora": true,
+        "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "tiedosto": "Lac Ouest – Lomé.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "tiedosto": "Lac Ouest – Lomé.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
+        "suora": true,
+        "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "tiedosto": "Lac Ouest – Lomé.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "001f398fbfba77ecae8eb7edaead1afe984b7728676581ad1f607f181449ee14",
+      "exportSHA256": "001f398fbfba77ecae8eb7edaead1afe984b7728676581ad1f607f181449ee14",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/cc-evidence/candidate-e8e7f626ed70ad.jpg",
+      "dimensions": [
+        9654,
+        2484
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "af07c28802c26b7e278645dd1eb346dcfd6e93c36d9f5683a8c3e31d270b90c2",
+        "semanticContextSHA256": "af07c28802c26b7e278645dd1eb346dcfd6e93c36d9f5683a8c3e31d270b90c2",
+        "subjectTitle": "Lomé",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Edison McCullen",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_Ouest_%E2%80%93_Lom%C3%A9.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Lac_Ouest_%E2%80%93_Lom%C3%A9.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Lac_Ouest_%E2%80%93_Lom%C3%A9.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Edison McCullen",
+            "licenseSourceSha256": "e012bd526a31be212672891b7e7fdf5076681d9e6c66c661106fb17fda59a94a",
+            "depictedWorkLayer": "Pääaihe on laaja järvi-, kasvillisuus- ja rantakaupunkimaisema. Kaukaiset rakennukset ja pienet kyltit muodostavat horisontin ympäristöä, eivät yksittäisen modernin rakennuksen, mainoksen tai taideteoksen pääaihetta. Tekijä Edison McCullen ja CC BY 4.0 todettu alkuperäissivulta. Ei yleistä arkkitehtuurin FOP- tai ikäoletusta.",
+            "sourcePlaceDescription": "Français : Lac Ouest de Lomé",
+            "sourcePlaceGeo": [
+              "  6.139254;    1.209198"
+            ],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/cc-evidence/candidate-e8e7f626ed70ad.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              9654,
+              2484
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_Ouest_%E2%80%93_Lom%C3%A9.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/60802e4146d31448ef5cdf82a5e40fe090b76ca60d54eb8fb3204577e41c18fe.html",
+            "sourceSHA256": "e012bd526a31be212672891b7e7fdf5076681d9e6c66c661106fb17fda59a94a",
+            "authorsFromSource": [
+              "Edison McCullen"
+            ],
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "sourceFields": [
+              [
+                "Description Lac Ouest – Lomé.jpg",
+                "Français : Lac Ouest de Lomé"
+              ],
+              [
+                "Date",
+                "23 January 2025, 16:24:56"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Edison McCullen"
+              ],
+              [
+                "Camera location",
+                "6° 08′ 21.31″ N, 1° 12′ 33.11″ E"
+              ],
+              [
+                "Date and time of data generation",
+                "16:24, 23 January 2025"
+              ],
+              [
+                "Date and time of digitizing",
+                "16:24, 23 January 2025"
+              ],
+              [
+                "DateTime subseconds",
+                "501"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "501"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "501"
+              ],
+              [
+                "Date metadata was last modified",
+                "15:24, 28 February 2025"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "layoutScope": "Full broad lakeside composition; no isolated building crop approved.",
+            "reviewedCandidateRecordSHA256": "ace647b9b28ebb2cbc5e2845e81811d2eaeff1951c213c27676087a329154baa"
+          },
+          "qaReason": "Kokonainen laaja Lac Ouestin ja rantakortteleiden oikea panoraama katsottu. Päämotiivi kasvillisuuden peittämä järvialue ja rantavyöhyke; kaukaiset rakennukset/luonnolliset kyltit muodostavat pienen horisonttikaistan, eivät yksilöidyn teoksen jäljennöspääaihetta. Ei etualan ihmiskasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description Lac Ouest de Lomé ja koordinaatit6.139254/1.209198 sitovat paikkaan. Edison McCullen/Own work/CC BY4.0,9654×2484 ja23.1.2025 varmennettu suoraan lähteestä. Säilytä laaja sommittelu; yhden vastarannan rakennuksen eristävä suurennus vaatii uuden teosarvion. Panoraaman kuvasuhde sallittu C1:ssä, eikä kasveista arvata lajia."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+        "fileSHA256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Lac Ouest – Lomé.jpg",
+          "sha256": "001f398fbfba77ecae8eb7edaead1afe984b7728676581ad1f607f181449ee14",
+          "verdict": "accepted",
+          "reason": "Kokonainen laaja Lac Ouestin ja rantakortteleiden oikea panoraama katsottu. Päämotiivi kasvillisuuden peittämä järvialue ja rantavyöhyke; kaukaiset rakennukset/luonnolliset kyltit muodostavat pienen horisonttikaistan, eivät yksilöidyn teoksen jäljennöspääaihetta. Ei etualan ihmiskasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description Lac Ouest de Lomé ja koordinaatit6.139254/1.209198 sitovat paikkaan. Edison McCullen/Own work/CC BY4.0,9654×2484 ja23.1.2025 varmennettu suoraan lähteestä. Säilytä laaja sommittelu; yhden vastarannan rakennuksen eristävä suurennus vaatii uuden teosarvion. Panoraaman kuvasuhde sallittu C1:ssä, eikä kasveista arvata lajia.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/cc-evidence/candidate-e8e7f626ed70ad.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              9654,
+              2484
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_Ouest_%E2%80%93_Lom%C3%A9.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/60802e4146d31448ef5cdf82a5e40fe090b76ca60d54eb8fb3204577e41c18fe.html",
+            "sourceSHA256": "e012bd526a31be212672891b7e7fdf5076681d9e6c66c661106fb17fda59a94a",
+            "authorsFromSource": [
+              "Edison McCullen"
+            ],
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "sourceFields": [
+              [
+                "Description Lac Ouest – Lomé.jpg",
+                "Français : Lac Ouest de Lomé"
+              ],
+              [
+                "Date",
+                "23 January 2025, 16:24:56"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Edison McCullen"
+              ],
+              [
+                "Camera location",
+                "6° 08′ 21.31″ N, 1° 12′ 33.11″ E"
+              ],
+              [
+                "Date and time of data generation",
+                "16:24, 23 January 2025"
+              ],
+              [
+                "Date and time of digitizing",
+                "16:24, 23 January 2025"
+              ],
+              [
+                "DateTime subseconds",
+                "501"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "501"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "501"
+              ],
+              [
+                "Date metadata was last modified",
+                "15:24, 28 February 2025"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "layoutScope": "Full broad lakeside composition; no isolated building crop approved.",
+            "reviewedCandidateRecordSHA256": "ace647b9b28ebb2cbc5e2845e81811d2eaeff1951c213c27676087a329154baa"
+          },
+          "reviewedAt": "2026-10-12T19:14:53.682412+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "lome",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Lac Ouest – Lomé.jpg",
+        "sha256": "001f398fbfba77ecae8eb7edaead1afe984b7728676581ad1f607f181449ee14",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_Ouest_%E2%80%93_Lom%C3%A9.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Lac_Ouest_%E2%80%93_Lom%C3%A9.jpg",
+        "author": "Edison McCullen",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "width": 9654,
+        "height": 2484,
+        "originalSHA256": "001f398fbfba77ecae8eb7edaead1afe984b7728676581ad1f607f181449ee14",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/c1-001f398fbfba77ecae8e.jpg",
+        "bytes": 3230282,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:15:50.937628+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Lac Ouest – Lomé.jpg",
+        "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+        "tiedosto": "Lac Ouest – Lomé.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "af07c28802c26b7e278645dd1eb346dcfd6e93c36d9f5683a8c3e31d270b90c2",
+      "contextAfterSHA256": "af07c28802c26b7e278645dd1eb346dcfd6e93c36d9f5683a8c3e31d270b90c2"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

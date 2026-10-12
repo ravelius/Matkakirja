@@ -1,0 +1,2517 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e05",
+  "city": "niamey",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+  "assets": [
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e05-niamey-traveler-v1-20261012T181309Z",
+      "galleryImageID": "e05-niamey-traveler-v1-20261012T181309Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: mangopuun lehti ja hedelmä.",
+        "lyhyt": "Havainnekuva: mangopuun lehti ja hedelmä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: mangopuun lehti ja hedelmä.",
+        "lyhyt": "Havainnekuva: mangopuun lehti ja hedelmä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1807761d2b9dded50195d4d07ce1a20acf7aa1d26fdf12b561e3fb6afc69708f",
+      "exportSHA256": "328620873911bb1ebbe5e358606d002c408870b5fe3c98e13b9942e98c72646a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "2a651f2cf1642167df450a84dfebe36950ad312262904b98fa78a7a285a8be03",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-natural-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-traveler-v1-20261012T181309Z/image.png",
+            "nativeSHA256": "1807761d2b9dded50195d4d07ce1a20acf7aa1d26fdf12b561e3fb6afc69708f",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kolme vihreää mangoa, pitkät lehdet ja hedelmätertun varret. Kasvin osat liittyvät uskottavasti, hedelmä- ja lehtipinnat vaihtelevat. Ei ihmisiä, tekstiä/logoja, vesileimaa tai fiktiivistä kaupunginäkymää.",
+            "captionFi": "Havainnekuva: mangopuun lehti ja hedelmä.",
+            "sourceAndTargetCheckFi": "Faktapohjan L3 vahvistaa kaupungissa istutettavan mangon; nykyinen L3-teksti säilyttää saman aiheen. TRAVELER on yleinen luontohavainne, captionFi ei nimeä paikkaa. Mangoaihe esiintyy myös L3:ssa: tässä eri native-kuva ja pysty lähikuva etusivulle, L3:n laajempi valo-varjo-kuva kertoo puiden istuttamisesta; samaa tiedostoa ei toisteta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Niameyn jokimaisema, torit ja käsityö kertovat kaupungin arjesta. Nigeriin matkustaminen ei tällä hetkellä ole turvallista. Kaupungin kansallismuseossa esitellään kulttuuria ja arkeologiaa. Saaret ovat myös asuttuja paikkoja, joiden kulkuyhteyksiä ja vierailumahdollisuuksia ei voi olettaa.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "qaReason": "Natiivi 1024×1536 pystyhavainne (0.667) vastaa lähdepohjan Niameyn istutetun mangopuun aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: mangopuun lehti ja hedelmä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+        "fileSHA256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e05-niamey-traveler-v1-20261012T181309Z",
+          "sha256": "1807761d2b9dded50195d4d07ce1a20acf7aa1d26fdf12b561e3fb6afc69708f",
+          "verdict": "accepted",
+          "reason": "Natiivi 1024×1536 pystyhavainne (0.667) vastaa lähdepohjan Niameyn istutetun mangopuun aihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-traveler-v1-20261012T181309Z/image.png",
+            "nativeSHA256": "1807761d2b9dded50195d4d07ce1a20acf7aa1d26fdf12b561e3fb6afc69708f",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kolme vihreää mangoa, pitkät lehdet ja hedelmätertun varret. Kasvin osat liittyvät uskottavasti, hedelmä- ja lehtipinnat vaihtelevat. Ei ihmisiä, tekstiä/logoja, vesileimaa tai fiktiivistä kaupunginäkymää.",
+            "captionFi": "Havainnekuva: mangopuun lehti ja hedelmä.",
+            "sourceAndTargetCheckFi": "Faktapohjan L3 vahvistaa kaupungissa istutettavan mangon; nykyinen L3-teksti säilyttää saman aiheen. TRAVELER on yleinen luontohavainne, captionFi ei nimeä paikkaa. Mangoaihe esiintyy myös L3:ssa: tässä eri native-kuva ja pysty lähikuva etusivulle, L3:n laajempi valo-varjo-kuva kertoo puiden istuttamisesta; samaa tiedostoa ei toisteta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Niameyn jokimaisema, torit ja käsityö kertovat kaupungin arjesta. Nigeriin matkustaminen ei tällä hetkellä ole turvallista. Kaupungin kansallismuseossa esitellään kulttuuria ja arkeologiaa. Saaret ovat myös asuttuja paikkoja, joiden kulkuyhteyksiä ja vierailumahdollisuuksia ei voi olettaa.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "reviewedAt": "2026-10-12T18:18:25.539929+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png?t=328620873911bb1e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+        "sha256": "328620873911bb1ebbe5e358606d002c408870b5fe3c98e13b9942e98c72646a",
+        "bytes": 2387596,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-niamey-traveler-v1-20261012T181309Z",
+        "nativeSHA256": "1807761d2b9dded50195d4d07ce1a20acf7aa1d26fdf12b561e3fb6afc69708f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "niamey",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:19:09.695322+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
+        "sha256": "328620873911bb1ebbe5e358606d002c408870b5fe3c98e13b9942e98c72646a",
+        "bytes": 2387596,
+        "SHAReadAt": "2026-10-12T18:29:45.542240+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "1807761d2b9dded50195d4d07ce1a20acf7aa1d26fdf12b561e3fb6afc69708f",
+        "rgbPixelSHA256": "c6a26f8408658702f3c4e42c0f3429aa26333dd0e3617f3a05b76b19176277f8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "2a651f2cf1642167df450a84dfebe36950ad312262904b98fa78a7a285a8be03"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e05-niamey-o3-v1-20261012T191048Z",
+      "galleryImageID": "e05-niamey-o3-v1-20261012T191048Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: savityön raaka-aine.",
+        "lyhyt": "Havainnekuva: savityön raaka-aine."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: savityön raaka-aine.",
+        "lyhyt": "Havainnekuva: savityön raaka-aine."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "383b97ff19d85745ac804a6d4f2527a53f0a120d1a125ff08d59a90eda2b488a",
+      "exportSHA256": "9739e388dfcc0edf7fea8356d78a011c351b94bcd9bab81df2ede400664e0b92",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "9e0cd7c17d6559b7926b5b27680c535e1c5bfed7f2f2a3b70ee0a0cd1e620911",
+        "subjectTitle": "Tori ja käsityö",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-object-or-material",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-o3-v1-20261012T191048Z/image.png",
+            "nativeSHA256": "383b97ff19d85745ac804a6d4f2527a53f0a120d1a125ff08d59a90eda2b488a",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kostea savipaakku ja koristeeton raakakulho työpinnalla. Massa, käsittelyjäljet, seinämä ja kosteus luontevat; ei tekstiä, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva: savityön raaka-aine.",
+            "sourceAndTargetCheckFi": "O3 ja faktapohjan Boubon/saviastiat luettu. CaptionFi havainne, ei museoesineen tai paikallisen tekijän työn jäljennös.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Grand Marché yhdistää tukku- ja vähittäiskaupan. Wadata tunnetaan käsityöalueena, ja Boubou Haman museossa esitellään alueen kulttuuria ja arkeologiaa. Boubonin saviastiat kertovat pääkaupungin yhteydestä jokivarren valmistajiin.",
+              "supportsFi": "Tori ja käsityö",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "qaReason": "Savityön materiaalihavainne vastaa O3:n käsityöaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: savityön raaka-aine.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+        "fileSHA256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e05-niamey-o3-v1-20261012T191048Z",
+          "sha256": "383b97ff19d85745ac804a6d4f2527a53f0a120d1a125ff08d59a90eda2b488a",
+          "verdict": "accepted",
+          "reason": "Savityön materiaalihavainne vastaa O3:n käsityöaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-o3-v1-20261012T191048Z/image.png",
+            "nativeSHA256": "383b97ff19d85745ac804a6d4f2527a53f0a120d1a125ff08d59a90eda2b488a",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kostea savipaakku ja koristeeton raakakulho työpinnalla. Massa, käsittelyjäljet, seinämä ja kosteus luontevat; ei tekstiä, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva: savityön raaka-aine.",
+            "sourceAndTargetCheckFi": "O3 ja faktapohjan Boubon/saviastiat luettu. CaptionFi havainne, ei museoesineen tai paikallisen tekijän työn jäljennös.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Grand Marché yhdistää tukku- ja vähittäiskaupan. Wadata tunnetaan käsityöalueena, ja Boubou Haman museossa esitellään alueen kulttuuria ja arkeologiaa. Boubonin saviastiat kertovat pääkaupungin yhteydestä jokivarren valmistajiin.",
+              "supportsFi": "Tori ja käsityö",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "reviewedAt": "2026-10-12T19:32:01.024568+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png?t=9739e388dfcc0edf",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+        "sha256": "9739e388dfcc0edf7fea8356d78a011c351b94bcd9bab81df2ede400664e0b92",
+        "bytes": 2503277,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-niamey-o3-v1-20261012T191048Z",
+        "nativeSHA256": "383b97ff19d85745ac804a6d4f2527a53f0a120d1a125ff08d59a90eda2b488a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "niamey",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:32:42.817786+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
+        "sha256": "9739e388dfcc0edf7fea8356d78a011c351b94bcd9bab81df2ede400664e0b92",
+        "bytes": 2503277,
+        "SHAReadAt": "2026-10-12T19:32:02.164475+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "383b97ff19d85745ac804a6d4f2527a53f0a120d1a125ff08d59a90eda2b488a",
+        "rgbPixelSHA256": "d81bc25626299495d44cb3b5eeb3c4a1a628f3c9ab275994de1ee6e0a354376b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "9e0cd7c17d6559b7926b5b27680c535e1c5bfed7f2f2a3b70ee0a0cd1e620911"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e05-niamey-o4-v2-20261012T181127Z",
+      "galleryImageID": "e05-niamey-o4-v2-20261012T181127Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: dégué eli hirssiä jogurtissa.",
+        "lyhyt": "Havainnekuva: dégué eli hirssiä jogurtissa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: dégué eli hirssiä jogurtissa.",
+        "lyhyt": "Havainnekuva: dégué eli hirssiä jogurtissa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9f1ddd3fd6b19f10aa46d08920f73386763b417ee538976b4ede2de0dafefb56",
+      "exportSHA256": "17a1d4adc04696d106af57fb462c26588fa8f6803cdc120e480a1aea539bcf0e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "1ebebf8bbdaa09d740b76796cf3edb13c4db15f2d7c099b23707db54517173a0",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-food-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-o4-v2-20261012T181127Z/image.png",
+            "nativeSHA256": "9f1ddd3fd6b19f10aa46d08920f73386763b417ee538976b4ede2de0dafefb56",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisessa kulhossa pieniä vaaleankeltaisia viljapalloja ja valkoista jogurttia. Pallojen koko/ryhmitys vaihtelee, jogurtin kosteus ja astia luontevat; ei koristeita, tekstiä, ihmisiä tai brändiä.",
+            "captionFi": "Havainnekuva: dégué eli hirssiä jogurtissa.",
+            "sourceAndTargetCheckFi": "Ajantasainen O4 nimeää déguén hirssipallot ja jogurtin; faktapohjan V/Street food -aihe luettu. CaptionFi Havainnekuva: dégué eli hirssiä jogurtissa. Ei tarkkaa reseptiä tai myyntipaikkaa koskevaa väitettä; v1 ei saa tätä kuittausta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Kossaï on lehmänpavuista tehty ruoka, jota syödään aamulla. Ruokavalikoimaan kuuluu myös riisiä maapähkinäkastikkeella. Dégué yhdistää hirssipallot ja jogurtin, ja baobabin hedelmästä tehdään juomaa. Nämä ovat ruoka-aiheita, eivät lupaus tietyn myyntipaikan tarjonnasta.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Niger",
+                "https://de.wikipedia.org/wiki/Gounti_Y%C3%A9na",
+                "https://de.wikipedia.org/wiki/Kanazi_(Niger",
+                "https://de.wikipedia.org/wiki/N%C3%A9ini_Goungou",
+                "https://de.wikipedia.org/wiki/Trois_S%C5%93urs",
+                "https://en.wikipedia.org/wiki/Boubon",
+                "https://en.wikipedia.org/wiki/Diori_Hamani_International_Airport",
+                "https://en.wikipedia.org/wiki/History_of_Niamey",
+                "https://en.wikipedia.org/wiki/Mus%C3%A9e_National_Boubou_Hama",
+                "https://en.wikipedia.org/wiki/Niamey",
+                "https://en.wikipedia.org/wiki/Niamey_Grand_Market",
+                "https://en.wikipedia.org/wiki/Our_Lady_of_Perpetual_Help_Cathedral,_Niamey",
+                "https://en.wikipedia.org/wiki/Timeline_of_Niamey",
+                "https://en.wikivoyage.org/wiki/Niamey",
+                "https://www.gov.uk/foreign-travel-advice/niger"
+              ],
+              "primaryTopicEvidence": {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e05/lahteet/en.wikivoyage.org_Niamey.txt",
+                "sha256": "496505ece5753f0abd452f29ff37a438871538c4627e91e09b13048843c67fb9",
+                "url": "https://en.wikivoyage.org/wiki/Niamey",
+                "section": "Other food tips, Dégué",
+                "line": 466,
+                "supportsFi": "Dégué on hirssipalloja jogurtissa. Paikallinen lähde kuvaa annoksen Niameyn ruokatarjonnassa.",
+                "readAt": "2026-10-12T18:11:26.879477+00:00"
+              },
+              "independentD": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/tarkistus.md",
+              "supersedesSourceBlockedAsset": "e05-niamey-o4-v1-20261012T175201Z"
+            }
+          },
+          "qaReason": "Uusi v2 havainnollistaa tekstissä nimettyä hirssi-jogurttiruokaa; oma hyväksyntä koskee vain tätä native-SHA:ta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: dégué eli hirssiä jogurtissa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+        "fileSHA256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e05-niamey-o4-v2-20261012T181127Z",
+          "sha256": "9f1ddd3fd6b19f10aa46d08920f73386763b417ee538976b4ede2de0dafefb56",
+          "verdict": "accepted",
+          "reason": "Uusi v2 havainnollistaa tekstissä nimettyä hirssi-jogurttiruokaa; oma hyväksyntä koskee vain tätä native-SHA:ta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-o4-v2-20261012T181127Z/image.png",
+            "nativeSHA256": "9f1ddd3fd6b19f10aa46d08920f73386763b417ee538976b4ede2de0dafefb56",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisessa kulhossa pieniä vaaleankeltaisia viljapalloja ja valkoista jogurttia. Pallojen koko/ryhmitys vaihtelee, jogurtin kosteus ja astia luontevat; ei koristeita, tekstiä, ihmisiä tai brändiä.",
+            "captionFi": "Havainnekuva: dégué eli hirssiä jogurtissa.",
+            "sourceAndTargetCheckFi": "Ajantasainen O4 nimeää déguén hirssipallot ja jogurtin; faktapohjan V/Street food -aihe luettu. CaptionFi Havainnekuva: dégué eli hirssiä jogurtissa. Ei tarkkaa reseptiä tai myyntipaikkaa koskevaa väitettä; v1 ei saa tätä kuittausta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Kossaï on lehmänpavuista tehty ruoka, jota syödään aamulla. Ruokavalikoimaan kuuluu myös riisiä maapähkinäkastikkeella. Dégué yhdistää hirssipallot ja jogurtin, ja baobabin hedelmästä tehdään juomaa. Nämä ovat ruoka-aiheita, eivät lupaus tietyn myyntipaikan tarjonnasta.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Niger",
+                "https://de.wikipedia.org/wiki/Gounti_Y%C3%A9na",
+                "https://de.wikipedia.org/wiki/Kanazi_(Niger",
+                "https://de.wikipedia.org/wiki/N%C3%A9ini_Goungou",
+                "https://de.wikipedia.org/wiki/Trois_S%C5%93urs",
+                "https://en.wikipedia.org/wiki/Boubon",
+                "https://en.wikipedia.org/wiki/Diori_Hamani_International_Airport",
+                "https://en.wikipedia.org/wiki/History_of_Niamey",
+                "https://en.wikipedia.org/wiki/Mus%C3%A9e_National_Boubou_Hama",
+                "https://en.wikipedia.org/wiki/Niamey",
+                "https://en.wikipedia.org/wiki/Niamey_Grand_Market",
+                "https://en.wikipedia.org/wiki/Our_Lady_of_Perpetual_Help_Cathedral,_Niamey",
+                "https://en.wikipedia.org/wiki/Timeline_of_Niamey",
+                "https://en.wikivoyage.org/wiki/Niamey",
+                "https://www.gov.uk/foreign-travel-advice/niger"
+              ],
+              "primaryTopicEvidence": {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e05/lahteet/en.wikivoyage.org_Niamey.txt",
+                "sha256": "496505ece5753f0abd452f29ff37a438871538c4627e91e09b13048843c67fb9",
+                "url": "https://en.wikivoyage.org/wiki/Niamey",
+                "section": "Other food tips, Dégué",
+                "line": 466,
+                "supportsFi": "Dégué on hirssipalloja jogurtissa. Paikallinen lähde kuvaa annoksen Niameyn ruokatarjonnassa.",
+                "readAt": "2026-10-12T18:11:26.879477+00:00"
+              },
+              "independentD": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/tarkistus.md",
+              "supersedesSourceBlockedAsset": "e05-niamey-o4-v1-20261012T175201Z"
+            }
+          },
+          "reviewedAt": "2026-10-12T18:18:10.233689+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png?t=17a1d4adc04696d1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+        "sha256": "17a1d4adc04696d106af57fb462c26588fa8f6803cdc120e480a1aea539bcf0e",
+        "bytes": 1972184,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-niamey-o4-v2-20261012T181127Z",
+        "nativeSHA256": "9f1ddd3fd6b19f10aa46d08920f73386763b417ee538976b4ede2de0dafefb56",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "niamey",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:19:08.346332+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
+        "sha256": "17a1d4adc04696d106af57fb462c26588fa8f6803cdc120e480a1aea539bcf0e",
+        "bytes": 1972184,
+        "SHAReadAt": "2026-10-12T18:29:45.434921+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9f1ddd3fd6b19f10aa46d08920f73386763b417ee538976b4ede2de0dafefb56",
+        "rgbPixelSHA256": "873b412dc11374ed8a91cd0db48c875f79fe3e2d78a6164257bc2c7691c06239",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "1ebebf8bbdaa09d740b76796cf3edb13c4db15f2d7c099b23707db54517173a0"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e05-niamey-k3-v1-20261012T180544Z",
+      "galleryImageID": "e05-niamey-k3-v1-20261012T180544Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: vedenkuljetuksen työntökärry.",
+        "lyhyt": "Havainnekuva: vedenkuljetuksen työntökärry."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: vedenkuljetuksen työntökärry.",
+        "lyhyt": "Havainnekuva: vedenkuljetuksen työntökärry."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "20acdbdbf21b9adfb1e55199b650d5729f6079efd83e50f161790f8565b10e49",
+      "exportSHA256": "d5f1032fa0dfcd0d0d1220cab5db068359243a36927ad637078e0adc125d1a41",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
+        "semanticContextSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
+        "subjectTitle": "Vesi kulkee työntökärryssä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-k3-v1-20261012T180544Z/image.png",
+            "nativeSHA256": "20acdbdbf21b9adfb1e55199b650d5729f6079efd83e50f161790f8565b10e49",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Metallikehikkoinen kaksipyöräinen kärry, kuormana läpinäkyviä kannellisia vesiastioita. Pyörät, kuorman tuki, pullomuovit/neste ja metalli luontevat. Astioiden valmistettu toistomuoto ei ole synteettinen vesipinta. Ei logoja, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva: vedenkuljetuksen työntökärry.",
+            "sourceAndTargetCheckFi": "K3 Vesi kulkee työntökärryssä luettu; faktapohjan ga’ruwa-/työntökärry-/vedenkuljettajaosumat vahvistavat aiheen. CaptionFi Havainnekuva: vedenkuljetuksen työntökärry, ei nimetyn kuljettajan tai reitin dokumentti.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Ga’ruwa-vedenkuljettajan työ alkaa vesipisteeltä. Hän ostaa vettä, nostaa astiat työntökärryyn ja vie kuorman kotitalouksille omaa vakiintunutta reittiään pitkin. Työtä opitaan myös oppipoikana, ja kuljettajilla on epävirallisia ammattiyhteisöjä. Kotona vettä voidaan säilyttää saviruukuissa. Niameyn vesihuollon arkeen kuuluu siis putkien ja vesipisteiden lisäksi ihmisiä, jotka tuntevat asiakkaansa ja kulkureittinsä. Tavallinen kärry on samalla veden jakelun työväline."
+            }
+          },
+          "qaReason": "Työntökärryn vedenkuljetushavainne vastaa K3:n arkista työvälinettä ja rehellistä kuvatekstiä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: vedenkuljetuksen työntökärry.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+        "fileSHA256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e05-niamey-k3-v1-20261012T180544Z",
+          "sha256": "20acdbdbf21b9adfb1e55199b650d5729f6079efd83e50f161790f8565b10e49",
+          "verdict": "accepted",
+          "reason": "Työntökärryn vedenkuljetushavainne vastaa K3:n arkista työvälinettä ja rehellistä kuvatekstiä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-k3-v1-20261012T180544Z/image.png",
+            "nativeSHA256": "20acdbdbf21b9adfb1e55199b650d5729f6079efd83e50f161790f8565b10e49",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Metallikehikkoinen kaksipyöräinen kärry, kuormana läpinäkyviä kannellisia vesiastioita. Pyörät, kuorman tuki, pullomuovit/neste ja metalli luontevat. Astioiden valmistettu toistomuoto ei ole synteettinen vesipinta. Ei logoja, tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva: vedenkuljetuksen työntökärry.",
+            "sourceAndTargetCheckFi": "K3 Vesi kulkee työntökärryssä luettu; faktapohjan ga’ruwa-/työntökärry-/vedenkuljettajaosumat vahvistavat aiheen. CaptionFi Havainnekuva: vedenkuljetuksen työntökärry, ei nimetyn kuljettajan tai reitin dokumentti.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Ga’ruwa-vedenkuljettajan työ alkaa vesipisteeltä. Hän ostaa vettä, nostaa astiat työntökärryyn ja vie kuorman kotitalouksille omaa vakiintunutta reittiään pitkin. Työtä opitaan myös oppipoikana, ja kuljettajilla on epävirallisia ammattiyhteisöjä. Kotona vettä voidaan säilyttää saviruukuissa. Niameyn vesihuollon arkeen kuuluu siis putkien ja vesipisteiden lisäksi ihmisiä, jotka tuntevat asiakkaansa ja kulkureittinsä. Tavallinen kärry on samalla veden jakelun työväline."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:17:25.406747+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png?t=d5f1032fa0dfcd0d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+        "sha256": "d5f1032fa0dfcd0d0d1220cab5db068359243a36927ad637078e0adc125d1a41",
+        "bytes": 2550001,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-niamey-k3-v1-20261012T180544Z",
+        "nativeSHA256": "20acdbdbf21b9adfb1e55199b650d5729f6079efd83e50f161790f8565b10e49",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "niamey",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:19:03.969693+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
+        "sha256": "d5f1032fa0dfcd0d0d1220cab5db068359243a36927ad637078e0adc125d1a41",
+        "bytes": 2550001,
+        "SHAReadAt": "2026-10-12T18:29:45.084617+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "20acdbdbf21b9adfb1e55199b650d5729f6079efd83e50f161790f8565b10e49",
+        "rgbPixelSHA256": "49e07245fb4cb636a845e53171e92094c81494d6a69ab784b43038d11d72adb2",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
+      "contextAfterSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e05-niamey-k4-v1-20261012T180735Z",
+      "galleryImageID": "e05-niamey-k4-v1-20261012T180735Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: tavallinen saviastia.",
+        "lyhyt": "Havainnekuva: tavallinen saviastia."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: tavallinen saviastia.",
+        "lyhyt": "Havainnekuva: tavallinen saviastia."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "99a0016edf82387bc73b806aa9f946eb06ce7df8f7ff51df81c09977a614a7c4",
+      "exportSHA256": "ad4c4c599d42f04c16569029f095408bf890466178f5dd18f15901557ec801ba",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
+        "semanticContextSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
+        "subjectTitle": "Saviruukun matka jokivartta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-k4-v1-20261012T180735Z/image.png",
+            "nativeSHA256": "99a0016edf82387bc73b806aa9f946eb06ce7df8f7ff51df81c09977a614a7c4",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Pallomainen saviruukku ja pieni kulho maalla. Savipinnan rakeisuus ja kulumat epäsäännöllisiä, suuaukko ja astioiden seinämät uskottavat; ei koristetaidetta, tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: tavallinen saviastia.",
+            "sourceAndTargetCheckFi": "Luettu K4 Saviruukun matka jokivartta ja faktapohjan K4 savi/Boubon-keramiikkaosuma. CaptionFi Havainnekuva: tavallinen saviastia ei väitä tietyn yhteisön astiatyyppiä tai aitona myyntipaikkakuvana.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Niameyn keramiikkakauppa ulottuu pääkaupungin ulkopuolelle. Boubonin jokivarsikylässä naiset valmistavat astioita kotitalouksissa, ja kylän viikkomarkkinoilla myydään keramiikan ohella muitakin tavaroita. Niameyssä puolestaan on omia keramiikan kauppapaikkoja. Näin astian valmistuspaikka ja myyntipaikka voivat olla eri yhteisöissä saman joen varrella. Savityön tarina löytyy tekijöiden kodeista, markkinoilta ja tavaran liikkeestä; suuren tehtaan porttia ei tämän tuotantoketjun ymmärtämiseen tarvita."
+            }
+          },
+          "qaReason": "Yleinen koristeeton saviastia havainnollistaa K4:n keramiikkakauppaa ilman museoesineen tai paikan jäljennöstä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: tavallinen saviastia.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+        "fileSHA256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e05-niamey-k4-v1-20261012T180735Z",
+          "sha256": "99a0016edf82387bc73b806aa9f946eb06ce7df8f7ff51df81c09977a614a7c4",
+          "verdict": "accepted",
+          "reason": "Yleinen koristeeton saviastia havainnollistaa K4:n keramiikkakauppaa ilman museoesineen tai paikan jäljennöstä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-k4-v1-20261012T180735Z/image.png",
+            "nativeSHA256": "99a0016edf82387bc73b806aa9f946eb06ce7df8f7ff51df81c09977a614a7c4",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Pallomainen saviruukku ja pieni kulho maalla. Savipinnan rakeisuus ja kulumat epäsäännöllisiä, suuaukko ja astioiden seinämät uskottavat; ei koristetaidetta, tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: tavallinen saviastia.",
+            "sourceAndTargetCheckFi": "Luettu K4 Saviruukun matka jokivartta ja faktapohjan K4 savi/Boubon-keramiikkaosuma. CaptionFi Havainnekuva: tavallinen saviastia ei väitä tietyn yhteisön astiatyyppiä tai aitona myyntipaikkakuvana.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Niameyn keramiikkakauppa ulottuu pääkaupungin ulkopuolelle. Boubonin jokivarsikylässä naiset valmistavat astioita kotitalouksissa, ja kylän viikkomarkkinoilla myydään keramiikan ohella muitakin tavaroita. Niameyssä puolestaan on omia keramiikan kauppapaikkoja. Näin astian valmistuspaikka ja myyntipaikka voivat olla eri yhteisöissä saman joen varrella. Savityön tarina löytyy tekijöiden kodeista, markkinoilta ja tavaran liikkeestä; suuren tehtaan porttia ei tämän tuotantoketjun ymmärtämiseen tarvita."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:17:38.154988+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png?t=ad4c4c599d42f04c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+        "sha256": "ad4c4c599d42f04c16569029f095408bf890466178f5dd18f15901557ec801ba",
+        "bytes": 2630251,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-niamey-k4-v1-20261012T180735Z",
+        "nativeSHA256": "99a0016edf82387bc73b806aa9f946eb06ce7df8f7ff51df81c09977a614a7c4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "niamey",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:19:05.297443+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
+        "sha256": "ad4c4c599d42f04c16569029f095408bf890466178f5dd18f15901557ec801ba",
+        "bytes": 2630251,
+        "SHAReadAt": "2026-10-12T18:29:45.206588+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "99a0016edf82387bc73b806aa9f946eb06ce7df8f7ff51df81c09977a614a7c4",
+        "rgbPixelSHA256": "f2654d1748a34f9fe35f97da51bf8c5f947c4d37bcd17cea5952b74c82020730",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
+      "contextAfterSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e05-niamey-l2-v1-20261012T192753Z",
+      "galleryImageID": "e05-niamey-l2-v1-20261012T192753Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kilpikorppi.",
+        "lyhyt": "Havainnekuva: kilpikorppi."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kilpikorppi.",
+        "lyhyt": "Havainnekuva: kilpikorppi."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2f2998fcc11d07468ff9a38c64c98b77c870711defd30510481df35ec0142faf",
+      "exportSHA256": "4b61ff953f4611023b5b173dc14560635c4918a22d8f14464eb3f7c437222088",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
+        "semanticContextSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
+        "subjectTitle": "Kolme sisarta kaupungin laidalla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-object-or-material-or-animal",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-l2-v1-20261012T192753Z/image.png",
+            "nativeSHA256": "2f2998fcc11d07468ff9a38c64c98b77c870711defd30510481df35ec0142faf",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Mustavalkoinen korppilintu: valkoinen kaulus/rinta, tumma pää/siivet/pyrstö. Nokka, jalat ja oksaa tarttuvat varpaat uskottavat, höyhenet luonnolliset; ei tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva: kilpikorppi.",
+            "sourceAndTargetCheckFi": "L2 ja faktapohjan Corvus albus luettu. CaptionFi havainne, ei Trois Sœursin paikkavalokuva tai todellinen yksilö/havainto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Trois Sœurs tarkoittaa kolmea sisarta. Nimi kuuluu Niameyn rakentamattomalle kukkulajonolle, jonka pinnassa näkyy paljasta lateriittia. Kukkulat asettuvat suunnilleen itä–länsisuuntaan, ja niiden pohjoispuolella maasto avautuu kohti Nigerjoen tasankoa. Ne kuuluvat Niamey V:n alueeseen. Paikasta on kirjattu myös linnustohavaintoja, kuten valkomustaa kilpikorppia. Pääkaupungin maisemaan mahtuu siis hallintorakennusten ja katujen lisäksi kukkuloita, joilla maaperä itse on näkyvin maamerkki.",
+              "factSheetExcerpt": [
+                "74: **L2 Trois Sœurs**, wiki Trois Sœurs: kukkulajono Niameyssä; nimi tarkoittaa kolmea sisarta; rakentamattomia lateriittikukkuloita; itä–länsisuuntainen kokonaisuus; pohjoispuolella jokisuuntainen kaupunkitasanko; kuuluu Niamey V:hen; linnustohavaintoja, esim. Corvus albus lähteen listassa. S/Geographie, Fauna. Ei täsmäkorkeuksia tai lajimäärää."
+              ],
+              "supportsFi": "Nykyinen L2 mainitsee kilpikorpin; faktapohjan Trois Sœursin Fauna-kohta yksilöi Corvus albus -lajin. Havainne ei väitä kuvauspaikkaa tai tiettyä lintuhavaintoa.",
+              "directSubjectInCurrentText": true,
+              "morphologyVerification": {
+                "url": "https://en.wikipedia.org/wiki/Pied_crow",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/assets/e05-bamako-o4-v1-20261012T174027Z/source-pied-crow.html",
+                "sha256": "13b383e23c129677757c7503a5e231aff7374b3ad310f8c8d17903c993b553c3",
+                "section": "Description; Identification",
+                "noteFi": "Mustat pää, kaula, siivet, pyrstö ja nokka; valkoinen hartia-rinta-alue. Ei valkokaularaappien valkokärkistä nokkaa."
+              }
+            }
+          },
+          "qaReason": "Kilpikorpin havainne vastaa L2:n lajiaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: kilpikorppi.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+        "fileSHA256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e05-niamey-l2-v1-20261012T192753Z",
+          "sha256": "2f2998fcc11d07468ff9a38c64c98b77c870711defd30510481df35ec0142faf",
+          "verdict": "accepted",
+          "reason": "Kilpikorpin havainne vastaa L2:n lajiaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-l2-v1-20261012T192753Z/image.png",
+            "nativeSHA256": "2f2998fcc11d07468ff9a38c64c98b77c870711defd30510481df35ec0142faf",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Mustavalkoinen korppilintu: valkoinen kaulus/rinta, tumma pää/siivet/pyrstö. Nokka, jalat ja oksaa tarttuvat varpaat uskottavat, höyhenet luonnolliset; ei tekstiä tai ihmisiä.",
+            "captionFi": "Havainnekuva: kilpikorppi.",
+            "sourceAndTargetCheckFi": "L2 ja faktapohjan Corvus albus luettu. CaptionFi havainne, ei Trois Sœursin paikkavalokuva tai todellinen yksilö/havainto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Trois Sœurs tarkoittaa kolmea sisarta. Nimi kuuluu Niameyn rakentamattomalle kukkulajonolle, jonka pinnassa näkyy paljasta lateriittia. Kukkulat asettuvat suunnilleen itä–länsisuuntaan, ja niiden pohjoispuolella maasto avautuu kohti Nigerjoen tasankoa. Ne kuuluvat Niamey V:n alueeseen. Paikasta on kirjattu myös linnustohavaintoja, kuten valkomustaa kilpikorppia. Pääkaupungin maisemaan mahtuu siis hallintorakennusten ja katujen lisäksi kukkuloita, joilla maaperä itse on näkyvin maamerkki.",
+              "factSheetExcerpt": [
+                "74: **L2 Trois Sœurs**, wiki Trois Sœurs: kukkulajono Niameyssä; nimi tarkoittaa kolmea sisarta; rakentamattomia lateriittikukkuloita; itä–länsisuuntainen kokonaisuus; pohjoispuolella jokisuuntainen kaupunkitasanko; kuuluu Niamey V:hen; linnustohavaintoja, esim. Corvus albus lähteen listassa. S/Geographie, Fauna. Ei täsmäkorkeuksia tai lajimäärää."
+              ],
+              "supportsFi": "Nykyinen L2 mainitsee kilpikorpin; faktapohjan Trois Sœursin Fauna-kohta yksilöi Corvus albus -lajin. Havainne ei väitä kuvauspaikkaa tai tiettyä lintuhavaintoa.",
+              "directSubjectInCurrentText": true,
+              "morphologyVerification": {
+                "url": "https://en.wikipedia.org/wiki/Pied_crow",
+                "nasSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/assets/e05-bamako-o4-v1-20261012T174027Z/source-pied-crow.html",
+                "sha256": "13b383e23c129677757c7503a5e231aff7374b3ad310f8c8d17903c993b553c3",
+                "section": "Description; Identification",
+                "noteFi": "Mustat pää, kaula, siivet, pyrstö ja nokka; valkoinen hartia-rinta-alue. Ei valkokaularaappien valkokärkistä nokkaa."
+              }
+            }
+          },
+          "reviewedAt": "2026-10-12T19:44:54.853470+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png?t=4b61ff953f461102",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+        "sha256": "4b61ff953f4611023b5b173dc14560635c4918a22d8f14464eb3f7c437222088",
+        "bytes": 2220391,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-niamey-l2-v1-20261012T192753Z",
+        "nativeSHA256": "2f2998fcc11d07468ff9a38c64c98b77c870711defd30510481df35ec0142faf",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "niamey",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T19:45:35.275980+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
+        "sha256": "4b61ff953f4611023b5b173dc14560635c4918a22d8f14464eb3f7c437222088",
+        "bytes": 2220391,
+        "SHAReadAt": "2026-10-12T19:45:30.750750+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2f2998fcc11d07468ff9a38c64c98b77c870711defd30510481df35ec0142faf",
+        "rgbPixelSHA256": "b206afe58c434b1212ae5370712fef91a0991d79752ffa0642cfdc033a6de895",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
+      "contextAfterSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e05-niamey-l3-v1-20261012T180857Z",
+      "galleryImageID": "e05-niamey-l3-v1-20261012T180857Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: mangopuun varjo.",
+        "lyhyt": "Havainnekuva: mangopuun varjo."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: mangopuun varjo.",
+        "lyhyt": "Havainnekuva: mangopuun varjo."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8e467dcd847e99e4de727a7842672bbd4c3a13caab90dfa41b14a163d19088dc",
+      "exportSHA256": "52b0dfb330c42f38ed3d1d552106d242fa95d5021d95d2661e3ec14c5507a41a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
+        "semanticContextSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
+        "subjectTitle": "Varjo on asukkaiden työtä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-l3-v1-20261012T180857Z/image.png",
+            "nativeSHA256": "8e467dcd847e99e4de727a7842672bbd4c3a13caab90dfa41b14a163d19088dc",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreitä mangohedelmiä ja pitkiä sileäreunaisia lehtiä oksissa. Hedelmien varret, lehtisuonitus, valo ja varjot luontevat. Ei samanlaiseksi monistettua kuori-/lehtipintaa, ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva: mangopuun varjo.",
+            "sourceAndTargetCheckFi": "Luettu L3 Varjo on asukkaiden työtä sekä faktapohjan L3 asukkaiden puut/mango/neem. CaptionFi Havainnekuva: mangopuun varjo, ei paikkavalokuva tai nimetty puuyksilö. Kuvassa lehvästön valo-varjo ja hedelmät, ei väitettyä lajiketta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Niameyn kaupunkipuista moni on asukkaiden istuttama ja hoitama. Kaupungissa kasvaa esimerkiksi mangoa ja neemiä, ja osa puulajeista on tuotu alueelle muualta. Istutettu vehreys eroaa ylängön luontaisesta pensaikosta ja laaksojen viljelymaisemasta. Puiden varjo antaa tilaa myös ulkoilmatapahtumille ja kokoontumisille. Kadun puu on siten enemmän kuin maiseman koriste: sen kasvattaminen kuuluu asukkaiden työhön, ja sen ympärille voi muodostua paikka, jossa kaupungin sosiaalinen elämä saa tilaa."
+            }
+          },
+          "qaReason": "Mangopuun havainne vastaa L3:n istutettujen kaupunkipuiden aihetta ja rehellistä kuvatyyppimerkintää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: mangopuun varjo.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+        "fileSHA256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e05-niamey-l3-v1-20261012T180857Z",
+          "sha256": "8e467dcd847e99e4de727a7842672bbd4c3a13caab90dfa41b14a163d19088dc",
+          "verdict": "accepted",
+          "reason": "Mangopuun havainne vastaa L3:n istutettujen kaupunkipuiden aihetta ja rehellistä kuvatyyppimerkintää.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/assets/e05-niamey-l3-v1-20261012T180857Z/image.png",
+            "nativeSHA256": "8e467dcd847e99e4de727a7842672bbd4c3a13caab90dfa41b14a163d19088dc",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreitä mangohedelmiä ja pitkiä sileäreunaisia lehtiä oksissa. Hedelmien varret, lehtisuonitus, valo ja varjot luontevat. Ei samanlaiseksi monistettua kuori-/lehtipintaa, ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva: mangopuun varjo.",
+            "sourceAndTargetCheckFi": "Luettu L3 Varjo on asukkaiden työtä sekä faktapohjan L3 asukkaiden puut/mango/neem. CaptionFi Havainnekuva: mangopuun varjo, ei paikkavalokuva tai nimetty puuyksilö. Kuvassa lehvästön valo-varjo ja hedelmät, ei väitettyä lajiketta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+              "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/faktapohja.md",
+              "sourceFactSheetSHA256": "929944dddf1a94ebd568725ccb100beecd2d5395351f7a01b32ed765ae9db043",
+              "contentExcerpt": "Niameyn kaupunkipuista moni on asukkaiden istuttama ja hoitama. Kaupungissa kasvaa esimerkiksi mangoa ja neemiä, ja osa puulajeista on tuotu alueelle muualta. Istutettu vehreys eroaa ylängön luontaisesta pensaikosta ja laaksojen viljelymaisemasta. Puiden varjo antaa tilaa myös ulkoilmatapahtumille ja kokoontumisille. Kadun puu on siten enemmän kuin maiseman koriste: sen kasvattaminen kuuluu asukkaiden työhön, ja sen ympärille voi muodostua paikka, jossa kaupungin sosiaalinen elämä saa tilaa."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:17:54.687692+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png?t=52b0dfb330c42f38",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+        "sha256": "52b0dfb330c42f38ed3d1d552106d242fa95d5021d95d2661e3ec14c5507a41a",
+        "bytes": 2245972,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-niamey-l3-v1-20261012T180857Z",
+        "nativeSHA256": "8e467dcd847e99e4de727a7842672bbd4c3a13caab90dfa41b14a163d19088dc",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "niamey",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:19:06.768495+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
+        "sha256": "52b0dfb330c42f38ed3d1d552106d242fa95d5021d95d2661e3ec14c5507a41a",
+        "bytes": 2245972,
+        "SHAReadAt": "2026-10-12T18:29:45.324526+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8e467dcd847e99e4de727a7842672bbd4c3a13caab90dfa41b14a163d19088dc",
+        "rgbPixelSHA256": "c8a129254b0a60a3d1f7972e00dfd5fabb1ddfbaf536efb0204469d29aee6c2b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
+      "contextAfterSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e05-niamey-photo-5c9036251b9fee0a",
+      "galleryImageID": "capital-cc-e05-niamey-photo-5c9036251b9fee0a",
+      "commonsFile": "Niamey from the sky.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/photo-5c9036251b9fee0a7ad1.jpg",
+        "suora": true,
+        "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
+        "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "tiedosto": "Niamey from the sky.jpg",
+        "vuosi": "2011"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
+        "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "tiedosto": "Niamey from the sky.jpg",
+        "vuosi": "2011"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/photo-5c9036251b9fee0a7ad1.jpg",
+        "suora": true,
+        "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
+        "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "tiedosto": "Niamey from the sky.jpg",
+        "vuosi": "2011"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5c9036251b9fee0a7ad1226afa16b6497328318d9d31a7ff2ceb2c081210d6cd",
+      "exportSHA256": "5c9036251b9fee0a7ad1226afa16b6497328318d9d31a7ff2ceb2c081210d6cd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/photo-5c9036251b9fee0a7ad1.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/photo-5c9036251b9fee0a7ad1.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-850ef7a3ca8792.jpg",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+        "semanticContextSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+        "subjectTitle": "niamey — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Jean Rebiffé",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Niamey_from_the_sky.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Niamey_from_the_sky.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Niamey_from_the_sky.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Jean Rebiffé",
+            "licenseSourceSha256": "e1d48437239bfbfe503774c8ad918dcff8fce5de5825cd6a23086633d4dfdd99",
+            "depictedWorkLayer": "Laaja tavanomainen kaupunkirakenne; mitään yksilöityä suojattua nykyarkkitehtuuria tai veistosta ei nosteta kuvan pääaiheeksi. Ei FOP-/PD-oletusta nimetystä rakennuksesta.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [
+              " 13.483100;    2.148600"
+            ],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-850ef7a3ca8792.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Niamey_from_the_sky.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/niamey-photo-source.html",
+            "sourcePageSha256": "e1d48437239bfbfe503774c8ad918dcff8fce5de5825cd6a23086633d4dfdd99",
+            "author": "Jean Rebiffé",
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Niamey_from_the_sky.jpg",
+            "width": 4608,
+            "height": 3456,
+            "captureDate": "15 May 2011, 16:16:47",
+            "placeEvidence": "Commons Summary: Aerial view of Niamey; Saga Kourtey area in Niamey IV. Camera location 13.483100 / 2.148600.",
+            "existingGameUseHits": [],
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Niamey_from_the_sky.jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "Jean Rebiffé",
+              "licenseSourceSha256": "e1d48437239bfbfe503774c8ad918dcff8fce5de5825cd6a23086633d4dfdd99",
+              "depictedWorkLayer": "Laaja tavanomainen kaupunkirakenne; mitään yksilöityä suojattua nykyarkkitehtuuria tai veistosta ei nosteta kuvan pääaiheeksi. Ei FOP-/PD-oletusta nimetystä rakennuksesta.",
+              "sourcePlaceDescription": null,
+              "sourcePlaceGeo": [
+                " 13.483100;    2.148600"
+              ],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "independentOfCCSelector": true
+          },
+          "qaReason": "Aito Saga Kourteyn asuinalueen ilmakuva Niamey IV:stä: Commonsin Summary nimeää kaupungin ja alueen sekä antaa paikannuksen. Ihmiset ovat liian pieniä luettaviksi kasvopiirteiksi. Tavallinen koko korttelirakenne, ei nimettyä suojattua yksilöteosta pääaiheena. Ei päälle lisättyä tekstiä, vesileimaa tai mainoskuvaa. Tekijä Jean Rebiffé ja CC BY 3.0 tarkistettu lähdesivun Author-/license-laatikosta; kuva vuodelta 2011. PHOTOlle ei vaadita panoraamaa, vaakamuotoa tai nykyvuoden tuoreutta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+        "fileSHA256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Niamey from the sky.jpg",
+          "sha256": "5c9036251b9fee0a7ad1226afa16b6497328318d9d31a7ff2ceb2c081210d6cd",
+          "verdict": "accepted",
+          "reason": "Aito Saga Kourteyn asuinalueen ilmakuva Niamey IV:stä: Commonsin Summary nimeää kaupungin ja alueen sekä antaa paikannuksen. Ihmiset ovat liian pieniä luettaviksi kasvopiirteiksi. Tavallinen koko korttelirakenne, ei nimettyä suojattua yksilöteosta pääaiheena. Ei päälle lisättyä tekstiä, vesileimaa tai mainoskuvaa. Tekijä Jean Rebiffé ja CC BY 3.0 tarkistettu lähdesivun Author-/license-laatikosta; kuva vuodelta 2011. PHOTOlle ei vaadita panoraamaa, vaakamuotoa tai nykyvuoden tuoreutta.",
+          "required": true,
+          "reviewedAt": "2026-10-12T18:17:00.695813+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-850ef7a3ca8792.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Niamey_from_the_sky.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/niamey-photo-source.html",
+            "sourcePageSha256": "e1d48437239bfbfe503774c8ad918dcff8fce5de5825cd6a23086633d4dfdd99",
+            "author": "Jean Rebiffé",
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Niamey_from_the_sky.jpg",
+            "width": 4608,
+            "height": 3456,
+            "captureDate": "15 May 2011, 16:16:47",
+            "placeEvidence": "Commons Summary: Aerial view of Niamey; Saga Kourtey area in Niamey IV. Camera location 13.483100 / 2.148600.",
+            "existingGameUseHits": [],
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Niamey_from_the_sky.jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "Jean Rebiffé",
+              "licenseSourceSha256": "e1d48437239bfbfe503774c8ad918dcff8fce5de5825cd6a23086633d4dfdd99",
+              "depictedWorkLayer": "Laaja tavanomainen kaupunkirakenne; mitään yksilöityä suojattua nykyarkkitehtuuria tai veistosta ei nosteta kuvan pääaiheeksi. Ei FOP-/PD-oletusta nimetystä rakennuksesta.",
+              "sourcePlaceDescription": null,
+              "sourcePlaceGeo": [
+                " 13.483100;    2.148600"
+              ],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "independentOfCCSelector": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "niamey",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Niamey from the sky.jpg",
+        "sha256": "5c9036251b9fee0a7ad1226afa16b6497328318d9d31a7ff2ceb2c081210d6cd",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Niamey_from_the_sky.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Niamey_from_the_sky.jpg",
+        "author": "Jean Rebiffé",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "width": 4608,
+        "height": 3456,
+        "originalSHA256": "5c9036251b9fee0a7ad1226afa16b6497328318d9d31a7ff2ceb2c081210d6cd",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/photo-5c9036251b9fee0a7ad1.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/photo-5c9036251b9fee0a7ad1.jpg",
+        "bytes": 4006077,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:17:27.693850+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Niamey from the sky.jpg",
+        "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
+        "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "vuosi": "2011"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
+        "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "tiedosto": "Niamey from the sky.jpg",
+        "vuosi": "2011"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+      "contextAfterSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-niamey-c1-c966432e9ab7f6ce",
+      "galleryImageID": "capital-cc-e05-niamey-c1-c966432e9ab7f6ce",
+      "commonsFile": "Blvd Mali Bero from grand mosquee niamey.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c1-c966432e9ab7f6ce7938.jpg",
+        "suora": true,
+        "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c1-c966432e9ab7f6ce7938.jpg",
+        "suora": true,
+        "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+      "exportSHA256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c1-c966432e9ab7f6ce7938.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c1-c966432e9ab7f6ce7938.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-f3feaecf851353.jpg",
+      "dimensions": [
+        2656,
+        1997
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+        "semanticContextSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+        "subjectTitle": "Niamey",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Roland Huziaker",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Blvd_Mali_Bero_from_grand_mosquee_niamey.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Blvd_Mali_Bero_from_grand_mosquee_niamey.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Blvd_Mali_Bero_from_grand_mosquee_niamey.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Roland Huziaker",
+            "licenseSourceSha256": "f01b9f83f28aa684485ebda609dbe7e9c0815aefbe8c373532c8bfe225cc6027",
+            "depictedWorkLayer": "Pääaihe on katu, puusto ja laaja utilitaaristen matalien rakennusten kokonaisuus; yksittäinen arkkitehtoninen tai taideteos ei nouse pääaiheeksi. Kuvauksen paikka on suuren moskeijan suunnasta, moskeijaa ei kuvata. Tekijä Roland Huziaker ja CC BY-SA 2.0 lähdesivulta; ei yleistä FOP- tai ikäoletusta.",
+            "sourcePlaceDescription": "English: Looking northwest from the grand mosquee niamey in Niamey, Niger. Main road is the Boulevard Mali Bero.",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Blvd Mali Bero from grand mosquee niamey.jpg",
+                "English: Looking northwest from the grand mosquee niamey in Niamey, Niger. Main road is the Boulevard Mali Bero."
+              ],
+              [
+                "Date",
+                "26 March 2006"
+              ],
+              [
+                "Source",
+                "https://www.flickr.com/photos/rolandh/148635304/sizes/l/"
+              ],
+              [
+                "Author",
+                "Roland Huziaker"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 2.0"
+            ],
+            "pageDimensions": [
+              2656,
+              1997
+            ],
+            "actualDimensions": [
+              2656,
+              1997
+            ],
+            "pageSha256": "f01b9f83f28aa684485ebda609dbe7e9c0815aefbe8c373532c8bfe225cc6027",
+            "nativeSha256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Blvd_Mali_Bero_from_grand_mosquee_niamey.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c1-741a35cf16b5.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-f3feaecf851353.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c1-741a35cf16b5.json",
+            "author": "Roland Huziaker",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+            "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Todellinen laaja katunäkymä Boulevard Mali Berolta: alkuperäinen Description yksilöi Niameyn, kuvaussuunnan ja tien. Pääaihe on katu, puusto ja tavallinen matala asutus; yksittäistä suojattua teosta ei toisinneta pääaiheena. Kaukaisten ihmisten kasvoista ei erotu tunnistettavia piirteitä, ei lisättyjä merkintöjä. Vuosi2006 kirjataan eikä väitetä nykyhetkeksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+        "fileSHA256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Blvd Mali Bero from grand mosquee niamey.jpg",
+          "sha256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+          "verdict": "accepted",
+          "reason": "Todellinen laaja katunäkymä Boulevard Mali Berolta: alkuperäinen Description yksilöi Niameyn, kuvaussuunnan ja tien. Pääaihe on katu, puusto ja tavallinen matala asutus; yksittäistä suojattua teosta ei toisinneta pääaiheena. Kaukaisten ihmisten kasvoista ei erotu tunnistettavia piirteitä, ei lisättyjä merkintöjä. Vuosi2006 kirjataan eikä väitetä nykyhetkeksi.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Blvd Mali Bero from grand mosquee niamey.jpg",
+                "English: Looking northwest from the grand mosquee niamey in Niamey, Niger. Main road is the Boulevard Mali Bero."
+              ],
+              [
+                "Date",
+                "26 March 2006"
+              ],
+              [
+                "Source",
+                "https://www.flickr.com/photos/rolandh/148635304/sizes/l/"
+              ],
+              [
+                "Author",
+                "Roland Huziaker"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 2.0"
+            ],
+            "pageDimensions": [
+              2656,
+              1997
+            ],
+            "actualDimensions": [
+              2656,
+              1997
+            ],
+            "pageSha256": "f01b9f83f28aa684485ebda609dbe7e9c0815aefbe8c373532c8bfe225cc6027",
+            "nativeSha256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Blvd_Mali_Bero_from_grand_mosquee_niamey.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c1-741a35cf16b5.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-f3feaecf851353.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c1-741a35cf16b5.json",
+            "author": "Roland Huziaker",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+            "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "niamey",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Blvd Mali Bero from grand mosquee niamey.jpg",
+        "sha256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Blvd_Mali_Bero_from_grand_mosquee_niamey.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Blvd_Mali_Bero_from_grand_mosquee_niamey.jpg",
+        "author": "Roland Huziaker",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 2656,
+        "height": 1997,
+        "originalSHA256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c1-c966432e9ab7f6ce7938.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c1-c966432e9ab7f6ce7938.jpg",
+        "bytes": 2347219,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:02.370125+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg",
+        "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+      "contextAfterSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34"
+    },
+    {
+      "era": "e05",
+      "city": "niamey",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e05-niamey-c2-591faae4e4eaacaf",
+      "galleryImageID": "capital-cc-e05-niamey-c2-591faae4e4eaacaf",
+      "commonsFile": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c2-591faae4e4eaacafd0ad.jpg",
+        "suora": true,
+        "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c2-591faae4e4eaacafd0ad.jpg",
+        "suora": true,
+        "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+      "exportSHA256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c2-591faae4e4eaacafd0ad.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c2-591faae4e4eaacafd0ad.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-dec9c60c91abb5.jpg",
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
+      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+        "semanticContextSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+        "subjectTitle": "Niamey",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Fhadel ALOU",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_majestueux_fleuve_Niger_serpente_%C3%A0_travers_la_capitale_du_Niger_Niamey_,_offrant_un_spectacle_captivant.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Le_majestueux_fleuve_Niger_serpente_%C3%A0_travers_la_capitale_du_Niger_Niamey_%2C_offrant_un_spectacle_captivant.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Le_majestueux_fleuve_Niger_serpente_%C3%A0_travers_la_capitale_du_Niger_Niamey_,_offrant_un_spectacle_captivant.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Fhadel ALOU",
+            "licenseSourceSha256": "a139fc7faf53b9cbaaf42cd911c19fe5732f0443ba9ed0d72468329a65cd5035",
+            "depictedWorkLayer": "Pääaihe luonnollinen jokimaisema ja laaja kaupunkirakenne. Ei yksilöidyn modernin teoksen tai rakennuksen julkisivun lähikuvapääaihetta. Lentokoneen käyttömoottorissa ei mainokseksi nostettua merkkiä/kuviointia. Fhadel ALOU ja CC BY-SA 4.0 alkuperäissivulta, ei FOP/ikäoletusta.",
+            "sourcePlaceDescription": "Français : depuis les hauteurs de Niamey. Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
+                "Français : depuis les hauteurs de Niamey. Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant."
+              ],
+              [
+                "Date",
+                "16 July 2023"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Fhadel ALOU"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              2048,
+              1536
+            ],
+            "actualDimensions": [
+              2048,
+              1536
+            ],
+            "pageSha256": "a139fc7faf53b9cbaaf42cd911c19fe5732f0443ba9ed0d72468329a65cd5035",
+            "nativeSha256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_majestueux_fleuve_Niger_serpente_%C3%A0_travers_la_capitale_du_Niger_Niamey_,_offrant_un_spectacle_captivant.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c2-cd349afd636a.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-dec9c60c91abb5.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c2-cd349afd636a.json",
+            "author": "Fhadel ALOU",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename and original URL aliases",
+            "captionFi": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+            "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+            "rightsScope": "Laaja todellinen joki-/kaupunkikokonaisuus; toiminnallinen moottori sivuosana, ei nimetyn suojatun nykyteoksen pääkuva. Ei blanket FOP -lupaa tai rakennusikään nojaavaa PD:tä."
+          },
+          "qaReason": "Aito laaja lentokuvanäkymä Niameysta ja Nigerjoesta; lähteen Description yksilöi kaupungin ja joen. Kaupungin ja viljelysmaan todellinen asettelu erottuu, kaukaisen horisontin utu luonnollista. Etualan lentokoneen moottori on funktionaalinen sivuosa ilman lisättyä logoa/tekstiä. Ei kasvoja tai erillisenä toisinnettua rakennus-/taideteospääaihetta. Kuva2023, ei väitetä nykyhetken tarkaksi tilannekuvaksi. Ei lento-/kuvaussuunta- tai lentokoneyhtiöpäätelmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+        "fileSHA256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
+          "sha256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+          "verdict": "accepted",
+          "reason": "Aito laaja lentokuvanäkymä Niameysta ja Nigerjoesta; lähteen Description yksilöi kaupungin ja joen. Kaupungin ja viljelysmaan todellinen asettelu erottuu, kaukaisen horisontin utu luonnollista. Etualan lentokoneen moottori on funktionaalinen sivuosa ilman lisättyä logoa/tekstiä. Ei kasvoja tai erillisenä toisinnettua rakennus-/taideteospääaihetta. Kuva2023, ei väitetä nykyhetken tarkaksi tilannekuvaksi. Ei lento-/kuvaussuunta- tai lentokoneyhtiöpäätelmää.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:26:23.932726+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
+                "Français : depuis les hauteurs de Niamey. Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant."
+              ],
+              [
+                "Date",
+                "16 July 2023"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Fhadel ALOU"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              2048,
+              1536
+            ],
+            "actualDimensions": [
+              2048,
+              1536
+            ],
+            "pageSha256": "a139fc7faf53b9cbaaf42cd911c19fe5732f0443ba9ed0d72468329a65cd5035",
+            "nativeSha256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_majestueux_fleuve_Niger_serpente_%C3%A0_travers_la_capitale_du_Niger_Niamey_,_offrant_un_spectacle_captivant.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c2-cd349afd636a.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/cc-evidence/candidate-dec9c60c91abb5.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa-evidence/source-c2-cd349afd636a.json",
+            "author": "Fhadel ALOU",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename and original URL aliases",
+            "captionFi": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+            "sourceContentSHA256": "2d636310be7e90d96d2949dea58ee2df502e15c0065b4ba878aa13a8e70c9073",
+            "rightsScope": "Laaja todellinen joki-/kaupunkikokonaisuus; toiminnallinen moottori sivuosana, ei nimetyn suojatun nykyteoksen pääkuva. Ei blanket FOP -lupaa tai rakennusikään nojaavaa PD:tä."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/qa.json",
+            "sha256": "142be7b44c9ba461ae50ee57c5cf993694032382f8f630d795c32b0af0052239"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/niamey/illustration-qa-extra.json",
+            "sha256": "b5c99f1578dbce619dd7564faeb078e6787182f8e8af3fa4ef40d04a47c074ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "niamey",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
+        "sha256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_majestueux_fleuve_Niger_serpente_%C3%A0_travers_la_capitale_du_Niger_Niamey_,_offrant_un_spectacle_captivant.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Le_majestueux_fleuve_Niger_serpente_%C3%A0_travers_la_capitale_du_Niger_Niamey_%2C_offrant_un_spectacle_captivant.jpg",
+        "author": "Fhadel ALOU",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 2048,
+        "height": 1536,
+        "originalSHA256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c2-591faae4e4eaacafd0ad.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/c2-591faae4e4eaacafd0ad.jpg",
+        "bytes": 247949,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:27:13.496381+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
+        "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "targetAfterSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+      "contextAfterSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

@@ -1,0 +1,2221 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e05",
+  "city": "yamoussoukro",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+  "assets": [
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e05-yamoussoukro-traveler-v1-20261012T182050Z",
+      "galleryImageID": "e05-yamoussoukro-traveler-v1-20261012T182050Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: ruokabanaanit kasvissa.",
+        "lyhyt": "Havainnekuva: ruokabanaanit kasvissa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: ruokabanaanit kasvissa.",
+        "lyhyt": "Havainnekuva: ruokabanaanit kasvissa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+      "exportSHA256": "90dc1a089f1fc36be33b5a689e3d11ec947580f8f2f0327d9cb89dd1ed9b40dd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-natural-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-traveler-v1-20261012T182050Z/image.png",
+            "nativeSHA256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreä banaaniterttu kasvissa, tyypillinen valerunko ja suuret lehdet. Hedelmät liittyvät terttuun luontevasti, kuoret/lehden repeämät vaihtelevat. Ei kasvoja, tekstiä, logoa tai suojattua teosta.",
+            "captionFi": "Havainnekuva: ruokabanaanit kasvissa.",
+            "sourceAndTargetCheckFi": "TRAVELER-kappale lähikylien tuotannosta sekä parasta-rivi ruokakasveista luettu; faktapohja nimeää ruokabanaanin seudun viljelykasvina. CaptionFi Havainnekuva: ruokabanaanit kasvissa ei nimeä plantaasia/lajiketta. L2:n erillinen ruoka-aineen/paiston kuva ja tämä pysty kasvikuva käsittelevät eri näkökulmia samasta lähteistetystä aiheesta, ei sama tiedosto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Yamoussoukron kaupunkimaisemaa jäsentävät puukujanteet, bulevardit ja markkinat. Kaupungin nimi kertoo vanhemmasta paikallisesta asutuksesta. Koulutuksen rooli näkyy polyteknillisen korkeakoulun monissa aloissa. Markkinoiden kautta kaupunki liittyy lähikylien tuotantoon, ja ruokaan tutustuminen avaa tätä yhteyttä.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "qaReason": "Natiivi pysty 1024×1536 (0.667) havainnollistaa tekstissä ja faktapohjassa nimettyä ruokabanaanin viljelyä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: ruokabanaanit kasvissa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+        "fileSHA256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e05-yamoussoukro-traveler-v1-20261012T182050Z",
+          "sha256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+          "verdict": "accepted",
+          "reason": "Natiivi pysty 1024×1536 (0.667) havainnollistaa tekstissä ja faktapohjassa nimettyä ruokabanaanin viljelyä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-traveler-v1-20261012T182050Z/image.png",
+            "nativeSHA256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreä banaaniterttu kasvissa, tyypillinen valerunko ja suuret lehdet. Hedelmät liittyvät terttuun luontevasti, kuoret/lehden repeämät vaihtelevat. Ei kasvoja, tekstiä, logoa tai suojattua teosta.",
+            "captionFi": "Havainnekuva: ruokabanaanit kasvissa.",
+            "sourceAndTargetCheckFi": "TRAVELER-kappale lähikylien tuotannosta sekä parasta-rivi ruokakasveista luettu; faktapohja nimeää ruokabanaanin seudun viljelykasvina. CaptionFi Havainnekuva: ruokabanaanit kasvissa ei nimeä plantaasia/lajiketta. L2:n erillinen ruoka-aineen/paiston kuva ja tämä pysty kasvikuva käsittelevät eri näkökulmia samasta lähteistetystä aiheesta, ei sama tiedosto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Yamoussoukron kaupunkimaisemaa jäsentävät puukujanteet, bulevardit ja markkinat. Kaupungin nimi kertoo vanhemmasta paikallisesta asutuksesta. Koulutuksen rooli näkyy polyteknillisen korkeakoulun monissa aloissa. Markkinoiden kautta kaupunki liittyy lähikylien tuotantoon, ja ruokaan tutustuminen avaa tätä yhteyttä.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "reviewedAt": "2026-10-12T18:25:38.625941+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png?t=90dc1a089f1fc36b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+        "sha256": "90dc1a089f1fc36be33b5a689e3d11ec947580f8f2f0327d9cb89dd1ed9b40dd",
+        "bytes": 2505330,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yamoussoukro-traveler-v1-20261012T182050Z",
+        "nativeSHA256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:27:47.161137+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
+        "sha256": "90dc1a089f1fc36be33b5a689e3d11ec947580f8f2f0327d9cb89dd1ed9b40dd",
+        "bytes": 2505330,
+        "SHAReadAt": "2026-10-12T18:29:46.794602+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+        "rgbPixelSHA256": "4743af5f32f77acb8070c6ed5633bcd24c99799debbc74545e24aacc3ae79bd6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e05-yamoussoukro-o4-v2-20261012T181713Z",
+      "galleryImageID": "e05-yamoussoukro-o4-v2-20261012T181713Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: attiéké kalan kanssa.",
+        "lyhyt": "Havainnekuva: attiéké kalan kanssa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: attiéké kalan kanssa.",
+        "lyhyt": "Havainnekuva: attiéké kalan kanssa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+      "exportSHA256": "ea38242573a693dca23666d6f30b917ff18404c7176a0e99a879b00ba895f840",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-food-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-o4-v2-20261012T181713Z/image.png",
+            "nativeSHA256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallinen lautanen, hienorakeinen vaalea massa ja yksi kokonainen grillattu kala. Rakeet eivät näytä riisiltä, kalan pää/suu/pyrstö ja paistopinta uskottavat, astia ehjä. Ei logoja, tekstejä tai ihmisiä.",
+            "captionFi": "Havainnekuva: attiéké kalan kanssa.",
+            "sourceAndTargetCheckFi": "Luettu O4 Mitä täällä syödään ja faktapohjan L1 maniokki/fermentointi/rakeinen massa/höyrytys/tarjoilu kalan kanssa. CaptionFi Havainnekuva: attiéké kalan kanssa, ilman kalalaji-, ravintola- tai paikallisen reseptin dokumentointiväitettä. V1 ei saa tätä hyväksyntää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Seudulla kasvatetaan maniokkia, jamssia ja ruokabanaania. Maniokista valmistettava attiéké kuuluu Norsunluurannikon ruokaperinteeseen, ja sitä syödään muun muassa kalan kanssa. Kaupungissa paikallista ruokaa myydään ravintoloissa ja katujen varsilla.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Ivory_Coast",
+                "https://en.wikipedia.org/wiki/Atti%C3%A9k%C3%A9",
+                "https://en.wikipedia.org/wiki/Basilica_of_Our_Lady_of_Peace",
+                "https://en.wikipedia.org/wiki/Cooking_banana",
+                "https://en.wikipedia.org/wiki/Institut_National_Polytechnique_F%C3%A9lix_Houphou%C3%ABt-Boigny",
+                "https://en.wikipedia.org/wiki/Lake_Kossou",
+                "https://en.wikipedia.org/wiki/Yam_(vegetable",
+                "https://en.wikipedia.org/wiki/Yamoussoukro",
+                "https://en.wikipedia.org/wiki/Yamoussoukro_Airport",
+                "https://en.wikivoyage.org/wiki/Yamoussoukro",
+                "https://fr.wikipedia.org/wiki/Yamoussoukro",
+                "https://ich.unesco.org/en/RL/skills-related-to-the-production-of-attieke-in-cote-d-ivoire-02086",
+                "https://www.gov.uk/foreign-travel-advice/cote-d-ivoire"
+              ]
+            }
+          },
+          "qaReason": "V2:n rakeinen attiéké ja kala vastaavat O4:n tekstiä; kuittaus vain katsotulle uudelle kuvalle."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: attiéké kalan kanssa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+        "fileSHA256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e05-yamoussoukro-o4-v2-20261012T181713Z",
+          "sha256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+          "verdict": "accepted",
+          "reason": "V2:n rakeinen attiéké ja kala vastaavat O4:n tekstiä; kuittaus vain katsotulle uudelle kuvalle.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-o4-v2-20261012T181713Z/image.png",
+            "nativeSHA256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallinen lautanen, hienorakeinen vaalea massa ja yksi kokonainen grillattu kala. Rakeet eivät näytä riisiltä, kalan pää/suu/pyrstö ja paistopinta uskottavat, astia ehjä. Ei logoja, tekstejä tai ihmisiä.",
+            "captionFi": "Havainnekuva: attiéké kalan kanssa.",
+            "sourceAndTargetCheckFi": "Luettu O4 Mitä täällä syödään ja faktapohjan L1 maniokki/fermentointi/rakeinen massa/höyrytys/tarjoilu kalan kanssa. CaptionFi Havainnekuva: attiéké kalan kanssa, ilman kalalaji-, ravintola- tai paikallisen reseptin dokumentointiväitettä. V1 ei saa tätä hyväksyntää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Seudulla kasvatetaan maniokkia, jamssia ja ruokabanaania. Maniokista valmistettava attiéké kuuluu Norsunluurannikon ruokaperinteeseen, ja sitä syödään muun muassa kalan kanssa. Kaupungissa paikallista ruokaa myydään ravintoloissa ja katujen varsilla.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Ivory_Coast",
+                "https://en.wikipedia.org/wiki/Atti%C3%A9k%C3%A9",
+                "https://en.wikipedia.org/wiki/Basilica_of_Our_Lady_of_Peace",
+                "https://en.wikipedia.org/wiki/Cooking_banana",
+                "https://en.wikipedia.org/wiki/Institut_National_Polytechnique_F%C3%A9lix_Houphou%C3%ABt-Boigny",
+                "https://en.wikipedia.org/wiki/Lake_Kossou",
+                "https://en.wikipedia.org/wiki/Yam_(vegetable",
+                "https://en.wikipedia.org/wiki/Yamoussoukro",
+                "https://en.wikipedia.org/wiki/Yamoussoukro_Airport",
+                "https://en.wikivoyage.org/wiki/Yamoussoukro",
+                "https://fr.wikipedia.org/wiki/Yamoussoukro",
+                "https://ich.unesco.org/en/RL/skills-related-to-the-production-of-attieke-in-cote-d-ivoire-02086",
+                "https://www.gov.uk/foreign-travel-advice/cote-d-ivoire"
+              ]
+            }
+          },
+          "reviewedAt": "2026-10-12T18:19:55.409356+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png?t=ea38242573a693dc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+        "sha256": "ea38242573a693dca23666d6f30b917ff18404c7176a0e99a879b00ba895f840",
+        "bytes": 2309514,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yamoussoukro-o4-v2-20261012T181713Z",
+        "nativeSHA256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:22:36.823272+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
+        "sha256": "ea38242573a693dca23666d6f30b917ff18404c7176a0e99a879b00ba895f840",
+        "bytes": 2309514,
+        "SHAReadAt": "2026-10-12T18:29:46.415452+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+        "rgbPixelSHA256": "cadeb87980dbec74498d01ce3f8e3468f2729e50276b1cd4c342a1b5a8f97f3e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e05-yamoussoukro-l1-v1-20261012T191248Z",
+      "galleryImageID": "e05-yamoussoukro-l1-v1-20261012T191248Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: maniokkimassan höyrytys.",
+        "lyhyt": "Havainnekuva: maniokkimassan höyrytys."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: maniokkimassan höyrytys.",
+        "lyhyt": "Havainnekuva: maniokkimassan höyrytys."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+      "exportSHA256": "d0f205be5ebe22fb3fe266954409cf0a8e593192b5877ee2aaa00a76a20a8346",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+        "semanticContextSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+        "subjectTitle": "Maniokki muuttuu rakeiksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-object-or-material",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-l1-v1-20261012T191248Z/image.png",
+            "nativeSHA256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Rakeista massaa kaksikerroksisessa höyrytysastiassa, sivureikiä, höyryä ja kosteuspisaroita. Metalli, kahvat ja ruoan rakenne uskottavat; ei tekstiä tai ihmisia.",
+            "captionFi": "Havainnekuva: maniokkimassan höyrytys.",
+            "sourceAndTargetCheckFi": "L1 ja faktapohjan attiéké/rakeistaminen/höyrytys luettu. CaptionFi havainne, ei paikallisen tekijän välineiden dokumentti tai tarkka valmistusohje.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Attiéké kuuluu Norsunluurannikon ruokaperinteeseen. Maniokista valmistettava massa fermentoidaan, muotoillaan rakeiseksi ja höyrytetään; valmis ruoka voidaan tarjota kalan kanssa. Valmistustaidot siirtyvät perheissä suullisesti ja tekemistä seuraamalla. Sama taito elää myös ravintoloissa ja yhteisillä aterioilla. Yamoussoukron seudulla kasvatetaan maniokkia, mutta attiéké on laajempi kansallinen perinne. Annoksen taustalla on siis raaka-aineen lisäksi opittujen työvaiheiden ketju ja ihmisiä, jotka välittävät osaamista eteenpäin.",
+              "supportsFi": "Maniokki muuttuu rakeiksi",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "qaReason": "Rakeisen maniokkimassan höyrytyshavainne vastaa L1:n työvaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: maniokkimassan höyrytys.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+        "fileSHA256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e05-yamoussoukro-l1-v1-20261012T191248Z",
+          "sha256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+          "verdict": "accepted",
+          "reason": "Rakeisen maniokkimassan höyrytyshavainne vastaa L1:n työvaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-l1-v1-20261012T191248Z/image.png",
+            "nativeSHA256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Rakeista massaa kaksikerroksisessa höyrytysastiassa, sivureikiä, höyryä ja kosteuspisaroita. Metalli, kahvat ja ruoan rakenne uskottavat; ei tekstiä tai ihmisia.",
+            "captionFi": "Havainnekuva: maniokkimassan höyrytys.",
+            "sourceAndTargetCheckFi": "L1 ja faktapohjan attiéké/rakeistaminen/höyrytys luettu. CaptionFi havainne, ei paikallisen tekijän välineiden dokumentti tai tarkka valmistusohje.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Attiéké kuuluu Norsunluurannikon ruokaperinteeseen. Maniokista valmistettava massa fermentoidaan, muotoillaan rakeiseksi ja höyrytetään; valmis ruoka voidaan tarjota kalan kanssa. Valmistustaidot siirtyvät perheissä suullisesti ja tekemistä seuraamalla. Sama taito elää myös ravintoloissa ja yhteisillä aterioilla. Yamoussoukron seudulla kasvatetaan maniokkia, mutta attiéké on laajempi kansallinen perinne. Annoksen taustalla on siis raaka-aineen lisäksi opittujen työvaiheiden ketju ja ihmisiä, jotka välittävät osaamista eteenpäin.",
+              "supportsFi": "Maniokki muuttuu rakeiksi",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "reviewedAt": "2026-10-12T19:33:00.839156+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png?t=d0f205be5ebe22fb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+        "sha256": "d0f205be5ebe22fb3fe266954409cf0a8e593192b5877ee2aaa00a76a20a8346",
+        "bytes": 2241542,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yamoussoukro-l1-v1-20261012T191248Z",
+        "nativeSHA256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T19:33:50.336465+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
+        "sha256": "d0f205be5ebe22fb3fe266954409cf0a8e593192b5877ee2aaa00a76a20a8346",
+        "bytes": 2241542,
+        "SHAReadAt": "2026-10-12T19:33:45.657149+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+        "rgbPixelSHA256": "dfc4a7dfb27e3b6a92814a1d4342b32b4447c36e6acf5a4cefc5250b52d46bf8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+      "contextAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e05-yamoussoukro-l2-v1-20261012T181814Z",
+      "galleryImageID": "e05-yamoussoukro-l2-v1-20261012T181814Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: ruokabanaanit.",
+        "lyhyt": "Havainnekuva: ruokabanaanit."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: ruokabanaanit.",
+        "lyhyt": "Havainnekuva: ruokabanaanit."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+      "exportSHA256": "fd6894aa234b23a4b76acd8de94a1c7df8b8e1490a32955a32652c912f0294ba",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+        "semanticContextSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+        "subjectTitle": "Banaani kuuluu myös kattilaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-l2-v1-20261012T181814Z/image.png",
+            "nativeSHA256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreitä kookkaita kulmikkaita ruokabanaaneita, paistettuja vinoja viipaleita tavallisessa pannussa. Kuoren vauriot, kypsän hedelmän pinta ja paistoreunat luontevat; ei synteettistä kuorta, ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva: ruokabanaanit.",
+            "sourceAndTargetCheckFi": "Luettu L2 Banaani kuuluu myös kattilaan ja faktapohjan L2 ruokabanaanin keittäminen/paistaminen. CaptionFi Havainnekuva: ruokabanaanit; ei lajikkeen, ravintolan tai paikan dokumentointiväitettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Yamoussoukron seudulla viljellään ruokabanaania. Tärkkelyspitoisia banaanilajikkeita käytetään kypsennettyinä, esimerkiksi keitettyinä tai paistettuina. Kypsyminen muuttaa hedelmän rakennetta ja makua: kypsä banaani on vihreää pehmeämpi ja makeampi. Ruokabanaani tai plantain ei kuitenkaan tarkoita yhtä ainoaa kasvitieteellistä lajia, vaan erilaisia Musa-ryhmän lajikkeita. Banaanista puhuttaessa on siksi hyvä muistaa myös sen käyttö ruokakasvina; tuttu hedelmän muoto voi päätyä hyvin erilaisiin ruokiin."
+            }
+          },
+          "qaReason": "Raaka-aineen ja paistetun ruokabanaanin havainne vastaa L2:n kypsentämisaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: ruokabanaanit.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+        "fileSHA256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e05-yamoussoukro-l2-v1-20261012T181814Z",
+          "sha256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+          "verdict": "accepted",
+          "reason": "Raaka-aineen ja paistetun ruokabanaanin havainne vastaa L2:n kypsentämisaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-l2-v1-20261012T181814Z/image.png",
+            "nativeSHA256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vihreitä kookkaita kulmikkaita ruokabanaaneita, paistettuja vinoja viipaleita tavallisessa pannussa. Kuoren vauriot, kypsän hedelmän pinta ja paistoreunat luontevat; ei synteettistä kuorta, ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva: ruokabanaanit.",
+            "sourceAndTargetCheckFi": "Luettu L2 Banaani kuuluu myös kattilaan ja faktapohjan L2 ruokabanaanin keittäminen/paistaminen. CaptionFi Havainnekuva: ruokabanaanit; ei lajikkeen, ravintolan tai paikan dokumentointiväitettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Yamoussoukron seudulla viljellään ruokabanaania. Tärkkelyspitoisia banaanilajikkeita käytetään kypsennettyinä, esimerkiksi keitettyinä tai paistettuina. Kypsyminen muuttaa hedelmän rakennetta ja makua: kypsä banaani on vihreää pehmeämpi ja makeampi. Ruokabanaani tai plantain ei kuitenkaan tarkoita yhtä ainoaa kasvitieteellistä lajia, vaan erilaisia Musa-ryhmän lajikkeita. Banaanista puhuttaessa on siksi hyvä muistaa myös sen käyttö ruokakasvina; tuttu hedelmän muoto voi päätyä hyvin erilaisiin ruokiin."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:23:45.736070+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png?t=fd6894aa234b23a4",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+        "sha256": "fd6894aa234b23a4b76acd8de94a1c7df8b8e1490a32955a32652c912f0294ba",
+        "bytes": 2551537,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yamoussoukro-l2-v1-20261012T181814Z",
+        "nativeSHA256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:27:44.269370+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
+        "sha256": "fd6894aa234b23a4b76acd8de94a1c7df8b8e1490a32955a32652c912f0294ba",
+        "bytes": 2551537,
+        "SHAReadAt": "2026-10-12T18:29:46.551199+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+        "rgbPixelSHA256": "d9c5f2965aa7a081a8ac447f7f12015e0940e54ce05a9924bb378f6a30a2468f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+      "contextAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e05-yamoussoukro-l3-v1-20261012T181945Z",
+      "galleryImageID": "e05-yamoussoukro-l3-v1-20261012T181945Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: jamssin mukulat.",
+        "lyhyt": "Havainnekuva: jamssin mukulat."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: jamssin mukulat.",
+        "lyhyt": "Havainnekuva: jamssin mukulat."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+      "exportSHA256": "fe5030a14bc308982e3a277af9f8d0f8be0dff5be3f9e22b8d935b5f5d1432f7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+        "semanticContextSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+        "subjectTitle": "Jamssi kasvaa maan alla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-l3-v1-20261012T181945Z/image.png",
+            "nativeSHA256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kaksi pitkulaista karheapintaista mukulaa, toisessa valkoinen leikkuupinta. Kuori, juurikarvat, paljas malto ja puupinta luontevat; ei oranssia bataattia, tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: jamssin mukulat.",
+            "sourceAndTargetCheckFi": "Luettu L3 Jamssi kasvaa maan alla ja faktapohjan L3 Dioscorea-mukula/ero bataattiin. CaptionFi Havainnekuva: jamssin mukulat; ei lajike- tai todellinen paikallinen sato-/torikuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Jamssi kuuluu Yamoussoukron seudun viljelykasveihin. Nimi viittaa Dioscorea-suvun kasveihin, joiden syötävä osa on maanalainen mukula. Kasvit itse ovat kiipeäviä köynnöksiä, ja niitä viljellään tropiikissa. Jamssi ja bataatti sekoitetaan joskus nimissä, mutta bataatti kuuluu toiseen kasvisukuun. Torilla saman oloinen mukula ei siis vielä kerro kasvien sukulaisuudesta. Jamssin tarinassa maanpäällinen köynnös ja maan alla kehittyvä sato kuuluvat yhteen, vaikka ruokaostoksissa tavallisesti nähdään vain mukula."
+            }
+          },
+          "qaReason": "Jamssin mukuloiden yleishavainne vastaa L3:n maanalaista syötävää kasvin osaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: jamssin mukulat.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+        "fileSHA256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e05-yamoussoukro-l3-v1-20261012T181945Z",
+          "sha256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+          "verdict": "accepted",
+          "reason": "Jamssin mukuloiden yleishavainne vastaa L3:n maanalaista syötävää kasvin osaa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/assets/e05-yamoussoukro-l3-v1-20261012T181945Z/image.png",
+            "nativeSHA256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kaksi pitkulaista karheapintaista mukulaa, toisessa valkoinen leikkuupinta. Kuori, juurikarvat, paljas malto ja puupinta luontevat; ei oranssia bataattia, tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: jamssin mukulat.",
+            "sourceAndTargetCheckFi": "Luettu L3 Jamssi kasvaa maan alla ja faktapohjan L3 Dioscorea-mukula/ero bataattiin. CaptionFi Havainnekuva: jamssin mukulat; ei lajike- tai todellinen paikallinen sato-/torikuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+              "sourceContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/faktapohja.md",
+              "sourceFactSheetSHA256": "5ecf3c5475d45ac652782cd95911b0f790d0f91af6018ba4741fc31066037d51",
+              "contentExcerpt": "Jamssi kuuluu Yamoussoukron seudun viljelykasveihin. Nimi viittaa Dioscorea-suvun kasveihin, joiden syötävä osa on maanalainen mukula. Kasvit itse ovat kiipeäviä köynnöksiä, ja niitä viljellään tropiikissa. Jamssi ja bataatti sekoitetaan joskus nimissä, mutta bataatti kuuluu toiseen kasvisukuun. Torilla saman oloinen mukula ei siis vielä kerro kasvien sukulaisuudesta. Jamssin tarinassa maanpäällinen köynnös ja maan alla kehittyvä sato kuuluvat yhteen, vaikka ruokaostoksissa tavallisesti nähdään vain mukula."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:24:04.975227+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png?t=fe5030a14bc30898",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+        "sha256": "fe5030a14bc308982e3a277af9f8d0f8be0dff5be3f9e22b8d935b5f5d1432f7",
+        "bytes": 2815803,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yamoussoukro-l3-v1-20261012T181945Z",
+        "nativeSHA256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:27:45.547863+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
+        "sha256": "fe5030a14bc308982e3a277af9f8d0f8be0dff5be3f9e22b8d935b5f5d1432f7",
+        "bytes": 2815803,
+        "SHAReadAt": "2026-10-12T18:29:46.680247+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+        "rgbPixelSHA256": "7a9c91d02a83b820e5d8ce41adb386490fb8a0432ea09da80518ae3b96a00757",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+      "contextAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yamoussoukro-photo-fd0034461890b1ee",
+      "galleryImageID": "capital-cc-e05-yamoussoukro-photo-fd0034461890b1ee",
+      "commonsFile": "20240521 - Agama agama.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/photo-fd0034461890b1eefb39.jpg",
+        "suora": true,
+        "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
+        "selite": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Lisko Yamoussoukrossa.",
+        "tiedosto": "20240521 - Agama agama.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
+        "selite": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Lisko Yamoussoukrossa.",
+        "tiedosto": "20240521 - Agama agama.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/photo-fd0034461890b1eefb39.jpg",
+        "suora": true,
+        "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
+        "selite": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Lisko Yamoussoukrossa.",
+        "tiedosto": "20240521 - Agama agama.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+      "exportSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/photo-fd0034461890b1eefb39.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/photo-fd0034461890b1eefb39.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-7524bc1192ec7a.jpg",
+      "dimensions": [
+        5184,
+        3888
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+        "semanticContextSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+        "subjectTitle": "yamoussoukro — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Fabricio Cardenas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Agama_agama.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/20240521_-_Agama_agama.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:20240521_-_Agama_agama.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Fabricio Cardenas",
+            "licenseSourceSha256": "5fecef22a060b6dc892648385c4060f8435df84274a47cc5fd27ac9eda5b7744",
+            "depictedWorkLayer": "Luonnoneläin, puunrunko ja lehdet; valokuvan tekijä ja CC BY-SA4.0 alkuperäisen Author/license -kentistä. Ei suojattua teospintaa.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [
+              "  6.812144;   -5.305382"
+            ],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Agama_agama.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d17acdaf1d154b85770c83d82d43a009b987a32b04b1b303919fdd313a07fd04.html",
+            "sourceSHA256": "5fecef22a060b6dc892648385c4060f8435df84274a47cc5fd27ac9eda5b7744",
+            "directAuthors": [
+              "Fabricio Cardenas",
+              "Fabricio Cardenas"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "21 May 2024, 15:46:14",
+              "Camera location": "6° 48′ 43.72″ N, 5° 18′ 19.38″ W"
+            },
+            "sourceOriginalDimensions": [
+              5184,
+              3888
+            ],
+            "localDimensions": [
+              5184,
+              3888
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-7524bc1192ec7a.jpg",
+            "mediaSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "captionFi": "Lisko Yamoussoukrossa.",
+            "placeEvidence": {
+              "cameraGeo": "6.812144, -5.305382",
+              "scope": "original Commons camera coordinates and source city classification, not a panorama claim",
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d17acdaf1d154b85770c83d82d43a009b987a32b04b1b303919fdd313a07fd04.html"
+            },
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito lisko puunrungolla, luonnollinen kaarna, lehdet ja valo; ei ihmisiä, tekstilisäyksiä, logoa tai suojattua teosta. Fabricio Cardenasin CC BY-SA 4.0 ja 5184×3888 varmennettu kuvasivulta/tiedostosta. Alkuperäisen kuvasivun kamerapaikka 6.812144/-5.305382 sitoo valokuvan Yamoussoukroon; caption vain Lisko Yamoussoukrossa, ei panoraama tai uusi nykytilanne. Kuvauspäivä 21.5.2024 lähteessä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Lisko Yamoussoukrossa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+        "fileSHA256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "verdict": "accepted",
+          "reason": "Aito lisko puunrungolla, luonnollinen kaarna, lehdet ja valo; ei ihmisiä, tekstilisäyksiä, logoa tai suojattua teosta. Fabricio Cardenasin CC BY-SA 4.0 ja 5184×3888 varmennettu kuvasivulta/tiedostosta. Alkuperäisen kuvasivun kamerapaikka 6.812144/-5.305382 sitoo valokuvan Yamoussoukroon; caption vain Lisko Yamoussoukrossa, ei panoraama tai uusi nykytilanne. Kuvauspäivä 21.5.2024 lähteessä.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Agama_agama.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d17acdaf1d154b85770c83d82d43a009b987a32b04b1b303919fdd313a07fd04.html",
+            "sourceSHA256": "5fecef22a060b6dc892648385c4060f8435df84274a47cc5fd27ac9eda5b7744",
+            "directAuthors": [
+              "Fabricio Cardenas",
+              "Fabricio Cardenas"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "21 May 2024, 15:46:14",
+              "Camera location": "6° 48′ 43.72″ N, 5° 18′ 19.38″ W"
+            },
+            "sourceOriginalDimensions": [
+              5184,
+              3888
+            ],
+            "localDimensions": [
+              5184,
+              3888
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-7524bc1192ec7a.jpg",
+            "mediaSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "captionFi": "Lisko Yamoussoukrossa.",
+            "placeEvidence": {
+              "cameraGeo": "6.812144, -5.305382",
+              "scope": "original Commons camera coordinates and source city classification, not a panorama claim",
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d17acdaf1d154b85770c83d82d43a009b987a32b04b1b303919fdd313a07fd04.html"
+            },
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:20:42.578936+00:00",
+          "commonsFile": "20240521 - Agama agama.jpg",
+          "sha256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "20240521 - Agama agama.jpg",
+        "sha256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Agama_agama.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/20240521_-_Agama_agama.jpg",
+        "author": "Fabricio Cardenas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 5184,
+        "height": 3888,
+        "originalSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/photo-fd0034461890b1eefb39.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/photo-fd0034461890b1eefb39.jpg",
+        "bytes": 8059911,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:24:54.879959+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "20240521 - Agama agama.jpg",
+        "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
+        "selite": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Lisko Yamoussoukrossa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
+        "selite": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Lisko Yamoussoukrossa.",
+        "tiedosto": "20240521 - Agama agama.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+      "contextAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yamoussoukro-c1-e82d57b26856a9e0",
+      "galleryImageID": "capital-cc-e05-yamoussoukro-c1-e82d57b26856a9e0",
+      "commonsFile": "20240521 - Yamoussoukro - Golf.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c1-e82d57b26856a9e02ca8.jpg",
+        "suora": true,
+        "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c1-e82d57b26856a9e02ca8.jpg",
+        "suora": true,
+        "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+      "exportSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c1-e82d57b26856a9e02ca8.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c1-e82d57b26856a9e02ca8.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-67c4bc68141c2d.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+        "semanticContextSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+        "subjectTitle": "Yamoussoukro",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Fabricio Cardenas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Yamoussoukro_-_Golf.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/20240521_-_Yamoussoukro_-_Golf.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:20240521_-_Yamoussoukro_-_Golf.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Fabricio Cardenas",
+            "licenseSourceSha256": "0454f908e84be1be724a6fe4f178edc9a102f69be48e8684b1234e2bea54b884",
+            "depictedWorkLayer": "Luonnonpuusto ja nurmialueen näkymä; ei erillistä nimettyä nykytaideteosta, rakennusjulkisivua tai veistosta päämotiivina. Ei anneta koko golfkentän suunnitelmalle blanket-PD-lupaa.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [
+              "  6.796929;   -5.252969"
+            ],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Yamoussoukro_-_Golf.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/37a9ca8e7348a7900c2b6641773507abe7cd3a9eed86bae975ca974337cc3b77.html",
+            "sourceSHA256": "0454f908e84be1be724a6fe4f178edc9a102f69be48e8684b1234e2bea54b884",
+            "directAuthors": [
+              "Fabricio Cardenas",
+              "Fabricio Cardenas"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "21 May 2024, 13:09:36",
+              "Camera location": "6° 47′ 48.94″ N, 5° 15′ 10.69″ W"
+            },
+            "sourceOriginalDimensions": [
+              4000,
+              3000
+            ],
+            "localDimensions": [
+              4000,
+              3000
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-67c4bc68141c2d.jpg",
+            "mediaSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "placeEvidence": {
+              "sourceTitle": "20240521 - Yamoussoukro - Golf",
+              "cameraLocation": "6.796929, -5.252969",
+              "scope": "actual city golf-course/park landscape, not a fictional urban layout"
+            },
+            "captionFi": "Yamoussoukron golfkentän puistomaista maisemaa.",
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "qaReason": "Laaja aito Yamoussoukron puistomainen golfkenttänäkymä, nurmea, puustoa, hiekkakuoppia ja pieni kenttämerkintä. Ei lähikasvoja, lisättyä otsikkoa, logoa, vesileimaa tai tunnistettavaa nykyteosta pääaiheena. Tiedoston alkuperäinen kaupunkinimi ja kamerapaikka sidottu Yamoussoukroon; kuva ei anna koko golfkentän suunnitelmalle PD-lupaa. Fabricio Cardenas/CC BY-SA 4.0 ja native 4000×3000 varmennettu; 21.5.2024 kuvausmetadatan päiväys."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+        "fileSHA256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "verdict": "accepted",
+          "reason": "Laaja aito Yamoussoukron puistomainen golfkenttänäkymä, nurmea, puustoa, hiekkakuoppia ja pieni kenttämerkintä. Ei lähikasvoja, lisättyä otsikkoa, logoa, vesileimaa tai tunnistettavaa nykyteosta pääaiheena. Tiedoston alkuperäinen kaupunkinimi ja kamerapaikka sidottu Yamoussoukroon; kuva ei anna koko golfkentän suunnitelmalle PD-lupaa. Fabricio Cardenas/CC BY-SA 4.0 ja native 4000×3000 varmennettu; 21.5.2024 kuvausmetadatan päiväys.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Yamoussoukro_-_Golf.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/37a9ca8e7348a7900c2b6641773507abe7cd3a9eed86bae975ca974337cc3b77.html",
+            "sourceSHA256": "0454f908e84be1be724a6fe4f178edc9a102f69be48e8684b1234e2bea54b884",
+            "directAuthors": [
+              "Fabricio Cardenas",
+              "Fabricio Cardenas"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "21 May 2024, 13:09:36",
+              "Camera location": "6° 47′ 48.94″ N, 5° 15′ 10.69″ W"
+            },
+            "sourceOriginalDimensions": [
+              4000,
+              3000
+            ],
+            "localDimensions": [
+              4000,
+              3000
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-67c4bc68141c2d.jpg",
+            "mediaSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "fullImageViewed": true,
+            "placeEvidence": {
+              "sourceTitle": "20240521 - Yamoussoukro - Golf",
+              "cameraLocation": "6.796929, -5.252969",
+              "scope": "actual city golf-course/park landscape, not a fictional urban layout"
+            },
+            "captionFi": "Yamoussoukron golfkentän puistomaista maisemaa.",
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:38:24.497241+00:00",
+          "commonsFile": "20240521 - Yamoussoukro - Golf.jpg",
+          "sha256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "20240521 - Yamoussoukro - Golf.jpg",
+        "sha256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20240521_-_Yamoussoukro_-_Golf.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/20240521_-_Yamoussoukro_-_Golf.jpg",
+        "author": "Fabricio Cardenas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c1-e82d57b26856a9e02ca8.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c1-e82d57b26856a9e02ca8.jpg",
+        "bytes": 4013166,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:38:54.106689+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "20240521 - Yamoussoukro - Golf.jpg",
+        "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+      "contextAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yamoussoukro-c2-3d781414bd19dadb",
+      "galleryImageID": "capital-cc-e05-yamoussoukro-c2-3d781414bd19dadb",
+      "commonsFile": "Yamoussoukro panorama.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c2-3d781414bd19dadb9c38.jpg",
+        "suora": true,
+        "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
+        "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "tiedosto": "Yamoussoukro panorama.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
+        "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "tiedosto": "Yamoussoukro panorama.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c2-3d781414bd19dadb9c38.jpg",
+        "suora": true,
+        "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
+        "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "tiedosto": "Yamoussoukro panorama.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+      "exportSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c2-3d781414bd19dadb9c38.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c2-3d781414bd19dadb9c38.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-c069cc20f7a362.jpg",
+      "dimensions": [
+        3641,
+        2048
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+        "semanticContextSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+        "subjectTitle": "Yamoussoukro",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mickaël T.",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Yamoussoukro_panorama.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Yamoussoukro_panorama.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Yamoussoukro_panorama.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Mickaël T.",
+            "licenseSourceSha256": "793bce68ca2c73b2ea9a3b70b5359edec2130484936878bf832e4b7061bf5c2d",
+            "depictedWorkLayer": "Pääaihe on koko kaupungin laaja puusto-, vesi- ja korttelimaisema. Kaukaiset eri rakennukset ovat horisontin sivuosia; yksittäistä suojattua modernia rakennus- tai taideteosta ei toisinneta pääaiheena. Mickaël T. ja CC BY 2.0 alkuperäissivulta; ei kuvassa näkymättömän kuvauspaikan arkkitehtuurioikeutta koskevaa päätelmää eikä FOP/ikäoletusta.",
+            "sourcePlaceDescription": "English: View of Yamoussoukro city from the Our Lady of Peace Basilica",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Yamoussoukro_panorama.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/20d63531ccc8a7f9c4637ade6cb2f165edba60419767b313b94996dba2b679b0.html",
+            "sourceSHA256": "793bce68ca2c73b2ea9a3b70b5359edec2130484936878bf832e4b7061bf5c2d",
+            "directAuthors": [
+              "Mickaël T."
+            ],
+            "directLicenses": [
+              "CC BY 2.0"
+            ],
+            "directRows": {
+              "Date": "15 May 2015, 18:02:05"
+            },
+            "sourceOriginalDimensions": [
+              3641,
+              2048
+            ],
+            "localDimensions": [
+              3641,
+              2048
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-c069cc20f7a362.jpg",
+            "mediaSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "sourceDescriptions": [
+              "English: View of Yamoussoukro city from the Our Lady of Peace Basilica",
+              ""
+            ],
+            "fullImageViewed": true,
+            "viewMethod": "view_image high; entire native 3641x2048 displayed at 2048x1152",
+            "personallyViewedByJob27": true,
+            "viewpointIsNotDepictedBasilica": true,
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "qaReason": "Oma koko kuvan katselu alkuperäistiedostosta: aito laaja puiden, vesialueiden, peltomaisen ympäristön ja kaukaisten kaupunkikorttelien näkymä Yamoussoukrossa. Sommittelu näyttää todellisen paikkanäkymän ja sopii C2-kanteen. Lähteen Description nimeää kaupungin ja kuvauspaikan basilikan; basilikaa ei itse toisinneta kuvassa. Taustan pienet eri rakennukset ja vesitorni ovat kokonaismaiseman osia, ei yksittäisen luovan nykyteoksen esittely; niille ei oleteta blanket-PD:tä. Mickaël T. / CC BY 2.0, 3641×2048, 15.5.2015 ja kuvauspaikkakuvaus tarkistettu alkuperäisestä HTML:stä, SHA paikallisesta tiedostosta. Ei tunnistettavia kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai kehystä. Selite sanoo vuoden 2015 eikä nykyhetkeä tai 1873."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+        "fileSHA256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "verdict": "accepted",
+          "reason": "Oma koko kuvan katselu alkuperäistiedostosta: aito laaja puiden, vesialueiden, peltomaisen ympäristön ja kaukaisten kaupunkikorttelien näkymä Yamoussoukrossa. Sommittelu näyttää todellisen paikkanäkymän ja sopii C2-kanteen. Lähteen Description nimeää kaupungin ja kuvauspaikan basilikan; basilikaa ei itse toisinneta kuvassa. Taustan pienet eri rakennukset ja vesitorni ovat kokonaismaiseman osia, ei yksittäisen luovan nykyteoksen esittely; niille ei oleteta blanket-PD:tä. Mickaël T. / CC BY 2.0, 3641×2048, 15.5.2015 ja kuvauspaikkakuvaus tarkistettu alkuperäisestä HTML:stä, SHA paikallisesta tiedostosta. Ei tunnistettavia kasvonpiirteitä, lisättyä tekstiä, vesileimaa tai kehystä. Selite sanoo vuoden 2015 eikä nykyhetkeä tai 1873.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Yamoussoukro_panorama.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/20d63531ccc8a7f9c4637ade6cb2f165edba60419767b313b94996dba2b679b0.html",
+            "sourceSHA256": "793bce68ca2c73b2ea9a3b70b5359edec2130484936878bf832e4b7061bf5c2d",
+            "directAuthors": [
+              "Mickaël T."
+            ],
+            "directLicenses": [
+              "CC BY 2.0"
+            ],
+            "directRows": {
+              "Date": "15 May 2015, 18:02:05"
+            },
+            "sourceOriginalDimensions": [
+              3641,
+              2048
+            ],
+            "localDimensions": [
+              3641,
+              2048
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-c069cc20f7a362.jpg",
+            "mediaSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "sourceDescriptions": [
+              "English: View of Yamoussoukro city from the Our Lady of Peace Basilica",
+              ""
+            ],
+            "fullImageViewed": true,
+            "viewMethod": "view_image high; entire native 3641x2048 displayed at 2048x1152",
+            "personallyViewedByJob27": true,
+            "viewpointIsNotDepictedBasilica": true,
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:30:30.567771+00:00",
+          "commonsFile": "Yamoussoukro panorama.jpg",
+          "sha256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Yamoussoukro panorama.jpg",
+        "sha256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Yamoussoukro_panorama.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Yamoussoukro_panorama.jpg",
+        "author": "Mickaël T.",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "width": 3641,
+        "height": 2048,
+        "originalSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c2-3d781414bd19dadb9c38.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/c2-3d781414bd19dadb9c38.jpg",
+        "bytes": 1662898,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:31:36.093366+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Yamoussoukro panorama.jpg",
+        "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
+        "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
+        "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "tiedosto": "Yamoussoukro panorama.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+      "contextAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "K3",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yamoussoukro-k3-6e1ff96202ac698d",
+      "galleryImageID": "capital-cc-e05-yamoussoukro-k3-6e1ff96202ac698d",
+      "commonsFile": "Biology microscope.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "suora": true,
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "suora": true,
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+      "exportSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
+      "dimensions": [
+        5712,
+        4284
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+        "semanticContextSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+        "subjectTitle": "Korkeakoulu yhdistää ammattialat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "J.Doniyorovich",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Biology_microscope.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "J.Doniyorovich",
+            "licenseSourceSha256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
+            "depictedWorkLayer": "CC0-vapautus ja valokuvan kuvaaja J.Doniyorovich alkuperäisestä Author-taulukosta. Pääaihe tavanomainen toiminnallinen optinen käyttölaite ilman itsenäistä figuratiivista koristelua/taideteospintaa; ei museorakennusta tai nimetyn oppilaitoksen arkkitehtuuria. Taustan käyttöpullot ja pöytä eivät teospääaiheita. Ei FOP- tai teoksen iästä tehtyä oletusta.",
+            "sourcePlaceDescription": "Oʻzbekcha / ўзбекча: Mikroskop, zarrabin – mikrozarralarni, koʻzga koʻrinmaydigan juda mayda narsalarni kattalashtirib ko'rsatadigan optik asbob",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/355715b7648abf53d7a8d7dff30929b2fbd2720d86c5722d234890d670380987.html",
+            "sourceSHA256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
+            "directAuthors": [
+              "J.Doniyorovich"
+            ],
+            "directLicenses": [
+              "CC0"
+            ],
+            "directRows": {
+              "Date": "29 May 2024, 16:53:00"
+            },
+            "sourceOriginalDimensions": [
+              5712,
+              4284
+            ],
+            "localDimensions": [
+              5712,
+              4284
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
+            "mediaSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "fullImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; whole native 5712x4284 displayed at 1824x1368",
+            "claimScope": "Generic research equipment; no city or named institute appearance claim",
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "qaReason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: tavanomainen toiminnallinen optinen mikroskooppi laboratoriopöydällä, taustalla arkisia käyttöastioita ja pöytiä. Kuva havainnollistaa K3:n agronomian/tekniikan/tutkimustyön aihetta yleisesti, ei INP-HB:n todellista laboratoriota tai Yamoussoukron kuvauspaikkaa; selite rajaa aiheen valomikroskoopin käyttöön. J.Doniyorovich ja CC0-luovutus tarkistettu alkuperäisen tiedostosivun tekijä-/lisenssikentästä, alkuperäinen 5712×4284 ja 29.5.2024 Date-rivi sekä paikallinen SHA varmennettu. Ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä tai mainospakkausta. Tavanomaisen laitteen toiminnalliset osat eivät ole erikseen esitetty luova taideteos, eikä kuvaan ole nimetty suojattua rakennusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Valomikroskooppi laboratoriotyön välineenä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+        "fileSHA256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "verdict": "accepted",
+          "reason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: tavanomainen toiminnallinen optinen mikroskooppi laboratoriopöydällä, taustalla arkisia käyttöastioita ja pöytiä. Kuva havainnollistaa K3:n agronomian/tekniikan/tutkimustyön aihetta yleisesti, ei INP-HB:n todellista laboratoriota tai Yamoussoukron kuvauspaikkaa; selite rajaa aiheen valomikroskoopin käyttöön. J.Doniyorovich ja CC0-luovutus tarkistettu alkuperäisen tiedostosivun tekijä-/lisenssikentästä, alkuperäinen 5712×4284 ja 29.5.2024 Date-rivi sekä paikallinen SHA varmennettu. Ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä tai mainospakkausta. Tavanomaisen laitteen toiminnalliset osat eivät ole erikseen esitetty luova taideteos, eikä kuvaan ole nimetty suojattua rakennusta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/355715b7648abf53d7a8d7dff30929b2fbd2720d86c5722d234890d670380987.html",
+            "sourceSHA256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
+            "directAuthors": [
+              "J.Doniyorovich"
+            ],
+            "directLicenses": [
+              "CC0"
+            ],
+            "directRows": {
+              "Date": "29 May 2024, 16:53:00"
+            },
+            "sourceOriginalDimensions": [
+              5712,
+              4284
+            ],
+            "localDimensions": [
+              5712,
+              4284
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
+            "mediaSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "fullImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; whole native 5712x4284 displayed at 1824x1368",
+            "claimScope": "Generic research equipment; no city or named institute appearance claim",
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:50:21.143473+00:00",
+          "commonsFile": "Biology microscope.jpg",
+          "sha256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "9467d8a29bccb520e69329e1aa7022bf65ae2d46533f24099855f3a6713faab5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "e454a829227378735998d991590a07f584551e72defb301ab82faa3efa2f8163"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "commonsFile": "Biology microscope.jpg",
+        "sha256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Biology_microscope.jpg",
+        "author": "J.Doniyorovich",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "width": 5712,
+        "height": 4284,
+        "originalSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "bytes": 3046635,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:50:43.500761+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Biology microscope.jpg",
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "targetAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+      "contextAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

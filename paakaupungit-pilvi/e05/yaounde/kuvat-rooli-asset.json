@@ -1,0 +1,2542 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e05",
+  "city": "yaounde",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+  "assets": [
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e05-yaounde-traveler-v1-20261012T185025Z",
+      "galleryImageID": "e05-yaounde-traveler-v1-20261012T185025Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: gneissin kerroksellinen pinta.",
+        "lyhyt": "Havainnekuva: gneissin kerroksellinen pinta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: gneissin kerroksellinen pinta.",
+        "lyhyt": "Havainnekuva: gneissin kerroksellinen pinta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "989b3168658a4d0ce00ad3877423f94042c2d9ae6e5f569161d4e506372e5e97",
+      "exportSHA256": "cb8f0659e5c49b55acd7da387592ed72c76eaf23f08ba36f223ba4304e8e9a52",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "fc16ee4c48907753b5cfe8f731e36e7a9516f8e02c7e7c53fa902290114b3058",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-natural-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-traveler-v1-20261012T185025Z/image.png",
+            "nativeSHA256": "989b3168658a4d0ce00ad3877423f94042c2d9ae6e5f569161d4e506372e5e97",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vaaleita/tummia poimuttuneita mineralivyöhykkeitä, karkea kallionpinta ja pieniä kasveja. Juovat/halkeamat vaihtelevat luonnollisesti, ei synteettistä toistokuviota, ihmisiä tai tekstiä/logoja.",
+            "captionFi": "Havainnekuva: gneissin kerroksellinen pinta.",
+            "sourceAndTargetCheckFi": "Luettu TRAVELER:n kukkulamaasto ja faktapohjan K1 gneissinen kallioperä. CaptionFi Havainnekuva: gneissin kerroksellinen pinta ei väitä tietyn Fébé-/Eloundem-kallion paikkavalokuvaksi tai geologiseksi näytteeksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Yaoundén maisemaan kuuluvat kukkulat, laaksot ja pienet vesiväylät. Markkinoilla näkyvät kaupungin arjen hankinnat. Fébé ja Eloundem kuuluvat pääkaupunkiseudun kukkulamaisemaan. Museon, puiston ja näköalapaikkojen nykyiset vierailumahdollisuudet selvitetään erikseen.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "qaReason": "Gneissin materiaalihavainne vastaa kaupungin kallioperäaihetta; natiivi pysty 1024×1536 (0.667)."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: gneissin kerroksellinen pinta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+        "fileSHA256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e05-yaounde-traveler-v1-20261012T185025Z",
+          "sha256": "989b3168658a4d0ce00ad3877423f94042c2d9ae6e5f569161d4e506372e5e97",
+          "verdict": "accepted",
+          "reason": "Gneissin materiaalihavainne vastaa kaupungin kallioperäaihetta; natiivi pysty 1024×1536 (0.667).",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-traveler-v1-20261012T185025Z/image.png",
+            "nativeSHA256": "989b3168658a4d0ce00ad3877423f94042c2d9ae6e5f569161d4e506372e5e97",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Vaaleita/tummia poimuttuneita mineralivyöhykkeitä, karkea kallionpinta ja pieniä kasveja. Juovat/halkeamat vaihtelevat luonnollisesti, ei synteettistä toistokuviota, ihmisiä tai tekstiä/logoja.",
+            "captionFi": "Havainnekuva: gneissin kerroksellinen pinta.",
+            "sourceAndTargetCheckFi": "Luettu TRAVELER:n kukkulamaasto ja faktapohjan K1 gneissinen kallioperä. CaptionFi Havainnekuva: gneissin kerroksellinen pinta ei väitä tietyn Fébé-/Eloundem-kallion paikkavalokuvaksi tai geologiseksi näytteeksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Yaoundén maisemaan kuuluvat kukkulat, laaksot ja pienet vesiväylät. Markkinoilla näkyvät kaupungin arjen hankinnat. Fébé ja Eloundem kuuluvat pääkaupunkiseudun kukkulamaisemaan. Museon, puiston ja näköalapaikkojen nykyiset vierailumahdollisuudet selvitetään erikseen.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "reviewedAt": "2026-10-12T19:08:57.585806+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png?t=cb8f0659e5c49b55",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+        "sha256": "cb8f0659e5c49b55acd7da387592ed72c76eaf23f08ba36f223ba4304e8e9a52",
+        "bytes": 3595768,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yaounde-traveler-v1-20261012T185025Z",
+        "nativeSHA256": "989b3168658a4d0ce00ad3877423f94042c2d9ae6e5f569161d4e506372e5e97",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:09:16.109965+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-traveler-v1-20261012T185025Z-989b3168658a.png",
+        "sha256": "cb8f0659e5c49b55acd7da387592ed72c76eaf23f08ba36f223ba4304e8e9a52",
+        "bytes": 3595768,
+        "SHAReadAt": "2026-10-12T19:32:03.114793+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "989b3168658a4d0ce00ad3877423f94042c2d9ae6e5f569161d4e506372e5e97",
+        "rgbPixelSHA256": "a01e974c057e72c13df3ffe69b446d93364211a6ac4bd958574a27a0d9c222b4",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "fc16ee4c48907753b5cfe8f731e36e7a9516f8e02c7e7c53fa902290114b3058"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e05-yaounde-o4-v1-20261012T175547Z",
+      "galleryImageID": "e05-yaounde-o4-v1-20261012T175547Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: paahdettu maissi.",
+        "lyhyt": "Havainnekuva: paahdettu maissi."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: paahdettu maissi.",
+        "lyhyt": "Havainnekuva: paahdettu maissi."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0edb8f1c2df547bed38ddc668c3753bae9e618598adb7f192076bbed70e4235a",
+      "exportSHA256": "9802d0988f7d4cf5959bb8df715c6854334b4af082596843eec694062f285248",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "72db5c07ee54bf1559a0402c8b9e120c4de57e29d8df39b6c8dda518a13aadf2",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-food-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-o4-v1-20261012T175547Z/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva: paahdettu maissi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Kaupungin ruokatarjonnassa on paikallista ja ranskalaista ravintolaruokaa. Katumyynnissä ja ruokapaikoissa mainitaan leipä, paahdettu maissi, grillattu kala ja vartaat. Yksittäisen paikan tämänhetkinen tarjonta selvitetään paikan päällä.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Cameroon",
+                "https://en.wikipedia.org/wiki/Blackitude_Museum",
+                "https://en.wikipedia.org/wiki/Georg_August_Zenker",
+                "https://en.wikipedia.org/wiki/Mvog-Betsi_Zoo",
+                "https://en.wikipedia.org/wiki/Yaound%C3%A9",
+                "https://en.wikipedia.org/wiki/Yaound%C3%A9_Nsimalen_International_Airport",
+                "https://en.wikivoyage.org/wiki/Yaound%C3%A9",
+                "https://fr.wikipedia.org/wiki/Chronologie_de_Yaound%C3%A9",
+                "https://fr.wikipedia.org/wiki/Lac_municipal_de_Yaound%C3%A9",
+                "https://fr.wikipedia.org/wiki/Mont_Eloundem",
+                "https://fr.wikipedia.org/wiki/Mont_F%C3%A9b%C3%A9",
+                "https://fr.wikipedia.org/wiki/Parc_zoo-botanique_de_Mvog_Betsi",
+                "https://fr.wikipedia.org/wiki/Yaound%C3%A9",
+                "https://www.gov.uk/foreign-travel-advice/cameroon"
+              ]
+            },
+            "rightsEvidence": {
+              "kind": "generated-generalized-food-illustration",
+              "noProtectedWorkDepicted": true,
+              "namedPlaceAppearanceClaimed": false
+            },
+            "independentOfProducer": true,
+            "sourceTextPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e05/lahteet/en.wikivoyage.org_Yaound_C3_A9.txt"
+          },
+          "qaReason": "Yleinen paahdetun maissin havainne sopii Yaoundén oppaan lähteistettyyn maissiaiheeseen. Jyvien rivit ovat maissille luontevia; muoto, paahdon vaihtelu, metallivadin/grillin rakenne ja valo johdonmukaisia. Ei ihmisiä, tekstiä, logoja, pakkauksia tai tunnistettavaa rakennusta. CaptionFi ilmoittaa havainnekuvan eikä väitä dokumentoitua myyjää, ravintolaa tai paikallista lajiketta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: paahdettu maissi.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+        "fileSHA256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e05-yaounde-o4-v1-20261012T175547Z",
+          "sha256": "0edb8f1c2df547bed38ddc668c3753bae9e618598adb7f192076bbed70e4235a",
+          "verdict": "accepted",
+          "reason": "Yleinen paahdetun maissin havainne sopii Yaoundén oppaan lähteistettyyn maissiaiheeseen. Jyvien rivit ovat maissille luontevia; muoto, paahdon vaihtelu, metallivadin/grillin rakenne ja valo johdonmukaisia. Ei ihmisiä, tekstiä, logoja, pakkauksia tai tunnistettavaa rakennusta. CaptionFi ilmoittaa havainnekuvan eikä väitä dokumentoitua myyjää, ravintolaa tai paikallista lajiketta.",
+          "required": true,
+          "reviewedAt": "2026-10-12T18:01:23.245550+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-o4-v1-20261012T175547Z/image.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva: paahdettu maissi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Kaupungin ruokatarjonnassa on paikallista ja ranskalaista ravintolaruokaa. Katumyynnissä ja ruokapaikoissa mainitaan leipä, paahdettu maissi, grillattu kala ja vartaat. Yksittäisen paikan tämänhetkinen tarjonta selvitetään paikan päällä.",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Cameroon",
+                "https://en.wikipedia.org/wiki/Blackitude_Museum",
+                "https://en.wikipedia.org/wiki/Georg_August_Zenker",
+                "https://en.wikipedia.org/wiki/Mvog-Betsi_Zoo",
+                "https://en.wikipedia.org/wiki/Yaound%C3%A9",
+                "https://en.wikipedia.org/wiki/Yaound%C3%A9_Nsimalen_International_Airport",
+                "https://en.wikivoyage.org/wiki/Yaound%C3%A9",
+                "https://fr.wikipedia.org/wiki/Chronologie_de_Yaound%C3%A9",
+                "https://fr.wikipedia.org/wiki/Lac_municipal_de_Yaound%C3%A9",
+                "https://fr.wikipedia.org/wiki/Mont_Eloundem",
+                "https://fr.wikipedia.org/wiki/Mont_F%C3%A9b%C3%A9",
+                "https://fr.wikipedia.org/wiki/Parc_zoo-botanique_de_Mvog_Betsi",
+                "https://fr.wikipedia.org/wiki/Yaound%C3%A9",
+                "https://www.gov.uk/foreign-travel-advice/cameroon"
+              ]
+            },
+            "rightsEvidence": {
+              "kind": "generated-generalized-food-illustration",
+              "noProtectedWorkDepicted": true,
+              "namedPlaceAppearanceClaimed": false
+            },
+            "independentOfProducer": true,
+            "sourceTextPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e05/lahteet/en.wikivoyage.org_Yaound_C3_A9.txt"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png?t=9802d0988f7d4cf5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+        "sha256": "9802d0988f7d4cf5959bb8df715c6854334b4af082596843eec694062f285248",
+        "bytes": 2766458,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yaounde-o4-v1-20261012T175547Z",
+        "nativeSHA256": "0edb8f1c2df547bed38ddc668c3753bae9e618598adb7f192076bbed70e4235a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:04:41.168328+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-o4-v1-20261012T175547Z-0edb8f1c2df5.png",
+        "sha256": "9802d0988f7d4cf5959bb8df715c6854334b4af082596843eec694062f285248",
+        "bytes": 2766458,
+        "SHAReadAt": "2026-10-12T18:29:46.907126+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0edb8f1c2df547bed38ddc668c3753bae9e618598adb7f192076bbed70e4235a",
+        "rgbPixelSHA256": "957853382780f899aa410b2c40fcfb88f87ea9de8f3fad4998d988dfee1f0ed4",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "72db5c07ee54bf1559a0402c8b9e120c4de57e29d8df39b6c8dda518a13aadf2"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e05-yaounde-k2-v1-20261012T184240Z",
+      "galleryImageID": "e05-yaounde-k2-v1-20261012T184240Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: maapähkinät torituotteena.",
+        "lyhyt": "Havainnekuva: maapähkinät torituotteena."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: maapähkinät torituotteena.",
+        "lyhyt": "Havainnekuva: maapähkinät torituotteena."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7ab972c099da7287e0eb852acb064ed3aa0caee9a01417167e1433b3247bdb09",
+      "exportSHA256": "227e27d321f2a6fd7ec9099cf05d96c9eca47269056bd3f5c2b8667a9714ada7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200",
+        "semanticContextSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200",
+        "subjectTitle": "Markkinoilla hankitaan arjen tavarat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-k2-v1-20261012T184240Z/image.png",
+            "nativeSHA256": "7ab972c099da7287e0eb852acb064ed3aa0caee9a01417167e1433b3247bdb09",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kuorellisia maapähkinöitä tavallisessa kulhossa, muutamassa avoimessa kuoressa ytimet näkyvät. Kuorien muodot/uurteet vaihtelevat luontevasti ja ytimien rakenne uskottava, ei ihmisiä tai tekstiä/logoja.",
+            "captionFi": "Havainnekuva: maapähkinät torituotteena.",
+            "sourceAndTargetCheckFi": "Luettu K2 Markkinoilla hankitaan arjen tavarat ja faktapohjan K2 maapähkinä-/juomamyynti. CaptionFi Havainnekuva: maapähkinät torituotteena ei nimeä myyjää, Mokoloa/Mfoundia, lajiketta tai todellista myyntierää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Mokolo ja Mfoundi ovat Yaoundén markkinapaikkoja, ja niiden rinnalla on keskustori sekä pienempiä kaupunginosamarkkinoita. Myynnissä on ruokaa, vaatteita, kenkiä ja kodin käyttöesineitä. Kaupungin katukauppaan kuuluvat myös maapähkinät ja juomat. Erilaiset kauppapaikat muodostavat näin arkisten hankintojen verkoston. Torilla käyvä ihminen voi etsiä niin aterian raaka-aineita kuin vaatetta tai kotiin tarvittavaa tavaraa. Markkinoiden nimet kuuluvat samalla kaupungin paikalliseen suunnistukseen ja asukkaiden päivittäiseen arkeen."
+            }
+          },
+          "qaReason": "Maapähkinöiden torituotehavainne vastaa K2:n katukaupan aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: maapähkinät torituotteena.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+        "fileSHA256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e05-yaounde-k2-v1-20261012T184240Z",
+          "sha256": "7ab972c099da7287e0eb852acb064ed3aa0caee9a01417167e1433b3247bdb09",
+          "verdict": "accepted",
+          "reason": "Maapähkinöiden torituotehavainne vastaa K2:n katukaupan aihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-k2-v1-20261012T184240Z/image.png",
+            "nativeSHA256": "7ab972c099da7287e0eb852acb064ed3aa0caee9a01417167e1433b3247bdb09",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Kuorellisia maapähkinöitä tavallisessa kulhossa, muutamassa avoimessa kuoressa ytimet näkyvät. Kuorien muodot/uurteet vaihtelevat luontevasti ja ytimien rakenne uskottava, ei ihmisiä tai tekstiä/logoja.",
+            "captionFi": "Havainnekuva: maapähkinät torituotteena.",
+            "sourceAndTargetCheckFi": "Luettu K2 Markkinoilla hankitaan arjen tavarat ja faktapohjan K2 maapähkinä-/juomamyynti. CaptionFi Havainnekuva: maapähkinät torituotteena ei nimeä myyjää, Mokoloa/Mfoundia, lajiketta tai todellista myyntierää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Mokolo ja Mfoundi ovat Yaoundén markkinapaikkoja, ja niiden rinnalla on keskustori sekä pienempiä kaupunginosamarkkinoita. Myynnissä on ruokaa, vaatteita, kenkiä ja kodin käyttöesineitä. Kaupungin katukauppaan kuuluvat myös maapähkinät ja juomat. Erilaiset kauppapaikat muodostavat näin arkisten hankintojen verkoston. Torilla käyvä ihminen voi etsiä niin aterian raaka-aineita kuin vaatetta tai kotiin tarvittavaa tavaraa. Markkinoiden nimet kuuluvat samalla kaupungin paikalliseen suunnistukseen ja asukkaiden päivittäiseen arkeen."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:52:05.870024+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png?t=227e27d321f2a6fd",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+        "sha256": "227e27d321f2a6fd7ec9099cf05d96c9eca47269056bd3f5c2b8667a9714ada7",
+        "bytes": 2702673,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yaounde-k2-v1-20261012T184240Z",
+        "nativeSHA256": "7ab972c099da7287e0eb852acb064ed3aa0caee9a01417167e1433b3247bdb09",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:52:50.875263+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-k2-v1-20261012T184240Z-7ab972c099da.png",
+        "sha256": "227e27d321f2a6fd7ec9099cf05d96c9eca47269056bd3f5c2b8667a9714ada7",
+        "bytes": 2702673,
+        "SHAReadAt": "2026-10-12T19:03:31.468264+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7ab972c099da7287e0eb852acb064ed3aa0caee9a01417167e1433b3247bdb09",
+        "rgbPixelSHA256": "bd311de6b06776d8765934e1bf09da51344f0a1ccb7b57830ce08899cb0d2f87",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200",
+      "contextAfterSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e05-yaounde-k4-v1-20261012T184444Z",
+      "galleryImageID": "e05-yaounde-k4-v1-20261012T184444Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: puutavaran pinta.",
+        "lyhyt": "Havainnekuva: puutavaran pinta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: puutavaran pinta.",
+        "lyhyt": "Havainnekuva: puutavaran pinta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "34ca95374ca752eed899a33ac2e2ed83058387183a2c8a6a8693594c2e8e3aa3",
+      "exportSHA256": "0453415d01cf33365275428ea5c45778fc833f1b4b4b0d14ce0dc63288f5579e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5",
+        "semanticContextSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5",
+        "subjectTitle": "Pääkaupungissa myös valmistetaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-k4-v1-20261012T184444Z/image.png",
+            "nativeSHA256": "34ca95374ca752eed899a33ac2e2ed83058387183a2c8a6a8693594c2e8e3aa3",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Sahattuja tavallisia puulankkuja ja lastuja työpöydällä. Päätyjen vuosirenkaat, syyt, halkeamat, oksat ja sahauspinta uskottavat, kuorikaistale epäsäännöllinen. Ei logoja, tekstiä, käsiä tai teosjäljennöstä.",
+            "captionFi": "Havainnekuva: puutavaran pinta.",
+            "sourceAndTargetCheckFi": "Luettu K4 Pääkaupungissa myös valmistetaan sekä faktapohjan K4 puutavaraa/tuotantoa. CaptionFi Havainnekuva: puutavaran pinta ei nimeä puulajia, paikallista tehdasta tai todellista Kamerunin puuerää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Yaoundén tuotannossa on maitotuotteita, olutta, savi- ja lasituotteita sekä puutavaraa. Kaupunki toimii myös alueellisena maataloustuotteiden jakelupaikkana, ja paikallisiin elinkeinoihin kuuluu kaupunkiviljelyä. Hallintokeskuksen arjessa näkyy siten virastojen lisäksi tavaroiden valmistamista ja käsittelyä. Eri tuotteet kertovat erilaisista materiaaleista ja työn vaiheista: ruoan valmistus, saven ja lasin käyttö sekä puutavaran työstäminen ovat osa kaupungin taloutta markkinakaupan ja koulutuksen rinnalla."
+            }
+          },
+          "qaReason": "Puutavaran yleinen materiaalihavainne vastaa K4:n tuotantoaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: puutavaran pinta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+        "fileSHA256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e05-yaounde-k4-v1-20261012T184444Z",
+          "sha256": "34ca95374ca752eed899a33ac2e2ed83058387183a2c8a6a8693594c2e8e3aa3",
+          "verdict": "accepted",
+          "reason": "Puutavaran yleinen materiaalihavainne vastaa K4:n tuotantoaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-k4-v1-20261012T184444Z/image.png",
+            "nativeSHA256": "34ca95374ca752eed899a33ac2e2ed83058387183a2c8a6a8693594c2e8e3aa3",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Sahattuja tavallisia puulankkuja ja lastuja työpöydällä. Päätyjen vuosirenkaat, syyt, halkeamat, oksat ja sahauspinta uskottavat, kuorikaistale epäsäännöllinen. Ei logoja, tekstiä, käsiä tai teosjäljennöstä.",
+            "captionFi": "Havainnekuva: puutavaran pinta.",
+            "sourceAndTargetCheckFi": "Luettu K4 Pääkaupungissa myös valmistetaan sekä faktapohjan K4 puutavaraa/tuotantoa. CaptionFi Havainnekuva: puutavaran pinta ei nimeä puulajia, paikallista tehdasta tai todellista Kamerunin puuerää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Yaoundén tuotannossa on maitotuotteita, olutta, savi- ja lasituotteita sekä puutavaraa. Kaupunki toimii myös alueellisena maataloustuotteiden jakelupaikkana, ja paikallisiin elinkeinoihin kuuluu kaupunkiviljelyä. Hallintokeskuksen arjessa näkyy siten virastojen lisäksi tavaroiden valmistamista ja käsittelyä. Eri tuotteet kertovat erilaisista materiaaleista ja työn vaiheista: ruoan valmistus, saven ja lasin käyttö sekä puutavaran työstäminen ovat osa kaupungin taloutta markkinakaupan ja koulutuksen rinnalla."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:53:28.840376+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png?t=0453415d01cf3336",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+        "sha256": "0453415d01cf33365275428ea5c45778fc833f1b4b4b0d14ce0dc63288f5579e",
+        "bytes": 2668943,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yaounde-k4-v1-20261012T184444Z",
+        "nativeSHA256": "34ca95374ca752eed899a33ac2e2ed83058387183a2c8a6a8693594c2e8e3aa3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:53:50.852251+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-k4-v1-20261012T184444Z-34ca95374ca7.png",
+        "sha256": "0453415d01cf33365275428ea5c45778fc833f1b4b4b0d14ce0dc63288f5579e",
+        "bytes": 2668943,
+        "SHAReadAt": "2026-10-12T19:03:31.606369+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "34ca95374ca752eed899a33ac2e2ed83058387183a2c8a6a8693594c2e8e3aa3",
+        "rgbPixelSHA256": "a0f7a9ea139ecb2242450350b114b25bb3c5fa635a9df84400b36f8d56c33214",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5",
+      "contextAfterSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e05-yaounde-l2-v1-20261012T184718Z",
+      "galleryImageID": "e05-yaounde-l2-v1-20261012T184718Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kasvinäytteen tutkimusvälineet.",
+        "lyhyt": "Havainnekuva: kasvinäytteen tutkimusvälineet."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: kasvinäytteen tutkimusvälineet.",
+        "lyhyt": "Havainnekuva: kasvinäytteen tutkimusvälineet."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6433f46d7e68498625577710b86dedd735b44e5ab32f0166d05652c05f8fd848",
+      "exportSHA256": "9bcb6dfdd12f2cdaf734b0dd7bd75395b058dc6dd78bb9b11bd3d8f89f2f453e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9",
+        "semanticContextSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9",
+        "subjectTitle": "Asemalla kerättiin näytteitä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-l2-v1-20261012T184718Z/image.png",
+            "nativeSHA256": "6433f46d7e68498625577710b86dedd735b44e5ab32f0166d05652c05f8fd848",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallinen kasvipuristin neljine ruuveineen, kasvinäyte ja suurennuslasi. Kasviruodit, pienet kukat, puu/paperi, ruuvit ja linssi uskottavat, ei tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: kasvinäytteen tutkimusvälineet.",
+            "sourceAndTargetCheckFi": "Luettu L2 Asemalla kerättiin näytteitä ja faktapohjan Georg August Zenkerin puutarha-/asematutkimus ja kokoelmat. CaptionFi Havainnekuva: kasvinäytteen tutkimusvälineet ei väitä Zenkerin todellisiksi välineiksi/näytteeksi tai 1800-luvun tutkimustilanteeksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Yaoundén saksalainen asema perustettiin 1800-luvun lopulla paikallisten päälliköiden kanssa sovittuun paikkaan. Puutarhuri ja luonnontutkija Georg August Zenker osallistui aseman valmistelu- ja tutkimustyöhön. Hän kokosi kasvi- ja eläinaineistoa, ja näytteitä päätyi herbaarioihin. Aseman myöhempi rooli oli myös sotilaallinen. Varhainen luonnontutkimus kuuluu näin kaupungin historiaan, mutta paikalliset asukkaat olivat alueella jo ennen asemaa: tutkimuspaikan synty ei ollut seudun asutuksen alku."
+            }
+          },
+          "qaReason": "Kasvinäytteen tutkimusvälineiden yleishavainne sopii L2:n tutkimus-/herbaarioaiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: kasvinäytteen tutkimusvälineet.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+        "fileSHA256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e05-yaounde-l2-v1-20261012T184718Z",
+          "sha256": "6433f46d7e68498625577710b86dedd735b44e5ab32f0166d05652c05f8fd848",
+          "verdict": "accepted",
+          "reason": "Kasvinäytteen tutkimusvälineiden yleishavainne sopii L2:n tutkimus-/herbaarioaiheeseen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-l2-v1-20261012T184718Z/image.png",
+            "nativeSHA256": "6433f46d7e68498625577710b86dedd735b44e5ab32f0166d05652c05f8fd848",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallinen kasvipuristin neljine ruuveineen, kasvinäyte ja suurennuslasi. Kasviruodit, pienet kukat, puu/paperi, ruuvit ja linssi uskottavat, ei tekstiä, logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva: kasvinäytteen tutkimusvälineet.",
+            "sourceAndTargetCheckFi": "Luettu L2 Asemalla kerättiin näytteitä ja faktapohjan Georg August Zenkerin puutarha-/asematutkimus ja kokoelmat. CaptionFi Havainnekuva: kasvinäytteen tutkimusvälineet ei väitä Zenkerin todellisiksi välineiksi/näytteeksi tai 1800-luvun tutkimustilanteeksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Yaoundén saksalainen asema perustettiin 1800-luvun lopulla paikallisten päälliköiden kanssa sovittuun paikkaan. Puutarhuri ja luonnontutkija Georg August Zenker osallistui aseman valmistelu- ja tutkimustyöhön. Hän kokosi kasvi- ja eläinaineistoa, ja näytteitä päätyi herbaarioihin. Aseman myöhempi rooli oli myös sotilaallinen. Varhainen luonnontutkimus kuuluu näin kaupungin historiaan, mutta paikalliset asukkaat olivat alueella jo ennen asemaa: tutkimuspaikan synty ei ollut seudun asutuksen alku."
+            }
+          },
+          "reviewedAt": "2026-10-12T19:08:11.362252+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png?t=9bcb6dfdd12f2cda",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+        "sha256": "9bcb6dfdd12f2cdaf734b0dd7bd75395b058dc6dd78bb9b11bd3d8f89f2f453e",
+        "bytes": 2472943,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yaounde-l2-v1-20261012T184718Z",
+        "nativeSHA256": "6433f46d7e68498625577710b86dedd735b44e5ab32f0166d05652c05f8fd848",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T19:08:22.910698+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-l2-v1-20261012T184718Z-6433f46d7e68.png",
+        "sha256": "9bcb6dfdd12f2cdaf734b0dd7bd75395b058dc6dd78bb9b11bd3d8f89f2f453e",
+        "bytes": 2472943,
+        "SHAReadAt": "2026-10-12T19:32:02.964479+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6433f46d7e68498625577710b86dedd735b44e5ab32f0166d05652c05f8fd848",
+        "rgbPixelSHA256": "0844bcab8ecaf6e3475c24f224d4f678e9b4f6f28c5cf2cf623b664b249d3ffa",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9",
+      "contextAfterSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e05-yaounde-l4-v1-20261012T192246Z",
+      "galleryImageID": "e05-yaounde-l4-v1-20261012T192246Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: esineiden huollon välineet.",
+        "lyhyt": "Havainnekuva: esineiden huollon välineet."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: esineiden huollon välineet.",
+        "lyhyt": "Havainnekuva: esineiden huollon välineet."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "952f760a5cbe5e464a37829c767399b844c844b8c166b51f962733f389c9b2c5",
+      "exportSHA256": "df3d67be6d82405c9be3bd3e2395f0fb3867ef7c47cd442cc2cd0a2b3b55619e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791",
+        "semanticContextSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791",
+        "subjectTitle": "Kokoelma ei synny kerralla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-object-or-material",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-l4-v1-20261012T192246Z/image.png",
+            "nativeSHA256": "952f760a5cbe5e464a37829c767399b844c844b8c166b51f962733f389c9b2c5",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Pehmeä sivellin, liina ja tavallinen matala astia. Harjakset, kahva, kangas ja astia luontevat; ei tekstiä, logoja, ihmisia tai museoesinejäljennöstä.",
+            "captionFi": "Havainnekuva: esineiden huollon välineet.",
+            "sourceAndTargetCheckFi": "L4 ja faktapohjan Blackitude-museon säilytys-/restaurointitehtävä luettu. CaptionFi havainne, ei museon todellinen työvälineistö tai suojattu esine.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Blackitude-museon yksityisen kulttuurikokoelman taustalla on Nana Agnèsin perheestä perittyä aineistoa sekä myöhempiä lahjoituksia ja hankintoja. Esineitä on eri Kamerunin alueilta, ja rakennusta on muokattu näyttelykäyttöön. Museon työhön kuuluu myös säilyttämistä ja restaurointia. Osa kokoelman kuvatuista esihistoriallisista työkaluista on kopioita. Museossa esineen tarinaan kuuluu siis myös kokoelman historia: mistä aineisto tuli, miten sitä on säilytetty ja onko esillä alkuperäinen esine vai sen jäljennös.",
+              "supportsFi": "Kokoelma ei synny kerralla",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "qaReason": "Huoltovälineiden yleishavainne vastaa L4:n säilytys-/restaurointiaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: esineiden huollon välineet.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+        "fileSHA256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e05-yaounde-l4-v1-20261012T192246Z",
+          "sha256": "952f760a5cbe5e464a37829c767399b844c844b8c166b51f962733f389c9b2c5",
+          "verdict": "accepted",
+          "reason": "Huoltovälineiden yleishavainne vastaa L4:n säilytys-/restaurointiaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/assets/e05-yaounde-l4-v1-20261012T192246Z/image.png",
+            "nativeSHA256": "952f760a5cbe5e464a37829c767399b844c844b8c166b51f962733f389c9b2c5",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Pehmeä sivellin, liina ja tavallinen matala astia. Harjakset, kahva, kangas ja astia luontevat; ei tekstiä, logoja, ihmisia tai museoesinejäljennöstä.",
+            "captionFi": "Havainnekuva: esineiden huollon välineet.",
+            "sourceAndTargetCheckFi": "L4 ja faktapohjan Blackitude-museon säilytys-/restaurointitehtävä luettu. CaptionFi havainne, ei museon todellinen työvälineistö tai suojattu esine.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+              "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/faktapohja.md",
+              "sourceFactSheetSHA256": "de88123c1e56e9794450f6c40c6e249717b9b9dbc04c94f926b09ba0815c0c97",
+              "contentExcerpt": "Blackitude-museon yksityisen kulttuurikokoelman taustalla on Nana Agnèsin perheestä perittyä aineistoa sekä myöhempiä lahjoituksia ja hankintoja. Esineitä on eri Kamerunin alueilta, ja rakennusta on muokattu näyttelykäyttöön. Museon työhön kuuluu myös säilyttämistä ja restaurointia. Osa kokoelman kuvatuista esihistoriallisista työkaluista on kopioita. Museossa esineen tarinaan kuuluu siis myös kokoelman historia: mistä aineisto tuli, miten sitä on säilytetty ja onko esillä alkuperäinen esine vai sen jäljennös.",
+              "supportsFi": "Kokoelma ei synny kerralla",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "reviewedAt": "2026-10-12T19:53:59.039130+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png?t=df3d67be6d82405c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+        "sha256": "df3d67be6d82405c9be3bd3e2395f0fb3867ef7c47cd442cc2cd0a2b3b55619e",
+        "bytes": 2190447,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-yaounde-l4-v1-20261012T192246Z",
+        "nativeSHA256": "952f760a5cbe5e464a37829c767399b844c844b8c166b51f962733f389c9b2c5",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:54:41.831806+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/yaounde/e05-yaounde-l4-v1-20261012T192246Z-952f760a5cbe.png",
+        "sha256": "df3d67be6d82405c9be3bd3e2395f0fb3867ef7c47cd442cc2cd0a2b3b55619e",
+        "bytes": 2190447,
+        "SHAReadAt": "2026-10-12T19:54:32.870200+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "952f760a5cbe5e464a37829c767399b844c844b8c166b51f962733f389c9b2c5",
+        "rgbPixelSHA256": "6def4a7be0943c786620d4e2e8ae8a4370ea472a30cf28250bbec88d6af2ee94",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791",
+      "contextAfterSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yaounde-photo-5ec5250f4484d91e",
+      "galleryImageID": "capital-cc-e05-yaounde-photo-5ec5250f4484d91e",
+      "commonsFile": "Clouds surround hill.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/photo-5ec5250f4484d91e19d2.jpg",
+        "suora": true,
+        "lahde": "Thetaxiphotographer, Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "lyhyt": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "tiedosto": "Clouds surround hill.jpg",
+        "vuosi": "2020"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Thetaxiphotographer, Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "lyhyt": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "tiedosto": "Clouds surround hill.jpg",
+        "vuosi": "2020"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/photo-5ec5250f4484d91e19d2.jpg",
+        "suora": true,
+        "lahde": "Thetaxiphotographer, Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "lyhyt": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "tiedosto": "Clouds surround hill.jpg",
+        "vuosi": "2020"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+      "exportSHA256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/photo-5ec5250f4484d91e19d2.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/photo-5ec5250f4484d91e19d2.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-5076d644f1ee09.jpg",
+      "dimensions": [
+        3456,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d401bd87f4724242b4cc3b2f434ae3495dd75a306b82d20409eab0c24a425e22",
+        "semanticContextSHA256": "d401bd87f4724242b4cc3b2f434ae3495dd75a306b82d20409eab0c24a425e22",
+        "subjectTitle": "yaounde — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Thetaxiphotographer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Clouds_surround_hill.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Clouds_surround_hill.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Clouds_surround_hill.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Thetaxiphotographer",
+            "licenseSourceSha256": "be7ab4e5d7b1e5853163f7ffdcb19b71c29063c14a079774ec417f7405e02608",
+            "depictedWorkLayer": "Luonnonmaasto ja puusto; ei nimettyä suojattua teosta. Kuvaaja Thetaxiphotographer ja CC BY-SA4.0 alkuperäislähteestä.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [
+              "  3.826272;   11.437038"
+            ],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-5076d644f1ee09.jpg",
+            "nativeSha256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+            "actualWidth": 3456,
+            "actualHeight": 3456,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Clouds_surround_hill.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-photo.html",
+            "sourcePageSha256": "be7ab4e5d7b1e5853163f7ffdcb19b71c29063c14a079774ec417f7405e02608",
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-photo.json",
+            "author": "Thetaxiphotographer",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceRows": [
+              [
+                "Description Clouds surround hill.jpg",
+                "This is an image with the theme \" Climate & Weather in Africa \" from: Cameroon"
+              ],
+              [
+                "Date",
+                "4 July 2020, 07:29:27"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Thetaxiphotographer"
+              ],
+              [
+                "Author",
+                "Tse Ernest Chi"
+              ]
+            ],
+            "captureDate": "4 July 2020, 07:29:27",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "rightsEvidence": "Luontopääaihe: puusto, kukkula ja luonnolliset pilvet; ei jäljennettyä ihmisteosta.",
+            "captionFi": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+            "sourceContentSha256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "formatRule": "Only TRAVELER requires portrait ratio 0.60–0.85. PHOTO may be a place-backed nature detail and is not required to be a current panorama."
+          },
+          "qaReason": "Aito pilvien peittämä luonnonkukkula. Lähteen Yaoundé-kategoria ja kameran GPS 3.826272/11.437038 sitovat kuvan Yaoundén seutuun; pelkkään Cameroon-teemaan ei nojata. Kuvassa ei ole nimettyä vuorta, suojattua rakennusta, taideteosta, kasvoja tai lisättyjä merkintöjä. Neliömuoto on PHOTO-paikassa sallittu. Kuvateksti pidetään yleisenä Yaoundén seudun kukkulamaisemana, ei Mont Fébén/Eloundemin nimeä eikä tarkkaa kaupunginosaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+        "fileSHA256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Clouds surround hill.jpg",
+          "sha256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+          "verdict": "accepted",
+          "reason": "Aito pilvien peittämä luonnonkukkula. Lähteen Yaoundé-kategoria ja kameran GPS 3.826272/11.437038 sitovat kuvan Yaoundén seutuun; pelkkään Cameroon-teemaan ei nojata. Kuvassa ei ole nimettyä vuorta, suojattua rakennusta, taideteosta, kasvoja tai lisättyjä merkintöjä. Neliömuoto on PHOTO-paikassa sallittu. Kuvateksti pidetään yleisenä Yaoundén seudun kukkulamaisemana, ei Mont Fébén/Eloundemin nimeä eikä tarkkaa kaupunginosaa.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:16:46.248425+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-5076d644f1ee09.jpg",
+            "nativeSha256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+            "actualWidth": 3456,
+            "actualHeight": 3456,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Clouds_surround_hill.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-photo.html",
+            "sourcePageSha256": "be7ab4e5d7b1e5853163f7ffdcb19b71c29063c14a079774ec417f7405e02608",
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-photo.json",
+            "author": "Thetaxiphotographer",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceRows": [
+              [
+                "Description Clouds surround hill.jpg",
+                "This is an image with the theme \" Climate & Weather in Africa \" from: Cameroon"
+              ],
+              [
+                "Date",
+                "4 July 2020, 07:29:27"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Thetaxiphotographer"
+              ],
+              [
+                "Author",
+                "Tse Ernest Chi"
+              ]
+            ],
+            "captureDate": "4 July 2020, 07:29:27",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "rightsEvidence": "Luontopääaihe: puusto, kukkula ja luonnolliset pilvet; ei jäljennettyä ihmisteosta.",
+            "captionFi": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+            "sourceContentSha256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "formatRule": "Only TRAVELER requires portrait ratio 0.60–0.85. PHOTO may be a place-backed nature detail and is not required to be a current panorama."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Clouds surround hill.jpg",
+        "sha256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Clouds_surround_hill.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Clouds_surround_hill.jpg",
+        "author": "Thetaxiphotographer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3456,
+        "height": 3456,
+        "originalSHA256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/photo-5ec5250f4484d91e19d2.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/photo-5ec5250f4484d91e19d2.jpg",
+        "bytes": 5610718,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:17:49.066527+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Clouds surround hill.jpg",
+        "lahde": "Thetaxiphotographer, Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "lyhyt": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "vuosi": "2020"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Thetaxiphotographer, Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "lyhyt": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+        "tiedosto": "Clouds surround hill.jpg",
+        "vuosi": "2020"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "d401bd87f4724242b4cc3b2f434ae3495dd75a306b82d20409eab0c24a425e22",
+      "contextAfterSHA256": "d401bd87f4724242b4cc3b2f434ae3495dd75a306b82d20409eab0c24a425e22"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yaounde-c1-28dadd02cab8e654",
+      "galleryImageID": "capital-cc-e05-yaounde-c1-28dadd02cab8e654",
+      "commonsFile": "Cloudy valley covering human habitat.png",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c1-28dadd02cab8e65410a4.png",
+        "suora": true,
+        "lahde": "JusatTop, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "lyhyt": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "tiedosto": "Cloudy valley covering human habitat.png"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "JusatTop, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "lyhyt": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "tiedosto": "Cloudy valley covering human habitat.png"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c1-28dadd02cab8e65410a4.png",
+        "suora": true,
+        "lahde": "JusatTop, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "lyhyt": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "tiedosto": "Cloudy valley covering human habitat.png"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+      "exportSHA256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c1-28dadd02cab8e65410a4.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c1-28dadd02cab8e65410a4.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-b57748bad30c40.png",
+      "dimensions": [
+        4500,
+        1800
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a7ba2824249faeed1ad84824cb8c97f843d532ef88473a216d0f5f240bd56930",
+        "semanticContextSHA256": "a7ba2824249faeed1ad84824cb8c97f843d532ef88473a216d0f5f240bd56930",
+        "subjectTitle": "Yaoundé",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "JusatTop",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cloudy_valley_covering_human_habitat.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Cloudy_valley_covering_human_habitat.png",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Cloudy_valley_covering_human_habitat.png",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "JusatTop",
+            "licenseSourceSha256": "243dfd1a6037c4789f948bfed4bb298f2ecfeec929feb99a6789f5548440064e",
+            "depictedWorkLayer": "Yleinen luonnonmaasto ja kaukainen tavanomainen asutus; ei tunnistettavaa nimettyä suojattua nykyteosta päämotiivina, ei FOP-/rakennusiästä pääteltyä PD-lupaa. Valokuvan CC BY-SA4.0 ja JusatTop suoraan alkuperäisestä lähteestä.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-b57748bad30c40.png",
+            "nativeSha256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+            "actualWidth": 4500,
+            "actualHeight": 1800,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Cloudy_valley_covering_human_habitat.png",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c1.html",
+            "sourcePageSha256": "243dfd1a6037c4789f948bfed4bb298f2ecfeec929feb99a6789f5548440064e",
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c1.json",
+            "author": "JusatTop",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceRows": [
+              [
+                "Description Cloudy valley covering human habitat.png",
+                "English: Cloudy valley covering part of human habitat on a sunny morning during the start of the rainy season around Simbock and Mendong in Yaounde. Igbo: Ndagwurugwu ojii na-ekpuchi akụkụ ụfọdụ nke ebe mmadụ n'ụtụtụ anwụ na-acha n'oge mmalite nke mmiri ozuzo na gburugburu Simbock na Mendong na Yaounde. This is an image with the theme \" Climate & Weather in Africa \" from: Cameroon"
+              ],
+              [
+                "Date",
+                "5 April 2023"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "JusatTop"
+              ]
+            ],
+            "captureDate": "5 April 2023",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "rightsEvidence": "Luonnonmaasto ja kaukainen asutuksen kokonaisuus; ei yksilöityä taide-/arkkitehtuuriteosta pääaiheena. Ei FOP- tai rakennuksen ikään perustuvaa lupaa.",
+            "captionFi": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+            "sourceContentSha256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "formatRule": "Only TRAVELER requires portrait ratio 0.60–0.85. PHOTO may be a place-backed nature detail and is not required to be a current panorama."
+          },
+          "qaReason": "Aito laaja kukkuloiden, laakson ja asutuksen näkymä. Alkuperäisen Description yksilöi Simbockin ja Mendongin Yaoundéssa. Luonnollinen pilvisyys ja utu vastaavat maisemaa; ei teknistä epäterävyyttä pääaiheessa, tunnistettavia kasvoja tai lisättyjä merkintöjä. Kaukainen tavallinen asutus on osa kokonaisuutta, yksittäistä suojattua nykyteosta ei toisinneta pääaiheena. Kansi kuvaa todellista kaupungin seutua."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+        "fileSHA256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Cloudy valley covering human habitat.png",
+          "sha256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+          "verdict": "accepted",
+          "reason": "Aito laaja kukkuloiden, laakson ja asutuksen näkymä. Alkuperäisen Description yksilöi Simbockin ja Mendongin Yaoundéssa. Luonnollinen pilvisyys ja utu vastaavat maisemaa; ei teknistä epäterävyyttä pääaiheessa, tunnistettavia kasvoja tai lisättyjä merkintöjä. Kaukainen tavallinen asutus on osa kokonaisuutta, yksittäistä suojattua nykyteosta ei toisinneta pääaiheena. Kansi kuvaa todellista kaupungin seutua.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:16:46.248425+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-b57748bad30c40.png",
+            "nativeSha256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+            "actualWidth": 4500,
+            "actualHeight": 1800,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Cloudy_valley_covering_human_habitat.png",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c1.html",
+            "sourcePageSha256": "243dfd1a6037c4789f948bfed4bb298f2ecfeec929feb99a6789f5548440064e",
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c1.json",
+            "author": "JusatTop",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceRows": [
+              [
+                "Description Cloudy valley covering human habitat.png",
+                "English: Cloudy valley covering part of human habitat on a sunny morning during the start of the rainy season around Simbock and Mendong in Yaounde. Igbo: Ndagwurugwu ojii na-ekpuchi akụkụ ụfọdụ nke ebe mmadụ n'ụtụtụ anwụ na-acha n'oge mmalite nke mmiri ozuzo na gburugburu Simbock na Mendong na Yaounde. This is an image with the theme \" Climate & Weather in Africa \" from: Cameroon"
+              ],
+              [
+                "Date",
+                "5 April 2023"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "JusatTop"
+              ]
+            ],
+            "captureDate": "5 April 2023",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "rightsEvidence": "Luonnonmaasto ja kaukainen asutuksen kokonaisuus; ei yksilöityä taide-/arkkitehtuuriteosta pääaiheena. Ei FOP- tai rakennuksen ikään perustuvaa lupaa.",
+            "captionFi": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+            "sourceContentSha256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "formatRule": "Only TRAVELER requires portrait ratio 0.60–0.85. PHOTO may be a place-backed nature detail and is not required to be a current panorama."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Cloudy valley covering human habitat.png",
+        "sha256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cloudy_valley_covering_human_habitat.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Cloudy_valley_covering_human_habitat.png",
+        "author": "JusatTop",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4500,
+        "height": 1800,
+        "originalSHA256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c1-28dadd02cab8e65410a4.png",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c1-28dadd02cab8e65410a4.png",
+        "bytes": 4035721,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:17:51.129315+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Cloudy valley covering human habitat.png",
+        "lahde": "JusatTop, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "lyhyt": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "JusatTop, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "lyhyt": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+        "tiedosto": "Cloudy valley covering human habitat.png"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "a7ba2824249faeed1ad84824cb8c97f843d532ef88473a216d0f5f240bd56930",
+      "contextAfterSHA256": "a7ba2824249faeed1ad84824cb8c97f843d532ef88473a216d0f5f240bd56930"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yaounde-c2-6671c86b41cce9df",
+      "galleryImageID": "capital-cc-e05-yaounde-c2-6671c86b41cce9df",
+      "commonsFile": "Hillside Yaounde View.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c2-6671c86b41cce9df3a14.jpg",
+        "suora": true,
+        "lahde": "Heather Powell, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "lyhyt": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "tiedosto": "Hillside Yaounde View.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Heather Powell, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "lyhyt": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "tiedosto": "Hillside Yaounde View.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c2-6671c86b41cce9df3a14.jpg",
+        "suora": true,
+        "lahde": "Heather Powell, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "lyhyt": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "tiedosto": "Hillside Yaounde View.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+      "exportSHA256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c2-6671c86b41cce9df3a14.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c2-6671c86b41cce9df3a14.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-3e0663a8fdc6e6.jpg",
+      "dimensions": [
+        4032,
+        1960
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "431934d9888d0b399b38aa584e273aca0ba5fc1f75f6df4e360305dddfe62360",
+        "semanticContextSHA256": "431934d9888d0b399b38aa584e273aca0ba5fc1f75f6df4e360305dddfe62360",
+        "subjectTitle": "Yaoundé",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Heather Powell",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Hillside_Yaounde_View.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Hillside_Yaounde_View.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Hillside_Yaounde_View.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Heather Powell",
+            "licenseSourceSha256": "c654a7a9582d5e318889de620540879e5e4f53c67e85b0d64c4c94dc32cac076",
+            "depictedWorkLayer": "Pääaihe on koko kaupunkimaiseman yleisnäkymä puuston kehystämänä; yksittäistä kaukaista rakennusta ei kuvata julkisivun pääaiheena eikä kuvatekstissä nimetä. Ei etualan veistosta tai nykytaideteosta. Kuvaajan Heather Powell CC BY-SA 4.0 todettu alkuperäissivulta. Ei FOP- tai rakennusiästä tehtyä oikeusoletusta.",
+            "sourcePlaceDescription": "English: Hillside Yaounde View Igbo: Hillside Yaounde View This is an image with the theme \" Play \" from: Cameroon",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Hillside Yaounde View.jpg",
+                "English: Hillside Yaounde View Igbo: Hillside Yaounde View This is an image with the theme \" Play \" from: Cameroon"
+              ],
+              [
+                "Date",
+                "15 September 2018, 09:25:56"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Heather Powell"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4032,
+              1960
+            ],
+            "actualDimensions": [
+              4032,
+              1960
+            ],
+            "pageSha256": "c654a7a9582d5e318889de620540879e5e4f53c67e85b0d64c4c94dc32cac076",
+            "nativeSha256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Hillside_Yaounde_View.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c2-5782c68fcfdb.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-3e0663a8fdc6e6.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c2-5782c68fcfdb.json",
+            "author": "Heather Powell",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+            "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Aito laaja rinnenäkymä Yaoundén asutukseen, puusto kehystää kuvaa. Alkuperäisen Description nimeää kaupungin. Pilvien ja kaukaisen horisontin utu on luonnollista. Kokonainen kaupunkiasettelu on pääaihe; kaukainen korkea rakennus ei ole itsenäinen arkkitehtuurin pääkuva. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Vuosi2018; nimeämätöntä kuvausmäkeä ei arvata."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+        "fileSHA256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Hillside Yaounde View.jpg",
+          "sha256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+          "verdict": "accepted",
+          "reason": "Aito laaja rinnenäkymä Yaoundén asutukseen, puusto kehystää kuvaa. Alkuperäisen Description nimeää kaupungin. Pilvien ja kaukaisen horisontin utu on luonnollista. Kokonainen kaupunkiasettelu on pääaihe; kaukainen korkea rakennus ei ole itsenäinen arkkitehtuurin pääkuva. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Vuosi2018; nimeämätöntä kuvausmäkeä ei arvata.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Hillside Yaounde View.jpg",
+                "English: Hillside Yaounde View Igbo: Hillside Yaounde View This is an image with the theme \" Play \" from: Cameroon"
+              ],
+              [
+                "Date",
+                "15 September 2018, 09:25:56"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Heather Powell"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4032,
+              1960
+            ],
+            "actualDimensions": [
+              4032,
+              1960
+            ],
+            "pageSha256": "c654a7a9582d5e318889de620540879e5e4f53c67e85b0d64c4c94dc32cac076",
+            "nativeSha256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Hillside_Yaounde_View.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c2-5782c68fcfdb.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-3e0663a8fdc6e6.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c2-5782c68fcfdb.json",
+            "author": "Heather Powell",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+            "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Hillside Yaounde View.jpg",
+        "sha256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Hillside_Yaounde_View.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Hillside_Yaounde_View.jpg",
+        "author": "Heather Powell",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4032,
+        "height": 1960,
+        "originalSHA256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c2-6671c86b41cce9df3a14.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c2-6671c86b41cce9df3a14.jpg",
+        "bytes": 2020427,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:04.013211+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Hillside Yaounde View.jpg",
+        "lahde": "Heather Powell, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "lyhyt": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Heather Powell, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "lyhyt": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+        "tiedosto": "Hillside Yaounde View.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "431934d9888d0b399b38aa584e273aca0ba5fc1f75f6df4e360305dddfe62360",
+      "contextAfterSHA256": "431934d9888d0b399b38aa584e273aca0ba5fc1f75f6df4e360305dddfe62360"
+    },
+    {
+      "era": "e05",
+      "city": "yaounde",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yaounde-c3-a19964ed2ad04216",
+      "galleryImageID": "capital-cc-e05-yaounde-c3-a19964ed2ad04216",
+      "commonsFile": "Végétation sur le Mont Fébé.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c3-a19964ed2ad042166967.jpg",
+        "suora": true,
+        "lahde": "ADAMBITA, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "lyhyt": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "tiedosto": "Végétation sur le Mont Fébé.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "ADAMBITA, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "lyhyt": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "tiedosto": "Végétation sur le Mont Fébé.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c3-a19964ed2ad042166967.jpg",
+        "suora": true,
+        "lahde": "ADAMBITA, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "lyhyt": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "tiedosto": "Végétation sur le Mont Fébé.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+      "exportSHA256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c3-a19964ed2ad042166967.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c3-a19964ed2ad042166967.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-37ac951410928f.jpg",
+      "dimensions": [
+        4608,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
+      "sourceContentSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4c6915ce2cf0368b146aaff5783170866e113416eeebf0f23bdf76e5c6b5ed67",
+        "semanticContextSHA256": "4c6915ce2cf0368b146aaff5783170866e113416eeebf0f23bdf76e5c6b5ed67",
+        "subjectTitle": "Yaoundé",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "ADAMBITA",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:V%C3%A9g%C3%A9tation_sur_le_Mont_F%C3%A9b%C3%A9.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/V%C3%A9g%C3%A9tation_sur_le_Mont_F%C3%A9b%C3%A9.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:V%C3%A9g%C3%A9tation_sur_le_Mont_F%C3%A9b%C3%A9.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "ADAMBITA",
+            "licenseSourceSha256": "44f6045ecda772c1ec6987758f8b748fb80f737d110a4ec2e52cec7615dac1b3",
+            "depictedWorkLayer": "Pääaihe on luonnollinen rinne ja kasvillisuus. Yksittäinen kaukainen rakennus ei ole itsenäinen julkisivu-/arkkitehtuurin pääaihe; ei taideteosta etualalla. Valokuvan ADAMBITA ja CC BY-SA 4.0 alkuperäissivulla. Ei nimetä rakennusta tai väitetä sen oikeusvapautta rakennuksen iän/FOP-oletuksen nojalla.",
+            "sourcePlaceDescription": "Français : Superbe vue de la végétation sur le Mont fébé situé a Yaoundé, on peut admirez ici un environnement au plus près de la nature English: Superb view of the vegetation on the Mont Febé located in Yaoundé, one can admire here an environment closer to nature This is an image of \"African people at work\" from Cameroon",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Végétation sur le Mont Fébé.jpg",
+                "Français : Superbe vue de la végétation sur le Mont fébé situé a Yaoundé, on peut admirez ici un environnement au plus près de la nature English: Superb view of the vegetation on the Mont Febé located in Yaoundé, one can admire here an environment closer to nature This is an image of \"African people at work\" from Cameroon"
+              ],
+              [
+                "Date",
+                "22 June 2017, 12:00:14"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "ADAMBITA"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4608,
+              2592
+            ],
+            "actualDimensions": [
+              4608,
+              2592
+            ],
+            "pageSha256": "44f6045ecda772c1ec6987758f8b748fb80f737d110a4ec2e52cec7615dac1b3",
+            "nativeSha256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:V%C3%A9g%C3%A9tation_sur_le_Mont_F%C3%A9b%C3%A9.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c3-63d91ceee442.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-37ac951410928f.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c3-63d91ceee442.json",
+            "author": "ADAMBITA",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+            "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Todellinen laaja Mont Fébén rinne ja kasvillisuus: alkuperäinen Description yksilöi Mont Fébén Yaoundéssa. Maissi, puusto ja rinne ovat pääaiheita. Kuvassa näkyvät sivussa myös kaukainen kerrostalomainen rakennus, seinärakenne ja rakennustelineitä; niitä ei irroteta rakennuskohteen pääkuvaksi eikä oikeusvapautta päätellä iästä. Ei ihmiskasvoja tai lisättyjä merkintöjä. Vuosi2017 kirjataan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+        "fileSHA256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Végétation sur le Mont Fébé.jpg",
+          "sha256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+          "verdict": "accepted",
+          "reason": "Todellinen laaja Mont Fébén rinne ja kasvillisuus: alkuperäinen Description yksilöi Mont Fébén Yaoundéssa. Maissi, puusto ja rinne ovat pääaiheita. Kuvassa näkyvät sivussa myös kaukainen kerrostalomainen rakennus, seinärakenne ja rakennustelineitä; niitä ei irroteta rakennuskohteen pääkuvaksi eikä oikeusvapautta päätellä iästä. Ei ihmiskasvoja tai lisättyjä merkintöjä. Vuosi2017 kirjataan.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Végétation sur le Mont Fébé.jpg",
+                "Français : Superbe vue de la végétation sur le Mont fébé situé a Yaoundé, on peut admirez ici un environnement au plus près de la nature English: Superb view of the vegetation on the Mont Febé located in Yaoundé, one can admire here an environment closer to nature This is an image of \"African people at work\" from Cameroon"
+              ],
+              [
+                "Date",
+                "22 June 2017, 12:00:14"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "ADAMBITA"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4608,
+              2592
+            ],
+            "actualDimensions": [
+              4608,
+              2592
+            ],
+            "pageSha256": "44f6045ecda772c1ec6987758f8b748fb80f737d110a4ec2e52cec7615dac1b3",
+            "nativeSha256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:V%C3%A9g%C3%A9tation_sur_le_Mont_F%C3%A9b%C3%A9.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c3-63d91ceee442.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/cc-evidence/candidate-37ac951410928f.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa-evidence/source-c3-63d91ceee442.json",
+            "author": "ADAMBITA",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+            "sourceContentSHA256": "32764d5ed7af2e732e3511746956ea4576e092a5bf6e77c2b41d1e84b4358344",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/qa.json",
+            "sha256": "fbcb931e6f12a192524f3a699d1532feb20900fb92422e8e48ceaa95c8dbee7f"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yaounde/illustration-qa-extra.json",
+            "sha256": "eca474e856ceed320419937246b5b7758eba2ad1656119fe3e1a4dbad3b91e89"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yaounde",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Végétation sur le Mont Fébé.jpg",
+        "sha256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:V%C3%A9g%C3%A9tation_sur_le_Mont_F%C3%A9b%C3%A9.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/V%C3%A9g%C3%A9tation_sur_le_Mont_F%C3%A9b%C3%A9.jpg",
+        "author": "ADAMBITA",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4608,
+        "height": 2592,
+        "originalSHA256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c3-a19964ed2ad042166967.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/c3-a19964ed2ad042166967.jpg",
+        "bytes": 5283266,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:06.940130+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Végétation sur le Mont Fébé.jpg",
+        "lahde": "ADAMBITA, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "lyhyt": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "ADAMBITA, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "lyhyt": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+        "tiedosto": "Végétation sur le Mont Fébé.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a644e84becb68481c0a31b2891b64bb47042aa355c7aa8998b258846dc711821",
+      "targetAfterSHA256": "4c6915ce2cf0368b146aaff5783170866e113416eeebf0f23bdf76e5c6b5ed67",
+      "contextAfterSHA256": "4c6915ce2cf0368b146aaff5783170866e113416eeebf0f23bdf76e5c6b5ed67"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

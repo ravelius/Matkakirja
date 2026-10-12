@@ -1,0 +1,1640 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e05",
+  "city": "portonovo",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+  "assets": [
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e05-portonovo-traveler-v1-20261012T183227Z",
+      "galleryImageID": "e05-portonovo-traveler-v1-20261012T183227Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: suuren puun tyvi.",
+        "lyhyt": "Havainnekuva: suuren puun tyvi."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: suuren puun tyvi.",
+        "lyhyt": "Havainnekuva: suuren puun tyvi."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6025435c502fb41b9aa83bffdfa14ab90aeeb6d1e6061d52a57719665f12834f",
+      "exportSHA256": "6a0a9d56133dd68e95b17a818c9f798456ea6f8ed00353e22aaa777ea7632f61",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-natural-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-traveler-v1-20261012T183227Z/image.png",
+            "nativeSHA256": "6025435c502fb41b9aa83bffdfa14ab90aeeb6d1e6061d52a57719665f12834f",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Järeän puun tyvi ja laippajuuret, lehtikarike ja aluskasvillisuus. Juuret liittyvät runkoon/maahan uskottavasti, kuori/sammal eivät toistuvaa pintaa, valo luonteva. Ei ihmisiä, tekstejä tai taideteosta.",
+            "captionFi": "Havainnekuva: suuren puun tyvi.",
+            "sourceAndTargetCheckFi": "Luettu TRAVELER-kappale ja parasta-rivi kasvipuutarhan vanhoista puista sekä faktapohjan K1. CaptionFi Havainnekuva: suuren puun tyvi ei esitä nimettyä puuyksilöä. K1:n erillinen vaakalehvästökuva ja pysty tyvikuva havainnollistavat eri osia samasta puustoaiheesta, ei sama native-tiedosto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Porto-Novon museoilla on eri painotuksia. Honmè avaa hovin historiaa, ja Adandén museo esittelee kulttuuriesineiden yhteisörooleja. Kasvipuutarhassa huomio kiinnittyy vanhoihin puihin ja kasvillisuuteen. Kaupungissa liikutaan muun muassa moottoripyörätakseilla, ja yhteydet Cotonouhun ovat osa matkan suunnittelua.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "qaReason": "Pysty 1024×1536 (0.667) ja suuren puun yleishavainne sopivat TRAVELER:n vanhaan puustoon liittyvään aiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: suuren puun tyvi.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+        "fileSHA256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e05-portonovo-traveler-v1-20261012T183227Z",
+          "sha256": "6025435c502fb41b9aa83bffdfa14ab90aeeb6d1e6061d52a57719665f12834f",
+          "verdict": "accepted",
+          "reason": "Pysty 1024×1536 (0.667) ja suuren puun yleishavainne sopivat TRAVELER:n vanhaan puustoon liittyvään aiheeseen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-traveler-v1-20261012T183227Z/image.png",
+            "nativeSHA256": "6025435c502fb41b9aa83bffdfa14ab90aeeb6d1e6061d52a57719665f12834f",
+            "nativeDimensions": [
+              1024,
+              1536
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Järeän puun tyvi ja laippajuuret, lehtikarike ja aluskasvillisuus. Juuret liittyvät runkoon/maahan uskottavasti, kuori/sammal eivät toistuvaa pintaa, valo luonteva. Ei ihmisiä, tekstejä tai taideteosta.",
+            "captionFi": "Havainnekuva: suuren puun tyvi.",
+            "sourceAndTargetCheckFi": "Luettu TRAVELER-kappale ja parasta-rivi kasvipuutarhan vanhoista puista sekä faktapohjan K1. CaptionFi Havainnekuva: suuren puun tyvi ei esitä nimettyä puuyksilöä. K1:n erillinen vaakalehvästökuva ja pysty tyvikuva havainnollistavat eri osia samasta puustoaiheesta, ei sama native-tiedosto.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Porto-Novon museoilla on eri painotuksia. Honmè avaa hovin historiaa, ja Adandén museo esittelee kulttuuriesineiden yhteisörooleja. Kasvipuutarhassa huomio kiinnittyy vanhoihin puihin ja kasvillisuuteen. Kaupungissa liikutaan muun muassa moottoripyörätakseilla, ja yhteydet Cotonouhun ovat osa matkan suunnittelua.",
+              "natureContextFromFactSheet": true
+            }
+          },
+          "reviewedAt": "2026-10-12T18:36:04.784042+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png?t=6a0a9d56133dd68e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+        "sha256": "6a0a9d56133dd68e95b17a818c9f798456ea6f8ed00353e22aaa777ea7632f61",
+        "bytes": 3608007,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-portonovo-traveler-v1-20261012T183227Z",
+        "nativeSHA256": "6025435c502fb41b9aa83bffdfa14ab90aeeb6d1e6061d52a57719665f12834f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T18:36:37.464386+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
+        "sha256": "6a0a9d56133dd68e95b17a818c9f798456ea6f8ed00353e22aaa777ea7632f61",
+        "bytes": 3608007,
+        "SHAReadAt": "2026-10-12T18:36:33.265222+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6025435c502fb41b9aa83bffdfa14ab90aeeb6d1e6061d52a57719665f12834f",
+        "rgbPixelSHA256": "f7a93a8044f784617467b8e0b7809f8952dcbae63a776af65864dc6e45398832",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e05-portonovo-k1-v1-20261012T183034Z",
+      "galleryImageID": "e05-portonovo-k1-v1-20261012T183034Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: vanhojen puiden lehvästö.",
+        "lyhyt": "Havainnekuva: vanhojen puiden lehvästö."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: vanhojen puiden lehvästö.",
+        "lyhyt": "Havainnekuva: vanhojen puiden lehvästö."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9d52e4eefba6bf6dd2ea2225a1a573180d6ea025342e47d32f5fa0fa4a678c39",
+      "exportSHA256": "3e1355a12e7fe530e2f023d50e4a2df720e554b475287d75abb22fb2d299eb09",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+        "semanticContextSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+        "subjectTitle": "Pyhästä metsästä kasvipuutarhaksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-k1-v1-20261012T183034Z/image.png",
+            "nativeSHA256": "9d52e4eefba6bf6dd2ea2225a1a573180d6ea025342e47d32f5fa0fa4a678c39",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Laaja lehvästö ja vanhan puun oksisto alhaalta katsottuna. Oksien liittymät, vaihteleva kuori/jäkälä, lehdet ja valo uskottavat; ei synteettistä pintatoistoa, arkkitehtuuria, ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva: vanhojen puiden lehvästö.",
+            "sourceAndTargetCheckFi": "Luettu K1 Pyhästä metsästä kasvipuutarhaksi ja faktapohjan K1 vanhoja isoja puita. CaptionFi Havainnekuva: vanhojen puiden lehvästö ei esitä Jardin des plantes et de la naturen yksilöityä puuta, asettelua tai kasvilajia.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Jardin des plantes et de la nature sijaitsee Hogbonun aiemman pyhän metsän paikalla. Metsä liittyi kuningaskunnan perinteiseen paikalliseen auktoriteettiin, ja myöhemmin alueesta tuli koekasvipuutarha. Nykyiseen kokonaisuuteen kuuluu suuria vanhoja puita sekä kasvien säilyttämistä ja opetusta. Puutarhaa on myös kunnostettu eri vaiheissa. Kaupungin hallintokortteleiden välissä oleva vihreä paikka kantaa näin useita käyttöhistorioita: sama puusto liittyy sekä paikalliseen perinteeseen että kasvien tutkimiseen."
+            }
+          },
+          "qaReason": "Vanhan puuston yleishavainne liittyy K1:n puutarhatekstiin ilman nimetyn puutarhan rekonstruktiota."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: vanhojen puiden lehvästö.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+        "fileSHA256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e05-portonovo-k1-v1-20261012T183034Z",
+          "sha256": "9d52e4eefba6bf6dd2ea2225a1a573180d6ea025342e47d32f5fa0fa4a678c39",
+          "verdict": "accepted",
+          "reason": "Vanhan puuston yleishavainne liittyy K1:n puutarhatekstiin ilman nimetyn puutarhan rekonstruktiota.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-k1-v1-20261012T183034Z/image.png",
+            "nativeSHA256": "9d52e4eefba6bf6dd2ea2225a1a573180d6ea025342e47d32f5fa0fa4a678c39",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Laaja lehvästö ja vanhan puun oksisto alhaalta katsottuna. Oksien liittymät, vaihteleva kuori/jäkälä, lehdet ja valo uskottavat; ei synteettistä pintatoistoa, arkkitehtuuria, ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva: vanhojen puiden lehvästö.",
+            "sourceAndTargetCheckFi": "Luettu K1 Pyhästä metsästä kasvipuutarhaksi ja faktapohjan K1 vanhoja isoja puita. CaptionFi Havainnekuva: vanhojen puiden lehvästö ei esitä Jardin des plantes et de la naturen yksilöityä puuta, asettelua tai kasvilajia.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Jardin des plantes et de la nature sijaitsee Hogbonun aiemman pyhän metsän paikalla. Metsä liittyi kuningaskunnan perinteiseen paikalliseen auktoriteettiin, ja myöhemmin alueesta tuli koekasvipuutarha. Nykyiseen kokonaisuuteen kuuluu suuria vanhoja puita sekä kasvien säilyttämistä ja opetusta. Puutarhaa on myös kunnostettu eri vaiheissa. Kaupungin hallintokortteleiden välissä oleva vihreä paikka kantaa näin useita käyttöhistorioita: sama puusto liittyy sekä paikalliseen perinteeseen että kasvien tutkimiseen."
+            }
+          },
+          "reviewedAt": "2026-10-12T18:34:07.274103+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png?t=3e1355a12e7fe530",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+        "sha256": "3e1355a12e7fe530e2f023d50e4a2df720e554b475287d75abb22fb2d299eb09",
+        "bytes": 3375023,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-portonovo-k1-v1-20261012T183034Z",
+        "nativeSHA256": "9d52e4eefba6bf6dd2ea2225a1a573180d6ea025342e47d32f5fa0fa4a678c39",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T18:34:44.087296+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
+        "sha256": "3e1355a12e7fe530e2f023d50e4a2df720e554b475287d75abb22fb2d299eb09",
+        "bytes": 3375023,
+        "SHAReadAt": "2026-10-12T18:34:40.572534+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9d52e4eefba6bf6dd2ea2225a1a573180d6ea025342e47d32f5fa0fa4a678c39",
+        "rgbPixelSHA256": "8c0546635eab413f4e64957978386927d3222278e5e3c213a381e2264cf34097",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "targetAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+      "contextAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e05-portonovo-k3-v1-20261012T175320Z",
+      "galleryImageID": "e05-portonovo-k3-v1-20261012T175320Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline.",
+        "lyhyt": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline.",
+        "lyhyt": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "39dab86eb961fb5f2ffe3f552c88323cb91c4e17c4979e1f5998ea6563c1d86f",
+      "exportSHA256": "4654ac88992fc27dc5de38a9e49bcb5baa244b29391296f070103d86832320a6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+        "semanticContextSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+        "subjectTitle": "Zemijan vie kaupungin läpi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-topic-illustration",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-k3-v1-20261012T175320Z/image.png",
+            "width": 1536,
+            "height": 1024,
+            "pngColorType": 2,
+            "captionFi": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline.",
+            "prompt": "Create one photorealistic-natural editorial illustration, landscape 3:2, preferred PNG sRGB 1536x1024. A single unbranded practical small motorcycle parked against a neutral background; focus on engine, saddle and rear passenger footrests, physically plausible two-wheel mechanical construction. No brand styling, number plate text, helmet logo, people or identifiable street. Soft natural daylight, modest everyday setting, close framing that makes the subject clear, physically plausible materials with irregular natural detail. No people, faces, hands, lettering, typography, labels, logos, watermark, borders, recognizable architecture or protected artwork. This is a generalized topic illustration, not documentary evidence of a named place, institution, object collection or historical event.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Porto-Novon liikkumiseen kuuluvat yksityiset moottoripyörätaksit, joita kutsutaan zemijaneiksi. Lisäksi käytetään taksi- ja minibussikyytejä. Tieyhteydet yhdistävät kaupungin Cotonouhun, jonka lentoasema palvelee myös Porto-Novoon saapuvia. Kaupungin ja avomeren välissä on laguuni. Matkan eri osuuksilla ympäristö ja kulkuneuvo vaihtuvat: lentoasemalta kuljetaan maanteitse, ja kaupungin kaduilla lyhyet kyydit ovat oma arkinen liikennemuotonsa. Nykyisiä vuoroja ei voi päätellä vanhoista reittikuvauksista."
+            },
+            "rightsEvidence": {
+              "kind": "generated-generalized-topic-illustration",
+              "noProtectedWorkDepicted": true,
+              "namedPlaceAppearanceClaimed": false
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T18:15:23.631995+00:00"
+          },
+          "qaReason": "Katsottu silmin: nimetön arkinen pieni moottoripyörä, kaksi rengasta, satula, moottori, tukijalka ja matkustajan jalkatukia. Osat liittyvät fyysisesti johdonmukaisesti, luonnolliset metallin/kumin pinnat; ei tekstiä, logoa, ihmisiä, arkkitehtuuria tai tietyn nykyteoksen kopiointia. Tekstin zemijan-liikenneaiheeseen sopiva yleishavainnekuva, ei Porto-Novossa kuvatuksi väitetty valokuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e05-portonovo-k3-v1-20261012T175320Z",
+          "sha256": "39dab86eb961fb5f2ffe3f552c88323cb91c4e17c4979e1f5998ea6563c1d86f",
+          "verdict": "accepted",
+          "reason": "Katsottu silmin: nimetön arkinen pieni moottoripyörä, kaksi rengasta, satula, moottori, tukijalka ja matkustajan jalkatukia. Osat liittyvät fyysisesti johdonmukaisesti, luonnolliset metallin/kumin pinnat; ei tekstiä, logoa, ihmisiä, arkkitehtuuria tai tietyn nykyteoksen kopiointia. Tekstin zemijan-liikenneaiheeseen sopiva yleishavainnekuva, ei Porto-Novossa kuvatuksi väitetty valokuva.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-k3-v1-20261012T175320Z/image.png",
+            "width": 1536,
+            "height": 1024,
+            "pngColorType": 2,
+            "captionFi": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline.",
+            "prompt": "Create one photorealistic-natural editorial illustration, landscape 3:2, preferred PNG sRGB 1536x1024. A single unbranded practical small motorcycle parked against a neutral background; focus on engine, saddle and rear passenger footrests, physically plausible two-wheel mechanical construction. No brand styling, number plate text, helmet logo, people or identifiable street. Soft natural daylight, modest everyday setting, close framing that makes the subject clear, physically plausible materials with irregular natural detail. No people, faces, hands, lettering, typography, labels, logos, watermark, borders, recognizable architecture or protected artwork. This is a generalized topic illustration, not documentary evidence of a named place, institution, object collection or historical event.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Porto-Novon liikkumiseen kuuluvat yksityiset moottoripyörätaksit, joita kutsutaan zemijaneiksi. Lisäksi käytetään taksi- ja minibussikyytejä. Tieyhteydet yhdistävät kaupungin Cotonouhun, jonka lentoasema palvelee myös Porto-Novoon saapuvia. Kaupungin ja avomeren välissä on laguuni. Matkan eri osuuksilla ympäristö ja kulkuneuvo vaihtuvat: lentoasemalta kuljetaan maanteitse, ja kaupungin kaduilla lyhyet kyydit ovat oma arkinen liikennemuotonsa. Nykyisiä vuoroja ei voi päätellä vanhoista reittikuvauksista."
+            },
+            "rightsEvidence": {
+              "kind": "generated-generalized-topic-illustration",
+              "noProtectedWorkDepicted": true,
+              "namedPlaceAppearanceClaimed": false
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T18:15:23.631995+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png?t=4654ac88992fc27d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+        "sha256": "4654ac88992fc27dc5de38a9e49bcb5baa244b29391296f070103d86832320a6",
+        "bytes": 2512274,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-portonovo-k3-v1-20261012T175320Z",
+        "nativeSHA256": "39dab86eb961fb5f2ffe3f552c88323cb91c4e17c4979e1f5998ea6563c1d86f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:16:10.408160+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
+        "sha256": "4654ac88992fc27dc5de38a9e49bcb5baa244b29391296f070103d86832320a6",
+        "bytes": 2512274,
+        "SHAReadAt": "2026-10-12T18:29:46.238463+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "39dab86eb961fb5f2ffe3f552c88323cb91c4e17c4979e1f5998ea6563c1d86f",
+        "rgbPixelSHA256": "b8283de3d20ab0fab0103f91b36c36ea4f6b4c4dab5be238725275a54395d102",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "targetAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+      "contextAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e05-portonovo-l4-v1-20261012T192830Z",
+      "galleryImageID": "e05-portonovo-l4-v1-20261012T192830Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: arkistotyön tavalliset materiaalit.",
+        "lyhyt": "Havainnekuva: arkistotyön tavalliset materiaalit."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: arkistotyön tavalliset materiaalit.",
+        "lyhyt": "Havainnekuva: arkistotyön tavalliset materiaalit."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ff5a8244685068be2ab3e29988553095673e05882ee388685a46914563624127",
+      "exportSHA256": "f7a8403cb3cf084dcef1ed927c8dccb2a990470a3065abe6a4f67379a85a6653",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+        "semanticContextSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+        "subjectTitle": "Museoilla on erilaiset tehtävät",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-object-or-material-or-animal",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-l4-v1-20261012T192830Z/image.png",
+            "nativeSHA256": "ff5a8244685068be2ab3e29988553095673e05882ee388685a46914563624127",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nimettömiä paperikansioita ja tyhjiä arkkeja. Paperin reunat, taitteet ja valo uskottavat; ei tekstiä, leimoja, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva: arkistotyön tavalliset materiaalit.",
+            "sourceAndTargetCheckFi": "L4/faktapohjan Adandén arkistotyö luettu. CaptionFi havainne, ei museon todellinen asiakirja tai suojatun sisällön jäljennös.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Alexandre Sènou Adandén etnografisen museon kokoelmat juontavat IFAN-tutkimuslaitoksen työhön. Adandé oli etnografi ja teki myös arkisto- ja kirjastotyötä. Museo esittelee kulttuuriesineitä ja niiden yhteisörooleja, ja kokoelmiin kuuluu Gèlèdé-aineistoa. Honmè puolestaan on entisen kuninkaallisen asuinpaikan historiaan keskittyvä paikkamuseo. Museokäyntien aiheet ovat siten erilaiset: yhdessä tarkastellaan yhteisöjen kulttuuria ja esineiden käyttöä, toisessa vanhaa hovipaikkaa ja sen elämää.",
+              "factSheetExcerpt": [
+                "55: **L4 Museot säilyttävät eri asioita**, wiki Musée ethnographique Alexandre Sènou Adandé: kokoelman IFAN-tausta; Adandé oli etnografi; myös arkisto-/kirjastotyötä; museo esittelee kulttuurisia esineitä ja niiden yhteisörooleja; Gèlèdé-kokoelmaa; eri tarkoitus kuin Honmèn hovipaikkamuseolla. E/johdanto, Histoire, Collections; H. Ei lähteetöntä väitettä kaikkien esineiden julkisesta näyttelytilanteesta.",
+                "77: - **Adandén museo**, rakennus, **6.47333, 2.61750** (E/6°28′24″N, 2°37′03″E). 1900-luvun alkupuolen rakennus, ei nykyistä 1873. E: siirtomaakauden rakennus; IFAN-kokoelmapohja; etnografinen museo; nimi tutkijasta/arkistonhoitajasta/kirjastonhoitajasta; kulttuuriesineiden yhteisöroolit; Gèlèdé-kokoelma; julkiselle yleisölle avattu myöhemmin. **Este:** rakennuksen suunnittelija/oikeusvapautuminen sekä näyttelyesineet varmistamatta.",
+                "91: Kansi 3: laguunin/kaupungin laaja maisema; vanhan kadun yleiskuva ilman suojattua julkisivupääaihetta; puutarhan kasvillisuus. K1–K4: luonnonpuut; hovipaikan kuva vain oikeusvarmistuksen jälkeen, muuten aihe muutettava; arkinen moottoripyörätaksi; soitin vain perinne-/teosoikeuden varmistuttua. L1–L4: oikeusvapaa vanha paikallismaisema; vanha historiallinen dokumentti ilman arkistoleimaa; yleinen kaupunkimaisema, ei uusi parlamenttitalo; arkiston/museotyön tavalliset työvälineet ilman suojattua esinettä. Matkailijalle tuore maltillinen pysty 0.60–0.85 puutarhan kasvillisuudesta; opas 3–5 kuvaa (kulkuväline, luonnonpaikka, tavalliset työvälineet, valmis paikallinen ruoka vasta ruokalajitunnistuksessa). Kohdekuvat vasta karttaesteen jälkeen; valokuva 1 yleismaisema; ennen–nyt vain löytyvän ≤1900 PD-kuvan perusteella. Ei kuvia haettu/hyväksytty; B/C/D tarkistavat ≥1200px, tekijän, tiedostolisenssin, kaupallisen teos-/perinneoikeuden ja näkyvän aiheen."
+              ],
+              "supportsFi": "Nykyinen L4 nimeää Adandén arkisto- ja kirjastotyön; faktapohja sallii arkiston/museotyön tavalliset työvälineet. Kuva ei jäljennä arkistodokumenttia tai museo-objektia.",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "qaReason": "Arkistomateriaalien havainne vastaa L4:n arkisto-/kirjastotyötä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: arkistotyön tavalliset materiaalit.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+        "fileSHA256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e05-portonovo-l4-v1-20261012T192830Z",
+          "sha256": "ff5a8244685068be2ab3e29988553095673e05882ee388685a46914563624127",
+          "verdict": "accepted",
+          "reason": "Arkistomateriaalien havainne vastaa L4:n arkisto-/kirjastotyötä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-l4-v1-20261012T192830Z/image.png",
+            "nativeSHA256": "ff5a8244685068be2ab3e29988553095673e05882ee388685a46914563624127",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nimettömiä paperikansioita ja tyhjiä arkkeja. Paperin reunat, taitteet ja valo uskottavat; ei tekstiä, leimoja, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva: arkistotyön tavalliset materiaalit.",
+            "sourceAndTargetCheckFi": "L4/faktapohjan Adandén arkistotyö luettu. CaptionFi havainne, ei museon todellinen asiakirja tai suojatun sisällön jäljennös.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Alexandre Sènou Adandén etnografisen museon kokoelmat juontavat IFAN-tutkimuslaitoksen työhön. Adandé oli etnografi ja teki myös arkisto- ja kirjastotyötä. Museo esittelee kulttuuriesineitä ja niiden yhteisörooleja, ja kokoelmiin kuuluu Gèlèdé-aineistoa. Honmè puolestaan on entisen kuninkaallisen asuinpaikan historiaan keskittyvä paikkamuseo. Museokäyntien aiheet ovat siten erilaiset: yhdessä tarkastellaan yhteisöjen kulttuuria ja esineiden käyttöä, toisessa vanhaa hovipaikkaa ja sen elämää.",
+              "factSheetExcerpt": [
+                "55: **L4 Museot säilyttävät eri asioita**, wiki Musée ethnographique Alexandre Sènou Adandé: kokoelman IFAN-tausta; Adandé oli etnografi; myös arkisto-/kirjastotyötä; museo esittelee kulttuurisia esineitä ja niiden yhteisörooleja; Gèlèdé-kokoelmaa; eri tarkoitus kuin Honmèn hovipaikkamuseolla. E/johdanto, Histoire, Collections; H. Ei lähteetöntä väitettä kaikkien esineiden julkisesta näyttelytilanteesta.",
+                "77: - **Adandén museo**, rakennus, **6.47333, 2.61750** (E/6°28′24″N, 2°37′03″E). 1900-luvun alkupuolen rakennus, ei nykyistä 1873. E: siirtomaakauden rakennus; IFAN-kokoelmapohja; etnografinen museo; nimi tutkijasta/arkistonhoitajasta/kirjastonhoitajasta; kulttuuriesineiden yhteisöroolit; Gèlèdé-kokoelma; julkiselle yleisölle avattu myöhemmin. **Este:** rakennuksen suunnittelija/oikeusvapautuminen sekä näyttelyesineet varmistamatta.",
+                "91: Kansi 3: laguunin/kaupungin laaja maisema; vanhan kadun yleiskuva ilman suojattua julkisivupääaihetta; puutarhan kasvillisuus. K1–K4: luonnonpuut; hovipaikan kuva vain oikeusvarmistuksen jälkeen, muuten aihe muutettava; arkinen moottoripyörätaksi; soitin vain perinne-/teosoikeuden varmistuttua. L1–L4: oikeusvapaa vanha paikallismaisema; vanha historiallinen dokumentti ilman arkistoleimaa; yleinen kaupunkimaisema, ei uusi parlamenttitalo; arkiston/museotyön tavalliset työvälineet ilman suojattua esinettä. Matkailijalle tuore maltillinen pysty 0.60–0.85 puutarhan kasvillisuudesta; opas 3–5 kuvaa (kulkuväline, luonnonpaikka, tavalliset työvälineet, valmis paikallinen ruoka vasta ruokalajitunnistuksessa). Kohdekuvat vasta karttaesteen jälkeen; valokuva 1 yleismaisema; ennen–nyt vain löytyvän ≤1900 PD-kuvan perusteella. Ei kuvia haettu/hyväksytty; B/C/D tarkistavat ≥1200px, tekijän, tiedostolisenssin, kaupallisen teos-/perinneoikeuden ja näkyvän aiheen."
+              ],
+              "supportsFi": "Nykyinen L4 nimeää Adandén arkisto- ja kirjastotyön; faktapohja sallii arkiston/museotyön tavalliset työvälineet. Kuva ei jäljennä arkistodokumenttia tai museo-objektia.",
+              "directSubjectInCurrentText": true
+            }
+          },
+          "reviewedAt": "2026-10-12T19:52:42.696491+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png?t=f7a8403cb3cf084d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+        "sha256": "f7a8403cb3cf084dcef1ed927c8dccb2a990470a3065abe6a4f67379a85a6653",
+        "bytes": 2021781,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-portonovo-l4-v1-20261012T192830Z",
+        "nativeSHA256": "ff5a8244685068be2ab3e29988553095673e05882ee388685a46914563624127",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:53:31.183696+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
+        "sha256": "f7a8403cb3cf084dcef1ed927c8dccb2a990470a3065abe6a4f67379a85a6653",
+        "bytes": 2021781,
+        "SHAReadAt": "2026-10-12T19:53:25.366306+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ff5a8244685068be2ab3e29988553095673e05882ee388685a46914563624127",
+        "rgbPixelSHA256": "4816aca8163c4f9b90ae06e5bb5408c995279e0315b3386e173d0dfbcb18d893",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "targetAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+      "contextAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e05-portonovo-photo-97c82d3d0131e3d1",
+      "galleryImageID": "capital-cc-e05-portonovo-photo-97c82d3d0131e3d1",
+      "commonsFile": "IROKO au CAEB.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/photo-97c82d3d0131e3d1e6d7.jpg",
+        "suora": true,
+        "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
+        "selite": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "tiedosto": "IROKO au CAEB.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
+        "selite": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "tiedosto": "IROKO au CAEB.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/photo-97c82d3d0131e3d1e6d7.jpg",
+        "suora": true,
+        "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
+        "selite": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "tiedosto": "IROKO au CAEB.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "97c82d3d0131e3d1e6d79b738f0eec5533ff1b018a2e4e7d7999472b622f2f54",
+      "exportSHA256": "97c82d3d0131e3d1e6d79b738f0eec5533ff1b018a2e4e7d7999472b622f2f54",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/photo-97c82d3d0131e3d1e6d7.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/photo-97c82d3d0131e3d1e6d7.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-evidence/candidate-a33916d17237d7.jpg",
+      "dimensions": [
+        1944,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+        "semanticContextSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+        "subjectTitle": "portonovo — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Thepipha12",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:IROKO_au_CAEB.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/IROKO_au_CAEB.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:IROKO_au_CAEB.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Thepipha12",
+            "licenseSourceSha256": "7c7a6f9eec17c9127fa660816ffe7e6a21d1028a98fffe4e912bb5b37022c532",
+            "depictedWorkLayer": "Pääaihe luonnonpuu. Taustalla vain sivuroolin tavanomaiset rakenteet, ei nimetyn arkkitehtuuriteoksen PD/FOP-oletusta. CC BY-SA4.0 ja Thepipha12 alkuperäisen Author-kentän mukaan.",
+            "sourcePlaceDescription": null,
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-fc4292ea224747fd/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-fc4292ea224747fd/source.html",
+            "sourceHTMLSHA256": "7c7a6f9eec17c9127fa660816ffe7e6a21d1028a98fffe4e912bb5b37022c532",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:IROKO_au_CAEB.jpg",
+            "sourceDescription": "Français : IROKO au CAEB English: IROKO at CAEB",
+            "sourceDate": "12 February 2022, 09:00:07",
+            "author": "Thepipha12",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 1944,
+            "height": 2592,
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:IROKO_au_CAEB.jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "Thepipha12",
+              "licenseSourceSha256": "7c7a6f9eec17c9127fa660816ffe7e6a21d1028a98fffe4e912bb5b37022c532",
+              "depictedWorkLayer": "Pääaihe luonnonpuu. Taustalla vain sivuroolin tavanomaiset rakenteet, ei nimetyn arkkitehtuuriteoksen PD/FOP-oletusta. CC BY-SA4.0 ja Thepipha12 alkuperäisen Author-kentän mukaan.",
+              "sourcePlaceDescription": null,
+              "sourcePlaceGeo": [],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00",
+            "placeEvidence": "Original file page visible Category: Porto-Novo; Description: IROKO au CAEB"
+          },
+          "qaReason": "Alkuperäinen todellinen puuvalokuva katsottu: iroko-rungon ja latvuksen luonnollinen rakenne näkyy, taustan ihmisistä ei erotu kasvoja. Kuvan laatu on pehmeä mutta pääaihe luettava. Lähteen Description nimeää CAEB-irokon ja sivun varsinainen näkyvä Category on Porto-Novo: paikkayhteys on lähteessä, ei yleisestä Benin-otsikosta päätelty. Caption ei väitä tiettyä nähtävyyttä tai koko kaupungin panoraamaa. Thepipha12 / CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä. Luontopuu pääaihe, taustan tavalliset rakenteet sivuroolissa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kaupungin puustoa Porto-Novossa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "IROKO au CAEB.jpg",
+          "sha256": "97c82d3d0131e3d1e6d79b738f0eec5533ff1b018a2e4e7d7999472b622f2f54",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen todellinen puuvalokuva katsottu: iroko-rungon ja latvuksen luonnollinen rakenne näkyy, taustan ihmisistä ei erotu kasvoja. Kuvan laatu on pehmeä mutta pääaihe luettava. Lähteen Description nimeää CAEB-irokon ja sivun varsinainen näkyvä Category on Porto-Novo: paikkayhteys on lähteessä, ei yleisestä Benin-otsikosta päätelty. Caption ei väitä tiettyä nähtävyyttä tai koko kaupungin panoraamaa. Thepipha12 / CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä. Luontopuu pääaihe, taustan tavalliset rakenteet sivuroolissa.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-fc4292ea224747fd/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-fc4292ea224747fd/source.html",
+            "sourceHTMLSHA256": "7c7a6f9eec17c9127fa660816ffe7e6a21d1028a98fffe4e912bb5b37022c532",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:IROKO_au_CAEB.jpg",
+            "sourceDescription": "Français : IROKO au CAEB English: IROKO at CAEB",
+            "sourceDate": "12 February 2022, 09:00:07",
+            "author": "Thepipha12",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 1944,
+            "height": 2592,
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:IROKO_au_CAEB.jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "Thepipha12",
+              "licenseSourceSha256": "7c7a6f9eec17c9127fa660816ffe7e6a21d1028a98fffe4e912bb5b37022c532",
+              "depictedWorkLayer": "Pääaihe luonnonpuu. Taustalla vain sivuroolin tavanomaiset rakenteet, ei nimetyn arkkitehtuuriteoksen PD/FOP-oletusta. CC BY-SA4.0 ja Thepipha12 alkuperäisen Author-kentän mukaan.",
+              "sourcePlaceDescription": null,
+              "sourcePlaceGeo": [],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00",
+            "placeEvidence": "Original file page visible Category: Porto-Novo; Description: IROKO au CAEB"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "IROKO au CAEB.jpg",
+        "sha256": "97c82d3d0131e3d1e6d79b738f0eec5533ff1b018a2e4e7d7999472b622f2f54",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:IROKO_au_CAEB.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/IROKO_au_CAEB.jpg",
+        "author": "Thepipha12",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1944,
+        "height": 2592,
+        "originalSHA256": "97c82d3d0131e3d1e6d79b738f0eec5533ff1b018a2e4e7d7999472b622f2f54",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/photo-97c82d3d0131e3d1e6d7.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/photo-97c82d3d0131e3d1e6d7.jpg",
+        "bytes": 1881192,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:21:36.959320+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "IROKO au CAEB.jpg",
+        "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
+        "selite": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Kaupungin puustoa Porto-Novossa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
+        "selite": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "tiedosto": "IROKO au CAEB.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "targetAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+      "contextAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-portonovo-c1-3b51fbc08ce17c17",
+      "galleryImageID": "capital-cc-e05-portonovo-c1-3b51fbc08ce17c17",
+      "commonsFile": "Photo lagune de Porto-Novo.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c1-3b51fbc08ce17c17c30d.jpg",
+        "suora": true,
+        "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "tiedosto": "Photo lagune de Porto-Novo.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "tiedosto": "Photo lagune de Porto-Novo.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c1-3b51fbc08ce17c17c30d.jpg",
+        "suora": true,
+        "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "tiedosto": "Photo lagune de Porto-Novo.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3b51fbc08ce17c17c30d14c40c3b57592123e436c2738ba3fc40c76771a0840a",
+      "exportSHA256": "3b51fbc08ce17c17c30d14c40c3b57592123e436c2738ba3fc40c76771a0840a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c1-3b51fbc08ce17c17c30d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c1-3b51fbc08ce17c17c30d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-evidence/candidate-fbe70a5b1fb37f.jpg",
+      "dimensions": [
+        4160,
+        3120
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+        "semanticContextSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+        "subjectTitle": "Porto-Novo",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Puzzle29",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Photo_lagune_de_Porto-Novo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Photo_lagune_de_Porto-Novo.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Photo_lagune_de_Porto-Novo.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Puzzle29",
+            "licenseSourceSha256": "117e77b937121f65de8906706c0b835f6d02ed3f717e1612a29a40ac4dcbfd0a",
+            "depictedWorkLayer": "Pääaihe on luonnollinen laguuni ja kaukainen rantaympäristö, yksittäinen rakennus/taideteos ei ole kuvan pääaiheena. Tekijä Puzzle29 ja CC BY-SA 4.0 alkuperäissivulta. Ei arkkitehtuurin iästä tai yleisestä FOP:sta tehtyä oletusta.",
+            "sourcePlaceDescription": "Français : Une photo de la lagune de Porto-Novo",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-2678fee62e6388f0/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-2678fee62e6388f0/source.html",
+            "sourceHTMLSHA256": "117e77b937121f65de8906706c0b835f6d02ed3f717e1612a29a40ac4dcbfd0a",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Photo_lagune_de_Porto-Novo.jpg",
+            "sourceDescription": "Français : Une photo de la lagune de Porto-Novo",
+            "sourceDate": "25 June 2020, 16:14:24",
+            "author": "Puzzle29",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 4160,
+            "height": 3120,
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Photo_lagune_de_Porto-Novo.jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "Puzzle29",
+              "licenseSourceSha256": "117e77b937121f65de8906706c0b835f6d02ed3f717e1612a29a40ac4dcbfd0a",
+              "depictedWorkLayer": "Pääaihe on luonnollinen laguuni ja kaukainen rantaympäristö, yksittäinen rakennus/taideteos ei ole kuvan pääaiheena. Tekijä Puzzle29 ja CC BY-SA 4.0 alkuperäissivulta. Ei arkkitehtuurin iästä tai yleisestä FOP:sta tehtyä oletusta.",
+              "sourcePlaceDescription": "Français : Une photo de la lagune de Porto-Novo",
+              "sourcePlaceGeo": [],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T19:22:47.419294+00:00"
+          },
+          "qaReason": "Alkuperäinen katsottu: todellinen laaja Porto-Novon laguunin ja rantakorttelien näkymä, lähde Description yksilöi kaupungin. Kuva näyttää luonnollisen veden ja oikean rantahorisontin, ei keksittyä kaupunkiasettelua. Kaukainen pieni vene, ei luettavia kasvonpiirteitä/itsenäistä nykyteosta pääaiheena. Paljon taivasta/vettä on sommittelutoiveen kysymys, ei keksitty uusi pakollinen este. Puzzle29 / CC BY-SA4.0 todennettu Author/Licensing-kentistä. Kuvausvuosi2020 säilyy; C1 ei nykyopaspalvelulupaus."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Photo lagune de Porto-Novo.jpg",
+          "sha256": "3b51fbc08ce17c17c30d14c40c3b57592123e436c2738ba3fc40c76771a0840a",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen katsottu: todellinen laaja Porto-Novon laguunin ja rantakorttelien näkymä, lähde Description yksilöi kaupungin. Kuva näyttää luonnollisen veden ja oikean rantahorisontin, ei keksittyä kaupunkiasettelua. Kaukainen pieni vene, ei luettavia kasvonpiirteitä/itsenäistä nykyteosta pääaiheena. Paljon taivasta/vettä on sommittelutoiveen kysymys, ei keksitty uusi pakollinen este. Puzzle29 / CC BY-SA4.0 todennettu Author/Licensing-kentistä. Kuvausvuosi2020 säilyy; C1 ei nykyopaspalvelulupaus.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-2678fee62e6388f0/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-2678fee62e6388f0/source.html",
+            "sourceHTMLSHA256": "117e77b937121f65de8906706c0b835f6d02ed3f717e1612a29a40ac4dcbfd0a",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Photo_lagune_de_Porto-Novo.jpg",
+            "sourceDescription": "Français : Une photo de la lagune de Porto-Novo",
+            "sourceDate": "25 June 2020, 16:14:24",
+            "author": "Puzzle29",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 4160,
+            "height": 3120,
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Photo_lagune_de_Porto-Novo.jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "Puzzle29",
+              "licenseSourceSha256": "117e77b937121f65de8906706c0b835f6d02ed3f717e1612a29a40ac4dcbfd0a",
+              "depictedWorkLayer": "Pääaihe on luonnollinen laguuni ja kaukainen rantaympäristö, yksittäinen rakennus/taideteos ei ole kuvan pääaiheena. Tekijä Puzzle29 ja CC BY-SA 4.0 alkuperäissivulta. Ei arkkitehtuurin iästä tai yleisestä FOP:sta tehtyä oletusta.",
+              "sourcePlaceDescription": "Français : Une photo de la lagune de Porto-Novo",
+              "sourcePlaceGeo": [],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T19:22:47.419294+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Photo lagune de Porto-Novo.jpg",
+        "sha256": "3b51fbc08ce17c17c30d14c40c3b57592123e436c2738ba3fc40c76771a0840a",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Photo_lagune_de_Porto-Novo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Photo_lagune_de_Porto-Novo.jpg",
+        "author": "Puzzle29",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4160,
+        "height": 3120,
+        "originalSHA256": "3b51fbc08ce17c17c30d14c40c3b57592123e436c2738ba3fc40c76771a0840a",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c1-3b51fbc08ce17c17c30d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c1-3b51fbc08ce17c17c30d.jpg",
+        "bytes": 3609793,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:23:11.613216+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Photo lagune de Porto-Novo.jpg",
+        "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "tiedosto": "Photo lagune de Porto-Novo.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "targetAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+      "contextAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e05-portonovo-c2-49def641ad244db2",
+      "galleryImageID": "capital-cc-e05-portonovo-c2-49def641ad244db2",
+      "commonsFile": "Vue de Porto Novo (Bénin).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c2-49def641ad244db2c05a.jpg",
+        "suora": true,
+        "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "tiedosto": "Vue de Porto Novo (Bénin).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "tiedosto": "Vue de Porto Novo (Bénin).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c2-49def641ad244db2c05a.jpg",
+        "suora": true,
+        "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "tiedosto": "Vue de Porto Novo (Bénin).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "49def641ad244db2c05a7d02bf1632e61d590874bed76f4d9de2838a23d2bec4",
+      "exportSHA256": "49def641ad244db2c05a7d02bf1632e61d590874bed76f4d9de2838a23d2bec4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c2-49def641ad244db2c05a.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c2-49def641ad244db2c05a.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-evidence/candidate-368a817f017d4f.jpg",
+      "dimensions": [
+        1280,
+        960
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+        "semanticContextSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+        "subjectTitle": "Porto-Novo",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "SebEsteban",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Vue_de_Porto_Novo_(B%C3%A9nin).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Vue_de_Porto_Novo_%28B%C3%A9nin%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Vue_de_Porto_Novo_(B%C3%A9nin).jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "SebEsteban",
+            "licenseSourceSha256": "463b3ab9a486fb2920a1e304085fb0f987d08ec8f1b9ae0b8c7d42d30ae4134e",
+            "depictedWorkLayer": "Pääaihe on korttelien, puuston ja vesistön kokonaisuus. Arkiset matalat peltikatto-/olkikattoiset rakennukset sekä kaukainen pieni talo ympäristöä; yksittäistä modernia rakennusta/taideteosta ei nosteta pääaiheeksi. SebEsteban ja CC BY-SA 4.0 todettu alkuperäissivulta. Ei yleistä FOP- tai iästä tehtyä PD-oletusta.",
+            "sourcePlaceDescription": "Igbo: Echiche nke Porto Novo (Benin) English: View of Porto Novo (Benin) This is an image from Benin",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-35ed0a61157f490e/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-35ed0a61157f490e/source.html",
+            "sourceHTMLSHA256": "463b3ab9a486fb2920a1e304085fb0f987d08ec8f1b9ae0b8c7d42d30ae4134e",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Vue_de_Porto_Novo_(B%C3%A9nin).jpg",
+            "sourceDescription": "Igbo: Echiche nke Porto Novo (Benin) English: View of Porto Novo (Benin)",
+            "sourceDate": "19 February 2005, 18:35:36",
+            "author": "SebEsteban",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 1280,
+            "height": 960,
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Vue_de_Porto_Novo_(B%C3%A9nin).jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "SebEsteban",
+              "licenseSourceSha256": "463b3ab9a486fb2920a1e304085fb0f987d08ec8f1b9ae0b8c7d42d30ae4134e",
+              "depictedWorkLayer": "Pääaihe on korttelien, puuston ja vesistön kokonaisuus. Arkiset matalat peltikatto-/olkikattoiset rakennukset sekä kaukainen pieni talo ympäristöä; yksittäistä modernia rakennusta/taideteosta ei nosteta pääaiheeksi. SebEsteban ja CC BY-SA 4.0 todettu alkuperäissivulta. Ei yleistä FOP- tai iästä tehtyä PD-oletusta.",
+              "sourcePlaceDescription": "Igbo: Echiche nke Porto Novo (Benin) English: View of Porto Novo (Benin) This is an image from Benin",
+              "sourcePlaceGeo": [],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T19:24:32.869927+00:00"
+          },
+          "qaReason": "Oma alkuperäiskatselu1280×960: laaja oikea Porto-Novon kortteli-, puusto-, katto- ja laguuninäkymä, ei kasvoja/lisättyä tekstiä/kehystä tai yksittäistä nykytaideteosta päämotiivina. Lähteen Description nimeää Porto Novon, Date19.2.2005 ja Author SebEsteban / CC BY-SA4.0 varmistettu tiedostosivulta. Kuvanleveydellä1280 raja täyttyy; kaupunki ja todellinen asettelu ovat nähtävissä. Vuosi2005 mainittu rehellisesti, C2 ei O/TRAVELER-tuoreusrooli. Ei väitettä kaikkien taustan rakennusten tekijäsuojasta tai yleisestä FOP-luvasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Vue de Porto Novo (Bénin).jpg",
+          "sha256": "49def641ad244db2c05a7d02bf1632e61d590874bed76f4d9de2838a23d2bec4",
+          "verdict": "accepted",
+          "reason": "Oma alkuperäiskatselu1280×960: laaja oikea Porto-Novon kortteli-, puusto-, katto- ja laguuninäkymä, ei kasvoja/lisättyä tekstiä/kehystä tai yksittäistä nykytaideteosta päämotiivina. Lähteen Description nimeää Porto Novon, Date19.2.2005 ja Author SebEsteban / CC BY-SA4.0 varmistettu tiedostosivulta. Kuvanleveydellä1280 raja täyttyy; kaupunki ja todellinen asettelu ovat nähtävissä. Vuosi2005 mainittu rehellisesti, C2 ei O/TRAVELER-tuoreusrooli. Ei väitettä kaikkien taustan rakennusten tekijäsuojasta tai yleisestä FOP-luvasta.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-35ed0a61157f490e/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-35ed0a61157f490e/source.html",
+            "sourceHTMLSHA256": "463b3ab9a486fb2920a1e304085fb0f987d08ec8f1b9ae0b8c7d42d30ae4134e",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Vue_de_Porto_Novo_(B%C3%A9nin).jpg",
+            "sourceDescription": "Igbo: Echiche nke Porto Novo (Benin) English: View of Porto Novo (Benin)",
+            "sourceDate": "19 February 2005, 18:35:36",
+            "author": "SebEsteban",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 1280,
+            "height": 960,
+            "rightsEvidence": {
+              "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Vue_de_Porto_Novo_(B%C3%A9nin).jpg",
+              "artistFieldSource": "Author table",
+              "explicitCreditFromSource": "SebEsteban",
+              "licenseSourceSha256": "463b3ab9a486fb2920a1e304085fb0f987d08ec8f1b9ae0b8c7d42d30ae4134e",
+              "depictedWorkLayer": "Pääaihe on korttelien, puuston ja vesistön kokonaisuus. Arkiset matalat peltikatto-/olkikattoiset rakennukset sekä kaukainen pieni talo ympäristöä; yksittäistä modernia rakennusta/taideteosta ei nosteta pääaiheeksi. SebEsteban ja CC BY-SA 4.0 todettu alkuperäissivulta. Ei yleistä FOP- tai iästä tehtyä PD-oletusta.",
+              "sourcePlaceDescription": "Igbo: Echiche nke Porto Novo (Benin) English: View of Porto Novo (Benin) This is an image from Benin",
+              "sourcePlaceGeo": [],
+              "noFopOrBuildingAgeAssumption": true
+            },
+            "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+            "reviewedAt": "2026-10-12T19:24:32.869927+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Vue de Porto Novo (Bénin).jpg",
+        "sha256": "49def641ad244db2c05a7d02bf1632e61d590874bed76f4d9de2838a23d2bec4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Vue_de_Porto_Novo_(B%C3%A9nin).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Vue_de_Porto_Novo_%28B%C3%A9nin%29.jpg",
+        "author": "SebEsteban",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1280,
+        "height": 960,
+        "originalSHA256": "49def641ad244db2c05a7d02bf1632e61d590874bed76f4d9de2838a23d2bec4",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c2-49def641ad244db2c05a.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c2-49def641ad244db2c05a.jpg",
+        "bytes": 359553,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:24:44.944790+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Vue de Porto Novo (Bénin).jpg",
+        "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "tiedosto": "Vue de Porto Novo (Bénin).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "targetAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+      "contextAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
