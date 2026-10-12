@@ -124,11 +124,8 @@ test('jokaisella maalla on molemmat aarteet nimineen ja faktoineen', () => {
  * ODOTTAVAT KUVAT on lueteltu tässä nimeltä, jotta lista ei kasva
  * huomaamatta: uusi kuvaton pari on lisättävä tähän tietoisesti.
  */
-const KUVAA_ODOTTAVAT = new Set([
-  'FIN', 'BEL', 'SVN', 'SVK', 'CYP', 'LUX', 'MLT',
-  // 12.10.2026: kymmenen pääkaupunkimaata (ei kuvia vielä)
-  'ALB', 'AND', 'BLR', 'LIE', 'MCO', 'MDA', 'MKD', 'MNE', 'SMR', 'SRB',
-]);
+const KUVAA_ODOTTAVAT = new Set(['FIN', 'BEL', 'SVN', 'SVK', 'CYP', 'LUX', 'MLT']);
+// 12.10.2026: kymmenen pääkaupunkimaata sai Commons-valokuvat (LAHTEET: js/lahteet.js).
 
 test('kuva on maan oma ja olemassa — tai sitä ei ole vielä lainkaan', () => {
   for (const [iso, pari] of Object.entries(PAIKALLISAARTEET)) {
