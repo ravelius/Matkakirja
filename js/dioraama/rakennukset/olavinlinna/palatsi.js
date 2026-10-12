@@ -89,8 +89,9 @@ const TUPA_KALUSTEET = [
   ...[[2.9, 4.1], [2.9, 3.3], [2.2, 4.1]].map(([x, z]) => ({ resepti: 'tynnyri', paikka: [x, YT, z], suunta: 0, sade: 0.33, korkeus: 0.85 })),
   { resepti: 'hylly', paikka: [r3(XW + 0.2), YT, -0.5], suunta: 90, leveys: 1.6, korkeus: 1.8, syvyys: 0.35, hyllyt: 3 },
   { resepti: 'arkku', paikka: [-2.6, YT, r3(Z1 - 0.35)], suunta: 0, leveys: 1.0 },
-  { resepti: 'seinasoihtu', paikka: [r3(XW + 0.02), r3(YT + 1.9), -7.0], suunta: 90 },
-  { resepti: 'seinasoihtu', paikka: [r3(XE - 0.02), r3(YT + 1.9), -8.5], suunta: 270 },
+  // 12.10. (#4417): sisätilassa ihralamput, ei soihtuja (soihdut vain ulkona).
+  { resepti: 'ihralamppu', paikka: [r3(XW + 0.02), r3(YT + 1.9), -7.0], suunta: 90 },
+  { resepti: 'ihralamppu', paikka: [r3(XE - 0.02), r3(YT + 1.9), -8.5], suunta: 270 },
 ];
 const TUPA_AUKOT = [
   ...TUPA_IKKUNAT.lansi.map((z) => ikkunaLevy(r3(XW - T + 0.02), YT + 1.0, z, 270, 0.9, 1.3)),
@@ -133,7 +134,8 @@ const SALI_SEINAT = seinat(YS, SALI.lahto - YS, {
     { u: uL(SALI_OVI.z), y: 0, leveys: SALI_OVI.leveys, korkeus: SALI_OVI.korkeus }],
   ita: SALI_IKKUNAT_ITA.map((z) => ({ u: uI(z), y: 0.9, leveys: 0.9, korkeus: 1.5 })),
 });
-const SALI_LATTIA = { resepti: 'laatta', paikka: [0, r3(YS + 0.01), ZK], suunta: 0, leveys: LEV + 0.1, syvyys: 17.1, paksuus: 0.1, pinnat: { yla: 'lankku', ala: 'lankku', sivu: 'puu' } };
+// 12.10. (#4417): Kuninkaansalissa säilynyt vanhaa laattakiveä (1L; laudoitus epävarma) → laattakivilattia.
+const SALI_LATTIA = { resepti: 'laatta', paikka: [0, r3(YS + 0.01), ZK], suunta: 0, leveys: LEV + 0.1, syvyys: 17.1, paksuus: 0.1, pinnat: { yla: 'kivilattia', ala: 'kivi', sivu: 'kivi' } };
 // Tynnyriholvi pitkittäin (akseli w = −z kun suunta 0), päätyseinien puoliellipsit mukaan.
 const SALI_HOLVI = { resepti: 'tynnyriholvi', paikka: [0, SALI.lahto, ZK], suunta: 0, pituus: 17, leveys: LEV, nousu: SALI.laki - SALI.lahto, paksuus: 0.35, segmentit: 20, paadyt: true };
 const POYTA = { x: 0, z: 2.6 }; // voudin pöytä eteläpäässä (A); Kellotornin avain pöydällä (kävelymerkki)
@@ -150,8 +152,9 @@ const SALI_KALUSTEET = [
   { resepti: 'puukasa', paikka: [r3(XE - 0.5), r3(YS + 0.34), SALI_TAKKA.z], suunta: 0, pituus: 0.55, halkoja: 7, siemen: 711, pinnat: { puu: 'hiillos' } },
   // Vaakunalaatta ikkunasyvennyksen eteläpielessä (L11, laatta 13; A: maalattu kilpi kivessä).
   { resepti: 'kilpi', paikka: [r3(XW - 0.8), r3(YS + 2.0), r3(SALI_IKKUNA.z + SALI_IKKUNA.leveys / 2 + 0.01)], suunta: 0, sade: 0.24 },
-  { resepti: 'seinasoihtu', paikka: [r3(XW + 0.02), r3(YS + 2.1), -9.0], suunta: 90 },
-  { resepti: 'seinasoihtu', paikka: [r3(XE - 0.02), r3(YS + 2.1), 3.0], suunta: 270 },
+  // 12.10. (#4417): sisätilassa ihralamput, ei soihtuja.
+  { resepti: 'ihralamppu', paikka: [r3(XW + 0.02), r3(YS + 2.1), -9.0], suunta: 90 },
+  { resepti: 'ihralamppu', paikka: [r3(XE - 0.02), r3(YS + 2.1), 3.0], suunta: 270 },
 ];
 const SALI_AUKOT = [
   ikkunaLevy(r3(XW - T + 0.02), YS + SALI_IKKUNA.y, SALI_IKKUNA.z, 270, SALI_IKKUNA.leveys, SALI_IKKUNA.korkeus),
