@@ -43,5 +43,16 @@ Ajoskriptit tämän session scratchpadissa: /private/tmp/claude-502/-Users-Share
   Kysymys.Avattu sulkee nostokortin ja chatin. Testataan samalla käännöksellä kuin napit (napitkuulto-ajo.sh kaanna = molemmat
   haarat; kysymys-ajo.sh iphone|ipad + sk-kysymys*.txt).
 - Linnahaara: natiivi-ui/linna-kuulto-184 pohjattu 4eccb3a27:ään → c9b9158eb; Siirtoseppä yhdistää itse SHA:n saatuaan.
+- **LINNA KUITATTU 184** (PT): natiivi-ui/linna-kuulto-184 8093b499b (pohja linnahaara bca7e1206) → Siirtosepälle yhdistettäväksi.
+  Kuvat lokit/natiivi-ui-linnakuulto-20261012-1608/.
+- **Kaasumittari + pallokisa** natiivi-ui/kaasumittari-184 e4be60a18 (wt/proto-natiivi-ui-kaasu): KaasuMittari.Lue, PallokisaUi.Hehku /
+  Tilanne / Nouto / Kyltti (LS1 kiinnittää); Pelikoodari yhdistää pelikoodari/pallokisa-184:ään (6fbe3e899). Tankin kuvake Codexilta.
+- **Codex-kuvaketilaus** pushattu claude/postilaatikko 23a88ef42 (posti/fable-codex-kuvakkeet-20261012.md, 24 kuvaketta + tyyliviite).
+- **Retkikunnan Jaa** natiivi-ui/retkikunta-jaa-184 a7d52190c (wt/proto-natiivi-ui-jaa): paperiteema (paneeli paperia), Mac = leikepöytä.
+- **Pienet 184** natiivi-ui/pienet-184 (wt/proto-natiivi-ui-pienet): kippi Poistu-vahvistus f11631667, ISS-ohjaamon jumi f111d33be
+  (☰ → Pulun taulu, lasin napautus vaihtaa iso/mini), raketin opasteet c6eb68801 (hintalapun alirivi, ISS-kertavinkki Pulun kuplana).
+  Taidemuseon fontti: PT d) ei muutosta.
+- **184-testikäännös** (Julkaisijan jonossa): napitkuulto-ajo.sh kaanna = napit+kysymys+jaa+kaasu+pienet; kuvat SKEN=napitkuulto|kysymys|
+  jaa|pallokisa|iss (iphone/ipad). NYKYINEN napeille: APPDIR=lokit/natiivi-ui-app-metro NIMI=nyk HAARA=natiivi-ui/metro-vapaa-183.
 - Julkaisijan ikkuna ~15.05: 1) linna-kuulto 2) aarre-lajit (aarrekartta-ajo.sh) 3) asettelutesti (taidehalli-parit.sh).
 - **184**: varivakiot 2c2054d8a + web #4482; museo-nyt-184 b2599db7f; Pelikoodarin säädin-paperi 028764614.
