@@ -1,0 +1,379 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "vientiane",
+  "maa": "LAO",
+  "era": "e10",
+  "kaupunki": {
+    "id": "vientiane",
+    "name": "Vientiane",
+    "wiki": "Vientiane",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 17.98,
+      "lon": 102.63
+    }
+  },
+  "artikkeli": {
+    "intro": "**Vientiane** on Laosin pääkaupunki Mekongin rannalla, vastapäätä Thaimaata. Sen keskustassa temppelit, museot, kahvilat ja joen rantakävely liittyvät samaan kaupunkikierrokseen. Kaupunki oli Lan Xangin valtakunnan pääkaupunki ja myöhemmin ranskalaisajan hallintokeskus. Nykyinen kirjoitusasu Vientiane tulee ranskasta; laon Viangchan-nimelle annetaan sekä kuuhun että santelipuuhun liittyvä tulkinta.\n\n**Wat Si Saketin** käytäväseinissä on pieniä Buddha-kuvia varten tehtyjä syvennyksiä. Läheinen Haw Phra Kaew muistaa Smaragdibuddhan, vaikka patsas on nykyisin Bangkokissa ja entinen temppeli toimii museona. Ban Anoun iltatorilla kaupungin arki jatkuu vartaina, riisileivonnaisina ja pieninä lehtikääreinä. Ruokapöydässä tahmea riisi kohtaa yrteillä maustetun laapin ja banaaninlehdessä höyrytetyn kalan. Kadulla myytävä täytetty patonki lisää tähän oman ranskalaisajan jälkensä.",
+    "teksti": "Vientianen ranskalainen nimi pohjautuu laon Viangchaniin. Viang tarkoittaa muurien ympäröimää kaupunkia, kun taas loppuosalle annetaan sekä santelipuuhun että kuuhun liittyvä tulkinta. Vanhan Lan Xangin pääkaupungin historia näkyy uskonnollisissa rakennuksissa ja niiden muuttuneissa tehtävissä.\n\nWat Si Saket rakennettiin 1800-luvun alkupuolella ja korjattiin myöhemmin ranskalaisajalla. Sen käytäväseinissä on keraamisia ja hopeisia Buddha-kuvia. Haw Phra Kaew puolestaan oli kuninkaan henkilökohtainen temppeli Smaragdibuddhaa varten; useiden tuhojen ja jälleenrakennusten jälkeen rakennus toimii museona.\n\nMekongin rantaa pitkin voi jatkaa ravintoloihin ja kahviloihin. Ban Anoun iltatorilla myydään pieniä ruokannoksia, ja Vientianen kaduilla vastaan tulee myös ranskalaisperäisiä patonkeja. Tahmea riisi, höyrytetty kala ja täytetty leipä näyttävät kaupungin ruokakulttuurin eri puolet."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä joen rannalla Vientiane sijaitsee?",
+      "options": [
+        "Mekongin",
+        "Salweenin",
+        "Irrawaddyn",
+        "Gangesin"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Joki kulkee usean Kaakkois-Aasian maan halki.",
+      "fact": "Vientiane sijaitsee Mekongin rannalla, vastapäätä Thaimaata.",
+      "source": "https://en.wikipedia.org/wiki/Vientiane"
+    },
+    {
+      "q": "Mitä Viangchan-nimen alkuosa viang tarkoittaa?",
+      "options": [
+        "Muurikaupunkia",
+        "Vuoristolaaksoa",
+        "Jokisuistoa",
+        "Riisipeltoa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Nimen alkuosa liittyy kaupungin vanhaan rajaukseen.",
+      "fact": "Viang tarkoittaa muurien ympäröimää kaupunkia.",
+      "source": "https://en.wikipedia.org/wiki/Vientiane"
+    },
+    {
+      "q": "Mitä materiaaleja Wat Si Saketin pienissä Buddha-kuvissa käytetään?",
+      "options": [
+        "Keramiikkaa ja hopeaa",
+        "Lasia ja alumiinia",
+        "Meripihkaa ja tinaa",
+        "Muovia ja terästä"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Ajattele perinteistä savityötä ja arvokasta metallia.",
+      "fact": "Temppelin käytäväseinissä on keraamisia ja hopeisia Buddha-kuvia.",
+      "source": "https://en.wikipedia.org/wiki/Wat_Si_Saket"
+    },
+    {
+      "q": "Mitä patsasta varten Haw Phra Kaew rakennettiin?",
+      "options": [
+        "Smaragdibuddhaa",
+        "Jadeleijonaa",
+        "Hopeanagaa",
+        "Kultaista norsua"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Temppelin nimikkopatsas liittyy buddhalaisuuteen.",
+      "fact": "Haw Phra Kaew rakennettiin Smaragdibuddhaa varten; patsas sijaitsee nykyisin Bangkokissa.",
+      "source": "https://en.wikipedia.org/wiki/Haw_Phra_Kaew"
+    },
+    {
+      "q": "Minkä myyttisen olennon uskotaan liittyvän That Damin stupaan?",
+      "options": [
+        "Naga-käärmeen",
+        "Garuda-linnun",
+        "Hanuman-apinan",
+        "Kinnari-hahmon"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Perimätiedon suojelijalla on käärmemäinen olemus.",
+      "fact": "That Damiin liittyvä perimätieto kertoo nagasta kaupungin suojelijana; tarina ei ole todiste eläimen olemassaolosta.",
+      "source": "https://en.wikipedia.org/wiki/That_Dam"
+    }
+  ],
+  "tiedot": [
+    "Viangchan-nimen loppuosalle annetaan sekä kuuhun että santelipuuhun liittyvä tulkinta.",
+    "Haw Phra Kaew rakennettiin Smaragdibuddhaa varten, mutta patsas on nykyisin Bangkokissa.",
+    "Huad on bambuinen höyrytyskori, jossa tahmea riisi kypsyy kattilan päällä."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lahde": "",
+    "lyhyt": "",
+    "selite": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Vientiane",
+      "johdanto": "Mekongin pääkaupungissa nimen tulkinnat, temppelien pienet kuvat ja iltatorin ruokapaketit avaavat eri puolia samasta kaupungista.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": ""
+        },
+        {
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": ""
+        },
+        {
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kaupunki, jonka nimessä on kaksi tulkintaa",
+          "teksti": "Vientiane on ranskalainen kirjoitusasu laon nimestä Viangchan. Sen alkuosa viang tarkoittaa muurien ympäröimää kaupunkia. Loppuosalle annetaan kaksi tulkintaa: santelipuu ja kuu. Taustalla ovat sanskritin eri sanat, santelipuuta tarkoittava candana ja kuuta tarkoittava chandra; laon kirjoituksessa merkityksiä on aiemmin erotettu toisistaan. Nimi voidaan siksi kääntää sekä santelipuun että kuun kaupungiksi. Myös Viangchan ja Wiangchan esiintyvät nimen latinalaisina kirjoitusasuina. Kuusta ja santelipuusta kertovat käännökset johtavat samaan kaupunkiin.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Vientiane"
+        },
+        {
+          "otsikko": "Buddha-kuvia seinän syvennyksissä",
+          "teksti": "Wat Si Saketin käytäväseinissä on pieniä Buddha-kuvia varten tehtyjä syvennyksiä. Kuvien joukossa on keraamisia ja hopeisia esineitä. Kuningas Anouvong rakennutti temppelin 1800-luvun alkupuolella; rakennukseen kuuluvat ympäröivä terassi ja monitasoinen, koristeltu katto. Ranskalaisajan hallinto korjasi temppeliä myöhemmin, ja kokonaisuuteen kuuluu myös museo. Sisäpihan keskellä sijaitseva sim on temppelin vihkimyssali. Siellä on lisää kuva-aiheita sekä seinämaalauksia Buddhan aiemmista elämistä, joten käytävän pienistä kuvista kierros jatkuu toisenlaiseen kuvakertomukseen.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Wat Si Saket"
+        },
+        {
+          "otsikko": "Temppeli muistaa poissaolevan patsaan",
+          "teksti": "Haw Phra Kaew rakennettiin kuninkaan palatsialueelle Smaragdibuddhaa varten. Se oli hallitsijan henkilökohtainen palvontapaikka, joten temppelissä ei asunut munkkeja. Patsas siirrettiin myöhemmin Bangkokiin, ja Vientianen rakennus tuhoutui sekä nousi uudelleen useita kertoja. Nykyinen rakennus on 1900-luvun jälleenrakennus ja toimii uskonnollisen taiteen museona. Kokoelmaan kuuluu puukaiverruksia, palmunlehtikäsikirjoituksia ja pronssinen sammakkorumpu. Temppelin nimi säilyttää muiston esineestä, joka sijaitsee nykyisin toisessa kaupungissa.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Haw Phra Kaew"
+        },
+        {
+          "otsikko": "Iltatori tarjoaa pieniä paketteja",
+          "teksti": "Ban Anoun ruokatori alkaa kokoontua auringonlaskun aikaan. Valikoimaan kuuluu vartaita, grillattua tahmeaa riisiä ja salaattiin käärittyjä miang-suupaloja, joissa on maapähkinätäyte. Pieniin riisitaikinaleivonnaisiin taas laitetaan porsaanjauhelihaa ja pavunituja. Kaupungin ruokaan voi tutustua annos kerrallaan: lehtikääre, paistettu taikina ja grillattu riisi ovat eri tapoja tuoda täyte tai lisuke pöytään. Torikierros täydentää temppelipäivää aivan omilla yksityiskohdillaan.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Vientiane"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": ""
+        },
+        "kappale": "Vientianen keskustassa voi yhdistää temppelit, museot ja kahvilat kävelykierrokseksi. Mekongin rannalle kannattaa jatkaa kaupungin ruokapaikkojen äärelle. Ban Anoun iltatori kokoontuu auringonlaskun aikaan. Riisileivonnaiset, vartaat ja lehtikääreet sopivat pieniksi maisteluannoksiksi. Junamatkalla varmista aseman nimi, sillä eri yhteydet käyttävät eri asemia.",
+        "artikkeli": {
+          "nimi": "Matkailijan Vientiane",
+          "taitto": "opas",
+          "teksti": "Kulje temppelin käytävältä joen rantaan ja jatka iltatorin pienille annoksille.",
+          "nosto": "Päivän museo- ja temppelikierros voi jatkua illalla riisileivonnaisten ja lehtikääreiden parissa.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Wattayn kansainväliseltä lentoasemalta keskustaan pääsee bussilla tai taksilla. Kaupungin junayhteydet käyttävät eri asemia: Lao-China Railway Station ja Khamsavath eivät ole sama paikka. Varmista aseman nimi lipusta. Keskustassa voi yhdistää kohteita kävellen; pidemmillä matkoilla käytetään busseja, takseja ja tuk-tukeja. Tuk-tuk-matkan hinta sovitaan ennen lähtöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": ""
+              }
+            },
+            {
+              "otsikko": "Pienet kuvat ja suuri muisto",
+              "teksti": "Aloita Wat Si Saketista, jonka käytäväseinissä on pieniä Buddha-kuvia. Läheinen Haw Phra Kaew on entinen palatsitemppeli ja nykyinen uskonnollisen taiteen museo. Sen Smaragdibuddha sijaitsee Bangkokissa. Molempien kohteiden tarinaan kuuluvat myöhemmät muutokset ja korjaukset, joten rakennusten nykyinen ulkoasu ei ole sellaisenaan kuva niiden alkuvaiheesta.",
+              "kuva": {
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": ""
+              }
+            },
+            {
+              "otsikko": "Mekongin rannalle",
+              "teksti": "Keskustasta voi jatkaa Mekongin rantakävelylle. Vastakkaisella rannalla on Thaimaa. Rannan ruokapaikat tarjoavat muun muassa laolaisia ja thaimaalaisia annoksia, ja joen äärellä voi pysähtyä iltakierroksen aikana. Ban Anoun ruokatori on erillinen paikka kaupungissa: sinne voi jatkaa maisemakävelyn jälkeen pienille välipaloille.",
+              "kuva": {
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Khao niao on tahmeaa riisiä, laap yrteillä maustettua liha- tai kalaseosta ja tam mak hoong vihreästä papaijasta tehtävää salaattia. Mok pa höyrytetään banaaninlehden sisällä. Khao jee pâté on täytetty patonki. Kalatahnaa ja muita kalapohjaisia mausteita käytetään monissa ruoissa, joten annoksen sisältö kannattaa varmistaa, jos kala tai äyriäiset eivät sovi ruokavalioon.",
+              "kuva": {
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": ""
+              }
+            },
+            {
+              "otsikko": "Päiväkierros ja iltaruoka",
+              "teksti": "Temppelit ja museot sopivat päivän kierrokseen, jonka voi jakaa kahviloissa pidettäviin taukoihin. Ban Anoun ruokatori alkaa kokoontua auringonlaskun aikaan; siellä voi kokeilla riisileivonnaisia, vartaita ja pieniä salaattikääröjä. Myyjät ja tarjonta vaihtelevat. Tarkista matkasi ajankohtaiset palvelut sekä lento- tai junayhteydet etukäteen ja varaa aikaa siirtymiseen oikealle asemalle.",
+              "kuva": {
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Wat Si Saket",
+                "tahdet": 3,
+                "selite": "Temppelin käytäväseinien pienet kuvat täydentävät rakennuksen historiaa."
+              },
+              {
+                "mita": "Haw Phra Kaew -museo",
+                "tahdet": 2,
+                "selite": "Entisen palatsitemppelin kokoelma esittelee uskonnollista taidetta."
+              },
+              {
+                "mita": "Mekongin rantakävely",
+                "tahdet": 3,
+                "selite": "Keskustan kierros jatkuu joen ja rannan ruokapaikkojen äärelle."
+              },
+              {
+                "mita": "Ban Anoun iltatori",
+                "tahdet": 2,
+                "selite": "Pienet riisileivonnaiset ja lehtikääreet näyttävät katukeittiön yksityiskohtia."
+              },
+              {
+                "mita": "Riisikori ja täytetty patonki",
+                "tahdet": 2,
+                "selite": "Kaupungin ruokapöydässä kohtaavat laolaiset ruoat ja ranskalainen leipäperintö."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Aseman nimi ratkaisee",
+                "teksti": "Lao-China Railway Station ja Khamsavath ovat eri asemia."
+              },
+              {
+                "otsikko": "Tuk-tuk ennen lähtöä",
+                "teksti": "Sovi matkan hinta ennen kyytiin lähtemistä."
+              },
+              {
+                "otsikko": "Kalainen mauste",
+                "teksti": "Myös muun pääraaka-aineen annoksessa voi olla kalatahnaa tai kalakastiketta."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "ruoka",
+      "nimi": "Riisikori ja patonki",
+      "johdanto": "Tahmea riisi, yrttinen laap ja banaaninlehtipaketti kuuluvat laolaiseen ruokapöytään; Vientianen kadulla vastaan tulee myös täytetty patonki.",
+      "tehtava": {
+        "kysymys": "Mihin mok pa -kala kääritään ennen höyryttämistä?",
+        "vaihtoehdot": [
+          "Banaaninlehteen",
+          "Kookospähkinän kuoreen",
+          "Riisipaperiin",
+          "Salaatinlehteen"
+        ],
+        "oikea": 0,
+        "fakta": "Mok pa kypsennetään lehtipaketissa, joka sidotaan bambunarulla."
+      },
+      "nostot": [
+        {
+          "otsikko": "Riisiä höyryssä ja yhteisessä korissa",
+          "teksti": "Khao niao, tahmea riisi, höyrytetään huad-nimisessä bambukorissa kattilan päällä. Pöytään riisi voidaan tuoda bambuisessa tarjoilukorissa, josta ruokailijat jakavat sen. Höyrytyskori ja ruokapöydän kori ovat siis saman aterian eri vaiheita. Perinteisessä yhteisruokailussa ruokalajit asetetaan matalalle rottinkiselle alustalle, ka toke -pöydälle. Annoksia syödään rinnakkain, ja keittoa nautitaan aterian aikana. Riisi liittyy koko pöydän ruokaan, eikä keitolle tarvitse odottaa erillistä vuoroa.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Lao cuisine"
+        },
+        {
+          "otsikko": "Laap ei ole yhden lihan nimi",
+          "teksti": "Laap, myös laab tai larb, on maustettu liha- tai kalaseos, jossa käytetään yrttejä ja kalapohjaisia mausteita. Ruoka voidaan tehdä esimerkiksi ankasta, kanasta, sianlihasta, naudanlihasta tai kalasta; siitä valmistetaan myös sieniversioita. Laon keittiössä käytetään padaek-kalatahnaa, ja laapissa voi olla hapatettua kalaa. Ruokalistan tuttu nimi ei siis vielä kerro annoksen proteiinia tai kaikkia mausteita. Kalaa välttävän kannattaa kysyä myös maustamisesta, vaikka annoksen pääraaka-aine olisi liha tai sieni.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Lao cuisine"
+        },
+        {
+          "otsikko": "Kala pakataan banaaninlehteen",
+          "teksti": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Lao cuisine"
+        },
+        {
+          "otsikko": "Patonki puhuu paikallista kieltä",
+          "teksti": "Vientianen kaduilla myydään patonkeja, ja kaupungissa on ranskalaisia ravintoloita sekä leipomoita. Leipä kuuluu ranskalaisajan ruokaperintöön, mutta sillä on myös paikalliset nimet ja täytteet. Khao jee pâté on pâtélla ja mausteilla täytetty patonki, Vietnamin bánh mì -leivän laolainen sukulainen. Pelkkä khao jee voi olla monimerkityksinen nimi: sillä tarkoitetaan myös paahdettua tahmeaa riisiä. Täytetyn leivän koko nimi kertoo siis enemmän kuin ensimmäiset sanat. Vientianen ruokakulttuuri mahtuu sekä riisikoriin että patongin väliin.",
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": "",
+          "wiki": "Lao cuisine"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Wat Si Saketin rakennus ja käytäväseinien pienet Buddha-kuvat kertovat vanhan temppelin historiasta. Kokonaisuutta on korjattu myöhemmin, joten nykyinen näkymä sisältää eri aikakausia.",
+    "rajat": {
+      "pohjoinen": 17.9661,
+      "etela": 17.9601,
+      "lansi": 102.6085,
+      "ita": 102.6149
+    },
+    "kohteet": [
+      {
+        "nimi": "Wat Si Saket",
+        "lat": 17.96306,
+        "lon": 102.61167
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Wat Si Saket": {
+      "aika": "1800-luvun alkupuoli",
+      "teksti": "Wat Si Saket sijaitsee Lan Xangin ja Setthathiratin katujen kulmassa lähellä Haw Phra Kaewta. Kuningas Anouvong rakennutti temppelin 1800-luvun alkupuolella. Se oli jo olemassa isoisän matkavuonna 1873, mutta myöhemmät korjaukset erottavat nykyisen kokonaisuuden tuon ajan rakennuksesta.\n\nTemppelin ympärillä on terassi, ja varsinaiseen rakennukseen kuuluu monitasoinen koristeltu katto. Käytäväseinien syvennyksissä on pieniä Buddha-kuvia, joiden materiaaleihin kuuluvat keramiikka ja hopea. Sisäpihan keskellä on sim, temppelin vihkimyssali. Sen seinämaalaukset kuvaavat Buddhan aiempia elämiä. Käytävän pienet kuvat ja salin kuvakertomukset ovat kokonaisuuden eri osia.\n\nKaupungin 1800-luvun tuhon yhteydessä Siamin joukot käyttivät temppelialuetta päämajana ja majoituspaikkana. Temppeliä korjattiin myöhemmin ranskalaisajan hallinnon aikana, ja siellä toimii myös museo. Rakennuksen, käytävän ja kuvien historiaan kuuluu siten myös käyttötapojen muuttuminen.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lahde": "",
+          "lyhyt": "",
+          "selite": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Wattay International Airport (VTE)",
+    "huomiot": [
+      "Rajattu A-lähdekooste ja C-tekstiluonnos; riippumaton D/E/F avoin.",
+      "Tourismlaos.org robots kielsi sivun: sisältöä ei noudettu tai käytetty. Primäärivarmennus avoin.",
+      "19 kuvaroolin tiedosto, lahde, lyhyt ja selite tyhjiä; kuvaputki erillinen.",
+      "Kartta partial 1/6–8: vain Wat Si Saketin oma WP-koordinaatti varmennettu ja mukana.",
+      "Haw Phra Kaew, That Dam, Patuxai, Buddha Park ja uusien teosten suojaraja estävät niiden kartta-/kuvavalinnan tässä luonnoksessa.",
+      "Sääauditointi 48/48 puuttuu: saatiedot null, saa.json jätetty koskematta; opas käsittelee päivä-/iltarytmiä ilman sääsuositusta.",
+      "Väestölukuja ei käytetty; kontekstin luku on pääkaupunkialueen, ei keskustan.",
+      "Liikenteen palvelutilanne, matkustusturvallisuus ja muu nykyopastieto auditoidaan erikseen."
+    ]
+  }
+}

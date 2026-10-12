@@ -1,0 +1,378 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "phnompenh",
+  "maa": "KHM",
+  "era": "e10",
+  "kaupunki": {
+    "id": "phnompenh",
+    "name": "Phnom Penh",
+    "wiki": "Phnom Penh",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 11.5696,
+      "lon": 104.921
+    }
+  },
+  "artikkeli": {
+    "intro": "Phnom Penhissä **Tonlé Sap -joki vaihtaa virtaussuuntaa** vuodenaikojen mukana. Mekongin tulvavesi voi työntyä sitä pitkin kohti järveä, ja veden laskiessa järvi purkautuu takaisin. Kambodžan pääkaupungin rantaa katsellessa on siis hyvä muistaa, ettei joki ole yhdensuuntainen katu. Kaupungin vanha nimi Chaktomuk, neljä kasvoa, viittaa sen jokien risteykseen.\n\nRannasta sisämaahan siirryttäessä katujen numerot alkavat toimia eräänlaisena kompassina: parittomat kulkevat pääosin pohjoisesta etelään ja parilliset idästä länteen. **Kuy teav -nuudeliannoksessa** puolestaan liemi voi tulla omaan kulhoonsa. Kuninkaanpalatsin alueella on Ranskassa valmistettu rautapaviljonki, ja Kansallismuseon rakennus sovittaa khmerarkkitehtuurin muotoja museon tarpeisiin. Phnom Penhin tarina avautuu sekä suurista joista että pienistä ratkaisuista, jotka ovat muuttaneet kadun, rakennuksen tai aamiaisen muotoa.",
+    "teksti": "Phnom Penhin kohdalla Mekong jatkuu etelään, Tonlé Sap liittyy siihen ja Bassac erkanee omaksi joekseen. Vanhan Chaktomuk-nimen neljä kasvoa ovat tämän vesiristeyksen haarat. Kaupunki on yhteydessä kaukana sijaitsevaan Tonlé Sap -järveen saman nimisen joen kautta; järvi ja joki ovat eri paikkoja.\n\nKuningas Norodom siirsi hovin Phnom Penhiin 1800-luvulla. Isoisän matkavuonna 1873 kaupunki oli jo pääkaupunki, mutta nykyinen rakennuskanta ei ole yksi säilynyt aikakausi. Palatsialueen eri osat, torit ja museot ovat syntyneet ja muuttuneet eri vaiheissa.\n\nKansallismuseossa khmerien menneisyyttä tarkastellaan esineiden kautta. Kuninkaallisen baletin liikkeet puolestaan välittävät tarinoita elävänä taitona: käsillä ja asennoilla on omat merkityksensä. Kivi ja liike säilyttävät eri tavoin saman kulttuurin muistia."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Phnom Penh on?",
+      "options": [
+        "Kambodžan",
+        "Thaimaan",
+        "Vietnamin",
+        "Malesian"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maan tunnettu historiallinen alue on Angkor.",
+      "fact": "Phnom Penh on Kambodžan pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Phnom_Penh"
+    },
+    {
+      "q": "Mikä joki erkanee Mekongista Phnom Penhin kohdalla?",
+      "options": [
+        "Bassac",
+        "Irrawaddy",
+        "Salween",
+        "Chao Phraya"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimi kuuluu kaupungin jokiristeyksen eteläiseen haaraan.",
+      "fact": "Bassac erkanee Mekongista Phnom Penhin kohdalla.",
+      "source": "https://en.wikipedia.org/wiki/Phnom_Penh"
+    },
+    {
+      "q": "Mitä kuivassa kuy teav -annoksessa tehdään liemelle?",
+      "options": [
+        "Tuodaan erikseen",
+        "Haihdutetaan pois",
+        "Korvataan mehulla",
+        "Jäädytetään lisukkeeksi"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nuudelien astia ei ole aterian ainoa astia.",
+      "fact": "Kuivan kuy teavin liemi tarjotaan omassa kulhossaan.",
+      "source": "https://en.wikipedia.org/wiki/Kuyteav"
+    },
+    {
+      "q": "Mihin suuntaan Phnom Penhin parittomasti numeroidut kadut pääosin kulkevat?",
+      "options": [
+        "Pohjoisesta etelään",
+        "Lännestä itään",
+        "Kehinä keskustan ympäri",
+        "Vinosti kohti jokirantaa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Katujen numerointi erottaa kaksi pääsuuntaa.",
+      "fact": "Parittomat katunumerot kuuluvat pääosin pohjois–eteläsuuntaisille kaduille; poikkeuksiakin on.",
+      "source": "https://en.wikivoyage.org/wiki/Phnom_Penh"
+    },
+    {
+      "q": "Milloin Kansallismuseon nykyinen rakennus syntyi?",
+      "options": [
+        "1900-luvun alkupuolella",
+        "1400-luvun puolivälissä",
+        "1700-luvun loppupuolella",
+        "2000-luvun alkupuolella"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennus on nuorempi kuin monet sen esittelemät esineet.",
+      "fact": "Kansallismuseon rakennus valmistui 1900-luvun alkupuolella.",
+      "source": "https://en.wikipedia.org/wiki/National_Museum_of_Cambodia"
+    }
+  ],
+  "tiedot": [
+    "Tonlé Sap -järvi ja Phnom Penhin rannalla virtaava Tonlé Sap -joki ovat eri paikkoja.",
+    "Phnom Penhin katunumerot antavat vihjeen suunnasta, mutta talonumerot eivät aina etene järjestyksessä.",
+    "Kansallismuseon oma rakennus on monia sen esittelemiä esineitä nuorempi."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Phnom Penh",
+      "johdanto": "Phnom Penhin jokiristeyksessä suunta ei aina ole pysyvä: vesi voi vaihtaa kulkuaan, ja katunumeroista voi lukea suunnan.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Joki peruuttaa järveen",
+          "teksti": "Tonlé Sap -joen virtaussuunta ei ole pysyvä. Sateiden nostama Mekong voi työntää vettä jokea pitkin kohti Tonlé Sap -järveä, joka laajenee tulvakaudella. Kun Mekongin pinta laskee, järvi alkaa purkautua takaisin samaa reittiä. Phnom Penh on tämän järjestelmän eteläisessä liitoskohdassa. Virtaussuuntaa ohjaa Mekongin ja järven vedenpintojen vaihtelu, ei kaupungin oma rytmi. Rannalla näkyvä vesi kuuluu paljon kaupunkia suurempaan kiertoon.",
+          "wiki": "Tonlé Sap",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kadulla on koordinaatisto",
+          "teksti": "Phnom Penhin katuosoitteessa numero kertoo muutakin kuin nimen. Parittomasti numeroidut kadut kulkevat pääosin pohjoisesta etelään, parilliset lännestä itään. Parittomien numeroiden sarja kasvaa joelta länteen, parillisten pohjoisesta etelään. Järjestelmässä on poikkeuksia, eivätkä talonumerot aina etene siistinä jonona. Pelkkä suuri numero ei siis takaa pitkää katua tai kaukaista taloa. Numerokartan rinnalla tarvitaan rakennuksen nimi ja sijainti: kaupunki tarjoaa vihjeen, ei aukotonta kaavaa.",
+          "wiki": "Phnom Penh",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Liemi saa oman kulhonsa",
+          "teksti": "Kuy teav on riisinuudeleista ja lihaliemestä tehtävä annos, jota syödään Phnom Penhissä erityisesti aamiaisella. Kaupungin nimellä tunnetussa versiossa on runsaasti lisukkeita, kuten lihaa ja mereneläviä. Annoksen voi saada myös kuivana: nuudelit ja lisukkeet ovat yhdessä astiassa, liemi toisessa. Kuiva ei siis tarkoita, että keitto olisi unohtunut keittiöön. Syöjä voi nauttia liemen erikseen tai lisätä sitä nuudeleihin. Sama ruokalaji muuttaa muotoaan ilman, että sen tärkeä liemi katoaa.",
+          "wiki": "Kuyteav",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Vesilaitos löysi hukkaan valuvan veden",
+          "teksti": "Phnom Penhin vesihuollon uudistuksessa huomio kohdistui myös veteen, joka katosi ennen asiakkaan hanaa. Verkoston hävikkiä vähennettiin, asiakasmäärä kasvoi ja ajoittaisesta jakelusta siirryttiin jatkuvaan vesipalveluun. Samalla vesilaitoksen talous muuttui alijäämäisestä kannattavaksi. Vesihuolto ei ole vain uusien putkien rakentamista: olemassa olevan verkoston toiminta ratkaisee, kuinka paljon puhdistettua vettä todella päätyy käyttöön. Tämä kaupunkitarina löytyy maamerkkien sijasta katujen alta.",
+          "wiki": "Phnom Penh",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita Phnom Penhin kävely Sisowath Quayn jokirannasta. Kansallismuseo ja palatsin alue tarjoavat kaksi erilaista tapaa tutustua khmerien kulttuuriin. Palatsivierailulle pukeudutaan hartiat ja polvet peittäen. Pidemmille kaupunkimatkoille voi ottaa taksin tai tuk-tukin. Aamulla kannattaa etsiä kuy teav -nuudeliannos ja kokeilla, miltä se maistuu liemi erikseen tarjottuna.",
+        "artikkeli": {
+          "nimi": "Matkailijan Phnom Penh",
+          "taitto": "opas",
+          "teksti": "Kulje jokirannasta museoon ja etsi aamiaiseksi kaupungin nimellä tunnettu nuudelikulho.",
+          "nosto": "Joen suunta, katujen numerot ja erillinen liemikulho tarjoavat omat avaimensa Phnom Penhiin.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Phnom Penhin kansainväliset lennot käyttävät Techo-lentoasemaa kaupungin ulkopuolella. Varaa siirtymään aikaa ja tarkista kentän kuljetusvaihtoehdot ennen lähtöä. Keskustassa voi liikkua taksilla tai tuk-tukilla; kyytejä voi tilata myös sovelluksella. Näytä määränpään sijainti kartalla, sillä pelkkä katu- ja talonumero ei aina yksilöi paikkaa vaivatta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Jokiranta avaa kaupungin",
+              "teksti": "Sisowath Quayn rantakadun varrella on kävelyalueita, kahviloita ja ravintoloita. Ranta sopii jokien ja kaupungin suhteen hahmottamiseen ennen sisämaan kortteleita. Phnom Penhin kohdalla Tonlé Sap -joki liittyy Mekongiin ja Bassac erkanee etelään. Leveän vesialueen äärellä on hyvä erottaa nämä joet toisistaan; Tonlé Sap -järvi sijaitsee muualla.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Museo ja palatsin alue",
+              "teksti": "Kansallismuseo tarjoaa näkymän khmerien esineistöön, kun taas Kuninkaanpalatsi on yhä kuninkaallinen asuinpaikka, jonka osiin pääsee tutustumaan. Palatsiin pukeudutaan hartiat ja polvet peittäen. Sisätilojen kuvausrajoitukset kannattaa tarkistaa paikan päällä. Wat Ounalom on rantaseudun buddhalainen luostari, jossa kävijä muistaa paikan olevan myös käytössä oleva uskonnollinen ympäristö.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Aamiainen nuudelikulhosta",
+              "teksti": "Kuy teav on Phnom Penhin luonteva aamiaisruoka: riisinuudeleita, lihalientä ja lisukkeita. Phnom Penhin versioon voidaan lisätä monenlaisia lihoja ja mereneläviä. Kuivassa annoksessa liemi tuodaan erikseen, joten nimi ei tarkoita lientä vailla olevaa ateriaa. Ruokatoreilla on myös muita paikallisia ruokia; maistelukierrosta voi rakentaa oman ruokavalion mukaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Phnom Penhissä sää on kuuma ja kostea. Sadekaudella kuuroja voi tulla iltapäivisin, joten päivän ulkoilun ja sisäkohteiden järjestystä kannattaa sovittaa sääennusteeseen. Museovierailun ja jokirannan voi yhdistää samaan päivään ilman, että kaikkien kävelyosuuksien täytyy osua samaan hetkeen. Tarkista matkan ajankohtainen sää ennen lähtöä ja jätä tilaa myös tauoille.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Jokiranta",
+                "tahdet": 3,
+                "selite": "Tonlé Sapin, Mekongin ja Bassacin yhteys avautuu veden äärellä."
+              },
+              {
+                "mita": "Kansallismuseo",
+                "tahdet": 3,
+                "selite": "Khmerien esineistö kertoo useista historiallisista aikakausista."
+              },
+              {
+                "mita": "Kuninkaanpalatsi",
+                "tahdet": 3,
+                "selite": "Eri rakennusvaiheet kohtaavat kuninkaallisella alueella."
+              },
+              {
+                "mita": "Kuy teav -aamiainen",
+                "tahdet": 3,
+                "selite": "Nuudelit voi maistaa myös erillisen liemen kanssa."
+              },
+              {
+                "mita": "Wat Ounalom",
+                "tahdet": 3,
+                "selite": "Rannan luostari tuo uskonnollisen arjen osaksi kaupunkivierailua."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Osoite",
+                "teksti": "Näytä kyydissä määränpään karttapiste; talonumerot voivat olla epäjärjestyksessä."
+              },
+              {
+                "otsikko": "Pukeutuminen",
+                "teksti": "Palatsiin mennään hartiat ja polvet peittävin vaattein."
+              },
+              {
+                "otsikko": "Liikenne",
+                "teksti": "Jalankulkijan on syytä varata aikaa vilkkaiden katujen ylityksiin."
+              },
+              {
+                "otsikko": "Lentoasema",
+                "teksti": "Techo sijaitsee keskustan ulkopuolella; tarkista kenttä ja kuljetus lentovarauksesta."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Rautaa, kattoja ja tanssia",
+      "johdanto": "Kaupungin historia voi syntyä pariisilaisessa tehtaassa, nousta kosteikon paikalle tai jatkua opettajan näyttämässä liikkeessä.",
+      "tehtava": {
+        "kysymys": "Mikä näistä rakennusmateriaaleista erottaa Napoleon-paviljongin ympäristön khmertyylisistä rakennuksista?",
+        "vaihtoehdot": [
+          "Valurauta",
+          "Tiilimuuraus",
+          "Puupilari",
+          "Hiekkakivi"
+        ],
+        "oikea": 0,
+        "fakta": "Napoleon-paviljonki on Ranskassa kuningas Norodomille valmistettu valurautainen huvila."
+      },
+      "nostot": [
+        {
+          "otsikko": "Palatsiin tuli rautainen vieras",
+          "teksti": "Kuninkaanpalatsin Napoleon III -paviljonki poikkeaa ympäristönsä khmertyylisistä rakennuksista: se on tehty raudasta. Pariisilainen Docros-yhtiö valmisti tämän tehdasvalmisteisen huvilan kuningas Norodomille 1800-luvulla. Sitä kutsuttiin myös nimellä maison de fer, rautatalo. Napoleon III:een liitetty nimi on synnyttänyt tarinan keisarin lahjasta, mutta rakennuksen tilaushistoria on toinen. Palatsialueella kohtaa siis myös eurooppalaisen metallirakentamisen perinteen. Nimi ja materiaali kertovat eri asioita samasta rakennuksesta.",
+          "wiki": "Royal Palace of Cambodia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Tori nousi kuivatulle kosteikolle",
+          "teksti": "Phsar Thmei tarkoittaa uutta toria, vaikka Phnom Penhin keskusmarkkinat ovat jo historiallinen rakennus. Art deco -tyylisen torin keskellä on kupoli, josta hallisiivet levittäytyvät ympäristöön. Paikalla oli aiemmin kosteikko, joka kuivattiin rakentamista varten. Rakennuksen suunnitteluun osallistui ranskalaisia arkkitehteja, ja se valmistui 1900-luvun alkupuolella. Torin historia kertoo samalla kaupungin muuttuneesta pohjasta: tuttu ostospaikka seisoo maalla, jota ei aina ollut samalla tavalla käytettävissä.",
+          "wiki": "Central Market (Phnom Penh)",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Khmerkatto museon yllä",
+          "teksti": "Kambodžan kansallismuseon rakennus on saanut vaikutteita khmerarkkitehtuurista, mutta sitä ei siirretty paikalle vanhasta temppelistä. Suunnittelija George Groslier sovitti paikallisia muotoja museorakennuksen tehtävään. Museolla on sisäpiha, ja kokoelmissa on veistoksia, keramiikkaa ja muita khmerkulttuurin esineitä. Rakennus valmistui 1900-luvun alkupuolella. Se on nuorempi kuin monet esittelemänsä teokset: museon oma kuori ja sen sisällä oleva historia kulkevat eri aikajanoilla.",
+          "wiki": "National Museum of Cambodia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kädet kertovat hovin tarinoita",
+          "teksti": "Kambodžan kuninkaallisessa baletissa tanssijan käden asento ei ole sattumanvarainen koriste. Liikkeet ja eleet välittävät tunteita ja kertomuksen tapahtumia, ja taito siirtyy opettajalta oppilaalle pitkän harjoittelun kautta. Esityksiä säestävät orkesteri ja laulajat. Hovin yhteydessä kehittynyt tanssi kuuluu myös juhliin ja seremonioihin. Vaikka länsimainen nimitys on baletti, kyse on omasta khmerien tanssiperinteestä. Sen kertova kieli on sekä asennoissa että liikkeessä, eikä tarinaa tarvitse lausua tavallisena puheena.",
+          "wiki": "Royal Ballet of Cambodia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Phnom Penhin jokirannan lähellä kuninkaallinen alue, museo ja luostarit kertovat eri vaiheissa rakentuneesta kaupungista.",
+    "rajat": {
+      "pohjoinen": 11.5688,
+      "etela": 11.5628,
+      "lansi": 104.926,
+      "ita": 104.932
+    },
+    "kohteet": [
+      {
+        "nimi": "Kambodžan kansallismuseo",
+        "lat": 11.5658,
+        "lon": 104.929
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Kambodžan kansallismuseo": {
+      "aika": "1900-luvun alkupuoli",
+      "teksti": "Kambodžan kansallismuseo sijaitsee Kuninkaanpalatsin pohjoispuolella Phnom Penhin keskustassa. Sen rakennus ei ole vanha temppeli, vaikka suunnittelussa on käytetty khmerien temppeliarkkitehtuurin muotoja. George Groslier sovitti nämä esikuvat museon suurempiin tilatarpeisiin. Näyttelyrakennukset ja sisäpiha muodostavat kokonaisuuden, jossa arkkitehtuuri ja esineistö edustavat eri ikäisiä kerrostumia.\n\nKokoelmissa on veistoksia, keramiikkaa, pronssiesineitä ja kansatieteellistä aineistoa. Museo sekä esittelee että säilyttää kambodžalaista kulttuuriperintöä. Nykyinen museorakennus syntyi vasta 1900-luvun alkupuolella: isoisän matkavuonna 1873 sitä ei ollut. Sen esittelemiä taideperinteitä oli silti ollut olemassa kauan ennen museota. Rakennuksen ikää ei siis pidä päätellä pelkästään kattomuodoista tai kokoelman vanhoista esineistä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Techo International Airport (KTI)",
+    "huomiot": [
+      "C-tekstiluonnos; B-kuvat sekä kartan sijainti- ja tekijänoikeusportti avoinna.",
+      "Saatiedot null: yhteistä 48/48 primäärisääauditointia ei ole hyväksytty.",
+      "Lentoasema päivitetty: vanha Phnom Penh International Airport ei ole oppaan kansainvälinen saapumiskenttä."
+    ]
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "kualalumpur",
+  "maa": "MYS",
+  "era": "e10",
+  "kaupunki": {
+    "id": "kualalumpur",
+    "name": "Kuala Lumpur",
+    "wiki": "Kuala Lumpur",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 3.1478,
+      "lon": 101.6953
+    }
+  },
+  "artikkeli": {
+    "intro": "Kuala Lumpurin keskustassa **sademetsä on jäänyt rakennusten keskelle**. Bukit Nanasin kukkulalla kulkevat polut johtavat säilyneeseen metsään, jota tunnetaan myös nimellä KL Forest Eco Park. Malesian pääkaupunki kasvoi tinakaivosten kauppapaikasta, mutta sen historia näkyy myös tavallisen korttelin nimessä. Brickfields, tiilikentät, sai nimensä kaupungin jälleenrakentamiseen tuotetuista tiilistä.\n\nVanhan keskustan Sin Sze Si Ya -temppelissä historiallisia henkilöitä kunnioitetaan jumaluuksina. Matkustajan päivää rytmittävät puolestaan erilaiset radat: LRT, MRT, monorail ja KTM:n lähijunat palvelevat saman kaupunkiseudun eri yhteyksiä. **Kuala Lumpurin Hokkien mee** saa tumman värinsä soijakastikkeesta. Brickfieldsissä aterian alustana voi olla banaaninlehti, ja roti canain taikinaan syntyy kerroksia venyttämällä ja taittamalla. Kaupungin ilme ja maut ovat kasvaneet malaijien, kiinalaisten ja intialaisten perinteiden kohtaamisista.",
+    "teksti": "Klangin ja Gombakin jokien yhtymä oli tinakaivosten tavaraliikenteen solmukohta. Veneillä saapuneet tarvikkeet jatkoivat kaivoksille, ja tina kulki kaupunkiin myytäväksi. Kuala Lumpur oli olemassa isoisän matkavuonna 1873, mutta sen rakentaminen jatkui tulipalojen ja tulvien jälkeisissä jälleenrakennuksissa.\n\nPuu- ja lehtikattoisten rakennusten tilalle alettiin vaatia tiiliä ja kattotiiliä paloturvallisuuden vuoksi. Yap Ah Loyn tiilitehdas liittyi tähän muutokseen. Brickfieldsin nimi säilyttää kaupungin materiaalihistorian, vaikka alue tunnetaan nykyisin myös intialaisista kaupoista ja ruokapaikoista.\n\nKaupungin keskustassa Bukit Nanas säilyttää osan trooppista metsää. Sen nimi merkitsee ananaskukkulaa, mutta nimen selitykseksi kerrottu ananaksilla suojattu linnoitus on perimätietoa. Metsän nykyinen suojelualue syntyi vasta 1900-luvun alussa. Kaupungin luonnonpaikallakin on oma muuttuva käyttöhistoriansa."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Kuala Lumpur on?",
+      "options": [
+        "Malesian",
+        "Kambodžan",
+        "Indonesian",
+        "Filippiinien"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa ulottuu Malakan niemimaalle ja Borneoon.",
+      "fact": "Kuala Lumpur on Malesian pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Kuala_Lumpur"
+    },
+    {
+      "q": "Mihin Brickfieldsin nimi liittyy?",
+      "options": [
+        "Tiilien valmistukseen",
+        "Laivojen rakentamiseen",
+        "Kankaiden värjäämiseen",
+        "Kahvin paahtamiseen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Korttelin historia on osa kaupungin rakennusmateriaalien muutosta.",
+      "fact": "Brickfields sai nimensä alueella tuotetuista tiilistä.",
+      "source": "https://en.wikipedia.org/wiki/Brickfields,_Kuala_Lumpur"
+    },
+    {
+      "q": "Mitä Bukit Nanasin nimi merkitsee?",
+      "options": [
+        "Ananaskukkulaa",
+        "Pippurilaaksoa",
+        "Banaanikaupunkia",
+        "Kookossatamaa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimi yhdistää pinnanmuodon ja trooppisen hedelmän.",
+      "fact": "Bukit Nanas tarkoittaa ananaskukkulaa.",
+      "source": "https://en.wikipedia.org/wiki/Bukit_Nanas"
+    },
+    {
+      "q": "Mikä antaa Kuala Lumpurin Hokkien mee -nuudeleille tumman värin?",
+      "options": [
+        "Tumma soijakastike",
+        "Vaalea kookosmaito",
+        "Punainen chilijauhe",
+        "Keltainen kurkumajauhe"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Tämä kastike liittyy annoksen tunnusomaiseen paistettuun versioon.",
+      "fact": "Kuala Lumpurin Hokkien mee maustetaan tummalla soijakastikkeella.",
+      "source": "https://en.wikipedia.org/wiki/Hokkien_mee"
+    },
+    {
+      "q": "Mikä Kuala Lumpurin liikennemuodoista kulkee keskustassa kohoradalla?",
+      "options": [
+        "Monorail",
+        "Jokilautta",
+        "Raitiovaunu",
+        "Johdinauto"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Vaunun rata nousee katujen yläpuolelle.",
+      "fact": "KL Monorailin rata kulkee koholla keskustan läpi.",
+      "source": "https://en.wikipedia.org/wiki/Kuala_Lumpur"
+    }
+  ],
+  "tiedot": [
+    "Brickfieldsin nimi säilyttää muiston tiilien valmistuksesta kaupungin jälleenrakentamiseen.",
+    "KL Sentral ja historiallinen Kuala Lumpur -rautatieasema ovat eri asemia.",
+    "Kuala Lumpurin Hokkien mee ja Penangin samanniminen ruoka ovat erilaisia nuudeliannoksia."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Kuala Lumpur",
+      "johdanto": "Kuala Lumpurin tarina löytyy metsän polusta, tiilitehtaan jättämästä nimestä ja eri järjestelmiä yhdistävästä raideliikenteestä.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Metsä jäi talojen keskelle",
+          "teksti": "Bukit Nanasin kukkulalla on säilynyt trooppista sademetsää keskellä Kuala Lumpuria. Metsäalue tunnetaan nykyisin nimellä KL Forest Eco Park, ja siellä kulkee kävelypolkuja. Suojelualue perustettiin 1900-luvun alussa, mutta sen pinta-ala on myöhemmin pienentynyt rakentamisen myötä. Kaupungin vihreä kohta on siis säilynyt ja muuttunut yhtä aikaa. Kukkulan nimi tarkoittaa ananaskukkulaa; nimeen liittyvä kertomus puolustukseksi kasvatetuista ananaksista kuuluu paikalliseen perimätietoon.",
+          "wiki": "Bukit Nanas",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Tiili jäi korttelin nimeen",
+          "teksti": "Brickfieldsin nimi tarkoittaa tiilikenttiä. Kuala Lumpurin tulipalojen ja tulvien jälkeiseen jälleenrakentamiseen tarvittiin tiiliä, ja Yap Ah Loy perusti alueelle tiilitehtaan. Kaupungin rakennuksissa alettiin vaatia tiiliä ja kattotiiliä puun ja lehtikatteiden sijaan palovaaran vähentämiseksi. Nykyisin Brickfields tunnetaan myös Little Indiana: siellä on intialaisia kauppoja ja ruokapaikkoja. Nimi säilyttää silti muistuman teollisesta tehtävästä, jonka avulla kaupungin rakentamisen materiaali vaihtui.",
+          "wiki": "Brickfields",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Ihmisistä tuli temppelin suojelijoita",
+          "teksti": "Sin Sze Si Ya -temppelin jumaluudet liittyvät paikallisiin historiallisiin henkilöihin. Seng Meng Leetä kunnioitetaan nimellä Sin Sze Ya, ja Si Sze Ya liittyy Yap Ah Loyn kenraaliin Chung Piang Laihin. Yap Ah Loy toi Sengin henkitaulun Kuala Lumpuriin ja perusti temppelin. Paikka palveli uskonnollisten rituaalien lisäksi yhteisön kohtaamisia ja riitojen ratkaisemista. Vanhan keskustan pyhäkkö säilyttää siis myös ihmisten nimiä ja kiinalaisen yhteisön muistia. Henkilöhistoria, uskonnollinen perinne ja kaupungin arki kohtaavat samassa paikassa.",
+          "wiki": "Sin Sze Si Ya Temple",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaupunki kulkee eri kiskoilla",
+          "teksti": "Kuala Lumpurin joukkoliikennekartta kokoaa yhteen erilaisia ratoja. LRT- ja MRT-linjat palvelevat kaupunkia, monorail kulkee koholla keskustan läpi ja KTM Komuter yhdistää keskustan lähialueisiin. KL Sentral on tärkeä vaihtoasema ja lentoasemajunien päätepiste kaupungissa. Samassa solmussa kohtaa siten eri järjestelmiä, ja osa vaihdoista sisältää kävelyä asemien välillä. Matkaa suunnitellessa kannattaa seurata linjan nimen lisäksi oman päätepysäkin nimeä: pelkkä junaan nouseminen ei vielä valitse suuntaa.",
+          "wiki": "Kuala Lumpur",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "KL Sentral on hyvä lähtökohta kaupungin raideliikenteeseen. Vanhan keskustan jokiyhtymä ja historiallinen rautatieasema näyttävät eri kerrostumia Kuala Lumpurista. Bukit Nanas tarjoaa metsän polkuja keskusta-alueella. Brickfieldsissä kaupunkivierailu jatkuu intialaisten kauppojen ja banaaninlehtiaterioiden äärellä. Varaa kävelyjen lomaan taukoja, sillä sää on kuuma ja kostea.",
+        "artikkeli": {
+          "nimi": "Matkailijan Kuala Lumpur",
+          "taitto": "opas",
+          "teksti": "Yhdistä keskustan kävelyyn metsäpolku ja ateria, jonka maut kertovat korttelin historiasta.",
+          "nosto": "Raideliikenne yhdistää kaupunkipäivän eri osat; asemien nimet ja ruokien paikalliset versiot kannattaa erottaa toisistaan.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Kuala Lumpurin kansainväliseltä lentoasemalta pääsee KL Sentralille junalla. Keskustan matkoja palvelevat LRT, MRT, monorail ja KTM Komuter, mutta vaihto ei aina tapahdu samalla laiturilla. Tarkista reitti lähtöaseman ja määränpään avulla ja seuraa opasteita vaihtopaikoissa. KL Sentral ja historiallinen Kuala Lumpur -rautatieasema ovat eri paikkoja; oikea nimi auttaa välttämään väärän asemavalinnan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Vanhan keskustan kerrostumat",
+              "teksti": "Klangin ja Gombakin jokien yhtymän ympärillä avautuu kaupungin vanha ydin. Sin Sze Si Ya -temppeli ja historiallinen rautatieasema kertovat eri yhteisöistä ja rakennusperinteistä. Merdeka-aukion ympäristöä voi tarkastella osana siirtomaa-ajan hallintokeskustaa ilman, että kävely muuttuu pelkäksi rakennusluetteloksi. Uskonnollisissa kohteissa noudata paikan pukeutumisohjeita ja toimintaan liittyviä rajoja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Metsään keskellä kaupunkia",
+              "teksti": "Bukit Nanasin metsän polut tarjoavat keskusta-alueella mahdollisuuden astua trooppisen kasvillisuuden keskelle. Paikka tunnetaan myös nimellä KL Forest Eco Park. Luontokävelyn voi yhdistää kaupunkipäivään, mutta polkujen kunto ja kulkureittien mahdolliset muutokset kannattaa tarkistaa paikalla. Kukkulan metsä on oma kohteensa: tämän kävelyn kiinnostus on kasvillisuudessa ja metsän säilymisessä kaupungin sisällä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kortteli löytyy myös ruokalistalta",
+              "teksti": "Kuala Lumpurin Hokkien mee on tummaa kastikkeessa haudutettua nuudelia, ja Brickfieldsissä voi tutustua banaaninlehtiriisiin. Mamak-ruokapaikoissa roti canai tulee usein dalin tai curryn kanssa. Yong tau foo puolestaan perustuu täytettyyn tofuun ja muihin täytettyihin aineksiin. Ruokalajit antavat erilaisia tapoja tutustua kaupungin kiinalaisiin ja intialaisiin ruokaperinteisiin; samanniminen annos voi muualla olla erilainen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Kuala Lumpurissa on kuumaa ja kosteaa, ja sateet voivat tehdä kävelypinnoista liukkaita. Sääennuste kannattaa tarkistaa päiväkohtaisesti ja kaupunkikävelyn lomaan varata sisätiloissa pidettäviä taukoja. Sadekuuron aikana joustava järjestys auttaa yhdistämään ruokapaikat, vanhan keskustan ja metsän eri hetkiin. Täsmällistä parasta matkakuukautta ei tarvitse lukita, jos suunnitelmassa on tilaa muuttaa ulkoilun ajankohtaa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Bukit Nanas",
+                "tahdet": 3,
+                "selite": "Trooppisen metsän polut avautuvat keskusta-alueella."
+              },
+              {
+                "mita": "Historiallinen rautatieasema",
+                "tahdet": 3,
+                "selite": "Hubbackin rakennus yhdistää eri arkkitehtuuriperinteitä."
+              },
+              {
+                "mita": "Brickfields",
+                "tahdet": 3,
+                "selite": "Intialaiset kaupat ja ruokapaikat ovat osa entistä tiilialuetta."
+              },
+              {
+                "mita": "Sin Sze Si Ya -temppeli",
+                "tahdet": 2,
+                "selite": "Temppelin jumaluudet liittyvät kiinalaisen yhteisön historiallisiin henkilöihin."
+              },
+              {
+                "mita": "Hokkien mee",
+                "tahdet": 3,
+                "selite": "Kaupungin tumma nuudeliannos näyttää saman nimen paikallisen version."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Aseman nimi",
+                "teksti": "KL Sentral ja Kuala Lumpur -rautatieasema ovat eri paikkoja."
+              },
+              {
+                "otsikko": "Vaihdoissa kävelyä",
+                "teksti": "Kaikki raideliikenteen vaihdot eivät tapahdu samalla laiturilla."
+              },
+              {
+                "otsikko": "Pukeutuminen",
+                "teksti": "Moskeijoissa ja osassa temppeleitä on omat pukeutumisohjeensa."
+              },
+              {
+                "otsikko": "Sateella",
+                "teksti": "Kävelypinnat voivat olla sateen aikana liukkaita."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "ruoka",
+      "nimi": "Nuudelit, täytteet ja lehti",
+      "johdanto": "Kuala Lumpurin ruokapöydässä tärkeä ero voi olla kastikkeen värissä, tofupalan sisällä tai lautasen paikalle levitetyssä lehdessä.",
+      "tehtava": {
+        "kysymys": "Mikä yong tau foon valmistuksen perusidea on?",
+        "vaihtoehdot": [
+          "Tofun täyttäminen tahnalla",
+          "Riisin kääriminen taikinaan",
+          "Nuudelien värjääminen soijalla",
+          "Lehden paistaminen leiväksi"
+        ],
+        "oikea": 0,
+        "fakta": "Yong tau foossa tofua täytetään liha- tai kalatahnalla, ja myös vihanneksia voidaan täyttää."
+      },
+      "nostot": [
+        {
+          "otsikko": "Tumma soija värittää nuudelit",
+          "teksti": "Kuala Lumpurin Hokkien mee on tumma nuudeliannos, jossa paksuja nuudeleita haudutetaan kastikkeessa. Paksuihin nuudeleihin yhdistetään esimerkiksi sianlihaa, kalmaria, kalakakkua, kaalia ja tummaa soijakastiketta. Nimi voi johtaa toisaalla erilaiseen ruokaan: Penangin Hokkien mee on katkarapuliemeen perustuva keitto, ja Singaporessa nimellä tunnetaan jälleen omanlaisensa paistettu annos. Pelkkä nimi ei siis kerro, millainen kulho tulee eteen. Kuala Lumpurin versiossa tunnusmerkkejä ovat juuri paksut nuudelit ja tumman kastikkeen peittämä pinta.",
+          "wiki": "Hokkien mee",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Täyte kulkee tofuun",
+          "teksti": "Yong tau foo liittyy hakka-kiinalaiseen ruokaperinteeseen. Sen keskeinen idea on täyttää tofu liha- tai kalatahnalla; samalla tavalla voidaan täyttää myös vihanneksia. Ruokalajia tarjotaan sekä liemessä että kuivempina annoksina kastikkeiden kanssa. Kuala Lumpurin seudulla se kuuluu kiinalaista ruokaa tarjoavien ruokapaikkojen valikoimaan. Nimi viittaa täytettyyn tofuun, mutta annoksen osat voivat ulottua tofuakin laajemmalle. Tuttuun palaan tehdään tilaa uudelle maulle: täyte on itse ruoan rakenteessa.",
+          "wiki": "Yong tau foo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Taikina taitetaan kerroksiksi",
+          "teksti": "Roti canai on intialaistaustainen leipä, jota tarjoillaan Kuala Lumpurin mamak-ruokapaikoissa. Taikina venytetään ohueksi ja taitellaan tai kierretään ennen paistamista. Työvaiheet muodostavat leipään kerroksia. Tavallisen roti canain rinnalle tulee usein dalia tai currykastiketta, mutta leivästä tehdään myös täytettyjä ja makeita muunnelmia. Sen valmistusta seuraamalla näkee, että taikinapalan muoto voi muuttua monta kertaa ennen pannua. Lopullinen ateria syntyy leivän kerroksista ja vierellä tarjotuista kastikkeista.",
+          "wiki": "Roti canai",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Aterian alusta kasvaa puussa",
+          "teksti": "Brickfieldsin intialaisissa ruokapaikoissa riisiateria voidaan tarjota banaaninlehdeltä. Riisin rinnalle asetellaan esimerkiksi vihanneksia, currya, suolaisia lisukkeita ja rapeaa papadamia. Lehti on aterian tarjoilualusta, ei mukaan syötävä vihannes. Banaaninlehtiriisi liittyy eteläintialaiseen ruokaperinteeseen, joka on saanut oman paikkansa Malesiassa. Lautasen tehtävän ottaa kasvin suuri lehti, ja saman alustan eri osiin mahtuu kokonainen valikoima ruokia. Pelkän riisin tilaaminen voi siten tarkoittaa moniosaisen aterian alkua.",
+          "wiki": "Banana leaf",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Kuala Lumpurin keskustassa historiallinen rautatieasema ja säilynyt metsäkukkula kertovat kaupungin rakentumisesta eri näkökulmista.",
+    "rajat": {
+      "pohjoinen": 3.1558,
+      "etela": 3.1364,
+      "lansi": 101.6903,
+      "ita": 101.7055
+    },
+    "kohteet": [
+      {
+        "nimi": "Kuala Lumpurin historiallinen rautatieasema",
+        "lat": 3.13944,
+        "lon": 101.69333
+      },
+      {
+        "nimi": "Bukit Nanas",
+        "tyyppi": "luonto",
+        "lat": 3.15278,
+        "lon": 101.7025
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Kuala Lumpurin historiallinen rautatieasema": {
+      "aika": "1900-luvun alkupuoli",
+      "teksti": "Kuala Lumpurin historiallinen rautatieasema sijaitsee Jalan Sultan Hishamuddinin varrella. Arthur Benison Hubback suunnitteli rakennuksen, jonka arkkitehtuuri yhdistää länsimaisia ja moguliperinteeseen liittyviä muotoja. Julkisivun kaaret ja kulmien kattopaviljongit tekevät asemasta tunnistettavan. Vaalea rappaus erottaa sen eräistä saman aikakauden paljasta tiiltä käyttävistä rakennuksista. Asemassa on ollut myös rautatiehotelli.\n\nNykyinen päärakennus syntyi 1900-luvun alkupuolella aiemman aseman tilalle. Isoisän matkavuonna 1873 sitä ei vielä ollut, eikä Kuala Lumpurin ja Klangin välinen rautatie ollut valmistunut. Sittemmin KL Sentral otti suuren osan kaupungin pääaseman tehtävistä. Historiallista asemaa ja nykyistä liikenteen solmua ei siksi pidä sekoittaa toisiinsa, vaikka kummankin nimessä on Kuala Lumpur.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Bukit Nanas": {
+      "aika": "Metsän suojelualue 1900-luvun alusta",
+      "teksti": "Bukit Nanas on Kuala Lumpurin keskustan kukkula, jonka alueella on säilynyt trooppista sademetsää. Metsässä on kävelypolkuja, ja suojelualue tunnetaan nykyisin nimellä KL Forest Eco Park. Rakentaminen on vähentänyt metsän pinta-alaa, joten nykyinen vihreä alue on osa laajemmasta historiallisesta kokonaisuudesta. Luontokohteen aiheena ovat kukkula ja metsä, eivät alueelle myöhemmin nousseet rakennukset.\n\nBukit Nanas merkitsee ananaskukkulaa. Perimätiedon mukaan ananaksia kasvatettiin puolustusasemaa ympäröivänä esteenä, mutta nimen selitys esitetään kertomuksena eikä todistettuna tapahtumana. Kukkula liittyy kaupungin 1800-luvun historiaan; isoisän matkavuonna 1873 sen nykyistä metsänsuojeluasemaa ei vielä ollut. Suojelualue perustettiin vasta 1900-luvun alussa. Metsään astuva kävijä saapuu siis myös paikkaan, jonka käyttötarkoitus on muuttunut kaupungin mukana.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Kuala Lumpur International Airport (KUL)",
+    "huomiot": [
+      "C-tekstiluonnos; B-kuvat ja täysi kartan 6–8 kohteen portti avoinna.",
+      "Saatiedot null: yhteistä 48/48 primäärisääauditointia ei ole hyväksytty.",
+      "Bukit Nanas on aito luontokohde; KL Tower ei ole kartan kohde eikä tämän aineiston kuvaehdotus.",
+      "Maalehden kookosriisi-, hapan liemi-, vedetty tee- ja kellotorni/katettu jalkakäytäväaiheita ei ole toistettu uusina nostoina."
+    ]
+  }
+}
