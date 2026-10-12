@@ -87,3 +87,9 @@ Lopputarkistuksessa havaittiin työpuussa pääsession SAA-VALMISTELU.md, kuuden
 ## Pääsession säävalmistelu ja lähdehylkäykset
 
 Alkuperäisen sääpoiminnan numeerinen tarkistus tuotti 6/9 riviä. Lähdetarkistus hylkäsi myöhemmin Luandan ja Kinshasan eri ajanjaksojen jäljitettävyysongelman; alkuperäiset tiedostot arkistoitu NAS-väliaineistoon. Käytössä 4/9: Bangui, Brazzaville, Kigali, Gitega. Libreville / Ciudad de la Paz / São Tomé konehylkäys, Luanda / Kinshasa lähdehylkäys; kaikilla viidellä saatiedot:null. A-raportin säätilan aikaisemmat luvut eivät kumoa tätä myöhempää päätöstä. SAA-VALMISTELU.md ja SAA-LAHDEHYLKAYKSET.md sisältävät näytöt.
+
+## Omistajan uusi tekstityön nopeutus12.10.2026
+
+Omistaja pyysi oleellista nopeutusta sekä enemmän sessioita/agentteja tavoitteenaan10x nopeus.30 pysyvää rinnakkaista sessiota luotu erillisille kaupunkijaoille. Kuvat pyydetty erillisestä Matkakirjan kuvat -putkesta, ensimmäinen Conakryn Camayennen kapokkipuut. Kirjoitetut tekstit eivät odota kuvia, puuttuvia karttapisteitä tai erillistä sääauditointia; puutteita ei arvata. Tekstiluonnoksen valmius ei ole sama kuin valmis-A–F, sisältöhyväksyntä, pelikytkentä tai julkaisu.
+
+Välitallennus 2026-10-12T07:40:36.871526+00:00: tekstiluonnoksia 91/93 (97,8 %), osaluonnokset ja edelleen keskeneräiset kohdat omissa C-muistioissaan. Tässä erässä tallennetut ydinluonnokset: libreville, saotome, bangui, brazzaville, kinshasa, luanda, kigali, gitega. Riippumattomat D-tarkistukset ja kuvien täydentäminen jatkossa. Tämä commit on tuotannon välitallennus, ei valmis-erätoimitus.

@@ -136,3 +136,40 @@ Konteksti luettu: maalehti null, lähikaupungit ja lähinostot tyhjät. Ei verta
 Ei sääriviä: Taulukon otsikossa ei ole normaalikautta. Vuosiväliä ei arvata. saatiedot:null; ei aste- tai mm-lukuja teksteihin.
 
 Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.
+
+## Rajattu lähdetäydennys 12.10.2026 — sessio 14
+
+Uusi omistus vain e06/ciudaddelapaz. Ennen muutoksia kaupungin kaikki neljä lähtötiedostoa kopioitu ja SHA-varmennettu NASin `valiaikainen/ciudaddelapaz-taydennys/alkuperainen-20261012-103030/`-hakemistoon. Alkuperäisen sisalto.json:n SHA-256 `fd259f2aff651818e96dd39227eb5116c12e083280cd9ef58fd6651ea90613a3`. Alkuperäinen A ja kuusi nostoa säilyvät; tämä lisäys päivittää niiden jälkeen löytyneen tiedon.
+
+### Lisälähteet — onnistunut haku ja henkilökohtainen tekstiluku
+
+Kaikki varsinainen sivusisältö yhteisellä sallittu_haku.py:llä: robots (Claude-User ja Matkakirja), redirectit ja globaali hakulukko. Kopiot, tekstipoiminnat, metadata ja SHA NASin valiaikainen/ciudaddelapaz-taydennys/. Verkkohakua käytetty oikeiden virallisten URLien löytämiseen, ei hakukatkelmaa lopullisen väitteen ainoana lähteenä. Ei PDF-hakuja, robots-kiertoa, kuvia tai uutta sääajoa.
+
+| Tunnus | Lähde / luetut osiot | URL |
+|---|---|---|
+| C7 | AAUCA:n oma etusivu: koulutusaloja, pääkampuksen osoite; nykyinen akateeminen kalenteri sivulla, ei päivämääriä tekstiin | https://aaucauniversity.com/ |
+| C8 | AAUCA:n oma Admisión a las Facultades: talous- ja kauppatiede, kasvatustiede/humanistiset alat, tekniikka/arkkitehtuuri, lääketiede/biologia | https://aaucauniversity.com/admision-a-la-facultades-y-grados/ |
+| C9 | Afro-American University of Central Africa: lead, History; pääkampus ja institutionaalinen historia; tarkat vuodet pois | https://en.wikipedia.org/wiki/Afro-American_University_of_Central_Africa |
+| C10 | Grand Hotel Djiblohon oma etusivu: Restaurants & Bars, hotellin sademetsäympäristö ja kongressitoiminto; mainoskielen superlatiivit ja turvallisuusväitteet pois | https://grandhoteldjibloho.com/ |
+| C11 | Hotellin oma historia: käyttötarkoitus, majoitus/kokoukset ja Djibloho (Ciudad de la Paz) -sijainti. Tarkka avaamisvuosi ja tapahtuma-/vierasväitteet pois | https://grandhoteldjibloho.com/the-story-of-grand-hotel-djibloho/ |
+| C12 | Hotellin oma Meetings & Events: kokouskeskus, erilaiset tilankäyttömahdollisuudet, auditorio, Libertad-juhlasali ja siirtoseinät | https://grandhoteldjibloho.com/events/ |
+| C13 | Hotellin oma Mariposa: kansainvälinen buffet/à la carte; samassa sivussa L’Incanto ja LOM. Hinnat, aukioloajat, teemaillat ja sisustuksen teokset pois | https://grandhoteldjibloho.com/dining-outlets/mariposa/ |
+| C14 | GOV.UK Equatorial Guinea, Safety and security: Crime/Taxis/Road travel. Ennalta sovitut kuljetukset ja pimeän maantiesiirtymien välttäminen. Ei politiikkaa tai rikos-/uhrilukuja | https://www.gov.uk/foreign-travel-advice/equatorial-guinea/safety-and-security |
+
+### Kaksi uutta erillistä teemanostoaihetta
+
+**T3 Koulutus nuoren kaupungin toimintona (C7/C8/C9).** AAUCA = Universidad Afro-Americana de África Central, pääkampus Ciudad de la Pazissa Djiblohon alueella. Olemassa olevan koulutustarjonnan alat: talous/kauppa, kasvatus/humanistiset alat, tekniikka/arkkitehtuuri, lääketiede/biologia. Yliopiston historia on 2000-luvulla. Ei tarkkaa perustamis-/avaamisvuotta, opiskelijamäärää, luentosalin visualisointia tai keksittyä kampuksella käyntiä. Koulutus on konkreettinen kaupungin toiminto, ei vain yleinen suunnittelukapasiteetti; ei toista visaa/minitehtävää.
+
+**T4 Kokous- ja majoituspalvelujen synty metsäiseen ympäristöön (C10/C11/C12).** Grand Hotel Djibloho on kongressi- ja majoituskokonaisuus kaupungin sademetsäisessä ympäristössä. Kokouskeskuksen käyttömuotoja ovat kokoukset, konferenssit, näyttelyt, messut, juhla-ateriat ja konsertit. Lisäksi auditorio, kokoushuoneet ja Salón Libertad -juhlasali; jälkimmäistä voi jakaa siirtoseinillä. Kerrotaan tilojen tarjotuista käyttötavoista, ei väitetä mitään nimettyä tapahtumaa toteutuneeksi tai salia vapaaksi. Ei tarkkoja henkilö-/huonemääriä, pinta-aloja, tähtiluokitusta tai avaamisvuotta. Modernin rakennuksen käyttöä kuvaava teksti ei tee siitä hyväksyttyä kartta- tai kuvakohdetta.
+
+### Kaksi uutta opasjaksoa ja tarkistettu matkailutiedon taso
+
+**J4 Mitä täällä syödään (C10/C13):** Grand Hotel Djiblohon Mariposa tarjoaa kansainvälistä buffet- ja à la carte -ruokailua. L’Incanto painottaa italialaista ruokaa, LOM afrikkalaisia makuja. Rajaus nimenomaan hotellin ruokailupaikkoihin; ei kaupungin ruokaperinteeksi tai omaksi erikoisruoaksi väittämistä. Ei ravintolaa, annosta, kellonaikaa tai hintaa keksitty. Nykyinen saatavuus varmistettava hotellilta matkan järjestämisen yhteydessä.
+
+**J5 Opiskelu ja kokousmatka (C7/C8/C12):** AAUCA:n opiskelu-/hakujärjestelyt ja koulutusaloja; Grand Hotel Djiblohon kokouspalvelut ja niiden suora järjestäminen. Jakso korvaa ennestään tyhjän sää-/ajankohtapaikan, koska juuri näistä kaupungin todellisista toiminnoista saatiin lähde. Ei yleisölle avoimen kampuksen, vierailukierroksen tai tapahtumakalenterin lupausta. Pääkaupunkiasema ei yksin todista turistipalvelujen laajuutta.
+
+Matkailijalle-osioon ja Perille-jaksoon lyhyt C14:ään perustuva kuljetusohje. Ei kuvata hallinto-/lentoasemarakennuksia, liikennereittejä, varmoja lentoyhteyksiä, metsäreittejä tai turvalliseksi luokiteltua omatoimista retkeä. Hotellin mainoskielen "turvallinen", "koskematon" ja superlatiivit eivät tule tekstiin.
+
+Viittä itsenäistä nähtävyys-/käyntisuositusta ei vieläkään saatu. `parasta:[]` säilyy, eikä samaa hotellia hajoteta viideksi eri nähtävyydeksi täyttämään kenttää. Kartan esittely/rajat/kohteet jäävät alkuperäiseen avoimeen tilaan. Kaikkien kuvaroolien neljä kenttää tyhjiä. Saatiedot null, sääauditointi avoin; ei sää-/kuukausilukuja, tarkkaa nykyväestöä tai vanhan kaupungin/alueen rajauksen arvausta.
+
+**A-päivitys:** kahdeksan erillisen noston ja viiden kirjoitetun opasjakson aineisto on nyt saatavilla. A ja koko kaupunkipaketti pysyvät osittaisina, koska nähtävyys-/kartta-, kuva-, sää- ja riippumattoman D/E/F:n portit ovat avoinna. Vanhan A:n toteamukset nosto- ja opasvajauksista kuvaavat lähtötilaa ennen tätä lähdetäydennystä.

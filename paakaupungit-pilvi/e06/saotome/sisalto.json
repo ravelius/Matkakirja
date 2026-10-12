@@ -1,0 +1,417 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "saotome",
+  "maa": "STP",
+  "era": "e06",
+  "kaupunki": {
+    "id": "saotome",
+    "name": "São Tomé",
+    "wiki": "São Tomé",
+    "ambience": "meri",
+    "pallo": {
+      "lat": 0.3365,
+      "lon": 6.7273
+    }
+  },
+  "artikkeli": {
+    "intro": "São Tomé on saarivaltion pääkaupunki, jonka keskusta seuraa **Ana Chavesin lahtea**. Kaupunki sijaitsee São Tomén saaren koillisrannikolla, ja sen nimi tarkoittaa portugaliksi Pyhää Tuomasta. Samalla nimellä puhutaan siis kaupungista ja saaresta; valtion nimi on São Tomé ja Príncipe. Portugalilainen kaupunkiasutus sai alkunsa 1400-luvun lopulla.\n\nSataman lähelle rakennettu **São Sebastiãon linnake** oli paikallaan jo isoisän matkavuonna 1873. Nykyisin linnakkeessa toimii museo, joten rannalla voi kohdata saman rakennuksen kahdessa hyvin erilaisessa tehtävässä. Kaupunki on myös saaren tie- ja bussiyhteyksien keskus, jonka arkea ovat tori, taksit ja yhteiskyydit. Kulttuurin puolella tchiloli yhdistää vanhan portugalilaisen näytelmätekstin musiikkiin, tanssiin ja paikallisten esiintyjäryhmien omaan ilmaisuun.",
+    "teksti": "Ana Chavesin lahti antaa kaupungille sen rannikkokehyksen. Lahden eteläisen pään linnake rakennettiin 1500-luvulla sataman suojaksi. Nykyinen satamalaituri on paljon myöhempää rakentamista, joten rantaa ei voi pitää muuttumattomana näkymänä menneisyyteen.\n\nKatedraalin paikalla on pitkä kirkollinen historia. Sen nykyinen julkisivu kuuluu kuitenkin 1900-luvun muutoksiin, ei sellaisenaan isoisän matkavuoteen. Kaupungin historialliset paikat sisältävät useita aikakerroksia, jotka näkyvät myös linnakkeen myöhemmässä museotehtävässä.\n\nSaaren sisäosissa maisema vaihtuu Obôn luonnonpuiston metsiin. Puisto ei ole yksi yhtenäinen metsäläntti, vaan siihen kuuluu erillisiä alueita ja monenlaisia kasvillisuusympäristöjä. Pääkaupungin rantakävely ja metsäretki ovat siksi eri mittakaavan tapoja tutustua São Toméen."
+  },
+  "kysymykset": [
+    {
+      "q": "Mikä on São Tomén pääkaupungin maantieteellinen sijainti?",
+      "options": [
+        "Saaren koillisrannikolla",
+        "Mantereen sisämaassa",
+        "Joen suuressa suistossa",
+        "Vuoriston korkealla solalla"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupunki kuuluu Guineanlahden saarivaltioon.",
+      "fact": "São Tomé sijaitsee samannimisen saaren koillisrannikolla.",
+      "source": "https://en.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9"
+    },
+    {
+      "q": "Mitä São Tomén nimi tarkoittaa?",
+      "options": [
+        "Pyhä Tuomas",
+        "Pyhä Pietari",
+        "Pyhä Paavali",
+        "Pyhä Markus"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Nimen taustalla on portugalinkielinen pyhimysnimi.",
+      "fact": "São Tomé tarkoittaa portugaliksi Pyhää Tuomasta.",
+      "source": "https://en.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9"
+    },
+    {
+      "q": "Mihin Ana Chavesin lahti liittyy?",
+      "options": [
+        "Kaupungin satamaan",
+        "Vuoriston kaivokseen",
+        "Sisämaan viljapeltoon",
+        "Saaren suureen järveen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kaupunki on rakennettu lahden rannalle.",
+      "fact": "São Tomén satama sijaitsee Ana Chavesin lahden äärellä.",
+      "source": "https://en.wikipedia.org/wiki/Ana_Chaves_Bay"
+    },
+    {
+      "q": "Millaisessa rakennuksessa São Sebastiãon museo toimii?",
+      "options": [
+        "Vanhassa linnakkeessa",
+        "Vanhassa rautatieasemassa",
+        "Entisessä teatterissa",
+        "Entisessä koulutalossa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennuksen aikaisempi tehtävä liittyi sataman puolustukseen.",
+      "fact": "Museo toimii São Sebastiãon linnakkeessa.",
+      "source": "https://en.wikipedia.org/wiki/Fort_S%C3%A3o_Sebasti%C3%A3o_(S%C3%A3o_Tom%C3%A9)"
+    },
+    {
+      "q": "Kenen tarinapiiriin tchilolin vanha näytelmä liittyy?",
+      "options": [
+        "Kaarle Suuren",
+        "Aleksanteri Suuren",
+        "Julius Caesarin",
+        "Napoleon Bonaparten"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Näytelmän taustalla on keskiaikaisen hallitsijan tarinaperinne.",
+      "fact": "Tchilolin pohjana oleva näytelmä kuuluu Kaarle Suuren tarinapiiriin.",
+      "source": "https://pt.wikipedia.org/wiki/Tchiloli"
+    }
+  ],
+  "tiedot": [
+    "São Sebastiãon linnake on vaihtanut sataman puolustuspaikasta museoksi.",
+    "São Tomén kaupunki, samanniminen saari ja saarivaltio ovat kolme eri maantieteellistä rajausta.",
+    "Tchiloli voi yhdistää vanhaa portugalilaista tekstiä nykykielisiin lisäyksiin ja improvisaatioon."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "São Tomé",
+      "johdanto": "Lahden kaari, vanha linnake ja saaren yhteydet kokoontuvat samaan rantakaupunkiin.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Lahti pitää kaupunkia sylissä",
+          "teksti": "Ana Chavesin lahti avautuu São Tomén saaren koillisrannikolla. Sen äärelle sijoittuvat pääkaupunki ja satama. Lahden pohjoista päätä kutsutaan Ponta Oque del Reiksi ja eteläistä Ponta São Sebastiãoksi; linnake seisoo eteläpäässä. Vesialue on matala, ja sataman nykyinen laituri kuuluu 1900-luvun jälkipuoliskon rakentamiseen. Sama lahti yhdistää siis vanhan kaupungin ja myöhemmän sataman, mutta sen ranta ei ole pysynyt samanlaisena vuosisadasta toiseen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ana Chaves Bay"
+        },
+        {
+          "otsikko": "Puolustuksesta muistamiseen",
+          "teksti": "São Sebastiãon linnake rakennettiin 1500-luvulla kaupungin ja sataman suojaksi. Se sijaitsee Ana Chavesin lahden kaakkoispäässä, nykyisen keskustan koillisosassa. Myöhemmin linnakkeeseen sijoitettiin kansallismuseo, jonka kokoelmissa on siirtomaa-ajan esineistöä ja uskonnollista taidetta. Muutos on kiinnostava: rakennus, jonka tehtävä oli vartioida, auttaa nyt ymmärtämään historiaa. Isoisän matkavuonna 1873 linnake oli jo olemassa, mutta nykyinen museo oli vielä tulevaisuutta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "São Sebastião Museum"
+        },
+        {
+          "otsikko": "Tori on myös lähtöpiste",
+          "teksti": "São Tomé on saaren maantie- ja bussiverkon keskus. Kaupungin kunnallistori ei siksi kuulu vain ostoskierrokseen: sen lähellä on myös taksiasema. Liikkumiseen käytetään taksien ohella collectivo-yhteiskyytejä, joita hoitavat minibussit. Saaren pääreittejä kulkee rannikon suunnassa, ja kaupungissa rantakatu Avenida 12 de Julho yhdistyy kävelykohteisiin. Torin, rantakadun ja lähtöpaikkojen kautta hahmottuu pääkaupunki, joka hoitaa samalla monia koko saaren arkisia yhteyksiä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "São Tomé"
+        },
+        {
+          "otsikko": "Vanha näytelmä elää uudelleen",
+          "teksti": "Tchiloli on teatterin, musiikin ja tanssin yhdistelmä. Sen pohjana on Baltazar Diasin 1500-luvun näytelmä, jonka kertomus kuuluu Kaarle Suuren tarinapiiriin. São Tomén paikalliset esiintyjäryhmät eivät kuitenkaan esitä vain koskematonta vanhaa tekstiä: mukana on myöhempiä proosalisäyksiä, nykyportugalia ja improvisaatiota. Vanhan kirjallisuuden ja elävän esityksen välillä on jatkuva liike. Perinteen saapumisajasta saarelle ei ole varmuutta, joten sille ei anneta yhtä varmaa syntymävuotta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tchiloli"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "São Tomén rannalla voi yhdistää lahden, linnakkeen historian ja torin samaan kaupunkikierrokseen. Taksit ja collectivo-yhteiskyydit palvelevat liikkumista. Obôn metsäalueet ovat erillinen retki kaupungin ulkopuolelle. Reitti ja kuljetus sovitaan paikallisen oppaan kanssa. Presidentinpalatsi ei kuulu vapaasti käytäviin tai kuvattaviin kohteisiin.",
+        "artikkeli": {
+          "nimi": "Matkailijan São Tomé",
+          "taitto": "opas",
+          "teksti": "Aloita lahden rannalta ja laajenna kierrosta halutessasi saaren metsiin.",
+          "nosto": "Keskustan kävely ja Obôn metsäretki tarvitsevat erilaiset järjestelyt.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "São Tomén kansainvälisen lentoaseman koodi on TMS. Kaupungissa liikutaan takseilla ja collectivo-yhteiskyydeillä. Torin lähellä oleva taksiasema on yksi liikkumisen lähtöpaikoista.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Lahden vanha kaupunki",
+              "teksti": "Ana Chavesin rantaa seuraavalla kierroksella voi tutustua kaupungin merelliseen kehykseen ja São Sebastiãon linnakkeeseen. Katedraalin historiallinen paikka kuuluu keskustaan, mutta sen nykyinen julkisivu on myöhempi kuin vanhimmat rakennusvaiheet. Presidentinpalatsi ei ole avoin yleisölle, eikä sen kuvaus ole sallittua.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Obô on erillinen retki",
+              "teksti": "Obôn puisto käsittää useita saaren osia, joten puiston nimi ei vielä määritä retkireittiä. Metsään lähtöä varten järjestetään paikallinen opas ja kuljetus. Ilhéu das Cabras kuuluu rannalta hahmottuvaan saaren maisemaan; se ei itsessään tarkoita valmista veneretkeä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kala ja pienet annokset",
+              "teksti": "Kaupungin ruoka-aiheisiin kuuluvat grillikala, meren antimet ja petiscos, pienet annokset. Tori tarjoaa myös mahdollisuuden tutustua kaupungin kauppa-arkeen. Ravintolan nimi vanhassa matkaoppaassa ei takaa sen nykyistä toimintaa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Metsäkierroksen suunnittelu",
+              "teksti": "Obôn retki sovitaan oppaan kanssa: samalla määritellään oikea puistoalue, kuljetus, reitti ja varusteet. Laajalle saarelle levittäytyvän puiston retkeä ei voi suunnitella pelkästään keskustan kävelykartasta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Ana Chavesin ranta",
+                "tahdet": 3,
+                "selite": "Lahti hahmottaa koko rantakaupungin sijainnin."
+              },
+              {
+                "mita": "São Sebastiãon linnake",
+                "tahdet": 3,
+                "selite": "Vanha puolustuspaikka toimii nykyisin museona."
+              },
+              {
+                "mita": "Kunnallistori",
+                "tahdet": 2,
+                "selite": "Tori yhdistää kaupungin kaupan ja liikkumisen."
+              },
+              {
+                "mita": "Tchiloli-esitys",
+                "tahdet": 2,
+                "selite": "Paikallisesti vahvistettu esitys avaa elävää teatteriperinnettä."
+              },
+              {
+                "mita": "Obô oppaan kanssa",
+                "tahdet": 3,
+                "selite": "Erillinen metsäretki vie saaren toiseen mittakaavaan."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Kieli ja raha",
+                "teksti": "Maan virallinen kieli on portugali ja valuutta dobra."
+              },
+              {
+                "otsikko": "Palatsin rajoitus",
+                "teksti": "Presidentinpalatsi ei ole yleisölle avoin eikä vapaasti kuvattava."
+              },
+              {
+                "otsikko": "Yhteiskyydit",
+                "teksti": "Collectivot ovat minibussien hoitamia yhteiskyytejä."
+              },
+              {
+                "otsikko": "Puiston mittakaava",
+                "teksti": "Obô sijaitsee kaupungin ulkopuolella useina erillisinä alueina."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Saari kaupungin takana",
+      "johdanto": "Rantakaupungin takaa avautuu saari, jossa luonnonpuisto koostuu useista alueista ja metsälläkin on monta historiaa.",
+      "tehtava": {
+        "kysymys": "Mitä voi kasvaa käytöstä poistuneelle plantaasille?",
+        "vaihtoehdot": [
+          "Sekundaarimetsää",
+          "Jäätikköä",
+          "Koralliriuttaa",
+          "Aavikkodyynejä"
+        ],
+        "oikea": 0,
+        "fakta": "Capoeira on uudelleen kasvanutta metsää; myös aikaisemmin viljelty alue voi metsittyä."
+      },
+      "nostot": [
+        {
+          "otsikko": "Vuohisaarella ei ole kylää",
+          "teksti": "Ilhéu das Cabras on pieni saari Guineanlahdella, São Tomén koillisrannikon edustalla ja kaupungin pohjoispuolella. Sen nimi viittaa vuohiin, mutta paikkaa kuvataan asumattomaksi. Maasto kohoaa kahdeksi mäeksi, ja koillisella kukkulalla on 1800-luvun lopulta periytyvä majakka. Saaren nimi esiintyy myös vanhassa Vingboonsin kartassa muodossa Mooro Caebres. Pieni rantamaiseman saari on siis sekä luonnonmuoto että vanhojen merikarttojen paikannimi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ilhéu das Cabras"
+        },
+        {
+          "otsikko": "Puisto ei ole yksi pala",
+          "teksti": "Obôn luonnonpuisto ei tarkoita yhtä kaupungin reunalla olevaa metsikköä. São Tomén saarella siihen kuuluu erillisiä alueita: keskistä vuoristoa, etelän Malanzan aluetta ja pohjoisen Praia das Conchasin sekä Lagoa Azulin ympäristöä. Puisto ulottuu usean piirikunnan alueelle, ja nykyinen suojeluasema on 2000-luvulta. Sen aluejakoa kannattaa siksi ajatella saaristomaisena verkostona saman saaren sisällä. Puiston nimi ei yksin kerro retken lähtöpaikkaa tai sitä, millaiseen maisemaan reitti vie.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Parque Natural Obô de São Tomé"
+        },
+        {
+          "otsikko": "Metsä palaa plantaasille",
+          "teksti": "Obôn alueilla esiintyy alanko- ja vuoristometsiä, mangrovea, ruohikkoympäristöjä sekä korkealla kasvavaa kosteaa metsää. Osa metsästä on sekundaarimetsää, paikalliselta nimeltään capoeira: se on kasvanut uudelleen esimerkiksi hylätyille plantaasialueille. Metsäinen maisema ei siis aina tarkoita paikkaa, jossa ihmisen toiminta ei olisi koskaan näkynyt. Orkideat, saniaiset ja sammalet kuuluvat puiston kasvillisuuteen, mutta niiden taustalla voi olla hyvin erilainen maankäytön historia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Parque Natural Obô de São Tomé"
+        },
+        {
+          "otsikko": "Linnut, joille saari on maailma",
+          "teksti": "Obôn metsissä elää São Tomélle kotoperäistä linnustoa. Esimerkkejä ovat São Tomén ibis, Bostrychia bocagei, ja São Tomén oliivikyyhky, Columba thomensis. Kotoperäinen tarkoittaa, että lajin luonnollinen esiintymisalue rajoittuu tiettyyn alueeseen; tässä saari on olennainen osa sen elinympäristöä. Puisto on tärkeä lintualue, mutta sen eläimistöön kuuluu myös sammakkoeläimiä ja kotoperäisiä lepakoita. Metsäretken kiinnostus syntyy koko elinympäristöstä, ei varmuudella luvattavasta eläinhavainnosta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Parque Natural Obô de São Tomé"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Ana Chavesin rannalla vanha linnake liittyy kaupungin satamahistoriaan. Pohjoisen merimaisemaan kuuluu Ilhéu das Cabras.",
+    "rajat": {
+      "pohjoinen": 0.411,
+      "etela": 0.34283,
+      "lansi": 6.712,
+      "ita": 6.74244
+    },
+    "kohteet": [
+      {
+        "nimi": "São Sebastiãon linnake",
+        "lat": 0.34583,
+        "lon": 6.73944
+      },
+      {
+        "nimi": "Ana Chavesin lahti",
+        "lat": 0.34778,
+        "lon": 6.72833,
+        "tyyppi": "luonto"
+      },
+      {
+        "nimi": "Ilhéu das Cabras",
+        "lat": 0.408,
+        "lon": 6.715,
+        "tyyppi": "luonto"
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "São Sebastiãon linnake": {
+      "aika": "1500-luku",
+      "teksti": "São Sebastiãon linnake seisoo Ana Chavesin lahden kaakkoispäässä, nykyisen kaupungin koillisosassa. Se rakennettiin 1500-luvulla sataman ja kaupungin puolustukseksi. Paikka oli siis olemassa jo isoisän matkavuonna 1873, mutta rakennuksen nykyinen tehtävä ei ollut vielä sama. Rannan puolustusrakennus kuuluu São Tomén pitkään satamahistoriaan.\n\nLinnakkeessa toimii nykyisin kansallismuseo. Sen kokoelmiin kuuluu siirtomaa-ajan esineistöä ja uskonnollista taidetta. Kokonaisuuteen liittyvä majakka lisättiin 1800-luvulla ja uudistettiin myöhemmin; nykyistä majakka-asua ei siksi voi pitää suoraan vanhan matkavuoden näkymänä. Samassa paikassa kohtaavat vanha puolustustehtävä, merenkulku ja myöhempi historian säilyttäminen.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Ana Chavesin lahti": {
+      "aika": "Luonnonlahti",
+      "teksti": "Ana Chavesin lahti sijaitsee São Tomén saaren koillisrannikolla. Pääkaupunki ja sen satama ovat asettuneet lahden äärelle. Pohjoisessa sitä rajaa Ponta Oque del Rei, etelässä Ponta São Sebastião. Eteläpään linnake muistuttaa siitä, että kaupunki ja sen meriyhteydet ovat pitkään kuuluneet yhteen.\n\nLahti on matala, ja sen rannalla näkyy useita rakentamisen vaiheita. Nykyinen satamalaituri kuuluu 1900-luvun jälkipuoliskolle, vaikka vesialue ja rantakaupunki olivat olemassa jo isoisän matkavuonna 1873. Menneisyyden rannasta puhuttaessa on siis erotettava luonnonlahti ja myöhemmin rakennettu satama. Lahti on kaupungin pysyvä maantieteellinen kehys, mutta ranta on muuttunut sen ympärillä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Ilhéu das Cabras": {
+      "aika": "Luonnonsaari; majakka 1800-luvun lopulta",
+      "teksti": "Ilhéu das Cabras sijaitsee Guineanlahdella São Tomén saaren koillisrannikon edustalla, pääkaupungin pohjoispuolella. Pieni, asumattomaksi kuvattu saari kohoaa kahdeksi mäeksi. Sen nimi viittaa vuohiin, ja vanhassa Vingboonsin kartassa esiintyy nimi Mooro Caebres. Saaren historiaa voi siten seurata myös merikarttojen nimissä.\n\nKoillisella kukkulalla on majakka, jonka alku kuuluu 1800-luvun loppuun. Isoisän matkavuonna 1873 saari oli olemassa, mutta tämä myöhempi majakka ei vielä kuulunut siihen. Luonnonsaari ja merenkulun rakennus ovat eri aikakerroksia samassa maisemassa. Paikka kuuluu São Tomén pohjoiseen merelliseen ympäristöön; sen tunnistaminen kartalla ei itsessään lupaa kuljetusta tai pääsyä saarelle.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "São Tomé International Airport (TMS)",
+    "huomiot": [
+      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa kirjoitettu A:n pohjalta. Sääjakson sijalla lähteistetty metsäretken suunnittelu, ei sääväitteitä.",
+      "Kartta partial 3: linnake, Ana Chavesin lahti ja Ilhéu das Cabras. Obôn kaukainen aluepiste jätetty oppaaseen; kirkot pois oikeus-/historiallisuusportin takia. Ei kuuden kohteen täytekarttaa.",
+      "Kuvaputki/B avoin: kaikki neljä kuvakenttää tyhjiä. Linnakkeen myöhempi majakka ja patsaat eivät ole vapaan alkuperäisrakennuksen kuva-aiheita ilman erillistä hyväksyntää.",
+      "Sää null, 48/48 primäärivarmennus avoin; tarkkoja perustamis- ja rakennusvuosia ei käytetty. Tarkka väestöluku jätetty pois."
+    ]
+  }
+}

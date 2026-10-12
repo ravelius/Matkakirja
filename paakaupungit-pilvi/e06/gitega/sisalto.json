@@ -1,0 +1,329 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "gitega",
+  "maa": "BDI",
+  "era": "e06",
+  "kaupunki": {
+    "id": "gitega",
+    "name": "Gitega",
+    "wiki": "Gitega",
+    "ambience": "ylanko",
+    "pallo": {
+      "lat": -3.4283,
+      "lon": 29.925
+    }
+  },
+  "artikkeli": {
+    "intro": "Gitega on Burundin poliittinen pääkaupunki **maan keskiosan ylängöllä**. Kaupunki sijaitsee kukkuloiden ympäröimällä tasangolla, ja sen nykyinen kaupunkialue jatkaa kasvuaan vanhan hallinnon ja kaupan ytimen ympärille. Aikaisempi kirjoitusasu oli Kitega. Moderni asemakaava syntyi 1900-luvun alussa, mutta seudun historia liittyy paljon vanhempaan kuningaskuntaan.\n\nIsoisän matkavuonna 1873 nykyistä katu- ja rakennuskokonaisuutta ei vielä ollut samassa muodossa. Gitegan pohjoispuolinen Gishora kuuluu kuninkaallisten rumpupaikkojen historiaan, jonka tarkkaa alkuajankohtaa ei voi asettaa yhteen varmaan vuoteen. **Kuninkaallisen rummun perinne** elää soiton, tanssin, laulun ja taitojen opettamisen yhdistelmänä. Gitegan kansallismuseo puolestaan säilyttää arjen ja hovin esineistöä: elävä perinne ja tallennettu kokoelma kertovat menneisyydestä eri tavoin.",
+    "teksti": "Gitegan moderni asemakaava on saksalaisajan 1900-luvun alun kerros. Seudun kuninkaalliset paikat eivät kuitenkaan ole sama asia kuin myöhemmin suunniteltu kaupunkikeskusta. Nykyinen pääkaupunkiasema, vanhempi kuningaskunnan historia ja kaupungin rakennusvaiheet kulkevat eri aikajanoilla.\n\nKansallismuseo syntyi 1900-luvun puolivälissä kansankulttuurin esineiden tallentamista varten. Kokoelmissa on etnografista ja historiallista aineistoa sekä kuninkaalliseen hoviin liittyviä esineitä. Museon tehtävä on säilyttää tietoa, jota esineiden käyttö ja tausta kantavat.\n\nRumpuperinne siirtyy tekemällä ja opetuksessa. Yhteissoiton rinnalla siihen kuuluvat tanssi, laulu ja soittimien valmistustaito. Seudun vesiverkko jatkaa toiseen mittakaavaan: Ruvyironza liittyy Ruvubuun, Kageraan ja Victoriajärven kautta Niilin vesistöön."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan poliittinen pääkaupunki Gitega on?",
+      "options": [
+        "Burundin",
+        "Ruandan",
+        "Ugandan",
+        "Kenian"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa kuuluu Afrikan Suurten järvien alueeseen.",
+      "fact": "Gitega on Burundin poliittinen pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Gitega"
+    },
+    {
+      "q": "Millaisessa maastossa Gitega sijaitsee?",
+      "options": [
+        "Ylängöllä kukkuloiden keskellä",
+        "Rannikon laajassa jokisuistossa",
+        "Aavikon hiekkadyynien välissä",
+        "Jäätikön reunalla vuonossa"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupunki sijaitsee maan keskiosan tasangolla.",
+      "fact": "Gitegan tasankoa ympäröivät kukkulat.",
+      "source": "https://en.wikipedia.org/wiki/Gitega"
+    },
+    {
+      "q": "Mikä on Gitegan aikaisempi kirjoitusasu?",
+      "options": [
+        "Kitega",
+        "Gitera",
+        "Kigera",
+        "Giketa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimen alussa käytettiin toista soinnitonta kirjainta.",
+      "fact": "Kitega on kaupungin aikaisempi kirjoitusasu.",
+      "source": "https://en.wikipedia.org/wiki/Gitega"
+    },
+    {
+      "q": "Mihin elävään perinteeseen Gishora liittyy?",
+      "options": [
+        "Kuninkaalliseen rumpuperinteeseen",
+        "Kuninkaalliseen mattokudontaan",
+        "Kuninkaalliseen lasinpuhallukseen",
+        "Kuninkaalliseen kirjanpainoon"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Esitykseen kuuluu rytmiä, laulua ja liikettä.",
+      "fact": "Gishora liittyy Burundin kuninkaalliseen rumpuperinteeseen.",
+      "source": "https://en.wikipedia.org/wiki/Gishora"
+    },
+    {
+      "q": "Minkä suuren joen vesiverkkoon Ruvyironza liittyy?",
+      "options": [
+        "Niilin",
+        "Kongon",
+        "Nigerin",
+        "Zambezin"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Vesi jatkaa Ruvubun ja Kageran kautta Victoriajärveen.",
+      "fact": "Ruvyironza on osa Niilin valuma-alueen jokiverkkoa.",
+      "source": "https://en.wikipedia.org/wiki/Ruvyironza_River"
+    }
+  ],
+  "tiedot": [
+    "Gitegan moderni asemakaava ja seudun kuninkaalliset paikat ovat eri historiallisia kerroksia.",
+    "Gitegan kansallismuseo tallentaa sekä arjen esineitä että kuninkaallisen hovin aineistoa.",
+    "Burundin rumpuperinteessä taitoja siirretään harjoittelun, opetuksen ja soittimien tekemisen kautta."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Gitega",
+      "johdanto": "Ylängön kaupunkikaava on nuorempi kuin seudun kuninkaallinen paikkahistoria; rumpuperinne elää ihmisten taidoissa.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kaupunki keskisellä ylängöllä",
+          "teksti": "Gitega sijaitsee Burundin keskiosan ylängöllä, kukkuloiden ympäröimällä tasangolla. Kaupunkialue kasvaa myös RN2-tien suunnassa. Vanhan hallinnon ja kaupan alueen rinnalla eri kaupunginosilla on omia historiallisia yhteyksiään: Nyamugarin kuvauksessa esiintyy swahilialue, Mushasha puolestaan liittyy uskonnolliseen toimintaan. Kaupungin maantiede ei siten ole pelkkä korkeus kartalla. Tasanko, ympäröivät kukkulat ja kaupunginosien erilaiset tehtävät muodostavat yhdessä sen paikallisen rakenteen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Gitega"
+        },
+        {
+          "otsikko": "Asemakaava ei ajoita kuningaskuntaa",
+          "teksti": "Nykyinen Gitegan kaupunkisuunnitelma kuuluu saksalaisajan 1900-luvun alkuun. Seudun kuninkaalliset paikat ovat toinen historiallinen kerros; Gishora sijaitsee kaupungin pohjoispuolella. Myös nimimuodot Kitega ja Gitega kertovat kaupungin myöhemmästä nimihistoriasta. Isoisän matkavuotta 1873 ei voi siksi kuvata nykyisen katuverkon kautta. Vanha kuningaskunnan paikkahistoria ja moderni hallintokaupunki liittyvät samaan seutuun, mutta ne eivät tarkoita samaa rakennettua keskustaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Gitega"
+        },
+        {
+          "otsikko": "Museo tallentaa myös arkisia esineitä",
+          "teksti": "Gitegan kansallismuseo syntyi 1900-luvun puolivälissä tallentamaan kansankulttuurin esineistöä. Kokoelmissa on etnografisia ja historiallisia esineitä sekä kuninkaallisen hovin aineistoa. Niistä julkaistiin myöhemmin myös kokoelmaluettelo. Arjen ja hovin rinnakkaisuus on kiinnostava: esinehistoria ei koostu vain hallitsijoiden tavaroista. Museon kokoelma voi säilyttää tietoa siitä, mitä ihmiset tekivät ja käyttivät, sekä siitä, millaiset esineet liittyivät kuninkaallisiin tehtäviin.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "National Museum of Gitega"
+        },
+        {
+          "otsikko": "Pieni joki jatkaa suureen verkkoon",
+          "teksti": "Ruvyironza kulkee Gitegan maakunnan kautta ja liittyy Ruvubuun. Ruvubun vesi jatkaa Kageraan, joka virtaa Victoriajärveen; sieltä vesiverkko liittyy Valkoiseen Niiliin. Jokilaaksoissa on myös maatalouskäyttöä. Seudun joki ei siis ole vain paikallinen viiva, vaan osa laajempaa valuma-aluetta. Kun veden reittiä seuraa, paikallinen jokinimi vaihtuu ensin Ruvubuksi, sitten Kageraksi. Gitegan maakunnan jokilaakso liittyy näin kauas jatkuvaan veden reittiin.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ruvyironza River"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Tarpeetonta matkustamista Burundiin kannattaa tällä hetkellä välttää. Gitegan paikkahistoriaa voi lähestyä ylängön kaupungin, museokokoelman ja rumpuperinteen kautta. Kansainvälisen saapumisen lentoasema on Bujumburassa, josta Gitegaan on tieyhteys. Gitegan oma kenttä ei ole vahvistettu nykyinen reittilentokenttä. Gishoran käynti ja mahdollinen esitys järjestetään paikallisesti.",
+        "artikkeli": {
+          "nimi": "Matkailijan Gitega",
+          "taitto": "opas",
+          "teksti": "Tutustu ylängön kaupunkiin ja rumpuperinteeseen matkan nykyiset rajoitukset huomioiden.",
+          "nosto": "Kaupunkihistoria ja elävä perinne ovat eri kokemuksia; tarpeetonta matkustamista kannattaa välttää.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Kansainvälisen saapumisen kenttä on Melchior Ndadayen lentoasema Bujumburassa, koodi BJM. Bujumburasta on tieyhteys Gitegaan. Gitegan GID-kentän nimeä ei pidä tulkita varmaksi matkustajareitiksi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kuninkaallisten paikkojen historia",
+              "teksti": "Gishoran vastaanotto- ja pihapaikat liittyvät rumpuperinteen historiaan. Gitegan kansallismuseo säilyttää arjen sekä hovin aineistoa. Museon nykyinen toiminta ja Gishoran käyntijärjestelyt varmistetaan paikallisesti.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ylängön kaupunkimaisema",
+              "teksti": "Gitega on kukkuloiden ympäröimällä tasangolla. Kaupallinen keskusta ja tori kuuluvat sen kaupunkitilaan. Ruvubun kansallispuisto ja Kareran putoukset ovat muiden alueiden retkikohteita, eivät Gitegan keskustan kävelypaikkoja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Burundin ruoka taustaksi",
+              "teksti": "Burundin yleiskeittiössä käytetään papuja, banaaneja, bataattia ja maniokkia. Ugali mainitaan maissi- tai maniokkijauhosta tehtävänä ruokana. Nämä ovat maan ruoka-aiheita, eivät vahvistettuja Gitegan erikoisannoksia tai tietyn kaupungin ravintolan nykyinen ruokalista.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Matkustamisen nykyiset rajat",
+              "teksti": "Tarpeetonta matkustamista Burundiin kannattaa tällä hetkellä välttää. Mahdollinen käynti tai rumpuesitys sovitaan paikallisesti; vanha kuvaus ei takaa esityksen ajankohtaa. Kaukaista kansallispuistoa ei pidä liittää kaupunkikierrokseen ilman erillisiä järjestelyjä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Lentoasemien ero",
+                "teksti": "BJM on Bujumburassa; Gitegan GID ei vahvista nykyistä reittipalvelua."
+              },
+              {
+                "otsikko": "Matkaa harkitaan",
+                "teksti": "Tarpeetonta matkustamista Burundiin kannattaa välttää."
+              },
+              {
+                "otsikko": "Perinne ja esitys",
+                "teksti": "Gishoran historiakuvaus ei ole esitysaikataulu."
+              },
+              {
+                "otsikko": "Museon toiminta",
+                "teksti": "Näyttelyn tämänhetkiset käyntijärjestelyt varmistetaan museolta."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "musiikki",
+      "nimi": "Kuninkaallisen rummun elävä perinne",
+      "johdanto": "Rumpuperinne yhdistää yhteissoiton, liikkeen ja taitojen välittämisen; Gishora on yksi sen paikkahistorian kerroksista.",
+      "tehtava": {
+        "kysymys": "Miten muut rummut sijoittuvat esityskuvauksessa keskeisen rummun ympärille?",
+        "vaihtoehdot": [
+          "Puolikaaren muotoon",
+          "Pitkään suoraan jonoon",
+          "Erillisiin suljettuihin huoneisiin",
+          "Kahteen vastakkaiseen riviin"
+        ],
+        "oikea": 0,
+        "fakta": "Rytmin työnjako ja kaareva ryhmäjärjestys kuuluvat samaan esityskuvaukseen."
+      },
+      "nostot": [
+        {
+          "otsikko": "Soitto on myös liikettä ja sanoja",
+          "teksti": "Burundin kuninkaallisen rummun perinteessä rytmi liittyy tanssiin, lauluun ja runolliseen ilmaisuun. Esitys on yhteissoittoa, jota käytetään paikallisten juhlien yhteydessä ja vierailijoiden vastaanotossa. Rumpua ei siis kuunnella vain erillisenä soittimena: ääni liittyy ihmisten liikkeeseen ja yhteiseen tilanteeseen. Eri ilmaisutavat muodostavat saman perinteen osia. Sen merkitystä voi ymmärtää tarkastelemalla, miten soittajat, tanssijat ja laulajat toimivat yhdessä oman yhteisönsä ympäristössä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Royal Drummers of Burundi"
+        },
+        {
+          "otsikko": "Keskusrumpu kokoaa puolikaaren",
+          "teksti": "Kuninkaallisen rumpuperinteen kuvauksessa muut rummut muodostavat puolikaaren keskeisen rummun ympärille. Osa soittimista pitää jatkuvaa rytmiä, kun taas toiset seuraavat keskusrummun rytmiä. Mukana ovat soittajat ja tanssijat, joiden toimintaa yhteinen rytmi jäsentää. Ryhmän järjestys on siis myös musiikin rakennetta. Pelkkä rumpujen luettelo ei kerro samaa kuin niiden tehtävien ja sijainnin hahmottaminen: keskusrumpu ja sitä ympäröivät osat muodostavat yhdessä esityksen rytmisen kokonaisuuden.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Royal Drummers of Burundi"
+        },
+        {
+          "otsikko": "Taito ei säily pelkässä esineessä",
+          "teksti": "Rumpuperinteen kantajiin kuuluu suojapaikkojen vartijasukujen jälkeläisiä. Taitoja opitaan harjoittelemalla ja myös muodollisessa opetuksessa; soittimien valmistustaito on osa samaa perinnettä. Puurungot ja eläinnahka liittyvät rumpujen materiaaleihin. Esineen säilyttäminen ei yksin jatka soiton taitoa, sillä siihen tarvitaan ihmisiä, jotka osaavat tehdä, soittaa ja opettaa. Sukupolvet kohtaavat käytännön työssä, jossa vanha osaaminen siirtyy uudelle tekijälle ja uuteen esitystilanteeseen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Royal Drummers of Burundi"
+        },
+        {
+          "otsikko": "Gishoran pihoilla on omat nimensä",
+          "teksti": "Gishoran historiallisessa paikkakuvauksessa Inama on vastaanoton paikka ja Intangaro etupiha, johon liittyy rumpujen suojapaikka. Kokonaisuuteen kuuluvat myös kuninkaallinen piha, Ingoro-asuinpaikka ja ikigo-takapiha sekä indaro ya Rugabon palvontatila. Nimet kertovat paikan eri tehtävistä, eivät vain samasta kentästä monella sanalla. Historiallinen järjestys ei kuitenkaan tarkoita, että jokainen nykyinen rakennus olisi alkuperäinen. Gishoraa voi lähestyä pihojen ja toimintojen paikkahistoriana ilman yhtä varmaa perustamisvuotta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Gishora"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "",
+    "rajat": null,
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Melchior Ndadaye International Airport, Bujumbura (BJM)",
+    "huomiot": [
+      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Ruokajakso nimetty Burundin yleiskeittiöksi, ei Gitegan erikoisuudeksi.",
+      "Kartta partial 0: Gishoran aukio-/paikkatyypin ratkaisu avoin, Ruvyironzan yhtymä keskustan ulkopuolella, torin oma WP/WD-piste puuttuu. Suojattuja museo- ja katedraalirakennuksia ei käytetty täytteenä.",
+      "Parasta-lista tyhjä: A:n viisi sisältöaihetta eivät ole viisi vahvistettua nykyistä käyntisuositusta. Oppaan täysi käyntiportti avoin.",
+      "Gishoran perustamisajasta ja perustajasta ristiriita H3/H4: ei varmaa 1873-tilaa, perustajaa tai täsmävuotta.",
+      "Kuvaputki avoin, kaikki kuvakentät tyhjiä. Sää null, 48/48 primäärivarmennus puuttuu. Nykyohje perustuu 11.10.2026 luettuun H18:aan."
+    ]
+  }
+}

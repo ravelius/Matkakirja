@@ -1,0 +1,328 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "ciudaddelapaz",
+  "maa": "GNQ",
+  "era": "e06",
+  "kaupunki": {
+    "id": "ciudaddelapaz",
+    "name": "Ciudad de la Paz",
+    "wiki": "Ciudad de la Paz",
+    "ambience": "sademetsa",
+    "pallo": {
+      "lat": 1.592,
+      "lon": 10.822
+    }
+  },
+  "artikkeli": {
+    "intro": "Ciudad de la Paz on pääkaupunki, jonka historiaa voi lukea myös rakennussuunnitelmana. Päiväntasaajan Guinean uusi hallintokaupunki sijaitsee **Río Munin sisämaassa**, nykyisen sademetsän ympäröimänä. Se on eri paikka kuin Bioko-saarella sijaitseva Malabo. Kaupunki tunnettiin aikaisemmin myös nimillä Oyala ja Djibloho.\n\nEspanjankielinen nykyinen nimi tarkoittaa **rauhan kaupunkia**. Hanke alkoi 2000-luvulla, ja sen suunnitelmissa yhdistyvät hallinnon tilat, asuinalueet ja niitä yhdistävä liikenneverkko. Rakentaminen on jatkunut vaiheittain: paperille hahmoteltu kaupunki ja jo rakennettu kaupunki eivät ole sama asia. Isoisän matkavuonna 1873 tätä nykyistä kaupunkia ei ollut, mutta se ei tee alueen aikaisemmista asukkaista ja historiasta olemattomia.",
+    "teksti": "Päiväntasaajan Guinean maantiede selittää pääkaupunkien eron. Malabo sijaitsee Bioko-saarella, kun taas Ciudad de la Paz kuuluu Río Munin mantereen puoleiseen alueeseen. Kyse on hallinnon siirtymisestä toiseen paikkaan, ei vanhan saarikaupungin uudesta nimestä.\n\nCiudad de la Paz suunniteltiin kokonaisuutena. Kaavoihin kuuluu hallinnon ja asumisen alueita sekä liikennejärjestelyjä. Kaupunkisuunnitelmaa laati portugalilainen FAT-toimisto, jonka nimi avautuu sanoiksi Future Architecture Thinking.\n\nDjibloho-nimi vaatii pienen tarkennuksen: se voi tarkoittaa myös ympäröivää hallintoaluetta. Samoin suunnitelman väestökapasiteetti kertoo tavoitellusta koosta, ei nykyisestä asukasmäärästä. Nuoren kaupungin ymmärtämiseksi on erotettava toisistaan paikka, hallintoalue ja tulevaisuutta varten tehty suunnitelma."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Ciudad de la Paz on?",
+      "options": [
+        "Päiväntasaajan Guinea",
+        "Keski-Afrikan tasavalta",
+        "São Tomé ja Príncipe",
+        "Kongon demokraattinen tasavalta"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa muodostuu mantereen alueesta ja saarista.",
+      "fact": "Ciudad de la Paz on Päiväntasaajan Guinean pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+    },
+    {
+      "q": "Mitä Ciudad de la Paz tarkoittaa?",
+      "options": [
+        "Rauhan kaupunki",
+        "Joen kaupunki",
+        "Metsän kaupunki",
+        "Vuoren kaupunki"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Nimi on espanjaa ja sisältää toiveikkaan käsitteen.",
+      "fact": "Nimi tarkoittaa espanjaksi rauhan kaupunkia.",
+      "source": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+    },
+    {
+      "q": "Millaisessa paikassa Ciudad de la Paz sijaitsee?",
+      "options": [
+        "Mantereen sisämaassa",
+        "Meren pienellä saarella",
+        "Laajalla jokisuistolla",
+        "Vuoriston lumirajalla"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Maan entinen pääkaupunki on Bioko-saarella.",
+      "fact": "Ciudad de la Paz sijaitsee Río Munin mantereen puoleisessa sisämaassa.",
+      "source": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+    },
+    {
+      "q": "Miten nykyinen Ciudad de la Paz sai alkunsa?",
+      "options": [
+        "Suunniteltuna kaupunkihankkeena",
+        "Vanhan sataman laajennuksena",
+        "Keskiaikaisen linnan ympäriltä",
+        "Kalastajakylien yhdistymisestä"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Hallinnon, asumisen ja liikenteen alueita hahmoteltiin yhdessä.",
+      "fact": "Nykyinen kaupunki on 2000-luvun suunniteltu hallintokaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+    },
+    {
+      "q": "Mihin maan maantieteelliseen alueeseen kaupunki kuuluu?",
+      "options": [
+        "Río Muniin",
+        "Bioko-saareen",
+        "Annobón-saareen",
+        "Corisco-saareen"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Etsi maan mantereen puoleinen alue.",
+      "fact": "Ciudad de la Paz sijaitsee Río Munin alueella.",
+      "source": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+    }
+  ],
+  "tiedot": [
+    "Nykyistä Ciudad de la Pazin kaupunkia ei ollut vielä isoisän matkavuonna 1873.",
+    "Oyala on saman nykyisen kaupunkihankkeen aikaisempi nimi.",
+    "Kaupungin suunniteltu väestökapasiteetti ja todellinen asukasluku kertovat eri asioista."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Ciudad de la Paz",
+      "johdanto": "Saarelta sisämaahan siirtynyt pääkaupunki avaa uuden luvun Päiväntasaajan Guinean kaupunkihistoriassa.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Nimi, joka lupaa rauhaa",
+          "teksti": "Ciudad de la Paz tarkoittaa espanjaksi rauhan kaupunkia. Oyala ja Djibloho ovat saman nuoren kaupunkihankkeen aikaisempia nimiä. Djibloho voi kuitenkin tarkoittaa myös ympäröivää hallintoaluetta. Siksi saman sanan näkeminen kahdessa kartassa ei vielä kerro, että kartat näyttävät saman rajauksen. Kaupungin nimiketjussa on yhtä aikaa kielen, paikannimen ja hallinnollisen aluejaon historiaa. Mengomeyén on lähiseudun toinen paikka, ei yksi kaupungin vanhoista nimistä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ciudad de la Paz"
+        },
+        {
+          "otsikko": "Pääkaupunki vaihtoi maisemaa",
+          "teksti": "Malabosta Ciudad de la Paziin siirtyessä vaihtuu paljon enemmän kuin katuosoite. Malabo on Bioko-saarella, Ciudad de la Paz puolestaan Río Munissa, maan mantereen puoleisessa sisämaassa. Uuden kaupungin lähistöllä sijaitsee Mengomeyén. Saari ja manner kuuluvat samaan valtioon, mutta niiden välillä on todellinen maantieteellinen ero. Uusi pääkaupunki ei siis ole laajennettu Malabo: sen ympäristö on sademetsäinen sisämaa, ei entisen pääkaupungin saari.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ciudad de la Paz"
+        },
+        {
+          "otsikko": "Kaava ennen kaupunkia",
+          "teksti": "Ciudad de la Pazin kaupunginosia ei ole syntynyt vain talo kerrallaan vuosisatojen kuluessa. Nykyinen kaupunki on suunniteltu hallintokaupungiksi, ja suunnitelma kokoaa yhteen hallinnon tilat, asuinalueet sekä liikenneverkon. Kaupunkisuunnittelusta vastasi portugalilainen FAT eli Future Architecture Thinking. Rakentaminen on edennyt vaiheittain. Kaupungin tapauksessa kaava kertoo siksi myös tulevaisuudesta: jokainen piirretty alue ei tarkoita jo valmista kaupunginosaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ciudad de la Paz"
+        },
+        {
+          "otsikko": "Lentokentän nimi on vihje",
+          "teksti": "Ciudad de la Pazin lentoyhteyksien portti sijaitsee Mengomeyénin lähellä. Sen virallinen nimi on President Obiang Nguema International Airport, ja kansainvälinen lentoasemakoodi on GEM. Kaupungin ja lentoaseman nimet ovat siis eri nimet, vaikka paikat liittyvät samaan sisämaan yhteyteen. Myös pääkaupungin aikaisemmat nimet Oyala ja Djibloho voivat näkyä matkatiedoissa. Paikkojen tunnistamisessa nimiä kannattaa lukea rinnakkain: kaupunki, lähiseudun paikkakunta ja lentokenttä ovat erillisiä kohteita.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "President Obiang Nguema International Airport"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Ciudad de la Paz sijaitsee mantereen sisämaassa. Kaupunki on suunniteltu hallintokeskukseksi, ja rakentaminen on jatkunut vaiheittain. Lentokenttä on Mengomeyénin lähellä. Vanhoissa ja uusissa paikannimissä voivat esiintyä Oyala, Djibloho ja Ciudad de la Paz. Sovi kuljetukset etukäteen majoituksen tai matkanjärjestäjän kanssa ja vältä maantiesiirtymiä pimeällä.",
+        "artikkeli": {
+          "nimi": "Matkailijan Ciudad de la Paz",
+          "taitto": "opas",
+          "teksti": "Tutustu nuoren sisämaakaupungin sijaintiin ja nimikarttaan.",
+          "nosto": "Ciudad de la Paz kuuluu Río Muniin; lentokenttä ja vanha saarella sijaitseva pääkaupunki ovat eri paikkoja.",
+          "jaksot": [
+            {
+              "otsikko": "Perille",
+              "teksti": "Mengomeyénin lähellä sijaitsevan kansainvälisen lentoaseman koodi on GEM. Sen virallinen nimi on President Obiang Nguema International Airport. Sovi kuljetus majoituksen tai matkanjärjestäjän kautta ja vältä maantieajoa pimeällä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kaupunki suunnitelmana",
+              "teksti": "Nykyinen kaupunki on suunniteltu hallinnon, asumisen ja liikenteen kokonaisuudeksi. Sen ympärillä on sademetsää, ja rakentaminen on jatkunut eri vaiheissa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Paikannimien jäljillä",
+              "teksti": "Oyala ja Djibloho ovat kaupungista aiemmin käytettyjä nimiä. Djibloho tarkoittaa myös hallintoaluetta, joten se voi näkyä kaupunkia laajempana rajauksena.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Grand Hotel Djiblohon Mariposa tarjoaa kansainvälistä buffet- ja à la carte -ruokailua. Saman hotellin L’Incanto painottaa italialaista ruokaa ja LOM afrikkalaisia makuja. Nämä ruokailupaikat ovat hotellin yhteydessä. Varmista ruokailun saatavuus ja varausjärjestelyt hotellilta matkaa suunnitellessasi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Opiskelu ja kokousmatka",
+              "teksti": "AAUCA-yliopiston pääkampus on Ciudad de la Pazissa. Sen aloihin kuuluvat esimerkiksi tekniikka ja arkkitehtuuri sekä lääketiede ja biologia. Opiskeluun liittyvän matkan järjestelyt hoidetaan yliopiston kanssa. Grand Hotel Djibloho puolestaan tarjoaa kokoushuoneita, auditorion ja kongressikeskuksen; tapahtuman tilat ja palvelut sovitaan hotellin kanssa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Saari ja manner",
+                "teksti": "Ciudad de la Paz on Río Munin sisämaassa, Malabo Bioko-saarella."
+              },
+              {
+                "otsikko": "Lentoasemakoodi",
+                "teksti": "GEM tarkoittaa Mengomeyénin lähellä sijaitsevaa kansainvälistä lentoasemaa."
+              },
+              {
+                "otsikko": "Nimikartta",
+                "teksti": "Djibloho voi tarkoittaa kaupungin lisäksi hallintoaluetta."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kaupunki ja sen aikatasot",
+      "johdanto": "Nykyinen kaupunki on nuori; paikka ja hallintoalue ovat eri asioita kuin tulevaisuuden rakennussuunnitelma.",
+      "tehtava": {
+        "kysymys": "Mikä tieto kertoo tulevaisuuden tavoitteesta?",
+        "vaihtoehdot": [
+          "Suunniteltu väestökapasiteetti",
+          "Kaupungin espanjankielinen nimi",
+          "Sijainti mantereen puolella",
+          "Lentoaseman kansainvälinen koodi"
+        ],
+        "oikea": 0,
+        "fakta": "Kaavassa varattu tila ihmisille kuvaa tavoiteltua kaupunkia; se ei laske nykyisiä asukkaita."
+      },
+      "nostot": [
+        {
+          "otsikko": "Vuosi 1873 ilman tätä kaupunkia",
+          "teksti": "Isoisän matkavuonna 1873 nykyistä Ciudad de la Pazia ei vielä ollut. Kaupunkihanke kuuluu 2000-luvulle, joten sen hallintoalueita, katuverkkoa ja uutta nimeä ei voi siirtää sellaisinaan vanhaan matkavuoteen. Paikkaa ei silti pidä ajatella historiattomaksi. Kaupungin myöhempi suunnittelu kertoo nykyisen kaupunkirakenteen synnystä, ei siitä, millaista elämä samalla alueella oli aikaisemmin. Uuden kaupungin ikä ja alueen ihmisten historia ovat kaksi eri aikajanaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ciudad de la Paz"
+        },
+        {
+          "otsikko": "Asukkaat eivät asu tavoitteessa",
+          "teksti": "Kaupunki voidaan suunnitella suurelle väestölle jo ennen kuin sen talot ovat valmiita. Ciudad de la Pazin suunnitelmissa on väestökapasiteetti, mutta kapasiteetti ei ole asukasluku: se kertoo, kuinka monelle ihmiselle tiloja on tarkoitus rakentaa. Nykyisten asukkaiden määrä on toinen kysymys. Samanlainen ero kulkee rakennettujen alueiden ja myöhempien rakennusvaiheiden välillä. Suunnittelukaupungista kertovaa karttaa lukee paremmin, kun erottaa tavoitteen toteutuneesta kaupungista.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ciudad de la Paz"
+        },
+        {
+          "otsikko": "Nuori kaupunki saa myös yliopiston",
+          "teksti": "Ciudad de la Pazissa toimii AAUCA, Keski-Afrikan afroamerikkalainen yliopisto. Sen pääkampus sijaitsee Djiblohon alueella, ja yliopiston historia kuuluu 2000-luvulle. Koulutustarjontaan kuuluvat talous- ja kauppatieteet, kasvatustiede ja humanistiset alat, tekniikka ja arkkitehtuuri sekä lääketiede ja biologia. Hallintokaupungin rinnalle kuuluu siis myös korkeakoulutuksen toimintaa. Kaupungin kehitystä voi seurata opetuksen kautta: usean alan opinnot kokoontuvat samaan nuoreen sisämaakaupunkiin.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Afro-American University of Central Africa"
+        },
+        {
+          "otsikko": "Kokouspaikka metsän keskellä",
+          "teksti": "Grand Hotel Djibloho rakennettiin sademetsäiseen ympäristöön myös kokoontumispaikaksi. Hotelliin liittyvän kongressikeskuksen tiloja voidaan käyttää kokouksiin, näyttelyihin, messuihin, juhla-aterioihin ja konsertteihin. Kokoushuoneiden lisäksi kokonaisuuteen kuuluu auditorio ja Salón Libertad -juhlasali, jota voi jakaa siirtoseinillä. Tilojen käyttötapa vaihtuu näin tapahtuman mukaan. Nuoren kaupungin palveluhistoriaan kuuluu majoituksen rinnalla tiloja, joissa vieraat voivat tavata ja työskennellä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Ciudad de la Paz"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "",
+    "rajat": null,
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "President Obiang Nguema International Airport (GEM)",
+    "huomiot": [
+      "C-päätekstit 8/8 nostoa ja 5/5 kirjoitettua opasjaksoa: kaksi lisänostoa sekä ruoka- ja opiskelu/kokousjakso AAUCA:n ja Grand Hotel Djiblohon omista lähteistä.",
+      "Viittä itsenäistä käyntisuositusta ei vahvistettu; parasta-lista pysyy tyhjänä. Oppaan täysi matkailusisältö on tältä osin avoin.",
+      "Kartta 0 ja kohdejutut 0: A ei vahvista paikkoja; rajat null, ei keksittyjä pisteitä tai suojattuja uusia rakennuksia.",
+      "Kaikki kuvat odottavat erillistä kuvaputkea; kuvaroolien neljä kenttää tyhjiä.",
+      "Saatiedot null: 48/48 primäärivarmennus puuttuu, ei käsin lukuja tai sääsuosituksia.",
+      "Kontekstin Malabo-superlatiivi on ristiriidassa Bata-lähteen kanssa; sitä ei toistettu. Pääsession korjaushavainto, kontekstia ei muutettu.",
+      "Sää-/ajankohtapaikan aiemmin tyhjä teksti korvattu lähteistettyyn opiskeluun ja kokousmatkaan keskittyvällä jaksolla. Ei ilmastolukuja tai vuodenajan suositusta.",
+      "Uudet modernien laitosten toimintoja kuvaavat nostot eivät hyväksy rakennuksia kartta- tai kuvakohteiksi. Oikeusportti, B ja D/E/F avoinna."
+    ]
+  }
+}
