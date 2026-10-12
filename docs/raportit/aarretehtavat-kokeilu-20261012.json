@@ -101,7 +101,7 @@
         "lon": 18.07528
       },
       "a": {
-        "vihjelause": "Luukkuni on linnan varjossa: etsi linna, joka paloi maan tasalle vuonna 1697 ja rakennettiin uudestaan.",
+        "vihjelause": "Luukkuni on linnan varjossa: etsi linna, joka nousi vuonna 1697 palaneen Tre Kronorin paikalle.",
         "kohde": {
           "nimi": "Kuninkaanlinna",
           "lat": 59.3268,
@@ -109,17 +109,17 @@
           "etaisyys_saapumispisteesta_m": 410
         },
         "vihje_vaarin": "Ei se. Linna on kuninkaan virallinen residenssi ja seisoo vanhankaupungin saarella, lähellä Skeppsbronia.",
-        "tiesitko": "Vanha Kolmen kruunun linna paloi 7. toukokuuta 1697, ja nykyinen palatsi rakennettiin sen tilalle Nicodemus Tessin nuoremman suunnitelmien mukaan."
+        "tiesitko": "Vanha Kolmen kruunun linna, Tre Kronor, paloi 7. toukokuuta 1697. Nykyinen palatsi nousi sen paikalle Nicodemus Tessin nuoremman piirustusten mukaan."
       },
       "b": {
         "tyyppi": "salakirjoitus",
-        "kysymys": "Isoisän merkintä: \"Kirjoitin sanan luukkuun siirtämällä jokaista kirjainta eteenpäin niin monta askelta kuin vanha linna paloi toukokuun päivänä.\" Pura sana.",
+        "kysymys": "Isoisän merkintä: \"Kirjoitin sanan luukkuun siirtämällä jokaista kirjainta eteenpäin niin monta askelta kuin Tre Kronor paloi toukokuun päivänä.\" Pura sana.",
         "salattu": "CHZH",
         "avain": 7,
         "suunta": "taaksepain",
-        "aakkosto": "A-Z",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
         "vastaus": "VASA",
-        "vihje_vaarin": "Isoisän avain on päivä, jona linna paloi toukokuussa. Siirrä jokaista kirjainta niin monta askelta taaksepäin.",
+        "vihje_vaarin": "Isoisän avain on päivä, jona Tre Kronor paloi toukokuussa. Siirrä jokaista kirjainta niin monta askelta taaksepäin.",
         "tiesitko": "Vasa upposi neitsytmatkallaan 10. elokuuta 1628 vain noin 1 300 metrin päässä satamasta, ja se nostettiin merestä 1961."
       },
       "pala": {
