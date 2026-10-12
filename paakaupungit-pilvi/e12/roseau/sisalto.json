@@ -1,0 +1,394 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "roseau",
+ "maa": "DMA",
+ "era": "e12",
+ "kaupunki": {
+  "id": "roseau",
+  "name": "Roseau",
+  "wiki": "Roseau",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 15.3,
+   "lon": -61.3833
+  }
+ },
+ "artikkeli": {
+  "intro": "Roseau on Dominican pääkaupunki, jonka keskustaa rajaavat Karibianmeri, Roseau-joki ja Morne Bruce -kukkula. Se kasvoi kalinagojen **Sairi-kylän** paikalle. Ranskalainen kaupunginnimi viittaa joen rannalla kasvaneeseen ruovikkoon. Vanhan keskustan kadut lähtevät entisen torin ympäriltä, ja ranskalais-brittiläinen historia näkyy sekä rakennuksissa että katuverkossa. Risteilyaluksesta voi astua suoraan kaupunkielämään, sillä laituri on vanhan posti- ja torirakennuksen edustalla.\n\nNykyinen ruokatori sijaitsee jokirannassa ja täyttyy hedelmistä, vihanneksista ja yrteistä. Keskustan laidalla **kasvitieteellinen puutarha** muistuttaa ajasta, jolloin hyötykasveja kokeiltiin ja taimia tuotettiin viljelijöille. Roseaussa kävi koulua myös kirjailija Jean Rhys, joten kaupungista lähtevät yhteydet eivät ole vain laivareittejä. Pienessä keskustassa tori, museo, kirjallisuus ja elävä musiikki tuovat saaren historiaan erilaisia ääniä.",
+  "teksti": "Roseaun asutushistoria alkaa jo ennen eurooppalaista kaupunkia. Kalinagojen Sairi sijaitsi meren ja joen äärellä. Ranskalainen asutus kehittyi toripaikan ympärille, ja myöhempi brittiläinen hallinto lisäsi linnoituksia, hallintorakennuksia sekä säännöllisempää katuverkkoa. Vanhan torin ympäriltä lähtevät kadut eivät silti noudata kaikkialla suoraa ruutukaavaa.\n\nIsoisän matkavuonna 1873 Roseau oli olemassa, ja Fort Youngin linnoitus oli olemassa, mutta sen nykyinen hotellikäyttö alkoi paljon myöhemmin. Kasvitieteellinen puutarha perustettiin vasta 1800-luvun lopulla. Vanhan ja uuden eroa ei siis voi nähdä vain rakennuksen paikasta: samalla tontilla käyttö voi vaihtua moneen kertaan.\n\nKaupungin museo toimii vanhassa posti- ja torirakennuksessa. Sen esineistö yhdistää alkuperäiskansojen historiaa, siirtomaa-aikaa ja saaren luonnonhistoriaa. Jokirannan nykyinen ruokatori näyttää toisenlaisen kokoelman: siellä saaren viljelijöiden tuotteet ja kaupunkilaisten ruokaostokset kohtaavat."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä valtion pääkaupunki Roseau on?",
+   "options": [
+    "Dominican",
+    "Dominikaanisen tasavallan",
+    "Grenadan",
+    "Barbadoksen"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Pääkaupunki on pienellä saarella Guadeloupen ja Martiniquen välissä.",
+   "fact": "Roseau on Dominican pääkaupunki. Dominica ja Dominikaaninen tasavalta ovat eri valtioita.",
+   "source": "https://en.wikipedia.org/wiki/Roseau"
+  },
+  {
+   "q": "Mihin Roseaun ranskalainen nimi viittaa?",
+   "options": [
+    "Ruovikkoon",
+    "Kallioluolaan",
+    "Sokerimyllyyn",
+    "Merituuleen"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimeen vaikutti se, mitä kasvoi joen rannalla.",
+   "fact": "Ranskalaiset nimesivät asutuksen joen rannoilla kasvaneiden ruokojen mukaan.",
+   "source": "https://en.wikipedia.org/wiki/Roseau"
+  },
+  {
+   "q": "Miksi Roseaun kasvitieteellinen puutarha alun perin perustettiin?",
+   "options": [
+    "Viljelyn monipuolistamiseksi",
+    "Laivaliikenteen ohjaamiseksi",
+    "Suolaveden puhdistamiseksi",
+    "Rautatien suojaamiseksi"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Puiston tehtävä ei ollut vain tarjota istumapaikkoja.",
+   "fact": "Puutarhassa kokeiltiin viljelykasveja ja tuotettiin taimia saaren viljelijöille.",
+   "source": "https://en.wikipedia.org/wiki/Dominica_Botanical_Gardens"
+  },
+  {
+   "q": "Mikä oli Dominican museon rakennuksen aiempi käyttö?",
+   "options": [
+    "Posti ja tori",
+    "Sairaala ja koulu",
+    "Teatteri ja kirjasto",
+    "Majakka ja satamavarasto"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Rakennuksessa hoidettiin sekä viestejä että kauppaa.",
+   "fact": "Museo toimii vanhassa posti- ja torirakennuksessa rantakadulla.",
+   "source": "https://en.wikipedia.org/wiki/Dominica_Museum"
+  },
+  {
+   "q": "Mihin musiikkityyliin WCK-yhtye yhdistetään?",
+   "options": [
+    "Bouyonin",
+    "Bluegrassin",
+    "Flamencon",
+    "Bossanovan"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Dominicalla syntynyt tyyli yhdistää saaren musiikkiperinteitä moderniin sointiin.",
+   "fact": "WCK kuuluu Dominican tunnettuimpiin bouyonyhtyeisiin.",
+   "source": "https://en.wikipedia.org/wiki/Bouyon_music"
+  }
+ ],
+ "tiedot": [
+  "Roseaun nimi viittaa ranskaksi ruovikkoon. Kaupungin nimi säilyttää siis muiston joen rantojen kasvillisuudesta.",
+  "Kasvitieteellisessä puutarhassa hurrikaanin kaatama apinanleipäpuu murskasi tyhjän koulubussin. Puun ja bussin jäänteet on säilytetty paikan muistona.",
+  "Jean Rhys kävi koulua Roseaussa ja kirjoitti myöhemmin Britanniassa. Hänen romaaninsa Siintää Sargassomeri palaa Karibialle toisen romaanin henkilön kautta."
+ ],
+ "valokuva": {
+  "tiedosto": "",
+  "lyhyt": "",
+  "selite": "",
+  "lahde": ""
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Roseau",
+   "johdanto": "Ruovikon mukaan nimetyssä pääkaupungissa vanha tori, satama ja jokirannan ruokakauppa avaavat eri reittejä saaren arkeen.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Nimi syntyi joen rannalla",
+     "teksti": "Roseaun nimi tulee ranskan ruovikkoa tarkoittavasta sanasta. Kaupunki syntyi joen suun tuntumaan kalinagojen Sairi-kylän paikalle, ja eurooppalaisen asutuksen katuja suunniteltiin vanhan torin ympärille. Nykyinen keskusta ei silti ole tasainen ruutukaava: torilta erkanevissa kaduissa on mutkia ja epäsäännöllisiä kortteleita. Ranskalainen vaikutus näkyy myös King George V Streetin rakennuksissa, vaikka kadun nimi viittaa Britanniaan. Kaupungin nimeä, katua ja rakennusta lukiessa voi siis kohdata eri historian kerrokset.",
+     "wiki": "Roseau",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Postitalon sisällä saaren historia",
+     "teksti": "Dominican museo toimii rantakadulla vanhassa posti- ja torirakennuksessa. Kokoelmissa saaren kulttuurihistoria kohtaa geologian ja arkeologian: esillä on muun muassa alkuperäiskansojen esineitä, vanhoja soittimia, maatalouden välineitä ja tulivuoriin liittyvää tietoa. Museon kehittämisessä on ollut keskeinen saaren historiantutkija Lennox Honychurch. Läheinen Old Market oli siirtomaa-ajan kaupan ja orjakaupan paikka. Museo ja tori näyttävät yhdessä, että luonnonhistoria ja ihmisten historia eivät ole tällä saarella erillisiä kertomuksia.",
+     "wiki": "The Dominica Museum",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Jokirannan syötävä kokoelma",
+     "teksti": "Roseaun nykyinen ruokatori on jokisuun lähellä kaupungin pohjoislaidalla. Myynnissä on hedelmiä, vihanneksia ja yrttejä, ja lauantaiaamu on vilkas torikäynnin ajankohta. Selleri, ruohosipuli, valkosipuli ja erilaiset paprikat kuuluvat saaren keittiössä käytettäviin mausteisiin. Vanha tori keskustassa ja nykyinen ruokatori eivät ole sama paikka: toinen tunnetaan nykyään myös käsityömyynnistä, toinen ruokaostoksista. Torilla saaren viljely tulee keskelle pääkaupunkia ilman, että pitää lähteä sisämaan maatilalle.",
+     "wiki": "Roseau",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Linnoituksen seuraava elämä",
+     "teksti": "Fort Young rakennettiin brittiläiseksi linnoitukseksi aiemman ranskalaisen linnoituksen paikalle. Nimi viittaa kuvernööri William Youngiin, joka määräsi sen rakennettavaksi. Myöhemmin paikassa toimi poliisin päämaja, ja 1900-luvulla vanhasta linnoitusalueesta tehtiin hotelli. Linnoituksen jäänteitä on säilynyt osana hotellin historiallista ympäristöä. Isoisän matkavuonna 1873 vierailija olisi siis kohdannut rannalla sotilaallisen rakennuksen. Nykyinen majoituskäyttö on paikalle paljon myöhemmin tullut kerros.",
+     "wiki": "Fort Young Hotel",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Roseaun vanhaan keskustaan voi saapua suoraan risteilylaiturilta. Old Marketin käsityömyynti ja jokirannan ruokatori ovat eri paikkoja. Museon lähistöllä kohtaa rantakorttelit ja Fort Youngin historiallisen ympäristön. Kasvitieteellisestä puutarhasta voi jatkaa Morne Brucelle nousevaa polkua. Pikkubussin lähtöpaikka varmistetaan erikseen, jos matka jatkuu saaren muihin kyliin.",
+    "artikkeli": {
+     "nimi": "Matkailijan Roseau",
+     "taitto": "opas",
+     "teksti": "Kulje vanhasta torikorttelista jokirannan ruokatorille ja puutarhan kautta kaupungin yläpuolelle.",
+     "nosto": "Käsityötori, ruokatori ja kasvitieteellinen puutarha näyttävät eri puolia samasta pienestä pääkaupungista.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Roseaun lähellä on Canefieldin lentoasema (DCF), mutta se ei ole sama kenttä kuin saaren koillisosassa sijaitseva Douglas–Charles. Tarkista lentolipusta, kumpaan saavut, ja sovi maayhteys sen mukaan. Risteilylaituri on vanhan keskustan ja museon edustalla. Keskustaan tutustuu jalan; saaren muihin kyliin kulkee pikkubusseja Roseausta. Niiden lähtöpaikka ja määränpää kannattaa varmistaa kuljettajalta, sillä määränpää ei aina näy ajoneuvon etuosassa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Vanha tori ja rantakorttelit",
+       "teksti": "Old Market ja jokirannan nykyinen ruokatori ovat eri paikkoja. Vanhalla torilla on nykyään käsityömyyntiä, mutta paikan historiaan kuuluu orjakauppa. Sen lähellä vanha posti- ja torirakennus toimii Dominican museona. Fort Youngin linnoitusalue puolestaan on saanut uuden elämän hotellina. Vanhassa keskustassa kävely yhdistää nämä paikat, mutta sisäänpääsy ja palveluiden ajantasainen toiminta tarkistetaan erikseen.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Puutarhasta näkymäpaikalle",
+       "teksti": "Kasvitieteellinen puutarha sijaitsee keskustan laidalla Morne Brucen alapuolella. Se on sekä kaupunkilaisten viheralue että vanha hyötykasvien kokeilupaikka. Jack’s Walk alkaa puutarhasta ja nousee kukkulalle, jolta näkyvät keskusta ja meri. Nousu on jyrkkä, joten sovita kävely omaan kuntoon ja päivän olosuhteisiin. Puutarhan perustaminen ja osa sen polkuverkosta ovat 1800-luvun loppupuolen historiaa, eivät todiste siitä, että puisto olisi ollut täällä jo isoisän matkavuonna.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Dominican kansallisruoka callaloo on keitto, jossa käytetään nuoria taron eli dasheenin lehtiä ja kookosmaitoa. Kreolikeittiössä voi kohdata myös kookosmaidossa valmistettua suolakalaa, codfish sancochea, sekä maustettua riisiruokaa pelauta. Jokirannan torilla myydään banaaneja, juureksia ja mausteita. Paikallinen figs-nimitys tarkoittaa vihreitä banaaneja, joita usein keitetään lisäkkeeksi; nimi ei siis tarkoita viikunaa. Ruokalistan vieras sana voi avata uuden raaka-aineen, mutta annoksen sisältö kannattaa aina varmistaa ruokapaikassa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Lauantaiaamu sopii ruokatorin tutkimiseen: silloin jokirannassa on paljon myyjiä ja ostajia. Sunnuntai on keskustassa yleensä hiljaisempi, joten varmista silloin tarvitsemiesi liikkeiden ja ruokapaikkojen toiminta. Musiikkia varten kannattaa tarkistaa tapahtumakalenteri erikseen, sillä kaupungin kulttuuria ei voi päätellä pelkästä toripäivästä. Sääennuste ja meriyhteyden olosuhteet tarkistetaan lähellä lähtöä; kukkulalle nouseva kävely ja rantakortteleissa kiertely ovat erilaisia retkiä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Old Market",
+        "tahdet": 3,
+        "selite": "Vanhan torin vaikea historia ja nykyinen käsityömyynti kuuluvat samaan paikkaan."
+       },
+       {
+        "mita": "Dominican museo",
+        "tahdet": 3,
+        "selite": "Vanha posti- ja torirakennus kokoaa saaren ihmisten ja luonnon historiaa."
+       },
+       {
+        "mita": "Kasvitieteellinen puutarha",
+        "tahdet": 3,
+        "selite": "Hyötykasvien kokeilupaikasta tuli myös kaupungin viheralue."
+       },
+       {
+        "mita": "Morne Bruce",
+        "tahdet": 2,
+        "selite": "Kukkulalta avautuu näkymä keskustaan ja merelle."
+       },
+       {
+        "mita": "Jokirannan ruokatori",
+        "tahdet": 2,
+        "selite": "Hedelmät, vihannekset ja yrtit tulevat saaren viljelijöiltä kaupunkiin."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kaksi eri toria",
+        "teksti": "Old Marketin käsityömyynti ja jokirannan ruokatori sijaitsevat eri paikoissa."
+       },
+       {
+        "otsikko": "Lentoaseman nimi",
+        "teksti": "Varmista lipusta, onko saapumiskenttä Canefield vai Douglas–Charles."
+       },
+       {
+        "otsikko": "Kukkulakävely",
+        "teksti": "Jack’s Walk on jyrkkä nousu; tarkista polun kulkukelpoisuus ennen lähtöä."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Kasveja, kirjoja ja kaupungin ääniä",
+   "johdanto": "Roseaun historia näkyy myös kasvikokeissa, kirjallisuuden näkökulmassa ja saarella syntyneessä musiikissa.",
+   "tehtava": {
+    "kysymys": "Mihin romaaniin Jean Rhysin Siintää Sargassomeri liittyy esiosana?",
+    "vaihtoehdot": [
+     "Kotiopettajattaren romaani",
+     "Ylpeys ja ennakkoluulo",
+     "Humiseva harju",
+     "Järki ja tunteet"
+    ],
+    "oikea": 0,
+    "fakta": "Siintää Sargassomeri avaa Kotiopettajattaren romaanista tutun Rochesterin vaimon aiempaa elämää."
+   },
+   "nostot": [
+    {
+     "otsikko": "Puutarha tehtiin myös viljelijöille",
+     "teksti": "Dominican kasvitieteellinen puutarha perustettiin 1800-luvun lopulla entiselle sokeriviljelmälle. Tarkoituksena oli monipuolistaa saaren viljelyä ja tuottaa viljelijöille oikein lisättyjä taimia. Kasveja saatiin myös Englannin Kew Gardensista. Hyötykasvien kokeilualueelle istutettiin samalla koristekasveja, joten tutkimus ja viihtyisä ympäristö kasvoivat rinnakkain. Hurrikaani David vaurioitti myöhemmin puutarhaa pahoin: kaatunut afrikkalainen apinanleipäpuu murskasi tyhjän koulubussin. Tämä puun ja bussin pari jäi osaksi paikan muistia.",
+     "wiki": "Dominica Botanical Gardens",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Romaanin sivuhenkilö saa menneisyyden",
+     "teksti": "Jean Rhys kävi koulua Roseaun katolisessa luostarikoulussa ennen opintojen jatkamista Englannissa. Hänen romaaninsa Siintää Sargassomeri palaa Karibialle ja kertoo Charlotte Brontën Kotiopettajattaren romaanista tutun Rochesterin vaimon aiemmasta elämästä. Rhys katsoo naista eri näkökulmasta kuin Brontën kertomus. Teos käsittelee myös riippuvuutta ja vallankäyttöä avioliitossa, joten kyse ei ole vain tutun juonen täydentämisestä. Dominicalla kasvanut kirjailija antaa vanhaan brittiläiseen romaaniin Karibialta avautuvan näkökulman.",
+     "wiki": "Jean Rhys",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Bouyon on sekoitus myös nimeltään",
+     "teksti": "Dominicalla syntynyt bouyon yhdistää jing ping -musiikkia, cadence-lypsoa ja paikallisia tanssiperinteitä, kuten bèlèä ja katrillia. Mukana on myös muiden Karibian musiikkityylien vaikutteita, ja perinteinen musiikki kohtaa modernin soinnin. Tunnettuja bouyonyhtyeitä ovat WCK eli Windward Caribbean Kulture sekä First Serenade. Nimi viittaa Antillien kreolissa keittomaiseen ruokaan, mikä sopii monia aineksia yhdistävään musiikkiin. Roseaussa kehittynyt tyyli kertoo saaren omasta luovasta työstä, ei vain muualta tuodusta tanssimusiikista.",
+     "wiki": "Bouyon music",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Katedraalin katto tuli saaren metsistä",
+     "teksti": "Roseaun katedraalin nykyinen asu syntyi useissa rakennusvaiheissa. Kivikirkossa yhdistyvät uusgotiikan ja uusromaanisen tyylin piirteet, ja rakennusmateriaaleihin kuuluu tuliperäistä kiveä. Puinen sisäkatto on kalinagojen tekemää työtä: he kaatoivat ja kuljettivat simarubapuita kaupungin koillispuolisista metsistä. Eurooppalaisilta kuulostavat tyylinimet eivät siis yksin kerro, ketkä kirkkoa rakensivat tai mistä sen aineet tulivat. Katedraalin historiassa saaren metsät, paikalliset tekijät ja katolinen seurakunta kuuluvat samaan kokonaisuuteen.",
+     "wiki": "Roseau Cathedral",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Roseaun vanha julkinen keskusta ja kasvitieteellinen puutarha kertovat saaren kaupunkielämästä eri tavoin. Puutarha on myös viljelyn kokeilujen historiallinen paikka.",
+  "rajat": {
+   "pohjoinen": 15.30425,
+   "etela": 15.29367,
+   "lansi": -61.39022,
+   "ita": -61.37891
+  },
+  "kohteet": [
+   {
+    "nimi": "Old Market",
+    "tyyppi": "aukio",
+    "lat": 15.29667,
+    "lon": -61.38722
+   },
+   {
+    "nimi": "Dominican kasvitieteellinen puutarha",
+    "tyyppi": "luonto",
+    "lat": 15.30125,
+    "lon": -61.38191
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Old Market": {
+   "aika": "Siirtomaa-aika",
+   "teksti": "Old Market sijaitsee Dominican museon takana vanhassa rantakorttelissa. Paikka tunnetaan myös nimillä Old Market Plaza ja Dawbiney Market Square. Siirtomaa-aikana torilla käytiin kauppaa Dominican ja ympäröivien saarten välillä; tavaroiden lisäksi siellä myytiin orjuutettuja ihmisiä. Torin julkinen elämä ei siksi ole pelkästään kaupan historiaa.\n\nIsoisän matkavuonna 1873 toripaikka kuului jo Roseauhun. Myöhemmin alue kunnostettiin käsityömyynnin paikaksi, ja nykyään siellä on esimerkiksi koruja, mausteita ja matkamuistoja. Jokirannan nykyinen ruokatori on eri paikka. Vanhalla torilla mennyt kauppa ja tämän päivän myynti ovat lähekkäin, mutta niiden sisältö ja yhteiskunnallinen merkitys ovat muuttuneet.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Dominican kasvitieteellinen puutarha": {
+   "aika": "1800-luvun loppu",
+   "teksti": "Dominican kasvitieteellinen puutarha sijaitsee Roseaun keskustan itälaidalla Morne Bruce -kukkulan alapuolella. Alueella on nurmikenttiä, istutuksia ja nimikyltillä merkittyjä trooppisia puita. Kasvilajeihin kuuluvat myös ylang-ylang ja tykinkuulapuu. Se on erilainen julkinen tila kuin tiiviin vanhankaupungin kadut: kasveihin voi tutustua siellä osana kaupunkikävelyä.\n\nPuutarha perustettiin entiselle sokeriviljelmälle kokeilemaan hyötykasveja ja tuottamaan taimia viljelijöille. Isoisän matkavuonna 1873 nykyistä puutarhaa ei vielä ollut. Alueelta lähtevä Jack’s Walk nousee Morne Brucelle, jolta näkyvät Roseau ja Karibianmeri. Kukkulanäkymä ja puutarhan kasvillisuus tarjoavat rinnakkain tavan hahmottaa kaupunkia ja sen ympäristöä.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Canefield Airport (DCF); saaren toinen saapumiskenttä Douglas–Charles erikseen",
+  "huomiot": [
+   "C-tekstiluonnos ja rajattu faktapohja. D/E/F, kuvat ja sääauditointi avoinna.",
+   "Kartta partial: vain paikkojen omista WP-pisteistä varmennetut kohteet. Rakennusten ja teosten tekijäketjuja ei arvattu.",
+   "Väestö- ja ilmastolukuja ei käytetty; saa.json koskematon."
+  ]
+ }
+}

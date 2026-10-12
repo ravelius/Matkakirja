@@ -1,0 +1,399 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "portofspain",
+  "maa": "TTO",
+  "era": "e12",
+  "kaupunki": {
+    "id": "portofspain",
+    "name": "Port of Spain",
+    "wiki": "Port of Spain",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 10.6667,
+      "lon": -61.5167
+    }
+  },
+  "artikkeli": {
+    "intro": "Port of Spain on Trinidadin ja Tobagon pääkaupunki Trinidadin luoteisrannikolla, Parianlahden äärellä. Sen nimi säilyttää muiston espanjalaisesta satamasta, vaikka Trinidad siirtyi myöhemmin Britannian hallintaan. **Kaupungin rannikko on rakennettu osittain täyttömaalle.** Nykyisen keskustan paikalla oli myös mangrovea kasvavia vuorovesilietteitä. St. Ann's Riverin uomaakin siirrettiin, kun kaupunki tarvitsi tilaa kasvaa.\n\nSuoran katuverkon pohjoispuolella avautuu Queen's Park Savannah, entinen viljelymaa ja laidun. Sen vieressä Royal Botanic Gardens kokoaa yhteen saaren omia ja maailmalta tuotuja puita. Belmontin mutkittelevat kadut taas kertovat keskustasta poikkeavasta kasvusta. Port of Spain on satama, hallinnon ja kaupan keskus sekä karnevaalin näyttämö, mutta sen mittakaavaa ei voi päätellä pelkästä kaupunginrajasta. Taajama jatkuu itään pitkin Trinidadin pohjoista asutusvyöhykettä.",
+    "teksti": "Kaupungin historia alkaa ennen espanjalaista nimeä: rannikon tuntumassa oli alkuperäisväestön kalastajakylä Cumucurapo. Espanjalainen siirtomaahallinto siirsi keskuksensa sisämaasta Port of Spainiin 1700-luvulla. Rannikon satamasta kasvoi saaren hallinnon paikka.\n\nVuonna 1873 Port of Spain oli Britannian hallitseman Trinidadin pääkaupunki. Savannah ja kasvitieteellinen puutarha olivat jo olemassa. Nykyinen kaupunki ei silti ole tuon ajan pysäytyskuva: täyttömaat, laajenevat asuinalueet ja myöhemmät rakennukset muuttivat sen rajoja.\n\nKaupungin tiivis keskusta on osa laajempaa taajamaa, joka jatkuu itään Ariman suuntaan. Linja-autot ja maxi-taksit yhdistävät sitä ympäristöönsä. Satama, toimistot, asuinalueet ja suuret avoimet viheralueet tekevät Port of Spainista kaupungin, jonka eri osat toimivat hyvin erilaisissa rytmeissä."
+  },
+  "kysymykset": [
+    {
+      "q": "Millä Trinidadin saaren puolella Port of Spain sijaitsee?",
+      "options": [
+        "Luoteisrannikolla",
+        "Kaakkoisrannikolla",
+        "Lounaisrannikolla",
+        "Koillisrannikolla"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Pääkaupunki katsoo Parianlahdelle.",
+      "fact": "Port of Spain sijaitsee Trinidadin luoteisrannikolla Parianlahden rannalla.",
+      "source": "https://en.wikipedia.org/wiki/Port_of_Spain"
+    },
+    {
+      "q": "Mitä Savannahin alueella harjoitettiin ennen puistokäyttöä?",
+      "options": [
+        "Karjan laidunnusta",
+        "Suolan haihdutusta",
+        "Helmien sukellusta",
+        "Kuparin louhintaa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Vihreän alueen aikaisempi käyttö liittyi kotieläimiin.",
+      "fact": "Sokeriruokomaana olleesta Savannahista tuli ensin laidun ja sitten puisto.",
+      "source": "https://en.wikipedia.org/wiki/Queen%27s_Park_Savannah"
+    },
+    {
+      "q": "Mitä Port of Spainin maxi-taksit ovat?",
+      "options": [
+        "Pikkubusseja",
+        "Polkupyöriä",
+        "Satamalauttoja",
+        "Raitiovaunuja"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kulkuvälineeseen mahtuu useita matkustajia.",
+      "fact": "Maxi-taksit ovat yksityisiä pikkubusseja; City Gate on niiden ja linja-autojen liikenteen solmukohta.",
+      "source": "https://en.wikipedia.org/wiki/Port_of_Spain"
+    },
+    {
+      "q": "Mitä St. Ann's Riverille tehtiin kaupungin kasvun vuoksi?",
+      "options": [
+        "Sen uomaa siirrettiin",
+        "Sen suulle tehtiin saari",
+        "Sen lähde padottiin",
+        "Sen pohja päällystettiin"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Ratkaisu muutti vesireitin paikkaa.",
+      "fact": "Joen kulku siirrettiin kaupungin itäpuolelle, jotta kaupunki pääsi laajenemaan.",
+      "source": "https://en.wikipedia.org/wiki/Port_of_Spain"
+    },
+    {
+      "q": "Mistä Royal Botanic Gardensin puukokoelma koostuu?",
+      "options": [
+        "Paikallisista ja tuoduista puista",
+        "Yksinomaan paikallisista puista",
+        "Ainoastaan hedelmäpuista",
+        "Pelkästään saaren palmulajeista"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kokoelma ulottuu Trinidadin luontoa laajemmalle.",
+      "fact": "Puutarhassa kasvaa Trinidadin ja Tobagon omia puulajeja sekä muualta maailmasta tuotuja puita.",
+      "source": "https://en.wikipedia.org/wiki/Royal_Botanic_Gardens,_Trinidad"
+    }
+  ],
+  "tiedot": [
+    "Savannahin keskellä oleva Peschierin suvun hautapaikka jäi yksityiseksi, vaikka ympäröivä maa ostettiin kaupungille.",
+    "Port of Spainin keskustan rantaa on kasvatettu täyttömaalla, jota tuotiin muun muassa Laventillen kukkuloilta.",
+    "Belmontia kutsuttiin Black St. Clairiksi: siellä rakensi kotejaan musta ammattilaisväestö, jota suljettiin vauraampien asuinalueiden ulkopuolelle."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Port of Spain",
+      "johdanto": "Vanha satama kasvoi siirtämällä jokea ja rakentamalla rantaa. Sen pohjoisreunalla entinen laidun avautuu suureksi yhteiseksi tilaksi.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Puiston keskelle jäi suvun pala",
+          "teksti": "Queen's Park Savannah oli ensin sokeriruokomaata ja sen jälkeen karjan laidun kaupungin laidalla. Kun kaupunki hankki alueen Peschierin suvulta, kaupan ulkopuolelle jäi suvun hautapaikka. Niinpä julkisella viheralueella on yhä pieni yksityinen osa. Savannah ei myöskään ole kauttaaltaan istutettu puutarha: sen avointa maata on käytetty hevoskilpailuihin ja pallopeleihin. Nimi tuo mieleen luonnon savannin, mutta paikan tarina kulkee viljelykseltä laitumen kautta kaupungin yhteiseksi tilaksi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Queen's Park Savannah"
+        },
+        {
+          "otsikko": "Belmontin toinen nimi",
+          "teksti": "Belmontin kapeat, mutkittelevat kadut eroavat keskustan suorasta ruudukosta. Laventillen kukkuloiden juurelle kasvanut kaupunginosa oli Port of Spainin varhainen esikaupunki. Sinne rakensi kotejaan myös musta ammattilaisväestö, jota suljettiin vauraampien St. Clairin ja Maravalin asuinalueiden ulkopuolelle. Belmont sai lempinimen Black St. Clair. Osa suurista taloista on muutettu yritysten käyttöön, osa on edelleen perheillä. Kaupunginosasta on lähtöisin myös karnevaalipukujen suunnittelijoita ja kulkueryhmien johtajia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Port of Spain"
+        },
+        {
+          "otsikko": "Puut tulivat maailmalta",
+          "teksti": "Royal Botanic Gardens sijaitsee Savannahin pohjoispuolella, mutta vierekkäiset viheralueet kertovat eri tarinoita. Savannahin ydin on avoin entinen laidun; kasvitieteellisessä puutarhassa puut muodostavat kokoelman. Mukana on Trinidadin ja Tobagon omia lajeja sekä muualta maailmasta tuotuja puita. Puutarha perustettiin jo 1800-luvun alussa. Sen alueella on myös vanhojen kuvernöörien hautapaikka. Kävely kulkee siis yhtä aikaa elävien kasvien kokoelmassa ja saaren siirtomaa-ajan muistojen keskellä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Royal Botanic Gardens, Trinidad"
+        },
+        {
+          "otsikko": "City Gate ei ole kaupunginportti",
+          "teksti": "Port of Spainin City Gate toimii linja-autojen ja yksityisten pikkubussien liikenteen solmuna South Quaylla, Independence Squaren eteläpuolella. Pikkubusseja kutsutaan maxi-takseiksi. Nimi voi johtaa vieraan ajatukset muuriin tai vanhaan porttiin, mutta tässä portista kulkee arkipäivän liikenne. Keskustan tiiviin katuverkon ulkopuolella taajama jatkuu itään erillisinä kaupunkeina alkaneiden asutusten ketjuna. Port of Spainin kaupunginraja ja se alue, jolla sen työmatkaliikenne liikkuu, eivät ole sama asia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Port of Spain"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita keskustan suorista kaduista ja Woodford Squaren ympäristöstä. Jatka Savannahille, jonka pohjoispuolella on kasvitieteellinen puutarha. Belmontin katuverkko näyttää toisenlaisen puolen kaupungin kasvusta. Piarcon lentoasema sijaitsee kaupungin itäpuolella, ja jatkokuljetus kuuluu saapumisen suunnitteluun. Käytä tunnettuja kuljetuksia ja sovi paluu etukäteen.",
+        "artikkeli": {
+          "nimi": "Matkailijan Port of Spain",
+          "taitto": "opas",
+          "teksti": "Kulje vanhan keskustan ja pohjoisreunan viheralueiden välillä.",
+          "nosto": "Savannah ja kasvitieteellinen puutarha ovat vierekkäin, mutta toinen kasvoi laitumesta ja toinen perustettiin puukokoelmaksi.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Port of Spainia palvelee Piarcon kansainvälinen lentoasema kaupungin itäpuolella. Lentokenttä ja keskusta ovat eri paikkoja, joten saapumiseen kuuluu myös maamatka. Keskustassa City Gate South Quaylla kokoaa linja-autoja ja maxi-takseja, eli yksityisiä pikkubusseja. Suunnittele liikkuminen sen mukaan, kuljetko keskustan sisällä vai itään jatkuvassa taajamassa. Kaupungin nimi kartalla ei tarkoita, että kaikki sen ympäristön kohteet olisivat kävelyetäisyydellä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Keskustan kerrokset",
+              "teksti": "Woodford Squaren ympärillä ovat Holy Trinity Cathedral ja Red House, kun taas Independence Square sijaitsee lähempänä sataman puoleista keskustaa. Katso katuverkkoa: sen suora ruudukko on vanhempi kuin monet sitä reunustavat talot. Rannikon täyttömaan historia selittää, miksi vanha rantaan liittynyt aukio on nyt keskellä rakennettua kaupunkia. Holy Trinity Cathedral on kärsinyt maanjäristysvaurioista, joten sen mahdollisuus ottaa vieraita vastaan on tarkistettava erikseen. Kirkkojen ulkopuolella voi silti tarkastella niiden paikkaa keskustan rakenteessa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Savannahin molemmat puolet",
+              "teksti": "Savannah on avoin viheralue, jonka pohjoispuolella kasvitieteellinen puutarha tarjoaa toisenlaisen kävelyn puiden keskellä. Länsireunalla kulkee Maraval Road ja sen varrella tunnettu Magnificent Seven -rakennusten ryhmä. Rakennusten käyttötavat vaihtelevat; kadulta katsominen ei tarkoita pääsyä sisään. Puiston ja puutarhan yhdistelmä antaa hyvän käsityksen keskustan pohjoisreunasta ilman, että jokainen maamerkki on oma retkensä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Port of Spainin ilmastossa erottuvat kuivempi ja sateisempi kausi. Sateisena aikana jätä kävelypäivään väljyyttä ja varaudu kuuroihin; ulkona vietetty päivä ei vaadi pelkkää aurinkosäätä. Karnevaali ennen paastoa muuttaa kaupungin rytmiä ja lisää majoituksen kysyntää, joten tapahtuman päivät kannattaa tarkistaa oman matkan vuodelle. Jos tavoitteena on rauhallinen kaupunkikävely, valitse ajankohta sen mukaan. Käytä sovittuja kuljetuksia ja tarkista ajantasaiset matkustusohjeet ennen lähtöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Savannah",
+                "tahdet": 3,
+                "selite": "Entinen viljelymaa ja laidun on nykyinen avoin viheralue."
+              },
+              {
+                "mita": "Royal Botanic Gardens",
+                "tahdet": 3,
+                "selite": "Puukokoelma yhdistää paikallisia ja maailmalta tuotuja lajeja."
+              },
+              {
+                "mita": "Woodford Square",
+                "tahdet": 2,
+                "selite": "Keskustan aukion ympärillä näkyy kaupungin rakennushistoriaa."
+              },
+              {
+                "mita": "Belmont",
+                "tahdet": 2,
+                "selite": "Mutkittelevat kadut kertovat ruutukeskustasta poikkeavasta kasvusta."
+              },
+              {
+                "mita": "Savannahin ruoka",
+                "tahdet": 2,
+                "selite": "Ruokakojuissa on muun muassa doublesia ja maissikeittoa."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Kaupunki ja taajama",
+                "teksti": "Itään jatkuva taajama ulottuu kaupunginrajojen ulkopuolelle."
+              },
+              {
+                "otsikko": "Kuljetus",
+                "teksti": "Piarcon lentoasemalta tarvitaan erillinen maamatka keskustaan."
+              },
+              {
+                "otsikko": "Käyntikäytännöt",
+                "teksti": "Kirkkojen ja muiden rakennusten vierailuajat tarkistetaan erikseen."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kaupunki liikkui maalla ja vedessä",
+      "johdanto": "Sataman historia näkyy nimessä, katuverkossa ja rantaviivassa. Joki ja meri eivät ole olleet kaupungille pysyviä rajoja.",
+      "tehtava": {
+        "kysymys": "Mitä vanhalle ranta-alueelle tuotiin, jotta kaupunki sai lisää maata?",
+        "vaihtoehdot": [
+          "Maata kukkuloilta",
+          "Jäätä sisämaasta",
+          "Suolaa merivedestä",
+          "Puuta satamalaivoista"
+        ],
+        "oikea": 0,
+        "fakta": "Laventillen rinteiltä saatua täytemaata käytettiin rannikon laajentamiseen."
+      },
+      "nostot": [
+        {
+          "otsikko": "Espanja jäi nimeen",
+          "teksti": "Port of Spainin englanninkielinen nimi tarkoittaa Espanjan satamaa. Taustalla on espanjalainen Puerto España, mutta eurooppalainen nimi ei ole seudun historian alku: lähellä oli alkuperäisväestön Cumucurapon kalastajakylä. Siirtomaahallinnon keskus siirtyi sisämaan San José de Oruñasta rannikolle 1700-luvulla. Trinidad siirtyi sittemmin Britannian hallintaan, eikä kaupungin espanjalainen nimi silti kadonnut. Paikannimessä säilyy eri kerros kuin kielessä, jota kaupungin hallinto nykyisin käyttää.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Port of Spain"
+        },
+        {
+          "otsikko": "Joki väistyi kaupungin tieltä",
+          "teksti": "Port of Spainin keskustan ruutukaava ulottuu ajalle, jolloin espanjalainen siirtomaahallinto laajensi satamapaikkaa. St. Ann's River vaikeutti kasvua, sillä se tulvi. Joen uomaa siirrettiin kaupungin itäpuolelle Laventillen kukkuloiden juureen, jotta asutus saattoi levitä pohjoiseen ja länteen. Muutos ei siis ollut pelkkä uusi katu kartalla: vesireitti järjestettiin uudelleen. Nykyinen keskustan katuverkko säilyttää vanhan ruudukon, vaikka sitä ympäröivä kaupunki on kasvanut paljon laajemmaksi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Port of Spain"
+        },
+        {
+          "otsikko": "Maa jatkoi merelle",
+          "teksti": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Port of Spain"
+        },
+        {
+          "otsikko": "Tulipalo muutti rakennustapaa",
+          "teksti": "Port of Spain kasvoi pitkään puutalojen kaupunkina. Suuri tulipalo 1800-luvun alussa tuhosi kaupunkia, minkä jälkeen rakentamista alettiin säädellä tarkemmin ja uusia hallintorakennuksia tehtiin tiilestä. Tapahtuma muutti muutakin kuin yksittäisiä taloja: siitä tuli raja vanhan ja uuden rakennustavan välille. Kaupungin nykyisessä arkkitehtuurissa puu ei silti kadonnut. Koristeellinen puutyö ja rautaiset kaiteet kuuluvat edelleen talojen ilmeeseen, vaikka niiden rinnalla ovat kivikirkot ja korkeat toimistorakennukset.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Port of Spain"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Savannahin entinen laidun ja sen pohjoispuolinen kasvitieteellinen puutarha näyttävät kaksi erilaista tapaa antaa tilaa kaupungin vihreydelle. Molempien historia ulottuu 1800-luvulle.",
+    "rajat": {
+      "pohjoinen": 10.678,
+      "etela": 10.6657,
+      "lansi": -61.5179,
+      "ita": -61.5104
+    },
+    "kohteet": [
+      {
+        "nimi": "Queen's Park Savannah",
+        "tyyppi": "luonto",
+        "lat": 10.6693,
+        "lon": -61.51408
+      },
+      {
+        "nimi": "Royal Botanic Gardens",
+        "tyyppi": "luonto",
+        "lat": 10.6744,
+        "lon": -61.5143
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Queen's Park Savannah": {
+      "aika": "1800-luvun alusta alkaen",
+      "teksti": "Queen's Park Savannahin alue oli sokeriruokomaata ennen kuin kaupunki osti sen Peschierin suvulta 1800-luvun alussa. Kauppaan ei kuulunut suvun hautapaikka, joka jäi yksityiseksi saarekkeeksi yhteisen alueen keskelle. Aluksi Savannah oli karjan laidun kaupungin laidalla. Vuosisadan puoliväliin mennessä siitä oli tullut puisto, joten vuoden 1873 kaupunkikuvaan kuului jo avoin Savannah.\n\nAlueella on myöhemmin pidetty hevoskilpailuja ja pelattu krikettiä, jalkapalloa sekä rugbya. Savannahin ydin ei ole kauttaaltaan istutettu puutarha; puut reunustavat sen laajaa avointa tilaa. Luoteiskulman Hollows puolestaan on entinen vesiallas, joka on tyhjennetty ja istutettu koristepensailla. Eteläreunan katsomo liittyy nykyiseen karnevaalin tapahtumapaikkaan, kun taas pohjoisreunalta alkaa erillinen kasvitieteellinen puutarha.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Royal Botanic Gardens": {
+      "aika": "1800-luvun alusta alkaen",
+      "teksti": "Royal Botanic Gardens sijaitsee Queen's Park Savannahin pohjoispuolella Port of Spainissa. Se perustettiin 1800-luvun alussa ja oli siis olemassa jo vuoden 1873 kaupunkimaisemassa. Puutarha on puukokoelma, jossa kasvaa sekä Trinidadin ja Tobagon omia lajeja että eri puolilta maailmaa tuotuja puita. Sen historia ei ala luonnonpuistona, vaan järjestettynä kasvitieteellisenä puutarhana.\n\nAlueella on myös pieni hautapaikka, johon on haudattu Trinidadin entisiä kuvernöörejä. Kasvien kokoelma ja siirtomaa-ajan muistot jakavat siten saman puutarha-alueen. Savannahin avoin entinen laidun ja tämän puutarhan istutettu ympäristö ovat vierekkäin, mutta eri kohteita. Puukokoelmaa voi tarkastella omana paikkanaan: se ei ole vain Savannahille lainattu nimi eikä sama avoin kenttä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Piarcon kansainvälinen lentoasema",
+    "huomiot": [
+      "C-tekstiluonnos. Kuvaroolit odottavat erillistä kuvaputkea; kaikki neljä kuvakenttää tyhjinä.",
+      "Sääauditointi 48/48 avoin; saatiedot:null, ei numeroita.",
+      "Kartta partial: vain kohteen omasta WP-pisteestä varmennetut paikat lisätään.",
+      "Ei väestölukuja: hallinnollisen kaupungin ja taajaman laajuudet erotettu.",
+      "Riippumaton D sekä E/F, hyväksyntä ja pelikytkentä avoinna.",
+      "Kartan 6–8 kohteen portti partial: 2/6. Woodford Squaren oma WP-sivu ei löytynyt; ei Wikivoyage-/kaupunkipisteen lainaamista.",
+      "Konteksti ilmoittaa Holy Trinity Cathedral 1818; sen WP-artikkeli sanoo valmistumisen 1823. Tarkkaa vuotta ei käytetä luonnoksessa. Riippumaton varmennus avoin.",
+      "Holy Trinity Cathedralin nykyinen vierailutilanne on varmistettava: WP kertoo maanjäristysvaurioista ja korjauksesta."
+    ]
+  }
+}

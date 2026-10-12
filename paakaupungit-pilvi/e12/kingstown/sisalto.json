@@ -1,0 +1,395 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "kingstown",
+ "maa": "VCT",
+ "era": "e12",
+ "kaupunki": {
+  "id": "kingstown",
+  "name": "Kingstown",
+  "wiki": "Kingstown",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 13.1553,
+   "lon": -61.2274
+  }
+ },
+ "artikkeli": {
+  "intro": "Kingstown on Saint Vincentin ja Grenadiinien pääkaupunki, jossa satama ja kauppa kokoavat saarivaltion arkea. Kaupunki sijaitsee Saint Vincentin pääsaarella jyrkkien kukkuloiden ympäröimänä. Sen lempinimi on **City of Arches**, kaarien kaupunki. Britannian siirtomaa-ajan Fort Charlotte kohoaa keskustan länsipuolella, mutta sen tykit suunnattiin sisämaahan.\n\nKaupungin kasvitieteellinen puutarha perustettiin jo 1700-luvulla hyöty- ja lääkekasvien kasvatuspaikaksi. Sinne saapuneet **leipäpuut** liittyvät William Blighin merimatkoihin, joista Bountyn kapina on tunnetuin. Kasvit päätyivät kuitenkin Kingstowniin myöhemmällä Providence-aluksen matkalla. Puutarhassa hoidetaan myös Saint Vincentin kotoperäisiä papukaijoja. Kingstownin historiassa puutarhan kasvit, sataman kuljetukset ja linnakkeen tykit kuuluvat saman saarivaltion eri vaiheisiin.",
+  "teksti": "Kingstown syntyi ranskalaisten siirtolaisten perustamana kaupunkina 1700-luvulla. Nykyisin se on Saint Vincentin ja Grenadiinien pääkaupunki sekä satama- ja kauppakeskus. Keskustaa ympäröivien kukkuloiden vuoksi kaupunki ja sen lähiseutu eivät ole yhtenäistä tasankoa.\n\nKasvitieteellisen puutarhan taustalla olivat hyötykasvien, lääkkeiden ja uusien viljelykasvien tarpeet. Kasveja tuotiin muilta Karibian saarilta ja kauempaa maailmasta. William Bligh sai leipäpuut perille vasta Bountyn matkan jälkeen uudella aluksella.\n\nFort Charlotte oli jo olemassa isoisän matkavuonna 1873. Se rakennettiin kukkulalle, mutta puolustuksen suunnittelijat varautuivat maitse tulevaan hyökkäykseen. Nykyisin linnoituksen historiallinen rakenne ja näkymät Kingstowniin kertovat sen sijainnista yhtä paljon kuin yksittäiset tykit."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä valtion pääkaupunki Kingstown on?",
+   "options": [
+    "Saint Vincentin ja Grenadiinien",
+    "Antiguan ja Barbudan",
+    "Saint Kittsin ja Nevisin",
+    "Trinidadin ja Tobagon"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Valtioon kuuluu pääsaari ja sen eteläpuolinen saariryhmä.",
+   "fact": "Kingstown on Saint Vincentin ja Grenadiinien pääkaupunki, joka sijaitsee Saint Vincentin saarella.",
+   "source": "https://en.wikipedia.org/wiki/Kingstown"
+  },
+  {
+   "q": "Millä aluksella William Bligh toi leipäpuut onnistuneesti Kingstowniin?",
+   "options": [
+    "Providencella",
+    "Bountylla",
+    "Endeavourilla",
+    "Discoverylla"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Kuuluisan kapinamatkan jälkeen hän lähti uudelleen merelle.",
+   "fact": "Leipäpuut saapuivat Kingstowniin Blighin myöhemmällä Providence-aluksen matkalla.",
+   "source": "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+  },
+  {
+   "q": "Mihin suuntaan Fort Charlotten tykit rakennettiin osoittamaan?",
+   "options": [
+    "Sisämaahan",
+    "Avomerelle",
+    "Satama-altaaseen",
+    "Suoraan ylöspäin"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Linnakkeen puolustajat varautuivat maitse tulevaan hyökkäykseen.",
+   "fact": "Fort Charlotte rakennettiin puolustautumaan myös saaren sisäosista tulevia hyökkäyksiä vastaan, ja sen tykit suunnattiin sisämaahan.",
+   "source": "https://en.wikipedia.org/wiki/Fort_Charlotte,_Saint_Vincent"
+  },
+  {
+   "q": "Minkä eläimen säilyttämiseen Kingstownin puutarhan kasvatusohjelma liittyy?",
+   "options": [
+    "Papukaijan",
+    "Merikilpikonnan",
+    "Mangustin",
+    "Iguaanin"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Eläin on myös Saint Vincentin kansallislintu.",
+   "fact": "Kasvitieteellisen puutarhan lintutarhassa kasvatetaan Saint Vincentin kotoperäistä papukaijaa.",
+   "source": "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+  },
+  {
+   "q": "Mikä kansainvälinen lentoasema palvelee nykyisin Saint Vincentin saarta?",
+   "options": [
+    "Argyle International",
+    "Hewanorra International",
+    "Grantley Adams",
+    "V. C. Bird"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kentän nimessä on sen sijaintipaikka pääsaarella.",
+   "fact": "Argyle International Airport palvelee Saint Vincentin kansainvälistä lentoliikennettä.",
+   "source": "https://en.wikipedia.org/wiki/Argyle_International_Airport"
+  }
+ ],
+ "tiedot": [
+  "Kingstownin puutarhassa kasvaa kloonijälkeläinen leipäpuusta, jonka William Bligh toi saarelle.",
+  "Fort Charlotte on nimetty kuningas Yrjö III:n puolison Charlotten mukaan.",
+  "Kingstown Saint Vincentillä ja Kingston Jamaikalla ovat eri kaupungit, vaikka nimet muistuttavat toisiaan."
+ ],
+ "valokuva": {
+  "tiedosto": "",
+  "lyhyt": "",
+  "selite": "",
+  "lahde": ""
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Kingstown",
+   "johdanto": "Kingstownin kaariaukot, satama ja kukkulat kuuluvat samaan kaupunkiin. Sen puutarhan kasvit ovat kulkeneet merimatkoja siinä missä ihmisetkin.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kaarien kaupunki",
+     "teksti": "Kingstown tunnetaan lempinimellä City of Arches, kaarien kaupunki. Lempinimi antaa kaupunkikävelylle aiheen: katseen voi suunnata keskustan rakennuksiin. Saarivaltion pääkaupunki on samalla kauppakeskus, joten arkkitehtuurin rinnalla näkyy jokapäiväinen kaupankäynti. Kukkulat ympäröivät keskustaa ja satama kuuluu sen toimintaan; näkymä muuttuu, kun siirrytään kaupungin tasolta Fort Charlotten kukkulalle. Lempinimi antaa kaupunkikävelylle pienen tehtävän: kaaria voi huomata rakennuksissa ennen kuin katse karkaa jälleen merelle.",
+     "wiki": "Kingstown",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kyyti alkaa H-kirjaimella",
+     "teksti": "Saint Vincentin paikallisliikennettä hoitavat monet yksityiset pikkubussit. Niiden rekisteritunnuksen alussa on H, joka viittaa englannin ilmaisuun for hire, vuokrattavana. Saari on vuoristoinen ja sen maasto vaihtelee jyrkästi, joten Kingstownista tehtävä retki ei ole pelkkää tasaista rantatietä. Pikkubussit, taksit ja vuokra-autot ovat käytettyjä liikkumistapoja. Kilven kirjain kertoo kuljetuksen luonteesta, mutta oikea ajosuunta on silti selvitettävä ennen kyytiin nousua. ",
+     "wiki": "Kingstown",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Tulipalon jälkeen vesijohto",
+     "teksti": "Kingstownin historiassa kaupunkitekniikalla on oma aikajärjestyksensä. Suuri tulipalo tuhosi laajoja osia kaupungista 1800-luvulla, ja palon jälkeen laadittiin suunnitelmat vedenjakelua varten. Järjestelmä valmistui myöhemmin, vielä samalla vuosisadalla. Kaupunkia ei siis kehitetty vain rakentamalla julkisivuja ja satamaa, vaan myös järjestämällä vettä. Keskustan kivirakennusten rinnalle kuuluu tämä vähemmän näkyvä historia: arjen toiminta tarvitsee yhteisiä järjestelmiä, joiden rakentaminen vie aikaa.",
+     "wiki": "Kingstown",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Sataman linnake katsoi sisämaahan",
+     "teksti": "Fort Charlotte rakennettiin Kingstownin länsipuolen kukkulalle. Satamasta katsottuna voisi odottaa tykkien osoittavan merelle, mutta ne suunnattiin sisämaahan. Brittien siirtomaahallinnon puolustussuunnitelmassa hyökkäys saattoi tulla saaren muualta rannikolta maitse, eikä suoraan Kingstownin edustalta. Linnake rakennettiin puolustettavaksi tukikohdaksi, johon kuljettiin viaduktia pitkin. Sen sijainti kertoo näin myös siitä, miten koko saaren kulkureittejä arvioitiin. Linnakkeelta avautuu näkymä pääkaupunkiin ja lähisaarille.",
+     "wiki": "Fort_Charlotte,_Saint_Vincent",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Kingstownin keskustassa voi aloittaa kaariaukoista ja satamakaupungin katukuvasta. Kasvitieteellinen puutarha sijaitsee keskustan pohjoispuolella. Fort Charlotte on länsipuolen kukkulalla, joten siihen on varattava erillinen nousu ja selvitettävä käyntimahdollisuus. Saint Vincentin maasto on mäkistä; taksit ja yksityiset pikkubussit ovat vaihtoehtoja pidempiin siirtymiin. Argyle International Airport on saaren nykyinen kansainvälinen lentoasema.",
+    "artikkeli": {
+     "nimi": "Matkailijan Kingstown",
+     "taitto": "opas",
+     "teksti": "Seuraa keskustan kaariaukkoja ja jatka hyötykasvien puutarhaan.",
+     "nosto": "Kingstownin päivä saa eri mittakaavan, kun vaihdat keskustan kaduilta puutarhaan ja kukkulalle.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Argyle International Airport (SVD) palvelee Saint Vincentin kansainvälistä lentoliikennettä. Kingstowniin jatketaan maakuljetuksella. Yksityiset pikkubussit ovat osa saaren paikallisliikennettä, ja niiden H-alkuiset kilvet viittaavat vuokrakuljetukseen. Taksit ovat toinen vaihtoehto. Mäkinen maasto kannattaa ottaa huomioon, kun suunnittelet kävelyn ja ajamisen yhdistelmää.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kaarien keskustassa",
+       "teksti": "City of Arches -lempinimi ohjaa katsomaan keskustan rakennusten kaariaukkoja. Kingstown on myös satama ja kaupankäynnin keskus, joten kaupunkikävely kulkee arkisessa ympäristössä. Pyhän Yrjön ja Pyhän Marian katedraalit kuuluvat keskustan historiallisiin maamerkkeihin; keskustassa on myös 1800-luvun kivirakennuksia.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Puutarha ja kukkula",
+       "teksti": "Kasvitieteellinen puutarha on Kingstownin pohjoisella laidalla. Sen kasvihistoriaan kuuluvat lääkekasvit, viljelykokeet ja meritse tuodut leipäpuut. Lintutarhan kasvatusohjelma liittyy saaren kotoperäiseen papukaijaan. Fort Charlotte sijaitsee kaupungin länsipuolella kukkulalla. Selvitä linnakkeen käyntimahdollisuus etukäteen.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Kingstownin keskustan ruokapaikkojen tarjonnassa on esimerkiksi rotia ja keittoja. Myös kasvisruokaa ja mehuja on mainittu keskustan tarjonnassa. Valitse ruokapaikan päivän listalta; saatavuus voi muuttua, joten yksittäisen vanhan ruokalistan sijaan kannattaa katsoa paikan omaa tarjontaa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Sovita kaupunkipäivä saapumisen ja jatkomatkan väliin. Puutarhassa ja linnakkeen kukkulalla liikutaan ulkona, joten matkapäivän ennuste auttaa retken järjestämisessä. Älä arvioi kävelyä pelkän karttamatkan perusteella: Kingstownin ympärillä on jyrkkiä kukkuloita. Puutarhan ja linnakkeen käyntijärjestelyt kannattaa selvittää ennen lähtöä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Keskustan kaariaukot",
+        "tahdet": 3,
+        "selite": "Kingstownin lempinimi saa vastineen rakennusten yksityiskohdissa."
+       },
+       {
+        "mita": "Kasvitieteellinen puutarha",
+        "tahdet": 3,
+        "selite": "Hyötykasvien historia yhdistää kaupunkia muihin Karibian saariin."
+       },
+       {
+        "mita": "Fort Charlotten näkymä",
+        "tahdet": 2,
+        "selite": "Kukkulalta voi hahmottaa Kingstownin ja lähisaarien sijaintia."
+       },
+       {
+        "mita": "Puutarhan lintutarha",
+        "tahdet": 2,
+        "selite": "Kotoperäisen papukaijan kasvatus on osa alueen suojelutyötä."
+       },
+       {
+        "mita": "Paikallinen ruoka",
+        "tahdet": 2,
+        "selite": "Keskustan ruokapaikoissa voi aloittaa rotista tai keitosta."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Lentoasema",
+        "teksti": "Kansainväliset lennot käyttävät Argylea, josta tarvitaan siirtyminen Kingstowniin."
+       },
+       {
+        "otsikko": "Mäkinen maasto",
+        "teksti": "Kaupunki on kukkuloiden ympäröimä, joten kaikkia kohteita ei kannata yhdistää tasamaan kävelynä."
+       },
+       {
+        "otsikko": "Puutarhan säännöt",
+        "teksti": "Puutarhaan ei saa tuoda lasipulloja; myös alkoholi ja tupakointi on kielletty alueella."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "luonto",
+   "nimi": "Kasvien merimatkat",
+   "johdanto": "Kingstownin puutarha oli osa hyötykasvien kansainvälistä verkostoa. Sen historia kulkee lääkkeistä leipäpuuhun ja nykyiseen lintujen suojeluun.",
+   "tehtava": {
+    "kysymys": "Miltä lähisaarelta Kingstownin puutarhaan tuotiin kanelia?",
+    "vaihtoehdot": [
+     "Guadeloupelta",
+     "Antigualta",
+     "Barbadokselta",
+     "Tobagolta"
+    ],
+    "oikea": 0,
+    "fakta": "Kaneli kuului Guadeloupen ja Saint Vincentin välisiin kasvinsiirtoihin."
+   },
+   "nostot": [
+    {
+     "otsikko": "Puutarha lääkkeitä ja ruokaa varten",
+     "teksti": "Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla hyötykasvien kokeilu- ja kasvatuspaikaksi. Taustalla olivat sekä lääkekasvien tarve että uusien ravinto- ja kauppakasvien etsiminen. Puutarhan varhaiseen historiaan kuuluivat sotilaslääkäri George Young ja Robert Melville. Alue ei ollut vain koristeellinen kävelypaikka: kasvien käyttöä tutkittiin ja niiden kasvattamista kokeiltiin paikallisissa oloissa. Myöhemmin puutarhassa tehtiin myös kokeita esimerkiksi kaakaolla, puuvillalla, sokeriruo’olla ja nuolijuurella.",
+     "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Bounty ei tuonut leipäpuita perille",
+     "teksti": "William Blighin Bounty-matkan tehtävänä oli hakea Tahitilta leipäpuita Länsi-Intiaan. Kapina keskeytti matkan, mutta kasvien kuljetusyritys jatkui. Bligh purjehti myöhemmin uudelleen Tahitille Providencella ja toi kasvit Kingstowniin. Puutarhan hoitaja Alexander Anderson huolehti niistä määränpäässä. Puutarhassa on edelleen kloonijälkeläinen yhdestä tuodusta leipäpuusta. Merimatkan jälki ei siis ole pelkkä tapahtuma asiakirjassa, vaan kasvilinja, jota on jatkettu lisäämällä alkuperäisestä puusta uusia yksilöitä.",
+     "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kaneli kulki saarien välillä",
+     "teksti": "Kingstownin puutarhan kasvit eivät saapuneet vain Britannian kautta. Ranskalaiset kasvitieteilijät ja Karibian saarten toimijat osallistuivat kasvinsiirtoihin esimerkiksi Martiniquelta, Guadeloupelta ja Cayennesta. Kanelia lähetettiin Guadeloupelta puutarhan varhaisiin kokoelmiin. Muualta saatiin myös Aasian kasveja ja Kiinasta tulleita siemeniä Kew’n puutarhan kautta. Paikallinen kasvatusalue kuului laajaan verkostoon: eri paikoissa kasvaneita kasveja kokeiltiin uudessa ympäristössä ja niiden hyötyä arvioitiin.",
+     "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kasvien keskellä kasvatetaan lintua",
+     "teksti": "Kingstownin puutarhassa on myös lintutarha, jonka kasvatusohjelma auttaa säilyttämään Saint Vincentin kotoperäistä papukaijaa (Amazona guildingii). Se on valtion kansallislintu. Lajia elää luonnossa Saint Vincentin saarella, ja puutarhan lintutarha tuo sen osaksi kaupungin luontokohdetta. Kasvitieteellisen puutarhan toiminta ulottuu näin kasvikokoelmaa laajemmalle. Historiallisen hyötykasvien kasvatuspaikan rinnalla tehdään nykyistä suojelutyötä, jonka kohteena on juuri tämän saaren eläinlaji.",
+     "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Kingstownin kasvitieteellinen puutarha ja Fort Charlotte kertovat kasvien kuljetuksista ja saaren puolustushistoriasta. Molemmat kohteet olivat olemassa jo 1800-luvulla.",
+  "rajat": {
+   "pohjoinen": 13.16883,
+   "etela": 13.1549,
+   "lansi": -61.2452,
+   "ita": -61.224
+  },
+  "kohteet": [
+   {
+    "nimi": "Kingstownin kasvitieteellinen puutarha",
+    "tyyppi": "luonto",
+    "lat": 13.16583,
+    "lon": -61.22708
+   },
+   {
+    "nimi": "Fort Charlotte",
+    "lat": 13.1579,
+    "lon": -61.2421
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Kingstownin kasvitieteellinen puutarha": {
+   "aika": "1700-luku",
+   "teksti": "Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla uusien ravinto-, lääke- ja kauppakasvien kasvattamista varten. Varhaiseen työhön osallistuivat Robert Melville, George Young ja myöhemmin Alexander Anderson. Kasveja saatiin muilta Karibian saarilta sekä Aasiasta ja muualta maailmasta. William Blighin tuomat leipäpuut kuuluivat tähän kansainväliseen kasvinsiirtoon.\n\nPuutarha oli olemassa isoisän matkavuonna 1873, mutta sen koko historia ei ole ollut yhtäjaksoista kukoistusta. Hoito heikkeni 1800-luvun puolivälin tienoilla, ja elvytystyö alkoi myöhemmin vuosisadan loppupuolella. Nykyiseen alueeseen kuuluu kasvikokoelman lisäksi papukaijan suojelua palveleva lintutarha. Kohde kertoo sekä siirtomaa-ajan hyötykasvikokeiluista että saaren oman luonnon säilyttämisestä.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Fort Charlotte": {
+   "aika": "1800-luvun alku",
+   "teksti": "Fort Charlotte on Britannian siirtomaa-ajan linnake Berkshire Hillillä Kingstownin länsipuolella. Se valmistui 1800-luvun alussa ja sai nimensä kuningas Yrjö III:n puolison Charlotten mukaan. Linnakkeen tykit suunnattiin sisämaahan, sillä puolustussuunnitelma varautui saaren muulta rannikolta maitse tulevaan hyökkäykseen. Tukikohtaan kuljettiin viaduktia pitkin.\n\nIsoisän matkavuonna 1873 linnake oli jo olemassa. Sen sijainti näkyy laajoissa näkymissä Kingstowniin, Young Islandille, Bequialle ja Grenadiineille. Alueen rakennuksia käytettiin myöhemmin erilaisiin hoito- ja laitoskäyttöihin. Linnakkeella toimii myös sataman sisääntuloa merkitsevä majakka. Vanha linnoitus kuuluu siten sekä kaupungin historialliseen maisemaan että sen merenkulun ympäristöön.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Argyle International Airport (SVD)",
+  "huomiot": [
+   "C-tekstiluonnos; A rajattu, kartta partial 2/6–8, riippumattomat D/E/F-portit avoinna.",
+   "20 kuvaroolia tyhjinä; myöhempi kuvaputki ja silmätarkistus määrittävät tiedostot ja kuvatekstit.",
+   "Sääauditointi 48/48 avoinna; saatiedot null, saa.json koskematon.",
+   "Puutarha on luontokohde; modernia temppelirakennusta tai taideteoksia ei sisällytetä kohde-/kuvarajaukseen. Fort Charlotten modernit seinämaalaukset pois kuvista.",
+   "Väestö C-teksteissä pois: kontekstin 10 690 / 2023 koskee Kingstownin piirin kotitalousväestöä, ei 26 395 asukkaan taajamaa."
+  ]
+ }
+}

@@ -1,0 +1,414 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "nassau",
+ "maa": "BHS",
+ "era": "e12",
+ "kaupunki": {
+  "id": "nassau",
+  "name": "Nassau",
+  "wiki": "Nassau",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 25.078,
+   "lon": -77.339
+  }
+ },
+ "artikkeli": {
+  "intro": "Nassaussa sama satama on palvellut merirosvoja, saarron läpi kulkeneita kauppalaivoja ja nykyisiä risteilymatkustajia. Bahaman pääkaupunki sijaitsee **New Providencen saarella**, ja sen edustalla on erillinen Paradise Island. Bay Streetin kaupankäynti kulkee rantaa pitkin, kun taas kukkulan takana ovat Grants Townin ja Bain Townin asuinalueet. Pääkaupunki on myös maan hallinnon, koulutuksen ja kaupan keskus.\n\nKaupungin eurooppalainen nimi kulkee Orange-Nassaun hallitsijasuvun kautta Saksaan asti. Kalkkikiveen louhitut **Kuningattaren portaat** taas kertovat orjuutettujen ihmisten työstä. Kukkuloiden linnakkeet kuuluivat sataman puolustukseen jo ennen isoisän matkavuotta 1873. Junkanoo-kulkueessa käsin tehdyt paperipuvut, musiikki ja tanssi ottavat kadun yhteiseen käyttöön. Saaristopääkaupungin historia löytyy sekä suurten laivojen reiteistä että niistä käsistä, jotka ovat rakentaneet sen portaita ja juhlia.",
+  "teksti": "Nassau syntyi 1600-luvulla Charles Townina ja sai nykyisen nimensä saman vuosisadan lopulla. Kaupungin varhaisessa historiassa hallitsijoiden nimet, hyökkäykset ja uudelleenrakentaminen seuraavat toisiaan. Matalasta satamasta tuli myöhemmin merirosvojen tukikohta, johon suurilla sotalaivoilla oli vaikea päästä.\n\nYhdysvaltain itsenäisyyssodan jälkeinen muutto kasvatti kaupunkia. Britannialle uskollisten siirtolaisten mukana saapui myös heidän orjuuttamiaan ihmisiä. Satamarannan lisäksi kaupungin historiaan kuuluvat afrikkalaistaustaisen väestön asuinalueet kukkulan eteläpuolella.\n\nJunkanoo on musiikin, tanssin ja käsityön yhteinen katuesitys, jonka juuret liittyvät orjuutettujen afrikkalaisten ja heidän jälkeläistensä juhlintaan. Paperista ja kartongista rakennetut puvut tekevät valmistelutyön näkyväksi vasta kulkueessa. Torikauppa ja kalatorin ruokakojut tuovat puolestaan satamakaupunkiin arjen rytmin."
+ },
+ "kysymykset": [
+  {
+   "q": "Millä saarella Nassau sijaitsee?",
+   "options": [
+    "New Providence",
+    "Grand Bahama",
+    "Eleuthera",
+    "Great Abaco"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Pääkaupungin edustan Paradise Island on eri saari.",
+   "fact": "Nassau sijaitsee New Providencen saarella.",
+   "source": "https://en.wikipedia.org/wiki/Nassau,_Bahamas"
+  },
+  {
+   "q": "Mikä on conch, jota valmistetaan Nassaun ruokakojuissa?",
+   "options": [
+    "Merikotilo",
+    "Leipähedelmä",
+    "Juureslajike",
+    "Trooppinen kala"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Samaa raaka-ainetta tarjotaan salaattina ja friteerattuina paloina.",
+   "fact": "Conch on merikotilo; Potters Caylla sitä valmistetaan muun muassa salaatiksi ja fritters-paloiksi.",
+   "source": "https://en.wikivoyage.org/wiki/Nassau"
+  },
+  {
+   "q": "Minkä materiaalin sisältä Kuningattaren portaat louhittiin?",
+   "options": [
+    "Kalkkikiven",
+    "Graniitin",
+    "Basaltin",
+    "Hiekkakiven"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Portaita ei rakennettu irrallisista kivistä.",
+   "fact": "Orjuutetut ihmiset louhivat portaikon kiinteään kalkkikiveen 1700-luvun lopulla.",
+   "source": "https://en.wikipedia.org/wiki/Queen%27s_Staircase"
+  },
+  {
+   "q": "Mitä kulkuvälinettä Fort Fincastlen muoto muistuttaa?",
+   "options": [
+    "Siipirataslaivaa",
+    "Purjevenettä",
+    "Höyryveturia",
+    "Postivaunua"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Muoto liittyy vesillä liikkuvaan kulkuvälineeseen.",
+   "fact": "Fort Fincastle on siipirataslaivaa muistuttavaksi muotoiltu linnake.",
+   "source": "https://en.wikipedia.org/wiki/Fort_Fincastle_(The_Bahamas)"
+  },
+  {
+   "q": "Miksi Nassaun matala satama oli merirosvoille hyödyllinen?",
+   "options": [
+    "Suuret sotalaivat eivät päässeet sinne",
+    "Laivojen korjaaminen oli siellä ilmaista",
+    "Satamasta kulki kanava sisämaan järvelle",
+    "Satamassa oli joka päivä tyyni sää"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Pienet alukset ja suuret alukset tarvitsivat eri määrän vettä alleen.",
+   "fact": "Pienille aluksille sopiva satama oli liian matala suurille sotalaivoille.",
+   "source": "https://en.wikipedia.org/wiki/Nassau,_Bahamas"
+  }
+ ],
+ "tiedot": [
+  "Nassaun nimi johtaa Orange-Nassaun hallitsijasuvun kautta Saksassa sijaitsevaan Nassauhun, vaikka kaupunki itse on Atlantin saaristossa.",
+  "Junkanoon käsin tehdyt puvut voivat olla kartonkia ja kreppipaperia. Kulkueen lyhyt hetki kadulla kokoaa näkyviin pitkin vuotta tehtyä valmistelutyötä.",
+  "Grants Town ja Bain Town kuuluvat Over-the-Hill-alueeseen: kaupunginosien yhteinen nimi tarkoittaa kukkulan takaista kaupunkia."
+ ],
+ "valokuva": {
+  "tiedosto": "",
+  "lyhyt": "",
+  "selite": "",
+  "lahde": ""
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Nassau",
+   "johdanto": "Sataman ympärillä kohtaavat kalkkikiveen louhittu historia, torikauppa ja paperista rakennettu juhla.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Koko vuosi paperia varten",
+     "teksti": "Junkanoo-kulkueessa kartonki ja kreppipaperi muuttuvat käsin tehdyiksi puvuiksi. Ryhmät valmistelevat asujaan pitkin vuotta, vaikka suuri yleisö näkee ne vasta kadulla. Nassaun kulkueessa tanssia säestävät rummut, kellot ja pillit, ja ryhmiä arvioidaan sekä musiikin että pukujen perusteella. Tapahtuman historia liittyy orjuutettujen afrikkalaisten ja heidän jälkeläistensä juhlintaan. Nykyinen kilpailumuoto yhdistää samaan esitykseen käsityön, liikkeen ja yhteisen rytmin.",
+     "wiki": "Junkanoo",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Portaat on otettu pois kalliosta",
+     "teksti": "Queen’s Staircase, Kuningattaren portaat, syntyi louhimalla kiinteää kalkkikiveä. Orjuutetut ihmiset tekivät työn rajallisilla työkaluilla 1700-luvun lopulla, jotta kaupungista saatiin kulkuyhteys Fort Fincastleen. Reitti nousee kiviseinien välistä Bennet’s Hillin suuntaan. Nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimen takana on siis toinen historia kuin itse rakentamisen takana: kuninkaallinen muistaminen ja työhön pakotettujen ihmisten työn jälki ovat samassa paikassa.",
+     "wiki": "Queen's Staircase",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Ostoskatu vaihtaa mittakaavaa",
+     "teksti": "Bay Street kulkee Nassaun sataman tuntumassa. Risteilymatkailijan kaupat, ravintolat ja historialliset rakennukset ovat tiiviisti lähekkäin, mutta kauempana idässä katu jatkuu myös paikallisten pienempien liikkeiden äärelle. Straw Market eli olkitori kokoaa bahamalaisia käsitöitä ja matkamuistoja saman katon alle. Nykyinen torirakennus korvasi tulipalossa tuhoutuneen edeltäjänsä. Satamakadulta löytyy siten sekä kaupungin kaupankäynnin vanha suunta että matkailua varten muuttunut toriperinne.",
+     "wiki": "Nassau, Bahamas",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Sillan toisella puolella on toinen saari",
+     "teksti": "Paradise Island sijaitsee Nassaun edustalla, mutta se on eri saari kuin New Providence, jolla pääkaupunki sijaitsee. Keskustasta pääsee sinne sillan kautta, ja myös vesitaksiyhteys tunnetaan. Nassaun majoitus keskittyy sekä Paradise Islandille että Cable Beachin alueelle, joten hotellin osoite ei välttämättä tarkoita keskustan satamakortteleita. Nämä nimet kannattaa erottaa jo matkaa suunnitellessa: kaupungin vanha ydin, hotelliranta ja vastarannan saari ovat eri paikkoja.",
+     "wiki": "Nassau, Bahamas",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Vanhan Nassaun kävelykohteet alkavat Bay Streetin satamakortteleista. Olkitori tuo vastaan käsityöt, Kuningattaren portaat kalkkikivisen reitin kukkulalle. Fort Fincastlelta voi hahmottaa myös edustan Paradise Islandin. Kalatorin ruokakojuja löytyy Potters Caylta sillan alta. Hotellialueiden ja keskustan väliset siirtymät kannattaa suunnitella erikseen.",
+    "artikkeli": {
+     "nimi": "Matkailijan Nassau",
+     "taitto": "opas",
+     "teksti": "Kulje satamasta kivisten portaiden kautta kukkulalle ja jätä aikaa myös torille.",
+     "nosto": "Vanha keskusta ja hotellialueet ovat eri ympäristöjä. Nassaun mittakaava avautuu parhaiten, kun erotat New Providencen ja vastarannan Paradise Islandin.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Lynden Pindlingin kansainvälinen lentoasema sijaitsee New Providencen länsiosassa. Keskustaan voi jatkaa taksilla; sovi hinta ennen lähtöä. Nassaun ja saaren paikallisliikenteessä kulkee jitney-pikkubusseja, joiden reitit kannattaa varmistaa kuljettajalta. Ne eivät liikennöi Paradise Islandille. Vanhan keskustan satamakortteleihin voi tutustua kävellen, kun taas Cable Beach ja muu saari vaativat oman siirtymänsä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Satamakatu ja olkitori",
+       "teksti": "Bay Streetin varrelta löytyvät keskustan kaupat ja Straw Market, olkitoriksi kutsuttu käsityö- ja matkamuistotori. Kadun läheisyydessä sijaitsevat myös Christ Church Cathedral ja Nassaun kirjasto. Potters Caylla Paradise Islandin sillan alla on kalatori ja ruokakojuja. Satamakortteleiden kävelyn voi siis yhdistää torikäyntiin, mutta Potters Cay on eri paikka kuin Bay Streetin olkitori.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kalkkikiviportaat ja linnakkeet",
+       "teksti": "Queen’s Staircase yhdistää kaupungin Fort Fincastlen kukkulaan. Portaiden historiaan kuuluu orjuutettujen ihmisten tekemä louhintatyö. Linnakkeelta avautuu näkymä Nassaun ja Paradise Islandin suuntaan; lännessä sijaitseva Fort Charlotte on toinen vanha satamaa valvonut linnoitus. Portaiden ja Fincastlen voi ottaa samaksi kävelykohteeksi. Charlotteen siirtyessä kaupungin satamarannan mittakaava avautuu toisesta suunnasta.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Nassau on lämmin ympäri vuoden, ja sateita on enemmän kesäkaudella kuin talvella. Joulu ja vuodenvaihde liittyvät Junkanoon suuriin katukulkueisiin, joten juhlan seuraaminen on erilainen matka kuin tavallinen rantapäivä. Varmista kulkueen ajankohta matkaa suunnitellessa. Päivän kävelyreittiin on hyvä yhdistää myös sisäkohde, kuten kirjasto, eikä rakentaa koko ohjelmaa yhden rantapäivän varaan.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Queen’s Staircase",
+        "tahdet": 3,
+        "selite": "Kiinteään kalkkikiveen louhittu kulkureitti kertoo linnakkeen lisäksi rakentajiensa työstä."
+       },
+       {
+        "mita": "Fort Fincastle",
+        "tahdet": 3,
+        "selite": "Kukkulan linnakkeelta voi hahmottaa kaupungin ja sen edustan saaren."
+       },
+       {
+        "mita": "Fort Charlotte",
+        "tahdet": 2,
+        "selite": "Vanha kalkkikivilinnake valvoo satamaa keskustan länsipuolella."
+       },
+       {
+        "mita": "Straw Market",
+        "tahdet": 2,
+        "selite": "Satamakadun torilla tutustuu bahamalaisiin käsitöihin ja matkamuistokauppaan."
+       },
+       {
+        "mita": "Potters Cay",
+        "tahdet": 2,
+        "selite": "Kalatorin ruokakojuissa conch tulee vastaan useassa valmistustavassa."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Eri saaret",
+        "teksti": "Nassau sijaitsee New Providencella, Paradise Island sataman toisella puolella."
+       },
+       {
+        "otsikko": "Pikkubussin reitti",
+        "teksti": "Jitney-pikkubussien reitit vaihtelevat; varmista määränpää kuljettajalta."
+       },
+       {
+        "otsikko": "Hotellin sijainti",
+        "teksti": "Paradise Island ja Cable Beach ovat eri majoitusalueita kuin sataman vanha keskusta."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Satama vaihtaa roolia",
+   "johdanto": "Nassaun historia kulkee hallitsijoiden nimistä merirosvoihin ja Atlantin yli tulleeseen muuttoon.",
+   "tehtava": {
+    "kysymys": "Mikä Nassaun alueen nimi kertoo sen suhteesta satamakeskustan kukkulaan?",
+    "vaihtoehdot": [
+     "Over-the-Hill",
+     "Cable Beach",
+     "Paradise Island",
+     "Potters Cay"
+    ],
+    "oikea": 0,
+    "fakta": "Over-the-Hill viittaa keskustan eteläpuolen asuinalueisiin, joihin kuuluvat Grants Town ja Bain Town."
+   },
+   "nostot": [
+    {
+     "otsikko": "Nimen matka Atlantin yli",
+     "teksti": "Nassau aloitti 1600-luvulla Charles Townina, Englannin Kaarle II:n mukaan nimettynä siirtokuntana. Kaupunki tuhottiin hyökkäyksessä ja rakennettiin uudelleen saman vuosisadan lopulla. Uusi nimi kunnioitti kuningas Vilhelm III:a, joka kuului Orange-Nassaun sukuun. Nimen taustalla on lopulta Saksassa sijaitseva Nassau. Bahamalaisen satamakaupungin nimi kuljettaa siis mukanaan eurooppalaista hallitsijasukua, vaikka kaupungin myöhempi elämä on rakentunut aivan toisella puolella Atlanttia.",
+     "wiki": "Nassau, Bahamas",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Mataluus oli merirosvolle etu",
+     "teksti": "Nassaun satama oli 1700-luvun alussa merirosvojen tukikohta. Suojaisilla vesillä pienet alukset pääsivät liikkumaan, mutta suuret sotalaivat eivät mahtuneet matalaan satamaan. Paikka tarjosi myös vettä ja elintarvikkeita. Siellä toimivat muun muassa Benjamin Hornigold ja Edward Teach, joka tunnetaan Mustapartana. Britannian nimittämä kuvernööri Woodes Rogers palautti kruunun hallintoa ja kauppaa. Merirosvovaiheen taustalla oli siis myös sataman käyttökelpoisuus, ei vain tunnettuja nimiä.",
+     "wiki": "Nassau, Bahamas",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kaupunki kasvoi kukkulan yli",
+     "teksti": "Yhdysvaltain itsenäisyyssodan jälkeen Bahamalle tuli Britannialle uskollisia siirtolaisia ja heidän orjuuttamiaan ihmisiä. Muutto vauhditti Nassaun kasvua 1700-luvun lopulla. Afrikkalaistaustaisen väestön asutus keskittyi myöhemmin muun muassa Grants Towniin ja Bain Towniin satamakeskustan eteläpuolella. Näitä kaupunginosia kutsutaan Over-the-Hill-alueeksi, kukkulan takaiseksi kaupungiksi. Nassaun historia jatkuu siten myös rantakadun ulkopuolella, asuinalueissa joiden nimi kertoo niiden sijainnista.",
+     "wiki": "Nassau, Bahamas",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Satama suuren sodan välissä",
+     "teksti": "Yhdysvaltain sisällissodan aikana Nassau palveli aluksia, jotka kulkivat kauppasaarron läpi etelävaltioiden Atlantin rannikon satamiin ja takaisin. Bahamalainen satama oli näin osa naapurimaan sodan aikaista kauppaverkostoa, vaikka se sijaitsi Britannian siirtomaassa. Isoisän matkavuoteen 1873 mennessä tämä kaupan vaihe oli jo ohi. Nassaun sataman historiassa merirosvojen tukikohta ja saarron läpi käynyt kauppaliikenne kuuluvat eri aikakausiin; niitä ei kannata sulauttaa samaksi meriseikkailuksi.",
+     "wiki": "Nassau, Bahamas",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Nassaun linnakkeet ja kalkkikiveen louhittu kulkureitti kertovat satamakaupungin historiasta. Portaat ja Fincastle kuuluvat samaan kokonaisuuteen, Charlotte sijaitsee lännessä.",
+  "rajat": {
+   "pohjoinen": 25.08048,
+   "etela": 25.07044,
+   "lansi": -77.36159,
+   "ita": -77.33469
+  },
+  "kohteet": [
+   {
+    "nimi": "Fort Fincastle",
+    "lat": 25.07361,
+    "lon": -77.33861
+   },
+   {
+    "nimi": "Kuningattaren portaat",
+    "lat": 25.07314,
+    "lon": -77.33767
+   },
+   {
+    "nimi": "Fort Charlotte",
+    "lat": 25.07778,
+    "lon": -77.35861
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Fort Fincastle": {
+   "aika": "1700-luvun loppu",
+   "teksti": "Fort Fincastle sijaitsee Bennet’s Hillin kukkulalla Nassaun keskustan yläpuolella. Lordi Dunmoren rakennuttama linnake on muotoiltu siipirataslaivaa muistuttavaksi. Sen nimen taustalla on Dunmoren toinen aatelisarvo, varakreivi Fincastle. Kukkulalta voi nähdä Nassaun, Paradise Islandin ja New Providencen itäiset lähestymissuunnat.\n\nLinnake ei toiminut pelkästään puolustusrakennuksena: se palveli myös majakkana, kunnes Paradise Islandille tuli korvaava valo, ja myöhemmin viestiasemana. Isoisän matkavuonna 1873 linnake oli jo vanha osa satamakaupungin ympäristöä. Vierailijan kävelyreitti kulkee usein Queen’s Staircasen kautta. Portaat ja linnake kuuluvat samaan historialliseen kokonaisuuteen, mutta niiden tekijät ja käyttötarkoitukset kertovat siitä eri puolia.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Kuningattaren portaat": {
+   "aika": "1700-luvun loppu",
+   "teksti": "Queen’s Staircase on kallioon louhittu portaikko Nassaun keskustassa. Orjuutetut ihmiset tekivät portaiden ja tien louhintatyön 1700-luvun lopulla, jotta kaupungin ja Fort Fincastlen välille syntyi kulkuyhteys. Kyse ei ollut irrallisten kivien pinoamisesta: reitti oli työstettävä kiinteään kalkkikiveen rajallisilla työkaluilla.\n\nPortaiden alaosan kulkuväylä jää korkeiden kiviseinien väliin. Reitti johtaa kohti Bennet’s Hillin linnaketta, ja se oli olemassa jo isoisän matkavuonna 1873. Queen’s Staircase -nimi annettiin myöhemmin kuningatar Victorian kunniaksi. Nimi kertoo kuninkaallisesta muistamisesta, mutta paikan rakentaminen kertoo ennen kaikkea työhön pakotetuista ihmisistä. Nykyinen kävelykohde yhdistää siten linnakkeen liikennejärjestelyn ja orjuuden historian samaan kiviseen reittiin.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Fort Charlotte": {
+   "aika": "1700-luvun loppu",
+   "teksti": "Fort Charlotte seisoo kukkulalla Nassaun sataman länsipuolella. Kalkkikivestä rakennettu linnake syntyi Britannian siirtomaakaudella, kun lordi Dunmore hallitsi Bahamaa. Se rakennettiin Yhdysvaltain itsenäisyyssodan päättymisen jälkeen ja kuului kaupungin sataman puolustukseen. Sijainti antaa rakennukselle yhteyden sekä meren kulkureitteihin että keskustan länsipuolelle.\n\nIsoisän matkavuonna 1873 Fort Charlotte oli jo osa Nassaun ympäristöä. Se kuuluu samaan vanhojen linnakkeiden ketjuun kuin Fort Fincastle ja Fort Montagu, mutta sijaitsee eri puolella satamakaupunkia kuin Bennet’s Hillin Fincastle. Charlotteen tutustuminen vie siis sataman toiseen reunaan. Linnakkeen merkitys liittyy siirtomaakaupungin puolustussuunnitelmaan; sitä ei pidä sekoittaa Nassaun varhaisempaan merirosvovaiheeseen.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Lynden Pindling International Airport",
+  "huomiot": [
+   "C-tekstiluonnos; B-kuvat, riippumaton D/E/F ja toimitushyväksyntä avoinna.",
+   "Kartta partial: kolme kohteen oman Wikipedia-artikkelin pisteestä varmennettua historiallista kohdetta; 6–8 kohteen portti avoin.",
+   "Kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde ovat tyhjät; kuvat tulevat erillisestä kuvaputkesta.",
+   "saatiedot:null: saa.json on olemassa, mutta 48/48-luvun primäärivarmennusta ei ole osoitettu tässä työssä.",
+   "Kontekstin väkiluku kuuluu New Providencen saarelle; kaupungin väkilukuna sitä ei käytetä.",
+   "Kontekstin portaiden 66 askelmaa poikkeaa nykyistä 65 askelmaa ja aiempaa 66 askelmaa erottavasta lähteestä; määrä jätetty pois.",
+   "Queen’s Staircase -artikkelin väite Victorian orjuuden lopettamisesta on ongelmallinen eikä sitä käytetä."
+  ]
+ }
+}

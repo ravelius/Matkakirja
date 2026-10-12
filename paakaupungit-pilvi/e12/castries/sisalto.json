@@ -1,0 +1,414 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "castries",
+ "maa": "LCA",
+ "era": "e12",
+ "kaupunki": {
+  "id": "castries",
+  "name": "Castries",
+  "wiki": "Castries",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 14.0108,
+   "lon": -60.9894
+  }
+ },
+ "artikkeli": {
+  "intro": "Castriesissa laivamatka voi päättyä suoraan pääkaupungin arkeen: Saint Lucian keskustan vieressä on **luonnonsatama**. Risteilyalusten matkustajat saapuvat Pointe Seraphinen kautta, ja kaupungista lähtee busseja eri puolille saarta. Sataman historiaan kuuluu myös hiilikauppa, sillä höyrylaivat tarvitsivat polttoainetta. Nykyinen kaupunkinimi muistuttaa ranskalaisesta laivastoministeristä, vaikka saaren kieli- ja kulttuurihistoria on paljon moninaisempi.\n\nJeremie Streetin torilla myydään kasviksia, mausteita ja käsitöitä sekä syödään paikallista ruokaa. Derek Walcottin aukion nimi tuo keskustaan Castriesissa syntyneen runoilijan, joka sai kirjallisuuden Nobelin. Samasta kaupungista lähti maailmalle myös taloustieteilijä **Arthur Lewis**. Morne Fortunen kukkulalla vanhat linnoitukset ja oppilaitokset kuuluvat puolestaan samaan maisemaan. Castriesin tarina kulkee laivojen, kaupan ja oppimisen välillä.",
+  "teksti": "Castriesin aikaisempi nimi oli Carénage, ja nykyinen nimi viittaa ranskalaiseen markiisi de Castriesiin. Satamaan rakennettiin laitureita hiilikauppaa varten, ja höyrylaivaliikenne kuului kaupungin kehitykseen. Keskusta rakennettiin uudelleen useiden suurten tulipalojen jälkeen.\n\nTorin rakennus syntyi vasta 1800-luvun lopulla, joten sitä ei vielä ollut isoisän matkavuonna 1873. Kauppapaikkaan lisättiin myöhemmin Vendor’s Arcade, jonka ravintolat ja käsityömyynti jatkavat torin toimintaa. Nykyinen tori yhdistää ruokaostokset ja matkamuistot.\n\nKaupungin kulttuurihistoriassa näkyvät Derek Walcott ja Arthur Lewis, Castriesissa syntyneet nobelistit. Walcottin mukaan nimetty aukio tunnettiin ennen muun muassa Place d’Armesina ja Columbus Squarena. Sen laidalla sijaitsevat katedraali ja kaupungin keskuskirjasto."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä saarivaltion pääkaupunki Castries on?",
+   "options": [
+    "Saint Lucian",
+    "Dominican",
+    "Grenadan",
+    "Barbadoksen"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Valtion nimi viittaa pyhimykseen.",
+   "fact": "Castries on Saint Lucian pääkaupunki ja satamakaupunki.",
+   "source": "https://en.wikipedia.org/wiki/Castries"
+  },
+  {
+   "q": "Mikä polttoaine kuului Castriesin sataman höyrylaiva-aikaan?",
+   "options": [
+    "Kivihiili",
+    "Maakaasu",
+    "Bensiini",
+    "Turve"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Laivojen höyrykoneet tarvitsivat kiinteää polttoainetta.",
+   "fact": "Castriesin sataman historiaan kuuluu hiilikauppa ja höyrylaivaliikenne.",
+   "source": "https://en.wikipedia.org/wiki/Castries"
+  },
+  {
+   "q": "Mistä Nobel-palkinnon alasta Castriesissa syntynyt Derek Walcott tunnetaan?",
+   "options": [
+    "Kirjallisuudesta",
+    "Kemiasta",
+    "Fysiikasta",
+    "Lääketieteestä"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Hänen työvälineisiinsä kuuluivat runot ja näytelmät.",
+   "fact": "Derek Walcott sai kirjallisuuden Nobelin. Castriesin keskustan aukio on nimetty hänen mukaansa.",
+   "source": "https://en.wikipedia.org/wiki/Derek_Walcott"
+  },
+  {
+   "q": "Mikä kirjain aloittaa Saint Lucian yksityisten reittibussien rekisteritunnuksen?",
+   "options": [
+    "M",
+    "T",
+    "L",
+    "R"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Tunnus näkyy vihreässä rekisterikilvessä.",
+   "fact": "Castriesista eri puolille saarta kulkevien yksityisten bussien vihreät rekisteritunnukset alkavat M-kirjaimella.",
+   "source": "https://en.wikipedia.org/wiki/Castries"
+  },
+  {
+   "q": "Mikä lentokenttä sijaitsee Castriesin lähellä?",
+   "options": [
+    "George F. L. Charles",
+    "Grantley Adamsin kenttä",
+    "V. C. Birdin kenttä",
+    "Maurice Bishopin kenttä"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kenttä tunnetaan myös kaupungin Vigien alueen yhteydessä.",
+   "fact": "George F. L. Charlesin lentoasema palvelee Castriesia; Hewanorran kansainvälinen kenttä on saaren eteläosassa.",
+   "source": "https://en.wikipedia.org/wiki/Castries"
+  }
+ ],
+ "tiedot": [
+  "Castriesin nimi viittaa markiisi de Castriesiin, joka toimi Ranskan laivasto- ja siirtomaaministerinä.",
+  "Torin vieressä toimivan Vendor’s Arcaden yhteydessä voi ostaa käsitöitä ja syödä paikallisten ravintoloiden ruokaa.",
+  "Morne Fortunen vanhalla sotilasalueella on myös oppilaitoksia, muun muassa Arthur Lewisin mukaan nimetty college."
+ ],
+ "valokuva": {
+  "tiedosto": "",
+  "lyhyt": "",
+  "selite": "",
+  "lahde": ""
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Castries",
+   "johdanto": "Laivojen satama on myös kauppiaiden ja nobelistien kaupunki. Castriesissa merireitit kohtaavat torin, bussipysäkit ja kirjallisuuden.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Höyrylaivan ostoslista",
+     "teksti": "Höyrylaivan oli saatava matkan varrella lisää hiiltä, ja Castriesin sataman historiaan kuuluu juuri tämä kauppa. Kaupunkiin rakennettiin läntinen laituri hiililiikennettä varten, ja satamassa alettiin vastaanottaa höyrylaivoja. Nyt Castriesiin tullaan myös risteilyaluksilla, jotka käyttävät Pointe Seraphinen satama-aluetta. Samassa lahdessa kohtaavat siten hyvin erilaiset merimatkojen tarpeet: aikaisempi polttoainehuolto ja nykyinen matkustajaliikenne. Kaupungin historiaan kuuluu tavaraa yhtä olennaisesti kuin matkustajia.",
+     "wiki": "Castries",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Ministeri jäi kartalle",
+     "teksti": "Carénage oli Castriesin aikaisempi nimi. Nykyinen nimi annettiin markiisi de Castriesin mukaan; hän oli Ranskan laivasto- ja siirtomaaministeri. Kaupungin nimessä kulkee siis hallintohistoriaa, vaikka nimeä käyttävä matkailija ei ministeriä tuntisikaan. Markiisin arvonimi puolestaan viittasi Etelä-Ranskassa sijaitsevaan Castriesin kuntaan. Saint Lucian ranskalainen vaihe näkyy myös kreolikielessä, kun taas maan virallinen kieli on englanti. Yksi karttanimi kertoo vain osan kaupungin kielten historiasta.",
+     "wiki": "Castries",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Tori sai oman jatko-osan",
+     "teksti": "Castriesin torin rakennus on 1800-luvun lopulta. Rakennusinsinööritoimisto Bruce & Still Liverpoolista osallistui sen toteutukseen, ja torilla kaupattiin lihaa, kalaa, yrttejä, mausteita sekä muita tarvikkeita. Toiminta on muuttunut: eläimiä ei enää teurasteta paikan päällä eikä kalaa myydä entiseen tapaan. Torin rinnalle perustettiin myöhemmin Vendor’s Arcade helpottamaan jalkakäytävien ruuhkaa. Sen ruokapaikat ja käsityöläiset jatkavat saman kauppapaikan tarinaa uudenlaisessa muodossa.",
+     "wiki": "Castries_Market",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Vihreä kilpi kertoo kyydistä",
+     "teksti": "Castriesista kulkee reittibusseja eri puolille Saint Luciaa. Ne ovat yksityisiä, ja bussin voi tunnistaa vihreästä rekisterikilvestä, jonka tunnus alkaa M-kirjaimella. Kaupunki toimii näin myös saaren maakuljetusten solmukohtana. Gros Isletin ja Soufrièren suuntaan on omat reittinsä, joten pääkaupungissa käynti voi olla osa pidempää saarimatkaa. Meritse saapuva matkustaja vaihtaa täällä kulkuneuvoa ja mittakaavaa: suuren laivan jälkeen matka jatkuu paikallisessa bussissa. Lähtöpaikka on selvitettävä reitin mukaan.",
+     "wiki": "Castries",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Aloita Castriesin keskustasta torilta ja Derek Walcottin aukiolta. Jeremie Streetin torin vierestä löytyy paikallisia ruokapaikkoja. Morne Fortune tarjoaa toisen näkökulman satamaan. Vigien rannalle voi jatkaa kaupunkikävelyn jälkeen. Tarkista saapuessa, käytätkö Castriesin lähellä olevaa George F. L. Charlesin kenttää vai saaren etelässä sijaitsevaa Hewanorran kenttää.",
+    "artikkeli": {
+     "nimi": "Matkailijan Castries",
+     "taitto": "opas",
+     "teksti": "Kulje sataman arjesta torille ja katso lopuksi kaupunkia kukkulalta.",
+     "nosto": "Castries sopii kaupunkipäivään, johon mahtuu kauppaa, paikallista ruokaa ja meren äärellä olemista.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "George F. L. Charlesin lentoasema sijaitsee Castriesin lähellä. Hewanorran kansainvälinen kenttä on Vieux Fortin luona saaren eteläosassa, joten se edellyttää erillistä maakuljetusta pääkaupunkiin. Risteilyalukset käyttävät Pointe Seraphinea. Castriesista lähtee yksityisiä reittibusseja eri puolille saarta; vihreä kilpi ja M-alkuinen tunnus auttavat tunnistamaan ne.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Tori ja runoilijan aukio",
+       "teksti": "Jeremie Streetin torilla voi tutustua kasviksiin, mausteisiin ja käsitöihin. Viereinen Vendor’s Arcade täydentää tarjontaa ruokapaikoilla ja käsityömyynnillä. Derek Walcottin aukio on keskustan puistoaukio, jonka laidalla ovat katedraali ja keskuskirjasto. Aukion aikaisemmat nimet Place d’Armes ja Columbus Square muistuttavat kaupungin eri vaiheista.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kukkulalta rannalle",
+       "teksti": "Morne Fortune sijaitsee kaupungin eteläpuolella. Kukkulalla on vanhoja linnoituksia, historiallisia sotilasrakennuksia ja oppilaitoksia. Satamaan avautuu näkymiä kukkulan pohjoispuolelta. Vigien ranta on vaihtoehto, jos haluat jatkaa kaupunkipäivää meren äärellä; se mainitaan myös Castriesin paikallisissa retkikohteissa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Torin vieressä Jeremie Streetille johtavalla kujalla on paikallisia ruokapaikkoja, ja Vendor’s Arcadessa toimii ravintoloita. Aloita niiden päivän tarjonnasta: kauppapaikka ja ruokailu kuuluvat täällä samaan kokonaisuuteen. Torilta voi hankkia myös kasviksia, yrttejä ja mausteita.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Kaupunkikäyntiä voi rytmittää sen mukaan, saavutko lennolla, risteilyaluksella vai muualta saarelta. Jos käytät Hewanorran kenttää, varaa keskustaan siirtymiselle aikaa. Torilla, aukiolla ja rannalla liikutaan ulkona, joten katso matkapäivän ennuste ja sovita kukkularetki siihen.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Castriesin tori",
+        "tahdet": 3,
+        "selite": "Mausteet, kasvikset ja käsityöt kohtaavat samassa kauppapaikassa."
+       },
+       {
+        "mita": "Derek Walcottin aukio",
+        "tahdet": 3,
+        "selite": "Runoilijan mukaan nimetty puistoaukio on katedraalin ja kirjaston äärellä."
+       },
+       {
+        "mita": "Morne Fortune",
+        "tahdet": 2,
+        "selite": "Kukkulalla vanha sotilasalue kohtaa oppilaitokset ja satamanäkymät."
+       },
+       {
+        "mita": "Vigien ranta",
+        "tahdet": 2,
+        "selite": "Ranta täydentää keskustassa vietettyä päivää."
+       },
+       {
+        "mita": "Torin ruokapaikat",
+        "tahdet": 2,
+        "selite": "Jeremie Streetin ympärillä voi kokeilla paikallista ruokaa."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kaksi eri lentokenttää",
+        "teksti": "George F. L. Charles palvelee Castriesia, mutta Hewanorra on saaren eteläosassa."
+       },
+       {
+        "otsikko": "Reittibussit",
+        "teksti": "Yksityisissä busseissa on vihreät rekisterikilvet ja M-alkuiset tunnukset."
+       },
+       {
+        "otsikko": "Kaupunki ja saari",
+        "teksti": "Pitonit sijaitsevat muualla Saint Lucialla; Castriesin päivä kannattaa rakentaa keskustan, kukkulan ja rannan ympärille."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Satamasta maailmalle",
+   "johdanto": "Castriesin historiaa kirjoitetaan kaupunkirakennuksissa ja kaupungista lähteneiden ihmisten työssä. Tulipalot, oppiminen ja nimien vaihtuminen jättivät erilaisia jälkiä.",
+   "tehtava": {
+    "kysymys": "Mikä Walcottin aukion aikaisemmista nimistä viittasi aseisiin?",
+    "vaihtoehdot": [
+     "Place d’Armes",
+     "Columbus Square",
+     "Promenade Square",
+     "Derek Walcott Square"
+    ],
+    "oikea": 0,
+    "fakta": "Place d’Armes merkitsee aseaukiota; myöhemmät nimet painottivat kävelyä ja henkilöhistoriaa."
+   },
+   "nostot": [
+    {
+     "otsikko": "Keskusta rakennettiin uudelleen",
+     "teksti": "Castriesin nykyistä keskustaa on vaikea lukea pelkkänä siirtomaa-ajan rakennusten kokoelmana, sillä kaupunki kärsi toistuvista suurista tulipaloista. Palot tuhosivat kaupunkia jo 1800-luvun alkupuolella ja uudelleen 1900-luvun puolivälissä. Keskustaa rakennettiin niiden jälkeen uudestaan. Kaupungin ikä ja yksittäisen rakennuksen ikä ovat siten eri asioita: vanha satamakaupunki ei ole säilynyt yhtenä muuttumattomana kokonaisuutena. Nykyiset kadut kuuluvat saman kaupungin jatkumoon, vaikka niiden rakennukset olisivat nuorempia.",
+     "wiki": "Castries",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Aukion nimissä vaihtuu näkökulma",
+     "teksti": "Derek Walcottin aukio on tunnettu aikaisemmin nimillä Place d’Armes, Promenade Square ja Columbus Square. Place d’Armes tarkoittaa aseaukiota, kun taas promenade viittaa kävelyyn. Nykyinen nimi kunnioittaa Castriesissa syntynyttä kirjallisuuden nobelistia. Nimet vaihtavat siis näkökulmaa samassa paikassa: aseisiin ja kävelyyn viittaavat nimet saavat rinnalleen henkilömuiston. Aukion laidalla ovat kaupungin keskuskirjasto ja katedraali, joten lukeminen ja kulttuurihistoria kuuluvat myös sen lähimpään ympäristöön.",
+     "wiki": "Derek_Walcott_Square",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kirjuri ennen taloustieteilijää",
+     "teksti": "Arthur Lewis syntyi Castriesissa opettajien perheeseen. Ennen yliopistoa hän työskenteli virastossa kirjurina ja oppi konekirjoitusta, arkistointia ja järjestelmällisyyttä. Lontooseen hän lähti opiskelemaan kaupallisia aineita; tuleva taloustieteilijä ei tuolloin vielä tuntenut omaa alaansa. Myöhemmin hän tutki talouden kehitystä ja sai taloustieteen Nobel-muistopalkinnon. Morne Fortunella toimivan Sir Arthur Lewis Community Collegen nimi palauttaa tämän kansainvälisen tutkijantien Castriesin opiskelijoiden arkeen.",
+     "wiki": "W._Arthur_Lewis",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Runokirja äidin avustuksella",
+     "teksti": "Derek Walcott kasvoi Castriesissa kodissa, jossa hänen opettajaäitinsä lausui runoja. Nuori kirjoittaja halusi julkaista oman runokirjan, ja äiti hankki rahat sen painamiseen. Kirja painettiin Trinidadissa, minkä jälkeen Walcott myi kappaleita ystävilleen ja sai kulut takaisin. Kirjallisuuden tulevan nobelistin alkuun kuului siis myös hyvin käytännöllinen kirjakauppa. Hänen uransa jatkui runoina, näytelminä ja opetuksena, mutta ensimmäisen kirjan takana olivat kodin tuki ja oma pieni lukijapiiri.",
+     "wiki": "Derek_Walcott",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Castriesin tori, puistoaukio ja Morne Fortunen kukkula kertovat kaupasta, kulttuurista ja vanhasta sotilasalueesta. Satamakaupunki avautuu eri tavoin keskustan tasolta ja kukkulalta.",
+  "rajat": {
+   "pohjoinen": 14.0148,
+   "etela": 13.98586,
+   "lansi": -60.9945,
+   "ita": -60.9862
+  },
+  "kohteet": [
+   {
+    "nimi": "Castriesin tori",
+    "lat": 14.0118,
+    "lon": -60.9894
+   },
+   {
+    "nimi": "Derek Walcottin aukio",
+    "tyyppi": "aukio",
+    "lat": 14.00861,
+    "lon": -60.99056
+   },
+   {
+    "nimi": "Morne Fortune",
+    "tyyppi": "luonto",
+    "lat": 13.98886,
+    "lon": -60.99137
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Castriesin tori": {
+   "aika": "1800-luvun loppu",
+   "teksti": "Castriesin tori sijaitsee keskustassa Jeremie Streetin äärellä. Kauppapaikan nimi on Castries Market and Vendor’s Arcade. Sen rakennuksen toteutti 1800-luvun lopulla Liverpoolin Bruce & Still -toimisto. Torilla myytiin lihaa, kalaa, yrttejä, mausteita ja käsitöitä. Isoisän matkavuonna 1873 tämä myöhempi torirakennus ei vielä ollut olemassa.\n\nKauppapaikan toiminta on muuttunut ajan mukana: kalaa ei enää myydä entiseen tapaan eikä lihaa teurasteta paikan päällä. Kaupunginvaltuusto perusti torin rinnalle Vendor’s Arcaden vähentämään jalkakäytävien ruuhkaa. Lisärakennuksessa on paikallisia ruokapaikkoja, käsityömyyntiä ja elintarvikkeita. Torin ympärillä kauppa jatkuu sekä päivittäisinä ruokaostoksina että matkailijoiden hankintoina.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Derek Walcottin aukio": {
+   "aika": "Historiallinen aukio, nykyinen nimi 1900-luvun lopulta",
+   "teksti": "Derek Walcottin aukio on puistoaukio Castriesin keskustassa. Sen reunat seuraavat Bourbon-, Brazil-, Laborie- ja Micoud-katuja. Aukion äärellä sijaitsevat Neitsyt Marian tahrattoman sikiämisen katedraali ja kaupungin keskuskirjasto. Paikka on tunnettu muun muassa nimillä Place d’Armes, Promenade Square ja Columbus Square.\n\nNykyinen nimi kunnioittaa Castriesissa syntynyttä Derek Walcottia, joka sai kirjallisuuden Nobelin. Isoisän matkavuonna 1873 aukio ei voinut kantaa myöhemmin syntyneen runoilijan nimeä. Nimenmuutokset ovat osa kaupungin historiaa, mutta kohde on itse aukio ja sen sijainti keskustassa. Katedraali ja kirjasto sitovat puistoaukion sekä uskonnolliseen että kirjalliseen kaupunkihistoriaan.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Morne Fortune": {
+   "aika": "Kukkula; vanha linnoitusalue 1700-luvulta",
+   "teksti": "Morne Fortune on Castriesin eteläpuolella sijaitseva kukkula ja asuinalue. Ranskalaiset rakensivat sinne linnoituksen, ja alue siirtyi myöhemmin brittien hallintaan. Isoisän matkavuonna 1873 kukkulalla oli jo sotilasalue; sen nimi Fort Charlotte viittasi kuningatar Charlotteen. Myöhemmät tykkiasemat kuuluivat sataman puolustukseen.\n\nKukkulalla säilyy vanhoja linnoituksia ja sotilasrakennuksia, mutta alueella on myös oppilaitoksia. Niihin kuuluvat Sir Arthur Lewis Community College ja Länsi-Intian yliopiston Saint Lucian toimipaikka. Kukkulan pohjoispuolelta avautuu näkymiä Castriesiin. Kukkulalla kaupungin sotilaallinen historia ja nykyinen koulutus ovat samassa ympäristössä. Historiallista aluetta hoitaa Saint Lucia National Trust.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "George F. L. Charles Airport (SLU)",
+  "huomiot": [
+   "C-tekstiluonnos; A rajattu ja kartta partial 3/6–8. Riippumattomat D/E/F-tarkistukset avoinna.",
+   "Kaikki 21 kuvaroolia tyhjinä; kuvaputki täydentää valinnat ja kuviin sopivat kuvatekstit.",
+   "Sääauditointi 48/48 ja saa.json primäärivarmennus avoinna, saatiedot null.",
+   "Castriesin nimenvaihdoksen vuosiristiriita ja pääartikkelin virheellinen laiturivuosilause jätetty pois.",
+   "Väestölukuja ei käytetä C-tekstissä; kontekstin Castries City + Suburban ei ole piirin väestö."
+  ]
+ }
+}

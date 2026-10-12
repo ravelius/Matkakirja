@@ -1,0 +1,375 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "basseterre",
+ "maa": "KNA",
+ "era": "e12",
+ "kaupunki": {
+  "id": "basseterre",
+  "name": "Basseterre",
+  "wiki": "Basseterre",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 17.2983,
+   "lon": -62.7342
+  }
+ },
+ "artikkeli": {
+  "intro": "Basseterre on Saint Kittsin ja Nevisin pääkaupunki, jossa sataman ja vanhan keskustan väli on lyhyt. Se sijaitsee Saint Kittsin lounaisrannikolla, lahdessa vihreiden kukkuloiden alapuolella. Ranskalainen nimi tarkoittaa **matalaa maata**. Mataluus näkyy myös kaupungin erikoisessa suhteessa veteen: joenuomat kulkevat keskustan läpi ja toimivat osin katuina. Kuivalta näyttävä katu voi siis kuulua samalla veden reittiin.\n\nKaupunki kasvoi ranskalaisesta siirtokunnasta brittiläisen hallinnon ja kaupankäynnin keskukseksi. Satama yhdisti sokeriplantaasit ulkomaailmaan, ja myöhemmin sokeriruokoa tuotiin Basseterreen myös rautateitse. Nykyinen kansallismuseo sijaitsee entisessä valtiovarainhallinnon talossa, jonka läpi laivoista saapuvat ihmiset aikanaan astuivat kaupunkiin. Nykyään **Port Zante** tuo rantaan risteilymatkustajia, mutta keskustan pankit, virastot ja pienet kaupat palvelevat myös saaren omaa arkea.",
+  "teksti": "Basseterreen siirtomaahistoria alkoi saarella, jolla kalinagot jo elivät. Ranskalaiset ja englantilaiset uudisasukkaat jakoivat saaren keskenään, ja kaupunki kehittyi ranskalaisten hallitsemassa eteläosassa. Myöhemmin Britannia otti koko saaren hallintaansa. Kaupankäynti ja hallinto keskittyivät vähitellen Basseterreen.\n\nOrjuuden päättymisen jälkeen monet plantaasien työntekijät muuttivat kaupunkiin. Muutto saattoi olla uuden elämän valinta tai seuraus siitä, että työ ja asunto plantaasilla menetettiin. Basseterreen historia on myös näiden asukkaiden historiaa, ei pelkkä rakennusten ja kuvernöörien aikajana.\n\nIsoisän matkavuonna 1873 kaupunki oli olemassa, ja suuri tulipalo oli jo muuttanut sen rakennuskantaa. Nykyinen museotalo ja sokerirata tulivat vasta myöhemmin. Radan käyttö muuttui sittemmin tavarankuljetuksesta matkailuun: samoihin rannikkomaisemiin katsotaan nyt kaksikerroksisista matkustajavaunuista."
+ },
+ "kysymykset": [
+  {
+   "q": "Millä saarella Basseterre sijaitsee?",
+   "options": [
+    "Saint Kittsillä",
+    "Nevisillä",
+    "Barbudalla",
+    "Anguillalla"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Valtion nimessä mainitaan myös pienempi naapuri.",
+   "fact": "Basseterre on Saint Kittsin saarella. Nevisin hallintokeskus on Charlestown.",
+   "source": "https://en.wikipedia.org/wiki/Basseterre"
+  },
+  {
+   "q": "Mitä ghautit ovat Basseterressa?",
+   "options": [
+    "Joenuomia",
+    "Satamalaitureita",
+    "Torikatoksia",
+    "Kirkonpihoja"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Niissä kaupunkielämä kohtaa veden reitin.",
+   "fact": "Ghautit ovat usein kuivia joenuomia, joita käytetään keskustassa myös katuina.",
+   "source": "https://en.wikipedia.org/wiki/Basseterre"
+  },
+  {
+   "q": "Mitä Saint Kittsin rautatie kuljetti ennen matkailijoita?",
+   "options": [
+    "Sokeriruokoa",
+    "Rautamalmia",
+    "Kahvipapuja",
+    "Tukkipuuta"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Lasti matkasi plantaaseilta tehtaaseen.",
+   "fact": "Kapearaiteinen rata yhdisti sokeriplantaaseja Basseterreen keskitettyyn sokeritehtaaseen.",
+   "source": "https://en.wikipedia.org/wiki/St._Kitts_Scenic_Railway"
+  },
+  {
+   "q": "Minkä niminen Itsenäisyydenaukio oli aikaisemmin?",
+   "options": [
+    "Pall Mall Square",
+    "Trafalgar Square",
+    "Parliament Square",
+    "Leicester Square"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Vanha nimi kuulostaa brittiläiseltä kaupunkiosoitteelta.",
+   "fact": "Aukion aiempi nimi oli Pall Mall Square. Nykyinen nimi liittyy valtion itsenäistymiseen.",
+   "source": "https://en.wikipedia.org/wiki/Independence_Square_(Basseterre)"
+  },
+  {
+   "q": "Mihin Berkeley Memorialin valmistuspaikka liittyy?",
+   "options": [
+    "Skotlantilaiseen valimoon",
+    "Ranskalaiseen kiviveistämöön",
+    "Kanadalaiseen kellotehtaaseen",
+    "Italialaiseen lasipajaan"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Maamerkin matka alkoi brittiläiseltä teollisuuspaikkakunnalta.",
+   "fact": "Kellon ja suihkulähteen sisältävän rakenteen valmisti Glasgowssa George Smith and Co.",
+   "source": "https://en.wikipedia.org/wiki/Berkeley_Memorial"
+  }
+ ],
+ "tiedot": [
+  "Kansallismuseon talon holvikäytävä oli aikanaan reitti laiturilta Fort Streetille. Rakennus toimi siis myös kaupungin porttina.",
+  "Scenic Railwayn matkustajavaunuissa on avoin yläkerros ja suljettu alakerta. Kerrosten välillä kuljetaan kierreportaita.",
+  "Basseterre on myös Joan Armatradingin synnyinkaupunki. Hänen myöhempi elämänsä ja musiikkiuransa kehittyivät Britanniassa."
+ ],
+ "valokuva": {
+  "tiedosto": "",
+  "lyhyt": "",
+  "selite": "",
+  "lahde": ""
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Basseterre",
+   "johdanto": "Joenuoma voi olla katu ja valtiovarainhallinnon talo kaupungin portti: Basseterreen arjessa on monta historiallista kerrosta.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Katu, joka on myös joenuoma",
+     "teksti": "Basseterreen College River ja Westbourne River ovat ghauteiksi kutsuttuja joenuomia. Ne ovat suuren osan vuodesta kuivia, ja keskustassa niiden uomia käytetään myös katuina. Kaupunkia ympäröiviltä rinteiltä tuleva vesi tarvitsee silti oman reittinsä merelle. College Riverin tulvat kuuluvat kaupungin historiaan, joten kyse ei ole vain erikoisesta paikannimestä. College Street Ghaut kertoo jo nimellään, että katu ja veden kulkureitti kohtaavat samassa paikassa. Basseterressa kaupungin ja luonnon rajaa voi kulkea pitkin.",
+     "wiki": "Basseterre",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kaupunkiin talon läpi",
+     "teksti": "Kansallismuseon talo seisoi aikanaan aivan Basseterreen lahden rannassa. Puiselta laiturilta kuljettiin rakennuksen holvikäytävän kautta Fort Streetille: valtiovarainhallinnon talo oli samalla portti kaupunkiin. Rakennuksessa toimivat myös tulli ja posti, ja sen kupolissa oli laivoja ohjaava valo. Nykyään rantaa on täytetty Port Zantea varten, joten meri ei enää ala samasta kohdasta. Museokäyttöön siirtynyt talo kantaa sataman historiaa rakenteissaan, vaikka kaupungin sisäänkäynti on siirtynyt kauemmas merelle.",
+     "wiki": "National Museum of Saint Kitts",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Basseterresta lauluntekijäksi",
+     "teksti": "Lauluntekijä Joan Armatrading syntyi Basseterressa, vietti osan lapsuudestaan Antigualla ja muutti myöhemmin vanhempiensa luo Birminghamiin. Hänen ensimmäiset laulunsa syntyivät pianolla, jonka äiti oli ostanut kotiin huonekaluksi. Kitaraa hän opetteli soittamaan itse. Armatradingin musiikissa kohtaavat muun muassa folk, rock, blues ja reggae, joten synnyinkaupunki ei lokeroi hänen taidettaan yhteen tyyliin. Hänen tarinansa yhdistää Karibian saaret ja Britannian myös lapsuuden ja omatoimisen musiikin tekemisen kautta.",
+     "wiki": "Joan Armatrading",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Pieni pääkaupunki, kansainvälinen kenttä",
+     "teksti": "Warner Parkin urheilukokonaisuus on isännöinyt kriketin maailmanmestaruusturnauksen otteluita. Basseterreen koko ei siis kerro, millaiselle yleisölle kaupungissa on pelattu. Alueeseen kuuluu krikettistadionin lisäksi jalkapallostadion, ja siellä harrastetaan myös yleisurheilua. Krikettiä seuraava matkailija voi etsiä kaupungin ohjelmasta ottelupäivän aivan kuten musiikista kiinnostunut etsii konserttia. Warner Park tuo keskustan historiaan toisen mittakaavan: hallinto- ja satamakaupungissa on myös tilaa kansainväliselle urheilulle.",
+     "wiki": "Basseterre",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Basseterreen vanhaan keskustaan voi tutustua jalan Port Zantesta. Circusin kellon, Itsenäisyydenaukion ja entisen valtiovarainhallinnon talon välillä näkyy satamakaupungin eri puolia. Kansallismuseon ajantasainen korjaus- ja vierailutilanne kannattaa selvittää erikseen. Saarta kiertävä Scenic Railway on retki keskustan ulkopuolelle. Nevisille lähdetään lautalla, joten paluumatka kuuluu päivän suunnitelmaan.",
+    "artikkeli": {
+     "nimi": "Matkailijan Basseterre",
+     "taitto": "opas",
+     "teksti": "Seuraa vanhaa kulkureittiä mereltä keskustaan ja jatka halutessasi sokeriradan maisemiin.",
+     "nosto": "Pieni keskusta yhdistää sataman, kauppakadut ja vanhat aukiot; saarten välinen matka alkaa taas omalta laituriltaan.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Basseterrea palvelee Robert L. Bradshaw International Airport (SKB). Risteilyalukset käyttävät Port Zantea, josta pääsee kävellen keskustaan. Nevisin Charlestownista on lauttayhteys Basseterreen. Keskustassa liikutaan helposti jalan; muualla saarella vaihtoehtoja ovat taksi ja paikallinen pikkubussi. Liikenne kulkee vasemmalla. Tarkista lautan vuorot ja paluuyhteys matkapäivälle, sillä eri saarten yhteydet eivät ole sama asia kuin keskustan kävelymatka.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Satamasta vanhaan keskustaan",
+       "teksti": "Port Zantesta vanhaan keskustaan tultaessa kansallismuseon rakennus auttaa ymmärtämään vanhaa rantaviivaa. Sen läpi kuljettiin aikanaan laiturilta kaupunkiin, mutta rakennuksen edessä on nyt täyttömaata. Kansallismuseon toiminta ja rakennuksen korjaustilanne kannattaa tarkistaa ennen sisävierailun suunnittelua. Jatka Fort Streetin kautta Circusin kellolle ja Itsenäisyydenaukiolle: näin satama, kauppakadut ja vanha hallinnollinen keskus liittyvät samaan kävelyyn.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kaupunki ja sokerirata",
+       "teksti": "Itsenäisyydenaukion vanha nimi oli Pall Mall Square. Sen historiaan kuuluu orjakauppa, joten paikkaan kannattaa tutustua myös historian kautta. Scenic Railway puolestaan on Saint Kittsin saaren retki, ei Basseterreen paikallisjuna. Rata kuljetti ennen sokeriruokoa kaupunkiin; nykyisissä vaunuissa voi katsella rannikkoa joko alemmasta salongista tai avoimesta yläkerroksesta. Selvitä retken lähtöpaikka erikseen, älä suuntaa vanhalle ratalinjalle odottamaan keskustan vuoroa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Kaupungin karnevaalikausi osuu joulun ja vuodenvaihteen ympärille. Silloin kalenterissa on musiikkia, naamiohahmoja ja katukulkueita; tapahtumien tarkat päivät tarkistetaan kunkin vuoden ohjelmasta. Karnevaaliin ajoitettu matka ja rauhallinen historian tutkiminen ovat erilaisia tapoja kokea sama keskusta. Sääennuste ja merimatkan olosuhteet on hyvä tarkistaa lähellä lähtöä. Ghautit ovat myös veden kulkureittejä, joten kuivan päivän katunäkymä ei kuvaa niitä kaikissa oloissa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Itsenäisyydenaukio",
+        "tahdet": 3,
+        "selite": "Aukion nimi ja aiempi käyttö avaavat valtion historiaa."
+       },
+       {
+        "mita": "Circus",
+        "tahdet": 3,
+        "selite": "Glasgowssa valmistettu kello on keskustan maamerkki."
+       },
+       {
+        "mita": "Kansallismuseon rakennus",
+        "tahdet": 2,
+        "selite": "Vanha holvikäytävä yhdisti laiturin kaupunkiin."
+       },
+       {
+        "mita": "Scenic Railway",
+        "tahdet": 2,
+        "selite": "Saarella tehtävä retki seuraa sokerinkuljetuksen historiaa."
+       },
+       {
+        "mita": "Lautta Nevisille",
+        "tahdet": 2,
+        "selite": "Charlestownin yhteys näyttää myös saarivaltion merellisen arjen."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Museon vierailu",
+        "teksti": "Tarkista kansallismuseon rakennuksen ja näyttelyiden ajantasainen tilanne."
+       },
+       {
+        "otsikko": "Lautat",
+        "teksti": "Varmista matkapäivän vuorot ja paluuyhteys ennen saariretkeä."
+       },
+       {
+        "otsikko": "Vasemmanpuoleinen liikenne",
+        "teksti": "Huomioi ajosuunta myös katuja ylittäessä."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Satamakaupungin muodonmuutokset",
+   "johdanto": "Basseterreen paikat ovat vaihtaneet nimeä, käyttöä ja yleisöä; menneisyyttä voi lukea myös tutun keskustan sisältä.",
+   "tehtava": {
+    "kysymys": "Mitä nimeä käytetään puujaloilla tanssivasta karnevaalihahmosta?",
+    "vaihtoehdot": [
+     "Moko-jumbie",
+     "Masquerade-tanssija",
+     "Karnevaalikuningatar",
+     "Calypso-laulaja"
+    ],
+    "oikea": 0,
+    "fakta": "Moko-jumbie kohoaa muiden kulkijoiden yläpuolelle puujalkojensa avulla."
+   },
+   "nostot": [
+    {
+     "otsikko": "Sokeriruoko vaihtui matkustajiin",
+     "teksti": "Saint Kittsin rannikkoa kiertävä kapearaiteinen rata rakennettiin 1900-luvun alussa tuomaan sokeriruokoa plantaaseilta Basseterreen keskitettyyn sokeritehtaaseen. Nykyinen Scenic Railway kuljettaa matkailijoita. Radan dieselveturit valmistettiin Romaniassa, ja ne päätyivät Karibialle puolalaisen sokeritehtaan rautatieltä. Myös vaunut ovat epätavallisia: alempi kerros on suljettu salonki, ylempi avoin katselutasanne, jonne noustaan kierreportaita. Sokerin kuljetusketjusta on tullut myös kaluston kansainvälinen matkakertomus.",
+     "wiki": "St. Kitts Scenic Railway",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Aukion nimi ja sen menneisyys",
+     "teksti": "Itsenäisyydenaukio tunnettiin aiemmin nimellä Pall Mall Square. Se oli hallinnon, kaupankäynnin ja kaupunkilaisten kohtaamisten keskus, mutta kaupankäyntiin kuului myös orjuutettujen ihmisten myynti. Tämä historia kuuluu aukioon siinä missä sitä reunustavat vanhat rakennuksetkin. Aukio sai nykyisen nimensä Saint Kittsin ja Nevisin itsenäistyessä. Nimi kertoo valtion omasta asemasta, mutta se ei pyyhi pois paikan aiempaa käyttöä. Samalla aukiolla kohtaavat julkinen kaupunkielämä ja vaikea historiallinen muisti.",
+     "wiki": "Independence Square (Basseterre)",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Kello Glasgowsta",
+     "teksti": "Circusin keskellä oleva Berkeley Memorial on sekä kello että juomavesisuihkulähde. Sen kellotaulut katsovat aukiolle saapuviin katuihin. Rakenteen suunnitteli ja valmisti Glasgowssa George Smith and Co., joten Basseterreen tuttu maamerkki kertoo myös skotlantilaisen valimotyön matkasta Karibialle. Muistomerkki omistettiin Thomas Berkeleylle, eikä sen nimi viittaa kaupungin perustajaan. Isoisän matkavuonna 1873 nykyistä kellorakennetta ei vielä ollut. Nykyisin sen ympärille voi sijoittaa tapaamisen ilman pitkää katuosoitetta.",
+     "wiki": "Berkeley Memorial",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Juhla kulkee puujaloilla",
+     "teksti": "Saint Kittsin karnevaali levittäytyy joulun ja vuodenvaihteen ympärille. Masquerade-tanssijoiden puvuissa on nauhoja, peilejä ja sulkapäähineitä; tansseissa kohtaavat afrikkalaiset ja eurooppalaiset perinteet. Kulkueen yläpuolella liikkuvat moko-jumbiet, puujaloilla tanssivat hahmot. Ne eivät ole sama asia kuin tavalliset naamioituneet tanssijat, vaikka asuissa on yhteisiä piirteitä. Karnevaali tuo tuttuun katutilaan sekä musiikkia että uuden korkeuden. Ohjelma sisältää myös calypsolaulua ja eri ikäisten esiintyjien kilpailuja.",
+     "wiki": "Culture of Saint Kitts and Nevis",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Itsenäisyydenaukio on Basseterreen vanhan julkisen elämän paikka. Sen historiaan kuuluvat hallinto, kaupankäynti ja orjakauppa.",
+  "rajat": {
+   "pohjoinen": 17.29912,
+   "etela": 17.29312,
+   "lansi": -62.72527,
+   "ita": -62.71927
+  },
+  "kohteet": [
+   {
+    "nimi": "Itsenäisyydenaukio",
+    "tyyppi": "aukio",
+    "lat": 17.29612,
+    "lon": -62.72227
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Itsenäisyydenaukio": {
+   "aika": "1700-luku",
+   "teksti": "Itsenäisyydenaukio on vanhan Basseterreen keskeinen julkinen tila. Se tunnettiin aiemmin nimellä Pall Mall Square, ja siitä kehittyi hallinnon, kaupan ja sosiaalisen elämän keskus. Aukiota reunustavat vanhat rakennukset sekä kaupungin konkatedraali; paikka kuuluu historiallisen keskustan kävelyyn myös silloin, kun kirkkoon ei mene sisälle.\n\nAukion historiaan kuuluu orjuutettujen ihmisten myynti. Sen menneisyyttä ei siksi voi kertoa vain kauppojen ja hallintotalojen kautta. Isoisän matkavuonna 1873 aukio oli olemassa ja tunnettiin vanhalla nimellään. Nykyinen nimi annettiin valtion itsenäistyessä: historiallinen paikka sai uuden nimen, mutta sen aiempaa käyttöä koskeva tieto kuuluu yhä siihen tutustuvalle.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Robert L. Bradshaw International Airport (SKB)",
+  "huomiot": [
+   "C-tekstiluonnos; rajattu A-faktapohja. D/E/F, kuvaputki ja sääauditointi avoinna.",
+   "Kartta partial: yksi aukio paikan omasta WP-pisteestä. Muut pisteet ja rakennusten tekijäketjut avoinna.",
+   "Kontekstin väkiluku koskee Saint George Basseterre -seurakuntaa, ei yksiselitteisesti kaupunkia; väkilukua ei käytetty."
+  ]
+ }
+}
