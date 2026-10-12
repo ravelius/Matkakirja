@@ -176,6 +176,8 @@
         "verifiedAt": "2026-10-12T18:21:31.018595+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
     },
@@ -352,6 +354,8 @@
         "verifiedAt": "2026-10-12T18:21:32.519375+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
     },
@@ -525,8 +529,202 @@
         "verifiedAt": "2026-10-12T18:21:33.746345+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
+    },
+    {
+      "id": "seville-7-asuinkuja-ilta-intro-v2",
+      "slot": 7,
+      "cityName": "Sevilla",
+      "gameCityId": "sevilla",
+      "mediaSlug": "seville",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-7-asuinkuja-ilta-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+      "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+      "bytes": 2364630,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Seville arrival intro, slot 7 replacement v2. Generate exactly ONE completely NEW original illustrative image, like an ordinary candid travel photograph taken with a real full-frame camera. Landscape EXACTLY 1536 x 1024 pixels, opaque RGB sRGB PNG. Present day. Restrained authentic natural colours, believable camera perspective and physically coherent blue-hour exposure with modest warm domestic window light. Fine natural irregular plaster, stone and leaves; no HDR, CGI, painting, cinematic grading, plastic surfaces or cloned/stamped organic texture.\nSCENE AND NEW COMPOSITION: a quiet anonymous old residential courtyard in Seville, Spain, at dusk. Camera at adult eye level with a 35 mm lens in a sheltered corner. The LARGE NEAR WALL fills the LEFT TWO THIRDS of the image: uninterrupted bare off-white limewashed plaster, gently weathered with subtle random natural surface texture. At the RIGHT THIRD a narrow oblique view opens across a small stone-paved courtyard to ONE DISTANT SECOND BARE WALL, pale cream with a SINGLE SMALL UPPER WINDOW emitting soft ordinary warm household light. A thin strip of real blue dusk sky and a few naturally varied vine leaves may be at the far upper edge. Low in the distant narrow courtyard opening, two TINY adults seen only from behind walk slowly away; faces completely invisible. Worn irregular paving and quiet warm reflected light give the scene its lived-in camera atmosphere. Intimate, understated, real photographic place; no major landmark, church, famous palace, ornate patio, fountain, modern named architect's building or art.\nHARD FRAMING REQUIREMENT: EVERY DOOR, door opening, door panel, jamb and doorway surround lies COMPLETELY OUTSIDE THE FRAME, including all distant doors. The image contains only the near blank wall, distant blank wall, single small upper window, a little paving and sky. No street-facing entrances exist in the composition. Do not place any plaque, ceramic square, tile panel, address plate, intercom, doorbell, meter, number fixture, metal symbol, sticker, pipe label, cable label, notice or text-bearing object anywhere. No visible drainpipe, conduit, wires or wall-mounted equipment. All plaster surfaces between edges and the single upper window are completely unmarked. The tiny people have plain generic unbranded clothes and no readable accessories.\nZERO text, letters, numerals, signs, logos, brands, brand patterns, watermarks, borders, frames, murals, graffiti, protected artworks, food or drink anywhere. No decorative sculptural lighting design. Generate all pixels anew; no edit, retouch or recolouring of a previous candidate. The previous rejected image must remain unchanged.",
+      "sources": [
+        {
+          "url": "https://visitasevilla.es/en/triana-bridge/",
+          "title": "Official VisitaSevilla – TrianaBridge",
+          "readFacts": [
+            "IsabelII/Trianabridge completed1852.",
+            "Crossesriver andconnectsTriana withhistoriccenter."
+          ]
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/archivos/web_es/contenido?id=c5b23cdd-cb0d-11df-afea-000ae4865a5f&idActivo=&idArchivo=d9f0f1ac-58a4-11dd-b44b-31450f5b9dd5",
+          "title": "Andalusia ProvincialArchives Sevilla – IsabelIIbridgehistory",
+          "readFacts": [
+            "Bridge constructed1845–1852.",
+            "Threeequal spans supportedbytwo centralpiers andtwo abutments;eachspan fivecastiron arches.",
+            "Originaldeckreplacedwithself-supportingdeck1977, omitmodernslabdetailsfrom1873.",
+            "1873noelectrictramwires;archive distinguisheslatertractionchanges."
+          ],
+          "localReadEvidence": "references/andalucia-archive-bridge-source.html"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/iaph/servicios/actualidad/noticias/detalle/520114.html",
+          "title": "IAPH – CarmenChapel",
+          "readFacts": [
+            "CurrentCarmenchapel constructed1926–1928, exclude1873."
+          ]
+        },
+        {
+          "url": "https://www.flickr.com/photos/bibliotecabne/5552726486/in/album-72157626332060636",
+          "title": "BibliotecaNacionalEspaña – Laurent IsabelIIbridge1867",
+          "readFacts": [
+            "Collectionexplicitlydatesalbum1867 andidentifiesimageSevilla.",
+            "Periodimage inspected:threecastironarches withcircularspandrelbracing,slenderdeck,stonepiers;oldquaysandwoodensailingvessels."
+          ],
+          "localReferencePath": "references/bne-laurent-isabelII-1867.jpg",
+          "role": "periodfacts only, newimage notcopy"
+        },
+        {
+          "url": "https://visitasevilla.es/en/10-tips-to-enjoy-the-feria-de-abril-like-a-true-sevillano/",
+          "title": "OfficialVisitaSevilla – FeriaAbril",
+          "readFacts": [
+            "Casetas temporaryfairbooths become socialhomesofSevilliansduringfestival."
+          ]
+        },
+        {
+          "url": "https://visitasevilla.es/barrio-de-triana/",
+          "title": "OfficialVisitaSevilla – Triana",
+          "readFacts": [
+            "Oldneighbourhood acrossriver, riversidewalkandhistoriclocalstreets."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://visitasevilla.es/en/barrio-de-santa-cruz/",
+          "title": "OfficialVisitaSevilla – SantaCruz",
+          "readFacts": [
+            "Historicneighbourhoodwitholdstreetsandsquares."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/areas/cultura/archivos/archivos-consejeria/archivo-historico-provincial-sevilla/ahps-recomienda/paginas/documento-ahps-jun-2021.html",
+          "title": "Sevilla ProvincialArchive – Citygaslighting1854",
+          "readFacts": [
+            "Citygaslightingcontractmade1853, firstunsuccessfulattempt1846, gascompanyownership1852."
+          ]
+        },
+        {
+          "url": "https://icas.sevilla.org/espacios/sahp/noticias/gas-2020",
+          "title": "Sevilla MunicipalArchive – Gasfactory1872plan",
+          "readFacts": [
+            "Municipalarchivepreserves1872gasfactoryreformplan.",
+            "Gasfactoryinstalledtwentyyearsbefore1872andcontractedwithcitypubliclighting."
+          ]
+        }
+      ],
+      "caption": "Sevillan vanhan asuinpihan lämmin iltavalo. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "worker": {
+            "agentFullFrameViewed": true,
+            "agentNativeSizeViewed": true,
+            "nativeDetailCoverage": "four 768x512 quadrants covering all1536x1024 pixels at100percent",
+            "noVisibleTextLogosBrands": true,
+            "noVisiblePlaquesNumbersStickers": true,
+            "allDoorsAndDoorSurroundsOutOfFrame": true,
+            "photorealistic": true,
+            "naturalTextures": true,
+            "peoplePolicyPass": true,
+            "peopleBackFacing": true,
+            "noFood": true,
+            "issues": [],
+            "rootReviewPending": true,
+            "compositionChanged": true,
+            "observations": "Large bare limewashed nearwall at left; narrow courtyardview right; distantbarewall and one small warmupperwindow. Wallweathering is naturalirregularplaster rather than marks. No doorway, panel, plaque, sticker, addressnumber, pipe/conduit label, art or brand. Two small back-facing adults, generic clothes. Coherentblue-hour/warmwindowlight, irregularleavesandstonepaving."
+          }
+        },
+        "sessionOwner": {
+          "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "noVisibleTextLogosBrands": true,
+          "fullFrameNativeTilesInspected": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/qa/delivery-fix-20261012/root-native/seville-7-asuinkuja-ilta-intro-v2-tl.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/qa/delivery-fix-20261012/root-native/seville-7-asuinkuja-ilta-intro-v2-tr.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/qa/delivery-fix-20261012/root-native/seville-7-asuinkuja-ilta-intro-v2-bl.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/qa/delivery-fix-20261012/root-native/seville-7-asuinkuja-ilta-intro-v2-br.png"
+          ],
+          "observations": "Native full1536x1024 frame and all four768x512 tiles inspected. Newcomposition dominated by irregular bare limeplasterwall with one warm domestic upperwindow, leafycorner and two small back-facing adults. Doors,numberplaques and namedesign absent; no text,labels,addressmarks,stickers,logos,brands or food across entire frame. Natural dusk/practical light and real-looking stone/plaster/foliage.",
+          "deliveryQualityFixPhase": "independent-delivery-quality-fix-20261012",
+          "reviewedAt": "2026-10-12T20:34:39.942070+00:00",
+          "ownerAcceptanceRequired": false,
+          "gameDeliveryAuthorized": true
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-7-asuinkuja-ilta-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+        "bytes": 2364630,
+        "nativeSha256": "2e002507776d7a35ed139b76f4deaeb1e3d82bc82552d06541bbc312a900cd93",
+        "decodedRGBSha256": "c648fe19b30b24dc71534e51dc24e15b0abfa6f3bffe078497a85e699528fe37",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T20:16:44.912756+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png?t=59502a791915235f",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png",
+        "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+        "bytes": 2364630,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+        "canonicalGetBytes": 2364630,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T20:34:42.915861+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true
     },
     {
       "id": "seville-8-triana-1873-intro-v2",
@@ -719,28 +917,13 @@
         "verifiedAt": "2026-10-12T18:21:36.897291+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
     }
   ],
-  "omittedItems": [
-    {
-      "id": "seville-7-asuinkuja-ilta-intro-v1",
-      "slot": 7,
-      "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
-      "fullFrameInspected": true,
-      "nativeDetailsInspected": true,
-      "approvedForDelivery": false,
-      "reason": "pending-quality-fix: keskietäisen vasemman oven vieressä on pieni tekstin/numeroiden kaltainen merkitty seinälaatta noin x823–831/y496–510, vastoin täysin paljaan seinän vaatimusta.",
-      "observations": [
-        "Koko kehys sekä molemmat puoliskot ja erillinen seinälaattarajaus tarkastettu. Kuvan vasemmanpuoleisen keskietäisen oven oikealla puolella on pieni vaalea suorakulmainen seinälaatta, noin x823–831/y496–510. Laatassa näkyy kahdessa ryhmässä tummia kirjain-/numeromaisia merkkejä. Täsmällistä lukemaa ei voi luotettavasti nimetä.",
-        "Tämä merkitty laatta rikkoo tuottajan vaatimusta täysin paljaista seinistä ilman laattoja, numeroita tai kirjoitusta. Hylkäys perustuu näkyvään rajattuun merkintäalueeseen, ei seinän satunnaisen rappauksen tulkitsemiseen tekstiksi. Slot7-v1 pending-quality-fix; alkuperäistä ei ole muutettu eikä uutta kuvaa generoitu.",
-        "Muu näkymä on kameramainen: vaihtelevat köynnöslehdet, kulunut rappaus ja epäsäännölliset katukivet, johdonmukainen sinisen illan ja lämpimien lyhtyjen valo. Kaksi kävelijää on pientä ja selin. Ei muita havaittuja logoja, ruokaa tai eläimiä.",
-        "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-left-doors-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-right-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-distant-left-wall-plaque.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-wall-mark-native.png",
-        "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
-      ]
-    }
-  ],
+  "omittedItems": [],
   "rejectedCandidates": [
     {
       "slot": 4,
@@ -755,18 +938,166 @@
       "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-8-triana-1873-intro-v1.png",
       "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-8-triana-1873-intro-v1.png",
       "reason": "Root QA rejected different camera geometry: diagonal bridge, different pier spacing and foreground bank versus frontal modern5"
+    },
+    {
+      "id": "seville-7-asuinkuja-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Sevilla",
+      "gameCityId": "sevilla",
+      "mediaSlug": "seville",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-7-asuinkuja-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v1.png",
+      "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+      "bytes": 2276394,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Seville intro slot7. Generate one completely new original photorealistic illustrative image, like a candid photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Restrained natural colours, ordinary natural light, credible perspective, natural irregular surfaces and individually varied plants. No HDR, CGI, render, painting, cinematic grading, plastic skin, repeating organic texture. No text, letters, numbers, signs, logos, brands, brand patterns, watermark, frame, border, food, protected artwork, or contemporary named designer architecture. Bare blank walls and lintels, plain closed residential doors with no address plaques. Scene: Present-day quiet ordinary historic residential lane in Seville, whitewashed and pale ochre walls, irregular old brick-and-stone paving, a little leafy vine high on one wall, closed plain dark wooden doors and small simple iron windowgrilles. Eye-level35mm photograph along gentle bend at bluehour, warm modest walllanterns and one lit upperwindow, naturallysoft shadows. Two tiny distant adults walkingaway, facesinvisible. Atmospheric ordinary street, no majorlandmark, no church, no publicart, no souvenirshops, no commercialfrontages, all lintelsandwalls completelyblank, no banners, plaques, numbers or lettering.",
+      "sources": [
+        {
+          "url": "https://visitasevilla.es/en/triana-bridge/",
+          "title": "Official VisitaSevilla – TrianaBridge",
+          "readFacts": [
+            "IsabelII/Trianabridge completed1852.",
+            "Crossesriver andconnectsTriana withhistoriccenter."
+          ]
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/archivos/web_es/contenido?id=c5b23cdd-cb0d-11df-afea-000ae4865a5f&idActivo=&idArchivo=d9f0f1ac-58a4-11dd-b44b-31450f5b9dd5",
+          "title": "Andalusia ProvincialArchives Sevilla – IsabelIIbridgehistory",
+          "readFacts": [
+            "Bridge constructed1845–1852.",
+            "Threeequal spans supportedbytwo centralpiers andtwo abutments;eachspan fivecastiron arches.",
+            "Originaldeckreplacedwithself-supportingdeck1977, omitmodernslabdetailsfrom1873.",
+            "1873noelectrictramwires;archive distinguisheslatertractionchanges."
+          ],
+          "localReadEvidence": "references/andalucia-archive-bridge-source.html"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/iaph/servicios/actualidad/noticias/detalle/520114.html",
+          "title": "IAPH – CarmenChapel",
+          "readFacts": [
+            "CurrentCarmenchapel constructed1926–1928, exclude1873."
+          ]
+        },
+        {
+          "url": "https://www.flickr.com/photos/bibliotecabne/5552726486/in/album-72157626332060636",
+          "title": "BibliotecaNacionalEspaña – Laurent IsabelIIbridge1867",
+          "readFacts": [
+            "Collectionexplicitlydatesalbum1867 andidentifiesimageSevilla.",
+            "Periodimage inspected:threecastironarches withcircularspandrelbracing,slenderdeck,stonepiers;oldquaysandwoodensailingvessels."
+          ],
+          "localReferencePath": "references/bne-laurent-isabelII-1867.jpg",
+          "role": "periodfacts only, newimage notcopy"
+        },
+        {
+          "url": "https://visitasevilla.es/en/10-tips-to-enjoy-the-feria-de-abril-like-a-true-sevillano/",
+          "title": "OfficialVisitaSevilla – FeriaAbril",
+          "readFacts": [
+            "Casetas temporaryfairbooths become socialhomesofSevilliansduringfestival."
+          ]
+        },
+        {
+          "url": "https://visitasevilla.es/barrio-de-triana/",
+          "title": "OfficialVisitaSevilla – Triana",
+          "readFacts": [
+            "Oldneighbourhood acrossriver, riversidewalkandhistoriclocalstreets."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://visitasevilla.es/en/barrio-de-santa-cruz/",
+          "title": "OfficialVisitaSevilla – SantaCruz",
+          "readFacts": [
+            "Historicneighbourhoodwitholdstreetsandsquares."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/areas/cultura/archivos/archivos-consejeria/archivo-historico-provincial-sevilla/ahps-recomienda/paginas/documento-ahps-jun-2021.html",
+          "title": "Sevilla ProvincialArchive – Citygaslighting1854",
+          "readFacts": [
+            "Citygaslightingcontractmade1853, firstunsuccessfulattempt1846, gascompanyownership1852."
+          ]
+        },
+        {
+          "url": "https://icas.sevilla.org/espacios/sahp/noticias/gas-2020",
+          "title": "Sevilla MunicipalArchive – Gasfactory1872plan",
+          "readFacts": [
+            "Municipalarchivepreserves1872gasfactoryreformplan.",
+            "Gasfactoryinstalledtwentyyearsbefore1872andcontractedwithcitypubliclighting."
+          ]
+        }
+      ],
+      "caption": "Sevillan vanhan asuinkujan lämpimät iltavalot. Havainnekuva.",
+      "QA": {
+        "agentFullFrameViewed": true,
+        "agentNativeSizeViewed": true,
+        "noVisibleTextLogosBrands": true,
+        "photorealistic": true,
+        "naturalTextures": true,
+        "footwearExcluded": false,
+        "peoplePolicyPass": true,
+        "noFood": true,
+        "issues": [],
+        "rootReviewPending": true
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-7-asuinkuja-ilta-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+        "bytes": 2276394,
+        "nativeSha256": "92510d695b3591e7751034fc99587e669e412272fb8ce980e8b742576e905084",
+        "decodedRGBSha256": "128df818e1b7cb4689e5cb01ea680c4ce51a5a370d49c01d2ef1e548a7edf492",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:08:45.678705+00:00"
+      },
+      "R2Proof": null,
+      "reason": "DeliveryQA rejected small labelledwallplaque atx823–831,y496–510",
+      "rejectionEvidence": {
+        "sourceQA": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/revisions/delivery-fix-20261012/delivery-qa.json",
+        "rejectedSHA": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+        "v1RasterAndExistingQAUnchanged": true
+      }
     }
   ],
   "complete": true,
-  "status": "awaiting-root-review-and-R2",
+  "status": "delivery-fix-v2-awaiting-root-QC-and-R2",
   "ownerAcceptanceVerified": false,
   "gameIntegrationVerified": false,
   "publicationVerified": false,
+  "deliveryFixPhase": "delivery-fix-20261012",
   "technicalDeliveryComplete": true,
+  "R2Verified": false,
   "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceRequired": false,
+  "gameDeliveryAuthorized": true,
   "gameIntegrated": false,
   "published": false,
-  "verifiedAt": "2026-10-12T18:21:36.910925+00:00",
+  "verifiedAt": "2026-10-12T20:34:43.019459+00:00",
   "rejectedCandidateHistory": [
     {
       "id": "seville-7-asuinkuja-ilta-intro-v1",
@@ -785,11 +1116,19 @@
       ]
     }
   ],
-  "pendingQualityFixSlots": [
-    7
-  ],
-  "allRequestedSlotsDelivered": false,
-  "actualCalls": 7,
+  "supplementalSources": [],
+  "deliveryRepairSelection": {
+    "reportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-qa-20261012.json",
+    "reportSHA256": "cc48b58244f235fefdfb642f7b6036c5c0a3d3978b7bf7eb25c81c146c1b41a5",
+    "ids": [
+      "seville-7-asuinkuja-ilta-intro-v2"
+    ],
+    "selectedAt": "2026-10-12T21:28:29.116562+00:00"
+  },
+  "ownerAcceptance": false,
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 8,
   "deliveryQAEvidence": {
     "mediaSlug": "seville",
     "gameCityId": "sevilla",
@@ -853,19 +1192,101 @@
         ]
       },
       {
-        "id": "seville-7-asuinkuja-ilta-intro-v1",
+        "id": "seville-7-asuinkuja-ilta-intro-v2",
         "slot": 7,
-        "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+        "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+        "actualFinalSHA256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
         "fullFrameInspected": true,
         "nativeDetailsInspected": true,
-        "approvedForDelivery": false,
-        "reason": "pending-quality-fix: keskietäisen vasemman oven vieressä on pieni tekstin/numeroiden kaltainen merkitty seinälaatta noin x823–831/y496–510, vastoin täysin paljaan seinän vaatimusta.",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty: uusi asuinpihan iltakuva on kameramaisen fotorealistinen. Koko kehyksessä ja natiivirajauksissa ei näy kirjoitusta, numeroita, seinälaattoja, logoja tai tunnuksia. Aiempi merkitty ovenvieruslaatta on poistunut uuden sommittelun mukana.",
         "observations": [
-          "Koko kehys sekä molemmat puoliskot ja erillinen seinälaattarajaus tarkastettu. Kuvan vasemmanpuoleisen keskietäisen oven oikealla puolella on pieni vaalea suorakulmainen seinälaatta, noin x823–831/y496–510. Laatassa näkyy kahdessa ryhmässä tummia kirjain-/numeromaisia merkkejä. Täsmällistä lukemaa ei voi luotettavasti nimetä.",
-          "Tämä merkitty laatta rikkoo tuottajan vaatimusta täysin paljaista seinistä ilman laattoja, numeroita tai kirjoitusta. Hylkäys perustuu näkyvään rajattuun merkintäalueeseen, ei seinän satunnaisen rappauksen tulkitsemiseen tekstiksi. Slot7-v1 pending-quality-fix; alkuperäistä ei ole muutettu eikä uutta kuvaa generoitu.",
-          "Muu näkymä on kameramainen: vaihtelevat köynnöslehdet, kulunut rappaus ja epäsäännölliset katukivet, johdonmukainen sinisen illan ja lämpimien lyhtyjen valo. Kaksi kävelijää on pientä ja selin. Ei muita havaittuja logoja, ruokaa tai eläimiä.",
-          "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-left-doors-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-right-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-distant-left-wall-plaque.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-wall-mark-native.png",
-          "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+          "Etualan suuri kalkkirappausseinä ja takaseinä ovat ilman kilpiä tai laattoja. Vanhan v1:n ovenvieruslaatta noin x823–831/y496–510 ei esiinny uuden v2:n sommittelussa; myös koko muun kehyksen mahdolliset merkinnät tarkastettu.",
+          "Kalkkirappauksen kulumat, halkeamat ja irtoavat pinnat ovat epäsäännöllisiä. Katukivien koot, saumat ja heijastusten voimakkuudet vaihtelevat luonnollisesti; ei leimattua toistuvaa pintakuviota.",
+          "Yläosan köynnösten lehdet vaihtelevat koossa, suunnassa ja valossa. Lehdet eivät muodosta toistuvaa leimasinkuviota. Eläimiä tai tarkastettavaa puunkuorta ei ole näkyvissä.",
+          "Kaksi keskietäistä ihmistä kulkee selin. Kasvot eivät näy; raajat, kädet, kävelyasento ja maan kosketus ovat uskottavia kuvan koossa. Vaatteissa tai laukussa ei näy brändikuviota.",
+          "Lämpimän yläikkunan valo, viileä iltataivas, seinien varjot ja kostean kivipinnan hohde muodostavat fyysisesti yhtenäisen näkymän. Perspek­tiivi ja tilan mittasuhteet ovat yhtenäiset.",
+          "Koko final- ja native-kehys avattu detail original -tilassa. Natiivikuvan neljä 768×512 ruutua kattavat jokaisen pikselin; lisäksi ihmisten ja takaseinän sekä ikkunan ja lehtien erillisrajaukset tarkastettu ilman skaalausta."
+        ],
+        "nativeDetailCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-crops/seville-7-asuinkuja-ilta-intro-v2-top-left.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+            "sourcePixels": [
+              0,
+              0,
+              768,
+              512
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "ded0f8a0e9db16dfb21f0ee65ef9c85f74139acd51282e2f4533d56647dfad12"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-crops/seville-7-asuinkuja-ilta-intro-v2-top-right.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+            "sourcePixels": [
+              768,
+              0,
+              1536,
+              512
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "c2e4b415d9bcd7761cb1f099aee919fadac5601f0598d70c20ba7f8c932f8c58"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-crops/seville-7-asuinkuja-ilta-intro-v2-bottom-left.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+            "sourcePixels": [
+              0,
+              512,
+              768,
+              1024
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "ef1f16e525a6e36777d770d99729888f112977a78808005646e6eb7a39c67b62"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-crops/seville-7-asuinkuja-ilta-intro-v2-bottom-right.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+            "sourcePixels": [
+              768,
+              512,
+              1536,
+              1024
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "ec92d97904f6752b32e8f16873c0612159e33d3d70f5ebc74adbcda121dc813e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-crops/seville-7-asuinkuja-ilta-intro-v2-people-and-background-wall.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+            "sourcePixels": [
+              1060,
+              430,
+              1400,
+              760
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "8241603ce549f50639aa15a9b72b2bb34bb5553549476dc08097bca2dd9b1882"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-crops/seville-7-asuinkuja-ilta-intro-v2-window-and-leaves.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-7-asuinkuja-ilta-intro-v2.png",
+            "sourcePixels": [
+              1050,
+              0,
+              1536,
+              400
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "56a84eeca0d9e3625e02b752fdf6842a59a8d5abe2638d5f63d7e515cb2e2eed"
+          }
         ]
       },
       {
@@ -892,18 +1313,21 @@
     "ownerAcceptance": false,
     "gameIntegrated": false,
     "reviewedAt": "2026-10-12T18:53:58.584653+00:00",
-    "sourceManifestSha256": "374de17c123ca35e0314a3e2511c94e9de9ea082093ba60b979b708b244f728c"
+    "sourceManifestSha256": "374de17c123ca35e0314a3e2511c94e9de9ea082093ba60b979b708b244f728c",
+    "repairQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/repair-qa-20261012.json",
+    "repairQASHA256": "cc48b58244f235fefdfb642f7b6036c5c0a3d3978b7bf7eb25c81c146c1b41a5",
+    "ownerAcceptanceRequired": false
   },
   "deliveryR2Proof": {
     "mediaSlug": "seville",
-    "verifiedAt": "2026-10-12T18:56:56.251076+00:00",
+    "verifiedAt": "2026-10-12T21:28:31.063488+00:00",
     "assets": [
       {
         "id": "seville-4-triana-arki-intro-v2",
         "slot": 4,
         "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
         "bytes": 2675520,
-        "verifiedAt": "2026-10-12T18:56:53.764238+00:00",
+        "verifiedAt": "2026-10-12T21:28:29.704251+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png",
@@ -916,7 +1340,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png?delivery-verify=f543a3b7a7a21655-1791831413764228000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png?delivery-verify=f543a3b7a7a21655-1791840509704246000",
             "http": 200,
             "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
             "bytes": 2675520,
@@ -932,7 +1356,7 @@
         "slot": 5,
         "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
         "bytes": 1974296,
-        "verifiedAt": "2026-10-12T18:56:53.793016+00:00",
+        "verifiedAt": "2026-10-12T21:28:29.704361+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png",
@@ -945,7 +1369,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png?delivery-verify=c4be6009aad87133-1791831413793011000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png?delivery-verify=c4be6009aad87133-1791840509704358000",
             "http": 200,
             "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
             "bytes": 1974296,
@@ -961,7 +1385,7 @@
         "slot": 6,
         "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
         "bytes": 1977944,
-        "verifiedAt": "2026-10-12T18:56:53.794666+00:00",
+        "verifiedAt": "2026-10-12T21:28:29.704423+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png",
@@ -974,10 +1398,39 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png?delivery-verify=a6bdd8413c5fed06-1791831413794663000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png?delivery-verify=a6bdd8413c5fed06-1791840509704421000",
             "http": 200,
             "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
             "bytes": 1977944,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "seville-7-asuinkuja-ilta-intro-v2",
+        "slot": 7,
+        "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+        "bytes": 2364630,
+        "verifiedAt": "2026-10-12T21:28:30.367527+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png",
+            "http": 200,
+            "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+            "bytes": 2364630,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png?delivery-verify=59502a791915235f-1791840510367520000",
+            "http": 200,
+            "sha256": "59502a791915235fa8e4dfb75b628108580c392bc1367b76b253406d6a95c42a",
+            "bytes": 2364630,
             "mime": "image/png",
             "cors": "https://matkakirja.app",
             "requestOrigin": "https://matkakirja.app",
@@ -990,7 +1443,7 @@
         "slot": 8,
         "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
         "bytes": 2272978,
-        "verifiedAt": "2026-10-12T18:56:55.024521+00:00",
+        "verifiedAt": "2026-10-12T21:28:30.451673+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png",
@@ -1003,7 +1456,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png?delivery-verify=3c3c6bf9e3d6d5d3-1791831415024513000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png?delivery-verify=3c3c6bf9e3d6d5d3-1791840510451665000",
             "http": 200,
             "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
             "bytes": 2272978,
@@ -1034,13 +1487,11 @@
   "stages": {
     "generated": null,
     "NAS": 5,
-    "QA": 4,
-    "R2": 4,
+    "QA": 5,
+    "R2": 5,
     "Git": "this handoff",
     "gallery": "pending"
   },
-  "ownerAcceptance": false,
-  "ownerAcceptanceRequired": false,
   "ownerReviewBeforeGameDelivery": false,
   "ownerAuthorization": {
     "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
@@ -1083,5 +1534,5 @@
     "ownerAcceptanceNotImpliedByAuthorization": true
   },
   "gameIntegrationAllowedWithoutOwnerAcceptance": true,
-  "deliveredAt": "2026-10-12T20:05:04.538997+00:00"
+  "deliveredAt": "2026-10-12T21:29:34.383671+00:00"
 }

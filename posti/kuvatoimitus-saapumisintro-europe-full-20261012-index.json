@@ -264,26 +264,9 @@
     "seville": {
       "gameCityId": "sevilla",
       "mediaSlug": "seville",
-      "acceptedAssets": 4,
-      "omittedItems": [
-        {
-          "id": "seville-7-asuinkuja-ilta-intro-v1",
-          "slot": 7,
-          "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "pending-quality-fix: keskietäisen vasemman oven vieressä on pieni tekstin/numeroiden kaltainen merkitty seinälaatta noin x823–831/y496–510, vastoin täysin paljaan seinän vaatimusta.",
-          "observations": [
-            "Koko kehys sekä molemmat puoliskot ja erillinen seinälaattarajaus tarkastettu. Kuvan vasemmanpuoleisen keskietäisen oven oikealla puolella on pieni vaalea suorakulmainen seinälaatta, noin x823–831/y496–510. Laatassa näkyy kahdessa ryhmässä tummia kirjain-/numeromaisia merkkejä. Täsmällistä lukemaa ei voi luotettavasti nimetä.",
-            "Tämä merkitty laatta rikkoo tuottajan vaatimusta täysin paljaista seinistä ilman laattoja, numeroita tai kirjoitusta. Hylkäys perustuu näkyvään rajattuun merkintäalueeseen, ei seinän satunnaisen rappauksen tulkitsemiseen tekstiksi. Slot7-v1 pending-quality-fix; alkuperäistä ei ole muutettu eikä uutta kuvaa generoitu.",
-            "Muu näkymä on kameramainen: vaihtelevat köynnöslehdet, kulunut rappaus ja epäsäännölliset katukivet, johdonmukainen sinisen illan ja lämpimien lyhtyjen valo. Kaksi kävelijää on pientä ja selin. Ei muita havaittuja logoja, ruokaa tai eläimiä.",
-            "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-left-doors-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-right-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-distant-left-wall-plaque.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-wall-mark-native.png",
-            "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
-          ]
-        }
-      ],
-      "actualCalls": 7,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 8,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-seville-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -291,26 +274,9 @@
     "venice": {
       "gameCityId": "venetsia",
       "mediaSlug": "venice",
-      "acceptedAssets": 4,
-      "omittedItems": [
-        {
-          "id": "venice-7-misericordia-ilta-intro-v2",
-          "slot": 7,
-          "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "pending-quality-fix: valaistun yläikkunan vasemmassa vihreässä luukussa on vaalea kilpimäinen tunnus noin x1024–1045/y89–111. Brändiä ei tunnisteta, mutta näkyvä tunnus rikkoo logottomuusvaatimusta. Valittu v2 on jo yksi laatukorjaus.",
-          "observations": [
-            "Valittu v2 tarkastettu kokonaan ja molempien julkisivujen, sillan ja kaukaisten ovien natiivirajauksina. Oikeanpuoleisen talon lämpimästi valaistun yläikkunan vasemman vihreän luukun yläosassa on vaalea, rajattu kilpi-/tunnusmainen kuvio noin x1024–1045/y89–111. Kuviossa on ulkoreuna ja sisäinen useaan osaan järjestynyt kuviointi; se erottuu ympäröivästä tasaisesta vihreästä luukusta.",
-            "Näkyvä tunnus rikkoo logottomuusvaatimusta. Tarkkaa brändiä, tunnuksen identiteettiä tai tekstiä ei väitetä tunnistetuksi. Slot7-v2 pending-quality-fix; manifestin mukaan yksi tuottajan laatukorjaus on jo käytetty, joten jatko on koordinaatiopäätös. Ei generointia tai rasterimuutoksia.",
-            "Muu näkymä on kameramainen: tyhjä kanava, luonnolliset heijastukset, kuluneet tiilet ja rappaus, johdonmukainen iltavalo ja pieni selin kävelevä hahmo. Muita selviä tekstejä tai ruokaa ei havaittu.",
-            "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-left-facades-bridge.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-right-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-far-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-upper-shutter-detail.png",
-            "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
-          ]
-        }
-      ],
-      "actualCalls": 8,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 9,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-venice-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -497,5 +463,5 @@
       "gameIntegrated": false
     }
   },
-  "updatedAt": "2026-10-12T21:28:31.544066+00:00"
+  "updatedAt": "2026-10-12T21:29:34.418301+00:00"
 }

@@ -2,7 +2,7 @@
   "cityName": "Venetsia",
   "gameCityId": "venetsia",
   "mediaSlug": "venice",
-  "status": "worker-produced-awaiting-root-QA-R2",
+  "status": "root-quality-correction-approved",
   "complete": true,
   "assets": [
     {
@@ -104,6 +104,8 @@
         "verifiedAt": "2026-10-12T18:19:08.501285+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
     },
@@ -225,6 +227,8 @@
         "verifiedAt": "2026-10-12T18:19:10.015652+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
     },
@@ -335,6 +339,141 @@
         "verifiedAt": "2026-10-12T18:19:11.939439+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "venice-7-misericordia-ilta-intro-v3",
+      "slot": 7,
+      "version": 3,
+      "cityName": "Venetsia",
+      "gameCityId": "venetsia",
+      "mediaSlug": "venice",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-7-misericordia-ilta-intro-v3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png",
+      "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png",
+      "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+      "bytes": 2135237,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: Matkakirja Venice city-arrival slot7, whole-new delivery correction v3.\nCreate ONE completely new independent photorealistic image, exactly1536x1024 pixels, landscape3:2, opaqueRGB sRGB PNG. It must look like an ordinary unposed photograph taken with a real full-frame camera,35mm lens, eye-level perspective, natural subdued dusk exposure. Do not edit, copy, recolour or reuse any previous image.\nScene: present-day Venice, a quiet narrow anonymous residential canal in Cannaregio at dusk. Camera looks diagonally along the canal from a low plain limestone bank. Empty green-grey water fills the lower two-thirds of the frame, with small irregular natural reflections of a few warm domestic windows. Only TWO modest old residential wall surfaces are substantially visible: simple worn muted pink/ochre plaster with patches of old irregular brick. A gentle canal bend closes the far distance. No landmark architecture and no bridge needed.\nWindow construction is essential: NO WINDOW SHUTTERS ANYWHERE in the entire image, including every distant window and the edges of frame. Only a few simple deep recessed RECTANGULAR UNSHUTTERED window openings with plain unornamented reveals; warm ordinary domestic light inside. No panels beside or over any window. Do not draw shutters open or closed. Keep large wall areas bare and unmarked. No visible ground-floor door panels or entrance plaques; framing mainly shows plain walls and a few upper recessed windows. No ornaments, no decorated railings, no reliefs, no symbols or patterned fixtures.\nLighting: soft blue dusk sky, restrained authentic colours, believable warm light leaking from three or four plain windows, mild camera low-light grain, real irregular stone/plaster/brick/water detail, soft realistic shadows. Quiet candid travel photograph, no HDR, no CGI, no painterly texture, no oversaturation or polished advertising look.\nThe canal is COMPLETELY EMPTY: no boats, gondolas, vessel hulls, motors, mooring equipment or registration-bearing objects. No people are needed; if any person appears, only a tiny distant back-facing adult, no visible face.\nHard exclusions across the FULL FRAME at native detail: no text, letters, numbers, logos, brands, plaques, address tiles, signs, stickers, labels, utility notices, shields, coats of arms, emblems, decorative badges, artwork, murals, relief motifs, food, readable or writing-like markings, watermark, border or frame. No contemporary named architectural designs. Keep every visible wall, window reveal and stone surface plain and unmarked. Absolutely NO WINDOW SHUTTERS and NO DOOR PANELS anywhere.",
+      "sources": [
+        {
+          "url": "https://www.veneziaunica.it/en/things-to-do-in-venice/venice-areas/sestieri/cannaregio",
+          "label": "Città Venezia – Cannaregio",
+          "readFacts": "Cannaregio has quiet corners and small alleys/canal banks facing lagoon, everyday neighbourhood setting; omit named churches/palaces and modern university campus."
+        },
+        {
+          "url": "https://www.comune.venezia.it/it/content/fondamenta-dei-ormesini",
+          "label": "Comune Venezia – Fondamenta Ormesini",
+          "readFacts": "Municipal area planning record locates Ormesini canal-bank setting; use anonymous residential fabric nearby."
+        }
+      ],
+      "caption": "Pienen kanavan ikkunavalot Cannaregiossa Venetsiassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "omit",
+          "workerNotes": "New v3 composition failure: a partial green wooden window shutter is visible at upper-right frame edge; green shutter panels also remain on distant grey facade. Explicit NO WINDOW SHUTTERS anywhere requirement fails. No further call authorized in this correction batch. No raster edits applied.",
+          "inspectedAt": "2026-10-12T20:18:35.029026+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending",
+          "nativeDetailEvidence": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/slot7-v3-top-right-edge.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/slot7-v3-far-facades.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/slot7-v3-near-windows.png"
+          ]
+        },
+        "sessionOwner": {
+          "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "noVisibleTextLogosBrands": true,
+          "fullFrameNativeTilesInspected": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/delivery-fix-20261012/root-native/venice-7-misericordia-ilta-intro-v3-tl.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/delivery-fix-20261012/root-native/venice-7-misericordia-ilta-intro-v3-tr.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/delivery-fix-20261012/root-native/venice-7-misericordia-ilta-intro-v3-bl.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/delivery-fix-20261012/root-native/venice-7-misericordia-ilta-intro-v3-br.png"
+          ],
+          "observations": "Native full1536x1024 frame and all four768x512 tiles inspected, including upper-rightedge and all distantfaçades. Narrow empty residentialcanal with old anonymous brick/plaster and unmarked warm windows. No boats,text,numbers,papers,stickers,addressplates,shields,crests,emblems,logos,brands,food or identifiablefaces observed. A plain partial green shutter at extremeupperright and plain farshutters remain, but they have no mark; they do not violate the owner no-logo/no-writing requirement. Natural waterreflection,weatheredbricks and coherent dusk exposure.",
+          "deliveryQualityFixPhase": "independent-delivery-quality-fix-20261012",
+          "reviewedAt": "2026-10-12T20:34:39.968917+00:00",
+          "ownerAcceptanceRequired": false,
+          "gameDeliveryAuthorized": true,
+          "workerPromptDeviationDisposition": {
+            "workerNoShuttersPromptPass": false,
+            "noShuttersIsOwnerRequirement": false,
+            "ownerNoLogosNoWritingPass": true,
+            "reason": "Windowshutter removal was an implementation tactic. All residual shutters are plain; prior shield/emblem absent. No pixel edits or additional call."
+          }
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-7-misericordia-ilta-intro-v3.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+        "bytes": 2135237,
+        "nativeSha256": "0aa9a6e39c554b50154b78e035f9a5e33f9815135d57013b0d6a0c1c955fe8bb",
+        "decodedRGBSha256": "cb0a7b9221534c42d15933bcf3ed9fd3e12421190c0e3e5ca2e10ef41d3f38dc",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T20:16:21.040847+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png?t=f395272f7ef7c01a",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png",
+        "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+        "bytes": 2135237,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+        "canonicalGetBytes": 2135237,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T20:34:43.956940+00:00"
+      },
+      "candidateStatus": "pending-quality-fix",
+      "selectedForDelivery": false,
+      "rootApprovedForTechnicalDelivery": false,
+      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
     },
@@ -462,28 +601,13 @@
         "verifiedAt": "2026-10-12T18:19:15.072801+00:00"
       },
       "ownerAcceptanceVerified": false,
+      "ownerAcceptanceRequired": false,
+      "gameDeliveryAuthorized": true,
       "gameIntegrated": false,
       "published": false
     }
   ],
-  "omittedItems": [
-    {
-      "id": "venice-7-misericordia-ilta-intro-v2",
-      "slot": 7,
-      "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
-      "fullFrameInspected": true,
-      "nativeDetailsInspected": true,
-      "approvedForDelivery": false,
-      "reason": "pending-quality-fix: valaistun yläikkunan vasemmassa vihreässä luukussa on vaalea kilpimäinen tunnus noin x1024–1045/y89–111. Brändiä ei tunnisteta, mutta näkyvä tunnus rikkoo logottomuusvaatimusta. Valittu v2 on jo yksi laatukorjaus.",
-      "observations": [
-        "Valittu v2 tarkastettu kokonaan ja molempien julkisivujen, sillan ja kaukaisten ovien natiivirajauksina. Oikeanpuoleisen talon lämpimästi valaistun yläikkunan vasemman vihreän luukun yläosassa on vaalea, rajattu kilpi-/tunnusmainen kuvio noin x1024–1045/y89–111. Kuviossa on ulkoreuna ja sisäinen useaan osaan järjestynyt kuviointi; se erottuu ympäröivästä tasaisesta vihreästä luukusta.",
-        "Näkyvä tunnus rikkoo logottomuusvaatimusta. Tarkkaa brändiä, tunnuksen identiteettiä tai tekstiä ei väitetä tunnistetuksi. Slot7-v2 pending-quality-fix; manifestin mukaan yksi tuottajan laatukorjaus on jo käytetty, joten jatko on koordinaatiopäätös. Ei generointia tai rasterimuutoksia.",
-        "Muu näkymä on kameramainen: tyhjä kanava, luonnolliset heijastukset, kuluneet tiilet ja rappaus, johdonmukainen iltavalo ja pieni selin kävelevä hahmo. Muita selviä tekstejä tai ruokaa ei havaittu.",
-        "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-left-facades-bridge.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-right-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-far-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-upper-shutter-detail.png",
-        "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
-      ]
-    }
-  ],
+  "omittedItems": [],
   "rejectedCandidates": [
     {
       "slot": 4,
@@ -508,17 +632,53 @@
       "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v1.png",
       "reason": "Lähellä olevan veneen keulan sivussa on keltaiset selkeät numero-/rekisterimerkit, qa/slot7-boat-mark-native.png. Tarpeellinen whole-newv2 tyhjällä kanavalla ilmanveneitä;v1säilytetty.",
       "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/prompts/7-misericordia-ilta-v1.txt"
+    },
+    {
+      "slot": 7,
+      "version": 2,
+      "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-7-misericordia-ilta-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v2.png",
+      "reason": "Latest delivery QA rejects pale shield/emblem in green shutter at x1024–1045,y89–111; exact source: delivery/cities/venice/qa.json.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/prompts/7-misericordia-ilta-v2.txt",
+      "deliveryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/qa.json"
     }
   ],
-  "actualCalls": 8,
+  "actualCalls": 9,
   "expectedSlots": 5,
-  "updatedAt": "2026-10-12T18:11:31.130530+00:00",
+  "updatedAt": "2026-10-12T20:18:35.029026+00:00",
   "technicalDeliveryComplete": true,
-  "existingDeliveredSlotsPreserved": [],
+  "correctionCalls": 1,
+  "latestCandidateSlot": 7,
+  "latestCandidateVersion": 3,
   "ownerAcceptanceVerified": false,
   "gameIntegrated": false,
   "published": false,
-  "verifiedAt": "2026-10-12T18:19:15.083325+00:00",
+  "workerPromptDeviations": [
+    {
+      "slot": 7,
+      "version": 3,
+      "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-7-misericordia-ilta-intro-v3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+      "reason": "New v3 composition failure: a partial green wooden window shutter is visible at upper-right frame edge; green shutter panels also remain on distant grey facade. Explicit NO WINDOW SHUTTERS anywhere requirement fails. No further call authorized in this correction batch. No raster edits applied.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/prompts/7-misericordia-ilta-v3.txt",
+      "nativeDetailEvidence": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/slot7-v3-top-right-edge.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/slot7-v3-far-facades.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/qa/slot7-v3-near-windows.png"
+      ],
+      "rootDisposition": "selected-for-technical-delivery",
+      "rootReviewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/root-review.json"
+    }
+  ],
+  "pendingQualityFixItems": [],
+  "rootDisposition": "slot7v3 passes owner visual constraints; unmarkedshutters deviation recorded",
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceRequired": false,
+  "gameDeliveryAuthorized": true,
+  "verifiedAt": "2026-10-12T20:34:44.061865+00:00",
+  "workerInitialStatus": "delivery-correction-attempt-complete-pending-quality-fix",
   "rejectedCandidateHistory": [
     {
       "id": "venice-7-misericordia-ilta-intro-v2",
@@ -537,10 +697,18 @@
       ]
     }
   ],
-  "pendingQualityFixSlots": [
-    7
-  ],
-  "allRequestedSlotsDelivered": false,
+  "supplementalSources": [],
+  "deliveryRepairSelection": {
+    "reportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/repair-qa-20261012.json",
+    "reportSHA256": "c4411c2c2e97e92f4e8a2d2107df18cba4fd162b36a16798e0b4a141df30cd91",
+    "ids": [
+      "venice-7-misericordia-ilta-intro-v3"
+    ],
+    "selectedAt": "2026-10-12T21:28:29.150645+00:00"
+  },
+  "ownerAcceptance": false,
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
   "deliveryQAEvidence": {
     "mediaSlug": "venice",
     "gameCityId": "venetsia",
@@ -601,19 +769,88 @@
         ]
       },
       {
-        "id": "venice-7-misericordia-ilta-intro-v2",
+        "id": "venice-7-misericordia-ilta-intro-v3",
         "slot": 7,
-        "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
+        "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+        "actualFinalSHA256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
         "fullFrameInspected": true,
         "nativeDetailsInspected": true,
-        "approvedForDelivery": false,
-        "reason": "pending-quality-fix: valaistun yläikkunan vasemmassa vihreässä luukussa on vaalea kilpimäinen tunnus noin x1024–1045/y89–111. Brändiä ei tunnisteta, mutta näkyvä tunnus rikkoo logottomuusvaatimusta. Valittu v2 on jo yksi laatukorjaus.",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty: tyhjä kanava ja iltavalaistut asuinjulkisivut ovat kameramaisen fotorealistisia. Koko kehyksessä ja natiivirajauksissa ei näy tekstiä, numeroita, logoja, kilpiä tai muita tunnuksia. Aiempi vihreän ikkunaluukun kilpimerkki puuttuu.",
         "observations": [
-          "Valittu v2 tarkastettu kokonaan ja molempien julkisivujen, sillan ja kaukaisten ovien natiivirajauksina. Oikeanpuoleisen talon lämpimästi valaistun yläikkunan vasemman vihreän luukun yläosassa on vaalea, rajattu kilpi-/tunnusmainen kuvio noin x1024–1045/y89–111. Kuviossa on ulkoreuna ja sisäinen useaan osaan järjestynyt kuviointi; se erottuu ympäröivästä tasaisesta vihreästä luukusta.",
-          "Näkyvä tunnus rikkoo logottomuusvaatimusta. Tarkkaa brändiä, tunnuksen identiteettiä tai tekstiä ei väitetä tunnistetuksi. Slot7-v2 pending-quality-fix; manifestin mukaan yksi tuottajan laatukorjaus on jo käytetty, joten jatko on koordinaatiopäätös. Ei generointia tai rasterimuutoksia.",
-          "Muu näkymä on kameramainen: tyhjä kanava, luonnolliset heijastukset, kuluneet tiilet ja rappaus, johdonmukainen iltavalo ja pieni selin kävelevä hahmo. Muita selviä tekstejä tai ruokaa ei havaittu.",
-          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-left-facades-bridge.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-right-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-far-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-upper-shutter-detail.png",
-          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+          "Aiemman v2:n vihreässä luukussa noin x1024–1045/y89–111 ollut rajattu kilpitunnus ei esiinny uudessa v3:ssa. Kaikki uuden kuvan ikkunat, luukut, julkisivut, kaukainen kattoalue ja veden reuna tarkastettu tekstin ja tunnusten varalta.",
+          "Oikeassa yläreunassa näkyy osa tavallista vihreää luukkua ja kauempana pieniä luukkuja. Niissä ei näy kilpimerkkiä, tekstiä, logoa tai kuviotunnusta. Tämä poikkeaa tuottajan NO SHUTTERS -toteutustaktiikasta, mutta luukut itsessään eivät riko omistajan kirjoituksettomuus- ja logottomuusvaatimusta.",
+          "Kanavan pinnan aallot ja katkonaiset lämpimät ikkunavalojen heijastukset vaihtelevat luonnollisesti. Tiilien sävyt, saumojen leveydet, rappauksen lohkeamat ja vedenrajassa oleva kuluma ovat epäsäännöllisiä.",
+          "Julkisivujen ja kanavan perspektiivi, vedenraja, ikkunasyvennykset sekä viileän illan ja lämpimien sisävalojen suhde ovat fyysisesti yhtenäiset. Ei maalauksellista tai muovista pintailmettä.",
+          "Kuvassa ei ole ihmisiä, kasvoja, käsiä, eläimiä, veneitä tai näkyviä brändituotteita. Kaukaisen julkisivun pieni vaalea suorakulmio näyttää ikkunalta, jossa on rakenteelliset jaot; siinä ei havaita kirjain- tai numeromerkintää.",
+          "Koko final-kehys avattu detail original -tilassa. Natiivikuvan neljä 768×512 ruutua kattavat jokaisen pikselin; lisäksi kaukaiset julkisivut ja luukut tarkastettu erillisessä natiivirajauksessa. Final ja native ovat todistetusti samat RGB-pikselit."
+        ],
+        "nativeDetailCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/repair-crops/venice-7-misericordia-ilta-intro-v3-top-left.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+            "sourcePixels": [
+              0,
+              0,
+              768,
+              512
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "26df4c97f599c3fd0ae5badb3d76230e5b502816f88b950c9e9e4cdc5f37a12b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/repair-crops/venice-7-misericordia-ilta-intro-v3-top-right.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+            "sourcePixels": [
+              768,
+              0,
+              1536,
+              512
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "a6ffc69ec956984e38532f8271e3bc8640334450671de18bc3848698fed0f8c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/repair-crops/venice-7-misericordia-ilta-intro-v3-bottom-left.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+            "sourcePixels": [
+              0,
+              512,
+              768,
+              1024
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "d13f29ceb3e15915eafbd5e0d12d2059eed66b07b0f5d6aff06766c95d4b4a3a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/repair-crops/venice-7-misericordia-ilta-intro-v3-bottom-right.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+            "sourcePixels": [
+              768,
+              512,
+              1536,
+              1024
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "3c7dae91cbd691bc8d28087fd0056807627e9e072f1bc9dfd5ea42492fd20c4b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/repair-crops/venice-7-misericordia-ilta-intro-v3-far-facades-and-shutters.png",
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v3.png",
+            "sourcePixels": [
+              700,
+              0,
+              1536,
+              600
+            ],
+            "unscaled": true,
+            "inspected": true,
+            "sha256": "2b23654c3fb55985104d4ee58a4ddac80e138697a963fb09267104711dbb34e4"
+          }
         ]
       },
       {
@@ -639,18 +876,21 @@
     "ownerAcceptance": false,
     "gameIntegrated": false,
     "reviewedAt": "2026-10-12T18:58:26.060673+00:00",
-    "sourceManifestSha256": "f997031f45f94bd82033c0326a608eca983d6ee3a8670608968efc222adb893c"
+    "sourceManifestSha256": "f997031f45f94bd82033c0326a608eca983d6ee3a8670608968efc222adb893c",
+    "repairQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/repair-qa-20261012.json",
+    "repairQASHA256": "c4411c2c2e97e92f4e8a2d2107df18cba4fd162b36a16798e0b4a141df30cd91",
+    "ownerAcceptanceRequired": false
   },
   "deliveryR2Proof": {
     "mediaSlug": "venice",
-    "verifiedAt": "2026-10-12T19:03:14.288203+00:00",
+    "verifiedAt": "2026-10-12T21:28:30.990368+00:00",
     "assets": [
       {
         "id": "venice-4-cannaregio-arki-intro-v2",
         "slot": 4,
         "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
         "bytes": 2819336,
-        "verifiedAt": "2026-10-12T19:03:13.034404+00:00",
+        "verifiedAt": "2026-10-12T21:28:29.753536+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png",
@@ -663,7 +903,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png?delivery-verify=c98321ccfbdd6b75-1791831793034399000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png?delivery-verify=c98321ccfbdd6b75-1791840509753531000",
             "http": 200,
             "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
             "bytes": 2819336,
@@ -679,7 +919,7 @@
         "slot": 5,
         "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
         "bytes": 2395285,
-        "verifiedAt": "2026-10-12T19:03:13.034578+00:00",
+        "verifiedAt": "2026-10-12T21:28:29.753645+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png",
@@ -692,7 +932,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png?delivery-verify=5b7b513839b26e1d-1791831793034576000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png?delivery-verify=5b7b513839b26e1d-1791840509753643000",
             "http": 200,
             "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
             "bytes": 2395285,
@@ -708,7 +948,7 @@
         "slot": 6,
         "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
         "bytes": 2121562,
-        "verifiedAt": "2026-10-12T19:03:13.034698+00:00",
+        "verifiedAt": "2026-10-12T21:28:29.753707+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png",
@@ -721,10 +961,39 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png?delivery-verify=c09021f2a0823008-1791831793034695000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png?delivery-verify=c09021f2a0823008-1791840509753706000",
             "http": 200,
             "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
             "bytes": 2121562,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "venice-7-misericordia-ilta-intro-v3",
+        "slot": 7,
+        "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+        "bytes": 2135237,
+        "verifiedAt": "2026-10-12T21:28:30.519009+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png",
+            "http": 200,
+            "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+            "bytes": 2135237,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png?delivery-verify=f395272f7ef7c01a-1791840510519002000",
+            "http": 200,
+            "sha256": "f395272f7ef7c01a2dd87299fd4431f2bf4a676d23e8ab15feb654d8e66ddc86",
+            "bytes": 2135237,
             "mime": "image/png",
             "cors": "https://matkakirja.app",
             "requestOrigin": "https://matkakirja.app",
@@ -737,7 +1006,7 @@
         "slot": 8,
         "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
         "bytes": 2043157,
-        "verifiedAt": "2026-10-12T19:03:13.672128+00:00",
+        "verifiedAt": "2026-10-12T21:28:30.578625+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png",
@@ -750,7 +1019,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png?delivery-verify=40e2e06ebb7198e8-1791831793672122000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png?delivery-verify=40e2e06ebb7198e8-1791840510578618000",
             "http": 200,
             "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
             "bytes": 2043157,
@@ -781,13 +1050,11 @@
   "stages": {
     "generated": null,
     "NAS": 5,
-    "QA": 4,
-    "R2": 4,
+    "QA": 5,
+    "R2": 5,
     "Git": "this handoff",
     "gallery": "pending"
   },
-  "ownerAcceptance": false,
-  "ownerAcceptanceRequired": false,
   "ownerReviewBeforeGameDelivery": false,
   "ownerAuthorization": {
     "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
@@ -830,5 +1097,5 @@
     "ownerAcceptanceNotImpliedByAuthorization": true
   },
   "gameIntegrationAllowedWithoutOwnerAcceptance": true,
-  "deliveredAt": "2026-10-12T20:05:04.559705+00:00"
+  "deliveredAt": "2026-10-12T21:29:34.416802+00:00"
 }
