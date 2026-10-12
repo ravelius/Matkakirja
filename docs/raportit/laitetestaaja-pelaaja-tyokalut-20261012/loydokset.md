@@ -1,0 +1,14 @@
+# Savukierros 183 löydökset (iPad 3622D89D, BUILD 183 37083563)
+- ALKU: otsikkoruutu ok (Aloita seikkailu, Laita äänet päälle, Apurahahakemus); intro "Heathrow, Lontoo, lokakuu 2026" ok; VALITSE ALOITUSKAUPUNKI ok.
+- ALOITUSVALINTA (s04): Lontoo + 3 kohdetta (Pariisi, Tukholma, Ateena, +6 h) OK; HUOM nappula peittää Pariisi-nimen "P"-kirjaimen.
+- Pariisi valittu → lentokonekohtaus (Ohita-nappi oikealla alhaalla).
+- LENTO KIPPI (Pariisi): pallo kartalta avaa 3D-kaupunkikierroksen (OK), raha 300 → 100 (£200 OK), katse kääntyy vedolla, ☰ avaa valikon (Aika ja sää, Kuvat, Näytä teksti, Mikseri, Lähteet, Poistu linssistä).
+- HUOM: "Poistu linssistä" sulki lennon HETI ilman vahvistuskysymystä (PT:n kuvaus: lopetus kysyy vahvistuksen). Erillistä tauko-nappia ei näkynyt (vain ☰, kuva-pienoiskuva ja ›-nappi).
+- ISS: Astronautin kamera → "ISS-ohjaamo" avautuu SUORAAN ohjaamoon (Val d'Or, Kanada); raketin nousua Andøyasta EI näkynyt (6/14/24/40 s kuvat). Reitti rakettiin selvittämättä (LS2).
+- ISS-OHJAAMO: paneeli (LAAJA/TELE, kuvanappi, sauva) häipyy n. 10 s jälkeen, jonka jälkeen ruudulla vain sijaintiteksti. EI sulje-/poistu-nappia löytynyt: napautukset keskelle/alas/kulmiin, vedot ja reunaveto eivät tuoneet mitään; jouduin käynnistämään sovelluksen uudelleen. (VIKA, kriittinen.)
+- TAIDEMUSEO (Amsterdam): lähes oikein: löytyy vain KESKENERÄISET-ryhmästä (kehittäjätila); näyttelyvalikko (7 näyttelyä) OK; Yövartio-sali OK; tauko → loki "tauko päälle, kertoja tauolla" OK.
+- HUOM: Yövartio-kuvan alaotsikko "Tohtori Nicolaes Tulpin anatomian oppitunti" ei kuulu Yövartioon (se on toinen Rembrandtin teos 1632): sisältövirhe tai väärä rivi.
+- HUOM: näyttelyvalikon ja salin fontti on järjestelmäfontti (ei pelin kirjasinta) ja tausta musta: tyylipoikkeama.
+- MATKA: Pariisista Amsterdamiin vain Bryssel kautta (juna 80 p + 80 p); `liiku <kohde>` -komento vaatii ensin Liiku-liuskan kulkutavan.
+- LAUTAPELI (Mylly, Amsterdam): kortti ok; opastus "Aseta nappulasi vuorotellen..." + Ohita opastus näkyy; taustapaneelissa "Botti · normaali" ennen valintaa vaikka valittuna Helppo botti (korjaantuu pelin alussa); LAUTAPELIT-otsikossa "6 / 6" mutta listassa vain 2 peliä (Mylly, Tavli).
+- AARRETEHTÄVÄ (Amsterdam, kohtaaminen): ok, oikea vastaus → Kori tulppaanisipuleita +£150, JATKA MATKAA OK.

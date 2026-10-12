@@ -1,4 +1,10 @@
-# Laitetestaajan aloitusviesti (päivitetty 10.10.2026 aamulla, nollaus)
+# Laitetestaajan aloitusviesti (päivitetty 12.10.2026 illalla, tilinvaihto)
+
+## PÄIVITYS 12.10.2026 illalla — LUE TÄMÄ ENSIN
+- **docs/raportit/viesti-laitetestaaja-luovutus-20261012-ilta.md** on uusin luovutus: tila LEPO; jonossa 1) pallokisan uusinta 2 (Pelikoodarin korjaus 037029f84, iPhone `0AC1815C` + iPad `3622D89D`), 2) Olavinlinna 5 (PT:n askel 0 -arkki + Siirtosepän app), 3) ISS-ohjaamon uusinta (NUI iss-jumi-184), 4) raketin oikea polku (Tromssa → Andøya → £500). Työkalut `docs/raportit/laitetestaaja-pelaaja-tyokalut-20261012/` (kopioi scratchiin, käännä `.simkosketus`).
+- Säännöt: simu vain Julkaisijan SIMU NYT -viestillä + oma kuormatarkistus (`sysctl -n vm.loadavg`); kuvat omistajalle/PT:lle täysin tarkkuudella + iso selite kuvaan; VAATII TOIMIA -kysymykset Asemataululle (doc_id `toimi-laitetestaaja`); Julkaisijalle SIMU VAPAA aina ajon jälkeen (UDID:llä sammutus, ei `shutdown all`).
+
+# (vanhempi) päivitetty 10.10.2026 aamulla, nollaus
 
 ## PÄIVITYS 10.10.2026 — LUE TÄMÄ ENSIN
 - **docs/raportit/viesti-laitetestaaja-luovutus-20261010.md** on uusin luovutus: tila oikeutettu lepo; jonossa junan 173 Pariisin portti, junan 174 iPad-muistiportti Olavinlinnassa (Siirtosepän skripti), varjomittaus TF 173:n jälkeen (ohje b389b5ab8), 169:n linnan/ylöskatseen uusinta PT:n pyynnöstä. Videotyökalut ja sudenkuopat luovutuksessa + `docs/raportit/laitetestaaja-video-tyokalut-20261010/`.
