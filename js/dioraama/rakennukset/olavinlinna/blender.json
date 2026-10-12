@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "566f23f32b22de86",
-  "kansio": "dioraama/olavinlinna/blender/566f23f32b22de86/",
+  "hash": "a3cb09610c006704",
+  "kansio": "dioraama/olavinlinna/blender/a3cb09610c006704/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -699,6 +699,71 @@
       "tavuja": 3066168
     },
     {
+      "polku": "hahmot/renki-1500-mh-0-6x6.astcm",
+      "sha256": "8d84954442e987fb1a6c6abadf52838ad38897ed09f9f1ca1268dfb524588a82",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-1-6x6.astcm",
+      "sha256": "5c4ec193290ff5045530d1c0d59235a3fef04763f9497caac7f4f4c6c2683370",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-10-6x6.astcm",
+      "sha256": "85a5deb41d535923b9d8ff7deb77e3d2641dbbab26b500b9229061cb13c10106",
+      "tavuja": 40112
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-11-6x6.astcm",
+      "sha256": "137737560041d34d1c8535dbed7eb14fc5af5842c4ab90c91a2999db39d4f985",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-2-6x6.astcm",
+      "sha256": "7db4c97d70d79b02ca18087259c1e986a76daf0e5f42fc752480f6a147a6205a",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-3-6x6.astcm",
+      "sha256": "5e3294f5115e914dd4a4b4460fe23351950a0453e357c46caf85d66fa386c07b",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-4-6x6.astcm",
+      "sha256": "48d6c6e03e57b29f0848db99e45850aa99007bc5e6bedb84da390376f5700d10",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-5-6x6.astcm",
+      "sha256": "bdecc1c75de1b844d9dbea14a688310ac390e063eebe7a2cd6e015f90db07199",
+      "tavuja": 40112
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-6-6x6.astcm",
+      "sha256": "9ffb11ab8cb57f55170c8b0a02354bda12d7c35bc9d879e0f957c1bc47553768",
+      "tavuja": 626304
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-7-6x6.astcm",
+      "sha256": "b2429a6f55c6529af7f33b707781b006ce90dc9e13fd7e4acea4fa92a181fd64",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-8-6x6.astcm",
+      "sha256": "a40bf92a12b56cf47d67c20594142cada24ff826ac46eaa8eb5a238fd49909a8",
+      "tavuja": 40112
+    },
+    {
+      "polku": "hahmot/renki-1500-mh-9-6x6.astcm",
+      "sha256": "cfb506624396979a97deeaecb2d01b03a8e92ebaba3b65ead2048e7a0cd10172",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/renki-1500-mh.glb",
+      "sha256": "50c4773f4d36f5579f17efd3ac24c9da0ddd19ec4f61df5427c2c95fe2b31f97",
+      "tavuja": 8697800
+    },
+    {
       "polku": "hahmot/renki-1500.glb",
       "sha256": "360a879c4852a9fc728fe9f638223a32c34067ae71f159b92a7e3fc6464bd5f2",
       "tavuja": 2172080
@@ -775,22 +840,22 @@
     },
     {
       "polku": "hahmot/soutaja-1500-mh-10-6x6.astcm",
-      "sha256": "ba1b8bfee1c1a797b65294b39990602d48c3df8641e49a248825ed6eed12c1f3",
+      "sha256": "d436c5fdaa3d604f0d0fc25cff7bec22f5d90fb905b9506fd2dd84e39225cbd2",
       "tavuja": 626304
     },
     {
       "polku": "hahmot/soutaja-1500-mh-11-6x6.astcm",
-      "sha256": "1873a1ab5f1e65bc99e21b250ef20e9fa3f622491955cc8b3c9e31710603925f",
+      "sha256": "ddb5e2b816117e381c449e7bdf0aab0e378149270aa33f4d86a76bb3f079abbb",
       "tavuja": 40112
     },
     {
       "polku": "hahmot/soutaja-1500-mh-12-6x6.astcm",
-      "sha256": "3df8f689ba0df724cf13850d320397a3493c0e5f30ad6ba4a8295e8b2aa4b441",
+      "sha256": "fdcf1f706a1d80d8ffe756b7ad9d2baa5b8239bc4d2588a03141c9c5f1bbbd5d",
       "tavuja": 40112
     },
     {
       "polku": "hahmot/soutaja-1500-mh-2-6x6.astcm",
-      "sha256": "7156c65ff261f1c0eb66830a19770e4af1c1586b7f380efc4ac1617d8880f243",
+      "sha256": "f6bc3f16e0b82369916b5ab8f809271623795f397ca7106257486a480f967078",
       "tavuja": 40112
     },
     {
@@ -800,7 +865,7 @@
     },
     {
       "polku": "hahmot/soutaja-1500-mh-4-6x6.astcm",
-      "sha256": "b7299439116014568377db0fdf10ede44f3e7f561c20805fed38a50a443ee4a7",
+      "sha256": "096a7949f26c4c0614eda893fe4bece27c0789b1dc167f1dd9cb896b92f8db59",
       "tavuja": 2497728
     },
     {
@@ -810,28 +875,28 @@
     },
     {
       "polku": "hahmot/soutaja-1500-mh-6-6x6.astcm",
-      "sha256": "d7ad3e407b84933a47997ec274349b7644179b1957c31731899caff99a32dbdf",
+      "sha256": "84e25ce50fa329aa424790b9eae7d6a6cd37ecb02a5e4520457ae495f2e4ceba",
       "tavuja": 158448
     },
     {
       "polku": "hahmot/soutaja-1500-mh-7-6x6.astcm",
-      "sha256": "e09bf85d8e337e2dd40f13a095f3d83ed863e3ba78f3bf05206075f4df03c077",
+      "sha256": "5c7068bf09c77d465d3ec11769d33349055388d673f220d3c8b96e18beebc21c",
       "tavuja": 40112
     },
     {
       "polku": "hahmot/soutaja-1500-mh-8-6x6.astcm",
-      "sha256": "f8ba7b48c475ea8f804259d4d4eaad20a84b9fa56dc22a8d9b305156ca8aaa6e",
+      "sha256": "25beb105a5c86d8ed969a36bc8ccc71eccfa9ee508b4d9eaf032ca69fddfb6d5",
       "tavuja": 158448
     },
     {
       "polku": "hahmot/soutaja-1500-mh-9-6x6.astcm",
-      "sha256": "b0b3b03962bfb7a51ea5ab4189a9dc45b9c2f90ad853d636138ece450fd7a5a9",
+      "sha256": "e4ad479e35a8bd50e7ab15d015725cc066f534c56b98a70bd9620150c36ce7d1",
       "tavuja": 40112
     },
     {
       "polku": "hahmot/soutaja-1500-mh.glb",
-      "sha256": "002b5fa2d5e59d8f92bd8bef8bfb75086d6ae123c67bc768707ea769ef3bcba5",
-      "tavuja": 14529624
+      "sha256": "bba2151157506b7b6fa1fc2acee39c6c0ce7085f8b2b9ac502fbc200fa9e3fda",
+      "tavuja": 14489920
     },
     {
       "polku": "hahmot/soutaja-1500.glb",
@@ -1232,6 +1297,56 @@
       "polku": "hahmot/vesipoika-1500-faceit.glb",
       "sha256": "e833eb4abed3a4758f4e5734f5dd5c98995f5fb92f901f91d5d72967e2b843e7",
       "tavuja": 2362420
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-0-6x6.astcm",
+      "sha256": "e6d880f3d51e69060a4b2f5fc683696f7674c12292ef32975b0ca35ecf20cbc7",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-1-6x6.astcm",
+      "sha256": "7db4c97d70d79b02ca18087259c1e986a76daf0e5f42fc752480f6a147a6205a",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-2-6x6.astcm",
+      "sha256": "6178da4175c321c2303ca0fe6d3156d5ba58c425dd9428f7dd3349a586a1d1fc",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-3-6x6.astcm",
+      "sha256": "faa62f174ecd2132759bc887374fff3bf77af7c4d8bc86b6e735732e60c3fe30",
+      "tavuja": 40112
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-4-6x6.astcm",
+      "sha256": "9ffb11ab8cb57f55170c8b0a02354bda12d7c35bc9d879e0f957c1bc47553768",
+      "tavuja": 626304
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-5-6x6.astcm",
+      "sha256": "16e09d89c7b00c056c6db4a87b5c907afeec4551a7e7e9579ac54c0618086613",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-6-6x6.astcm",
+      "sha256": "a40bf92a12b56cf47d67c20594142cada24ff826ac46eaa8eb5a238fd49909a8",
+      "tavuja": 40112
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-7-6x6.astcm",
+      "sha256": "b221b01db1bc107accee711b19677a08f81532269a4bfcf2bc1d7d831ca083d9",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh-8-6x6.astcm",
+      "sha256": "85a5deb41d535923b9d8ff7deb77e3d2641dbbab26b500b9229061cb13c10106",
+      "tavuja": 40112
+    },
+    {
+      "polku": "hahmot/vesipoika-1500-mh.glb",
+      "sha256": "af97b8b63ebd9fe46f84ce0da661438088e01f6be8fd12b86b36d974f99abf3d",
+      "tavuja": 7317772
     },
     {
       "polku": "hahmot/vesipoika-1500.glb",
@@ -1940,8 +2055,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "3b720cb8ab483543839819af7e758d5fbc46b6dbb0a7f9f9d8d9d1286cf9d147",
-      "tavuja": 74444
+      "sha256": "2143e41c35e54030e8f0ddb8c752c03b612e6849c2476eb272192d36cb255f88",
+      "tavuja": 74516
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -1960,8 +2075,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "98d98bd35b42997640cde513aaa1c6dfacdae78e1bf5c7f7b85e26b2ec1c62b5",
-      "tavuja": 33579
+      "sha256": "f59fb0290e7af23356e7baaec097cc550d4cd139cd81fcacc3bca033bc30ff1c",
+      "tavuja": 34571
     },
     {
       "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
@@ -3350,8 +3465,8 @@
     },
     {
       "polku": "tilat/kappeli.glb",
-      "sha256": "0ce8c9dedac8e79d1ea46c6d3cf73925ca147cd326a9ff563783a716eb65b231",
-      "tavuja": 2187732
+      "sha256": "9af288d279ee25e7b4b1babc680f2c7087d1c4d46f4d38b3357590475fc74280",
+      "tavuja": 1851752
     },
     {
       "polku": "tilat/keittio-g102.glb",
@@ -3394,89 +3509,84 @@
       "tavuja": 718956
     },
     {
-      "polku": "ulkokuori/asu.json",
-      "sha256": "0f61909300a30faece7187972582582ac33fc6190328256e4e3d18983bf91b47",
-      "tavuja": 16
-    },
-    {
       "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
       "sha256": "faa252124d2b97443c185e06f27fd1979d980bbfc9a6157002f3e75c2146e706",
       "tavuja": 4408350
     },
     {
       "polku": "ulkokuori/ulkokuori-2k-4x4.astcm",
-      "sha256": "e5274ade4afb42a056fb3b73e9d7b8285af31d842505904d11c0784936475bd0",
+      "sha256": "fca4abc8a9fa9242540fb95f92440636c31bc4bf422440f087c090dd6109b286",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-2k.jpg",
-      "sha256": "1ff2c1fa90b954641250b8a1db82cbb2944196ce38100fb4136e5efff759b515",
-      "tavuja": 2632939
+      "sha256": "0ee70c29b2100f03a9819b9600463b48262a4afd864facdf879b831354551735",
+      "tavuja": 2627428
     },
     {
       "polku": "ulkokuori/ulkokuori-4k-4x4.astcm",
-      "sha256": "5a36462bd4787a10dc391e1b51cd797dd4b092ec091e3a7ff53017932265173d",
+      "sha256": "5cab0da0090a43e705f23ff00cb5028b61a60231c0d4e1435bce15ebcd6e9428",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-4k.jpg",
-      "sha256": "05c2929e940c4c8f93324855df5d7a854906272937a454ae569fd20147c82596",
-      "tavuja": 10064879
+      "sha256": "aff0844269272e6d2d2b7f639be7ef0a5af49d29ccd71f572c0243171bad3523",
+      "tavuja": 9994287
     },
     {
       "polku": "ulkokuori/ulkokuori-8k-4x4.astcm",
-      "sha256": "fa05b7a57fee30180ef51a95c59320464d4c1dc9ae69e61f89fd40a9bdfd752e",
+      "sha256": "213e48eafc5e52454b35ce3f34d50feb93b9bcae3fa4ad725fd2451103d18c58",
       "tavuja": 39816848
     },
     {
       "polku": "ulkokuori/ulkokuori-8k.jpg",
-      "sha256": "93cba9e83c16f40af69a3a24cc620928f0f332a770d71145700518a27acaa223",
-      "tavuja": 25760778
+      "sha256": "02101bd965446cd9901ac6ffa7702c345eda515fe24fe3df49629fa9ccbde7bb",
+      "tavuja": 26757781
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k-4x4.astcm",
-      "sha256": "91f18894fc52f2afd2c3b99ee0dbdb9bcbc56248956f2643fbb873b8982235bd",
+      "sha256": "cbf77423798f879fc921afb823cae83c3c7ff98dff1be83d059631811433523e",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k.jpg",
-      "sha256": "424d10fab9bb8d60e411d19069a989069d509fb149861197d0748ba71a616dcf",
-      "tavuja": 2050719
+      "sha256": "aa9974191f823f88981b1630f9ef3247b7364619ba2b301f0ffe4d0baa07f6ac",
+      "tavuja": 2053745
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k-4x4.astcm",
-      "sha256": "2dee76a5df60394d758b06c633bf73605a416f735e24cd238807993862cff12c",
+      "sha256": "e93438a98069124689decad510e8c331e8bfc23f77341753d8f08d9a74d5752f",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k.jpg",
-      "sha256": "43943efbdc8d1629b337113bd416f6b643b85264d827177f108095f34fb54686",
-      "tavuja": 7334875
+      "sha256": "1766edd93a7621bb8255c51fc358b737e2036a53a440c4c27141dd4f79812ccd",
+      "tavuja": 7348417
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k-4x4.astcm",
-      "sha256": "667466d455e9dfa94bbdcc3e33787194a8fc097c10d50424d60e5d90d23700aa",
+      "sha256": "b57b0cb9d6b74f74ae2cb591b5173bbfd20eb7c1c89f05b4abeb1981ab25f640",
       "tavuja": 39816848
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k.jpg",
-      "sha256": "a42e084feda7c4715be4e33036cf2481bbba2fc0dad53d12d8f0431a6fea8c6e",
-      "tavuja": 20137836
+      "sha256": "e00b94c3e7f90574841b84b23a88d520ddcfcf1b1b2b2b567139a8d0bfaa214e",
+      "tavuja": 20188599
     },
     {
       "polku": "ulkokuori/ulkokuori_huippu.glb",
-      "sha256": "07304dfcfdb9a095cd6b5743fdecac7754376188d1c263911ffec6d88bacada1",
-      "tavuja": 71249792
+      "sha256": "f63ac3a481c3ea5273332e765c0a96187c13e84680c1842e20e1fde7d85064a3",
+      "tavuja": 73093600
     },
     {
       "polku": "ulkokuori/ulkokuori_kevyt.glb",
-      "sha256": "30fed900ee3e76899bb5b447c2963f22180ca158461f3235067cf32331ec01e3",
-      "tavuja": 13082492
+      "sha256": "e2e8f0facc56d4d31c750165b02965316ab461e69657fc8bb4d2eb33726a2370",
+      "tavuja": 13296360
     },
     {
       "polku": "ulkokuori/ulkokuori_normaali.glb",
-      "sha256": "a5981fec191b64c72f8b945fba43158106f6339a29e1e3ad58f00e358bce2c3f",
-      "tavuja": 33020200
+      "sha256": "e7900cf6206cb2cb48050bbb83bd4239cfa843ed91a3579515719d6845c06c02",
+      "tavuja": 33649324
     },
     {
       "polku": "vaiheet/haapiot.glb",
