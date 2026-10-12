@@ -1,0 +1,914 @@
+{
+  "cityName": "Rooma",
+  "gameCityId": "rooma",
+  "mediaSlug": "rome",
+  "status": "worker-produced-awaiting-root-QA-R2",
+  "complete": true,
+  "assets": [
+    {
+      "id": "rome-4-trastevere-arki-intro-v1",
+      "slot": 4,
+      "version": 1,
+      "cityName": "Rooma",
+      "gameCityId": "rooma",
+      "mediaSlug": "rome",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-4-trastevere-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-4-trastevere-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-4-trastevere-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-4-trastevere-arki-intro-v1.png",
+      "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+      "bytes": 2899523,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Rome, a modest residential side lane near Via della Scala in Trastevere. Main subject: a resident in plain grey jacket carrying folded laundry in a basket, small and20 metres distant walking away; another tiny person tending plain potted plants with back turned. Old faded burnt-ochre plaster and reddish-brown shutters, a short plain laundry line between upper windows, uneven dark volcanic stone paving. At pedestrian eye height with35mm lens, buildings enclosing a gentle sideways bend, morning natural shade. Every door/wall unmarked and blank; no shops, temples, churches, murals, traffic or recognisable faces.",
+      "sources": [
+        {
+          "url": "https://turismoroma.it/it/page/rione-xiii-trastevere",
+          "label": "Roma Capitale Turismo – Rione XIII Trastevere",
+          "readFacts": "Trastevere on other bank of Tiber has intricate narrow streets, characteristic squares, artisan shops and social venues; choose ordinary residential fabric, no named artworks."
+        }
+      ],
+      "caption": "Trasteveren arki Rooman asuinkujalla. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys ja1536x1024 tarkastettu; ihmiset selin, luonnollinen pesukori/pyykki ja kasvit; ei osoitelaattoja/tekstiä/brändejä; vanha anonyymi asuinympäristö.",
+          "inspectedAt": "2026-10-12T17:31:41.487405+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and doorway,plant,clothes,basket details inspected. Plausible worn Trastevere residential lane with two small/back-facing adults, natural camera shade and irregular plaster/cobbles/plants. Generic clothes and domestic laundry, no addressplaque,text,sign,logo,food or nameddesign observed.",
+          "limits": [
+            "Generated illustrative view; individual anonymous features reconstructed, not surveyed."
+          ],
+          "reviewedAt": "2026-10-12T17:34:46.060930+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-4-trastevere-arki-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-4-trastevere-arki-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+        "bytes": 2899523,
+        "nativeSha256": "00c44125ee0d5bb778894db81efcd7fbcaac24820dcff4cfdd21f4f06f6ee7a9",
+        "decodedRGBSha256": "c0eb4acd83498e9bdabf2ac8c2bc7587a6299d9af96df8ed7e0646b1d8047ab6",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:31:06.044817+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-4-trastevere-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-4-trastevere-arki-intro-v1.png?t=41ba5ad4973d2482",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-4-trastevere-arki-intro-v1.png",
+        "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+        "bytes": 2899523,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+        "canonicalGetBytes": 2899523,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:43:11.382799+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "rome-5-tiber-ponte-sisto-intro-v1",
+      "slot": 5,
+      "version": 1,
+      "cityName": "Rooma",
+      "gameCityId": "rooma",
+      "mediaSlug": "rome",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-5-tiber-ponte-sisto-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-5-tiber-ponte-sisto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-5-tiber-ponte-sisto-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-5-tiber-ponte-sisto-intro-v1.png",
+      "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+      "bytes": 2757657,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Rome: Tiber seen from low west/right-bank walkway about100 metres south/downstream of Ponte Sisto, facing north-northeast upstream toward the bridge. Broad pale green river fills foreground and lower two-thirds, Ponte Sisto crosses middle distance as ONE low bridge with EXACTLY FOUR shallow travertine arches and the characteristic small circular flood-opening in the centre between its two central arches. Plain unmarked bridge parapet. River parapet and embankment edge at lower right, plane trees and modest ordinary old plaster buildings behind bridge, no monumental domes or skyline. Soft morning daylight, natural gentle ripples, no motorboats, signs or close people.",
+      "sources": [
+        {
+          "url": "https://www.sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/beni_architettonici/ponte_sisto",
+          "label": "Sovrintendenza Capitolina – Ponte Sisto",
+          "readFacts": "Bridge built for1475 Jubilee, four travertine-clad arches and central circular opening. Metal widening side-walkways added1877, later removed; exclude them in1873. Modern parapets are reconstructed in brick-panel/travertine-pier rhythm.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://romacentocinquanta.it/wp/percorso/progetto-e-costruzione-dei-muraglioni-del-tevere/",
+          "label": "Università Tor Vergata / Archivio di Stato Roma – Tiber embankments",
+          "readFacts": "Special Tiber office tasked1876 with engineered muraglioni: retaining walls, collectors, broad landing quays and lungotevere roads.1873 predates these modern tall walls and quays; show irregular river banks instead.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://iccd.cultura.gov.it/getFile.php?id=2382",
+          "label": "ICCD Ministry of Culture photo archive catalogue",
+          "readFacts": "Catalogue pages16–17 (PDFpage9) identifies anonymous albumen photo MPI325386: Tiber mills near Tiber Island with Ponte Sisto background, before1870. Text verifies riverine pre-embankment appearance. Screenshot attempt timed out, photograph not visually inspected.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Tiber ja Ponte Siston vanha kivisilta Roomassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys+natiivikoko: neljä sillankaarta ja keskellä pyöreä tulva-aukko; luonnollinen Tiber, nykyiset rantamuurit; ei tekstiä/brändejä/kylttejä/etualakasvoja. Kuvaparin katselusuunta tallennettu.",
+          "inspectedAt": "2026-10-12T17:34:55.281118+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and bridgearches,oculus,masonry,bank,foliage,water detail inspected. PonteSisto four arches and central oculus credible over Tiber; modern embankments included in current scene. No people,text,logos,signs or contemporarynameddesign observed; natural leaf/water detail and restrained camera light.",
+          "reviewedAt": "2026-10-12T17:38:06.003917+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-5-tiber-ponte-sisto-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-5-tiber-ponte-sisto-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+        "bytes": 2757657,
+        "nativeSha256": "cd4942d7e759f3029be92dce3a1be76288a2f2eaa2736fc187e90fa9924040c0",
+        "decodedRGBSha256": "54f5f042bca132bf1a049b88774cae246e17cb2d44500fa7209f341b3e952fed",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:34:44.850980+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-5-tiber-ponte-sisto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-5-tiber-ponte-sisto-intro-v1.png?t=8c22cfd76ae1d366",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-5-tiber-ponte-sisto-intro-v1.png",
+        "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+        "bytes": 2757657,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+        "canonicalGetBytes": 2757657,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:43:13.311307+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "rome-6-san-cosimato-juhla-intro-v1",
+      "slot": 6,
+      "version": 1,
+      "cityName": "Rooma",
+      "gameCityId": "rooma",
+      "mediaSlug": "rome",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-6-san-cosimato-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-6-san-cosimato-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png",
+      "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+      "bytes": 2279865,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Rome, informal joyful summer community gathering beside Piazza San Cosimato in Trastevere, tree shade and ordinary old ochre residential façades blurred behind, no church in frame. One fictional29-year-old Italian man with short curly dark hair laughing in foreground, visible chest-up, generic open solid slate-blue linen overshirt over plain white tee. Young adult local Roman friends behind clapping and smiling, varying generic contemporary solid-colour clothing. Camera framed chest-up for ALL people; crowd torsos fill entire bottom edge, all legs and shoes outside frame. No shoes anywhere. No flags, uniforms, brand motifs, signs, food, drinks, screens, musical artwork or stage branding. Diffuse early evening daylight, candid camera, natural skin pores and individual hair strands.",
+      "sources": [
+        {
+          "url": "https://turismoroma.it/it/page/rione-xiii-trastevere",
+          "label": "Roma Capitale Turismo – Rione XIII Trastevere",
+          "readFacts": "Trastevere on other bank of Tiber has intricate narrow streets, characteristic squares, artisan shops and social venues; choose ordinary residential fabric, no named artworks."
+        },
+        {
+          "url": "https://www.turismoroma.it/it/node/700",
+          "label": "Turismo Roma – San Cosimato",
+          "readFacts": "San Cosimato lies in heart of Trastevere; present square used only as context, exclude church/artworks."
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen kokoontuminen Trasteveressä Roomassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys ja natiivikoko: iloinen aikuisten joukko, yksi fiktiivinen mies etualalla, geneeriset muodikkaat vaatteet, kaikki jalkineet rajattu pois; ei ruokaa/tekstiä/brändejä, luonnollinen iho ja hiukset.",
+          "inspectedAt": "2026-10-12T17:36:48.164581+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and each upperbody,hands,clothing,skin,backdrop inspected. Fictional adult foreground amid cheerful young-adult gathering with generic solidcolour clothing. All footwear cropped/occluded; no food,brands,signs,text,numberplaques or artworks. Credible natural skin,hair and subdued camera light.",
+          "reviewedAt": "2026-10-12T17:40:13.573892+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-6-san-cosimato-juhla-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-6-san-cosimato-juhla-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+        "bytes": 2279865,
+        "nativeSha256": "2c8b3b3628a3e5fea95cfe8aa6b25e0a36eca3a677aa319f62288e9460f69abf",
+        "decodedRGBSha256": "be46b063eb14f8ec486c9629d1c2eb12551b7ca8513864ba5e99fed404b6dd1e",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:36:40.162883+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png?t=2f27f4343788bf39",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png",
+        "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+        "bytes": 2279865,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+        "canonicalGetBytes": 2279865,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:43:15.164178+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "rome-7-regola-ilta-intro-v1",
+      "slot": 7,
+      "version": 1,
+      "cityName": "Rooma",
+      "gameCityId": "rooma",
+      "mediaSlug": "rome",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-7-regola-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-7-regola-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-7-regola-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-7-regola-ilta-intro-v1.png",
+      "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+      "bytes": 2874609,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Rome: a quiet ordinary residential segment near Via Giulia in Regola at blue hour just after light rain. Eye-level diagonal view across a small junction, restrained grey-brown old stucco buildings, dark wood unmarked doors, slight reflections in irregular wet dark stone paving, two warm street lamps and scattered warm upper windows. A couple of very small distant adults walk away beyond the junction. No landmarks, churches, statues, plaques or signs, no facing people. Real camera documentary low-light photograph, modest grain, restrained saturated blue sky only, natural warm window lights.",
+      "sources": [
+        {
+          "url": "https://www.turismoroma.it/it/luoghi/ponte-sisto",
+          "label": "Turismo Roma – Ponte Sisto location",
+          "readFacts": "Ponte Sisto links Trastevere to the Regola side, near Via Giulia; ordinary older neighbourhood selected."
+        }
+      ],
+      "caption": "Regolan vanhat asuintalot Rooman sinisenä hetkenä. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys+natiivikoko tarkastettu: iltavalot, kostea epäsäännöllinen kivikatu, pienet selin kävelijät; seinien yksittäiset vaaleat pinnat ovat blank vailla tekstiä, ei logoja/brändejä/osoitenumeroita.",
+          "inspectedAt": "2026-10-12T17:37:42.245348+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and doorwall,window,paving,foliage details inspected. Anonymous old Regola junction at bluehour with warm practical lamps/windows, wet irregular cobbles and distant back-facing adults. No text,addressplaques,logos or artwork. Camera/light credible without CGI or HDR.",
+          "reviewedAt": "2026-10-12T17:40:13.581881+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-7-regola-ilta-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-7-regola-ilta-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+        "bytes": 2874609,
+        "nativeSha256": "722b6f471e015a7ff3e6a0283cd5ddbe3e90d8fec1384e370120c0a33bf7fe50",
+        "decodedRGBSha256": "05af2190a4ec854bcc98a08b7e4c5f4a70eb0000aa0bd558a3d63699fa2f1c3b",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:37:30.151317+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-7-regola-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-7-regola-ilta-intro-v1.png?t=35398f8305a28ada",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-7-regola-ilta-intro-v1.png",
+        "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+        "bytes": 2874609,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+        "canonicalGetBytes": 2874609,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:43:16.961620+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "rome-8-ponte-sisto-1873-intro-v2",
+      "slot": 8,
+      "version": 2,
+      "cityName": "Rooma",
+      "gameCityId": "rooma",
+      "mediaSlug": "rome",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-8-ponte-sisto-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-8-ponte-sisto-1873-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png",
+      "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+      "bytes": 2395908,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, native neutral monochrome photograph: STRICTLY equal RGB channels R=G=B for EVERY pixel, absolutely no colour tint, no warm tone, no sepia, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Exactly year1873, Rome. Same fixed viewpoint as slot5: on west/right bank100 metres south/downstream of Ponte Sisto, facing north-northeast upstream. Broad river fills lower two-thirds, one low bridge across middle distance with EXACTLY FOUR shallow travertine arches and a small central circular flood-hole between central arches; simple old brick/travertine parapet. Pre1876 irregular gravel and muddy riverbank in lower right, old modest plaster buildings near river beyond bridge, fewer trees than today. NO modern high embankment retaining walls, no broad paved quays, no lungotevere boulevard, no1877 metal bridge side-walkways, no modern bridges or buildings, no cars, electric lights, plastic, cables or signs. One tiny distant plain wooden rowboat. One tiny distant adult rowing, face invisible, plain nineteenth-century dark wool clothes. Soft neutral daylight, subtle fine photographic grain and gentle contrast, historical reconstruction rather than replica of archival photo. Strict neutral grayscale RGB equal channels throughout. Critical historical/camera correction: ALL ROOFS perfectly free of antennae, aerials, rooftop rods, masts, wires or TV/radio hardware of any kind. Exclude ALL large church domes from the entire frame, including SaintPeter. Keep only low ordinary houses and trees behind the bridge. Camera is fixed west/right bank downstream of bridge, facing north-northeast, not a frontal centre-of-river shot: near right riverbank forms a diagonal foreground edge; bridge occupies middle distance, left end slightly farther than right end. One tiny rowing boat only. Entirely new independent image, no edits or reuse of previous pixels.",
+      "sources": [
+        {
+          "url": "https://www.sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/beni_architettonici/ponte_sisto",
+          "label": "Sovrintendenza Capitolina – Ponte Sisto",
+          "readFacts": "Bridge built for1475 Jubilee, four travertine-clad arches and central circular opening. Metal widening side-walkways added1877, later removed; exclude them in1873. Modern parapets are reconstructed in brick-panel/travertine-pier rhythm.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://romacentocinquanta.it/wp/percorso/progetto-e-costruzione-dei-muraglioni-del-tevere/",
+          "label": "Università Tor Vergata / Archivio di Stato Roma – Tiber embankments",
+          "readFacts": "Special Tiber office tasked1876 with engineered muraglioni: retaining walls, collectors, broad landing quays and lungotevere roads.1873 predates these modern tall walls and quays; show irregular river banks instead.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://iccd.cultura.gov.it/getFile.php?id=2382",
+          "label": "ICCD Ministry of Culture photo archive catalogue",
+          "readFacts": "Catalogue pages16–17 (PDFpage9) identifies anonymous albumen photo MPI325386: Tiber mills near Tiber Island with Ponte Sisto background, before1870. Text verifies riverine pre-embankment appearance. Screenshot attempt timed out, photograph not visually inspected.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Tiber ja Ponte Sisto Roomassa vuonna 1873, ennen korkeita rantamuureja. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "V2 koko kehys ja natiivikoko: neljä kaarta ja keski-aukko, oikean rannan diagonal samaan katselusuuntaan kuin5, vanha ennenmuraglioni-kivikko/maaranta; ei tunnistettavia antenneja/kylttejä/sähköä/autoja eikä etualakasvoja. Neutraali mustavalkoinen ilman näkyvää sävyä; lähteet tallennettu ennen kutsua.",
+          "inspectedAt": "2026-10-12T17:41:16.112225+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and stonearches,centraloculus,banks,boat,oldbuilding detail inspected. Neutralblack/white without visiblecast. Same west/rightbank downstream PonteSisto direction as modern5; fourarches and centraloculus retained. Irregular old muddybank/oldhouse foundations replace engineered modern embankments. No invented basilicadome,1877metalwalkways,modernroad,vehicle,electriclight,printedtext or logo observed.",
+          "historicalPairSlot": 5,
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "reviewedAt": "2026-10-12T17:42:21.080591+00:00",
+          "limits": [
+            "Illustrative pre-embankment reconstruction; individual anonymous houses reconstructed, not surveyed."
+          ]
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-8-ponte-sisto-1873-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-8-ponte-sisto-1873-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+        "bytes": 2395908,
+        "nativeSha256": "878be10f204a40efb48ff4b6cf9d3433733a421ff91578e6c432e8d8317db253",
+        "decodedRGBSha256": "ae3e9a2bb8aeaad054e58a9ca5ef97e32c4d49c546069d03957f76b5924bc662",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:40:56.099369+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png?t=985852f062647d12",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png",
+        "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+        "bytes": 2395908,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+        "canonicalGetBytes": 2395908,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:43:18.777505+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "rejectedCandidates": [
+    {
+      "slot": 8,
+      "version": 1,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/rome-8-ponte-sisto-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/native/rome-8-ponte-sisto-1873-intro-v1.png",
+      "reason": "Rooftop thin T-shaped antenna-like rods on left buildings and centre roofs are unverified1873 elements; large dome was meant to be excluded and same-view modern pair differs. Preserve v1; one whole-new v2 quality retry to remove aerials/masts/dom es and keep same bridge viewpoint.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/prompts/8-ponte-sisto-1873-v1.txt"
+    }
+  ],
+  "actualCalls": 6,
+  "expectedSlots": 5,
+  "updatedAt": "2026-10-12T17:41:16.167136+00:00",
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:43:18.796336+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "deliveryQAEvidence": {
+    "mediaSlug": "rome",
+    "gameCityId": "rooma",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/brief.json",
+      "https://www.sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/beni_architettonici/ponte_sisto",
+      "https://romacentocinquanta.it/wp/percorso/progetto-e-costruzione-dei-muraglioni-del-tevere/"
+    ],
+    "assets": [
+      {
+        "id": "rome-4-trastevere-arki-intro-v1",
+        "slot": 4,
+        "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä pyykkiä kantavan henkilön/korin, kasveja hoitavan selin olevan henkilön ja lähikasvillisuuden natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen lehdistö/haarat, kulunut rappaus ja vulkaaninen kiveys; uskottava kameranäkymä, perspektiivi ja päivänvalo.",
+          "Ihmiset selin, kasvot eivät näy. Pyykkikori ja tekstiilit geneerisiä. Ei tekstiä, numeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "rome-5-tiber-ponte-sisto-intro-v1",
+        "slot": 5,
+        "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja sillan keskiympyrän/kaarien sekä lähirannan/puun/lehtien/veden natiivirajaukset tarkastettu.",
+          "Neljä travertiinikaarta ja keskimmäinen pyöreä aukko, koherentti joen/sillan perspektiivi. Luonnolliset lehdistö, puunkuori ja vesi ilman leimakuvioita tai muovisuutta.",
+          "Lähiranta oikealla ja silta keskietäisyydessä, joki alakehyksessä; kuva5 on1873-kuvan8 moderni vertailupari. Ei tekstiä, logoja, brändikuvioita, ruokaa tai etualan kasvoja.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "rome-6-san-cosimato-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja etualan kasvot/hiukset/vaatteet sekä molempien sivujen kasvojen/kaikkien näkyvien käsien natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten Trastevere-kokoontuminen, geneeriset muodikkaat nykyvaatteet. Iho, hampaat, korvat, hiukset ja taputtavien käsien anatomia uskottavia; osassa käsistä luonnollista liiketerävyyden pehmeyttä.",
+          "Kaikki ihmiset rajattu jalkineiden yläpuolelta. Ei jalkineita, ruokaa, juomapakkauksia, tekstiä, logoja tai brändikuvioita koko kehyksessä.",
+          "Koherentti luonnonvalo ja optinen taustan pehmeys, perspektiivi kameramainen; ei muovisuutta tai orgaanisia leimakuvioita havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "rome-7-regola-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä ovien/seinien/ruukkupuiden ja kaukaisten ihmisten/risteyksen natiivirajaukset tarkastettu.",
+          "Kulunut rappaus, luonnolliset kasvit ja epäsäännöllinen märkä kiveys uskottavia; lämmin lamppuvalo ja heijastukset koherentit hämärässä kameranäkymässä.",
+          "Kaksi pientä ihmistä selin. Ei tekstiä, numeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "rome-8-ponte-sisto-1873-intro-v2",
+        "slot": 8,
+        "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Valittu täysin uusi8v2; koko1536x1024 kehys sekä sillan/kattojen, vasempien talojen/vanhan rannan ja soutuveneen/oikean rantadiagonaalin natiivirajaukset tarkastettu.",
+          "Näkyvä ilme neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä. Pientä numeerista RGBeroa ei käytetty itsenäisenä hylkäysperusteena.",
+          "Vertailtu moderniin5:een: sama oikean rannan lähidiagonaali, joen yli keskietäisyydessä kulkeva nelikaarinen Ponte Sisto ja keskiympyrä, sama katselusuunta sillalle. Tarkka1873-rantatalojen ja kasvillisuuden järjestys on rekonstruoitu havainnollisesti.",
+          "Briefin kaksi virallista lähdesivua avattu: Ponte Siston1475-nelikaarinen perusrakenne ja1877-metalliset sivukäytävät; Tiberin1876-alkaen suunnitellut korkeat rantamuurit, laajat laiturit ja lungotevere-kadut. Ne tukevat1873-kuvan poissulkemisia.",
+          "1873-exclusions tarkastettu: ei korkeita nykyisiä rantamuureja, laajoja päällystettyjä jokilaitureita, lungotevere-bulevardia,1877-metallisia sivukäytäviä, nykyajan siltoja/rakennuksia, autoja, sähkövaloa, muovia, johtoja tai merkkejä. Ei suuria kirkonkupoleita.",
+          "Katoilla ei tunnistettavia TV/radioantennirakenteita tai T-muotoisia antenneja. Yksi erittäin haalea pystylinja katon yläpuolella ei muodosta natiivirajauksessa tunnistettavaa nykyesineen rakennetta; sitä ei tulkittu todistetuksi1873-anakronismiksi.",
+          "Pieni merkitön puinen soutuvene ja hyvin pieni selin oleva aikakauden aikuinen. Koherentti luonnonvalo/perspektiivi ja luonnolliset kasvillisuus-/vesipinnat. Ei tekstiä, logoja, brändikuvioita, ruokaa tai etualan kasvoja.",
+          "V1:n tuottajan hylkäys säilyy historiassa; valittu8v2 arvioitu itsenäisesti.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "rome-8-ponte-sisto-1873-intro-v1",
+        "slot": 8,
+        "sha256": "5d0d49cf69d08237e4bb8d9421b0b7d8e7fdb318c809659cbfefdcdee7533002",
+        "fullFrameInspected": false,
+        "nativeDetailsInspected": false,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "producerReason": "Rooftop thin T-shaped antenna-like rods on left buildings and centre roofs are unverified1873 elements; large dome was meant to be excluded and same-view modern pair differs. Preserve v1; one whole-new v2 quality retry to remove aerials/masts/dom es and keep same bridge viewpoint.",
+        "reason": "Tuottajan ensimmäisen kandidaatin hylkäys kirjattu metatiedoista; tämä rajattu itsenäinen rasteri-QA koski valittuja nykykuvia.",
+        "producerMetadataReviewedOnly": true
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:14:30.328793+00:00",
+    "sourceManifestSha256": "0b7f5579e46fe7414965c9aa4217db1dd08e27e6ba77cb6e80ff2a27e84a0b94"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "rome",
+    "verifiedAt": "2026-10-12T18:17:11.885647+00:00",
+    "assets": [
+      {
+        "id": "rome-4-trastevere-arki-intro-v1",
+        "slot": 4,
+        "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+        "bytes": 2899523,
+        "verifiedAt": "2026-10-12T18:17:09.638976+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-4-trastevere-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+            "bytes": 2899523,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-4-trastevere-arki-intro-v1.png?delivery-verify=41ba5ad4973d2482-1791829029638969000",
+            "http": 200,
+            "sha256": "41ba5ad4973d24829abc0feb34dc390753b989a0ee047292cd2663656d3315fb",
+            "bytes": 2899523,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "rome-5-tiber-ponte-sisto-intro-v1",
+        "slot": 5,
+        "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+        "bytes": 2757657,
+        "verifiedAt": "2026-10-12T18:17:09.649476+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-5-tiber-ponte-sisto-intro-v1.png",
+            "http": 200,
+            "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+            "bytes": 2757657,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-5-tiber-ponte-sisto-intro-v1.png?delivery-verify=8c22cfd76ae1d366-1791829029649453000",
+            "http": 200,
+            "sha256": "8c22cfd76ae1d366ce108cf9ee7ed7d5ce5c621d0813e992a1c272203110c9c7",
+            "bytes": 2757657,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "rome-6-san-cosimato-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+        "bytes": 2279865,
+        "verifiedAt": "2026-10-12T18:17:09.651165+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+            "bytes": 2279865,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-6-san-cosimato-juhla-intro-v1.png?delivery-verify=2f27f4343788bf39-1791829029651162000",
+            "http": 200,
+            "sha256": "2f27f4343788bf3971c7f66049f1e3a43dd6488489f2db35d94b8d194948c874",
+            "bytes": 2279865,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "rome-7-regola-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+        "bytes": 2874609,
+        "verifiedAt": "2026-10-12T18:17:10.690215+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-7-regola-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+            "bytes": 2874609,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-7-regola-ilta-intro-v1.png?delivery-verify=35398f8305a28ada-1791829030690208000",
+            "http": 200,
+            "sha256": "35398f8305a28ada3c2b573fb53652e772395ef3b440db09ccaa0c82dd71833f",
+            "bytes": 2874609,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "rome-8-ponte-sisto-1873-intro-v2",
+        "slot": 8,
+        "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+        "bytes": 2395908,
+        "verifiedAt": "2026-10-12T18:17:10.713693+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+            "bytes": 2395908,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261012-full/rome-8-ponte-sisto-1873-intro-v2.png?delivery-verify=985852f062647d12-1791829030713685000",
+            "http": 200,
+            "sha256": "985852f062647d126514555cbdb809510f196f02fe7590d2098e2731e2bfc932",
+            "bytes": 2395908,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/rome/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.490940+00:00"
+}

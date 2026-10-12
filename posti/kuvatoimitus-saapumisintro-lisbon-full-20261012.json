@@ -282,42 +282,186 @@
       "ownerAcceptanceVerified": false,
       "gameIntegrated": false,
       "published": false
-    }
-  ],
-  "omittedItems": [
+    },
     {
-      "id": "lisbon-8-alfama-tejo-1873-intro-v1",
+      "id": "lisbon-8-alfama-tejo-1873-intro-v2",
       "slot": 8,
-      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v1.png",
-      "reason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
-      "rootReview": {
-        "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
-        "fullFrameInspected": true,
-        "nativeDetailsInspected": true,
-        "approvedForTechnicalDelivery": false,
-        "observations": "Entire native1536x1024 historical frame inspected and compared visually with retained slot5. Same elevated hillside direction over Alfama roofs toward broad Tagus, near roofs bottom/left and estuary beyond/right. Neutral black and white. Old irregular tile/plaster and small sailing craft, no modern coastal road, antennas, cruise terminal, bridge, opposite-shore towers or electric lights. No text,logos,numbers or artwork observed.",
-        "historicalPairSlot": 5,
-        "historicalSourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json",
-        "limits": [
-          "Conservative illustrative1873 roofscape based on old quarter geography; individual anonymous facades are reconstructed, not a surveyed photograph."
-        ],
-        "reviewedAt": "2026-10-12T17:26:20.016873+00:00",
-        "strictNeutralBlackWhite": false,
-        "omissionReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call."
+      "cityName": "Lissabon",
+      "gameCityId": "lissabon",
+      "mediaSlug": "lisbon",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/native/lisbon-8-alfama-tejo-1873-intro-v2.png",
+      "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+      "bytes": 2667360,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png",
+      "generationPrompt": "NATIVE NEUTRAL MONOCHROME PHOTOGRAPH. STRICTLY EQUAL RGB CHANNELS R=G=B FOR EVERY PIXEL. NO COLOUR TINT OF ANY KIND, NO COLORED NOISE. Render the entire image exclusively in black, white and neutral gray. RGB output1536x1024. Use case: historical-scene. Asset type: Matkakirja Lisbon arrival intro slot 8, year exactly 1873. Generate one completely new original photorealistic illustrative image, like a candid documentary photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Neutral grey tones and credible single-camera geometry, natural irregular wear, individually varied roof tiles and foliage. No HDR, CGI, render, painting, cinematic grading, plastic skin or stamped/cloned textures. Absolutely no text, lettering, numbers, signage, logos, brands, brand patterns, watermarks, borders, frames, food, protected artwork or contemporary named designer architecture. Render strictly neutral BLACK AND WHITE with R=G=B at every pixel, absolutely no sepia or coloured tint. Scene: Lisbon Alfama residential rooftops and Tagus estuary in 1873. Same camera location and southeast viewing direction as the modern water image: pedestrian-eye-height camera on the Santa Luzia hillside, 35mm lens; irregular layered old plaster homes with clay tile roofs fill the entire lower foreground and descend from the left toward the historic waterfront; broad calm estuary opens across the upper right half and a low faint natural opposite shore spans the horizon. No monument in the frame. Ordinary small eighteenth-century and earlier homes, simple wood-framed small windows, chimneys. Water has one or two tiny distant wooden sailing boats. Old modest quay, no modern paved coastal road, no containers, no large cranes, no motor craft, no cruise terminal, no antennas, no cables, no cars, no modern apartment towers across the estuary, no bridge. Alfama retains medieval street layout and survived 1755; 25 de Abril bridge only opened in1966 and MUST be absent. No visible modern garden/pergola/railings/tile murals from viewpoint. Soft hazy daylight, muted grayscale contrast, fine believable grain as a nineteenth-century plate photograph, slight optical falloff but no deliberate dark border or artificial frame. People absent or too tiny to identify. Physically plausible individually irregular tile roofs and naturally broken-up water ripples.",
+      "sources": [
+        {
+          "url": "https://www.visitlisboa.com/en/places/alfama",
+          "title": "Visit Lisboa – Alfama",
+          "readFacts": [
+            "Alfama is Lisbon oldest neighbourhood, cobbled steep lanes.",
+            "Santa Luzia viewpoint looks over Alfama and Tagus.",
+            "Street references in Alfama predate1873 (Cruzes da Sé1690, Beco Quebra-Costas1565)."
+          ]
+        },
+        {
+          "url": "https://www.e-cultura.pt/patrimonio_item/10245",
+          "title": "Centro Nacional de Cultura – Bairro de Alfama",
+          "readFacts": [
+            "Alfama on southern castle hillside preserves medieval Arab-influenced urban layout.",
+            "1755 earthquake little affected district; historic warehouses next to Tagus."
+          ]
+        },
+        {
+          "url": "https://servicos.infraestruturasdeportugal.pt/pt-pt/a-descobrir/obras-de-arte/ponte-25-de-abril/inauguracao",
+          "title": "Infraestruturas de Portugal – A Inauguração",
+          "readFacts": [
+            "25 de Abril bridge inaugurated6 August1966, exclude from1873."
+          ]
+        },
+        {
+          "url": "https://www.visitlisboa.com/en/events/lisbon-festivities-1",
+          "title": "Visit Lisboa – Lisbon Festivities",
+          "readFacts": [
+            "June celebrations with music, street entertainment and folk festivals in Alfama, Bica, Bairro Alto, Castelo and Mouraria."
+          ]
+        },
+        {
+          "url": "https://www.visitlisboa.com/en/places/bairro-alto",
+          "title": "Visit Lisboa – Bairro Alto",
+          "readFacts": [
+            "Bairro Alto is old traditional residential district and nightlife gathering area."
+          ]
+        }
+      ],
+      "caption": "Alfaman katot ja Tejojoen vesipinta Lissabonissa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true,
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "maxRedGreenDifference": 11,
+          "maxRedBlueDifference": 10,
+          "meanRGB": [
+            130.4644858042399,
+            130.3597730000814,
+            130.45990562438965
+          ],
+          "meanSignedRedMinusBlue": 0.004580179850250943
+        },
+        "sessionOwner": {
+          "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "neutralityDiagnostics": {
+            "meanRGB": [
+              130.464,
+              130.36,
+              130.46
+            ],
+            "meanChromaSpread": 1.078,
+            "p99ChromaSpread": 5.0
+          },
+          "observations": "Entire native1536x1024 frame and roofs,rivercraft,shore details inspected. Compared with retained slot5: same elevated Santa Luzia hillside direction over Alfama toward Tagus, roofs lower/left, water beyond/right. Neutral black/white without sepia or blue cast. Old tile/plaster/wooden craft, no motorvehicles,antennas,modern road,terminal,bridge,towers or electriclighting. No text/logos/addressplaques. Individual facades reconstructed conservatively from historic district sources.",
+          "historicalPairSlot": 5,
+          "limits": [
+            "Historical illustrative reconstruction; tiny native RGB channel noise retained without pixel change. No mathematically channel-identical grayscale claim."
+          ],
+          "reviewedAt": "2026-10-12T17:33:22.787491+00:00"
+        }
       },
-      "generationCalls": 1
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/native/lisbon-8-alfama-tejo-1873-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+        "bytes": 2667360,
+        "nativeSha256": "ebbed419bb4aca3caca14106e783f61e9cb7405211fad46d65099b7433fdb91e",
+        "decodedRGBSha256": "4702e52c249d6073cca6742e6b8aa816efffb674aa2002c362239b5e480150c9",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:30:53.455653+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png?t=22e7c677f9afd8e6",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png",
+        "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+        "bytes": 2667360,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+        "canonicalGetBytes": 2667360,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:33:24.709147+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
     }
   ],
-  "retainedExistingSlots": [
-    4,
-    5
+  "omittedItems": [],
+  "rejectedCandidates": [
+    {
+      "slot": 8,
+      "id": "lisbon-8-alfama-tejo-1873-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/native/lisbon-8-alfama-tejo-1873-intro-v1.png",
+      "reason": "failed quality candidate preserved; one whole-new replacement generated"
+    }
   ],
-  "status": "awaiting-root-review; slot8 technical-black-white-check-failed",
+  "complete": true,
+  "status": "awaiting-root-review-and-R2",
   "ownerAcceptanceVerified": false,
   "gameIntegrationVerified": false,
   "publicationVerified": false,
-  "complete": true,
-  "technicalDeliveryComplete": false,
+  "technicalDeliveryComplete": true,
   "existingDeliveredSlotsPreserved": [
     {
       "id": "lisbon-4-alfama-sample",
@@ -440,35 +584,10 @@
   ],
   "gameIntegrated": false,
   "published": false,
-  "verifiedAt": "2026-10-12T17:27:45.937090+00:00",
-  "rejectedCandidateHistory": [
-    {
-      "id": "lisbon-8-alfama-tejo-1873-intro-v1",
-      "slot": 8,
-      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v1.png",
-      "reason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
-      "rootReview": {
-        "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
-        "fullFrameInspected": true,
-        "nativeDetailsInspected": true,
-        "approvedForTechnicalDelivery": false,
-        "observations": "Entire native1536x1024 historical frame inspected and compared visually with retained slot5. Same elevated hillside direction over Alfama roofs toward broad Tagus, near roofs bottom/left and estuary beyond/right. Neutral black and white. Old irregular tile/plaster and small sailing craft, no modern coastal road, antennas, cruise terminal, bridge, opposite-shore towers or electric lights. No text,logos,numbers or artwork observed.",
-        "historicalPairSlot": 5,
-        "historicalSourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json",
-        "limits": [
-          "Conservative illustrative1873 roofscape based on old quarter geography; individual anonymous facades are reconstructed, not a surveyed photograph."
-        ],
-        "reviewedAt": "2026-10-12T17:26:20.016873+00:00",
-        "strictNeutralBlackWhite": false,
-        "omissionReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call."
-      },
-      "generationCalls": 1
-    }
-  ],
-  "pendingQualityFixSlots": [
-    8
-  ],
-  "allRequestedSlotsDelivered": false,
+  "verifiedAt": "2026-10-12T17:33:24.723523+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
   "actualCalls": 4,
   "deliveryQAEvidence": {
     "mediaSlug": "lisbon",
@@ -480,7 +599,11 @@
       "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/manifest.json",
       "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/ready.json",
       "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/brief.json",
-      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json"
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/reused-amsterdam-lisbon-proofs.json",
+      "https://www.visitlisboa.com/en/places/alfama",
+      "https://www.e-cultura.pt/patrimonio_item/10245",
+      "https://servicos.infraestruturasdeportugal.pt/pt-pt/a-descobrir/obras-de-arte/ponte-25-de-abril/inauguracao"
     ],
     "assets": [
       {
@@ -554,6 +677,31 @@
           "provenanceMetadataPass": true,
           "captionPass": true
         }
+      },
+      {
+        "id": "lisbon-8-alfama-tejo-1873-intro-v2",
+        "slot": 8,
+        "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Valittu8v2 hyväksytty riippumattomassa toimitus-QA:ssa: visuaalisesti neutraali mustavalkoinen1873-havainnekuva samalla katselusuunnalla kuin säilytetty5.",
+        "observations": [
+          "Koko1536x1024 kehys ja kattojen/rappauksen/kasvien, laiturien/veneiden sekä veden/vastarannan natiivirajaukset tarkastettu.",
+          "Näkyvä ilme on neutraali mustavalkoinen; ei sepiaa tai tarkoituksellista lämmintä/kylmää sävytystä. Yksittäinen pieni RGB-kanavaero ei ole itsenäinen hylkäysperuste.",
+          "Vertailtu säilytettyynlisbon-5-tejo-sample-kuvaan, jonka SHA256 varmistettu889fae9894940143fe8059f67f30a20f504767f22aa8099350f2a639aaf8b12b: korkealta Santa Luzian/Alfaman rinteestä katot laskeutuvat vasemmalta alas rantaan, laaja Tejo oikealla ja matala vastaranta horisontissa. Katselusuunta ja kaupungin/joen sijoittuminen vastaavat toisiaan.",
+          "Brief ja sources-1873.json luettu;3 historiallista lähdettä avattu. Alfaman vanha rinnemaasto/asutus ja vanhat rantavarastot tukevat konservatiivista kattonäkymää;1966-valmistunut silta suljettu pois.",
+          "1873-period exclusions tarkastettu: ei siltaa, modernia päällystettyä rantatietä, vastarannan tornitaloja, TV-antenneja, risteilyterminaalia, kontteja, suuria nostureita, moottorialuksia, autoja, sähköjohtoja tai moderneja näköalapaikan kaiteita/pergolaa/laattamaalauksia.",
+          "Pienet perinteiset purjeveneet ja satamaveneet/laiturit; ihmiset hyvin pieniä. Ei etualan kasvoja, tekstiä, logoja, numeroita, brändikuvioita tai ruokaa havaittu.",
+          "Kattotiilet, kulunut rappaus ja kasvillisuus epäsäännöllisiä, veden pinta luonnollinen; kamera-fotorealismi, valo ja perspektiivi koherentit.",
+          "Kattojen ja yksittäisten rakennusten tarkka järjestys on havainnollinen1873-rekonstruktio; lähteet eivät tee siitä mitattua arkistopaikkakuvaa.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/8v2-left-roofs-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/8v2-quay-boats.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/8v2-water-horizon.png"
+        ]
       }
     ],
     "producerOmissionsReviewed": [
@@ -562,7 +710,7 @@
         "slot": 8,
         "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
         "producerReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
-        "status": "pending-quality-fix",
+        "status": "rejected-superseded-by-approved-v2",
         "approvedForDelivery": false,
         "fullFrameInspected": true,
         "nativeDetailsInspected": true,
@@ -572,18 +720,22 @@
           "Näkymä on briefin mukaisesti korkealta vanhojen kattojen yli leveälle Tejolle; kattokerros alhaalla/vasemmalla ja vesi sen takana.",
           "Period exclusions luettu. Siltaa, moderneja vastarannan tornitaloja, risteilyterminaalia, antenneja tai moottorialuksia ei havaittu.",
           "Alkuperäistä rasteria ei korjattu. Uusi valittu slot8 pitää tarkastaa erikseen."
-        ]
+        ],
+        "originalStatus": "pending-quality-fix",
+        "supersededBy": "lisbon-8-alfama-tejo-1873-intro-v2",
+        "interpretationUpdate": "Aiempi numeeriseen kanavaeroon perustunut hylkäys säilyy tuotantopäätöksen historiassa. Nykyinen neutraalius arvioidaan näkyvästä kuvasta, ei numeerisella RGB-nollatoleranssilla. V1:tä ei palauteta valituksi; uusi v2 tarkastettu erikseen."
       }
     ],
     "ownerAcceptance": false,
     "gameIntegrated": false,
-    "reviewedAt": "2026-10-12T17:30:44.139823+00:00",
+    "reviewedAt": "2026-10-12T17:48:12.189964+00:00",
     "evidence": {
       "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/manifest.json",
-      "manifestSHA256": "9fb4ac7d46dc8a6621ac12fa279692e6d48b2f87671eeb625f5636ace0ff8a3a",
+      "manifestSHA256": "a7622d3c3622cf9e83eaab614a01095051f34d9e19c6c39f6400f2efc929c960",
       "reviewedAssetIds": [
         "lisbon-6-santos-populares-intro-v1",
-        "lisbon-7-bairro-alto-ilta-intro-v1"
+        "lisbon-7-bairro-alto-ilta-intro-v1",
+        "lisbon-8-alfama-tejo-1873-intro-v2"
       ],
       "reviewedOmissionIds": [
         "lisbon-8-alfama-tejo-1873-intro-v1"
@@ -591,21 +743,23 @@
       "allCurrentManifestAssetsReviewed": true,
       "rasterModificationApplied": false,
       "limits": [
-        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimituksen varmennus kuuluu toimitussessiolle.",
-        "Vuoden1873 v1 on pending-quality-fix; mahdollinen v2 tarvitsee oman koko kehystä ja yksityiskohtia koskevan QA:n."
+        "QA koskee nimettyjä SHA256-tavuja; R2/Git/gallery-varmennus kuuluu toimitussessiolle.",
+        "1873-rakennuskohtaiset yksityiskohdat ovat havainnollinen rekonstruktio; katselusuunta/kuvajaottelu verrattu säilytettyyn5-kuvaan."
       ]
-    }
+    },
+    "sourceManifestSha256": "a7622d3c3622cf9e83eaab614a01095051f34d9e19c6c39f6400f2efc929c960",
+    "gameDeliveryStatus": "HOLD"
   },
   "deliveryR2Proof": {
     "mediaSlug": "lisbon",
-    "verifiedAt": "2026-10-12T17:31:10.858762+00:00",
+    "verifiedAt": "2026-10-12T17:50:07.235248+00:00",
     "assets": [
       {
         "id": "lisbon-6-santos-populares-intro-v1",
         "slot": 6,
         "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
         "bytes": 2134078,
-        "verifiedAt": "2026-10-12T17:31:09.594394+00:00",
+        "verifiedAt": "2026-10-12T17:50:06.004336+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png",
@@ -618,7 +772,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png?delivery-verify=b8e58eecedb5b0be-1791826269594390000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png?delivery-verify=b8e58eecedb5b0be-1791827406004328000",
             "http": 200,
             "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
             "bytes": 2134078,
@@ -634,7 +788,7 @@
         "slot": 7,
         "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
         "bytes": 2623200,
-        "verifiedAt": "2026-10-12T17:31:09.594521+00:00",
+        "verifiedAt": "2026-10-12T17:50:06.004507+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png",
@@ -647,10 +801,39 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png?delivery-verify=556a4547d458393e-1791826269594519000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png?delivery-verify=556a4547d458393e-1791827406004505000",
             "http": 200,
             "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
             "bytes": 2623200,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "lisbon-8-alfama-tejo-1873-intro-v2",
+        "slot": 8,
+        "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+        "bytes": 2667360,
+        "verifiedAt": "2026-10-12T17:50:06.004944+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+            "bytes": 2667360,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-8-alfama-tejo-1873-intro-v2.png?delivery-verify=22e7c677f9afd8e6-1791827406004941000",
+            "http": 200,
+            "sha256": "22e7c677f9afd8e69c6101530482947fc587a6e6111ed285ce089726202323b8",
+            "bytes": 2667360,
             "mime": "image/png",
             "cors": "https://matkakirja.app",
             "requestOrigin": "https://matkakirja.app",
@@ -675,12 +858,55 @@
   },
   "stages": {
     "generated": null,
-    "NAS": 2,
-    "QA": 2,
-    "R2": 2,
+    "NAS": 3,
+    "QA": 3,
+    "R2": 3,
     "Git": "this handoff",
     "gallery": "pending"
   },
   "ownerAcceptance": false,
-  "deliveredAt": "2026-10-12T17:31:15.849335+00:00"
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.366982+00:00"
 }

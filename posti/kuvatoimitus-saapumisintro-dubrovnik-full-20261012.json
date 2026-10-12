@@ -1,0 +1,886 @@
+{
+  "cityName": "Dubrovnik",
+  "gameCityId": "dubrovnik",
+  "mediaSlug": "dubrovnik",
+  "createdAt": "2026-10-12T17:27:34.410593+00:00",
+  "status": "awaitingSessionOwnerQA",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "generationRequestsIssued": 7,
+  "assets": [
+    {
+      "id": "dubrovnik-intro-4",
+      "slot": 4,
+      "cityName": "Dubrovnik",
+      "gameCityId": "dubrovnik",
+      "mediaSlug": "dubrovnik",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/dubrovnik-4-arki-kuja-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/native/dubrovnik-4-arki-kuja-intro-v1-native.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png",
+      "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+      "bytes": 3071212,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro, a fictional illustrative image, never an actual on-location photo. Generate ONE brand new landscape image exactly1536x1024 pixels, opaque RGB sRGB. It must look like an unposed photograph from a real camera: natural light, muted authentic colours, coherent perspective, believable irregular texture. NO text of any kind, letters, numbers, street signs, house numbers, labels, logos, watermarks, frames, brand stripes or brand patterns, protected artworks, named contemporary architect designs. No HDR, CGI, painting, beauty retouching, plastic skin or repeated stamped vegetation. Scene: ordinary anonymous residential staircase alley in the old part of Dubrovnik today, pale weathered limestone walls, muted dark-green closed shutters, modest washing hanging well above the narrow stair lane. The alley climbs obliquely, hand-worn stone steps irregularly rounded, everyday life rather than any landmark. Camera at1.6m,35mm documentary lens, soft midmorning light, balanced exposure. Two small residents far uphill seen entirely from behind, plain unbranded clothes, faces not visible. No food, no shopfronts, no monuments, no close people, no motor vehicles, no advertising. Keep a clear stone foreground and quiet natural perspective.",
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/95/",
+          "publisher": "UNESCO World Heritage Centre",
+          "readFacts": [
+            "Dubrovnik old city is a historic enclosed urban ensemble, with ordinary stone building fabric."
+          ],
+          "readAt": "2026-10-12",
+          "scope": "Anonymous residential alley illustration; not a specific named monument."
+        }
+      ],
+      "caption": "Dubrovnikin asuinkujan arkea. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Natural worn limestone texture, believable rear-facing small people, no text, logos or signage; no landmark duplication.",
+          "reviewedAt": "2026-10-12T17:22:22.797895+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:22:52.648020+00:00",
+          "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame inspected: irregular limestone, washing and plants; two small distant people from behind; no text, logos, brands, address numbers, protected landmarks or identifiable foreground faces. Natural subdued camera rendering.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:28:38.398978+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+        "bytes": 3071212,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png",
+            "http": 200,
+            "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+            "bytes": 3071212,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png?t=491df538c317ec8c",
+            "http": 200,
+            "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+            "bytes": 3071212,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "pixelExactMetadataExport": true
+    },
+    {
+      "id": "dubrovnik-intro-5",
+      "slot": 5,
+      "cityName": "Dubrovnik",
+      "gameCityId": "dubrovnik",
+      "mediaSlug": "dubrovnik",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png",
+      "generationPrompt": "Generate ONE new real-camera-looking illustrative image for a city intro, exactly1536x1024 landscape opaque RGB sRGB. It is a fictional illustrative reconstruction, not an actual photo. Natural light, authentic subdued colours, believable optics and unique irregular details. No text, letters, numbers, street or house signs, advertising, labels, logos, brand marks or brand patterns, watermarks, frame, protected artwork or named contemporary architect designs. No HDR, CGI, painting, excessive cinematic saturation, plastic skin, stamped trees, cloned rocks or repeated foliage. Use case: photorealistic-natural. Lokrum island near Dubrovnik today: a quiet unbuilt section of the southwestern limestone shoreline. Camera1.6m above a rock shelf,35mm lens, facing west along the shore. Foreground lower-left has a broad low pale jagged limestone shelf with fissures; left midground slopes into naturally varied dark-green Mediterranean scrub, low holm oaks and a few irregular Aleppo pines; right half open Adriatic water, translucent blue-green near the rock grading into muted slate-blue farther out, softly rippled. Horizon in the upper third. Soft morning daylight, faint haze. No buildings anywhere, no paved paths, railings or piers, no people, birds, boats, kayaks or beach furniture. Natural shore texture, not an idealized tropical postcard. This camera and shore layout will be reused for1873.",
+      "sources": [
+        {
+          "url": "https://www.lokrum.hr/en/nature",
+          "publisher": "Public Institution Lokrum Reserve",
+          "readFacts": [
+            "Natural uneven limestone shore and coastal halophytes; Aleppo pine and holm oak coastal communities present on southeastern/southern/southwestern coast.",
+            "Forest protection dates from1948; protection designation must not be projected into1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.lokrum.hr/en/history",
+          "publisher": "Public Institution Lokrum Reserve",
+          "readFacts": [
+            "Benedictine monastery mentioned1023; monks departed1798.",
+            "Maximilian summer villa built early1860s; fort begun1806, expanded1830s. All buildings deliberately outside the selected shore frame."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://tzdubrovnik.hr/get/prirodne_znamenitosti/1716/o_nama.html",
+          "publisher": "Dubrovnik Tourist Board",
+          "readFacts": [
+            "Botanical garden founded1959; therefore exclude its exotic display plantings, paths and garden signs from1873 scene.",
+            "Lokrum an island accessible from city harbour; the scene is unbuilt rocky shore."
+          ],
+          "readMethod": "search-index text read; current page redirects to experiencedubrovnik.com and direct web open failed",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Lokrumin kallioranta Dubrovnikin edustalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Full-frame native1536x1024 reviewed: irregular limestone and organic coastal vegetation, no human artifacts or stamped patterns, natural water and subdued colours.",
+          "reviewedAt": "2026-10-12T17:23:58.809067+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:24:42.612172+00:00",
+          "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame inspected: irregular limestone shore on left, Mediterranean vegetation, Adriatic water on right; no people, buildings, signage, logo, stamped texture or designed artwork. Natural subdued coastal photograph appearance. Pair composition recorded for1873.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:28:42.453366+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+        "bytes": 3013866,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+            "bytes": 3013866,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png?t=b755a083413a9ac0",
+            "http": 200,
+            "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+            "bytes": 3013866,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/dubrovnik-5-lokrum-ranta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/native/dubrovnik-5-lokrum-ranta-intro-v1-native.png",
+      "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+      "bytes": 3013866,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "dubrovnik-intro-6",
+      "slot": 6,
+      "cityName": "Dubrovnik",
+      "gameCityId": "dubrovnik",
+      "mediaSlug": "dubrovnik",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png",
+      "generationPrompt": "Generate ONE new real-camera-looking illustrative image for a city intro, exactly1536x1024 landscape opaque RGB sRGB. It is a fictional illustrative reconstruction, not an actual photo. Natural light, authentic subdued colours, believable optics and unique irregular details. No text, letters, numbers, street or house signs, advertising, labels, logos, brand marks or brand patterns, watermarks, frame, protected artwork or named contemporary architect designs. No HDR, CGI, painting, excessive cinematic saturation, plastic skin, stamped trees, cloned rocks or repeated foliage. Use case: photorealistic-natural. A spontaneous joyful gathering of local Croatian young adults aged22-30 by Lapad Bay in Dubrovnik today, informal open-air summer music evening, sea and a subdued tree-covered headland in background. One invented adult woman close in the left foreground laughing toward friends, ordinary authentic skin texture and natural face, wearing a plain contemporary charcoal sleeveless top and open cream linen shirt with NO patterns or branding. Background: varied local young-adult Croatian friends in plain contemporary casual clothes, talking and moving with relaxed energy, never a staged lineup. Tight chest-up foreground framing; EVERY other person also shown upper-body only, lower bodies are fully hidden by the dense shoulder-level crowd or bottom crop. ABSOLUTELY ZERO SHOES, FEET OR FOOTWEAR anywhere in frame. Natural late-afternoon/early evening available light,35mm candid photograph, realistic gentle background softness. No food, drinks, flags, banners, stages with lettering, phones visible, landmark monuments or symbols.",
+      "sources": [
+        {
+          "url": "https://tzdubrovnik.hr/lang/13/user_files/novak/Dubrovnik_riviera_info_english.pdf",
+          "publisher": "Dubrovnik Tourist Board",
+          "readFacts": [
+            "King Zvonimir Promenade in Lapad Bay is a pedestrian zone suitable for walking and social activity.",
+            "Gruz Harbour is the principal visitor arrival harbour about3km from Old City."
+          ],
+          "readAt": "2026-10-12",
+          "illustrationScope": "Fictional casual gathering and generic bay background; not a claim of a documented concert.",
+          "readMethod": "Official brochure search-index text read; direct open redirects and failed."
+        }
+      ],
+      "caption": "Nuorten aikuisten kesäilta Lapadin lahdella. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native full frame reviewed: invented adult foreground, natural skin and hair, unbranded generic summer clothes, happy candid local group; all feet/shoes excluded and no logos or text.",
+          "reviewedAt": "2026-10-12T17:24:42.891094+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:25:40.526607+00:00",
+          "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: joyful adult summer gathering, foreground fictional woman, generic upper-body clothing and plain sunglasses. All feet/shoes outside frame, no words, logos, brand patterns or protected works; natural skin texture.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:28:44.917020+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+        "bytes": 2026138,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+            "bytes": 2026138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png?t=121cf7eac1d3c3dc",
+            "http": 200,
+            "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+            "bytes": 2026138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/dubrovnik-6-lapad-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/native/dubrovnik-6-lapad-juhla-intro-v1-native.png",
+      "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+      "bytes": 2026138,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "dubrovnik-intro-7",
+      "slot": 7,
+      "attempt": 2,
+      "cityName": "Dubrovnik",
+      "gameCityId": "dubrovnik",
+      "mediaSlug": "dubrovnik",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+      "generationPrompt": "Use case: photorealistic-natural. Generate one COMPLETELY NEW image, landscape1536x1024 opaque RGB sRGB. Gruz harbour bay in Dubrovnik today at blue hour, a quiet expanse of gently rippled water filling foreground and middle ground, only ordinary anonymous low old stone/stucco hillside residences on far shore. Natural dusk camera exposure, muted blues, modest warm window lights as irregular reflections. Real camera35mm eye-level, spontaneous atmosphere, no CGI/HDR or stamped trees. Crucial: NO BOATS OF ANY KIND ANYWHERE, no ships, no buoys, no piers, no people, no vehicles. Avoid every opportunity for numerals: buildings have blank plain walls with no address plaques, labels, signs, clocks or nameplates. ZERO text, numbers, letters, logos, brands or patterns, watermarks or frames. No bridge, cruise ships, protected artworks, landmarks or named modern architect designs. Anonymous historic Mediterranean housing fabric; no excessive glow or cinematic colour. Fictional illustrative view, not an actual location photograph.",
+      "sources": [
+        {
+          "url": "https://tzdubrovnik.hr/user_files/made/Promidzbeni%20materijal/TZ%20Grad_riviera%20info_informator%202015_ENG.indd.pdf",
+          "publisher": "Dubrovnik Tourist Board",
+          "readFacts": [
+            "Gruz Harbour is3km from Old City; waterfront port services surround it."
+          ],
+          "readMethod": "Official brochure search-index text read",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Gružin sataman iltavalot. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Full frame/native reviewed: no boats, numerals or signs; natural bay water, modest distant warm windows, coherent generic old hillside housing.",
+          "reviewedAt": "2026-10-12T17:33:43.314834+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:35:07.977072+00:00",
+          "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame of fresh correction: anonymous old hillside residences and subdued window reflections, no boats, numbers, signage, logos or near faces. Natural blue-hour photograph appearance.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:36:40.507240+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+        "bytes": 2002279,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+            "bytes": 2002279,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png?t=b9b3ab591f823db5",
+            "http": 200,
+            "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+            "bytes": 2002279,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/native/dubrovnik-7-gruz-iltavalot-intro-v2-native.png",
+      "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+      "bytes": 2002279,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "dubrovnik-intro-8",
+      "slot": 8,
+      "attempt": 2,
+      "cityName": "Dubrovnik",
+      "gameCityId": "dubrovnik",
+      "mediaSlug": "dubrovnik",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png",
+      "generationPrompt": "Use case: historical-scene. Generate one completely NEW1536x1024 landscape opaque RGB sRGB image. EXACT YEAR1873. Lokrum southwestern rocky shore near Dubrovnik, precise same shore viewpoint and westward viewing axis as modern pair. Pure NEUTRAL BLACK AND WHITE, grey pixels only, no sepia, no tint. Real nineteenth-century plate photograph appearance, natural gentle daylight, fine grain and soft contrast, no border. Composition anchors: pale fissured limestone rock shelf covers the entire bottom-left third and extends diagonally from bottom-right-of-center toward a narrow midground promontory at x62percent,y38percent. Dense irregular low holm-oak/mastic scrub and several native Aleppo pines occupy the left third from foreground to promontory; one slender crooked pine leans up toward right around x30percent, top cropped. The rocky coast runs obliquely away from near bottom-left to the small point in center-right. Calm rippling Adriatic sea fills the right half. ESSENTIAL distant background: a long low hazy mainland mountain range stretches from x50percent to the right edge along the horizon; tallest distant rounded peak around x56percent,y30percent, gradually lower layered grey ridges to right, horizon waterline at y37percent. DO NOT show an empty flat ocean horizon; the remote mountains MUST remain visible exactly as in modern view. Do not mirror or change the shoreline direction. Natural vegetation1873 and geological limestone coast; individual trees may be younger but same view anchors. No manmade structures, buildings, monastery, fort, villa, gardens, modern exotic1959plantings, paths, railings, signs, lights, wires, people, vessels, boats or contemporary items. No text, numbers, letters, logos, stamps, watermarks, frames, CGI, painting, HDR or repetitive rock/tree patterns. This is a sourced illustrative reconstruction, not an actual archival photo.",
+      "sources": [
+        {
+          "url": "https://www.lokrum.hr/en/nature",
+          "publisher": "Public Institution Lokrum Reserve",
+          "readFacts": [
+            "Natural uneven limestone shore and coastal halophytes; Aleppo pine and holm oak coastal communities present on southeastern/southern/southwestern coast.",
+            "Forest protection dates from1948; protection designation must not be projected into1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.lokrum.hr/en/history",
+          "publisher": "Public Institution Lokrum Reserve",
+          "readFacts": [
+            "Benedictine monastery mentioned1023; monks departed1798.",
+            "Maximilian summer villa built early1860s; fort begun1806, expanded1830s. All buildings deliberately outside the selected shore frame."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://tzdubrovnik.hr/get/prirodne_znamenitosti/1716/o_nama.html",
+          "publisher": "Dubrovnik Tourist Board",
+          "readFacts": [
+            "Botanical garden founded1959; therefore exclude its exotic display plantings, paths and garden signs from1873 scene.",
+            "Lokrum an island accessible from city harbour; the scene is unbuilt rocky shore."
+          ],
+          "readMethod": "search-index text read; current page redirects to experiencedubrovnik.com and direct web open failed",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Lokrumin kallioranta vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Full frame/native reviewed: monochrome, no modern structures; matching westward coastal arrangement now includes distant mountain range and tilted pine. Root to judge residual rock/horizon geometry differences versus modern5.",
+          "reviewedAt": "2026-10-12T17:34:57.621884+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:36:36.473932+00:00",
+          "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame and modern5 pair compared: coastal curve left and distant hilly horizon now retained in same direction. Neutral monochrome, no people or later structures, signs or brands. Vegetation is a historical reconstruction; two institutional historical sources precede call.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:36:43.738859+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+        "bytes": 3076445,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png",
+            "http": 200,
+            "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+            "bytes": 3076445,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png?t=dac1825dd0d576a1",
+            "http": 200,
+            "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+            "bytes": 3076445,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/dubrovnik-8-lokrum1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/native/dubrovnik-8-lokrum1873-intro-v2-native.png",
+      "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+      "bytes": 3076445,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    }
+  ],
+  "omittedItems": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "productionComplete": true,
+  "successfulImageReturns": 5,
+  "rejectedCandidates": [
+    {
+      "slot": 7,
+      "reason": "Visible registration-number-like digits on white boat hull at right midground. No text/numbers requirement failed. Single authorized call used; candidate preserved, no retry.",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/native/dubrovnik-7-gruz-iltavalot-intro-v1-native.png",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/dubrovnik-7-gruz-iltavalot-intro-v1.png",
+      "sha256": "83907e98cc78fcfc8c32de03a042a57d2bf2fb7d57b76875db7ea5ac302c2c6f"
+    },
+    {
+      "slot": 8,
+      "reason": "Same-view precision failed: modern distant mountain horizon is absent in historical image and rocky shoreline shape differs. Authorized single call used, no extra variant.",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/native/dubrovnik-8-lokrum1873-intro-v1-native.png",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/dubrovnik-8-lokrum1873-intro-v1.png",
+      "sha256": "0e46bf7bb4a338617689c0c2b858d5e2d285864107d9121ba78192308ad25e2f"
+    }
+  ],
+  "updatedAt": "2026-10-12T17:34:57.621884+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 7,
+  "deliveryQAEvidence": {
+    "mediaSlug": "dubrovnik",
+    "gameCityId": "dubrovnik",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/sources.json",
+      "https://www.lokrum.hr/en/nature",
+      "https://www.lokrum.hr/en/history"
+    ],
+    "assets": [
+      {
+        "id": "dubrovnik-intro-4",
+        "slot": 4,
+        "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä askelmien/kasvien ja kaukaisten henkilöiden/pyykkien natiivirajaukset tarkastettu.",
+          "Luonnollinen kulunut kalkkikivi ja epäsäännöllinen kasvillisuus; koherentti portaiden/julkisivujen perspektiivi ja pehmeä päivänvalo.",
+          "Kaksi pientä ihmistä selin; ei tekstiä, osoitenumeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia; RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-5",
+        "slot": 5,
+        "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä puiden/pensaiden, rantakallion/veden ja taustavuoriston natiivirajaukset tarkastettu.",
+          "Luonnolliset epäsäännölliset rungot, haarat, neulaset/lehtimassat ja kallion halkeamat; ei kaarnaleimaa, kloonikuvioita tai muovisuutta havaittu.",
+          "Kalkkikivinen luonnonranta vasemmalla etenee keskioikean niemelle; vesi oikealla ja etäinen vuorijono horisontissa. Ei rakennuksia, ihmisiä, eläimiä, veneitä tai moderneja kalusteita.",
+          "Valo, veden läpinäkyvyys ja aallot koherentit; ei tekstiä/logoja/brändikuvioita/ruokaa. Kuva5 on1873-kuvan8 moderni vertailupari.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia; RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-6",
+        "slot": 6,
+        "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan ja muiden henkilöiden kasvojen/hiusten/vaatteiden/näkyvän käden natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla ja iloinen nuorten aikuisten kesäinen kokoontuminen lahden rannalla; geneeriset muodikkaat nykyvaatteet. Iho, hampaat, hiukset ja näkyvä käsi uskottavia.",
+          "Kaikki henkilöt rajattu/peitetty jalkineiden yläpuolelta: ei jalkineita missään kehyksessä. Ei ruokaa, tekstiä, logoja tai brändikuvioita havaittu.",
+          "Luonnollinen iltavalo ja optinen taustan pehmeys, anatomia ja perspektiivi koherentit.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia; RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-7",
+        "slot": 7,
+        "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Valittu täysin uusi v2; koko1536x1024 kehys sekä kaukaisten talojen/kasvillisuuden ja veden/valojen natiivirajaukset tarkastettu.",
+          "Luonnollinen hämäräkameran valotus, epäsäännölliset veden heijastukset ja koherentti rinnetalojen perspektiivi. Kasvillisuus vaihtelevaa ilman leimakuvioita.",
+          "Ei veneitä, laivoja, poijuja, ihmisiä tai numeroihin houkuttelevia laitteita. Ei tekstiä, osoitenumeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "V1:n veneessä ollut rekisterinumeroa muistuttava merkintä on poistunut kokonaan uudenv2:n koostumuksessa.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia; RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-8",
+        "slot": 8,
+        "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Valittu täysin uusi v2; koko1536x1024 kehys ja puiden/pensaiden, kallion/veden sekä taustavuoriston natiivirajaukset tarkastettu ja verrattu moderniin5:een.",
+          "Näkyvä kokonaisilme on neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä; mustavalkoisuutta ei hylätty yksittäisten pikselien pienen RGB-kanavaeron perusteella.",
+          "Vastaava katselusuunta ja kuvajaottelu kuin5: kallioranta ja kasvillisuus vasemmalla, rannanniemi keskioikealla, meri oikealla ja mannervuoristo horisontissa. V1:n tyhjän merihorisontin puute korjattu.",
+          "Briefin1873-exclusions tarkastettu: ei rakennuksia, luostaria/linnaketta/huvilaa, puutarhan näyttelyistutuksia, betoniterasseja, päällystettyjä polkuja, kaiteita, sähkövaloja, merkkejä, ihmisiä, veneitä tai muita nykyesineitä.",
+          "Luonnollinen epäsäännöllinen kasvillisuus, kivet ja vesi; ei tekstiä, logoja, brändikuvioita tai ruokaa havaittu.",
+          "Geologinen ranta ja luonnonkasvillisuus ovat briefin konservatiivinen havainnollinen rekonstruktio. Yksittäiset puut/kivet ja vuoriston tarkat ääriviivat eivät ole arkistovalokuvan tai mitatun1873-paikan tarkkuusväite.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia; RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "dubrovnik-7-gruz-iltavalot-intro-v1",
+        "slot": 7,
+        "sha256": "83907e98cc78fcfc8c32de03a042a57d2bf2fb7d57b76875db7ea5ac302c2c6f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "reason": "V1:n valkoisen veneen kyljessä on näkyvä numeromainen rekisterimerkintä; ei tekstiä/numeroita -vaatimus ei täyty.",
+        "observations": [
+          "Alkuperäinen hylkäys tarkastettu koko kehykseltä ja relevantista natiivirajauksesta. Hylättyv1 säilytetty historiassa; uusi valittuv2 hyväksytty erikseen."
+        ]
+      },
+      {
+        "id": "dubrovnik-8-lokrum1873-intro-v1",
+        "slot": 8,
+        "sha256": "0e46bf7bb4a338617689c0c2b858d5e2d285864107d9121ba78192308ad25e2f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "reason": "V1:n horisontista puuttuu modernissa5:ssä näkyvä mannervuoristo, joten vertailuparin katselusuunta ei täyty.",
+        "observations": [
+          "Alkuperäinen hylkäys tarkastettu koko kehykseltä ja relevantista natiivirajauksesta. Hylättyv1 säilytetty historiassa; uusi valittuv2 hyväksytty erikseen."
+        ]
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:39:05.060630+00:00",
+    "sourceManifestSha256": "0742c83f8e5336a27594cfba19263ca7e658edfa07bc51bdcf7edcc44c048a07"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "dubrovnik",
+    "verifiedAt": "2026-10-12T17:39:48.235783+00:00",
+    "assets": [
+      {
+        "id": "dubrovnik-intro-4",
+        "slot": 4,
+        "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+        "bytes": 3071212,
+        "verifiedAt": "2026-10-12T17:39:46.553465+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png",
+            "http": 200,
+            "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+            "bytes": 3071212,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png?delivery-verify=491df538c317ec8c-1791826786553459000",
+            "http": 200,
+            "sha256": "491df538c317ec8c0ebeeb3650ab83882a59d99973f3d8906e63fa31166ac1af",
+            "bytes": 3071212,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-5",
+        "slot": 5,
+        "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+        "bytes": 3013866,
+        "verifiedAt": "2026-10-12T17:39:46.553632+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+            "bytes": 3013866,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png?delivery-verify=b755a083413a9ac0-1791826786553630000",
+            "http": 200,
+            "sha256": "b755a083413a9ac0c2a23ad6a6cdc5aafcdc4b5c286f7f1f0e3ba2fec4be5cb9",
+            "bytes": 3013866,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-6",
+        "slot": 6,
+        "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+        "bytes": 2026138,
+        "verifiedAt": "2026-10-12T17:39:46.553700+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+            "bytes": 2026138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-6-lapad-juhla-intro-v1.png?delivery-verify=121cf7eac1d3c3dc-1791826786553698000",
+            "http": 200,
+            "sha256": "121cf7eac1d3c3dc4aef7be4109655f5090ab60d7fc95713e38716a18c8f37d4",
+            "bytes": 2026138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-7",
+        "slot": 7,
+        "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+        "bytes": 2002279,
+        "verifiedAt": "2026-10-12T17:39:47.256981+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+            "bytes": 2002279,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png?delivery-verify=b9b3ab591f823db5-1791826787256975000",
+            "http": 200,
+            "sha256": "b9b3ab591f823db528edd359c87c716566f97cb871f4f8432c8c0d942cf1759f",
+            "bytes": 2002279,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dubrovnik-intro-8",
+        "slot": 8,
+        "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+        "bytes": 3076445,
+        "verifiedAt": "2026-10-12T17:39:47.365503+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png",
+            "http": 200,
+            "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+            "bytes": 3076445,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dubrovnik/20261012-full/dubrovnik-8-lokrum1873-intro-v2.png?delivery-verify=dac1825dd0d576a1-1791826787365495000",
+            "http": 200,
+            "sha256": "dac1825dd0d576a1f5b36ce9a0fd8e4485baf4bd59fb902d1a9ff6f2fef0d519",
+            "bytes": 3076445,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/dubrovnik/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.630331+00:00"
+}

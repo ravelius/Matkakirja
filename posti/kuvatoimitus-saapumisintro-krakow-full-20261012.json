@@ -1,0 +1,989 @@
+{
+  "cityName": "Krakova",
+  "gameCityId": "krakova",
+  "mediaSlug": "krakow",
+  "createdAt": "2026-10-12T17:38:55.114816+00:00",
+  "status": "awaitingSessionOwnerQA",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "generationRequestsIssued": 6,
+  "assets": [
+    {
+      "id": "krakow-intro-4",
+      "slot": 4,
+      "cityName": "Krakova",
+      "gameCityId": "krakova",
+      "mediaSlug": "krakow",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural unless historical-scene specified. Generate ONE completely new fictional illustrative city-intro photograph-like image, exactly1536x1024 landscape opaque RGB sRGB. Real camera optics, unposed natural textures, subdued true colours, natural light. No HDR, CGI, painting, cinematic oversaturation, plastic skin, cloned/stamped nature. No text, letters, numerals, signs, house numbers, advertising, logos, brands, branded stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. People small/far/from behind except celebration slot6, where invented adult faces allowed. Anonymous residential courtyard in Krakow Kazimierz today. Plain weathered ochre/cream stucco walls, a modest wooden courtyard gallery and a few bicycles with no brands, worn paving, potted plants casually placed. Two small residents seen from behind crossing far side carrying plain bags, faces fully hidden. Eye-level35mm documentary photograph through shadowed arch into softly sunlit courtyard; believable ordinary life, no cafe, food, shops, monuments or posters.",
+      "sources": [
+        {
+          "url": "https://www.krakow.pl/instcbi/1284/inst/10969/801/Ulica-Szeroka.html",
+          "publisher": "City of Krakow",
+          "readFacts": [
+            "Szeroka is broad historic Kazimierz street ensemble; ordinary residential fabric surrounds old quarter."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Krakovan Kazimierzin asuinpihan arkea. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Natural courtyard photograph; small rear-facing people, bikes have no branding. Tiny blue wall detail left of rear arch flagged for root review as possible address plaque.",
+          "reviewedAt": "2026-10-12T17:32:00.924852+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:33:18.987490+00:00",
+          "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame plus wall/bicycle detail crops inspected. Blue wall speck is too indistinct to form a number or sign, bicycles have reflective paint without lettering. Ordinary courtyard, two distant people from behind, no discernible text/logos or near faces.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:41:06.820283+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+        "bytes": 2446328,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png",
+            "http": 200,
+            "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+            "bytes": 2446328,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png?t=4ce29b1d05a42961",
+            "http": 200,
+            "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+            "bytes": 2446328,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-4-kazimierz-piha-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-4-kazimierz-piha-intro-v1-native.png",
+      "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+      "bytes": 2446328,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "krakow-intro-5",
+      "slot": 5,
+      "cityName": "Krakova",
+      "gameCityId": "krakova",
+      "mediaSlug": "krakow",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural unless historical-scene specified. Generate ONE completely new fictional illustrative city-intro photograph-like image, exactly1536x1024 landscape opaque RGB sRGB. Real camera optics, unposed natural textures, subdued true colours, natural light. No HDR, CGI, painting, cinematic oversaturation, plastic skin, cloned/stamped nature. No text, letters, numerals, signs, house numbers, advertising, logos, brands, branded stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. People small/far/from behind except celebration slot6, where invented adult faces allowed. Western Planty garden in Krakow today, camera centered on a straight quiet gravel walking avenue looking south,1.6m eye height,35mm lens. Two parallel rows of mature irregular lime/chestnut trees converge to a central vanishing point at x50percent/y45percent. Broad pale gravel path enters centered lower edge, low grass lawns on both sides, canopy overhead. A tiny jogger and walker far in the center, seen from behind, no visible faces, plain clothes. Soft spring morning daylight, natural greens, irregular leaves; no statues, buildings, pond, benches, lamps, fences, signs or kiosks. Same path position and SOUTHWARD direction planned for historical1873 pair.",
+      "sources": [
+        {
+          "url": "https://www.krakow.pl/instcbi/11195,inst,4844,0,instcbi.html",
+          "publisher": "City of Krakow",
+          "readFacts": [
+            "Planty laid out1822-1830 on former fortifications; first monument Straszewski1874; kiosks only from1890s.",
+            "Northern Barbican-Slawkowska part laid out around1880; excluded.",
+            "Modern restoration began1988; restored lamp/fence designs excluded from1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://visitmalopolska.pl/obiekt/-/poi/planty-krakowskie",
+          "publisher": "Official tourism portal of Malopolska regional government",
+          "readFacts": [
+            "Tree planting includes chestnut,lime,poplar,maple; first memorial1874.",
+            "Park is old-city green ring, today has eight gardens."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://ruj.uj.edu.pl/server/api/core/bitstreams/e8876af0-c945-49bd-8589-724ff351fea5/content",
+          "publisher": "Jagiellonian University repository, Torowska study",
+          "readFacts": [
+            "History section pp20-21: founded1821-1830; paths/drives demarcated and trees/lawns planted1822-1830; low perimeter fences.",
+            "Changes1870-1911 mean contemporary decorative objects must not be assumed for1873."
+          ],
+          "localSource": "planty-study.pdf; extracted planty-study.txt",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Plantyn puiden varjossa Krakovassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native full frame1536x1024 reviewed: believable irregular leafy avenue, small rear-facing walkers, no logos/signs/monuments/buildings, natural green light and gravel path.",
+          "reviewedAt": "2026-10-12T17:35:51.557223+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:38:57.902589+00:00",
+          "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: south-facing central Planty gravel avenue, irregular mature trees, two small rear-facing people. No signs, monuments, lamps, logos or near faces; authentic green foliage texture and natural available light.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:41:09.699286+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+        "bytes": 3399968,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png",
+            "http": 200,
+            "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+            "bytes": 3399968,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png?t=db8a976b75a3c487",
+            "http": 200,
+            "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+            "bytes": 3399968,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-5-planty-puut-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-5-planty-puut-intro-v1-native.png",
+      "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+      "bytes": 3399968,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "krakow-intro-6",
+      "slot": 6,
+      "cityName": "Krakova",
+      "gameCityId": "krakova",
+      "mediaSlug": "krakow",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural unless historical-scene specified. Generate ONE completely new fictional illustrative city-intro photograph-like image, exactly1536x1024 landscape opaque RGB sRGB. Real camera optics, unposed natural textures, subdued true colours, natural light. No HDR, CGI, painting, cinematic oversaturation, plastic skin, cloned/stamped nature. No text, letters, numerals, signs, house numbers, advertising, logos, brands, branded stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. People small/far/from behind except celebration slot6, where invented adult faces allowed. A joyful informal evening gathering of local Polish young adults aged22-30 in an ordinary anonymous Kazimierz courtyard today, softly lit worn pale stucco and a few plain warm window lights in the background. One invented adult man in the near foreground, smiling in profile toward friends, modern plain muted terracotta overshirt over plain black shirt, natural skin and hair. Varied young adult Polish crowd laughing behind him, casual generic fashionable unbranded clothes. Chest-up candid35mm composition, EVERY person upper-body only, ALL feet and footwear completely outside frame or hidden by shoulders. Zero shoes anywhere. Natural twilight mixed with modest window light, mild real sensor grain, no food, beverages, instruments with branding, banners, text, logos, striped brand motifs or stage signs.",
+      "sources": [
+        {
+          "url": "https://www.krakow.pl/instcbi/1284/inst/10969/801/Ulica-Szeroka.html",
+          "publisher": "City of Krakow",
+          "readFacts": [
+            "Szeroka is broad historic Kazimierz street ensemble; ordinary residential fabric surrounds old quarter."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Nuorten aikuisten ilta Kazimierzissa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Fullframe native reviewed: joyful invented young adult faces, authentic skin, plain contemporary clothing; entire crowd chest-up with zero footwear, no logos/text/food.",
+          "reviewedAt": "2026-10-12T17:36:41.269420+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:38:57.947383+00:00",
+          "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: fictional young adult man foreground with joyful adult courtyard crowd, plain fashionable shirts, every shoe/foot outside crop. No branding, text or food, natural skin texture and ordinary twilight/window light.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:41:12.316862+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+        "bytes": 1938444,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+            "bytes": 1938444,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png?t=c2c28084d2b5f267",
+            "http": 200,
+            "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+            "bytes": 1938444,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-6-kazimierz-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-6-kazimierz-juhla-intro-v1-native.png",
+      "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+      "bytes": 1938444,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "krakow-intro-7",
+      "slot": 7,
+      "cityName": "Krakova",
+      "gameCityId": "krakova",
+      "mediaSlug": "krakow",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural unless historical-scene specified. Generate ONE completely new fictional illustrative city-intro photograph-like image, exactly1536x1024 landscape opaque RGB sRGB. Real camera optics, unposed natural textures, subdued true colours, natural light. No HDR, CGI, painting, cinematic oversaturation, plastic skin, cloned/stamped nature. No text, letters, numerals, signs, house numbers, advertising, logos, brands, branded stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. People small/far/from behind except celebration slot6, where invented adult faces allowed. Krakow old Podgorze at blue hour, cropped oblique view along a row of ordinary historic two/three-storey cream and faded ochre residential houses on the northwestern side of Podgorze market-square area. Modest warm windows and small anonymous wall lamps, wet cobbles after a passing shower gently reflecting light; no exaggerated glow. Eye-level35mm camera close to plain foreground paving, only two small people in distance seen from behind. Frame excludes church, monuments, fountains, modern designed buildings, shops, signs, notices, street names, house numbers, cars and plates. Natural restrained dusk exposure, ordinary urban warmth.",
+      "sources": [
+        {
+          "url": "https://krakow.pl/instcbi/35742/inst/11701/1041/Rynek-Podgorski.html",
+          "publisher": "City of Krakow",
+          "readFacts": [
+            "Oldest row of houses is northwestern frontage of Podgorze market square."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Vanhan Podgórzen ikkunoiden iltavaloa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Fullframe native reviewed: coherent old residential row, modest warm windows, plausible wet cobbles; only rear-facing distant people, no signs/logos/numbers or protected landmarks.",
+          "reviewedAt": "2026-10-12T17:37:43.742544+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:41:01.340838+00:00",
+          "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: ordinary historic residential row, wet cobbles and modest warm windows, small rear-facing couple. No lettering, address signs, logos, near faces or protected monuments; natural twilight exposure.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:41:14.739516+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+        "bytes": 2525441,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png",
+            "http": 200,
+            "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+            "bytes": 2525441,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png?t=6279dfddd38fb81b",
+            "http": 200,
+            "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+            "bytes": 2525441,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-7-podgorze-ikkunat-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-7-podgorze-ikkunat-intro-v1-native.png",
+      "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+      "bytes": 2525441,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "krakow-intro-8-v2",
+      "slot": 8,
+      "attempt": 2,
+      "cityName": "Krakova",
+      "gameCityId": "krakova",
+      "mediaSlug": "krakow",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png",
+      "generationPrompt": "STRICT NEUTRAL BLACK AND WHITE PHOTOGRAPH. True colourless monochrome only: black, neutral grey, white; RGB R=G=B at every pixel. NO yellow, brown, sepia, warm tone, green, blue or ANY colour tint. No antique paper stain, no aged print processing, no yellowed emulsion, no duotone. Render as a neutral black-and-white real-camera image of a historical scene, not a tinted antique reproduction. Generate ONE completely new1536x1024 landscape opaque RGB sRGB illustrative image, entire image newly generated, no recolouring or editing previous pixels. Exact year1873 in scene content, western Planty garden in Krakow. Same southward central-axis gravel avenue view as modern5 and prior8composition: broad pale gravel path enters centered lower edge with edges x10percent/x89percent, narrows to central vanishing point x49percent/y56percent; level grass strips both sides, two parallel rows of naturally irregular lime/chestnut trees; nearest trunks left x16percent/right x87percent, canopy overhead. Historically trees established1822-1830, around40-50years old in1873. Two tiny walkers far away seen from behind, one long coat/trousers, one long skirt/jacket, no visible faces. No buildings, monuments (first1874), pond, kiosks (1890s), restored1988lamps/fences, electricity, bins, sportswear, bicycles or vehicles. Natural gentle daytime light, coherent real-camera perspective, sharp believable unique textures, restrained contrast and fine neutral luminance grain. All leaves, rocks, shadows and water are NEUTRAL GREY, never greenish/brownish; white highlights are neutral white. Zero text, numerals, signs, plaques, letters, labels, logos, brands or branded patterns, watermarks or frames. No painting/CGI/HDR, plastic textures or cloned/stamped nature. Preserve geographical view and composition while correcting only the colour requirement in this whole-new reconstruction. Not an actual archival photograph.",
+      "sources": [
+        {
+          "url": "https://www.krakow.pl/instcbi/11195,inst,4844,0,instcbi.html",
+          "publisher": "City of Krakow",
+          "readFacts": [
+            "Planty laid out1822-1830 on former fortifications; first monument Straszewski1874; kiosks only from1890s.",
+            "Northern Barbican-Slawkowska part laid out around1880; excluded.",
+            "Modern restoration began1988; restored lamp/fence designs excluded from1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://visitmalopolska.pl/obiekt/-/poi/planty-krakowskie",
+          "publisher": "Official tourism portal of Malopolska regional government",
+          "readFacts": [
+            "Tree planting includes chestnut,lime,poplar,maple; first memorial1874.",
+            "Park is old-city green ring, today has eight gardens."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://ruj.uj.edu.pl/server/api/core/bitstreams/e8876af0-c945-49bd-8589-724ff351fea5/content",
+          "publisher": "Jagiellonian University repository, Torowska study",
+          "readFacts": [
+            "History section pp20-21: founded1821-1830; paths/drives demarcated and trees/lawns planted1822-1830; low perimeter fences.",
+            "Changes1870-1911 mean contemporary decorative objects must not be assumed for1873."
+          ],
+          "localSource": "planty-study.pdf; extracted planty-study.txt",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Plantyn puistokäytävä vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Fullframe native reviewed: visibly neutral black/grey/white, no yellow/sepia/warm tint; same central south-facing Planty avenue and distant1873rear-facing walkers, natural leaf/stone detail, no later objects.",
+          "reviewedAt": "2026-10-12T18:19:47.415536+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:24:30.905984+00:00",
+          "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame+modern5 pair: straight same-axis Planty avenue and period rear-facing couple, no later objects/text. New neutral monochrome rendering passes reinspection; measured global channelmean spread0.269. No pixel recoloring.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:24:35.612787+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+        "bytes": 3449200,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png",
+            "http": 200,
+            "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+            "bytes": 3449200,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png?t=300d3fbcfea8de88",
+            "http": 200,
+            "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+            "bytes": 3449200,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-8-planty1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-8-planty1873-intro-v2-native.png",
+      "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+      "bytes": 3449200,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "producerCurrentID": "krakow-intro-8"
+    }
+  ],
+  "omittedItems": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "productionComplete": true,
+  "successfulImageReturns": 6,
+  "candidateAssets": [
+    {
+      "id": "krakow-intro-8",
+      "slot": 8,
+      "cityName": "Krakova",
+      "gameCityId": "krakova",
+      "mediaSlug": "krakow",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural unless historical-scene specified. Generate ONE completely new fictional illustrative city-intro photograph-like image, exactly1536x1024 landscape opaque RGB sRGB. Real camera optics, unposed natural textures, subdued true colours, natural light. No HDR, CGI, painting, cinematic oversaturation, plastic skin, cloned/stamped nature. No text, letters, numerals, signs, house numbers, advertising, logos, brands, branded stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. People small/far/from behind except celebration slot6, where invented adult faces allowed. Use case: historical-scene. Exact year1873, western Planty garden in Krakow, same southward central-axis avenue view as modern pair: broad pale gravel path centered lower edge and narrows to central vanishing point x49percent/y56percent, level grass strips both sides, two parallel rows of irregular lime/chestnut trees framing path, overhead natural canopy. Trees historically around40-50years established, not giant ancient trunks. Camera1.6m,35mm equivalent, facing south; no buildings visible. Two tiny period walkers far away from behind: long plain coat/trousers and long skirt/jacket, no faces. PURE NEUTRAL BLACK AND WHITE every pixel grey, no sepia or tint; believable nineteenth-century plate photo with fine grain and soft contrast, no border. No monuments (first memorial1874), ponds, kiosks (1890s), modern paving, restored1988 lamps/fences, electrical lighting, trash cans, sportswear, bikes or cars. Quiet daylight. Same geographic park area and same camera direction.\n Additional visual-pair anchors: nearest left-row trunk at x16percent, nearest right-row trunk at x87percent; path sides enter bottom at x10percent and x89percent and converge centrally; canopy fills top, no horizon or buildings, lawns left/right. Keep the same level ground, central-axis southward direction and straight avenue composition as the modern photograph.",
+      "sources": [
+        {
+          "url": "https://www.krakow.pl/instcbi/11195,inst,4844,0,instcbi.html",
+          "publisher": "City of Krakow",
+          "readFacts": [
+            "Planty laid out1822-1830 on former fortifications; first monument Straszewski1874; kiosks only from1890s.",
+            "Northern Barbican-Slawkowska part laid out around1880; excluded.",
+            "Modern restoration began1988; restored lamp/fence designs excluded from1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://visitmalopolska.pl/obiekt/-/poi/planty-krakowskie",
+          "publisher": "Official tourism portal of Malopolska regional government",
+          "readFacts": [
+            "Tree planting includes chestnut,lime,poplar,maple; first memorial1874.",
+            "Park is old-city green ring, today has eight gardens."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://ruj.uj.edu.pl/server/api/core/bitstreams/e8876af0-c945-49bd-8589-724ff351fea5/content",
+          "publisher": "Jagiellonian University repository, Torowska study",
+          "readFacts": [
+            "History section pp20-21: founded1821-1830; paths/drives demarcated and trees/lawns planted1822-1830; low perimeter fences.",
+            "Changes1870-1911 mean contemporary decorative objects must not be assumed for1873."
+          ],
+          "localSource": "planty-study.pdf; extracted planty-study.txt",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Plantyn puistokäytävä vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: central southward gravel avenue matches modern composition, planted tree rows and lawns; distant period walkers from behind; no later memorials/kiosks/modern fixtures; neutral monochrome.",
+          "reviewedAt": "2026-10-12T17:38:54.588614+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:18:50.413264+00:00",
+          "sha256": "1a2e2f23fd9b402e3d933234c0aece93c42b2fe5548c6ccb2a4179f44fc6dc5b",
+          "approvedForTechnicalDelivery": false,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Approval withdrawn after whole-frame reinspection and channel audit: noticeably warm taupe/yellow neutrality failure, meanRGB105.10/100.87/95.91. Preserve immutable R2v1 and native, one authorized full-new8v2 correction pending.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:41:17.143453+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "1a2e2f23fd9b402e3d933234c0aece93c42b2fe5548c6ccb2a4179f44fc6dc5b",
+        "bytes": 3088915,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v1.png",
+            "http": 200,
+            "sha256": "1a2e2f23fd9b402e3d933234c0aece93c42b2fe5548c6ccb2a4179f44fc6dc5b",
+            "bytes": 3088915,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v1.png?t=1a2e2f23fd9b402e",
+            "http": 200,
+            "sha256": "1a2e2f23fd9b402e3d933234c0aece93c42b2fe5548c6ccb2a4179f44fc6dc5b",
+            "bytes": 3088915,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-8-planty1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-8-planty1873-intro-v1-native.png",
+      "sha256": "1a2e2f23fd9b402e3d933234c0aece93c42b2fe5548c6ccb2a4179f44fc6dc5b",
+      "bytes": 3088915,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "slot": 8,
+      "reason": "Session owner QA rejected: Approval withdrawn after whole-frame reinspection and channel audit: noticeably warm taupe/yellow neutrality failure, meanRGB105.10/100.87/95.91. Preserve immutable R2v1 and native, one authorized full-new8v2 correction pending.",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-8-planty1873-intro-v1-native.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-8-planty1873-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural unless historical-scene specified. Generate ONE completely new fictional illustrative city-intro photograph-like image, exactly1536x1024 landscape opaque RGB sRGB. Real camera optics, unposed natural textures, subdued true colours, natural light. No HDR, CGI, painting, cinematic oversaturation, plastic skin, cloned/stamped nature. No text, letters, numerals, signs, house numbers, advertising, logos, brands, branded stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. People small/far/from behind except celebration slot6, where invented adult faces allowed. Use case: historical-scene. Exact year1873, western Planty garden in Krakow, same southward central-axis avenue view as modern pair: broad pale gravel path centered lower edge and narrows to central vanishing point x49percent/y56percent, level grass strips both sides, two parallel rows of irregular lime/chestnut trees framing path, overhead natural canopy. Trees historically around40-50years established, not giant ancient trunks. Camera1.6m,35mm equivalent, facing south; no buildings visible. Two tiny period walkers far away from behind: long plain coat/trousers and long skirt/jacket, no faces. PURE NEUTRAL BLACK AND WHITE every pixel grey, no sepia or tint; believable nineteenth-century plate photo with fine grain and soft contrast, no border. No monuments (first memorial1874), ponds, kiosks (1890s), modern paving, restored1988 lamps/fences, electrical lighting, trash cans, sportswear, bikes or cars. Quiet daylight. Same geographic park area and same camera direction.\n Additional visual-pair anchors: nearest left-row trunk at x16percent, nearest right-row trunk at x87percent; path sides enter bottom at x10percent and x89percent and converge centrally; canopy fills top, no horizon or buildings, lawns left/right. Keep the same level ground, central-axis southward direction and straight avenue composition as the modern photograph."
+    }
+  ],
+  "updatedAt": "2026-10-12T18:23:33.985829+00:00",
+  "deliverySelection": {
+    "reason": "Select independently reviewed whole-new8v2; unique gallery ID preserves prior8v1 and saved decisions.",
+    "selectedAt": "2026-10-12T19:25:25.555629+00:00",
+    "producerCurrentSlot8ID": "krakow-intro-8",
+    "selectedSlot8ID": "krakow-intro-8-v2"
+  },
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "krakow",
+    "gameCityId": "krakova",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/planty-study.txt",
+      "https://www.krakow.pl/instcbi/11195,inst,4844,0,instcbi.html",
+      "https://visitmalopolska.pl/obiekt/-/poi/planty-krakowskie"
+    ],
+    "assets": [
+      {
+        "id": "krakow-intro-4",
+        "slot": 4,
+        "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä kaukaisten henkilöiden/kasvien, pyörien ja puisen pihagallerian natiivirajaukset tarkastettu.",
+          "Koherentti arkinen kameranäkymä; kulunut rappaus, puu ja kiveys epäsäännöllisiä. Kasvillisuus luonnollista, ei leimakuvioita tai muovisuutta.",
+          "Kaksi pientä selin olevaa henkilöä; kassit, vaatteet ja pyörät geneerisiä/merkitsemättömiä. Ei tekstiä, osoitenumeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "krakow-intro-5",
+        "slot": 5,
+        "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä molempien puolien puunkuoren/lehtien ja kaukaisten henkilöiden/polun natiivirajaukset tarkastettu.",
+          "Luonnolliset epäsäännölliset rungot, kaarna, haarautuminen ja lehtimassat; ei kaarnaleimaa tai muovisuutta. Uskottavat päivänvalon siivilöityvät varjot ja suora puistokäytävän perspektiivi.",
+          "Kaksi pientä selin olevaa nykyajan henkilöä; ei etualan kasvoja, tekstiä, logoja, brändikuvioita tai ruokaa.",
+          "Käytävä keskellä, puu-/nurmikaistat molemmin puolin ja pakopiste keskellä. Kuva5 on1873-kuvan8 moderni vertailupari.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "krakow-intro-6",
+        "slot": 6,
+        "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja etualan kasvot sekä sivuhenkilöiden kasvot/hiukset/vaatteet/käsien näkyvät osat tarkastettu natiivikoossa.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten pihajuhla ja geneeriset muodikkaat nykyvaatteet; iho, hampaat, hiukset ja näkyvät osittaiset kädet uskottavia.",
+          "Kaikki ihmiset rajattu tai peitetty jalkineiden yläpuolelta. Ei jalkineita, ruokaa, juomapakkauksia, tekstiä, logoja tai brändikuvioita missään kehyksessä.",
+          "Koherentti hämärä/ikkunavalo, kameramainen optinen taustan pehmeys ja perspektiivi.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "krakow-intro-7",
+        "slot": 7,
+        "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä ovien/kasvien/rappauksen ja kaukaisten ihmisten/puun natiivirajaukset tarkastettu.",
+          "Kujan perspektiivi koherentti, luonnollinen hämärä ja lämpimät valot vastaavat märän kiveyksen heijastuksia. Kasvien haarat/lehdet ja puunrunko epäsäännöllisiä.",
+          "Kaksi pientä ihmistä selin; ei tekstiä, osoitenumeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "krakow-intro-8-v2",
+        "slot": 8,
+        "version": 2,
+        "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/krakow-8-planty1873-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/native/krakow-8-planty1873-intro-v2-native.png",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uusi8v2 hyväksytty riippumattomassa korvaavan kuvan QA:ssa: visuaalisesti neutraali mustavalkoinen, modernin5 katselusuunta ja1873-exclusions täyttyvät.",
+        "observations": [
+          "Koko1536x1024 kehys tarkastettu tools.view_image original; molempien lähirunkojen/kaarnan/lehtien ja puistokäytävän/aikakauden henkilöiden natiivirajaukset tarkastettu ilman skaalausta.",
+          "Näkyvä kokonaisilme on neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista lämmintä/kylmää sävytystä. RGB-kanavien numeerista nollatoleranssia ei vaadittu.",
+          "Vertailtu moderniin5:een, jonka alkuperäinen SHA256 vastaa aiempaa QA:ta: sama suora keskiakselin etelään katsova puistokäytävä, pakopiste keskellä, puu- ja nurmikaistat molemmin puolin sekä lehvästö ylhäällä.",
+          "Luonnollinen epäsäännöllinen puunkuori, haarautuminen, lehdet ja polun pinta; ei kaarnaleimaa, muovisuutta tai kloonattuja orgaanisia kuvioita. Koherentti luonnonvalo ja kameran perspektiivi.",
+          "Kaksi hyvin pientä selin olevaa aikakauden aikuista: pitkä takki/housut ja pitkähameinen asu/hattu. Ei havaittavaa anatomista virhettä, etualan kasvoja, tekstiä, numeroita, logoja, brändikuvioita tai ruokaa.",
+          "Sama brief/sources.json luettu; yliopistotutkimuksen painettujen sivujen20–21 paikallinen tekstisisältö luettu uudelleen. Aiemmin tässä QA-sessiossa avatut2 virallista lähdesivua tukevat1822–1830 polku/nurmi/puu-perusasetelmaa ja1874-alkaneiden muistomerkkien poissulkemista.",
+          "1873-exclusions tarkastettu: ei myöhempää noin1880-pohjoisosaa,1874-alkaneita muistomerkkejä tai veistoksia,1890-luvun kioskeja,1988-restauroituja lamppuja/aitoja, rakennuksia, lammikkoa, sähkövaloa, roskiksia, urheiluvaatteita, pyöriä tai ajoneuvoja.",
+          "Tarkka yksittäinen puu-/polkuasettelu ja1873-puistosijainti ovat konservatiivinen havainnollinen rekonstruktio, eivät mitatun arkistopaikkakuvan tarkkuusväite.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa nykymanifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/krakow/crops/replacement-8-v2-left-bark-leaves.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/krakow/crops/replacement-8-v2-right-bark-leaves.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/krakow/crops/replacement-8-v2-path-period-people.png"
+        ],
+        "producerReviewedID": "krakow-intro-8"
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "reviewedAt": "2026-10-12T17:52:34.787533+00:00",
+    "sourceManifestSha256": "12d6a78b2ccb6549beeff511d6cea0b7fbde173dbd454f25202a211e1e6a2b1e",
+    "replacementQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/krakow/replacement-qa.json"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "krakow",
+    "verifiedAt": "2026-10-12T19:25:27.817175+00:00",
+    "assets": [
+      {
+        "id": "krakow-intro-4",
+        "slot": 4,
+        "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+        "bytes": 2446328,
+        "verifiedAt": "2026-10-12T19:25:26.415748+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png",
+            "http": 200,
+            "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+            "bytes": 2446328,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-4-kazimierz-piha-intro-v1.png?delivery-verify=4ce29b1d05a42961-1791833126415741000",
+            "http": 200,
+            "sha256": "4ce29b1d05a429615191a3e123dcf0db0141ca91d3c85b991bc48c7fd83ceb60",
+            "bytes": 2446328,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "krakow-intro-5",
+        "slot": 5,
+        "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+        "bytes": 3399968,
+        "verifiedAt": "2026-10-12T19:25:26.416975+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png",
+            "http": 200,
+            "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+            "bytes": 3399968,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-5-planty-puut-intro-v1.png?delivery-verify=db8a976b75a3c487-1791833126416971000",
+            "http": 200,
+            "sha256": "db8a976b75a3c48749cc9349878db473a1061c7a9ff245b2d565b3d2f40815bb",
+            "bytes": 3399968,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "krakow-intro-6",
+        "slot": 6,
+        "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+        "bytes": 1938444,
+        "verifiedAt": "2026-10-12T19:25:26.417097+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+            "bytes": 1938444,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-6-kazimierz-juhla-intro-v1.png?delivery-verify=c2c28084d2b5f267-1791833126417096000",
+            "http": 200,
+            "sha256": "c2c28084d2b5f267a67331daaad075e643ffa4648f2087a11beff2467e0db890",
+            "bytes": 1938444,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "krakow-intro-7",
+        "slot": 7,
+        "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+        "bytes": 2525441,
+        "verifiedAt": "2026-10-12T19:25:26.926461+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png",
+            "http": 200,
+            "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+            "bytes": 2525441,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-7-podgorze-ikkunat-intro-v1.png?delivery-verify=6279dfddd38fb81b-1791833126926454000",
+            "http": 200,
+            "sha256": "6279dfddd38fb81b5693abb7dd716b729dc92d015f2093a71922617ad3ac16d5",
+            "bytes": 2525441,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "krakow-intro-8-v2",
+        "slot": 8,
+        "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+        "bytes": 3449200,
+        "verifiedAt": "2026-10-12T19:25:27.059479+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png",
+            "http": 200,
+            "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+            "bytes": 3449200,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/krakow/20261012-full/krakow-8-planty1873-intro-v2.png?delivery-verify=300d3fbcfea8de88-1791833127059473000",
+            "http": 200,
+            "sha256": "300d3fbcfea8de88c72b1ed5fcc41f2847f9c5be910135cfa83c0ee10e28e019",
+            "bytes": 3449200,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/krakow/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.717065+00:00"
+}

@@ -1,0 +1,1053 @@
+{
+  "cityName": "Lappi",
+  "gameCityId": "lappi",
+  "mediaSlug": "lapland",
+  "updatedAt": "2026-10-12T17:40:02.398908+00:00",
+  "assets": [
+    {
+      "id": "intro-lappi-4-v1",
+      "slot": 4,
+      "cityName": "Lappi",
+      "gameCityId": "lappi",
+      "mediaSlug": "lapland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-4-inari-talviarki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-4-inari-talviarki-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png",
+      "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native output PNG1536x1024 landscape3:2, opaque RGB sRGB. Looks like a real unprocessed camera photograph, believable natural light, muted authentic colors, irregular real wood, snow and foliage, natural skin pores. No HDR, CGI, painting, cinematic oversaturation, repeated patterns. Absolutely no text, signs, lettering, logos, brands, house numbers, watermark, frame, murals, sculptures or recognizable modern designer architecture. No food. Use case: photorealistic-natural. Present-day Inari village in Finnish Lapland on a quiet winter morning. Low ordinary red and pale-yellow wooden residential houses, plain modest roofs partly covered in uneven snow, birch and pine trees. Eye-level35mm view along snowy pedestrian lane. Three small distant adult residents walking away in contemporary plain winter coats, backs turned, no recognizable faces. Soft grey daylight, compacted footmarks irregular in snow. No named public building, shop, traffic sign or decorative art.",
+      "sources": [
+        {
+          "url": "https://inari150.fi/inaris-history/",
+          "title": "Inari Municipality150 historical boards with Siida and Gold Museum expertise",
+          "readFacts": [
+            "Inarijärvi basin formed after ice age; centuries of lake transport by boat before1873.",
+            "Inari village centre developed from1880s; road Inari-Ivalo1925; lake water regulation began1941.1873 excludes modern village buildings, roads, motors, docks, electricity, navigation markers and regulated shore structures.",
+            "Exact composition only natural rock shore, lake and distant pine islands, avoiding assumptions about historical built environment.",
+            "1912-1914 lake sailboat image noted but later than1873; no target-year photo found in focused search."
+          ],
+          "appliesTo": [
+            4,
+            5,
+            7,
+            8
+          ]
+        }
+      ],
+      "caption": "Inarin kylän talvinen arkikävely. Havainnekuva.",
+      "QA": {
+        "id": "intro-lappi-4-v1",
+        "slot": 4,
+        "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:32:07.562165+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary snowy Inari wooden street, native near house panel is plain window surround not sign; no text/logo, distant back-view people, irregular winter trees and snow.",
+        "detailCrops": [
+          "session-owner-review/slot4-house-mark-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-4-inari-talviarki-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-4-inari-talviarki-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+        "bytes": 2755657,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:39:49.224347+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+        "bytes": 2755657,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png",
+            "http": 200,
+            "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+            "bytes": 2755657,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png?verify=north-fdfab067661d0bdf-1791826789224572000",
+            "http": 200,
+            "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+            "bytes": 2755657,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2755657
+    },
+    {
+      "id": "intro-lappi-5-v1",
+      "slot": 5,
+      "cityName": "Lappi",
+      "gameCityId": "lappi",
+      "mediaSlug": "lapland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-5-pahtaniemi-inarijarvi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-5-pahtaniemi-inarijarvi-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png",
+      "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native output PNG1536x1024 landscape3:2, opaque RGB sRGB. Looks like a real unprocessed camera photograph, believable natural light, muted authentic colors, irregular real wood, snow and foliage, natural skin pores. No HDR, CGI, painting, cinematic oversaturation, repeated patterns. Absolutely no text, signs, lettering, logos, brands, house numbers, watermark, frame, murals, sculptures or recognizable modern designer architecture. No food. Use case: photorealistic-natural. Present-day Lake Inarijärvi, Finland, at Pahtaniemi natural lakeshore viewpoint facing due east over Ukonselkä. Eye-level35mm lens, broad open calm lake fills center and lower-right; a distinctly sloping dark grey granite ledge occupies the entire bottom-left corner, with sparse Scots pines at far-left edge. Horizon at upper third, low small irregular pine-covered islands grouped on the RIGHT third of the horizon, the LEFT horizon is more open water. Soft cloudy early July afternoon, subtle ripples, cool muted colors. Geological shoreline, not a mountain panorama. No people, buildings, docks, trails, navigation markers, sacred island landmarks, boats or manmade objects. This exact geometric layout will form the1873 historical pair.",
+      "sources": [
+        {
+          "url": "https://www.luontoon.fi/fi/artikkelit/inarijarvi-melojille",
+          "title": "Metsähallitus, Inarijärvi melojille",
+          "readFacts": [
+            "Pahtaniemi cliff is a named shore viewpoint on Inarijärvi; no hiking structures at Pahtaniemi.",
+            "Rugged lake with many pine-covered islands and exposed waters; view east out onto Ukonselkä, exclude sacred island landmarks."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://inari150.fi/inaris-history/",
+          "title": "Inari Municipality150 historical boards with Siida and Gold Museum expertise",
+          "readFacts": [
+            "Inarijärvi basin formed after ice age; centuries of lake transport by boat before1873.",
+            "Inari village centre developed from1880s; road Inari-Ivalo1925; lake water regulation began1941.1873 excludes modern village buildings, roads, motors, docks, electricity, navigation markers and regulated shore structures.",
+            "Exact composition only natural rock shore, lake and distant pine islands, avoiding assumptions about historical built environment.",
+            "1912-1914 lake sailboat image noted but later than1873; no target-year photo found in focused search."
+          ],
+          "appliesTo": [
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "url": "https://www.ymparisto.fi/fi/luonto-vesistot-ja-meri/luonnon-monimuotoisuus/suojelu-ennallistaminen-ja-luonnonhoito/natura-2000-alueet/inarijarvi",
+          "title": "Finnish Environment administration, Inarijärvi Natura",
+          "readFacts": [
+            "Subarctic rugged large lake with clear water, islands and shore forests."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        }
+      ],
+      "caption": "Inarijärvi Pahtaniemen luonnonrannalta. Havainnekuva.",
+      "QA": {
+        "id": "intro-lappi-5-v1",
+        "slot": 5,
+        "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:33:30.314479+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: Pahtaniemi natural shore illustration with irregular rock, pine branching and lake ripples; native crop inspected, no stamped trees, text, signs, faces or protected architecture.",
+        "detailCrops": [
+          "session-owner-review/slot5-pine-rock-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-5-pahtaniemi-inarijarvi-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-5-pahtaniemi-inarijarvi-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+        "bytes": 2420414,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:39:52.520643+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+        "bytes": 2420414,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png",
+            "http": 200,
+            "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+            "bytes": 2420414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png?verify=north-41a1ba17512afb54-1791826792520662000",
+            "http": 200,
+            "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+            "bytes": 2420414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2420414
+    },
+    {
+      "id": "intro-lappi-6-v1",
+      "slot": 6,
+      "version": 1,
+      "cityName": "Lappi",
+      "gameCityId": "lappi",
+      "mediaSlug": "lapland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-6-rovaniemi-juhannus-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-6-rovaniemi-juhannus-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/lapland/20261012-full/lapland-6-rovaniemi-juhannus-intro-v1.png",
+      "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native output PNG1536x1024 landscape3:2, opaque RGB sRGB. Looks like a real unprocessed camera photograph, believable natural light, muted authentic colors, irregular real wood, snow and foliage, natural skin pores. No HDR, CGI, painting, cinematic oversaturation, repeated patterns. Absolutely no text, signs, lettering, logos, brands, house numbers, watermark, frame, murals, sculptures or recognizable modern designer architecture. No food. Use case: photorealistic-natural. Present-day Rovaniemi, Finnish Lapland, joyful young-adult midsummer riverside community party in a simple open riverside grove beside Kemijoki, under pale northern evening sky. A fictional Finnish adult man aged27 in the foreground laughing warmly while turning toward a nearby friend, chest-up close framing, short brown slightly windswept hair, generic fashionable plain ivory knit short-sleeve shirt. Behind him a dense cheerful group aged22-32, varied natural local appearances, contemporary plain modern casual clothing, sharing a happy summer moment with relaxed dance gestures. River and ordinary birches softly blurred behind. Natural candid35mm photograph. Crowd fills frame with overlapping upper bodies; ALL legs, feet and footwear of EVERY person MUST be completely outside crop or hidden. No musical instruments, stage, devices, headwear, banners, beer, food, drink, emblems, branded stripes or text. Human real skin texture, not staged fashion advertising.",
+      "sources": [
+        {
+          "url": "https://www.visitrovaniemi.fi/summer-events-in-rovaniemi/",
+          "title": "Visit Rovaniemi summer events",
+          "readFacts": [
+            "Summer events and midsummer celebrations, riverside gatherings beside Kemijoki. Image shows fictional informal party, not a documented real event."
+          ],
+          "appliesTo": [
+            6
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten kesäjuhla Rovaniemellä. Havainnekuva.",
+      "QA": {
+        "id": "intro-lappi-6-v1",
+        "slot": 6,
+        "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:35:46.453181+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: cheerful fictional young-adult riverside midsummer crowd, natural skin/knit inspected natively; generic clothing, no instruments/text/logos, no footwear at any depth.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-knit-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-6-rovaniemi-juhannus-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-6-rovaniemi-juhannus-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+        "bytes": 2248707,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-6-rovaniemi-juhannus-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:39:55.438236+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+        "bytes": 2248707,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-6-rovaniemi-juhannus-intro-v1.png",
+            "http": 200,
+            "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+            "bytes": 2248707,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-6-rovaniemi-juhannus-intro-v1.png?verify=north-542fb087fefa2e2b-1791826795438254000",
+            "http": 200,
+            "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+            "bytes": 2248707,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2248707
+    },
+    {
+      "id": "intro-lappi-7-v1",
+      "slot": 7,
+      "version": 1,
+      "cityName": "Lappi",
+      "gameCityId": "lappi",
+      "mediaSlug": "lapland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-7-ivalo-talvi-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-7-ivalo-talvi-ilta-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png",
+      "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native output PNG1536x1024 landscape3:2, opaque RGB sRGB. Looks like a real unprocessed camera photograph, believable natural light, muted authentic colors, irregular real wood, snow and foliage, natural skin pores. No HDR, CGI, painting, cinematic oversaturation, repeated patterns. Absolutely no text, signs, lettering, logos, brands, house numbers, watermark, frame, murals, sculptures or recognizable modern designer architecture. No food. Use case: photorealistic-natural. Present-day Ivalo village, Finnish Lapland, ordinary quiet residential lane at blue hour on a winter evening. Low red and subdued yellow wooden homes with simple pitched snow-covered roofs, several warm lit windows, plain modest street lamps, scattered pine trees and bare birches. Eye-level35mm view along an unmarked snow-covered lane, two small distant adults seen from behind in plain coats. Dark cobalt-grey sky, no aurora. Natural exposure, subtle warm-light reflections in irregular snow, no glowing CGI. No church, museum, iconic architecture, shops or signage.",
+      "sources": [
+        {
+          "url": "https://inari150.fi/inaris-history/",
+          "title": "Inari Municipality150 historical boards with Siida and Gold Museum expertise",
+          "readFacts": [
+            "Inarijärvi basin formed after ice age; centuries of lake transport by boat before1873.",
+            "Inari village centre developed from1880s; road Inari-Ivalo1925; lake water regulation began1941.1873 excludes modern village buildings, roads, motors, docks, electricity, navigation markers and regulated shore structures.",
+            "Exact composition only natural rock shore, lake and distant pine islands, avoiding assumptions about historical built environment.",
+            "1912-1914 lake sailboat image noted but later than1873; no target-year photo found in focused search."
+          ],
+          "appliesTo": [
+            4,
+            5,
+            7,
+            8
+          ]
+        }
+      ],
+      "caption": "Ivalon tavallinen asuinkatu talvi-illassa. Havainnekuva.",
+      "QA": {
+        "id": "intro-lappi-7-v1",
+        "slot": 7,
+        "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:37:46.250269+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: winter Ivalo ordinary wooden street and distant back-view walkers; native small partially snow-covered car has no discernible text or logo; natural irregular snow/branches, plain facades.",
+        "detailCrops": [
+          "session-owner-review/slot7-car-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-7-ivalo-talvi-ilta-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-7-ivalo-talvi-ilta-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+        "bytes": 2549946,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:39:58.839664+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+        "bytes": 2549946,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+            "bytes": 2549946,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png?verify=north-764a60558cf15a4b-1791826798839683000",
+            "http": 200,
+            "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+            "bytes": 2549946,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2549946
+    },
+    {
+      "id": "intro-lappi-8-v1",
+      "slot": 8,
+      "version": 1,
+      "cityName": "Lappi",
+      "gameCityId": "lappi",
+      "mediaSlug": "lapland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-8-pahtaniemi-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-8-pahtaniemi-1873-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/lapland/20261012-full/lapland-8-pahtaniemi-1873-intro-v1.png",
+      "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native output PNG1536x1024 landscape3:2, opaque RGB sRGB. Looks like a real unprocessed camera photograph, believable natural light, muted authentic colors, irregular real wood, snow and foliage, natural skin pores. No HDR, CGI, painting, cinematic oversaturation, repeated patterns. Absolutely no text, signs, lettering, logos, brands, house numbers, watermark, frame, murals, sculptures or recognizable modern designer architecture. No food. Use case: historical-scene. Exact year1873, Lake Inarijärvi at Pahtaniemi natural shore, Finnish Lapland. Neutral black-and-white grayscale photograph appearance with subtle fine grain and soft period-camera contrast, no sepia. Face due east onto Ukonselkä from the SAME natural shore eye-level35mm viewpoint: broad calm lake center and lower-right, distinctly sloping dark grey granite ledge covering bottom-LEFT corner, sparse Scots pines at far-LEFT edge. Horizon upper third; low pine-covered islands grouped on the RIGHT third, LEFT horizon open water. Same layout as the modern pair. The glacial basin and rock shore existed millennia before1873. No people or boats required, just water, rock and irregular trees. Absolutely no buildings, modern village, motorboats, docks, roads, lamps, electricity, navigation marks, signs, regulated shoreline structures, hiking furniture or modern equipment. Unmanaged natural shoreline before1941 lake regulation. The supplied modern image is ONLY a geometry reference for the landscape. Generate a completely new1873 historical scene from scratch in this same location, same view, same sloping left granite shore and low island arrangement right horizon. Do not simply recolor the modern image; reconstruct period natural vegetation, unmanaged shoreline and photographic light.",
+      "sources": [
+        {
+          "url": "https://www.luontoon.fi/fi/artikkelit/inarijarvi-melojille",
+          "title": "Metsähallitus, Inarijärvi melojille",
+          "readFacts": [
+            "Pahtaniemi cliff is a named shore viewpoint on Inarijärvi; no hiking structures at Pahtaniemi.",
+            "Rugged lake with many pine-covered islands and exposed waters; view east out onto Ukonselkä, exclude sacred island landmarks."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://inari150.fi/inaris-history/",
+          "title": "Inari Municipality150 historical boards with Siida and Gold Museum expertise",
+          "readFacts": [
+            "Inarijärvi basin formed after ice age; centuries of lake transport by boat before1873.",
+            "Inari village centre developed from1880s; road Inari-Ivalo1925; lake water regulation began1941.1873 excludes modern village buildings, roads, motors, docks, electricity, navigation markers and regulated shore structures.",
+            "Exact composition only natural rock shore, lake and distant pine islands, avoiding assumptions about historical built environment.",
+            "1912-1914 lake sailboat image noted but later than1873; no target-year photo found in focused search."
+          ],
+          "appliesTo": [
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "url": "https://www.ymparisto.fi/fi/luonto-vesistot-ja-meri/luonnon-monimuotoisuus/suojelu-ennallistaminen-ja-luonnonhoito/natura-2000-alueet/inarijarvi",
+          "title": "Finnish Environment administration, Inarijärvi Natura",
+          "readFacts": [
+            "Subarctic rugged large lake with clear water, islands and shore forests."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        }
+      ],
+      "caption": "Inarijärvi Pahtaniemen rannalta vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "intro-lappi-8-v1",
+        "slot": 8,
+        "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:39:46.691642+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 lake/rock/pine illustration, same5 horizon/left shore/right island placement; native shore texture inspected natural, no modern roads/docks/electricity/structures; historical municipal and nature sources read.",
+        "detailCrops": [
+          "session-owner-review/slot8-rock-shore-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/native/lapland-8-pahtaniemi-1873-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/final/lapland-8-pahtaniemi-1873-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+        "bytes": 2530272,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-8-pahtaniemi-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:40:01.865093+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+        "bytes": 2530272,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-8-pahtaniemi-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+            "bytes": 2530272,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-8-pahtaniemi-1873-intro-v1.png?verify=north-8f84c855924570a4-1791826801865113000",
+            "http": 200,
+            "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+            "bytes": 2530272,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2530272
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "lapland",
+    "gameCityId": "lappi",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/sources-before-generation.json"
+    ],
+    "sourceManifestSha256": "e04da3fea898de018642239068da63ef83ecdae569caddb975f4125accc31724",
+    "assets": [
+      {
+        "id": "intro-lappi-4-v1",
+        "slot": 4,
+        "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Talvisen kyläkuvan koivunkuori, oksisto, puutalojen pinnat ja lumijäljet ovat luonnollisen epäsäännöllisiä. Kolme pientä aikuista näkyy selin. Tekstiä, numeroita, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan koivunkuoresta, ihmisistä ja oikeanpuoleisesta talosta/lumesta tarkastettu.",
+          "Koivun valkoiset ja tummat kuorilaikut vaihtelevat koossa ja asennossa; ei toistuvaa kaarnaleimaa tai painettua kuviota.",
+          "Paljaat oksat ja havupuiden haarat ovat epäsäännöllisiä; puulaudoitus, lumen kerrostumat ja painaumat näyttävät kameramaisilta.",
+          "Kävelijöiden kasvoja ei näy. Ei eläimiä, ruokaa, kylttejä tai tunnuksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/4-birch-bark.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/4-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/4-houses-snow.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false
+        },
+        "technicalEvidence": {
+          "bytes": 2755657,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "intro-lappi-5-v1",
+        "slot": 5,
+        "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Rantakallion halkeamat, jäkälä, mäntyjen oksat ja järven heijastukset ovat luonnollisia. Saariryhmä ja kallion paikka muodostavat slot8:n kanssa yhtenäisen katselusuunnan. Ei ihmisiä, eläimiä, kirjoitusta tai rakennelmia.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset vasemmista männyistä/kalliosta, jäkälästä ja saarista/vedestä tarkastettu.",
+          "Männyn neulastupsut ja oksien haarat vaihtelevat. Jäkälä muodostaa epäsäännöllisiä laikkuja ilman leimakuviota.",
+          "Lähikallio laskee alhaalla/vasemmalla kohti vettä. Matalat metsäiset saaret sijoittuvat oikealle, ja vasen suunta on avointa vettä.",
+          "Ei eläimiä, veneitä, laitureita, navigointimerkkejä, tekstiä tai logoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/5-pine-rock.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/5-rock-lichen.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/5-islands-water.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false
+        },
+        "technicalEvidence": {
+          "bytes": 2420414,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "intro-lappi-6-v1",
+        "slot": 6,
+        "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen mies on anatomisesti uskottava, iho ja hiukset luonnollisia ja neule geneeristä nykymuotia. Juhlaväki näkyy ylävartaloina ilman jalkineita, ruokaa, tekstiä tai brändejä.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, oikeista käsistä sekä vasemman puolen nostetusta kädestä ja taustakoivuista tarkastettu.",
+          "Kasvojen iho, hampaat, korva ja hiukset ovat luonnollisia. Nostetuissa/taipuneissa käsissä ei selkeää ylimääräistä osaa tai mahdotonta asentoa.",
+          "Kaikki näkyvät henkilöt ovat aikuisia; alavartalot ja jalkineet jäävät kehyksen ulkopuolelle tai muiden peittoon.",
+          "Vaatteet ja pienet korut ovat geneerisiä; ei logoja, tunnistettavaa brändikuviota, ruokaa, juomia tai tekstiä. Taustakoivut ovat optisesti epäteräviä ja epäsäännöllisiä.",
+          "Ei eläimiä kuvassa.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/6-right-hands.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/6-left-birches-hand.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false
+        },
+        "technicalEvidence": {
+          "bytes": 2248707,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "intro-lappi-7-v1",
+        "slot": 7,
+        "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Sinisen hetken lumipinnat, puut ja lämpimien valojen jakautuminen ovat uskottavia. Kaksi pientä kävelijää näkyy selin. Osittain lumen takana olevassa pienessä autossa ei natiivirajauksessa erotu luettavaa kirjoitusta tai tunnistettavaa logoa.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset pienestä autosta, ihmisistä, vasemman puolen koivusta/talosta ja lumen valoista tarkastettu.",
+          "Autosta näkyy vain pieni lumen osittain peittämä takakulma; valot ja vaaleat pienet pinnat eivät muodosta erottuvaa kirjain-/numeroriviä tai bränditunnusta.",
+          "Koivun oksisto ja kuori vaihtelevat ilman leimakuviota. Lumipenkat, jäljet ja lämpimät valolaikut ovat epäsäännöllisiä ja vastaavat lamppujen sijoittelua.",
+          "Kävelijät näkyvät selin; ei tunnistettavia kasvoja, ruokaa, mainoksia, tekstiä tai logoja. Ei revontulia tai eläimiä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/7-car.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/7-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/7-birch-house.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/7-snow-lights.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false
+        },
+        "technicalEvidence": {
+          "bytes": 2549946,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "intro-lappi-8-v1",
+        "slot": 8,
+        "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on näkyvästi neutraali mustavalkoinen ilman sepiaa. Kallion rinne, männyt vasemmalla, avoin vesi vasempaan horisonttiin ja saariryhmä oikealla vastaavat slot5:n katselusuuntaa. Luetun lähdepaketin period exclusions täyttyvät.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset vasemmista männyistä/kalliosta, jäkälästä ja saarista/vedestä tarkastettu.",
+          "Slot5:n kanssa sama luonnonrannan suuntarakenne: alas viettävä graniitti alhaalla/vasemmalla, mäntyjä vasemmassa reunassa, järvi keskellä/oikealla ja matalat saaret oikealla horisontissa.",
+          "Mäntyjen oksisto, jäkälä ja kallion kuluma ovat epäsäännöllisiä ilman leimakuviota. Vesi sisältää vaihtelevia pieniä aaltoja.",
+          "Metsähallituksen Pahtaniemi/Ukonselkä-lähde ja Inarin kunnan historiallinen lähdepaketti sekä ympäristöhallinnon järvikuvaus luettu. Poissa ovat myöhempi kylä, tiet, moottorit, laiturit, sähkö, navigointimerkit ja säännöstelyn rantarakenteet.",
+          "1912–1914 kuvakontekstia ei käsitelty1873-todisteena; tämän katselukulman target-year-valokuvaa ei ollut briefissä. Kyseessä luonnonmaiseman havainnollistava rekonstruktio.",
+          "Ei näkyvää värisävytystä, tekstiä, logoja, ihmisiä tai eläimiä. Alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/8-pine-rock.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/8-rock-lichen.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lapland/crops/8-islands-water.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false
+        },
+        "technicalEvidence": {
+          "bytes": 2530272,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://www.luontoon.fi/fi/artikkelit/inarijarvi-melojille",
+          "https://inari150.fi/inaris-history/",
+          "https://www.ymparisto.fi/fi/luonto-vesistot-ja-meri/luonnon-monimuotoisuus/suojelu-ennallistaminen-ja-luonnonhoito/natura-2000-alueet/inarijarvi"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T17:53:25.819574+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/manifest.json",
+      "manifestSHA256": "e04da3fea898de018642239068da63ef83ecdae569caddb975f4125accc31724",
+      "reviewedAssetIds": [
+        "intro-lappi-4-v1",
+        "intro-lappi-5-v1",
+        "intro-lappi-6-v1",
+        "intro-lappi-7-v1",
+        "intro-lappi-8-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "1873-näkymä on havainnollistava luonnonmaisemarekonstruktio, ei tarkka historiallinen paikkavalokuva.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "lapland",
+    "verifiedAt": "2026-10-12T17:54:36.678065+00:00",
+    "assets": [
+      {
+        "id": "intro-lappi-4-v1",
+        "slot": 4,
+        "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+        "bytes": 2755657,
+        "verifiedAt": "2026-10-12T17:54:33.944524+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png",
+            "http": 200,
+            "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+            "bytes": 2755657,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png?delivery-verify=fdfab067661d0bdf-1791827673944520000",
+            "http": 200,
+            "sha256": "fdfab067661d0bdfcde0df462119c95ef5e0f1480dea228b9d6f4a94ef62c7fa",
+            "bytes": 2755657,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-lappi-5-v1",
+        "slot": 5,
+        "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+        "bytes": 2420414,
+        "verifiedAt": "2026-10-12T17:54:33.944783+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png",
+            "http": 200,
+            "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+            "bytes": 2420414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png?delivery-verify=41a1ba17512afb54-1791827673944779000",
+            "http": 200,
+            "sha256": "41a1ba17512afb54fd42dc525c08ef54cb7de9a5d91a88570fa16bfba54741dd",
+            "bytes": 2420414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-lappi-6-v1",
+        "slot": 6,
+        "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+        "bytes": 2248707,
+        "verifiedAt": "2026-10-12T17:54:33.944928+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-6-rovaniemi-juhannus-intro-v1.png",
+            "http": 200,
+            "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+            "bytes": 2248707,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-6-rovaniemi-juhannus-intro-v1.png?delivery-verify=542fb087fefa2e2b-1791827673944927000",
+            "http": 200,
+            "sha256": "542fb087fefa2e2bfc3eb653f6bcfd1931016625134f60e5c55c17d60bb645d5",
+            "bytes": 2248707,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-lappi-7-v1",
+        "slot": 7,
+        "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+        "bytes": 2549946,
+        "verifiedAt": "2026-10-12T17:54:35.404504+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+            "bytes": 2549946,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png?delivery-verify=764a60558cf15a4b-1791827675404491000",
+            "http": 200,
+            "sha256": "764a60558cf15a4bc687d33db7e2b2aa616bdc5502e18979edd98b86219619da",
+            "bytes": 2549946,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-lappi-8-v1",
+        "slot": 8,
+        "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+        "bytes": 2530272,
+        "verifiedAt": "2026-10-12T17:54:35.597442+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-8-pahtaniemi-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+            "bytes": 2530272,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lapland/20261012-full/lapland-8-pahtaniemi-1873-intro-v1.png?delivery-verify=8f84c855924570a4-1791827675597427000",
+            "http": 200,
+            "sha256": "8f84c855924570a46e0b189734738fe875c40913d067d7b916720aa1c5afd4ca",
+            "bytes": 2530272,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/lapland/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.073762+00:00"
+}

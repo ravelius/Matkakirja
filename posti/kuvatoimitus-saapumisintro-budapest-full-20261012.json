@@ -1,0 +1,1404 @@
+{
+  "cityName": "Budapest",
+  "gameCityId": "budapest",
+  "mediaSlug": "budapest",
+  "assets": [
+    {
+      "id": "budapest-4-pest-arkipiha-intro-v1",
+      "slot": 4,
+      "cityName": "Budapest",
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/budapest-4-pest-arkipiha-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/native/budapest-4-pest-arkipiha-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+      "bytes": 2722717,
+      "nativeSha256": "d7eaef3811e7aaa7f2c1fc6a023025ca7cb54fd16e5001a2600cd8b2e6ef599d",
+      "decodedRGBSha256": "ed083cd2f6d729ef3c2c5ac8e9e2f92cebda3ceeca22d3add84712d514c6f1c5",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:29:49.626586+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Budapest Józsefváros ordinary late19th-century residential courtyard. A compact cream plaster apartment block with open iron access galleries on two upper floors, worn stone stair in shadow, simple potted plants and clothes drying on a plain unmarked line, asymmetrical domestic details. Adult eye-level28mm view across courtyard with a little upward perspective. Two small distant adult neighbours seen from behind crossing courtyard carrying plain cloth bags, faces not visible. Soft midday natural daylight, ordinary candid domestic atmosphere; no named palace, artworks, plaques, letters or door numbers.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "label": "Gellért Hill geographical and historical overview",
+          "readAt": "2026-10-12",
+          "facts": [
+            "235m dolomite hill above Danube, long predates1873.",
+            "Hillsides historically vineyards; current large parkland should not be copied wholesale into1873.",
+            "Hilltop monuments omitted from framing."
+          ]
+        },
+        {
+          "url": "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "label": "HistoricBridges structure documentation",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Liberty Bridge constructed1896; absent1873. All bridges cropped out."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "label": "Budapest official tourism, Budapest Spas, page6",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Gellért Thermal Baths building opened1918; excluded1873."
+          ]
+        },
+        {
+          "url": "https://fortepan.hu/en/photos/?id=82109",
+          "label": "Fortepan / Budapest City Archives, image82109, HU.BFL.XV.19.d.1.05.054",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Catalogue context: Gellért Hill view toward Royal Palace and Chain Bridge circa1874. Near-period contextual reference, northern direction; not copied."
+          ]
+        },
+        {
+          "url": "https://wp.jozsefvaros.hu/english/",
+          "label": "Józsefváros municipal community information",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential community neighbourhood, local street festivals and music events."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda",
+          "label": "Budapest official tourism: Óbuda",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Historic Krúdy Quarter has classicist ordinary buildings and social gathering venues."
+          ]
+        }
+      ],
+      "caption": "Budapestin vanhan asuintalon arkinen sisäpiha. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-4-pest-arkipiha-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-4-pest-arkipiha-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and door,bellhardware,plant,laundry detail inspected. Credible anonymous old Pest courtyard with two back-facing adults, modest daylight and naturally irregular textures. Generic household objects, no text,logos,addressnumbers or artworks observed.",
+          "reviewedAt": "2026-10-12T17:38:05.903377+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-4-pest-arkipiha-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-4-pest-arkipiha-intro-v1.png?t=6b2a74f315d76504",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-4-pest-arkipiha-intro-v1.png",
+        "sha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+        "bytes": 2722717,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+        "canonicalGetBytes": 2722717,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:41:50.042573+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "budapest-5-gellert-tonava-intro-v2",
+      "slot": 5,
+      "cityName": "Budapest",
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/budapest-5-gellert-tonava-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/native/budapest-5-gellert-tonava-intro-v2.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+      "bytes": 2825315,
+      "nativeSha256": "bd041212d67b9edd3cfab0a9ecbc99dfa9ea84fc1edddf3c9139997b789e2943",
+      "decodedRGBSha256": "a0a6c4b23164092f5a9fb127a93f9cf7c8899cb18c116f69a30782b8bc40ef29",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:34:53.447734+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Budapest. Stand on a bare natural rocky outcrop on the eastern slope of Gellért Hill and aim the50mm camera STEEPLY DOWNWARD toward the broad Danube water immediately below. Landscape1536x1024. Close irregular dolomite stones and dry grass form a small lower-left triangular foreground. THE ENTIRE REST OF THE FRAME IS RIVER WATER: no sky, no horizon, no opposite shore, no island, no distant forest or buildings. Danube gently moving grey-blue surface extends beyond top and right image edges. Physically plausible high-elevation oblique downward perspective, ordinary soft midmorning natural camera exposure, restrained rock and water textures. Absolutely no embankment road, cars, bridge, monument, railing, human face or structures. Do not turn the river into an ocean; real small river currents and ripples, inland water. This exact steep downward rock-to-water view will form the1873 pair.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "label": "Gellért Hill geographical and historical overview",
+          "readAt": "2026-10-12",
+          "facts": [
+            "235m dolomite hill above Danube, long predates1873.",
+            "Hillsides historically vineyards; current large parkland should not be copied wholesale into1873.",
+            "Hilltop monuments omitted from framing."
+          ]
+        },
+        {
+          "url": "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "label": "HistoricBridges structure documentation",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Liberty Bridge constructed1896; absent1873. All bridges cropped out."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "label": "Budapest official tourism, Budapest Spas, page6",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Gellért Thermal Baths building opened1918; excluded1873."
+          ]
+        },
+        {
+          "url": "https://fortepan.hu/en/photos/?id=82109",
+          "label": "Fortepan / Budapest City Archives, image82109, HU.BFL.XV.19.d.1.05.054",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Catalogue context: Gellért Hill view toward Royal Palace and Chain Bridge circa1874. Near-period contextual reference, northern direction; not copied."
+          ]
+        },
+        {
+          "url": "https://wp.jozsefvaros.hu/english/",
+          "label": "Józsefváros municipal community information",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential community neighbourhood, local street festivals and music events."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda",
+          "label": "Budapest official tourism: Óbuda",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Historic Krúdy Quarter has classicist ordinary buildings and social gathering venues."
+          ]
+        }
+      ],
+      "caption": "Tonava Gellértinvuoren luonnonrinteeltä katsottuna Budapestissa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v2.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "peopleAbsent": true
+        },
+        "sessionOwner": {
+          "sha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and rock,grass,water detail inspected. Tight downward GellertHill rockface/Danube surface crop excludes implausible farbank and skyline. Realistic irregular limestone and dry vegetation with gently moving water; no text,logo,people,artworks or structure.",
+          "reviewedAt": "2026-10-12T17:38:05.920816+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v2.png?t=2ba10fd68b263902",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v2.png",
+        "sha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+        "bytes": 2825315,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+        "canonicalGetBytes": 2825315,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:41:51.518741+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "budapest-6-pest-katujuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Budapest",
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/budapest-6-pest-katujuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/native/budapest-6-pest-katujuhla-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+      "bytes": 2129902,
+      "nativeSha256": "b9f3f11b2d246615d93d572819e29de9eb095301777cfff05bad133d1f7656ba",
+      "decodedRGBSha256": "0d9783ffae1e79e10ace0ac5a884c7b23676bd9b71285c536293a048cf7119d0",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:36:06.273526+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Budapest Pest neighbourhood summer street-music celebration, joyful crowd of fictional Hungarian young adults all25–35, normal Central European local variety, relaxed dance and laughter. One fictional adult man nearest foreground, short dark hair, warm smile looking sideways toward friends, plain fashionable rust-brown linen shirt open over plain white tee, unretouched skin. Surrounding friends wear contemporary generic solid-colour clothing. Candid50mm lens at chest height, all people chest-up or waist-up or lower bodies fully blocked by crowd. ABSOLUTELY NO footwear, feet or shoes visible anywhere, including background. Weathered anonymous old Budapest stucco facades softly blurred, late-afternoon natural sun, sense of music and joy without visible stage, instruments, signs, drinks, food, logos, brand stripes, murals or modern designs.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "label": "Gellért Hill geographical and historical overview",
+          "readAt": "2026-10-12",
+          "facts": [
+            "235m dolomite hill above Danube, long predates1873.",
+            "Hillsides historically vineyards; current large parkland should not be copied wholesale into1873.",
+            "Hilltop monuments omitted from framing."
+          ]
+        },
+        {
+          "url": "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "label": "HistoricBridges structure documentation",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Liberty Bridge constructed1896; absent1873. All bridges cropped out."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "label": "Budapest official tourism, Budapest Spas, page6",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Gellért Thermal Baths building opened1918; excluded1873."
+          ]
+        },
+        {
+          "url": "https://fortepan.hu/en/photos/?id=82109",
+          "label": "Fortepan / Budapest City Archives, image82109, HU.BFL.XV.19.d.1.05.054",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Catalogue context: Gellért Hill view toward Royal Palace and Chain Bridge circa1874. Near-period contextual reference, northern direction; not copied."
+          ]
+        },
+        {
+          "url": "https://wp.jozsefvaros.hu/english/",
+          "label": "Józsefváros municipal community information",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential community neighbourhood, local street festivals and music events."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda",
+          "label": "Budapest official tourism: Óbuda",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Historic Krúdy Quarter has classicist ordinary buildings and social gathering venues."
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen korttelijuhla Budapestissa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": false,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "fictionalAdultsOnly": true,
+          "footwearAbsentEntireFrame": true
+        },
+        "sessionOwner": {
+          "sha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and each body,clothes,skin,hands and blurred backdrop inspected. Fictional adult man foreground at cheerful adult gathering in Pest, plain generic clothing and plausible old residential backdrop. All footwear cropped/occluded; no brands,food,text,logos or namedcontemporarywork observed. Natural skin,hair and camera rendering.",
+          "reviewedAt": "2026-10-12T17:38:05.953002+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png?t=333e361fb01f599d",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png",
+        "sha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+        "bytes": 2129902,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+        "canonicalGetBytes": 2129902,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:41:53.442503+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "budapest-8-gellert-tonava-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Budapest",
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/budapest-8-gellert-tonava-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/native/budapest-8-gellert-tonava-1873-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+      "bytes": 2914368,
+      "nativeSha256": "9471659a636a8e915fc50ef5baebca4d27864857c82559fb7c1f5a6326c24725",
+      "decodedRGBSha256": "2d955c2968b63d6dfef2d69c5ddda5978d5ce22b10ba7bc2846b2f6ab7a2b1d6",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:38:12.743772+00:00",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, pure neutral BLACK AND WHITE grayscale with absolutely no sepia or colour tint, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Year EXACTLY1873, Budapest. Stand on a natural rocky outcrop on the eastern slope of Gellért Hill and aim the50mm camera STEEPLY DOWNWARD toward the broad Danube water immediately below. SAME viewpoint and slope angle as modern slot5. Close irregular dolomite stones and dry grass form a small lower-left triangular foreground. THE ENTIRE REST OF FRAME IS RIVER WATER: no sky, horizon, opposite shore, island, distant forest or buildings. Danube gently moving neutral grey surface extends beyond top and right image edges. No bank roads, cars, bridge, monument, railing, structures or people. Dolomite hill and Danube long predate1873; Liberty Bridge1896 and Gellért Bath1918 absent. Natural midday historical camera atmosphere, pure NEUTRAL BLACK AND WHITE, no sepia or tinted shadow. Fine grain and gentle contrast; no frame or copied archivalimage. Native neutral monochrome photograph with no deliberate warm or cool tint.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "label": "Gellért Hill geographical and historical overview",
+          "readAt": "2026-10-12",
+          "facts": [
+            "235m dolomite hill above Danube, long predates1873.",
+            "Hillsides historically vineyards; current large parkland should not be copied wholesale into1873.",
+            "Hilltop monuments omitted from framing."
+          ]
+        },
+        {
+          "url": "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "label": "HistoricBridges structure documentation",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Liberty Bridge constructed1896; absent1873. All bridges cropped out."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "label": "Budapest official tourism, Budapest Spas, page6",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Gellért Thermal Baths building opened1918; excluded1873."
+          ]
+        },
+        {
+          "url": "https://fortepan.hu/en/photos/?id=82109",
+          "label": "Fortepan / Budapest City Archives, image82109, HU.BFL.XV.19.d.1.05.054",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Catalogue context: Gellért Hill view toward Royal Palace and Chain Bridge circa1874. Near-period contextual reference, northern direction; not copied."
+          ]
+        },
+        {
+          "url": "https://wp.jozsefvaros.hu/english/",
+          "label": "Józsefváros municipal community information",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential community neighbourhood, local street festivals and music events."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda",
+          "label": "Budapest official tourism: Óbuda",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Historic Krúdy Quarter has classicist ordinary buildings and social gathering venues."
+          ]
+        }
+      ],
+      "caption": "Tonava Gellértinvuoren rinteeltä vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "historicalYear": 1873,
+          "visuallyNeutralBlackWhite": true,
+          "sameViewAsSlot": 5,
+          "periodExclusionsVerified": true,
+          "peopleAbsent": true,
+          "grayscaleChannelProof": {
+            "maxRG": 14,
+            "maxRB": 11,
+            "exactEqualRGB": false,
+            "diagnosticOnly": true
+          }
+        },
+        "sessionOwner": {
+          "sha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and rock,grass,water details inspected. Neutralblack/white without visible tint. Compared to selected modern5v2: same tight downward limestone rockface/Danube surface crop, no farbank,skyline,building,bridge,vehicle,modernlighting or text/logo. Natural old geological/river elements source-supported before1873.",
+          "limits": [
+            "Illustrative reconstruction, not a surveyed topographic record."
+          ],
+          "reviewedAt": "2026-10-12T17:41:48.237862+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png?t=beffcb3f2464dcf8",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png",
+        "sha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+        "bytes": 2914368,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+        "canonicalGetBytes": 2914368,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:41:55.295368+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "budapest-7-obuda-iltakatu-intro-v2",
+      "slot": 7,
+      "cityName": "Budapest",
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/budapest-7-obuda-iltakatu-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/native/budapest-7-obuda-iltakatu-intro-v2.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+      "bytes": 2222022,
+      "nativeSha256": "445c11b6e19711ae4ae0c473253cf1a034192e205df2dea1b640976c80b2941c",
+      "decodedRGBSha256": "fb82f9d9eb9ff3f1a8b793181a3d5cad73f75746dad7bedf66df295fe248aaa7",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:40:12.449469+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Budapest Óbuda Krúdy Quarter: ordinary quiet narrow cobbled street with low anonymous historic classicist homes, muted cream and pale peach plaster, simple shuttered windows, uneven red clay roofline, one plain warm doorway lamp and scattered glowing domestic windows. Eyelevel35mm view along gently bending street at blue hour, small leafy branch edge, two tiny distant adults walking away, natural subdued twilight and physically plausible warm window light. No shopfronts, commercial signs, house numbers, statues, artworks, famous museum buildings, modern apartment towers or front-facing people. STRICT EMPTY FACADES: ALL walls are completely plain smooth unmarked plaster between windows and door openings. No wall fixtures except ONE very simple light bulb recessed inside a doorway. NO hanging wall lamps, NO plaques, NO metal number shapes, NO addressplates, NO doorbells, NO electric meters, NO house names, NO symbols. Keep all front doors deep inside dark recesses and without accessories. Window illumination and distant domestic lights provide the evening mood.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "label": "Gellért Hill geographical and historical overview",
+          "readAt": "2026-10-12",
+          "facts": [
+            "235m dolomite hill above Danube, long predates1873.",
+            "Hillsides historically vineyards; current large parkland should not be copied wholesale into1873.",
+            "Hilltop monuments omitted from framing."
+          ]
+        },
+        {
+          "url": "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "label": "HistoricBridges structure documentation",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Liberty Bridge constructed1896; absent1873. All bridges cropped out."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "label": "Budapest official tourism, Budapest Spas, page6",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Gellért Thermal Baths building opened1918; excluded1873."
+          ]
+        },
+        {
+          "url": "https://fortepan.hu/en/photos/?id=82109",
+          "label": "Fortepan / Budapest City Archives, image82109, HU.BFL.XV.19.d.1.05.054",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Catalogue context: Gellért Hill view toward Royal Palace and Chain Bridge circa1874. Near-period contextual reference, northern direction; not copied."
+          ]
+        },
+        {
+          "url": "https://wp.jozsefvaros.hu/english/",
+          "label": "Józsefváros municipal community information",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential community neighbourhood, local street festivals and music events."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda",
+          "label": "Budapest official tourism: Óbuda",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Historic Krúdy Quarter has classicist ordinary buildings and social gathering venues."
+          ]
+        }
+      ],
+      "caption": "Óbudan vanha asuinkatu Budapestin sinisessä illassa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v2.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and each visible doorway/windowwall inspected. Old low residential Óbuda lane at dusk, two distant back-facing adults, plain warm light and naturally irregular paving/leaves. All visible walls and door surrounds unmarked: no numberplaques,text,signs,logos or artwork.",
+          "limits": [
+            "Illustrative reconstruction, not a surveyed topographic record."
+          ],
+          "reviewedAt": "2026-10-12T17:41:48.218006+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v2.png?t=1033515dea5897c1",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v2.png",
+        "sha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+        "bytes": 2222022,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+        "canonicalGetBytes": 2222022,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:41:56.883698+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "complete": true,
+  "rejectedCandidates": [
+    {
+      "id": "budapest-5-gellert-tonava-intro-v1",
+      "slot": 5,
+      "cityName": "Budapest",
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/budapest-5-gellert-tonava-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/native/budapest-5-gellert-tonava-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "0c53e7f7c3526739897ce7edd0b2eeb47cc5eef2c345b1adb5be51bfaed8a854",
+      "bytes": 2526085,
+      "nativeSha256": "bf3197f3802a5cbae9c170d3bf50dd48c4953094c6cfa4ba64b88f237783dcfe",
+      "decodedRGBSha256": "a95eb5b803d8ffb1f35a0b90c060e6931fd9d40668274e5d91d757e1cc687d9b",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:33:51.535303+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Budapest: precise viewpoint on the rocky eastern natural slope of Gellért Hill, looking southeast and downward toward the broad Danube river downstream,50mm lens. Foreground at bottom left irregular light dolomite stones, dry grasses and a small naturally asymmetrical shrub, river broad and grey-blue fills middle/right, distant low eastern shore shown as a thin hazy green line. Crop very carefully to show NO bridge, NO built skyline, NO houses, NO bath building, NO embankment road, NO statue, NO monument, NO railing, no boats needed, no people. The subtle hazy opposite shoreline and broad real river, subdued midmorning light, muted foliage, ordinary camera exposure. Use this exact river direction and foreground-rock geometry for the1873 pair.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "label": "Gellért Hill geographical and historical overview",
+          "readAt": "2026-10-12",
+          "facts": [
+            "235m dolomite hill above Danube, long predates1873.",
+            "Hillsides historically vineyards; current large parkland should not be copied wholesale into1873.",
+            "Hilltop monuments omitted from framing."
+          ]
+        },
+        {
+          "url": "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "label": "HistoricBridges structure documentation",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Liberty Bridge constructed1896; absent1873. All bridges cropped out."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "label": "Budapest official tourism, Budapest Spas, page6",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Gellért Thermal Baths building opened1918; excluded1873."
+          ]
+        },
+        {
+          "url": "https://fortepan.hu/en/photos/?id=82109",
+          "label": "Fortepan / Budapest City Archives, image82109, HU.BFL.XV.19.d.1.05.054",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Catalogue context: Gellért Hill view toward Royal Palace and Chain Bridge circa1874. Near-period contextual reference, northern direction; not copied."
+          ]
+        },
+        {
+          "url": "https://wp.jozsefvaros.hu/english/",
+          "label": "Józsefváros municipal community information",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential community neighbourhood, local street festivals and music events."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda",
+          "label": "Budapest official tourism: Óbuda",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Historic Krúdy Quarter has classicist ordinary buildings and social gathering venues."
+          ]
+        }
+      ],
+      "caption": "Tonava Gellértinvuoren luonnonrinteeltä katsottuna Budapestissa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v1.png",
+      "QA": {
+        "agentReviewed": true,
+        "fullFrame": true,
+        "nativeDetails": true,
+        "noTextLogosBrands": true,
+        "foodAbsent": true,
+        "peopleDistantOrBackFacing": true,
+        "photorealism": true,
+        "issues": [
+          "Geographically implausible wooded oppositebank in centralGellért southeastview; replace by steepdownwardcrop"
+        ],
+        "status": "rejected"
+      },
+      "R2Proof": null
+    },
+    {
+      "id": "budapest-7-obuda-iltakatu-intro-v1",
+      "slot": 7,
+      "cityName": "Budapest",
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/budapest-7-obuda-iltakatu-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/native/budapest-7-obuda-iltakatu-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "92484e36835ff9719cba62bc20c63c6e75e2806cefa8c251ef74bb1c039974de",
+      "bytes": 2373933,
+      "nativeSha256": "e7f2f739b7de8bf6b0e25a1f4fe0658524f1bdc59c549ec4b226ede382312a3c",
+      "decodedRGBSha256": "1bb8db8994e1e24a664a43b67615b63a46ab6dd59c8ea53a5a67572165977c64",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:38:12.312734+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Budapest Óbuda Krúdy Quarter: ordinary quiet narrow cobbled street with low anonymous historic classicist homes, muted cream and pale peach plaster, simple shuttered windows, uneven red clay roofline, one plain warm doorway lamp and scattered glowing domestic windows. Eyelevel35mm view along gently bending street at blue hour, small leafy branch edge, two tiny distant adults walking away, natural subdued twilight and physically plausible warm window light. No shopfronts, commercial signs, house numbers, statues, artworks, famous museum buildings, modern apartment towers or front-facing people.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "label": "Gellért Hill geographical and historical overview",
+          "readAt": "2026-10-12",
+          "facts": [
+            "235m dolomite hill above Danube, long predates1873.",
+            "Hillsides historically vineyards; current large parkland should not be copied wholesale into1873.",
+            "Hilltop monuments omitted from framing."
+          ]
+        },
+        {
+          "url": "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "label": "HistoricBridges structure documentation",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Liberty Bridge constructed1896; absent1873. All bridges cropped out."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "label": "Budapest official tourism, Budapest Spas, page6",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Gellért Thermal Baths building opened1918; excluded1873."
+          ]
+        },
+        {
+          "url": "https://fortepan.hu/en/photos/?id=82109",
+          "label": "Fortepan / Budapest City Archives, image82109, HU.BFL.XV.19.d.1.05.054",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Catalogue context: Gellért Hill view toward Royal Palace and Chain Bridge circa1874. Near-period contextual reference, northern direction; not copied."
+          ]
+        },
+        {
+          "url": "https://wp.jozsefvaros.hu/english/",
+          "label": "Józsefváros municipal community information",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential community neighbourhood, local street festivals and music events."
+          ]
+        },
+        {
+          "url": "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda",
+          "label": "Budapest official tourism: Óbuda",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Historic Krúdy Quarter has classicist ordinary buildings and social gathering venues."
+          ]
+        }
+      ],
+      "caption": "Óbudan vanha asuinkatu Budapestin sinisessä illassa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v1.png",
+      "QA": {
+        "agentReviewed": true,
+        "fullFrame": true,
+        "nativeDetails": true,
+        "noTextLogosBrands": true,
+        "foodAbsent": true,
+        "peopleDistantOrBackFacing": true,
+        "photorealism": true,
+        "issues": [
+          "Suspected house-number-like fixtures above doorway; rootdecisionpending"
+        ],
+        "status": "rejected"
+      },
+      "R2Proof": null
+    }
+  ],
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:41:56.896211+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 7,
+  "deliveryQAEvidence": {
+    "mediaSlug": "budapest",
+    "gameCityId": "budapest",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/sources.json"
+    ],
+    "sourceManifestSha256": "6225ee8bb87af41b5843cea7f12c9a7fa55d4e2070bbf88bfca3ddd2f3393813",
+    "assets": [
+      {
+        "id": "budapest-4-pest-arkipiha-intro-v1",
+        "slot": 4,
+        "sha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vanhan sisäpihan galleriat, rappaus, kasvit ja arjen yksityiskohdat muodostavat uskottavan kameranäkymän. Kaksi aikuista näkyy selin. Läheltä tarkastettu pieni seinälaite on painike-/ovikalustoa ilman havaittavaa kirjoitusta; ei tekstiä, numeroita, logoja tai brändikuvioita.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset pienestä seinälaitteesta, ihmisistä/portaista ja kasveista/gallerioista tarkastettu.",
+          "Kaiteiden ja kerrosten perspektiivi sekä portaiden rakenne ovat yhteensopivia; kasvien oksat/lehtiasennot ja rappauksen kuluma vaihtelevat luonnollisesti.",
+          "Kaksi aikuista on kehyksen kokoon nähden pieniä ja selin; ei tunnistettavia kasvoja.",
+          "Pyykit ja kangaskassit ovat ilman tunnuksia. Pieni seinälaite koostuu pystysuuntaisista painike-/syvennysmuodoista, ei havaittavista merkeistä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/4-wall-fixture.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/4-people-stairs.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/4-plants-galleries.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2722717,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "budapest-5-gellert-tonava-intro-v2",
+        "slot": 5,
+        "sha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uuden v2:n jyrkästi alaspäin suunnattu kallio–vesi-rajaus on sisäisesti uskottava. Kallion kolot, kuivat kasvit ja joen virtauksen rikkoma pinta ovat luonnollisia. Horisonttia, vastarannan virheellistä metsämaisemaa tai modernia rakennelmaa ei näy.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kallioista/ruohosta sekä vedestä tarkastettu.",
+          "Kallion halkeamat ja ruohon haarautuminen ovat epäsäännöllisiä; vesi sisältää vaihtelevia virtaus- ja valokuvioita ilman koristeleimaa.",
+          "Ei ihmisiä, eläimiä, tekstiä, logoja, siltoja, rantatietä, horisonttia tai vastarantaa.",
+          "Slot8:n kanssa sama tiukka alaviisto suuntarakenne: lähikallio ja kuiva ruoho alhaalla/vasemmalla, vesi muualla kehyksessä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/5-rocks-grass.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/5-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2825315,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "budapest-6-pest-katujuhla-intro-v1",
+        "slot": 6,
+        "sha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivisen etualan aikuisen miehen iho, kasvot ja näkyvä liikkuva käsi ovat anatomisesti uskottavia. Vaatteet ovat geneeristä nykymuotia. Juhlivan väkijoukon jalkineet ja ruoka jäävät pois; tekstiä, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset etualan kasvoista/kädestä ja molemmista väkijoukon puolista tarkastettu.",
+          "Iho, hiukset, korva ja hampaat näyttävät luonnollisilta. Etualan käden sormet ja peukalo ovat uskottavassa taivutetussa asennossa; pieni liike-epäterävyys kameramaista.",
+          "Muut kädet ovat osin peittyviä tai syväterävyysalueen ulkopuolella, mutta ilmeisiä ylimääräisiä osia ei havaittu.",
+          "Kaikki näkyvät henkilöt ovat aikuisia ja ylävartaloina tai muiden peittämiä. Ei ruokaa, juomia, jalkineita, logoja tai tunnistettavaa brändikuviota.",
+          "Vaatteiden kuosit ovat tavallisia geneerisiä kankaita; juhlatunnelma ja valaistus ovat yhtenäisiä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/6-hand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/6-left-crowd.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/6-right-crowd.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2129902,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "budapest-8-gellert-tonava-1873-intro-v1",
+        "slot": 8,
+        "sha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on näkyvästi neutraali mustavalkoinen ilman sepiaa. Tiukka alaviisto kallio–vesi-näkymä vastaa valittua slot5v2-paria. Luetun tuottajan lähdepaketin myöhemmät rakennukset/sillat ja moderni maisemointi on rajattu pois.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kallioista/kuivasta kasvillisuudesta ja vedestä tarkastettu.",
+          "Slot5v2:n kanssa sama suuntarakenne: kalliot ja kuiva ruoho alhaalla/vasemmalla, muu kehys joen vettä; ei horisonttia tai vastarantaa.",
+          "Kallion kolot, kasvien haarat ja veden heijastukset ovat epäsäännöllisiä ja kameramaisia. Ei tekstiä, logoja, ihmisiä tai moottorialuksia.",
+          "Period exclusions luettu: Liberty Bridge1896, Gellért Bath1918, moderni puistomaisemointi ja kaikki rakennettu arkkitehtuuri puuttuvat.",
+          "Lähdepaketissa on Gellértin maantieteen ja siltojen dokumentaatio, Budapestin virallinen kylpylä-PDF sekä Fortepan/Budapest City Archives -konteksti noin1874. Pohjoiseen katsova periodikuva on kontekstia, ei tämän tiukan alaviiston kuvakulman mittaus.",
+          "Ei näkyvää lämmintä tai kylmää sävytystä. Alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/8-rocks-grass.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/8-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2914368,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+          "https://historicbridges.org/bridges/browser/?bridgebrowser=hungary/libertybridge/",
+          "https://www.budapestinfo.hu/storage/files/A3t7HzeYsDqYHPjsT2ZY7To789ITWgsJfVvY50MC.pdf",
+          "https://fortepan.hu/en/photos/?id=82109",
+          "https://wp.jozsefvaros.hu/english/",
+          "https://www.budapestinfo.hu/en/the-tourist-offer-of-obuda"
+        ]
+      },
+      {
+        "id": "budapest-7-obuda-iltakatu-intro-v2",
+        "slot": 7,
+        "sha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uuden v2:n lähijulkisivut ja oviaukko ovat kirjoituksettomia. Tavanomaiset ikkunaluukut, epätasainen kiveys ja pieni lehdistö sopivat yhtenäiseen sinisen hetken kameranäkymään. Kaksi pientä kävelijää näkyy selin.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähijulkisivusta/oviaukosta, kävelijöistä sekä katoista/kasveista tarkastettu.",
+          "Lähioviaukossa on tavallinen polttimo; ei numeroita, nimikylttejä, osoitelaattoja tai tunnuksia.",
+          "Kattotiilien kuluma, rappaus ja lehtien asennot vaihtelevat ilman kaarna- tai lehtileimaa.",
+          "Ikkunoiden ja oviaukon lämmin valo sekä taivaan sininen valo ovat yhtenäisiä. Kävelijät ovat pieniä selin ilman näkyviä kasvoja; ei ruokaa, tekstiä tai logoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/7-door-window-wall.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/7-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/budapest/crops/7-plants-roof.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2222022,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "producerRejectedCandidatesRead": [
+      {
+        "id": "budapest-5-gellert-tonava-intro-v1",
+        "slot": 5,
+        "producerIssues": [
+          "Geographically implausible wooded oppositebank in centralGellért southeastview; replace by steepdownwardcrop"
+        ],
+        "independentImageReassessment": false
+      },
+      {
+        "id": "budapest-7-obuda-iltakatu-intro-v1",
+        "slot": 7,
+        "producerIssues": [
+          "Suspected house-number-like fixtures above doorway; rootdecisionpending"
+        ],
+        "independentImageReassessment": false
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T17:49:01.025590+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/manifest.json",
+      "manifestSHA256": "6225ee8bb87af41b5843cea7f12c9a7fa55d4e2070bbf88bfca3ddd2f3393813",
+      "reviewedAssetIds": [
+        "budapest-4-pest-arkipiha-intro-v1",
+        "budapest-5-gellert-tonava-intro-v2",
+        "budapest-6-pest-katujuhla-intro-v1",
+        "budapest-8-gellert-tonava-1873-intro-v1",
+        "budapest-7-obuda-iltakatu-intro-v2"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Kuvat ovat havainnekuvia, eivät tämän kallio–vesi-kuvakulman maantieteellinen mittaus.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "budapest",
+    "verifiedAt": "2026-10-12T17:50:08.174148+00:00",
+    "assets": [
+      {
+        "id": "budapest-4-pest-arkipiha-intro-v1",
+        "slot": 4,
+        "sha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+        "bytes": 2722717,
+        "verifiedAt": "2026-10-12T17:50:06.103743+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-4-pest-arkipiha-intro-v1.png",
+            "http": 200,
+            "sha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+            "bytes": 2722717,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-4-pest-arkipiha-intro-v1.png?delivery-verify=6b2a74f315d76504-1791827406103728000",
+            "http": 200,
+            "sha256": "6b2a74f315d7650422bfa833ea6a0b577cf99a9815892097dd0c28112338d054",
+            "bytes": 2722717,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "budapest-5-gellert-tonava-intro-v2",
+        "slot": 5,
+        "sha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+        "bytes": 2825315,
+        "verifiedAt": "2026-10-12T17:50:06.103907+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v2.png",
+            "http": 200,
+            "sha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+            "bytes": 2825315,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-5-gellert-tonava-intro-v2.png?delivery-verify=2ba10fd68b263902-1791827406103905000",
+            "http": 200,
+            "sha256": "2ba10fd68b263902d2f353e7ab389c5c9a3a29f862ade4a6f07f3caecc03a8f2",
+            "bytes": 2825315,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "budapest-6-pest-katujuhla-intro-v1",
+        "slot": 6,
+        "sha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+        "bytes": 2129902,
+        "verifiedAt": "2026-10-12T17:50:06.104005+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+            "bytes": 2129902,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-6-pest-katujuhla-intro-v1.png?delivery-verify=333e361fb01f599d-1791827406104000000",
+            "http": 200,
+            "sha256": "333e361fb01f599dab163c60f9f05eb41c57c6ad6d7b991ef4088de12d6b2210",
+            "bytes": 2129902,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "budapest-8-gellert-tonava-1873-intro-v1",
+        "slot": 8,
+        "sha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+        "bytes": 2914368,
+        "verifiedAt": "2026-10-12T17:50:07.239853+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+            "bytes": 2914368,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-8-gellert-tonava-1873-intro-v1.png?delivery-verify=beffcb3f2464dcf8-1791827407239846000",
+            "http": 200,
+            "sha256": "beffcb3f2464dcf8cca72c3e8b3528f459a1f8bd1f8434391988d91abc47ee4e",
+            "bytes": 2914368,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "budapest-7-obuda-iltakatu-intro-v2",
+        "slot": 7,
+        "sha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+        "bytes": 2222022,
+        "verifiedAt": "2026-10-12T17:50:07.337843+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v2.png",
+            "http": 200,
+            "sha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+            "bytes": 2222022,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261012-full/budapest-7-obuda-iltakatu-intro-v2.png?delivery-verify=1033515dea5897c1-1791827407337835000",
+            "http": 200,
+            "sha256": "1033515dea5897c1b1db620793521d4d076042c23bb22738334e218725069eb2",
+            "bytes": 2222022,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/budapest/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.250426+00:00"
+}

@@ -1,0 +1,699 @@
+{
+  "cityName": "Helsinki",
+  "gameCityId": "helsinki",
+  "mediaSlug": "helsinki",
+  "updatedAt": "2026-10-12T17:28:10.185904+00:00",
+  "assets": [
+    {
+      "id": "helsinki-5-kaivopuiston-meri-intro-v1",
+      "slot": 5,
+      "cityName": "Helsinki",
+      "gameCityId": "helsinki",
+      "mediaSlug": "helsinki",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/helsinki-5-kaivopuiston-meri-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/native/helsinki-5-kaivopuiston-meri-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png",
+      "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Helsinki arrival intro slot5. Kaivopuisto southern Helsinki Baltic shoreline: camera at1.6m on a natural exposed gray granite rock on the shore, looking south-southeast across softly rippling sea to low natural rocky tree-covered islands. Wide35mm landscape, granite rock foreground lower left, water occupying middle, low island horizon in upper third, pale cloudy summer sky. Narrow restricted SE seaward crop, NO buildings anywhere, NO piers, paths, railings, street furniture, statues, churches or city skyline. One small unmarked modern sailing boat very far out on the water. Natural rock is irregular glacial gray granite with warm patches, wind-shaped sparse grasses. No people or visible faces. Generate one entirely new real-camera-looking photorealistic illustrative image, landscape1536x1024 PNG opaque RGB sRGB. Natural light, subdued authentic colors, ordinary irregular real textures,35mm camera perspective. No HDR, CGI, painting, plastic skin or repeating stamped natural textures. Absolutely no text, letters, digits, street signs, address numbers, advertising, posters, logos, brands, brand patterns, watermark or borders. No food, protected art or modern architect-designed landmark.",
+      "sources": [
+        {
+          "url": "https://historia.hel.fi/en/alueet/southern/kaivopuisto",
+          "title": "City of Helsinki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978271+00:00",
+          "readFacts": [
+            "Spa company established in 1834; spa opened1838, park built on rugged seashore cliffs.",
+            "Regular steamship traffic Helsinki Tallinn Saint Petersburg began1837.",
+            "Ursa observatory opened1926, excluded from1873.",
+            "Landscape heavily redeveloped around1900; historical frame restricts to bare coastal rock and water without later park design."
+          ],
+          "periodReference": "Page contains 1852–1855 landscape and1872 painting; not identical shore view; no exact1873 photo located."
+        },
+        {
+          "url": "https://www.hel.fi/fi/kulttuuri-ja-vapaa-aika/ulkoilu-puistot-ja-luontokohteet/puistot/kaivopuisto",
+          "title": "Helsingin kaupunki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978437+00:00",
+          "readFacts": [
+            "Kaivopuisto lies at the sea in southern Helsinki; rocky high points have sea views.",
+            "Harakka island is close to Kaivopuisto; coastal route borders park.",
+            "Ursa observatory1926 excluded; all buildings, statues, piers and contemporary shore furniture excluded in restricted historical seaward crop."
+          ]
+        }
+      ],
+      "caption": "Merimaisema Kaivopuiston kalliorannalta Helsingissä. Havainnekuva.",
+      "QA": {
+        "id": "helsinki-5-kaivopuiston-meri-intro-v1",
+        "slot": 5,
+        "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:25:46.296981+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural rocky Baltic shore and low islands; native water/rock crop shows irregular photographic detail, no stamped organic texture, no lettering or modern protected architecture.",
+        "detailCrops": [
+          "session-owner-review/slot5-rock-sea-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:27:54.918440+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+        "bytes": 2572119,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png",
+            "http": 200,
+            "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+            "bytes": 2572119,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png?verify=north-9b4be9b210cec326-1791826074918461000",
+            "http": 200,
+            "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+            "bytes": 2572119,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2572119
+    },
+    {
+      "id": "helsinki-6-kesajuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Helsinki",
+      "gameCityId": "helsinki",
+      "mediaSlug": "helsinki",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/helsinki-6-kesajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/native/helsinki-6-kesajuhla-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png",
+      "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Helsinki arrival intro slot6. A lively small outdoor summer dance celebration in a Helsinki neighborhood park TODAY. One fictional Finnish young adult woman age27 in foreground, spontaneous delighted smile toward a friend off camera, contemporary generic fashionable cream linen blazer over plain sage top, natural skin texture, short dark-blonde hair moving with breeze. A cheerful dense crowd of fictional local Helsinki young adults in stylish plain unbranded casual clothing behind her, chatting and dancing, some Nordic pale and medium complexions appropriate to Helsinki's local population, natural diverse faces but secondary people softly blurred. Mature green park trees and distant anonymous old plaster residential facades. TIGHT WAIST-UP photograph, foreground waist cut at lower image edge; background dense shoulder-to-shoulder chest-up people cover every lower body. EVERY SHOE AND FOOT OF EVERY PERSON must be outside the frame or completely concealed. No footwear anywhere, no full-length humans, no stage branding, no banners, no signage, no festival art, no drinks or food. Natural soft evening sunlight, candid documentarycamera, friendly joyful believable moment, not staged group portrait. Generate one entirely new real-camera-looking photorealistic illustrative image, landscape1536x1024 PNG opaque RGB sRGB. Natural light, subdued authentic colors, ordinary irregular real textures,35mm camera perspective. No HDR, CGI, painting, plastic skin or repeating stamped natural textures. Absolutely no text, letters, digits, street signs, address numbers, advertising, posters, logos, brands, brand patterns, watermark or borders. No food, protected art or modern architect-designed landmark.",
+      "sources": [
+        {
+          "url": "https://historia.hel.fi/en/alueet/southern/kaivopuisto",
+          "title": "City of Helsinki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978271+00:00",
+          "readFacts": [
+            "Spa company established in 1834; spa opened1838, park built on rugged seashore cliffs.",
+            "Regular steamship traffic Helsinki Tallinn Saint Petersburg began1837.",
+            "Ursa observatory opened1926, excluded from1873.",
+            "Landscape heavily redeveloped around1900; historical frame restricts to bare coastal rock and water without later park design."
+          ],
+          "periodReference": "Page contains 1852–1855 landscape and1872 painting; not identical shore view; no exact1873 photo located."
+        },
+        {
+          "url": "https://www.hel.fi/fi/kulttuuri-ja-vapaa-aika/ulkoilu-puistot-ja-luontokohteet/puistot/kaivopuisto",
+          "title": "Helsingin kaupunki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978437+00:00",
+          "readFacts": [
+            "Kaivopuisto lies at the sea in southern Helsinki; rocky high points have sea views.",
+            "Harakka island is close to Kaivopuisto; coastal route borders park.",
+            "Ursa observatory1926 excluded; all buildings, statues, piers and contemporary shore furniture excluded in restricted historical seaward crop."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Helsingin kesäjuhlassa. Havainnekuva.",
+      "QA": {
+        "id": "helsinki-6-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:27:40.909880+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural fictional young-adult foreground face and hands inspected natively, generic garments without discernible logos, no footwear at any depth; camera-like park celebration.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-hands-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:28:00.277846+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+        "bytes": 2110146,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+            "bytes": 2110146,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png?verify=north-a7949fd582d2c4cd-1791826080277864000",
+            "http": 200,
+            "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+            "bytes": 2110146,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2110146
+    },
+    {
+      "id": "helsinki-7-ikkunavalot-intro-v1",
+      "slot": 7,
+      "cityName": "Helsinki",
+      "gameCityId": "helsinki",
+      "mediaSlug": "helsinki",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/helsinki-7-ikkunavalot-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/native/helsinki-7-ikkunavalot-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png",
+      "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Helsinki arrival intro slot7. A quiet ordinary Helsinki old residential block at blue hour TODAY, photographed from pavement at eye level along the street. Anonymous late19th/early20th-century plaster facades, restrained pale ochre and dusty gray walls, warm domestic light glowing in a few irregular windows, damp stone pavement softly reflects simple street lamps, two small distant adults walking away in modern coats. Intimate real Nordic evening, no famous landmark, no monument, no identifiable architect-designed building, no shops, no vehicles, no visible close faces. Generate one entirely new real-camera-looking photorealistic illustrative image, landscape1536x1024 PNG opaque RGB sRGB. Natural light, subdued authentic colors, ordinary irregular real textures,35mm camera perspective. No HDR, CGI, painting, plastic skin or repeating stamped natural textures. Absolutely no text, letters, digits, street signs, address numbers, advertising, posters, logos, brands, brand patterns, watermark or borders. No food, protected art or modern architect-designed landmark.",
+      "sources": [
+        {
+          "url": "https://historia.hel.fi/en/alueet/southern/kaivopuisto",
+          "title": "City of Helsinki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978271+00:00",
+          "readFacts": [
+            "Spa company established in 1834; spa opened1838, park built on rugged seashore cliffs.",
+            "Regular steamship traffic Helsinki Tallinn Saint Petersburg began1837.",
+            "Ursa observatory opened1926, excluded from1873.",
+            "Landscape heavily redeveloped around1900; historical frame restricts to bare coastal rock and water without later park design."
+          ],
+          "periodReference": "Page contains 1852–1855 landscape and1872 painting; not identical shore view; no exact1873 photo located."
+        },
+        {
+          "url": "https://www.hel.fi/fi/kulttuuri-ja-vapaa-aika/ulkoilu-puistot-ja-luontokohteet/puistot/kaivopuisto",
+          "title": "Helsingin kaupunki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978437+00:00",
+          "readFacts": [
+            "Kaivopuisto lies at the sea in southern Helsinki; rocky high points have sea views.",
+            "Harakka island is close to Kaivopuisto; coastal route borders park.",
+            "Ursa observatory1926 excluded; all buildings, statues, piers and contemporary shore furniture excluded in restricted historical seaward crop."
+          ]
+        }
+      ],
+      "caption": "Helsingin vanhan asuinkorttelin iltavalot. Havainnekuva.",
+      "QA": {
+        "id": "helsinki-7-ikkunavalot-intro-v1",
+        "slot": 7,
+        "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:27:40.970192+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary old Helsinki facades, warm domestic light and distant backs; native door/people crop shows no readable text/logo/address mark; photographic wet pavement.",
+        "detailCrops": [
+          "session-owner-review/slot7-doors-people-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:28:04.399981+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+        "bytes": 2474965,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+            "bytes": 2474965,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png?verify=north-1241bd799aa2f2ee-1791826084400000000",
+            "http": 200,
+            "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+            "bytes": 2474965,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2474965
+    },
+    {
+      "id": "helsinki-8-kaivopuisto-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Helsinki",
+      "gameCityId": "helsinki",
+      "mediaSlug": "helsinki",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/helsinki-8-kaivopuisto-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/native/helsinki-8-kaivopuisto-1873-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png",
+      "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Asset type: Helsinki arrival intro slot8. Create a completely new rigorous photorealistic historical illustration of Kaivopuisto southern Helsinki natural Baltic rocky shoreline in EXACT YEAR1873. Modern slot5 reference is supplied ONLY as camera location and direction/landform reference: identical camera1.6m on exposed shore granite looking south-southeast, granite lowerleft, Baltic water middle, same low natural tree-covered island horizon in upperthird,35mm. Reconstruct1873 from scratch, do not edit recolor or retouch modern pixels. In1873 the Kaivopuisto spa park already existed1834/1838 and rugged seashore cliffs existed, regular steamships began1837. This restricted seaward framing has no architecture anywhere. Small distant authentic wooden1873 sailing skiff with plain sail replaces any modern yacht; no motorboat, plastic, modern rigging or engine. NO buildings, piers, modern paving, railings, lamp posts, statues, street furniture, antennas, electric lights or observatory(Ursa1926). No people. Neutral true BLACK AND WHITE achromatic grayscale ONLY, fine subtle photographic grain and soft1870s photographic contrast, no sepia, no colorful tint, no artificial border. Real uneven granite, sea ripples and island silhouettes, cloudy natural daylight. Photorealistic-camera depiction rather than drawing. Generate one entirely new real-camera-looking photorealistic illustrative image, landscape1536x1024 PNG opaque RGB sRGB. Natural light, subdued authentic colors, ordinary irregular real textures,35mm camera perspective. No HDR, CGI, painting, plastic skin or repeating stamped natural textures. Absolutely no text, letters, digits, street signs, address numbers, advertising, posters, logos, brands, brand patterns, watermark or borders. No food, protected art or modern architect-designed landmark.",
+      "sources": [
+        {
+          "url": "https://historia.hel.fi/en/alueet/southern/kaivopuisto",
+          "title": "City of Helsinki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978271+00:00",
+          "readFacts": [
+            "Spa company established in 1834; spa opened1838, park built on rugged seashore cliffs.",
+            "Regular steamship traffic Helsinki Tallinn Saint Petersburg began1837.",
+            "Ursa observatory opened1926, excluded from1873.",
+            "Landscape heavily redeveloped around1900; historical frame restricts to bare coastal rock and water without later park design."
+          ],
+          "periodReference": "Page contains 1852–1855 landscape and1872 painting; not identical shore view; no exact1873 photo located."
+        },
+        {
+          "url": "https://www.hel.fi/fi/kulttuuri-ja-vapaa-aika/ulkoilu-puistot-ja-luontokohteet/puistot/kaivopuisto",
+          "title": "Helsingin kaupunki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978437+00:00",
+          "readFacts": [
+            "Kaivopuisto lies at the sea in southern Helsinki; rocky high points have sea views.",
+            "Harakka island is close to Kaivopuisto; coastal route borders park.",
+            "Ursa observatory1926 excluded; all buildings, statues, piers and contemporary shore furniture excluded in restricted historical seaward crop."
+          ]
+        }
+      ],
+      "caption": "Kaivopuiston kalliorannan merimaisema vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "helsinki-8-kaivopuisto-1873-intro-v1",
+        "slot": 8,
+        "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:27:41.041880+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: visually neutral black-and-white1873 sailing skiff, bare natural coast and islands, matching5 viewpoint/horizon; sources exclude later shore structures; native water/skiff inspected, no modern objects or text. Tiny native RGB variation retained, no recolouring.",
+        "detailCrops": [
+          "session-owner-review/slot8-sailboat-sea-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:28:09.404217+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+        "bytes": 2769576,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+            "bytes": 2769576,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png?verify=north-97c3e903a1f7fa87-1791826089404245000",
+            "http": 200,
+            "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+            "bytes": 2769576,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2769576
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "helsinki-4-asuinalueen-arki-intro-v1",
+      "slot": 4,
+      "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Hylätty toimituksesta: lähimmän pyörän mustassa etukorissa näkyy vaalea kirjainmainen logo-/tekstimerkki. Ensimmäinen candidate jää pending-quality-fix; kokonaan uusi tarpeellinen korjaus on sallittu.",
+      "observations": [
+        "Koko kehys: fotorealistinen asuinkatu, johdonmukainen perspektiivi ja pehmeä luonnonvalo. Kaksi pientä kävelijää selin.",
+        "Puiden kuori ja lehdet, kiveys, rappaus sekä ajoneuvojen pinnat tarkastettu natiivikokoisina; ei havaittua kaarnaleimaa tai muovisuutta.",
+        "HYLKÄYS: lähimmän polkupyörän mustan etukorin yläreunassa, noin x=651..677 y=599..611, näkyy vaalea noin kolmikirjaiminen BLC:n kaltainen logo-/tekstimerkki. Merkki rikkoo no text/logos -vaatimusta, vaikka tarkkaa tuotemerkkiä ei voida tunnistaa.",
+        "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-bike-basket-mark.png",
+        "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-people-bikes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-tree-cars-leaves.png",
+        "Tämä ensimmäinen candidate jää pending-quality-fix. Yksi kokonaan uusi tarpeellinen laatukorjaus kuuluu owner-order.jsonin rootWorkflowPolicyCorrectioniin; tätä tiedostoa ei retusoida eikä toimiteta.",
+        "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+      ]
+    }
+  ],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": false,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [
+    {
+      "id": "helsinki-4-asuinalueen-arki-intro-v1",
+      "slot": 4,
+      "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Hylätty toimituksesta: lähimmän pyörän mustassa etukorissa näkyy vaalea kirjainmainen logo-/tekstimerkki. Ensimmäinen candidate jää pending-quality-fix; kokonaan uusi tarpeellinen korjaus on sallittu.",
+      "observations": [
+        "Koko kehys: fotorealistinen asuinkatu, johdonmukainen perspektiivi ja pehmeä luonnonvalo. Kaksi pientä kävelijää selin.",
+        "Puiden kuori ja lehdet, kiveys, rappaus sekä ajoneuvojen pinnat tarkastettu natiivikokoisina; ei havaittua kaarnaleimaa tai muovisuutta.",
+        "HYLKÄYS: lähimmän polkupyörän mustan etukorin yläreunassa, noin x=651..677 y=599..611, näkyy vaalea noin kolmikirjaiminen BLC:n kaltainen logo-/tekstimerkki. Merkki rikkoo no text/logos -vaatimusta, vaikka tarkkaa tuotemerkkiä ei voida tunnistaa.",
+        "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-bike-basket-mark.png",
+        "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-people-bikes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-tree-cars-leaves.png",
+        "Tämä ensimmäinen candidate jää pending-quality-fix. Yksi kokonaan uusi tarpeellinen laatukorjaus kuuluu owner-order.jsonin rootWorkflowPolicyCorrectioniin; tätä tiedostoa ei retusoida eikä toimiteta.",
+        "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+      ]
+    }
+  ],
+  "pendingQualityFixSlots": [
+    4
+  ],
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "helsinki",
+    "gameCityId": "helsinki",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/sources.json",
+      "https://historia.hel.fi/en/alueet/southern/kaivopuisto",
+      "https://www.hel.fi/fi/kulttuuri-ja-vapaa-aika/ulkoilu-puistot-ja-luontokohteet/puistot/kaivopuisto"
+    ],
+    "assets": [
+      {
+        "id": "helsinki-4-asuinalueen-arki-intro-v1",
+        "slot": 4,
+        "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "Hylätty toimituksesta: lähimmän pyörän mustassa etukorissa näkyy vaalea kirjainmainen logo-/tekstimerkki. Ensimmäinen candidate jää pending-quality-fix; kokonaan uusi tarpeellinen korjaus on sallittu.",
+        "observations": [
+          "Koko kehys: fotorealistinen asuinkatu, johdonmukainen perspektiivi ja pehmeä luonnonvalo. Kaksi pientä kävelijää selin.",
+          "Puiden kuori ja lehdet, kiveys, rappaus sekä ajoneuvojen pinnat tarkastettu natiivikokoisina; ei havaittua kaarnaleimaa tai muovisuutta.",
+          "HYLKÄYS: lähimmän polkupyörän mustan etukorin yläreunassa, noin x=651..677 y=599..611, näkyy vaalea noin kolmikirjaiminen BLC:n kaltainen logo-/tekstimerkki. Merkki rikkoo no text/logos -vaatimusta, vaikka tarkkaa tuotemerkkiä ei voida tunnistaa.",
+          "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-bike-basket-mark.png",
+          "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-people-bikes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-tree-cars-leaves.png",
+          "Tämä ensimmäinen candidate jää pending-quality-fix. Yksi kokonaan uusi tarpeellinen laatukorjaus kuuluu owner-order.jsonin rootWorkflowPolicyCorrectioniin; tätä tiedostoa ei retusoida eikä toimiteta.",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+        ]
+      },
+      {
+        "id": "helsinki-5-kaivopuiston-meri-intro-v1",
+        "slot": 5,
+        "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty: luonnollinen fotorealistinen merinäkymä, ei tekstiä/logoja; moderni katselusuunta sopii historialliseen pariin.",
+        "observations": [
+          "Fotorealistinen kallioranta ja merinäkymä; veden aallot, heijastukset, kivien kuluminen ja heinä ovat epäsäännöllisiä ja luonnollisia.",
+          "Pieni kaukainen moderni purjevene; ei ihmisiä, tekstiä, logoja, rakennuksia tai epäjohdonmukaista valaistusta.",
+          "Kallio alavasemmalla, matalat saaret horisontissa ja avoin meri muodostavat saman katselusuunnan kuin slot8:n historiallinen pari.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot5-rock-grasses-water.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot5-boat-islands.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+        ]
+      },
+      {
+        "id": "helsinki-6-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty: uskottava fiktiivinen aikuinen etualalla kesäjuhlassa, luonnolliset kasvot ja kädet, geneeriset vaatteet, ei ruokaa tai näkyviä jalkineita.",
+        "observations": [
+          "Fiktiivinen aikuinen etualalla; luonnollinen iho, silmät, hampaat, hiukset ja näkyvä käsi. Taustan näkyvät kasvot ja kädet tarkastettu; ei selvää anatomista virhettä.",
+          "Uskottava nykypäivän kesäjuhla puistossa; etualan pellavableiseri ja yksivärinen toppi ovat geneerisiä ja muodikkaita. Ei tekstiä, logoja tai tunnistettavaa brändikuviota.",
+          "Rajaus pitää kaikkien henkilöiden jalkineet ja jalat poissa näkyvistä. Ei ruokaa tai juomia. Lämmin luonnonvalo ja syväterävyys ovat johdonmukaisia.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot6-face-hand.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot6-secondary-hands-faces.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+        ]
+      },
+      {
+        "id": "helsinki-7-ikkunavalot-intro-v1",
+        "slot": 7,
+        "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty: fotorealistinen iltakatu ja pienet selin kävelevät ihmiset; koherentti valo ja perspektiivi, ei näkyvää tekstiä/logoja.",
+        "observations": [
+          "Fotorealistinen iltakatu; kahden pienen kävelijän selät, rakennusten linjat ja märkien pintojen heijastukset ovat johdonmukaisia.",
+          "Ovien, seinäpaneelien ja venttiilien natiivikokoisessa tarkastuksessa ei havaittu luettavaa tekstiä, numeroa tai logoa. Puiden oksasto ja kuori ovat luonnollisia.",
+          "Lämmin ikkuna- ja katuvalo sopii siniseen iltataivaaseen; ei muovisuutta tai epäjohdonmukaista perspektiiviä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot7-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot7-tree-lamp.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+        ]
+      },
+      {
+        "id": "helsinki-8-kaivopuisto-1873-intro-v1",
+        "slot": 8,
+        "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty: neutraali mustavalkoinen1873-havainnekuva, modernin parin katselusuunta ja lähteiden tukema rajattu rannikkorekonstruktio; ei briefin sulkemia moderneja elementtejä.",
+        "observations": [
+          "Visuaalisesti neutraali mustavalkoinen fotorealistinen merikuva, ei näkyvää seepiaa tai värisävyä. Alkuperäisessä RGB-datassa pieniä kanavaeroja (keskiarvo max-min 2.2326/255, suurin16/255 yhdessä pikselissä); alkuperäisiä pikseleitä ei muutettu.",
+          "Kameran suunta, alavasemman kalliorannan rakenne, saarten sijoittelu ja horisontti vastaavat slot5:n modernia paria. Kuva on uusi historiallinen rekonstruktio.",
+          "Pieni puinen purjevene on aikakaudelle uskottava; ei näkyvää moottoria, muovia tai nykyaikaisia rannikon rakenteita. Kallio, heinä ja vesi tarkastettu natiivikokoisina.",
+          "Kaksi briefin virallista lähdettä luettu verkosta. Ne tukevat Kaivopuiston 1800-luvun kylpyläpuistoa ja kallioista rannikkoa; exact1873 saman paikan valokuvaa ei lähteissä ole. Historiallisen rajatun merinäkymän uskottavuus on lähteisiin perustuva tulkinta.",
+          "Producerbriefin period exclusions tarkastettu: ei Ursan1926 tähtitornia, rakennuksia, moderneja polkuja/päällysteitä, kaiteita, lamppuja, muistomerkkejä, opasteita tai moottoriveneitä. Kuvassa ei havaittu näitä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot8-sail-boat-water.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot8-rock-grasses.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:32:53.715300+00:00",
+    "sourceManifestSha256": "f183f9713861ea39223760409ae3104a66dde166f5e51a88612bf7e46830bf8c"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "helsinki",
+    "verifiedAt": "2026-10-12T17:36:19.506866+00:00",
+    "assets": [
+      {
+        "id": "helsinki-5-kaivopuiston-meri-intro-v1",
+        "slot": 5,
+        "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+        "bytes": 2572119,
+        "verifiedAt": "2026-10-12T17:36:18.208520+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png",
+            "http": 200,
+            "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+            "bytes": 2572119,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png?delivery-verify=9b4be9b210cec326-1791826578208514000",
+            "http": 200,
+            "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
+            "bytes": 2572119,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "helsinki-6-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+        "bytes": 2110146,
+        "verifiedAt": "2026-10-12T17:36:18.208804+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+            "bytes": 2110146,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png?delivery-verify=a7949fd582d2c4cd-1791826578208803000",
+            "http": 200,
+            "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
+            "bytes": 2110146,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "helsinki-7-ikkunavalot-intro-v1",
+        "slot": 7,
+        "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+        "bytes": 2474965,
+        "verifiedAt": "2026-10-12T17:36:18.209259+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+            "bytes": 2474965,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png?delivery-verify=1241bd799aa2f2ee-1791826578209233000",
+            "http": 200,
+            "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
+            "bytes": 2474965,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "helsinki-8-kaivopuisto-1873-intro-v1",
+        "slot": 8,
+        "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+        "bytes": 2769576,
+        "verifiedAt": "2026-10-12T17:36:18.843483+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+            "bytes": 2769576,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png?delivery-verify=97c3e903a1f7fa87-1791826578843465000",
+            "http": 200,
+            "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
+            "bytes": 2769576,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 4,
+    "R2": 4,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.831574+00:00"
+}

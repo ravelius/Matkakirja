@@ -1,0 +1,731 @@
+{
+  "cityName": "Kreeta",
+  "gameCityId": "kreeta",
+  "mediaSlug": "crete",
+  "status": "worker-complete-awaiting-session-owner-QA-and-R2",
+  "productionComplete": true,
+  "assets": [
+    {
+      "id": "crete-intro-4-v1",
+      "slot": 4,
+      "cityName": "Kreeta",
+      "gameCityId": "kreeta",
+      "mediaSlug": "crete",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-4-kournas-kylarki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-4-kournas-kylarki-native-v1.png",
+      "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+      "bytes": 3135766,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Crete arrival intro slot 4. Present-day Kournas village in western Crete. An ordinary anonymous hillside residential lane with two-storey rough limestone and off-white plaster houses, plain faded olive-grey wood shutters, a few terracotta plant pots, pale dry uneven lane paving. One neighbor with a plain tote walks away in middle distance, another small rear-facing person rounds the far bend. Nothing staged; human-scale real Cretan daily life in clear gentle morning light. Eye-height oblique 45mm view, no prominent or named architecture, no close faces, no souvenir stalls or market products. Photorealistic real-camera travel image, natural illumination, subdued authentic colors, irregular true stone plaster foliage and skin textures. Landscape 1536x1024 opaque RGB sRGB. No illustration, CGI, HDR, cinematic color grading, plastic skin or stamped repetitive leaves. No text, lettering, numbers, signs, logos, brand patterns, stripes, graffiti, artworks, watermark or frame. In every Cretan image exclude all monuments: no church, chapel, minaret, monastery, fortress, defensive wall, lighthouse, historic landmark, ancient ruin, statuary, memorial or carved monument. Ordinary anonymous residential houses and nature only. No food or drinks.",
+      "sources": [
+        {
+          "url": "https://visitchania.gr/en/places-to-visit/lake-of-kourna/",
+          "publisher": "Visit Chania official destination portal",
+          "readFacts": "Kournas is a traditional village near lake, at foot of Mount Dafnomadara. Supports ordinary village residential setting; fictional gathering is not asserted as a documented festival."
+        }
+      ],
+      "caption": "Arkinen kävelyhetki Kournasin kylän asuinkujalla Kreetalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:31:34.165103+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Ordinary residential lane, no monuments or churches, two small people walking away, irregular foliage stone and paving, no discernible text logos or food."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:32:29.813041+00:00",
+          "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: ordinary limestone/plaster village lane, two people walking away, no monument, church, near faces, text, logo or address numbers. Irregular olive leaves and stone, authentic subdued camera light.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:39:03.156231+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+        "bytes": 3135766,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png",
+            "http": 200,
+            "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+            "bytes": 3135766,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png?t=d93efa8ac1442f8e",
+            "http": 200,
+            "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+            "bytes": 3135766,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "crete-intro-5-v1",
+      "slot": 5,
+      "cityName": "Kreeta",
+      "gameCityId": "kreeta",
+      "mediaSlug": "crete",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-5-kournasjarvi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-5-kournasjarvi-native-v1.png",
+      "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+      "bytes": 2900753,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Crete arrival intro slot 5. Current-day quiet Kournas freshwater lake in western Crete. From a natural patch of the eastern shore of Lake Kournas near Kavallos, western Crete, camera 1.4m above the pale pebbly sand looking west-southwest across the lake at the low rocky foothills rising behind the opposite shore. 40mm lens, shore curves from lower right toward middle right, irregular sparse reeds along right edge, lake fills lower left and center, limestone hills occupy upper center and left. Crop the view tightly to water and hills, excluding all houses, roads, cafés, tourist structures and distant settlements. Calm muted green-blue freshwater, shallow pale sandy water margin, dry limestone hillside with scattered irregular scrub and small olive trees rather than lush woodland, soft summer daylight with slight natural haze and a pale sky. No people in foreground; no boats, pedalos, birds or animals necessary. Preserve this precise viewpoint for the 1873 companion. Photorealistic real-camera travel image, natural illumination, subdued authentic colors, irregular true stone plaster foliage and skin textures. Landscape 1536x1024 opaque RGB sRGB. No illustration, CGI, HDR, cinematic color grading, plastic skin or stamped repetitive leaves. No text, lettering, numbers, signs, logos, brand patterns, stripes, graffiti, artworks, watermark or frame. In every Cretan image exclude all monuments: no church, chapel, minaret, monastery, fortress, defensive wall, lighthouse, historic landmark, ancient ruin, statuary, memorial or carved monument. Ordinary anonymous residential houses and nature only. No food or drinks.",
+      "sources": [
+        {
+          "url": "https://apokoronas.gov.gr/en/d-e-georgioupolis/",
+          "publisher": "Municipality of Apokoronas",
+          "readFacts": "Kavallos is on the eastern lake shore. Kournas is natural, stream and spring fed, drained by Delfinas. Eastern cafés and pedalboats are modern setting: all excluded from pair. Lake vicinity settlements existed under Ottoman rule; no settlement is included."
+        },
+        {
+          "url": "https://eprints.whiterose.ac.uk/176917/1/Kournas_Rev_Final.pdf",
+          "publisher": "White Rose university repository, Jouffroy-Bapicot et al. 2021, Quaternary Science Reviews doi10.1016/j.quascirev.2021.107072",
+          "readFacts": "Lake sediment sequence covers nearly ten millennia. Sections5.1–5.2 document olive cultivation since17th century; slopes had reduced woodland, later nineteenth-century olive cultivation increase. Reconstruct sparse scrub and scattered olives, not lush forest. Lake certainly existed1873; exact shore water level not established."
+        },
+        {
+          "url": "https://www.aegeussociety.org/wp-content/uploads/2021/12/Bottema-Sarpaki-2003-Holocene.pdf",
+          "publisher": "Bottema and Sarpaki2003, The Holocene13(5)733–749 primary research",
+          "readFacts": "Sediment core and vegetation study confirms lake older than3500BP and its ancient natural basin. Modern northern barrier is discussed; choose eastern shore looking west so no northern manmade barrier or outlet engineering appears."
+        }
+      ],
+      "caption": "Kournasjärven luonnonrantaa Kreetan länsiosassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:32:41.955974+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Natural lake bank, no people monuments buildings road signs or food. Ripples and reeds irregular; scattered rounded hillside shrubs inspected, note root should assess repetition at native scale."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:34:23.480064+00:00",
+          "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: quiet lake, pale natural bank right, distinctive limestone ridge profile, no buildings/monuments/text/people. Rounded maquis bushes vary in size, shape, shade and position without exact repeated stamps. Natural muted water and atmospheric camera light;1873 terrain reference established.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:39:08.407353+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+        "bytes": 2900753,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png",
+            "http": 200,
+            "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+            "bytes": 2900753,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png?t=1bd5cbd6764e8133",
+            "http": 200,
+            "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+            "bytes": 2900753,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "crete-intro-6-v1",
+      "slot": 6,
+      "cityName": "Kreeta",
+      "gameCityId": "kreeta",
+      "mediaSlug": "crete",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-6-kreetan-kesajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-6-kreetan-kesajuhla-native-v1.png",
+      "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+      "bytes": 2081769,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Crete arrival intro slot 6. Current-day joyful informal evening village courtyard celebration in Kournas, western Crete, surrounded by plain anonymous weathered limestone residential walls and simple warm practical bulbs. One fictional Cretan Greek young adult man aged 28 nearest camera, laughing while turning toward friends, olive complexion with realistic uneven skin texture, thick short wavy dark hair, a plain loose sage-green linen shirt open at the neck without any pattern, emblems or stripes. Behind him local Cretan Greek young adult friends aged 23 to 35 talk and laugh in fashionable generic solid-color clothes; candid relaxed celebration, not a posed promotional shoot. Shoulder-height 50mm view, mid-torso-up frame, crowd tightly fills lower frame: ALL ankles, feet and shoes excluded by cropping or upper-body occlusion, absolutely zero footwear even on background people. Every person adult and fictional. Natural late-evening ambience and faint bulb light, no stage performer, no banner, no dance costume or religious setting. Photorealistic real-camera travel image, natural illumination, subdued authentic colors, irregular true stone plaster foliage and skin textures. Landscape 1536x1024 opaque RGB sRGB. No illustration, CGI, HDR, cinematic color grading, plastic skin or stamped repetitive leaves. No text, lettering, numbers, signs, logos, brand patterns, stripes, graffiti, artworks, watermark or frame. In every Cretan image exclude all monuments: no church, chapel, minaret, monastery, fortress, defensive wall, lighthouse, historic landmark, ancient ruin, statuary, memorial or carved monument. Ordinary anonymous residential houses and nature only. No food or drinks.",
+      "sources": [
+        {
+          "url": "https://visitchania.gr/en/places-to-visit/lake-of-kourna/",
+          "publisher": "Visit Chania official destination portal",
+          "readFacts": "Kournas is a traditional village near lake, at foot of Mount Dafnomadara. Supports ordinary village residential setting; fictional gathering is not asserted as a documented festival."
+        }
+      ],
+      "caption": "Kuvitteellinen nuorten aikuisten kesäjuhla Kournasin kylässä Kreetalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:33:59.366266+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Fictional Cretan adults with natural skin, generic plain modern linen clothes, all footwear ankles feet excluded from full frame including background, no monuments food text logos or artwork."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:36:05.464147+00:00",
+          "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: fictional young adult Cretan man and cheerful adult friends, plain contemporary linen clothing, no text/logos/food, all footwear excluded. Natural skin texture, anonymous residential courtyard, no monument or church.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:39:11.016721+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+        "bytes": 2081769,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+            "bytes": 2081769,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png?t=db056095a0a4b912",
+            "http": 200,
+            "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+            "bytes": 2081769,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "crete-intro-7-v1",
+      "slot": 7,
+      "cityName": "Kreeta",
+      "gameCityId": "kreeta",
+      "mediaSlug": "crete",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/crete-7-hanian-asuintalojen-valot-native-v1.png",
+      "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+      "bytes": 2747320,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Crete arrival intro slot 7. Present-day ordinary residential corner in the Topanas neighborhood of Chania, Crete, a narrow paved passage with anonymous old plaster and limestone two-storey homes and unmarked wooden doors. At blue hour, a modest warm interior glow escapes a few upper windows, two simple generic wall lanterns light uneven paving. View from street level with 50mm lens looking around a quiet bend, one very small couple in the far distance walking away, faces invisible. Residential scene only, buildings are plain vernacular houses without carved ornaments, historic landmark or monument. Faint sea-blue evening sky above rooftops, realistic exposure and calm muted color, no spectacular lighting. Photorealistic real-camera travel image, natural illumination, subdued authentic colors, irregular true stone plaster foliage and skin textures. Landscape 1536x1024 opaque RGB sRGB. No illustration, CGI, HDR, cinematic color grading, plastic skin or stamped repetitive leaves. No text, lettering, numbers, signs, logos, brand patterns, stripes, graffiti, artworks, watermark or frame. In every Cretan image exclude all monuments: no church, chapel, minaret, monastery, fortress, defensive wall, lighthouse, historic landmark, ancient ruin, statuary, memorial or carved monument. Ordinary anonymous residential houses and nature only. No food or drinks.",
+      "sources": [
+        {
+          "url": "https://oldsite.incrediblecrete.gr/wp-content/uploads/2015/10/Finnish-English.pdf",
+          "publisher": "Region of Crete official tourism brochure",
+          "readFacts": "Topanas neighborhood in Chania has narrow paved streets with historic vernacular residential buildings. New scene confines frame to anonymous ordinary residences, excludes all named monuments and ornate mansions."
+        }
+      ],
+      "caption": "Ikkunavalot Hanian tavallisella asuinkujalla Kreetalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:35:16.519886+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Ordinary Chania residential facades with a sea glimpse, small rear-facing couple, practical generic light, no landmark monument chapel artwork text logo food or close face."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:36:36.580257+00:00",
+          "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: anonymous Topanas residential lane with small rear-facing couple and modest evening window/lantern light. No church, fortress, memorial, other monument, text or logos. Natural stone and foliage.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:39:14.775569+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+        "bytes": 2747320,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+            "http": 200,
+            "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+            "bytes": 2747320,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png?t=f93a051b07f5e4a1",
+            "http": 200,
+            "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+            "bytes": 2747320,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "crete-intro-8-v1",
+      "slot": 8,
+      "sha256": "02291f5e7e54b2ede010165cbc36e4e7de5f838bfc0c5e7b9db0b50cdfb312e8",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Hylätty parivastaavuudesta: pysyvän paljaan kallionenäkkeen sijainti ja muoto poikkeavat modernista slot5:stä, vaikka briefi vaatii saman muuttumattoman kalliogeometrian. Neutraali mustavalkoisuus ja muistomerkkien poissulku läpäisevät. Pending-quality-fix.",
+      "observations": [
+        "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Muistomerkkien poissulku täyttyy: järvi ja luonto ilman rakennuksia, kirkkoja, linnoituksia, raunioita tai patsaita.",
+        "Vesi, kaislat, rantakivet ja kuivien rinteiden hajanaiset pensaat näyttävät luonnollisilta. Pieni kaukainen mies selin paidassa, liivissä ja löysissä housuissa on aikakaudelle uskottava; kasvot eivät erotu. Ei kirjoitusta, logoja tai modernia infrastuktuuria.",
+        "HYLKÄYS: samaa muuttumatonta kalliomaastoa/samaa framingia edellyttävä5/8pari ei täyty. Slot5:n paljas läheisempi kallionenäkkeen huippu noin x940,y210 on slot8:ssa siirtynyt noin x725,y230 ja sen kallio-/rinneprofiili on muuttunut. Myös keskitaustan harjanteen muoto ja sen suhde kallionenäkkeeseen poikkeavat.",
+        "Tämä ei ole pelkkä kasvillisuuden tai vedenpinnan historiallinen vaihtelu. Producerbriefin viimeinen kappale edellyttää Fixed terrain silhouette / This rock geometry is unchanged in1873 ja kieltää eri laakson keksimisen. Yleinen WSW-suunta ja korkein huippu vasemmalla säilyvät, mutta niiden säilyminen yksin ei vahvista vaadittua maastoparia.",
+        "Vertailutodisteet: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot5-hill-rock-geometry.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-hill-rock-geometry.png",
+        "Brief, historical-sources.json ja kaksi tutkimuslähdettä luettu verkosta. Vuoden2021 tutkimuksesta luettu kohdat5.1.5 ja5.2 sekä järvialtaan kuvaus;2003 tutkimuksesta luettu tiivistelmä ja Kournas-Delphinos-alueen järvi/pohjoisbarrier-kuvaus. Ne tukevat vanhaa luonnollista järviallasta ja harvaa pensas-/oliivikasvillisuutta, eivät kuvan muuttunutta yksittäistä kalliogeometriaa.",
+        "Apokoronasin kunnan lähdesivu aikakatkaisi verkkohakuyrityksen; sen kirjattu tuottajan lähdenäyttö luettiin historical-sources.jsonista. Kaksi muuta primaarilähdettä saatiin luettua suoraan.",
+        "Period exclusions tarkastettu: ei taloja/asumuksia, modernia turismia, pohjoista muokattua pato-/purkurakennetta, teitä, kaiteita, kahviloita, pedaaliveneitä, autoja, koneita, sähköjohtoja, valoja tai muovia. Täsmällistä1873-rantakuvaa ei briefin mukaan löytynyt; vedenpinta ja yksittäiset kaislat ovat tulkintaa.",
+        "Ensimmäinen candidate jää pending-quality-fix; yksi tarpeellinen kokonaan uusi laatukorjaus on rootWorkflowPolicyCorrectionin mukaan sallittu. Tässä QA:ssa ei tehdä generointia tai rasterimuokkausta.",
+        "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-reeds-period-walker.png",
+        "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+      ]
+    }
+  ],
+  "generatedImageCount": 5,
+  "missingSlots": [],
+  "builtInToolOnly": true,
+  "ownerEditorialAcceptance": "pending",
+  "gameIntegration": "pending",
+  "rejectedCandidateHistory": [
+    {
+      "id": "crete-intro-8-v1",
+      "slot": 8,
+      "sha256": "02291f5e7e54b2ede010165cbc36e4e7de5f838bfc0c5e7b9db0b50cdfb312e8",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Hylätty parivastaavuudesta: pysyvän paljaan kallionenäkkeen sijainti ja muoto poikkeavat modernista slot5:stä, vaikka briefi vaatii saman muuttumattoman kalliogeometrian. Neutraali mustavalkoisuus ja muistomerkkien poissulku läpäisevät. Pending-quality-fix.",
+      "observations": [
+        "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Muistomerkkien poissulku täyttyy: järvi ja luonto ilman rakennuksia, kirkkoja, linnoituksia, raunioita tai patsaita.",
+        "Vesi, kaislat, rantakivet ja kuivien rinteiden hajanaiset pensaat näyttävät luonnollisilta. Pieni kaukainen mies selin paidassa, liivissä ja löysissä housuissa on aikakaudelle uskottava; kasvot eivät erotu. Ei kirjoitusta, logoja tai modernia infrastuktuuria.",
+        "HYLKÄYS: samaa muuttumatonta kalliomaastoa/samaa framingia edellyttävä5/8pari ei täyty. Slot5:n paljas läheisempi kallionenäkkeen huippu noin x940,y210 on slot8:ssa siirtynyt noin x725,y230 ja sen kallio-/rinneprofiili on muuttunut. Myös keskitaustan harjanteen muoto ja sen suhde kallionenäkkeeseen poikkeavat.",
+        "Tämä ei ole pelkkä kasvillisuuden tai vedenpinnan historiallinen vaihtelu. Producerbriefin viimeinen kappale edellyttää Fixed terrain silhouette / This rock geometry is unchanged in1873 ja kieltää eri laakson keksimisen. Yleinen WSW-suunta ja korkein huippu vasemmalla säilyvät, mutta niiden säilyminen yksin ei vahvista vaadittua maastoparia.",
+        "Vertailutodisteet: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot5-hill-rock-geometry.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-hill-rock-geometry.png",
+        "Brief, historical-sources.json ja kaksi tutkimuslähdettä luettu verkosta. Vuoden2021 tutkimuksesta luettu kohdat5.1.5 ja5.2 sekä järvialtaan kuvaus;2003 tutkimuksesta luettu tiivistelmä ja Kournas-Delphinos-alueen järvi/pohjoisbarrier-kuvaus. Ne tukevat vanhaa luonnollista järviallasta ja harvaa pensas-/oliivikasvillisuutta, eivät kuvan muuttunutta yksittäistä kalliogeometriaa.",
+        "Apokoronasin kunnan lähdesivu aikakatkaisi verkkohakuyrityksen; sen kirjattu tuottajan lähdenäyttö luettiin historical-sources.jsonista. Kaksi muuta primaarilähdettä saatiin luettua suoraan.",
+        "Period exclusions tarkastettu: ei taloja/asumuksia, modernia turismia, pohjoista muokattua pato-/purkurakennetta, teitä, kaiteita, kahviloita, pedaaliveneitä, autoja, koneita, sähköjohtoja, valoja tai muovia. Täsmällistä1873-rantakuvaa ei briefin mukaan löytynyt; vedenpinta ja yksittäiset kaislat ovat tulkintaa.",
+        "Ensimmäinen candidate jää pending-quality-fix; yksi tarpeellinen kokonaan uusi laatukorjaus on rootWorkflowPolicyCorrectionin mukaan sallittu. Tässä QA:ssa ei tehdä generointia tai rasterimuokkausta.",
+        "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-reeds-period-walker.png",
+        "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+      ]
+    }
+  ],
+  "pendingQualityFixSlots": [
+    8
+  ],
+  "allRequestedSlotsDelivered": false,
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "crete",
+    "gameCityId": "kreeta",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/historical-sources.json",
+      "https://eprints.whiterose.ac.uk/176917/1/Kournas_Rev_Final.pdf",
+      "https://www.aegeussociety.org/wp-content/uploads/2021/12/Bottema-Sarpaki-2003-Holocene.pdf"
+    ],
+    "assets": [
+      {
+        "id": "crete-intro-4-v1",
+        "slot": 4,
+        "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: tavallinen fotorealistinen asuinkuja, pienet henkilöt selin, ei tekstiä, logoja tai muistomerkkejä.",
+        "observations": [
+          "Fotorealistinen tavallinen Kournasin asuinkuja; kaksi pientä henkilöä selin. Kiveys, kalkkikivi, rappaus, lehdet ja ruukkukasvit ovat luonnollisen epäsäännöllisiä.",
+          "Ovet, seinät, pieni sähköpaneeli ja kaukaiset rakennukset tarkastettu natiivikokoisina. Ei havaittua kirjoitusta, numeroa, logoa tai tunnistettavaa brändimerkkiä.",
+          "Muistomerkkien poissulku läpäisee: kuvassa tavallisia nimettömiä asuinrakennuksia ja luontoa; ei kirkkoa, kappelia, minareettia, luostaria, linnoitusta, puolustusmuuria, majakkaa, antiikin raunioita, patsasta tai muistomerkkiä.",
+          "Perspektiivi ja varjojen suunta ovat johdonmukaisia; ei muovisuutta tai leimattua luonnon pintaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot4-people-houses.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot4-stone-leaves-door.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "crete-intro-5-v1",
+        "slot": 5,
+        "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: luonnollinen järvinäkymä ilman rakennuksia tai muistomerkkejä; tätä kuvaa käytetään historiallisen maastoparin referenssinä.",
+        "observations": [
+          "Fotorealistinen luonnollinen Kournasjärven ranta. Epäsäännöllinen aallokko ja caustic-valo vedessä, luonnolliset rantakivet, pensaat, kaislat ja kuiva kivikkoinen rinne.",
+          "Ei ihmisiä, tekstiä, logoja, rakennuksia, muistomerkkejä, turistivälineitä, veneitä tai rantarakenteita. Muistomerkkien poissulku täyttyy.",
+          "Moderni parireferenssi: korkein huippu vasemmalla noin x355,y20 ja läheisempi paljas kallionenäkkeen huippu oikealla keskellä noin x940,y210. Yleinen järven yli WSW-katselusuunta on briefin mukainen; slot8:n pysyvä kallionenäkkeen geometria ei kuitenkaan vastaa tätä valittua kuvaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot5-hill-rock-geometry.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot5-shore-reeds-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "crete-intro-6-v1",
+        "slot": 6,
+        "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: uskottava fiktiivinen aikuinen nykyjuhlassa, luonnolliset kasvot ja kädet, geneeriset vaatteet, ei ruokaa, jalkineita, brändimerkkejä tai muistomerkkejä.",
+        "observations": [
+          "Fiktiivinen aikuinen mies etualalla nykypäivän Kreetan kesäjuhlassa. Luonnolliset kasvot, iho, hampaat, hiukset ja parransänki; taustan näkyvät kasvot ja kädet tarkastettu natiivikokoisina, ei selvää anatomista virhettä.",
+          "Etualan yksivärinen vihreä pellavapaita ja taustan geneeriset nykyaikaiset vaatteet: ei kirjoitusta, logoa, tunnistettavaa brändikuviota tai kansallista-/tanssipukua.",
+          "Kaikkien henkilöiden jalkineet ja jalat jäävät pois näkyvistä. Ei ruokaa, juomia tai tarjoilupöytää. Luonnonvalo ja himmeät käytännön lamput ovat johdonmukaisia.",
+          "Taustassa tavalliset nimettömät kiviset asuinseinät, ei kirkkoa, luostaria, puolustusmuuria, antiikin raunioita, patsasta tai muuta muistomerkkiä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot6-foreground-face-shirt.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot6-secondary-hands-faces.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "crete-intro-7-v1",
+        "slot": 7,
+        "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: tavallinen fotorealistinen ilta-asuinkuja ilman tekstiä tai muistomerkkejä.",
+        "observations": [
+          "Fotorealistinen Hanian tavallinen asuinkuja. Pieni pari selin kauempana, luonnolliset ikkuna-/lyhtyvalot ja uskottava hämärän perspektiivi.",
+          "Ovet, seinäpinnat, kiveys ja lehdet tarkastettu natiivikokoisina. Ei kirjoitusta, numeroita, logoja, muovisuutta tai leimattua orgaanista pintaa.",
+          "Muistomerkkien poissulku täyttyy: tavallisia nimettömiä asuintaloja ilman kaiverrettua monumenttikoristelua; ei kirkkoa, luostaria, linnoitusta, majakkaa, patsasta tai antiikin rauniota.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot7-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot7-plants-stone-door.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "crete-intro-8-v1",
+        "slot": 8,
+        "sha256": "02291f5e7e54b2ede010165cbc36e4e7de5f838bfc0c5e7b9db0b50cdfb312e8",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "Hylätty parivastaavuudesta: pysyvän paljaan kallionenäkkeen sijainti ja muoto poikkeavat modernista slot5:stä, vaikka briefi vaatii saman muuttumattoman kalliogeometrian. Neutraali mustavalkoisuus ja muistomerkkien poissulku läpäisevät. Pending-quality-fix.",
+        "observations": [
+          "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Muistomerkkien poissulku täyttyy: järvi ja luonto ilman rakennuksia, kirkkoja, linnoituksia, raunioita tai patsaita.",
+          "Vesi, kaislat, rantakivet ja kuivien rinteiden hajanaiset pensaat näyttävät luonnollisilta. Pieni kaukainen mies selin paidassa, liivissä ja löysissä housuissa on aikakaudelle uskottava; kasvot eivät erotu. Ei kirjoitusta, logoja tai modernia infrastuktuuria.",
+          "HYLKÄYS: samaa muuttumatonta kalliomaastoa/samaa framingia edellyttävä5/8pari ei täyty. Slot5:n paljas läheisempi kallionenäkkeen huippu noin x940,y210 on slot8:ssa siirtynyt noin x725,y230 ja sen kallio-/rinneprofiili on muuttunut. Myös keskitaustan harjanteen muoto ja sen suhde kallionenäkkeeseen poikkeavat.",
+          "Tämä ei ole pelkkä kasvillisuuden tai vedenpinnan historiallinen vaihtelu. Producerbriefin viimeinen kappale edellyttää Fixed terrain silhouette / This rock geometry is unchanged in1873 ja kieltää eri laakson keksimisen. Yleinen WSW-suunta ja korkein huippu vasemmalla säilyvät, mutta niiden säilyminen yksin ei vahvista vaadittua maastoparia.",
+          "Vertailutodisteet: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot5-hill-rock-geometry.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-hill-rock-geometry.png",
+          "Brief, historical-sources.json ja kaksi tutkimuslähdettä luettu verkosta. Vuoden2021 tutkimuksesta luettu kohdat5.1.5 ja5.2 sekä järvialtaan kuvaus;2003 tutkimuksesta luettu tiivistelmä ja Kournas-Delphinos-alueen järvi/pohjoisbarrier-kuvaus. Ne tukevat vanhaa luonnollista järviallasta ja harvaa pensas-/oliivikasvillisuutta, eivät kuvan muuttunutta yksittäistä kalliogeometriaa.",
+          "Apokoronasin kunnan lähdesivu aikakatkaisi verkkohakuyrityksen; sen kirjattu tuottajan lähdenäyttö luettiin historical-sources.jsonista. Kaksi muuta primaarilähdettä saatiin luettua suoraan.",
+          "Period exclusions tarkastettu: ei taloja/asumuksia, modernia turismia, pohjoista muokattua pato-/purkurakennetta, teitä, kaiteita, kahviloita, pedaaliveneitä, autoja, koneita, sähköjohtoja, valoja tai muovia. Täsmällistä1873-rantakuvaa ei briefin mukaan löytynyt; vedenpinta ja yksittäiset kaislat ovat tulkintaa.",
+          "Ensimmäinen candidate jää pending-quality-fix; yksi tarpeellinen kokonaan uusi laatukorjaus on rootWorkflowPolicyCorrectionin mukaan sallittu. Tässä QA:ssa ei tehdä generointia tai rasterimuokkausta.",
+          "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-reeds-period-walker.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:53:39.823939+00:00",
+    "sourceManifestSha256": "d3a61ce32ef3edf65aa08117c575476067307e7076b4b2803e383b93324cfb4f"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "crete",
+    "verifiedAt": "2026-10-12T17:54:36.133620+00:00",
+    "assets": [
+      {
+        "id": "crete-intro-4-v1",
+        "slot": 4,
+        "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+        "bytes": 3135766,
+        "verifiedAt": "2026-10-12T17:54:33.834260+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png",
+            "http": 200,
+            "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+            "bytes": 3135766,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png?delivery-verify=d93efa8ac1442f8e-1791827673834255000",
+            "http": 200,
+            "sha256": "d93efa8ac1442f8e7732d34842b6481abc7333b2a21c28c6d012d45ece6565df",
+            "bytes": 3135766,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "crete-intro-5-v1",
+        "slot": 5,
+        "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+        "bytes": 2900753,
+        "verifiedAt": "2026-10-12T17:54:33.834367+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png",
+            "http": 200,
+            "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+            "bytes": 2900753,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png?delivery-verify=1bd5cbd6764e8133-1791827673834365000",
+            "http": 200,
+            "sha256": "1bd5cbd6764e813347e00098204aa4fdfdb15c425b5700cb593ab169c10da4ab",
+            "bytes": 2900753,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "crete-intro-6-v1",
+        "slot": 6,
+        "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+        "bytes": 2081769,
+        "verifiedAt": "2026-10-12T17:54:33.834458+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+            "bytes": 2081769,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-6-kreetan-kesajuhla-intro-v1.png?delivery-verify=db056095a0a4b912-1791827673834457000",
+            "http": 200,
+            "sha256": "db056095a0a4b912d24707500a0773aa5c1351ffa388c462dc94a5ad7d95717c",
+            "bytes": 2081769,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "crete-intro-7-v1",
+        "slot": 7,
+        "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+        "bytes": 2747320,
+        "verifiedAt": "2026-10-12T17:54:35.003360+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+            "http": 200,
+            "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+            "bytes": 2747320,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png?delivery-verify=f93a051b07f5e4a1-1791827675003354000",
+            "http": 200,
+            "sha256": "f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db",
+            "bytes": 2747320,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/crete/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 4,
+    "R2": 4,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.740922+00:00"
+}

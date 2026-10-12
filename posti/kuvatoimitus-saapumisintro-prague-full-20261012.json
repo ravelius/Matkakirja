@@ -1,0 +1,1083 @@
+{
+  "cityName": "Praha",
+  "gameCityId": "praha",
+  "mediaSlug": "prague",
+  "assets": [
+    {
+      "id": "prague-4-vinohrady-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Praha",
+      "gameCityId": "praha",
+      "mediaSlug": "prague",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/prague-4-vinohrady-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/native/prague-4-vinohrady-arki-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+      "bytes": 3382779,
+      "nativeSha256": "ec4929a45436a806abca17dc4dc043b56800d9044b5c7b05319430677303f2cc",
+      "decodedRGBSha256": "c0d7e3f94bf1461e0c7948c9b57466b99e3808adcd1d474877d03b49ca632182",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:42:47.086491+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Prague Vinohrady quiet residential side street, ordinary anonymous older apartment houses with muted pale-green, cream and faded pink stucco, plain bay windows and red tile roofs. Tree-lined pavement on gentle uphill, an adult on a bicycle far away seen from behind and two very small pedestrians walking away. Natural diffuse spring midday,35mm eyelevel photograph. Frame residential upperwalls and pavement without shops, signs, plaques, door numbers, public art, famousbuildings or parked cars. No recognisable faces.",
+      "sources": [
+        {
+          "url": "https://prague.eu/en/objevujte/kampa/",
+          "label": "Prague official tourism: Kampa and Čertovka",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Čertovka artificial Vltava branch documented under earlier name1585; banks firmly formed after1600.",
+            "GrandPriorymill existedaround1400.",
+            "PresentKampa park form1947–1948 and gardenwall removal1950s; exclude modernpark/open lawns1873."
+          ]
+        },
+        {
+          "url": "https://srv.vodnimlyny.cz/mlyny/objekty/detail/377-velkoprevorsky-mlyn",
+          "label": "Czech watermill heritage database: GrandPriorymill",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Renaissance exterior rebuilt1597–1598; canal-facingfacade retains Renaissancearticulation.",
+            "Northernresidential extension1889, therefore exclude1873 by tight southernfacadecrop.",
+            "Mechanicalalterations1904, fire1938, housingconversion1939; original1873workingmill differs fromtoday.",
+            "Currentwoodwheel rebuilt1992;1873functional timberwheel representedgenerically, not1992replica.",
+            "Historicalphoto catalogue includes canalview1907, later contextual reference, notcopied."
+          ]
+        },
+        {
+          "url": "https://prague.eu/en/vinohrady-and-vrsovice-la-dolce-vita/",
+          "label": "Prague officialtourism: Vinohrady/Vršovice",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential tree-lined streets with elaborate older facades.",
+            "Districts have local cultural/sociallife, ordinary contemporary neighbourhood celebration appropriate."
+          ]
+        }
+      ],
+      "caption": "Vinohradyn asuinkadun arkinen päivä Prahassa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-4-vinohrady-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-4-vinohrady-arki-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and fences,walls,leaf/flower,paving and distantpeople details inspected. Ordinary Vinohrady residentialside street with small back-facing people and cyclist. Credible single-camera perspective,natural diffuse light and irregular textures. No text,numberplaques,signs,brands,food or protected contemporarydesign observed.",
+          "limits": [
+            "Generated illustrative view, not an actual event photo or surveyed architecture record."
+          ],
+          "reviewedAt": "2026-10-12T17:44:46.335754+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-4-vinohrady-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-4-vinohrady-arki-intro-v1.png?t=ecd4e3d1a4e4f8ea",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-4-vinohrady-arki-intro-v1.png",
+        "sha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+        "bytes": 3382779,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+        "canonicalGetBytes": 3382779,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:49:58.177094+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "prague-5-certovka-mylly-intro-v1",
+      "slot": 5,
+      "cityName": "Praha",
+      "gameCityId": "praha",
+      "mediaSlug": "prague",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/prague-5-certovka-mylly-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/native/prague-5-certovka-mylly-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+      "bytes": 2894641,
+      "nativeSha256": "c307dec178d03b3faecb35266f780c46bdb1b25098c22d2a95f42c6c4f7de4b7",
+      "decodedRGBSha256": "e5ae269d82f87fee19720fd9e8017eea391c0eadc10a4abc96b48fa03d60826d",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:43:46.697136+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Prague Čertovka canal in Malá Strana, stand at the Hroznova crossing and look south along stream toward the southern canal-facing part of the old Grand Priory Mill. Camera35mm at pedestrian height, tight frame with narrow gently moving canal across left/center foreground, weathered pale cream simple Renaissance-era mill facade on right, steep red-clay roof edge, irregular old stone foundation and a wooden undershot mill wheel partlyvisible besidewall. Soft overhanging tree branches fromleft, everyday green-water reflections. Crop completely OUT the northern residentialextension behindcamera, every bridge, railing, statue including canalfigurines, skyline/churchspires, plaques and all people. Ordinary restrained natural morning camera exposure, functional historic structure rather than decorativeart. Exact same southernfacade and waterdirection for1873pair.",
+      "sources": [
+        {
+          "url": "https://prague.eu/en/objevujte/kampa/",
+          "label": "Prague official tourism: Kampa and Čertovka",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Čertovka artificial Vltava branch documented under earlier name1585; banks firmly formed after1600.",
+            "GrandPriorymill existedaround1400.",
+            "PresentKampa park form1947–1948 and gardenwall removal1950s; exclude modernpark/open lawns1873."
+          ]
+        },
+        {
+          "url": "https://srv.vodnimlyny.cz/mlyny/objekty/detail/377-velkoprevorsky-mlyn",
+          "label": "Czech watermill heritage database: GrandPriorymill",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Renaissance exterior rebuilt1597–1598; canal-facingfacade retains Renaissancearticulation.",
+            "Northernresidential extension1889, therefore exclude1873 by tight southernfacadecrop.",
+            "Mechanicalalterations1904, fire1938, housingconversion1939; original1873workingmill differs fromtoday.",
+            "Currentwoodwheel rebuilt1992;1873functional timberwheel representedgenerically, not1992replica.",
+            "Historicalphoto catalogue includes canalview1907, later contextual reference, notcopied."
+          ]
+        },
+        {
+          "url": "https://prague.eu/en/vinohrady-and-vrsovice-la-dolce-vita/",
+          "label": "Prague officialtourism: Vinohrady/Vršovice",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential tree-lined streets with elaborate older facades.",
+            "Districts have local cultural/sociallife, ordinary contemporary neighbourhood celebration appropriate."
+          ]
+        }
+      ],
+      "caption": "Čertovkan vesi ja vanha mylly Prahan Malá Stranassa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "peopleAbsent": true
+        },
+        "sessionOwner": {
+          "sha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and woodenwheel,masonry,plaster,foliage,water details inspected. Narrow Certovka channel and ordinary old GrandPriory millcanalfacade with traditional woodenwheel. Irregular textures,credible camera/light and water. No signs,text,addressnumbers,brands,foregroundfaces or protected contemporarynameddesign observed.",
+          "limits": [
+            "Generated illustrative reconstruction; individual details are not measured surveys."
+          ],
+          "reviewedAt": "2026-10-12T17:47:06.865018+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png?t=a2fd03f1208cc561",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png",
+        "sha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+        "bytes": 2894641,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+        "canonicalGetBytes": 2894641,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:50:00.678270+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "prague-6-vinohrady-ilotapahtuma-intro-v1",
+      "slot": 6,
+      "cityName": "Praha",
+      "gameCityId": "praha",
+      "mediaSlug": "prague",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/prague-6-vinohrady-ilotapahtuma-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/native/prague-6-vinohrady-ilotapahtuma-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+      "bytes": 2176270,
+      "nativeSha256": "434d83c26bb210cb94c865861dcf9aac9d34617f8cbba43d49fa8022051755c7",
+      "decodedRGBSha256": "08fb80a0adf822b21ae9c4ae01406c18c804e1851c1bb0b9964a47e56d59f595",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:44:46.945428+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Prague Vinohrady informal joyful summer neighbourhood music event. One fictional Czech adult woman about28 in foreground, curly light-brown hair, candid broad smile while laughing toward friends, fashionable plain dark-blue sleeveless top and light beige overshirt, naturally textured unretouchedskin. Behindher locallyplausible Czech young adults25–35 enjoying music and dancing in generic contemporary solidcolour clothes.35mm chestheight candidcamera in soft lateafternoonlight, ordinary old residentialstucco softlyblurred behindtrees. EVERY human is chest-up or waist-up or lowerbody blocked bycrowd; absolutely ZERO shoes, feet or footwear anywhere including distantbackground. No stages, food, drinks, devices, logos, stripes, letters, signs, tattoos or publicart. Casual local celebration, no glamourad.",
+      "sources": [
+        {
+          "url": "https://prague.eu/en/objevujte/kampa/",
+          "label": "Prague official tourism: Kampa and Čertovka",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Čertovka artificial Vltava branch documented under earlier name1585; banks firmly formed after1600.",
+            "GrandPriorymill existedaround1400.",
+            "PresentKampa park form1947–1948 and gardenwall removal1950s; exclude modernpark/open lawns1873."
+          ]
+        },
+        {
+          "url": "https://srv.vodnimlyny.cz/mlyny/objekty/detail/377-velkoprevorsky-mlyn",
+          "label": "Czech watermill heritage database: GrandPriorymill",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Renaissance exterior rebuilt1597–1598; canal-facingfacade retains Renaissancearticulation.",
+            "Northernresidential extension1889, therefore exclude1873 by tight southernfacadecrop.",
+            "Mechanicalalterations1904, fire1938, housingconversion1939; original1873workingmill differs fromtoday.",
+            "Currentwoodwheel rebuilt1992;1873functional timberwheel representedgenerically, not1992replica.",
+            "Historicalphoto catalogue includes canalview1907, later contextual reference, notcopied."
+          ]
+        },
+        {
+          "url": "https://prague.eu/en/vinohrady-and-vrsovice-la-dolce-vita/",
+          "label": "Prague officialtourism: Vinohrady/Vršovice",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential tree-lined streets with elaborate older facades.",
+            "Districts have local cultural/sociallife, ordinary contemporary neighbourhood celebration appropriate."
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen kesätapahtuma Prahan Vinohradyssa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": false,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "fictionalAdultsOnly": true,
+          "footwearAbsentEntireFrame": true
+        },
+        "sessionOwner": {
+          "sha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and every upperbody,hand,skin,clothing,backdrop inspected. Fictional adult woman at joyful outdoor young-adult neighbourhood gathering. Generic solidcolour clothes,all footwear outsideframe or occluded,no food,brands,text,addressnumbers,signs or artwork. Natural skin,hair and camera exposure.",
+          "limits": [
+            "Illustrative scene, not a surveyed location or actual event photograph."
+          ],
+          "reviewedAt": "2026-10-12T17:47:51.872555+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png?t=b04c4cfe890fe5a0",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png",
+        "sha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+        "bytes": 2176270,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+        "canonicalGetBytes": 2176270,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:50:02.168727+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "prague-7-mala-strana-iltakuja-intro-v1",
+      "slot": 7,
+      "cityName": "Praha",
+      "gameCityId": "praha",
+      "mediaSlug": "prague",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/prague-7-mala-strana-iltakuja-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/native/prague-7-mala-strana-iltakuja-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+      "bytes": 2061515,
+      "nativeSha256": "57221ca2f845960ddabfc14975e4de481a669a60ff57ccf5eb70b98355efce71",
+      "decodedRGBSha256": "fb35a25f01fae9717893724aaf2e5d0009f7beeb775d6644b79aa95432b7ffdb",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:45:45.196900+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Prague Malá Strana, an ordinary narrow residential cobbled lane of anonymous17th–19thcentury buildings with muted peach and creamplaster, uneven tile roofs, simple shutters, warmly lit domesticwindows at bluehour. Eyelevel35mm looking aroundgentlebend, one tiny distantbackfacingadult. ALL exteriorwallspacesbetweenwindows are completely PLAIN AND EMPTY: no plaques, addressplates, doorbells, numberedfixtures, houseemblems orsymbols. Doors recessedindarkness withoutaccessories; gentle windowlight only, no wall lamps needed. No statues, churches, Castle, Tyn, CharlesBridge or modernarchitecture. Natural restrained eveningcamera exposure, realistically wornstonepaving.",
+      "sources": [
+        {
+          "url": "https://prague.eu/en/objevujte/kampa/",
+          "label": "Prague official tourism: Kampa and Čertovka",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Čertovka artificial Vltava branch documented under earlier name1585; banks firmly formed after1600.",
+            "GrandPriorymill existedaround1400.",
+            "PresentKampa park form1947–1948 and gardenwall removal1950s; exclude modernpark/open lawns1873."
+          ]
+        },
+        {
+          "url": "https://srv.vodnimlyny.cz/mlyny/objekty/detail/377-velkoprevorsky-mlyn",
+          "label": "Czech watermill heritage database: GrandPriorymill",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Renaissance exterior rebuilt1597–1598; canal-facingfacade retains Renaissancearticulation.",
+            "Northernresidential extension1889, therefore exclude1873 by tight southernfacadecrop.",
+            "Mechanicalalterations1904, fire1938, housingconversion1939; original1873workingmill differs fromtoday.",
+            "Currentwoodwheel rebuilt1992;1873functional timberwheel representedgenerically, not1992replica.",
+            "Historicalphoto catalogue includes canalview1907, later contextual reference, notcopied."
+          ]
+        },
+        {
+          "url": "https://prague.eu/en/vinohrady-and-vrsovice-la-dolce-vita/",
+          "label": "Prague officialtourism: Vinohrady/Vršovice",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential tree-lined streets with elaborate older facades.",
+            "Districts have local cultural/sociallife, ordinary contemporary neighbourhood celebration appropriate."
+          ]
+        }
+      ],
+      "caption": "Malá Stranan tavallinen kuja Prahan iltavaloissa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-7-mala-strana-iltakuja-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-7-mala-strana-iltakuja-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and all door/windowwalls,paving,roof details inspected. Anonymous MalaStrana residentiallane with one small back-facing walker,modest practical warmwindowlight against remaining dusk. Blank door/wall surfaces,no addressnumbers,text,signs,logos or artworks. Credible oldtiles/plaster/stone and camera perspective.",
+          "limits": [
+            "Illustrative reconstruction, not an actual event photo or measured architecture survey."
+          ],
+          "reviewedAt": "2026-10-12T17:49:56.301153+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-7-mala-strana-iltakuja-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-7-mala-strana-iltakuja-intro-v1.png?t=5db034f09d95d974",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-7-mala-strana-iltakuja-intro-v1.png",
+        "sha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+        "bytes": 2061515,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+        "canonicalGetBytes": 2061515,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:50:03.929708+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "prague-8-certovka-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Praha",
+      "gameCityId": "praha",
+      "mediaSlug": "prague",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/prague-8-certovka-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/native/prague-8-certovka-1873-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+      "bytes": 2820904,
+      "nativeSha256": "b18a075fc00318aec3123146cc2bdd72f238a55013413a07e9a3471b97ec7e11",
+      "decodedRGBSha256": "73a24695d9226b018228ca5069603e818a3c6952d59184afeae7b5581f3265af",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:46:47.718549+00:00",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, pure neutral BLACK AND WHITE with no deliberate warm/cool tint or sepia, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Year EXACTLY1873, Prague Čertovka. Sameposition: Hroznova crossing looking SOUTH alongstream toward original southern canal-facing GrandPrioryMill,35mm eyelevel. Narrow gentle canal left/centerforeground, pale plaster simple Renaissance-era millfacade on right, steep clayroofedge, irregular oldstonefoundation, FUNCTIONAL plain timber undershotwheel partiallyvisible, made as a genuine1873 workingwoodwheel not today's1992replica. Sourceconfirmed Renaissancefacade1597–1598 and canal predates1873. Tightcrop excludes all bridges, railings, northern1889residentialextension, modernopenKampa park1947–1948, canalstatues, allfigures, skylineandchurchspires. No modernmechanicalconversion1904/1939, electricity, automobiles, modernwindows, concrete, signs, plaques, addressnumbers or motorboats. Fine historicalcameragrain, soft daylight and gentlecontrast, believablewood/stone/water, original historicalillustration withoutcopyingphotograph.",
+      "sources": [
+        {
+          "url": "https://prague.eu/en/objevujte/kampa/",
+          "label": "Prague official tourism: Kampa and Čertovka",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Čertovka artificial Vltava branch documented under earlier name1585; banks firmly formed after1600.",
+            "GrandPriorymill existedaround1400.",
+            "PresentKampa park form1947–1948 and gardenwall removal1950s; exclude modernpark/open lawns1873."
+          ]
+        },
+        {
+          "url": "https://srv.vodnimlyny.cz/mlyny/objekty/detail/377-velkoprevorsky-mlyn",
+          "label": "Czech watermill heritage database: GrandPriorymill",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Renaissance exterior rebuilt1597–1598; canal-facingfacade retains Renaissancearticulation.",
+            "Northernresidential extension1889, therefore exclude1873 by tight southernfacadecrop.",
+            "Mechanicalalterations1904, fire1938, housingconversion1939; original1873workingmill differs fromtoday.",
+            "Currentwoodwheel rebuilt1992;1873functional timberwheel representedgenerically, not1992replica.",
+            "Historicalphoto catalogue includes canalview1907, later contextual reference, notcopied."
+          ]
+        },
+        {
+          "url": "https://prague.eu/en/vinohrady-and-vrsovice-la-dolce-vita/",
+          "label": "Prague officialtourism: Vinohrady/Vršovice",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Residential tree-lined streets with elaborate older facades.",
+            "Districts have local cultural/sociallife, ordinary contemporary neighbourhood celebration appropriate."
+          ]
+        }
+      ],
+      "caption": "Čertovkan vanha mylly Prahassa vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "historicalYear": 1873,
+          "visuallyNeutralBlackWhite": true,
+          "periodExclusionsVerified": true,
+          "sameViewAsSlot": 5,
+          "peopleAbsent": true,
+          "grayscaleChannelProof": {
+            "maxRG": 12,
+            "maxRB": 17,
+            "exactEqualRGB": false,
+            "diagnosticOnly": true
+          }
+        },
+        "sessionOwner": {
+          "sha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and millwheel,functionalwoodenstructure,masonry,plaster,water/leaves details inspected. Neutralblack/white without colourcast. Same southward Certovka channel direction as modern5,old Renaissance millfacade and functional generic woodenwheel. Later northwing,modern openKampapark,1992replicawheel claim,modernmechanics excluded. No text,logo,numberplaque,modernvehicle/light or faces.",
+          "limits": [
+            "Illustrative reconstruction, not an actual event photo or measured architecture survey."
+          ],
+          "reviewedAt": "2026-10-12T17:49:56.308317+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png?t=be5055a842c579fe",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png",
+        "sha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+        "bytes": 2820904,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+        "canonicalGetBytes": 2820904,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:50:05.693170+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "complete": true,
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:50:05.711789+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "prague",
+    "gameCityId": "praha",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/sources.json"
+    ],
+    "sourceManifestSha256": "6539fde8f15e55b832733b46e25ec9ea555895d0ff7ca0a0c8255f09cab41167",
+    "assets": [
+      {
+        "id": "prague-4-vinohrady-arki-intro-v1",
+        "slot": 4,
+        "sha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Asuinkadun julkisivut, kivipäällyste ja puut ovat kameramaisia ja perspektiivi yhtenäinen. Pyöräilijä ja kaksi pientä kävelijää näkyvät selin. Ei tekstiä, numeroita, logoja tai brändikuvioita havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset puunkuoresta/lehdistä, ihmisistä ja oikeanpuoleisesta julkisivusta/kasveista tarkastettu.",
+          "Oksien haarautuminen, lehtiasennot ja kuoren pienet vauriot ovat epäsäännöllisiä ilman leimakuviota; rappaus ja kiveys vaihtelevat luonnollisesti.",
+          "Kaukaisessa pyörässä tai vaatteissa ei erotu tunnuksia. Ei tunnistettavia kasvoja, kylttejä, ruokaa tai ajoneuvojen rekisterimerkkejä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/4-bark-leaves.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/4-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/4-wall-plants.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3382779,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "prague-5-certovka-mylly-intro-v1",
+        "slot": 5,
+        "sha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kanava, kulunut julkisivu, puupyörä ja veden heijastukset ovat fyysisesti uskottavia. Puun, kiven ja kasvillisuuden pinnat vaihtelevat luonnollisesti. Sama vesiväylän suuntarakenne kuin slot8:ssa; ei tekstiä, logoja tai ihmisfiguureja.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset puupyörästä, kivijalasta/vedestä ja lehdistöstä tarkastettu.",
+          "Puupyörän laudat, akselialue ja vesikosketus ovat mittasuhteiltaan uskottavia; kuluma ja pinnasta tippuva vesi kameramaisia.",
+          "Kivet, rappauksen halkeilu ja lehtiasennot eivät muodosta leimakuviota. Ei kylttejä, numeroita, sillan kaiteita, kanavapatsaita tai ihmisiä.",
+          "Slot8:n kanssa kanava vasemmalla/keskellä ja myllyseinä/puupyörä oikealla, sama yleinen etelään suuntautuva kapea katselukulma.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/5-wheel.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/5-stone-water.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/5-leaves.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2894641,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "prague-6-vinohrady-ilotapahtuma-intro-v1",
+        "slot": 6,
+        "sha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen nainen, luonnollinen iho ja hiukset sekä geneerinen nykyvaatetus sopivat juhlaan. Näkyvät kädet ovat uskottavia. Ruokaa, jalkineita, kirjoitusta, logoja tai tunnistettavaa brändikuviota ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, vasemmasta kädestä, oikeanpuoleisen aikuisen käsistä/hameesta ja keskialueen käsistä tarkastettu.",
+          "Ihon tekstuuri, hampaat ja hiukset ovat luonnollisia. Osittain taipuneet/peittyvät kädet ovat anatomisesti uskottavia ilman ilmeisiä ylimääräisiä osia.",
+          "Vaatetus on geneeristä. Reunan hameessa on tavallinen paisley-/kasviaiheinen kuvio ilman tunnistettavaa logoa tai brändimerkkiä.",
+          "Kaikki näkyvät henkilöt ovat aikuisia ja ylävartaloina tai muiden peittämiä. Ei ruokaa, juomia tai jalkineita.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/6-left-hand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/6-right-skirt-hands.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/6-middle-hands.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2176270,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "prague-7-mala-strana-iltakuja-intro-v1",
+        "slot": 7,
+        "sha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kujan kiveys, julkisivut, kattolinjat ja lämmin ikkunavalo muodostavat yhtenäisen sinisen hetken kameranäkymän. Lähiovet ja seinät ovat kirjoituksettomia; yksi pieni aikuinen näkyy selin.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset molemmista lähioviaukoista/seinäpinnoista ja pienestä kävelijästä tarkastettu.",
+          "Oviaukot ovat tyhjiä ilman nimilaattoja, numeroita, tunnuksia tai tekstiä. Tavalliset ikkunaluukkujen metalliosat ilman tunnuksia.",
+          "Kiveyksen kuluma ja saumat vaihtelevat; kattotiilet ja julkisivujen perspektiivi yhtenäisiä. Ihmisen kasvot eivät näy. Ei ruokaa, logoja tai julkista taidetta.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/7-left-wall-door.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/7-right-wall-door.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/7-person.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2061515,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "prague-8-certovka-1873-intro-v1",
+        "slot": 8,
+        "sha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on näkyvästi neutraali mustavalkoinen ilman sepiaa. Kanavan ja oikean myllyseinän/puupyörän suuntarakenne vastaa slot5:tä. Periodibriefin lähteistä rajatut myöhemmät siipi-, puisto- ja koneistorakenteet puuttuvat valitusta kuvakulmasta.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset puupyörästä, kivijalasta/vedestä ja puista/lehdistöstä tarkastettu.",
+          "Slot5:n kanssa sama yleinen katselusuunta: kanava vasemmalla/keskellä ja myllyseinä/vesipyörä oikealla. Historiallinen julkisivu ja puurakenteet on rekonstruoitu; ei oleteta samaa nykyikkunajakoa.",
+          "Timber-pyörän laudat, puukehä ja akselin rakenne ovat uskottavia; epäsäännöllinen puu, kivi, rappaus ja lehdistö ilman leimaa. Ei kirjoitusta, logoja tai ihmisiä.",
+          "Prague official tourism -kanavahistoria ja Czech watermill heritage database -myllyhistoria luettu tuottajan paketista. Tiukassa rajauksessa ei1889pohjoissiipeä,1947–1948Kampa-puistoa, modernia koneistoa,1992replikan tarkkaa periodiväitettä, sähköä, autoja, motoriveneitä, patsaita tai siltoja.",
+          "Luetteloitu1907-kuva on myöhempää kontekstia;1873-kuva on lähdepohjainen havainnollistava rekonstruktio. Ei näkyvää sävytystä; alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/8-wheel.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/8-stone-water.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/prague/crops/8-leaves.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2820904,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://prague.eu/en/objevujte/kampa/",
+          "https://srv.vodnimlyny.cz/mlyny/objekty/detail/377-velkoprevorsky-mlyn",
+          "https://prague.eu/en/vinohrady-and-vrsovice-la-dolce-vita/"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:11:34.817744+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/manifest.json",
+      "manifestSHA256": "6539fde8f15e55b832733b46e25ec9ea555895d0ff7ca0a0c8255f09cab41167",
+      "reviewedAssetIds": [
+        "prague-4-vinohrady-arki-intro-v1",
+        "prague-5-certovka-mylly-intro-v1",
+        "prague-6-vinohrady-ilotapahtuma-intro-v1",
+        "prague-7-mala-strana-iltakuja-intro-v1",
+        "prague-8-certovka-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Historiallinen myllykuva on havainnollistava rekonstruktio, ei1873 julkisivun tai koneiston tarkka mittaus.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "prague",
+    "verifiedAt": "2026-10-12T18:13:12.885615+00:00",
+    "assets": [
+      {
+        "id": "prague-4-vinohrady-arki-intro-v1",
+        "slot": 4,
+        "sha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+        "bytes": 3382779,
+        "verifiedAt": "2026-10-12T18:13:11.219234+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-4-vinohrady-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+            "bytes": 3382779,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-4-vinohrady-arki-intro-v1.png?delivery-verify=ecd4e3d1a4e4f8ea-1791828791219229000",
+            "http": 200,
+            "sha256": "ecd4e3d1a4e4f8ea9b63cbf01221137adc5e46c2ad43bf01620158c35653fe41",
+            "bytes": 3382779,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "prague-5-certovka-mylly-intro-v1",
+        "slot": 5,
+        "sha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+        "bytes": 2894641,
+        "verifiedAt": "2026-10-12T18:13:11.219376+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png",
+            "http": 200,
+            "sha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+            "bytes": 2894641,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png?delivery-verify=a2fd03f1208cc561-1791828791219374000",
+            "http": 200,
+            "sha256": "a2fd03f1208cc5613f17d51cc96bfbe5bbba9a272fb1a2ac4025df81a91aab83",
+            "bytes": 2894641,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "prague-6-vinohrady-ilotapahtuma-intro-v1",
+        "slot": 6,
+        "sha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+        "bytes": 2176270,
+        "verifiedAt": "2026-10-12T18:13:11.219449+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png",
+            "http": 200,
+            "sha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+            "bytes": 2176270,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-6-vinohrady-ilotapahtuma-intro-v1.png?delivery-verify=b04c4cfe890fe5a0-1791828791219448000",
+            "http": 200,
+            "sha256": "b04c4cfe890fe5a010fe90dbb40fa9fb2d5cb2139140031cd749984cc21926c8",
+            "bytes": 2176270,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "prague-7-mala-strana-iltakuja-intro-v1",
+        "slot": 7,
+        "sha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+        "bytes": 2061515,
+        "verifiedAt": "2026-10-12T18:13:12.151314+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-7-mala-strana-iltakuja-intro-v1.png",
+            "http": 200,
+            "sha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+            "bytes": 2061515,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-7-mala-strana-iltakuja-intro-v1.png?delivery-verify=5db034f09d95d974-1791828792151305000",
+            "http": 200,
+            "sha256": "5db034f09d95d9747964b401b5b2178605203eff274b4cf57b569d9202760efa",
+            "bytes": 2061515,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "prague-8-certovka-1873-intro-v1",
+        "slot": 8,
+        "sha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+        "bytes": 2820904,
+        "verifiedAt": "2026-10-12T18:13:12.205858+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+            "bytes": 2820904,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261012-full/prague-8-certovka-1873-intro-v1.png?delivery-verify=be5055a842c579fe-1791828792205852000",
+            "http": 200,
+            "sha256": "be5055a842c579fe97434a3dba32e71a8b5d75841f22a5ca1cf4a69ead5cb2ed",
+            "bytes": 2820904,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/prague/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.461943+00:00"
+}

@@ -1,0 +1,902 @@
+{
+  "cityName": "Tromssa",
+  "gameCityId": "tromssa",
+  "mediaSlug": "tromso",
+  "updatedAt": "2026-10-12T18:19:08.467358+00:00",
+  "assets": [
+    {
+      "id": "intro-tromssa-4-v1",
+      "slot": 4,
+      "version": 1,
+      "cityName": "Tromssa",
+      "gameCityId": "tromssa",
+      "mediaSlug": "tromso",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-4-puutalokatu-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-4-puutalokatu-arki-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png",
+      "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native PNG1536x1024 landscape3:2, opaque RGB sRGB. Ordinary real camera photo appearance, unprocessed natural light, subdued genuine colors, natural skin and irregular real material texture. No HDR, CGI, painting, cinematic effect, smooth plastic skin or stamped foliage. Absolutely no text, signs, logos, brands, digits, house numbers, lettering, stickers, labels, posters, emblems, watermark, frame, artwork or named protected modern architecture. Completely unmarked walls, downpipes, doors, railings, clothing and equipment. No food. Use case: photorealistic-natural. Present-day Tromsø Norway, everyday morning on a small sloping residential side street among ordinary old timber houses. Eye-level35mm diagonal view uphill, one white wooden house and another muted pale-yellow clapboard house with simple sash windows and slate roofs, plain older red timber building farther away, narrow pavement and birch trees. Three small distant adult residents walking away in plain contemporary jackets, faces unrecognizable. Soft cloudy northern July daylight, wet patches on ordinary pavement. No shops, cars, church, museum, large bridge or landmark. All facades and pipes totally blank, no address plates.",
+      "sources": [
+        {
+          "url": "https://www.visittromso.no/learn-about-history-tromso",
+          "title": "Visit Tromsø official historical guide",
+          "readFacts": [
+            "City preserves older wooden buildings dating from1789. Use ordinary anonymous residential timber houses, not named modern design."
+          ],
+          "appliesTo": [
+            4,
+            7
+          ]
+        }
+      ],
+      "caption": "Tromssan tavallisen puutalokadun arkikävely. Havainnekuva.",
+      "QA": {
+        "id": "intro-tromssa-4-v1",
+        "slot": 4,
+        "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:18:53.022762+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary old wooden Tromso street, native houses/people inspected plain; small rear-view walkers, no text/address/logo or repeated vegetation stamp.",
+        "detailCrops": [
+          "session-owner-review/slot4-facades-people-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-4-puutalokatu-arki-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-4-puutalokatu-arki-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+        "bytes": 3047531,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:18:56.291533+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+        "bytes": 3047531,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+            "bytes": 3047531,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png?verify=north-d0d1432d4f59b8ce-1791829136308992000",
+            "http": 200,
+            "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+            "bytes": 3047531,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3047531
+    },
+    {
+      "id": "intro-tromssa-5-v1",
+      "slot": 5,
+      "version": 1,
+      "cityName": "Tromssa",
+      "gameCityId": "tromssa",
+      "mediaSlug": "tromso",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-5-prestvannet-luonto-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-5-prestvannet-luonto-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png",
+      "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native PNG1536x1024 landscape3:2, opaque RGB sRGB. Ordinary real camera photo appearance, unprocessed natural light, subdued genuine colors, natural skin and irregular real material texture. No HDR, CGI, painting, cinematic effect, smooth plastic skin or stamped foliage. Absolutely no text, signs, logos, brands, digits, house numbers, lettering, stickers, labels, posters, emblems, watermark, frame, artwork or named protected modern architecture. Completely unmarked walls, downpipes, doors, railings, clothing and equipment. No food. Use case: photorealistic-natural. Present-day Tromsø, Prestvannet small lake reservoir, from its natural NORTH bank around69.660,18.935 looking SOUTH-SOUTHEAST across the water. Low eye-level35mm view near water: grass and irregular sedges form a shallow curved shoreline in bottom-LEFT, a single thin birch trunk frames far-LEFT edge, calm modest blue-grey lake spans middle and lower-RIGHT. Distant opposite bank is a low gently undulating grassy rim with mixed small birches, reflected subtly in water, horizon at upper half. Tight peaceful natural composition, not an enormous mountain lake. Overcast July afternoon. No houses, observatory, mountains above treeline, paths, platforms, benches, dam structures, boats, birds or people. Use this exact shoreline curve and view as the1873pair.",
+      "sources": [
+        {
+          "url": "https://www.tromso.kommune.no/sites/default/files/2022-05/Vedlegg%201%20KDP_VA_09.11.2021_fagdokument.pdf?v=44",
+          "title": "Tromsø municipality water and sewer plan2021-2032, physical PDFpage28",
+          "localReadText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/prestvannet-waterworks-page-28-read.txt",
+          "readFacts": [
+            "Waterworks established1864-1866; Prestvannet earth dam built1867. It was a130000m3usable reservoir by1873.",
+            "Bekkevold basin improvement1875and pipeline1894mustnotappear.",
+            "Composition is natural reservoir banks, water and vegetation only; dam/pipes and all buildings outside frame."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://www.nibio.no/tema/landskap/fugleturisme/_/attachment/inline/d808c1ac-1a72-471a-a829-9cb34f6d08f8%3A9649bbdc9946abdeacfc3786c70d57094e15f760/Fugleguide%20for%20Troms%C3%B8.pdf",
+          "title": "NIBIO research institute, Birdguide Tromsø pages33-34",
+          "localReadText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/prestvannet-nibio-page-33-read.txt",
+          "readFacts": [
+            "Prestvannet at69.65946,18.93494on top of Tromsøya, partly man-made habitat.",
+            "Norwegian text explicitly says lake dammed1867for town drinking water; confirms existence in1873independently.",
+            "Present paths and observation platforms around lake; exclude them from both paired tight nature compositions. No birds needed so no introduced species assumptions."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://fr.uit.no/labyrint/a/romvokterne?cid=711046&p_document_id=709192",
+          "title": "UiT Arctic University, Geofysen history",
+          "readFacts": [
+            "Geophysical institute decision1917; Geofysen near Prestvannet built1918; later aurora observatory1930. None existed1873and all buildings excluded."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        }
+      ],
+      "caption": "Prestvannet pohjoisrannalta. Havainnekuva.",
+      "QA": {
+        "id": "intro-tromssa-5-v1",
+        "slot": 5,
+        "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:18:53.082512+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural Prestvannet reservoir/birch scene, native bank/grass/trunks varied and photographic, no text/faces/structures, natural restrained light.",
+        "detailCrops": [
+          "session-owner-review/slot5-birch-bank-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-5-prestvannet-luonto-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-5-prestvannet-luonto-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+        "bytes": 2768647,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:18:59.224152+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+        "bytes": 2768647,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png",
+            "http": 200,
+            "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+            "bytes": 2768647,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png?verify=north-0d19225e32074286-1791829139224181000",
+            "http": 200,
+            "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+            "bytes": 2768647,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2768647
+    },
+    {
+      "id": "intro-tromssa-6-v1",
+      "slot": 6,
+      "version": 1,
+      "cityName": "Tromssa",
+      "gameCityId": "tromssa",
+      "mediaSlug": "tromso",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-6-telegrafbukta-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-6-telegrafbukta-juhla-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/tromso/20261012-full/tromso-6-telegrafbukta-juhla-intro-v1.png",
+      "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native PNG1536x1024 landscape3:2, opaque RGB sRGB. Ordinary real camera photo appearance, unprocessed natural light, subdued genuine colors, natural skin and irregular real material texture. No HDR, CGI, painting, cinematic effect, smooth plastic skin or stamped foliage. Absolutely no text, signs, logos, brands, digits, house numbers, lettering, stickers, labels, posters, emblems, watermark, frame, artwork or named protected modern architecture. Completely unmarked walls, downpipes, doors, railings, clothing and equipment. No food. Use case: photorealistic-natural. Present-day Tromsø Norway, joyful young-adult summer festival gathering at Telegrafbukta, outdoors near the grassy sea shore, a candid happy moment at the Bukta summer atmosphere. One entirely fictional Norwegian adult man aged28 foreground, chest-up close framing, short dark-blond hair and light stubble, laughing toward a friend, generic fashionable plain dark-navy overshirt over rust-colored knit shirt. Behind him cheerful young adults aged22-32 with varied plausible local appearances, plain contemporary fashionable jackets, relaxed celebratory dance gestures. Soft northern summer evening daylight, sea and birches subtly blurred behind, natural wind and real skin pores. Dense overlapping upper-body crowd MUST completely hide or crop ALL legs, feet and footwear of EVERY person, no shoes anywhere. No visible stage, musical instruments, phones, hats, jewelry emblems, badges, branded stripes, banners, event names, art, food, drinks or tables.",
+      "sources": [
+        {
+          "url": "https://www.visittromso.no/no/telegrafbukta",
+          "title": "Visit Tromsø, Telegrafbukta",
+          "readFacts": [
+            "Southern island beach/rock/grassy area hosts annual summer Bukta Open Air festival.",
+            "Image shows fictional contemporary young adult festival gathering, no real person/event asserted; stage and all text excluded."
+          ],
+          "appliesTo": [
+            6
+          ]
+        }
+      ],
+      "caption": "Kesäjuhla Telegrafbuktassa. Havainnekuva.",
+      "QA": {
+        "id": "intro-tromssa-6-v1",
+        "slot": 6,
+        "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:18:53.139823+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: fictional adult face and plain navy/rust garments inspected natively, cheerful young adults at coastal summer gathering, no footwear/text/logos/instruments/food.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-shirt-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-6-telegrafbukta-juhla-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-6-telegrafbukta-juhla-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+        "bytes": 2129605,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-6-telegrafbukta-juhla-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:19:02.686361+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+        "bytes": 2129605,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-6-telegrafbukta-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+            "bytes": 2129605,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-6-telegrafbukta-juhla-intro-v1.png?verify=north-bf676729981a8fbe-1791829142686381000",
+            "http": 200,
+            "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+            "bytes": 2129605,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2129605
+    },
+    {
+      "id": "intro-tromssa-7-v1",
+      "slot": 7,
+      "version": 1,
+      "cityName": "Tromssa",
+      "gameCityId": "tromssa",
+      "mediaSlug": "tromso",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-7-puutalokatu-iltavalot-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-7-puutalokatu-iltavalot-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png",
+      "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native PNG1536x1024 landscape3:2, opaque RGB sRGB. Ordinary real camera photo appearance, unprocessed natural light, subdued genuine colors, natural skin and irregular real material texture. No HDR, CGI, painting, cinematic effect, smooth plastic skin or stamped foliage. Absolutely no text, signs, logos, brands, digits, house numbers, lettering, stickers, labels, posters, emblems, watermark, frame, artwork or named protected modern architecture. Completely unmarked walls, downpipes, doors, railings, clothing and equipment. No food. Use case: photorealistic-natural. Present-day Tromsø ordinary old wooden residential quarter at blue hour on a rainy autumn evening. Eye-level35mm view along a slightly sloping narrow lane, simple red, warm ochre and white timber facades with rectangular sash windows, modest plain lamps and warm lights from windows, wet uneven paving. Two very small distant adults seen from behind. No identifiable faces. Natural restrained exposure, muted colors, warm reflections without glowing effects. No Arctic Cathedral, museum, harbor warehouse, bridge, skyline, cars, shops, art or signs. Every wall, pipe, door and surface entirely blank with no notices, numbers, labels or letter-like markings.",
+      "sources": [
+        {
+          "url": "https://www.visittromso.no/learn-about-history-tromso",
+          "title": "Visit Tromsø official historical guide",
+          "readFacts": [
+            "City preserves older wooden buildings dating from1789. Use ordinary anonymous residential timber houses, not named modern design."
+          ],
+          "appliesTo": [
+            4,
+            7
+          ]
+        }
+      ],
+      "caption": "Tromssan vanha puutalokortteli iltavaloissa. Havainnekuva.",
+      "QA": {
+        "id": "intro-tromssa-7-v1",
+        "slot": 7,
+        "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:18:53.194019+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: native foreground pipe patch is plain joint/wear/reflection without discernible writing/logo/sticker; ordinary timber evening street, distant rear-view walkers, natural photographic light.",
+        "detailCrops": [
+          "session-owner-review/slot7-downpipe-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-7-puutalokatu-iltavalot-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-7-puutalokatu-iltavalot-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+        "bytes": 2452666,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:19:05.117071+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+        "bytes": 2452666,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+            "bytes": 2452666,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png?verify=north-892d6f4546d27423-1791829145117093000",
+            "http": 200,
+            "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+            "bytes": 2452666,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2452666
+    },
+    {
+      "id": "intro-tromssa-8-v1",
+      "slot": 8,
+      "version": 1,
+      "cityName": "Tromssa",
+      "gameCityId": "tromssa",
+      "mediaSlug": "tromso",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-8-prestvannet-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-8-prestvannet-1873-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/tromso/20261012-full/tromso-8-prestvannet-1873-intro-v1.png",
+      "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a completely new photorealistic illustrative travel-game intro image. Native PNG1536x1024 landscape3:2, opaque RGB sRGB. Ordinary real camera photo appearance, unprocessed natural light, subdued genuine colors, natural skin and irregular real material texture. No HDR, CGI, painting, cinematic effect, smooth plastic skin or stamped foliage. Absolutely no text, signs, logos, brands, digits, house numbers, lettering, stickers, labels, posters, emblems, watermark, frame, artwork or named protected modern architecture. Completely unmarked walls, downpipes, doors, railings, clothing and equipment. No food. Use case: historical-scene. Exact year1873, Tromsø Norway, Prestvannet reservoir from the natural NORTH bank at69.660,18.935 looking SOUTH-SOUTHEAST. Neutral black-and-white grayscale nineteenth-century photographic appearance, soft contrast and fine subtle grain, not sepia. Reservoir existed after an earth dam was built1867. Same layout as modern landscape: bottom-LEFT curved grass and sedge shore, single slender birch at far-LEFT edge, calm small lake middle and lower-RIGHT, distant opposite bank low gently undulating grass rim with smaller scattered young birches, horizon upper half. Early reservoir moorland margins, naturally more open and less maintained than present-day vegetation. No people or birds needed. Absolutely no1918Geofysen building or1930observatory, modern city houses, platforms, paths, concrete, benches, boats, electrical poles, lights, modern dam machinery, pipeline structures or equipment. All built features excluded by tight nature framing. Supplied present-day image is ONLY a reference for geographic composition and direction; generate a whole new1873historical scene from scratch with period shoreline vegetation and period camera light, not recoloring.",
+      "sources": [
+        {
+          "url": "https://www.tromso.kommune.no/sites/default/files/2022-05/Vedlegg%201%20KDP_VA_09.11.2021_fagdokument.pdf?v=44",
+          "title": "Tromsø municipality water and sewer plan2021-2032, physical PDFpage28",
+          "localReadText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/prestvannet-waterworks-page-28-read.txt",
+          "readFacts": [
+            "Waterworks established1864-1866; Prestvannet earth dam built1867. It was a130000m3usable reservoir by1873.",
+            "Bekkevold basin improvement1875and pipeline1894mustnotappear.",
+            "Composition is natural reservoir banks, water and vegetation only; dam/pipes and all buildings outside frame."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://www.nibio.no/tema/landskap/fugleturisme/_/attachment/inline/d808c1ac-1a72-471a-a829-9cb34f6d08f8%3A9649bbdc9946abdeacfc3786c70d57094e15f760/Fugleguide%20for%20Troms%C3%B8.pdf",
+          "title": "NIBIO research institute, Birdguide Tromsø pages33-34",
+          "localReadText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/prestvannet-nibio-page-33-read.txt",
+          "readFacts": [
+            "Prestvannet at69.65946,18.93494on top of Tromsøya, partly man-made habitat.",
+            "Norwegian text explicitly says lake dammed1867for town drinking water; confirms existence in1873independently.",
+            "Present paths and observation platforms around lake; exclude them from both paired tight nature compositions. No birds needed so no introduced species assumptions."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://fr.uit.no/labyrint/a/romvokterne?cid=711046&p_document_id=709192",
+          "title": "UiT Arctic University, Geofysen history",
+          "readFacts": [
+            "Geophysical institute decision1917; Geofysen near Prestvannet built1918; later aurora observatory1930. None existed1873and all buildings excluded."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        }
+      ],
+      "caption": "Prestvannet samalla rannalla vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "intro-tromssa-8-v1",
+        "slot": 8,
+        "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:18:53.246973+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 reservoir with same5 bank/horizon viewpoint; two primary sources independently confirm1867dam; native birch/bank/water natural, no1875/1894pipeline or1918/1930structures.",
+        "detailCrops": [
+          "session-owner-review/slot8-bank-birches-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/native/tromso-8-prestvannet-1873-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/final/tromso-8-prestvannet-1873-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+        "bytes": 2862322,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-8-prestvannet-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:19:07.644450+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+        "bytes": 2862322,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-8-prestvannet-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+            "bytes": 2862322,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-8-prestvannet-1873-intro-v1.png?verify=north-46ab2e9c5ab69be5-1791829147644468000",
+            "http": 200,
+            "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+            "bytes": 2862322,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2862322
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "tromso",
+    "gameCityId": "tromssa",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/sources-before-generation.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/prestvannet-waterworks-page-28-read.txt",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/prestvannet-nibio-page-33-read.txt"
+    ],
+    "assets": [
+      {
+        "id": "intro-tromssa-4-v1",
+        "slot": 4,
+        "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen puutalokadun arki, ihmiset selin ja merkitsemättömät seinäpinnat.",
+        "observations": [
+          "Fotorealistinen tavallinen puutalokatu, kolme pientä henkilöä selin. Puupinnat, koivunkuori, lehdet, märkä katu ja taustan vuorimaasto luonnollisia; perspektiivi ja päivänvalo koherentteja.",
+          "Ovet, ikkunat, seinät, kävelijät, puut ja kasvit tarkastettu natiivikokoisina. Ei kirjoitusta, numeroa, osoitekilpeä, logoa tai brändikuviota. Ei muovisuutta tai leimattua orgaanista pintaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot4-people-houses-birch.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot4-wood-doors-leaves.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "intro-tromssa-5-v1",
+        "slot": 5,
+        "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: luonnollinen järvenranta ilman rakennuksia tai nykyrakenteita, historiallisen parin katselusuunta täyttyy.",
+        "observations": [
+          "Fotorealistinen Prestvannetin pohjoisrannan luontonäkymä. Epäsäännöllinen koivunkuori, lehdet, rantaheinä, kaukaisen rannan puut, veden aallot ja heijastukset luonnollisia.",
+          "Ei ihmisiä, eläimiä, kirjoitusta, logoja, rakennuksia, teitä, putkia, patoa, polkurakenteita, opasteita tai lintualustoja. Ei kaarnaleimaa tai muovisuutta; valo koherentti.",
+          "Sama yleinen pohjoisrannalta south-southeast-katselusuunta kuin slot8:ssa: ruohikkoranta vasemmalla alhaalla, avoin vesi keskellä/oikealla ja matala puinen vastaranta. Yksittäistä kasvillisuutta ei esitetä mitattuna historiallisena vastaavuutena.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot5-birch-leaves-shore.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot5-farbank-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "intro-tromssa-6-v1",
+        "slot": 6,
+        "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fiktiivinen aikuinen nykyajan kesäjuhlassa, luonnolliset kasvot ja kädet, geneeriset vaatteet; ei ruokaa, jalkineita tai brändiä.",
+        "observations": [
+          "Fiktiivinen aikuinen mies etualalla nykyajan Telegrafbuktan kesäjuhlassa. Luonnollinen iho, silmät, hampaat ja hiukset; näkyvät taustan kasvot, nostettu nyrkki ja etualan vieressä näkyvä käsi tarkastettu natiivikokoisina ilman selvää anatomista virhettä.",
+          "Geneerinen yksivärinen tumma paita ja oranssi neule, taustassa tavallisia muodikkaita nykyvaatteita. Ei kirjoitusta, logoa tai tunnistettavaa brändikuviota.",
+          "Kaikkien henkilöiden jalat ja jalkineet poissa näkyvistä; ei ruokaa, juomia, soittimia, tarjoilupöytiä, stagea tai brändättyä tapahtumarakennetta. Luonnonvalo ja merellinen tausta koherentteja. Tapahtuma on kuvitteellinen eikä kuvaa väitetä dokumentoiduksi festivaalikuvaksi.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot6-face-clothes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot6-raised-fist-front-hand.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "intro-tromssa-7-v1",
+        "slot": 7,
+        "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen iltapuukatu, pieni pari selin ja koherentti valo ilman kirjoitusta tai logoja.",
+        "observations": [
+          "Fotorealistinen tavallinen puutalokorttelin iltakatu, pieni pari selin. Lämpimät lamput, ikkunat ja märän kadun heijastukset sopivat siniseen iltataivaaseen.",
+          "Ovet, ikkunat, puupinnat, kasvit, kävelijät ja katu tarkastettu natiivikokoisina. Ei kirjoitusta, osoitenumeroa, kylttiä tai logoa. Ei muovisuutta tai leimattua luonnon pintaa; perspektiivi ja varjot koherentteja.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot7-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot7-wood-window-leaves.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "intro-tromssa-8-v1",
+        "slot": 8,
+        "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: neutraali mustavalkoinen1873 altaan luontonäkymä, sama katselusuunta ja period exclusions täyttyvät. Kaksi luettua primaarilähdekatkelmaa vahvistaa1867 patoamisen.",
+        "observations": [
+          "Visuaalisesti neutraali mustavalkoinen1873-kuva ilman näkyvää seepiaa tai värisävyä. Epäsäännöllinen koivunkuori, lehdet, rantaheinä, avoimempi vastarannan kasvillisuus, vesi ja heijastukset näyttävät luonnollisilta; ei kaarnaleimaa tai muovisuutta.",
+          "Sama yleinen pohjoisrannalta SSE-katselusuunta ja järven/ruohikkorannan sommittelu kuin modernissa slot5:ssä. Historiallinen kasvillisuus on havainnollistava tulkinta, ei väite tarkasta yksittäisten puiden1873 sijainnista.",
+          "Brief ja sources-before-generation.json luettu. Kaksi erillistä primaarilähdekatkelmaa luettu paikallisista tiedostoista: Tromssan kunnan vesihuoltosuunnitelman PDF-sivu28 (tekstissä sisäinen26) ja NIBIO:n lintututkimuslaitoksen Tromssa-lintuoppaan sivu33. Molemmat tekstit vahvistavat Prestvannetin patoamisen1867; kunnan teksti kuvaa maapadon ja käyttöaltaan ennen1873. PDF-tekstikatkelmat luettiin suoraan, ei vain tuottajan tiivistelmää.",
+          "Period exclusions tarkastettu: ei1875 Bekkevold-parannuksia,1894 putkistoa, myöhempiä Geofysen/auroraobservatorio-rakennuksia, patoa, rakennuksia, skylinea, teitä, polkuja, havaintolavoja, opasteita, kaiteita, sähkövaloja, johtoja tai muovia. Lintuja/eläimiä ei kuvata, joten ei tuotuja lajioletuksia.",
+          "Tarkkaa1873 saman katselusuunnan arkistokuvaa ei briefin mukaan löytynyt. Kuva on lähteisiin perustuva1873 altaan luonnonrannan rekonstruktio; vedenpintaa tai täsmällistä kasvillisuutta ei esitetä mitatuksi.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot8-birch-leaves-shore.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tromso/crops/slot8-farbank-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T18:39:07.857137+00:00",
+    "sourceManifestSha256": "0f67ad55c407eec1892b25755c1818f670efadb41dd8ddd421cc42b71a96e5c7"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "tromso",
+    "verifiedAt": "2026-10-12T18:42:49.634508+00:00",
+    "assets": [
+      {
+        "id": "intro-tromssa-4-v1",
+        "slot": 4,
+        "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+        "bytes": 3047531,
+        "verifiedAt": "2026-10-12T18:42:48.441475+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+            "bytes": 3047531,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png?delivery-verify=d0d1432d4f59b8ce-1791830568441466000",
+            "http": 200,
+            "sha256": "d0d1432d4f59b8ce0c37b739199c3daded5a0e8c1f75f59395583e6384e4f84e",
+            "bytes": 3047531,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-tromssa-5-v1",
+        "slot": 5,
+        "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+        "bytes": 2768647,
+        "verifiedAt": "2026-10-12T18:42:48.441770+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png",
+            "http": 200,
+            "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+            "bytes": 2768647,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png?delivery-verify=0d19225e32074286-1791830568441760000",
+            "http": 200,
+            "sha256": "0d19225e32074286e8d82f83981d2374ccd3e90c5d95d459f3c28811b8b48bef",
+            "bytes": 2768647,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-tromssa-6-v1",
+        "slot": 6,
+        "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+        "bytes": 2129605,
+        "verifiedAt": "2026-10-12T18:42:48.441912+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-6-telegrafbukta-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+            "bytes": 2129605,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-6-telegrafbukta-juhla-intro-v1.png?delivery-verify=bf676729981a8fbe-1791830568441910000",
+            "http": 200,
+            "sha256": "bf676729981a8fbec30368df58745a6f1484533318065fbe80d552c23ebc3f56",
+            "bytes": 2129605,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-tromssa-7-v1",
+        "slot": 7,
+        "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+        "bytes": 2452666,
+        "verifiedAt": "2026-10-12T18:42:49.024477+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+            "bytes": 2452666,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png?delivery-verify=892d6f4546d27423-1791830569024464000",
+            "http": 200,
+            "sha256": "892d6f4546d27423eb0ede1739eae6c72a795a977bde6e4f4bb300b1c20d3758",
+            "bytes": 2452666,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-tromssa-8-v1",
+        "slot": 8,
+        "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+        "bytes": 2862322,
+        "verifiedAt": "2026-10-12T18:42:49.037693+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-8-prestvannet-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+            "bytes": 2862322,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tromso/20261012-full/tromso-8-prestvannet-1873-intro-v1.png?delivery-verify=46ab2e9c5ab69be5-1791830569037682000",
+            "http": 200,
+            "sha256": "46ab2e9c5ab69be53f6b3d8642ec0b2f1e7c18d839ae2dc270f1d05333b05f14",
+            "bytes": 2862322,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tromso/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.156120+00:00"
+}

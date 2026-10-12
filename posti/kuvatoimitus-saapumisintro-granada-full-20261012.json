@@ -1,0 +1,1040 @@
+{
+  "cityName": "Granada",
+  "gameCityId": "granada",
+  "mediaSlug": "granada",
+  "assets": [
+    {
+      "id": "granada-4-albaicin-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Granada",
+      "gameCityId": "granada",
+      "mediaSlug": "granada",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-4-albaicin-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-4-albaicin-arki-intro-v1.png",
+      "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+      "bytes": 3025395,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-4-albaicin-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-4-albaicin-arki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Granada intro slot4. Generate one completely new original photorealistic illustrative image, natural real-camera documentary photography. Landscape exactly1536x1024 opaqueRGB sRGB PNG. Subdued authentic colours, ordinary natural light, natural irregular stone and plaster texture, individually varied foliage, credible perspective. No HDR, painting, CGI, render, cinematic grading, plastic skin or cloned textures. No text, letters, numbers, signs, logos, brands, brandpatterns, watermarks, frames, food, protected artwork or contemporary named designer architecture. Plain closed residential doors and blank stone lintels without signs or plaques. Scene: Present-day ordinary quiet Albaicin residential lane Granada. Uneven pale pebblepaving and gentlystepped uphilllane, whitewashed gardenwalls, plain brownwoodendoors, some old reddishterracottaroofedges andplantpots, tinyglimpse of interiorcarmengarden foliage overwall. Camera35mm eyelevel looking uphillaroundsoftbend. Twoverysmall back-facing adultresidents20metresaway, onecarrying plain clothbag, facesinvisible. Softmorninglight, real weathered whiteplaster andirregular stones. No church, castle, monument, touristshop, artworks, tilestories or numbereddoors.",
+      "sources": [
+        {
+          "url": "https://albaicinparaiso.com/puente-de-espinosa/",
+          "title": "Agencia Pública Albaicin Granada – Puente de Espinosa",
+          "readFacts": [
+            "Espinosa bridge believed lateChristian17thcentury, connectsAlbaicin andChurra.",
+            "Churra existed inIslamic Nasridperiod.",
+            "Bridge affords view of oldmanorhousefacades along right riverbank."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/monumento/calle-emblematica/carrera-del-darro?page=1",
+          "title": "Ayuntamiento Granada – Carrera delDarro",
+          "readFacts": [
+            "Oneof oldestGranadastreets, shallow riverflow under ancestralEspinosa/Cabrera bridges connectingChurra.",
+            "Neighbouringhistoricbuildings16thcentury andearlier; riverbedremains visiblehere."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/en/barrio-turistico/albaicin",
+          "title": "Ayuntamiento Granada – Albaicin",
+          "readFacts": [
+            "Old narrowstreets andtraditionalhouses, carmenes withinteriorgardens."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/dia-cruz-granada",
+          "title": "Ayuntamiento Granada – Dia de laCruz",
+          "readFacts": [
+            "May cityfestival, eveningcelebration until23or01dependingday, neighbourhoodflowerdecorations."
+          ]
+        },
+        {
+          "url": "https://albaicinparaiso.com/wp-content/uploads/2021/07/Vista-perspectiva-Puente-de-Espinosa.jpg",
+          "title": "AgenciaPublica Albaicin – currentbridgeplacephoto",
+          "role": "geographicreferenceonly; never copy photograph"
+        }
+      ],
+      "caption": "Albaicínin asuinkujan arkea Granadassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and walls,door,stone/cobblesteps,foliage and smallpeople inspected. Plausible ordinary Albaicin residentialsteps with two distant back-facing adults,white unmarked walls and worn oldwooddoor. Natural daylight and irregular authentictextures; no text,addressnumbers,signs,brands,food or protecteddesign.",
+          "reviewedAt": "2026-10-12T17:51:50.499875+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-4-albaicin-arki-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-4-albaicin-arki-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+        "bytes": 3025395,
+        "nativeSha256": "e2785b8bdd97d0da4a44615a4c2b807ad810ba3fde1b7cb8d22924dd5f6f6c49",
+        "decodedRGBSha256": "b4fbd6ba144d2a674622b544bf8fb365991531a2cdae44569b48e2210e49b64d",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:49:28.979936+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-4-albaicin-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-4-albaicin-arki-intro-v1.png?t=1a0e5ee69bea4b34",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-4-albaicin-arki-intro-v1.png",
+        "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+        "bytes": 3025395,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+        "canonicalGetBytes": 3025395,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:01:22.171692+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "granada-5-darro-espinosa-intro-v1",
+      "slot": 5,
+      "cityName": "Granada",
+      "gameCityId": "granada",
+      "mediaSlug": "granada",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-5-darro-espinosa-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-5-darro-espinosa-intro-v1.png",
+      "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+      "bytes": 3404344,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-5-darro-espinosa-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-5-darro-espinosa-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Granada intro slot5. Generate one completely new original photorealistic illustrative image, natural real-camera documentary photography. Landscape exactly1536x1024 opaqueRGB sRGB PNG. Subdued authentic colours, ordinary natural light, natural irregular stone and plaster texture, individually varied foliage, credible perspective. No HDR, painting, CGI, render, cinematic grading, plastic skin or cloned textures. No text, letters, numbers, signs, logos, brands, brandpatterns, watermarks, frames, food, protected artwork or contemporary named designer architecture. Plain closed residential doors and blank stone lintels without signs or plaques. Scene: Present-day Darro river beneath Puente de Espinosa Granada. Camera35mm atlowpedestrianeyeheight onnorth riverbank justUPSTREAM eastofthebridge, lookingWEST downstreamtowardbridge. Narrow shallow clearrockystream flows fromlowerforegroundtoward one simpleoldsingle-segmental masonryarchbridge spanninghorizontally inuppermiddle; modest narrowbridgewith plain lowthickstoneparapet, irregular weathered oldbrickarchrim andstonewall, not monumental. Someordinary oldtwothree-storey white/creamplaster residentialhomes nearbridge inupperbackground, smallplainwindows andoldtile roofedges; no namedpalaces. Naturalriverstones, littlegrass alongedges, softearlydaylight, gentlewatermotion. Peopleabsent. ExcludeAlhambra, towers, church, modernrailing, cars, shops, streetnames, signs, sculpture, complexmodernbuildings.",
+      "sources": [
+        {
+          "url": "https://albaicinparaiso.com/puente-de-espinosa/",
+          "title": "Agencia Pública Albaicin Granada – Puente de Espinosa",
+          "readFacts": [
+            "Espinosa bridge believed lateChristian17thcentury, connectsAlbaicin andChurra.",
+            "Churra existed inIslamic Nasridperiod.",
+            "Bridge affords view of oldmanorhousefacades along right riverbank."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/monumento/calle-emblematica/carrera-del-darro?page=1",
+          "title": "Ayuntamiento Granada – Carrera delDarro",
+          "readFacts": [
+            "Oneof oldestGranadastreets, shallow riverflow under ancestralEspinosa/Cabrera bridges connectingChurra.",
+            "Neighbouringhistoricbuildings16thcentury andearlier; riverbedremains visiblehere."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/en/barrio-turistico/albaicin",
+          "title": "Ayuntamiento Granada – Albaicin",
+          "readFacts": [
+            "Old narrowstreets andtraditionalhouses, carmenes withinteriorgardens."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/dia-cruz-granada",
+          "title": "Ayuntamiento Granada – Dia de laCruz",
+          "readFacts": [
+            "May cityfestival, eveningcelebration until23or01dependingday, neighbourhoodflowerdecorations."
+          ]
+        },
+        {
+          "url": "https://albaicinparaiso.com/wp-content/uploads/2021/07/Vista-perspectiva-Puente-de-Espinosa.jpg",
+          "title": "AgenciaPublica Albaicin – currentbridgeplacephoto",
+          "role": "geographicreferenceonly; never copy photograph"
+        }
+      ],
+      "caption": "Darrojoki ja Puente de Espinosan vanha silta Granadassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and singlearch,stonewall,mortar,water,foliage inspected. Plausible small Espinosa bridge over narrow Darro from easternupstream riverlevel facingwest. Worn anonymous residentialfacades,irregular oldstone/naturalriver, no signs,text,logos,addressnumbers,faces or contemporarydesign observed.",
+          "limits": [
+            "Illustrative view; individual anonymous features reconstructed, not measured."
+          ],
+          "reviewedAt": "2026-10-12T17:52:33.413378+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-5-darro-espinosa-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-5-darro-espinosa-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+        "bytes": 3404344,
+        "nativeSha256": "51a1a616729da708fa128f02b3cc602ad14fac1af76f6483ba0a68d23f4d8874",
+        "decodedRGBSha256": "1e913d152d56ab6640562e8815b7354bfd712c12674e3db12ec69b7cdad8f008",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:50:25.123255+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-5-darro-espinosa-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-5-darro-espinosa-intro-v1.png?t=e8ac9b14f94c13f1",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-5-darro-espinosa-intro-v1.png",
+        "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+        "bytes": 3404344,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+        "canonicalGetBytes": 3404344,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:01:23.907250+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "granada-6-cruces-juhla-intro-v1",
+      "slot": 6,
+      "cityName": "Granada",
+      "gameCityId": "granada",
+      "mediaSlug": "granada",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-6-cruces-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-6-cruces-juhla-intro-v1.png",
+      "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+      "bytes": 2198442,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Granada intro slot6. Generate one completely new original photorealistic illustrative image, natural real-camera documentary photography. Landscape exactly1536x1024 opaqueRGB sRGB PNG. Subdued authentic colours, ordinary natural light, natural irregular stone and plaster texture, individually varied foliage, credible perspective. No HDR, painting, CGI, render, cinematic grading, plastic skin or cloned textures. No text, letters, numbers, signs, logos, brands, brandpatterns, watermarks, frames, food, protected artwork or contemporary named designer architecture. Plain closed residential doors and blank stone lintels without signs or plaques. Scene: Present-day Granada, joyful May Dia de laCruz neighbourhoodparty inordinary Albaicin courtyard. Whitewashed oldhomes withsimple ironbalconies, leafyplantpots, understated redandwhite plainpaperstreamers above; no actualcrossartwork or displayinframe. Onefictional Andalusian adultman aged26, naturallytextured skin, darkhair andplainshortbeard, laughingtofriendoffcamera inrightforeground; generic fashionable plain navycottonopenovershirt overlightgreytshirt, nolettering orpatterns. Behind him locallyplausible youngadult neighbours23–35, variednaturalSpanishappearances, smilingandchattingatjoyfulgathering, genericcontemporaryclothes.50mm chest-upcamera, overlappingadulttorsos fillalllowerframe; ALL shoesandfeetincludingbackgroundentirelyexcluded orfullyhidden. Lateafternoon naturalsun, a fewsimplewarm bulbsbeginningtoglow, realcandidfaces/anatomy. Nofood/drinks/children/traditionalcostumes/stage/paintings/monuments.",
+      "sources": [
+        {
+          "url": "https://albaicinparaiso.com/puente-de-espinosa/",
+          "title": "Agencia Pública Albaicin Granada – Puente de Espinosa",
+          "readFacts": [
+            "Espinosa bridge believed lateChristian17thcentury, connectsAlbaicin andChurra.",
+            "Churra existed inIslamic Nasridperiod.",
+            "Bridge affords view of oldmanorhousefacades along right riverbank."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/monumento/calle-emblematica/carrera-del-darro?page=1",
+          "title": "Ayuntamiento Granada – Carrera delDarro",
+          "readFacts": [
+            "Oneof oldestGranadastreets, shallow riverflow under ancestralEspinosa/Cabrera bridges connectingChurra.",
+            "Neighbouringhistoricbuildings16thcentury andearlier; riverbedremains visiblehere."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/en/barrio-turistico/albaicin",
+          "title": "Ayuntamiento Granada – Albaicin",
+          "readFacts": [
+            "Old narrowstreets andtraditionalhouses, carmenes withinteriorgardens."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/dia-cruz-granada",
+          "title": "Ayuntamiento Granada – Dia de laCruz",
+          "readFacts": [
+            "May cityfestival, eveningcelebration until23or01dependingday, neighbourhoodflowerdecorations."
+          ]
+        },
+        {
+          "url": "https://albaicinparaiso.com/wp-content/uploads/2021/07/Vista-perspectiva-Puente-de-Espinosa.jpg",
+          "title": "AgenciaPublica Albaicin – currentbridgeplacephoto",
+          "role": "geographicreferenceonly; never copy photograph"
+        }
+      ],
+      "caption": "Nuoria aikuisia toukokuun korttelijuhlassa Granadassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": true,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and hand/skin/clothing/background detail inspected including dedicated doorwallcrop. Fictionaladult man amid cheerful adult neighbourhoodgathering with genericclothes,unmarked paperbunting,allfootwear cropped/occluded and nofood/brand/logo/text. Blurred small background yellow/white doorfixture is plain unmarked intercom panel; no distinguishable letters,numbers or signwriting in nativecrop. Natural skin/hair/daylight.",
+          "nativeCropPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/qa/granada-6-doorwall-native-detail.png",
+          "reviewedAt": "2026-10-12T17:54:43.369083+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-6-cruces-juhla-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-6-cruces-juhla-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+        "bytes": 2198442,
+        "nativeSha256": "981774e743291ceea0dba75d5709d075c6c9cb05a26b0a64e49f9f83fee481ca",
+        "decodedRGBSha256": "4188112fe140bf120656c3d06fbfd49aed0c2bb9785d42ab27655dadf0e9cc36",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:51:46.237077+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png?t=a2a5d5c9e7a7374c",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png",
+        "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+        "bytes": 2198442,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+        "canonicalGetBytes": 2198442,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:01:25.498015+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "granada-7-asukortteli-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Granada",
+      "gameCityId": "granada",
+      "mediaSlug": "granada",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-7-asukortteli-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-7-asukortteli-ilta-intro-v1.png",
+      "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+      "bytes": 2680661,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-7-asukortteli-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-7-asukortteli-ilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Granada intro slot7. Generate one completely new original photorealistic illustrative image, natural real-camera documentary photography. Landscape exactly1536x1024 opaqueRGB sRGB PNG. Subdued authentic colours, ordinary natural light, natural irregular stone and plaster texture, individually varied foliage, credible perspective. No HDR, painting, CGI, render, cinematic grading, plastic skin or cloned textures. No text, letters, numbers, signs, logos, brands, brandpatterns, watermarks, frames, food, protected artwork or contemporary named designer architecture. Plain closed residential doors and blank stone lintels without signs or plaques. Scene: Present-day smallanonymous oldresidentialsquare inhistoric Granada atbluehour, distinctfromnarrowlane. Eyelevel35mm diagonalview acrosswornpebblepavingsmallopenspace, singleirregular matureorangetree atleft, whiteandpalebeige traditionalhouses aroundsquare, reddishclayroofedges, unadorned ironbalconies, warmwindowsandordinarywalllanterns, oneplainwoodenbench. Twoverysmall adultswalkingaway faracrosssquare, facesinvisible. Subtlenaturallightandcalm localatmosphere, nopublicart/monuments/church/distantcastle/cafetable/food/signs/plaques/house numbers; everywallbare andalldoorwaysplainresidential.",
+      "sources": [
+        {
+          "url": "https://albaicinparaiso.com/puente-de-espinosa/",
+          "title": "Agencia Pública Albaicin Granada – Puente de Espinosa",
+          "readFacts": [
+            "Espinosa bridge believed lateChristian17thcentury, connectsAlbaicin andChurra.",
+            "Churra existed inIslamic Nasridperiod.",
+            "Bridge affords view of oldmanorhousefacades along right riverbank."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/monumento/calle-emblematica/carrera-del-darro?page=1",
+          "title": "Ayuntamiento Granada – Carrera delDarro",
+          "readFacts": [
+            "Oneof oldestGranadastreets, shallow riverflow under ancestralEspinosa/Cabrera bridges connectingChurra.",
+            "Neighbouringhistoricbuildings16thcentury andearlier; riverbedremains visiblehere."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/en/barrio-turistico/albaicin",
+          "title": "Ayuntamiento Granada – Albaicin",
+          "readFacts": [
+            "Old narrowstreets andtraditionalhouses, carmenes withinteriorgardens."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/dia-cruz-granada",
+          "title": "Ayuntamiento Granada – Dia de laCruz",
+          "readFacts": [
+            "May cityfestival, eveningcelebration until23or01dependingday, neighbourhoodflowerdecorations."
+          ]
+        },
+        {
+          "url": "https://albaicinparaiso.com/wp-content/uploads/2021/07/Vista-perspectiva-Puente-de-Espinosa.jpg",
+          "title": "AgenciaPublica Albaicin – currentbridgeplacephoto",
+          "role": "geographicreferenceonly; never copy photograph"
+        }
+      ],
+      "caption": "Granadan vanhan asuinkorttelin ilta ja ikkunavalot. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and all doorwall,window,paving,tree/plant details inspected. Ordinary old Granada residentialcourt at dusk with two distant back-facing adults,subdued windows/practicallamps and natural citrus tree. No preparedfood imagery,text,addressnumbers,signs,logos or artworks; camera/material/foliage credible.",
+          "limits": [
+            "Illustrative view; exact natural contours and individual vegetation are not surveyed."
+          ],
+          "reviewedAt": "2026-10-12T17:56:02.603221+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-7-asukortteli-ilta-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-7-asukortteli-ilta-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+        "bytes": 2680661,
+        "nativeSha256": "0461d76d71a4623e96c69ca6c6b244fb031dec955e0a5bfc0c21c2342888de52",
+        "decodedRGBSha256": "eaa6639662ae6f890dfab872c2272715253a5959f0ba134e728a7d74c2f8cdbf",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:52:52.964901+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-7-asukortteli-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-7-asukortteli-ilta-intro-v1.png?t=1457a0cbe7d62da6",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-7-asukortteli-ilta-intro-v1.png",
+        "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+        "bytes": 2680661,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+        "canonicalGetBytes": 2680661,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:01:27.111770+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "granada-8-darro-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Granada",
+      "gameCityId": "granada",
+      "mediaSlug": "granada",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-8-darro-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-8-darro-1873-intro-v1.png",
+      "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+      "bytes": 3112554,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja Granada intro slot8. Generate one completely new original photorealistic illustrative image, natural real-camera documentary photography. Landscape exactly1536x1024 opaqueRGB sRGB PNG. Neutral graytones only, ordinary natural light, natural irregular stone and plaster texture, individually varied foliage, credible perspective. No HDR, painting, CGI, render, cinematic grading, plastic skin or cloned textures. No text, letters, numbers, signs, logos, brands, brandpatterns, watermarks, frames, food, protected artwork or contemporary named designer architecture. Plain closed residential doors and blank stone lintels without signs or plaques. Scene: NATIVE NEUTRAL MONOCHROME PHOTOGRAPH, onlyblackwhiteandneutralgray, nosepia orcolourcast. Year exactly1873 GranadaDarro riverandEspinosabridge. SAME cameraviewpoint as5: lowpedestrianeyeheight onNORTH riverbankjustUPSTREAM EASTofbridge, lookingWESTdownstream; shallow narrowrockystreamfromlowerforegroundtoward small single-segmental oldmasonryarchbridge horizontallyuppermiddle. Bridgehasplainlowthickparapet, weatheredbrickarchrimandstonewalls, modestspan. Anonymous ordinary oldwhiteplaster2/3storeyhouses nearbridge inupperbackground, smalldarkwoodframedwindows andoldclayroofs, no decorative commercialfacades. Thisbridgeisbased on17thcenturyheritage andancientriverstreet; no latercityfeatures. Peopleabsent orjustoneverytinyback-facing adultwearing1873coatandhatonthebridge. Noelectricalfixtures, cables, cars, modernrailing, asphalt, shops, posters, text, antennas, plasticitems, newbuildings, Alhambra, towers, church ormonuments. Softnaturalmorninglight, crediblefineplategrain, neutralgrayscalecontrast, individuallyirregular oldstonesandriver ripples; noborderorartificialvignette.",
+      "sources": [
+        {
+          "url": "https://albaicinparaiso.com/puente-de-espinosa/",
+          "title": "Agencia Pública Albaicin Granada – Puente de Espinosa",
+          "readFacts": [
+            "Espinosa bridge believed lateChristian17thcentury, connectsAlbaicin andChurra.",
+            "Churra existed inIslamic Nasridperiod.",
+            "Bridge affords view of oldmanorhousefacades along right riverbank."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/monumento/calle-emblematica/carrera-del-darro?page=1",
+          "title": "Ayuntamiento Granada – Carrera delDarro",
+          "readFacts": [
+            "Oneof oldestGranadastreets, shallow riverflow under ancestralEspinosa/Cabrera bridges connectingChurra.",
+            "Neighbouringhistoricbuildings16thcentury andearlier; riverbedremains visiblehere."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/en/barrio-turistico/albaicin",
+          "title": "Ayuntamiento Granada – Albaicin",
+          "readFacts": [
+            "Old narrowstreets andtraditionalhouses, carmenes withinteriorgardens."
+          ]
+        },
+        {
+          "url": "https://turismo.granada.org/es/dia-cruz-granada",
+          "title": "Ayuntamiento Granada – Dia de laCruz",
+          "readFacts": [
+            "May cityfestival, eveningcelebration until23or01dependingday, neighbourhoodflowerdecorations."
+          ]
+        },
+        {
+          "url": "https://albaicinparaiso.com/wp-content/uploads/2021/07/Vista-perspectiva-Puente-de-Espinosa.jpg",
+          "title": "AgenciaPublica Albaicin – currentbridgeplacephoto",
+          "role": "geographicreferenceonly; never copy photograph"
+        }
+      ],
+      "caption": "Darrojoki ja Puente de Espinosan vanha silta Granadassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true,
+          "visuallyNeutralBlackWhite": true,
+          "sameViewPairSlot": 5,
+          "year1873ModernExclusionsPass": true,
+          "strictRGBIdentityDiagnostic": false,
+          "maxRedGreenDifference": 10,
+          "maxRedBlueDifference": 10,
+          "meanRGB": [
+            92.16477076212566,
+            92.17278226216634,
+            92.22579892476399
+          ],
+          "meanSignedRedMinusBlue": -0.06102816263833688
+        },
+        "sessionOwner": {
+          "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and singlebridgearch,masonry,oldplaster/wood,water,periodadult detail inspected. Neutralblack/white no visible colourcast. Same upstream/east riverlevel viewpoint facingwest toward Espinosabridge as modern5,old ordinary facades and visible naturalriverbed. Tiny back-facing periodadult, no antennas,cars,modernroad/electriclighting,text,logos,addressnumbers or protectedcontemporarydesign.",
+          "historicalPairSlot": 5,
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "reviewedAt": "2026-10-12T18:01:19.805781+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/granada-8-darro-1873-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/native/granada-8-darro-1873-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+        "bytes": 3112554,
+        "nativeSha256": "1c835c85d89347eb94e63bec358d0df4abddc2aafac4f4ff71b5c55a65e8b0fe",
+        "decodedRGBSha256": "4ff3d40e978bd30af5c974f0b2b77d08450a1d8c5007974eb78650f10a2602cf",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:58:15.647389+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png?t=3ca36a9253cb19c1",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png",
+        "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+        "bytes": 3112554,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+        "canonicalGetBytes": 3112554,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:01:29.774710+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "rejectedCandidates": [],
+  "complete": true,
+  "status": "awaiting-root-review-and-R2",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T18:01:29.790789+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "granada",
+    "gameCityId": "granada",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/sources-1873.json",
+      "https://albaicinparaiso.com/puente-de-espinosa/",
+      "https://turismo.granada.org/es/monumento/calle-emblematica/carrera-del-darro?page=1"
+    ],
+    "assets": [
+      {
+        "id": "granada-4-albaicin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä kaukaisten ihmisten/portaiden, oven/ruukkukasvin ja vasemman puutarhan natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen lehvistö, muurirappaus, puuovi ja kulunut pikkukiveys. Koherentti päivänvalo, varjot ja kujan perspektiivi; ei kaarnaleimaa tai muovisuutta havaittu.",
+          "Kaksi pientä henkilöä selin; laukku geneerinen. Ei tekstiä, numeroita, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "granada-5-darro-espinosa-intro-v1",
+        "slot": 5,
+        "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä yksiaukkoisen sillan/taustajulkisivujen ja veden/kivien/lähilehtien natiivirajaukset tarkastettu.",
+          "Luonnollinen matala kivinen Darro, koherentti veden liike ja kivikaari. Kasvillisuus, kivet ja kulunut rappaus epäsäännöllisiä ilman leimakuvioita tai muovisuutta.",
+          "Lähiranta vasemmalla, joki alakehyksestä sillan alle, yksi kaarisilta ylemmässä keskikehyksessä. Kuva5 on1873-kuvan8 moderni vertailupari.",
+          "Ei ihmisiä, tekstiä, logoja, brändikuvioita tai ruokaa havaittu; valo ja perspektiivi kameramaisia.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "granada-6-cruces-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan kasvot/hiukset/vaatteet, sivu-/taustahenkilöiden kasvot/käsien näkyvät osat ja pieni taustan seinäkilpi tarkastettu natiivikoossa.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten toukokuinen korttelijuhla, geneeriset muodikkaat nykyvaatteet. Iho, hiukset, hampaat, korvat ja näkyvät käsien osat uskottavia.",
+          "Kaikki henkilöt rajattu tai peitetty jalkineiden yläpuolelta. Ei jalkineita, ruokaa, juomapakkauksia, tekstiä, logoja tai brändikuvioita koko kehyksessä; paperikoristeet geneerisiä.",
+          "Taustan pieni keltainen suorakaide on natiivirajauksessa tyhjä väripinta, alapuolinen kapea osa ei muodosta havaittavaa kirjoitusta tai numeroa.",
+          "Koherentti luonnonvalo, optinen taustan pehmeys ja perspektiivi; luonnollinen kasvillisuus ilman leimakuvioita.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "granada-7-asukortteli-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä appelsiinipuun rungon/haarojen/lehtien, penkin ja kaukaisten ihmisten/ovien natiivirajaukset tarkastettu.",
+          "Puun runko, haarautuminen, lehdet ja hedelmät vaihtelevat luonnollisesti; ei kaarnaleimaa tai muovisuutta. Tavallinen puistopuu aukion osana, ei ruokakuvallinen asetelma.",
+          "Koherentti hämärävalo, lämpimät ikkunavalot ja aukion perspektiivi; kiveys/rappaus luonnollisia. Kaksi pientä selin olevaa henkilöä.",
+          "Ei tekstiä, osoitenumeroita, logoja, brändikuvioita, ruoka-annoksia tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "granada-8-darro-1873-intro-v1",
+        "slot": 8,
+        "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä sillan/kattojen/aikakauden henkilön ja veden/kivien/kasvillisuuden natiivirajaukset tarkastettu.",
+          "Näkyvä ilme on neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä. Pientä numeerista RGBeroa ei käytetty itsenäisenä hylkäysperusteena.",
+          "Vertailtu moderniin5:een: sama vasen lähiranta, matala kivinen joki alakehyksestä yhden segmenttikaaren alle, vanhat talot sillan takana ja oikean rannan julkisivu. Katselusuunta ja kuvajaottelu vastaavat toisiaan.",
+          "Brief/sources-1873.json sekä2 virallista lähdesivua luettu:1600-luvun Espinosa-silta ja Darrojoen vanha kadun/talojen perusasetelma tukevat1873-havainnekuvaa. Täsmällinen rakennus-/rantakohtainen1873-tila ei ole arkistopaikan tarkkuusväite.",
+          "Period exclusions tarkastettu: ei sähkökalusteita/johtoja, autoja, moderneja kaiteita, asfalttia, kauppoja/mainoksia/julisteita, antenneja, muoviesineitä, uusia rakennuksia, Alhambraa, torneja, kirkkoa tai muistomerkkejä.",
+          "Sillalla yksi hyvin pieni selin oleva aikakauden aikuinen. Luonnolliset kuluneet kivet, lehdistö ja vesi; koherentti valo/perspektiivi. Ei tekstiä, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:21:30.031728+00:00",
+    "sourceManifestSha256": "8de956667f1f0afcb37072a4c00a33209c0145a45f287e67b930823fc0ece52f"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "granada",
+    "verifiedAt": "2026-10-12T18:23:10.343080+00:00",
+    "assets": [
+      {
+        "id": "granada-4-albaicin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+        "bytes": 3025395,
+        "verifiedAt": "2026-10-12T18:23:08.821848+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-4-albaicin-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+            "bytes": 3025395,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-4-albaicin-arki-intro-v1.png?delivery-verify=1a0e5ee69bea4b34-1791829388821839000",
+            "http": 200,
+            "sha256": "1a0e5ee69bea4b34e91f3f4fd9983419434c09eaab9bdafd232f708de167d4ba",
+            "bytes": 3025395,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "granada-5-darro-espinosa-intro-v1",
+        "slot": 5,
+        "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+        "bytes": 3404344,
+        "verifiedAt": "2026-10-12T18:23:08.821993+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-5-darro-espinosa-intro-v1.png",
+            "http": 200,
+            "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+            "bytes": 3404344,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-5-darro-espinosa-intro-v1.png?delivery-verify=e8ac9b14f94c13f1-1791829388821989000",
+            "http": 200,
+            "sha256": "e8ac9b14f94c13f1c5696202e99db138a08bbb33badae340cff013a8e4f833b0",
+            "bytes": 3404344,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "granada-6-cruces-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+        "bytes": 2198442,
+        "verifiedAt": "2026-10-12T18:23:08.822151+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+            "bytes": 2198442,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-6-cruces-juhla-intro-v1.png?delivery-verify=a2a5d5c9e7a7374c-1791829388822148000",
+            "http": 200,
+            "sha256": "a2a5d5c9e7a7374cd309e3033f6a7ecf52b255385f407924f3a2301545dde72a",
+            "bytes": 2198442,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "granada-7-asukortteli-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+        "bytes": 2680661,
+        "verifiedAt": "2026-10-12T18:23:09.609104+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-7-asukortteli-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+            "bytes": 2680661,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-7-asukortteli-ilta-intro-v1.png?delivery-verify=1457a0cbe7d62da6-1791829389609096000",
+            "http": 200,
+            "sha256": "1457a0cbe7d62da68c4241e16e7ace693b2df1a3758de8b157b53f583021a8db",
+            "bytes": 2680661,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "granada-8-darro-1873-intro-v1",
+        "slot": 8,
+        "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+        "bytes": 3112554,
+        "verifiedAt": "2026-10-12T18:23:09.661306+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+            "bytes": 3112554,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/granada/20261012-full/granada-8-darro-1873-intro-v1.png?delivery-verify=3ca36a9253cb19c1-1791829389661299000",
+            "http": 200,
+            "sha256": "3ca36a9253cb19c108a28f487f460afcd6bc2f342110917990bb747448c7eca1",
+            "bytes": 3112554,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/granada/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.317235+00:00"
+}

@@ -1,0 +1,1042 @@
+{
+  "cityName": "Firenze",
+  "gameCityId": "firenze",
+  "mediaSlug": "florence",
+  "status": "worker-produced-awaiting-root-QA-R2",
+  "complete": true,
+  "assets": [
+    {
+      "id": "florence-4-san-frediano-arki-intro-v2",
+      "slot": 4,
+      "version": 2,
+      "cityName": "Firenze",
+      "gameCityId": "firenze",
+      "mediaSlug": "florence",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-4-san-frediano-arki-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-4-san-frediano-arki-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png",
+      "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+      "bytes": 2337116,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food. Present-day Florence: a quiet narrow residential side lane off Via dell’Orto in San Frediano, pale ochre and cream worn plaster, irregular shutters and modest old doors, one plain unbranded commuter bicycle being wheeled by a small person20 metres away, walking away from camera, one distant resident carrying a plain cloth bag. No recognisable faces. Camera at pedestrian eye height down the lane, morning shade with gentle sunlight high on walls. No monuments, churches, cafés or commercial storefronts. ALL walls absolutely blank and unmarked at every distance, including door frames: no number plaques, no address tiles, no tiny signage, no intercom labels, no doorbell panels, no street-name lettering. Only plain residential plaster and stone. This must be a completely new independent image, no edit or reuse of any previous image.",
+      "sources": [
+        {
+          "url": "https://www.feelflorence.it/sites/default/files/2021-05/DOSSIER_FLORENCE_ARNO.pdf",
+          "label": "FeelFlorence municipal Arno/Oltrarno dossier",
+          "readFacts": "Oltrarno has narrow streets; west along Borgo San Frediano modest homes and artisan workshops. Map locates Via dell’Orto and Piazza Tasso."
+        }
+      ],
+      "caption": "San Fredianon asuinkuja Firenzessä tavallisena aamuna. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "V2 kokonaan uusi generointi; koko kehys+natiivikoko tarkastettu; kaikki seinät/ovet vailla numerokilpiä/tekstiä, selin näkyvät ihmiset, pyörä ja luonnolliset materiaalit.",
+          "inspectedAt": "2026-10-12T17:32:41.271931+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and all doorwalls inspected. Ordinary worn San Frediano residential lane, two back-facing residents and unmarked bicycle, natural soft sunlight, irregular plaster/paving/plants. All visible doorwalls blank: no addressplaque,number,text,sign,logo or artwork.",
+          "limits": [
+            "Generated illustrative view; individual anonymous features reconstructed, not surveyed."
+          ],
+          "reviewedAt": "2026-10-12T17:34:46.023997+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-4-san-frediano-arki-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-4-san-frediano-arki-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+        "bytes": 2337116,
+        "nativeSha256": "65a733f9de99c65244ae42b4e70c04d548c3c37426aa496453965b9d645db5a5",
+        "decodedRGBSha256": "c299c4947229278776073c27bd4253a1257748327c093c14708f44651cb8dc1f",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:32:25.488176+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png?t=d897d8570f79d053",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png",
+        "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+        "bytes": 2337116,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+        "canonicalGetBytes": 2337116,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:34:47.502789+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "florence-5-cascine-arno-intro-v1",
+      "slot": 5,
+      "version": 1,
+      "cityName": "Firenze",
+      "gameCityId": "firenze",
+      "mediaSlug": "florence",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-5-cascine-arno-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-5-cascine-arno-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png",
+      "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+      "bytes": 2909286,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food. Present-day Florence, Arno at Cascine park: precise viewpoint on north/right bank near Viale degli Olmi, facing west/downstream almost parallel to the bank, river opening across left two-thirds of frame, near-bank irregular earth and gravel sloping into water at lower right, loose poplar and willow crowns along right and far shoreline. Crop tightly to natural river water and wooded banks, no skyline, buildings, bridges, roads, power cables or signs anywhere. Low eye-level landscape from bank, natural overcast morning, irregular ripples and earth details, a single small distant adult in plain modern clothes walking away on dirt path at extreme right.",
+      "sources": [
+        {
+          "url": "https://www.regione.toscana.it/-/parco-delle-casci-1",
+          "label": "Regione Toscana – Parco delle Cascine",
+          "readFacts": "Cascine occupies the right bank of the Arno; Medici farming and hunting estate, public park during Napoleonic period; purchased by municipality1869; woods include elms, pines, oaks and poplars.20th-century sports and university facilities must be excluded.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://brunelleschi.imss.fi.it/itineraries/place/ParcoCascine.html",
+          "label": "Museo Galileo / IMSS – Parco delle Cascine",
+          "readFacts": "Right bank of Arno; park works from1786, public during Napoleonic era, municipal purchase1869. Aviation school1937; present Ponte alla Vittoria replaces older1836 suspended bridge; Ponte all’Indiano second half20th century. All bridges and institutional buildings outside this narrow nature crop.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.feelflorence.it/en/points-interest/cascine-park",
+          "label": "Comune di Firenze – Cascine Park",
+          "readFacts": "Medici estate16th century, permanently public1807–1815, aviation school1938. Park and trees existed in1873; no claim that any individual tree is identical.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Arnojoen rauhallinen ranta Cascinen puiston kohdalla Firenzessä. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys ja natiivikoko tarkastettu: luonnolliset vesi/lehdet/kivet, ei tekstiä/kylttejä/brändejä/modernia arkkitehtuuria, kaukainen henkilö selin; näkymä sopii1873-pariksi.",
+          "inspectedAt": "2026-10-12T17:24:07.506545+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Entire native1536x1024 frame inspected including stones, leaves and water. Broad quiet Arno with natural treelined banks and one distant back-facing walker. No building, artwork, sign, text or logo; credible restrained camera rendering.",
+          "limits": [
+            "Generated illustrative view, not a surveyed topographic or architectural record."
+          ],
+          "reviewedAt": "2026-10-12T17:24:37.283145+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-5-cascine-arno-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-5-cascine-arno-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+        "bytes": 2909286,
+        "nativeSha256": "3b65b0a1b497ba3c879d97f9ffd61a4f3dd301ee83f64443dc032e9d477cd2c5",
+        "decodedRGBSha256": "695e93452803e0d2590b5301348a76aaa5e344ed74b98784cf31085a7b4ab6cd",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:23:52.430656+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png?t=aa898ca0992b96dd",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png",
+        "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+        "bytes": 2909286,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+        "canonicalGetBytes": 2909286,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:34:48.877127+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "florence-6-tasso-juhla-intro-v1",
+      "slot": 6,
+      "version": 1,
+      "cityName": "Firenze",
+      "gameCityId": "firenze",
+      "mediaSlug": "florence",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-6-tasso-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-6-tasso-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png",
+      "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+      "bytes": 2173315,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food. Present-day informal outdoor music gathering at tree-lined residential edge of Piazza Tasso, Florence. One entirely fictional27-year-old Italian woman in immediate foreground, smiling naturally toward a friend outside frame, visible from upper chest upward, loose plain ivory linen shirt and thin simple silver necklace; local young adult Italian crowd behind her laughing and clapping, fashionable entirely generic solid-colour clothes. Every person visible ONLY waist/chest-up, dense torsos hide lower bodies and all footwear; bottom of frame contains only upper torsos. No shoes anywhere, no flags, uniforms, logos, drinks or food. Plain old residential façades and out-of-focus trees behind, late afternoon natural warm shade. Candid camera moment, realistic pores and unruly hair, believable varied human anatomy. All visible walls must be completely unmarked: no address-number tiles, number plaques, street-name plates, shop signs, intercom labels or doorbell writing anywhere, including tiny distant details.",
+      "sources": [
+        {
+          "url": "https://www.feelflorence.it/it/punti-di-interesse/piazza-tasso",
+          "label": "FeelFlorence – Piazza Tasso",
+          "readFacts": "Official municipality tourism record locates Piazza Torquato Tasso in Florence."
+        },
+        {
+          "url": "https://www.feelflorence.it/sites/default/files/2021-05/DOSSIER_FLORENCE_ARNO.pdf",
+          "label": "FeelFlorence municipal Arno/Oltrarno dossier",
+          "readFacts": "Oltrarno has narrow streets; west along Borgo San Frediano modest homes and artisan workshops. Map locates Via dell’Orto and Piazza Tasso."
+        }
+      ],
+      "caption": "Iloinen nuorten aikuisten kokoontuminen Piazza Tasson laidalla Firenzessä. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys ja natiiviyksityiskohdat: fiktiivinen aikuinen etualalla, iloinen aikuisten joukko, geneeriset asut, kaikki jalkineet poissa rajauksesta; ei kylttejä/brändejä/tekstiä/ruokaa, iho ja hiukset luonnolliset.",
+          "inspectedAt": "2026-10-12T17:26:19.644561+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and clothing,hands,skin,background inspected. Fictional foreground adult amid cheerful Italian young-adult outdoor music gathering with generic plain clothing. Guitar has no brandmark; every person is cropped/occluded above footwear. No food, logos, signs, address tiles or text visible; natural skin,hair,light and photographic exposure.",
+          "limits": [
+            "Generated illustrative view, not an actual event photograph or measured street survey."
+          ],
+          "reviewedAt": "2026-10-12T17:30:18.119713+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-6-tasso-juhla-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-6-tasso-juhla-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+        "bytes": 2173315,
+        "nativeSha256": "617f327ef51bc6c976372fde8508c8321283888ac34b49f98e25c36345f785d8",
+        "decodedRGBSha256": "19dc38cce80ba26de539c6ae65251d12027a92459dfb8c7ec42aa67c030788c5",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:26:06.940393+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png?t=a6fe6d54662f9e62",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png",
+        "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+        "bytes": 2173315,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+        "canonicalGetBytes": 2173315,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:34:51.811238+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "florence-7-oltrarno-ilta-intro-v1",
+      "slot": 7,
+      "version": 1,
+      "cityName": "Firenze",
+      "gameCityId": "firenze",
+      "mediaSlug": "florence",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-7-oltrarno-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-7-oltrarno-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png",
+      "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+      "bytes": 2484071,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food. Present-day Florence, ordinary residential stretch of Via dei Serragli in Oltrarno at blue hour. View at eye level along worn stone pavement, narrow old ochre and grey buildings with plain shutters, several warmly lit upper windows and two simple modest street lamps; no monumental skyline and no church. Two small distant people walk away at street bend. No front faces, no motor vehicles, business signs or café menus. Real camera slight low-light grain, warm practical window light against subdued deep blue sky, no dramatic cinema grading. All visible walls must be completely unmarked: no address-number tiles, number plaques, street-name plates, shop signs, intercom labels or doorbell writing anywhere, including tiny distant details.",
+      "sources": [
+        {
+          "url": "https://www.feelflorence.it/sites/default/files/2021-05/DOSSIER_FLORENCE_ARNO.pdf",
+          "label": "FeelFlorence municipal Arno/Oltrarno dossier",
+          "readFacts": "Oltrarno has narrow streets; west along Borgo San Frediano modest homes and artisan workshops. Map locates Via dell’Orto and Piazza Tasso."
+        }
+      ],
+      "caption": "Oltrarnon asuinkatu ja lämpimät ikkunavalot Firenzessä. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys ja1536x1024 yksityiskohdat tarkastettu: ei kylttejä/osoitelaattoja/tekstiä/brändejä; ihmiset pieniä selin; luonnollinen iltavalo, vanha anonyymi asuinrakennuskanta.",
+          "inspectedAt": "2026-10-12T17:27:12.549904+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and doorwall detail inspected. Worn anonymous residential street with irregular stone paving and natural foliage, restrained blue-hour light and practical lamps/windows. Distant back-facing adults. Door surrounds and walls unmarked; no address plaques, text,logos or artworks visible.",
+          "limits": [
+            "Generated illustrative view, not an actual event photograph or measured street survey."
+          ],
+          "reviewedAt": "2026-10-12T17:30:18.120320+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-7-oltrarno-ilta-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-7-oltrarno-ilta-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+        "bytes": 2484071,
+        "nativeSha256": "8576d25dff750cf18d6cbb39859c4ac0953b72fab76a18901d2a98f46e74cc82",
+        "decodedRGBSha256": "4f6c169d240322d0ade23a080e2c7ed41e5014c6acbd1d6cd774fa887074da53",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:27:03.882468+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png?t=e845e235c33c88ba",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png",
+        "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+        "bytes": 2484071,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+        "canonicalGetBytes": 2484071,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:34:54.706737+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "florence-8-cascine-1873-intro-v1",
+      "slot": 8,
+      "version": 2,
+      "cityName": "Firenze",
+      "gameCityId": "firenze",
+      "mediaSlug": "florence",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-8-cascine-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-8-cascine-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png",
+      "sha256": "81cfbbdc681a6177b50949607c35f396d95783cfc66d4c6208a32e7cef21bb4b",
+      "bytes": 2725003,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, strictly neutral black and white only, equal RGB channels, no colour and no sepia, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food. Year1873, Florence. Exact same viewpoint as slot5: north/right bank of Arno near the place now called Viale degli Olmi, looking west/downstream almost parallel to bank. River occupies left two-thirds, natural earth/gravel bank lower right, loose poplar and willow woodland along right and far shoreline. A researched plausible1873 reconstruction, not an authentic archival photo. Narrow natural river crop excludes ALL buildings and bridges, so no20th-century additions. A single very small distant person walking away, dark nineteenth-century wool coat and plain hat, tiny enough that face is invisible. No paved cycleway, modern railing, machinery, vehicles, electric lights, cables or plastic. Soft daylight, subtle nineteenth-century photographic grain and gentle contrast; water and trees irregularly detailed, no frame. All visible walls must be completely unmarked: no address-number tiles, number plaques, street-name plates, shop signs, intercom labels or doorbell writing anywhere, including tiny distant details.\n",
+      "sources": [
+        {
+          "url": "https://www.regione.toscana.it/-/parco-delle-casci-1",
+          "label": "Regione Toscana – Parco delle Cascine",
+          "readFacts": "Cascine occupies the right bank of the Arno; Medici farming and hunting estate, public park during Napoleonic period; purchased by municipality1869; woods include elms, pines, oaks and poplars.20th-century sports and university facilities must be excluded.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://brunelleschi.imss.fi.it/itineraries/place/ParcoCascine.html",
+          "label": "Museo Galileo / IMSS – Parco delle Cascine",
+          "readFacts": "Right bank of Arno; park works from1786, public during Napoleonic era, municipal purchase1869. Aviation school1937; present Ponte alla Vittoria replaces older1836 suspended bridge; Ponte all’Indiano second half20th century. All bridges and institutional buildings outside this narrow nature crop.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.feelflorence.it/en/points-interest/cascine-park",
+          "label": "Comune di Firenze – Cascine Park",
+          "readFacts": "Medici estate16th century, permanently public1807–1815, aviation school1938. Park and trees existed in1873; no claim that any individual tree is identical.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Arnojoen ranta Cascinen puiston kohdalla vuonna 1873. Havainnekuva.",
+      "QA": {
+        "deliveryAlternativeReview": {
+          "mediaSlug": "florence",
+          "gameCityId": "firenze",
+          "id": "florence-8-cascine-1873-intro-v1",
+          "slot": 8,
+          "version": 1,
+          "sha256": "81cfbbdc681a6177b50949607c35f396d95783cfc66d4c6208a32e7cef21bb4b",
+          "nativeSha256": "ac7d2789267ae75981456f93ca935aefe7e8c20475c735074bfbd59c6f5e9187",
+          "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-8-cascine-1873-intro-v1.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-8-cascine-1873-intro-v1.png",
+          "bytes": 2725003,
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": true,
+          "producerBriefRead": true,
+          "sourceevidence": {
+            "briefPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/brief.json",
+            "briefSha256": "38715f618fad5cab51ac62e85b5bd6050d8c63a5f10983d54767bea1107337ac",
+            "sourcesRead": [
+              "https://www.regione.toscana.it/-/parco-delle-casci-1",
+              "https://brunelleschi.imss.fi.it/itineraries/place/ParcoCascine.html",
+              "https://www.feelflorence.it/en/points-interest/cascine-park"
+            ],
+            "readFacts": [
+              "Regione Toscana ja Museo Galileo sijoittavat Cascinen Arnon oikealle rannalle ja kirjaavat kaupungin omistuksen1869; puisto ja sen puusto ovat1873 aikakaudelle mahdollisia.",
+              "Museo Galileo kuvaa1937 ilmailukoulun sekä nykyisen Ponte alla Vittorian ja Ponte all’Indianon myöhempää historiaa; nämä rakenteet eivät kuulu rajattuun1873-näkymään.",
+              "FeelFlorence kirjaa pysyvän julkisen puiston1807–1815 ja myöhemmän1938 koulurakennuksen."
+            ],
+            "periodExclusionsReviewed": [
+              "Kaikki rakennukset ja sillat rajattu pois",
+              "20th-century facilities, nykyiset sillat ja koulurakennukset",
+              "Moderni päällystetty pyörätie, kaiteet, koneet, ajoneuvot, sähkövalot, johdot ja muovi"
+            ],
+            "historicalPair": {
+              "modernSlot": 5,
+              "modernId": "florence-5-cascine-arno-intro-v1",
+              "modernFinalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-5-cascine-arno-intro-v1.png",
+              "modernSha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+              "direction": "Arnon oikealta/pohjoisrannalta länteen alavirtaan joen suuntaisesti",
+              "visuallyConsistentDirection": true,
+              "observations": "Joki avautuu vasemmalla; luonnollinen maa-/soraranta ja metsäinen kulkupolku oikealla. Molemmissa katse etenee samaa rantaa pitkin ja pieni henkilö kulkee poispäin. Kasvillisuuden yksilöllinen muoto ja rantakasvusto muuttuvat historiallisessa rekonstruktiossa; kyse ei ole mitatusta topografisesta vastaavuudesta."
+            },
+            "interpretationLimit": "Lähteisiin perustuva rajattu luonnonrantarekonstruktio. Briefin mukaan täsmällistä tämän katselusuunnan pre1873-aikakausikuvaa ei löytynyt; kuvaa ei esitetä autenttisena valokuvana."
+          },
+          "notes": [
+            "Koko1536x1024kehys ja kolme natiivirajausta luettu tools.view_image detail original.",
+            "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Pieni RGB-kanavaero yksin ei muodosta laatuhylkäystä eikä alkuperäisiä pikseleitä ole muutettu.",
+            "Natiivikokoisessa horisonttirajauksessa ei erotu rakennuksia, kattoja tai muuta moderneja rakenteita; etäiset rinteet ja jatkuva puusto jäävät luonnonmaisemaksi. Tämä eroaa valitunv2:n havaituista rakennusmuodoista.",
+            "Kuori, lehtikuvio, rantakivet, kasvit, vesi ja heijastukset näyttävät epäsäännöllisiltä ja luonnollisilta. Ei kaarnaleimaa tai muovisuutta.",
+            "Pieni selin kävelevä aikuinen tummassa pitkässä takissa ja hatussa; ei tunnistettavia kasvoja tai näkyviä moderneja vaate-elementtejä. Ei tekstiä, logoja, ruokaa, sähkövalaistusta, ajoneuvoja tai kaiteita.",
+            "PNG RGB opaque1536x1024 sRGB, Description ja Source ovat Havainnekuva. Tekoälyllä tuotettu, ei valokuva.; final/native-pikselit samat ja metadataexportin SHA täsmää.",
+            "V1 säilyy tuottajan manifestissa historiana. Alkuperäinen numeerinen RGB-hylkäys on root-review.jsonissa myöhemmin korjattu visuaaliseksi hyväksynnäksi. Tässä riippumaton tarkastus hyväksyy olemassa olevan v1-tiedoston, ei uutta generointia tai paikallista retusointia.",
+            "Valintaa tukeva tieto: koordinaattori voi valita tämän jo olemassa olevan hyväksytyn v1:n slot8:aan erillisessä valintamanifestissa. Nykyinen qa.json pitää v2:n false-merkinnän. R2preview/readback kuuluu koordinaattorille; sitä ei tehty tässä QA:ssa.",
+            "QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta. Omistajan hyväksyntä, pelitoimituslupa ja peli-integraatio ovat erilliset."
+          ],
+          "nativeCrops": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot8-v1-horizon.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot8-v1-bark-walker.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot8-v1-shore-water.png"
+          ],
+          "currentSelectedCandidateId": "florence-8-cascine-1873-intro-v2",
+          "currentSelectedCandidateApproved": false,
+          "sourceManifestSha256": "1c95b35d098ff427d752899ea6da0ef758c8e8cfc0d67decc2b6383689d2b36b",
+          "ownerAcceptance": false,
+          "gameIntegrated": false,
+          "R2IndependentlyVerified": false,
+          "reviewedAt": "2026-10-12T17:44:00.514743+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-8-cascine-1873-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-8-cascine-1873-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "4633e083d6f8c793e7ad511f96d22407e035e1c5acef5bd97cda7dd92d76001c",
+        "bytes": 2640256,
+        "nativeSha256": "095b8d0d8e276a0a9142b7f354b0457e59e0c4511abc602dde040e08919a022b",
+        "decodedRGBSha256": "ec1f70fae8a870195a134c128990776caeb62a7d1bf6dd067797e7c512d2e77e",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:33:33.199777+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png?t=81cfbbdc681a6177",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png",
+        "sha256": "81cfbbdc681a6177b50949607c35f396d95783cfc66d4c6208a32e7cef21bb4b",
+        "bytes": 2725003,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/prompts/8-cascine-1873.txt"
+    }
+  ],
+  "omittedItems": [],
+  "rejectedCandidates": [
+    {
+      "slot": 4,
+      "version": 1,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-4-san-frediano-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-4-san-frediano-arki-intro-v1.png",
+      "reason": "Root-QA hylkää: oikean etualan oven yläoikean seinän valkeassa osoitekilvessä numeromaiset siniset merkit. Ei lisäkutsua/retusointia. Ehdokas säilyy.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/prompts/4-san-frediano-arki.txt"
+    },
+    {
+      "slot": 8,
+      "version": 1,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-8-cascine-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-8-cascine-1873-intro-v1.png",
+      "reason": "Natiivikuva näyttää mustavalkoiselta mutta RGB-kanavat eivät ole kaikissa pikseleissä yhtäsuuret; ei täytä puhdasta harmaasävyä. Säilyy ehdokkaana, ei recolour/retusointia/lisäkutsua.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/prompts/8-cascine-1873.txt"
+    }
+  ],
+  "actualCalls": 7,
+  "expectedSlots": 5,
+  "updatedAt": "2026-10-12T17:33:49.243349+00:00",
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:34:57.184805+00:00",
+  "deliverySelection": {
+    "selectedAt": "2026-10-12T17:47:02.838407+00:00",
+    "reason": "Current v2 violates no-buildings period framing; existing v1 independently passes full/native QA and same-view history checks",
+    "selectedId": "florence-8-cascine-1873-intro-v1",
+    "supersededCandidateId": "florence-8-cascine-1873-intro-v2",
+    "sourceProducerManifestSha256": "1c95b35d098ff427d752899ea6da0ef758c8e8cfc0d67decc2b6383689d2b36b",
+    "alternativeReviewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/alternative-qa.json"
+  },
+  "deliveryRejectedCandidate": {
+    "id": "florence-8-cascine-1873-intro-v2",
+    "sha256": "4633e083d6f8c793e7ad511f96d22407e035e1c5acef5bd97cda7dd92d76001c",
+    "reason": "Visible building/roof shapes in historical horizon; excluded by producer brief"
+  },
+  "ownerAcceptance": false,
+  "previewOnly": true,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "deliveryQAEvidence": {
+    "mediaSlug": "florence",
+    "gameCityId": "firenze",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/brief.json",
+      "https://www.regione.toscana.it/-/parco-delle-casci-1",
+      "https://brunelleschi.imss.fi.it/itineraries/place/ParcoCascine.html",
+      "https://www.feelflorence.it/en/points-interest/cascine-park"
+    ],
+    "assets": [
+      {
+        "id": "florence-4-san-frediano-arki-intro-v2",
+        "slot": 4,
+        "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty kuvasivun pending-arviointiin: valittu v2 on fotorealistinen arkikuja ilman näkyvää tekstiä, numeroita tai logoja.",
+        "observations": [
+          "Valittu v2: fotorealistinen San Fredianon arkinen asuinkuja, kaksi henkilöä selin ja geneerinen merkitsemätön polkupyörä. Ei näkyviä tunnistettavia kasvoja.",
+          "Ovien ja seinien natiivikokoisissa rajauksissa ei havaittu tekstikilpeä, numeroa, logoa tai kirjoitusta. Rappauksen, kiveyksen ja lehtien epäsäännölliset pinnat näyttävät luonnollisilta.",
+          "Mittakaava, rakennuslinjat ja pehmeän aamupäivän valon varjot ovat johdonmukaisia; ei muovisuutta tai leimattua pintarakennetta.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot4-people-bike-walls.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot4-doors-leaves.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä ei ole omistajan hyväksyntä tai pelitoimituslupa."
+        ]
+      },
+      {
+        "id": "florence-5-cascine-arno-intro-v1",
+        "slot": 5,
+        "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty kuvasivun pending-arviointiin: luonnollinen fotorealistinen jokiranta ilman rakennuksia tai tekstiä.",
+        "observations": [
+          "Fotorealistinen rauhallinen Arnojoki; vesi vasemmalla, luonnollinen sora-/maaranta oikealla ja puinen vastaranta. Pienet aallot, heijastukset, kivet, kuori ja lehdet ovat luonnollisen epäsäännöllisiä.",
+          "Yksi pieni kaukainen aikuinen selin nykyvaatteissa. Ei näkyviä tunnistettavia kasvoja, tekstiä, logoja, rakennuksia, siltoja tai moderneja rantarakenteita.",
+          "Yleinen joen vartta seuraava katselusuunta ja oikean rannan sijoitus vastaavat slot8:n suunnitelmaa. Valitun slot8-v2:n horisontti ja rajaus kuitenkin poikkeavat: siellä näkyy rinteitä ja pieniä rakennusmuotoja, jotka modernikuvassa eivät näy.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot5-tree-bark-leaves-walker.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot5-shore-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä ei ole omistajan hyväksyntä tai pelitoimituslupa."
+        ]
+      },
+      {
+        "id": "florence-6-tasso-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty kuvasivun pending-arviointiin: uskottava fiktiivinen aikuinen nykypäivän musiikkikokoontumisessa; luonnolliset kasvot ja kädet, ei ruokaa, jalkineita tai brändimerkkejä.",
+        "observations": [
+          "Fiktiivinen aikuinen etualalla; iho, silmät, hampaat, hiukset ja kasvojen mittasuhteet näyttävät luonnollisilta. Näkyvät taustan kädet ja kasvot sekä kitaristin käsi tarkastettu natiivikokoisina, ei selvää anatomista virhettä.",
+          "Uskottava nykyajan nuorten aikuisten musiikkikokoontuminen; etualan vaalea pellavapaita ja yksinkertainen kaulaketju ovat geneerisiä. Taustan vaatteissa tai kitarassa ei tunnistettavaa brändiä, tekstiä tai logoa; punaisen paidan pieni tavallinen koriste ei ole tunnistettava brändikuvio.",
+          "Kaikkien henkilöiden jalat ja jalkineet ovat poissa näkyvistä; ei ruokaa tai juomia. Pehmeä lämmin luonnonvalo, syväterävyys ja materiaalit ovat johdonmukaisia.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot6-face-clothes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot6-guitar-hands.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot6-secondary-clapping-hands.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä ei ole omistajan hyväksyntä tai pelitoimituslupa."
+        ]
+      },
+      {
+        "id": "florence-7-oltrarno-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty kuvasivun pending-arviointiin: fotorealistinen iltakuja, pienet henkilöt selin ja merkitsemättömät seinäpinnat.",
+        "observations": [
+          "Fotorealistinen Oltrarnon asuinkuja, pienet kaukaiset selin kävelevät henkilöt ja lämpimät ikkuna-/katulamppuvalot sinistä iltataivasta vasten.",
+          "Ovien, seinien ja pienten laitteiden natiivikokoisissa rajauksissa ei havaittu luettavaa tekstiä, numeroa tai logoa. Kiveys, lehdet ja rappaus näyttävät epäsäännöllisiltä ja luonnollisilta.",
+          "Rakennusten perspektiivi ja valon suunta ovat johdonmukaisia; ei muovisuutta tai kaarnaleimaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot7-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot7-wall-foliage.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä ei ole omistajan hyväksyntä tai pelitoimituslupa."
+        ]
+      },
+      {
+        "mediaSlug": "florence",
+        "gameCityId": "firenze",
+        "id": "florence-8-cascine-1873-intro-v1",
+        "slot": 8,
+        "version": 1,
+        "sha256": "81cfbbdc681a6177b50949607c35f396d95783cfc66d4c6208a32e7cef21bb4b",
+        "nativeSha256": "ac7d2789267ae75981456f93ca935aefe7e8c20475c735074bfbd59c6f5e9187",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-8-cascine-1873-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/native/florence-8-cascine-1873-intro-v1.png",
+        "bytes": 2725003,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "producerBriefRead": true,
+        "sourceevidence": {
+          "briefPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/brief.json",
+          "briefSha256": "38715f618fad5cab51ac62e85b5bd6050d8c63a5f10983d54767bea1107337ac",
+          "sourcesRead": [
+            "https://www.regione.toscana.it/-/parco-delle-casci-1",
+            "https://brunelleschi.imss.fi.it/itineraries/place/ParcoCascine.html",
+            "https://www.feelflorence.it/en/points-interest/cascine-park"
+          ],
+          "readFacts": [
+            "Regione Toscana ja Museo Galileo sijoittavat Cascinen Arnon oikealle rannalle ja kirjaavat kaupungin omistuksen1869; puisto ja sen puusto ovat1873 aikakaudelle mahdollisia.",
+            "Museo Galileo kuvaa1937 ilmailukoulun sekä nykyisen Ponte alla Vittorian ja Ponte all’Indianon myöhempää historiaa; nämä rakenteet eivät kuulu rajattuun1873-näkymään.",
+            "FeelFlorence kirjaa pysyvän julkisen puiston1807–1815 ja myöhemmän1938 koulurakennuksen."
+          ],
+          "periodExclusionsReviewed": [
+            "Kaikki rakennukset ja sillat rajattu pois",
+            "20th-century facilities, nykyiset sillat ja koulurakennukset",
+            "Moderni päällystetty pyörätie, kaiteet, koneet, ajoneuvot, sähkövalot, johdot ja muovi"
+          ],
+          "historicalPair": {
+            "modernSlot": 5,
+            "modernId": "florence-5-cascine-arno-intro-v1",
+            "modernFinalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/florence-5-cascine-arno-intro-v1.png",
+            "modernSha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+            "direction": "Arnon oikealta/pohjoisrannalta länteen alavirtaan joen suuntaisesti",
+            "visuallyConsistentDirection": true,
+            "observations": "Joki avautuu vasemmalla; luonnollinen maa-/soraranta ja metsäinen kulkupolku oikealla. Molemmissa katse etenee samaa rantaa pitkin ja pieni henkilö kulkee poispäin. Kasvillisuuden yksilöllinen muoto ja rantakasvusto muuttuvat historiallisessa rekonstruktiossa; kyse ei ole mitatusta topografisesta vastaavuudesta."
+          },
+          "interpretationLimit": "Lähteisiin perustuva rajattu luonnonrantarekonstruktio. Briefin mukaan täsmällistä tämän katselusuunnan pre1873-aikakausikuvaa ei löytynyt; kuvaa ei esitetä autenttisena valokuvana."
+        },
+        "notes": [
+          "Koko1536x1024kehys ja kolme natiivirajausta luettu tools.view_image detail original.",
+          "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Pieni RGB-kanavaero yksin ei muodosta laatuhylkäystä eikä alkuperäisiä pikseleitä ole muutettu.",
+          "Natiivikokoisessa horisonttirajauksessa ei erotu rakennuksia, kattoja tai muuta moderneja rakenteita; etäiset rinteet ja jatkuva puusto jäävät luonnonmaisemaksi. Tämä eroaa valitunv2:n havaituista rakennusmuodoista.",
+          "Kuori, lehtikuvio, rantakivet, kasvit, vesi ja heijastukset näyttävät epäsäännöllisiltä ja luonnollisilta. Ei kaarnaleimaa tai muovisuutta.",
+          "Pieni selin kävelevä aikuinen tummassa pitkässä takissa ja hatussa; ei tunnistettavia kasvoja tai näkyviä moderneja vaate-elementtejä. Ei tekstiä, logoja, ruokaa, sähkövalaistusta, ajoneuvoja tai kaiteita.",
+          "PNG RGB opaque1536x1024 sRGB, Description ja Source ovat Havainnekuva. Tekoälyllä tuotettu, ei valokuva.; final/native-pikselit samat ja metadataexportin SHA täsmää.",
+          "V1 säilyy tuottajan manifestissa historiana. Alkuperäinen numeerinen RGB-hylkäys on root-review.jsonissa myöhemmin korjattu visuaaliseksi hyväksynnäksi. Tässä riippumaton tarkastus hyväksyy olemassa olevan v1-tiedoston, ei uutta generointia tai paikallista retusointia.",
+          "Valintaa tukeva tieto: koordinaattori voi valita tämän jo olemassa olevan hyväksytyn v1:n slot8:aan erillisessä valintamanifestissa. Nykyinen qa.json pitää v2:n false-merkinnän. R2preview/readback kuuluu koordinaattorille; sitä ei tehty tässä QA:ssa.",
+          "QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta. Omistajan hyväksyntä, pelitoimituslupa ja peli-integraatio ovat erilliset."
+        ],
+        "nativeCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot8-v1-horizon.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot8-v1-bark-walker.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/crops/slot8-v1-shore-water.png"
+        ],
+        "currentSelectedCandidateId": "florence-8-cascine-1873-intro-v2",
+        "currentSelectedCandidateApproved": false,
+        "sourceManifestSha256": "1c95b35d098ff427d752899ea6da0ef758c8e8cfc0d67decc2b6383689d2b36b",
+        "ownerAcceptance": false,
+        "gameIntegrated": false,
+        "R2IndependentlyVerified": false,
+        "reviewedAt": "2026-10-12T17:44:00.514743+00:00",
+        "reason": "Existing v1 passes visible neutrality, same-view and period exclusions; v2 rejection preserved separately",
+        "observations": [
+          "Koko1536x1024kehys ja kolme natiivirajausta luettu tools.view_image detail original.",
+          "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Pieni RGB-kanavaero yksin ei muodosta laatuhylkäystä eikä alkuperäisiä pikseleitä ole muutettu.",
+          "Natiivikokoisessa horisonttirajauksessa ei erotu rakennuksia, kattoja tai muuta moderneja rakenteita; etäiset rinteet ja jatkuva puusto jäävät luonnonmaisemaksi. Tämä eroaa valitunv2:n havaituista rakennusmuodoista.",
+          "Kuori, lehtikuvio, rantakivet, kasvit, vesi ja heijastukset näyttävät epäsäännöllisiltä ja luonnollisilta. Ei kaarnaleimaa tai muovisuutta.",
+          "Pieni selin kävelevä aikuinen tummassa pitkässä takissa ja hatussa; ei tunnistettavia kasvoja tai näkyviä moderneja vaate-elementtejä. Ei tekstiä, logoja, ruokaa, sähkövalaistusta, ajoneuvoja tai kaiteita.",
+          "PNG RGB opaque1536x1024 sRGB, Description ja Source ovat Havainnekuva. Tekoälyllä tuotettu, ei valokuva.; final/native-pikselit samat ja metadataexportin SHA täsmää.",
+          "V1 säilyy tuottajan manifestissa historiana. Alkuperäinen numeerinen RGB-hylkäys on root-review.jsonissa myöhemmin korjattu visuaaliseksi hyväksynnäksi. Tässä riippumaton tarkastus hyväksyy olemassa olevan v1-tiedoston, ei uutta generointia tai paikallista retusointia.",
+          "Valintaa tukeva tieto: koordinaattori voi valita tämän jo olemassa olevan hyväksytyn v1:n slot8:aan erillisessä valintamanifestissa. Nykyinen qa.json pitää v2:n false-merkinnän. R2preview/readback kuuluu koordinaattorille; sitä ei tehty tässä QA:ssa.",
+          "QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta. Omistajan hyväksyntä, pelitoimituslupa ja peli-integraatio ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:42:28.732304+00:00",
+    "sourceManifestSha256": "1c95b35d098ff427d752899ea6da0ef758c8e8cfc0d67decc2b6383689d2b36b",
+    "originalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/qa.json",
+    "deliverySelection": {
+      "selectedAt": "2026-10-12T17:47:02.838407+00:00",
+      "reason": "Current v2 violates no-buildings period framing; existing v1 independently passes full/native QA and same-view history checks",
+      "selectedId": "florence-8-cascine-1873-intro-v1",
+      "supersededCandidateId": "florence-8-cascine-1873-intro-v2",
+      "sourceProducerManifestSha256": "1c95b35d098ff427d752899ea6da0ef758c8e8cfc0d67decc2b6383689d2b36b",
+      "alternativeReviewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/florence/alternative-qa.json"
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "florence",
+    "verifiedAt": "2026-10-12T17:47:45.284103+00:00",
+    "assets": [
+      {
+        "id": "florence-4-san-frediano-arki-intro-v2",
+        "slot": 4,
+        "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+        "bytes": 2337116,
+        "verifiedAt": "2026-10-12T17:47:41.844477+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png",
+            "http": 200,
+            "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+            "bytes": 2337116,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png?delivery-verify=d897d8570f79d053-1791827261844468000",
+            "http": 200,
+            "sha256": "d897d8570f79d0536acb0c76c7f39b16e73b3d69f96ade1f561ef33b42ea230f",
+            "bytes": 2337116,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "florence-5-cascine-arno-intro-v1",
+        "slot": 5,
+        "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+        "bytes": 2909286,
+        "verifiedAt": "2026-10-12T17:47:41.857676+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png",
+            "http": 200,
+            "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+            "bytes": 2909286,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png?delivery-verify=aa898ca0992b96dd-1791827261857669000",
+            "http": 200,
+            "sha256": "aa898ca0992b96ddbc126b85d4199ada4db95057188dc18db75ae12604bcc06b",
+            "bytes": 2909286,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "florence-6-tasso-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+        "bytes": 2173315,
+        "verifiedAt": "2026-10-12T17:47:42.011906+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+            "bytes": 2173315,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-6-tasso-juhla-intro-v1.png?delivery-verify=a6fe6d54662f9e62-1791827262011886000",
+            "http": 200,
+            "sha256": "a6fe6d54662f9e6276930e4e99449c2dc17fc513bfc9aeda14a2cb6e76362a89",
+            "bytes": 2173315,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "florence-7-oltrarno-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+        "bytes": 2484071,
+        "verifiedAt": "2026-10-12T17:47:42.891513+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+            "bytes": 2484071,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png?delivery-verify=e845e235c33c88ba-1791827262891503000",
+            "http": 200,
+            "sha256": "e845e235c33c88bae6fd14b6d036048cc24adfcfcfafc46156a4d47be520084a",
+            "bytes": 2484071,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "florence-8-cascine-1873-intro-v1",
+        "slot": 8,
+        "sha256": "81cfbbdc681a6177b50949607c35f396d95783cfc66d4c6208a32e7cef21bb4b",
+        "bytes": 2725003,
+        "verifiedAt": "2026-10-12T17:47:43.027709+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "81cfbbdc681a6177b50949607c35f396d95783cfc66d4c6208a32e7cef21bb4b",
+            "bytes": 2725003,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/florence/20261012-full/florence-8-cascine-1873-intro-v1.png?delivery-verify=81cfbbdc681a6177-1791827263027696000",
+            "http": 200,
+            "sha256": "81cfbbdc681a6177b50949607c35f396d95783cfc66d4c6208a32e7cef21bb4b",
+            "bytes": 2725003,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/florence/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.284131+00:00"
+}

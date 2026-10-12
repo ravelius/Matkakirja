@@ -1,0 +1,664 @@
+{
+  "cityName": "Amsterdam",
+  "gameCityId": "amsterdam",
+  "mediaSlug": "amsterdam",
+  "updatedAt": "2026-10-12T17:43:01.285972+00:00",
+  "assets": [
+    {
+      "id": "amsterdam-6-kuninkaanpaiva-intro-v1",
+      "slot": 6,
+      "cityName": "Amsterdam",
+      "gameCityId": "amsterdam",
+      "mediaSlug": "amsterdam",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/final/amsterdam-6-kuninkaanpaiva-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/native/amsterdam-6-kuninkaanpaiva-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-6-kuninkaanpaiva-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-6-kuninkaanpaiva-intro-v1.png",
+      "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja European city arrival illustration. Generate one entirely new opaque RGB sRGB PNG, exactly1536x1024 landscape3:2. Present-day Amsterdam King's Day, a joyful candid street celebration beside ordinary old Dutch brick canal houses. One completely fictional27-year-old Dutch woman in the foreground, naturally smiling towards a friend outside frame, chest-up portrait integrated into the street scene rather than posing. She wears a plain modern burnt-orange knitted top under a casual cream jacket, completely generic unbranded clothes, no patterns, badges or printed lettering. Behind her a lively small crowd of young adult local residents of varied natural Dutch appearances, chatting and laughing, upper bodies only. Camera at shoulder height,35mm real lens, frame bottom cuts at the foreground person's chest and background people overlap densely so every person's feet and every shoe are fully outside the frame or hidden. Do not include even tiny background footwear. Some old canal house windows and a sliver of canal parapet establish Amsterdam; no famous monuments. Soft April afternoon light, subdued realistic color with modest orange accents, natural skin pores and unretouched candid expressions, believable asymmetric hair and garments. Deep enough focus to read the real urban environment, gentle optical depth rather than artificial bokeh. No food, no drink containers, no stage, no banners. Strictly no text, letters,numbers, shop signs, plaques,logos,brands,trademarks,striped brand motifs,addresses,license plates,watermarks,borders or artwork anywhere. No real person's likeness. No HDR,CGI,painting,cinematic grading,plastic skin,perfectly repeated faces or stamped trees. One complete real-camera-looking scene.",
+      "sources": [
+        {
+          "url": "https://www.iamsterdam.com/en/whats-on/kings-day",
+          "readFacts": "Annual orange-filled King’s Day celebration includes partying and local gatherings."
+        }
+      ],
+      "caption": "Kuninkaanpäivän iloinen katutapahtuma. Havainnekuva.",
+      "QA": {
+        "id": "amsterdam-6-kuninkaanpaiva-intro-v1",
+        "slot": 6,
+        "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:23:53.254686+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: fictional adult with natural skin/eyes; ordinary orange clothing, sunglasses and garments inspected natively with no readable mark or logo; all footwear completely excluded; camera-like Amsterdam canal celebration.",
+        "detailCrops": [
+          "session-owner-review/slot6-glasses-clothes-native-crop.png",
+          "session-owner-review/slot6-face-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:42:52.143474+00:00",
+        "preflightHttp": 200,
+        "origin": "https://matkakirja.app",
+        "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+        "bytes": 2379601,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-6-kuninkaanpaiva-intro-v1.png",
+            "http": 200,
+            "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+            "bytes": 2379601,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-6-kuninkaanpaiva-intro-v1.png?verify=north-bd3edda934657fee-1791826972143981000",
+            "http": 200,
+            "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+            "bytes": 2379601,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2379601
+    },
+    {
+      "id": "amsterdam-7-herengracht-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Amsterdam",
+      "gameCityId": "amsterdam",
+      "mediaSlug": "amsterdam",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/final/amsterdam-7-herengracht-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/native/amsterdam-7-herengracht-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-7-herengracht-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-7-herengracht-ilta-intro-v1.png",
+      "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. One new opaque RGB sRGB PNG1536x1024 landscape3:2. Real-camera present-day Amsterdam evening along Herengracht, photographed at standing eye height from the west-bank brick quay just north of the Leliegracht junction, looking northeast up the canal.35mm lens. Left lower corner a short close stretch of weathered brick quay with simple dark iron railing; narrow canal fills center and lower half into distance; eastern opposite bank of varied17th/18th-century narrow brick canal houses occupies the right two thirds, with bell and stepped gables, old sash windows and a restrained mix of dark brown and pale plaster facades. A few warm ordinary room lights and plain old-style street lamps reflect softly in irregular water. No bridge is visible anywhere; no church towers or monuments. Natural early blue-hour sky still bright enough to see old brick texture, subdued real colors and believable exposure, no artificial spotlight or spectacular illumination. A couple of tiny distant people from behind on the opposite quay, faces unreadable; two small ordinary unbranded parked bicycles far away. No boats near foreground. Trees sparse and naturally asymmetric, individualized branches and leaves. Deep optical focus, authentic camera perspective, moderate contrast and faint camera grain. Scene is an illustration of the named canal neighborhood, not a claim of an exact documentary photograph of individual house addresses. No text,letters,digits,numbers,nameplates,signs,addresses,boat names,brands,logos,license plates,watermarks,borders,artworks or contemporary named design architecture. No HDR,CGI,illustration,painterly light,plastic materials,stamped trees or mechanically identical windows. Entirely new complete image.",
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1349/",
+          "readFacts": "Canal district built in the seventeenth century; most seventeenth/eighteenth-century houses survive; civil and hydraulic structures often replaced. Historical scene uses old anonymous house rows, not current bridge exactness."
+        },
+        {
+          "url": "https://www.amsterdam.nl/nieuws/achtergrond/oudste-foto-stad/",
+          "readFacts": "Municipal archive article identifies Herengracht photograph1856 viewed from Leliegracht2 towards Warmoesgracht; Pieter Oosterhuis photographed Amsterdam1860-1870; period city predates bicycles,cars,electricity. Herengracht1856 reference proves rows/quays before1873. Present Raadhuisstraat beyond frame excluded."
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Gezicht-op-de-Herengracht-te-Amsterdam--cdfd32e3e34817d5fc0192f1e17768b6",
+          "readFacts": "Public-domain photograph RP-F-F00926-E attributed Andries Jager c1860-c1900; broader period visual reference, not exact1873 date."
+        }
+      ],
+      "caption": "Herengrachtin ikkunavalot. Havainnekuva.",
+      "QA": {
+        "id": "amsterdam-7-herengracht-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:25:46.206285+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: anonymous old canal facades and normal domestic/street lighting; native doors/bicycles/people crop shows no readable text or logos; people distant backs; natural water ripples.",
+        "detailCrops": [
+          "session-owner-review/slot7-doors-people-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:42:56.051052+00:00",
+        "preflightHttp": 200,
+        "origin": "https://matkakirja.app",
+        "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+        "bytes": 2751460,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-7-herengracht-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+            "bytes": 2751460,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-7-herengracht-ilta-intro-v1.png?verify=north-900a251ac24d6e54-1791826976051126000",
+            "http": 200,
+            "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+            "bytes": 2751460,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2751460
+    },
+    {
+      "id": "amsterdam-8-herengracht-1873-intro-v2",
+      "slot": 8,
+      "cityName": "Amsterdam",
+      "gameCityId": "amsterdam",
+      "mediaSlug": "amsterdam",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/final/amsterdam-8-herengracht-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/native/amsterdam-8-herengracht-1873-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-8-herengracht-1873-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-8-herengracht-1873-intro-v2.png",
+      "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Generate one entirely new complete photograph-like illustration as opaque RGB sRGB PNG exactly1536x1024. Herengracht,Amsterdam in the exact year1873, pure neutral black and white without sepia or color. Camera at standing eye level on the west-bank brick quay just north of Leliegracht, looking northeast along the canal. Match the place and camera direction of this modern composition: short close brick quay and simple black iron railing in lower-left edge; narrow canal filling center/lower half leading away to left distance; opposite eastern bank of varied17th/18th-century narrow brick canal houses fills right two thirds, varied bell and stepped gables, sash windows, dark-brick houses interspersed with a pale-plastered house. No bridge in the frame, no towers or monuments. The houses have historical unrenovated materials and authentic pre1873 forms, old narrow windows, varied roof levels, weathered masonry. Daytime soft overcast light, analogue1870s plate-photograph feeling with moderate contrast,fine grain,subtle natural optical vignette, deep believable optical focus. Sparse naturally irregular elm trees with thin asymmetrical branches. One modest wooden rowing skiff far away on the canal, no motor or modern houseboats. Two tiny adults far away seen from behind in1873 clothing,long coat and bonnet/skirt, faces unreadable. Use historical facts already researched: Amsterdam canal system and gabled house rows existed in17th/18th centuries; municipal archive Herengracht1856 view documents these quays and houses; modern bridges/road widening cannot be assumed historical so omit all bridges and intersections. Strict year1873: NO bicycles,automobiles,motorboats,electric lights,electric cabling,asphalt,roadmarkings,modern street furniture,modern architecture,tall blocks,satellite dishes,glass extensions,plastic furniture or contemporary roofs. No illuminated windows needed. Everything architectural is anonymous old vernacular building fabric, no reproduced artwork. NO text,letters,numerals,addresses,signs,plaques,logos,names,watermarks,frames,borders. No CGI,painting,illustration aesthetic,HDR,stamped trees or identical repeating windows. This is a historical reconstruction, not a claimed archival photograph.\nCOMPOSITION REFERENCE: The supplied image is the modern slot7 image only. Use it ONLY to anchor camera position/direction and the exact house-row composition and gable order. Generate an entirely new researched historical1873 scene from scratch; do not merely recolor or retouch the modern photograph. Keep the same canal width, west quay onlowerleft, easternhouse-row angular perspective and the same ordered gable silhouettes. Remove every bicycle and electric modern lamp, all planters and modern fittings; use plain1873quays and periodgas lamps if needed. Neutralblackwhite1873daylight. The most critical correction is that opposite house row must visibly correspond to modern reference rather than a different generic canal street.",
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1349/",
+          "readFacts": "Canal district built in the seventeenth century; most seventeenth/eighteenth-century houses survive; civil and hydraulic structures often replaced. Historical scene uses old anonymous house rows, not current bridge exactness."
+        },
+        {
+          "url": "https://www.amsterdam.nl/nieuws/achtergrond/oudste-foto-stad/",
+          "readFacts": "Municipal archive article identifies Herengracht photograph1856 viewed from Leliegracht2 towards Warmoesgracht; Pieter Oosterhuis photographed Amsterdam1860-1870; period city predates bicycles,cars,electricity. Herengracht1856 reference proves rows/quays before1873. Present Raadhuisstraat beyond frame excluded."
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Gezicht-op-de-Herengracht-te-Amsterdam--cdfd32e3e34817d5fc0192f1e17768b6",
+          "readFacts": "Public-domain photograph RP-F-F00926-E attributed Andries Jager c1860-c1900; broader period visual reference, not exact1873 date."
+        }
+      ],
+      "caption": "Herengrachtin kanavaranta Amsterdamissa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "amsterdam-8-herengracht-1873-intro-v2",
+        "slot": 8,
+        "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:42:50.235253+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS v2: neutral black-and-white1873 canal scene; modern7 gable/facade row and same view composition now retained, native facades/stairs inspected without text/modern bicycles/electric fixtures; period clothing and tiny rowing boat; documented old canal district.",
+        "detailCrops": [
+          "session-owner-review/slot8-v2-facades-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:43:00.656073+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+        "bytes": 2740846,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-8-herengracht-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+            "bytes": 2740846,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-8-herengracht-1873-intro-v2.png?verify=north-75a6da1aec50bc84-1791826980656108000",
+            "http": 200,
+            "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+            "bytes": 2740846,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2740846
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [
+    {
+      "id": "amsterdam-4-jordaan-sample-v2",
+      "fileName": "amsterdam-4-jordaan-sample-v2.png",
+      "city": "Amsterdam",
+      "cityId": "amsterdam",
+      "country": "Alankomaat",
+      "character": "Jordaanin kanavakatu",
+      "caption": "Jordaanin kanavanvarsikatu Amsterdamissa nykyajan havainnekuvana. Havainnekuva.",
+      "moment": "Tekoälyllä tuotettu fotorealistinen havainnekuva; ei aito paikkavalokuva.",
+      "categoryId": "havainnekuvat-20261012",
+      "mediaSource": "local",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-4-jordaan-sample-v2.png",
+      "batchLabel": "Euroopan kaupunkinäytteet · 12.10.2026",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: European city arrival illustration, a single horizontal 1536×1024 opaque travel photograph. Primary request: a present-day camera-looking documentary view at a person's eye level along an ordinary historic canal-side street in Amsterdam's Jordaan. View along a quiet narrow canal; uneven old Dutch brick and plaster houses with varied authentic stepped and bell gables, tall narrow sash windows, realistic brick quay, simple iron railing, a few ordinary parked bicycles. Keep all near foreground water clear of boats: foreground consists solely of ordinary pavement, simple railing and canal edge. Any watercraft are tiny distant unlettered silhouettes only. No close boats, cars or shopfront displays. Two small distant pedestrians seen from behind, faces not discernible. Composition: 35mm lens, standing eye level, believable perspective and scale, street and canal forming the view into depth. The city is the main subject. Natural overcast-bright daylight, restrained true colors, real optical detail, moderate/deep depth of field. Materials: individualized weathered bricks and mortar, irregular natural leaf veins and asymmetric branching, subtle water ripples and reflections governed by light, no stamped or repeating organic texture. This is an anonymous historically plausible Jordaan scene, not a claim to depict one named landmark exactly. Constraints: no text anywhere, no letters, digits, addresses, shop signs, brand logos, adverts, price boards, watermarks or borders. No identifiable faces. No artwork or contemporary protected designer objects. No fantasy architecture, no tilt-shift miniature, no cinematic HDR or painterly finish. Render one complete natural photographic scene, not a collage. No artificial background blur.\nExtra strict no-text constraint: all visible surfaces are entirely free of writing, numerals or letter-like painted marks; omit sign plates and name plaques. Generate an entirely new complete photograph, not an edit.",
+      "promptSource": "recorded",
+      "webReferenceImageCount": 0,
+      "webReferenceUrls": [
+        {
+          "label": "Kuvan lähde",
+          "url": "https://www.iamsterdam.com/en/explore/neighbourhoods/centrum/things-to-do-in-the-jordaan"
+        }
+      ],
+      "initialWorkflowStatus": "pending",
+      "initialSuggestion": ""
+    },
+    {
+      "id": "amsterdam-5-amstel-sample",
+      "fileName": "amsterdam-5-amstel-sample.png",
+      "city": "Amsterdam",
+      "cityId": "amsterdam",
+      "country": "Alankomaat",
+      "character": "Amsterdamin kanavarantaa",
+      "caption": "Amsterdamin kanavarantaa nykyajan kaupunkinäkymässä. Havainnekuva.",
+      "moment": "Tekoälyllä tuotettu fotorealistinen havainnekuva; ei aito paikkavalokuva.",
+      "categoryId": "havainnekuvat-20261012",
+      "mediaSource": "local",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-5-amstel-sample.png",
+      "batchLabel": "Euroopan kaupunkinäytteet · 12.10.2026",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: European city arrival illustration; a single 1536×1024 horizontal opaque camera-looking travel photograph. Primary request: present-day Amsterdam, an eye-level view across the wider Amstel river in the historic city center, photographed from a public brick riverside quay. The river fills the lower half and a continuous varied row of old Amsterdam canal houses with Dutch brick facades, narrow windows, restrained stepped/bell gables, and natural roof heights fills the far bank; a modest old masonry bridge appears further along the river. Anonymous ordinary historical architecture, no named monument exactness. One small unbranded moored boat at the edge, two distant people from behind on the opposite quay, indistinguishable faces. Camera: realistic 35mm perspective at standing eye height, deep enough focus for the architecture, wide environmental composition. Light: soft late-afternoon daylight and natural restrained colors. Materials: physically plausible irregular water reflections and small nonuniform ripples; sparse naturally growing leafy branches near one frame edge, no leaf pattern stamps or embossed bark. Urban Amsterdam must be clearly recognizable and dominate the scene, not a generic country canal. Constraints: no letters, numbers, text, signs, logos, boat names, watermarks, frames or collages. No identifiable faces or modern artworks. No plastic textures, repeated concentric waves, identical trees, fantasy buildings, painterly rendering, strong HDR or bokeh.",
+      "promptSource": "recorded",
+      "webReferenceImageCount": 0,
+      "webReferenceUrls": [
+        {
+          "label": "Kuvan lähde",
+          "url": "https://www.iamsterdam.com/en/see-and-do/nature-and-active/walking-and-cycling-routes/amstel-river-walking-route"
+        }
+      ],
+      "initialWorkflowStatus": "pending",
+      "initialSuggestion": ""
+    }
+  ],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 4,
+  "deliveryQAEvidence": {
+    "mediaSlug": "amsterdam",
+    "gameCityId": "amsterdam",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/sources.json",
+      "https://whc.unesco.org/en/list/1349/",
+      "https://www.amsterdam.nl/nieuws/achtergrond/oudste-foto-stad/"
+    ],
+    "assets": [
+      {
+        "id": "amsterdam-6-kuninkaanpaiva-intro-v1",
+        "slot": 6,
+        "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan ja sivuhenkilöiden kasvojen, hiusten, vaatetuksen ja oikean reunakäden rajaukset tarkastettu natiivikoossa.",
+          "Fiktiivinen aikuinen etualalla, nuorten aikuisten oranssisävyinen Kuninkaanpäivän ympäristö ja geneeriset muodikkaat nykyvaatteet. Iho, hiukset ja hampaat uskottavia; näkyvissä oleva reunakäsi anatomisesti koherentti.",
+          "Kaikki henkilöt rajattu/peitetty jalkineiden yläpuolelta; ei jalkineita eikä ruokaa missään kehyksessä. Ei tekstiä, logoja tai brändikuvioita havaittu.",
+          "Luonnollinen päivänvalo, valokuvamainen terävyys/taustan optinen pehmeys ja koherentti kaupunkiympäristö. Ei muovisuutta tai orgaanisia leimakuvioita havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "amsterdam-7-herengracht-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etupuun/kaiteen/rannan, julkisivujen/ikkunoiden/pyörien/ihmisten ja veden rajaukset tarkastettu natiivikoossa.",
+          "Uskottava tavallinen kameranäkymä: luonnollinen hämärä ja koherentit lämpimät ikkunavalot; heijastukset rikkoutuvat epäsäännölliseen veteen.",
+          "Luonnollinen puunrunko ja vaihteleva haarautuminen/lehvistö; tiilimateriaali ja perspektiivi koherentit. Pienet ihmiset selin ja polkupyörät merkittömiä.",
+          "Ei tekstiä, logoja, osoitenumeroita, brändikuvioita tai ruokaa havaittu. Kuva7 on tämän kaupungin historiallisen kuvan8 vertailupari, ei säilytetty kuva5.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "amsterdam-8-herengracht-1873-intro-v2",
+        "slot": 8,
+        "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Valittu8v2 hyväksytty riippumattomassa toimitus-QA:ssa. Herengrachtin talorivi/päätyjärjestys vastaa modernia7 ja näkyvä ilme on neutraali mustavalkoinen.",
+        "observations": [
+          "Koko1536x1024 kehys sekä oikeiden päätyjen/ikkunoiden, keskirivin/julkisivujen/ihmisten ja vasemman puun/lähikaiteen/soutuveneen natiivirajaukset tarkastettu.",
+          "Vertailtu moderniin7:ään: sama alavasemman lähipenger/kaide, kanavan suunta keskialueelta vasempaan etäisyyteen, vastarannan talorivi oikealla. Vaalean rapatun talon, sen vasemman koristeellisen kellopäädyn, oikean porrastetun tiilipäädyn ja keskirivin päätyjen keskinäinen järjestys nyt vastaavat. V1:n eri talorivi korjattu.",
+          "Näkyvä kokonaisilme on neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä; numeerista RGB-nollatoleranssia ei käytetty hylkäysperusteena.",
+          "Brief/sources.json ja aiemmin tässä QA-sessiossa avatut2 virallista lähdettä luettu. Kanava ja17/18-vuosisadan talorivit ovat1873-ajan tukema perusasetelma; vuoden1856 Herengracht-arkistokuvan seloste tukee rantojen olemassaoloa. Tarkka1873-tila on havainnollinen rekonstruktio.",
+          "Period exclusions tarkastettu: ei pyöriä, autoja, moottoriveneitä, asuntoveneitä, sähkövaloja/johtoja, asfalttia/tieviivoja, moderneja istutusruukkuja/kalusteita, satelliittiantenneja, moderneja laajennuksia, siltoja tai tornitaloja. Vain vanha geneerinen kaasulampun kaltainen valaisin ja perinteiset rantarakenteet.",
+          "Pieni puinen soutuvene ja2 pientä selin olevaa aikakauden aikuista. Ei etualan kasvoja, tekstiä, osoitenumeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "Puunkuori/lehvistö, kulunut tiili/rappaus ja vesi luonnollisia ilman orgaanista leimakuviota tai muovisuutta; kameramainen valo ja perspektiivi koherentit.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu. Export/native-pikselit identtiset."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/amsterdam/crops/8v2-right-gables.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/amsterdam/crops/8v2-middle-facades-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/amsterdam/crops/8v2-quay-tree-boat.png"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "amsterdam-8-herengracht-1873-intro-v1",
+        "slot": 8,
+        "sha256": "e9d47e07a01d892aa9f76dc8edc4c0c008d1ced9a288ddd47ecd9ba2a49a3a52",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "reason": "Kuva8v1 vaihtaa kuva7:n julkisivusarjaa, päätyjen keskinäisiä paikkoja ja portaikkoja ilman dokumentoitua1873-muutosta; sama-paikka-pari ei täyty. Lisäksi RGB ei ole neutraali mustavalkoinen: max R–G12, R–B10, G–B18. Tarpeellinen kokonaan uusi laatukorjaus on sallittu, v1 ei toimitukseen.",
+        "observations": [
+          "Koko historiallinen kehys ja etupuun/kaiteen/veneen sekä julkisivujen/portaikkojen/ihmisten natiivirajaukset tarkastettu.",
+          "Kanavan suunta on samankaltainen kuin7 ja lähipenger vasemmalla, talorivi oikealla, mutta tunnistettavat rakennusmuodot/järjestys muuttuvat: kuvan7 keski-oikean vaalea talo ja koristeellinen kellopäätyinen talo korvautuvat eri paikassa olevalla päätyjen/portaiden sarjalla.",
+          "Pieni soutuvene ja pienet aikakauden asuiset selin olevat henkilöt; ei moderneja autoja, pyöriä, sähkövaloa, asuntoveneitä tai moderneja siltoja havaittu.",
+          "Luonnolliset lehdet, runko ja vesi; ei tekstiä, logoja, brändikuvioita tai ruokaa havaittu.",
+          "Briefin ja sources.json:n kaksi virallista lähdettä avattu: UNESCO kanavakorttelin historiallisuudesta ja kaupungin1856 Herengracht-arkistokuvan seloste. Ne eivät dokumentoi tuotetun v1:n julkisivuvaihtoja."
+        ],
+        "originalStatus": "pending-quality-fix",
+        "supersededBy": "amsterdam-8-herengracht-1873-intro-v2",
+        "interpretationUpdate": "V1:n talorivin/katselupaikan mismatch säilyy oikeana hylkäyksenä. Alkuperäinen numeerinen RGB-arvio säilytetään historiassa; nykyvaatimuksena visuaalinen neutraalius, pieni yksittäinen kanavaero ei itsenäinen hylkäys. Valittu v2 tarkastettu erikseen."
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:56:04.500708+00:00",
+    "sourceManifestSha256": "87fd6b91553ee1ba6a425b843a894feea5024d6c278b7d0260bfe7e14d2de6dd",
+    "gameDeliveryStatus": "HOLD"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "amsterdam",
+    "verifiedAt": "2026-10-12T17:58:39.488544+00:00",
+    "assets": [
+      {
+        "id": "amsterdam-6-kuninkaanpaiva-intro-v1",
+        "slot": 6,
+        "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+        "bytes": 2379601,
+        "verifiedAt": "2026-10-12T17:58:38.598434+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-6-kuninkaanpaiva-intro-v1.png",
+            "http": 200,
+            "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+            "bytes": 2379601,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-6-kuninkaanpaiva-intro-v1.png?delivery-verify=bd3edda934657fee-1791827918598428000",
+            "http": 200,
+            "sha256": "bd3edda934657fee7c7aa29d2de7dde91613dcf676749b117611e6cab15b058b",
+            "bytes": 2379601,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "amsterdam-7-herengracht-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+        "bytes": 2751460,
+        "verifiedAt": "2026-10-12T17:58:38.598945+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-7-herengracht-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+            "bytes": 2751460,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-7-herengracht-ilta-intro-v1.png?delivery-verify=900a251ac24d6e54-1791827918598942000",
+            "http": 200,
+            "sha256": "900a251ac24d6e5468e86a1c9705b10bc51011c028ea5a1e5b37eb374949e3a9",
+            "bytes": 2751460,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "amsterdam-8-herengracht-1873-intro-v2",
+        "slot": 8,
+        "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+        "bytes": 2740846,
+        "verifiedAt": "2026-10-12T17:58:38.599011+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-8-herengracht-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+            "bytes": 2740846,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012-full/amsterdam-8-herengracht-1873-intro-v2.png?delivery-verify=75a6da1aec50bc84-1791827918599009000",
+            "http": 200,
+            "sha256": "75a6da1aec50bc84e1dfe91c9808595bc015a0362c25fb9afbfd15cb60bb18a2",
+            "bytes": 2740846,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/amsterdam/manifest.json",
+  "requestedNewSlots": [
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [
+    {
+      "id": "amsterdam-4-jordaan-sample-v2",
+      "fileName": "amsterdam-4-jordaan-sample-v2.png",
+      "city": "Amsterdam",
+      "cityId": "amsterdam",
+      "country": "Alankomaat",
+      "character": "Jordaanin kanavakatu",
+      "caption": "Jordaanin kanavanvarsikatu Amsterdamissa nykyajan havainnekuvana. Havainnekuva.",
+      "moment": "Tekoälyllä tuotettu fotorealistinen havainnekuva; ei aito paikkavalokuva.",
+      "categoryId": "havainnekuvat-20261012",
+      "mediaSource": "local",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-4-jordaan-sample-v2.png",
+      "batchLabel": "Euroopan kaupunkinäytteet · 12.10.2026",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: European city arrival illustration, a single horizontal 1536×1024 opaque travel photograph. Primary request: a present-day camera-looking documentary view at a person's eye level along an ordinary historic canal-side street in Amsterdam's Jordaan. View along a quiet narrow canal; uneven old Dutch brick and plaster houses with varied authentic stepped and bell gables, tall narrow sash windows, realistic brick quay, simple iron railing, a few ordinary parked bicycles. Keep all near foreground water clear of boats: foreground consists solely of ordinary pavement, simple railing and canal edge. Any watercraft are tiny distant unlettered silhouettes only. No close boats, cars or shopfront displays. Two small distant pedestrians seen from behind, faces not discernible. Composition: 35mm lens, standing eye level, believable perspective and scale, street and canal forming the view into depth. The city is the main subject. Natural overcast-bright daylight, restrained true colors, real optical detail, moderate/deep depth of field. Materials: individualized weathered bricks and mortar, irregular natural leaf veins and asymmetric branching, subtle water ripples and reflections governed by light, no stamped or repeating organic texture. This is an anonymous historically plausible Jordaan scene, not a claim to depict one named landmark exactly. Constraints: no text anywhere, no letters, digits, addresses, shop signs, brand logos, adverts, price boards, watermarks or borders. No identifiable faces. No artwork or contemporary protected designer objects. No fantasy architecture, no tilt-shift miniature, no cinematic HDR or painterly finish. Render one complete natural photographic scene, not a collage. No artificial background blur.\nExtra strict no-text constraint: all visible surfaces are entirely free of writing, numerals or letter-like painted marks; omit sign plates and name plaques. Generate an entirely new complete photograph, not an edit.",
+      "promptSource": "recorded",
+      "webReferenceImageCount": 0,
+      "webReferenceUrls": [
+        {
+          "label": "Kuvan lähde",
+          "url": "https://www.iamsterdam.com/en/explore/neighbourhoods/centrum/things-to-do-in-the-jordaan"
+        }
+      ],
+      "initialWorkflowStatus": "pending",
+      "initialSuggestion": "",
+      "sourceManifestProof": {
+        "id": "amsterdam-4-jordaan-sample-v2",
+        "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/amsterdam/manifest.json",
+        "sha256": "920b5e8d6a96848da9921e703f2f72927ab7e0b1ab1817bc67d23691120ef180",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/amsterdam/final/amsterdam-4-jordaan-sample-v2.png",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-4-jordaan-sample-v2.png",
+        "generationPrompt": "Use case: photorealistic-natural. Asset type: European city arrival illustration, a single horizontal 1536×1024 opaque travel photograph. Primary request: a present-day camera-looking documentary view at a person's eye level along an ordinary historic canal-side street in Amsterdam's Jordaan. View along a quiet narrow canal; uneven old Dutch brick and plaster houses with varied authentic stepped and bell gables, tall narrow sash windows, realistic brick quay, simple iron railing, a few ordinary parked bicycles. Keep all near foreground water clear of boats: foreground consists solely of ordinary pavement, simple railing and canal edge. Any watercraft are tiny distant unlettered silhouettes only. No close boats, cars or shopfront displays. Two small distant pedestrians seen from behind, faces not discernible. Composition: 35mm lens, standing eye level, believable perspective and scale, street and canal forming the view into depth. The city is the main subject. Natural overcast-bright daylight, restrained true colors, real optical detail, moderate/deep depth of field. Materials: individualized weathered bricks and mortar, irregular natural leaf veins and asymmetric branching, subtle water ripples and reflections governed by light, no stamped or repeating organic texture. This is an anonymous historically plausible Jordaan scene, not a claim to depict one named landmark exactly. Constraints: no text anywhere, no letters, digits, addresses, shop signs, brand logos, adverts, price boards, watermarks or borders. No identifiable faces. No artwork or contemporary protected designer objects. No fantasy architecture, no tilt-shift miniature, no cinematic HDR or painterly finish. Render one complete natural photographic scene, not a collage. No artificial background blur.\nExtra strict no-text constraint: all visible surfaces are entirely free of writing, numerals or letter-like painted marks; omit sign plates and name plaques. Generate an entirely new complete photograph, not an edit.",
+        "bytes": 3077274,
+        "verifiedAt": "2026-10-12T17:30:01.681509+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-4-jordaan-sample-v2.png",
+            "http": 200,
+            "sha256": "920b5e8d6a96848da9921e703f2f72927ab7e0b1ab1817bc67d23691120ef180",
+            "bytes": 3077274,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-4-jordaan-sample-v2.png?reuse-verify=920b5e8d6a96848d-1791826202042159000",
+            "http": 200,
+            "sha256": "920b5e8d6a96848da9921e703f2f72927ab7e0b1ab1817bc67d23691120ef180",
+            "bytes": 3077274,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "amsterdam-5-amstel-sample",
+      "fileName": "amsterdam-5-amstel-sample.png",
+      "city": "Amsterdam",
+      "cityId": "amsterdam",
+      "country": "Alankomaat",
+      "character": "Amsterdamin kanavarantaa",
+      "caption": "Amsterdamin kanavarantaa nykyajan kaupunkinäkymässä. Havainnekuva.",
+      "moment": "Tekoälyllä tuotettu fotorealistinen havainnekuva; ei aito paikkavalokuva.",
+      "categoryId": "havainnekuvat-20261012",
+      "mediaSource": "local",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-5-amstel-sample.png",
+      "batchLabel": "Euroopan kaupunkinäytteet · 12.10.2026",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: European city arrival illustration; a single 1536×1024 horizontal opaque camera-looking travel photograph. Primary request: present-day Amsterdam, an eye-level view across the wider Amstel river in the historic city center, photographed from a public brick riverside quay. The river fills the lower half and a continuous varied row of old Amsterdam canal houses with Dutch brick facades, narrow windows, restrained stepped/bell gables, and natural roof heights fills the far bank; a modest old masonry bridge appears further along the river. Anonymous ordinary historical architecture, no named monument exactness. One small unbranded moored boat at the edge, two distant people from behind on the opposite quay, indistinguishable faces. Camera: realistic 35mm perspective at standing eye height, deep enough focus for the architecture, wide environmental composition. Light: soft late-afternoon daylight and natural restrained colors. Materials: physically plausible irregular water reflections and small nonuniform ripples; sparse naturally growing leafy branches near one frame edge, no leaf pattern stamps or embossed bark. Urban Amsterdam must be clearly recognizable and dominate the scene, not a generic country canal. Constraints: no letters, numbers, text, signs, logos, boat names, watermarks, frames or collages. No identifiable faces or modern artworks. No plastic textures, repeated concentric waves, identical trees, fantasy buildings, painterly rendering, strong HDR or bokeh.",
+      "promptSource": "recorded",
+      "webReferenceImageCount": 0,
+      "webReferenceUrls": [
+        {
+          "label": "Kuvan lähde",
+          "url": "https://www.iamsterdam.com/en/see-and-do/nature-and-active/walking-and-cycling-routes/amstel-river-walking-route"
+        }
+      ],
+      "initialWorkflowStatus": "pending",
+      "initialSuggestion": "",
+      "sourceManifestProof": {
+        "id": "amsterdam-5-amstel-sample",
+        "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/amsterdam/manifest.json",
+        "sha256": "b923e2e1080d9d9ae29082f0b7877ae1eac4a80fb60b8b787eb34036c73f1c1d",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/amsterdam/final/amsterdam-5-amstel-sample.png",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-5-amstel-sample.png",
+        "generationPrompt": "Use case: photorealistic-natural. Asset type: European city arrival illustration; a single 1536×1024 horizontal opaque camera-looking travel photograph. Primary request: present-day Amsterdam, an eye-level view across the wider Amstel river in the historic city center, photographed from a public brick riverside quay. The river fills the lower half and a continuous varied row of old Amsterdam canal houses with Dutch brick facades, narrow windows, restrained stepped/bell gables, and natural roof heights fills the far bank; a modest old masonry bridge appears further along the river. Anonymous ordinary historical architecture, no named monument exactness. One small unbranded moored boat at the edge, two distant people from behind on the opposite quay, indistinguishable faces. Camera: realistic 35mm perspective at standing eye height, deep enough focus for the architecture, wide environmental composition. Light: soft late-afternoon daylight and natural restrained colors. Materials: physically plausible irregular water reflections and small nonuniform ripples; sparse naturally growing leafy branches near one frame edge, no leaf pattern stamps or embossed bark. Urban Amsterdam must be clearly recognizable and dominate the scene, not a generic country canal. Constraints: no letters, numbers, text, signs, logos, boat names, watermarks, frames or collages. No identifiable faces or modern artworks. No plastic textures, repeated concentric waves, identical trees, fantasy buildings, painterly rendering, strong HDR or bokeh.",
+        "bytes": 2868500,
+        "verifiedAt": "2026-10-12T17:30:01.682960+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-5-amstel-sample.png",
+            "http": 200,
+            "sha256": "b923e2e1080d9d9ae29082f0b7877ae1eac4a80fb60b8b787eb34036c73f1c1d",
+            "bytes": 2868500,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/amsterdam/20261012/amsterdam-5-amstel-sample.png?reuse-verify=b923e2e1080d9d9a-1791826201965896000",
+            "http": 200,
+            "sha256": "b923e2e1080d9d9ae29082f0b7877ae1eac4a80fb60b8b787eb34036c73f1c1d",
+            "bytes": 2868500,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    }
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 3,
+    "QA": 3,
+    "R2": 3,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.666726+00:00"
+}

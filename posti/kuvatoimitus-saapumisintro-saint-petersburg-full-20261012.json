@@ -1,0 +1,777 @@
+{
+  "cityName": "Pietari",
+  "gameCityId": "pietari",
+  "mediaSlug": "saint-petersburg",
+  "status": "worker-complete-awaiting-session-owner-QA-and-R2",
+  "productionComplete": true,
+  "assets": [
+    {
+      "id": "saint-petersburg-intro-5-v1",
+      "slot": 5,
+      "cityName": "Pietari",
+      "gameCityId": "pietari",
+      "mediaSlug": "saint-petersburg",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-5-moika-sininen-silta-native-v1.png",
+      "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+      "bytes": 2599299,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Saint Petersburg arrival intro slot5. Current-day urban water at the Blue Bridge on Moika River. From the upstream northeastern bank of the Moika River, Saint Petersburg, near the water stairs about15 meters north of the Blue Bridge, camera1.2m above the water with50mm lens looking southwest downstream directly toward the upstream face of the bridge's surviving1842 cast-iron section. A single broad low flattened blue cast-iron arch spans the channel between curved rose-grey granite-faced abutments. Dark long tunnel under the exceptionally wide bridge recedes into shadow. Water fills lower two-thirds, granite edge enters lower right; top of the old simple blue railing lies very near the top edge. Crop at railing height: NO buildings, sky, upper bridge pavement, modern light fixtures, monuments, roads, traffic or skyline appear above it. Soft overcast summer daylight, calm grey-green ripples with broken muted blue reflections, slight damp marks on individual old granite stones. No foreground person or boat; almost all image is water and the low bridge mouth. Architecture is the old utilitarian nineteenth-century structure, NOT a modern designer bridge. Maintain exact upstream face and viewpoint for1873pair. Real-camera photorealistic travel image with natural exposure, muted actual colors, realistic uneven textures, no HDR, cinematic grading, CGI, illustration, plastic skin or stamped foliage. Landscape1536x1024 opaque RGB sRGB. No text, letters, address numbers, shop signs, logos, brands, distinctive brand stripes, graffiti, copyrighted artworks, watermarks or frame. No food or drink. Only slot6 allows a fictional adult face near camera; others people very small, far away or viewed from behind. Exclude Winter Palace, Church of the Savior on Blood, Peter and Paul Cathedral, Isaac dome, Rostral columns and Palace Bridge, all already covered in existing images.",
+      "sources": [
+        {
+          "url": "https://en.mostotrest-spb.ru/bridges/sinij",
+          "publisher": "SP SBI Mostotrest municipal bridge authority",
+          "readFacts": "Single-span cast-iron vault1818; widened upstream1842–1843. Upstream1842cast-iron part survives. Downstream1818part replaced by reinforced concrete1929–1930, so choose upstream face. Paving became asphalt1938; ornamental lamps late19thcentury and Neptune gauge1971. All upper surfaces/lamps/gauge excluded. Granite abutments existed1873."
+        },
+        {
+          "url": "https://visit-petersburg.ru/leisure/tp-14dopolnitelnye-obekty/siny-most/",
+          "publisher": "Saint Petersburg official city tourism portal",
+          "readFacts": "Blue Bridge spansMoika; simple historical appearance largely preserved through reconstruction. Later ornamental lamps and1971Neptune water-level gauge confirmed; excluded from historical reconstruction and modern tight composition."
+        }
+      ],
+      "caption": "Moikan vettä Sinisen sillan vanhan valurautaosan edessä Pietarissa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:46:05.383809+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Upstream old bridge face tightly cropped at top rail, granite abutments and natural ripples, no lamps traffic buildings monuments signs text logos or people. Pair geometry low flattened arch in upper third, granite edge lower right."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:49:13.678187+00:00",
+          "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: tightly cropped old upstream Blue Bridge iron arch and granite abutments above Moika water. No lamps, traffic, buildings, signs, logos or people. Ordinary reflected available light, natural water texture;1842component confirmed by municipal bridge and tourism authorities.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:56:16.863657+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+        "bytes": 2599299,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+            "http": 200,
+            "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+            "bytes": 2599299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png?t=0b1f22abdffd08ce",
+            "http": 200,
+            "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+            "bytes": 2599299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "saint-petersburg-intro-6-v1",
+      "slot": 6,
+      "cityName": "Pietari",
+      "gameCityId": "pietari",
+      "mediaSlug": "saint-petersburg",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-6-jelaginin-puistojuhla-native-v1.png",
+      "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+      "bytes": 2300027,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Saint Petersburg arrival intro slot6. Current-day lively daytime summer park gathering on Yelagin Island Saint Petersburg, an open green patch with naturally irregular mature trees. One entirely fictional local Russian young adult woman age26 nearest camera with naturally textured fair skin and loose dark-blonde wavy hair, plain stylish unpatterned soft denim-blue overshirt over a simple cream top, laughing spontaneously at a friend off camera. A large cheerful mixed crowd of local young adults age23–35 chats and celebrates behind her, mostly upper-body silhouettes, generic fashionable solid clothes, no costume or brand patterns. Bright soft northern summer daylight, candid shoulder-height35mm camera, mid-torso-up of foreground and dense upper-body crowd filling lower frame. ALL feet shoes sneakers sandals ankles entirely excluded by high cropping or crowd occlusion even in deepest background. No stage, instruments, banners, artwork, famous performer or named festival claim, no picnic or drinks. Real-camera photorealistic travel image with natural exposure, muted actual colors, realistic uneven textures, no HDR, cinematic grading, CGI, illustration, plastic skin or stamped foliage. Landscape1536x1024 opaque RGB sRGB. No text, letters, address numbers, shop signs, logos, brands, distinctive brand stripes, graffiti, copyrighted artworks, watermarks or frame. No food or drink. Only slot6 allows a fictional adult face near camera; others people very small, far away or viewed from behind. Exclude Winter Palace, Church of the Savior on Blood, Peter and Paul Cathedral, Isaac dome, Rostral columns and Palace Bridge, all already covered in existing images.",
+      "sources": [
+        {
+          "url": "https://elaginpark.org/en/",
+          "publisher": "Yelagin Island park official operator",
+          "readFacts": "Current park is protected northernmost Neva-delta island and cultural/recreation space with outdoor events. Fictional young-adult summer gathering uses ordinary tree-covered clearing; no staged artwork or documented event claim."
+        }
+      ],
+      "caption": "Kuvitteellinen nuorten aikuisten kesätapahtuma Pietarin Jelagininsaarella. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:47:51.166248+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Daylight fictional young-adult park event, natural skin and individual foliage, solid unbranded clothes, all feet footwear ankles excluded including far crowd, no food text logos flags performance artwork or military."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:51:50.989750+00:00",
+          "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: fictional young adult woman foreground and joyful local adult park crowd, generic unbranded denim/plain clothing, all footwear excluded. No text or food, naturally textured skin. Distant blurred old-style pavilion is not a modern named design.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:56:20.323725+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+        "bytes": 2300027,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+            "bytes": 2300027,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png?t=21a22a5c30d3f730",
+            "http": 200,
+            "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+            "bytes": 2300027,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "saint-petersburg-intro-7-v1",
+      "slot": 7,
+      "cityName": "Pietari",
+      "gameCityId": "pietari",
+      "mediaSlug": "saint-petersburg",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-7-moikan-iltavalot-native-v1.png",
+      "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+      "bytes": 2453962,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Saint Petersburg arrival intro slot7. Current-day quiet stretch of Moika River at blue hour, distinct from Blue Bridge view, ordinary anonymous low nineteenth-century stucco residential facades across water, worn rose-grey granite quay and simple unbranded warm street lamps. A few warm apartment windows create faint uneven reflections in canal ripples. Oblique50mm view from embankment level, one couple very small and rear-facing along the distant bank. No prominent landmark, church, dome, palace, statues or bridge. Natural northern twilight still visible in cool pale sky, restrained truthful exposure, no theatrical illumination, no foreground faces. Real-camera photorealistic travel image with natural exposure, muted actual colors, realistic uneven textures, no HDR, cinematic grading, CGI, illustration, plastic skin or stamped foliage. Landscape1536x1024 opaque RGB sRGB. No text, letters, address numbers, shop signs, logos, brands, distinctive brand stripes, graffiti, copyrighted artworks, watermarks or frame. No food or drink. Only slot6 allows a fictional adult face near camera; others people very small, far away or viewed from behind. Exclude Winter Palace, Church of the Savior on Blood, Peter and Paul Cathedral, Isaac dome, Rostral columns and Palace Bridge, all already covered in existing images.",
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/en/route/tp-20-vdol-moyki/",
+          "publisher": "Saint Petersburg official city tourism portal",
+          "readFacts": "Moika flows through central city historic built banks; embankments consolidated since1711, woodenquay1736. Supports current-day anonymous residential canal scene without a particular building claim."
+        }
+      ],
+      "caption": "Ikkunavalot heijastuvat Moikaan Pietarin iltahämärässä. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:49:24.317766+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Ordinary older canal facades with restrained warm windows and ripples, one small rear-facing couple, no modern protected landmark, visible readable text logos food cars or close faces."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:51:51.041265+00:00",
+          "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: Moika canal reflections, anonymous historic residential facades and small rear-facing couple. No discernible signs, numerals, logos, vehicles, foreground faces or contemporary artwork. Natural dusk and ordinary warm lights.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:56:23.432287+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+        "bytes": 2453962,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+            "bytes": 2453962,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png?t=304ea74d18337161",
+            "http": 200,
+            "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+            "bytes": 2453962,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "saint-petersburg-intro-8-v1",
+      "slot": 8,
+      "cityName": "Pietari",
+      "gameCityId": "pietari",
+      "mediaSlug": "saint-petersburg",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-8-moika-sininen-silta-1873-native-v1.png",
+      "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+      "bytes": 2373904,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. Matkakirja Saint Petersburg arrival intro slot8. Strictly year1873, source-backed illustrative reconstruction of the Blue Bridge's1842upstream cast-iron face, Moika River Saint Petersburg. From the upstream northeastern bank of the Moika River, Saint Petersburg, near the water stairs about15 meters north of the Blue Bridge, camera1.2m above the water with50mm lens looking southwest downstream directly toward the upstream face of the bridge's surviving1842 cast-iron section. A single broad low flattened painted cast-iron arch spans the channel between curved rose-grey granite-faced abutments. Dark long tunnel under the exceptionally wide bridge recedes into shadow. Water fills lower two-thirds, granite edge enters lower right; top of the old simple painted railing lies very near the top edge. Crop at railing height: NO buildings, sky, upper bridge pavement, modern light fixtures, monuments, roads, traffic or skyline appear above it. EXACT same upstream bank camera spot,1.2mheight,50mm lens and southwest downstream direction as modern slot5. Neutral black-and-white photograph look, grayscale only no sepia or blue tint, soft overcast Northern daylight, fine natural photographic grain and restrained contrast. Old cast-iron vault and rose-grey granite facing already existed1873. The wide vault is made of bolted cast-iron sections, not reinforced concrete. A small distant plain wooden rowing skiff carries one tiny rear-facing adult boatman in simple1870s shirt waistcoat and cap near the dark arch entrance, face unreadable. No later ornamental lamps (late nineteenth century), no1971Neptune gauge pillar, no1929–1930concrete replacement, no1938asphalt, no electric light or wire, cars, motorboat, road signs, plastic, modern cloth or steel infrastructure. Upper roadway and all surrounding buildings cropped entirely away, so no unverified facade construction dates enter image. Real-camera photorealistic travel image with natural exposure, neutral grayscale tones, realistic uneven textures, no HDR, cinematic grading, CGI, illustration, plastic skin or stamped foliage. Landscape1536x1024 opaque RGB sRGB. No text, letters, address numbers, shop signs, logos, brands, distinctive brand stripes, graffiti, copyrighted artworks, watermarks or frame. No food or drink. Only slot6 allows a fictional adult face near camera; others people very small, far away or viewed from behind. Exclude Winter Palace, Church of the Savior on Blood, Peter and Paul Cathedral, Isaac dome, Rostral columns and Palace Bridge, all already covered in existing images. Composition lock from modern companion: top of cast-iron railing is clipped at very top edge, shallow arch and granite abutments occupy upper third, rippling water fills lower two thirds, oblique rose-grey granite quay ledge rises diagonally from bottom right. Exactly one low flattened arch, no extra arch, no buildings or sky above bridge.",
+      "sources": [
+        {
+          "url": "https://en.mostotrest-spb.ru/bridges/sinij",
+          "publisher": "SP SBI Mostotrest municipal bridge authority",
+          "readFacts": "Single-span cast-iron vault1818; widened upstream1842–1843. Upstream1842cast-iron part survives. Downstream1818part replaced by reinforced concrete1929–1930, so choose upstream face. Paving became asphalt1938; ornamental lamps late19thcentury and Neptune gauge1971. All upper surfaces/lamps/gauge excluded. Granite abutments existed1873."
+        },
+        {
+          "url": "https://visit-petersburg.ru/leisure/tp-14dopolnitelnye-obekty/siny-most/",
+          "publisher": "Saint Petersburg official city tourism portal",
+          "readFacts": "Blue Bridge spansMoika; simple historical appearance largely preserved through reconstruction. Later ornamental lamps and1971Neptune water-level gauge confirmed; excluded from historical reconstruction and modern tight composition."
+        }
+      ],
+      "caption": "Moika ja Sinisen sillan valurautaosa Pietarissa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:51:20.122304+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Neutral grayscale, same clipped-rail shallow arch water-and-right-granite framing as5, old cast-iron bolted face, distant rear-facing period rower, no modern lamps concrete roadway cars buildings electricity signs or text."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:56:11.403952+00:00",
+          "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame and modern5 pair compared: same cropped upstream shallow iron arch, granite abutments and near-right embankment. Visually neutral monochrome, distant period rower from behind, no later lamps/gauge, electric lights, street traffic, signs or buildings. Two municipal sources confirm1842surviving component and exclude1929downstream replacement.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:56:25.659044+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+        "bytes": 2373904,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+            "bytes": 2373904,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png?t=87ea55e1e3bd5d23",
+            "http": 200,
+            "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+            "bytes": 2373904,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "saint-petersburg-intro-4-v2",
+      "slot": 4,
+      "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Ei QA-hyväksyntää: valitunv2:n takaseinällä näkyy pieni merkitty osoitekilven kaltainen paneeli. Pending-quality-fix; v2 on jo laatukorjaus, joten tarvitaan jatkopäätös.",
+      "observations": [
+        "Valittu v2: fotorealistinen tavallinen asuinpiha/kadun sisäinen asuinmiljöö, kolme henkilöä selin ja geneerinen polkupyörä. Luonnollinen kiveys, rappaus, puunkuori ja lehdet; koherentti valo ja perspektiivi.",
+        "HYLKÄYS: takaseinällä ikkunan yläoikean puolen ja holvikäytävän välissä noin x948..958 y489..502 on pieni vaalea/sinikehyksinen osoitekilven kaltainen merkintä, jonka sisällä näkyy tumma kirjain-/numeromainen kuvio. Tarkkaa numeroa ei tulkita, mutta merkitty kilpi rikkoo no address numbers/text -vaatimusta.",
+        "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-rear-wall-plaque.png; laajempi konteksti /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-bark-leaves.png",
+        "Henkilöt, pyörä, muut seinäpinnat ja kuori/lehtikuvio tarkastettu: ei muuta selvää logoa, muovisuutta tai leimattua pintaa.",
+        "V2 on jo yksi tarpeellinen kokonaan uusi laatukorjaus. Tila pending-quality-fix; jatkotapa kuuluu koordinaattorin päätökseen, ei automaattista uutta generointia tai paikallista rasterikorjausta.",
+        "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-people-bike-walls.png",
+        "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+      ]
+    }
+  ],
+  "generatedImageCount": 5,
+  "missingSlots": [],
+  "builtInToolOnly": true,
+  "ownerEditorialAcceptance": "pending",
+  "gameIntegration": "pending",
+  "rejectedCandidates": [
+    {
+      "id": "saint-petersburg-intro-4-v1",
+      "slot": 4,
+      "cityName": "Pietari",
+      "gameCityId": "pietari",
+      "mediaSlug": "saint-petersburg",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-4-vasilinsaaren-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/saint-petersburg-4-vasilinsaaren-arki-native-v1.png",
+      "sha256": "30c9659c6f657d2aa99e7784e7aebda9b5395e1d948a90ee23d0a6d716f0777f",
+      "bytes": 2810546,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Saint Petersburg arrival intro slot4. Current-day residential part of Vasilievsky Island street grid, a straight human-scale side street with anonymous old three-storey pale plaster apartment houses, simple weathered entrances, small plain bicycle parked by a wall, an uneven row of trees casting soft shadow. Mid-morning diffuse Northern light. Eye-level45mm view at an oblique angle, one resident in plain contemporary clothes carrying a fabric tote walks away in middle distance and two tiny rear-facing pedestrians farther down the pavement. Ordinary daily urban life, no monument or recognizable named building, no close face. Real-camera photorealistic travel image with natural exposure, muted actual colors, realistic uneven textures, no HDR, cinematic grading, CGI, illustration, plastic skin or stamped foliage. Landscape1536x1024 opaque RGB sRGB. No text, letters, address numbers, shop signs, logos, brands, distinctive brand stripes, graffiti, copyrighted artworks, watermarks or frame. No food or drink. Only slot6 allows a fictional adult face near camera; others people very small, far away or viewed from behind. Exclude Winter Palace, Church of the Savior on Blood, Peter and Paul Cathedral, Isaac dome, Rostral columns and Palace Bridge, all already covered in existing images.",
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/en/leisure/places/tp-202016-andreevskiy-bulvar-peshekhodnaya-zona-na-6-7-liniyakh-vasilevskogo-ostrova/",
+          "publisher": "Saint Petersburg official city tourism portal",
+          "readFacts": "Vasilievsky lines were intended as canals, name1718; first stone houses nearNeva, streetscape19th–early20thcentury. Generic residential current-day side street depicted, named statues and decorative memorial tram excluded."
+        }
+      ],
+      "caption": "Arkinen kävelyhetki Pietarin Vasilinsaaren asuinkadulla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T17:42:02.423994+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": false,
+          "notes": "REJECTED FOR QUALITY: parked cars added to right background; vehicle badges and license-plate marks risk forbidden logos and lettering. Preserve v1; whole-new v2 needs vehicle-free framing.",
+          "rejectedReason": "Parked cars introduce license-plate lettering and badge/logo risk"
+        },
+        "rootSessionReview": {
+          "status": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "pending"
+      }
+    }
+  ],
+  "actualGenerationCallsIssued": 6,
+  "rejectedCandidateCount": 1,
+  "qualityRetriesIssued": 1,
+  "rejectedCandidateHistory": [
+    {
+      "id": "saint-petersburg-intro-4-v2",
+      "slot": 4,
+      "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Ei QA-hyväksyntää: valitunv2:n takaseinällä näkyy pieni merkitty osoitekilven kaltainen paneeli. Pending-quality-fix; v2 on jo laatukorjaus, joten tarvitaan jatkopäätös.",
+      "observations": [
+        "Valittu v2: fotorealistinen tavallinen asuinpiha/kadun sisäinen asuinmiljöö, kolme henkilöä selin ja geneerinen polkupyörä. Luonnollinen kiveys, rappaus, puunkuori ja lehdet; koherentti valo ja perspektiivi.",
+        "HYLKÄYS: takaseinällä ikkunan yläoikean puolen ja holvikäytävän välissä noin x948..958 y489..502 on pieni vaalea/sinikehyksinen osoitekilven kaltainen merkintä, jonka sisällä näkyy tumma kirjain-/numeromainen kuvio. Tarkkaa numeroa ei tulkita, mutta merkitty kilpi rikkoo no address numbers/text -vaatimusta.",
+        "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-rear-wall-plaque.png; laajempi konteksti /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-bark-leaves.png",
+        "Henkilöt, pyörä, muut seinäpinnat ja kuori/lehtikuvio tarkastettu: ei muuta selvää logoa, muovisuutta tai leimattua pintaa.",
+        "V2 on jo yksi tarpeellinen kokonaan uusi laatukorjaus. Tila pending-quality-fix; jatkotapa kuuluu koordinaattorin päätökseen, ei automaattista uutta generointia tai paikallista rasterikorjausta.",
+        "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-people-bike-walls.png",
+        "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+      ]
+    }
+  ],
+  "pendingQualityFixSlots": [
+    4
+  ],
+  "allRequestedSlotsDelivered": false,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "saint-petersburg",
+    "gameCityId": "pietari",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/historical-sources.json",
+      "https://en.mostotrest-spb.ru/bridges/sinij",
+      "https://visit-petersburg.ru/leisure/tp-14dopolnitelnye-obekty/siny-most/",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/references/blue-bridge-official-current.jpg"
+    ],
+    "assets": [
+      {
+        "id": "saint-petersburg-intro-4-v2",
+        "slot": 4,
+        "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "Ei QA-hyväksyntää: valitunv2:n takaseinällä näkyy pieni merkitty osoitekilven kaltainen paneeli. Pending-quality-fix; v2 on jo laatukorjaus, joten tarvitaan jatkopäätös.",
+        "observations": [
+          "Valittu v2: fotorealistinen tavallinen asuinpiha/kadun sisäinen asuinmiljöö, kolme henkilöä selin ja geneerinen polkupyörä. Luonnollinen kiveys, rappaus, puunkuori ja lehdet; koherentti valo ja perspektiivi.",
+          "HYLKÄYS: takaseinällä ikkunan yläoikean puolen ja holvikäytävän välissä noin x948..958 y489..502 on pieni vaalea/sinikehyksinen osoitekilven kaltainen merkintä, jonka sisällä näkyy tumma kirjain-/numeromainen kuvio. Tarkkaa numeroa ei tulkita, mutta merkitty kilpi rikkoo no address numbers/text -vaatimusta.",
+          "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-rear-wall-plaque.png; laajempi konteksti /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-bark-leaves.png",
+          "Henkilöt, pyörä, muut seinäpinnat ja kuori/lehtikuvio tarkastettu: ei muuta selvää logoa, muovisuutta tai leimattua pintaa.",
+          "V2 on jo yksi tarpeellinen kokonaan uusi laatukorjaus. Tila pending-quality-fix; jatkotapa kuuluu koordinaattorin päätökseen, ei automaattista uutta generointia tai paikallista rasterikorjausta.",
+          "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-people-bike-walls.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "saint-petersburg-intro-5-v1",
+        "slot": 5,
+        "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen matala valurautainen silta ja vesi, rajaus ja historiallisen parin katselusuunta täyttyvät.",
+        "observations": [
+          "Fotorealistinen Moikan vesi ja Sinisen sillan matala yksi valurautakaari. Rautapinnat, graniitti, kosteusjäljet, aallokko ja siniset heijastukset ovat luonnollisia; perspektiivi ja valo koherentteja.",
+          "Koko kehys ja natiivirajaukset: ei kirjoitusta, logoja, rakennuksia, taivasta, sillan ajorataa, valaisimia, liikennettä tai maamerkkejä yläreunassa. Pelkkä kaari, graniittiset maatukiosat, yläreunan kaide ja vesi.",
+          "Sama upstream-1842valurautapuolen southwest/downstream-katselusuunta ja sommittelu kuin slot8:ssa: matala yksittäinen kaari yläkolmanneksessa, vesi alempana ja graniittireuna oikealta alhaalta.",
+          "Virallinen nykykuva /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/references/blue-bridge-official-current.jpg luettu visuaalisesti matalan kaaren ja graniittisten maatukien yleisgeometrian tueksi; ei käytetty1873-ajoitusnäyttönä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot5-castiron-arch.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot5-water-granite.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "saint-petersburg-intro-6-v1",
+        "slot": 6,
+        "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fiktiivinen aikuinen nykyajan puistojuhlassa, luonnolliset kasvot ja kädet, geneeriset vaatteet; ei ruokaa, jalkineita tai brändimerkkejä.",
+        "observations": [
+          "Fiktiivinen aikuinen etualalla nykypäivän Jelagininsaaren puistotapahtumassa. Luonnollinen iho, silmät, hampaat ja hiukset; näkyvät taustan kädet ja kasvot tarkastettu ilman selvää anatomista virhettä.",
+          "Geneerinen sininen paita ja yksinkertainen vaalea toppi; taustan tavalliset muodikkaat nykyvaatteet ilman kirjoitusta, logoja tai tunnistettavaa brändikuviota. Oikean henkilön paidan vaaleat kohdat ovat kangastaitosten valoa, eivät tunnistettavaa logoa.",
+          "Kaikkien henkilöiden jalat ja jalkineet poissa näkyvistä, myös etäisimmässä väkijoukossa. Ei ruokaa, juomia, picnic-tarjoilua tai brändättyä tapahtumarakennetta. Luonnonvalo ja puusto koherentteja.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot6-face-clothes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot6-right-hand-shirt.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot6-background-heads.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "saint-petersburg-intro-7-v1",
+        "slot": 7,
+        "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen iltaranta, pieni pari selin ja koherentti valo ilman tekstiä tai logoja.",
+        "observations": [
+          "Fotorealistinen Moikan iltaranta, matalat nimettömät asuinjulkisivut, pieni pari selin ja lämpimän valon epäsäännölliset heijastukset vedessä.",
+          "Ovet, seinät, ikkunat, kaiteet, henkilöt ja graniittipinnat tarkastettu natiivikokoisina. Ei kirjoitusta, numeroa tai logoa; koherentti perspektiivi ja valo, ei muovisuutta tai leimattua luonnon pintaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot7-walls-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot7-water-granite.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "saint-petersburg-intro-8-v1",
+        "slot": 8,
+        "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: neutraali mustavalkoinen1873 upstream-valurautasillan rekonstruktio, modernin parin katselusuunta, lähteet ja period exclusions täyttyvät.",
+        "observations": [
+          "Visuaalisesti neutraali mustavalkoinen1873-kuva ilman seepiaa tai näkyvää värisävyä. Luonnollinen vesi, graniitti ja tumma valurautainen kaari; ei tekstiä tai logoja.",
+          "Sama katselusuunta ja vakaa bridgegeometry kuin modernissa slot5:ssa: yksi leveä matala kaari yläkolmanneksessa, kaide yläreunassa, graniittiset kaarevat maatukiosat, tumma tunneli ja oikealta alhaalta nouseva graniittireuna. Ei ylimääräistä kaarta tai taivasta.",
+          "Pieni puinen soutuvene ja selin nähty henkilö paidassa, liivissä ja lakissa. Kasvot erottumattomat ja näkyvät käsivarret uskottavia; ei moottoria, muovia, logosymboleja tai modernia vaatetta.",
+          "Brief ja historical-sources.json sekä kaksi lähdesivua luettu verkosta. Mostotrestin municipal bridgeauthority vahvistaa upstream1842–1843 valurautaosan ja myöhemmän downstream1929–1930 betonikorvauksen; officialtourism vahvistaa myöhempiä valaisimia ja1971Neptune-mittapylvään.",
+          "Period exclusions tarkastettu: ei downstream-betonikorvausta1929–1930, myöhempiä koristevalaisimia,1971Neptune-mittapylvästä,1938asfalttia, rakennuksia, sillan ajorataa, sähkövaloja/-johtoja, autoja, moderneja veneitä tai olemassaolevien heroiden maamerkkejä. Rajattu vanhan upstream-puolen valurautainen rakenne on lähteiden mukainen1873-tulkinta.",
+          "Sopivaa1870-luvun valokuvaa ei briefin mukaan löytynyt; yksittäiset pintatekstuurit ja täsmällinen kaidekoristelu ovat havainnollistavaa rekonstruktiota. Nykykuvaa ei pidetä aikakausilähteenä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot8-arch-boatman.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot8-granite-water-railing.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T18:09:45.571895+00:00",
+    "sourceManifestSha256": "827379afe584d85c1a1e39848457b38d6de45eccdcd2f7e61d00f6c4cb3a1843"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "saint-petersburg",
+    "verifiedAt": "2026-10-12T18:17:11.505162+00:00",
+    "assets": [
+      {
+        "id": "saint-petersburg-intro-5-v1",
+        "slot": 5,
+        "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+        "bytes": 2599299,
+        "verifiedAt": "2026-10-12T18:17:09.452758+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+            "http": 200,
+            "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+            "bytes": 2599299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png?delivery-verify=0b1f22abdffd08ce-1791829029452753000",
+            "http": 200,
+            "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
+            "bytes": 2599299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "saint-petersburg-intro-6-v1",
+        "slot": 6,
+        "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+        "bytes": 2300027,
+        "verifiedAt": "2026-10-12T18:17:09.452886+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+            "bytes": 2300027,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png?delivery-verify=21a22a5c30d3f730-1791829029452884000",
+            "http": 200,
+            "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
+            "bytes": 2300027,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "saint-petersburg-intro-7-v1",
+        "slot": 7,
+        "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+        "bytes": 2453962,
+        "verifiedAt": "2026-10-12T18:17:09.461057+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+            "bytes": 2453962,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png?delivery-verify=304ea74d18337161-1791829029461041000",
+            "http": 200,
+            "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
+            "bytes": 2453962,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "saint-petersburg-intro-8-v1",
+        "slot": 8,
+        "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+        "bytes": 2373904,
+        "verifiedAt": "2026-10-12T18:17:10.361792+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+            "bytes": 2373904,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png?delivery-verify=87ea55e1e3bd5d23-1791829030361783000",
+            "http": 200,
+            "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
+            "bytes": 2373904,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 4,
+    "R2": 4,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.821130+00:00"
+}

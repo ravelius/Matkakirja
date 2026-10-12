@@ -1,0 +1,931 @@
+{
+  "cityName": "Sarajevo",
+  "gameCityId": "sarajevo",
+  "mediaSlug": "sarajevo",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "assets": [
+    {
+      "id": "sarajevo-intro-4-v1",
+      "slot": 4,
+      "cityName": "Sarajevo",
+      "gameCityId": "sarajevo",
+      "mediaSlug": "sarajevo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/final/sarajevo-4-alifakovac-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/native/sarajevo-4-alifakovac-arki-intro-v1.png",
+      "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+      "bytes": 3183563,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Sarajevo, ordinary Alifakovac hillside residential lane, steep worn stone pedestrian path winding between modest anonymous traditional Bosnian houses with white lime plaster, dark wooden projecting upper floors and red tiled roofs, irregular green courtyards, an old plum tree. Two adult residents walking away up the lane in middle distance carrying plain cloth bags. Empty foreground, no nearby faces. Camera eye-level35mm gently uphill, cloudy morning soft light, real worn textures; frame garden-side blank walls, windows and rooftops, no frontdoor address plaques. No mosques, cemetery, famous museum or bazaar, no commercial shops. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, weapons, soldiers or political symbols. ALL walls doors gates completely unlettered, no address numbers, utility labels or plates anywhere. No faces close to camera except slot6.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/prompts/slot4.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://www.visitsarajevo.ba/sarajevo-in-ottoman-empire/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "Alifakovac retainssteeplanes withtraditionalresidentialhouses"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://www.visitsarajevo.ba/latest-events/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "Cityliveperformances culturalmusicfestivals"
+          ],
+          "application": "genericfictionalmusicevening, notdepicting actualnamedperformerorevent"
+        },
+        {
+          "slot": 7,
+          "url": "https://preapp.visitsarajevo.ba/bs/mejtas-2/",
+          "publisher": "VisitSarajevo officialTourismAssociation",
+          "readFacts": [
+            "Mejtas characterized byAustro-Hungarianera houses andlaterdevelopment"
+          ],
+          "application": "anonymous oldresidential facades, nofamousmuseum orpost1873viewclaim"
+        }
+      ],
+      "caption": "Arkinen asuinkuja Alifakovacin alueella Sarajevossa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame and native checked: small rear-facing adults, generic old residential houses, blank walls/gateposts, no address textlogoscarsfood or protectedmodernart; natural stoneandfoliage."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:21.802204+00:00",
+          "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: ordinary Alifakovac lane, rear-facing adults, no text/address/logo/vehicles. Natural worn stone and unique foliage.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:25:46.967120+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+        "bytes": 3183563,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+            "bytes": 3183563,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png?t=f2f6a31e40ff421e",
+            "http": 200,
+            "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+            "bytes": 3183563,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "sarajevo-intro-5-v1",
+      "slot": 5,
+      "cityName": "Sarajevo",
+      "gameCityId": "sarajevo",
+      "mediaSlug": "sarajevo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/final/sarajevo-5-miljacka-kozija-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/native/sarajevo-5-miljacka-kozija-intro-v1.png",
+      "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+      "bytes": 3288737,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Sarajevo: nature of the Miljacka gorge at Kozija ćuprija, the Goat Bridge. Low camera on rocky downstream riverbank looking upstream toward the broadside of the bridge, slightly oblique but central round arch visible; river coming from under arch across lowerhalf, pale irregular pebbles foregroundleft, rocky natural bank right. Authentic old pale stone bridge has ONE main near-semicircular arch, two smaller ROUND openings symmetrically in masonry spandrels, simple low solid stone parapet, slight crest atcenter; bridge spans42m, mainarch17.6m, no towers. Wooded green slopes, treebranches loosely framing scene. No people needed, no city buildings, no highways guardrails or modern railway. Soft natural spring morning, flowing water with irregular little ripples, muted true colors, 35mm real-camera photograph. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, weapons, soldiers or political symbols. ALL walls doors gates completely unlettered, no address numbers, utility labels or plates anywhere. No faces close to camera except slot6.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/prompts/slot5.txt",
+      "sources": [
+        {
+          "url": "https://aab-edu.net/wp-content/uploads/2020/02/03-2015-EN-07-Ahmet-Hadrovic.pdf",
+          "publisher": "AhmetHadrović, Thesis3(2015) researcharticle, AAB",
+          "readFacts": [
+            "GoatBridge in Sarajevo onMiljacka, 3kmupstream oncaravanroute",
+            "Paperdatesbridgebefore1550; singlearch17.60m, twocircularopenings, length42m width4.75m; stoneparapet; researchphotoFigure08May2014"
+          ],
+          "application": "16thcenturyor earlier bridge pre1873; exactsinglearch andtwocircle silhouette"
+        },
+        {
+          "url": "https://www.visitsarajevo.ba/bs/bascarsija/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "KozijaCuprija built16thcentury upstream fromoldcity; approachalongMiljacka fromBentbašaDariva"
+          ],
+          "application": "independentpre1873construction confirmation andnaturalgorgecontext; do not usegoatlegend asfact"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Ignaz_Konigsberger,_Sarajevo,_Koza_Cuprija.jpg",
+          "publisher": "Commons historicphoto metadata",
+          "readFacts": [
+            "IgnazKonigsberger1849–1925, circa1890 photograph, publicdomain"
+          ],
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/references/goat-bridge-circa1890.jpg",
+          "application": "late19th-century silhouette andsparsehillside context; NOTclaimed exact1873reference, nearbyhouseexcludedduetounverifieddate"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Sarajevo_Kozija_Cuprija.JPG",
+          "publisher": "WikimediaCommons currentphoto",
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/references/goat-bridge-current.jpg",
+          "readFacts": [
+            "Lowriverbank frontalbridge photo:mainarchtwoholes, pebbles, woodedgorge"
+          ],
+          "application": "modern framingreference"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Narrow-Gauge-Railway_Ostbahn_Sarajevo_Kozija-Cuprija.jpg",
+          "publisher": "HistoricEasternRailway postcard metadata",
+          "readFacts": [
+            "Easternrailway underconstruction prioropening1906"
+          ],
+          "application": "exclude allrail infrastructure1873"
+        }
+      ],
+      "caption": "Miljackan luonto Kozija ćuprijan kivisillan luona Sarajevossa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame/native checked against modern bridgephoto: onemainarch andtwo circularopenings, plainparapet, naturalbankrocksflowandfoliage; no modernroadrailart ormarks, nopeople."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:21.821591+00:00",
+          "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: Miljacka natural banks and old Goat Bridge main arch/two circular holes, no signs, brands or people. Photographic irregular rocks and water.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:25:49.208421+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+        "bytes": 3288737,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png",
+            "http": 200,
+            "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+            "bytes": 3288737,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png?t=f2af08ee25a24cba",
+            "http": 200,
+            "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+            "bytes": 3288737,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "sarajevo-intro-6-v1",
+      "slot": 6,
+      "cityName": "Sarajevo",
+      "gameCityId": "sarajevo",
+      "mediaSlug": "sarajevo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/final/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/native/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+      "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+      "bytes": 2125954,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Sarajevo, joyful small outdoor summer music evening in an old residential courtyard: one fictional Bosnian man age28 smiling candidly in foreground, short curly black hair, simple plain slate-blue linen shirt over light cotton top. Behind him a lively group of young adult local Bosnians enjoying music, natural variety of local appearances, friends laughing, lightly swaying and clapping, fashionable generic jackets and plain tops. Ordinary lime-plastered old walls and leafy grapevine, warm modest lightbulbs. Lived-in unposed moment, realistic pores and hair. Every person cropped at chest or waist or lowerbody hidden by crowd. ALL footwear and ALL legs entirely outside frame, including background. No stage branding, actual performers, named event depiction, banners or food. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, weapons, soldiers or political symbols. ALL walls doors gates completely unlettered, no address numbers, utility labels or plates anywhere. No faces close to camera except slot6.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/prompts/slot6.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://www.visitsarajevo.ba/sarajevo-in-ottoman-empire/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "Alifakovac retainssteeplanes withtraditionalresidentialhouses"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://www.visitsarajevo.ba/latest-events/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "Cityliveperformances culturalmusicfestivals"
+          ],
+          "application": "genericfictionalmusicevening, notdepicting actualnamedperformerorevent"
+        },
+        {
+          "slot": 7,
+          "url": "https://preapp.visitsarajevo.ba/bs/mejtas-2/",
+          "publisher": "VisitSarajevo officialTourismAssociation",
+          "readFacts": [
+            "Mejtas characterized byAustro-Hungarianera houses andlaterdevelopment"
+          ],
+          "application": "anonymous oldresidential facades, nofamousmuseum orpost1873viewclaim"
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen musiikki-ilta Sarajevossa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Full frame/native inspected: fictional adult foreground, generic clothes without brandedpatterns, allfootwear outsideframe, nofoodtextlogos; realistic skin/hair/hands."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:24:31.030836+00:00",
+          "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: fictional adult man foreground, joyful adult music gathering, generic contemporary clothes and unmarked guitar. All footwear excluded, no text/logos/food; natural skin and ordinary courtyard lighting.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:25:51.713976+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+        "bytes": 2125954,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+            "bytes": 2125954,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png?t=f97a0af31ed9ed52",
+            "http": 200,
+            "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+            "bytes": 2125954,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "sarajevo-intro-7-v1",
+      "slot": 7,
+      "cityName": "Sarajevo",
+      "gameCityId": "sarajevo",
+      "mediaSlug": "sarajevo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/final/sarajevo-7-mejtas-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/native/sarajevo-7-mejtas-ilta-intro-v1.png",
+      "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+      "bytes": 2580731,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Sarajevo, Mejtaš neighbourhood ordinary residential side street at blue hour, anonymous old late19th-century plaster houses in muted cream and grey with simple bay windows, sloping narrow pedestrian lane and a leafy tree. Warm windows and small ordinary lamps cast natural soft glow; tiny adults walk away far in distance. Camera eye-level35mm looking along lane, all walls blank and no doorfronts or gatepost plates in frame. No cathedral, mosque, bridge, famous museum, shops, advertisements or modern towers. Quiet real documentary night photograph, natural darkblue ambient sky and warm windowlight. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, weapons, soldiers or political symbols. ALL walls doors gates completely unlettered, no address numbers, utility labels or plates anywhere. No faces close to camera except slot6.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/prompts/slot7.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://www.visitsarajevo.ba/sarajevo-in-ottoman-empire/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "Alifakovac retainssteeplanes withtraditionalresidentialhouses"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://www.visitsarajevo.ba/latest-events/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "Cityliveperformances culturalmusicfestivals"
+          ],
+          "application": "genericfictionalmusicevening, notdepicting actualnamedperformerorevent"
+        },
+        {
+          "slot": 7,
+          "url": "https://preapp.visitsarajevo.ba/bs/mejtas-2/",
+          "publisher": "VisitSarajevo officialTourismAssociation",
+          "readFacts": [
+            "Mejtas characterized byAustro-Hungarianera houses andlaterdevelopment"
+          ],
+          "application": "anonymous oldresidential facades, nofamousmuseum orpost1873viewclaim"
+        }
+      ],
+      "caption": "Mejtašin asuinkadun iltavalot Sarajevossa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame/native checked: small rear-facing adults, no doorplatesnumberssignslogos ormodernlandmarks, residentialwindows andstreetlightnatural, muted dusk."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:24:31.084781+00:00",
+          "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: ordinary old Mejtas residential street, tiny rear-facing people and quiet hillside lights, no numbers, signage, logos, vehicles or foreground faces. Natural stone/plaster and subdued dusk.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:25:53.788589+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+        "bytes": 2580731,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+            "bytes": 2580731,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png?t=0f6f5213aac2e8eb",
+            "http": 200,
+            "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+            "bytes": 2580731,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "sarajevo-intro-8-v1",
+      "slot": 8,
+      "cityName": "Sarajevo",
+      "gameCityId": "sarajevo",
+      "mediaSlug": "sarajevo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/final/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/native/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+      "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+      "bytes": 3226358,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. EXACTLY Sarajevo1873: Miljacka gorge and Kozija ćuprija Goat Bridge. SAME viewpoint as slot5: low rocky downstream riverbank looking upstream toward bridge broadside slightly oblique, ONE main semicircular stone arch center, river flowing from under arch across lowerhalf, irregular pale pebbles foregroundleft and natural rocky bankright. Accurate Ottoman bridge already centuriesold by1873: mainarchspan17.6m, length42m, two small ROUND flood/weightrelief openings above its left andright sides, solid low stone parapet and slight centercrest, no towers. Sparse scrubby hillside with exposedrock and scattered broadleaf trees as in late19th-century context, gravel/earth approaches. Two tiny1873 travelers in long darkcoats and fez on farbridge seen frombehind, no close faces. PURE neutral black-and-white periodcamera realism, finegrain gentlecontrast no sepia. No Austro-Hungarian railway (opened1906), tunnels, modern asphaltroad, highwayguardrail, concrete, modern signage, electriclights, cars or modernclothes; no later citybuildings, no nearbyhouse of unverified1873date. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, weapons, soldiers or political symbols. ALL walls doors gates completely unlettered, no address numbers, utility labels or plates anywhere. No faces close to camera except slot6.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/prompts/slot8.txt",
+      "sources": [
+        {
+          "url": "https://aab-edu.net/wp-content/uploads/2020/02/03-2015-EN-07-Ahmet-Hadrovic.pdf",
+          "publisher": "AhmetHadrović, Thesis3(2015) researcharticle, AAB",
+          "readFacts": [
+            "GoatBridge in Sarajevo onMiljacka, 3kmupstream oncaravanroute",
+            "Paperdatesbridgebefore1550; singlearch17.60m, twocircularopenings, length42m width4.75m; stoneparapet; researchphotoFigure08May2014"
+          ],
+          "application": "16thcenturyor earlier bridge pre1873; exactsinglearch andtwocircle silhouette"
+        },
+        {
+          "url": "https://www.visitsarajevo.ba/bs/bascarsija/",
+          "publisher": "SarajevoCanton officialTourismAssociation",
+          "readFacts": [
+            "KozijaCuprija built16thcentury upstream fromoldcity; approachalongMiljacka fromBentbašaDariva"
+          ],
+          "application": "independentpre1873construction confirmation andnaturalgorgecontext; do not usegoatlegend asfact"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Ignaz_Konigsberger,_Sarajevo,_Koza_Cuprija.jpg",
+          "publisher": "Commons historicphoto metadata",
+          "readFacts": [
+            "IgnazKonigsberger1849–1925, circa1890 photograph, publicdomain"
+          ],
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/references/goat-bridge-circa1890.jpg",
+          "application": "late19th-century silhouette andsparsehillside context; NOTclaimed exact1873reference, nearbyhouseexcludedduetounverifieddate"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Sarajevo_Kozija_Cuprija.JPG",
+          "publisher": "WikimediaCommons currentphoto",
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/references/goat-bridge-current.jpg",
+          "readFacts": [
+            "Lowriverbank frontalbridge photo:mainarchtwoholes, pebbles, woodedgorge"
+          ],
+          "application": "modern framingreference"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Narrow-Gauge-Railway_Ostbahn_Sarajevo_Kozija-Cuprija.jpg",
+          "publisher": "HistoricEasternRailway postcard metadata",
+          "readFacts": [
+            "Easternrailway underconstruction prioropening1906"
+          ],
+          "application": "exclude allrail infrastructure1873"
+        }
+      ],
+      "caption": "Miljacka ja Kozija ćuprijan kivisilta Sarajevossa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Wholeframe/native checked, neutralgrayscale, periodtravelers rear-facing, onemainarch+twocircleholes, no laterrailroadroadlights orbuildings. Same lowdownstream rockybank upstreambridgeview as5, sparse periodhillside, sources saved beforecall."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:25:40.899668+00:00",
+          "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame+modern5 pair: same low riverbank bridge view, main arch/two round holes, period rear-facing adults, neutral monochrome. No rail infrastructure, modern signs or buildings. Research and official16thcentury dating plus circa1890context precede call.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:25:56.086074+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+        "bytes": 3226358,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+            "bytes": 3226358,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png?t=8bd169d5c929d113",
+            "http": 200,
+            "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+            "bytes": 3226358,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    }
+  ],
+  "omittedItems": [],
+  "status": "awaitingSessionOwnerQA",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "callsIssued": 5,
+  "imagesReturned": 5,
+  "updatedAt": "2026-10-12T18:14:51.384315+00:00",
+  "productionComplete": true,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "sarajevo",
+    "gameCityId": "sarajevo",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/references/goat-bridge-current.jpg",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/references/goat-bridge-circa1890.jpg",
+      "https://aab-edu.net/wp-content/uploads/2020/02/03-2015-EN-07-Ahmet-Hadrovic.pdf",
+      "https://www.visitsarajevo.ba/bs/otomansko-sarajevo/"
+    ],
+    "assets": [
+      {
+        "id": "sarajevo-intro-4-v1",
+        "slot": 4,
+        "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä kaukaisten henkilöiden/portin/kasvien ja lähirungon/lehtien/ikkunoiden natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen haarautuminen/lehdistö, kulunut rappaus/puu ja kiveys. Koherentti valo ja kujan perspektiivi, ei leimakuvioita tai muovisuutta.",
+          "Kaksi pientä ihmistä selin, laukut/vaatteet geneerisiä. Ei tekstiä, osoitenumeroita, logoja, brändikuvioita, ruoka-annoksia tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sarajevo-intro-5-v1",
+        "slot": 5,
+        "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä sillan pääkaaren/kahden pyöreän aukon ja joen/kivien/lehtien natiivirajaukset tarkastettu.",
+          "Yksi pääkaari ja sen molemmilla puolilla pyöreä aukko vastaavat lähteiden siluettia; kiviparapetin keskiylitys ja sillan materiaali uskottavia. Paikallinen nykyreferenssi tarkastettu.",
+          "Luonnolliset epäsäännölliset kivet, puunkuori/lehvistö ja veden virtaus, koherentti valo ja perspektiivi; ei orgaanista leimakuviota tai muovisuutta.",
+          "Lähikiviranta vasemmalla ja joki sillan alle ylävirtaan; kuva5 on1873-kuvan8 moderni vertailupari. Ei ihmisiä, tekstiä, logoja, brändikuvioita tai ruokaa havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sarajevo-intro-6-v1",
+        "slot": 6,
+        "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan kasvot/hiukset/vaatteet, molempien sivujen kasvojen/käsien ja taustan kitaran lavan natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten musiikki-ilta, geneeriset muodikkaat nykyvaatteet. Iho, hiukset, hampaat, korvat ja näkyvät kädet uskottavia.",
+          "Kaikki henkilöt rajattu tai peitetty jalkineiden yläpuolelta. Ei jalkineita, ruokaa, juomapakkauksia, tekstiä, logoja tai tunnistettavia brändikuvioita koko kehyksessä.",
+          "Kitaran lapa natiivirajauksessa epäterävä, näkyvissä viritystapit; ei kirjoitusmaista brändimerkintää havaittu.",
+          "Koherentti luonnonvalo/lempeä pihavalo, optinen taustan pehmeys ja perspektiivi; kasvillisuus luonnollista.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sarajevo-intro-7-v1",
+        "slot": 7,
+        "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä ikkunoiden/lähikasvien ja kaukaisten ihmisten/kiveyksen natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen kasvillisuus ja kulunut rappaus; kameramainen hämärävalotus, lämmin ikkunavalo ja katuperspektiivi koherentit.",
+          "Ihmiset pieniä ja selin; ei tekstiä, numeroita, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sarajevo-intro-8-v1",
+        "slot": 8,
+        "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä sillan/aikakauden henkilöiden ja veden/kivien/luonnonrannan natiivirajaukset tarkastettu.",
+          "Näkyvä ilme neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä; pientä numeerista RGBeroa ei käytetty itsenäisenä hylkäysperusteena.",
+          "Vertailtu moderniin5:een: sama joen alajuoksun kivirannalta ylävirtaan suuntautuva katselusuunta, yksi pääkaari ja molempien puolien pyöreä aukko, lähikivet vasemmalla, joen kulku ja rinne oikealla. Kuvajaottelu vastaa paria.",
+          "Brief/sources.json luettu. Tutkimusartikkelin17.6m pääkaari/kaksi sivuaukkoa ja ennen1550-ajoitus sekä virallisen Visit Sarajevo -Ottomansko Sarajevo -tekstin1500-luvun rakentaminen luettu. Tarkkaa rakentamisvuotta ei väitetä, molemmat ajoitukset edeltävät1873.",
+          "Paikalliset nykyreferenssi ja noin1890-kuva katsottu. Jälkimmäinen on myöhempi kuin1873; käytetty sillan siluetin/harvemman rinnenäkymän tukena, ei täsmällisen1873-paikkakuvan todisteena.",
+          "1873-period exclusions tarkastettu: ei1906-rautatietä, ratoja, tunneleita, moderneja kaiteita/teitä/asfalttia, betonirakenteita, kylttejä, sähkövaloja, autoja/nykyvaatteita, myöhempiä kaupunkitaloja tai ajoitukseltaan epävarmaa1890-referenssin lähitaloa.",
+          "Sillalla kaksi hyvin pientä selin olevaa aikakauden aikuista pitkin takein/fezein. Luonnolliset kivi-/kasvillisuus-/vesipinnat, koherentti valo/perspektiivi. Ei tekstiä, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "Tarkka1873-kivisauma/puu/rantakivi on havainnollinen konservatiivinen rekonstruktio, ei mitatun arkistopaikkakuvan tarkkuusväite.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T19:05:56.647660+00:00",
+    "sourceManifestSha256": "7e246d85fe72a51a30274a3f7f929d4d2d930d8091bf085b022e86a0ef4f5868"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "sarajevo",
+    "verifiedAt": "2026-10-12T19:08:12.850642+00:00",
+    "assets": [
+      {
+        "id": "sarajevo-intro-4-v1",
+        "slot": 4,
+        "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+        "bytes": 3183563,
+        "verifiedAt": "2026-10-12T19:08:11.155311+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+            "bytes": 3183563,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png?delivery-verify=f2f6a31e40ff421e-1791832091155305000",
+            "http": 200,
+            "sha256": "f2f6a31e40ff421e085329b8309225d2130901e24a2d051c1209882bb919b276",
+            "bytes": 3183563,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sarajevo-intro-5-v1",
+        "slot": 5,
+        "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+        "bytes": 3288737,
+        "verifiedAt": "2026-10-12T19:08:11.155431+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png",
+            "http": 200,
+            "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+            "bytes": 3288737,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png?delivery-verify=f2af08ee25a24cba-1791832091155429000",
+            "http": 200,
+            "sha256": "f2af08ee25a24cba1abd1467c057ecf55606e2031b321db68da55eaa20b2f5ec",
+            "bytes": 3288737,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sarajevo-intro-6-v1",
+        "slot": 6,
+        "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+        "bytes": 2125954,
+        "verifiedAt": "2026-10-12T19:08:11.155496+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+            "bytes": 2125954,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-6-pihan-musiikki-ilta-intro-v1.png?delivery-verify=f97a0af31ed9ed52-1791832091155495000",
+            "http": 200,
+            "sha256": "f97a0af31ed9ed52b6dbb334c2a20ca99c052f2dddbb520996e37ad15e06b782",
+            "bytes": 2125954,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sarajevo-intro-7-v1",
+        "slot": 7,
+        "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+        "bytes": 2580731,
+        "verifiedAt": "2026-10-12T19:08:12.006859+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+            "bytes": 2580731,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png?delivery-verify=0f6f5213aac2e8eb-1791832092006853000",
+            "http": 200,
+            "sha256": "0f6f5213aac2e8eb05aa95679849dad3a1ec8613f3765531bea942edc62e2767",
+            "bytes": 2580731,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sarajevo-intro-8-v1",
+        "slot": 8,
+        "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+        "bytes": 3226358,
+        "verifiedAt": "2026-10-12T19:08:12.144797+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+            "bytes": 3226358,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sarajevo/20261012-full/sarajevo-8-miljacka-kozija-1873-intro-v1.png?delivery-verify=8bd169d5c929d113-1791832092144791000",
+            "http": 200,
+            "sha256": "8bd169d5c929d113ff972ac94267a972eb39da9a58e9138b8f7cbb342255f882",
+            "bytes": 3226358,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sarajevo/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": 5,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.853801+00:00"
+}

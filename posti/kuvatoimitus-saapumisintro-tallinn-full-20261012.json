@@ -1,0 +1,934 @@
+{
+  "cityName": "Tallinna",
+  "gameCityId": "tallinna",
+  "mediaSlug": "tallinn",
+  "updatedAt": "2026-10-12T17:52:55.301905+00:00",
+  "assets": [
+    {
+      "id": "tallinn-4-kalamajan-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Tallinna",
+      "gameCityId": "tallinna",
+      "mediaSlug": "tallinn",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/tallinn-4-kalamajan-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/native/tallinn-4-kalamajan-arki-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/tallinn/20261012-full/tallinn-4-kalamajan-arki-intro-v1.png",
+      "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Tallinn slot4. Kalamaja,TallinnTODAY: ordinaryold woodenresidentialstreet, anonymous modesttwostorey timberhouses withweathered mutedgreenandcream horizontalwoodcladding, simpleplainfrontdoors, smallplantsand modestfrontyards. Two distantmodernneighbors walkingAWAY withbackstocamera, onewithplaincanvasbag. Eyelevellooking alongstreet, softEstonianmorninglight, calm everydaycommunity. Nooldtownwall,towers,palace,church,TVTower,shopfronts,artmurals,cars,bikesorclosefaces. Everyentrydoor isblankpanelwithhandleonly, no mailslots/addressplates/numbers/names/badges. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://blogi.linnamuuseum.ee/pirita-rand-100-kuidas-tallinlane-minevikus-suvitas/",
+          "title": "TallinnCityMuseum: PiritaBeach100, summerhistory",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/references/pirita-history-read.txt",
+          "readFacts": [
+            "Sandbeach sunbathing/swimmingnotwidespread19c; developedbathingbeach1920s.",
+            "Firstsummerhouses1909, divingtower1912; beachbuilding1926then1929, all excluded1873.",
+            "19c/early20c area sandybeaches andoldfishinghouses; viewcroppednorthwardtosand/sea,pineedge only."
+          ],
+          "periodReference": "Museumcontains1898river/conventphotoTLMF368 and1930sbeachphoto, noexact1873samenorthwardviewlocated."
+        },
+        {
+          "url": "https://www.visittallinn.ee/eng/visitor/see-do/neighbourhoods/pirita/",
+          "title": "VisitTallinn: Pirita",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Pirita has2km sandybeach, riverbanks andcoastalpines.",
+            "1980Olympicbuildings/TVTower/yachtharbour excludedfrom bothframes."
+          ]
+        },
+        {
+          "url": "https://web.visittallinn.ee/eng/visitor/ideas-tips/tips-and-guides/kalamaja-telliskivi-noblessner",
+          "title": "VisitTallinn: Kalamaja/Telliskivi/Noblessner",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Kalamaja woodenresidentialhouses mainlylate19th/early20thcentury, contemporaryhomes.",
+            "Streetfestivals/openyardcelebrations illustrate neighborhoodcommunity.",
+            "NoTelliskiviartmurals or named modernbuildingworks included."
+          ]
+        }
+      ],
+      "caption": "Kalamajan puutalokorttelin arkea Tallinnassa. Havainnekuva.",
+      "QA": {
+        "id": "tallinn-4-kalamajan-arki-intro-v1",
+        "slot": 4,
+        "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:47:47.325024+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary Kalamaja wood-clad houses, native near door/hydrangea inspected without numbers/text/logo; back-view walkers, natural photographic materials and foliage.",
+        "detailCrops": [
+          "session-owner-review/slot4-door-foliage-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-4-kalamajan-arki-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:52:35.925596+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+        "bytes": 2879383,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-4-kalamajan-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+            "bytes": 2879383,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-4-kalamajan-arki-intro-v1.png?verify=north-d54f69110aec29f7-1791827555926819000",
+            "http": 200,
+            "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+            "bytes": 2879383,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2879383
+    },
+    {
+      "id": "tallinn-5-piritan-ranta-intro-v1",
+      "slot": 5,
+      "cityName": "Tallinna",
+      "gameCityId": "tallinna",
+      "mediaSlug": "tallinn",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/tallinn-5-piritan-ranta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/native/tallinn-5-piritan-ranta-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/tallinn/20261012-full/tallinn-5-piritan-ranta-intro-v1.png",
+      "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. MatkakirjaTallinnslot5. Natural northsectionofPirita sandybeach,TallinnTODAY, camera1.6m lookingNORTH-NORTHEAST along shoreline towardsdistantViimsicoast, AWAYfromTallinncitycenter. PaleordinaryBaltsandforeground, softBalticwavesandseaLEFT, curvingsandybeach extendinginto middledistance, irregular lowcoastalpinesandgrassesRIGHT, low hazyflatBaltichorizon. No cityskyline,architecture,resortbuildings,port,piers,boats,benches,sunbeds,umbrellas,signs,modernfurniture or people. AuthenticmodestBalticbeach, nottropical; realwavelets, uneven driftgrass, subduedpearlgray sky andnaturalgreenpines, softcloudy earlysummerlight. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://blogi.linnamuuseum.ee/pirita-rand-100-kuidas-tallinlane-minevikus-suvitas/",
+          "title": "TallinnCityMuseum: PiritaBeach100, summerhistory",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/references/pirita-history-read.txt",
+          "readFacts": [
+            "Sandbeach sunbathing/swimmingnotwidespread19c; developedbathingbeach1920s.",
+            "Firstsummerhouses1909, divingtower1912; beachbuilding1926then1929, all excluded1873.",
+            "19c/early20c area sandybeaches andoldfishinghouses; viewcroppednorthwardtosand/sea,pineedge only."
+          ],
+          "periodReference": "Museumcontains1898river/conventphotoTLMF368 and1930sbeachphoto, noexact1873samenorthwardviewlocated."
+        },
+        {
+          "url": "https://www.visittallinn.ee/eng/visitor/see-do/neighbourhoods/pirita/",
+          "title": "VisitTallinn: Pirita",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Pirita has2km sandybeach, riverbanks andcoastalpines.",
+            "1980Olympicbuildings/TVTower/yachtharbour excludedfrom bothframes."
+          ]
+        },
+        {
+          "url": "https://web.visittallinn.ee/eng/visitor/ideas-tips/tips-and-guides/kalamaja-telliskivi-noblessner",
+          "title": "VisitTallinn: Kalamaja/Telliskivi/Noblessner",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Kalamaja woodenresidentialhouses mainlylate19th/early20thcentury, contemporaryhomes.",
+            "Streetfestivals/openyardcelebrations illustrate neighborhoodcommunity.",
+            "NoTelliskiviartmurals or named modernbuildingworks included."
+          ]
+        }
+      ],
+      "caption": "Piritan hiekkarannan merimaisema Tallinnassa. Havainnekuva.",
+      "QA": {
+        "id": "tallinn-5-piritan-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:52:32.503434+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural Pirita sand/grass/sea/pine scene, native dune/surf textures irregular and photographic; no faces, buildings, labels, logos or signs.",
+        "detailCrops": [
+          "session-owner-review/slot5-dune-surf-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-5-piritan-ranta-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:52:39.499662+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+        "bytes": 2339459,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-5-piritan-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+            "bytes": 2339459,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-5-piritan-ranta-intro-v1.png?verify=north-a205eaa291e4546a-1791827559499703000",
+            "http": 200,
+            "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+            "bytes": 2339459,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2339459
+    },
+    {
+      "id": "tallinn-6-kalamajan-pihajuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Tallinna",
+      "gameCityId": "tallinna",
+      "mediaSlug": "tallinn",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/tallinn-6-kalamajan-pihajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/native/tallinn-6-kalamajan-pihajuhla-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/tallinn/20261012-full/tallinn-6-kalamajan-pihajuhla-intro-v1.png",
+      "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. MatkakirjaTallinnslot6. Contemporary joyous youngadultKalamajaneighborhood openyard summercelebration inTallinn, anonymousoldwoodenresidentialhouses softfocus behind, leafyneighborhoodyard. OnefictionalEstonianyoungadultwoman age25 inforeground laughing spontaneouslytowardfriend, stylishplain mutedblue overshirt overcreamtop, naturallightbrown shoulderlengthhair andreal skinpores. Densecheerfulcrowd of fictional localEstoniayoungadults in fashionablegenericunbranded contemporaryclothing, plausibleEstonianlocalpopulation, warmcommunityatmosphere, talkingandmovingtomusic, secondaryfaces softlyblurred. TIGHT upperbodyportrait-with-environment: foregroundwaistcutoutsideframe andcrowdshoulderscoverEVERYlowerbody; ALL shoesandfeetofEVERYpersonoutsideframeorfullyconcealed. Nofood/drinks,banners,stagegraphics,wallart,signs,branding. Naturalsummergoldenhourlight,sincerecandidcamera,notstagedfashionadvertisement. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://blogi.linnamuuseum.ee/pirita-rand-100-kuidas-tallinlane-minevikus-suvitas/",
+          "title": "TallinnCityMuseum: PiritaBeach100, summerhistory",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/references/pirita-history-read.txt",
+          "readFacts": [
+            "Sandbeach sunbathing/swimmingnotwidespread19c; developedbathingbeach1920s.",
+            "Firstsummerhouses1909, divingtower1912; beachbuilding1926then1929, all excluded1873.",
+            "19c/early20c area sandybeaches andoldfishinghouses; viewcroppednorthwardtosand/sea,pineedge only."
+          ],
+          "periodReference": "Museumcontains1898river/conventphotoTLMF368 and1930sbeachphoto, noexact1873samenorthwardviewlocated."
+        },
+        {
+          "url": "https://www.visittallinn.ee/eng/visitor/see-do/neighbourhoods/pirita/",
+          "title": "VisitTallinn: Pirita",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Pirita has2km sandybeach, riverbanks andcoastalpines.",
+            "1980Olympicbuildings/TVTower/yachtharbour excludedfrom bothframes."
+          ]
+        },
+        {
+          "url": "https://web.visittallinn.ee/eng/visitor/ideas-tips/tips-and-guides/kalamaja-telliskivi-noblessner",
+          "title": "VisitTallinn: Kalamaja/Telliskivi/Noblessner",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Kalamaja woodenresidentialhouses mainlylate19th/early20thcentury, contemporaryhomes.",
+            "Streetfestivals/openyardcelebrations illustrate neighborhoodcommunity.",
+            "NoTelliskiviartmurals or named modernbuildingworks included."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Kalamajan pihajuhlassa Tallinnassa. Havainnekuva.",
+      "QA": {
+        "id": "tallinn-6-kalamajan-pihajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:52:32.590741+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: cheerful fictional adult face and plain shirt inspected natively, natural skin; contemporary Kalamaja yard crowd with generic clothes, all footwear excluded, no discernible text/logo.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-shirt-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-6-kalamajan-pihajuhla-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:52:44.305663+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+        "bytes": 2216113,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-6-kalamajan-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+            "bytes": 2216113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-6-kalamajan-pihajuhla-intro-v1.png?verify=north-96931326791d4f2c-1791827564305684000",
+            "http": 200,
+            "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+            "bytes": 2216113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2216113
+    },
+    {
+      "id": "tallinn-7-puutalokorttelin-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Tallinna",
+      "gameCityId": "tallinna",
+      "mediaSlug": "tallinn",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/tallinn-7-puutalokorttelin-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/native/tallinn-7-puutalokorttelin-ilta-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/tallinn/20261012-full/tallinn-7-puutalokorttelin-ilta-intro-v1.png",
+      "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. MatkakirjaTallinnslot7. Ordinaryold woodenhouse neighborhoodinTallinnTODAY atbluehour. Cameraatstreetlevel looksalong modestanonymous timberhouses paintedsubduedcreamgray/olive, finehorizontalwoodcladding andwarmdomesticwindowglows. Dampsimplepavement, smallfrontyard shrubs, normalunornamentedstreetlamp, twoverysmall distantmodernadults walkingAWAY. Entrydoorsplain blankwoodpanelswithsimplehandlesONLY, no mailslots,nameplates,addressnumbers,signboards or decorativebadges. Nocitywall/tower,palace,cathedral,shops,vehicles,protectedart oridentifiableface. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://blogi.linnamuuseum.ee/pirita-rand-100-kuidas-tallinlane-minevikus-suvitas/",
+          "title": "TallinnCityMuseum: PiritaBeach100, summerhistory",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/references/pirita-history-read.txt",
+          "readFacts": [
+            "Sandbeach sunbathing/swimmingnotwidespread19c; developedbathingbeach1920s.",
+            "Firstsummerhouses1909, divingtower1912; beachbuilding1926then1929, all excluded1873.",
+            "19c/early20c area sandybeaches andoldfishinghouses; viewcroppednorthwardtosand/sea,pineedge only."
+          ],
+          "periodReference": "Museumcontains1898river/conventphotoTLMF368 and1930sbeachphoto, noexact1873samenorthwardviewlocated."
+        },
+        {
+          "url": "https://www.visittallinn.ee/eng/visitor/see-do/neighbourhoods/pirita/",
+          "title": "VisitTallinn: Pirita",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Pirita has2km sandybeach, riverbanks andcoastalpines.",
+            "1980Olympicbuildings/TVTower/yachtharbour excludedfrom bothframes."
+          ]
+        },
+        {
+          "url": "https://web.visittallinn.ee/eng/visitor/ideas-tips/tips-and-guides/kalamaja-telliskivi-noblessner",
+          "title": "VisitTallinn: Kalamaja/Telliskivi/Noblessner",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Kalamaja woodenresidentialhouses mainlylate19th/early20thcentury, contemporaryhomes.",
+            "Streetfestivals/openyardcelebrations illustrate neighborhoodcommunity.",
+            "NoTelliskiviartmurals or named modernbuildingworks included."
+          ]
+        }
+      ],
+      "caption": "Tallinnan puutalokorttelin iltavalot. Havainnekuva.",
+      "QA": {
+        "id": "tallinn-7-puutalokorttelin-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:52:32.656556+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary wooden residential evening street; native near door has blank panel/handle only, no address/text/logo; distant back-view people and natural window/street light.",
+        "detailCrops": [
+          "session-owner-review/slot7-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-7-puutalokorttelin-ilta-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:52:47.248604+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+        "bytes": 2716096,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-7-puutalokorttelin-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+            "bytes": 2716096,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-7-puutalokorttelin-ilta-intro-v1.png?verify=north-4c51ff2893fb2550-1791827567248630000",
+            "http": 200,
+            "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+            "bytes": 2716096,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2716096
+    },
+    {
+      "id": "tallinn-8-pirita-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Tallinna",
+      "gameCityId": "tallinna",
+      "mediaSlug": "tallinn",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/tallinn-8-pirita-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/native/tallinn-8-pirita-1873-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/tallinn/20261012-full/tallinn-8-pirita-1873-intro-v1.png",
+      "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. MatkakirjaTallinnslot8. Completelynew historicallycredible cameraillustration ofthe naturalnorthsectionofPirita sandybeach inexactYEAR1873. Modernslot5reference isONLYa physicalcamera/location/directionguide: same1.6m35mmcamlookingNORTH-NORTHEAST alongshore towardViimsi, seaLEFT, naturalpineedgeRIGHT, sandyforeground, noTallinnskyline. Reconstruct1873fromscratch, doNOTrecolororretouchmodernpixels. Existingnaturalbeach/sand,Balticwater andcoastalpines, moreraggedwildgrasses anduntidiednaturalshore; noresortinfrastructure ormassbathing(organizedbathingsite1920s). NO1909villas,1912divingtower,1926/1929beachbuilding,1980Olympic/yachtharbourstructures,modernpiers,paving,lamps,umbrellas,furniture,plastic,signs,boats,architecture orpeople. NeutralBLACKANDWHITEachromaticlookONLY, fine1870sphotographicgrainandsoftcontrast,nosepia/no tint/no border. Realwavelets andirregularpineforms. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://blogi.linnamuuseum.ee/pirita-rand-100-kuidas-tallinlane-minevikus-suvitas/",
+          "title": "TallinnCityMuseum: PiritaBeach100, summerhistory",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/references/pirita-history-read.txt",
+          "readFacts": [
+            "Sandbeach sunbathing/swimmingnotwidespread19c; developedbathingbeach1920s.",
+            "Firstsummerhouses1909, divingtower1912; beachbuilding1926then1929, all excluded1873.",
+            "19c/early20c area sandybeaches andoldfishinghouses; viewcroppednorthwardtosand/sea,pineedge only."
+          ],
+          "periodReference": "Museumcontains1898river/conventphotoTLMF368 and1930sbeachphoto, noexact1873samenorthwardviewlocated."
+        },
+        {
+          "url": "https://www.visittallinn.ee/eng/visitor/see-do/neighbourhoods/pirita/",
+          "title": "VisitTallinn: Pirita",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Pirita has2km sandybeach, riverbanks andcoastalpines.",
+            "1980Olympicbuildings/TVTower/yachtharbour excludedfrom bothframes."
+          ]
+        },
+        {
+          "url": "https://web.visittallinn.ee/eng/visitor/ideas-tips/tips-and-guides/kalamaja-telliskivi-noblessner",
+          "title": "VisitTallinn: Kalamaja/Telliskivi/Noblessner",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Kalamaja woodenresidentialhouses mainlylate19th/early20thcentury, contemporaryhomes.",
+            "Streetfestivals/openyardcelebrations illustrate neighborhoodcommunity.",
+            "NoTelliskiviartmurals or named modernbuildingworks included."
+          ]
+        }
+      ],
+      "caption": "Piritan luonnollinen hiekkaranta vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "tallinn-8-pirita-1873-intro-v1",
+        "slot": 8,
+        "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:52:32.770125+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 natural beach with same5 shore direction/horizon; native dune/surf inspected irregular; no1909villas/1912tower/1920sresort/1980structures, supported by read municipal museum and Pirita nature sources.",
+        "detailCrops": [
+          "session-owner-review/slot8-dune-surf-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-8-pirita-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:52:54.391758+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+        "bytes": 2781643,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-8-pirita-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+            "bytes": 2781643,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-8-pirita-1873-intro-v1.png?verify=north-543009169c8d304e-1791827574391778000",
+            "http": 200,
+            "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+            "bytes": 2781643,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2781643
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "tallinn",
+    "gameCityId": "tallinna",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/sources.json"
+    ],
+    "sourceManifestSha256": "ddd535b595fa3b45fdd4d77c42e1c08208e33ac987f5bc45398bad81be939520",
+    "assets": [
+      {
+        "id": "tallinn-4-kalamajan-arki-intro-v1",
+        "slot": 4,
+        "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Puutalojen laudoitus, kasvit, puunkuori ja katu näyttävät luonnollisilta. Kaksi kehyksen kokoon nähden pientä aikuista näkyy selin. Lähiovi on tyhjä paneeli tavallisella kahvalla; tekstiä, numeroita, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta/kasveista, ihmisistä ja puunkuoresta tarkastettu.",
+          "Laudoituksen maalipinnan kuluma ja puunkuoren vaihtelu ovat epäsäännöllisiä; oksat ja lehdet eivät muodosta toistuvaa leimaa.",
+          "Oven yläpuolen pieni pyöreä laite on tavallista kalustoa ilman havaittavaa kirjoitusta tai tunnusta. Ihmisten kasvoja ei näy. Ei ruokaa tai ajoneuvoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/4-door-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/4-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/4-tree-bark.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2879383,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "tallinn-5-piritan-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Rannan hiekka, rantaan nousevat aallot, männyt ja heinät ovat luonnollisen epäsäännöllisiä. Suuntarakenne vastaa slot8-paria. Ei ihmisiä, tekstiä, logoja tai rakennelmia.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset aalloista/hiekasta sekä männyistä/heinistä tarkastettu.",
+          "Aaltojen vaahto ja rantaan ajautunut kasvimateriaali vaihtelevat; heinät ja neulasryhmät ovat luonnollisia ilman leimakuviota.",
+          "Slot8:n kanssa sama rannan kaarre: meri vasemmalla, hiekkaranta keskellä, männyt ja heinät oikealla, ei kaupunkisiluettia. Ei veneitä, laitureita, kalusteita tai kylttejä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/5-waves-sand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/5-pine-grass.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2339459,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "tallinn-6-kalamajan-pihajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen nainen on anatomisesti uskottava, iho ja hiukset luonnollisia ja vaatteet geneeristä nykymuotia. Väkijoukko näkyy ylävartaloina ilman ruokaa tai jalkineita. Ei tekstiä, logoja tai tunnistettavaa brändikuviota.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, oikeanpuoleisista käsistä ja vasemman väkijoukon vaatteista/kasvoista tarkastettu.",
+          "Ihon tekstuuri, hampaat, korva ja hiukset ovat kameramaisia; osittain peittyvissä käsissä ei ilmeistä anatomista virhettä.",
+          "Kaikki näkyvät henkilöt ovat aikuisia. Alavartalot ja jalkineet jäävät kehyksen ulkopuolelle tai muiden peittoon.",
+          "Raidat ja kukkakangas ovat geneerisiä kuoseja ilman tunnistettavia brändimerkkejä. Taustan puutalo ja luonnonvalo ovat yhtenäisiä; ei ruokaa, juomia tai kirjoitusta.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/6-right-hands.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/6-left-people-clothes.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2216113,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "tallinn-7-puutalokorttelin-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Iltakuvan tyhjä puuovi, laudoitus, kasvit ja märän kadun valot muodostavat uskottavan kameranäkymän. Kaksi pientä kävelijää näkyy selin. Kirjoitusta, numeroita, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta/kasveista, ihmisistä ja märästä päällysteestä tarkastettu.",
+          "Lähiovessa vain tavallinen kahva/lukko; ei postiluukkua, nimikylttejä, numeroita tai tunnuksia.",
+          "Pensaiden oksat ja lehdet ovat epäsäännöllisiä. Päällysteen kuluma ja lampuista tulevat heijastukset vaihtelevat luonnollisesti.",
+          "Kävelijät ovat pieniä, selin ja optisesti epäteräviä ilman tunnistettavia kasvoja. Ei ruokaa, ajoneuvoja tai mainoksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/7-door-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/7-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/7-foliage-paving.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2716096,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "tallinn-8-pirita-1873-intro-v1",
+        "slot": 8,
+        "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 ranta on näkyvästi neutraali mustavalkoinen ilman sepiaa. Rannan kaarre, meren paikka vasemmalla ja mänty-/heinäreuna oikealla vastaavat slot5:n suuntaa. Luetun lähdepaketin period exclusions täyttyvät.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset aalloista/hiekasta, männyistä/heinistä sekä luonnollisesta rantaan ajautuneesta materiaalista tarkastettu.",
+          "Slot5:n kanssa sama yleinen katselusuunta ja maisemarakenne: meri vasemmalla, hiekkaranta keskellä, rannikon männyt oikealla.",
+          "Vaahto, heinät, oksat ja ajopuu vaihtelevat luonnollisesti ilman leimakuviota. Ei näkyvää värisävytystä, tekstiä, logoja tai ihmisiä.",
+          "Tallinnan kaupunginmuseon rannanhistoria ja VisitTallinnin Pirita-lähde luettu tuottajan paketista. Poissa ovat1909huvilat,1912hyppytorni,1926/1929rantarakennus,1980olympia-/venesatamarakenteet, modernit laiturit, päällystys, kalusteet, valot ja kaupunkisiluetti.",
+          "Pakettiin kirjatut1898 ja1930-luvun kuvat eivät todista tarkkaa1873-kuvakulmaa; tämä on lähdepohjainen havainnollistava luonnonrantarekonstruktio. Alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/8-waves-sand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/8-pine-grass.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/tallinn/crops/8-shore-debris.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2781643,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://blogi.linnamuuseum.ee/pirita-rand-100-kuidas-tallinlane-minevikus-suvitas/",
+          "https://www.visittallinn.ee/eng/visitor/see-do/neighbourhoods/pirita/",
+          "https://web.visittallinn.ee/eng/visitor/ideas-tips/tips-and-guides/kalamaja-telliskivi-noblessner"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:04:06.544663+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/manifest.json",
+      "manifestSHA256": "ddd535b595fa3b45fdd4d77c42e1c08208e33ac987f5bc45398bad81be939520",
+      "reviewedAssetIds": [
+        "tallinn-4-kalamajan-arki-intro-v1",
+        "tallinn-5-piritan-ranta-intro-v1",
+        "tallinn-6-kalamajan-pihajuhla-intro-v1",
+        "tallinn-7-puutalokorttelin-ilta-intro-v1",
+        "tallinn-8-pirita-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Kuvat ovat havainnollistavia rekonstruktioita, eivät tämän rannansuunnan mitattuja paikkavalokuvia.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "tallinn",
+    "verifiedAt": "2026-10-12T18:06:57.653531+00:00",
+    "assets": [
+      {
+        "id": "tallinn-4-kalamajan-arki-intro-v1",
+        "slot": 4,
+        "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+        "bytes": 2879383,
+        "verifiedAt": "2026-10-12T18:06:55.023343+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-4-kalamajan-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+            "bytes": 2879383,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-4-kalamajan-arki-intro-v1.png?delivery-verify=d54f69110aec29f7-1791828415023337000",
+            "http": 200,
+            "sha256": "d54f69110aec29f7f51b64075d9b66299e80958ba10d952f242d335c7224e76b",
+            "bytes": 2879383,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "tallinn-5-piritan-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+        "bytes": 2339459,
+        "verifiedAt": "2026-10-12T18:06:55.024287+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-5-piritan-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+            "bytes": 2339459,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-5-piritan-ranta-intro-v1.png?delivery-verify=a205eaa291e4546a-1791828415024283000",
+            "http": 200,
+            "sha256": "a205eaa291e4546adb4068e800d11271e363ea9a5b5153b2f00d188e093293c7",
+            "bytes": 2339459,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "tallinn-6-kalamajan-pihajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+        "bytes": 2216113,
+        "verifiedAt": "2026-10-12T18:06:55.025280+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-6-kalamajan-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+            "bytes": 2216113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-6-kalamajan-pihajuhla-intro-v1.png?delivery-verify=96931326791d4f2c-1791828415025275000",
+            "http": 200,
+            "sha256": "96931326791d4f2cbe7ca914a0ecceefef2c02b26de1ba814f83cb0bbf2abe47",
+            "bytes": 2216113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "tallinn-7-puutalokorttelin-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+        "bytes": 2716096,
+        "verifiedAt": "2026-10-12T18:06:56.073053+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-7-puutalokorttelin-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+            "bytes": 2716096,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-7-puutalokorttelin-ilta-intro-v1.png?delivery-verify=4c51ff2893fb2550-1791828416073043000",
+            "http": 200,
+            "sha256": "4c51ff2893fb2550530d2860c4f02dc1158c7bc803ee64afbeb5d74061e70732",
+            "bytes": 2716096,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "tallinn-8-pirita-1873-intro-v1",
+        "slot": 8,
+        "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+        "bytes": 2781643,
+        "verifiedAt": "2026-10-12T18:06:56.193652+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-8-pirita-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+            "bytes": 2781643,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/tallinn/20261012-full/tallinn-8-pirita-1873-intro-v1.png?delivery-verify=543009169c8d304e-1791828416193639000",
+            "http": 200,
+            "sha256": "543009169c8d304eb426241f90b25cfaa5221fc2db4c576fc3a6b303bb5bcb2f",
+            "bytes": 2781643,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/tallinn/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.933588+00:00"
+}

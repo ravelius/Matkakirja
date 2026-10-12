@@ -1,0 +1,1089 @@
+{
+  "cityName": "Riika",
+  "gameCityId": "riika",
+  "mediaSlug": "riga",
+  "updatedAt": "2026-10-12T17:48:10.974895+00:00",
+  "assets": [
+    {
+      "id": "intro-riika-4-v1",
+      "slot": 4,
+      "cityName": "Riika",
+      "gameCityId": "riika",
+      "mediaSlug": "riga",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-4-agenskalns-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-4-agenskalns-arki-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/riga/20261012-full/riga-4-agenskalns-arki-intro-v1.png",
+      "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a new photorealistic illustrative image for a travel-game city intro. Native final output must be PNG,1536x1024 pixels landscape3:2, opaque RGB sRGB. Real camera photograph appearance, unprocessed natural light, muted believable colors, fine irregular material texture. No HDR, no CGI, no painterly effect, no stamped foliage, no repeated people. Absolutely no text, lettering, signs, house numbers, logos, brands, graphic stripes, watermark, frame, artwork or modern signature architecture. Use case: photorealistic-natural. Present-day Riga, Latvia, everyday life on a quiet Āgenskalns residential side street. A gently diagonal street view at pedestrian eye level, ordinary weathered pale sage and ochre nineteenth-century wooden houses with simple white window frames, leafy street trees. Two small distant adults seen from behind walking away and one distant person wheeling a plain unbranded bicycle. Faces unrecognizable. Soft overcast summer morning. Residential facades only, no shops or street plaques. No food.",
+      "sources": [
+        {
+          "url": "https://www.kalnciemaiela.lv/en/kalnciema-quarter/history/",
+          "title": "Kalnciema Quarter official history",
+          "readFacts": [
+            "Āgenskalns left-bank district and nineteenth-century wooden residential buildings.",
+            "Quarter hosts contemporary cultural activity; image is generic candid scene in such a courtyard, not a reproduction of a specific modern artwork."
+          ],
+          "appliesTo": [
+            4,
+            6
+          ]
+        }
+      ],
+      "caption": "Āgenskalnsin tavallinen puutalojen asuinkatu, arkinen kävely ja polkupyörä. Havainnekuva.",
+      "QA": {
+        "id": "intro-riika-4-v1",
+        "slot": 4,
+        "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:23:32.343406+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary wooden residential street; native people/bicycle and facade/foliage inspected, distant backs, no discernible text, logo or repeated organic stamp.",
+        "detailCrops": [
+          "session-owner-review/slot4-people-native-crop.png",
+          "session-owner-review/slot4-house-foliage-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-4-agenskalns-arki-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-4-agenskalns-arki-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+        "bytes": 3160672,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-4-agenskalns-arki-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:47:48.477921+00:00",
+        "preflightHttp": 200,
+        "origin": "https://matkakirja.app",
+        "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+        "bytes": 3160672,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-4-agenskalns-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+            "bytes": 3160672,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-4-agenskalns-arki-intro-v1.png?verify=north-58134ad1991c19f5-1791827268478171000",
+            "http": 200,
+            "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+            "bytes": 3160672,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3160672
+    },
+    {
+      "id": "intro-riika-5-v1",
+      "slot": 5,
+      "cityName": "Riika",
+      "gameCityId": "riika",
+      "mediaSlug": "riga",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-5-bastejkalns-kanava-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-5-bastejkalns-kanava-native-v1.png",
+      "r2Key": "julisteet/saapumisintro/riga/20261012-full/riga-5-bastejkalns-kanava-intro-v1.png",
+      "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a new photorealistic illustrative image for a travel-game city intro. Native final output must be PNG,1536x1024 pixels landscape3:2, opaque RGB sRGB. Real camera photograph appearance, unprocessed natural light, muted believable colors, fine irregular material texture. No HDR, no CGI, no painterly effect, no stamped foliage, no repeated people. Absolutely no text, lettering, signs, house numbers, logos, brands, graphic stripes, watermark, frame, artwork or modern signature architecture. Use case: photorealistic-natural. Present-day Riga, Bastejkalns canal. From west bank around56.9530,24.1090, eye level35mm lens looking northeast along a gentle canal curve toward the wooded hill. Narrow calm dark green water receding from bottom center to right middle, grassy uneven banks and varied mature deciduous trees, irregular branches and leaves, a simple bank path on left. Tight natural composition: no bridges, pavilion, monuments, buildings, fountains, waterfalls, swan house, boats, ducks or people. Soft cloudy June morning. Preserve this precise canal curve and direction as the future1873 pair.",
+      "sources": [
+        {
+          "url": "https://rigasdarziunparki.lv/darzu-un-parku-vesture-un-musdienas/bastejkalns-un-kanalmalas-apstadijumi-toreiz-un-tagad",
+          "title": "Rīgas Meži, Bastejkalns history",
+          "readFacts": [
+            "Fortification demolition authorized1857; mound1858; first trees1858-1859; wooden pavilion1860.",
+            "Later path redesign and cafe1887; rock cascade and waterfall1898; retaining walls1951; new benches artwork2014. These are excluded from1873."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://dom.lndb.lv/data/obj/12670.html",
+          "title": "Latvian National Library, Bastejkalns canal bridge photograph",
+          "readFacts": [
+            "Canal formed1857-1863 from fortification moat.",
+            "Present footbridge1892 and swan house1901, so both are excluded from1873. Catalog image dated1930s, useful only for later-feature exclusion, not1873 replication."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://www.liveriga.com/en/2989-bastion-hill",
+          "title": "LiveRiga tourism, Bastejkalns",
+          "readFacts": [
+            "Canal, leafy paths and wooded hill; no monument or artwork will be in composition."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        }
+      ],
+      "caption": "Bastejkalnsin kanavan kaarre ja puiston rinne. Havainnekuva.",
+      "QA": {
+        "id": "intro-riika-5-v1",
+        "slot": 5,
+        "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:25:46.109201+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural irregular trees, water and canal banks; whole frame and native foliage/water crop inspected; no structures, text, logos or faces.",
+        "detailCrops": [
+          "session-owner-review/slot5-canal-foliage-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-5-bastejkalns-kanava-native-v1.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-5-bastejkalns-kanava-intro-v1.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+        "bytes": 3227067,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-5-bastejkalns-kanava-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:47:49.733295+00:00",
+        "preflightHttp": 200,
+        "origin": "https://matkakirja.app",
+        "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+        "bytes": 3227067,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-5-bastejkalns-kanava-intro-v1.png",
+            "http": 200,
+            "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+            "bytes": 3227067,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-5-bastejkalns-kanava-intro-v1.png?verify=north-16582b8828cb79ed-1791827269733327000",
+            "http": 200,
+            "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+            "bytes": 3227067,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3227067
+    },
+    {
+      "id": "intro-riika-6-v2",
+      "slot": 6,
+      "version": 2,
+      "cityName": "Riika",
+      "gameCityId": "riika",
+      "mediaSlug": "riga",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-6-kalnciema-juhla-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-6-kalnciema-juhla-native-v2.png",
+      "r2Key": "julisteet/saapumisintro/riga/20261012-full/riga-6-kalnciema-juhla-intro-v2.png",
+      "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a new photorealistic illustrative image for a travel-game city intro. Native final output must be PNG,1536x1024 pixels landscape3:2, opaque RGB sRGB. Real camera photograph appearance, unprocessed natural light, muted believable colors, fine irregular material texture. No HDR, no CGI, no painterly effect, no stamped foliage, no repeated people. Absolutely no text, lettering, signs, house numbers, logos, brands, graphic stripes, watermark, frame, artwork or modern signature architecture. Use case: photorealistic-natural. Present-day Riga Kalnciema wooden-quarter courtyard, a joyful summer evening community courtyard celebration of young adults aged22-32, contemporary Latvian urban crowd of varied natural appearances. One entirely fictional adult woman aged27 in the foreground smiling naturally toward a friend just off camera, candid chest-up composition; brown hair loosely tied, generic fashionable plain cream overshirt over a charcoal top, no jewelry emblems. Other cheerful young adults in soft focus wearing modern plain neutral casual clothing, natural gestures. Warm simple bulbs and ordinary weathered wooden courtyard facade behind, no stage, no artwork. Tight waist-high maximum crop and overlapping upper bodies MUST hide ALL legs, feet and footwear of EVERY person in foreground and background. No shoes anywhere. No food, drink, tables, text, logos or branding. Natural skin pores, real camera35mm f2.8, understated warm dusk light. IMPORTANT: No instruments of any kind anywhere, no guitar, no music equipment, no phones. All plain fabrics absolutely free of marks, lettering, logos, stripes or branded designs. No jewelry emblems.",
+      "sources": [
+        {
+          "url": "https://www.kalnciemaiela.lv/en/kalnciema-quarter/history/",
+          "title": "Kalnciema Quarter official history",
+          "readFacts": [
+            "Āgenskalns left-bank district and nineteenth-century wooden residential buildings.",
+            "Quarter hosts contemporary cultural activity; image is generic candid scene in such a courtyard, not a reproduction of a specific modern artwork."
+          ],
+          "appliesTo": [
+            4,
+            6
+          ]
+        }
+      ],
+      "caption": "Kalnciema-korttelin kesäinen pihajuhla. Havainnekuva.",
+      "QA": {
+        "id": "intro-riika-6-v2",
+        "slot": 6,
+        "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:42:50.316222+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS v2: instrument/headstock absent, natural fictional adult face and generic unmarked shirt inspected natively; cheerful local courtyard crowd, no footwear/text/logo.",
+        "detailCrops": [
+          "session-owner-review/slot6-v2-face-garments-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-6-kalnciema-juhla-native-v2.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-6-kalnciema-juhla-intro-v2.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+        "bytes": 1959363,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-6-kalnciema-juhla-intro-v2.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:48:01.648514+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+        "bytes": 1959363,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-6-kalnciema-juhla-intro-v2.png",
+            "http": 200,
+            "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+            "bytes": 1959363,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-6-kalnciema-juhla-intro-v2.png?verify=north-113ffa4ed9a6ccd7-1791827281648583000",
+            "http": 200,
+            "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+            "bytes": 1959363,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 1959363
+    },
+    {
+      "id": "intro-riika-7-v3",
+      "slot": 7,
+      "version": 3,
+      "cityName": "Riika",
+      "gameCityId": "riika",
+      "mediaSlug": "riga",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/final/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/native/riga-7-vanhakaupunki-iltakuja-native-v3.png",
+      "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+      "bytes": 2924346,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+      "r2Key": "julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+      "generationPrompt": "Use case: photorealistic-natural.\nCreate ONE completely new present-day Riga Old Town evening side-alley image for a travel-game arrival intro. Landscape 1536 x 1024 PNG, opaque RGB sRGB.\nReal handheld camera photograph appearance, eye-level oblique 35mm view looking diagonally across the open middle of an ordinary cobblestone lane as it gently bends away. The foreground is entirely uneven old cobblestones. A long continuous bare anonymous old wall runs diagonally into the distance: aged muted warm-grey lime plaster with some naturally exposed dull red brick near its base, authentic small random chips and granular mortar. Opposite it is another plain old masonry wall. Simple low plaster houses and modest tiled roofs are visible only in the far distance. No named landmark, church, tower or monumental architecture. A quietly lived-in Baltic old-town side lane, not an imposing fortress, archway or tunnel.\nFraming is crucial: the view shows open roadway and uninterrupted blank masonry, with all doorways, wall-mounted lamps and the areas beneath them, building address corners, street plaques and lower window corners completely outside the image. NO doors or windows in either near wall. One small plain old-fashioned freestanding streetlamp may be seen far beyond the blank wall, with its base hidden. Soft restrained warm reflected light grazes the wall and a few slightly damp stones. Blue-hour ambient light remains soft and natural, with realistic subdued ochre, grey and brick colours; a little soft evening sky above the distant roofs. Empty foreground; no people needed.\nEvery visible surface is free of writing or symbols. Absolutely no letters, words, numbers, house numbers, signs, plaques, stickers, labels, notices, graffiti, emblems, logos, brands, watermarks or frames; no mark resembling a digit on any wall. Natural wear appears only as tiny random granular chips and diffuse patches, never bold isolated drawn shapes. No shopfronts, cars, food, furniture, pipes, utility boxes, posters, artwork or modern signature works. No identifiable faces, no visible branded footwear.\nTexture must be convincing at native resolution: genuinely irregular individual cobbles and mortar, restrained random weathering, natural optical softness and fine camera grain. No repeated texture stamps, patterned bark, waxy surfaces, CGI, illustration, HDR, artificial clarity, cinematic teal/orange, dramatic glow, glossy wet mirror pavement or oversaturated lighting. Ordinary real-camera evening exposure with detail still visible in the surfaces. Generate entirely from scratch, no retouching or reference-image editing.",
+      "caption": "Vanhankaupungin tavallinen kapea kuja iltavalossa. Havainnekuva.",
+      "sources": [
+        {
+          "url": "https://www.liveriga.com/en/7896-the-old-town",
+          "title": "LiveRiga Old Town",
+          "readFacts": [
+            "Medieval old town and old streets; anonymous ordinary side-alley rather than named protected modern work."
+          ],
+          "appliesTo": [
+            7
+          ]
+        }
+      ],
+      "QA": {
+        "id": "intro-riika-7-v3",
+        "slot": 7,
+        "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "allSurfaceQA": true,
+        "reviewedAt": "2026-10-12T18:33:02.527191+00:00",
+        "reviewer": "dedicated-riga7-repair-session",
+        "reviewMethod": "Entire1536x1024 generated frame plus five original-resolution crops using view_image. Overlapping four800x600 crops cover the entire frame; additional400x370 crop covers the distant lamp, facade and alley bend.",
+        "reason": "PASS: oblique open cobbled lane with continuous anonymous bare masonry walls, restrained blue-hour and warm lamplight. No discernible letters, numerals, house numbers, plaques, labels, logos or symbols on foreground/lower pavement, wall chips, eaves, far facades, lamp or pipes. No conspicuous9-like wall mark. Random worn plaster and exposed bricks, individual cobbles, mortar, leaves and roofing look natural rather than stamped; no HDR/CGI. No people, branded footwear, city heroes or identifiable modern artworks.",
+        "detailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-upper-left.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-upper-right.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-lower-left.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-lower-right.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-distant-lamp-wall.png"
+        ],
+        "historicalPairDependency": false,
+        "ownerAcceptanceVerified": false,
+        "independentReview": {
+          "reviewer": "riga7_independent_qa",
+          "reviewedAt": "2026-10-12T18:34:09.719744+00:00",
+          "status": "PASS",
+          "approvedForTechnicalDelivery": true,
+          "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+          "nativeSha256": "d521440eaba6358c1ba0d19757929e3c231d67c47c8ea13c0bdc596da685f103",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "inspectionScale": "Whole final and native images plus all four overlapping 100 percent corner crops and distant lamp/wall crop; no upscaled retouching.",
+          "inspectedPaths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/final/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/native/riga-7-vanhakaupunki-iltakuja-native-v3.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-upper-left.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-upper-right.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-lower-left.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-lower-right.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/root-distant-lamp-wall.png"
+          ],
+          "notes": [
+            "Koko kuva: vino avoin mukulakivikuja ja pitkä paljas vanha muuri. Etualalla ei ihmisiä, ovia, ikkunoita, kylttejä tai seinälaattoja.",
+            "Kaikki 100 prosentin kulmarajaukset: en havainnut kirjoitusta, kirjaimia, numeroita, osoitemerkkejä, symboleja, logoja, vesileimaa tai brändejä. Aiemmin ongelmana kuvattu 9:n kaltainen erillinen seinämerkki ei ole tässä näkyvissä.",
+            "Lampun ympäristö ja kaukaiset julkisivut tarkastettu: paljasta seinää, sadevesiputkia ja tavallisia kattopintoja. Ei lampun alla olevaa kilpeä, kirjoitusta eikä tunnistettavaa numeroa.",
+            "Kiveyksen muodot ja saumat vaihtelevat; tiilet ovat osittain peittyneitä ja eri tavoin lohkeilleita; rappaus sisältää pieniä satunnaisia siruja ja laajoja kulumia. En havainnut toistuvaa leimasinkuviota tai tekstiä jäljittelevää kulumaa.",
+            "Lehdistö on epäsäännöllinen eikä kuviokaarnaa näy. Katot, pilvet ja perspektiivi ovat visuaalisesti johdonmukaisia.",
+            "Vaimeat harmaat ja tiilen sävyt, sinisen hetken ympäristövalo sekä pieni lämmin lamppu-/seinävalo näyttävät kameraa vastaavilta. Ei selvästi CGI-, kuvitus- tai HDR-vaikutelmaa eikä märän peilikadun ylikiiltoa.",
+            "Ei tunnistettavia etualan kasvoja tai ihmisiä; ei näkyvää modernia teosta, brändiä tai kaupungin tunnusmonumenttia. Tulkinta on nimetön sivukuja, ei dokumentaarinen todistus tietystä Riian kadusta.",
+            "Pienet promptipoikkeamat: kaukana näkyy sadevesiputkia ja lamppu vaikuttaa muurin lähelle asennetulta. Nämä eivät tuota tekstivirhettä eivätkä riko annettua visuaalista hyväksymisporttia."
+          ],
+          "checks": {
+            "textNumbersSignsMarks": "PASS",
+            "foregroundAndBottomSurfaces": "PASS",
+            "distantLampWallAndFacades": "PASS",
+            "naturalIrregularTextures": "PASS",
+            "cameraRealLightColor": "PASS",
+            "logosBrandsFacesModernWorks": "PASS",
+            "requiredAnonymousComposition": "PASS"
+          },
+          "technicalVerification": {
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "opaque": true,
+            "iccProfileName": "sRGB built-in",
+            "pixelValuesUnchanged": true,
+            "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+          },
+          "scope": {
+            "generationCallsByReviewer": 0,
+            "r2ActionsByReviewer": 0,
+            "historicalSameViewDependency": false,
+            "originalCityFilesEdited": false
+          }
+        },
+        "independentReviewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/qa/independent-review.json"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png?t=4fac718f90844f8f",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+        "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+        "bytes": 2924346,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:34:33.421861+00:00",
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+            "http": 200,
+            "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+            "bytes": 2924346,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "pngVerified": true,
+            "byteExact": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png?verify=riga7-v3-4fac718f90844f8f-1791830072489387000",
+            "http": 200,
+            "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+            "bytes": 2924346,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "pngVerified": true,
+            "byteExact": true
+          }
+        ],
+        "canonicalAndCacheBustedByteExact": true,
+        "immutableNoOverwrite": true,
+        "origin": "https://matkakirja.app"
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/native/riga-7-vanhakaupunki-iltakuja-native-v3.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/final/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+        "bytes": 2924346,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "intro-riika-8-v2",
+      "slot": 8,
+      "version": 2,
+      "cityName": "Riika",
+      "gameCityId": "riika",
+      "mediaSlug": "riga",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-8-bastejkalns-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-8-bastejkalns-1873-native-v2.png",
+      "r2Key": "julisteet/saapumisintro/riga/20261012-full/riga-8-bastejkalns-1873-intro-v2.png",
+      "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Create a new photorealistic illustrative image for a travel-game city intro. Native final output must be PNG,1536x1024 pixels landscape3:2, opaque RGB sRGB. Real camera photograph appearance, unprocessed natural light, muted believable colors, fine irregular material texture. No HDR, no CGI, no painterly effect, no stamped foliage, no repeated people. Absolutely no text, lettering, signs, house numbers, logos, brands, graphic stripes, watermark, frame, artwork or modern signature architecture. Use case: historical-scene. Exact year1873, Riga Bastejkalns canal, entirely neutral black-and-white grayscale historical photographic appearance, soft contrast and very fine grain, not sepia. Same exact west bank viewpoint around56.9530,24.1090 and northeast direction as the present-day water scene: narrow calm canal recedes from bottom center toward just LEFT of center, wooded hill behind. Canal existed since1857-1863. Show rough grassy earthen banks, young irregular deciduous trees and smaller sparse plantings typical of the early park, narrow unpaved footpath on left. No people required. Tight natural view with no buildings. Absolutely no1892 footbridge, no1901 swan house, no1898 cascade or waterfall, no1887 cafe or redesign, no modern retaining walls, lamps, electrical wires, paved paths, sculptures, vehicles or contemporary park furniture. Real period camera light and plausible natural texture, no decorative vignetting or border. Use the provided present-day canal photograph ONLY as a reference for geographical composition and camera viewing direction. Make a completely NEW1873 scene from scratch, do not recolor the reference. Preserve exactly its canal course, same near width and vanishing bend just LEFT of center, same left-bank path, same wooded hillside on the RIGHT. Lower the tree age and exclude all modern structures. The image must represent this same bank and direction, never mirror or reverse the canal. Natural black-and-white photograph.",
+      "sources": [
+        {
+          "url": "https://rigasdarziunparki.lv/darzu-un-parku-vesture-un-musdienas/bastejkalns-un-kanalmalas-apstadijumi-toreiz-un-tagad",
+          "title": "Rīgas Meži, Bastejkalns history",
+          "readFacts": [
+            "Fortification demolition authorized1857; mound1858; first trees1858-1859; wooden pavilion1860.",
+            "Later path redesign and cafe1887; rock cascade and waterfall1898; retaining walls1951; new benches artwork2014. These are excluded from1873."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://dom.lndb.lv/data/obj/12670.html",
+          "title": "Latvian National Library, Bastejkalns canal bridge photograph",
+          "readFacts": [
+            "Canal formed1857-1863 from fortification moat.",
+            "Present footbridge1892 and swan house1901, so both are excluded from1873. Catalog image dated1930s, useful only for later-feature exclusion, not1873 replication."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        },
+        {
+          "url": "https://www.liveriga.com/en/2989-bastion-hill",
+          "title": "LiveRiga tourism, Bastejkalns",
+          "readFacts": [
+            "Canal, leafy paths and wooded hill; no monument or artwork will be in composition."
+          ],
+          "appliesTo": [
+            5,
+            8
+          ]
+        }
+      ],
+      "caption": "Bastejkalnsin kanavan kaarre vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "intro-riika-8-v2",
+        "slot": 8,
+        "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:47:46.790598+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS v2: neutral black-and-white1873 canal, same5 left-centre bend, left path and right mound placement; younger slender plantings and grass, no later bridges/pavilions/structures; native trees/water inspected natural. Two read park/archive sources support1858-1863 canal/planting.",
+        "detailCrops": [
+          "session-owner-review/slot8-v2-young-trees-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/native/riga-8-bastejkalns-1873-native-v2.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-8-bastejkalns-1873-intro-v2.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+        "bytes": 3219044,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-8-bastejkalns-1873-intro-v2.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:48:09.245889+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+        "bytes": 3219044,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-8-bastejkalns-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+            "bytes": 3219044,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-8-bastejkalns-1873-intro-v2.png?verify=north-cbd9798e7dfdf3c4-1791827289245947000",
+            "http": 200,
+            "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+            "bytes": 3219044,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3219044
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "producerOmissionsPreserved": [
+    {
+      "id": "intro-riika-7-v2",
+      "slot": 7,
+      "reason": "PENDING-QUALITY-FIX after one full retry: a conspicuous9-like dark wall marking below distant right lamp remains visible in native crop; no-number compliance cannot be confidently verified. Both candidates preserved; no further automatic call under current policy.",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/final/riga-7-vanhakaupunki-iltakuja-intro-v2.png",
+      "sha256": "0ec77ebb99fcb1b47301a5c11db527462669ab1a2daddfe3af1425e1005fd585",
+      "status": "pending-quality-fix"
+    }
+  ],
+  "supplementalSources": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/manifest.json",
+      "sha256": "f9ff990541c47c1d95a63f8b25c381ae7ac7f0573ee7043a145e7584314af126",
+      "assetID": "intro-riika-7-v3",
+      "slot": 7,
+      "additionalCalls": 1
+    }
+  ],
+  "ownerAcceptance": false,
+  "gameIntegrated": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 9,
+  "deliveryQAEvidence": {
+    "mediaSlug": "riga",
+    "gameCityId": "riika",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/brief.json",
+      "https://rigasdarziunparki.lv/darzu-un-parku-vesture-un-musdienas/bastejkalns-un-kanalmalas-apstadijumi-toreiz-un-tagad",
+      "https://dom.lndb.lv/data/obj/12670.html"
+    ],
+    "assets": [
+      {
+        "id": "intro-riika-4-v1",
+        "slot": 4,
+        "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja puunkuoren/lehtien, kaukaisten ihmisten/polkupyörän sekä puutalojen/kasvien natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen puunkuori ja lehvistö sekä kuluneet lautajulkisivut; ei kaarnaleimaa tai muovisuutta havaittu.",
+          "Kolme pientä selin olevaa aikuista, yksi kuljettaa merkitöntä polkupyörää. Ei tekstiä, numeroita, logoja, brändikuvioita tai ruokaa havaittu.",
+          "Valo ja katuperspektiivi koherentit, kameramainen valokuvailme.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "intro-riika-5-v1",
+        "slot": 5,
+        "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja puunkuoren/haarojen/lehtien sekä kanavaveden/rinteiden natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen puunkuori ja lehtimassa, uskottava optiikka/valo ja veden heijastukset; ei leimattuja orgaanisia tekstuureja havaittu.",
+          "Kanava kääntyy keskivasemmalle, polku vasemmalla rannalla, korkeampi metsäinen rinne oikealla. Kuva5 on1873-kuvan8 moderni vertailupari.",
+          "Ei ihmisiä/eläimiä/veneitä, siltoja, rakennuksia, paviljonkeja, muistomerkkejä tai vesiputouksia kehyksessä. Ei tekstiä/logoja/brändikuvioita/ruokaa havaittu.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "intro-riika-6-v2",
+        "slot": 6,
+        "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Valittu v2 hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan kasvojen/hiusten/vaatteiden ja sivu-/taustahenkilöiden kasvojen/näkyvien käsien natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten kesäinen pihajuhla, geneeriset muodikkaat nykyvaatteet. Luonnollinen iho, hiukset, hampaat ja osittain peittyvät kädet anatomisesti uskottavia.",
+          "Kaikki henkilöt rajattu tai peitetty jalkineiden yläpuolelta; ei jalkineita, ruokaa, juomapakkauksia, soittimia, puhelimia, tekstiä, logoja tai brändikuvioita koko kehyksessä. V1:n kitaran kirjoitusmerkintä ei uusiudu uudessa6v2:ssa.",
+          "Uskottava tavallinen kameravalotus, koherentti lämmin hämärävalo ja puutalon pihaperspektiivi; luonnollinen optinen taustan pehmeys.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "intro-riika-7-v3",
+        "slot": 7,
+        "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty täydentävä slot7-v3: fotorealistinen anonyymi vanhankaupungin iltakuja, luonnolliset kivi-/rappauspinnat ja hillitty valo, ei erottuvaa kirjoitusta, numeroita, osoitekilpiä, symboleja tai logoja.",
+        "observations": [
+          "Koko1536x1024 kehys luettu detail original. Neljä päällekkäistä800x600 natiivirajausta kattaa koko kehyksen; viides510x560 rajaus tarkentaa seinää, kujankäännöstä ja kaukaista valaisinaluetta.",
+          "Seinien kulumat ovat pieniä epäsäännöllisiä rappauksen siruja, paljastuneita tiiliä ja laastinpintoja. Ei selvää kirjoitusmerkkiä, numeroa,9:n kaltaista erillistä piirtomerkkiä, osoitekilpeä, labelia, ilmoitusta, tarraa, logoa tai graffitia.",
+          "Etualan kivet ja saumat ovat yksilöllisiä ja epäsäännöllisiä; katon tiilet, lehtikuviot, kaukaiset julkisivut ja valaisin tarkastettu. Ei muovisuutta, leimattua pintatekstuuria, CGI/HDR-ilmettä tai epäjohdonmukaista perspektiiviä.",
+          "Hillitty sininen iltavalo ja seinän lämmin heijastunut valo sopivat yhteen. Kuja on avoin tavallinen sivukuja, ei linnoitus, tunneli tai named landmark. Ei ihmisiä, näkyviä jalkineita, ruokaa tai brändimerkkejä.",
+          "LiveRigan virallinen vanhankaupungin lähdesivu luettu verkosta ja supplemental-assignment sekä alkuperäinenbrief luettu. Katu-/seinänäkymä on anonyymi havainne, ei tarkka tietyn nimeltä tunnistetun rakennuksen rekonstruktio.",
+          "Tämä on nykyajan slot7-kuva;1873-paririippuvuutta ei ole. Aiemmat city-candidatet ja aiempiqa.json säilyvät. Koordinaattori kuluttaa erillisen supplemental-manifestin, eikä QA kirjoita alkuperäistä city-manifestia.",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat Havainnekuva. Tekoälyllä tuotettu, ei valokuva.; kuvateksti päättyy Havainnekuva. Final-tavujen SHA256 vastaa manifestia ja native/final-pikselit samat.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/riga/crops/slot7-v3-upper-left.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/riga/crops/slot7-v3-upper-right.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/riga/crops/slot7-v3-lower-left.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/riga/crops/slot7-v3-lower-right.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/riga/crops/slot7-v3-distant-lamp-wall.png",
+          "QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta. Omistajahyväksyntä, pelitoimitus ja peli-integraatio ovat erilliset."
+        ]
+      },
+      {
+        "id": "intro-riika-8-v2",
+        "slot": 8,
+        "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Valittu v2 hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä vasemman puun/polun/rannan ja kanavakaarteen/rinteen/veden natiivirajaukset tarkastettu.",
+          "Näkyvä kokonaisilme neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä. Pieni numeerinen RGBero yksin ei ole laatuhylkäysperuste.",
+          "Vertailtu moderniin5:een: kanava etenee alakeskeltä keskivasemman kaarteeseen, polku vasemmalla ja korkeampi puistomäki oikealla. Sama katselusuunta/kuvajaottelu nyt säilyy; v1:n vastakkainen kaarre ja rinteen sijainti korjattu.",
+          "Rinteen istutus näkyy harvempana/nuorempana kuin nykykuvassa. Luonnollinen epäsäännöllinen kuori/lehdistö/ruoho ja veden heijastukset; ei kaarnaleimaa tai muovisuutta havaittu. Valo ja perspektiivi koherentit.",
+          "Briefin1873-period exclusions tarkastettu: ei1892-siltaa,1901-joutsentaloa,1898-kaskadia/vesiputousta,1887-kahvilaa,1951-tukimuureja,2014-taidepenkkejä, rakennuksia, lamppuja, sähköjohtoja, päällystettyjä polkuja, veistoksia, ajoneuvoja tai nykykalusteita.",
+          "Ei ihmisiä, eläimiä, veneitä, tekstiä, logoja, brändikuvioita tai ruokaa havaittu.",
+          "Erillinen sources.json puuttuu; lähteet luettu briefistä. Aiemmin tässä QA-sessiossa avatut2 virallista lähdettä tukevat kanavan ja puiston1857–1863-perusasetelmaa sekä myöhempien rakennelmien poissulkemista. LNB:n1930-luvun kuva ei ole1873-visuaalilähde.",
+          "Yksittäinen kasvillisuus ja1873-rantaprofiili ovat konservatiivinen havainnollinen rekonstruktio, eivät mitatun arkistopaikan tarkkuusväite.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "intro-riika-6-v1",
+        "slot": 6,
+        "sha256": "876547fdf18e74561f13da4b3de5cf808228189a823ab5a67733c7424c0d970e",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "reason": "Kitaran lavassa näkyy vaalea kirjoitus-/brändimerkinnän kaltainen kuvio; ei tekstiä/logoja -vaatimus ei täyty.",
+        "observations": [
+          "Koko1536x1024 kehys ja hylkäyksen relevantti natiivirajaus tarkastettu; alkuperäinen v1-hylkäys vahvistettu.",
+          "Tarpeellinen täysin uusi laatukorjaus on tilauksen mukaan sallittu. V2-tiedoston olemassaolo kansiossa ei ole manifestin valinta tai toimitushyväksyntä; tähän QA:han sidottu manifest valitsee vielä vain4/5."
+        ],
+        "historicalReview": true,
+        "originalStatus": "pending-quality-fix",
+        "supersededBy": "intro-riika-6-v2",
+        "currentResolution": "V1-arvio säilytetty historiassa; valittu uusi v2 tarkastettu ja hyväksytty erikseen."
+      },
+      {
+        "id": "intro-riika-7-v1",
+        "slot": 7,
+        "sha256": "26ecaa3e7b71607689d5f2578fb2570c0c6215ff83c7c95e0db736e737a84efb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "status": "rejected-first-attempt",
+        "reason": "Läheisessä oikean seinän syöksytorvessa näkyy vaalea suorakaiteinen tarra/graafinen merkki, jossa kirjoituksen kaltainen kuvio; ei tekstiä/merkintöjä -vaatimus ei täyty.",
+        "observations": [
+          "Koko1536x1024 kehys ja hylkäyksen relevantti natiivirajaus tarkastettu; alkuperäinen v1-hylkäys vahvistettu.",
+          "Tarpeellinen täysin uusi laatukorjaus on tilauksen mukaan sallittu. V2-tiedoston olemassaolo kansiossa ei ole manifestin valinta tai toimitushyväksyntä; tähän QA:han sidottu manifest valitsee vielä vain4/5."
+        ],
+        "historicalReview": true,
+        "originalStatus": "pending-quality-fix",
+        "currentResolution": "Slot7:n toinenkin kandidaatti hylätty producer-manifestissa; valittua toimituskuvaa ei ole. V2:n rasteri ei kuulu tämän6/8-lisätarkastuksen piiriin."
+      },
+      {
+        "id": "intro-riika-8-v1",
+        "slot": 8,
+        "sha256": "a218d76c8916ba0354657113831d6f68d4e9f7403eb72f27446cb0445f6327dc",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "reason": "Kanavan suunta ja rinteen sijainti muuttuvat moderniin5:een nähden: moderni kanava kääntyy keskivasemmalle ja korkeampi rinne oikealla, v1:n vesiväylä jatkuu oikealle ja rinne vasemmalla. Sama katselusuunta ei täyty.",
+        "observations": [
+          "Koko1536x1024 kehys ja hylkäyksen relevantti natiivirajaus tarkastettu; alkuperäinen v1-hylkäys vahvistettu.",
+          "Tarpeellinen täysin uusi laatukorjaus on tilauksen mukaan sallittu. V2-tiedoston olemassaolo kansiossa ei ole manifestin valinta tai toimitushyväksyntä; tähän QA:han sidottu manifest valitsee vielä vain4/5.",
+          "Näkyvä historiallinen ilme on neutraali mustavalkoinen; RGB-kanavien numeerinen nollatoleranssi ei ollut hylkäyksen peruste.",
+          "Briefin1873-period exclusions luettu ja kehys tarkastettu: ei myöhempää1892-siltaa,1901-joutsentaloa,1887-kahvilaa/polkusuunnitelmaa,1898-kaskadia/vesiputousta,1951-tukimuureja tai2014-taidepenkkejä; ei moderneja esineitä havaittu.",
+          "Erillinen sources.json puuttui. Briefin kaksi virallista lähdettä avattu: Rīgas Meži puiston1857–1860-alkuvaiheesta ja myöhemmistä rakennelmista; LNB:n1930-luvun luettelokuva ja historiallinen seloste myöhempien silta/joutsentalon poissulkemiseksi. Myöhempää luettelokuvaa ei käsitelty1873-arkistoreferenssinä."
+        ],
+        "historicalReview": true,
+        "originalStatus": "pending-quality-fix",
+        "supersededBy": "intro-riika-8-v2",
+        "currentResolution": "V1-arvio säilytetty historiassa; valittu uusi v2 tarkastettu ja hyväksytty erikseen."
+      },
+      {
+        "id": "intro-riika-7-v2",
+        "slot": 7,
+        "sha256": "0ec77ebb99fcb1b47301a5c11db527462669ab1a2daddfe3af1425e1005fd585",
+        "fullFrameInspected": false,
+        "nativeDetailsInspected": false,
+        "approvedForDelivery": false,
+        "status": "pending-quality-fix",
+        "producerReason": "PENDING-QUALITY-FIX after one full retry: a conspicuous9-like dark wall marking below distant right lamp remains visible in native crop; no-number compliance cannot be confidently verified. Both candidates preserved; no further automatic call under current policy.",
+        "reason": "Tuottajan nykyinen slot7v2-omission kirjattu metatiedoista; ei riippumatonta rasteri-QA:ta tässä vain6v2/8v2-lisätarkastuksessa.",
+        "observations": [
+          "Manifestin mukaan7v2 hylätty9-kaltaisen seinämerkinnän vuoksi. Molemmat7-kandidaatit säilyvät historiassa; lisägenerointia ei tehty."
+        ],
+        "producerMetadataReviewedOnly": true
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "reviewedAt": "2026-10-12T17:59:17.184118+00:00",
+    "sourceManifestSha256": "56bac1f6dba0a721771697702f6183a0bd4618bb60dde40e242595a9939a04ba",
+    "galleryWorkflowStatus": "pending",
+    "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/riga/supplemental-qa.json",
+    "supplementalSources": [
+      {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/riga-7/manifest.json",
+        "sha256": "f9ff990541c47c1d95a63f8b25c381ae7ac7f0573ee7043a145e7584314af126",
+        "assetID": "intro-riika-7-v3",
+        "slot": 7,
+        "additionalCalls": 1
+      }
+    ]
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "riga",
+    "verifiedAt": "2026-10-12T18:48:32.805673+00:00",
+    "assets": [
+      {
+        "id": "intro-riika-4-v1",
+        "slot": 4,
+        "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+        "bytes": 3160672,
+        "verifiedAt": "2026-10-12T18:48:31.473618+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-4-agenskalns-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+            "bytes": 3160672,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-4-agenskalns-arki-intro-v1.png?delivery-verify=58134ad1991c19f5-1791830911473611000",
+            "http": 200,
+            "sha256": "58134ad1991c19f5cb07a710b806363449f47c640b4748d1d357a093f20abd71",
+            "bytes": 3160672,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-riika-5-v1",
+        "slot": 5,
+        "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+        "bytes": 3227067,
+        "verifiedAt": "2026-10-12T18:48:31.473753+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-5-bastejkalns-kanava-intro-v1.png",
+            "http": 200,
+            "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+            "bytes": 3227067,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-5-bastejkalns-kanava-intro-v1.png?delivery-verify=16582b8828cb79ed-1791830911473751000",
+            "http": 200,
+            "sha256": "16582b8828cb79ed9bb78bfb0976f84f2e19a64cc892334bb4e3977c42a16d37",
+            "bytes": 3227067,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-riika-6-v2",
+        "slot": 6,
+        "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+        "bytes": 1959363,
+        "verifiedAt": "2026-10-12T18:48:31.473838+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-6-kalnciema-juhla-intro-v2.png",
+            "http": 200,
+            "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+            "bytes": 1959363,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-6-kalnciema-juhla-intro-v2.png?delivery-verify=113ffa4ed9a6ccd7-1791830911473836000",
+            "http": 200,
+            "sha256": "113ffa4ed9a6ccd7c962df49e3af1779f47b4e3d831296fe4a547edde7facef9",
+            "bytes": 1959363,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-riika-7-v3",
+        "slot": 7,
+        "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+        "bytes": 2924346,
+        "verifiedAt": "2026-10-12T18:48:31.970995+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+            "http": 200,
+            "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+            "bytes": 2924346,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png?delivery-verify=4fac718f90844f8f-1791830911970988000",
+            "http": 200,
+            "sha256": "4fac718f90844f8fd7fc8a8caf2842817f7fd88c56c9c72a93c3ced82c33d289",
+            "bytes": 2924346,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "intro-riika-8-v2",
+        "slot": 8,
+        "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+        "bytes": 3219044,
+        "verifiedAt": "2026-10-12T18:48:32.117763+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-8-bastejkalns-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+            "bytes": 3219044,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/riga/20261012-full/riga-8-bastejkalns-1873-intro-v2.png?delivery-verify=cbd9798e7dfdf3c4-1791830912117757000",
+            "http": 200,
+            "sha256": "cbd9798e7dfdf3c4f08c953f712bbe9731d6ac5942dcf9e25f84b97bad02a527",
+            "bytes": 3219044,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/riga/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.029070+00:00"
+}

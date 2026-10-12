@@ -1,0 +1,811 @@
+{
+  "cityName": "Dublin",
+  "gameCityId": "dublin",
+  "mediaSlug": "dublin",
+  "updatedAt": "2026-10-12T18:26:13.381507+00:00",
+  "assets": [
+    {
+      "id": "dublin-4-stoneybatter-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Dublin",
+      "gameCityId": "dublin",
+      "mediaSlug": "dublin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/final/dublin-4-stoneybatter-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/native/dublin-4-stoneybatter-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/dublin/20261012-full/dublin-4-stoneybatter-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-4-stoneybatter-arki-intro-v1.png",
+      "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Dublin,Ireland. Everyday Stoneybatter residential side street, modest anonymous Victorian redbrick terraced cottages with grey slate roofs and simple painted timber doors, some old cream plaster house fronts mixed in. Standing eye-level view down a gently curving quiet lane. Three small distant adults in plain modern jackets walking away, faces unreadable, hands empty. Soft Irish late morning daylight after a shower, realistically damp pavement and individualized old brickwork, modest doorway plants. Do not show bicycles,cars,scooters,modern shopfronts,food,graffiti,statues or famousmonuments. No house numbers or plaques.",
+      "sources": [
+        {
+          "url": "https://www.visitdublin.com/guides/things-to-do-stoneybatter-smithfield",
+          "readFacts": "Officialtourism:StoneybatterisoldneighborhoodofVictorianterracedcottagesandproudcommunity.4focusesdailyresidentialstreet,noart/food/modernSmithfieldblocks."
+        }
+      ],
+      "caption": "Stoneybatterin asuinkadun arkea Dublinissa. Havainnekuva.",
+      "QA": {
+        "id": "dublin-4-stoneybatter-arki-intro-v1",
+        "slot": 4,
+        "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:25:59.891600+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary small Dublin brick/plaster terrace street, native near door plain without text/numbers/logos; distant rear-view walkers, natural photographic weathering.",
+        "detailCrops": [
+          "session-owner-review/slot4-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:26:02.463403+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+        "bytes": 2902986,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-4-stoneybatter-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+            "bytes": 2902986,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-4-stoneybatter-arki-intro-v1.png?verify=north-1fe32e7a73a080bb-1791829562463627000",
+            "http": 200,
+            "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+            "bytes": 2902986,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2902986
+    },
+    {
+      "id": "dublin-5-grand-canal-intro-v2",
+      "slot": 5,
+      "cityName": "Dublin",
+      "gameCityId": "dublin",
+      "mediaSlug": "dublin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/final/dublin-5-grand-canal-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/native/dublin-5-grand-canal-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/dublin/20261012-full/dublin-5-grand-canal-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-5-grand-canal-intro-v2.png",
+      "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Dublin,Ireland, genuinely URBAN Grand Canal at Portobello. Camera standing on the NORTH-bank towpath EAST of Portobello Harbour, looking EAST along a straight stretch,35mm eye-level perspective. The engineered narrow canal is roughly10meterswide, with two parallel clearly built old stone retaining banks, NOT a broad natural river and NOT a rural woodland canal. Near north-bank pavement runs from lower-left into the center distance, canal water occupies lower-right and center. On the left behind the walkway, ordinary anonymous old Dublin redbrick and pale plaster two-storey terraced homes, simple grey slate roofs and chimney pots, plain sash windows and modest doorsteps, no precise landmarkreproduction. Across the narrow water, a simple low stone bank, a strip of ordinary urban grass and scattered trees, with additional old modest brick buildings set back in distance. Clear city scale and bounded canal geometry. Few asymmetric real willow branches, not dense forest. No bridge visible. A couple of tiny distant pedestrians from behind, unreadable faces. No closeboats, no cars,bicycles,scooters,road signs,parkstatues,logos,house numbers,plaques or lettering. Soft overcastbright Irish afternoon with restrained authentic colors, believable water reflections, genuinely weathered urbanstone and oldbrick. No protected modern designer buildings. One complete new photographic scene from scratch; do not reuse the previous ruralcanalimage.",
+      "sources": [
+        {
+          "url": "https://archive.waterwaysireland.org/history-of-the-waterways/9/the-history-of-the-grand-canal",
+          "readFacts": "WaterwaysIrelandoperatorarchive:cityworks1773,CircularLineDublincompletedtoPortobello1790,canaltoShannon1803-1804,passengerboatswithdrawn1852,bargeenginesinstalled1911onward.1873canal/towpath existed,nomotors orpassengerliner."
+        },
+        {
+          "url": "https://www.dublincity.ie/sites/default/files/2022-06/portobello-walking-trail-map-guide-2021-003.pdf",
+          "readFacts": "CityCouncil/PortobelloResidents2021guide:Harbour1801,GrandCanalHotel1807,canalcompleted1804,originalbridge1790rebuilt1936.1873frameexcludesbridgesandbuildings,currentmodernrailingsandstreetfurniture. CircularLinecompletiondiffersacrosssources1791vs1796;doesnotaffect1873existence,nofalsepreciseclaimincaption. CityCouncilguide:Portobellobeganasan18thcenturysuburb;mid1860sPleasureGardens/EmorvilleclosureenabledVictorianredbrickhousinglargescaledevelopmentbefore1873."
+        }
+      ],
+      "caption": "Grand Canalin vettä Portobellon kohdalla Dublinissa. Havainnekuva.",
+      "QA": {
+        "id": "dublin-5-grand-canal-intro-v2",
+        "slot": 5,
+        "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:25:59.972828+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS v2: narrow engineered urban Portobello canal now matches brief, old anonymous terraces and bounded stonebanks; native water/banks inspected natural and unmarked, no modern protected named works or identifiable faces.",
+        "detailCrops": [
+          "session-owner-review/slot5-v2-banks-water-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:26:05.047482+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+        "bytes": 2914599,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-5-grand-canal-intro-v2.png",
+            "http": 200,
+            "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+            "bytes": 2914599,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-5-grand-canal-intro-v2.png?verify=north-4b7d7275f22c35dd-1791829565047498000",
+            "http": 200,
+            "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+            "bytes": 2914599,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2914599
+    },
+    {
+      "id": "dublin-6-patrickinpaiva-intro-v1",
+      "slot": 6,
+      "cityName": "Dublin",
+      "gameCityId": "dublin",
+      "mediaSlug": "dublin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/final/dublin-6-patrickinpaiva-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/native/dublin-6-patrickinpaiva-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/dublin/20261012-full/dublin-6-patrickinpaiva-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-6-patrickinpaiva-intro-v1.png",
+      "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Dublin St Patrick's Day street celebration in midMarch. One completely fictional27-year-old Irish man foreground, chest-up, auburn curly hair and lightstubble, warm candid laugh while looking to a friend offcamera. He wears a fashionable plain darkgreen wool overshirt over a charcoal top, generic unbranded modern clothes with no symbols or patterns. Behind him a cheerful crowd of young adult local Irish residents with varied natural Irish appearances, modern plain casual coats and mutedgreen accents, celebrating together along an ordinary old brick Dublin street. Environmental35mm camera at shoulder height; bottom of frame at mainperson's chest, overlapping crowd hides every lowerbody. Absolutely EVERY shoe, foot and ankle at every distance completely outside the frame or hidden. No leprechaun costume,facepaint,shamrock marks,flags,banners,stage,performers,food,drink containers or toys. Soft cloudy spring afternoon, realistic unretouched skin and freckles, asymmetrical hair, joyful candid atmosphere, deep enough focus for old housing behind. No famousmonuments or protectedart.",
+      "sources": [
+        {
+          "url": "https://api.ireland.ie/en/st-patricks-day-2026/visit-ireland-on-st-patricks-day/",
+          "readFacts": "OfficialIreland:17Marchparadesandstreetparties withgreenclothing,musicanddance.Illustratesfictionalyoungadultcrowd,noactualperformers orbranding."
+        }
+      ],
+      "caption": "Nuoria aikuisia Pyhän Patrickin päivän juhlassa Dublinissa. Havainnekuva.",
+      "QA": {
+        "id": "dublin-6-patrickinpaiva-intro-v1",
+        "slot": 6,
+        "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:26:00.035052+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural fictional adult face and plain green coat inspected natively, cheerful contemporary city street gathering, no footwear/text/brand patterns/logos/food.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-coat-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:26:07.675186+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+        "bytes": 2150652,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-6-patrickinpaiva-intro-v1.png",
+            "http": 200,
+            "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+            "bytes": 2150652,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-6-patrickinpaiva-intro-v1.png?verify=north-3cf85cecc8fa2473-1791829567675204000",
+            "http": 200,
+            "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+            "bytes": 2150652,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2150652
+    },
+    {
+      "id": "dublin-7-merrion-square-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Dublin",
+      "gameCityId": "dublin",
+      "mediaSlug": "dublin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/final/dublin-7-merrion-square-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/native/dublin-7-merrion-square-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/dublin/20261012-full/dublin-7-merrion-square-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-7-merrion-square-ilta-intro-v1.png",
+      "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Dublin bluehour. Camera standing on east-side MerrionSquare pavement looking along the south Georgian residential house row, diagonal rhythm of three-and-four-storey old redbrick townhouses with grey sash windows, plain colored doors and granite entrance steps, ordinary black iron front railings. Warm modest room lights and unadorned old-style streetlamps, damp pavement with natural faint reflections. Two small distant people from behind, faces unreadable. Keep centralparkstatues,streetart,plaques,doorbells withnames,housenumbers,museums and LeinsterHouse entirelyoutofframe. No shops,food,cars,bicycles or logos. Real subtleIrishbluehour, restrained greyblue/redbrick palette, no spectacular lighting.",
+      "sources": [
+        {
+          "url": "https://www.visitdublin.com/merrion-square",
+          "readFacts": "Three sidesofMerrionSquarelinedwithGeorgianhouses. Existingplaques/statues/artdisplayexcludedfromframe."
+        }
+      ],
+      "caption": "Merrion Squaren vanhoja taloja Dublinin iltavaloissa. Havainnekuva.",
+      "QA": {
+        "id": "dublin-7-merrion-square-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:26:00.145607+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: Georgian ordinary brick residential evening street, native near door/knocker/frame inspected without discernible lettering/number/logo; distant backs, photographic natural light.",
+        "detailCrops": [
+          "session-owner-review/slot7-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:26:10.001672+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+        "bytes": 2641625,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-7-merrion-square-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+            "bytes": 2641625,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-7-merrion-square-ilta-intro-v1.png?verify=north-5096bddc534f1ceb-1791829570001690000",
+            "http": 200,
+            "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+            "bytes": 2641625,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2641625
+    },
+    {
+      "id": "dublin-8-grand-canal-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Dublin",
+      "gameCityId": "dublin",
+      "mediaSlug": "dublin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/final/dublin-8-grand-canal-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/native/dublin-8-grand-canal-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/dublin/20261012-full/dublin-8-grand-canal-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-8-grand-canal-1873-intro-v1.png",
+      "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Exact year1873,Dublin,Ireland, Grand Canal at Portobello. PURE neutral black and white, no sepia. Camera standing on the NORTH-bank towpath EAST of Portobello Harbour looking EAST along the straight waterway. Same place,direction and composition as the supplied modern5-v2 reference: engineered narrow roughly10mwidecanal, two parallel built stone retainingbanks, near north-bank towpath lower-left into centerdistance, canal water lower-right/center, ordinary low Dublin redbrick and paleplaster terraced homes and chimneypots on the left, distant lowbrickbuildings and sparse grass/trees across thewater. Use reference ONLY to anchor canalwidth,banklayout and ordered anonymoushouse composition; generate a completely new historical1873 scene fromscratch, not recolor/retouch. Old neighborhood existed in18thcentury; citycanal works1773,Portobellocanal1790,harbour1801, housinglargescaleexpansionmid1860s establishedbefore1873. Restore rough earth/gravel towpath and period old stonebanks rather than currentasphalt; fewer smaller naturallyirregulartrees rather than currentmatureparkvegetation. One tiny distant wooden rowingskiff,no engines; two tinydistantadults seenfrombehind in1873longcoats, no identifiablefaces. Exclude allmodern bridges/current1936RobertEmmetBridge, motorboats(bargeengines1911onward), passengerliner(servicewithdrawn1852), modernindustrialorhighrisebuildings, electriclamps, wires, bicycles,cars,roadmarkings,modernrails,streetbenches,signs,satellite equipment,plasticobjects,military,statues,artworks,lettering,house numbers. No exactclaim about individual streetaddressfacades. Soft overcast daylight,1870sglassplatephotofeel,finegrain,mildopticalvignette,moderatecontrast,notpainted,notCGI.",
+      "sources": [
+        {
+          "url": "https://archive.waterwaysireland.org/history-of-the-waterways/9/the-history-of-the-grand-canal",
+          "readFacts": "WaterwaysIrelandoperatorarchive:cityworks1773,CircularLineDublincompletedtoPortobello1790,canaltoShannon1803-1804,passengerboatswithdrawn1852,bargeenginesinstalled1911onward.1873canal/towpath existed,nomotors orpassengerliner."
+        },
+        {
+          "url": "https://www.dublincity.ie/sites/default/files/2022-06/portobello-walking-trail-map-guide-2021-003.pdf",
+          "readFacts": "CityCouncil/PortobelloResidents2021guide:Harbour1801,GrandCanalHotel1807,canalcompleted1804,originalbridge1790rebuilt1936.1873frameexcludesbridgesandbuildings,currentmodernrailingsandstreetfurniture. CircularLinecompletiondiffersacrosssources1791vs1796;doesnotaffect1873existence,nofalsepreciseclaimincaption. CityCouncilguide:Portobellobeganasan18thcenturysuburb;mid1860sPleasureGardens/EmorvilleclosureenabledVictorianredbrickhousinglargescaledevelopmentbefore1873."
+        }
+      ],
+      "caption": "Grand Canal Portobellon kohdalla Dublinissa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "dublin-8-grand-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:26:00.231981+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 urban canal, same5-v2 narrow bank/terrace viewpoint; native quay/period rear-view people/wooden rowing skiff inspected, earth towpath, no engines or modern bridge/electric/street equipment; two read operator/city historical sources support pre1873 canal/suburb.",
+        "detailCrops": [
+          "session-owner-review/slot8-quay-boat-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:26:12.654153+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+        "bytes": 2740162,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-8-grand-canal-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+            "bytes": 2740162,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-8-grand-canal-1873-intro-v1.png?verify=north-440045b53013b26c-1791829572654169000",
+            "http": 200,
+            "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+            "bytes": 2740162,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2740162
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "dublin",
+    "gameCityId": "dublin",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/sources.json"
+    ],
+    "sourceManifestSha256": "feb7f226a07357d05c87bde02046f9e7588ea74e86ab4fc63c16bf5658132d7a",
+    "assets": [
+      {
+        "id": "dublin-4-stoneybatter-arki-intro-v1",
+        "slot": 4,
+        "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Asuinkadun kulunut tiili, rappaus, kasvit ja kostea päällyste näyttävät luonnollisilta. Kolme pientä aikuista näkyy selin. Lähiovet ja seinät ovat ilman havaittavaa kirjoitusta, numeroita, logoja tai brändikuvioita.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset molemmista lähiovista/seinäpinnoista ja ihmisistä tarkastettu.",
+          "Tiilien laasti, rappauksen kuluma, lehtiasennot ja kasvien haarat vaihtelevat ilman leimakuviota; katugeometria ja varjot yhtenäisiä.",
+          "Ovet, laitteet ja ruukut ovat geneerisiä ilman tunnuksia. Kasvot eivät näy; ei ruokaa, mainoksia tai ajoneuvoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/4-left-door-wall.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/4-right-door-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/4-people.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2902986,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "dublin-5-grand-canal-intro-v2",
+        "slot": 5,
+        "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uuden v2:n kapea rakennettu kaupunkikanava, kivirannat, talot ja veden heijastukset ovat uskottavia. Pienissä ihmisissä ei erotu tunnistettavia kasvoja. Kanavan suunta ja rantamuuri vastaavat1873-paria; ei kirjoitusta, numeroita tai logoja havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset ihmisistä/taloista, vastarannan kivestä/puista, vedestä/lähirannasta sekä pienestä vaaleasta seinäkohdasta tarkastettu.",
+          "Kanava on selvästi kivireunainen ja kaupunkimittakaavainen; rantojen pakopisteet ja talojen mittasuhteet yhtenäisiä.",
+          "Kasvien oksat/lehtiasennot, muurien kivet ja veden epäsäännölliset heijastukset luonnollisia ilman leimaa. Vastarannan pieni vaalea seinäkohta ei muodosta havaittavaa kirjain-/numeroriviä tai tunnusta.",
+          "Kaksi ihmistä on hyvin pieniä ilman tunnistettavaa kasvoa. Slot8:n kanssa polku/talot vasemmalla ja kanava keskellä/oikealla. Ei modernia tunnistettavaa suunnitteluteosta, ruokaa tai mainosta.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/5-people-houses.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/5-far-stone-trees.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/5-water-bank.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/5-white-wall-detail.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2914599,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "dublin-6-patrickinpaiva-intro-v1",
+        "slot": 6,
+        "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivisen etualan aikuisen miehen iho, kasvot ja hiukset ovat uskottavia. Vaatetus on geneeristä nykymuotia, eikä tunnistettavaa brändikuviota havaittu. Väkijoukko näkyy ylävartaloina ilman ruokaa tai jalkineita.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, oikeanpuoleisesta näkyvästä kädestä ja vasemman reunan kankaasta tarkastettu.",
+          "Ihon tekstuuri, pisamat, hampaat, korva ja hiukset ovat kameramaisia ilman muovisuutta. Taipunut käsi ja pieni koru ovat anatomisesti uskottavia.",
+          "Vaatteet, asusteet ja kangaskuosit ovat geneerisiä ilman logoa, kirjoitusta tai tunnistettavaa brändikuviota.",
+          "Kaikki näkyvät henkilöt ovat aikuisia ja ylävartaloina tai muiden peittämiä. Ei ruokaa, juoma-astioita, jalkineita, leprechaun-asua tai tunnuskuvioita.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/6-right-hand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/6-left-fabric.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2150652,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "dublin-7-merrion-square-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Iltakuvan tiilijulkisivut, perinteiset ovikehykset, puut ja märän kävelytien valot ovat uskottavia. Kaksi pientä kävelijää näkyy selin. Ovien kulumat ja metalliosat eivät muodosta havaittavaa kirjoitusta, numeroita tai logoja.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan ovesta/kivikehyksestä, keskialueen ovesta ja ihmisistä tarkastettu.",
+          "Ovikehysten tavalliset historialliset muodot ilman nimettyä taideaihetta tai kirjoitusta; puupaneelien pienet vaaleat kohdat näyttävät epäsäännölliseltä kulumalta.",
+          "Lehdet, paljaat oksat, tiilet ja kiveyksen kosteus vaihtelevat luonnollisesti; valot ja heijastukset yhtenäisiä.",
+          "Kävelijät selin ilman kasvoja. Ei ruokaa, logoja, nimilaattoja, mainoksia tai ajoneuvoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/7-front-door-stone.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/7-middle-door.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/7-people.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2641625,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "dublin-8-grand-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on näkyvästi neutraali mustavalkoinen ilman sepiaa. Kaupunkikanavan suunta ja kivirantojen/talojen järjestys vastaavat slot5v2:tä. Maapolku, pienemmät puut ja periodiaikuiset sekä soutuvene sopivat historialliseen kehykseen; myöhemmät laitteet puuttuvat.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset ihmisistä/soutuveneestä, vastarannan pienestä tummasta muodosta, taloista/kivistä ja vedestä/lähirannasta tarkastettu.",
+          "Slot5v2:n kanssa sama suunta: polku ja tavalliset talot vasemmalla, suoraviivainen kivireunainen kanava keskellä/oikealla ja matalat talot taustalla. Nykyinen asfaltti korvattu maa-/sorapinnalla ja puusto on pienempää.",
+          "Kaksi vasemmanpuoleista periodiaikuista ja soutaja ovat hyvin pieniä, selin, ilman kasvojen tunnistettavuutta. Soutuvene, airot ja henkilö ovat mittasuhteiltaan uskottavia.",
+          "Vastarannan pieni tumma puu-/juurimuodon kaltainen kohta tarkastettu natiivisti; siitä ei erotu kirjoitusta, tunnusta, tunnistettavaa kasvoa tai modernia laitetta.",
+          "Waterways Irelandin1773/1790kanavatiedot,1852matkustajaliikenteen päättyminen ja1911moottorit sekä Dublin City Councilin Portobello-historia luettu tuottajan paketista.1873-kehyksestä puuttuvat nykyiset sillat/1936Robert Emmet Bridge, moottoriveneet, matkustajalaiva, sähkö, johdot, autot, pyörät, moderni katukalusto ja suojatut nykyteokset.",
+          "Ei tekstiä, logoja tai näkyvää sävytystä. Lähteiden tarkkojen valmistumispäivien eroa ei siirretty kuvatekstin väitteeksi. Tämä on lähdepohjainen rekonstruktio, ei yksittäisten osoitejulkisivujen tarkka1873mittaus. Rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/8-people-skiff.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/8-right-bank-object.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/8-houses-stone.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/dublin/crops/8-water-bank.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2740162,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://archive.waterwaysireland.org/history-of-the-waterways/9/the-history-of-the-grand-canal",
+          "https://www.dublincity.ie/sites/default/files/2022-06/portobello-walking-trail-map-guide-2021-003.pdf"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:54:00.369989+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/manifest.json",
+      "manifestSHA256": "feb7f226a07357d05c87bde02046f9e7588ea74e86ab4fc63c16bf5658132d7a",
+      "reviewedAssetIds": [
+        "dublin-4-stoneybatter-arki-intro-v1",
+        "dublin-5-grand-canal-intro-v2",
+        "dublin-6-patrickinpaiva-intro-v1",
+        "dublin-7-merrion-square-ilta-intro-v1",
+        "dublin-8-grand-canal-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Historiallinen kanavakuva on havainnollistava rekonstruktio, ei1873 julkisivujen tarkka kartoitus.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "dublin",
+    "verifiedAt": "2026-10-12T18:56:57.583869+00:00",
+    "assets": [
+      {
+        "id": "dublin-4-stoneybatter-arki-intro-v1",
+        "slot": 4,
+        "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+        "bytes": 2902986,
+        "verifiedAt": "2026-10-12T18:56:54.553019+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-4-stoneybatter-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+            "bytes": 2902986,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-4-stoneybatter-arki-intro-v1.png?delivery-verify=1fe32e7a73a080bb-1791831414553011000",
+            "http": 200,
+            "sha256": "1fe32e7a73a080bbca08b37531b4c65f3cfbcc732d52ff6b8cc54fa8dbe0908f",
+            "bytes": 2902986,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dublin-5-grand-canal-intro-v2",
+        "slot": 5,
+        "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+        "bytes": 2914599,
+        "verifiedAt": "2026-10-12T18:56:54.553900+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-5-grand-canal-intro-v2.png",
+            "http": 200,
+            "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+            "bytes": 2914599,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-5-grand-canal-intro-v2.png?delivery-verify=4b7d7275f22c35dd-1791831414553895000",
+            "http": 200,
+            "sha256": "4b7d7275f22c35dd5e9e46a13f43cf4291ef87e556a9a495f466839b0cde0389",
+            "bytes": 2914599,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dublin-6-patrickinpaiva-intro-v1",
+        "slot": 6,
+        "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+        "bytes": 2150652,
+        "verifiedAt": "2026-10-12T18:56:54.554684+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-6-patrickinpaiva-intro-v1.png",
+            "http": 200,
+            "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+            "bytes": 2150652,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-6-patrickinpaiva-intro-v1.png?delivery-verify=3cf85cecc8fa2473-1791831414554682000",
+            "http": 200,
+            "sha256": "3cf85cecc8fa247307062c7cfa40b64d22f5ecb720c7c81bd5b81af06f2134ac",
+            "bytes": 2150652,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dublin-7-merrion-square-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+        "bytes": 2641625,
+        "verifiedAt": "2026-10-12T18:56:55.977607+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-7-merrion-square-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+            "bytes": 2641625,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-7-merrion-square-ilta-intro-v1.png?delivery-verify=5096bddc534f1ceb-1791831415977600000",
+            "http": 200,
+            "sha256": "5096bddc534f1ceb27b2c2d89a0e653c38ab3f4157adaf7b9f56bd111f15c5f7",
+            "bytes": 2641625,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "dublin-8-grand-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+        "bytes": 2740162,
+        "verifiedAt": "2026-10-12T18:56:56.245657+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-8-grand-canal-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+            "bytes": 2740162,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/dublin/20261012-full/dublin-8-grand-canal-1873-intro-v1.png?delivery-verify=440045b53013b26c-1791831416245643000",
+            "http": 200,
+            "sha256": "440045b53013b26c6cdb8e8343e882466c76bc42ea295e95e663cbdaba383dc6",
+            "bytes": 2740162,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/dublin/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.764421+00:00"
+}

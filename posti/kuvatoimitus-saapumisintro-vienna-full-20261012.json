@@ -1,0 +1,859 @@
+{
+  "cityName": "Wien",
+  "gameCityId": "wien",
+  "mediaSlug": "vienna",
+  "createdAt": "2026-10-12T18:10:56.268495+00:00",
+  "status": "awaitingSessionOwnerQA",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "generationRequestsIssued": 6,
+  "assets": [
+    {
+      "id": "vienna-intro-4",
+      "slot": 4,
+      "cityName": "Wien",
+      "gameCityId": "wien",
+      "mediaSlug": "vienna",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png",
+      "generationPrompt": "Generate ONE wholly new photorealistic-natural fictional illustrative city-intro image exactly1536x1024 landscape opaque RGB sRGB. Natural real-camera optics/light, authentic subdued colours, material irregularity and coherent perspective. No HDR, CGI, painting, cinematic overcolour, stamped/cloned nature, plastic skin. ZERO text, letters, numerals, address signs, plaques, posters, lettering, labels, logos, brands, brand stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. Only celebration6 permits invented adult foreground faces; other people small/far/from behind. Vienna Servitenviertel today, ordinary quiet residential side lane near Servitengasse, preserved anonymous pale cream/ochre three-storey townhouses and modest paving. Two small adults far along the lane seen from behind walking together beside a plain unbranded bicycle; one resident farther away waters a simple potted plant, face hidden. Eye-level35mm candid camera oblique down lane, soft midmorning light. Houses show plain windows and walls, no storefronts, signs, addresses, notices, plaques, door lettering, parked cars or plates. No church, palaces, statues, decorative artworks, famous architecture or food. Believable ordinary Viennese daily life, relaxed pace.",
+      "sources": [
+        {
+          "url": "https://www.wien.info/en/dine-drink/markets/servitenviertel-358086",
+          "publisher": "Vienna Tourist Board",
+          "readFacts": [
+            "Servitenviertel has preserved houses and picturesque lanes with a village-like atmosphere; ordinary residential fabric depicted without named shops/church."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Servitenviertelin arkea Wienissä. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: ordinary lane with rear-facing walkers and plant-watering resident whose face hidden/downward, no signs/address/logos/bike branding; authentic mild light and irregular plants.",
+          "reviewedAt": "2026-10-12T18:04:13.309888+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:21.978304+00:00",
+          "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: ordinary lane and adults from behind/downward with no clear faces, watering plants and unmarked bicycle. No text/logos/address plaques; natural materials.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:24:38.340030+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+        "bytes": 2865395,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+            "bytes": 2865395,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png?t=78e88ee5378e5b94",
+            "http": 200,
+            "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+            "bytes": 2865395,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/vienna-4-servitenviertel-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/native/vienna-4-servitenviertel-arki-intro-v1-native.png",
+      "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+      "bytes": 2865395,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "vienna-intro-5",
+      "slot": 5,
+      "cityName": "Wien",
+      "gameCityId": "wien",
+      "mediaSlug": "vienna",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png",
+      "generationPrompt": "Generate ONE wholly new photorealistic-natural fictional illustrative city-intro image exactly1536x1024 landscape opaque RGB sRGB. Natural real-camera optics/light, authentic subdued colours, material irregularity and coherent perspective. No HDR, CGI, painting, cinematic overcolour, stamped/cloned nature, plastic skin. ZERO text, letters, numerals, address signs, plaques, posters, lettering, labels, logos, brands, brand stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. Only celebration6 permits invented adult foreground faces; other people small/far/from behind. Vienna Alte Donau today, quiet reed-lined bank of Upper Old Danube in early morning.35mm camera low near natural shore, irregular reed stems in lower-left, one spreading willow beside left bank, broad calm muted blue-grey water reflecting a few broken clouds and low tree line on far shore. Gentle sparse ripples, small near-shore water plants, occasional natural fallen branch; no symmetrical repeats or perfect mirror. Frame tightly excludes buildings, bridges, towers, public art, signs, boats, rails, piers, people and wildlife. Soft diffused dawn light, restrained real camera greens/greys, ecological lake habitat rather than landmark panorama.",
+      "sources": [
+        {
+          "url": "https://www.wien.gv.at/en/environment/old-danube-facts",
+          "publisher": "City of Vienna Water Management",
+          "readFacts": [
+            "Alte Donau is former Danube branch with two basins; reed zones and lakeshore vegetation support habitat.",
+            "Depiction is current lake only, not1873: historical Danube regulation unsuitable for exact old lake match."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Alte Donaun ruoikkorantaa Wienissä. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: organic reeds/willow with irregular stems, believable lake reflections/ripples and subdued dawn light, no buildings/text/signs/logos/boats/wildlife.",
+          "reviewedAt": "2026-10-12T18:05:31.888147+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:22.018059+00:00",
+          "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: undeveloped reed/willow bank and water, irregular reeds and branches, no people/structures/text/logo. Natural muted available light.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:24:40.758755+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+        "bytes": 2758262,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png",
+            "http": 200,
+            "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+            "bytes": 2758262,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png?t=35720f5d49ca6ca9",
+            "http": 200,
+            "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+            "bytes": 2758262,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/vienna-5-alte-donau-ruoikko-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/native/vienna-5-alte-donau-ruoikko-intro-v1-native.png",
+      "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+      "bytes": 2758262,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "vienna-intro-6",
+      "slot": 6,
+      "cityName": "Wien",
+      "gameCityId": "wien",
+      "mediaSlug": "vienna",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png",
+      "generationPrompt": "Generate ONE wholly new photorealistic-natural fictional illustrative city-intro image exactly1536x1024 landscape opaque RGB sRGB. Natural real-camera optics/light, authentic subdued colours, material irregularity and coherent perspective. No HDR, CGI, painting, cinematic overcolour, stamped/cloned nature, plastic skin. ZERO text, letters, numerals, address signs, plaques, posters, lettering, labels, logos, brands, brand stripes/patterns, watermarks, frames, protected artworks or named contemporary architect designs. No food. Only celebration6 permits invented adult foreground faces; other people small/far/from behind. Joyful informal contemporary young-adult outdoor summer music gathering in Green Prater in Vienna, Austrian local adults aged22-30, leafy poplar trees and a meadow softly blurred behind. One invented adult woman in left foreground with curly brown hair, warm spontaneous smile and natural skin texture, wearing a plain pale pink cotton top under a plain light-blue denim jacket without labels or patterns. Friends behind are various local young adults in current fashionable unbranded solid-colour casual clothes, casually clapping/talking, no staged line or influencer glamour. Tight chest-up35mm candid composition; ALL people upper bodies only, every foot, shoe and footwear fully excluded from whole frame. Natural late afternoon daylight, believable hands and hair. No food/drinks, banners, stages with lettering, instruments, carnival rides, Ferris wheel, logos, signs, brands, art sculptures or designed modern architecture.",
+      "sources": [
+        {
+          "url": "https://www.wien.info/en/see-do/prater?pp=1",
+          "publisher": "Vienna Tourist Board",
+          "readFacts": [
+            "Green Prater has poplars, meadows and dense undergrowth around Hauptallee; used for leisure."
+          ],
+          "readMethod": "Source search-index passage read",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Nuorten aikuisten kesäilta Wienin Praterissa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: young fictional adults, genuine natural skin/hair, joyful clapping, plain denim jacket and solid tops with no logos; all crowd upper bodies, zero footwear/text/food.",
+          "reviewedAt": "2026-10-12T18:06:23.722681+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:22.057705+00:00",
+          "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: fictional young adult foreground and joyful adult park crowd, plain denim/solid clothes, no logos/text/food. Every shoe/foot outside frame, natural skin/hands.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:24:43.195479+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+        "bytes": 2376990,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+            "bytes": 2376990,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png?t=8a777868b7bc5680",
+            "http": 200,
+            "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+            "bytes": 2376990,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/vienna-6-prater-kesajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/native/vienna-6-prater-kesajuhla-intro-v1-native.png",
+      "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+      "bytes": 2376990,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "vienna-intro-7",
+      "slot": 7,
+      "attempt": 2,
+      "cityName": "Wien",
+      "gameCityId": "wien",
+      "mediaSlug": "vienna",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png",
+      "generationPrompt": "EMPTY ARCHITECTURAL COURTYARD ONLY. No people, humans, faces, heads, bodies, silhouettes, figures, mannequins or statues ANYWHERE. The courtyard is completely deserted and the windows are empty. Generate ONE completely NEW1536x1024 landscape opaque RGB sRGB photograph-like illustrative image of the old Amerlinghaus courtyard in Spittelberg Vienna today at blue hour. View from inside opposite corner toward plain old first-floor wooden Pawlatsche gallery; modest pale weathered stucco, back and right gallery railing, worn steep stone stairs rise at left midground, an old irregular vine trained overhead, uneven stone paving covering foreground. Only bare architecture, natural vine, stone and empty space. A few plain windows have modest warm indoor light, no inhabitants visible. Natural real-camera35mm optics and restrained cool dusk/warm window contrast, quiet unposed architectural photograph, not CGI or painting, no HDR. There are NO people even distant or reflected and no portraits/art anywhere. No cafes, tables, food, chairs, advertising, written notices, address plaques, museum signs, text, letters, numbers, brand marks/logos, watermarks, borders, contemporary named architecture or artworks. The courtyard is empty. Coherent old house geometry around1700fabric, vine leaves irregular. This is a new sourced illustrative reconstruction, never an actual location photo.",
+      "sources": [
+        {
+          "url": "https://www.immuseum.at/objekte/das-amerlinghaus",
+          "publisher": "Im Museum cultural heritage project; primary interview with Neubau museum director Monika Grussmann",
+          "readFacts": [
+            "Amerlinghaus built around1700; Friedrich von Amerling born here1803.",
+            "Courtyard has a200year old vine and steep stone stairs to first-floor wooden gallery (Pawlatsche).",
+            "Major Spittelberg revitalisation follows1975occupation; modern cultural-centre fixtures, museum signs and electric lights excluded from1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.wien.info/en/dine-drink/markets/spittelberg-wining-dining-359532",
+          "publisher": "Vienna Tourist Board",
+          "readFacts": [
+            "Spittelberg preserves Biedermeier buildings and narrow lanes; Amerlingbeisl courtyard is an old Biedermeier garden at Stiftgasse8.",
+            "Modern bars/gallery/studio signage and outdoor hospitality furnishings not projected into1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://magazin.wienmuseum.at/50-jahre-besetzung-amerlinghaus",
+          "publisher": "Wien Museum",
+          "readFacts": [
+            "Spittelberg1970s demolition plan was opposed; historic Grunderzeit and older houses preserved rather than replaced.",
+            "1975occupation led to Amerlinghaus cultural-centre usage; exclude new centre fixtures from1873."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Spittelbergin Amerlinghausin pihan iltavaloa Wienissä. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: completely empty courtyard, no faces/people/labels/signage; old stairs/gallery/vine and restrained natural blue hour, no protected art. Single retry corrected added people.",
+          "reviewedAt": "2026-10-12T18:09:38.655404+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:24:30.972923+00:00",
+          "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: empty historic courtyard, steep stone stair left, wooden gallery and vine, generic warm windows. No faces, signage, numerals or brands; natural subdued evening.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:24:46.043164+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+        "bytes": 2731693,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png",
+            "http": 200,
+            "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+            "bytes": 2731693,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png?t=000d0a0ff2c963d1",
+            "http": 200,
+            "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+            "bytes": 2731693,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/vienna-7-amerling-piha-ilta-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/native/vienna-7-amerling-piha-ilta-intro-v2-native.png",
+      "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+      "bytes": 2731693,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "vienna-intro-8",
+      "slot": 8,
+      "cityName": "Wien",
+      "gameCityId": "wien",
+      "mediaSlug": "vienna",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png",
+      "generationPrompt": "EMPTY ARCHITECTURAL COURTYARD IN1873. NO PEOPLE, HUMAN FIGURES, FACES, PORTRAITS OR STATUES ANYWHERE, including windows. Generate ONE completely new1536x1024 landscape opaque RGB sRGB image, exact year1873, PURE NEUTRAL BLACK AND WHITE every pixel grey, no tint/sepia. Old Amerlinghaus courtyard at Spittelberg Vienna, built around1700 and existing1803. SAME camera at opposite courtyard corner looking toward old wooden first-floor Pawlatsche gallery as modern7-v2. Composition geometry MUST stay: a steep straight worn stone stair occupies leftmost quarter, enters at bottom-left and rises to small landing around x18percent/y38percent; a plain wooden gallery with solid unornamented plank balustrade extends from landing across back wall at y40percent and continues along right wall in perspective. An irregular vine trunk rises just right of staircase x26percent then vine branches cross overhead toward upper-right. Ground-floor back wall has one plain dark wooden door at x44percent/y58percent, and a simple arched passage at x56percent/y55percent continuing into a dim rear corridor. Modest plain windows around back/right stucco walls. All these walls/roof footprints retain same viewpoint and proportions, not a different generic courtyard. Broad uneven stone paving fills lower half. Vine was already established by1873, conservatively thinner than today; no modern trellis material. Native mild daylight, authentic nineteenth-century plate photograph feel with fine grain and soft contrast, no artificial border. Empty quiet1700house fabric, no1875+additions or modern cultural-centre/museum fittings (centre only1975 onward). No electric light/window glow, wires, plastic piping, modern fixtures, plaques, painted text, posters, signs, address numbers, labels, café furnishings, food/tables, modern objects, lettering, logos, branded patterns, watermarks or frames. No CGI/HDR/painting, believable unique wood and stone texture. This is a sourced illustrative reconstruction, not an actual archive photograph.",
+      "sources": [
+        {
+          "url": "https://www.immuseum.at/objekte/das-amerlinghaus",
+          "publisher": "Im Museum cultural heritage project; primary interview with Neubau museum director Monika Grussmann",
+          "readFacts": [
+            "Amerlinghaus built around1700; Friedrich von Amerling born here1803.",
+            "Courtyard has a200year old vine and steep stone stairs to first-floor wooden gallery (Pawlatsche).",
+            "Major Spittelberg revitalisation follows1975occupation; modern cultural-centre fixtures, museum signs and electric lights excluded from1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.wien.info/en/dine-drink/markets/spittelberg-wining-dining-359532",
+          "publisher": "Vienna Tourist Board",
+          "readFacts": [
+            "Spittelberg preserves Biedermeier buildings and narrow lanes; Amerlingbeisl courtyard is an old Biedermeier garden at Stiftgasse8.",
+            "Modern bars/gallery/studio signage and outdoor hospitality furnishings not projected into1873."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://magazin.wienmuseum.at/50-jahre-besetzung-amerlinghaus",
+          "publisher": "Wien Museum",
+          "readFacts": [
+            "Spittelberg1970s demolition plan was opposed; historic Grunderzeit and older houses preserved rather than replaced.",
+            "1975occupation led to Amerlinghaus cultural-centre usage; exclude new centre fixtures from1873."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Spittelbergin Amerlinghausin piha vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: empty1873courtyard, neutral monochrome, same left-stair/back-right gallery/central arch view anchors as modern7v2; no electric fixtures, modern centre signs, faces/text/art.",
+          "reviewedAt": "2026-10-12T18:10:56.046216+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:24:30.998469+00:00",
+          "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame and modern7-v2 pair: same courtyard/stair/gallery/vine position, visually neutral monochrome, no people or post1975culture-centre fixtures, modern lights or signs. Museum-director primary account1700/1803 and municipal cultural sources read before1873call. Different individual vine branches are reconstructed.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:24:49.476684+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+        "bytes": 3004892,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png",
+            "http": 200,
+            "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+            "bytes": 3004892,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png?t=df078dace0f3920f",
+            "http": 200,
+            "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+            "bytes": 3004892,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/vienna-8-amerling1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/native/vienna-8-amerling1873-intro-v1-native.png",
+      "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+      "bytes": 3004892,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    }
+  ],
+  "omittedItems": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "productionComplete": true,
+  "successfulImageReturns": 6,
+  "rejectedCandidates": [
+    {
+      "slot": 7,
+      "reason": "Close foreground group with visible faces; forbidden outside slot6. One whole-new required correction pending.",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/native/vienna-7-amerling-piha-ilta-intro-v1-native.png",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/vienna-7-amerling-piha-ilta-intro-v1.png",
+      "sha256": "44b2614a740b84a5fb46a0c3aa0fa5e76197b67a7dc2fbbc100d7fac72bad332"
+    }
+  ],
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "vienna",
+    "gameCityId": "wien",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/assignment.json",
+      "https://www.immuseum.at/objekte/das-amerlinghaus",
+      "https://magazin.wienmuseum.at/50-jahre-besetzung-amerlinghaus"
+    ],
+    "assets": [
+      {
+        "id": "vienna-intro-4",
+        "slot": 4,
+        "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja pelitoimitus pysyvät erillisinä HOLD-portteina.",
+        "observations": [
+          "Koko kehys ja molempien julkisivujen, lehtien, kukkien, ovien, pyörän ja ihmisten natiiviyksityiskohdat tarkastettu. Vaihtelevat lehdet ja kukat, rappaus, piharuukut ja epäsäännölliset katukivet näyttävät luonnollisilta. Valo ja perspektiivi ovat yhtenäiset.",
+          "Kaksi kävelijää pyörän kanssa ovat pieniä selin olevia hahmoja. Kasveja kasteleva hahmo nähdään taka-/sivusuunnasta pää alaspäin; kasvojen yksityiskohdat eivät näy. Näkyvät kädet ja kastelukannun käyttö ovat uskottavat. Pyörässä, kannussa, laukussa, vaatteissa ja seinissä ei erotu tekstiä, logoja, osoitenumeroita tai brändikuvioita. Ei ruokaa tai eläimiä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot4-left-foliage-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot4-people-bike-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot4-right-facades.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vienna-intro-5",
+        "slot": 5,
+        "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja pelitoimitus pysyvät erillisinä HOLD-portteina.",
+        "observations": [
+          "Koko nykyinen Alte Donau -luontonäkymä sekä pajun kuori/oksat/lehdet, ruoko, lähipinnan veden kasvit ja kaukainen puusto tarkastettu natiivikoossa. Lehdistö ja ruoko vaihtelevat luonnollisesti ilman leimattua kuviota. Heijastukset katkeavat pienissä aalloissa ja vastaavat näkyvää puustoa ja pilviä.",
+          "Valo ja perspektiivi ovat johdonmukaiset. Ei ihmisiä, eläimiä, veneitä, kylttejä, rakennuksia, logoja tai ruokaa. Producer brief nimenomaisesti erottaa tämän nykyisen järvinäkymän vuoden1873 parista; Wienin varsinainen historiallinen pari on7/8.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot5-willow-reeds.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot5-water-far-shore.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vienna-intro-6",
+        "slot": 6,
+        "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja pelitoimitus pysyvät erillisinä HOLD-portteina.",
+        "observations": [
+          "Fiktiivinen aikuinen nainen etualalla Praterin rennossa kesäkokoontumisessa, geneerinen nykyajan vaaleanpunainen paita ja farkkutakki. Luonnollinen ihorakenne, silmät, hampaat, hiukset, hartiat ja vaatetuksen taitokset. Kasvojen ja vartaloiden valo sopii taustan päivänvaloon.",
+          "Keskimmäisen miehen ja oikean naisen kasvoja, aurinkolaseja ja taputtavia käsiä tarkastettu natiivikoossa. Näkyvissä sormissa, peukaloissa ja nivelissä ei selvää lisäsormi- tai sulautumisvirhettä. Aurinkolasien geneerisissä kehyksissä tai farkkutakin nappien/ompeleiden kohdalla ei erotu logoa tai tekstiä. Kaikki jalkineet ja jalkaterät jäävät ylävartalorajauksen ulkopuolelle. Ei ruokaa, juomia tai brändikuvioita.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot6-foreground-face-denim.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot6-center-face-glasses-hands.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot6-right-face-hands.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vienna-intro-7",
+        "slot": 7,
+        "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja pelitoimitus pysyvät erillisinä HOLD-portteina.",
+        "observations": [
+          "Valittu v2 tarkastettu kokonaan ja pihan portaiden, köynnösrungon ja lehtien sekä puugallerian, ovien, ikkunoiden, holvin ja kivipinnan natiivirajauksina. Piha ja ikkunat ovat tyhjät. Ei näkyviä ihmisiä, muotokuvia, tekstiä, logoja, opasteita, kahvilakalusteita tai ruokaa.",
+          "Köynnöksen uurteinen kuori ja vaihtelevat lehdet, kuluneet portaat, puukaiteet ja kivipinta näyttävät luonnollisilta. Gallerian syvyys, portaiden liittyminen ylätasoon ja holvi ovat johdonmukaiset. Lämmin nykyinen valaistus ja sininen ilta sopivat yhteen.",
+          "Briefin historiallinen pari on7/8: samasta vastakkaisesta pihankulmasta kohti vasemman reunan portaita ja taka-/oikean seinän Pawlatsche-galleriaa. Puiden oksien, ikkuna- ja oviyksityiskohtien rekonstruktio on havainnollistava, ei mittatarkka arkkitehtuuritutkimus.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot7-stair-vine-bark.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot7-gallery-walls-arch.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vienna-intro-8",
+        "slot": 8,
+        "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja pelitoimitus pysyvät erillisinä HOLD-portteina.",
+        "observations": [
+          "Vuoden1873 kuva kokonaan ja portaiden, köynnöskuoren/lehtien, puugallerian, ikkunoiden/ovien, holvin ja kivipinnan natiivirajaukset tarkastettu. Visuaalinen yleisilme on neutraali mustavalkoinen ilman seepiaa tai värisävyä. RGB-kanavien numeerista nollatoleranssia ei aseteta eikä rasteria ole muunnettu.",
+          "Historiallinen pari on producer brief historicalCheck.modernPairSlot7, ei Alte Donau -slot5. Sama pihankulmasta katsottu suunta: portaat vasemmalla, köynnösrunko portaiden vieressä, puinen galleria taka- ja oikealla seinällä, alhaalla ovi ja holvikäytävä sekä kivinen avoin etuala. Geometrian perusrakenne ja katselusuunta täyttyvät; yksittäiset pintakulumat, lehtiasennot ja aukkojen mittasuhteet ovat lähteisiin perustuvan havainnollistuksen rajoissa.",
+          "Kaksi varsinaista lähdettä luettu: Im Museumin Neubau-museon johtajan ensikäden haastattelu tukee noin1700 rakennusta, Amerlingin syntymää1803, vanhaa köynnöstä, jyrkkiä kiviportaita ja ensimmäisen kerroksen Pawlatschea. Wien Museumin50 Jahre Besetzung Amerlinghaus -artikkeli vahvistaa1975 valtauksen, sen jälkeisen korjauksen ja1978 kulttuurikeskuksen avaamisen. Niihin liittyviä varusteita ei projisoida vuoteen1873.",
+          "Period exclusions täyttyvät: ei sähkövalaisimia tai valaistuja ikkunoita, johtoja, muoviputkia, kulttuurikeskuksen/museon kilpiä tai nykykalusteita, julisteita, opasteita, osoitenumeroita, kahvilapöytiä, ruokaa, muotokuvia, ihmisiä, autoja tai nykytaidetta. Kuori, lehdet, puu ja kivien pinta ovat luonnolliset.",
+          "Tarkkaa samasta pihasta otettua vuoden1873 valokuvaa ei producer briefissä ole. Vanha pihamuoto ja aikakausi ovat lähteisiin perustuva rekonstruktio, eivät arkistovalokuva tai mitattu dokumentointi. Köynnöksen olemassaolo1873 on nykyistä noin200 vuoden ikätietoa koskeva konservatiivinen päätelmä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot8-stair-vine-bark.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vienna/crops/slot8-gallery-walls-arch.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit ovat identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "historicalPairSlots": [
+      7,
+      8
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "reviewedAt": "2026-10-12T19:06:33.270939+00:00",
+    "sourceManifestSha256": "4e6246e6592b9099b9947cb96b240dcc886058917cbcf36285361ee8f737f6f7"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "vienna",
+    "verifiedAt": "2026-10-12T19:07:20.601589+00:00",
+    "assets": [
+      {
+        "id": "vienna-intro-4",
+        "slot": 4,
+        "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+        "bytes": 2865395,
+        "verifiedAt": "2026-10-12T19:07:18.596237+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+            "bytes": 2865395,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-4-servitenviertel-arki-intro-v1.png?delivery-verify=78e88ee5378e5b94-1791832038596233000",
+            "http": 200,
+            "sha256": "78e88ee5378e5b9456f634b388d8d2eec2afc16520d88b87efc42fe045340eb5",
+            "bytes": 2865395,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vienna-intro-5",
+        "slot": 5,
+        "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+        "bytes": 2758262,
+        "verifiedAt": "2026-10-12T19:07:18.596350+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png",
+            "http": 200,
+            "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+            "bytes": 2758262,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-5-alte-donau-ruoikko-intro-v1.png?delivery-verify=35720f5d49ca6ca9-1791832038596348000",
+            "http": 200,
+            "sha256": "35720f5d49ca6ca9691ba2a47cdd9f58deb359c73882382a85f85154e528f1fd",
+            "bytes": 2758262,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vienna-intro-6",
+        "slot": 6,
+        "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+        "bytes": 2376990,
+        "verifiedAt": "2026-10-12T19:07:18.596416+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+            "bytes": 2376990,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-6-prater-kesajuhla-intro-v1.png?delivery-verify=8a777868b7bc5680-1791832038596414000",
+            "http": 200,
+            "sha256": "8a777868b7bc5680ebbec96fbc1d05789016742616bc9cd50146d49e45d82488",
+            "bytes": 2376990,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vienna-intro-7",
+        "slot": 7,
+        "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+        "bytes": 2731693,
+        "verifiedAt": "2026-10-12T19:07:19.503188+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png",
+            "http": 200,
+            "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+            "bytes": 2731693,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-7-amerling-piha-ilta-intro-v2.png?delivery-verify=000d0a0ff2c963d1-1791832039503183000",
+            "http": 200,
+            "sha256": "000d0a0ff2c963d1e443763684255d5260bb682ab737c7422872bbb7d1a25c7a",
+            "bytes": 2731693,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vienna-intro-8",
+        "slot": 8,
+        "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+        "bytes": 3004892,
+        "verifiedAt": "2026-10-12T19:07:19.518975+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png",
+            "http": 200,
+            "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+            "bytes": 3004892,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261012-full/vienna-8-amerling1873-intro-v1.png?delivery-verify=df078dace0f3920f-1791832039518967000",
+            "http": 200,
+            "sha256": "df078dace0f3920f233620c692ee469491c42a842f3644f19a8d73846a2dc776",
+            "bytes": 3004892,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vienna/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.984023+00:00"
+}

@@ -1,0 +1,1302 @@
+{
+  "cityName": "Bukarest",
+  "gameCityId": "bukarest",
+  "mediaSlug": "bucharest",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "assets": [
+    {
+      "id": "bucharest-intro-4-v3",
+      "slot": 4,
+      "cityName": "Bukarest",
+      "gameCityId": "bukarest",
+      "mediaSlug": "bucharest",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/native/bucharest-4-cotroceni-kavely-intro-v3.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/final/bucharest-4-cotroceni-kavely-intro-v3.png",
+      "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+      "nativeSha256": "fc5be95b3b1505d30dec77193901645ce4b721994a64d1b9b7bd1e289a61eb3e",
+      "bytes": 3161796,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "generationSourcePath": "/Users/samireivinen/.codex/generated_images/01a13160-7e0e-7613-946e-1c259bf77bf0/exec-6af1f098-3db9-4368-aa42-1b66d4379974.png",
+      "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: one modern city arrival intro illustration, landscape 1536x1024, 3:2, opaque RGB sRGB PNG.\nPrimary request: a candid everyday walk in an anonymous residential setting inspired by Cotroceni, Bucharest, today. Create a completely new image from this written scene; no image editing or reference-image imitation.\nScene and framing: eye-level 35mm real-camera view along a quiet narrow pedestrian path under loosely interlocking mature linden and chestnut trees. The path runs beside the PLAIN SIDE WALLS of modest older one- and two-storey plaster homes and continuous low garden fences with ivy and shrubs. Only plain side walls are visible; the street-facing fronts and all entrances are completely outside the composition. An unobstructed worn grey walking surface leads into the distance. Show two small fictional adults far away, walking away from camera side by side in ordinary plain modern clothes. Their faces are not visible; their distant footwear is generic, unmarked and insignificant in scale.\nMaterials: subtly uneven pale cream and grey-beige plaster with sparse random hairline weathering, plain vertical iron garden fencing, irregular real leaves, unpatterned natural tree bark, a few scattered fallen leaves, modest lived-in gardens. All wall and fence surfaces are physically blank and uninterrupted. No gates or gateposts, doors, plaques, mailboxes, intercoms, decorative inscriptions, stickers, labels, maps, posters, notices or utility markings anywhere. No false blurred rectangles that suggest removed signs or addresses.\nLighting and photographic character: soft natural late-morning daylight filtered through foliage, mild broken shadows, restrained everyday colors, natural contrast and exposure, slight optical softness in the far distance, believable irregular textures. Quiet observational photograph taken by a person on a walk, neither theatrical nor staged.\nStrict exclusions throughout the entire image including every corner and the bottom edge: absolutely no writing, letters, digits, address numbers, signage, text-like marks, logos, brands, recognizable branded clothing or shoe designs, watermarks or borders. Absolutely no cars or other vehicles, bicycles, scooters, license plates, parking or roadway. No recognizable foreground faces. No monuments, palaces, churches, triumphal arches, landmark architecture, named modern artworks, sculptures or murals. No food. No HDR, CGI, render gloss, painterly surfaces, stamped or repeating bark/leaves, artificial texture patterns, exaggerated color grade or dramatic golden-hour glow. This is a present-day color scene; no historical pairing or black-and-white treatment. The invented composition does not claim a specific real street or landmark.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/prompts/slot4-v3.txt",
+      "actualCallPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/actual-call-1.json",
+      "caption": "Cotrocenin asuinympäristöä mukaileva arkinen kävelynäkymä. Havainnekuva.",
+      "sources": [
+        {
+          "url": "https://cotroceni.ro/despre-cotroceni/",
+          "publisher": "Cotroceni district website",
+          "reviewedAt": "2026-10-12T18:30:52.701993+00:00",
+          "readFacts": [
+            "Residential one- and two-storey houses",
+            "Ivy-covered garden walls and mature linden/chestnut crowns",
+            "Quiet ordinary walking environment"
+          ],
+          "application": "Anonymous modern residential atmosphere only; invented pedestrian side-wall composition, no exact geographic-view claim; excludes all named landmarks and address details."
+        }
+      ],
+      "QA": {
+        "worker": {
+          "reviewer": "dedicated Bukarest repair session",
+          "reviewedAt": "2026-10-12T18:32:16.902992+00:00",
+          "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+          "approvedForTechnicalDelivery": true,
+          "pass": true,
+          "fullFrameInspected": true,
+          "wholeFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "nativeDetailsInspected": true,
+          "allSurfaceQAPass": true,
+          "footwearBrandQAPass": true,
+          "bottomTextErrorQAPass": true,
+          "reviewMethod": "view_image original full frame and unscaled native crops",
+          "notes": "Whole frame and every native quadrant, centre walkers, right bark/fence and complete bottom strip inspected. Continuous blank plaster side wall and uninterrupted garden fence; no doors, gateposts, plaques, signs, blurred sign rectangles, vehicles, text, numbers, logos or watermark. Two distant fictional adults viewed from behind, plain unbranded clothes and tiny footwear; no visible faces. Natural irregular plaster cracks, foliage, bark and scattered leaves; ordinary filtered daylight, no HDR/CGI appearance. Generic invented setting only; no named modern works or geographic landmark claim. Present-day color slot4 is independent of historical pair.",
+          "cropObservations": {
+            "top-left": "Blank wall, gutter/eave and random fine cracking; no markings or sign/door locations.",
+            "top-right": "Irregular leaves and several distinct tree trunks; no stamped/repeating organic pattern or carved writing.",
+            "bottom-left": "Natural wall base and plants, no lettering.",
+            "bottom-right": "Continuous plain vertical garden fence and irregular stone base; no badges or small labels.",
+            "center-walkers": "Two small rear-facing adults, plain clothes and generic footwear; no facial or brand detail.",
+            "bottom-strip": "Grey path, random leaves/shadows and wall/fence bases; no text-like mark or watermark anywhere across entire lower edge."
+          },
+          "ownerEditorialAcceptance": "pending",
+          "independentReview": "pending"
+        },
+        "rootSessionReview": {
+          "reviewer": "dedicated Bukarest repair session",
+          "reviewedAt": "2026-10-12T18:32:16.902992+00:00",
+          "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+          "approvedForTechnicalDelivery": true,
+          "pass": true,
+          "fullFrameInspected": true,
+          "wholeFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "nativeDetailsInspected": true,
+          "allSurfaceQAPass": true,
+          "footwearBrandQAPass": true,
+          "bottomTextErrorQAPass": true,
+          "reviewMethod": "view_image original full frame and unscaled native crops",
+          "notes": "Whole frame and every native quadrant, centre walkers, right bark/fence and complete bottom strip inspected. Continuous blank plaster side wall and uninterrupted garden fence; no doors, gateposts, plaques, signs, blurred sign rectangles, vehicles, text, numbers, logos or watermark. Two distant fictional adults viewed from behind, plain unbranded clothes and tiny footwear; no visible faces. Natural irregular plaster cracks, foliage, bark and scattered leaves; ordinary filtered daylight, no HDR/CGI appearance. Generic invented setting only; no named modern works or geographic landmark claim. Present-day color slot4 is independent of historical pair.",
+          "cropObservations": {
+            "top-left": "Blank wall, gutter/eave and random fine cracking; no markings or sign/door locations.",
+            "top-right": "Irregular leaves and several distinct tree trunks; no stamped/repeating organic pattern or carved writing.",
+            "bottom-left": "Natural wall base and plants, no lettering.",
+            "bottom-right": "Continuous plain vertical garden fence and irregular stone base; no badges or small labels.",
+            "center-walkers": "Two small rear-facing adults, plain clothes and generic footwear; no facial or brand detail.",
+            "bottom-strip": "Grey path, random leaves/shadows and wall/fence bases; no text-like mark or watermark anywhere across entire lower edge."
+          },
+          "ownerEditorialAcceptance": "pending",
+          "independentReview": "pending"
+        },
+        "independentReview": {
+          "cityName": "Bukarest",
+          "gameCityId": "bukarest",
+          "mediaSlug": "bucharest",
+          "slot": 4,
+          "candidateVersion": 3,
+          "reviewedAt": "2026-10-12T18:32:41.610739+00:00",
+          "reviewer": "independent research/QA sub-agent",
+          "pass": true,
+          "approvedForTechnicalPreview": true,
+          "ownerEditorialAcceptance": "pending",
+          "gameIntegrationVerified": false,
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/native/bucharest-4-cotroceni-kavely-intro-v3.png",
+          "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/final/bucharest-4-cotroceni-kavely-intro-v3.png",
+          "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+          "wholeFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "bottomTextExclusionSpecificallyInspected": true,
+          "method": "view_image(detail=original): full native frame and eight unscaled native pixel crops; no local image editing or regeneration",
+          "inspectedFiles": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/native/bucharest-4-cotroceni-kavely-intro-v3.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-top-left.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-top-right.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-bottom-left.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-bottom-right.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-center-walkers.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-right-bark-fence.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-bottom-strip.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/qa/native-left-wall.png"
+          ],
+          "cropObservations": {
+            "wholeFrame": "Pass. Present-day shaded pedestrian walkway, plain continuous plaster side wall on the left, ordinary uninterrupted garden railings on the right. Two small distant adults face away. No vehicles, house doors, gate entrances, address plaques, signage, logos, protected works or identifiable landmark.",
+            "top-left": "Pass. Blank uneven plaster, non-repeated cracks and leaf shadows, ordinary eaves with one small dark fixing; no printed or embossed marks, lettering, number plaques or door openings.",
+            "top-right": "Pass. Irregular canopy, varied tree trunks and continuous garden railing. Bark has branching relief and local variation; no repeated stamped motif, cut-in writing, tags or signs.",
+            "bottom-left": "Pass. Natural ivy and shrub growth, aged blank wall plinth, leaf litter and path. No writing, numbers, objects with labels or unnatural patterned ground texture.",
+            "bottom-right": "Pass. Plain fence bars and blank aged plinth, irregular plant overlap and leaf litter. No address plaque, gate hardware suggesting an entrance, text, numbers or branded objects.",
+            "center-walkers": "Pass. Exactly two distant adults from behind. Plain dark top and light trousers, plain light top and blue trousers; tiny unmarked dark footwear. Softness corresponds to distance/depth of field, with no blurred sign or text-bearing patch.",
+            "right-bark-fence": "Pass. Bark ridges vary across trunks and contain natural knots; ordinary rail joints, continuous fence and plants. No repetitive organic stamp texture, tags, placards or house-number placeholders.",
+            "bottom-strip": "Pass. Entire lower edge specifically inspected at original pixels. Asphalt/gravel grain, fallen leaves, vegetation and plain plaster plinth only; no pseudo-text, watermark, number forms, logos or generation caption.",
+            "left-wall": "Pass. Continuous blank residential side wall with varied fine cracks and soft dappled daylight; no doors, windows, plaque outlines, erased/blurred signs, graffiti or text-like generated damage."
+          },
+          "checks": {
+            "textNumeralsSignsLogosBrandsAbsent": true,
+            "carsRegistrationPlatesAbsent": true,
+            "doorsAddressPlaquesAndBlurredTextLocationsAbsent": true,
+            "recognizableFacesAbsent": true,
+            "distantRearFacingAdultsOnly": true,
+            "protectedArtAndNamedModernLandmarksAbsent": true,
+            "naturalAvailableLightAndMutedCameraColors": true,
+            "irregularSurfaceTextures": true,
+            "noHDRCGIPatternBark": true
+          },
+          "technicalVerification": {
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "mode": "RGB",
+            "opaque": true,
+            "iccProfileDescription": "sRGB built-in",
+            "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "nativeFinalPixelEquality": true
+          },
+          "sourceAssessment": {
+            "url": "https://cotroceni.ro/despre-cotroceni/",
+            "readLive": true,
+            "supports": "General ordinary low-rise residential setting, leafy small gardens and joined crowns of mature lime/chestnut trees. This is an illustrative composition; no precise real street or geographical landmark assertion. Source also contains number12, named cafes and monuments; these were excluded from the composition."
+          },
+          "remainingGates": [
+            "root session QA/manifest handling",
+            "R2 immutable upload and byte-exact readback",
+            "private gallery pending",
+            "explicit owner acceptance before game handoff"
+          ],
+          "generationCallsIssuedByReviewer": 0,
+          "r2CallsIssuedByReviewer": 0
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png?t=43ee2108175c2b2b",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+        "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+        "bytes": 3161796,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:33:49.846134+00:00",
+        "immutableNoOverwrite": true,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+            "http": 200,
+            "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+            "bytes": 3161796,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true,
+            "PNGDecodedVerified": true,
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "mode": "RGB",
+            "metadataVerified": true,
+            "cacheControl": "public, max-age=31536000, immutable"
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png?t=43ee2108175c2b2b",
+            "http": 200,
+            "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+            "bytes": 3161796,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true,
+            "PNGDecodedVerified": true,
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "mode": "RGB",
+            "metadataVerified": true,
+            "cacheControl": "public, max-age=31536000, immutable"
+          }
+        ],
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+        "canonicalGetBytes": 3161796,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "bucharest-intro-5-v1",
+      "slot": 5,
+      "cityName": "Bukarest",
+      "gameCityId": "bukarest",
+      "mediaSlug": "bucharest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/final/bucharest-5-cismigiu-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/native/bucharest-5-cismigiu-intro-v1.png",
+      "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+      "bytes": 3297432,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: city arrival intro illustration. Present-day Bucharest, Cişmigiu Garden's central lake. Exact viewpoint concept for paired historical image: camera at the low eastern bank looking west across a broad still pond toward a gently curved wooded shore, left edge a gravel path, a leaning willow entering from the right, trees and sky only behind the opposite shore. Two small anonymous wooden rowboats far across the lake, their occupants tiny and turned away. Natural soft morning light, water ripples with irregular reflections, subtly uneven foliage, no buildings, bridges, restaurants, statues or monuments. Eye-level 35mm, wide 3:2. Output: one opaque 1536x1024 RGB sRGB landscape PNG. Photorealistic, indistinguishable from a candid real-camera image, natural available light, restrained true-to-life colors, irregular real materials and foliage, no HDR, CGI, painting or plastic skin. Absolutely no text, letters, numerals, signs, logos, brands, recognizable branded patterns, watermarks or borders. No food. No protected contemporary art or recognizable recent architect-designed landmarks. Only fictional people, all adults.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/prompts/slot5.txt",
+      "sources": [
+        {
+          "url": "https://www.icr.ro/pagini/nature-and-architecture-the-parks-and-gardens-of-the-capital",
+          "publisher": "Romanian Cultural Institute",
+          "readFacts": [
+            "Lake created1850–1852; winding alleys and planting; inaugurated1854",
+            "Monte Carlo restaurant pavilion1905, later replaced",
+            "1930s garden enlargement and bridges/grottoes additions; Writers Rotunda1943"
+          ],
+          "application": "include lake trees winding gravel paths; exclude buildings bridges statues and modern installations"
+        },
+        {
+          "url": "https://www.goethe.de/ins/ro/ro/kul/sup/amprente-germane-in-bucuresti/27029953.html",
+          "publisher": "Goethe-Institut Romania",
+          "readFacts": [
+            "Garden begun1845, inaugurated1854",
+            "Modern park appearance largely associated with Rebhuhn who arrived circa1910"
+          ],
+          "application": "do not copy current landscape installations into1873"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Angerer_-_Grădina_Cişmigiu.jpg",
+          "publisher": "Wikimedia Commons metadata for Ludwig Angerer historic photo",
+          "readFacts": [
+            "Photo date1856; authorLudwig Angerer1827–1879; public domain"
+          ],
+          "application": "period context reference"
+        }
+      ],
+      "caption": "Cişmigiun puistojärvi Bukarestissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Full frame and native detail inspected: distant rear-facing rowers, no text/logos/artwork; natural water and tree irregularity."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:24:22.182668+00:00",
+          "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame inspected: lakeshore with gravel path left and willow right, two distant rowboats, no near faces, text, branded objects or structures. Irregular leaves and ripples, subdued natural camera light. Modern pair composition established for1873.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:29:00.858273+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+        "bytes": 3297432,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png",
+            "http": 200,
+            "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+            "bytes": 3297432,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png?t=ca19ce55ee110c8b",
+            "http": 200,
+            "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+            "bytes": 3297432,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "bucharest-intro-6-v1",
+      "slot": 6,
+      "cityName": "Bukarest",
+      "gameCityId": "bukarest",
+      "mediaSlug": "bucharest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/final/bucharest-6-pihajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/native/bucharest-6-pihajuhla-intro-v1.png",
+      "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+      "bytes": 2164442,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: city arrival intro illustration. A joyful present-day informal outdoor music gathering in Bucharest on a leafy old residential courtyard at dusk. One entirely fictional smiling Romanian woman age 26 prominent in the foreground, candid three-quarter waist-up framing, textured brown bob, simple unbranded sage linen jacket over an ivory top. Behind her many young Romanian adults celebrating together, natural range of local appearances, relaxed fashionable generic plain clothing, some clapping, ordinary old plaster courtyard walls and leafy branches, modest warm light bulbs. Lively but unposed documentary moment, realistic skin pores and imperfect gestures. ALL people framed waist-up or occluded by other upper bodies; ALL legs and ALL footwear entirely outside the image, including background crowd. No stage signs, banners or identifiable event. Output: one opaque 1536x1024 RGB sRGB landscape PNG. Photorealistic, indistinguishable from a candid real-camera image, natural available light, restrained true-to-life colors, irregular real materials and foliage, no HDR, CGI, painting or plastic skin. Absolutely no text, letters, numerals, signs, logos, brands, recognizable branded patterns, watermarks or borders. No food. No protected contemporary art or recognizable recent architect-designed landmarks. Only fictional people, all adults.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/prompts/slot6.txt",
+      "sources": [
+        {
+          "url": "https://cotroceni.ro/despre-cotroceni/",
+          "readFacts": [
+            "Old Bucharest residential district retaining houses and local identity"
+          ]
+        },
+        {
+          "url": "https://visitbucharest.today/boat-rides-bucharest/",
+          "readFacts": [
+            "Dambovita crosses the city; generic river channel rather than named protected landmark"
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen musiikki-ilta Bukarestin pihalla. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Full frame and native details inspected; fictional adult foreground, natural texture, generic clothes, no text/logos/food; all footwear outside framing."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:25:55.578052+00:00",
+          "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame: fictional adult woman foreground and joyful adult courtyard music gathering. All footwear excluded. Plain contemporary clothing and instruments, no text/logo/brand patterns. Natural skin and motion blur, old anonymous courtyard.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:29:03.459253+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+        "bytes": 2164442,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+            "bytes": 2164442,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png?t=4240c9f8c334d5a3",
+            "http": 200,
+            "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+            "bytes": 2164442,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "bucharest-intro-7-v1",
+      "slot": 7,
+      "cityName": "Bukarest",
+      "gameCityId": "bukarest",
+      "mediaSlug": "bucharest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/final/bucharest-7-dambovita-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/native/bucharest-7-dambovita-ilta-intro-v1.png",
+      "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+      "bytes": 2509919,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: city arrival intro illustration. Present-day Bucharest at blue hour, quiet stretch of the Dâmboviţa river beside the old city, view obliquely downstream from the riverside walkway. Narrow channel in foreground reflects ordinary warm streetlamps and anonymous older apartment windows; plain embankment walls, trees, distant small walking silhouettes from behind. Crop out all major buildings and bridges, palace, CEC palace and churches. Subtle available light, real-camera 35mm photograph, deep gentle blue dusk, warm reflections in softly moving water, nothing theatrical. Output: one opaque 1536x1024 RGB sRGB landscape PNG. Photorealistic, indistinguishable from a candid real-camera image, natural available light, restrained true-to-life colors, irregular real materials and foliage, no HDR, CGI, painting or plastic skin. Absolutely no text, letters, numerals, signs, logos, brands, recognizable branded patterns, watermarks or borders. No food. No protected contemporary art or recognizable recent architect-designed landmarks. Only fictional people, all adults.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/prompts/slot7.txt",
+      "sources": [
+        {
+          "url": "https://cotroceni.ro/despre-cotroceni/",
+          "readFacts": [
+            "Old Bucharest residential district retaining houses and local identity"
+          ]
+        },
+        {
+          "url": "https://visitbucharest.today/boat-rides-bucharest/",
+          "readFacts": [
+            "Dambovita crosses the city; generic river channel rather than named protected landmark"
+          ]
+        }
+      ],
+      "caption": "Dâmboviţan ilta ja valojen heijastukset Bukarestissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Full frame and native inspected; small rear-facing walkers; no legible marks or brands, anonymous buildings; natural water and foliage."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:26:21.579613+00:00",
+          "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame: canal evening reflections, anonymous old residential facades and small people from behind. No text, logos, foreground faces or named contemporary design. Plausible subdued blue hour and warm ordinary lamps.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:29:06.003868+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+        "bytes": 2509919,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+            "bytes": 2509919,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png?t=a5c8e5cd891bea2e",
+            "http": 200,
+            "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+            "bytes": 2509919,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "bucharest-intro-8-v1",
+      "slot": 8,
+      "cityName": "Bukarest",
+      "gameCityId": "bukarest",
+      "mediaSlug": "bucharest",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/final/bucharest-8-cismigiu-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/native/bucharest-8-cismigiu-1873-intro-v1.png",
+      "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+      "bytes": 3073773,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. Asset type: city arrival intro historical illustration. Bucharest Cişmigiu Garden in EXACTLY year 1873. Same viewpoint and camera direction as slot5: low eastern bank looking west across broad central lake toward gently curved wooded opposite shore, gravel path entering from left and a leaning willow at right. Follow established mid-nineteenth-century public garden: the lake was formed 1850–1852, opened1854, winding dirt/gravel paths, mixed chestnut and other broadleaf trees of varied young-to-middle age, simple plain wooden benches; one small wooden rowboat in distant water, a couple tiny park visitors in1873 long coats and long dresses seen from behind. Pure neutral black-and-white grayscale period-camera realism with gentle contrast and fine grain, no sepia or tint. No buildings, no modern bank paving, no modern bridges, no Monte Carlo restaurant or1905 pavilion, no1930s landscape additions, no statues, no1943 writers rotunda, no20th-century monuments, no automobiles, bicycles, electric lamps or modern clothing. Preserve natural tree irregularity. Soft morning available light, wide eye-level35mm composition. Output: one opaque 1536x1024 RGB sRGB landscape PNG. Photorealistic, indistinguishable from a candid real-camera image, natural available light, restrained true-to-life colors, irregular real materials and foliage, no HDR, CGI, painting or plastic skin. Absolutely no text, letters, numerals, signs, logos, brands, recognizable branded patterns, watermarks or borders. No food. No protected contemporary art or recognizable recent architect-designed landmarks. Only fictional people, all adults.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/prompts/slot8.txt",
+      "sources": [
+        {
+          "url": "https://www.icr.ro/pagini/nature-and-architecture-the-parks-and-gardens-of-the-capital",
+          "publisher": "Romanian Cultural Institute",
+          "readFacts": [
+            "Lake created1850–1852; winding alleys and planting; inaugurated1854",
+            "Monte Carlo restaurant pavilion1905, later replaced",
+            "1930s garden enlargement and bridges/grottoes additions; Writers Rotunda1943"
+          ],
+          "application": "include lake trees winding gravel paths; exclude buildings bridges statues and modern installations"
+        },
+        {
+          "url": "https://www.goethe.de/ins/ro/ro/kul/sup/amprente-germane-in-bucuresti/27029953.html",
+          "publisher": "Goethe-Institut Romania",
+          "readFacts": [
+            "Garden begun1845, inaugurated1854",
+            "Modern park appearance largely associated with Rebhuhn who arrived circa1910"
+          ],
+          "application": "do not copy current landscape installations into1873"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Angerer_-_Grădina_Cişmigiu.jpg",
+          "publisher": "Wikimedia Commons metadata for Ludwig Angerer historic photo",
+          "readFacts": [
+            "Photo date1856; authorLudwig Angerer1827–1879; public domain"
+          ],
+          "application": "period context reference"
+        }
+      ],
+      "caption": "Cişmigiun järven ranta Bukarestissa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame and native detail checked; neutral grayscale, period clothing rear-facing small people, no modern installations. Same eastern low-bank westward view as5: pathleft willowright lakecenter; historical context confirmed before call."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:28:58.138882+00:00",
+          "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame and modern5 pair inspected: same lake shore orientation, gravel path left and willow right. Neutral monochrome, period distant people from behind and rowing skiff; no later bridges, pavilion, electric lights or text. Two institutional sources and1856 period photo recorded before generation; vegetation is reconstructed.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:29:08.353200+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+        "bytes": 3073773,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+            "bytes": 3073773,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png?t=e4ce8be5f73ee57f",
+            "http": 200,
+            "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+            "bytes": 3073773,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    }
+  ],
+  "omittedItems": [],
+  "status": "pending-quality-fix",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "callsIssued": 6,
+  "imagesReturned": 6,
+  "updatedAt": "2026-10-12T17:33:28.148895+00:00",
+  "productionComplete": true,
+  "rejectedCandidates": [
+    {
+      "slot": 4,
+      "reason": "Visible vehicle registration plate letter/numeral marks",
+      "candidate": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/final/bucharest-4-cotroceni-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/native/bucharest-4-cotroceni-intro-v1.png",
+        "sha256": "0f61291407cefc4cc11455ff7efccfc91875d9c79abb22c4cd19a85f03cee60f",
+        "bytes": 3185112,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "pixelExactMetadataExport": true,
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        },
+        "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/prompts/slot4.txt",
+        "generationPrompt": "Use case: photorealistic-natural. Asset type: city arrival intro illustration. Present-day Bucharest, everyday morning on a quiet Cotroceni residential side street, ordinary anonymous old plaster houses behind low iron gates, lime trees casting broken soft shadows. A pair of residents walking away far down the pavement, one adult cycling away in the middle distance, no close faces. Human scale, worn stone, uneven plaster, lived-in gardens; no palace, churches, triumphal arch or major landmarks. Eye-level 35mm photograph looking down the street, ordinary documentary framing. Output: one opaque 1536x1024 RGB sRGB landscape PNG. Photorealistic, indistinguishable from a candid real-camera image, natural available light, restrained true-to-life colors, irregular real materials and foliage, no HDR, CGI, painting or plastic skin. Absolutely no text, letters, numerals, signs, logos, brands, recognizable branded patterns, watermarks or borders. No food. No protected contemporary art or recognizable recent architect-designed landmarks. Only fictional people, all adults.",
+        "QA": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "workerPass": false,
+          "issue": "Vehicle registration plates contain apparent letter/numeral marks; cars added by generator despite anonymous residential subject; retain candidate and omit without another call.",
+          "rootSessionReview": "pending"
+        }
+      }
+    },
+    {
+      "slot": 4,
+      "reason": "Second complete new candidate removed vehicles, but left foreground gatepost has a visible address plate resembling numeral12. Forbidden address numbers remain. No third call; pending-quality-fix.",
+      "candidate": {
+        "id": "bucharest-intro-4-v1",
+        "slot": 4,
+        "cityName": "Bukarest",
+        "gameCityId": "bukarest",
+        "mediaSlug": "bucharest",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/final/bucharest-4-cotroceni-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/native/bucharest-4-cotroceni-intro-v2.png",
+        "sha256": "433d5dc00c85cf6ad69b5bdba012af67ac03ca7f339940f1c10b06c7d6a0c1ea",
+        "bytes": 3104543,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "pixelExactMetadataExport": true,
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        },
+        "r2Key": "julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-intro-v2.png",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-intro-v2.png",
+        "generationPrompt": "Use case: photorealistic-natural. Asset type: city arrival intro illustration. Present-day Bucharest, everyday morning on a quiet Cotroceni residential side street, ordinary anonymous old plaster houses behind low iron gates, lime trees casting broken soft shadows. A pair of residents walking away far down the pavement,  no close faces. Human scale, worn stone, uneven plaster, lived-in gardens; no palace, churches, triumphal arch or major landmarks. Eye-level 35mm photograph looking down the street, ordinary documentary framing. Output: one opaque 1536x1024 RGB sRGB landscape PNG. Photorealistic, indistinguishable from a candid real-camera image, natural available light, restrained true-to-life colors, irregular real materials and foliage, no HDR, CGI, painting or plastic skin. Absolutely no text, letters, numerals, signs, logos, brands, recognizable branded patterns, watermarks or borders. No food. No protected contemporary art or recognizable recent architect-designed landmarks. Only fictional people, all adults. CRITICAL QUALITY CORRECTION: absolutely NO CARS anywhere, NO VEHICLES at all, NO bicycles, no scooters, no trucks, no car shape, no parking, no license plates, no registration markings. Show an empty pedestrian-only lane with walkers and homes only. No storefronts, signs, address numerals or wall writing. Entirely new complete generation, not an edit.",
+        "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/prompts/slot4-attempt2.txt",
+        "sources": [
+          {
+            "url": "https://cotroceni.ro/despre-cotroceni/",
+            "readFacts": [
+              "Old Bucharest residential district retaining houses and local identity"
+            ]
+          },
+          {
+            "url": "https://visitbucharest.today/boat-rides-bucharest/",
+            "readFacts": [
+              "Dambovita crosses the city; generic river channel rather than named protected landmark"
+            ]
+          }
+        ],
+        "caption": "Cotrocenin arkinen asuinkatu Bukarestissa. Havainnekuva.",
+        "QA": {
+          "worker": {
+            "wholeFrameInspected": true,
+            "nativeDetailsInspected": true,
+            "pass": false,
+            "notes": "Second complete new candidate removed vehicles, but left foreground gatepost has a visible address plate resembling numeral12. Forbidden address numbers remain. No third call; pending-quality-fix."
+          },
+          "rootSessionReview": {
+            "status": "pending"
+          }
+        },
+        "R2Proof": {
+          "status": "pending"
+        }
+      }
+    }
+  ],
+  "producerOmissionsPreserved": [
+    {
+      "slot": 4,
+      "status": "pending-quality-fix",
+      "reason": "Primary candidate has car plates; necessary second whole-new candidate has foreground address numeral12; no further call authorized."
+    }
+  ],
+  "supplementalSources": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/manifest.json",
+      "sha256": "9594051b7852d453b9b53fa47258c3a77568c016a69d8168d34b8646f5c7db2b",
+      "assetID": "bucharest-intro-4-v3",
+      "slot": 4,
+      "additionalCalls": 1
+    }
+  ],
+  "ownerAcceptance": false,
+  "gameIntegrated": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 7,
+  "deliveryQAEvidence": {
+    "mediaSlug": "bucharest",
+    "gameCityId": "bukarest",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/slot4-export.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/slot4-qa.json"
+    ],
+    "sourceManifestSha256": "d89050770b731667b38de04ff95c97344ac2dd3f66f78955f938c155fdc1c982",
+    "assets": [
+      {
+        "id": "bucharest-intro-4-v3",
+        "slot": 4,
+        "candidateVersion": 3,
+        "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uuden v3:n koko kehys, kaikki natiivineljännekset ja koko alareuna ovat ilman kirjoitusta, numeroita, osoitelaattoja, kylttejä, logoja tai ajoneuvojen rekisterikilpiä. Kaksi pientä aikuista näkyy selin. Luonnollinen puunkuori, lehdistö, rappaus ja kävelypinnan perspektiivi/valo täyttävät kuvallisen QA:n.",
+        "observations": [
+          "Koko kehys ja seitsemän suurentamatonta natiivirajausta tarkastettu: neljä neljännestä, kävelijät, puunkuoret/aita ja koko alareuna.",
+          "Vasemman puolen rappaus on jatkuvaa, ovetonta ja kyltitöntä. Halkeamat haarautuvat luonnollisesti eivätkä muodosta tekstimäisiä merkkejä; ei peitettyjä tai sumennettuja osoitelaatan paikkoja.",
+          "Oikea aita on tavallinen jatkuva pystysuuntainen rauta-aita, ilman portinpylväitä, nimi-/numerokylttejä, tunnuksia tai merkintöjä.",
+          "Ei autoja, pyöriä, skoottereita tai muita ajoneuvoja; rekisterikilpiä ja ajoneuvobrändejä ei ole.",
+          "Kaksi kehyksen kokoon nähden pientä aikuista näkyy selin optisesti pehmeässä etäisyydessä. Asut ja pieni jalkinepinta ovat geneerisiä ilman tunnistettavia brändimerkkejä; ei näkyviä kasvoja.",
+          "Lehtien asennot, oksien haarat ja puunkuorien uurteet vaihtelevat luonnollisesti ilman kaarna-/lehtileimaa. Päivän suodattuneet varjot ovat yhtenäisiä; ei muovisuutta, HDR-ilmettä tai epäjohdonmukaista perspektiiviä.",
+          "Koko alareuna sisältää vain kulunutta kävelypintaa, varjoja, lehtiä, kasveja ja tyhjiä sokkelipintoja; ei vesileimaa, sukupolven kuvatekstiä tai tekstijälkiä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, Description/Source match required provenance, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v3-top-left.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v3-top-right.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v3-bottom-left.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v3-bottom-right.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v3-walkers.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v3-bark-fence.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v3-bottom-strip.png"
+        ],
+        "checks": {
+          "textNumeralsSignsLogosBrandsAbsent": true,
+          "carsRegistrationPlatesAbsent": true,
+          "addressPlaquesAbsent": true,
+          "bottomTextErrorAbsent": true,
+          "peopleSmallRearFacing": true,
+          "naturalMaterialsAndPhotorealismPass": true
+        },
+        "technicalEvidence": {
+          "bytes": 3161796,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "nativeFinalDecodedRGBEqual": true
+        }
+      },
+      {
+        "id": "bucharest-intro-5-v1",
+        "slot": 5,
+        "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Puistojärven kuva on uskottava kameranäkymä: epäsäännöllinen lehdistö, veden heijastukset ja polun materiaalit ovat luonnolliset. Molempien kaukaisten soutuveneiden aikuiset näkyvät selin; tekstiä, logoja, rakennuksia tai muistomerkkejä ei havaittu.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset vasemmasta lehdistöstä, molemmista veneistä ja oikean puolen pajusta/vedestä tarkastettu.",
+          "Lehtien koko, asento ja valon läpäisy vaihtelevat; oksistossa ei havaittu kopioituja leimasimia.",
+          "Veneiden perspektiivi, airot ja pienet selin olevat henkilöt ovat uskottavia; ei tunnistettavia kasvoja.",
+          "Slot8-parin kanssa sama matala rannalta vastarannalle katsova suuntarakenne: polku vasemmalla, roikkuva paju oikealla, järvi keskellä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/5-left-foliage.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/5-boats.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/5-right-willow-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3297432,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "bucharest-intro-6-v1",
+        "slot": 6,
+        "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen nainen, luonnollinen iho ja geneerinen nykyvaatetus sopivat pihakokoontumiseen. Instrumentit, kasvojen rakenne ja näkyvät kädet ovat uskottavia. Jalkineita, ruokaa, tekstiä tai brändejä ei havaittu.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset etualan kasvoista, instrumenteista/käsistä, etualan liikkuvasta kädestä ja taputtavasta väkijoukosta tarkastettu.",
+          "Ihon tekstuuri, hampaat, hiukset ja korvat ovat luonnollisia; muovisuutta tai ilmeistä anatomista virhettä ei havaittu.",
+          "Sormien asento on instrumentteihin ja taputukseen nähden uskottava. Etualan kädessä on liikkeen suuntaista kameramaista epäterävyyttä.",
+          "Kaikki henkilöt ovat aikuisia, ylävartaloina tai muiden peittämiä; jalat ja jalkineet jäävät kokonaan kehyksen ulkopuolelle.",
+          "Vaatteet ovat geneerisiä ja ilman tunnistettavaa brändikuviota; ei ruokaa, kirjoitusta tai logoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/6-instruments-hands.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/6-foreground-hand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/6-crowd-hands.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2164442,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "bucharest-intro-7-v1",
+        "slot": 7,
+        "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Joen sinisen hetken perspektiivi, rantakaiteen mittakaava ja lampuista tulevat veden heijastukset ovat yhtenäisiä. Pienet kävelijät näkyvät selin, eikä kuvassa havaittu tekstiä, logoja, tunnistettavia etualan kasvoja tai materiaaleihin leimattua kuviota.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset rakennuksista/lehdistöstä, kävelijöistä/kaiteesta ja veden valoista tarkastettu.",
+          "Veden epäsäännölliset aallot katkovat valopylväät uskottavasti; heijastukset vastaavat lamppujen paikkoja.",
+          "Puuston lehdistö ja oksat ovat vaihtelevia ilman kaarnaleimaa tai näkyvää kloonausta.",
+          "Rakennusten, rantamuurin ja kävelytien pakopisteet ovat yhteensopivia. Ihmiset näkyvät selin ilman tunnistettavia kasvoja.",
+          "Ei ruokaa, tekstiä, logoja tai nimettyä suojattua taidetta havaittu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/7-foliage-facades.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/7-people-rail.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/7-water-light.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2509919,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "bucharest-intro-8-v1",
+        "slot": 8,
+        "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Koko kehys ja natiiviyksityiskohdat ovat visuaalisesti neutraalia mustavalkoista ilman sepiaa tai havaittavaa sävytystä. Puistopari5/8 säilyttää saman katselusuunnan ja period exclusions täyttyvät; pienet alkuperäiset RGB-kanavaerot eivät yksin riko omistajan visuaalista neutraalin mustavalkoisen ehtoa.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset molemmista puunkuorista, pienistä aikuisista ja soutuveneestä/vastarannasta tarkastettu.",
+          "Slot5:n kanssa sama suuntarakenne: matala ranta, vasemmalta tuleva sorapolku, oikealla paju ja järven vastaranta keskellä.",
+          "Puunkuorien uurteet ja lehdistö vaihtelevat luonnollisesti; ei toistuvaa kaarnaleimaa. Tavallinen puupenkki, pienet selin näkyvät pitkät takit/hameet ja kaukainen soutuvene ovat periodikehykseen sopivia.",
+          "Romanian Cultural Institute ja Goethe-Institut -lähteiden period exclusions luettu: ei modernia rantapäällystettä, nykyisiä siltoja,1905Monte Carlo-paviljonkia,1930-luvun laajennuksia,1943Writers Rotundaa, sähkölamppuja tai moderneja ajoneuvoja havaittu.",
+          "Alkuperäisten RGB-kanavien max erot R-G11 ja R-B12 kirjataan teknisenä havaintona. Näkyvä kuva on neutraali harmaasävy. Numeerista pikselikohtaista nollatoleranssia ei ollut omistajan ehdossa.",
+          "Alkuperäistä rasteria tai sen väritystä ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/8-left-bark-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/8-right-bark.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/8-boat-shore.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3073773,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true,
+          "maxAbsoluteRG": 11,
+          "maxAbsoluteRB": 12
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://www.icr.ro/pagini/nature-and-architecture-the-parks-and-gardens-of-the-capital",
+          "https://www.goethe.de/ins/ro/ro/kul/sup/amprente-germane-in-bucuresti/27029953.html",
+          "https://commons.wikimedia.org/wiki/File:Angerer_-_Grădina_Cişmigiu.jpg"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "bucharest-intro-4-v1",
+        "slot": 4,
+        "sha256": "0f61291407cefc4cc11455ff7efccfc91875d9c79abb22c4cd19a85f03cee60f",
+        "status": "pending-quality-fix",
+        "nextDecision": "needs-owner-next-decision",
+        "approvedForDelivery": false,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "reason": "Koko kehys ja keskialueen autojen natiivirajaus vahvistavat vaalean auton rekisterikilvessä kirjaimia/numeroita muistuttavat tummat merkit. Kaksi ehdokasta on hylätty; tätä ei kirjata valmiiksi tai lopulliseksi toimitukseksi.",
+        "observations": [
+          "Alkuperäinen rasteri säilyi muuttamattomana.",
+          "Tuottajan valtuutettu laatukorjaus on käytetty; seuraava toimenpide kuuluu pääsession/omistajan päätökseen."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-vehicle-plates.png"
+        ]
+      },
+      {
+        "id": "bucharest-intro-4-v2",
+        "slot": 4,
+        "sha256": "433d5dc00c85cf6ad69b5bdba012af67ac03ca7f339940f1c10b06c7d6a0c1ea",
+        "status": "pending-quality-fix",
+        "nextDecision": "needs-owner-next-decision",
+        "approvedForDelivery": false,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "reason": "Toisen kokonaan uuden ehdokkaan etualan portinpylväässä on näkyvä talonumero12. Koko kehys ja pylvään natiivirajaus tarkastettu. Kaksi ehdokasta on hylätty; tätä ei kirjata valmiiksi tai lopulliseksi toimitukseksi.",
+        "observations": [
+          "Alkuperäinen rasteri säilyi muuttamattomana.",
+          "Tuottajan valtuutettu laatukorjaus on käytetty; seuraava toimenpide kuuluu pääsession/omistajan päätökseen."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/crops/4-v2-address.png"
+        ]
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:36:37.263098+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/manifest.json",
+      "manifestSHA256": "d89050770b731667b38de04ff95c97344ac2dd3f66f78955f938c155fdc1c982",
+      "reviewedAssetIds": [
+        "bucharest-intro-5-v1",
+        "bucharest-intro-6-v1",
+        "bucharest-intro-7-v1",
+        "bucharest-intro-8-v1"
+      ],
+      "reviewedOmissionIds": [
+        "bucharest-intro-4-v1",
+        "bucharest-intro-4-v2"
+      ],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimituksen varmennus kuuluu toimitussessiolle.",
+        "Puistopari vastaa briefin yleistä katselusuuntaa ja sommittelua; kuvat ovat havainnekuvia, eivät tarkkaa kartoitusta.",
+        "Slot4 on pending-quality-fix/needs-owner-next-decision kahden hylätyn ehdokkaan jälkeen."
+      ]
+    },
+    "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bucharest/supplemental-qa.json",
+    "supplementalSources": [
+      {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/extra-repairs/bucharest-4/manifest.json",
+        "sha256": "9594051b7852d453b9b53fa47258c3a77568c016a69d8168d34b8646f5c7db2b",
+        "assetID": "bucharest-intro-4-v3",
+        "slot": 4,
+        "additionalCalls": 1
+      }
+    ]
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "bucharest",
+    "verifiedAt": "2026-10-12T18:44:49.141230+00:00",
+    "assets": [
+      {
+        "id": "bucharest-intro-4-v3",
+        "slot": 4,
+        "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+        "bytes": 3161796,
+        "verifiedAt": "2026-10-12T18:44:47.343459+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+            "http": 200,
+            "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+            "bytes": 3161796,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png?delivery-verify=43ee2108175c2b2b-1791830687343449000",
+            "http": 200,
+            "sha256": "43ee2108175c2b2b651b11b49b9aa60cd6c3663252c332b278f760e53eceddb5",
+            "bytes": 3161796,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bucharest-intro-5-v1",
+        "slot": 5,
+        "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+        "bytes": 3297432,
+        "verifiedAt": "2026-10-12T18:44:47.343875+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png",
+            "http": 200,
+            "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+            "bytes": 3297432,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png?delivery-verify=ca19ce55ee110c8b-1791830687343872000",
+            "http": 200,
+            "sha256": "ca19ce55ee110c8b46d9b1b0341b4da4ac48503f03ea8394661427bff5b82f01",
+            "bytes": 3297432,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bucharest-intro-6-v1",
+        "slot": 6,
+        "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+        "bytes": 2164442,
+        "verifiedAt": "2026-10-12T18:44:47.344124+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+            "bytes": 2164442,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-6-pihajuhla-intro-v1.png?delivery-verify=4240c9f8c334d5a3-1791830687344122000",
+            "http": 200,
+            "sha256": "4240c9f8c334d5a3b295321f93f19a3ceb5dad0bc2f1d0a038dec3a8a30bbdef",
+            "bytes": 2164442,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bucharest-intro-7-v1",
+        "slot": 7,
+        "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+        "bytes": 2509919,
+        "verifiedAt": "2026-10-12T18:44:47.959657+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+            "bytes": 2509919,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png?delivery-verify=a5c8e5cd891bea2e-1791830687959644000",
+            "http": 200,
+            "sha256": "a5c8e5cd891bea2ee9be9aee2443e1b036c464485ca85f0303555f6f3a4432d9",
+            "bytes": 2509919,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bucharest-intro-8-v1",
+        "slot": 8,
+        "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+        "bytes": 3073773,
+        "verifiedAt": "2026-10-12T18:44:48.563051+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+            "bytes": 3073773,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261012-full/bucharest-8-cismigiu-1873-intro-v1.png?delivery-verify=e4ce8be5f73ee57f-1791830688563043000",
+            "http": 200,
+            "sha256": "e4ce8be5f73ee57f185262280a2913dda1380f7e52d8a6d8dbb7c5cad8a93039",
+            "bytes": 3073773,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/bucharest/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": 6,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.593913+00:00"
+}

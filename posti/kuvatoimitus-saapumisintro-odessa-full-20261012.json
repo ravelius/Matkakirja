@@ -1,0 +1,862 @@
+{
+  "cityName": "Odessa",
+  "gameCityId": "odessa",
+  "mediaSlug": "odessa",
+  "createdAt": "2026-10-12T17:48:17.607444+00:00",
+  "status": "awaitingSessionOwnerQA",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "generationRequestsIssued": 6,
+  "assets": [
+    {
+      "id": "odessa-intro-4",
+      "slot": 4,
+      "attempt": 2,
+      "cityName": "Odessa",
+      "gameCityId": "odessa",
+      "mediaSlug": "odessa",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png",
+      "generationPrompt": "Use case: photorealistic-natural. ONE wholly new1536x1024 landscape opaque RGB sRGB image. Ordinary peaceful Odesa residential rear courtyard today, shot from the side beneath one irregular acacia tree, faded pale stucco blank rear walls, high timber gallery and unmarked laundry drying casually. Two distant residents from behind walking across irregular patched stone paving, plain bags and solid unbranded clothing, no faces. Foreground has a humble worn unmarked outdoor water tap on an entirely BLANK wall, natural modest planted pot. Composition deliberately EXCLUDES ALL DOORWAYS AND ENTRANCES from the entire frame. Walls only have windows with closed plain shutters or plain gallery railings, no entrances. Every surface is bare and unmarked: absolutely NO paper, notices, posters, nameplates, plaques, blue badges, stickers, labels, writings, letters, signs or address numbers anywhere, including remote walls. Real35mm documentary camera at eye-level, soft authentic morning light, restrained natural colours, irregular worn textures, no plastic/CGI/HDR/painting. No food, shops, vehicles, brands, logos, patterns, watermarks, frames, sculptures, modern architect designs. No war, soldiers, uniforms, weapons or destruction. Fictional illustrative image of ordinary courtyard life, not an actual location photo.",
+      "sources": [
+        {
+          "url": "https://guides.odesatourism.site/reestr/diduk/",
+          "publisher": "Odesa Tourist Portal official guide registry",
+          "readFacts": [
+            "Courtyard tours describe wooden galleries, courtyard wells and ordinary everyday resident settings away from main tourist routes."
+          ],
+          "readMethod": "Source search-index full text read",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/1703",
+          "publisher": "UNESCO World Heritage Centre",
+          "readFacts": [
+            "Historic Odesa has two-to-four-storey buildings and wide perpendicular tree-lined streets; large areas of19th-century urban fabric survive."
+          ],
+          "readMethod": "Source search-index text read",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Odessan asuinpihan arkea. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: blank walls and shuttered windows, no written notices or plaques. Rear-facing residents, believable laundry gallery and worn paving, natural texture/light, no brands.",
+          "reviewedAt": "2026-10-12T17:44:53.637392+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:49:13.561821+00:00",
+          "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: blank courtyard walls and shuttered windows, two adults walking away, unmarked laundry. No notices, door plaques, lettering, logos or cars. Natural worn surfaces and irregular tree shade.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:51:08.327343+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+        "bytes": 3060305,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png",
+            "http": 200,
+            "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+            "bytes": 3060305,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png?t=2af1451b6a706a33",
+            "http": 200,
+            "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+            "bytes": 3060305,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/odessa-4-odesa-piha-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/native/odessa-4-odesa-piha-intro-v2-native.png",
+      "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+      "bytes": 3060305,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "odessa-intro-5",
+      "slot": 5,
+      "cityName": "Odessa",
+      "gameCityId": "odessa",
+      "mediaSlug": "odessa",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png",
+      "generationPrompt": "Generate ONE brand new photorealistic-natural fictional illustrative city-intro image exactly1536x1024 landscape, opaque RGB sRGB. Real camera appearance, natural light, muted authentic colours, coherent perspective, unique irregular material/foliage detail. NO HDR, CGI, painting, artificial cinematic colour, plastic skin or stamped/cloned organic textures. ZERO text, letters, numbers, street/address signs, labels, logos, brands, distinctive brand stripes/patterns, watermarks, borders, protected artwork or named modern architect designs. No food. Except celebration6, people small/far/from behind. Kuyalnyk estuary by Odesa today, undeveloped eastern bank in the middle part of the long lake, camera1.6m at shoreline facing west-northwest across shallow saline water. Sandy-clayey pale grey shore begins at bottom-left and traces a gentle arc toward center-left; a little coarse yellow-brown steppe grass on the near left edge. Water fills lower-right and middle; across the lake a low smooth muted ochre steppe ridge spans the entire horizon at y40percent, just a few percent of frame high, no mountains. Quiet lightly rippled grey-green brine in soft morning light, subdued blue sky and thin clouds. No buildings, resort towers, pools, roads, railways, powerlines, signs, people, boats, posts or animals. Natural irregular small salt-edged mud patches, no bright pink fantasy. Same geographic viewpoint and orientation for1873 pair.",
+      "sources": [
+        {
+          "url": "https://kuyalnik.com.ua/en/history/",
+          "publisher": "Kuyalnik sanatorium official operator history",
+          "readFacts": [
+            "First estuary hospital1833; second1842; modern monumental mud-bath building1892; dormitory towers1976/1981/1986.",
+            "Saline estuary separated from Black Sea by deposited sand; silt and brine are native landscape.",
+            "Railway dating differs1868 vs tourist portal1873, so no railways depicted."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.odesatourism.site/en/beaches-resorts/",
+          "publisher": "Odesa Tourist Portal",
+          "readFacts": [
+            "Kuyalnyk resort13km from city centre;1833 mud baths; substantial new bath building1890-1892.",
+            "Historic nineteenth-century water body already existed; modern resort structures excluded."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2025.1716358/full",
+          "publisher": "Frontiers in Marine Science, primary long-term study",
+          "readFacts": [
+            "Estuary is elongated north-south endorheic lake, length25-30km and width2.5-3km depending on water amount.",
+            "Modern water level changes significantly;1873 image reconstructs a conservative ordinary water-level scene, not a claim of measured1873 shoreline."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Kuyalnykin suolaestuaari Odessan lähellä. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: undeveloped brine shore, low steppe ridge, coherent water and naturally irregular salt/mud textures; no signs, buildings, people or anachronistic items.",
+          "reviewedAt": "2026-10-12T17:44:10.051468+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:49:13.586639+00:00",
+          "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: undeveloped salt-estuary shore left, low natural steppe ridge across water. No people, signs, buildings or brands; irregular salt/mud/grass textures and subdued daylight. Modern historical-pair geography established.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:51:12.149302+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+        "bytes": 2408209,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+            "bytes": 2408209,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png?t=cd361e1a0b0efa96",
+            "http": 200,
+            "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+            "bytes": 2408209,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/odessa-5-kuyalnyk-ranta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/native/odessa-5-kuyalnyk-ranta-intro-v1-native.png",
+      "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+      "bytes": 2408209,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "odessa-intro-6",
+      "slot": 6,
+      "cityName": "Odessa",
+      "gameCityId": "odessa",
+      "mediaSlug": "odessa",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png",
+      "generationPrompt": "Generate ONE brand new photorealistic-natural fictional illustrative city-intro image exactly1536x1024 landscape, opaque RGB sRGB. Real camera appearance, natural light, muted authentic colours, coherent perspective, unique irregular material/foliage detail. NO HDR, CGI, painting, artificial cinematic colour, plastic skin or stamped/cloned organic textures. ZERO text, letters, numbers, street/address signs, labels, logos, brands, distinctive brand stripes/patterns, watermarks, borders, protected artwork or named modern architect designs. No food. Except celebration6, people small/far/from behind. An informal joyful contemporary seaside gathering of local young Ukrainian adults aged22-30 on Odesa Black Sea waterfront at late-afternoon golden light, pale sea and low open horizon beyond. One invented adult woman foreground at right with short dark hair and natural ordinary skin, smiling sideways at friends, plain muted sage linen vest over plain white top and small generic earrings. Crowd of young local Ukrainian adults moving and laughing behind, ordinary fashionable solid-colour unbranded summer clothes, varied authentic faces. Camera tight chest-up, EVERY person shown upper-body only; absolutely ALL feet, shoes and footwear fully excluded from the whole frame by dense shoulders and bottom crop. No food, drinks, flags, banners, instruments, branding, text or numbers. Real35mm candid photograph, natural slight movement, believable hair and hands, not staged group. Peaceful life, no war, soldiers, military, destruction or political symbols.",
+      "sources": [
+        {
+          "url": "https://www.odesatourism.site/en/beaches-resorts/",
+          "publisher": "Odesa Tourist Portal",
+          "readFacts": [
+            "Odesa has Black Sea beaches and seaside leisure areas; the gathering depicted is invented, not a documented event."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Nuorten aikuisten ilta Odessan merenrannalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: natural invented adult foreground, cheerful local young-adult crowd, upper bodies only and no footwear, generic clothes/earrings without logos/text, peaceful coast and believable skin/hands.",
+          "reviewedAt": "2026-10-12T17:46:15.029751+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:49:13.630126+00:00",
+          "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: fictional adult woman foreground at peaceful seaside gathering, local adult crowd in plain fashionable clothing. No shoes/feet anywhere, no text/logos/food/soldiers; plausible natural skin and backlight.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:51:21.925553+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+        "bytes": 1892016,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+            "bytes": 1892016,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png?t=d092d4bc31946dcf",
+            "http": 200,
+            "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+            "bytes": 1892016,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/odessa-6-merenranta-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/native/odessa-6-merenranta-juhla-intro-v1-native.png",
+      "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+      "bytes": 1892016,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "odessa-intro-7",
+      "slot": 7,
+      "cityName": "Odessa",
+      "gameCityId": "odessa",
+      "mediaSlug": "odessa",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png",
+      "generationPrompt": "Generate ONE brand new photorealistic-natural fictional illustrative city-intro image exactly1536x1024 landscape, opaque RGB sRGB. Real camera appearance, natural light, muted authentic colours, coherent perspective, unique irregular material/foliage detail. NO HDR, CGI, painting, artificial cinematic colour, plastic skin or stamped/cloned organic textures. ZERO text, letters, numbers, street/address signs, labels, logos, brands, distinctive brand stripes/patterns, watermarks, borders, protected artwork or named modern architect designs. No food. Except celebration6, people small/far/from behind. Odesa today at blue hour, an ordinary quiet tree-lined residential street with anonymous19th-century two- and three-storey cream and faded apricot stucco houses, a few open warm-lit windows, irregular acacia branches overhead. Camera along sidewalk looking down street diagonally,50mm realistic documentary optics, cobbles and worn threshold stones, natural restrained dusk exposure. Two very small faraway walkers from behind, no visible faces. Residential street only, no Deribasivska or Primorsky landmark, opera house, port, palace or monuments. No cars, plates, house numbers, plaques, signage, text, logos, shops, advertisements, protected artworks or contemporary named architecture. Quiet peaceful city without war, soldiers, uniforms or damage.",
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1703",
+          "publisher": "UNESCO World Heritage Centre",
+          "readFacts": [
+            "Historic Odesa has two-to-four-storey buildings and wide perpendicular tree-lined streets; large areas of19th-century urban fabric survive."
+          ],
+          "readMethod": "Source search-index text read",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Odessan asuinkadun iltavaloa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: peaceful old tree-lined street, natural dusk exposure, no readable/depicted signage, logos or house numbers; far rear-facing people, no war/military.",
+          "reviewedAt": "2026-10-12T17:47:12.698338+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:49:13.655315+00:00",
+          "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: anonymous old tree-lined residential street, small distant walkers seen from behind. No signage, address numerals, cars/logos or war/military. Restrained real-camera dusk and warm windows.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:51:25.321032+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+        "bytes": 2724414,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+            "bytes": 2724414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png?t=9c7a4b439be44073",
+            "http": 200,
+            "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+            "bytes": 2724414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/odessa-7-asuinkatu-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/native/odessa-7-asuinkatu-ilta-intro-v1-native.png",
+      "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+      "bytes": 2724414,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "odessa-intro-8",
+      "slot": 8,
+      "cityName": "Odessa",
+      "gameCityId": "odessa",
+      "mediaSlug": "odessa",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png",
+      "generationPrompt": "Generate ONE brand new photorealistic-natural fictional illustrative city-intro image exactly1536x1024 landscape, opaque RGB sRGB. Real camera appearance, natural light, muted authentic colours, coherent perspective, unique irregular material/foliage detail. NO HDR, CGI, painting, artificial cinematic colour, plastic skin or stamped/cloned organic textures. ZERO text, letters, numbers, street/address signs, labels, logos, brands, distinctive brand stripes/patterns, watermarks, borders, protected artwork or named modern architect designs. No food. Except celebration6, people small/far/from behind. Use case: historical-scene. Exact year1873, Kuyalnyk estuary near Odesa, undeveloped eastern bank in middle portion of lake, same west-northwest camera direction and1.6m shore-level composition as modern5: sandy-clayey shore starts bottom-left and arcs toward center-left, sparse low steppe grasses at near-left edge; broad shallow saline water fills center and lower-right; very low smooth steppe ridge across opposite shore spans entire horizon at y34percent with no mountains. Ordinary nineteenth-century water level, not a drought desert. No buildings anywhere; exclude later1892 mudbath architecture and all1970s/1980s resort towers, no railway, roads, industry, concrete, wires, signs, lamps, motorboats, people or contemporary things. PURE NEUTRAL BLACK AND WHITE all pixels grey, no sepia/tint, authentic old plate-photo feel with fine grain, soft daylight contrast and no border. Natural brine ripples and salt-silt shore irregularities; same geographic waterbody/camera direction. Peaceful landscape, no war, soldiers or military.\n Pair anchors from modern image: narrow distant steppe ridge highest y32percent, waterline y34percent. Near shore curves from lower-right-center x78percent at bottom toward x32percent/y39percent then left edge/y35percent; steppe-grass bank at extreme left; all mid/right open water. Match broad viewpoint and low flat distant ridge; no tall hills or cliffs.",
+      "sources": [
+        {
+          "url": "https://kuyalnik.com.ua/en/history/",
+          "publisher": "Kuyalnik sanatorium official operator history",
+          "readFacts": [
+            "First estuary hospital1833; second1842; modern monumental mud-bath building1892; dormitory towers1976/1981/1986.",
+            "Saline estuary separated from Black Sea by deposited sand; silt and brine are native landscape.",
+            "Railway dating differs1868 vs tourist portal1873, so no railways depicted."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.odesatourism.site/en/beaches-resorts/",
+          "publisher": "Odesa Tourist Portal",
+          "readFacts": [
+            "Kuyalnyk resort13km from city centre;1833 mud baths; substantial new bath building1890-1892.",
+            "Historic nineteenth-century water body already existed; modern resort structures excluded."
+          ],
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2025.1716358/full",
+          "publisher": "Frontiers in Marine Science, primary long-term study",
+          "readFacts": [
+            "Estuary is elongated north-south endorheic lake, length25-30km and width2.5-3km depending on water amount.",
+            "Modern water level changes significantly;1873 image reconstructs a conservative ordinary water-level scene, not a claim of measured1873 shoreline."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Kuyalnykin estuaarin ranta vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: same estuary shore direction/arc and low opposite steppe ridge as modern5; neutral blackwhite, natural water/salt/clay detail, all later buildings and military omitted.",
+          "reviewedAt": "2026-10-12T17:48:17.378502+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:51:04.431327+00:00",
+          "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame and modern5 pair compared: same left estuary shore curve and low steppe ridge across water. Visually neutral monochrome, no people, signs, buildings or modern objects. Historical sanatorium1833 existence and primary geological study support old natural estuary; exact waterline and vegetation are illustrative.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:51:28.026952+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+        "bytes": 2435081,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png",
+            "http": 200,
+            "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+            "bytes": 2435081,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png?t=04b6cf8d7ecbde75",
+            "http": 200,
+            "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+            "bytes": 2435081,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/odessa-8-kuyalnyk1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/native/odessa-8-kuyalnyk1873-intro-v1-native.png",
+      "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+      "bytes": 2435081,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    }
+  ],
+  "omittedItems": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "productionComplete": true,
+  "successfulImageReturns": 6,
+  "rejectedCandidates": [
+    {
+      "slot": 4,
+      "reason": "Visible posted notice with writing/scribbles on rear wall and small blue address-like plaque; required one whole-new correction pending.",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/native/odessa-4-odesa-piha-intro-v1-native.png",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/odessa-4-odesa-piha-intro-v1.png",
+      "sha256": "b368a45bd76952d3a910ddcd65a9a54250d2a6d673ec7f40251b3505a305bd71"
+    }
+  ],
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "odessa",
+    "gameCityId": "odessa",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/sources.json",
+      "https://kuyalnik.com.ua/en/history/",
+      "https://www.odesatourism.site/en/beaches-resorts/"
+    ],
+    "assets": [
+      {
+        "id": "odessa-intro-4",
+        "slot": 4,
+        "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty valittu v2: uskottava arkinen asuinpiha, henkilöt selin ja merkitsemättömät seinät.",
+        "observations": [
+          "Valittu v2: fotorealistinen tavallinen asuinpiha, kaksi henkilöä selin. Kuluneet puurakenteiset galleriat, pyykki, rappaus, kiveys ja ruukkukasvit ovat uskottavia.",
+          "Seinä-/ikkunapinnat, henkilöt, puunkuori ja lehdet tarkastettu natiivikokoisina. Ei havaittua kirjoitusta, ilmoitusta, osoitekilpeä, numeroa, logoa, muovisuutta tai leimattua luonnon pintaa. Valo, varjot ja perspektiivi ovat koherentteja.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot4-bark-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot4-people-gallery-wall.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "odessa-intro-5",
+        "slot": 5,
+        "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: luonnollinen matalan arolinjan suolaestuaari ilman rakennuksia, tekstiä tai nykyinfrastruktuuria.",
+        "observations": [
+          "Fotorealistinen luonnollinen suolaestuaari, matala arolinja ja vasemmalta alhaalta kaartuva ranta. Vesi oikealla/keskellä, epäsäännöllinen suolakerros, muta, hiekka ja kuiva ruoho.",
+          "Ei rakennuksia, ihmisiä, tekstiä, logoja, teitä, rautatietä, veneitä, vuoria tai turistirakenteita. Aallokko ja valaistus ovat luonnollisia.",
+          "Sama yleinen WNW-katselusuunta, rantakaaren suunta ja matala vastaranta kuin slot8:ssa. Tarkkaa1873 vedenkorkeutta tai yksittäistä rantaviivaa ei esitetä todennetuksi.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot5-salt-mud-water.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot5-steppe-horizon.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "odessa-intro-6",
+        "slot": 6,
+        "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fiktiivinen aikuinen nykypäivän merenrantajuhlassa, luonnolliset kasvot ja kädet, geneeriset vaatteet; ei ruokaa, jalkineita tai brändimerkkejä.",
+        "observations": [
+          "Fiktiivinen aikuinen etualalla nykyajan merenrantajuhlassa. Luonnollinen iho, silmät, hampaat ja hiukset; taustan näkyvät kasvot sekä vasemman henkilön näkyvä käsi tarkastettu natiivikokoisina ilman selvää anatomista virhettä.",
+          "Geneerinen yksivärinen pellavaliivi ja vaalea toppi, taustassa tavallisia muodikkaita nykyvaatteita. Ei kirjoitusta, numeroita, logoja, tunnistettavaa brändikuviota, ruokaa tai juomia.",
+          "Kaikkien henkilöiden jalat ja jalkineet poissa näkyvistä. Aurinkoinen valo, ihon materiaalit ja meren taustan perspektiivi ovat koherentteja.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot6-face-clothes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot6-left-face-hand.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "odessa-intro-7",
+        "slot": 7,
+        "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen iltakatu, pienet henkilöt selin, luonnollinen puusto ja koherentti valo.",
+        "observations": [
+          "Fotorealistinen puiden reunustama asuinkatu ja kaksi pientä kävelijää selin. Lämmin ikkuna-/lyhtyvalo ja sininen iltataivas ovat koherentteja.",
+          "Puunkuori, lehdet, ovet, seinäpinnat, ikkunat ja pienet henkilöt tarkastettu natiivikokoisina. Ei kirjoitusta, numeroita, logoja, muovisuutta tai kaarnaleimaa; perspektiivi ja kiveys uskottavia.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot7-tree-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot7-door-leaves.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "odessa-intro-8",
+        "slot": 8,
+        "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: neutraali mustavalkoinen1873-etuaarirekonstruktio, sama yleinen katselusuunta kuin slot5 ja period exclusions täyttyvät.",
+        "observations": [
+          "Visuaalisesti neutraali mustavalkoinen1873-havainnekuva ilman havaittavaa seepiaa tai värisävyä. Luonnollinen vesi, suola-/mutaranta ja epäsäännöllinen kasvillisuus; ei tekstiä, logoja, ihmisiä tai rakennuksia.",
+          "Sama yleinen WNW-katselusuunta ja sommittelu kuin modernissa slot5:ssä: ranta kaartuu vasemmalta alhaalta kohti vasenta keskikohtaa, vesi avautuu oikealle ja matala arolinja jatkuu horisontissa. Vedenpinnan vaihtelu ja kasvillisuuden ero ovat havainnollistavaa rekonstruktiota, ei täsmällistä1873 mittausnäyttöä.",
+          "Brief, sources.json sekä kaksi lähdesivua luettu verkosta: sanatorium-operaattorin historia ja Odessan virallinen matkailuportaali. Ne tukevat estuaarin historiallista olemassaoloa ja myöhempien kylpylärakenteiden1890–1892 sekä1970/1980-lukujen lisäysten poissulkemista.",
+          "Period exclusions tarkastettu: ei rakennuksia1892 kylpyläkompleksi mukaanlukien,1976/1981/1986 majoitustorneja, rautateitä, teitä, teollisuutta, betonia, johtoja, opasteita, valaisimia, moottoriveneitä tai muita nykyajan esineitä. Rautatien lähteiden1868/1873 vuosiristiriita ei vaikuta tähän rakenteettomaan näkymään.",
+          "Briefin mukaan tämän avoimen estuaarirannan1873-aikakausikuvaa ei löytynyt; kuva on lähteisiin perustuva konservatiivinen luonnonmaiseman tulkinta.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot8-salt-shore-plants.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/odessa/crops/slot8-steppe-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T18:03:33.302674+00:00",
+    "sourceManifestSha256": "2b728c495a939a6c1e7ec860a48bf0bc935a33a76022f8a1a394f1e6f1919344"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "odessa",
+    "verifiedAt": "2026-10-12T18:06:57.925217+00:00",
+    "assets": [
+      {
+        "id": "odessa-intro-4",
+        "slot": 4,
+        "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+        "bytes": 3060305,
+        "verifiedAt": "2026-10-12T18:06:55.147991+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png",
+            "http": 200,
+            "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+            "bytes": 3060305,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png?delivery-verify=2af1451b6a706a33-1791828415147984000",
+            "http": 200,
+            "sha256": "2af1451b6a706a339d6c98205075f880b693a3db5d30096d1d305dc993e8c02f",
+            "bytes": 3060305,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "odessa-intro-5",
+        "slot": 5,
+        "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+        "bytes": 2408209,
+        "verifiedAt": "2026-10-12T18:06:55.148691+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+            "bytes": 2408209,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png?delivery-verify=cd361e1a0b0efa96-1791828415148685000",
+            "http": 200,
+            "sha256": "cd361e1a0b0efa96cec6f6dc116c446d4eb0eaef76517967796a1deb8d224ed6",
+            "bytes": 2408209,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "odessa-intro-6",
+        "slot": 6,
+        "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+        "bytes": 1892016,
+        "verifiedAt": "2026-10-12T18:06:55.149743+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+            "bytes": 1892016,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-6-merenranta-juhla-intro-v1.png?delivery-verify=d092d4bc31946dcf-1791828415149741000",
+            "http": 200,
+            "sha256": "d092d4bc31946dcf51b0fdca243d68e768da4452deda64d57342633e02d01b14",
+            "bytes": 1892016,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "odessa-intro-7",
+        "slot": 7,
+        "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+        "bytes": 2724414,
+        "verifiedAt": "2026-10-12T18:06:56.455929+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+            "bytes": 2724414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png?delivery-verify=9c7a4b439be44073-1791828416455916000",
+            "http": 200,
+            "sha256": "9c7a4b439be44073b9666280c47e8e2bbe0dc93484b7a341c2153cfea0daa88a",
+            "bytes": 2724414,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "odessa-intro-8",
+        "slot": 8,
+        "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+        "bytes": 2435081,
+        "verifiedAt": "2026-10-12T18:06:56.706605+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png",
+            "http": 200,
+            "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+            "bytes": 2435081,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/odessa/20261012-full/odessa-8-kuyalnyk1873-intro-v1.png?delivery-verify=04b6cf8d7ecbde75-1791828416706582000",
+            "http": 200,
+            "sha256": "04b6cf8d7ecbde7545bf604a99f6a726a3718ab3a155239f7649b306f6e56b8b",
+            "bytes": 2435081,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/odessa/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.798742+00:00"
+}

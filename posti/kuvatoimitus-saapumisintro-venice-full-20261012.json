@@ -1,0 +1,834 @@
+{
+  "cityName": "Venetsia",
+  "gameCityId": "venetsia",
+  "mediaSlug": "venice",
+  "status": "worker-produced-awaiting-root-QA-R2",
+  "complete": true,
+  "assets": [
+    {
+      "id": "venice-4-cannaregio-arki-intro-v2",
+      "slot": 4,
+      "version": 2,
+      "cityName": "Venetsia",
+      "gameCityId": "venetsia",
+      "mediaSlug": "venice",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-4-cannaregio-arki-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-4-cannaregio-arki-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png",
+      "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+      "bytes": 2819336,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Venice, quiet ordinary residential canal bank in Cannaregio away from main sights: worn Istrian stone walkway at lower right, narrow green-grey canal at left, faded pink and ochre plaster brick houses with irregular plain shutters. One small adult resident walking away20metres distant carries a plain canvas shopping bag; another small adult distant lowering a plain wicker basket into an entirely unmarked simple wooden rowboat. All people far/backturned; no faces visible. Morning diffuse light,35mm pedestrian camera angled along canal bank, no monumental bridge, church or palace. All visible walls, boat hulls and doors completely blank, no shop fronts, menus, number tiles, plaques, intercom labels, boat registrations or logos. No food visible. CRITICAL: No stickers, decals, labels, wrapped label bands, utility markings, safety notices or graffiti on ANY surface. Exclude exposed drainpipes, utility boxes, metal doorbells and intercoms from the entire frame. Near camera at right use uninterrupted plain old brick/plaster wall and stone walkway, completely unmarked. Boats have blank wooden hulls without any numbers or names. Completely new independent camera scene, no editing or reuse of prior pixels.",
+      "sources": [
+        {
+          "url": "https://www.veneziaunica.it/en/things-to-do-in-venice/venice-areas/sestieri/cannaregio",
+          "label": "Città Venezia – Cannaregio",
+          "readFacts": "Cannaregio has quiet corners and small alleys/canal banks facing lagoon, everyday neighbourhood setting; omit named churches/palaces and modern university campus."
+        }
+      ],
+      "caption": "Arkipäivän asiointia Cannaregion kanavanrannalla Venetsiassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "V2 koko kehys+natiivikoko tarkastettu; oikea etualaseinä unmarked ilman etikettiputkea, vanha anonyymi asuinrakennuskanta, ihmiset selin, veneiden rungot vailla rekisterimerkkejä/tekstiä/brändejä; epäsäännöllinen kivi/vesi/kasvillisuus.",
+          "inspectedAt": "2026-10-12T17:59:40.985557+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and boat,unmarkedwalls,shutters,brick/plaster,paving,foliage,back-facingpeople inspected. Contemporaryordinary Cannaregio canalroutine with workerfacingaway and distantresident,plain boats/clothes. Foregroundwalls clear of stickers/labels/addressnumbers; no text,logos,food,signs or protected contemporarydesign. Credible restrained camera/material/water detail.",
+          "reviewedAt": "2026-10-12T18:03:32.422949+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-4-cannaregio-arki-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-4-cannaregio-arki-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+        "bytes": 2819336,
+        "nativeSha256": "be6269c9a4f2565ace93b14d7625a247b9a1ad4035dd7024ea81a8fac7a84b7d",
+        "decodedRGBSha256": "825b338c9297168fa2d047a17aded9fcb7a9f32288422fa64551566e891bfb3f",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:59:18.881841+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png?t=c98321ccfbdd6b75",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png",
+        "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+        "bytes": 2819336,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+        "canonicalGetBytes": 2819336,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:08.501285+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "venice-5-santerasmo-laguuni-intro-v1",
+      "slot": 5,
+      "version": 1,
+      "cityName": "Venetsia",
+      "gameCityId": "venetsia",
+      "mediaSlug": "venice",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-5-santerasmo-laguuni-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-5-santerasmo-laguuni-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png",
+      "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+      "bytes": 2395285,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Venetian northern lagoon seen from natural northmost shore of SantErasmo island, standing on muddy reed-fringed bank facing north-northwest away from settlement. Shallow silver blue-grey brackish water covers left two-thirds; irregular low green and russet saltmarsh/barene with a winding tidal creek extends at lower right toward middle distance; low remote marsh islands at flat horizon, huge pale overcast sky. No buildings, skyline, piers, sea walls or bridges anywhere. One tiny plain wooden rowboat far in middle distance, entirely blank unmarked hull, no engine; small adult rowing away, face impossible to see. Eye-level35mm natural camera, soft diffused morning daylight, genuine irregular reed stems and water ripples, no birds needed, no repetitive stamped vegetation.",
+      "sources": [
+        {
+          "url": "https://www.veneziaunica.it/it/cosa-fare-a-venezia/il-territorio-di-venezia/isole/sant-erasmo",
+          "label": "Città di Venezia – Sant’Erasmo",
+          "readFacts": "SantErasmo historically agricultural island in north lagoon;1843–1844 tower on southwest end, lagoon boundary stones instituted1791. Modern twentieth-century telemetry towers and later restored fortifications excluded from entire natural crop.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://live.comune.venezia.it/it/node/137335",
+          "label": "Comune Venezia – North lagoon itinerary",
+          "readFacts": "Island retains natural saltmarsh/barene, brackish channels and beach edges. CristoRe church consecrated1929, parish1926; exclude church and buildings. Lagoon habitat continuity in1873 is inferred, exact reed patch/shore shape not asserted as documented.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.silvenezia.it/?q=node%2F180",
+          "label": "Atlante della Laguna di Venezia – Sant’Erasmo itinerary",
+          "readFacts": "Island nineteenth-century tower sheltered archduke1848; modern village church1929. Choose northern shore facing north away from both village and southern fortifications. No modern pier/boardwalk in1873 crop.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/394/",
+          "label": "UNESCO World Heritage – Venice and lagoon",
+          "readFacts": "Lagoon history linked to settlements since5th century; muddy shelves alternately submerged/exposed are defining habitat. Modern motorboat erosion and engineering affect marsh morphology;1873 natural shore is an inferred reconstruction, no claim of exact153year shore identity.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Sant’Erasmon pohjoisrannan laguuniluontoa Venetsiassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys+natiivikoko: luonteva matala barene/ruovikko ja vuorovesiuoma, yksi pieni selin näkyvä soutaja vailla merkintöjä. Ei tekstiä/brändejä/kylttejä/suojattua nimettyä nykyarkkitehtuuria; kaukainen horisontti pääosin matalaa kasvillisuutta. Ei stamp-kuvioita.",
+          "inspectedAt": "2026-10-12T18:02:10.460092+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and marshgrasses,muddybank,water,tinyrower/horizon details inspected. Natural north SantErasmo lagoon/barene scene with one distant back-facing adultrower and plain boat,irregular nativeplants/waterripples,no moderninfrastructure,signs,text,logo,numberplates or nameddesign. Restrained cloudycamera rendering.",
+          "reviewedAt": "2026-10-12T18:05:48.024453+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-5-santerasmo-laguuni-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-5-santerasmo-laguuni-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+        "bytes": 2395285,
+        "nativeSha256": "2a90d899dd5a2e3c1114915e2639bbf665ff96bd1a96a1647dee649d213e44de",
+        "decodedRGBSha256": "dd706253afdcf2d725b42d612276970a4f6de7b61b952ccffa2a5b9f3e730ffe",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:01:42.082115+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png?t=5b7b513839b26e1d",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png",
+        "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+        "bytes": 2395285,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+        "canonicalGetBytes": 2395285,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:10.015652+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "venice-6-cannaregio-juhla-intro-v2",
+      "slot": 6,
+      "version": 2,
+      "cityName": "Venetsia",
+      "gameCityId": "venetsia",
+      "mediaSlug": "venice",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-6-cannaregio-juhla-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-6-cannaregio-juhla-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png",
+      "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+      "bytes": 2121562,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day informal joyful music gathering beside Fondamenta degli Ormesini in Cannaregio, Venice; ordinary old residential canal façades softly out of focus, a small hint of canal water behind people. One fictional28-year-old Italian man with short dark slightly wavy hair in foreground laughing toward friend outside frame; plain muted sage-green overshirt over plain ivory tee. Young adult local Venetian friends behind smiling and clapping in generic fashionable solid-colour clothes. ALL people only chest/upper-torso visible, dense crowd torsos fill bottom edge, no lower bodies and NO SHOES ANYWHERE. No food/drinks, menus, masks, flags, festival logos, brand patterns, artwork, screens or signs. Candid summer late afternoon light, real skin pores and small natural wrinkles, loose natural hair, no fashion advertising pose. CRITICAL FRAME: Background contains ONLY canal water and the plain upper-storey plaster/window areas across the canal, softly out of focus. No ground-floor door, no entrance, no shopfront, no awning, no plaque, no door panel, no label or notice surface ANYWHERE. Crop the background to canal and upper windows; dense people hide all lower architecture. Absolutely no dark marks shaped like words even in blur. Foreground adult laughs with hands below frame, avoid visible foreground clapping hands. Entirely new independent image, no edit, no reuse.",
+      "sources": [
+        {
+          "url": "https://www.veneziaunica.it/en/things-to-do-in-venice/venice-areas/sestieri/cannaregio",
+          "label": "Città Venezia – Cannaregio",
+          "readFacts": "Cannaregio has quiet corners and small alleys/canal banks facing lagoon, everyday neighbourhood setting; omit named churches/palaces and modern university campus."
+        },
+        {
+          "url": "https://live.comune.venezia.it/it/2025/04/la-fondamenta-bianca-torna-martedi-28-luglio-fondamenta-della-misericordia-ormesini-e",
+          "label": "Comune Venezia – Fondamenta gathering2020",
+          "readFacts": "Municipal record describes community summer gathering on Misericordia/Ormesini/Capuzine waterfront with live musicians. Scene is a new fictional present-day informal celebration, not a portrayal of the real2020 dinner; all food excluded."
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen kokoontuminen Cannaregiossa Venetsiassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "V2 kokonaan uusi; koko kehys ja natiivikoko: etualan fiktiivinen aikuinen ja iloinen aikuisten joukko, vaatteet geneeriset, kaikki jalkineet poissa. Taustassa ikkunaseinät/kanavavesi ilman kirjoitusmerkkejä/kylttejä/osoitelaattoja/logoa; ei ruokaa; iho/hiukset luonnolliset.",
+          "inspectedAt": "2026-10-12T18:05:38.783142+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and all hands,skin,clothing,windowwall/background details inspected. Fictional adultman at cheerful adult canal-side gathering,plain generic fashionableclothes,all footwear cropped/occluded. Backgroundupperwindows and water clear of doorinscription; no addressnumbers,text,signs,logos,brandstripes,food or protecteddesign. Natural camera/skin/hair rendering.",
+          "limits": [
+            "Illustrative scene, not an actual event photo or architectural survey."
+          ],
+          "reviewedAt": "2026-10-12T18:07:38.474644+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-6-cannaregio-juhla-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-6-cannaregio-juhla-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+        "bytes": 2121562,
+        "nativeSha256": "ac39624e6025dda899695e958ec8deaf5b17fbcf03fc2d6c742ea4b52d94fa9b",
+        "decodedRGBSha256": "a39d1ef362171f748599caac64d028c72740cf378170fca305f42af52f9b8377",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:05:18.464911+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png?t=c09021f2a0823008",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png",
+        "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+        "bytes": 2121562,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+        "canonicalGetBytes": 2121562,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:11.939439+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "venice-8-santerasmo-1873-intro-v1",
+      "slot": 8,
+      "version": 1,
+      "cityName": "Venetsia",
+      "gameCityId": "venetsia",
+      "mediaSlug": "venice",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-8-santerasmo-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-8-santerasmo-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png",
+      "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+      "bytes": 2043157,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, native neutral black-and-white monochrome with no sepia, no warm or cool colour tint, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Exactly year1873, northern lagoon of Venice. Same fixed viewpoint as slot5: standing on natural northmost muddy/reed-fringed shore of SantErasmo island facing north-northwest away from settlement. Shallow brackish water left two-thirds; irregular low saltmarsh/barene and winding narrow tidal creek lower right curving toward middle distance, flat remote marsh islands on horizon, huge pale overcast sky. No buildings, church, tower, skyline, pier, seawall, road or bridge anywhere, only natural lagoon habitat. ONE tiny plain unmarked wooden rowboat far in middle distance, no engine, one tiny adult rowing away in dark1873 wool clothing and plain hat, no visible face. No motorboats, registration names/numbers, synthetic ropes, plastic, navigation signs, electricity, antennas, concrete or modern infrastructure. Historical plausible nature reconstruction, not archival photograph; no claim exact reed patch identical across153years. Soft neutral daylight, fine subtle photographic grain and gentle nineteenth-century contrast. Entire image visibly neutral grayscale. Match this fixed composition: flat horizon at roughly39percent frame height; pale sky above, broad shallow water below across left two-thirds, natural low saltmarsh fingers indented at middle-right, fine muddy/reed fringe at lower edge/right, single small wooden rowboat left of centre just below horizon. Old nineteenth-century rower is far away, face invisible. No roofs or human structures even at remote horizon; irregular native marsh vegetation, no cultivated garden design.",
+      "sources": [
+        {
+          "url": "https://www.veneziaunica.it/it/cosa-fare-a-venezia/il-territorio-di-venezia/isole/sant-erasmo",
+          "label": "Città di Venezia – Sant’Erasmo",
+          "readFacts": "SantErasmo historically agricultural island in north lagoon;1843–1844 tower on southwest end, lagoon boundary stones instituted1791. Modern twentieth-century telemetry towers and later restored fortifications excluded from entire natural crop.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://live.comune.venezia.it/it/node/137335",
+          "label": "Comune Venezia – North lagoon itinerary",
+          "readFacts": "Island retains natural saltmarsh/barene, brackish channels and beach edges. CristoRe church consecrated1929, parish1926; exclude church and buildings. Lagoon habitat continuity in1873 is inferred, exact reed patch/shore shape not asserted as documented.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.silvenezia.it/?q=node%2F180",
+          "label": "Atlante della Laguna di Venezia – Sant’Erasmo itinerary",
+          "readFacts": "Island nineteenth-century tower sheltered archduke1848; modern village church1929. Choose northern shore facing north away from both village and southern fortifications. No modern pier/boardwalk in1873 crop.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/394/",
+          "label": "UNESCO World Heritage – Venice and lagoon",
+          "readFacts": "Lagoon history linked to settlements since5th century; muddy shelves alternately submerged/exposed are defining habitat. Modern motorboat erosion and engineering affect marsh morphology;1873 natural shore is an inferred reconstruction, no claim of exact153year shore identity.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Sant’Erasmon laguuniranta Venetsiassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys ja natiivikoko tarkastettu: visuaalisesti neutraali mustavalkoinen, sama SantErasmon pohjoisrannan NNW suunta kuin5, veden/pienen soutuveneen/matalan barene-rannan järjestys yhtenäinen;1873-vaatteet kaukaa selin, ei rakennuksia/laitureita/moottoreita/tekstiä/numeroita/sähköä; muuttuva vuorovesiranta historiallisena luontopäätelmänä merkitty lähteisiin.",
+          "inspectedAt": "2026-10-12T18:11:31.060105+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and marshgrasses,mud,water,horizon,woodrowboat/periodadult detail inspected and compared with modern5. Same north/northwest natural SantErasmolagoon direction,waterleft and bareneright,neutralblack/white no visible tint. Tiny back-facing periodrower,no laterchurch1929/telemetrytower,fortrestoration,boardwalk,pier,modernboat,electriclighting,text/number/logo. Habitatcontinuity is explicitly inferred,not exactshoreline identity.",
+          "limits": [
+            "Illustrative scene; individual reconstructed features are not an exact measured periodrecord."
+          ],
+          "reviewedAt": "2026-10-12T18:19:06.903271+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-8-santerasmo-1873-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-8-santerasmo-1873-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+        "bytes": 2043157,
+        "nativeSha256": "f49340709fce7f352bf6b575cc9c98fdfb9f465249a0a924b93f710aa88ace1c",
+        "decodedRGBSha256": "5b71c0d950c7d90684cbd30f8096ec2e434db8be05aa48da5cd6cfd01e3f211d",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:10:52.167805+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png?t=40e2e06ebb7198e8",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png",
+        "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+        "bytes": 2043157,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+        "canonicalGetBytes": 2043157,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:15.072801+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "venice-7-misericordia-ilta-intro-v2",
+      "slot": 7,
+      "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "pending-quality-fix: valaistun yläikkunan vasemmassa vihreässä luukussa on vaalea kilpimäinen tunnus noin x1024–1045/y89–111. Brändiä ei tunnisteta, mutta näkyvä tunnus rikkoo logottomuusvaatimusta. Valittu v2 on jo yksi laatukorjaus.",
+      "observations": [
+        "Valittu v2 tarkastettu kokonaan ja molempien julkisivujen, sillan ja kaukaisten ovien natiivirajauksina. Oikeanpuoleisen talon lämpimästi valaistun yläikkunan vasemman vihreän luukun yläosassa on vaalea, rajattu kilpi-/tunnusmainen kuvio noin x1024–1045/y89–111. Kuviossa on ulkoreuna ja sisäinen useaan osaan järjestynyt kuviointi; se erottuu ympäröivästä tasaisesta vihreästä luukusta.",
+        "Näkyvä tunnus rikkoo logottomuusvaatimusta. Tarkkaa brändiä, tunnuksen identiteettiä tai tekstiä ei väitetä tunnistetuksi. Slot7-v2 pending-quality-fix; manifestin mukaan yksi tuottajan laatukorjaus on jo käytetty, joten jatko on koordinaatiopäätös. Ei generointia tai rasterimuutoksia.",
+        "Muu näkymä on kameramainen: tyhjä kanava, luonnolliset heijastukset, kuluneet tiilet ja rappaus, johdonmukainen iltavalo ja pieni selin kävelevä hahmo. Muita selviä tekstejä tai ruokaa ei havaittu.",
+        "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-left-facades-bridge.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-right-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-far-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-upper-shutter-detail.png",
+        "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+      ]
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "slot": 4,
+      "version": 1,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-4-cannaregio-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-4-cannaregio-arki-intro-v1.png",
+      "reason": "Natiivicrop qa/slot4-drainpipe-native.png osoittaa oikean etualan syöksytorven valkeita etikettinauhoja ja pieniä kirjain-/numeromaisia merkintöjä. One whole-newv2 required;v1preserved.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/prompts/4-cannaregio-arki-v1.txt"
+    },
+    {
+      "slot": 6,
+      "version": 1,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-6-cannaregio-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-6-cannaregio-juhla-intro-v1.png",
+      "reason": "Left background door upper panel contains dark letter-like/sign-like marking (qa/slot6-door-mark-native.png). Hard no-text/sign rule fails even though defocused. One whole-newv2 without ground-floor doors or sign-bearing backgrounds.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/prompts/6-cannaregio-juhla-v1.txt"
+    },
+    {
+      "slot": 7,
+      "version": 1,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/venice-7-misericordia-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/native/venice-7-misericordia-ilta-intro-v1.png",
+      "reason": "Lähellä olevan veneen keulan sivussa on keltaiset selkeät numero-/rekisterimerkit, qa/slot7-boat-mark-native.png. Tarpeellinen whole-newv2 tyhjällä kanavalla ilmanveneitä;v1säilytetty.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/prompts/7-misericordia-ilta-v1.txt"
+    }
+  ],
+  "actualCalls": 8,
+  "expectedSlots": 5,
+  "updatedAt": "2026-10-12T18:11:31.130530+00:00",
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T18:19:15.083325+00:00",
+  "rejectedCandidateHistory": [
+    {
+      "id": "venice-7-misericordia-ilta-intro-v2",
+      "slot": 7,
+      "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "pending-quality-fix: valaistun yläikkunan vasemmassa vihreässä luukussa on vaalea kilpimäinen tunnus noin x1024–1045/y89–111. Brändiä ei tunnisteta, mutta näkyvä tunnus rikkoo logottomuusvaatimusta. Valittu v2 on jo yksi laatukorjaus.",
+      "observations": [
+        "Valittu v2 tarkastettu kokonaan ja molempien julkisivujen, sillan ja kaukaisten ovien natiivirajauksina. Oikeanpuoleisen talon lämpimästi valaistun yläikkunan vasemman vihreän luukun yläosassa on vaalea, rajattu kilpi-/tunnusmainen kuvio noin x1024–1045/y89–111. Kuviossa on ulkoreuna ja sisäinen useaan osaan järjestynyt kuviointi; se erottuu ympäröivästä tasaisesta vihreästä luukusta.",
+        "Näkyvä tunnus rikkoo logottomuusvaatimusta. Tarkkaa brändiä, tunnuksen identiteettiä tai tekstiä ei väitetä tunnistetuksi. Slot7-v2 pending-quality-fix; manifestin mukaan yksi tuottajan laatukorjaus on jo käytetty, joten jatko on koordinaatiopäätös. Ei generointia tai rasterimuutoksia.",
+        "Muu näkymä on kameramainen: tyhjä kanava, luonnolliset heijastukset, kuluneet tiilet ja rappaus, johdonmukainen iltavalo ja pieni selin kävelevä hahmo. Muita selviä tekstejä tai ruokaa ei havaittu.",
+        "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-left-facades-bridge.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-right-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-far-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-upper-shutter-detail.png",
+        "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+      ]
+    }
+  ],
+  "pendingQualityFixSlots": [
+    7
+  ],
+  "allRequestedSlotsDelivered": false,
+  "deliveryQAEvidence": {
+    "mediaSlug": "venice",
+    "gameCityId": "venetsia",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/assignment.json",
+      "https://www.veneziaunica.it/it/cosa-fare-a-venezia/il-territorio-di-venezia/isole/sant-erasmo",
+      "https://live.comune.venezia.it/it/node/137335",
+      "https://whc.unesco.org/en/list/394/",
+      "https://www.silvenezia.it/?q=node%2F180"
+    ],
+    "assets": [
+      {
+        "id": "venice-4-cannaregio-arki-intro-v2",
+        "slot": 4,
+        "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Valittu v2 tarkastettu kokonaan. Vaihtelevat rapautuneet rappaukset, tiilet ja rantakivet, puuveneet, lehdistö ja veden heijastukset ovat kameramaiset. Ei leimattua orgaanista toistokuviota. Valo ja perspektiivi ovat yhtenäiset.",
+          "Veneen asukas on selin kumartuneena, kasvot eivät näy ja näkyvä käsi liittyy uskottavasti koriin. Kaukainen kävelijä on selin. Seinät, veneet ja laukku eivät sisällä tekstiä, numeroita, logoja tai tarroja. Korin vaalea sisältö on materiaalia, ei tunnistettavaa ruokaa. Ei eläimiä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot4-boat-hand-facade.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot4-far-walker-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot4-plants-upper-wall.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "venice-5-santerasmo-laguuni-intro-v1",
+        "slot": 5,
+        "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Laguuni kokonaan sekä pieni soutuvene, horisontti, lähiruovikko ja mutapinta tarkastettu. Vaihtelevat kasviryhmät, ohuet ruoko- ja heinänkorret, vesi ja muta muodostavat luonnollisen ympäristön. Valo ja perspektiivi ovat yhtenäiset.",
+          "Soutaja on pieni ja selin, veneessä ei ole merkintöjä tai moottoria. Ei rakennuksia, torneja, tekstiä, logoja, ruokaa tai eläimiä. Pari5/8 noudattaa samaa pohjois-/luoteissuuntaista luonnonrantakatselua: avoin vesi vasemmalla ja matala suolakasvillisuus ja mutaranta oikealla. Yksittäisten ruovikoiden153 vuoden identtisyyttä ei väitetä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot5-boat-horizon.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot5-marsh-reeds.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "venice-6-cannaregio-juhla-intro-v2",
+        "slot": 6,
+        "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Valittu v2 tarkastettu kokonaan. Etualalla fiktiivinen aikuinen mies rennossa juhla-/kokoontumistilanteessa, geneerinen nykyaikainen yksivärinen salviapaita ja vaalea T-paita. Kasvojen iho, parta, hiukset, hampaat, silmät ja kaulan anatomia ovat uskottavat; taustan kasvot luontevat.",
+          "Etualan kädet ovat kehyksen ulkopuolella. Taustan osin peittyvien taputtavien käsien näkyvissä osissa ei selvää lisäsormi-, sulautumis- tai nivelvirhettä. Kaikki jalkineet peittyvät ylävartalorajaukseen. Ei ruokaa, juomia, tekstiä, logoja tai brändikuvioita. Luonnollinen lämmin valo ja syväterävyys.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot6-foreground-face.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot6-background-clapping-hands.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "venice-7-misericordia-ilta-intro-v2",
+        "slot": 7,
+        "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "pending-quality-fix: valaistun yläikkunan vasemmassa vihreässä luukussa on vaalea kilpimäinen tunnus noin x1024–1045/y89–111. Brändiä ei tunnisteta, mutta näkyvä tunnus rikkoo logottomuusvaatimusta. Valittu v2 on jo yksi laatukorjaus.",
+        "observations": [
+          "Valittu v2 tarkastettu kokonaan ja molempien julkisivujen, sillan ja kaukaisten ovien natiivirajauksina. Oikeanpuoleisen talon lämpimästi valaistun yläikkunan vasemman vihreän luukun yläosassa on vaalea, rajattu kilpi-/tunnusmainen kuvio noin x1024–1045/y89–111. Kuviossa on ulkoreuna ja sisäinen useaan osaan järjestynyt kuviointi; se erottuu ympäröivästä tasaisesta vihreästä luukusta.",
+          "Näkyvä tunnus rikkoo logottomuusvaatimusta. Tarkkaa brändiä, tunnuksen identiteettiä tai tekstiä ei väitetä tunnistetuksi. Slot7-v2 pending-quality-fix; manifestin mukaan yksi tuottajan laatukorjaus on jo käytetty, joten jatko on koordinaatiopäätös. Ei generointia tai rasterimuutoksia.",
+          "Muu näkymä on kameramainen: tyhjä kanava, luonnolliset heijastukset, kuluneet tiilet ja rappaus, johdonmukainen iltavalo ja pieni selin kävelevä hahmo. Muita selviä tekstejä tai ruokaa ei havaittu.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-left-facades-bridge.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-right-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-far-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-upper-shutter-detail.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "venice-8-santerasmo-1873-intro-v1",
+        "slot": 8,
+        "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Historiakuva v1 kokonaan ja horisontti/soutuvene sekä lähimuta/ruovikko natiivikoossa tarkastettu. Visuaalinen yleisilme on neutraali mustavalkoinen ilman seepiaa tai värisävyä. Pieniä RGB-kanavaeroja ei käytetä yksin hylkäykseen eikä rasteria ole värimuunnettu.",
+          "Sama katselusuunta kuin5: SantErasmon luonnollinen pohjoisranta kohti pohjois-/luoteislaguunia, asutuksesta ja etelälinnoituksista poispäin. Avoin vesi vasemmalla, matala suolakasvillisuus/mutainen ranta oikealla. Horisontin korkeus ja yksittäisten ruovikoiden muoto vaihtelevat; brief ei väitä historiallista rantaviivaa pikselintarkasti identtiseksi.",
+          "Kaksi varsinaista ensisijaista lähdettä luettu: Comune Venezia Laguna Nord vahvistaa saaren barene-suolahetteet ja murtovesikanavat sekä CristoRe-kirkon1929 ja seurakunnan1926. UNESCO Venice and lagoon kuvaa vuosisatoja jatkuneen laguunin, vaihtelevasti veden peittämiä mutatasanteita ja myöhempää morfologian muutosta. Lisäksi Atlante della Laguna -lähde luettu; se sisältää eteläisen1800-luvun linnoituksen, pohjoisen rantareitin ja myöhemmän kirkon.",
+          "Avattu nykyinen VeneziaUnica-sivu oli lyhyt ja tuki vain puutarha-/viljelysaaren ja rannan luonnetta. Producer-briefin kaikkia1840-luvun yksityiskohtia ei väitetä tästä avatusta sivusta varmennetuiksi. Vuoden1873 luonnonympäristö on lähteisiin perustuva päätelmä; ei täsmälleen samasta pisteestä dokumentoitu vuoden1873 valokuva.",
+          "Period exclusions täyttyvät: ei rakennuksia, kirkkoa, linnoitus-/telemetriatornia, laituria, betonia, tietä, sähkölaitteita, navigaatiokylttejä, moderneja veneitä, rekisterimerkkejä tai muovia. Yksi pieni selin oleva soutaja tummassa vaatetuksessa ja hatussa, ei näkyviä kasvoja. Vene, vesi, vaihtelevat ruokokasvit ja muta ovat luonnolliset. Ei tekstejä tai logoja.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot8-boat-horizon.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot8-marsh-mud.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T18:58:26.060673+00:00",
+    "sourceManifestSha256": "f997031f45f94bd82033c0326a608eca983d6ee3a8670608968efc222adb893c"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "venice",
+    "verifiedAt": "2026-10-12T19:03:14.288203+00:00",
+    "assets": [
+      {
+        "id": "venice-4-cannaregio-arki-intro-v2",
+        "slot": 4,
+        "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+        "bytes": 2819336,
+        "verifiedAt": "2026-10-12T19:03:13.034404+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png",
+            "http": 200,
+            "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+            "bytes": 2819336,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png?delivery-verify=c98321ccfbdd6b75-1791831793034399000",
+            "http": 200,
+            "sha256": "c98321ccfbdd6b751c5503039e95818dfba550f7c304b63d498fdad88329261b",
+            "bytes": 2819336,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "venice-5-santerasmo-laguuni-intro-v1",
+        "slot": 5,
+        "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+        "bytes": 2395285,
+        "verifiedAt": "2026-10-12T19:03:13.034578+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png",
+            "http": 200,
+            "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+            "bytes": 2395285,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-5-santerasmo-laguuni-intro-v1.png?delivery-verify=5b7b513839b26e1d-1791831793034576000",
+            "http": 200,
+            "sha256": "5b7b513839b26e1de0e8f4ea55d035a91fe3ff8e8e99b0716587955bff475ef4",
+            "bytes": 2395285,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "venice-6-cannaregio-juhla-intro-v2",
+        "slot": 6,
+        "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+        "bytes": 2121562,
+        "verifiedAt": "2026-10-12T19:03:13.034698+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png",
+            "http": 200,
+            "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+            "bytes": 2121562,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-6-cannaregio-juhla-intro-v2.png?delivery-verify=c09021f2a0823008-1791831793034695000",
+            "http": 200,
+            "sha256": "c09021f2a0823008ca42e24622288d972faa395862cf2f0e487153f8a6071a67",
+            "bytes": 2121562,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "venice-8-santerasmo-1873-intro-v1",
+        "slot": 8,
+        "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+        "bytes": 2043157,
+        "verifiedAt": "2026-10-12T19:03:13.672128+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+            "bytes": 2043157,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/venice/20261012-full/venice-8-santerasmo-1873-intro-v1.png?delivery-verify=40e2e06ebb7198e8-1791831793672122000",
+            "http": 200,
+            "sha256": "40e2e06ebb7198e8af5062af6aad6846c852b7ebd9e883ac76ee5a280f307c46",
+            "bytes": 2043157,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/venice/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 4,
+    "R2": 4,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.559705+00:00"
+}

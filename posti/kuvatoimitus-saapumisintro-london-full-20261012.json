@@ -1,0 +1,934 @@
+{
+  "cityName": "Lontoo",
+  "gameCityId": "lontoo",
+  "mediaSlug": "london",
+  "updatedAt": "2026-10-12T17:43:21.591064+00:00",
+  "assets": [
+    {
+      "id": "london-4-asuintalojen-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Lontoo",
+      "gameCityId": "lontoo",
+      "mediaSlug": "london",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/london-4-asuintalojen-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/native/london-4-asuintalojen-arki-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/london/20261012-full/london-4-asuintalojen-arki-intro-v1.png",
+      "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: London arrivalintro slot4. London TODAY, ordinary old Victorian residential terrace street, modest anonymous weathered brownbrickhouses with plain blackdoors and white sashwindows, smallfrontgardens, damp pavements, one small distant commuter carrying a plainbag and two other smallwalkers all seenFROMBEHIND. Eyecamera looking downthestreet, softcloudyday, unposed everydayLondonatmosphere. No shops,pubsigns,cars,phoneboxes,buses,touristattractions or closefaces. Doorandwall surfaces completely blank without numbers. Create one completely new photorealistic camera-style illustrative image1536x1024 landscapePNG opaqueRGBsRGB. Natural softlight, mutedtruecolors, irregularrealbrick/stone/foliagetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/repeating naturaltexture. Absolutely no text, letters,digits,logos,trademarks,brandpatterns,street signs,house numbers,lettering,posters,advertising,watermark,border,food,protectedart,statues,famousmodernarchitecturalwork.",
+      "sources": [
+        {
+          "url": "https://canalrivertrust.org.uk/canals-and-rivers/regents-canal/history-of-the-regents-canal",
+          "title": "Canal & River Trust: History of Regents Canal",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Regents Canal company formed1812; canal completed1820, thus operational1873.",
+            "Canal carried timber coal and buildingmaterials; waterway active19c transport.",
+            "Underground electrical cables below towpath added1979, all contemporary equipment excluded."
+          ]
+        },
+        {
+          "url": "https://collections.canalrivertrust.org.uk/bw100.1",
+          "title": "Canal & River Trust archive BW100/1: Proprietors originalrecords",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Official original papers record construction1819–openingAugust1,1820.",
+            "Archive dates1802–1883, coveringexact1873, with original company transportrecords."
+          ],
+          "periodReference": "Original period records located; exact1873 sameviewphotograph not found; no photograph claimed."
+        },
+        {
+          "url": "https://canalrivertrust.org.uk/things-to-do/walking/canal-and-river-walks-near-me/little-venice-to-camden-walk",
+          "title": "Canal & River Trust: LittleVenice toCamden walk",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Canal skirtsRegentsPark; willowtrees dip into water; residentialgardens bybanks.",
+            "Macclesfield/BlowUpBridge wasdemolished1874 and rebuilt, so all bridges excluded1873.",
+            "Zoo aviaries/wirecages excluded inboth restricted frames."
+          ]
+        }
+      ],
+      "caption": "Lontoon asuinkadun tavallista arkea. Havainnekuva.",
+      "QA": {
+        "id": "london-4-asuintalojen-arki-intro-v1",
+        "slot": 4,
+        "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:39:46.750708+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary London brick terrace street, native foreground mail-slot is plain blank metal with no text/number/logo; people back view, natural masonry/leaves.",
+        "detailCrops": [
+          "session-owner-review/slot4-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-4-asuintalojen-arki-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:43:05.155217+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+        "bytes": 2975771,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-4-asuintalojen-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+            "bytes": 2975771,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-4-asuintalojen-arki-intro-v1.png?verify=north-cad58bf247a66372-1791826985155443000",
+            "http": 200,
+            "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+            "bytes": 2975771,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2975771
+    },
+    {
+      "id": "london-5-regents-canal-intro-v1",
+      "slot": 5,
+      "cityName": "Lontoo",
+      "gameCityId": "lontoo",
+      "mediaSlug": "london",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/london-5-regents-canal-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/native/london-5-regents-canal-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/london/20261012-full/london-5-regents-canal-intro-v1.png",
+      "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: London arrivalintro slot5. Quiet Regent's Canal reach along the westernedge ofRegent'sPark, LondonTODAY. Camera1.6m onthe southbank towpath looking west along water,35mm: towpath lowerleft disappearing into middledistance, long narrowcanal acrossmiddle, overhanging irregular weepingwillowandotherdeciduoustrees alongoppositebank, actualLondoncanal scale. One plainmodern unlettered unbranded smallnarrowboat veryfaraway. Restrictedwatersidecrop containsNO buildings,bridges,zooobjects,statues,billboards,lights,rails or signs. No people. SoftBritish overcastsummerlight, realwater ripples rather than glassmirror. Create one completely new photorealistic camera-style illustrative image1536x1024 landscapePNG opaqueRGBsRGB. Natural softlight, mutedtruecolors, irregularrealbrick/stone/foliagetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/repeating naturaltexture. Absolutely no text, letters,digits,logos,trademarks,brandpatterns,street signs,house numbers,lettering,posters,advertising,watermark,border,food,protectedart,statues,famousmodernarchitecturalwork.",
+      "sources": [
+        {
+          "url": "https://canalrivertrust.org.uk/canals-and-rivers/regents-canal/history-of-the-regents-canal",
+          "title": "Canal & River Trust: History of Regents Canal",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Regents Canal company formed1812; canal completed1820, thus operational1873.",
+            "Canal carried timber coal and buildingmaterials; waterway active19c transport.",
+            "Underground electrical cables below towpath added1979, all contemporary equipment excluded."
+          ]
+        },
+        {
+          "url": "https://collections.canalrivertrust.org.uk/bw100.1",
+          "title": "Canal & River Trust archive BW100/1: Proprietors originalrecords",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Official original papers record construction1819–openingAugust1,1820.",
+            "Archive dates1802–1883, coveringexact1873, with original company transportrecords."
+          ],
+          "periodReference": "Original period records located; exact1873 sameviewphotograph not found; no photograph claimed."
+        },
+        {
+          "url": "https://canalrivertrust.org.uk/things-to-do/walking/canal-and-river-walks-near-me/little-venice-to-camden-walk",
+          "title": "Canal & River Trust: LittleVenice toCamden walk",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Canal skirtsRegentsPark; willowtrees dip into water; residentialgardens bybanks.",
+            "Macclesfield/BlowUpBridge wasdemolished1874 and rebuilt, so all bridges excluded1873.",
+            "Zoo aviaries/wirecages excluded inboth restricted frames."
+          ]
+        }
+      ],
+      "caption": "Regent’s Canalin rauhallinen vesinäkymä Lontoossa. Havainnekuva.",
+      "QA": {
+        "id": "london-5-regents-canal-intro-v1",
+        "slot": 5,
+        "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:39:46.810930+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural tree-lined canal, native small narrowboat/water shows no discernible lettering/logo, irregular foliage and real-camera tones; no faces or protected architecture.",
+        "detailCrops": [
+          "session-owner-review/slot5-boat-water-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-5-regents-canal-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:43:08.243638+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+        "bytes": 3376138,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-5-regents-canal-intro-v1.png",
+            "http": 200,
+            "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+            "bytes": 3376138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-5-regents-canal-intro-v1.png?verify=north-9dae7f4dce20373c-1791826988243667000",
+            "http": 200,
+            "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+            "bytes": 3376138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3376138
+    },
+    {
+      "id": "london-6-pihajuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Lontoo",
+      "gameCityId": "lontoo",
+      "mediaSlug": "london",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/london-6-pihajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/native/london-6-pihajuhla-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/london/20261012-full/london-6-pihajuhla-intro-v1.png",
+      "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: London arrivalintro slot6. An authentic contemporary youngadultcourtyardmusicparty in an ordinary Londonneighborhood, oldanonymous brownbrickwalls softfocus inbackground. One fictional BlackBritish youngadult woman age26 inforeground smilingjoyfully at someoneoffcamera, naturaldarkcurlyhair, stylishplain burgundy blouse under generic charcoalblazer, naturalreal skinpores, no makeuppolish or plasticlook. Livelydensecrowd of fictional local Londonyoungadults in contemporaryfashionable plainbrandfreeclothes, plausibleLondonmixedpopulation, chattinganddancing, secondaryfaces softfocus, believablecandidmoment. TIGHT upperbody composition, foregroundcutatwaist and backgroundshoulder/waist-updensecrowd coversALL legs,feetandshoes. EVERY shoe ofEVERY person outsideframe orfullyconcealed; nofullbody humans. Nofood/drinks,brands,banners,festivalart,stagelogos,lettering. Soft natural earlyevening sunlight, gentle ambient courtyardlamps. Create one completely new photorealistic camera-style illustrative image1536x1024 landscapePNG opaqueRGBsRGB. Natural softlight, mutedtruecolors, irregularrealbrick/stone/foliagetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/repeating naturaltexture. Absolutely no text, letters,digits,logos,trademarks,brandpatterns,street signs,house numbers,lettering,posters,advertising,watermark,border,food,protectedart,statues,famousmodernarchitecturalwork.",
+      "sources": [
+        {
+          "url": "https://canalrivertrust.org.uk/canals-and-rivers/regents-canal/history-of-the-regents-canal",
+          "title": "Canal & River Trust: History of Regents Canal",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Regents Canal company formed1812; canal completed1820, thus operational1873.",
+            "Canal carried timber coal and buildingmaterials; waterway active19c transport.",
+            "Underground electrical cables below towpath added1979, all contemporary equipment excluded."
+          ]
+        },
+        {
+          "url": "https://collections.canalrivertrust.org.uk/bw100.1",
+          "title": "Canal & River Trust archive BW100/1: Proprietors originalrecords",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Official original papers record construction1819–openingAugust1,1820.",
+            "Archive dates1802–1883, coveringexact1873, with original company transportrecords."
+          ],
+          "periodReference": "Original period records located; exact1873 sameviewphotograph not found; no photograph claimed."
+        },
+        {
+          "url": "https://canalrivertrust.org.uk/things-to-do/walking/canal-and-river-walks-near-me/little-venice-to-camden-walk",
+          "title": "Canal & River Trust: LittleVenice toCamden walk",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Canal skirtsRegentsPark; willowtrees dip into water; residentialgardens bybanks.",
+            "Macclesfield/BlowUpBridge wasdemolished1874 and rebuilt, so all bridges excluded1873.",
+            "Zoo aviaries/wirecages excluded inboth restricted frames."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Lontoon pihajuhlassa. Havainnekuva.",
+      "QA": {
+        "id": "london-6-pihajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:42:50.465736+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural fictional adult skin/face and plain jacket inspected natively; joyful contemporary London courtyard crowd; no footwear and no discernible logos/text.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-jacket-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-6-pihajuhla-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:43:12.422960+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+        "bytes": 2073345,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-6-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+            "bytes": 2073345,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-6-pihajuhla-intro-v1.png?verify=north-31141f6d99c5e710-1791826992427785000",
+            "http": 200,
+            "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+            "bytes": 2073345,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2073345
+    },
+    {
+      "id": "london-7-asuinkadun-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Lontoo",
+      "gameCityId": "lontoo",
+      "mediaSlug": "london",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/london-7-asuinkadun-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/native/london-7-asuinkadun-ilta-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png",
+      "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: London arrivalintro slot7. A quiet old ordinary Londonresidentialsidestreet TODAY atbluehour, eyelevelcameralookingalonganonymous GeorgianandVictorian brickhouses, simple darkentrydoors, warmdomesticwindowglow, damp asphaltandstonepavementreflectinga fewnormalstreetlights. Small distant couple walkingaway, facesnotvisible. Calmrealcameraexposure, mutedLondonbluegrayandamber, no landmarks, shops,pubs,signs,vehicles,house numbers. Doors completelyblank, no mailboxnumberplaques. Create one completely new photorealistic camera-style illustrative image1536x1024 landscapePNG opaqueRGBsRGB. Natural softlight, mutedtruecolors, irregularrealbrick/stone/foliagetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/repeating naturaltexture. Absolutely no text, letters,digits,logos,trademarks,brandpatterns,street signs,house numbers,lettering,posters,advertising,watermark,border,food,protectedart,statues,famousmodernarchitecturalwork.",
+      "sources": [
+        {
+          "url": "https://canalrivertrust.org.uk/canals-and-rivers/regents-canal/history-of-the-regents-canal",
+          "title": "Canal & River Trust: History of Regents Canal",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Regents Canal company formed1812; canal completed1820, thus operational1873.",
+            "Canal carried timber coal and buildingmaterials; waterway active19c transport.",
+            "Underground electrical cables below towpath added1979, all contemporary equipment excluded."
+          ]
+        },
+        {
+          "url": "https://collections.canalrivertrust.org.uk/bw100.1",
+          "title": "Canal & River Trust archive BW100/1: Proprietors originalrecords",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Official original papers record construction1819–openingAugust1,1820.",
+            "Archive dates1802–1883, coveringexact1873, with original company transportrecords."
+          ],
+          "periodReference": "Original period records located; exact1873 sameviewphotograph not found; no photograph claimed."
+        },
+        {
+          "url": "https://canalrivertrust.org.uk/things-to-do/walking/canal-and-river-walks-near-me/little-venice-to-camden-walk",
+          "title": "Canal & River Trust: LittleVenice toCamden walk",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Canal skirtsRegentsPark; willowtrees dip into water; residentialgardens bybanks.",
+            "Macclesfield/BlowUpBridge wasdemolished1874 and rebuilt, so all bridges excluded1873.",
+            "Zoo aviaries/wirecages excluded inboth restricted frames."
+          ]
+        }
+      ],
+      "caption": "Lontoon asuinkadun iltavalot. Havainnekuva.",
+      "QA": {
+        "id": "london-7-asuinkadun-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:42:50.529623+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary London brick residential evening street; native right door/mail-slot has plain metal texture with no discernible glyph/number/logo; distant backs, natural optical light.",
+        "detailCrops": [
+          "session-owner-review/slot7-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:43:16.021930+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+        "bytes": 2888662,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+            "bytes": 2888662,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png?verify=north-ac3ccae78475fb34-1791826996021965000",
+            "http": 200,
+            "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+            "bytes": 2888662,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2888662
+    },
+    {
+      "id": "london-8-regents-canal-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Lontoo",
+      "gameCityId": "lontoo",
+      "mediaSlug": "london",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/london-8-regents-canal-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/native/london-8-regents-canal-1873-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/london/20261012-full/london-8-regents-canal-1873-intro-v1.png",
+      "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Asset type: London arrivalintro slot8. A completelynew rigorously historical real-cameraillustration of Regent'sCanal quietreach byRegent'sPark in exactYEAR1873. Suppliedmodernslot5reference ONLYguides samephysical35mmcameraposition1.6m on southtowpath lookingwest, canal/towpath/landformdirection. Reconstruct1873 fromscratch, no recoloringor editingmodernpixels. Canalopened1820 and wasactiveworkingwaterway1873. Replace modernnarrowboat withone faraway authenticwooden19th-century cargo narrowboat, plaincanvascover andlow hull, no engine, modernpaintedpatterns,text or branding. Earthandgravel towpath, irregularwillowanddeciduoustrees, realwater. NO buildings,bridges(Macclesfieldrebuildafter1874excluded), zoostructures,lamps,electricity,metalbenches,plastic,paving,railings,modernobjectsorpeople. Neutral BLACKANDWHITE ONLY, achromaticgrayscale look, delicate1870sphotographicgrain, softcontrast, no sepia/colorcast/border. Create one completely new photorealistic camera-style illustrative image1536x1024 landscapePNG opaqueRGBsRGB. Natural softlight, mutedtruecolors, irregularrealbrick/stone/foliagetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/repeating naturaltexture. Absolutely no text, letters,digits,logos,trademarks,brandpatterns,street signs,house numbers,lettering,posters,advertising,watermark,border,food,protectedart,statues,famousmodernarchitecturalwork.",
+      "sources": [
+        {
+          "url": "https://canalrivertrust.org.uk/canals-and-rivers/regents-canal/history-of-the-regents-canal",
+          "title": "Canal & River Trust: History of Regents Canal",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Regents Canal company formed1812; canal completed1820, thus operational1873.",
+            "Canal carried timber coal and buildingmaterials; waterway active19c transport.",
+            "Underground electrical cables below towpath added1979, all contemporary equipment excluded."
+          ]
+        },
+        {
+          "url": "https://collections.canalrivertrust.org.uk/bw100.1",
+          "title": "Canal & River Trust archive BW100/1: Proprietors originalrecords",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Official original papers record construction1819–openingAugust1,1820.",
+            "Archive dates1802–1883, coveringexact1873, with original company transportrecords."
+          ],
+          "periodReference": "Original period records located; exact1873 sameviewphotograph not found; no photograph claimed."
+        },
+        {
+          "url": "https://canalrivertrust.org.uk/things-to-do/walking/canal-and-river-walks-near-me/little-venice-to-camden-walk",
+          "title": "Canal & River Trust: LittleVenice toCamden walk",
+          "readAt": "2026-10-12T17:32:34.221611+00:00",
+          "readFacts": [
+            "Canal skirtsRegentsPark; willowtrees dip into water; residentialgardens bybanks.",
+            "Macclesfield/BlowUpBridge wasdemolished1874 and rebuilt, so all bridges excluded1873.",
+            "Zoo aviaries/wirecages excluded inboth restricted frames."
+          ]
+        }
+      ],
+      "caption": "Regent’s Canalin vesinäkymä vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "london-8-regents-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:42:50.630637+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 canal/towpath with same5 willow/bank direction, native wooden freight boat and small rear-view boatman inspected; canal1820 and period cargo supported by read original records; no post1873 bridges/equipment.",
+        "detailCrops": [
+          "session-owner-review/slot8-boat-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-8-regents-canal-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:43:20.340640+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+        "bytes": 3366515,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-8-regents-canal-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+            "bytes": 3366515,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-8-regents-canal-1873-intro-v1.png?verify=north-248f4ccbd13d9881-1791827000340738000",
+            "http": 200,
+            "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+            "bytes": 3366515,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3366515
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "london",
+    "gameCityId": "lontoo",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/sources.json"
+    ],
+    "sourceManifestSha256": "ec690d467703971000103226a6fa1de3a4fd7791fa9a7b32c9ff477bd7893ec6",
+    "assets": [
+      {
+        "id": "london-4-asuintalojen-arki-intro-v1",
+        "slot": 4,
+        "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vanhan asuinkadun tiili, puunkuori, kasvit ja märkä jalkakäytävä näyttävät luonnollisilta. Kolme kehyksen kokoon nähden pientä aikuista näkyy selin. Lähiovi on kirjoitukseton; ei numeroita, logoja tai brändikuvioita havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta, puunkuoresta/ihmisistä ja kasveista/tiilestä tarkastettu.",
+          "Puunkuoren halkeamat ja sammal sekä lehtien asennot vaihtelevat ilman leimakuviota. Tiilien ja laastin värit sekä kiven kosteus ovat kameramaisia.",
+          "Lähioven postiluukku ja paneelit ovat tyhjiä ilman havaittavaa kirjoitusta tai numeromerkkejä.",
+          "Ihmiset näkyvät selin ilman tunnistettavia kasvoja; laukut ja asut geneerisiä. Ei ruokaa, ajoneuvoja tai suojattuja koristeaiheita.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/4-door.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/4-bark-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/4-plants-brick.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2975771,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "london-5-regents-canal-intro-v1",
+        "slot": 5,
+        "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kanavan mittakaava, vetopolku, vaihteleva lehdistö ja veden pienet aallot ovat uskottavia. Kaukaisen veneen rungossa ei erotu tekstiä tai logoa. Sommittelu ja katselusuunta vastaavat1873-paria.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset veneestä, pajusta ja vasemman puolen lehdistöstä/polusta tarkastettu.",
+          "Pajun lehdet, oksien kaaret ja suurten lehtien eri asennot ovat luonnollisen epäsäännöllisiä; ei kaarna- tai lehtileimaa.",
+          "Pieni moderni vene on kaukana ja ilman havaittavaa kirjoitusta, tunnusta tai brändikuviota.",
+          "Slot8:n kanssa sama suuntarakenne: vetopolku vasemmalla, kanava keskellä/oikealla, roikkuva paju vastakkaisella oikealla rannalla. Ei rakennuksia, siltoja, eläintarharakenteita tai mainoksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/5-boat.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/5-willow.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/5-leaves-path.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3376138,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "london-6-pihajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen nainen on luonnollisen näköinen, iho ja kasvojen rakenne uskottavia ja nykyvaatteet geneerisiä. Väkijoukko näkyy ylävartaloina ilman jalkineita tai ruokaa. Ei tekstiä, logoja tai tunnistettavaa brändikuviota.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, oikeanpuoleisen aikuisen käsistä/kasvoista sekä reunimmaisen vaatteen kuosista tarkastettu.",
+          "Ihon huokoset, hiukset, hampaat ja korvat ovat luonnollisia ilman muovisuutta. Näkyvät kädet ovat osittain taipuneita/peittyviä ilman selkeää anatomista virhettä.",
+          "Blazer ja burgundinpusero ovat geneerisiä. Reunan monivärinen kuosi on tavallinen abstrakti/kasviaiheinen kangas ilman tunnistettavia brändimerkkejä.",
+          "Kaikki näkyvät henkilöt ovat aikuisia, ylävartaloina tai muiden peittämiä; ruokaa, juomia ja jalkineita ei näy.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/6-right-hand-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/6-clothes-people.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2073345,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "london-7-asuinkadun-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Iltakuvan julkisivut, ovet, kasvillisuus ja märän kadun heijastukset muodostavat uskottavan kameranäkymän. Kaksi pientä kävelijää näkyy selin. Natiivirajauksessa oven metalliluukussa ei erotu kirjoitusta tai numeroa.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan oven paneelista, kasveista/julkisivusta, ihmisistä ja märästä päällysteestä tarkastettu.",
+          "Oven postiluukku ja lukon metalliosat ovat tavallista laitekalustoa ilman havaittavia kirjain-/numeromerkkejä tai logoja.",
+          "Lehtien asennot ja pensaiden haarautuminen ovat epäsäännöllisiä; kiveyksen saumat ja märän pinnan valolaikut vaihtelevat.",
+          "Lamppujen ja ikkunoiden valo sekä taivaan sininen valo ovat yhteensopivia. Ihmiset näkyvät selin ilman tunnistettavia kasvoja; ei ajoneuvoja, ruokaa tai mainoksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/7-door-panel.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/7-plants-facade.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/7-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/7-wet-paving.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2888662,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "london-8-regents-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on näkyvästi neutraali mustavalkoinen ilman sepiaa. Kanavan, vasemman vetopolun ja vastarannan pajun suuntarakenne vastaa slot5:tä. Puinen peitetty kuormavene ja pieni selin näkyvä periodivaatteinen aikuinen sopivat historialliseen kehykseen; myöhemmät rakenteet puuttuvat.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset puuveneestä, pajusta ja vasemman lehdistöstä/polusta tarkastettu.",
+          "Slot5:n kanssa sama suunta ja kanalinen mittakaava: sorainen vetopolku vasemmalla, vesiväylä keskellä/oikealla, suuri paju vastakkaisella oikealla rannalla.",
+          "Veneen laudoitus ja yksinkertainen kangaspeite ovat uskottavia ilman moottoria, moderneja tunnuksia tai kirjoitusta. Pieni hattu-/takkipukuinen aikuinen näkyy selin, kasvoja ei erotu.",
+          "Pajun lehdet, oksat ja veden pienet heijastukset vaihtelevat luonnollisesti; ei leimattua orgaanista pintaa.",
+          "Canal & River Trust -historian1820avaus ja BW100/1alkuperäisasiakirjapaketti sekä kävelyreitin1874Macclesfield-uudelleenrakennus luettu tuottajan lähdetiedoista. Kaikki sillat, rakennukset, eläintarharakenteet, sähkövalot, muovi, kaiteet ja moderni päällystys puuttuvat.",
+          "Tämän kuvakulman täsmällistä1873-valokuvaa ei ollut dokumentoitu; kuva on lähdepohjainen havainnollistava rekonstruktio. Ei näkyvää värisävytystä; rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/8-boat.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/8-willow.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/london/crops/8-leaves-path.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3366515,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://canalrivertrust.org.uk/canals-and-rivers/regents-canal/history-of-the-regents-canal",
+          "https://collections.canalrivertrust.org.uk/bw100.1",
+          "https://canalrivertrust.org.uk/things-to-do/walking/canal-and-river-walks-near-me/little-venice-to-camden-walk"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T17:58:56.328355+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/manifest.json",
+      "manifestSHA256": "ec690d467703971000103226a6fa1de3a4fd7791fa9a7b32c9ff477bd7893ec6",
+      "reviewedAssetIds": [
+        "london-4-asuintalojen-arki-intro-v1",
+        "london-5-regents-canal-intro-v1",
+        "london-6-pihajuhla-intro-v1",
+        "london-7-asuinkadun-ilta-intro-v1",
+        "london-8-regents-canal-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Kuvat ovat havainnollistavia rekonstruktioita, eivät tämän kanavakulman mitattuja paikkavalokuvia.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "london",
+    "verifiedAt": "2026-10-12T18:00:42.500133+00:00",
+    "assets": [
+      {
+        "id": "london-4-asuintalojen-arki-intro-v1",
+        "slot": 4,
+        "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+        "bytes": 2975771,
+        "verifiedAt": "2026-10-12T18:00:39.953543+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-4-asuintalojen-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+            "bytes": 2975771,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-4-asuintalojen-arki-intro-v1.png?delivery-verify=cad58bf247a66372-1791828039953538000",
+            "http": 200,
+            "sha256": "cad58bf247a66372f0ff3868f66c82e4e52903daa0df002164091f4ca5587693",
+            "bytes": 2975771,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "london-5-regents-canal-intro-v1",
+        "slot": 5,
+        "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+        "bytes": 3376138,
+        "verifiedAt": "2026-10-12T18:00:39.953812+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-5-regents-canal-intro-v1.png",
+            "http": 200,
+            "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+            "bytes": 3376138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-5-regents-canal-intro-v1.png?delivery-verify=9dae7f4dce20373c-1791828039953810000",
+            "http": 200,
+            "sha256": "9dae7f4dce20373cba3638d5ba717fe6c5546a5d82f7525863ecf7262cc3285e",
+            "bytes": 3376138,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "london-6-pihajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+        "bytes": 2073345,
+        "verifiedAt": "2026-10-12T18:00:39.954014+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-6-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+            "bytes": 2073345,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-6-pihajuhla-intro-v1.png?delivery-verify=31141f6d99c5e710-1791828039954010000",
+            "http": 200,
+            "sha256": "31141f6d99c5e7102c8ee770c627a52009d30879d4584b95471596b890c0b2e6",
+            "bytes": 2073345,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "london-7-asuinkadun-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+        "bytes": 2888662,
+        "verifiedAt": "2026-10-12T18:00:40.994170+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+            "bytes": 2888662,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png?delivery-verify=ac3ccae78475fb34-1791828040994162000",
+            "http": 200,
+            "sha256": "ac3ccae78475fb34094b3ce846025a1864a74c08690358394ab05b8e15456660",
+            "bytes": 2888662,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "london-8-regents-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+        "bytes": 3366515,
+        "verifiedAt": "2026-10-12T18:00:41.481669+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-8-regents-canal-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+            "bytes": 3366515,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261012-full/london-8-regents-canal-1873-intro-v1.png?delivery-verify=248f4ccbd13d9881-1791828041481663000",
+            "http": 200,
+            "sha256": "248f4ccbd13d9881f8882d3748b61ce86eac354b2941dd1cfdccb778ff96d004",
+            "bytes": 3366515,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/london/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.896201+00:00"
+}

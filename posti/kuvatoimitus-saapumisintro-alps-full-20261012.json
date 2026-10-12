@@ -1,0 +1,1159 @@
+{
+  "cityName": "Alpit",
+  "gameCityId": "alpit",
+  "mediaSlug": "alps",
+  "assets": [
+    {
+      "id": "alps-4-sils-kylan-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Alpit",
+      "gameCityId": "alpit",
+      "mediaSlug": "alps",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/alps-4-sils-kylan-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/native/alps-4-sils-kylan-arki-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+      "bytes": 2812180,
+      "nativeSha256": "4cc3515c45bf906ccbe8354f483dea0d10694d08560946c5c3c0e76328ffc0c0",
+      "decodedRGBSha256": "43b853eb8aa2094983dbfd62e8d9a7e35747930740e8c79e55088fda777113fb",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:50:39.790762+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Sils Maria village in Swiss UpperEngadine Alps. Ordinary narrow villagefootpath beside traditional anonymous thickwhiteplasterhomes with deeprecessedwindows and darkwood roofeaves, one modestwooden bench, small irregulargardenpatches, distant larchwoods and subdued mountainshoulder. Eyelevel35mm. Two tiny backfacingadultlocalresidentswalkingaway and one farbackfacinghiker in plainunmarkedmodernjacket, allfacesinvisible. Diffuse clearautumnmidday naturalcameraexposure, restrainedreal colours. ALL plasterblank; no sgraffito, carvings, murals, signs, house numbers, bellplates, church, grandhotel, trains, snowpeakpostcardtreatment or nameddesign.",
+      "sources": [
+        {
+          "url": "https://hls-dhs-dss.ch/fr/articles/001545/2011-11-29/",
+          "label": "Historical Dictionary of Switzerland, Sils im Engadin/Segl",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Chastè peninsula and SilsLake documented with medievalcastletraces.",
+            "Fishing important from lateMiddleAges, so1873lake/fishingboat justified.",
+            "Waldhaus1908 and touristboatservice1908, exclude both1873.",
+            "Traditional regional settlement predates1873;moderncableway/newwinterresortbuildings excluded."
+          ]
+        },
+        {
+          "url": "https://www.waldhaus-sils.ch/en/about-us/our-history/founders",
+          "label": "Waldhaus official history",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Hotelopened15June1908 after2.5-yearconstruction, absent1873."
+          ]
+        },
+        {
+          "url": "https://www.sils.ch/en/guide/power-of-nature/chaste-peninsula",
+          "label": "Sils municipal tourism: Chastè nature",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Larchforest paths, shoreviewtowardMaloja; realsettingforpair.",
+            "Nietzschememorialstone exists today; intentionally excluded from bothframes."
+          ]
+        },
+        {
+          "url": "https://www.myswitzerland.com/en-gb/destinations/lake-sils/",
+          "label": "Switzerland Tourism: LakeSils",
+          "readAt": "2026-10-12",
+          "facts": [
+            "UpperEngadine lake near Maloja watershed, surrounding mountains, Chastèpeninsula.",
+            "Modern scheduledpassengerboats excluded."
+          ]
+        },
+        {
+          "url": "https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/sag/dienstleistungen/bestaende/fotosammlungen/Documents/N18%20Fotosammlung%2019Jh%20Findmittel.pdf",
+          "label": "Graubünden StateArchives N18 nineteenth-century photo catalogue",
+          "readAt": "2026-10-12",
+          "facts": [
+            "N18.46 'Silsersee, Strasse entlang dem See, im Hintergrund Sils-Baselgia', photographdatedca1860–1880; periodcontextsource.",
+            "Catalogueavailable, noexact1873sameviewphoto retrieved; noarchivalcompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Silsin kylän arkinen päivä Sveitsin Alpeilla. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and oldplaster/eaves/roof,bench,fence,plants,tree/mountain,distantpeople inspected. Ordinary Sils Engadin residentiallane with three small back-facing adults,plain generic clothes/backpack. Natural mountain/daylight and irregular authentictextures. No text,logos,addressnumbers,signs,artworks or namedcontemporarydesign observed.",
+          "limits": [
+            "Illustrative view; individual anonymous features reconstructed, not measured."
+          ],
+          "reviewedAt": "2026-10-12T17:52:33.420633+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png?t=6c83aadd1ffe7729",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png",
+        "sha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+        "bytes": 2812180,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+        "canonicalGetBytes": 2812180,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:03:33.991897+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "alps-5-silsjarvi-chaste-intro-v1",
+      "slot": 5,
+      "cityName": "Alpit",
+      "gameCityId": "alpit",
+      "mediaSlug": "alps",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/alps-5-silsjarvi-chaste-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/native/alps-5-silsjarvi-chaste-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+      "bytes": 2960644,
+      "nativeSha256": "48bf8e19b404b48971d2f70368da35b14d75a43f4f893f2e67cc86fb5141b0dc",
+      "decodedRGBSha256": "491ef05aa28ad002d3cbdf60b600991d9cfe084acbfd563ac98f7858f012fcdb",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:51:24.943687+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day SwissAlps, LakeSils/LejdaSegl inUpperEngadine. Preciseviewpoint raw southwest shore ofChastè peninsula, looking SOUTHWEST acrosslake towardMaloja. Eyelevel35mm, irregular palegranite/granodiorite shorestones atlowerforeground, one asymmetrical larchtree framing LEFTedge, low shoreline and mutedgrey ruggedalpine mountains acrossdistance, broad lake occupiesmiddle/right. Natural finewater ripples, diffuse mild late-summermorninglight, subduedrealgreen/grey/blue hues, minimal clearcloudedsky. No people, wildlife, buildings, docks, boats, roads, cableways, railways, huts, memorialstone or engravedrocks. PhysicallyplausibledocumentarylandscapenotepicHDR. Samecamera position/direction for1873.",
+      "sources": [
+        {
+          "url": "https://hls-dhs-dss.ch/fr/articles/001545/2011-11-29/",
+          "label": "Historical Dictionary of Switzerland, Sils im Engadin/Segl",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Chastè peninsula and SilsLake documented with medievalcastletraces.",
+            "Fishing important from lateMiddleAges, so1873lake/fishingboat justified.",
+            "Waldhaus1908 and touristboatservice1908, exclude both1873.",
+            "Traditional regional settlement predates1873;moderncableway/newwinterresortbuildings excluded."
+          ]
+        },
+        {
+          "url": "https://www.waldhaus-sils.ch/en/about-us/our-history/founders",
+          "label": "Waldhaus official history",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Hotelopened15June1908 after2.5-yearconstruction, absent1873."
+          ]
+        },
+        {
+          "url": "https://www.sils.ch/en/guide/power-of-nature/chaste-peninsula",
+          "label": "Sils municipal tourism: Chastè nature",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Larchforest paths, shoreviewtowardMaloja; realsettingforpair.",
+            "Nietzschememorialstone exists today; intentionally excluded from bothframes."
+          ]
+        },
+        {
+          "url": "https://www.myswitzerland.com/en-gb/destinations/lake-sils/",
+          "label": "Switzerland Tourism: LakeSils",
+          "readAt": "2026-10-12",
+          "facts": [
+            "UpperEngadine lake near Maloja watershed, surrounding mountains, Chastèpeninsula.",
+            "Modern scheduledpassengerboats excluded."
+          ]
+        },
+        {
+          "url": "https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/sag/dienstleistungen/bestaende/fotosammlungen/Documents/N18%20Fotosammlung%2019Jh%20Findmittel.pdf",
+          "label": "Graubünden StateArchives N18 nineteenth-century photo catalogue",
+          "readAt": "2026-10-12",
+          "facts": [
+            "N18.46 'Silsersee, Strasse entlang dem See, im Hintergrund Sils-Baselgia', photographdatedca1860–1880; periodcontextsource.",
+            "Catalogueavailable, noexact1873sameviewphoto retrieved; noarchivalcompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Sils-järvi Chastèn niemeltä kohti Malojaa Sveitsin Alpeilla. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "peopleAbsent": true
+        },
+        "sessionOwner": {
+          "sha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and lakewater,shorestones,larchneedles,mountain/tree slopes inspected. Plausible SilsLake from Chaste peninsula toward west-southwest,rocks/larch leftforeground,lake and irregularmountains beyond. Restrained naturaldaylight and organictexture,no stampedtrees. No buildings,people,text,signs,logos,brands or protectedartworks.",
+          "limits": [
+            "Illustrative view; exact natural contours and individual vegetation are not surveyed."
+          ],
+          "reviewedAt": "2026-10-12T17:56:02.620217+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png?t=dae7dc1ae9e7509b",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png",
+        "sha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+        "bytes": 2960644,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+        "canonicalGetBytes": 2960644,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:03:35.835268+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "alps-6-sils-kesatapahtuma-intro-v1",
+      "slot": 6,
+      "cityName": "Alpit",
+      "gameCityId": "alpit",
+      "mediaSlug": "alps",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/alps-6-sils-kesatapahtuma-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/native/alps-6-sils-kesatapahtuma-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+      "bytes": 2195618,
+      "nativeSha256": "b3b5244ca4fa7612549d673f75759126aad70c9f7504ff6dc0f97fe0b78513e3",
+      "decodedRGBSha256": "b2b592d5100de487a279d86c5b135fbd464dc7e8d1a1d856b0ef7211495ddfb9",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:52:35.935394+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Sils village inSwissUpperEngadine Alps, joyful outdoor summercommunity music celebration. One completelyfictional Swissadultmanabout30 foreground, sandyblondhair and shortnaturalbeard, smilingtowardfriend, fashionable plain charcoal overshirt over muted sage-green tee. Locallyplausible SwissEngadineyoungadultfriendsall25–35 ingeneric contemporary unpatternedclothing, laughing and enjoyingmusic.35mm candidchestheightcamera, allpersons chest-up orwaist-up or lowerbody completelyoccluded bycrowd. ABSOLUTELY NO feet/shoes/footwear inentireimage, includingbackground. Plain traditionaloldwhiteplaster homes softlyblurred withlarchandmountains farbehind, softsummerlateafternoonnatural light. Natural human skin, nofood/drink, stage, brandedoutdoorwear, mountain-equipmentlogos, sportsstripes, motifs, signs, embroideredpatterns, publicart or celebritylikeness.",
+      "sources": [
+        {
+          "url": "https://hls-dhs-dss.ch/fr/articles/001545/2011-11-29/",
+          "label": "Historical Dictionary of Switzerland, Sils im Engadin/Segl",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Chastè peninsula and SilsLake documented with medievalcastletraces.",
+            "Fishing important from lateMiddleAges, so1873lake/fishingboat justified.",
+            "Waldhaus1908 and touristboatservice1908, exclude both1873.",
+            "Traditional regional settlement predates1873;moderncableway/newwinterresortbuildings excluded."
+          ]
+        },
+        {
+          "url": "https://www.waldhaus-sils.ch/en/about-us/our-history/founders",
+          "label": "Waldhaus official history",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Hotelopened15June1908 after2.5-yearconstruction, absent1873."
+          ]
+        },
+        {
+          "url": "https://www.sils.ch/en/guide/power-of-nature/chaste-peninsula",
+          "label": "Sils municipal tourism: Chastè nature",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Larchforest paths, shoreviewtowardMaloja; realsettingforpair.",
+            "Nietzschememorialstone exists today; intentionally excluded from bothframes."
+          ]
+        },
+        {
+          "url": "https://www.myswitzerland.com/en-gb/destinations/lake-sils/",
+          "label": "Switzerland Tourism: LakeSils",
+          "readAt": "2026-10-12",
+          "facts": [
+            "UpperEngadine lake near Maloja watershed, surrounding mountains, Chastèpeninsula.",
+            "Modern scheduledpassengerboats excluded."
+          ]
+        },
+        {
+          "url": "https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/sag/dienstleistungen/bestaende/fotosammlungen/Documents/N18%20Fotosammlung%2019Jh%20Findmittel.pdf",
+          "label": "Graubünden StateArchives N18 nineteenth-century photo catalogue",
+          "readAt": "2026-10-12",
+          "facts": [
+            "N18.46 'Silsersee, Strasse entlang dem See, im Hintergrund Sils-Baselgia', photographdatedca1860–1880; periodcontextsource.",
+            "Catalogueavailable, noexact1873sameviewphoto retrieved; noarchivalcompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen kesätapahtuma Silsissä Sveitsin Alpeilla. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-6-sils-kesatapahtuma-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-6-sils-kesatapahtuma-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": false,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "fictionalAdultsOnly": true,
+          "footwearAbsentEntireFrame": true
+        },
+        "sessionOwner": {
+          "sha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and accordion/guitar surfaces,clothing,hands,skin,background inspected. Fictional adult man in cheerful Engadin young-adult summermusic gathering,plain generic fashionableclothing and unmarked instruments. Every person cropped/occluded above footwear,nofood,text,brandnames/stripes,logos,numberplaques or protected contemporarynameddesign. Natural hair,skin,daylight and mountainbackdrop.",
+          "limits": [
+            "Illustrative regional scene, not an actual event photo or measured village survey."
+          ],
+          "reviewedAt": "2026-10-12T17:56:56.784492+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-6-sils-kesatapahtuma-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-6-sils-kesatapahtuma-intro-v1.png?t=1c435b666c5fd977",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-6-sils-kesatapahtuma-intro-v1.png",
+        "sha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+        "bytes": 2195618,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+        "canonicalGetBytes": 2195618,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:03:37.544624+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "alps-7-sils-talvi-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Alpit",
+      "gameCityId": "alpit",
+      "mediaSlug": "alps",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/alps-7-sils-talvi-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/native/alps-7-sils-talvi-ilta-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+      "bytes": 2504992,
+      "nativeSha256": "6410b62244d14a441716452579340897b934fdfce2f9b51743f6ef0300456d44",
+      "decodedRGBSha256": "e64ee544cd3752bd509e366af08ac545698c2e8c043bcdfc1dd10a663ac38394",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:53:52.012323+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day SilsMaria traditionalvillageintheSwissAlps duringquietwinterbluehour. Eyelevel35mm alongsmallfootpath between ordinaryanonymousoldwhiteplasterEngadinehomes, darkwood eaves, deeprecessedwindows emittingirregularwarm domesticlights. Thinpatchesofnaturaluntroddensnow besidepathand onroofs, mountainsasveryfaintbackgroundsilhouette, tinybackfacingadultwalkingawayfaroff. Naturalcoldblueambienttwilight and modestwarmwindowlight, clearirregularsnowcrystals andrealwornplaster, noheavyglamour. ALL exteriorwalls completelyunmarkedandblank, no sgraffito, symbols, numberplaques, houseemblems, doorbellplates, advertisements or modernresortdesign. Nochurch,hotelWaldhaus,trains,cableways or faces.",
+      "sources": [
+        {
+          "url": "https://hls-dhs-dss.ch/fr/articles/001545/2011-11-29/",
+          "label": "Historical Dictionary of Switzerland, Sils im Engadin/Segl",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Chastè peninsula and SilsLake documented with medievalcastletraces.",
+            "Fishing important from lateMiddleAges, so1873lake/fishingboat justified.",
+            "Waldhaus1908 and touristboatservice1908, exclude both1873.",
+            "Traditional regional settlement predates1873;moderncableway/newwinterresortbuildings excluded."
+          ]
+        },
+        {
+          "url": "https://www.waldhaus-sils.ch/en/about-us/our-history/founders",
+          "label": "Waldhaus official history",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Hotelopened15June1908 after2.5-yearconstruction, absent1873."
+          ]
+        },
+        {
+          "url": "https://www.sils.ch/en/guide/power-of-nature/chaste-peninsula",
+          "label": "Sils municipal tourism: Chastè nature",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Larchforest paths, shoreviewtowardMaloja; realsettingforpair.",
+            "Nietzschememorialstone exists today; intentionally excluded from bothframes."
+          ]
+        },
+        {
+          "url": "https://www.myswitzerland.com/en-gb/destinations/lake-sils/",
+          "label": "Switzerland Tourism: LakeSils",
+          "readAt": "2026-10-12",
+          "facts": [
+            "UpperEngadine lake near Maloja watershed, surrounding mountains, Chastèpeninsula.",
+            "Modern scheduledpassengerboats excluded."
+          ]
+        },
+        {
+          "url": "https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/sag/dienstleistungen/bestaende/fotosammlungen/Documents/N18%20Fotosammlung%2019Jh%20Findmittel.pdf",
+          "label": "Graubünden StateArchives N18 nineteenth-century photo catalogue",
+          "readAt": "2026-10-12",
+          "facts": [
+            "N18.46 'Silsersee, Strasse entlang dem See, im Hintergrund Sils-Baselgia', photographdatedca1860–1880; periodcontextsource.",
+            "Catalogueavailable, noexact1873sameviewphoto retrieved; noarchivalcompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Silsin kylän ikkunoiden valot talvisessa Alppi-illassa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and windowwalls,snow,wood/stone,branches,mountains,distantadult inspected. Anonymous old Sils residentiallane in snowy bluehour with one small back-facing adult,restrained warm domesticwindowlight. No text,addressnumbers,logos,signs or protecteddesign. Irregular branch/stone/snow details and coherent duskcamera perspective.",
+          "limits": [
+            "Illustrative regional scene, not an actual event photo or measured village survey."
+          ],
+          "reviewedAt": "2026-10-12T17:56:56.784935+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png?t=30ed95bb1c57ea52",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png",
+        "sha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+        "bytes": 2504992,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+        "canonicalGetBytes": 2504992,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:03:39.027852+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "alps-8-silsjarvi-1873-intro-v2",
+      "slot": 8,
+      "cityName": "Alpit",
+      "gameCityId": "alpit",
+      "mediaSlug": "alps",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/alps-8-silsjarvi-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/native/alps-8-silsjarvi-1873-intro-v2.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+      "bytes": 2958204,
+      "nativeSha256": "414b69967fe45971ddaf27f99a5b81b905caedb2f885b80ec514a64ee6cdf416",
+      "decodedRGBSha256": "bdcfc87e4b9e099ce167639cb9b78056dec06261f5d5444f6daf6f94d727e7cc",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T18:00:56.863015+00:00",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, pure neutral BLACK AND WHITE grayscale without warm or cool tint, no sepia, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. EXACT YEAR1873, SwissAlps LakeSils/LejdaSegl. Exactsameviewpoint as modern5: raw SOUTHWEST shoreofChastèpeninsula, looking SOUTHWEST acrosslake towardMaloja, eyelevel35mm. Irregular palegranite/granodioritestones atlowerforeground, one naturallyasymmetrical larchtree atLEFTedge, low oppositeshore andrealmuted ruggedalpine mountainridges, broadlake middle/right. Finewater ripples andsoftmorninglight. Lakeandpeninsula existedmedievaltimes, fishingdocumentedlongbefore1873. One verysmallplainwoodfishingrowboatfaraway, nolegibleboatmarks and nofaces. NoWaldhaushotel1908, touristboats1908, modernresortbuildings, docks, railways, cableways, roads, huts, statues, Nietzschememorialstone/engravedboulders, modernbenches or electricity. Neutral19th-centurycamerafinegrainandgentlecontrast, nopainting, nofakeagedpaperborder, originalhistoricalillustration. Input image role: MODERN VIEWPOINT AND TERRAIN REFERENCE ONLY. Generate a completely NEW ORIGINAL historical photograph in1873, with every pixel generated afresh, not a filter or edit of supplied image. CRITICAL GEOMETRY: the supplied modern reference defines the exact camera position and view toward Maloja. Retain its exact mountain ridge shapes and relative positions, especially the large sloping ridge on the right, lower central ridges, foreground shore-rock positions and larch at left. These geological shapes cannot change between1873 and today. Neutral black-and-white1873 camera atmosphere, tiny plain woodenfishingrowboat far on lake is allowed, no later buildings or touristboats. Keep old candidate intact.",
+      "sources": [
+        {
+          "url": "https://hls-dhs-dss.ch/fr/articles/001545/2011-11-29/",
+          "label": "Historical Dictionary of Switzerland, Sils im Engadin/Segl",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Chastè peninsula and SilsLake documented with medievalcastletraces.",
+            "Fishing important from lateMiddleAges, so1873lake/fishingboat justified.",
+            "Waldhaus1908 and touristboatservice1908, exclude both1873.",
+            "Traditional regional settlement predates1873;moderncableway/newwinterresortbuildings excluded."
+          ]
+        },
+        {
+          "url": "https://www.waldhaus-sils.ch/en/about-us/our-history/founders",
+          "label": "Waldhaus official history",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Hotelopened15June1908 after2.5-yearconstruction, absent1873."
+          ]
+        },
+        {
+          "url": "https://www.sils.ch/en/guide/power-of-nature/chaste-peninsula",
+          "label": "Sils municipal tourism: Chastè nature",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Larchforest paths, shoreviewtowardMaloja; realsettingforpair.",
+            "Nietzschememorialstone exists today; intentionally excluded from bothframes."
+          ]
+        },
+        {
+          "url": "https://www.myswitzerland.com/en-gb/destinations/lake-sils/",
+          "label": "Switzerland Tourism: LakeSils",
+          "readAt": "2026-10-12",
+          "facts": [
+            "UpperEngadine lake near Maloja watershed, surrounding mountains, Chastèpeninsula.",
+            "Modern scheduledpassengerboats excluded."
+          ]
+        },
+        {
+          "url": "https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/sag/dienstleistungen/bestaende/fotosammlungen/Documents/N18%20Fotosammlung%2019Jh%20Findmittel.pdf",
+          "label": "Graubünden StateArchives N18 nineteenth-century photo catalogue",
+          "readAt": "2026-10-12",
+          "facts": [
+            "N18.46 'Silsersee, Strasse entlang dem See, im Hintergrund Sils-Baselgia', photographdatedca1860–1880; periodcontextsource.",
+            "Catalogueavailable, noexact1873sameviewphoto retrieved; noarchivalcompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Sils-järvi Chastèn niemeltä vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "historicalYear": 1873,
+          "visuallyNeutralBlackWhite": true,
+          "periodExclusionsVerified": true,
+          "sameViewAsSlot": 5,
+          "terrainReferenceUsed": true,
+          "grayscaleChannelProof": {
+            "maxRG": 14,
+            "maxRB": 13,
+            "exactEqualRGB": false,
+            "diagnosticOnly": true
+          }
+        },
+        "sessionOwner": {
+          "sha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and mountainridges,forest,shorestones,larchneedles,water,tinywoodboat inspected and compared against modern5. Nearleft larch/rockshore,lakehorizon and west-southwest mountainprofile now correspond. Neutralblack/white without visiblecast; tinygenericwoodrowboat, no1908Waldhaus/touristboat,cableway,memorial,electriclight,text,logo or modernstructure. Older mountain/nature/fishingcontext supported by historicaldictionary and officialsourcefacts.",
+          "reviewedAt": "2026-10-12T18:03:32.347935+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5,
+          "limits": [
+            "Illustrative1873 reconstruction; seasonal snow/vegetation not an exact measured periodrecord."
+          ]
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png?t=8429cc4254d302ed",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png",
+        "sha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+        "bytes": 2958204,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+        "canonicalGetBytes": 2958204,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:03:40.500423+00:00"
+      },
+      "generationParameters": {
+        "tool": "image_gen.imagegen",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/alps-5-silsjarvi-chaste-intro-v1.png"
+        ],
+        "transparent_background": false,
+        "intent": "whole-new historical scene, referenceonly forstableterrain/camerageometry"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "complete": true,
+  "rejectedCandidates": [
+    {
+      "id": "alps-8-silsjarvi-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Alpit",
+      "gameCityId": "alpit",
+      "mediaSlug": "alps",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/alps-8-silsjarvi-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/native/alps-8-silsjarvi-1873-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "67557524c8fa4180c81bed2c63df38ef69fdc848d61fbe97e14755b90e3c4519",
+      "bytes": 2677210,
+      "nativeSha256": "6c2a202db5cca89238e584e526387d325d7308df0efe34eb27ea5854d6da84c8",
+      "decodedRGBSha256": "b2913e0ac14973f910a2ca442c3477327f56c3d4e121b7a016539955cf6fc3f4",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:59:28.535472+00:00",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, pure neutral BLACK AND WHITE grayscale without warm or cool tint, no sepia, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. EXACT YEAR1873, SwissAlps LakeSils/LejdaSegl. Exactsameviewpoint as modern5: raw SOUTHWEST shoreofChastèpeninsula, looking SOUTHWEST acrosslake towardMaloja, eyelevel35mm. Irregular palegranite/granodioritestones atlowerforeground, one naturallyasymmetrical larchtree atLEFTedge, low oppositeshore andrealmuted ruggedalpine mountainridges, broadlake middle/right. Finewater ripples andsoftmorninglight. Lakeandpeninsula existedmedievaltimes, fishingdocumentedlongbefore1873. One verysmallplainwoodfishingrowboatfaraway, nolegibleboatmarks and nofaces. NoWaldhaushotel1908, touristboats1908, modernresortbuildings, docks, railways, cableways, roads, huts, statues, Nietzschememorialstone/engravedboulders, modernbenches or electricity. Neutral19th-centurycamerafinegrainandgentlecontrast, nopainting, nofakeagedpaperborder, originalhistoricalillustration.",
+      "sources": [
+        {
+          "url": "https://hls-dhs-dss.ch/fr/articles/001545/2011-11-29/",
+          "label": "Historical Dictionary of Switzerland, Sils im Engadin/Segl",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Chastè peninsula and SilsLake documented with medievalcastletraces.",
+            "Fishing important from lateMiddleAges, so1873lake/fishingboat justified.",
+            "Waldhaus1908 and touristboatservice1908, exclude both1873.",
+            "Traditional regional settlement predates1873;moderncableway/newwinterresortbuildings excluded."
+          ]
+        },
+        {
+          "url": "https://www.waldhaus-sils.ch/en/about-us/our-history/founders",
+          "label": "Waldhaus official history",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Hotelopened15June1908 after2.5-yearconstruction, absent1873."
+          ]
+        },
+        {
+          "url": "https://www.sils.ch/en/guide/power-of-nature/chaste-peninsula",
+          "label": "Sils municipal tourism: Chastè nature",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Larchforest paths, shoreviewtowardMaloja; realsettingforpair.",
+            "Nietzschememorialstone exists today; intentionally excluded from bothframes."
+          ]
+        },
+        {
+          "url": "https://www.myswitzerland.com/en-gb/destinations/lake-sils/",
+          "label": "Switzerland Tourism: LakeSils",
+          "readAt": "2026-10-12",
+          "facts": [
+            "UpperEngadine lake near Maloja watershed, surrounding mountains, Chastèpeninsula.",
+            "Modern scheduledpassengerboats excluded."
+          ]
+        },
+        {
+          "url": "https://www.gr.ch/DE/institutionen/verwaltung/ekud/afk/sag/dienstleistungen/bestaende/fotosammlungen/Documents/N18%20Fotosammlung%2019Jh%20Findmittel.pdf",
+          "label": "Graubünden StateArchives N18 nineteenth-century photo catalogue",
+          "readAt": "2026-10-12",
+          "facts": [
+            "N18.46 'Silsersee, Strasse entlang dem See, im Hintergrund Sils-Baselgia', photographdatedca1860–1880; periodcontextsource.",
+            "Catalogueavailable, noexact1873sameviewphoto retrieved; noarchivalcompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Sils-järvi Chastèn niemeltä vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v1.png",
+      "QA": {
+        "agentReviewed": true,
+        "fullFrame": true,
+        "nativeDetails": true,
+        "noTextLogosBrands": true,
+        "foodAbsent": true,
+        "peopleDistantOrBackFacing": true,
+        "photorealism": true,
+        "issues": [
+          "Right mountainridge differs materially from modern5; not sameview"
+        ],
+        "status": "rejected",
+        "historicalYear": 1873,
+        "visuallyNeutralBlackWhite": true,
+        "periodExclusionsVerified": true,
+        "grayscaleChannelProof": {
+          "maxRG": 12,
+          "maxRB": 10,
+          "exactEqualRGB": false,
+          "diagnosticOnly": true
+        }
+      },
+      "R2Proof": null
+    }
+  ],
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T18:03:40.511005+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "alps",
+    "gameCityId": "alpit",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/sources.json",
+      "https://hls-dhs-dss.ch/fr/articles/001545/2011-11-29/",
+      "https://www.waldhaus-sils.ch/en/about-us/our-history/founders"
+    ],
+    "assets": [
+      {
+        "id": "alps-4-sils-kylan-arki-intro-v1",
+        "slot": 4,
+        "sha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: uskottava tavallinen alppikylän arki, ihmiset selin ja merkitsemättömät seinät.",
+        "observations": [
+          "Fotorealistinen tavallinen Silsin kyläpolku, kolme pientä henkilöä selin. Luonnollinen valkoinen rappaus, tumma kulunut puu, kiveys, puutarhakasvit ja lehtikuusimetsä.",
+          "Ovet, ikkunat, seinät, räystäät ja henkilöt tarkastettu natiivikokoisina. Ei kirjoitusta, osoitekilpeä, numeroa, logoa, sgraffitoa, kaiverrusta, seinämaalausta tai tunnistettavaa brändikuviota. Perspektiivi ja varjot koherentteja; ei muovisuutta tai leimattua pintaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot4-people-walls-garden.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot4-eaves-wood-plaster.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "alps-5-silsjarvi-chaste-intro-v1",
+        "slot": 5,
+        "sha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen luonnonranta ja järvi, luonnolliset materiaalit sekä historiallisen parin maastovastaavuus.",
+        "observations": [
+          "Fotorealistinen Sils-järven luonnonranta, vasemmalla epäsymmetrinen lehtikuusi ja etualalla epäsäännölliset rantakivet; järvi keskellä/oikealla ja vuorenharjanteet kauempana.",
+          "Puunkuori, neulaset, kivet, sammal/jäkälä, vesi ja kaukaiset rinteet tarkastettu natiivikokoisina. Ei tekstiä, logoja, kaarnaleimaa, muovisuutta, ihmisiä, eläimiä, rakennuksia, laitureita tai nykyaikaisia rantarakenteita.",
+          "Moderni/historiallinen pari säilyttää Chastèn SW-katselusuunnan kohti Malojaa sekä korkeimman oikean harjanteen, alempien keskikallioiden ja etualan kivien suhteelliset paikat. Valittu8-v2 täyttää briefin pysyvän geologisen muodon lukituksen.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot5-larch-rocks.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot5-ridges-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "alps-6-sils-kesatapahtuma-intro-v1",
+        "slot": 6,
+        "sha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fiktiivinen aikuinen nykyajan yhteisötapahtumassa, luonnolliset kasvot ja kädet, geneerinen vaatetus ja soittimet; ei ruokaa, jalkineita tai brändiä.",
+        "observations": [
+          "Fiktiivinen aikuinen mies etualalla nykypäivän Silsin kesätapahtumassa. Luonnollinen iho, silmät, hampaat, hiukset ja parta; kitaristin kädet ja taustan kasvot tarkastettu natiivikokoisina ilman selvää anatomista virhettä.",
+          "Geneerinen yksivärinen tumma paita ja vihreä tee, taustassa tavalliset nykyvaatteet. Kitarassa ja harmonikassa ei erottuvaa kirjoitusta tai logoa; harmonikan kantohihna on tavallinen nahkahihna värireunoin, ei tunnistettava brändi-/urheilukuvio.",
+          "Kaikkien henkilöiden jalat ja jalkineet poissa näkyvistä, myös kaukaisessa väkijoukossa. Ei ruokaa, juomia, urheilubrändejä, kirjailtuja motiiveja, julkista taidetta tai nimettyä esiintyjä-/festivaaliväitettä. Luonnonvalo ja syväterävyys koherentteja.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot6-face-clothes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot6-guitar-hands.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot6-accordion-strap.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "alps-7-sils-talvi-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen talvinen kyläilta, luonnollinen lumi, merkitsemättömät seinät ja pieni henkilö selin.",
+        "observations": [
+          "Fotorealistinen talvinen Silsin asuinpolku, yksi hyvin pieni henkilö selin. Kylmä sininen iltavalo, lämpimät ikkunaheijastukset, epäsäännöllinen lumi ja vanhan rappauksen tekstuuri uskottavia.",
+          "Ovet, ikkunat, räystäät, seinät, lumi, kiveys ja kävelijä tarkastettu natiivikokoisina. Ei kirjoitusta, numeroa, logoa, sgraffitoa, talovaakunaa tai tunnistettavaa brändikuviota. Ei muovista lunta tai leimattua luonnon pintaa; perspektiivi koherentti.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot7-snow-person-walls.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot7-warm-window-eaves.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "alps-8-silsjarvi-1873-intro-v2",
+        "slot": 8,
+        "sha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty valittu v2: neutraali mustavalkoinen1873-järvikuva, modernin parin katselusuunta ja pysyvä kalliomaasto säilyvät; lähteet ja period exclusions täyttyvät.",
+        "observations": [
+          "Valittu v2 on visuaalisesti neutraali mustavalkoinen1873-kuva ilman näkyvää seepiaa tai värisävyä. Fotorealistinen lehtikuusi, kivet, jäkälä, rinteet ja vesi; ei muovisuutta tai kaarnaleimaa.",
+          "Sama modernin slot5:n SW-katselusuunta, suurten vuorenharjanteiden tarkat suhteelliset muodot ja paikat, oikean rinteen laskeva profiili, alemmat keskiharjanteet, etualan rantakivien paikat ja lehtikuusi vasemmalla. Pysyvän geologisen muodon lukitus täyttyy.",
+          "Yksi hyvin pieni kaukainen yksinkertainen soutuvene ja henkilö siluettina; ei näkyviä kasvoja, tekstiä, moottoria tai moderneja merkkejä. Luonnonvalo, varjot ja vesi koherentteja.",
+          "Brief ja sources.json luettu. HistoricalDictionaryofSwitzerland luettu suoraan verkosta: Chastè/järvi ja myöhäiskeskiajalta tunnettu kalastus tukevat1873-luonnonrantaa ja pientä venettä, matkailuvenepalvelu sekä Waldhaus alkavat1908. Waldhausin oma perustamishistoria luettu hakutyökalun indeksoimana, koska suora avaus ei palauttanut varsinaista JS-sisältöä; se vahvistaa15June1908 avaamisen.",
+          "Period exclusions luettu ja tarkastettu: ei Waldhaus-hotellia1908, matkailuveneitä1908, moderneja resort-rakennuksia, laitureita, rautatietä, kaapelihissejä, teitä, majoja, Nietzsche-muistokiveä, kaiverrettuja lohkareita, moderneja penkkejä, sähköä tai myöhempiä maamerkkejä.",
+          "Täsmällistä tämän katselusuunnan1873-arkistokuvaa ei briefin mukaan löytynyt; historiallinen atmosfääri ja yksittäiset luonnon pintatekstuurit ovat havainnollistavaa rekonstruktiota. Maastomuodot verrattiin moderniin valittuun kuvaan.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot8-larch-rocks.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/alps/crops/slot8-ridges-boat-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T18:22:11.782195+00:00",
+    "sourceManifestSha256": "4979aea8343e302fb3f07c264d37e961a97dab39bb905a1f9a665953ccd0091d"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "alps",
+    "verifiedAt": "2026-10-12T18:29:31.589571+00:00",
+    "assets": [
+      {
+        "id": "alps-4-sils-kylan-arki-intro-v1",
+        "slot": 4,
+        "sha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+        "bytes": 2812180,
+        "verifiedAt": "2026-10-12T18:29:29.420456+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+            "bytes": 2812180,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png?delivery-verify=6c83aadd1ffe7729-1791829769420450000",
+            "http": 200,
+            "sha256": "6c83aadd1ffe77293d318ce7cfe62db02a7c6c1a30e66805b55042e520feb10e",
+            "bytes": 2812180,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "alps-5-silsjarvi-chaste-intro-v1",
+        "slot": 5,
+        "sha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+        "bytes": 2960644,
+        "verifiedAt": "2026-10-12T18:29:29.421858+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png",
+            "http": 200,
+            "sha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+            "bytes": 2960644,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png?delivery-verify=dae7dc1ae9e7509b-1791829769421855000",
+            "http": 200,
+            "sha256": "dae7dc1ae9e7509baa1bd8c1f22f157846d42d8b9eaa21e93ee8951faf939898",
+            "bytes": 2960644,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "alps-6-sils-kesatapahtuma-intro-v1",
+        "slot": 6,
+        "sha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+        "bytes": 2195618,
+        "verifiedAt": "2026-10-12T18:29:29.423048+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-6-sils-kesatapahtuma-intro-v1.png",
+            "http": 200,
+            "sha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+            "bytes": 2195618,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-6-sils-kesatapahtuma-intro-v1.png?delivery-verify=1c435b666c5fd977-1791829769423046000",
+            "http": 200,
+            "sha256": "1c435b666c5fd977d0014e3689c235fe6ee58af27cd0c0d02c7908fe60ec1a08",
+            "bytes": 2195618,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "alps-7-sils-talvi-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+        "bytes": 2504992,
+        "verifiedAt": "2026-10-12T18:29:30.166381+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+            "bytes": 2504992,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png?delivery-verify=30ed95bb1c57ea52-1791829770166374000",
+            "http": 200,
+            "sha256": "30ed95bb1c57ea52ec810be97d7ff4d3a34370490e6cf56137be342e83855611",
+            "bytes": 2504992,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "alps-8-silsjarvi-1873-intro-v2",
+        "slot": 8,
+        "sha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+        "bytes": 2958204,
+        "verifiedAt": "2026-10-12T18:29:30.292204+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+            "bytes": 2958204,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261012-full/alps-8-silsjarvi-1873-intro-v2.png?delivery-verify=8429cc4254d302ed-1791829770292198000",
+            "http": 200,
+            "sha256": "8429cc4254d302ede76db53488a6c01ba9de8d7a763fb647ee1df30d1435f5c4",
+            "bytes": 2958204,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/alps/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.348055+00:00"
+}

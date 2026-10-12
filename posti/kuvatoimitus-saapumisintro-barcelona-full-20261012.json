@@ -1,0 +1,1074 @@
+{
+  "cityName": "Barcelona",
+  "gameCityId": "barcelona",
+  "mediaSlug": "barcelona",
+  "assets": [
+    {
+      "id": "barcelona-4-born-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Barcelona",
+      "gameCityId": "barcelona",
+      "mediaSlug": "barcelona",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-4-born-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-4-born-arki-intro-v1.png",
+      "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+      "bytes": 2571254,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-4-born-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-4-born-arki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Barcelona intro slot4. Generate one completely new original photorealistic illustrative image, visibly like a natural documentary photograph made with a real full-frame camera. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Restrained true colours, natural light, credible perspective, irregular real materials and individually varied foliage. No HDR, CGI, painting, render, cinematic grading, plastic skin or stamped organic texture. No text, letters, numbers, signs, logos, brands, branding patterns, watermarks, frames, border, food, protected artworks or contemporary named designer architecture. Scene: Present-day ordinary residential lane in El Born, Barcelona. Eye-level35mm camera looking down a gently curving pedestrian lane, old plain warm ochre plaster and grey stone dwellings with slim iron balconies, worn stone paving. One small distant adult carrying a cloth shopping tote, another wheeling an unbranded city bicycle, both viewed from behind at least15metres away, no visible front faces. Soft late morning light, a little laundry on plain balcony, believable everyday setting. No monument, no commercial storefront signs, no artwork, no food.",
+      "sources": [
+        {
+          "url": "https://www.barcelonabusturistic.cat/es/barrio-de-la-barceloneta",
+          "title": "Official Barcelona Bus Turistic – Barceloneta",
+          "readFacts": [
+            "Narrow neighbourhood streets constructed1753 on a triangular extension of land into sea.",
+            "Maritime neighbourhood; sculptural cubes introduced during1992 renewal, excluded."
+          ]
+        },
+        {
+          "url": "https://thisisbarcelona.com/sea-and-mountains/sea-and-beaches/platja-de-la-barceloneta",
+          "title": "Official Turisme de Barcelona – Barceloneta Beach",
+          "readFacts": [
+            "Historic city beach and open Mediterranean stretch with fine sand.",
+            "Beach redeveloped for1992 Olympics; modern promenade and facilities excluded1873."
+          ]
+        },
+        {
+          "url": "https://festamajordegracia.cat/la-festa-major-de-gracia/historia-de-la-festa/",
+          "title": "Fundació Festa Major de Gràcia – Història",
+          "readFacts": [
+            "Gracia has August neighbourhood festival since first written record1817.",
+            "Neighbours decorate streets and turn them into improvised dance gathering spaces."
+          ]
+        },
+        {
+          "url": "https://bid.barcelonaturisme.com/wv3/en/page/1052/gothic-quarter.html",
+          "title": "Official Turisme de Barcelona – Gothic Quarter",
+          "readFacts": [
+            "Roman and medieval town centre remains core of modern Barcelona."
+          ]
+        },
+        {
+          "url": "https://www.barcelonaturisme.com/wv3/ent/page/1240/passeig-del-born.html",
+          "title": "Turisme de Barcelona – Passeig del Born",
+          "readFacts": [
+            "Born is a historic medieval street with civic gathering history."
+          ]
+        }
+      ],
+      "caption": "El Bornin arkea Barcelonassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and doorwall,paving,plant details inspected. Plausible ordinary Born residential side lane with two small back-facing residents and unmarked bicycle, irregular old stone/plaster and domestic balconies. No text,street/addressplaque,logo,food or artwork observed; narrow lane perspective and soft daylight credible.",
+          "limits": [
+            "Illustrative atmosphere, not an actual event photograph or surveyed reconstruction."
+          ],
+          "reviewedAt": "2026-10-12T17:36:01.444966+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-4-born-arki-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-4-born-arki-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+        "bytes": 2571254,
+        "nativeSha256": "4adadc01f0683cad4790da0828d0a66fcfa8376e76792f081b9a9143b26358d3",
+        "decodedRGBSha256": "53e81e6135b1b33f206a4650ee2365a1a522bdd3b2a9d9a84535a3fe0bc55ac0",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:29:19.881611+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-4-born-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-4-born-arki-intro-v1.png?t=3c56d25e6929bba9",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-4-born-arki-intro-v1.png",
+        "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+        "bytes": 2571254,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+        "canonicalGetBytes": 2571254,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:39:23.041040+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "barcelona-5-barceloneta-meri-intro-v1",
+      "slot": 5,
+      "cityName": "Barcelona",
+      "gameCityId": "barcelona",
+      "mediaSlug": "barcelona",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-5-barceloneta-meri-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-5-barceloneta-meri-intro-v1.png",
+      "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+      "bytes": 2333460,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-5-barceloneta-meri-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-5-barceloneta-meri-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Barcelona intro slot5. Generate one completely new original photorealistic illustrative image, visibly like a natural documentary photograph made with a real full-frame camera. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Restrained true colours, natural light, credible perspective, irregular real materials and individually varied foliage. No HDR, CGI, painting, render, cinematic grading, plastic skin or stamped organic texture. No text, letters, numbers, signs, logos, brands, branding patterns, watermarks, frames, border, food, protected artworks or contemporary named designer architecture. Scene: Present-day Barceloneta Beach, Barcelona, Mediterranean water as main subject. Stand on the sand at the central beach and face EAST-SOUTHEAST toward open sea, camera eye-level35mm. A thin gently curving band of natural pale sand at bottom and left, small foamy breaking waves extend diagonally from lower-left to middle-right, wide open sea in right and upper half, level unobstructed horizon. One tiny back-facing adult far along shoreline, plain clothing, no visible face. Natural early-morning haze and soft sun, non-repeating waves and damp grains of sand. Strictly no buildings, skyline, hotel, sculpture, promenade, sports equipment, boat masts, beach installations, parasols or lettering in the frame. This precise viewing direction and natural shore will be paired with year1873.",
+      "sources": [
+        {
+          "url": "https://www.barcelonabusturistic.cat/es/barrio-de-la-barceloneta",
+          "title": "Official Barcelona Bus Turistic – Barceloneta",
+          "readFacts": [
+            "Narrow neighbourhood streets constructed1753 on a triangular extension of land into sea.",
+            "Maritime neighbourhood; sculptural cubes introduced during1992 renewal, excluded."
+          ]
+        },
+        {
+          "url": "https://thisisbarcelona.com/sea-and-mountains/sea-and-beaches/platja-de-la-barceloneta",
+          "title": "Official Turisme de Barcelona – Barceloneta Beach",
+          "readFacts": [
+            "Historic city beach and open Mediterranean stretch with fine sand.",
+            "Beach redeveloped for1992 Olympics; modern promenade and facilities excluded1873."
+          ]
+        },
+        {
+          "url": "https://festamajordegracia.cat/la-festa-major-de-gracia/historia-de-la-festa/",
+          "title": "Fundació Festa Major de Gràcia – Història",
+          "readFacts": [
+            "Gracia has August neighbourhood festival since first written record1817.",
+            "Neighbours decorate streets and turn them into improvised dance gathering spaces."
+          ]
+        },
+        {
+          "url": "https://bid.barcelonaturisme.com/wv3/en/page/1052/gothic-quarter.html",
+          "title": "Official Turisme de Barcelona – Gothic Quarter",
+          "readFacts": [
+            "Roman and medieval town centre remains core of modern Barcelona."
+          ]
+        },
+        {
+          "url": "https://www.barcelonaturisme.com/wv3/ent/page/1240/passeig-del-born.html",
+          "title": "Turisme de Barcelona – Passeig del Born",
+          "readFacts": [
+            "Born is a historic medieval street with civic gathering history."
+          ]
+        }
+      ],
+      "caption": "Barcelonetan ranta ja Välimeren vesipinta Barcelonassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and waterfoam/sand details inspected. Natural sea-facing Barceloneta waterline crop without buildings,coastal infrastructure or protected work. One tiny back-facing adult, realistic irregular waves/foam/sand, restrained natural light. No text,sign,logo or brands.",
+          "limits": [
+            "Illustrative atmosphere, not an actual event photograph or surveyed reconstruction."
+          ],
+          "reviewedAt": "2026-10-12T17:36:01.446849+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-5-barceloneta-meri-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-5-barceloneta-meri-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+        "bytes": 2333460,
+        "nativeSha256": "7331dc02fea99b576131b8b505b2fe23d0d6371baf92742be399dc938e9147e6",
+        "decodedRGBSha256": "cc92c178becb83ec27844d613a9831de671822b814c7622d688c7bbcb9dea6e4",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:32:25.658252+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-5-barceloneta-meri-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-5-barceloneta-meri-intro-v1.png?t=d121bfd9bdaa20ad",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-5-barceloneta-meri-intro-v1.png",
+        "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+        "bytes": 2333460,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+        "canonicalGetBytes": 2333460,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:39:24.279084+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "barcelona-6-gracia-juhla-intro-v1",
+      "slot": 6,
+      "cityName": "Barcelona",
+      "gameCityId": "barcelona",
+      "mediaSlug": "barcelona",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-6-gracia-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-6-gracia-juhla-intro-v1.png",
+      "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+      "bytes": 2152205,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Barcelona intro slot6. Generate one completely new original photorealistic illustrative image, visibly like a natural documentary photograph made with a real full-frame camera. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Restrained true colours, natural light, credible perspective, irregular real materials and individually varied foliage. No HDR, CGI, painting, render, cinematic grading, plastic skin or stamped organic texture. No text, letters, numbers, signs, logos, brands, branding patterns, watermarks, frames, border, food, protected artworks or contemporary named designer architecture. Scene: Modern Barcelona, joyful August Festa Major de Gracia street gathering with young adults. Plain old residential facades softly behind, overhead simple unpatterned strips of coloured paper and plain warm bulbs; no themed artworks. A single fictional Catalan/Spanish adult man aged28, short dark curly hair and natural warm complexion, laughs looking to a companion off-camera, at lower-right foreground. Generic fashionable unbranded sage-green short-sleeved linen shirt, no graphic patterns. Locally plausible mixed young-adult Barcelona neighbours stand densely behind him, smiling and clapping, heads and upper torsos only. Camera chest height50mm, frame at mid-torso. ALL FEET AND SHOES are fully outside frame or hidden by crowd torsos, even in distance. Late-afternoon real sunlight, casual spontaneous joyful mood, realistic skin and hands. No children, food, drinks, stage, banners, signs or text.",
+      "sources": [
+        {
+          "url": "https://www.barcelonabusturistic.cat/es/barrio-de-la-barceloneta",
+          "title": "Official Barcelona Bus Turistic – Barceloneta",
+          "readFacts": [
+            "Narrow neighbourhood streets constructed1753 on a triangular extension of land into sea.",
+            "Maritime neighbourhood; sculptural cubes introduced during1992 renewal, excluded."
+          ]
+        },
+        {
+          "url": "https://thisisbarcelona.com/sea-and-mountains/sea-and-beaches/platja-de-la-barceloneta",
+          "title": "Official Turisme de Barcelona – Barceloneta Beach",
+          "readFacts": [
+            "Historic city beach and open Mediterranean stretch with fine sand.",
+            "Beach redeveloped for1992 Olympics; modern promenade and facilities excluded1873."
+          ]
+        },
+        {
+          "url": "https://festamajordegracia.cat/la-festa-major-de-gracia/historia-de-la-festa/",
+          "title": "Fundació Festa Major de Gràcia – Història",
+          "readFacts": [
+            "Gracia has August neighbourhood festival since first written record1817.",
+            "Neighbours decorate streets and turn them into improvised dance gathering spaces."
+          ]
+        },
+        {
+          "url": "https://bid.barcelonaturisme.com/wv3/en/page/1052/gothic-quarter.html",
+          "title": "Official Turisme de Barcelona – Gothic Quarter",
+          "readFacts": [
+            "Roman and medieval town centre remains core of modern Barcelona."
+          ]
+        },
+        {
+          "url": "https://www.barcelonaturisme.com/wv3/ent/page/1240/passeig-del-born.html",
+          "title": "Turisme de Barcelona – Passeig del Born",
+          "readFacts": [
+            "Born is a historic medieval street with civic gathering history."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Gràcian korttelijuhlassa Barcelonassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": true,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and every person/clothing/hand/background detail inspected. Fictional adult man foreground amid joyful young adult street gathering, generic plain shirt and generic organic fabric, unmarked bunting and householdlights. All bodies cropped/occluded above footwear. No food,text,sign,logo,brand stripes or nameddesign observed. Natural skin,hair,light.",
+          "limits": [
+            "Illustrative atmosphere, not an actual event photograph or surveyed reconstruction."
+          ],
+          "reviewedAt": "2026-10-12T17:36:01.448260+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-6-gracia-juhla-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-6-gracia-juhla-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+        "bytes": 2152205,
+        "nativeSha256": "2f929237d5f9463eb1e4089d0d280ecec7bd50d864e01cb252bbe02c729808d7",
+        "decodedRGBSha256": "7c9d93b6272389f5fc90f5d1b383df8ca6d5b36ef281449fd9f08b4d9eeb77eb",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:34:03.020300+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png?t=02081746fccd3374",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png",
+        "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+        "bytes": 2152205,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+        "canonicalGetBytes": 2152205,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:39:25.562731+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "barcelona-7-gotic-ilta-intro-v2",
+      "slot": 7,
+      "cityName": "Barcelona",
+      "gameCityId": "barcelona",
+      "mediaSlug": "barcelona",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-7-gotic-ilta-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-7-gotic-ilta-intro-v2.png",
+      "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+      "bytes": 2316303,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-7-gotic-ilta-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-7-gotic-ilta-intro-v2.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Barcelona intro slot7. Generate one completely new original photorealistic illustrative image, visibly like a natural documentary photograph made with a real full-frame camera. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Restrained true colours, natural light, credible perspective, irregular real materials and individually varied foliage. No HDR, CGI, painting, render, cinematic grading, plastic skin or stamped organic texture. No text, letters, numbers, signs, logos, brands, branding patterns, watermarks, frames, border, food, protected artworks or contemporary named designer architecture. Scene: Present-day old anonymous residential side lane in Barri Gotic, Barcelona, at quiet blue hour. Eye-level35mm view along narrow flat stone-paved lane, worn grey-beige old stone walls and small simple iron balconies, modest warm window lights and two understated wall lamps. Camera frames homes and pavement, a glimpse of dark-blue sky above. Two tiny back-facing people far away. No cathedral, no carved statues, no decorative bridge or Bishop bridge, no monumental facades, no modern art, no storefront text, no graffiti. Naturally irregular stone joints, gentle shadows, dry stone pavement with subtle soft light.\n EVERY doorway is a closed, plain residential wooden door with an uninterrupted bare stone lintel and bare blank wall above. NO retail doorway, no lettering on walls or lintels, no address plaque, no shop, no cafe. All wall surfaces and door frames are completely unmarked. Choose a quiet narrow residential passage rather than any shopping lane. The main view should feature upper facades and stone residential doorways in shadow, photograph in slightly softer ambient light, no shop signs even small or illegible.",
+      "sources": [
+        {
+          "url": "https://www.barcelonabusturistic.cat/es/barrio-de-la-barceloneta",
+          "title": "Official Barcelona Bus Turistic – Barceloneta",
+          "readFacts": [
+            "Narrow neighbourhood streets constructed1753 on a triangular extension of land into sea.",
+            "Maritime neighbourhood; sculptural cubes introduced during1992 renewal, excluded."
+          ]
+        },
+        {
+          "url": "https://thisisbarcelona.com/sea-and-mountains/sea-and-beaches/platja-de-la-barceloneta",
+          "title": "Official Turisme de Barcelona – Barceloneta Beach",
+          "readFacts": [
+            "Historic city beach and open Mediterranean stretch with fine sand.",
+            "Beach redeveloped for1992 Olympics; modern promenade and facilities excluded1873."
+          ]
+        },
+        {
+          "url": "https://festamajordegracia.cat/la-festa-major-de-gracia/historia-de-la-festa/",
+          "title": "Fundació Festa Major de Gràcia – Història",
+          "readFacts": [
+            "Gracia has August neighbourhood festival since first written record1817.",
+            "Neighbours decorate streets and turn them into improvised dance gathering spaces."
+          ]
+        },
+        {
+          "url": "https://bid.barcelonaturisme.com/wv3/en/page/1052/gothic-quarter.html",
+          "title": "Official Turisme de Barcelona – Gothic Quarter",
+          "readFacts": [
+            "Roman and medieval town centre remains core of modern Barcelona."
+          ]
+        },
+        {
+          "url": "https://www.barcelonaturisme.com/wv3/ent/page/1240/passeig-del-born.html",
+          "title": "Turisme de Barcelona – Passeig del Born",
+          "readFacts": [
+            "Born is a historic medieval street with civic gathering history."
+          ]
+        }
+      ],
+      "caption": "Vanha asuinkuja iltavaloissa Barcelonassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and all door/headwall details inspected. Restrained bluehour old anonymous residential lane, worn irregular stone and practical windows/lamps, two distant back-facing adults. Doors closed and walls unmarked; no shoptext,signs,numbers,logos or artworks.",
+          "limits": [
+            "Illustrative scene; individual reconstructed details and historic shoreline are not a survey or actual photograph."
+          ],
+          "reviewedAt": "2026-10-12T17:39:21.442492+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-7-gotic-ilta-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-7-gotic-ilta-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+        "bytes": 2316303,
+        "nativeSha256": "8b293f17e751747f04803046aca1b4c468b12618f9d701553d6cd70bb2c2c92b",
+        "decodedRGBSha256": "dd08318b59def5b77ee513d2273ff5dec48f17960ae55045f7cc0faa965c03d7",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:36:23.529739+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-7-gotic-ilta-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-7-gotic-ilta-intro-v2.png?t=0d842ca2242ee30a",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-7-gotic-ilta-intro-v2.png",
+        "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+        "bytes": 2316303,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+        "canonicalGetBytes": 2316303,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:39:26.746923+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "barcelona-8-barceloneta-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Barcelona",
+      "gameCityId": "barcelona",
+      "mediaSlug": "barcelona",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-8-barceloneta-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-8-barceloneta-1873-intro-v1.png",
+      "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+      "bytes": 2179671,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png",
+      "generationPrompt": "NATIVE NEUTRAL MONOCHROME PHOTOGRAPH. STRICTLY EQUAL RGB CHANNELS R=G=B FOR EVERY PIXEL. NO COLOR TINT OF ANY KIND. Use case: historical-scene. Asset type: Matkakirja Barcelona intro slot8. Generate one completely new original photorealistic illustrative image, visibly like a natural documentary photograph made with a real full-frame camera. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Neutral greys only, natural light, credible perspective, irregular real materials and individually varied foliage. No HDR, CGI, painting, render, cinematic grading, plastic skin or stamped organic texture. No text, letters, numbers, signs, logos, brands, branding patterns, watermarks, frames, border, food, protected artworks or contemporary named designer architecture. Scene: Year exactly1873 at Barceloneta shore Barcelona. STRICTLY NEUTRAL BLACK AND WHITE, every RGB pixel must have identical R=G=B values, no sepia or colour tint. Same camera viewpoint/direction as slot5: stand on sand at central Barceloneta beach and face EAST-SOUTHEAST toward open Mediterranean sea, eye-level35mm; pale natural sand in lower-left and bottom, thin foam waves running diagonally lower-left toward middle-right, wide open sea and level unobstructed horizon in upper/right frame. Two small ordinary wooden fishing skiffs pulled high onto sand at left edge, traditional rough hulls, simple rope, no painted names or numbers; no people or only one very tiny distant back-facing fisherman in1873 plain shirt and trousers. Neighbourhood dates1753 and is maritime. No modern promenade, hotel, modern breakwater, towers, sculpture, parasols, lifeguard hut, sports equipment, motorboats, electricity, cars. Soft natural haze daylight, subtle authentic plate-photo grain, real irregular surf and sand; no artificial dark border.",
+      "sources": [
+        {
+          "url": "https://www.barcelonabusturistic.cat/es/barrio-de-la-barceloneta",
+          "title": "Official Barcelona Bus Turistic – Barceloneta",
+          "readFacts": [
+            "Narrow neighbourhood streets constructed1753 on a triangular extension of land into sea.",
+            "Maritime neighbourhood; sculptural cubes introduced during1992 renewal, excluded."
+          ]
+        },
+        {
+          "url": "https://thisisbarcelona.com/sea-and-mountains/sea-and-beaches/platja-de-la-barceloneta",
+          "title": "Official Turisme de Barcelona – Barceloneta Beach",
+          "readFacts": [
+            "Historic city beach and open Mediterranean stretch with fine sand.",
+            "Beach redeveloped for1992 Olympics; modern promenade and facilities excluded1873."
+          ]
+        },
+        {
+          "url": "https://festamajordegracia.cat/la-festa-major-de-gracia/historia-de-la-festa/",
+          "title": "Fundació Festa Major de Gràcia – Història",
+          "readFacts": [
+            "Gracia has August neighbourhood festival since first written record1817.",
+            "Neighbours decorate streets and turn them into improvised dance gathering spaces."
+          ]
+        },
+        {
+          "url": "https://bid.barcelonaturisme.com/wv3/en/page/1052/gothic-quarter.html",
+          "title": "Official Turisme de Barcelona – Gothic Quarter",
+          "readFacts": [
+            "Roman and medieval town centre remains core of modern Barcelona."
+          ]
+        },
+        {
+          "url": "https://www.barcelonaturisme.com/wv3/ent/page/1240/passeig-del-born.html",
+          "title": "Turisme de Barcelona – Passeig del Born",
+          "readFacts": [
+            "Born is a historic medieval street with civic gathering history."
+          ]
+        }
+      ],
+      "caption": "Barcelonetan meriranta Barcelonassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true,
+          "visuallyNeutralBlackWhite": true,
+          "sameViewPairSlot": 5,
+          "year1873ModernExclusionsPass": true,
+          "strictRGBIdentityDiagnostic": false,
+          "maxRedGreenDifference": 8,
+          "maxRedBlueDifference": 6,
+          "meanRGB": [
+            147.34014765421549,
+            147.1729253133138,
+            147.22358004252115
+          ],
+          "meanSignedRedMinusBlue": 0.11656761169433594
+        },
+        "sessionOwner": {
+          "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and boatplanks,rope,wavefoam,distantshore/worker detail inspected. Neutralblack/white without sepia or visiblecast. Same beach waterline/seaward direction as modern5, with simple wooden fishingboats and tiny periodworker. No modern promenade,facilities,design,cranes,tallbuildings,motorcraft,lighting or text/logos. Ordinary sandshore1873 reconstruction is source-supported.",
+          "limits": [
+            "Illustrative scene; individual reconstructed details and historic shoreline are not a survey or actual photograph."
+          ],
+          "reviewedAt": "2026-10-12T17:39:21.444127+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5,
+          "neutralityDiagnostics": {
+            "meanRGB": [
+              147.34,
+              147.173,
+              147.224
+            ],
+            "signedMeanRminusB": 0.117
+          }
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-8-barceloneta-1873-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-8-barceloneta-1873-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+        "bytes": 2179671,
+        "nativeSha256": "3ca37e958c47a1f043251c7bfa3948d7a71459472e2537dd19b07162c74542cb",
+        "decodedRGBSha256": "294c7fc093ee33ac44aac4f3d38dd8859f8419b2bf154f66776ba1f2f754ac7f",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:37:29.111936+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png?t=74040db93b8f781b",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png",
+        "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+        "bytes": 2179671,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+        "canonicalGetBytes": 2179671,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:39:28.181483+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "rejectedCandidates": [
+    {
+      "slot": 7,
+      "id": "barcelona-7-gotic-ilta-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/barcelona-7-gotic-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/native/barcelona-7-gotic-ilta-intro-v1.png",
+      "reason": "failed quality candidate preserved; one whole-new replacement generated"
+    }
+  ],
+  "complete": true,
+  "status": "awaiting-root-review-and-R2",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:39:28.195296+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "barcelona",
+    "gameCityId": "barcelona",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/sources-1873.json",
+      "https://www.barcelonabusturistic.cat/es/barrio-de-la-barceloneta",
+      "https://thisisbarcelona.com/sea-and-mountains/sea-and-beaches/platja-de-la-barceloneta"
+    ],
+    "assets": [
+      {
+        "id": "barcelona-4-born-arki-intro-v1",
+        "slot": 4,
+        "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen arkikuja, pienet henkilöt selin, ei erottuvaa kirjoitusta tai logoja.",
+        "observations": [
+          "Fotorealistinen vanha Bornin asuinkuja; kaksi pientä henkilöä selin, toinen pyörää taluttaen. Rakennusten perspektiivi, mittakaava ja pehmeä päivänvalo ovat johdonmukaisia.",
+          "Ovien, seinien, pyörän, lehtien ja kiveyksen yksityiskohdat tarkastettu. Oikeanpuoleisen putken pienet vaaleat osat tarkastettu erikseen: niiden tummista aukoista ei erotu luettavaa tekstijonoa, selvää kirjoitettua numeroa tai tunnistettavaa logoa. Ei havaittua tekstiä tai brändimerkkejä.",
+          "Kivi, rappaus ja lehtien epäsäännölliset rakenteet ovat luonnollisia; ei kaarnaleimaa tai muovisuutta.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot4-pipe-marks.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot4-people-bike-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot4-stone-leaves.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta ja pysyy erillään omistajan hyväksynnästä sekä pelitoimituksesta."
+        ]
+      },
+      {
+        "id": "barcelona-5-barceloneta-meri-intro-v1",
+        "slot": 5,
+        "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: luonnollinen meriranta, uskottava vesi ja hiekka, ei moderneja rantarakenteita tai tekstiä.",
+        "observations": [
+          "Fotorealistinen Barcelonetan meriranta, leveä avoin meri ja tasainen horisontti. Rantavaahto, aallot ja märkä hiekka ovat epäsäännöllisiä, valaistus ja heijastukset johdonmukaisia.",
+          "Yksi hyvin pieni kaukainen aikuinen selin. Ei tunnistettavia kasvoja, tekstiä, logoja, rakennuksia, hotelleja, veistoksia, rantavarusteita tai siluettia.",
+          "Ranta kaartuu vasemmalta ja alareunasta, meri avautuu oikealle; sama yleinen ESE-katselusuunta ja rantaviivan suunta kuin slot8:n historiallisessa parissa. Rajauksen taivaan ja meren suhde poikkeaa; kyse ei ole pikselintarkasta tai mitatusta rannikkorekonstruktiosta.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot5-surf-sand.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot5-distant-walker.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta ja pysyy erillään omistajan hyväksynnästä sekä pelitoimituksesta."
+        ]
+      },
+      {
+        "id": "barcelona-6-gracia-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fiktiivinen aikuinen nykypäivän juhlatilanteessa, luonnolliset kasvot ja kädet, geneerinen vaatetus, ei ruokaa tai jalkineita.",
+        "observations": [
+          "Fiktiivinen aikuinen mies etualalla nykypäivän Gràcian korttelijuhlassa. Luonnollinen iho, silmät, hampaat ja hiukset; taustan näkyvät kasvot ja taputtavat kädet tarkastettu, ei selvää anatomista virhettä.",
+          "Etualan vihreä pellavapaita on geneerinen ja muodikas. Taustan pieni tavallinen kukkakuvio ei ole tunnistettava brändikuvio; ei kirjoitusta tai logoja. Yläpuoliset värilliset paperisuikaleet ja lamput ovat geneerisiä ilman symboleja.",
+          "Kaikkien henkilöiden jalkineet ja jalat jäävät pois näkyvistä. Ei ruokaa tai selvästi tunnistettavaa juoma-astiaa; vasemman taustahenkilön vaalea kohta kuuluu paidan/kaula-aukon alueeseen, ei varmuudella juoma-astiaan. Luonnonvalo ja syväterävyys ovat johdonmukaisia.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot6-face.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot6-left-hands-cup.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot6-center-clapping-hands.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta ja pysyy erillään omistajan hyväksynnästä sekä pelitoimituksesta."
+        ]
+      },
+      {
+        "id": "barcelona-7-gotic-ilta-intro-v2",
+        "slot": 7,
+        "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: valittu v2 on fotorealistinen merkitsemätön iltakuja, pienet henkilöt selin ja koherentti valaistus.",
+        "observations": [
+          "Valittu v2: fotorealistinen vanha asuinkuja iltavalossa. Kaksi hyvin pientä henkilöä selin, lämpimät lamput ja ikkunat sinistä iltataivasta vasten.",
+          "Ovien, karmien ja seinien natiivikokoisessa tarkastuksessa ei havaittu kirjoitusta, numeroa, logoa tai kaupallista kylttiä. Kivi, lehtikasvit ja rappaus ovat luonnollisen epäsäännöllisiä.",
+          "Perspektiivi, mittakaava ja varjot ovat johdonmukaisia; ei muovisuutta tai leimattua luonnon pintaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot7-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot7-stone-plants.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta ja pysyy erillään omistajan hyväksynnästä sekä pelitoimituksesta."
+        ]
+      },
+      {
+        "id": "barcelona-8-barceloneta-1873-intro-v1",
+        "slot": 8,
+        "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: neutraali mustavalkoinen1873-rantahavainne, perinteiset puuveneet ja sama yleinen katselusuunta kuin modernissa slot5:ssä; lähteet ja period exclusions luettu.",
+        "observations": [
+          "Visuaalisesti neutraali mustavalkoinen rannikkokuva ilman näkyvää seepiaa tai muuta värisävyä. Arvio ei käytä RGB-kanavien numeerista nollatoleranssia.",
+          "Kaksi pientä vanhaa puuvenettä vasemmalla, realistinen kulunut puu, köydet ja verkot ilman tekstiä tai tunnistettavia logosymboleja. Pieni selin näkyvä kalastaja puuvarren kanssa, kasvot erottumattomat, yksinkertainen paita ja housut aikakaudelle uskottavia.",
+          "Hiekka, rantavaahto ja aallot ovat luonnollisen epäsäännöllisiä. Ei muovisuutta tai leimattua pintaa; meri ja taivaan valo ovat koherentteja.",
+          "Sama yleinen modernin slot5:n ESE-katselusuunta ja vasemmalta kaartuva rantaviiva. Historiallisen kuvan horisontti on alempana kuvassa, joten rajaus ei ole pikselintarkasti sama; maastoa ei esitetä mitattuna rekonstruktiona.",
+          "Briefin kaksi virallista lähdesivua sekä sources-1873.json luettu. Lähteet tukevat1753 muodostunutta merellistä Barcelonetaa ja1992 rantauudistusta. Täsmällistä1873 tämän katselusuunnan aikakausikuvaa ei käytetty; luonnonrantarekonstruktio on lähteisiin perustuva tulkinta.",
+          "Period exclusions luettu ja tarkastettu: ei1992 promenadirakenteita, moderneja veistoksia, hotellia, moottoriveneitä, moderneja aallonmurtajia, lifeguard-hutia, rantaurheiluvälineitä, autoja, sähkövaloja tai muovia. Aivan vasemmassa kaukaisessa reunassa on matala nimetön rakennusten siluetti ilman tunnistettavaa modernia tornia/hotellia; siitä ei tehdä täsmällistä arkkitehtonista1873-väitettä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot8-wooden-boats.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot8-far-left-fisherman-building.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/barcelona/crops/slot8-surf-sand.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta ja pysyy erillään omistajan hyväksynnästä sekä pelitoimituksesta."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:48:47.594295+00:00",
+    "sourceManifestSha256": "548a8c6d9f4c80f1666ee69a8d5872836ba3f4411b7524cd9e735a90d08060eb"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "barcelona",
+    "verifiedAt": "2026-10-12T17:50:07.840340+00:00",
+    "assets": [
+      {
+        "id": "barcelona-4-born-arki-intro-v1",
+        "slot": 4,
+        "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+        "bytes": 2571254,
+        "verifiedAt": "2026-10-12T17:50:05.998936+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-4-born-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+            "bytes": 2571254,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-4-born-arki-intro-v1.png?delivery-verify=3c56d25e6929bba9-1791827405998925000",
+            "http": 200,
+            "sha256": "3c56d25e6929bba99b23da13ad9de6ffe77f5bde8360f6400a1594ed566d854a",
+            "bytes": 2571254,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "barcelona-5-barceloneta-meri-intro-v1",
+        "slot": 5,
+        "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+        "bytes": 2333460,
+        "verifiedAt": "2026-10-12T17:50:05.999234+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-5-barceloneta-meri-intro-v1.png",
+            "http": 200,
+            "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+            "bytes": 2333460,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-5-barceloneta-meri-intro-v1.png?delivery-verify=d121bfd9bdaa20ad-1791827405999231000",
+            "http": 200,
+            "sha256": "d121bfd9bdaa20ad42e98e4d27b31ada02fec5af2fb4942fedf012e9dcd99e0a",
+            "bytes": 2333460,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "barcelona-6-gracia-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+        "bytes": 2152205,
+        "verifiedAt": "2026-10-12T17:50:05.999360+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+            "bytes": 2152205,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-6-gracia-juhla-intro-v1.png?delivery-verify=02081746fccd3374-1791827405999358000",
+            "http": 200,
+            "sha256": "02081746fccd3374124f2dab4c28d88d424b61d1073afed262dfd61207ef4962",
+            "bytes": 2152205,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "barcelona-7-gotic-ilta-intro-v2",
+        "slot": 7,
+        "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+        "bytes": 2316303,
+        "verifiedAt": "2026-10-12T17:50:06.810890+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-7-gotic-ilta-intro-v2.png",
+            "http": 200,
+            "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+            "bytes": 2316303,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-7-gotic-ilta-intro-v2.png?delivery-verify=0d842ca2242ee30a-1791827406810884000",
+            "http": 200,
+            "sha256": "0d842ca2242ee30a39986b4be027d3b0365de7a9537d376e3ff62920609b2c12",
+            "bytes": 2316303,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "barcelona-8-barceloneta-1873-intro-v1",
+        "slot": 8,
+        "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+        "bytes": 2179671,
+        "verifiedAt": "2026-10-12T17:50:07.225761+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+            "bytes": 2179671,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/barcelona/20261012-full/barcelona-8-barceloneta-1873-intro-v1.png?delivery-verify=74040db93b8f781b-1791827407225754000",
+            "http": 200,
+            "sha256": "74040db93b8f781ba8b3dc531668f25cc82fb5d8845e09a56d53a9abefd5099b",
+            "bytes": 2179671,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/barcelona/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.185539+00:00"
+}

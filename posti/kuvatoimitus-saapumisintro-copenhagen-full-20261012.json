@@ -1,0 +1,926 @@
+{
+  "cityName": "Kööpenhamina",
+  "gameCityId": "kobenhavn",
+  "mediaSlug": "copenhagen",
+  "updatedAt": "2026-10-12T17:37:56.452814+00:00",
+  "assets": [
+    {
+      "id": "copenhagen-5-frederiksbergin-kanava-intro-v1",
+      "slot": 5,
+      "cityName": "Kööpenhamina",
+      "gameCityId": "kobenhavn",
+      "mediaSlug": "copenhagen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/copenhagen-5-frederiksbergin-kanava-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/native/copenhagen-5-frederiksbergin-kanava-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png",
+      "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Copenhagen arrivalintro slot5. Frederiksberg Gardens central romantic winding canal TODAY, camera1.6m on the east grassy bank looking west along a curve of the canal toward green deciduous treegroups. Water foreground and middle, a gentle bank bending rightward and mature irregular willow/broadleaf trees sheltering the opposite bank. Soft summer afternoon, calm softly rippling water, two small ducks separated naturally. Very restricted view contains only water, trees and grass; NO buildings, palaces, pavilions, footbridges, statues, paved paths, zoo structures, signs, benches, rails, lights or people. Credible real English-style landscaped canal, not a fantasy forest or tropical jungle. One completely new camera-photorealistic illustrative image, landscape1536x1024 PNG opaque RGB sRGB. Natural light and muted authentic colors, irregular real material textures,35mm lens. No HDR, CGI, painting, plastic skin, repeated stamped plants. Absolutely no text, digits, logos, trademarks, brand patterns, signboards, street signs, address numbers, posters, advertising, watermarks, borders, food, protectedart, statues or famous modern architect-designed works.",
+      "sources": [
+        {
+          "url": "https://slks.dk/fileadmin/user_upload/0_SLKS/Dokumenter/Om_styrelsen/udbud/Bilag_11_Frederiksberg_Have._Baerende_bevaringsvaerdier_-_2014.pdf",
+          "title": "Slots- og Kulturstyrelsen: Frederiksberg Have, Bærende bevaringsværdier2014",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Gardens redesign began1798; fountains/basins changed into open canal with islands and bridges1798–1804.",
+            "Restricted view of winding canal, banks and tree groups therefore existed in1873.",
+            "All buildings/pavilions/bridges/zoo structures/signs excluded from chosen framing."
+          ],
+          "periodReference": "Official document provides garden history and plans, no exact1873 same-view photograph found.",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/references/frederiksberg-historie-read.txt"
+        },
+        {
+          "url": "https://stadsarkivet.frederiksberg.dk/brug-stadsarkivet/byvandringer/oestturen",
+          "title": "Frederiksberg municipal archive: Østturen",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Frederiksberg garden changed from symmetrical Baroque plan to English landscape style1795–1804.",
+            "Søndre Fasanvej extended and developed almost200years after1682; modern surrounding blocks excluded."
+          ]
+        },
+        {
+          "url": "https://www.visitcopenhagen.com/copenhagen/planning/frederiksberg-garden-gdk412226",
+          "title": "VisitCopenhagen Frederiksberg Garden",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Canals used for rowing, small islands and mature trees; park used as outing place for centuries.",
+            "Chinese pavilion dates1799 per tourismpage but not in image; no architecture date reliance."
+          ]
+        }
+      ],
+      "caption": "Frederiksbergin puiston vehreä kanavanäkymä Kööpenhaminassa. Havainnekuva.",
+      "QA": {
+        "id": "copenhagen-5-frederiksbergin-kanava-intro-v1",
+        "slot": 5,
+        "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:32:07.351839+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural canal and irregular real-looking foliage/water, two distinct correctly formed mallards inspected natively, no structures/logos/text.",
+        "detailCrops": [
+          "session-owner-review/slot5-ducks-water-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:37:51.109009+00:00",
+        "preflightHttp": 200,
+        "origin": "https://matkakirja.app",
+        "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+        "bytes": 3127882,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png",
+            "http": 200,
+            "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+            "bytes": 3127882,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png?verify=north-347fb2b098939292-1791826671109028000",
+            "http": 200,
+            "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+            "bytes": 3127882,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3127882
+    },
+    {
+      "id": "copenhagen-6-korttelijuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Kööpenhamina",
+      "gameCityId": "kobenhavn",
+      "mediaSlug": "copenhagen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/copenhagen-6-korttelijuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/native/copenhagen-6-korttelijuhla-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png",
+      "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Copenhagen arrivalintro slot6. Lively Copenhagen neighborhood courtyard music celebration TODAY, small anonymous old brick residential walls out of focus behind. One fictional Danish young adult man age28 in foreground laughing toward an unseen friend, stylish generic plain dark-green overshirt over white unmarked tshirt, real skin pores, tousled brown hair. Cheerful dense crowd of fictional local Copenhagen youngadult men andwomen wearing contemporary fashionable plain unbranded clothes, natural Northern European local population, spontaneous chatting and moving to music, some people softly blurred. TIGHT CHEST/WAIST-UP candid camera framing: every lower body hidden by the crowd or cut entirely outside frame; ALL FOOTWEAR, FEET AND SHOES of every person absent. No fullbody humans, no banners, no signs, no food or drinks, no branded stage. Soft natural evening sunlight, subtlewarmth, authentic joyful gathering. One completely new camera-photorealistic illustrative image, landscape1536x1024 PNG opaque RGB sRGB. Natural light and muted authentic colors, irregular real material textures,35mm lens. No HDR, CGI, painting, plastic skin, repeated stamped plants. Absolutely no text, digits, logos, trademarks, brand patterns, signboards, street signs, address numbers, posters, advertising, watermarks, borders, food, protectedart, statues or famous modern architect-designed works.",
+      "sources": [
+        {
+          "url": "https://slks.dk/fileadmin/user_upload/0_SLKS/Dokumenter/Om_styrelsen/udbud/Bilag_11_Frederiksberg_Have._Baerende_bevaringsvaerdier_-_2014.pdf",
+          "title": "Slots- og Kulturstyrelsen: Frederiksberg Have, Bærende bevaringsværdier2014",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Gardens redesign began1798; fountains/basins changed into open canal with islands and bridges1798–1804.",
+            "Restricted view of winding canal, banks and tree groups therefore existed in1873.",
+            "All buildings/pavilions/bridges/zoo structures/signs excluded from chosen framing."
+          ],
+          "periodReference": "Official document provides garden history and plans, no exact1873 same-view photograph found.",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/references/frederiksberg-historie-read.txt"
+        },
+        {
+          "url": "https://stadsarkivet.frederiksberg.dk/brug-stadsarkivet/byvandringer/oestturen",
+          "title": "Frederiksberg municipal archive: Østturen",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Frederiksberg garden changed from symmetrical Baroque plan to English landscape style1795–1804.",
+            "Søndre Fasanvej extended and developed almost200years after1682; modern surrounding blocks excluded."
+          ]
+        },
+        {
+          "url": "https://www.visitcopenhagen.com/copenhagen/planning/frederiksberg-garden-gdk412226",
+          "title": "VisitCopenhagen Frederiksberg Garden",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Canals used for rowing, small islands and mature trees; park used as outing place for centuries.",
+            "Chinese pavilion dates1799 per tourismpage but not in image; no architecture date reliance."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Kööpenhaminan korttelijuhlassa. Havainnekuva.",
+      "QA": {
+        "id": "copenhagen-6-korttelijuhla-intro-v1",
+        "slot": 6,
+        "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:32:07.405601+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: fictional adult face and plain garments inspected natively, natural skin and anatomy; lively young-adult courtyard crowd; all footwear excluded; no discernible text/logos.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-clothes-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:37:52.341254+00:00",
+        "preflightHttp": 200,
+        "origin": "https://matkakirja.app",
+        "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+        "bytes": 2104426,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+            "bytes": 2104426,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png?verify=north-f98cf13cea620820-1791826672341281000",
+            "http": 200,
+            "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+            "bytes": 2104426,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2104426
+    },
+    {
+      "id": "copenhagen-7-korttelin-iltavalot-intro-v2",
+      "slot": 7,
+      "cityName": "Kööpenhamina",
+      "gameCityId": "kobenhavn",
+      "mediaSlug": "copenhagen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/copenhagen-7-korttelin-iltavalot-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/native/copenhagen-7-korttelin-iltavalot-intro-v2-native.png",
+      "r2Key": "julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png",
+      "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Copenhagen slot7 NECESSARY whole-new quality replacement. Create entirelynew realcamera photorealistic illustrativeimage1536x1024 PNG landscapeRGB opaque sRGB. Quiet ordinaryold Copenhagen residentiallane TODAY bluehour; humanheight35mmcamera alonganonymous mutedochre grayandbrick18th/19thcentury plasterhouses, warm domesticwindowlights, dampirregularcobbledlane reflectingordinarylamps. Two small distantmodern adults walkingaway. Everydoor is anabsolutelyplain unmarkedsolidwoodpanel withbasicdoorhandleONLY: NO mailslots, brassplates, doorbells, addresspanels, nameplates, keytags, signs, numbers, carvings, emblems or ornaments ondoors. Nearbydoors may sitinshadowor behind plants; no legibleorillegibletext anywhere. Noarchitecturelandmarks, canal,Nyhavn,castle,church,shops,cars,faces,food,protectedart. Naturalbluehourcameraexposure, mutedtruecolor, irregularrealtextures. Absolutely no letters,digits,logos,branding,posters,marks,watermarks,borders. NoHDR/CGI/painting/stampedfoliage.",
+      "sources": [
+        {
+          "url": "https://slks.dk/fileadmin/user_upload/0_SLKS/Dokumenter/Om_styrelsen/udbud/Bilag_11_Frederiksberg_Have._Baerende_bevaringsvaerdier_-_2014.pdf",
+          "title": "Slots- og Kulturstyrelsen: Frederiksberg Have, Bærende bevaringsværdier2014",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Gardens redesign began1798; fountains/basins changed into open canal with islands and bridges1798–1804.",
+            "Restricted view of winding canal, banks and tree groups therefore existed in1873.",
+            "All buildings/pavilions/bridges/zoo structures/signs excluded from chosen framing."
+          ],
+          "periodReference": "Official document provides garden history and plans, no exact1873 same-view photograph found.",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/references/frederiksberg-historie-read.txt"
+        },
+        {
+          "url": "https://stadsarkivet.frederiksberg.dk/brug-stadsarkivet/byvandringer/oestturen",
+          "title": "Frederiksberg municipal archive: Østturen",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Frederiksberg garden changed from symmetrical Baroque plan to English landscape style1795–1804.",
+            "Søndre Fasanvej extended and developed almost200years after1682; modern surrounding blocks excluded."
+          ]
+        },
+        {
+          "url": "https://www.visitcopenhagen.com/copenhagen/planning/frederiksberg-garden-gdk412226",
+          "title": "VisitCopenhagen Frederiksberg Garden",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Canals used for rowing, small islands and mature trees; park used as outing place for centuries.",
+            "Chinese pavilion dates1799 per tourismpage but not in image; no architecture date reliance."
+          ]
+        }
+      ],
+      "caption": "Kööpenhaminan vanhan asuinkorttelin iltavalot. Havainnekuva.",
+      "QA": {
+        "id": "copenhagen-7-korttelin-iltavalot-intro-v2",
+        "slot": 7,
+        "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:37:46.117705+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS v2: native foreground door has only unmarked panel and generic handle; mail/address plates absent, no text/logos; distant backs, natural window light and wet cobbles.",
+        "detailCrops": [
+          "session-owner-review/slot7-v2-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:37:55.037532+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+        "bytes": 2432242,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+            "bytes": 2432242,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png?verify=north-dd8ae38a02da95c3-1791826675037549000",
+            "http": 200,
+            "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+            "bytes": 2432242,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2432242
+    },
+    {
+      "id": "copenhagen-8-frederiksberg-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Kööpenhamina",
+      "gameCityId": "kobenhavn",
+      "mediaSlug": "copenhagen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/copenhagen-8-frederiksberg-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/native/copenhagen-8-frederiksberg-1873-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png",
+      "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Asset type: Copenhagen arrivalintro slot8. Completely new historicalcamera illustration in exact YEAR1873, Frederiksberg Gardens central winding canal. Supplied modern slot5 reference guides ONLY physical camera and landform: same1.6m camera eastbank facingwest, identicalrightward canal curve, opposite grassbank and treegroup positions. Reconstruct1873 from scratch rather than edit or recolor. Canal and romantic English landscape layout formed1798–1804, already present1873. Water, naturalgrassbanks and irregulardeciduous trees only; plausible1873 maturetrees not modern exact growth. NO architecture or palaces/pavilions/footbridges, no zoo structures, lamps, benches, signs, paving, railings, plastic, electriclighting, or modern objects. No people, two small irregularlyseparated ducks optional. True neutral BLACK AND WHITE achromaticgrayscale, delicate1870s photographic grain and softcontrast, no sepia or colorfultint, no border. Real water ripples and authenticnaturaltextures. One completely new camera-photorealistic illustrative image, landscape1536x1024 PNG opaque RGB sRGB. Natural light and muted authentic colors, irregular real material textures,35mm lens. No HDR, CGI, painting, plastic skin, repeated stamped plants. Absolutely no text, digits, logos, trademarks, brand patterns, signboards, street signs, address numbers, posters, advertising, watermarks, borders, food, protectedart, statues or famous modern architect-designed works.",
+      "sources": [
+        {
+          "url": "https://slks.dk/fileadmin/user_upload/0_SLKS/Dokumenter/Om_styrelsen/udbud/Bilag_11_Frederiksberg_Have._Baerende_bevaringsvaerdier_-_2014.pdf",
+          "title": "Slots- og Kulturstyrelsen: Frederiksberg Have, Bærende bevaringsværdier2014",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Gardens redesign began1798; fountains/basins changed into open canal with islands and bridges1798–1804.",
+            "Restricted view of winding canal, banks and tree groups therefore existed in1873.",
+            "All buildings/pavilions/bridges/zoo structures/signs excluded from chosen framing."
+          ],
+          "periodReference": "Official document provides garden history and plans, no exact1873 same-view photograph found.",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/references/frederiksberg-historie-read.txt"
+        },
+        {
+          "url": "https://stadsarkivet.frederiksberg.dk/brug-stadsarkivet/byvandringer/oestturen",
+          "title": "Frederiksberg municipal archive: Østturen",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Frederiksberg garden changed from symmetrical Baroque plan to English landscape style1795–1804.",
+            "Søndre Fasanvej extended and developed almost200years after1682; modern surrounding blocks excluded."
+          ]
+        },
+        {
+          "url": "https://www.visitcopenhagen.com/copenhagen/planning/frederiksberg-garden-gdk412226",
+          "title": "VisitCopenhagen Frederiksberg Garden",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Canals used for rowing, small islands and mature trees; park used as outing place for centuries.",
+            "Chinese pavilion dates1799 per tourismpage but not in image; no architecture date reliance."
+          ]
+        }
+      ],
+      "caption": "Frederiksbergin puiston kanavanäkymä vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "copenhagen-8-frederiksberg-1873-intro-v1",
+        "slot": 8,
+        "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:33:30.150969+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 park canal, same5 bend/tree-group direction and bank placement; official1798-1804 garden history supports canal; native ducks/water inspect natural, no modern structures.",
+        "detailCrops": [
+          "session-owner-review/slot8-ducks-canal-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:37:55.901559+00:00",
+        "preflightHttp": 200,
+        "origin": "https://matkakirja.app",
+        "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+        "bytes": 3173837,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+            "bytes": 3173837,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png?verify=north-0da22ab1835dce21-1791826675901582000",
+            "http": 200,
+            "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+            "bytes": 3173837,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3173837
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "copenhagen-4-pyorailyarki-intro-v2",
+      "slot": 4,
+      "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Toisen ehdokkaan taustakatossa (kehyksen noin x780–850,y280–340) on terävästi rajattuja vaaleita kaarevia/viivamaisia merkkejä, jotka näyttävät maalatulta graffitilta tai tekstimäiseltä kuviolta. Kirjoituksettomuutta ei voi varmistaa tästä natiiviyksityiskohdasta. Nykyinen v2 jää pending-quality-fix/needs-owner-next-decision kahden yrityksen jälkeen.",
+      "observations": [
+        "Koko kehys ja natiivirajaukset ihmisistä/pyörästä, julkisivusta/lehdistöstä sekä taustan kattolappeesta tarkastettu.",
+        "Etualan parkkeeratut tunnukselliset pyörät on poistettu, ja kaukainen pyöräilijä sekä kävelijät näkyvät selin.",
+        "Katossa on vaalea, selvärajainen kaareva viivakuvio, joka erottuu punaisesta kattotiiliverkosta. Tästä ei voi nimetä varmaa luettavaa sanaa tai brändiä, mutta kuvio näyttää lisätyltä merkiltä eikä satunnaiselta luonnolliselta kulumalta.",
+        "Muissa tarkastetuissa pinnoissa ei näkyvää tekstiä/logoa; lehdistö ja katugeometria uskottavia.",
+        "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+      ],
+      "nativeDetailCrops": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-people.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-foliage-facade.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-roof.png"
+      ],
+      "technicalEvidence": {
+        "bytes": 2987082,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "opaque": true,
+        "profileDescription": "sRGB built-in",
+        "provenanceMetadataPass": true,
+        "captionPass": true
+      },
+      "status": "pending-quality-fix",
+      "nextDecision": "needs-owner-next-decision",
+      "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
+    }
+  ],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": false,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [
+    {
+      "id": "copenhagen-4-pyorailyarki-intro-v2",
+      "slot": 4,
+      "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Toisen ehdokkaan taustakatossa (kehyksen noin x780–850,y280–340) on terävästi rajattuja vaaleita kaarevia/viivamaisia merkkejä, jotka näyttävät maalatulta graffitilta tai tekstimäiseltä kuviolta. Kirjoituksettomuutta ei voi varmistaa tästä natiiviyksityiskohdasta. Nykyinen v2 jää pending-quality-fix/needs-owner-next-decision kahden yrityksen jälkeen.",
+      "observations": [
+        "Koko kehys ja natiivirajaukset ihmisistä/pyörästä, julkisivusta/lehdistöstä sekä taustan kattolappeesta tarkastettu.",
+        "Etualan parkkeeratut tunnukselliset pyörät on poistettu, ja kaukainen pyöräilijä sekä kävelijät näkyvät selin.",
+        "Katossa on vaalea, selvärajainen kaareva viivakuvio, joka erottuu punaisesta kattotiiliverkosta. Tästä ei voi nimetä varmaa luettavaa sanaa tai brändiä, mutta kuvio näyttää lisätyltä merkiltä eikä satunnaiselta luonnolliselta kulumalta.",
+        "Muissa tarkastetuissa pinnoissa ei näkyvää tekstiä/logoa; lehdistö ja katugeometria uskottavia.",
+        "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+      ],
+      "nativeDetailCrops": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-people.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-foliage-facade.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-roof.png"
+      ],
+      "technicalEvidence": {
+        "bytes": 2987082,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "opaque": true,
+        "profileDescription": "sRGB built-in",
+        "provenanceMetadataPass": true,
+        "captionPass": true
+      },
+      "status": "pending-quality-fix",
+      "nextDecision": "needs-owner-next-decision",
+      "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
+    }
+  ],
+  "pendingQualityFixSlots": [
+    4
+  ],
+  "actualCalls": 7,
+  "deliveryQAEvidence": {
+    "mediaSlug": "copenhagen",
+    "gameCityId": "kobenhavn",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/sources.json"
+    ],
+    "sourceManifestSha256": "b52386570af9e351cf7176063a8080c28bce2b884dfa1803061b307103cffce1",
+    "assets": [
+      {
+        "id": "copenhagen-4-pyorailyarki-intro-v2",
+        "slot": 4,
+        "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "Toisen ehdokkaan taustakatossa (kehyksen noin x780–850,y280–340) on terävästi rajattuja vaaleita kaarevia/viivamaisia merkkejä, jotka näyttävät maalatulta graffitilta tai tekstimäiseltä kuviolta. Kirjoituksettomuutta ei voi varmistaa tästä natiiviyksityiskohdasta. Nykyinen v2 jää pending-quality-fix/needs-owner-next-decision kahden yrityksen jälkeen.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset ihmisistä/pyörästä, julkisivusta/lehdistöstä sekä taustan kattolappeesta tarkastettu.",
+          "Etualan parkkeeratut tunnukselliset pyörät on poistettu, ja kaukainen pyöräilijä sekä kävelijät näkyvät selin.",
+          "Katossa on vaalea, selvärajainen kaareva viivakuvio, joka erottuu punaisesta kattotiiliverkosta. Tästä ei voi nimetä varmaa luettavaa sanaa tai brändiä, mutta kuvio näyttää lisätyltä merkiltä eikä satunnaiselta luonnolliselta kulumalta.",
+          "Muissa tarkastetuissa pinnoissa ei näkyvää tekstiä/logoa; lehdistö ja katugeometria uskottavia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-foliage-facade.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-roof.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2987082,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        },
+        "status": "pending-quality-fix",
+        "nextDecision": "needs-owner-next-decision",
+        "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
+      },
+      {
+        "id": "copenhagen-5-frederiksbergin-kanava-intro-v1",
+        "slot": 5,
+        "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kanavan rannat, puut ja veden heijastukset muodostavat uskottavan kameranäkymän. Molemmat pienet ankat ovat anatomisesti luonnollisia, eikä lehdistössä havaittu leimattua kuviota. Ei tekstiä, logoja, ihmisiä tai rakennelmia.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset molemmista ankoista, vasemmasta puustosta ja oikeanpuoleisesta rannasta/vedestä tarkastettu.",
+          "Ankkojen nokat, päät ja vartalon mittasuhteet ovat uskottavia; ei ylimääräisiä osia tai muovista tekstuuria.",
+          "Pajun lehdistö, ruohon terät ja oksien haarautuminen vaihtelevat luonnollisesti; ei toistuvaa kaarnaleimaa.",
+          "Slot8:n kanssa sama katselusuunta ja sommittelu: vasemman rannan paju, oikealle kaartuva kanava ja oikeanpuoleinen nurmiranta.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/5-ducks.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/5-left-trees.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/5-right-bank-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3127882,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "copenhagen-6-korttelijuhla-intro-v1",
+        "slot": 6,
+        "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen mies näyttää luonnolliselta, iho ja kasvojen rakenne ovat uskottavat, ja vaatetus on geneeristä nykymuotia. Juhlaväki näkyy ylävartaloina ilman jalkineita, ruokaa, tekstiä tai brändikuvioita.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset etualan kasvoista, vasemmista aikuisista ja oikean puolen näkyvästä kädestä tarkastettu.",
+          "Ihon huokoset, ilmejuonteet, hampaat, korva ja hiukset ovat kameramaisia; ei ilmeistä anatomista virhettä tai muovisuutta.",
+          "Näkyvä oikeanpuoleinen käsi on osittain peittyvä/taipunut ja mittasuhteiltaan uskottava.",
+          "Henkilöt ovat aikuisia. Alavartalot jäävät kehyksen ulkopuolelle tai muiden ihmisten peittoon; ei näkyviä jalkineita tai ruokaa.",
+          "Vihreä paita, valkoinen T-paita ja muut asut ovat ilman tunnistettavia logoja tai brändikuvioita; taustan vanha tiiliseinä ja luonnonvalo ovat yhtenäisiä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/6-crowd-hand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/6-left-people.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2104426,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "copenhagen-7-korttelin-iltavalot-intro-v2",
+        "slot": 7,
+        "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uuden v2:n natiivirajaukset vahvistavat molempien lähiovien tyhjät puupaneelit ja geneeriset kahvat. Iltakujan perspektiivi, märkä kiveys, valaistus ja pienet selin olevat kävelijät ovat uskottavia; ei tekstiä, logoja tai tunnistettavia kasvoja.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset molemmista lähiovista, kävelijöistä/kaukaisista pyöristä sekä lehdistöstä ja kiveyksestä tarkastettu.",
+          "v1:n tekstimäinen postilaatan merkki puuttuu. v2:n ovissa ei ole nimikylttejä, numeroita, postiluukkuja tai tunnuksia.",
+          "Kaukaiset kaksi kävelijää näkyvät selin; pyörien pienissä pinnoissa ei erotu merkkejä.",
+          "Rappauksen kuluma, lehdistö ja kiveys vaihtelevat; lamppujen ja ikkunoiden valot heijastuvat märästä pinnasta uskottavasti.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/7-v2-left-door.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/7-v2-right-door.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/7-v2-people-bikes.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/7-v2-leaves-cobbles.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2432242,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "copenhagen-8-frederiksberg-1873-intro-v1",
+        "slot": 8,
+        "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Koko kehys ja natiiviyksityiskohdat ovat näkyvästi neutraalia mustavalkoista ilman sepiaa. Kanavan katselusuunta vastaa slot5:tä. Kaksi luettua institutionaalista lähdettä tukee1873 olemassa ollutta kanavamaisemaa, ja rajatut myöhemmät rakenteet puuttuvat.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset ankoista/vedestä, vasemmasta puustosta ja oikeanpuoleisesta rannasta tarkastettu.",
+          "Nykyisen5:n kanssa sama kanavan kaarre ja rantojen suuntarakenne: paju vasemmalla, puuryhmät vastarannalla, nurmiranta oikealla.",
+          "Ankat, veden epäsäännölliset heijastukset ja lehtien vaihtelu ovat luonnollisia; puunkuorissa ei leimattua kuviota.",
+          "Period exclusions luettu: ei arkkitehtuuria, palatseja/paviljonkeja, siltoja, eläintarharakenteita, sähkölamppuja, penkkejä, kylttejä, päällystystä tai kaiteita.",
+          "Slots- og Kulturstyrelsen -lähteen1798–1804 kanavamuutos ja Frederiksbergin arkiston1795–1804 maisemapuutarhakuvaus luettu ennen arviointia. Tarkkaa samaan suuntaan otettua1873-valokuvaa ei ollut dokumentoitu; kasvusto on havainnollistava rekonstruktio.",
+          "Ei näkyvää värisävytystä, tekstiä tai logoja. Alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/8-ducks-water.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/8-left-foliage-bark.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/8-right-bank-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3173837,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://slks.dk/fileadmin/user_upload/0_SLKS/Dokumenter/Om_styrelsen/udbud/Bilag_11_Frederiksberg_Have._Baerende_bevaringsvaerdier_-_2014.pdf",
+          "https://stadsarkivet.frederiksberg.dk/brug-stadsarkivet/byvandringer/oestturen",
+          "https://www.visitcopenhagen.com/copenhagen/planning/frederiksberg-garden-gdk412226"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "copenhagen-4-pyorailyarki-intro-v1",
+        "slot": 4,
+        "sha256": "783929ef97462b33ab8301613e14dc482d915586ad7f094c52b2dcdc6c30e4ae",
+        "status": "superseded-rejected-candidate",
+        "approvedForDelivery": false,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "reason": "Etualan vaalean pyörän ohjainputkessa näkyy kilpimäinen tunnuskuvio, joten v1 hylätään.",
+        "observations": [
+          "Ensimmäinen ehdokas säilytetty; tuottajan kokonaan uusi v2 on tarkastettu erikseen current-assets-listassa."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-bicycle-badge.png"
+        ]
+      },
+      {
+        "id": "copenhagen-7-korttelin-iltavalot-intro-v1",
+        "slot": 7,
+        "sha256": "9e10d2f502a6d4475360625b1a5024f91f4ed49ad97676fe437129923293eb58",
+        "status": "superseded-rejected-candidate",
+        "approvedForDelivery": false,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "reason": "Etualan oven metallipaneelissa näkyy pieni vaalea numeroa/kirjoitusta muistuttava merkki, joten v1 hylätään.",
+        "observations": [
+          "Ensimmäinen ehdokas säilytetty; tuottajan kokonaan uusi v2 on tarkastettu erikseen current-assets-listassa."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/7-door-panel.png"
+        ]
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:41:13.861662+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/manifest.json",
+      "manifestSHA256": "b52386570af9e351cf7176063a8080c28bce2b884dfa1803061b307103cffce1",
+      "reviewedAssetIds": [
+        "copenhagen-4-pyorailyarki-intro-v2",
+        "copenhagen-5-frederiksbergin-kanava-intro-v1",
+        "copenhagen-6-korttelijuhla-intro-v1",
+        "copenhagen-7-korttelin-iltavalot-intro-v2",
+        "copenhagen-8-frederiksberg-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [
+        "copenhagen-4-pyorailyarki-intro-v1",
+        "copenhagen-7-korttelin-iltavalot-intro-v1"
+      ],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Puistopari on havainnollistava rekonstruktio, ei1873 topografinen mittaus.",
+        "Slot4v2:n kattomerkin tulkinta on epävarma; rajaus talletettu päätöstä varten."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "copenhagen",
+    "verifiedAt": "2026-10-12T17:42:34.832564+00:00",
+    "assets": [
+      {
+        "id": "copenhagen-5-frederiksbergin-kanava-intro-v1",
+        "slot": 5,
+        "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+        "bytes": 3127882,
+        "verifiedAt": "2026-10-12T17:42:33.674759+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png",
+            "http": 200,
+            "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+            "bytes": 3127882,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png?delivery-verify=347fb2b098939292-1791826953674754000",
+            "http": 200,
+            "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
+            "bytes": 3127882,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "copenhagen-6-korttelijuhla-intro-v1",
+        "slot": 6,
+        "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+        "bytes": 2104426,
+        "verifiedAt": "2026-10-12T17:42:33.675042+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+            "bytes": 2104426,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png?delivery-verify=f98cf13cea620820-1791826953675040000",
+            "http": 200,
+            "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
+            "bytes": 2104426,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "copenhagen-7-korttelin-iltavalot-intro-v2",
+        "slot": 7,
+        "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+        "bytes": 2432242,
+        "verifiedAt": "2026-10-12T17:42:33.675702+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+            "bytes": 2432242,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png?delivery-verify=dd8ae38a02da95c3-1791826953675700000",
+            "http": 200,
+            "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
+            "bytes": 2432242,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "copenhagen-8-frederiksberg-1873-intro-v1",
+        "slot": 8,
+        "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+        "bytes": 3173837,
+        "verifiedAt": "2026-10-12T17:42:34.239027+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+            "bytes": 3173837,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png?delivery-verify=0da22ab1835dce21-1791826954239019000",
+            "http": 200,
+            "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
+            "bytes": 3173837,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 4,
+    "R2": 4,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.856540+00:00"
+}

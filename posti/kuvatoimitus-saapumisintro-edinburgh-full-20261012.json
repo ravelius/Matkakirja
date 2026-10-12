@@ -1,0 +1,986 @@
+{
+  "cityName": "Edinburgh",
+  "gameCityId": "edinburgh",
+  "mediaSlug": "edinburgh",
+  "updatedAt": "2026-10-12T18:22:25.813363+00:00",
+  "assets": [
+    {
+      "id": "edinburgh-4-kivikorttelin-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Edinburgh",
+      "gameCityId": "edinburgh",
+      "mediaSlug": "edinburgh",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/edinburgh-4-kivikorttelin-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/native/edinburgh-4-kivikorttelin-arki-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-4-kivikorttelin-arki-intro-v1.png",
+      "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Assettype: Edinburgharrivalintro slot4. Edinburgh TODAY, everyday ordinaryresidentialstreet ofanonymous modestoldsandstone tenements, weatheredlightbrownstoneblocks, simpletall sashwindows,darkblankfrontdoors,basicironboundaryrailsand sparsehardyplants. Eyelevelcamera lookingdiagonallyalongthe street, softcoolScottishcloudymorning, two distantmodernadultcommuters FROMBEHIND, plainbags orcoats. No Castle,StGiles,CaltonHill,DeanVillage,VictoriaStreet,RoyalMile,shops,cars,bikes,closefaces or monuments. Entrydoorsonlyplainpanelswithsimplehandles,nopostslots/name/addresspanels,doors orwalls mustbearnoletters/numbers. Create one completely new photorealistic real-camera illustrative image,1536x1024 landscapePNG opaqueRGB sRGB. Natural lighting, mutedauthenticcolors, irregularrealmaterials andnaturaltextures,35mmcamera. No HDR, CGI, painting, plasticskin or stamped/repeating foliage. Absolutely no text,letters,digits,logos,brands,brandpatterns, signs,streetnames,addressnumbers,nameplates,posters,advertising,watermarks,borders,food,protectedart,sculptures or famousmodernarchitect-designedworks.",
+      "sources": [
+        {
+          "url": "https://www.scottishcanals.co.uk/visit/canals/visit-the-union-canal/history-heritage",
+          "title": "Scottish Canals: Union Canal history and heritage",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Canal approved1817, opened1822 afterfouryears, operationalby1873.",
+            "Edinburgh/GlasgowRailway ownership1849; Fountainbridge liftingbridge plans1906,modernliftingbridgeexcluded.",
+            "Easternterminus closed1921; modernrestoration2001, moderntowpathfurniture/brandingexcluded."
+          ],
+          "periodReference": "Official canalhistory timeline andhistoriccanal image found; noexact1873 Harrisonreachsameviewphoto located."
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/SM11097",
+          "title": "HistoricEnvironmentScotland: UnionCanal,Fountainbridge toRiverAlmond,SM11097",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Listedwaterwaycontainscanalwater,banksandnorth-side towingpath.",
+            "Chosenframe fromnorthbank facingwest/southwest, keepingtowingpathonright ofimage.",
+            "Allmarkers,kickingstoneswithinscriptions,bridgesandmodernarchitectureexcluded fromframe."
+          ]
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/LB27798",
+          "title": "HistoricEnvironmentScotland: EastHermistonBridge,LB27798",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "UnionCanalbuilt1818–1822, independentheritagecorroborationof1822opening.",
+            "Bridgekeystonehasinscribed10, so nobridges orinscribedstonesincludedinimage."
+          ]
+        },
+        {
+          "url": "https://www.scottishcanals.co.uk/moorings/harrison-park",
+          "title": "ScottishCanals:HarrisonParkmoorings",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "HarrisonParkreach2mileswest ofEdinburghcitycentre, leafylocation,usedbyrowers/kayakers.",
+            "Contemporaryelectricity/mooringfacilitiesexcluded; viewcroppedsmallnaturalwaterreach withoutnamedmodernstructures."
+          ]
+        }
+      ],
+      "caption": "Edinburghin kivitalokorttelin arkea. Havainnekuva.",
+      "QA": {
+        "id": "edinburgh-4-kivikorttelin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:21:57.516892+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary older stone residential terrace, native near door/facade plain without inscriptions/numbers/logos; distant back-view walkers, natural photographic masonry and foliage.",
+        "detailCrops": [
+          "session-owner-review/slot4-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-4-kivikorttelin-arki-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:22:03.411856+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+        "bytes": 2690446,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-4-kivikorttelin-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+            "bytes": 2690446,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-4-kivikorttelin-arki-intro-v1.png?verify=north-44647814d5439748-1791829323416193000",
+            "http": 200,
+            "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+            "bytes": 2690446,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2690446
+    },
+    {
+      "id": "edinburgh-5-union-canal-intro-v1",
+      "slot": 5,
+      "cityName": "Edinburgh",
+      "gameCityId": "edinburgh",
+      "mediaSlug": "edinburgh",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/edinburgh-5-union-canal-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/native/edinburgh-5-union-canal-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-5-union-canal-intro-v1.png",
+      "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Assettype: Edinburgharrivalintro slot5. UnionCanal atquietHarrisonParkreach EdinburghTODAY, restrictednaturalcrop. Camera1.6m onNORTHBANKtowpath facingWEST/SOUTHWEST alongcanal,35mm: towpathlowerRIGHT recedesintodistance, narrow5-to6metrecanal waterthroughmiddleandleft, oppositeleftbankwith lowgrasses andirregulardeciduoustrees,some earlyautumnleaves. Softcloudymorning, authenticmodestScottishcontourcanal, notawideriver. One smallunmarkedkayakveryfaraway, paddleronlyatinybackviewsilhouette. No bridge,buildings,boathouse,parkmonument,markers,kickingstoneswithinscriptions,signs,benches,rails,lamps,mooringelectricboxes ormodernstructures. Ordinarywaterripples,differentunrepeatedtreeformsand unevenbanktexture. Create one completely new photorealistic real-camera illustrative image,1536x1024 landscapePNG opaqueRGB sRGB. Natural lighting, mutedauthenticcolors, irregularrealmaterials andnaturaltextures,35mmcamera. No HDR, CGI, painting, plasticskin or stamped/repeating foliage. Absolutely no text,letters,digits,logos,brands,brandpatterns, signs,streetnames,addressnumbers,nameplates,posters,advertising,watermarks,borders,food,protectedart,sculptures or famousmodernarchitect-designedworks.",
+      "sources": [
+        {
+          "url": "https://www.scottishcanals.co.uk/visit/canals/visit-the-union-canal/history-heritage",
+          "title": "Scottish Canals: Union Canal history and heritage",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Canal approved1817, opened1822 afterfouryears, operationalby1873.",
+            "Edinburgh/GlasgowRailway ownership1849; Fountainbridge liftingbridge plans1906,modernliftingbridgeexcluded.",
+            "Easternterminus closed1921; modernrestoration2001, moderntowpathfurniture/brandingexcluded."
+          ],
+          "periodReference": "Official canalhistory timeline andhistoriccanal image found; noexact1873 Harrisonreachsameviewphoto located."
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/SM11097",
+          "title": "HistoricEnvironmentScotland: UnionCanal,Fountainbridge toRiverAlmond,SM11097",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Listedwaterwaycontainscanalwater,banksandnorth-side towingpath.",
+            "Chosenframe fromnorthbank facingwest/southwest, keepingtowingpathonright ofimage.",
+            "Allmarkers,kickingstoneswithinscriptions,bridgesandmodernarchitectureexcluded fromframe."
+          ]
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/LB27798",
+          "title": "HistoricEnvironmentScotland: EastHermistonBridge,LB27798",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "UnionCanalbuilt1818–1822, independentheritagecorroborationof1822opening.",
+            "Bridgekeystonehasinscribed10, so nobridges orinscribedstonesincludedinimage."
+          ]
+        },
+        {
+          "url": "https://www.scottishcanals.co.uk/moorings/harrison-park",
+          "title": "ScottishCanals:HarrisonParkmoorings",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "HarrisonParkreach2mileswest ofEdinburghcitycentre, leafylocation,usedbyrowers/kayakers.",
+            "Contemporaryelectricity/mooringfacilitiesexcluded; viewcroppedsmallnaturalwaterreach withoutnamedmodernstructures."
+          ]
+        }
+      ],
+      "caption": "Union Canalin vesinäkymä Edinburghissa. Havainnekuva.",
+      "QA": {
+        "id": "edinburgh-5-union-canal-intro-v1",
+        "slot": 5,
+        "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:21:57.790201+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural quiet Union Canal/Harrison reach, native small kayaker/water/bank inspected without identifiable face or text/logo; no structures/markers/protected design, photographic irregular foliage.",
+        "detailCrops": [
+          "session-owner-review/slot5-person-water-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-5-union-canal-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:22:11.187830+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+        "bytes": 3059113,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-5-union-canal-intro-v1.png",
+            "http": 200,
+            "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+            "bytes": 3059113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-5-union-canal-intro-v1.png?verify=north-444feaecd508b3bc-1791829331187938000",
+            "http": 200,
+            "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+            "bytes": 3059113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3059113
+    },
+    {
+      "id": "edinburgh-6-kesatanssit-intro-v1",
+      "slot": 6,
+      "cityName": "Edinburgh",
+      "gameCityId": "edinburgh",
+      "mediaSlug": "edinburgh",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/edinburgh-6-kesatanssit-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/native/edinburgh-6-kesatanssit-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-6-kesatanssit-intro-v1.png",
+      "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Assettype: Edinburgharrivalintro slot6. Informal outdoorcommunitysummerceilidh dancecelebration in an Edinburghneighborhoodgarden TODAY, anonymousold sandstonebuilding blurredbehind leafycommunityyard. One fictionalScottishyoungadultman age28 inforeground laughingtowardafriend, shortdarkbrownhair,realnaturalskintextureandfaintfreckles, fashionableplain darkrust overshirt overgenericcreamtop, nothistoricaldress. Densecheerfulcrowd of fictional localEdinburghyoungadults inmodernfashionableplainbrandfreeclothing, plausibleScottishpopulation, candidchattingandgentledancing, secondaryfaces softfocus. TIGHT upperbodyframing: foregroundcutatwaist andALLbackgroundlegsandfeetcoveredbycrowdshouldersoroutofframe. EVERYperson'sshoeandfootmustbeabsentatALLdepths. No full-lengthhumans,food/drinks,tartan/kilts,costumes,festivalbanners,signage,stagebranding,logos,artmurals. Softnaturalsummereveninglight,warmfriendlyrealmoment. Create one completely new photorealistic real-camera illustrative image,1536x1024 landscapePNG opaqueRGB sRGB. Natural lighting, mutedauthenticcolors, irregularrealmaterials andnaturaltextures,35mmcamera. No HDR, CGI, painting, plasticskin or stamped/repeating foliage. Absolutely no text,letters,digits,logos,brands,brandpatterns, signs,streetnames,addressnumbers,nameplates,posters,advertising,watermarks,borders,food,protectedart,sculptures or famousmodernarchitect-designedworks.",
+      "sources": [
+        {
+          "url": "https://www.scottishcanals.co.uk/visit/canals/visit-the-union-canal/history-heritage",
+          "title": "Scottish Canals: Union Canal history and heritage",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Canal approved1817, opened1822 afterfouryears, operationalby1873.",
+            "Edinburgh/GlasgowRailway ownership1849; Fountainbridge liftingbridge plans1906,modernliftingbridgeexcluded.",
+            "Easternterminus closed1921; modernrestoration2001, moderntowpathfurniture/brandingexcluded."
+          ],
+          "periodReference": "Official canalhistory timeline andhistoriccanal image found; noexact1873 Harrisonreachsameviewphoto located."
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/SM11097",
+          "title": "HistoricEnvironmentScotland: UnionCanal,Fountainbridge toRiverAlmond,SM11097",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Listedwaterwaycontainscanalwater,banksandnorth-side towingpath.",
+            "Chosenframe fromnorthbank facingwest/southwest, keepingtowingpathonright ofimage.",
+            "Allmarkers,kickingstoneswithinscriptions,bridgesandmodernarchitectureexcluded fromframe."
+          ]
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/LB27798",
+          "title": "HistoricEnvironmentScotland: EastHermistonBridge,LB27798",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "UnionCanalbuilt1818–1822, independentheritagecorroborationof1822opening.",
+            "Bridgekeystonehasinscribed10, so nobridges orinscribedstonesincludedinimage."
+          ]
+        },
+        {
+          "url": "https://www.scottishcanals.co.uk/moorings/harrison-park",
+          "title": "ScottishCanals:HarrisonParkmoorings",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "HarrisonParkreach2mileswest ofEdinburghcitycentre, leafylocation,usedbyrowers/kayakers.",
+            "Contemporaryelectricity/mooringfacilitiesexcluded; viewcroppedsmallnaturalwaterreach withoutnamedmodernstructures."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Edinburghin kesätansseissa. Havainnekuva.",
+      "QA": {
+        "id": "edinburgh-6-kesatanssit-intro-v1",
+        "slot": 6,
+        "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:21:58.361495+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: fictional adult face/garments/hands inspected natively, cheerful young-adult summer partner dance in ordinary old stone courtyard; generic clothes, no footwear/text/logos/instrument/food.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-hands-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-6-kesatanssit-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:22:16.909404+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+        "bytes": 2137461,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-6-kesatanssit-intro-v1.png",
+            "http": 200,
+            "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+            "bytes": 2137461,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-6-kesatanssit-intro-v1.png?verify=north-30f42119730c8a56-1791829336909427000",
+            "http": 200,
+            "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+            "bytes": 2137461,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2137461
+    },
+    {
+      "id": "edinburgh-7-kivikadun-iltavalot-intro-v2",
+      "slot": 7,
+      "cityName": "Edinburgh",
+      "gameCityId": "edinburgh",
+      "mediaSlug": "edinburgh",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/edinburgh-7-kivikadun-iltavalot-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/native/edinburgh-7-kivikadun-iltavalot-intro-v2-native.png",
+      "r2Key": "julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-7-kivikadun-iltavalot-intro-v2.png",
+      "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Edinburgh arrival intro slot7, necessary whole-new quality replacement v2. Create ONE completely new photorealistic camera-looking illustration, landscape1536x1024 PNG opaque RGB sRGB. Contemporary ordinary Edinburgh residential street at natural blue hour. Anonymous modest old sandstone tenements, plain rectangular sash windows, gentle warm domestic window glow, wet slightly uneven pavement reflecting a few ordinary street lamps. Camera at human height with natural35mm lens, looking along the quiet street. Two tiny distant modern adults seen strictly FROM BEHIND, faces not visible. Show ordinary residential masonry and modest plants, no tourist landmark. Every stone doorway surround is ENTIRELY PLAIN weathered sandstone blocks with NO capitals, NO carved decorations, NO decorative banding, NO engraved labels, NO sculpted plaques, NO inscriptions, letters, digits, symbols, crests or address panels anywhere. Prefer simple square-edged unornamented rectangular stone door openings. Doors are flat plain unmarked timber panels with one ordinary handle ONLY: NO mail slots, number plates, name plates, buzzers with labels, carvings, emblems or fancy hardware. All masonry surfaces including lintels and jambs are blank natural stone texture, absolutely no mark resembling lettering or numerals. No shops, pubs, vehicles, bicycles, church, castle, monuments, art, sculpture, signs or protected modern architect-designed works. Natural low-light real-camera exposure, restrained authentic blue-gray and softly amber tones, realistic irregular stone grain, natural vegetation, no glossyHDR, CGI, painting, artificial vignette or repetitive textures. Absolutely NO text, letters, numbers, carved letter-like marks, logos, branding, trademarks, brand patterns, posters, advertising, watermarks, borders or food. Reconstruct the whole scene freshly; do not edit, retouch or recolor the rejected image. Do not include a caption or any graphic.",
+      "sources": [
+        {
+          "url": "https://www.scottishcanals.co.uk/visit/canals/visit-the-union-canal/history-heritage",
+          "title": "Scottish Canals: Union Canal history and heritage",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Canal approved1817, opened1822 afterfouryears, operationalby1873.",
+            "Edinburgh/GlasgowRailway ownership1849; Fountainbridge liftingbridge plans1906,modernliftingbridgeexcluded.",
+            "Easternterminus closed1921; modernrestoration2001, moderntowpathfurniture/brandingexcluded."
+          ],
+          "periodReference": "Official canalhistory timeline andhistoriccanal image found; noexact1873 Harrisonreachsameviewphoto located."
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/SM11097",
+          "title": "HistoricEnvironmentScotland: UnionCanal,Fountainbridge toRiverAlmond,SM11097",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Listedwaterwaycontainscanalwater,banksandnorth-side towingpath.",
+            "Chosenframe fromnorthbank facingwest/southwest, keepingtowingpathonright ofimage.",
+            "Allmarkers,kickingstoneswithinscriptions,bridgesandmodernarchitectureexcluded fromframe."
+          ]
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/LB27798",
+          "title": "HistoricEnvironmentScotland: EastHermistonBridge,LB27798",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "UnionCanalbuilt1818–1822, independentheritagecorroborationof1822opening.",
+            "Bridgekeystonehasinscribed10, so nobridges orinscribedstonesincludedinimage."
+          ]
+        },
+        {
+          "url": "https://www.scottishcanals.co.uk/moorings/harrison-park",
+          "title": "ScottishCanals:HarrisonParkmoorings",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "HarrisonParkreach2mileswest ofEdinburghcitycentre, leafylocation,usedbyrowers/kayakers.",
+            "Contemporaryelectricity/mooringfacilitiesexcluded; viewcroppedsmallnaturalwaterreach withoutnamedmodernstructures."
+          ]
+        }
+      ],
+      "caption": "Edinburghin kivikorttelin iltavalot. Havainnekuva.",
+      "QA": {
+        "id": "edinburgh-7-kivikadun-iltavalot-intro-v2",
+        "slot": 7,
+        "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:21:58.521640+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS v2: native foreground stone door surround is completely plain, first carved-lettering defect absent; generic old stone street with natural window/street light and distant backs, no numbers/text/logos.",
+        "detailCrops": [
+          "session-owner-review/slot7-v2-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-7-kivikadun-iltavalot-intro-v2.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:22:20.485679+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+        "bytes": 2584953,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-7-kivikadun-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+            "bytes": 2584953,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-7-kivikadun-iltavalot-intro-v2.png?verify=north-7745710c33046aff-1791829340485708000",
+            "http": 200,
+            "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+            "bytes": 2584953,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2584953
+    },
+    {
+      "id": "edinburgh-8-union-canal-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Edinburgh",
+      "gameCityId": "edinburgh",
+      "mediaSlug": "edinburgh",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/edinburgh-8-union-canal-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/native/edinburgh-8-union-canal-1873-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-8-union-canal-1873-intro-v1.png",
+      "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Assettype: Edinburgharrivalintro slot8. Entirelynew historicallycredible realcameraillustration ofUnionCanal quietHarrisonParkarea reach inEdinburgh inEXACTYEAR1873. Modernslot5reference guidesONLYsamephysicalcamera1.6m northbanklookingWEST/SOUTHWEST,35mm,towpathRIGHT,oppositeleftnaturalbankandnarrow5–6m canalwater direction. Reconstruct1873fromscratch ratherthan edit,recolor orretouch. UnionCanalopened1822; northsideearth/gravel towingpathandworkingwaterway present1873. Replacekayakwithonefaraway plain authentic19th-century woodencargo barge withlowcanvascover, simpleunmarkedweatheredwoodenboat andnoengine,noplastic,no modernrigging,letteringorpaintedlogos. Ruggedgrassandolddeciduoustreebanks,notmodernformalparkdesign. No recognizablefaces: one tiny faraway1873workeroptionalbackview inplaincoatandcap. NOarchitecture/bridges,1906Fountainbridgeliftingbridge,modernpiers,paving,lamps,benches,markers,signs,electricboxes,roads,plasticormodernobjects. NEUTRALBLACKANDWHITElookonly,achromaticgraytones, fine1870sphotographicgrain andsoftcontrast,nosepia/coloredtint/border. Realcanalripplesandstoneearthtextures. Create one completely new photorealistic real-camera illustrative image,1536x1024 landscapePNG opaqueRGB sRGB. Natural lighting, mutedauthenticcolors, irregularrealmaterials andnaturaltextures,35mmcamera. No HDR, CGI, painting, plasticskin or stamped/repeating foliage. Absolutely no text,letters,digits,logos,brands,brandpatterns, signs,streetnames,addressnumbers,nameplates,posters,advertising,watermarks,borders,food,protectedart,sculptures or famousmodernarchitect-designedworks.",
+      "sources": [
+        {
+          "url": "https://www.scottishcanals.co.uk/visit/canals/visit-the-union-canal/history-heritage",
+          "title": "Scottish Canals: Union Canal history and heritage",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Canal approved1817, opened1822 afterfouryears, operationalby1873.",
+            "Edinburgh/GlasgowRailway ownership1849; Fountainbridge liftingbridge plans1906,modernliftingbridgeexcluded.",
+            "Easternterminus closed1921; modernrestoration2001, moderntowpathfurniture/brandingexcluded."
+          ],
+          "periodReference": "Official canalhistory timeline andhistoriccanal image found; noexact1873 Harrisonreachsameviewphoto located."
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/SM11097",
+          "title": "HistoricEnvironmentScotland: UnionCanal,Fountainbridge toRiverAlmond,SM11097",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "Listedwaterwaycontainscanalwater,banksandnorth-side towingpath.",
+            "Chosenframe fromnorthbank facingwest/southwest, keepingtowingpathonright ofimage.",
+            "Allmarkers,kickingstoneswithinscriptions,bridgesandmodernarchitectureexcluded fromframe."
+          ]
+        },
+        {
+          "url": "https://portal.historicenvironment.scot/designation/LB27798",
+          "title": "HistoricEnvironmentScotland: EastHermistonBridge,LB27798",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "UnionCanalbuilt1818–1822, independentheritagecorroborationof1822opening.",
+            "Bridgekeystonehasinscribed10, so nobridges orinscribedstonesincludedinimage."
+          ]
+        },
+        {
+          "url": "https://www.scottishcanals.co.uk/moorings/harrison-park",
+          "title": "ScottishCanals:HarrisonParkmoorings",
+          "readAt": "2026-10-12T17:53:29.109361+00:00",
+          "readFacts": [
+            "HarrisonParkreach2mileswest ofEdinburghcitycentre, leafylocation,usedbyrowers/kayakers.",
+            "Contemporaryelectricity/mooringfacilitiesexcluded; viewcroppedsmallnaturalwaterreach withoutnamedmodernstructures."
+          ]
+        }
+      ],
+      "caption": "Union Canalin näkymä Edinburghissa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "edinburgh-8-union-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:21:58.865665+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 canal with same5 direction and north towpath position, native wooden cargo boat/period rear-view boatman inspected; two official read sources confirm1822canal, excludes1906liftingbridge and modern restoration furniture.",
+        "detailCrops": [
+          "session-owner-review/slot8-cargo-boat-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-8-union-canal-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:22:24.505056+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+        "bytes": 3085023,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-8-union-canal-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+            "bytes": 3085023,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-8-union-canal-1873-intro-v1.png?verify=north-7280591ede51218c-1791829344505106000",
+            "http": 200,
+            "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+            "bytes": 3085023,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3085023
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "edinburgh",
+    "gameCityId": "edinburgh",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/sources.json"
+    ],
+    "sourceManifestSha256": "fda6f671d57a53405b20035c744643f3e51f9fda22577398e02ce9ca6f978e93",
+    "assets": [
+      {
+        "id": "edinburgh-4-kivikorttelin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kivitalojen julkisivut, tyhjä ovi, puutarhakasvit ja kostea katu ovat uskottavia. Kaksi kehyksen kokoon nähden pientä aikuista näkyy selin. Tekstiä, numeroita, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta/kivestä, ihmisistä ja kasveista tarkastettu.",
+          "Kivien sävyt ja kuluma sekä lehtien ja oksien asennot vaihtelevat luonnollisesti ilman leimaa. Lähikiven luonnollinen pintavaihtelu ei muodosta havaittavaa kirjoitusta.",
+          "Ovipaneelit ja nuppi ovat tyhjiä ilman postiluukkua, nimilaattaa tai numeroita. Kävelijöiden kasvoja ei näy; asut ja laukut geneerisiä. Ei ruokaa tai mainoksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/4-door-stone.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/4-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/4-plants.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2690446,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "edinburgh-5-union-canal-intro-v1",
+        "slot": 5,
+        "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kapea kanava, oikeanpuoleinen polku, kasvillisuus ja veden heijastukset ovat kameramaisia ja sisäisesti yhtenäisiä. Kajakissa on hyvin pieni aikuinen ilman tunnistettavia kasvoja tai tunnuksia. Suunta vastaa slot8-paria.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kajakista, lehdistöstä ja oikean polun/veden reunasta tarkastettu.",
+          "Puuston muodot, oksien haarat, heinät ja lehtiasennot vaihtelevat luonnollisesti ilman leimaa. Kajakki ja mela ovat mittasuhteiltaan uskottavia.",
+          "Kajakin pieni henkilö ei sisällä tunnistettavaa kasvoa tai vaatemerkkiä. Ei tekstiä, logoja, rakennuksia, siltoja tai moderneja kalusteita.",
+          "Slot8:n kanssa sama suuntarakenne: vetopolku oikealla, vesiväylä keskellä/vasemmalla, luonnollinen puusto vasemmalla vastarannalla.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/5-kayak.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/5-foliage.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/5-path-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3059113,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "edinburgh-6-kesatanssit-intro-v1",
+        "slot": 6,
+        "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen mies, luonnollinen iho, kasvot, kädet ja geneerinen nykyvaatetus täyttävät omistajan juhlakuvan ehdot. Ruokaa, logoja, brändikuvioita tai jalkineita ei näy. Vasemmassa reunassa näkyvä nimetön juomalasi on kirjattu promptipoikkeamaksi, ei yksin hylkäysperusteeksi.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, etualan käsistä, vasemmasta väkijoukosta ja vasemman reunan lasista tarkastettu.",
+          "Ihon huokoset, hiukset, hampaat ja korva ovat luonnollisia. Etualan toisiaan koskettavat osittain peittyvät kädet ovat uskottavia ilman ilmeistä anatomista virhettä.",
+          "Kaikki näkyvät henkilöt ovat aikuisia ja ylävartaloina tai muiden peittämiä. Vaatteet ja pieni kukkakangas ovat geneerisiä; ei tunnistettavaa brändikuviota.",
+          "Vasemmassa etualan reunassa on osittain peittyvä läpinäkyvä juomalasi, jossa meripihkanväristä nestettä. Lasi ilman tekstiä/logoja; nesteen lajia ei päätellä.",
+          "Tuottajan no-drinks-lisäys ei ollut omistajan uusi hyväksyntäportti. Omistajan no-food-kuva- ja jalkine-ehto täyttyvät; lasi ei muuta kuvaa ruokakuvaksi.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/6-hands.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/6-left-possible-glass.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/6-left-crowd.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2137461,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        },
+        "promptDeviations": [
+          {
+            "type": "anonymous-drink-glass-visible",
+            "blocking": false,
+            "reason": "Producer prompt added no-drinks; owner prohibits food images and footwear. Anonymous glass alone does not fail owner conditions, as clarified by coordinator."
+          }
+        ]
+      },
+      {
+        "id": "edinburgh-7-kivikadun-iltavalot-intro-v2",
+        "slot": 7,
+        "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uuden v2:n ovi ja ovikehys ovat tyhjiä tavallista kivipintaa ilman havaittavia kaiverruksia tai osoitemerkkejä. Kivi, kasvit, märän kadun valot ja pienet selin näkyvät kävelijät ovat uskottavia.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta/kivikehyksestä, keskialueen kivipinnasta ja ihmisistä tarkastettu.",
+          "Ovi sisältää vain tyhjät paneelit ja tavallisen nupin; ei postiluukkua, nimilaattaa, numeromerkkejä tai tunnuksia. Kiven tummat epäsäännölliset pintakohdat eivät muodosta havaittavaa kirjoitusta.",
+          "Kivien sävyt ja kasvien oksat/lehtiasennot vaihtelevat luonnollisesti; lämpimät heijastukset vastaavat lamppuja ja ikkunoita. Kävelijät selin ilman tunnistettavia kasvoja. Ei ruokaa, logoja tai mainoksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/7-door-stone.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/7-stone-detail.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/7-people.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2584953,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "edinburgh-8-union-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on näkyvästi neutraali mustavalkoinen ilman sepiaa. Kanavan ja oikean vetopolun suunta vastaa slot5:tä. Puinen kangaspeitteinen kuormavene ja pieni selin näkyvä periodiaikuinen ovat uskottavia; myöhemmät rakenteet puuttuvat.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kuormaveneestä, puustosta ja oikean polun/veden reunasta tarkastettu.",
+          "Slot5:n kanssa sama vesiväylän katselusuunta: polku oikealla, kanava keskellä/vasemmalla ja luonnollinen lehtipuuranta vasemmalla.",
+          "Veneen laudoitus ja yksinkertainen kangaspeite ovat uskottavia ilman moottoria tai tunnuksia. Pieni perioditakkinen/hattupäinen aikuinen näkyy selin ilman kasvoja.",
+          "Puusto, ruoho ja veden aallot vaihtelevat luonnollisesti ilman leimaa. Ei kirjoitusta, logoja tai näkyvää värisävytystä.",
+          "Scottish Canalsin1822avaus ja1906Fountainbridge-uudistus sekä Historic Environment Scotlandin pohjoisen vetopolun heritage-kuvaus luettu tuottajan paketista. Kaikki sillat, rakennukset, modernit kalusteet, numerokivet, sähkölaatikot, valot, muovi ja päällyste puuttuvat.",
+          "Tämän kuvakulman tarkkaa1873-valokuvaa ei ollut paketissa; kuva on lähdepohjainen havainnollistava rekonstruktio. Alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/8-barge.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/8-foliage.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/edinburgh/crops/8-path-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3085023,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://www.scottishcanals.co.uk/visit/canals/visit-the-union-canal/history-heritage",
+          "https://portal.historicenvironment.scot/designation/SM11097",
+          "https://portal.historicenvironment.scot/designation/LB27798",
+          "https://www.scottishcanals.co.uk/moorings/harrison-park"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:34:02.305614+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/manifest.json",
+      "manifestSHA256": "fda6f671d57a53405b20035c744643f3e51f9fda22577398e02ce9ca6f978e93",
+      "reviewedAssetIds": [
+        "edinburgh-4-kivikorttelin-arki-intro-v1",
+        "edinburgh-5-union-canal-intro-v1",
+        "edinburgh-6-kesatanssit-intro-v1",
+        "edinburgh-7-kivikadun-iltavalot-intro-v2",
+        "edinburgh-8-union-canal-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Historiallinen kanavakuva on havainnollistava rekonstruktio, ei1873 rantaviivan tai veneen tarkka mittaus.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "edinburgh",
+    "verifiedAt": "2026-10-12T18:52:41.693854+00:00",
+    "assets": [
+      {
+        "id": "edinburgh-4-kivikorttelin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+        "bytes": 2690446,
+        "verifiedAt": "2026-10-12T18:52:39.519257+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-4-kivikorttelin-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+            "bytes": 2690446,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-4-kivikorttelin-arki-intro-v1.png?delivery-verify=44647814d5439748-1791831159519251000",
+            "http": 200,
+            "sha256": "44647814d5439748139f7445957c88cbbf3f9c4334172095b245515dad1d78f4",
+            "bytes": 2690446,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "edinburgh-5-union-canal-intro-v1",
+        "slot": 5,
+        "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+        "bytes": 3059113,
+        "verifiedAt": "2026-10-12T18:52:39.519581+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-5-union-canal-intro-v1.png",
+            "http": 200,
+            "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+            "bytes": 3059113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-5-union-canal-intro-v1.png?delivery-verify=444feaecd508b3bc-1791831159519578000",
+            "http": 200,
+            "sha256": "444feaecd508b3bc8bac13e2d6ea21fade1c60eb2f258afa082bf95554fb0d37",
+            "bytes": 3059113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "edinburgh-6-kesatanssit-intro-v1",
+        "slot": 6,
+        "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+        "bytes": 2137461,
+        "verifiedAt": "2026-10-12T18:52:39.519807+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-6-kesatanssit-intro-v1.png",
+            "http": 200,
+            "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+            "bytes": 2137461,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-6-kesatanssit-intro-v1.png?delivery-verify=30f42119730c8a56-1791831159519805000",
+            "http": 200,
+            "sha256": "30f42119730c8a563ee35ea24f3ccf19b2776a50ecd1acc90d5feaf1a8e8fcf7",
+            "bytes": 2137461,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "edinburgh-7-kivikadun-iltavalot-intro-v2",
+        "slot": 7,
+        "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+        "bytes": 2584953,
+        "verifiedAt": "2026-10-12T18:52:40.130249+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-7-kivikadun-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+            "bytes": 2584953,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-7-kivikadun-iltavalot-intro-v2.png?delivery-verify=7745710c33046aff-1791831160130240000",
+            "http": 200,
+            "sha256": "7745710c33046aff5c49ddbe8d3691534fb68b2fd7c788ce0ac8737028234c02",
+            "bytes": 2584953,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "edinburgh-8-union-canal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+        "bytes": 3085023,
+        "verifiedAt": "2026-10-12T18:52:40.339793+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-8-union-canal-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+            "bytes": 3085023,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/edinburgh/20261012-full/edinburgh-8-union-canal-1873-intro-v1.png?delivery-verify=7280591ede51218c-1791831160339781000",
+            "http": 200,
+            "sha256": "7280591ede51218c426a2c6aed9da3f39fa68446414758870f1dcc47841424f2",
+            "bytes": 3085023,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/edinburgh/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.810300+00:00"
+}

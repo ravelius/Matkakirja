@@ -1,0 +1,822 @@
+{
+  "cityName": "Bergen",
+  "gameCityId": "bergen",
+  "mediaSlug": "bergen",
+  "updatedAt": "2026-10-12T17:38:12.390994+00:00",
+  "assets": [
+    {
+      "id": "bergen-4-nordnes-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Bergen",
+      "gameCityId": "bergen",
+      "mediaSlug": "bergen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/final/bergen-4-nordnes-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/native/bergen-4-nordnes-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/bergen/20261012-full/bergen-4-nordnes-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-4-nordnes-arki-intro-v1.png",
+      "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Bergen,Norway. A quiet ordinary Nordnes cobbled residential lane between small old painted timber houses in muted white and ochre with redtile and slate roofs. Irregular old wooden siding and modest doorsteps with plants. Standing eye-level camera looking gently downhill along the lane, a distant glimpse of soft blue fjord and hills. Three small distant adults in plain modern jackets walk away, faces entirely unreadable. Calm bright overcast daylight after a shower, damp uneven cobbles. No famous monuments, no food stalls, no cars.",
+      "sources": [
+        {
+          "url": "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/districts-and-neighborhoods-in-bergen-city-center",
+          "readFacts": "Nordnes peninsula extends west between Vågen and Puddefjorden; settlement dates to1107-1110. Aquarium1960 and totem1970 excluded; Nordnes old alleys/wooden houses; Nygårdshøyden mostly old brick residential streets."
+        },
+        {
+          "url": "https://en.visitbergen.com/ideas-and-inspiration/films-and-pictures/pictures-from-bergen/wooden-houses",
+          "readFacts": "Tourism board documents wooden residential houses at Nordnes Strangebakken,NedreStrangehagen and Verftsbakken."
+        }
+      ],
+      "caption": "Nordnesin puutalokujan arkea Bergenissä. Havainnekuva.",
+      "QA": {
+        "id": "bergen-4-nordnes-arki-intro-v1",
+        "slot": 4,
+        "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:32:07.507901+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural Nordnes ordinary wooden street and sea background, native near door inspected with no lettering/logo/number, people small from behind; photographic materials and vegetation.",
+        "detailCrops": [
+          "session-owner-review/slot4-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:37:58.777107+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+        "bytes": 2933930,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-4-nordnes-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+            "bytes": 2933930,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-4-nordnes-arki-intro-v1.png?verify=north-3b1c0a3dfdd08c07-1791826678777778000",
+            "http": 200,
+            "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+            "bytes": 2933930,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2933930
+    },
+    {
+      "id": "bergen-5-nordnes-ranta-intro-v1",
+      "slot": 5,
+      "cityName": "Bergen",
+      "gameCityId": "bergen",
+      "mediaSlug": "bergen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/final/bergen-5-nordnes-ranta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/native/bergen-5-nordnes-ranta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/bergen/20261012-full/bergen-5-nordnes-ranta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-5-nordnes-ranta-intro-v1.png",
+      "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Bergen,Norway. Natural northwestern rocky shoreline of Nordnes tip, looking northwest across Byfjorden towards distant low Askøy hills. Standing camera1.6m high on rough shore. Uneven dark grey rocks occupy lower-left foreground, sparse low grass and scrub along left edge, open sea in center and lower-right, a narrow strip of distant hills across upper third. Soft Nordic afternoon under broken overcast, restrained bluegrey water with irregular small wind ripples. One tiny unlettered white ferry far away. No people, aquarium, pool, totem pole, harbour buildings, bridge, landmarks, groomed park flowerbeds or benches. Water and geology dominate.",
+      "sources": [
+        {
+          "url": "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/districts-and-neighborhoods-in-bergen-city-center",
+          "readFacts": "Nordnes peninsula extends west between Vågen and Puddefjorden; settlement dates to1107-1110. Aquarium1960 and totem1970 excluded; Nordnes old alleys/wooden houses; Nygårdshøyden mostly old brick residential streets."
+        },
+        {
+          "url": "https://www.bergenbyarkiv.no/bergenbyleksikon/arkiv/1425084",
+          "readFacts": "Bergen city archive encyclopedia: Nordnesparken developed1888-1898; large deciduous trees planted with park; Nordnes sea bath1910, totem1970.1873 image excludes park paths, planted big trees,pool,art and all later structures."
+        }
+      ],
+      "caption": "Bergenin Nordnesin kalliorantaa ja Byfjordenin vettä. Havainnekuva.",
+      "QA": {
+        "id": "bergen-5-nordnes-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:33:30.205856+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural Nordnes rocky shore and Byfjorden view, native rock/lichen irregular photographic detail; tiny distant generic ship without discernible text; no faces or protected architecture.",
+        "detailCrops": [
+          "session-owner-review/slot5-rock-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:38:01.966576+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+        "bytes": 2522802,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-5-nordnes-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+            "bytes": 2522802,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-5-nordnes-ranta-intro-v1.png?verify=north-7420266407b53a8d-1791826681966626000",
+            "http": 200,
+            "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+            "bytes": 2522802,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2522802
+    },
+    {
+      "id": "bergen-6-musiikki-ilta-intro-v1",
+      "slot": 6,
+      "cityName": "Bergen",
+      "gameCityId": "bergen",
+      "mediaSlug": "bergen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/final/bergen-6-musiikki-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/native/bergen-6-musiikki-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/bergen/20261012-full/bergen-6-musiikki-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-6-musiikki-ilta-intro-v1.png",
+      "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Bergen young adult summer music gathering in an anonymous old brick residential courtyard at Nygårdshøyden. One fictional26-year-old Norwegian man foreground, chest-up, spontaneous warm smile while turning to friends. Plain fashionable muted navy overshirt over creamT-shirt, absolutely no labels or patterns. Several other young adult local Norwegian residents chatting and laughing behind, varied natural Norwegian appearances, contemporary plain fashion. Only upper bodies visible: camera at shoulder height, bottom cuts at foreground chest, dense overlapping crowd completely hides all legs and feet. EVERY shoe at every distance completely out of frame or hidden. No food, drink containers, banners, stages or performers. Early summer evening natural light and a few warm old house windows. Realistic skin pores and asymmetric hair, joyful candid mood. Urban environment visible, no artificial bokeh.",
+      "sources": [
+        {
+          "url": "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/districts-and-neighborhoods-in-bergen-city-center",
+          "readFacts": "Nordnes peninsula extends west between Vågen and Puddefjorden; settlement dates to1107-1110. Aquarium1960 and totem1970 excluded; Nordnes old alleys/wooden houses; Nygårdshøyden mostly old brick residential streets."
+        },
+        {
+          "url": "https://en.visitbergen.com/whats-on",
+          "readFacts": "Bergen music and festival city; many concerts and local gatherings, annual music festivals inMay-June. Generic courtyard celebration depicts atmosphere without branding or actual performers."
+        }
+      ],
+      "caption": "Nuoria aikuisia Bergenin kesäisessä musiikki-illassa. Havainnekuva.",
+      "QA": {
+        "id": "bergen-6-musiikki-ilta-intro-v1",
+        "slot": 6,
+        "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:33:30.262812+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural fictional adult face and generic plain blue overshirt inspected natively; cheerful young-adult courtyard, no footwear or discernible logos/text.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-clothes-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:38:05.807999+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+        "bytes": 2254604,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-6-musiikki-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+            "bytes": 2254604,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-6-musiikki-ilta-intro-v1.png?verify=north-165bd9b9845e1145-1791826685808040000",
+            "http": 200,
+            "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+            "bytes": 2254604,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2254604
+    },
+    {
+      "id": "bergen-7-nygardshoyden-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Bergen",
+      "gameCityId": "bergen",
+      "mediaSlug": "bergen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/final/bergen-7-nygardshoyden-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/native/bergen-7-nygardshoyden-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/bergen/20261012-full/bergen-7-nygardshoyden-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-7-nygardshoyden-ilta-intro-v1.png",
+      "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Nygårdshøyden,Bergen at blue hour. An old anonymous brick residential street with two-and-three-storey nineteenth-century plaster and brick houses in subdued ochre,dusky red and grey. Slight uphill perspective from standing eye height; damp irregular paving reflects a few ordinary warm street lamps and room lights. Two tiny distant adults walking away with unreadable faces. Dark green mountain outline at far end. Urban Norwegian atmosphere. No shops, food, famous churches, Grieghallen, Fløibanen, modern highrises or contemporary designer works. Plausible modest evening exposure with details in shadows.",
+      "sources": [
+        {
+          "url": "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/districts-and-neighborhoods-in-bergen-city-center",
+          "readFacts": "Nordnes peninsula extends west between Vågen and Puddefjorden; settlement dates to1107-1110. Aquarium1960 and totem1970 excluded; Nordnes old alleys/wooden houses; Nygårdshøyden mostly old brick residential streets."
+        }
+      ],
+      "caption": "Nygårdshøydenin asuinkatu Bergenin iltavaloissa. Havainnekuva.",
+      "QA": {
+        "id": "bergen-7-nygardshoyden-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:35:46.222736+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary old Bergen street, warm windows and distant backs, native foreground door/railings inspected free of text/logos/address marks; natural photographic wet cobbles.",
+        "detailCrops": [
+          "session-owner-review/slot7-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:38:08.323136+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+        "bytes": 2767133,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-7-nygardshoyden-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+            "bytes": 2767133,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-7-nygardshoyden-ilta-intro-v1.png?verify=north-721d23800810b9a4-1791826688323155000",
+            "http": 200,
+            "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+            "bytes": 2767133,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2767133
+    },
+    {
+      "id": "bergen-8-nordnes-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Bergen",
+      "gameCityId": "bergen",
+      "mediaSlug": "bergen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/final/bergen-8-nordnes-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/native/bergen-8-nordnes-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/bergen/20261012-full/bergen-8-nordnes-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-8-nordnes-1873-intro-v1.png",
+      "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Historical Bergen,Norway in the exact year1873, pure neutral black and white with no sepia. Same camera position and northwest direction as the modern shore pair: stand on natural northwestern rocky shore of Nordnes tip, look northwest across Byfjorden towards low Askøy hills. Irregular bare grey rocks in lower-left foreground, sparse low grassy scrub along left edge, open sea center and lower-right, distant hills narrow upper strip. Nordnesparken was built1888-1898 so there are NO landscaped park paths or planted big deciduous trees. No aquarium1960, totem1970, pool1910, modern bridges, harbour cranes, railings, lamps, benches, asphalt, cars, motorboats or electricity. All buildings out of frame. One tiny distant wooden sailboat under a plain sail. No people or military. Soft overcast daylight with1870s glass plate feeling, fine grain, slight optical vignette, modest contrast. Research-backed reconstruction rather than claimed archival photo. The supplied modern photograph-like illustration is ONLY a camera-position, shoreline-shape and distant-hill arrangement reference. Generate an entirely new historical1873 scene from scratch; keep the same rough rocks at lowerleft and the same distant hill silhouette and sightline, replace the modern ferry with a tiny period sailboat. Do not merely recolor the reference.",
+      "sources": [
+        {
+          "url": "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/districts-and-neighborhoods-in-bergen-city-center",
+          "readFacts": "Nordnes peninsula extends west between Vågen and Puddefjorden; settlement dates to1107-1110. Aquarium1960 and totem1970 excluded; Nordnes old alleys/wooden houses; Nygårdshøyden mostly old brick residential streets."
+        },
+        {
+          "url": "https://www.bergenbyarkiv.no/bergenbyleksikon/arkiv/1425084",
+          "readFacts": "Bergen city archive encyclopedia: Nordnesparken developed1888-1898; large deciduous trees planted with park; Nordnes sea bath1910, totem1970.1873 image excludes park paths, planted big trees,pool,art and all later structures."
+        },
+        {
+          "url": "https://www.nordnesparkensvenner.no/parkens-historie",
+          "readFacts": "Local park history by MonsKvamme: committee founded24March1887; area military until1872; park initiators described natural fresh-sea-air area. In1873 coast predates landscaped park. No military structures or people included; view northwest over open water."
+        }
+      ],
+      "caption": "Nordnesin kallioranta Bergenissä vuonna 1873 ennen puiston rakentamista. Havainnekuva.",
+      "QA": {
+        "id": "bergen-8-nordnes-1873-intro-v1",
+        "slot": 8,
+        "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T17:37:46.182020+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 natural Nordnes shore, same5 rock/horizon composition, distant ordinary sailing boat replaces modern ferry; native boat/water inspected with no text/modern objects; municipal/local park histories exclude later park structures.",
+        "detailCrops": [
+          "session-owner-review/slot8-sailboat-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T17:38:11.459828+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+        "bytes": 2634482,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-8-nordnes-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+            "bytes": 2634482,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-8-nordnes-1873-intro-v1.png?verify=north-cc6f51613c9ffe3b-1791826691459856000",
+            "http": 200,
+            "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+            "bytes": 2634482,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2634482
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "bergen",
+    "gameCityId": "bergen",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/sources.json"
+    ],
+    "sourceManifestSha256": "f5442a6310d6b601512dcd38c31975ea9fddcce40fe522ad84f235aec5ce9049",
+    "assets": [
+      {
+        "id": "bergen-4-nordnes-arki-intro-v1",
+        "slot": 4,
+        "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Puutalojen laudoitus, kattotiilet, kasvit ja kostea epätasainen kiveys näyttävät luonnollisilta. Kolme pientä kävelijää näkyy selin; ovissa tai muissa pinnoissa ei havaittu tekstiä, numeroita, logoja tai brändikuvioita.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset vasemmasta ovesta/kasveista, kävelijöistä ja oikeanpuoleisesta talosta tarkastettu.",
+          "Laudoituksen maalipinnat, portaiden kuluma ja kasvien oksat/lehtiasennot vaihtelevat luonnollisesti. Ei leimattua kasvi- tai kaarnakuviota.",
+          "Kujan perspektiivi ja rinteeseen sijoittuvat talot ovat keskenään yhtenäisiä. Kävelijöiden kasvoja ei näy.",
+          "Lähiovissa on tavallisia kahvoja ja laitteita ilman havaittavaa kirjoitusta; ei ruokaa tai ajoneuvoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/4-left-door-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/4-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/4-right-house.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2933930,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "bergen-5-nordnes-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kallioiden halkeamat, jäkälä, niukka kasvillisuus ja veden aallot näyttävät luonnollisilta, ja pilvisen päivän valaistus on yhtenäinen. Kaukainen pieni lautta on ilman havaittavaa kirjoitusta; ei logoja, ihmisiä tai muita rakennelmia.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kallioista, lautasta/kaukaisista kukkuloista ja vedestä tarkastettu.",
+          "Jäkälä muodostaa epäsäännöllisiä laikkuja eikä toistuvaa leimaa; ruohot ja kallion halkeamat vaihtelevat.",
+          "Aallot ja tummat kallion vesirajat ovat luonnollisia; ei muovista pintaa tai ristiriitaista valoa.",
+          "Slot8:n kanssa sama rantakallioiden paikka alhaalla/vasemmalla, laaja vesi keskellä/oikealla ja kaukainen kukkularivi.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/5-rocks.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/5-ferry-hills.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/5-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2522802,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "bergen-6-musiikki-ilta-intro-v1",
+        "slot": 6,
+        "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen mies, luonnollinen iho, hiukset ja kasvojen rakenne sekä geneerinen nykyvaatetus sopivat pihakokoontumiseen. Väkijoukko näkyy ylävartaloina ilman ruokaa tai jalkineita; ei tekstiä, logoja tai brändikuvioita.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, vasemmista aikuisista/osittaisesta kädestä ja oikeanpuoleisista aikuisista tarkastettu.",
+          "Ihon huokoset, hampaat, korva ja hiukset ovat uskottavia; näkyvissä osittaisissa käsissä ei ilmeistä anatomista virhettä.",
+          "Kaikki henkilöt ovat aikuisia; alavartalot ja jalkineet jäävät kehyksen ulkopuolelle tai muiden peittoon.",
+          "Paidat ja muu vaatetus ovat geneerisiä ilman tunnistettavaa logoa/kuosia. Kasvit ja tiiliseinän yksityiskohdat ovat luonnollisia; lämmin ikkunavalo ja taivasvalo yhteensopivia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/6-left-hand-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/6-right-people.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2254604,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "bergen-7-nygardshoyden-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Iltakujan perspektiivi, epätasainen kiveys sekä lamppujen ja ikkunoiden lämpimät valot ovat fyysisesti yhtenäisiä. Kaksi pientä kävelijää näkyy selin. Ovet ja laitteet ovat ilman havaittavia tekstimerkkejä; kasvit näyttävät luonnollisilta.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta/kasveista, kävelijöistä ja kiveyksestä tarkastettu.",
+          "Lähioven ympärillä on tavallista tyhjää ovilaitekalustoa; ei havaittavaa numeroa, kirjainta, logoa tai brändikuviota.",
+          "Kiveyksen saumat ja kostean pinnan valot vaihtelevat; lehtien, oksien ja kivien epäsäännöllisyys on kameramainen.",
+          "Kaksi henkilöä on pieniä ja selin ilman kasvojen tunnistettavuutta; ei ruokaa, mainoksia tai näkyvää tunnettua maamerkkiä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/7-door-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/7-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/7-cobbles.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2767133,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "bergen-8-nordnes-1873-intro-v1",
+        "slot": 8,
+        "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on koko kehyksessä ja yksityiskohdissa näkyvästi neutraali mustavalkoinen ilman sepiaa. Rantakallioiden, veden ja vastarannan suunta vastaa slot5:tä. Kaukainen purjevene ja niukka luonnonkasvillisuus sopivat1873-kehykseen; lähteissä rajatut myöhemmät rakenteet puuttuvat.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kallioista, purjeveneestä/kaukaisista kukkuloista ja vedestä tarkastettu.",
+          "Slot5:n kanssa sama rantamuoto ja katselusuunta: kalliot alhaalla/vasemmalla, Byfjorden keskellä/oikealla, Askøyn kukkulasuunnan siluetti takana.",
+          "Vesi, jäkälä ja matala kasvillisuus ovat epäsäännöllisiä; ei leimattuja orgaanisia pintoja, tekstiä tai logoja.",
+          "Bergenin kaupunginarkiston Nordnesparken1888–1898-, merikylpylä1910- ja totem1970-tiedot sekä Nordnesparkens Venner -historian1887puistohanke luettu.1873-kuvasta puuttuvat myöhempi puisto, suuret istutetut puut, polut, akvaario, allas, totem, nosturit, kaiteet, sähkövalot ja moottorialukset.",
+          "Modernin5:n lautan tilalla on pieni purjevene. Ei rakennuksia tai ihmisiä. Kuvan lievä rakeisuus ja vinjetti ovat periodibriefin mukaisia.",
+          "Tarkkaa saman kulman1873-valokuvaa ei ollut briefissä; näkymä on lähdepohjainen havainnollistava rekonstruktio. Alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/8-rocks.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/8-sail-hills.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/bergen/crops/8-water.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2634482,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/districts-and-neighborhoods-in-bergen-city-center",
+          "https://www.bergenbyarkiv.no/bergenbyleksikon/arkiv/1425084",
+          "https://www.nordnesparkensvenner.no/parkens-historie"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T17:44:54.859401+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/manifest.json",
+      "manifestSHA256": "f5442a6310d6b601512dcd38c31975ea9fddcce40fe522ad84f235aec5ce9049",
+      "reviewedAssetIds": [
+        "bergen-4-nordnes-arki-intro-v1",
+        "bergen-5-nordnes-ranta-intro-v1",
+        "bergen-6-musiikki-ilta-intro-v1",
+        "bergen-7-nygardshoyden-ilta-intro-v1",
+        "bergen-8-nordnes-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Kuvat ovat havainnollistavia rekonstruktioita, eivät kartoitettuja paikkavalokuvia.",
+        "Omistaja arvioi kaikki kuvasivulla ennen peliin toimitusta; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "bergen",
+    "verifiedAt": "2026-10-12T17:45:55.258342+00:00",
+    "assets": [
+      {
+        "id": "bergen-4-nordnes-arki-intro-v1",
+        "slot": 4,
+        "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+        "bytes": 2933930,
+        "verifiedAt": "2026-10-12T17:45:53.057265+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-4-nordnes-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+            "bytes": 2933930,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-4-nordnes-arki-intro-v1.png?delivery-verify=3b1c0a3dfdd08c07-1791827153057258000",
+            "http": 200,
+            "sha256": "3b1c0a3dfdd08c070aed0a87603a75a57be6080d1115a8f10b9626a2df78d0b4",
+            "bytes": 2933930,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bergen-5-nordnes-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+        "bytes": 2522802,
+        "verifiedAt": "2026-10-12T17:45:53.059086+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-5-nordnes-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+            "bytes": 2522802,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-5-nordnes-ranta-intro-v1.png?delivery-verify=7420266407b53a8d-1791827153059081000",
+            "http": 200,
+            "sha256": "7420266407b53a8d72f1c86b7c239982651b98718959dd6b8c8652758af076af",
+            "bytes": 2522802,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bergen-6-musiikki-ilta-intro-v1",
+        "slot": 6,
+        "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+        "bytes": 2254604,
+        "verifiedAt": "2026-10-12T17:45:53.060302+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-6-musiikki-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+            "bytes": 2254604,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-6-musiikki-ilta-intro-v1.png?delivery-verify=165bd9b9845e1145-1791827153060299000",
+            "http": 200,
+            "sha256": "165bd9b9845e1145a21c7dd0a12405a0bc3c4ee100b2606d065c69e5449235d2",
+            "bytes": 2254604,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bergen-7-nygardshoyden-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+        "bytes": 2767133,
+        "verifiedAt": "2026-10-12T17:45:54.260737+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-7-nygardshoyden-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+            "bytes": 2767133,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-7-nygardshoyden-ilta-intro-v1.png?delivery-verify=721d23800810b9a4-1791827154260727000",
+            "http": 200,
+            "sha256": "721d23800810b9a45b2e2468091daa208d4e2c5e3290cfa9e4542f1a2052dd53",
+            "bytes": 2767133,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "bergen-8-nordnes-1873-intro-v1",
+        "slot": 8,
+        "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+        "bytes": 2634482,
+        "verifiedAt": "2026-10-12T17:45:54.468515+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-8-nordnes-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+            "bytes": 2634482,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/bergen/20261012-full/bergen-8-nordnes-1873-intro-v1.png?delivery-verify=cc6f51613c9ffe3b-1791827154468505000",
+            "http": 200,
+            "sha256": "cc6f51613c9ffe3bf0abbb420015b476ad21447f82207a9adea152d7eef2e4b1",
+            "bytes": 2634482,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/bergen/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.702121+00:00"
+}

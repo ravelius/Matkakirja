@@ -1,0 +1,1126 @@
+{
+  "cityName": "Berliini",
+  "mediaSlug": "berlin",
+  "assets": [
+    {
+      "id": "berlin-4-kreuzberg-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Berliini",
+      "gameCityId": "berliini",
+      "mediaSlug": "berlin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/berlin-4-kreuzberg-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/native/berlin-4-kreuzberg-arki-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+      "bytes": 2908720,
+      "nativeSha256": "953a7e3fe39af0bce194bb261ad19d0af3fc6b48074cf415ac11d886a13fbc93",
+      "decodedRGBSha256": "2fad4c37e05ce88f689050eaac045af9c0fba47a280ddc4b8b51fa82b3eed6a4",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:22:36.357410+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Berlin Kreuzberg, a quiet anonymous late19th-century residential side street. Worn cream and muted ochre stucco apartment facades, irregular windows, plain doorways, a few everyday bicycles without markings leaned beside a wall. View at adult eye level along pavement,35mm lens, gentle street perspective with two very small distant adults walking away. Soft cloudy morning. No landmarks, shops, statues, signage, readable number plates or front-facing people.",
+      "sources": [
+        {
+          "url": "https://www.berlin.de/en/attractions-and-sights/5321177-3104052-landwehr-canal.en.html",
+          "label": "Berlin official city portal: Landwehr Canal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Construction began in 1845 and completed in1850.",
+            "Canal transported building materials during city expansion.",
+            "Vegetated park stretches through Tiergarten and Charlottenburg; bridges and landmarks can be excluded."
+          ]
+        },
+        {
+          "url": "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/freiflaechen/gewaesser/artikel.179313.php",
+          "label": "Charlottenburg-Wilmersdorf district: Landwehrkanal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal constructed1845–1850.",
+            "South bank rebuilt with stone retaining wall and promenade1883–1890, absent1873.",
+            "North bank remained in original natural state."
+          ]
+        },
+        {
+          "url": "https://www.visitberlin.de/en/landwehrkanal",
+          "label": "VisitBerlin: canal neighbourhoods",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal banks in Kreuzberg and Neukölln host promenades and young-adult social gatherings."
+          ]
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Twee-mensen-langs-een-kanaal-in-Berlijn--8c5c689652cee0a56aaf96113c241886",
+          "label": "Rijksmuseum historical catalogue, RP-F-F25700-F",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Otto Rau canal/woodland photographic print dated c1886–1891, later than1873; contextual reference only, not used to establish1873 bank works or copied."
+          ],
+          "referencePeriod": "1886–1891, not1873"
+        }
+      ],
+      "caption": "Berliinin Kreuzbergin asuinkadun arkinen aamupäivä. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-4-kreuzberg-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-4-kreuzberg-arki-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "photorealism": true,
+          "noTextLogosBrands": true,
+          "peopleDistantOrBackFacing": true,
+          "foodAbsent": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native1536x1024 full frame inspected. Ordinary cream/ochre residential street with two distant back-facing adults. Irregular leaves and plaster, credible tree trunks, bicycles and paving. No readable signs,numbers,logos or artwork observed; subdued single-camera photographic rendering. Cars at left have no visible logo/plate text.",
+          "limits": [
+            "Anonymous residential atmosphere, not a measured record of a specific street frontage."
+          ],
+          "reviewedAt": "2026-10-12T17:23:07.480472+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-4-kreuzberg-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-4-kreuzberg-arki-intro-v1.png?t=122330f5fb9fee12",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-4-kreuzberg-arki-intro-v1.png",
+        "sha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+        "bytes": 2908720,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+        "canonicalGetBytes": 2908720,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:28:33.302310+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "berlin-5-landwehrkanal-luonto-intro-v1",
+      "slot": 5,
+      "cityName": "Berliini",
+      "gameCityId": "berliini",
+      "mediaSlug": "berlin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/berlin-5-landwehrkanal-luonto-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/native/berlin-5-landwehrkanal-luonto-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+      "bytes": 3427153,
+      "nativeSha256": "abc1eca2366370d417ff9faa7b9a33666f8664b09f0a7707e6ce02d523f587d4",
+      "decodedRGBSha256": "b6252adc199ac4df3173d34e6264fb44b00adac27416f6db4f4877f22f828787",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:23:55.560965+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Berlin Landwehrkanal in Charlottenburg: stand on the natural northern bank opposite the Salzufer stretch and look southwest along the quiet canal, downstream. Eye-level35mm, near left foreground naturally sloping grassy earth bank with one asymmetrical mature deciduous tree, canal runs diagonally lower right toward center-left distance; opposite bank in middle distance has a low ordinary stone retaining edge behind foliage. Tight low framing excludes ALL buildings and ALL bridges, only irregular mature trees, narrow waterway, simple worn gravel footpath and gentle summer water ripples, peaceful diffuse midmorning light. One tiny back-facing adult walking on far path, no foreground faces. This exact bank/canal direction also forms the1873 historical pair.",
+      "sources": [
+        {
+          "url": "https://www.berlin.de/en/attractions-and-sights/5321177-3104052-landwehr-canal.en.html",
+          "label": "Berlin official city portal: Landwehr Canal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Construction began in 1845 and completed in1850.",
+            "Canal transported building materials during city expansion.",
+            "Vegetated park stretches through Tiergarten and Charlottenburg; bridges and landmarks can be excluded."
+          ]
+        },
+        {
+          "url": "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/freiflaechen/gewaesser/artikel.179313.php",
+          "label": "Charlottenburg-Wilmersdorf district: Landwehrkanal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal constructed1845–1850.",
+            "South bank rebuilt with stone retaining wall and promenade1883–1890, absent1873.",
+            "North bank remained in original natural state."
+          ]
+        },
+        {
+          "url": "https://www.visitberlin.de/en/landwehrkanal",
+          "label": "VisitBerlin: canal neighbourhoods",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal banks in Kreuzberg and Neukölln host promenades and young-adult social gatherings."
+          ]
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Twee-mensen-langs-een-kanaal-in-Berlijn--8c5c689652cee0a56aaf96113c241886",
+          "label": "Rijksmuseum historical catalogue, RP-F-F25700-F",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Otto Rau canal/woodland photographic print dated c1886–1891, later than1873; contextual reference only, not used to establish1873 bank works or copied."
+          ],
+          "referencePeriod": "1886–1891, not1873"
+        }
+      ],
+      "caption": "Landwehrkanalin vihreä pohjoisranta Charlottenburgissa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-5-landwehrkanal-luonto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-5-landwehrkanal-luonto-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Entire native1536x1024 frame inspected including tree bark, irregular leaves, water ripples and bank. Natural canal scene with one distant back-facing walker, no structures or signage/logos. Single-camera perspective credible.",
+          "limits": [
+            "Generated illustrative view, not a surveyed topographic or architectural record."
+          ],
+          "reviewedAt": "2026-10-12T17:24:37.252791+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-5-landwehrkanal-luonto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-5-landwehrkanal-luonto-intro-v1.png?t=e48762faf3d8934d",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-5-landwehrkanal-luonto-intro-v1.png",
+        "sha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+        "bytes": 3427153,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+        "canonicalGetBytes": 3427153,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:28:34.848963+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "berlin-6-kanava-kesajuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Berliini",
+      "gameCityId": "berliini",
+      "mediaSlug": "berlin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/berlin-6-kanava-kesajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/native/berlin-6-kanava-kesajuhla-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+      "bytes": 2091782,
+      "nativeSha256": "681a52aacdba7aa36277febd4a623c1a5b59d1d6159abf10f3a5fc2b943c7943",
+      "decodedRGBSha256": "943906576b9cf8814939aa2ef5394ce185c4dd95c2fd9417ce715cf6baf1ceee",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:24:47.114111+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Berlin canal-side informal summer neighbourhood celebration near Kreuzberg, lively joyful young adults all clearly25–35, natural locally plausible diverse Berlin residents, candid laughter and relaxed dancing. One completely fictional adult woman in foreground, smiling while turning toward friends, short brown hair, plain fashionable olive overshirt over black top, natural unretouched skin texture and normal hands. Candid35mm at chest height. EVERY PERSON CROPPED AT CHEST OR WAIST OR COMPLETELY OCCLUDED BELOW WAIST by people: absolutely NO shoes, feet or footwear anywhere in image, including far background. Behind her upper bodies of friends, soft trees and canal water in evening daylight, no recognizable landmark, stage, artist design, devices, brand stripes, patterns, patches, text or food. No fashion-advertising glamour.",
+      "sources": [
+        {
+          "url": "https://www.berlin.de/en/attractions-and-sights/5321177-3104052-landwehr-canal.en.html",
+          "label": "Berlin official city portal: Landwehr Canal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Construction began in 1845 and completed in1850.",
+            "Canal transported building materials during city expansion.",
+            "Vegetated park stretches through Tiergarten and Charlottenburg; bridges and landmarks can be excluded."
+          ]
+        },
+        {
+          "url": "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/freiflaechen/gewaesser/artikel.179313.php",
+          "label": "Charlottenburg-Wilmersdorf district: Landwehrkanal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal constructed1845–1850.",
+            "South bank rebuilt with stone retaining wall and promenade1883–1890, absent1873.",
+            "North bank remained in original natural state."
+          ]
+        },
+        {
+          "url": "https://www.visitberlin.de/en/landwehrkanal",
+          "label": "VisitBerlin: canal neighbourhoods",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal banks in Kreuzberg and Neukölln host promenades and young-adult social gatherings."
+          ]
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Twee-mensen-langs-een-kanaal-in-Berlijn--8c5c689652cee0a56aaf96113c241886",
+          "label": "Rijksmuseum historical catalogue, RP-F-F25700-F",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Otto Rau canal/woodland photographic print dated c1886–1891, later than1873; contextual reference only, not used to establish1873 bank works or copied."
+          ],
+          "referencePeriod": "1886–1891, not1873"
+        }
+      ],
+      "caption": "Nuorten aikuisten kesäinen illanvietto Berliinin kanavan rannalla. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": false,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "fictionalAdultsOnly": true,
+          "footwearAbsentEntireFrame": true
+        },
+        "sessionOwner": {
+          "sha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native full frame inspected including every body, hands and clothing. Joyful fictional adult canal-side gathering, foreground adult with natural skin, all bodies cropped above footwear. Generic plain/organic printed clothes, no brands, text, logos, numbers or food. Canal and blurred simple bridge remain incidental, no identifiable contemporary design.",
+          "limits": [
+            "Generated illustrative view, not a documentary record of actual people or a surveyed place."
+          ],
+          "reviewedAt": "2026-10-12T17:25:58.258995+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png?t=a16ace53134aafd5",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png",
+        "sha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+        "bytes": 2091782,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+        "canonicalGetBytes": 2091782,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:28:36.246437+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "berlin-7-kreuzberg-iltapiha-intro-v1",
+      "slot": 7,
+      "cityName": "Berliini",
+      "gameCityId": "berliini",
+      "mediaSlug": "berlin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/berlin-7-kreuzberg-iltapiha-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/native/berlin-7-kreuzberg-iltapiha-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+      "bytes": 2630401,
+      "nativeSha256": "7fb093f26c05fc1f3d6946ae59f1ada9cfd16b86c830c9779e7fc3c7b3739424",
+      "decodedRGBSha256": "10d40392933c6cc981dee4879168ca5c5d6cd85d10732682c4766e1df9f9007e",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:25:18.465528+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Berlin Kreuzberg ordinary anonymous19th-century residential courtyard at blue hour, seen at eye level through a simple old gateway,35mm lens. Weathered plaster walls in subdued grey and muted ochre, plain old stairwell windows emitting irregular quiet warm domestic light, a few unmarked bicycles parked far aside, small leafy tree in cobbled courtyard. Two distant tiny adults seen from behind entering doorway. Real dusk exposure, warm modest household lights contrasting with remaining cool ambient sky; no decorative light-show, murals, contemporary named design, shops, signs or numbers. No foreground faces.",
+      "sources": [
+        {
+          "url": "https://www.berlin.de/en/attractions-and-sights/5321177-3104052-landwehr-canal.en.html",
+          "label": "Berlin official city portal: Landwehr Canal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Construction began in 1845 and completed in1850.",
+            "Canal transported building materials during city expansion.",
+            "Vegetated park stretches through Tiergarten and Charlottenburg; bridges and landmarks can be excluded."
+          ]
+        },
+        {
+          "url": "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/freiflaechen/gewaesser/artikel.179313.php",
+          "label": "Charlottenburg-Wilmersdorf district: Landwehrkanal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal constructed1845–1850.",
+            "South bank rebuilt with stone retaining wall and promenade1883–1890, absent1873.",
+            "North bank remained in original natural state."
+          ]
+        },
+        {
+          "url": "https://www.visitberlin.de/en/landwehrkanal",
+          "label": "VisitBerlin: canal neighbourhoods",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal banks in Kreuzberg and Neukölln host promenades and young-adult social gatherings."
+          ]
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Twee-mensen-langs-een-kanaal-in-Berlijn--8c5c689652cee0a56aaf96113c241886",
+          "label": "Rijksmuseum historical catalogue, RP-F-F25700-F",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Otto Rau canal/woodland photographic print dated c1886–1891, later than1873; contextual reference only, not used to establish1873 bank works or copied."
+          ],
+          "referencePeriod": "1886–1891, not1873"
+        }
+      ],
+      "caption": "Berliinin vanhan asuintalon sisäpiha iltavalossa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native full frame and door/window/bicycle/plant detail inspected. Ordinary worn stucco courtyard with subdued practical warm light, two tiny back-facing adults. No text, logos, door numbers or protected art observed. Irregular paving and foliage, credible night camera exposure.",
+          "limits": [
+            "Generated illustrative view, not a documentary record of actual people or a surveyed place."
+          ],
+          "reviewedAt": "2026-10-12T17:25:58.265412+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png?t=07607857d62a71e8",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png",
+        "sha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+        "bytes": 2630401,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+        "canonicalGetBytes": 2630401,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:28:37.920468+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "berlin-8-landwehrkanal-1873-intro-v2",
+      "slot": 8,
+      "cityName": "Berliini",
+      "gameCityId": "berliini",
+      "mediaSlug": "berlin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/berlin-8-landwehrkanal-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/native/berlin-8-landwehrkanal-1873-intro-v2.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+      "bytes": 3088164,
+      "nativeSha256": "f3f7fd0cb67634dff349ba4795da3ec91389514c692d3a90382f46c50475a0b6",
+      "decodedRGBSha256": "44803c1297c688abd980faebda5af3bc7bee94d0f1785601904e4924cc51216d",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:31:06.368822+00:00",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, strictly neutral BLACK AND WHITE grayscale, absolutely no colour tint or sepia, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Year EXACTLY1873, Berlin Landwehrkanal, Charlottenburg. Same viewpoint as modern pair: stand on natural northern bank opposite the stretch later called Salzufer and look southwest downstream, eye-level35mm. Near left foreground naturally sloping grassy earth bank with an asymmetrical deciduous tree; canal runs diagonally lower right toward center-left distance; opposite bank softly vegetated earth rather than masonry. Tight low framing excludes ALL buildings and ALL bridges. Canal already existed, completed1850; the southern stone retaining wall and promenade of1883–1890 MUST NOT EXIST. A small plain wooden cargo punt carrying timber far downwater, one tiny distant adult canal worker seen from behind in unbranded1873 wool shirt, waistcoat and cap on rough earthen towpath. No motorboats, cars, bicycles, concrete, railings, modern benches, asphalt or electric lighting. Natural midday daylight, documentary19th-century camera feel, fine grain and gentle contrast, realistic tree anatomy and water. No faux age damage or image frame. This is original historical illustration, not copied museum photograph. CRITICAL NATIVE PIXEL OUTPUT: an entirely neutral MONOCHROME black-and-white photograph. Every pixel has strictly identical red, green and blue values: R=G=B exactly. No warm or cool tint anywhere, no blue shadows, no cream paper. Produce native RGB PNG with pure grayscale visual data, exact channel equality,1536x1024.",
+      "sources": [
+        {
+          "url": "https://www.berlin.de/en/attractions-and-sights/5321177-3104052-landwehr-canal.en.html",
+          "label": "Berlin official city portal: Landwehr Canal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Construction began in 1845 and completed in1850.",
+            "Canal transported building materials during city expansion.",
+            "Vegetated park stretches through Tiergarten and Charlottenburg; bridges and landmarks can be excluded."
+          ]
+        },
+        {
+          "url": "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/freiflaechen/gewaesser/artikel.179313.php",
+          "label": "Charlottenburg-Wilmersdorf district: Landwehrkanal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal constructed1845–1850.",
+            "South bank rebuilt with stone retaining wall and promenade1883–1890, absent1873.",
+            "North bank remained in original natural state."
+          ]
+        },
+        {
+          "url": "https://www.visitberlin.de/en/landwehrkanal",
+          "label": "VisitBerlin: canal neighbourhoods",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal banks in Kreuzberg and Neukölln host promenades and young-adult social gatherings."
+          ]
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Twee-mensen-langs-een-kanaal-in-Berlijn--8c5c689652cee0a56aaf96113c241886",
+          "label": "Rijksmuseum historical catalogue, RP-F-F25700-F",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Otto Rau canal/woodland photographic print dated c1886–1891, later than1873; contextual reference only, not used to establish1873 bank works or copied."
+          ],
+          "referencePeriod": "1886–1891, not1873"
+        }
+      ],
+      "caption": "Landwehrkanalin luonnonranta Berliinissä vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "historicalYear": 1873,
+          "neutralBlackAndWhite": true,
+          "periodExclusionsVerified": true,
+          "sameViewAsSlot": 5,
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentity": false,
+          "chromaDiagnostic": {
+            "meanRGB": [
+              103.075,
+              103.068,
+              103.095
+            ],
+            "meanChromaSpread": 1.412,
+            "p99Spread": 6,
+            "meanRminusB": -0.02
+          }
+        },
+        "sessionOwner": {
+          "sha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "neutralityDiagnostics": {
+            "meanRGB": [
+              103.075,
+              103.068,
+              103.095
+            ],
+            "meanChromaSpread": 1.412,
+            "p99ChromaSpread": 6.0
+          },
+          "observations": "Entire native1536x1024 frame and vegetation,boat,worker detail inspected. Compared with modernslot5: same northbank southwest canal direction/treeleft and water course. Neutral black/white, no sepia/color cast. Earthen banks rather than later masonry, wooden cargo punt/timber and distant periodworkers. No modern design,lighting,vehicles,text/logos observed.",
+          "historicalPairSlot": 5,
+          "limits": [
+            "Historical illustrative reconstruction; tiny native RGB channel noise retained without pixel change. No mathematically channel-identical grayscale claim."
+          ],
+          "reviewedAt": "2026-10-12T17:33:22.794542+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png?t=d4163b394201ffa8",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png",
+        "sha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+        "bytes": 3088164,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+        "canonicalGetBytes": 3088164,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:36:04.039238+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "complete": true,
+  "rejectedCandidates": [
+    {
+      "id": "berlin-8-landwehrkanal-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Berliini",
+      "gameCityId": "berliini",
+      "mediaSlug": "berlin",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/berlin-8-landwehrkanal-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/native/berlin-8-landwehrkanal-1873-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "e7e17267dc6939667c9cbe3c00364a0d6d2f6ceceac56e63325402d5f1a0f8c9",
+      "bytes": 3173854,
+      "nativeSha256": "6dcc61af9d52fcd30705b98e368506858d56d3af202e2932b86e5131a97b9193",
+      "decodedRGBSha256": "c675cede9f5b040ffef2ec8664527e25fc09fdc8dcd23d51ae53e3f8041cb87e",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T17:26:09.294671+00:00",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, strictly neutral BLACK AND WHITE grayscale, absolutely no colour tint or sepia, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Year EXACTLY1873, Berlin Landwehrkanal, Charlottenburg. Same viewpoint as modern pair: stand on natural northern bank opposite the stretch later called Salzufer and look southwest downstream, eye-level35mm. Near left foreground naturally sloping grassy earth bank with an asymmetrical deciduous tree; canal runs diagonally lower right toward center-left distance; opposite bank softly vegetated earth rather than masonry. Tight low framing excludes ALL buildings and ALL bridges. Canal already existed, completed1850; the southern stone retaining wall and promenade of1883–1890 MUST NOT EXIST. A small plain wooden cargo punt carrying timber far downwater, one tiny distant adult canal worker seen from behind in unbranded1873 wool shirt, waistcoat and cap on rough earthen towpath. No motorboats, cars, bicycles, concrete, railings, modern benches, asphalt or electric lighting. Natural midday daylight, documentary19th-century camera feel, fine grain and gentle contrast, realistic tree anatomy and water. No faux age damage or image frame. This is original historical illustration, not copied museum photograph.",
+      "sources": [
+        {
+          "url": "https://www.berlin.de/en/attractions-and-sights/5321177-3104052-landwehr-canal.en.html",
+          "label": "Berlin official city portal: Landwehr Canal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Construction began in 1845 and completed in1850.",
+            "Canal transported building materials during city expansion.",
+            "Vegetated park stretches through Tiergarten and Charlottenburg; bridges and landmarks can be excluded."
+          ]
+        },
+        {
+          "url": "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/freiflaechen/gewaesser/artikel.179313.php",
+          "label": "Charlottenburg-Wilmersdorf district: Landwehrkanal",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal constructed1845–1850.",
+            "South bank rebuilt with stone retaining wall and promenade1883–1890, absent1873.",
+            "North bank remained in original natural state."
+          ]
+        },
+        {
+          "url": "https://www.visitberlin.de/en/landwehrkanal",
+          "label": "VisitBerlin: canal neighbourhoods",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Canal banks in Kreuzberg and Neukölln host promenades and young-adult social gatherings."
+          ]
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Twee-mensen-langs-een-kanaal-in-Berlijn--8c5c689652cee0a56aaf96113c241886",
+          "label": "Rijksmuseum historical catalogue, RP-F-F25700-F",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Otto Rau canal/woodland photographic print dated c1886–1891, later than1873; contextual reference only, not used to establish1873 bank works or copied."
+          ],
+          "referencePeriod": "1886–1891, not1873"
+        }
+      ],
+      "caption": "Landwehrkanalin luonnonranta Berliinissä vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v1.png",
+      "QA": {
+        "agentReviewed": true,
+        "fullFrame": true,
+        "nativeDetails": true,
+        "noTextLogosBrands": true,
+        "foodAbsent": true,
+        "peopleDistantOrBackFacing": true,
+        "photorealism": true,
+        "issues": [
+          "RGBdifferences maxRG11,maxRB12"
+        ],
+        "status": "rejected",
+        "historicalYear": 1873,
+        "neutralBlackAndWhite": true,
+        "periodExclusionsVerified": true,
+        "sameViewAsSlot": 5
+      },
+      "R2Proof": null
+    }
+  ],
+  "gameCityId": "berliini",
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:36:04.195631+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "berlin",
+    "gameCityId": "berliini",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/sources.json",
+      "https://www.berlin.de/en/attractions-and-sights/5321177-3104052-landwehr-canal.en.html",
+      "https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/freiflaechen/gewaesser/artikel.179313.php"
+    ],
+    "assets": [
+      {
+        "id": "berlin-4-kreuzberg-arki-intro-v1",
+        "slot": 4,
+        "sha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä polkupyörien, kasvien, julkisivun, puun ja kaukaisten ihmisten rajaukset tarkastettu ilman skaalausta.",
+          "Uskottava arkinen kameranäkymä: epäsäännöllinen rappaus, lehdet ja puunkuori; pehmeä luonnonvalo ja koherentti katuperspektiivi.",
+          "Kaksi pientä ihmistä selin; ei ruokaa, luettavaa tekstiä, logoja, numeroita tai brändikuvioita havaittu.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "berlin-5-landwehrkanal-luonto-intro-v1",
+        "slot": 5,
+        "sha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja puunkuori/lehvistö sekä vastarannan ihminen ja rantakivi tarkastettu natiivikoossa.",
+          "Puunkuoren uurteet seuraavat rungon muotoa epäsäännöllisinä, lehdet/ruoho ja veden heijastukset luonnollisia; ei kaarnaleimaa tai muovisuutta havaittu.",
+          "Pohjoisranta vasemmalla ja vastaranta oikealla; kanava katoaa keskivasempaan. Rakennuksia tai siltoja ei kehyksessä. Vastapolun ihminen pieni ja selin.",
+          "Ei tekstiä, logoja, brändikuvioita tai ruokaa havaittu; valaisu ja perspektiivi koherentit.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "berlin-6-kanava-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys, etualan kasvot ja käsi sekä sivu-/taustahenkilöiden näkyvät kädet ja kasvot tarkastettu natiivikoossa.",
+          "Etualalla fiktiivinen aikuinen; kasvojen iho, hampaat, hiukset ja näkyvät käsien asennot uskottavia ilman olennaisia anatomisia virheitä.",
+          "Geneeriset muodikkaat nykyvaatteet ja iloisen kanavanrantajuhlan tilanne; kaikki ihmiset rajattu tai peitetty jalkineiden yläpuolelta.",
+          "Ei jalkineita, ruokaa, tekstiä, logoja tai tunnistettavia brändikuvioita missään kehyksessä. Taustan puut ja pehmeä iltavalo kamerakuvan mukaisia.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "berlin-7-kreuzberg-iltapiha-intro-v1",
+        "slot": 7,
+        "sha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja puun/lehtien, polkupyörien, ihmisten, oviaukon ja ikkunoiden rajaukset tarkastettu natiivikoossa.",
+          "Rappaus, epäsäännöllinen mukulakiveys ja lehvistö luonnollisia; uskottava hämärän kameravalotus ja koherentti lämmin huonevalo.",
+          "Kaksi pientä selin olevaa ihmistä oviaukossa; ei etualan kasvoja. Ei tekstiä, logoja, numeroita, brändikuvioita tai ruokaa havaittu.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024, sRGB-profiili, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "berlin-8-landwehrkanal-1873-intro-v2",
+        "slot": 8,
+        "sha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Valittu8v2 hyväksytty riippumattomassa toimitus-QA:ssa; visuaalisesti neutraali mustavalkoinen.",
+        "observations": [
+          "Koko1536x1024 kehys sekä puunkuoren/haarojen/lehtien, puutavaraveneen/henkilöiden/rannan ja veden natiivirajaukset tarkastettu.",
+          "Näkyvä kokonaisilme on neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista lämmintä/kylmää sävytystä. Nykyvaatimus ei edellytä kaikkien yksittäisten pikselien numeerista RGB-kanavayhtäsuuruutta.",
+          "Vertailtu moderniin5:een: lähellä oleva luonnonranta ja puu vasemmalla, vastaranta oikealla, kanava kulkee alaoikealta keskivasempaan. Sama katselusuunta/kuvajaottelu säilyy.",
+          "Briefin1873-exclusions tarkastettu: ei1883–1890-etelärannan kivimuuria tai promenadia, rakennuksia, siltoja, sähkövaloa, moottoriveneitä, autoja, pyöriä, betonia, kaiteita, moderneja penkkejä tai asfalttia.",
+          "Puutavaraa kuljettava merkinnätön puinen lastivene ja pienet selin olevat aikakauden aikuiset. Näkyvät kädet/kehot ja veneen käyttö uskottavia; ei etualan kasvoja.",
+          "Luonnollinen epäsäännöllinen kaarna, lehvistö, ruoho ja vesi; ei leimakuvioita tai muovisuutta. Koherentti valo ja perspektiivi. Ei tekstiä, logoja, brändikuvioita tai ruokaa havaittu.",
+          "Aiemmin tässä QA-sessiossa avatut kaksi virallista lähdettä tukevat kanavan olemassaoloa1850 sekä myöhempien1883–1890-rantatöiden poissulkemista.1873-rantamuoto ja yksittäiset puut ovat havainnollinen rekonstruktio, eivät mitattu arkistopaikkakuva.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "berlin-8-landwehrkanal-1873-intro-v1",
+        "slot": 8,
+        "sha256": "e7e17267dc6939667c9cbe3c00364a0d6d2f6ceceac56e63325402d5f1a0f8c9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "reason": "V1 ei ole neutraali mustavalkoinen: RGB-kanavien maksierot R–G13, R–B15 ja G–B22. Alkuperäinen hylkäys vahvistettu; yksi kokonaan uusi tarpeellinen laatukorjaus on tilauksen mukaan sallittu, hylättyä v1:tä ei toimiteta.",
+        "observations": [
+          "Kanavan katselusuunta ja kuvajaottelu vastaavat modernia5: vasen luonnonranta ja etualan puu, oikea vastaranta, vesiväylä keskivasempaan. Tarkka puu- ja rantamuoto on havainnollinen rekonstruktio.",
+          "Historiallisessa kehyksessä ei modernia rantakivimuuria, rakennuksia, siltoja, sähkövaloa, moottoriveneitä, autoja, pyöriä, betonipintoja, asfalttia tai moderneja kalusteita. Pieni puutavaravene ja pienet aikakauden henkilöt.",
+          "brief.json/sources.json luettu; erillistä sources-1873.json-tiedostoa ei ollut Berliinin kansiossa. Kaksi briefin virallista lähdettä avattu: kanava1845–1850; etelärannan kivimuuri ja promenade1883–1890, ei1873.",
+          "Kasvillisuus ja vesi ovat luonnollisia, ei tekstiä/logoja/brändikuvioita/ruokaa havaittu. Värisävy estää toimitushyväksynnän."
+        ],
+        "originalStatus": "pending-quality-fix",
+        "supersededBy": "berlin-8-landwehrkanal-1873-intro-v2",
+        "interpretationUpdate": "V1:n aiempi numeeriseen kanavaeroon perustunut hylkäys säilyy tuotantopäätöksen historiassa. Nykyinen neutraalius arvioidaan näkyvästä kuvasta; pieni numeerinen RGBero yksin ei ole laatuhylkäys. V1:tä ei valita takaisin, uusi v2 tarkastettu erikseen."
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:45:31.189971+00:00",
+    "sourceManifestSha256": "abbc3c9c71f8efec7879974a81f287783c7bc98e6ba36dc09db4adb5d93fff1b",
+    "gameDeliveryStatus": "HOLD"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "berlin",
+    "verifiedAt": "2026-10-12T17:47:47.128414+00:00",
+    "assets": [
+      {
+        "id": "berlin-4-kreuzberg-arki-intro-v1",
+        "slot": 4,
+        "sha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+        "bytes": 2908720,
+        "verifiedAt": "2026-10-12T17:47:44.589462+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-4-kreuzberg-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+            "bytes": 2908720,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-4-kreuzberg-arki-intro-v1.png?delivery-verify=122330f5fb9fee12-1791827264589455000",
+            "http": 200,
+            "sha256": "122330f5fb9fee125c457e8a0904391717497afa9e0e1ab3a3423e256e52e04d",
+            "bytes": 2908720,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "berlin-5-landwehrkanal-luonto-intro-v1",
+        "slot": 5,
+        "sha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+        "bytes": 3427153,
+        "verifiedAt": "2026-10-12T17:47:44.592550+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-5-landwehrkanal-luonto-intro-v1.png",
+            "http": 200,
+            "sha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+            "bytes": 3427153,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-5-landwehrkanal-luonto-intro-v1.png?delivery-verify=e48762faf3d8934d-1791827264592544000",
+            "http": 200,
+            "sha256": "e48762faf3d8934d9e8f46be8866fe025983277f4d7da5be4026a958b0e6632b",
+            "bytes": 3427153,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "berlin-6-kanava-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+        "bytes": 2091782,
+        "verifiedAt": "2026-10-12T17:47:44.610319+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+            "bytes": 2091782,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-6-kanava-kesajuhla-intro-v1.png?delivery-verify=a16ace53134aafd5-1791827264610262000",
+            "http": 200,
+            "sha256": "a16ace53134aafd59776d6c243806726823c1afc4c25cf2241ae332120080384",
+            "bytes": 2091782,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "berlin-7-kreuzberg-iltapiha-intro-v1",
+        "slot": 7,
+        "sha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+        "bytes": 2630401,
+        "verifiedAt": "2026-10-12T17:47:46.134024+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png",
+            "http": 200,
+            "sha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+            "bytes": 2630401,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png?delivery-verify=07607857d62a71e8-1791827266134015000",
+            "http": 200,
+            "sha256": "07607857d62a71e81a6d2d961d0a8e17334bb749707c5097b983bb26a66df164",
+            "bytes": 2630401,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "berlin-8-landwehrkanal-1873-intro-v2",
+        "slot": 8,
+        "sha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+        "bytes": 3088164,
+        "verifiedAt": "2026-10-12T17:47:46.146749+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+            "bytes": 3088164,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/berlin/20261012-full/berlin-8-landwehrkanal-1873-intro-v2.png?delivery-verify=d4163b394201ffa8-1791827266146736000",
+            "http": 200,
+            "sha256": "d4163b394201ffa8f2b35cd8f7f0f8142d2e642a9b5ce473de5e85dad4ee876f",
+            "bytes": 3088164,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/berlin/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.219020+00:00"
+}

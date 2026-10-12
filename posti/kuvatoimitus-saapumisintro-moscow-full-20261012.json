@@ -1,0 +1,912 @@
+{
+  "cityName": "Moskova",
+  "gameCityId": "moskova",
+  "mediaSlug": "moscow",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "assets": [
+    {
+      "id": "moscow-intro-4-v1",
+      "slot": 4,
+      "cityName": "Moskova",
+      "gameCityId": "moskova",
+      "mediaSlug": "moscow",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/final/moscow-4-arbat-piha-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/native/moscow-4-arbat-piha-intro-v1.png",
+      "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+      "bytes": 3230299,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Moscow, everyday life in an anonymous old residential courtyard off Arbat: three-storey faded ochre plaster housing, old leafy lime trees, modest weathered garden benches, narrow worn pedestrian path with two tiny adult residents carrying plain canvas bags walking away toward a shaded open passage. Foreground is empty irregular cobblestone and tree roots. Frame mainly courtyard trees and blank backwall windows; no entrances or gateposts, no close faces, no famous landmarks, no storefronts. Eye-level35mm soft morning documentaryphoto. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, soldiers, weapons, uniforms or political symbols. All walls, gates and doors completely unlettered; no addressnumbers or numberplates anywhere.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/prompts/slot4.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://www.mos.ru/upload/documents/files/8877/AktArbat.pdf",
+          "publisher": "Moscow HeritageDepartment",
+          "readFacts": [
+            "Arbat namedcurrentstreet fromend18thcentury, historicalresidentialdistrict"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://www.mos.ru/upload/documents/files/4593/AktGIKE_Neskychniiter-riyasportaifitnesa.pdf",
+          "publisher": "Moscow HeritageDepartment",
+          "readFacts": [
+            "Neskuchnypark developedfrom18th–19thcentury estates, woodedpark context"
+          ],
+          "application": "generic woodedclearing withoutlandmarks"
+        },
+        {
+          "slot": 7,
+          "url": "https://zmsk.ru/zamoskvoreche/istoriya-zamoskvorechya/",
+          "publisher": "Zamoskvorechye municipaladministration",
+          "readFacts": [
+            "Historic lanepattern; lowurbanestates withgardens beforelate19thcentury and retainedhistoricneighbourhood context"
+          ]
+        }
+      ],
+      "caption": "Arkinen asuinpiha Moskovan Arbatin alueella. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame and native details inspected: rear-facing fictional adult residents, blank walls, no plate/sign/text/logo/car; irregular stone foliage and trees."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:51:50.927062+00:00",
+          "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: ordinary old Arbat residential courtyard, two adults walking away, no lettering, plaques, vehicles, brands, soldiers or near faces. Irregular trees, worn plaster/cobbles, natural restrained daylight.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:50.513959+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+        "bytes": 3230299,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png",
+            "http": 200,
+            "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+            "bytes": 3230299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png?t=c8e085abf410ca6d",
+            "http": 200,
+            "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+            "bytes": 3230299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "moscow-intro-5-v1",
+      "slot": 5,
+      "cityName": "Moskova",
+      "gameCityId": "moskova",
+      "mediaSlug": "moscow",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/final/moscow-5-chistye-lampi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/native/moscow-5-chistye-lampi-intro-v1.png",
+      "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+      "bytes": 2831992,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Moscow Chistye Prudy: camera on the southern short end of the long narrow rectangular pond, looking north-northwest along its length. Lowerhalf still grey-green water with softly irregular reflections; straight low stone bank on left beside a walkway, mixed lindens and willows along both sides, distant end closed by trees. One small adult sitting on a bench far atleft seen frombehind. Low eye-level35mm composition, narrowfield excludes all surrounding city buildings, statues, pavilionrestaurants, duckhouses and advertising. Morning under bright thincloud, authentic understated greens, natural individualbranches and ripples. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, soldiers, weapons, uniforms or political symbols. All walls, gates and doors completely unlettered; no addressnumbers or numberplates anywhere.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/prompts/slot5.txt",
+      "sources": [
+        {
+          "url": "https://www.mos.ru/upload/documents/files/9263/Moskovskoenasledievipysk50.pdf",
+          "publisher": "Moscow Heritage Department, Moscow Heritage50",
+          "readFacts": [
+            "Current Chistyepond artificially dug1820s on formerWhiteCitymoat site; earlier Menshikovpond was filled bylate18thcentury"
+          ],
+          "access": "Official indexedextract read; webfullPDFtoo large11760983 bytes; initiallocalGETreset",
+          "application": "1873 currentpond alreadyexists; do not confuse1703story"
+        },
+        {
+          "url": "https://www.mos.ru/upload/documents/files/8423/RvzBVAGLJ-A%28ZVPBVA%29BAP%281%29.pdf",
+          "publisher": "Moscow Heritage conservationreport",
+          "readFacts": [
+            "Currentpond elongated approximately190m toward south-southeast, currentlandscape context described"
+          ],
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/references/chistye-heritage-act.pdf",
+          "application": "match longaxis southernend view north-northwest and crop modern surroundings"
+        },
+        {
+          "url": "https://www.mos.ru/upload/documents/files/6570/AKTGIKEChistoprydniibylvarspodpisu.pdf",
+          "publisher": "Moscow Heritage conservationassessment2025",
+          "readFacts": [
+            "Boulevardname afterWhiteCitywallremoval in1820s; pond acquiredname fromanotherlostpond"
+          ],
+          "access": "Official indexedextract read; fullPDF39595727bytes too large forweb",
+          "application": "corroborates pre1873boulevardpondsite"
+        },
+        {
+          "url": "https://ru.wikipedia.org/wiki/Чистые_пруды",
+          "publisher": "Wikipedia referencescompiled",
+          "readFacts": [
+            "Bank stone reinforcement1960 andconcrete1966, boatstationclosed1958"
+          ],
+          "application": "supporting laterinfrastructureexclusion; notcounted towardtwo primarysources"
+        }
+      ],
+      "caption": "Chistyjen lammen vesi ja puut Moskovassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame/native inspected, small rear-facing adult atleft, long pond axis and lowbankleft, buildingscropped out, irregularwater and trees no textlogosart."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:56:11.461685+00:00",
+          "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: long pond view with low stone bank/path on left and willow fringe right, one rear-facing distant seated adult. No buildings, logos, text, military or art; natural irregular water and foliage. Early1800spond origin supported by Moscow heritage reports; modern pair fixed.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:53.595133+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+        "bytes": 2831992,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+            "http": 200,
+            "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+            "bytes": 2831992,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png?t=fff160a4c8e9e107",
+            "http": 200,
+            "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+            "bytes": 2831992,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "moscow-intro-6-v1",
+      "slot": 6,
+      "cityName": "Moskova",
+      "gameCityId": "moskova",
+      "mediaSlug": "moscow",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/final/moscow-6-neskuchny-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/native/moscow-6-neskuchny-juhla-intro-v1.png",
+      "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+      "bytes": 2223111,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Joyful present-day informal summer park music gathering in Moscow Neskuchny Garden, greenwooded clearing at earlyevening. One completely fictional Russian womanage25 atforeground laughing spontaneously, lightbrown hairloosely tiedback, generic plain cobalt cotton shirt and unbranded cream overshirt. Typical local Moscow youngadults behindher, mix of natural haircolors and complexions, many friends smiling clapping and dancing in plain stylish casualclothes. Waist-up close documentaryframing, foregroundwaist atbottomedge, ALL backgroundpeople lowerbodies hiddenbyother upperbodies. No legs and NO FOOTWEAR anywhere. Natural goldenlateafternoonlight, nofood, no namedstage, no art installations, no banners. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, soldiers, weapons, uniforms or political symbols. All walls, gates and doors completely unlettered; no addressnumbers or numberplates anywhere.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/prompts/slot6.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://www.mos.ru/upload/documents/files/8877/AktArbat.pdf",
+          "publisher": "Moscow HeritageDepartment",
+          "readFacts": [
+            "Arbat namedcurrentstreet fromend18thcentury, historicalresidentialdistrict"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://www.mos.ru/upload/documents/files/4593/AktGIKE_Neskychniiter-riyasportaifitnesa.pdf",
+          "publisher": "Moscow HeritageDepartment",
+          "readFacts": [
+            "Neskuchnypark developedfrom18th–19thcentury estates, woodedpark context"
+          ],
+          "application": "generic woodedclearing withoutlandmarks"
+        },
+        {
+          "slot": 7,
+          "url": "https://zmsk.ru/zamoskvoreche/istoriya-zamoskvorechya/",
+          "publisher": "Zamoskvorechye municipaladministration",
+          "readFacts": [
+            "Historic lanepattern; lowurbanestates withgardens beforelate19thcentury and retainedhistoricneighbourhood context"
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen puistoilta Moskovassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Wholeframe and native inspected: entirelyfictionaladultforeground, allfootwear excluded, genericclothes, nofoodlogosor text, no waror soldiers; skin realistic, hands plausible."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:57:35.043163+00:00",
+          "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: cheerful fictional young adult woman and local adult park gathering, generic plain clothes and eyewear, all footwear excluded. No text/logo/food/soldiers or stamped foliage; natural skin, motion and backlight.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:56.684213+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+        "bytes": 2223111,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+            "bytes": 2223111,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png?t=bc6379dbd04e6a7b",
+            "http": 200,
+            "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+            "bytes": 2223111,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "moscow-intro-7-v1",
+      "slot": 7,
+      "cityName": "Moskova",
+      "gameCityId": "moskova",
+      "mediaSlug": "moscow",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/final/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/native/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+      "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+      "bytes": 2551421,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Moscow, small quiet residential side lane in Zamoskvorechye at bluehour afterlight rain. Anonymous old low plastermerchant houses, simple roundedwindows, leafy courtyard trees and irregular cobblestonefootpath reflecting warm ordinarywindowlight. A couple of tinyadultsilhouettes faraway walkingaway. Eyelevel35mmview alongnarrowlane; frame cuts off entrances and nameplates, absolutelyblankwalls, no churchesdomes or Kremlin, no storefronts and no cars. Realistic dimavailablelight, restrained duskpalette, slightwetstoneglints. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, soldiers, weapons, uniforms or political symbols. All walls, gates and doors completely unlettered; no addressnumbers or numberplates anywhere.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/prompts/slot7.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://www.mos.ru/upload/documents/files/8877/AktArbat.pdf",
+          "publisher": "Moscow HeritageDepartment",
+          "readFacts": [
+            "Arbat namedcurrentstreet fromend18thcentury, historicalresidentialdistrict"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://www.mos.ru/upload/documents/files/4593/AktGIKE_Neskychniiter-riyasportaifitnesa.pdf",
+          "publisher": "Moscow HeritageDepartment",
+          "readFacts": [
+            "Neskuchnypark developedfrom18th–19thcentury estates, woodedpark context"
+          ],
+          "application": "generic woodedclearing withoutlandmarks"
+        },
+        {
+          "slot": 7,
+          "url": "https://zmsk.ru/zamoskvoreche/istoriya-zamoskvorechya/",
+          "publisher": "Zamoskvorechye municipaladministration",
+          "readFacts": [
+            "Historic lanepattern; lowurbanestates withgardens beforelate19thcentury and retainedhistoricneighbourhood context"
+          ]
+        }
+      ],
+      "caption": "Zamoskvoretšjen asuinkujan iltavalot Moskovassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame/native checked: blank facades, small rear-facing adults, no numberslogosvehicles or war; wetstone and lighting natural."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:01:00.976685+00:00",
+          "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: anonymous old Zamoskvorechye lane, blank facades and small rear-facing walkers. No text, address numerals, branding, vehicles or military; realistic damp paving and subdued warm-window dusk.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:59.027645+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+        "bytes": 2551421,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+            "bytes": 2551421,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png?t=a411814b7046e4ac",
+            "http": 200,
+            "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+            "bytes": 2551421,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "moscow-intro-8-v1",
+      "slot": 8,
+      "cityName": "Moskova",
+      "gameCityId": "moskova",
+      "mediaSlug": "moscow",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/final/moscow-8-chistye-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/native/moscow-8-chistye-1873-intro-v1.png",
+      "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+      "bytes": 2753568,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. EXACTLY Moscow1873, Chistye pond on Chistoprudny Boulevard. Sameplace and direction as slot5: loweye-level camera at southernshortend looking north-northwest along the longnarrow rectangularpond. Water lowerhalf, walkway and bankalongleft, mixedlindens andwillows alongsides, trees atfarend; narrowview excludes ALL buildings and statues. The currentpond was made in1820s on the formerWhiteCitymoat site, notthe lostMenshikovpond. In1873 show simple grass-and-earthbanks and plain crushedgravelwalkway, simple woodenbench atfarleft with two tinypeople in1873 darkcoats andlongdress seenfrombehind. PURE neutralblack-and-white periodphotographicrealism, gentlecontrast finegrain. No modernstone/concretebankrevetment, asphalt, electriclights, modernpondrestaurant/pavilion, modernstatues, metroentry, modernvehicles or clothing. No sailboats or motorboats. Authentic individuallyvaried broadleaf trees, softcloudy morning. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. No war, soldiers, weapons, uniforms or political symbols. All walls, gates and doors completely unlettered; no addressnumbers or numberplates anywhere.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/prompts/slot8.txt",
+      "sources": [
+        {
+          "url": "https://www.mos.ru/upload/documents/files/9263/Moskovskoenasledievipysk50.pdf",
+          "publisher": "Moscow Heritage Department, Moscow Heritage50",
+          "readFacts": [
+            "Current Chistyepond artificially dug1820s on formerWhiteCitymoat site; earlier Menshikovpond was filled bylate18thcentury"
+          ],
+          "access": "Official indexedextract read; webfullPDFtoo large11760983 bytes; initiallocalGETreset",
+          "application": "1873 currentpond alreadyexists; do not confuse1703story"
+        },
+        {
+          "url": "https://www.mos.ru/upload/documents/files/8423/RvzBVAGLJ-A%28ZVPBVA%29BAP%281%29.pdf",
+          "publisher": "Moscow Heritage conservationreport",
+          "readFacts": [
+            "Currentpond elongated approximately190m toward south-southeast, currentlandscape context described",
+            "Official PDF locally downloaded and extracted with bundledpypdf: currentpond dug early19thcentury on dismantledWhiteCityfortifications",
+            "Pond190m longSSE, widthup60m, roundedSSEend andrectangularNNWend"
+          ],
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/references/chistye-heritage-act.pdf",
+          "application": "match longaxis southernend view north-northwest and crop modern surroundings",
+          "textPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/references/chistye-heritage-act.txt"
+        },
+        {
+          "url": "https://www.mos.ru/upload/documents/files/6570/AKTGIKEChistoprydniibylvarspodpisu.pdf",
+          "publisher": "Moscow Heritage conservationassessment2025",
+          "readFacts": [
+            "Boulevardname afterWhiteCitywallremoval in1820s; pond acquiredname fromanotherlostpond"
+          ],
+          "access": "Official indexedextract read; fullPDF39595727bytes too large forweb",
+          "application": "corroborates pre1873boulevardpondsite"
+        },
+        {
+          "url": "https://ru.wikipedia.org/wiki/Чистые_пруды",
+          "publisher": "Wikipedia referencescompiled",
+          "readFacts": [
+            "Bank stone reinforcement1960 andconcrete1966, boatstationclosed1958"
+          ],
+          "application": "supporting laterinfrastructureexclusion; notcounted towardtwo primarysources"
+        }
+      ],
+      "caption": "Chistyjen lammen ranta Moskovassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Wholeframe/native checked, puregrayscale periodclothes rear-facing adults, gravel/earthbank excludes laterconcrete, no modernbuildingsstatueslights orvehicles, same southern-end NNWview as5. Two primarysources saved beforecall."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:07:32.377618+00:00",
+          "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame and modern5 compared: same long pond orientation, path/earthen bank left and willow fringe right, distant rear-facing period seated adults. Neutral monochrome, no1970sstone edge, electric lamps, buildings, soldiers or text. Early1800spond dated by official heritage reports read before call; plants reconstructed.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:08:01.274611+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+        "bytes": 2753568,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+            "bytes": 2753568,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png?t=e398ef52521a379a",
+            "http": 200,
+            "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+            "bytes": 2753568,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    }
+  ],
+  "omittedItems": [],
+  "status": "awaitingSessionOwnerQA",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "callsIssued": 5,
+  "imagesReturned": 5,
+  "updatedAt": "2026-10-12T18:01:48.662866+00:00",
+  "productionComplete": true,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "moscow",
+    "gameCityId": "moskova",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/references/chistye-heritage-act.txt",
+      "https://www.mos.ru/upload/documents/files/9263/Moskovskoenasledievipysk50.pdf",
+      "https://www.mos.ru/upload/documents/files/8423/RvzBVAGLJ-A%28ZVPBVA%29BAP%281%29.pdf"
+    ],
+    "assets": [
+      {
+        "id": "moscow-intro-4-v1",
+        "slot": 4,
+        "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä lähirungon/kaarna- ja lehtiyksityiskohtien ja kaukaisten henkilöiden/julkisivujen natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen kuori, juuret, lehdet ja pihan kulunut kiveys/rappaus; ei kaarnaleimaa tai muovisuutta. Koherentti valo ja perspektiivi.",
+          "Kaksi pientä henkilöä selin, laukut/vaatteet geneerisiä. Ei tekstiä, numeroita, logoja, brändikuvioita, ruokaa tai etualan kasvoja.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "moscow-intro-5-v1",
+        "slot": 5,
+        "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä vasemman rannan/puunkuoren/penkkihenkilön ja vastarannan pajujen/veden natiivirajaukset tarkastettu.",
+          "Luonnolliset epäsäännölliset rungot, haarat, lehtimassat ja veden heijastukset; ei leimakuviota tai muovisuutta havaittu. Kamera-fotorealismi, valo ja perspektiivi koherentit.",
+          "Pitkä lampi avautuu alakehyksestä etäisyyteen, polku/kivireuna vasemmalla ja puusto molemmin puolin; kuva5 on1873-kuvan8 moderni vertailupari.",
+          "Penkkihenkilö selin, ei tunnistettavia kasvoja. Ei tekstiä, logoja, brändikuvioita tai ruokaa havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "moscow-intro-6-v1",
+        "slot": 6,
+        "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan kasvojen/hiusten/vaatteiden/käden ja molempien sivujen kasvojen/kaikkien näkyvien käsien natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten puistokokoontuminen, geneeriset muodikkaat nykyvaatteet. Iho, hiukset, hampaat, korvat ja näkyvät käsien asennot uskottavia.",
+          "Kaikki henkilöt rajattu tai peitetty jalkineiden yläpuolelta. Ei jalkineita, ruokaa, tekstiä, logoja tai brändikuvioita koko kehyksessä.",
+          "Koherentti luonnonvalo, optinen taustan pehmeys ja perspektiivi; ei muovisuutta havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "moscow-intro-7-v1",
+        "slot": 7,
+        "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä ikkunoiden/lähikasvien ja kaukaisten henkilöiden/märän kiveyksen natiivirajaukset tarkastettu.",
+          "Luonnollinen vaihteleva lehvistö ja kasvillisuus; ikkunoiden lämminvalo ja märän kiveyksen heijastukset koherentit. Tavallinen kameran hämärävalotus ja uskottava kujan perspektiivi.",
+          "Kaksi hyvin pientä ihmistä selin; ei tekstiä, numeroita, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "moscow-intro-8-v1",
+        "slot": 8,
+        "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä vasemman rannan/aikakauden henkilöiden/puunkuoren ja pajujen/veden natiivirajaukset tarkastettu.",
+          "Näkyvä ilme neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä. Pieni numeerinen RGBero ei ollut itsenäinen hylkäysperuste.",
+          "Vertailtu moderniin5:een: sama pitkän lammen suuntainen katselusuunta, lähiranta/polku vasemmalla, vesi alakehyksestä puuston sulkemaan etäpäätyyn ja puut molemmin puolin. Nykyinen kivireuna vaihtuu maa-/ruohopenkereeseen.",
+          "Brief/sources.json luettu. Virallisen Moscow Heritage50-PDF:n hakupalvelun tekstistä luettu1820-luvun nykyisen keinotekoisen lammen tausta; erillisestä paikallisesta virallisesta suojeluraportin tekstistä luettu varhaisen1800-luvun lampi ja190m pitkä eteläkaakko–pohjoisluoteisakseli. Nämä ovat kaksi primäärilähdettä; Wikipediaa ei laskettu primäärilähteeksi.",
+          "1873-period exclusions tarkastettu: ei1900-luvun kivi-/betonirantavahvistusta, nykyistä lampiravintolaa/paviljonkia,1959-Gribojedov-veistosta,1935-metrosisäänkäyntiä, sähkövaloja, ajoneuvoja, asfalttia, nykyvaatteita tai veneitä. Kaikki rakennukset pois kehyksestä.",
+          "Kaksi pientä selin olevaa aikakauden aikuista yksinkertaisella puupenkillä. Puunkuori/lehvistö ja veden pinta luonnollisia ilman leimakuvioita; koherentti valo ja perspektiivi. Ei tekstiä, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "Vuoden1873 ranta ja yksittäinen kasvillisuus ovat konservatiivinen havainnollinen rekonstruktio; täsmällistä pre1874-lampikuvaa ei briefin mukaan löytynyt. Ei mitatun arkistopaikkakuvan tarkkuusväitettä.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:30:14.342944+00:00",
+    "sourceManifestSha256": "984712d1023b63078478a6b73ec79cdb6ac4d80aaad973f4a47243ea4d24dab4"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "moscow",
+    "verifiedAt": "2026-10-12T18:34:52.747325+00:00",
+    "assets": [
+      {
+        "id": "moscow-intro-4-v1",
+        "slot": 4,
+        "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+        "bytes": 3230299,
+        "verifiedAt": "2026-10-12T18:34:50.711197+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png",
+            "http": 200,
+            "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+            "bytes": 3230299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png?delivery-verify=c8e085abf410ca6d-1791830090711190000",
+            "http": 200,
+            "sha256": "c8e085abf410ca6da2b022bee0ffb2b11c419c23fa840f9c3e24d4c3f78c82cb",
+            "bytes": 3230299,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "moscow-intro-5-v1",
+        "slot": 5,
+        "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+        "bytes": 2831992,
+        "verifiedAt": "2026-10-12T18:34:50.711297+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+            "http": 200,
+            "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+            "bytes": 2831992,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png?delivery-verify=fff160a4c8e9e107-1791830090711295000",
+            "http": 200,
+            "sha256": "fff160a4c8e9e1072a180aeaa352f736ce590acd38d066bf103f50a21a5627cb",
+            "bytes": 2831992,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "moscow-intro-6-v1",
+        "slot": 6,
+        "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+        "bytes": 2223111,
+        "verifiedAt": "2026-10-12T18:34:50.711361+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+            "bytes": 2223111,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-6-neskuchny-juhla-intro-v1.png?delivery-verify=bc6379dbd04e6a7b-1791830090711359000",
+            "http": 200,
+            "sha256": "bc6379dbd04e6a7b401cbe8c749b5098e197dda98c48e53b8cac4667b2e7d676",
+            "bytes": 2223111,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "moscow-intro-7-v1",
+        "slot": 7,
+        "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+        "bytes": 2551421,
+        "verifiedAt": "2026-10-12T18:34:51.690264+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+            "bytes": 2551421,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png?delivery-verify=a411814b7046e4ac-1791830091690254000",
+            "http": 200,
+            "sha256": "a411814b7046e4ac8a61cf1d79d8e30a69cdac7510f34172539bd1446cff7f91",
+            "bytes": 2551421,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "moscow-intro-8-v1",
+        "slot": 8,
+        "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+        "bytes": 2753568,
+        "verifiedAt": "2026-10-12T18:34:51.896226+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+            "bytes": 2753568,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/moscow/20261012-full/moscow-8-chistye-1873-intro-v1.png?delivery-verify=e398ef52521a379a-1791830091896220000",
+            "http": 200,
+            "sha256": "e398ef52521a379ae2e4f76b6de495e09aded4a11df0105f11e16631a786c802",
+            "bytes": 2753568,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/moscow/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": 5,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.771609+00:00"
+}

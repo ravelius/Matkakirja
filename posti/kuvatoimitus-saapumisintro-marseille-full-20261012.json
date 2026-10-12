@@ -1,0 +1,1230 @@
+{
+  "cityName": "Marseille",
+  "gameCityId": "marseille",
+  "mediaSlug": "marseille",
+  "assets": [
+    {
+      "id": "marseille-4-panier-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Marseille",
+      "gameCityId": "marseille",
+      "mediaSlug": "marseille",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/marseille-4-panier-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/native/marseille-4-panier-arki-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+      "bytes": 3001561,
+      "nativeSha256": "6d334a0fae535aa5292c0135ccc7035c1be725e026ab6301778d1841415dd0c5",
+      "decodedRGBSha256": "f2ee689d7e9e96711363099ab3abd11270680d28a1bb792d90e68434a5356c79",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T18:02:47.785972+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Marseille LePanier ordinary slopingresidentiallane, worncreamand paleochreplasterhomeswithmutedbluewoodshutters, plain laundry onshortunmarkedline overhead, irregularterracottapottedplants and unevenstonepaving.35mm eyelevelcamera alonggentlerise, twovery smalladultlocalresidentsseenfrombehindwalkingawaycarryingplainclothbags. Softlate-morning Mediterranean natural light withgentleshadows, subduedauthenticcolours, noHDR. ALL wallsblank andunmarked betweenwindows; no murals, graffiti, symbols, sculptures, doorbellplaques, houseaddressnumbers, shops, signs, prices, brandedgoods, famouschurches, museum or modernnamedarchitecture. Nofacesfront.",
+      "sources": [
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/la-corniche-kennedy/the-vallon-des-auffes/",
+          "label": "Marseille officialtourism: Vallon des Auffes",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Traditionalfishingharbour withpointu woodenboats.",
+            "Oldbridge hasthreearches, span60m, heights17m.",
+            "ArmyofOrient memorial unveiled1927, excluded1873 andcurrentimage asprotectedart."
+          ]
+        },
+        {
+          "url": "https://www.persee.fr/doc/aru_0180-930x_1999_num_85_1_2284",
+          "label": "Bertile Beunard, LaCorniche marseillaise, LesAnnalesdelarechercheurbaine85(1999),78–88, DOI10.3406/aru.1999.2284",
+          "readAt": "2026-10-12",
+          "facts": [
+            "CornicheroadbetweenFausseMonnaieandCatalansbuilt1861–1863.",
+            "Vallonbridgeconstruction1861–1863 closesearlieropencreek; bridge thereforepresent1873.",
+            "Horse traffic preceded tramandmotorcar; noautomobiles/electrictraffic1873."
+          ],
+          "readingMethod": "Search-returned fullOCR article text; directvieweronlyimages"
+        },
+        {
+          "url": "https://www.marseille.fr/pepites-patrimoniales/62-corniche-kennedy",
+          "label": "CityofMarseille heritage chronology,62CornicheKennedy",
+          "readAt": "2026-10-12",
+          "facts": [
+            "ParcelcrossedbyCornicheroadandVallonviaducfrom1860.",
+            "Nearbycurrenthouse dates1923–1925, shed1946, extension1953–1957; allsurroundinghousesandstructurescroppedfrompair.",
+            "ArmyofOrientmonumentworksbegan1926; notpresent1873."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-old-marseille-and-the-panier-marseille-2eme-en-2792374/",
+          "label": "Marseilleofficialtourism: LePanierhistoricresidentialdistrict",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Oldneighbourhood withnarrowstreets, terracesandlocalsociallife; anonymousplasterhousing chosenwithoutprotectedmurals."
+          ]
+        },
+        {
+          "url": "https://tourisme-marseille.com/fiche/viaduc-pont-du-vallon-des-auffes-marseille/?print=1",
+          "label": "Contextualbridgecataloguewitholdpostcards",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Bridge1863 cataloguedwithhistoricpostcards; postcardsnotexactdated1873 andnotusedasperiodproof.",
+            "Noexact1873sameviewphotographretrieved; noexistingpicturecompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Le Panierin asuinkujan arkinen päivä Marseillessa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-4-panier-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-4-panier-arki-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and wall/window/door,laundry,plants,paving,distantadult details inspected. Ordinary LePanier residentiallane with two small back-facing adults,natural daylight and irregular realmaterial/foliage. Generic domesticlaundry,no printedtext,addressnumbers,signs,logos,brands,food,murals or protectedcontemporarydesign.",
+          "reviewedAt": "2026-10-12T18:10:50.691169+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-4-panier-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-4-panier-arki-intro-v1.png?t=78a6756a375e77f7",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-4-panier-arki-intro-v1.png",
+        "sha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+        "bytes": 3001561,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+        "canonicalGetBytes": 3001561,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:09.850919+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "marseille-5-vallon-des-auffes-vesi-intro-v2",
+      "slot": 5,
+      "cityName": "Marseille",
+      "gameCityId": "marseille",
+      "mediaSlug": "marseille",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/native/marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+      "bytes": 2545948,
+      "nativeSha256": "d1e0db637cda59da3db813cee69460231bc8676e2ea663ccf40b4e624ee162bf",
+      "decodedRGBSha256": "84ab83a31d44fd9ce26c3833732ad86a152598838a8df0498a08e9442a6cf961",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T18:08:36.799708+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Marseille, France, small fishing harbour Vallon des Auffes. ORIGINAL NEW PHOTOGRAPH from a low central position on the INNER harbour quay, looking SOUTHWEST straight toward the real Corniche viaduct and sea. The real bridge has THREE HIGH SEMICIRCULAR arches, overall about60m long and17m high, carefully coursed SMALL GREY LIMESTONE MASONRY, squared heavy stone piers and substantial high vertical spandrels, an old level parapet on top. It is a maintained nineteenth-century road viaduct, NOT a low ancient Roman footbridge, NOT rough ruined stone arches. Supporting input is a LOCATION/STRUCTURE reference only, not a photograph to copy: create a distinct original frontal35mm low-eyelevel composition, subdued natural coastal morning light, no source-image pixel copying. Tight frame on water and tall bridge so most sky/road deck and ALL houses outside image. Foreground water softly rippling, two small wooden Provençal fishing rowboats moored far to left, plain faded white/blue hulls, ZERO vessel names, registration numbers or brands. No modern engines, pontoons, road traffic, streetlights, signs, graffiti, wall letters, sculptures,1927monument, people or decorative art. Retain real bridge proportions and grey coursed masonry. Physically plausible camera photograph, restrained colours, fine irregular natural materials.",
+      "sources": [
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/la-corniche-kennedy/the-vallon-des-auffes/",
+          "label": "Marseille officialtourism: Vallon des Auffes",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Traditionalfishingharbour withpointu woodenboats.",
+            "Oldbridge hasthreearches, span60m, heights17m.",
+            "ArmyofOrient memorial unveiled1927, excluded1873 andcurrentimage asprotectedart."
+          ]
+        },
+        {
+          "url": "https://www.persee.fr/doc/aru_0180-930x_1999_num_85_1_2284",
+          "label": "Bertile Beunard, LaCorniche marseillaise, LesAnnalesdelarechercheurbaine85(1999),78–88, DOI10.3406/aru.1999.2284",
+          "readAt": "2026-10-12",
+          "facts": [
+            "CornicheroadbetweenFausseMonnaieandCatalansbuilt1861–1863.",
+            "Vallonbridgeconstruction1861–1863 closesearlieropencreek; bridge thereforepresent1873.",
+            "Horse traffic preceded tramandmotorcar; noautomobiles/electrictraffic1873."
+          ],
+          "readingMethod": "Search-returned fullOCR article text; directvieweronlyimages"
+        },
+        {
+          "url": "https://www.marseille.fr/pepites-patrimoniales/62-corniche-kennedy",
+          "label": "CityofMarseille heritage chronology,62CornicheKennedy",
+          "readAt": "2026-10-12",
+          "facts": [
+            "ParcelcrossedbyCornicheroadandVallonviaducfrom1860.",
+            "Nearbycurrenthouse dates1923–1925, shed1946, extension1953–1957; allsurroundinghousesandstructurescroppedfrompair.",
+            "ArmyofOrientmonumentworksbegan1926; notpresent1873."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-old-marseille-and-the-panier-marseille-2eme-en-2792374/",
+          "label": "Marseilleofficialtourism: LePanierhistoricresidentialdistrict",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Oldneighbourhood withnarrowstreets, terracesandlocalsociallife; anonymousplasterhousing chosenwithoutprotectedmurals."
+          ]
+        },
+        {
+          "url": "https://tourisme-marseille.com/fiche/viaduc-pont-du-vallon-des-auffes-marseille/?print=1",
+          "label": "Contextualbridgecataloguewitholdpostcards",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Bridge1863 cataloguedwithhistoricpostcards; postcardsnotexactdated1873 andnotusedasperiodproof.",
+            "Noexact1873sameviewphotographretrieved; noexistingpicturecompositioncopied."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/app/uploads/marseille-tourisme/2021/12/thumbs/111237/ratio_square_medium/vallon-des-auffes-lever-du-soleil-joomtcm-640x640.webp",
+          "label": "Official tourism current geography reference",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Visually inspected realtall grey coursed-masonry three-archbridge; previouslowroughmasonrycandidatefailed.",
+            "Usedonlystructure/geographyreference, originalfrontal composition generated."
+          ]
+        }
+      ],
+      "caption": "Vallon des Auffesin pienen sataman vesi ja vanha silta Marseillessa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "peopleAbsent": true,
+          "realBridgeProportionsVerified": true
+        },
+        "sessionOwner": {
+          "sha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and threehighstonearches/piers,masonry,rocks,boathulls,water inspected. Vallon/Cornichebridge now has tall finegrey-stone viaduct proportions,supports and three higharchedopenings. Two plaintraditionalboats atleft,naturalharbourwater. Tightcrop excludes nearbylaterhouses/1927monument/moderntrafficfacilities; no text,logos,registrationnumbers or protectedcontemporarydesign.",
+          "limits": [
+            "Illustrative scene, not an actual event photo or measured architectural record."
+          ],
+          "reviewedAt": "2026-10-12T18:13:00.968508+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v2.png?t=874d146f0298481b",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+        "sha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+        "bytes": 2545948,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+        "canonicalGetBytes": 2545948,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:11.233154+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "marseille-6-panier-korttelijuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Marseille",
+      "gameCityId": "marseille",
+      "mediaSlug": "marseille",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/marseille-6-panier-korttelijuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/native/marseille-6-panier-korttelijuhla-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+      "bytes": 2225828,
+      "nativeSha256": "ded76924202552ee67d93e71d50ca4193768766b35947971ba34d763538ee7f1",
+      "decodedRGBSha256": "80604ffb3a731693752ffbf37c1152887a60619e007ca21366238c5f82208634",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T18:09:32.413387+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Marseille LePanier neighbourhood open-air summermusiccelebration. Onecompletelyfictionaladultwomanabout28 foreground, darkcurlyhair andnaturallightolive skin, laughing withfriend, fashionableplainrust-redsleeveless topunderplaincreamlinenovershirt. Behindher locallyplausible Marseille youngadults25–35 withnormalMediterraneanFrench/CentralEuropean/NorthAfricanlocalvariety, smilingandrelaxeddancing, allgenericmodernsolidcolourclothes.35mm candidchestheightcamera, ALLpeople chest-up/waist-up orlowerbodiesfullyoccluded. ZEROshoes, feet orfootwearanywhereincludingdistantbackground. Anonymousoldcreamstuccohomesandsoftleafyshadebehindcrowd, naturallateafternooncoastaldaylight, realhumanskinnotplastic. Nofood,drinks,banners,stage,brands,sportsstripes,logos,lettering,tattoos,murals,sculptures ornamedmodernarchitecture.",
+      "sources": [
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/la-corniche-kennedy/the-vallon-des-auffes/",
+          "label": "Marseille officialtourism: Vallon des Auffes",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Traditionalfishingharbour withpointu woodenboats.",
+            "Oldbridge hasthreearches, span60m, heights17m.",
+            "ArmyofOrient memorial unveiled1927, excluded1873 andcurrentimage asprotectedart."
+          ]
+        },
+        {
+          "url": "https://www.persee.fr/doc/aru_0180-930x_1999_num_85_1_2284",
+          "label": "Bertile Beunard, LaCorniche marseillaise, LesAnnalesdelarechercheurbaine85(1999),78–88, DOI10.3406/aru.1999.2284",
+          "readAt": "2026-10-12",
+          "facts": [
+            "CornicheroadbetweenFausseMonnaieandCatalansbuilt1861–1863.",
+            "Vallonbridgeconstruction1861–1863 closesearlieropencreek; bridge thereforepresent1873.",
+            "Horse traffic preceded tramandmotorcar; noautomobiles/electrictraffic1873."
+          ],
+          "readingMethod": "Search-returned fullOCR article text; directvieweronlyimages"
+        },
+        {
+          "url": "https://www.marseille.fr/pepites-patrimoniales/62-corniche-kennedy",
+          "label": "CityofMarseille heritage chronology,62CornicheKennedy",
+          "readAt": "2026-10-12",
+          "facts": [
+            "ParcelcrossedbyCornicheroadandVallonviaducfrom1860.",
+            "Nearbycurrenthouse dates1923–1925, shed1946, extension1953–1957; allsurroundinghousesandstructurescroppedfrompair.",
+            "ArmyofOrientmonumentworksbegan1926; notpresent1873."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-old-marseille-and-the-panier-marseille-2eme-en-2792374/",
+          "label": "Marseilleofficialtourism: LePanierhistoricresidentialdistrict",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Oldneighbourhood withnarrowstreets, terracesandlocalsociallife; anonymousplasterhousing chosenwithoutprotectedmurals."
+          ]
+        },
+        {
+          "url": "https://tourisme-marseille.com/fiche/viaduc-pont-du-vallon-des-auffes-marseille/?print=1",
+          "label": "Contextualbridgecataloguewitholdpostcards",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Bridge1863 cataloguedwithhistoricpostcards; postcardsnotexactdated1873 andnotusedasperiodproof.",
+            "Noexact1873sameviewphotographretrieved; noexistingpicturecompositioncopied."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/app/uploads/marseille-tourisme/2021/12/thumbs/111237/ratio_square_medium/vallon-des-auffes-lever-du-soleil-joomtcm-640x640.webp",
+          "label": "Official tourism current geography reference",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Visually inspected realtall grey coursed-masonry three-archbridge; previouslowroughmasonrycandidatefailed.",
+            "Usedonlystructure/geographyreference, originalfrontal composition generated."
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen korttelijuhla Marseillen Le Panierissa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": false,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "fictionalAdultsOnly": true,
+          "footwearAbsentEntireFrame": true
+        },
+        "sessionOwner": {
+          "sha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and all clothing,skin,hands,upperbody/background details inspected. Fictional adult woman foreground at cheerful adult LePanier neighbourhoodgathering,plaingenericclothes,all footwear excluded by crop/occlusion. Natural skin,hair,leaves and daylight,no food,text,logo,brandstripes,addressnumbers,signs,murals or protectedcontemporarydesign.",
+          "limits": [
+            "Illustrative scene, not an actual event photo or measured architectural record."
+          ],
+          "reviewedAt": "2026-10-12T18:13:00.977622+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png?t=bb19eaeb033bd5ec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png",
+        "sha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+        "bytes": 2225828,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+        "canonicalGetBytes": 2225828,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:12.876328+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "marseille-7-panier-ilta-portaat-intro-v1",
+      "slot": 7,
+      "cityName": "Marseille",
+      "gameCityId": "marseille",
+      "mediaSlug": "marseille",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/marseille-7-panier-ilta-portaat-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/native/marseille-7-panier-ilta-portaat-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+      "bytes": 2551835,
+      "nativeSha256": "a5c628914158015eade776508250b05a7b4adb1f5c98e885d89deec55165922b",
+      "decodedRGBSha256": "960641f04bb637a8ef634b54bf369c6779abaf4a5629ecfd0fa6eaf5f4f24598",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T18:10:57.634577+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Marseille LePanier quietsteepresidentialsteppedlane atbluehour afteralightshower.35mm eyelevellookingdownirregularwornstonesteps betweenanonymousoldcreamandpaleochreplasterhomes, mutedblue/greywoodshutters, irregularwarmdomesticwindowlights reflectingsoftly onslightlydampstone, tinyverydistantbackfacingadultdescendingsteps. NaturalMediterraneantwilight exposure, plausiblewarmlightandcoolambientsky, notreplicatedcobblepatterns. Completelyblankwalls: noaddressplates, numbers, bellplaques, symbols, graffiti,murals, signs, walllampsorbusinesses. NoVieuxPort, cathedral,NotreDame,Mucem,PalaisLongchamp ormodernarchitecture; quietordinaryhousingwithsoftplantsbylowdoors.",
+      "sources": [
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/la-corniche-kennedy/the-vallon-des-auffes/",
+          "label": "Marseille officialtourism: Vallon des Auffes",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Traditionalfishingharbour withpointu woodenboats.",
+            "Oldbridge hasthreearches, span60m, heights17m.",
+            "ArmyofOrient memorial unveiled1927, excluded1873 andcurrentimage asprotectedart."
+          ]
+        },
+        {
+          "url": "https://www.persee.fr/doc/aru_0180-930x_1999_num_85_1_2284",
+          "label": "Bertile Beunard, LaCorniche marseillaise, LesAnnalesdelarechercheurbaine85(1999),78–88, DOI10.3406/aru.1999.2284",
+          "readAt": "2026-10-12",
+          "facts": [
+            "CornicheroadbetweenFausseMonnaieandCatalansbuilt1861–1863.",
+            "Vallonbridgeconstruction1861–1863 closesearlieropencreek; bridge thereforepresent1873.",
+            "Horse traffic preceded tramandmotorcar; noautomobiles/electrictraffic1873."
+          ],
+          "readingMethod": "Search-returned fullOCR article text; directvieweronlyimages"
+        },
+        {
+          "url": "https://www.marseille.fr/pepites-patrimoniales/62-corniche-kennedy",
+          "label": "CityofMarseille heritage chronology,62CornicheKennedy",
+          "readAt": "2026-10-12",
+          "facts": [
+            "ParcelcrossedbyCornicheroadandVallonviaducfrom1860.",
+            "Nearbycurrenthouse dates1923–1925, shed1946, extension1953–1957; allsurroundinghousesandstructurescroppedfrompair.",
+            "ArmyofOrientmonumentworksbegan1926; notpresent1873."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-old-marseille-and-the-panier-marseille-2eme-en-2792374/",
+          "label": "Marseilleofficialtourism: LePanierhistoricresidentialdistrict",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Oldneighbourhood withnarrowstreets, terracesandlocalsociallife; anonymousplasterhousing chosenwithoutprotectedmurals."
+          ]
+        },
+        {
+          "url": "https://tourisme-marseille.com/fiche/viaduc-pont-du-vallon-des-auffes-marseille/?print=1",
+          "label": "Contextualbridgecataloguewitholdpostcards",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Bridge1863 cataloguedwithhistoricpostcards; postcardsnotexactdated1873 andnotusedasperiodproof.",
+            "Noexact1873sameviewphotographretrieved; noexistingpicturecompositioncopied."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/app/uploads/marseille-tourisme/2021/12/thumbs/111237/ratio_square_medium/vallon-des-auffes-lever-du-soleil-joomtcm-640x640.webp",
+          "label": "Official tourism current geography reference",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Visually inspected realtall grey coursed-masonry three-archbridge; previouslowroughmasonrycandidatefailed.",
+            "Usedonlystructure/geographyreference, originalfrontal composition generated."
+          ]
+        }
+      ],
+      "caption": "Le Panierin porraskuja Marseillen sinisessä illassa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-7-panier-ilta-portaat-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-7-panier-ilta-portaat-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review"
+        },
+        "sessionOwner": {
+          "sha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and doorwalls,windows/lamps,paving/steps,foliage,distantadult details inspected. Anonymous old LePanier residentialsteps toward coast atdusk with one small back-facing adult and plain practicallight. No addressnumbers,signs,text,logos,brands,murals or protecteddesign; irregular oldmaterial/plant textures and credible restrained camera exposure.",
+          "limits": [
+            "Illustrative scene; individual reconstructed features are not an exact measured periodrecord."
+          ],
+          "reviewedAt": "2026-10-12T18:19:06.911366+00:00"
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-7-panier-ilta-portaat-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-7-panier-ilta-portaat-intro-v1.png?t=8246870b3900bab1",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-7-panier-ilta-portaat-intro-v1.png",
+        "sha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+        "bytes": 2551835,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+        "canonicalGetBytes": 2551835,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:14.516154+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "marseille-8-vallon-des-auffes-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Marseille",
+      "gameCityId": "marseille",
+      "mediaSlug": "marseille",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/marseille-8-vallon-des-auffes-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/native/marseille-8-vallon-des-auffes-1873-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+      "bytes": 2685164,
+      "nativeSha256": "8257e4e43e4606240025841af939c242d5aee7ece81077a29f3070f0896ccf9b",
+      "decodedRGBSha256": "d7c0d99cb67905934dbbb3f5a019a413f7ea9b66040615c3d16ff309b773b45d",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T18:12:49.690938+00:00",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, pure neutral BLACK AND WHITE grayscale, no deliberate colour tint or sepia, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. EXACT YEAR1873, Marseille Vallon des Auffes. Same low central position on inner harbour quay looking SOUTHWEST directly toward the Corniche viaduct and sea as supplied modern slot5 VIEWPOINT REFERENCE. Generate a COMPLETELY NEW original historical scene, every pixel newly generated, not a filter/edit of source photograph. Keep exact geological/bridge layout and camera direction: THREE HIGH SEMICIRCULAR arches, overall60m long and17m high, small grey coursed limestone masonry, squared heavy stone piers, high vertical spandrels and old level parapet. Corniche construction finished1863, so bridge exists1873. Foreground calm real seawater, two distant working wooden Provençal fishing boats with oars/simple furled canvas, bare worn wood without numbers/names. Tight crop excludes ALL houses and road deck traffic; do not include modern1923–1925house,1946shed,1950sextension,1927ArmyofOrientmonument. No motorboats, engines, plastic, electricity, cars, modern streetlights, signs or humans. Native neutral black-and-white19th-century documentary photograph look, natural diffuse morninglight, fine grain and gentle contrast, ordinary authentic camera texture. The supplied reference determines viewpoint only, not source pixels or protected photograph composition.",
+      "sources": [
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/la-corniche-kennedy/the-vallon-des-auffes/",
+          "label": "Marseille officialtourism: Vallon des Auffes",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Traditionalfishingharbour withpointu woodenboats.",
+            "Oldbridge hasthreearches, span60m, heights17m.",
+            "ArmyofOrient memorial unveiled1927, excluded1873 andcurrentimage asprotectedart."
+          ]
+        },
+        {
+          "url": "https://www.persee.fr/doc/aru_0180-930x_1999_num_85_1_2284",
+          "label": "Bertile Beunard, LaCorniche marseillaise, LesAnnalesdelarechercheurbaine85(1999),78–88, DOI10.3406/aru.1999.2284",
+          "readAt": "2026-10-12",
+          "facts": [
+            "CornicheroadbetweenFausseMonnaieandCatalansbuilt1861–1863.",
+            "Vallonbridgeconstruction1861–1863 closesearlieropencreek; bridge thereforepresent1873.",
+            "Horse traffic preceded tramandmotorcar; noautomobiles/electrictraffic1873."
+          ],
+          "readingMethod": "Search-returned fullOCR article text; directvieweronlyimages"
+        },
+        {
+          "url": "https://www.marseille.fr/pepites-patrimoniales/62-corniche-kennedy",
+          "label": "CityofMarseille heritage chronology,62CornicheKennedy",
+          "readAt": "2026-10-12",
+          "facts": [
+            "ParcelcrossedbyCornicheroadandVallonviaducfrom1860.",
+            "Nearbycurrenthouse dates1923–1925, shed1946, extension1953–1957; allsurroundinghousesandstructurescroppedfrompair.",
+            "ArmyofOrientmonumentworksbegan1926; notpresent1873."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-old-marseille-and-the-panier-marseille-2eme-en-2792374/",
+          "label": "Marseilleofficialtourism: LePanierhistoricresidentialdistrict",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Oldneighbourhood withnarrowstreets, terracesandlocalsociallife; anonymousplasterhousing chosenwithoutprotectedmurals."
+          ]
+        },
+        {
+          "url": "https://tourisme-marseille.com/fiche/viaduc-pont-du-vallon-des-auffes-marseille/?print=1",
+          "label": "Contextualbridgecataloguewitholdpostcards",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Bridge1863 cataloguedwithhistoricpostcards; postcardsnotexactdated1873 andnotusedasperiodproof.",
+            "Noexact1873sameviewphotographretrieved; noexistingpicturecompositioncopied."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/app/uploads/marseille-tourisme/2021/12/thumbs/111237/ratio_square_medium/vallon-des-auffes-lever-du-soleil-joomtcm-640x640.webp",
+          "label": "Official tourism current geography reference",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Visually inspected realtall grey coursed-masonry three-archbridge; previouslowroughmasonrycandidatefailed.",
+            "Usedonlystructure/geographyreference, originalfrontal composition generated."
+          ]
+        }
+      ],
+      "caption": "Vallon des Auffesin satama ja silta Marseillessa vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png",
+      "QA": {
+        "worker": {
+          "agentReviewed": true,
+          "fullFrame": true,
+          "nativeDetails": true,
+          "noTextLogosBrands": true,
+          "foodAbsent": true,
+          "peopleDistantOrBackFacing": true,
+          "photorealism": true,
+          "issues": [],
+          "status": "preliminary-pass-awaiting-root-review",
+          "historicalYear": 1873,
+          "visuallyNeutralBlackWhite": true,
+          "periodExclusionsVerified": true,
+          "sameViewAsSlot": 5,
+          "viewpointReferenceUsed": true,
+          "peopleAbsent": true,
+          "grayscaleChannelProof": {
+            "maxRG": 13,
+            "maxRB": 10,
+            "exactEqualRGB": false,
+            "diagnosticOnly": true
+          },
+          "chromaDiagnostic": {
+            "meanRGB": [
+              122.34748395284016,
+              122.0899232228597,
+              122.21036720275879
+            ],
+            "meanRminusB": 0.13711675008137547,
+            "maxRG": 13,
+            "maxRB": 10,
+            "exactChannelEqualityRequired": false,
+            "visuallyNeutralBlackWhite": true
+          }
+        },
+        "sessionOwner": {
+          "sha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and threehighstonearches,masonry,piers,rocks,periodboats/water details inspected against selectedmodern5v2. Same harbour-to-sea low viewpoint and bridgearch/rock arrangement. Neutralblack/white no visiblecast; old plainwoodfishingboats with smallmasts/rigging. Bridgeexisted1863. No1927monument,1920s/laterhouses,sheds/extensions,moderntrafficfacilities,motorcraft,electriclight,text,logos or registrationnumbers.",
+          "limits": [
+            "Illustrative scene; individual reconstructed features are not an exact measured periodrecord."
+          ],
+          "reviewedAt": "2026-10-12T18:19:06.920039+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5
+        }
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png?t=94569640b252898e",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png",
+        "sha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+        "bytes": 2685164,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+        "canonicalGetBytes": 2685164,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:19:15.937459+00:00"
+      },
+      "generationParameters": {
+        "tool": "image_gen.imagegen",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/marseille-5-vallon-des-auffes-vesi-intro-v2.png"
+        ],
+        "transparent_background": false,
+        "intent": "whole-new historical scene, viewpoint/unchangingbridge only reference"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "complete": true,
+  "rejectedCandidates": [
+    {
+      "id": "marseille-5-vallon-des-auffes-vesi-intro-v1",
+      "slot": 5,
+      "cityName": "Marseille",
+      "gameCityId": "marseille",
+      "mediaSlug": "marseille",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/marseille-5-vallon-des-auffes-vesi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/native/marseille-5-vallon-des-auffes-vesi-intro-v1.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeMode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedSRGBProfile": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sha256": "90a4c449ff09c565118087795d7e3c61727ce49a178af48d12e9c731ea5c3dc2",
+      "bytes": 2306272,
+      "nativeSha256": "e689b35ccfa041832f0f3864493ca6de33835e2725e6f0776634af3e0e6d52d5",
+      "decodedRGBSha256": "474c18694acf3361800d1198bc71b2ae3fe8e3f057d52db5849f83494049ca31",
+      "pixelChangesApplied": false,
+      "decodedRGBPixelsIdentical": true,
+      "resizeApplied": false,
+      "cropApplied": false,
+      "retouchApplied": false,
+      "metadataOnlyExport": true,
+      "exportedAt": "2026-10-12T18:06:33.004070+00:00",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival-intro illustrative image. Generate ONE completely new original image, landscape exactly 1536 x 1024 pixels, opaque RGB sRGB PNG. It is an AI illustration visually resembling an ordinary real-camera documentary travel photograph, never a painting or CGI render. Physically plausible single full-frame camera perspective, natural restrained authentic colours, soft natural light, fine irregular real surface texture, no HDR, oversharpening, dramatic film grading, stamped repeating leaves or decorative stone patterns. No letters, text, numbers, street or commercial signs, logos, brand patterns, advertisements, watermarks, frames or border. No modern named architects' design works, public art, murals or protected decorative artworks. No food. Present-day Marseille Vallon desAuffes smalltraditionalfishingharbour. Preciseviewfromnortherninsideharbourquay lookingSOUTHWEST towardtheoldCorniche stonebridge andsea beyond,35mm loweyelevelcamera. Foreground calm seawaterwithfineirregularripples, two smallplainwoodenProvençalpointu rowboats mooredfaraside inmutedwhite/bluepaintwithoutnamesorregistrations. MidbackgroundtheREAL old bridgeofTHREE lowwideSTONE archesacrosstherockyinlet,60m long, sea glimpsedthrougharches. Naturalweatheredcreamlimestonequays androughshorestones. Frameverytightandlow: nohousesorrestaurantsatall, no roadtraffic/moderndeckaccessoriesabovebridge, no sculpture/1927monument, noadvertising, modernapartmentblocks, motorengines, metal pontoons, signs, numbers or people. SubduedMediterraneanmorninglight, ordinarydocumentarycameraappearance. Samepositionanddirectionas1873pair.",
+      "sources": [
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/la-corniche-kennedy/the-vallon-des-auffes/",
+          "label": "Marseille officialtourism: Vallon des Auffes",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Traditionalfishingharbour withpointu woodenboats.",
+            "Oldbridge hasthreearches, span60m, heights17m.",
+            "ArmyofOrient memorial unveiled1927, excluded1873 andcurrentimage asprotectedart."
+          ]
+        },
+        {
+          "url": "https://www.persee.fr/doc/aru_0180-930x_1999_num_85_1_2284",
+          "label": "Bertile Beunard, LaCorniche marseillaise, LesAnnalesdelarechercheurbaine85(1999),78–88, DOI10.3406/aru.1999.2284",
+          "readAt": "2026-10-12",
+          "facts": [
+            "CornicheroadbetweenFausseMonnaieandCatalansbuilt1861–1863.",
+            "Vallonbridgeconstruction1861–1863 closesearlieropencreek; bridge thereforepresent1873.",
+            "Horse traffic preceded tramandmotorcar; noautomobiles/electrictraffic1873."
+          ],
+          "readingMethod": "Search-returned fullOCR article text; directvieweronlyimages"
+        },
+        {
+          "url": "https://www.marseille.fr/pepites-patrimoniales/62-corniche-kennedy",
+          "label": "CityofMarseille heritage chronology,62CornicheKennedy",
+          "readAt": "2026-10-12",
+          "facts": [
+            "ParcelcrossedbyCornicheroadandVallonviaducfrom1860.",
+            "Nearbycurrenthouse dates1923–1925, shed1946, extension1953–1957; allsurroundinghousesandstructurescroppedfrompair.",
+            "ArmyofOrientmonumentworksbegan1926; notpresent1873."
+          ]
+        },
+        {
+          "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-old-marseille-and-the-panier-marseille-2eme-en-2792374/",
+          "label": "Marseilleofficialtourism: LePanierhistoricresidentialdistrict",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Oldneighbourhood withnarrowstreets, terracesandlocalsociallife; anonymousplasterhousing chosenwithoutprotectedmurals."
+          ]
+        },
+        {
+          "url": "https://tourisme-marseille.com/fiche/viaduc-pont-du-vallon-des-auffes-marseille/?print=1",
+          "label": "Contextualbridgecataloguewitholdpostcards",
+          "readAt": "2026-10-12",
+          "facts": [
+            "Bridge1863 cataloguedwithhistoricpostcards; postcardsnotexactdated1873 andnotusedasperiodproof.",
+            "Noexact1873sameviewphotographretrieved; noexistingpicturecompositioncopied."
+          ]
+        }
+      ],
+      "caption": "Vallon des Auffesin pienen sataman vesi ja vanha silta Marseillessa. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v1.png",
+      "QA": {
+        "agentReviewed": true,
+        "fullFrame": true,
+        "nativeDetails": true,
+        "noTextLogosBrands": true,
+        "foodAbsent": true,
+        "peopleDistantOrBackFacing": true,
+        "photorealism": true,
+        "issues": [
+          "Bridge lowroughmasonry geometry differs fromactual17m-high Cornicheviaduct"
+        ],
+        "status": "rejected"
+      },
+      "R2Proof": null
+    }
+  ],
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T18:19:15.947404+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "marseille",
+    "gameCityId": "marseille",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/references/vallon-official-geography.webp",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/references/vallon-bridge-geography.webp",
+      "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/la-corniche-kennedy/the-vallon-des-auffes/",
+      "https://www.marseille.fr/pepites-patrimoniales/62-corniche-kennedy",
+      "https://www.persee.fr/doc/aru_0180-930x_1999_num_85_1_2284"
+    ],
+    "assets": [
+      {
+        "id": "marseille-4-panier-arki-intro-v1",
+        "slot": 4,
+        "sha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä kaukaisten ihmisten/kasvien ja lähikasvien/rappauksen/kiveyksen natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen lehdistö/haarat, kulunut rappaus, puuluukut ja kiveys; koherentti päivänvalo ja kujan perspektiivi, ei orgaanisia leimakuvioita tai muovisuutta.",
+          "Kaksi pientä ihmistä selin; pyykit, laukut ja vaatteet geneerisiä. Ei tekstiä, osoitenumeroita, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "marseille-5-vallon-des-auffes-vesi-intro-v2",
+        "slot": 5,
+        "sha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Valittu täysin uusi5v2; koko1536x1024 kehys ja veneiden runkojen sekä sillan keskipilarin/kaarimateriaalin natiivirajaukset tarkastettu.",
+          "Kolme korkeaa puolipyöreää kivikaarta, suuri pystysuuntainen kivimuurirunko ja raskaat pilarit; verrattu paikalliseen nykyiseen maantieteelliseen siltareferenssiin. V1:n matalan karkean pikkusillan ongelma korjattu.",
+          "Kuvallinen rakenne on havainnollinen sillan rekonstruktio; yksittäiset kivisaumat ja pilaridetaljit eivät ole mitatun rakennuspiirustuksen tarkkuusväite.",
+          "Veneiden rungot/lankut/maali/kiinnitysköydet luonnollisia ja uskottavia. Ei nimiä, rekisterinumeroita, logoja, moottoreita, ruokaa tai ihmisiä.",
+          "Koherentti kameran perspektiivi, luonnonvalo ja veden heijastukset; ei muovisuutta. Kuva5 on1873-kuvan8 moderni vertailupari.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "marseille-6-panier-korttelijuhla-intro-v1",
+        "slot": 6,
+        "sha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan kasvojen/hiusten/vaatteiden/käden, oikeiden kasvojen/käsien ja vasempien kasvojen natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten Le Panierin korttelijuhla, geneeriset muodikkaat nykyvaatteet. Iho, hiukset, hampaat, korvat ja näkyvät kädet uskottavia.",
+          "Kaikki ihmiset rajattu tai peitetty jalkineiden yläpuolelta. Ei jalkineita, ruokaa, juomia, tekstiä, logoja, tatuointeja tai tunnistettavia brändikuvioita koko kehyksessä.",
+          "Koherentti lämmin luonnonvalo ja optinen taustan pehmeys, perspektiivi kameramainen; kasvillisuus luonnollista.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "marseille-7-panier-ilta-portaat-intro-v1",
+        "slot": 7,
+        "sha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä kaukaisen henkilön/portaiden/ovien ja lähilehtien/ikkunoiden natiivirajaukset tarkastettu.",
+          "Luonnolliset vaihtelevat lehdet/haarat sekä kulunut rappaus ja kostea kivikiveys; koherentti hämärä/ikkunavalo ja portaikon perspektiivi.",
+          "Yksi hyvin pieni henkilö selin; ei tekstiä, numeroita, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "marseille-8-vallon-des-auffes-1873-intro-v1",
+        "slot": 8,
+        "sha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä puuveneiden/purjerikauksen ja sillan keskipilarin/kivipinnan natiivirajaukset tarkastettu.",
+          "Näkyvä kokonaisilme neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä. Pientä numeerista RGBeroa ei käytetty itsenäisenä hylkäysperusteena.",
+          "Vertailtu valittuun moderniin5v2:een: sama sisäsatamasta merelle suuntautuva näkymä, kolme korkeaa kaarta, pilareiden/kaarien järjestys, sivujen kalliorannat ja avomeri niiden läpi. Katselusuunta ja kuvajaottelu vastaavat.",
+          "Brief/sources.json luettu. Virallisen matkailusivun ja kaupungin perintöchronologian tekstit avattu; Perseen tutkimusartikkelin1861–1863-rakennusvaihe luettu hakupalvelun OCR-tekstistä. Sillan olemassaolo1873 ja myöhempien rakennelmien poissulkemiset lähteiden tukemia.",
+          "Period exclusions tarkastettu: kaikki ympäröivät talot ja1923–1925-talo,1946-varasto,1950-luvun lisäosa,1927-muistomerkki pois kehyksestä. Ei moottoriveneitä, moottoreita, muovia, sähkövaloja, autoja, tie-liikennettä tai merkkejä.",
+          "Kaksi merkitöntä puista kalastus-/soutuvenettä perinteisellä masto-/purjevarustuksella; puu, köydet ja vesi uskottavia. Ei ihmiset, tekstiä, logoja, rekisterinumeroita, brändikuvioita tai ruokaa havaittu.",
+          "Koherentti kameravalo/perspektiivi ja luonnolliset pintayksityiskohdat. Tarkka1873-lautarakenne/kivisauma ei ole mitatun arkistopaikkakuvan tarkkuusväite; havainnollinen konservatiivinen rekonstruktio.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "marseille-5-vallon-des-auffes-vesi-intro-v1",
+        "slot": 5,
+        "sha256": "90a4c449ff09c565118087795d7e3c61727ce49a178af48d12e9c731ea5c3dc2",
+        "fullFrameInspected": false,
+        "nativeDetailsInspected": false,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "producerReason": [
+          "Bridge lowroughmasonry geometry differs fromactual17m-high Cornicheviaduct"
+        ],
+        "reason": "Tuottajan v1-siltarakenteen hylkäys kirjattu historiasta; tämä itsenäinen rasteri-QA koski valittua5v2:ta.",
+        "producerMetadataReviewedOnly": true
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:53:33.404744+00:00",
+    "sourceManifestSha256": "51b6ee3a37ed84d745c5870ebd4f674568ab828e3832de09b4aa94b99dbd0fc4"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "marseille",
+    "verifiedAt": "2026-10-12T18:56:57.364391+00:00",
+    "assets": [
+      {
+        "id": "marseille-4-panier-arki-intro-v1",
+        "slot": 4,
+        "sha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+        "bytes": 3001561,
+        "verifiedAt": "2026-10-12T18:56:54.337807+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-4-panier-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+            "bytes": 3001561,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-4-panier-arki-intro-v1.png?delivery-verify=78a6756a375e77f7-1791831414337797000",
+            "http": 200,
+            "sha256": "78a6756a375e77f780a044a4b8ce3100554b4ced8ba4421f1dadb75b72945de2",
+            "bytes": 3001561,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "marseille-5-vallon-des-auffes-vesi-intro-v2",
+        "slot": 5,
+        "sha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+        "bytes": 2545948,
+        "verifiedAt": "2026-10-12T18:56:54.339869+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+            "http": 200,
+            "sha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+            "bytes": 2545948,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-5-vallon-des-auffes-vesi-intro-v2.png?delivery-verify=874d146f0298481b-1791831414339866000",
+            "http": 200,
+            "sha256": "874d146f0298481bc2f87dbb0c0623352623588e485f805fec05bf75c8fb16a3",
+            "bytes": 2545948,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "marseille-6-panier-korttelijuhla-intro-v1",
+        "slot": 6,
+        "sha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+        "bytes": 2225828,
+        "verifiedAt": "2026-10-12T18:56:54.364466+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+            "bytes": 2225828,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-6-panier-korttelijuhla-intro-v1.png?delivery-verify=bb19eaeb033bd5ec-1791831414364451000",
+            "http": 200,
+            "sha256": "bb19eaeb033bd5ecca126f4ca339bf2eec04c8626495160c577d47d394d57d30",
+            "bytes": 2225828,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "marseille-7-panier-ilta-portaat-intro-v1",
+        "slot": 7,
+        "sha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+        "bytes": 2551835,
+        "verifiedAt": "2026-10-12T18:56:55.798322+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-7-panier-ilta-portaat-intro-v1.png",
+            "http": 200,
+            "sha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+            "bytes": 2551835,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-7-panier-ilta-portaat-intro-v1.png?delivery-verify=8246870b3900bab1-1791831415798312000",
+            "http": 200,
+            "sha256": "8246870b3900bab1d5233b081f45e7603f6cfe5796df543ad6380604bfea285e",
+            "bytes": 2551835,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "marseille-8-vallon-des-auffes-1873-intro-v1",
+        "slot": 8,
+        "sha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+        "bytes": 2685164,
+        "verifiedAt": "2026-10-12T18:56:55.831476+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+            "bytes": 2685164,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261012-full/marseille-8-vallon-des-auffes-1873-intro-v1.png?delivery-verify=94569640b252898e-1791831415829657000",
+            "http": 200,
+            "sha256": "94569640b252898e04b2152499b9096e39263b4bc92138c736b07ff8fed7c69f",
+            "bytes": 2685164,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/marseille/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.426935+00:00"
+}

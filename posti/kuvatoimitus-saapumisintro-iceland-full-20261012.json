@@ -1,0 +1,950 @@
+{
+  "cityName": "Islanti",
+  "gameCityId": "islanti",
+  "mediaSlug": "iceland",
+  "updatedAt": "2026-10-12T18:09:49.147285+00:00",
+  "assets": [
+    {
+      "id": "iceland-4-reykjavikin-arki-intro-v1",
+      "slot": 4,
+      "cityName": "Islanti",
+      "gameCityId": "islanti",
+      "mediaSlug": "iceland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/iceland-4-reykjavikin-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/native/iceland-4-reykjavikin-arki-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/iceland/20261012-full/iceland-4-reykjavikin-arki-intro-v1.png",
+      "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. MatkakirjaIcelandslot4. ReykjavikTODAY ordinaryolderresidentialblock: modestanonymous lowwoodencottages clad inweathered corrugatedmetal andhorizontalwood, mutedrustred grayandcream, whitetimberwindowframes, sparsehardyplants nearentry. Two smalldistantmodernadults walkingaway inplaincoats, backsvisible. Streetlevel35mmcameraalonggentlyslopingstreet,softcoolovercastIcelandicsummerlight, ordinaryquietlocaldaily life. Nochurch,tower,Hallgrimskirkja,Harpa,famousarchitecture,art,shops,cars,bikes,closefaces,streetnamesor signs. Entrydoorsabsolutelyblank withsimplehandlesonly,nopostslot/address/namepanels/numbers. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://reykjavik.is/en/hljomskalagardurinn-tjornin-and-vatnsmyri",
+          "title": "ReykjavikCity: Tjornin,Hljomskalagardurinn,Vatnsmyri",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Tjornin isoldsealagoon closedover1200yearsago; freshwaterlakeexisted1873.",
+            "Hljomskalinnbuilt1923;parkgraduallyexpandedwithtreeplanting afterthat.",
+            "Vatnsmyri wetlandspeatcutting;drained/cultivatedearly20c,airport1940s.1873viewrestoresmarshgrasses/reedsand openlowshore.",
+            "CityHall1992 excluded;modernbridges/embankments andallarchitecture excluded."
+          ],
+          "periodReference": "Museumphotolookup found1920Tjornin image, noexact1873southpondsameviewphoto located."
+        },
+        {
+          "url": "https://visitreykjavik.is/service/pond-and-hljomskalagardurinn-park",
+          "title": "VisitReykjavik: pondandHljomskalagardurinnpark",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "UrbanizationbeganTjorninnorthend18c; freshwaterlakeestablishedbefore1873.",
+            "Hljomskalinn1923; modernparkandcurrenttrees notretained in1873reconstruction."
+          ]
+        },
+        {
+          "url": "https://reykjavik.is/en/reykjavik-city-hall",
+          "title": "ReykjavikCity: CityHall",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "CityHallinauguratedApril14,1992;excludedfromallnewimages."
+          ]
+        }
+      ],
+      "caption": "Reykjavíkin puutalokorttelin arkea Islannissa. Havainnekuva.",
+      "QA": {
+        "id": "iceland-4-reykjavikin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:09:32.923488+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: anonymous ordinary corrugated timber Reykjavík residential street, native near door plain, no text/address/logo; distant backs, natural restrained camera colors.",
+        "detailCrops": [
+          "session-owner-review/slot4-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-4-reykjavikin-arki-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:09:36.623540+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+        "bytes": 2613803,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-4-reykjavikin-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+            "bytes": 2613803,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-4-reykjavikin-arki-intro-v1.png?verify=north-9159f69c80aa513c-1791828576623759000",
+            "http": 200,
+            "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+            "bytes": 2613803,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2613803
+    },
+    {
+      "id": "iceland-5-tjorninin-vesi-intro-v1",
+      "slot": 5,
+      "cityName": "Islanti",
+      "gameCityId": "islanti",
+      "mediaSlug": "iceland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/iceland-5-tjorninin-vesi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/native/iceland-5-tjorninin-vesi-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/iceland/20261012-full/iceland-5-tjorninin-vesi-intro-v1.png",
+      "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. MatkakirjaIcelandslot5. Tjörnin's southernpond(Suðurtjörn)inReykjavikTODAY. Camera1.6m onnaturalgrassy eastbank looking SOUTHWEST across calmfreshwater,35mmhorizontalframe. Lowshorewithhardygrasseslowerleft, waterdominatesmiddle, lowfarbank withmodestdeciduousbirch/alderpark-treegroups andgrassinupperthird, cloudydiffuseIcelandicsky. Two smallwildducks widelyseparated naturally. Restrictedviewcrop containsNOarchitecture,churches,CityHall,bridges,bandstand,roads,airport,paths,benches,signs,railings,lamps,boats,sculpture orpeople. Believablecompacturbanlake scale,nomountains inventedonimmediatefarbank. Mutedgraygreen coolnaturalcolor andrealwaterripples. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://reykjavik.is/en/hljomskalagardurinn-tjornin-and-vatnsmyri",
+          "title": "ReykjavikCity: Tjornin,Hljomskalagardurinn,Vatnsmyri",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Tjornin isoldsealagoon closedover1200yearsago; freshwaterlakeexisted1873.",
+            "Hljomskalinnbuilt1923;parkgraduallyexpandedwithtreeplanting afterthat.",
+            "Vatnsmyri wetlandspeatcutting;drained/cultivatedearly20c,airport1940s.1873viewrestoresmarshgrasses/reedsand openlowshore.",
+            "CityHall1992 excluded;modernbridges/embankments andallarchitecture excluded."
+          ],
+          "periodReference": "Museumphotolookup found1920Tjornin image, noexact1873southpondsameviewphoto located."
+        },
+        {
+          "url": "https://visitreykjavik.is/service/pond-and-hljomskalagardurinn-park",
+          "title": "VisitReykjavik: pondandHljomskalagardurinnpark",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "UrbanizationbeganTjorninnorthend18c; freshwaterlakeestablishedbefore1873.",
+            "Hljomskalinn1923; modernparkandcurrenttrees notretained in1873reconstruction."
+          ]
+        },
+        {
+          "url": "https://reykjavik.is/en/reykjavik-city-hall",
+          "title": "ReykjavikCity: CityHall",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "CityHallinauguratedApril14,1992;excludedfromallnewimages."
+          ]
+        }
+      ],
+      "caption": "Reykjavíkin Tjörnin-lammen vesinäkymä Islannissa. Havainnekuva.",
+      "QA": {
+        "id": "iceland-5-tjorninin-vesi-intro-v1",
+        "slot": 5,
+        "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:09:33.204090+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural freshwater pond bank, two distinct mallards/water inspected natively; irregular plants and ripples, no text/signs/protected architectural works/faces.",
+        "detailCrops": [
+          "session-owner-review/slot5-ducks-bank-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-5-tjorninin-vesi-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:09:39.591413+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+        "bytes": 2567172,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-5-tjorninin-vesi-intro-v1.png",
+            "http": 200,
+            "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+            "bytes": 2567172,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-5-tjorninin-vesi-intro-v1.png?verify=north-3418c12e480d7619-1791828579591433000",
+            "http": 200,
+            "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+            "bytes": 2567172,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2567172
+    },
+    {
+      "id": "iceland-6-reykjavikin-kesajuhla-intro-v1",
+      "slot": 6,
+      "cityName": "Islanti",
+      "gameCityId": "islanti",
+      "mediaSlug": "iceland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/iceland-6-reykjavikin-kesajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/native/iceland-6-reykjavikin-kesajuhla-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/iceland/20261012-full/iceland-6-reykjavikin-kesajuhla-intro-v1.png",
+      "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. MatkakirjaIcelandslot6. ReykjavikTODAY joyous neighborhoodsummermusiccelebration,outdoorswithanonymousoldcorrugatedwoodhouses softfocus behind. OnefictionalIcelandicyoungadult manage27 foreground, laughingtowardsfriend, shortreddishbrownhair andnaturalrealpaleskinwithfreckles, fashionableplain charcoalwoolovershirt overunpatternedcreamtop. DensecheerfulcrowdoffictionallocalReykjavikyoungadults withplausibleIcelandicpopulationfaces, contemporaryfashionableplainbrandfreeclothesandlightjackets, chattingdancing,enjoyingacoolbrightsummerevening. TightCHEST/WAIST-UP candidcameracomposition, EVERYperson'slegs,feetandshoes fullyoutofframeorhiddenbycrowdshoulders. Nofootwear atanydepth,no full-lengthhuman. Nofood/drinks,flaggraphics,stagebranding,banners,posters,signs,artmurals. Naturalsoftnortherneveningsunlight,authenticfriendlymoment,realclothingtexture. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://reykjavik.is/en/hljomskalagardurinn-tjornin-and-vatnsmyri",
+          "title": "ReykjavikCity: Tjornin,Hljomskalagardurinn,Vatnsmyri",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Tjornin isoldsealagoon closedover1200yearsago; freshwaterlakeexisted1873.",
+            "Hljomskalinnbuilt1923;parkgraduallyexpandedwithtreeplanting afterthat.",
+            "Vatnsmyri wetlandspeatcutting;drained/cultivatedearly20c,airport1940s.1873viewrestoresmarshgrasses/reedsand openlowshore.",
+            "CityHall1992 excluded;modernbridges/embankments andallarchitecture excluded."
+          ],
+          "periodReference": "Museumphotolookup found1920Tjornin image, noexact1873southpondsameviewphoto located."
+        },
+        {
+          "url": "https://visitreykjavik.is/service/pond-and-hljomskalagardurinn-park",
+          "title": "VisitReykjavik: pondandHljomskalagardurinnpark",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "UrbanizationbeganTjorninnorthend18c; freshwaterlakeestablishedbefore1873.",
+            "Hljomskalinn1923; modernparkandcurrenttrees notretained in1873reconstruction."
+          ]
+        },
+        {
+          "url": "https://reykjavik.is/en/reykjavik-city-hall",
+          "title": "ReykjavikCity: CityHall",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "CityHallinauguratedApril14,1992;excludedfromallnewimages."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Reykjavíkin kesäjuhlassa. Havainnekuva.",
+      "QA": {
+        "id": "iceland-6-reykjavikin-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:09:33.378525+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural fictional adult face/freckles and plain wool coat inspected natively, joyful young adult summer crowd and ordinary houses; no footwear/text/logo/instrument.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-coat-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-6-reykjavikin-kesajuhla-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:09:42.624916+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+        "bytes": 2070256,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-6-reykjavikin-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+            "bytes": 2070256,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-6-reykjavikin-kesajuhla-intro-v1.png?verify=north-daa41461b0735f03-1791828582624943000",
+            "http": 200,
+            "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+            "bytes": 2070256,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2070256
+    },
+    {
+      "id": "iceland-7-reykjavikin-iltavalot-intro-v1",
+      "slot": 7,
+      "cityName": "Islanti",
+      "gameCityId": "islanti",
+      "mediaSlug": "iceland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/iceland-7-reykjavikin-iltavalot-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/native/iceland-7-reykjavikin-iltavalot-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png",
+      "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. MatkakirjaIcelandslot7. Quiet ReykjavikoldresidentialstreetTODAYatbluehour, eyelevelcamera alonganonymoussmallcorrugatedwoodhouses with simpleslopingroofs in mutedrust/charcoal/gray, warmdomesticlightin irregularwindows, dampunmarkedpavementreflectingafewnormalstreetlamps. Oneor twoverysmall distantmodernwalkersFROMBEHIND, noidentifiableface. Allentrydoorsplainwoodwithhandleonly, NOMAILSLOTS,addressplates,nameplates,numbers,emblemsor carvings. NoHallgrimskirkja,church,famouslandmark,Harpa,shopfront,cars,protectedart orsculptures. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://reykjavik.is/en/hljomskalagardurinn-tjornin-and-vatnsmyri",
+          "title": "ReykjavikCity: Tjornin,Hljomskalagardurinn,Vatnsmyri",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Tjornin isoldsealagoon closedover1200yearsago; freshwaterlakeexisted1873.",
+            "Hljomskalinnbuilt1923;parkgraduallyexpandedwithtreeplanting afterthat.",
+            "Vatnsmyri wetlandspeatcutting;drained/cultivatedearly20c,airport1940s.1873viewrestoresmarshgrasses/reedsand openlowshore.",
+            "CityHall1992 excluded;modernbridges/embankments andallarchitecture excluded."
+          ],
+          "periodReference": "Museumphotolookup found1920Tjornin image, noexact1873southpondsameviewphoto located."
+        },
+        {
+          "url": "https://visitreykjavik.is/service/pond-and-hljomskalagardurinn-park",
+          "title": "VisitReykjavik: pondandHljomskalagardurinnpark",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "UrbanizationbeganTjorninnorthend18c; freshwaterlakeestablishedbefore1873.",
+            "Hljomskalinn1923; modernparkandcurrenttrees notretained in1873reconstruction."
+          ]
+        },
+        {
+          "url": "https://reykjavik.is/en/reykjavik-city-hall",
+          "title": "ReykjavikCity: CityHall",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "CityHallinauguratedApril14,1992;excludedfromallnewimages."
+          ]
+        }
+      ],
+      "caption": "Reykjavíkin vanhan puutalokorttelin iltavalot. Havainnekuva.",
+      "QA": {
+        "id": "iceland-7-reykjavikin-iltavalot-intro-v1",
+        "slot": 7,
+        "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:09:33.489204+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: ordinary timber evening street, native near door/window plain and unlettered; distant back-view walkers, natural optical window light, no text/logo/address.",
+        "detailCrops": [
+          "session-owner-review/slot7-door-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:09:45.556140+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+        "bytes": 2440580,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+            "bytes": 2440580,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png?verify=north-31c89af2005a9add-1791828585556163000",
+            "http": 200,
+            "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+            "bytes": 2440580,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2440580
+    },
+    {
+      "id": "iceland-8-tjornin-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Islanti",
+      "gameCityId": "islanti",
+      "mediaSlug": "iceland",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/iceland-8-tjornin-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/native/iceland-8-tjornin-1873-intro-v1-native.png",
+      "r2Key": "julisteet/saapumisintro/iceland/20261012-full/iceland-8-tjornin-1873-intro-v1.png",
+      "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. MatkakirjaIcelandslot8. Completelynew rigorous historicalcameraillustrationofTjörnin's southernlake shoreinReykjavik inexactYEAR1873. Modernslot5referenceguidesONLYsamephysicalcamera1.6m eastbanklookingSOUTHWEST acrosssamepond,35mm,samelowfarshoreandwaterviewdirection. Reconstruct1873fromscratch, donotedit/recolormodernpixels. Tjörninwasfreshwaterformedover1200yearsago;in1873 southernedgefacedVatnsmýriwetlandusedforpeatcutting. REPLACE modernpark-treegroupswithopenlowwetland grassandreeds,sparsehardyscrub,unmodifiedmarshybank. NOplantedHljomskalaparkorbandstand(after1923),CityHall1992,Hallgrimskirkja1986,airport1940s,modernbridges,separateartificialponds,paving,roads,benches,lights,signs,boats,buildingsorpeople. Oneortwo smallnaturallyseparatedducksonwater optional. TrueNEUTRALBLACKANDWHITElook, achromaticgraytonality,no sepia/coloredtint,delicate1870sphotographicgrainsoftcontrast,noborder. AuthenticIcelandicopenlowwetlandandrealwaterripples,nomountains inventedalongfarbank. Entirelynew photorealistic camera-style illustrativeimage1536x1024landscapePNG opaqueRGB sRGB. Naturallight, mutedauthenticcolors, irregularrealsurfacetextures,35mmcamera. NoHDR/CGI/painting/plastic skin/stampedrepeatingplants. Absolutelyno text,letters,digits,logos,trademarks,brandpatterns,signs,streetnames,housenumbers,posters,lettering,advertising,watermarks,borders,food,protectedart,statues,famousmodernarchitecturalworks.",
+      "sources": [
+        {
+          "url": "https://reykjavik.is/en/hljomskalagardurinn-tjornin-and-vatnsmyri",
+          "title": "ReykjavikCity: Tjornin,Hljomskalagardurinn,Vatnsmyri",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "Tjornin isoldsealagoon closedover1200yearsago; freshwaterlakeexisted1873.",
+            "Hljomskalinnbuilt1923;parkgraduallyexpandedwithtreeplanting afterthat.",
+            "Vatnsmyri wetlandspeatcutting;drained/cultivatedearly20c,airport1940s.1873viewrestoresmarshgrasses/reedsand openlowshore.",
+            "CityHall1992 excluded;modernbridges/embankments andallarchitecture excluded."
+          ],
+          "periodReference": "Museumphotolookup found1920Tjornin image, noexact1873southpondsameviewphoto located."
+        },
+        {
+          "url": "https://visitreykjavik.is/service/pond-and-hljomskalagardurinn-park",
+          "title": "VisitReykjavik: pondandHljomskalagardurinnpark",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "UrbanizationbeganTjorninnorthend18c; freshwaterlakeestablishedbefore1873.",
+            "Hljomskalinn1923; modernparkandcurrenttrees notretained in1873reconstruction."
+          ]
+        },
+        {
+          "url": "https://reykjavik.is/en/reykjavik-city-hall",
+          "title": "ReykjavikCity: CityHall",
+          "readAt": "2026-10-12T17:41:02.249785+00:00",
+          "readFacts": [
+            "CityHallinauguratedApril14,1992;excludedfromallnewimages."
+          ]
+        }
+      ],
+      "caption": "Tjörnin-lammen etelärannan näkymä vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "iceland-8-tjornin-1873-intro-v1",
+        "slot": 8,
+        "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:09:33.637741+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 pond, same5 south-pond water/bank viewpoint; current1923onward park trees replaced by undeveloped marsh/reeds, supported by two read city/tourism histories; native vegetation/waterfowl natural, no modern works.",
+        "detailCrops": [
+          "session-owner-review/slot8-wetland-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-8-tjornin-1873-intro-v1.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:09:48.464954+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+        "bytes": 2680163,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-8-tjornin-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+            "bytes": 2680163,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-8-tjornin-1873-intro-v1.png?verify=north-496e7e1191e5135b-1791828588464977000",
+            "http": 200,
+            "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+            "bytes": 2680163,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2680163
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "iceland",
+    "gameCityId": "islanti",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/sources.json"
+    ],
+    "sourceManifestSha256": "c00c9d93b24e8b8d9cfc936c1aafea248279ac1f608dab3c3d9c3428b14bdb16",
+    "assets": [
+      {
+        "id": "iceland-4-reykjavikin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vanhan asuinkadun puu- ja aaltopeltipinnat, kasvit ja katu näyttävät luonnollisilta. Kaksi pientä aikuista näkyy selin. Lähiovet ovat tyhjiä ilman osoitemerkkejä; tekstiä, numeroita, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta/seinästä, ihmisistä ja kasveista/taloista tarkastettu.",
+          "Pellin ruoste, maalipinnan kuluma, laudoitus ja kasvien oksien/lehtien vaihtelu ovat kameramaisia ilman leimakuviota.",
+          "Ihmiset näkyvät selin ilman tunnistettavia kasvoja. Tavalliset ovikahvat ilman tunnuksia; ei ruokaa, mainoksia tai näkyvää suojattua nykyarkkitehtuuria.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/4-door-wall.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/4-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/4-plants-house.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false,
+          "naturalAnatomyPass": null
+        },
+        "technicalEvidence": {
+          "bytes": 2613803,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "iceland-5-tjorninin-vesi-intro-v1",
+        "slot": 5,
+        "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Lammen ankat ovat anatomisesti luonnollisia: nokat, kaulat, vartalon mittasuhteet ja höyhenpinnat uskottavia. Ruohot, puusto ja veden aallot vaihtelevat luonnollisesti. Sama lammen suuntarakenne kuin slot8:ssa; ei kirjoitusta tai rakennelmia.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset molemmista ankoista, vastarannan puustosta ja lähiruohosta/vedestä tarkastettu.",
+          "Ankat ovat erillisiä, yksi pää ja luonnollinen vartalo kullakin, ilman ylimääräisiä osia tai muovisuutta. Höyhenpinnan kuvio vaihtelee luonnollisesti.",
+          "Ruohon terät, oksien haarat ja lehtiasennot epäsäännöllisiä ilman leimaa; veden heijastukset vastaavat pilvistä säätä.",
+          "Slot8:n kanssa lähiruoho vasemmalla/alhaalla, vesi keskellä/oikealla ja matala vastaranta ylhäällä. Ei ihmisiä, veneitä, rakennuksia, kylttejä tai logoja.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/5-ducks.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/5-far-shore.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/5-grass-water.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": true,
+          "anatomyCheckApplicable": true,
+          "naturalAnatomyPass": true
+        },
+        "technicalEvidence": {
+          "bytes": 2567172,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "iceland-6-reykjavikin-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivinen etualan aikuinen, luonnollinen iho ja hiukset sekä geneerinen nykymuotinen vaatetus sopivat juhlaan. Väkijoukko näkyy ylävartaloina ilman ruokaa tai jalkineita. Näkyvissä käsissä ei ilmeistä anatomista virhettä eikä vaatteissa tunnistettavaa brändikuviota.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, oikeanpuoleisesta nostetusta kädestä ja reunimmaisista vaatteista tarkastettu.",
+          "Ihon pisamat, tekstuuri, hampaat, korva ja hiukset ovat kameramaisia; ei muovisuutta. Taipunut käsi on uskottava ilman selkeää ylimääräistä osaa.",
+          "Vaatteet, pienet korut, olkahihnat ja neulepäähineet ovat geneerisiä ilman havaittavia logoja tai kirjoitusta. Epäterävä reunakuosi ei muodosta tunnistettavia brändimerkkejä.",
+          "Kaikki näkyvät henkilöt ovat aikuisia ja ylävartaloina tai muiden peittämiä. Ei ruokaa, juomia tai jalkineita.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/6-right-hand.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/6-right-clothes.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false,
+          "naturalAnatomyPass": null
+        },
+        "technicalEvidence": {
+          "bytes": 2070256,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "iceland-7-reykjavikin-iltavalot-intro-v1",
+        "slot": 7,
+        "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Iltakuvan puu-/peltijulkisivut, ovi, märkä päällyste ja lämpimät valot muodostavat uskottavan kameranäkymän. Kaksi pientä aikuista näkyy selin. Ei tekstiä, numeroita, logoja tai brändikuvioita havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähiovesta/seinästä, kävelijöistä ja märästä päällysteestä tarkastettu.",
+          "Ovi on tavallinen tyhjä puupaneeli kahvalla/lukolla, ilman postiluukkua, osoitelaattoja, nimimerkkejä tai tunnuksia.",
+          "Pellin, puun ja päällysteen kuluma vaihtelee; valojen heijastukset vastaavat lamppujen ja ikkunoiden sijaintia. Kävelijöiden kasvoja ei näy. Ei ruokaa tai mainoksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/7-door-wall.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/7-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/7-paving.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": false,
+          "anatomyCheckApplicable": false,
+          "naturalAnatomyPass": null
+        },
+        "technicalEvidence": {
+          "bytes": 2440580,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "iceland-8-tjornin-1873-intro-v1",
+        "slot": 8,
+        "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 kuva on näkyvästi neutraali mustavalkoinen ilman sepiaa. Suunta ja lammen sommittelu vastaavat slot5:tä, mutta myöhemmät puistopuut korvautuvat lähteiden mukaisella avoimella kosteikolla. Ankat ja luonnonpinnat ovat uskottavia; myöhemmät rakenteet puuttuvat.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset molemmista ankoista, vastarannan kosteikosta ja lähiruohosta/vedestä tarkastettu.",
+          "Slot5:n kanssa sama lammen katselusuunta: lähiruoho alhaalla/vasemmalla, vesi keskellä/oikealla ja matala vastaranta ylhäällä. Nykyiset korkeat puuryhmät poistettu, avoin heinä-/ruokoranta ja pieni pensaikko tilalla.",
+          "Ankkojen nokat, päät, kaulat ja vartalot ovat luonnollisia ilman ylimääräisiä osia. Ruokojen haarat ja veden aaltojen kuvio vaihtelevat ilman leimaa.",
+          "Reykjavík Cityn kosteikko-/puistohistoria ja VisitReykjavikin lampi-/puistolähde luettu tuottajan lähdepaketista. Ei1923jälkeistä puistoistutusta,1992kaupungintaloa,1986Hallgrímskirkjaa,1940-luvun lentokenttää, rakennuksia, moderneja siltoja, päällystystä, penkkejä tai sähkövaloja.",
+          "1920kuvakontekstia ei käsitellä1873-todisteena. Kuva on havainnollistava luonnonrantarekonstruktio; ei näkyvää sävytystä, kirjoitusta tai logoja. Rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/8-ducks.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/8-far-shore.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/iceland/crops/8-grass-water.png"
+        ],
+        "animalInspection": {
+          "animalsObserved": true,
+          "anatomyCheckApplicable": true,
+          "naturalAnatomyPass": true
+        },
+        "technicalEvidence": {
+          "bytes": 2680163,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://reykjavik.is/en/hljomskalagardurinn-tjornin-and-vatnsmyri",
+          "https://visitreykjavik.is/service/pond-and-hljomskalagardurinn-park",
+          "https://reykjavik.is/en/reykjavik-city-hall"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:24:22.748586+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/manifest.json",
+      "manifestSHA256": "c00c9d93b24e8b8d9cfc936c1aafea248279ac1f608dab3c3d9c3428b14bdb16",
+      "reviewedAssetIds": [
+        "iceland-4-reykjavikin-arki-intro-v1",
+        "iceland-5-tjorninin-vesi-intro-v1",
+        "iceland-6-reykjavikin-kesajuhla-intro-v1",
+        "iceland-7-reykjavikin-iltavalot-intro-v1",
+        "iceland-8-tjornin-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Historiallinen lampikuva on havainnollistava rekonstruktio, ei1873 rantaviivan tarkka mittaus.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "iceland",
+    "verifiedAt": "2026-10-12T18:25:36.308525+00:00",
+    "assets": [
+      {
+        "id": "iceland-4-reykjavikin-arki-intro-v1",
+        "slot": 4,
+        "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+        "bytes": 2613803,
+        "verifiedAt": "2026-10-12T18:25:35.011277+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-4-reykjavikin-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+            "bytes": 2613803,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-4-reykjavikin-arki-intro-v1.png?delivery-verify=9159f69c80aa513c-1791829535011272000",
+            "http": 200,
+            "sha256": "9159f69c80aa513c76d7b584588d768e41dda15f10e90e9cea06ff4a84e19b7f",
+            "bytes": 2613803,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "iceland-5-tjorninin-vesi-intro-v1",
+        "slot": 5,
+        "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+        "bytes": 2567172,
+        "verifiedAt": "2026-10-12T18:25:35.011619+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-5-tjorninin-vesi-intro-v1.png",
+            "http": 200,
+            "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+            "bytes": 2567172,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-5-tjorninin-vesi-intro-v1.png?delivery-verify=3418c12e480d7619-1791829535011616000",
+            "http": 200,
+            "sha256": "3418c12e480d7619eb774a622fe15ac025cea0b185e5f318053c985a534595da",
+            "bytes": 2567172,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "iceland-6-reykjavikin-kesajuhla-intro-v1",
+        "slot": 6,
+        "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+        "bytes": 2070256,
+        "verifiedAt": "2026-10-12T18:25:35.011802+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-6-reykjavikin-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+            "bytes": 2070256,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-6-reykjavikin-kesajuhla-intro-v1.png?delivery-verify=daa41461b0735f03-1791829535011800000",
+            "http": 200,
+            "sha256": "daa41461b0735f03e5538a0cca1d0150ee5fba7af8fff755398825a28449ae49",
+            "bytes": 2070256,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "iceland-7-reykjavikin-iltavalot-intro-v1",
+        "slot": 7,
+        "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+        "bytes": 2440580,
+        "verifiedAt": "2026-10-12T18:25:35.597764+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+            "bytes": 2440580,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png?delivery-verify=31c89af2005a9add-1791829535597756000",
+            "http": 200,
+            "sha256": "31c89af2005a9add81525eea8ffbc473360b46d19aaf5c3e0c68da0d3b3925da",
+            "bytes": 2440580,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "iceland-8-tjornin-1873-intro-v1",
+        "slot": 8,
+        "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+        "bytes": 2680163,
+        "verifiedAt": "2026-10-12T18:25:35.633871+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-8-tjornin-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+            "bytes": 2680163,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/iceland/20261012-full/iceland-8-tjornin-1873-intro-v1.png?delivery-verify=496e7e1191e5135b-1791829535633865000",
+            "http": 200,
+            "sha256": "496e7e1191e5135bb332cc83be0c5e722b4189ff35bce76c4f0265adb994da87",
+            "bytes": 2680163,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/iceland/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.978146+00:00"
+}

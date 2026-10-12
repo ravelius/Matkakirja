@@ -1,0 +1,901 @@
+{
+  "cityName": "Sisilia",
+  "gameCityId": "sisilia",
+  "mediaSlug": "sicily",
+  "status": "worker-produced-awaiting-root-QA-R2",
+  "complete": true,
+  "assets": [
+    {
+      "id": "sicily-4-marzamemi-arki-intro-v1",
+      "slot": 4,
+      "version": 1,
+      "cityName": "Sisilia",
+      "gameCityId": "sisilia",
+      "mediaSlug": "sicily",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-4-marzamemi-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-4-marzamemi-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png",
+      "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+      "bytes": 2784245,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Marzamemi, southeastern Sicily. Ordinary small stone courtyard at the old fishing village edge, sun-bleached low limestone houses and muted pale blue plain wooden doors, one small adult carrying coiled plain rope and walking away toward sea opening, another small adult20metres away seen from behind repairing an unbranded simple fishing net draped beside a small empty wooden boat on dry land. No fish or food. Eye-level35mm documentary view with salt-weathered irregular stone, morning diffuse Mediterranean light, modest unposed daily work. All faces distant/backturned. No churches, tuna-factory landmarks, decorated ceramics, commercial furniture or signs.",
+      "sources": [
+        {
+          "url": "https://www.visitsicily.info/en/marzamemi/",
+          "label": "Regione Sicilia official tourism – Marzamemi",
+          "readFacts": "Small fishing village near Noto with modest sunlit houses, narrow alleys, coastline and historic tuna nets1600; choose ordinary house and harbour activity, no food/fish processing."
+        }
+      ],
+      "caption": "Kalastajakylän arkea Marzamemissä Sisiliassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys+natiivikoko: ihmiset selin, ei näkyviä kasvoja, vene/nets tyhjiä ilman saalista/ruokaa, plain siniset ovet ja tavallinen kalkkikivikanta; ei merkkejä/numerokilpiä/tekstiä/logoja; aidon kameran materiaalit.",
+          "inspectedAt": "2026-10-12T17:44:42.086834+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and woodenboat,net,rope,stonewalls,plants,workers detail inspected. Contemporary ordinary fishingyard in old Marzamemi with two back-facing adults,plain generic clothing and no visiblefood. Irregular authentic materials,credible natural daylight. No text,numberplates,logos,brands or protected nameddesign observed.",
+          "limits": [
+            "Illustrative scene, not a surveyed location or actual event photograph."
+          ],
+          "reviewedAt": "2026-10-12T17:47:51.907239+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-4-marzamemi-arki-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-4-marzamemi-arki-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+        "bytes": 2784245,
+        "nativeSha256": "db6431d9a847f0ec8f25be44ce0926a3618dc29f538156efee2b037564b38dc6",
+        "decodedRGBSha256": "ad043352ebe9877ea786fc82b13125e338b43e4bf2c02888c03c817e62214d75",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:44:23.976769+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png?t=2a29ab347405da82",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png",
+        "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+        "bytes": 2784245,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+        "canonicalGetBytes": 2784245,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:56:04.657664+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sicily-5-calamosche-luonto-intro-v1",
+      "slot": 5,
+      "version": 1,
+      "cityName": "Sisilia",
+      "gameCityId": "sisilia",
+      "mediaSlug": "sicily",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-5-calamosche-luonto-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-5-calamosche-luonto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png",
+      "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+      "bytes": 2874145,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Calamosche cove near Noto, southeastern Sicily. Precise natural viewpoint on northern rocky promontory at its seaward end, facing south-southeast diagonally back across the cove: low pale limestone and irregular Mediterranean scrub at lower right foreground, curved200m pale sand beach farther right, low southern rocky promontory bounding middle-right, calm sea covers left two-thirds and opens to flat horizon at upper left. No buildings anywhere, no developed coastline. Dry soft morning light and restrained real sea blue-green, small irregular transparent ripples, one tiny adult distant near beach waterline, back turned, plain modern casual clothes. No boats, beach loungers, umbrellas, fences, signs, boardwalks or plastic. Real coast geology, low headlands not high dramatic cliffs.",
+      "sources": [
+        {
+          "url": "https://www.visitsicily.info/en/the-most-beautiful-beaches-in-sicily/",
+          "label": "Regione Sicilia official tourism – Calamosche",
+          "readFacts": "Calamosche near Noto in Vendicari is a200m natural cove between two rocky promontories, ravines/caves and Mediterranean scrub, calm clear sea. This natural geology is the only visible place subject; no exact19th-century individual vegetation claim.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.riserve-vendicari-cavagrande-pantalica.it/wp-content/uploads/2023/08/Decreti-Vendicari.pdf",
+          "label": "Regione Siciliana – decree establishing Vendicari reserve",
+          "readFacts": "1984 decree establishes Oasi Faunistica di Vendicari in Noto. Current formal reserve facilities/trails/boardwalks/signs are excluded from1873. Natural cove predating1873 is an explicit geological continuity inference, not a documented exact photo of the year.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.comune.noto.sr.it/it/vivere/spiaggia-della-tonnara-di-vendicari",
+          "label": "Comune di Noto – Vendicari coastal geography",
+          "readFacts": "Vendicari lies between Calamosche and SanLorenzo, low sloping sandy sea bottom, rocky coast north near15th-century tower and18th-century fishery. Both buildings excluded from Calamosche crop.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Calamoschen hiekkalahti ja kiviset niemet Sisiliassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys+natiivikoko: matalat kalkkikiviniemet ja kaareva hiekkaranta, vesi/kivet/kasvillisuus epäsäännöllistä; ei rakennuksia/kylttejä/brändejä/tekstiä, pieni kaukainen henkilö; luonnollinen nykykuva1873-pariksi.",
+          "inspectedAt": "2026-10-12T17:45:46.525950+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and irregular stone,scrub,sand,underwaterrocks,wavewater details inspected. Calamosche naturalcoveseen from northrock toward south-southeast,plausible low promontories and sandy pocketbeach,one tiny back-facing adult. Natural clearsea and daylight,no infrastructure,text,signs,brands or protectedwork.",
+          "limits": [
+            "Illustrative scene, not a surveyed location or actual event photograph."
+          ],
+          "reviewedAt": "2026-10-12T17:47:52.011979+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-5-calamosche-luonto-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-5-calamosche-luonto-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+        "bytes": 2874145,
+        "nativeSha256": "487fa631e42dba3bdccd6b9a8c4ce22f72ad94688a21e714973d4bd9e786fd00",
+        "decodedRGBSha256": "5daf754c51f5c1b5e17beef25ab9f88015f079639a55d3fa3f6d99402b114884",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:45:24.686943+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png?t=302ff2037aed03e0",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png",
+        "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+        "bytes": 2874145,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+        "canonicalGetBytes": 2874145,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:56:06.653377+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sicily-6-marzamemi-juhla-intro-v1",
+      "slot": 6,
+      "version": 1,
+      "cityName": "Sisilia",
+      "gameCityId": "sisilia",
+      "mediaSlug": "sicily",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-6-marzamemi-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-6-marzamemi-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png",
+      "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+      "bytes": 1982723,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Marzamemi Sicily, informal lively summer music gathering at ordinary stone village courtyard by the coast. One fictional26-year-old Sicilian Italian woman in close foreground laughing naturally, medium dark curly hair loose, generic plain terracotta-colour sleeveless top and simple unbranded earrings. Local Italian young adults behind smiling and clapping, generic contemporary solid-colour shirts, modest low white stone houses and a hint of calm sea blurred background. Candid mid-evening natural daylight, real pores/hair and varied faces. ALL people framed upper torso only, bottom edge entirely occupied by upper torsos, no legs or footwear anywhere. No food, drinks, flags, logos, branded patterns, concert screens, named performers or text.",
+      "sources": [
+        {
+          "url": "https://www.visitsicily.info/en/marzamemi/",
+          "label": "Regione Sicilia official tourism – Marzamemi",
+          "readFacts": "Small fishing village near Noto with modest sunlit houses, narrow alleys, coastline and historic tuna nets1600; choose ordinary house and harbour activity, no food/fish processing."
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen kesäilta Marzamemissä Sisiliassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys+natiivikoko: fiktiivinen nuori aikuinen etualalla, iloinen rannikon aikuisten seurue, tavalliset geneeriset modernit asut; kaikki jalkineet poissa. Ei logoja/tekstiä/kylttejä/ruokaa; kameran näköiset iho/hiukset/valot.",
+          "inspectedAt": "2026-10-12T17:48:05.354165+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and clothing,jewellery,hands,skin,backdrop inspected. Fictional adult Sicilian woman amid cheerful adult seaside courtyard gathering,plain generic warmweather clothing,all footwear excluded by crop/occlusion. No food,text,signs,addressnumbers,brands,logos or protecteddesign. Natural eveninglight,skin,hair,stone.",
+          "limits": [
+            "Illustrative reconstruction, not an actual event photo or measured architecture survey."
+          ],
+          "reviewedAt": "2026-10-12T17:49:56.344295+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-6-marzamemi-juhla-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-6-marzamemi-juhla-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+        "bytes": 1982723,
+        "nativeSha256": "113155cd18681d73c64c98b7ed108e77dfc508370b47da414b80bddb31d33c82",
+        "decodedRGBSha256": "7f333304c48164c359009806c37ef30134a26d8ec775d97e04f324d7fc80e9f3",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:47:47.162068+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png?t=d115f8aa63861b85",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png",
+        "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+        "bytes": 1982723,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+        "canonicalGetBytes": 1982723,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:56:08.069190+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sicily-7-marzamemi-satamailta-intro-v2",
+      "slot": 7,
+      "version": 2,
+      "cityName": "Sisilia",
+      "gameCityId": "sisilia",
+      "mediaSlug": "sicily",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-7-marzamemi-satamailta-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-7-marzamemi-satamailta-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png",
+      "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+      "bytes": 2149098,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, natural restrained colour, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Present-day Marzamemi Sicily, quiet edge of an ordinary small fishing harbour at blue hour: two entirely plain unmarked wooden rowboats, different sizes and natural faded blue/brown colours tied alongside a short old stone quay; no names or registration letters/numbers on hulls. Low modest pale limestone fishermen’s houses at far right, a few warm upper windows and modest unbranded lantern light, darkening calm sea stretching left, irregular faint warm reflections. Eye-level35mm camera diagonal across moored boats, one very small adult distant walking away along quay; no facing people. No church, factory chimney, elaborate modern yacht marina, signs, logos, names, numbers, fishing catch or food. Real unpolished photograph, natural low-light grain. Critical: BOTH boat hulls are completely blank and unmarked EVERYWHERE, no registration marks, no vessel names, no symbol-like scratches resembling writing, no numbers near the bow; no motors or engine cowls and no brand details. Show the two simple rowboats from stern-quarter, wooden hulls only, no need for bow-facing registration surfaces. All distant objects remain unmarked too. Generate an entirely new independent scene, not an edit/recolour of any previous image.",
+      "sources": [
+        {
+          "url": "https://www.visitsicily.info/en/marzamemi/",
+          "label": "Regione Sicilia official tourism – Marzamemi",
+          "readFacts": "Small fishing village near Noto with modest sunlit houses, narrow alleys, coastline and historic tuna nets1600; choose ordinary house and harbour activity, no food/fish processing."
+        }
+      ],
+      "caption": "Pienen kalasataman iltavalot Marzamemissä Sisiliassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "V2 koko kehys+natiivikoko: kaksi erilaista puusoutuvenettä täysin vailla nimiä/numeroita/tekstiä/logoa, ei moottoreita; rannikon iltavalo ja pieni selin näkyvä kävelijä, kaikki materiaalit kameran näköisiä.",
+          "inspectedAt": "2026-10-12T17:50:49.467318+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and boathulls/transoms,rope,quay,doors,windowwalls inspected. Two plain unmarked worn woodenboats,small back-facing walker,quiet oldharbour houses with modest warmpracticallight. No text,registrationnumbers,brandmarks,logos,signs or artworks observed. Irregular realwood/rope/water and restrained duskcamera rendering.",
+          "reviewedAt": "2026-10-12T17:51:50.494263+00:00"
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-7-marzamemi-satamailta-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-7-marzamemi-satamailta-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+        "bytes": 2149098,
+        "nativeSha256": "a087bb76cb4cae0e3a85ed2ea2274ec28187f0aef46e7828b5a150311471d62c",
+        "decodedRGBSha256": "3d3121ec75072628ae90cb764acc513548392f66350ea28d5b88f18db28effca",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:50:30.689977+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png?t=cd7d645c47fcad80",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png",
+        "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+        "bytes": 2149098,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+        "canonicalGetBytes": 2149098,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:56:10.372789+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sicily-8-calamosche-1873-intro-v1",
+      "slot": 8,
+      "version": 1,
+      "cityName": "Sisilia",
+      "gameCityId": "sisilia",
+      "mediaSlug": "sicily",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-8-calamosche-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-8-calamosche-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png",
+      "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+      "bytes": 2683351,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city-arrival illustration. Generate one completely new original image, landscape exactly 1536x1024 pixels, opaque RGB sRGB PNG. Real full-frame camera photograph appearance, candid documentary travel image, 35mm lens, native neutral black-and-white monochrome, no sepia, no colour tint, grayscale appearance, soft believable light, irregular real stone, plaster, foliage and water textures. No HDR, CGI, painted effects, plastic skin, cloned trees or embossed organic patterns. Absolutely no text, letters, numbers, signs, logos, brands, watermarks, borders or frames. No modern named design architecture, contemporary artworks, decorative murals, famous foreground landmarks or food.  All walls completely unmarked: no address-number tiles, number plaques, street-name plates, intercom labels, traffic signs, doorbell writing or even tiny distant lettering. Exactly year1873, natural Calamosche cove near Noto, Sicily. Same fixed camera viewpoint as slot5: north rocky promontory at its seaward end, facing south-southeast diagonally across cove. Low pale limestone and irregular Mediterranean scrub at lower right foreground, curved200m sand beach farther right, low southern limestone promontory bounds middle-right; calm sea occupies left two-thirds and flat sea horizon upper left. No buildings of any age in this crop. Historical plausible reconstruction based on natural geology continuity; not an archival photo. ONE very small distant adult walking away by beach waterline in dark plain nineteenth-century coat and simple hat, face invisible. No boats, loungers, beach umbrellas, paths, boardwalks, modern fences, signs, lamps, electricity, plastic, concrete or developed coast. Low real rocky headlands, soft neutral daylight, gentle photographic grain and period softness. Entire image visibly neutral grayscale without warm or cool tone.",
+      "sources": [
+        {
+          "url": "https://www.visitsicily.info/en/the-most-beautiful-beaches-in-sicily/",
+          "label": "Regione Sicilia official tourism – Calamosche",
+          "readFacts": "Calamosche near Noto in Vendicari is a200m natural cove between two rocky promontories, ravines/caves and Mediterranean scrub, calm clear sea. This natural geology is the only visible place subject; no exact19th-century individual vegetation claim.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.riserve-vendicari-cavagrande-pantalica.it/wp-content/uploads/2023/08/Decreti-Vendicari.pdf",
+          "label": "Regione Siciliana – decree establishing Vendicari reserve",
+          "readFacts": "1984 decree establishes Oasi Faunistica di Vendicari in Noto. Current formal reserve facilities/trails/boardwalks/signs are excluded from1873. Natural cove predating1873 is an explicit geological continuity inference, not a documented exact photo of the year.",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.comune.noto.sr.it/it/vivere/spiaggia-della-tonnara-di-vendicari",
+          "label": "Comune di Noto – Vendicari coastal geography",
+          "readFacts": "Vendicari lies between Calamosche and SanLorenzo, low sloping sandy sea bottom, rocky coast north near15th-century tower and18th-century fishery. Both buildings excluded from Calamosche crop.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Calamoschen luonnonranta Sisiliassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "workerFullFrameInspected": true,
+          "workerNativeDetailsInspected": true,
+          "workerResult": "pass",
+          "workerNotes": "Koko kehys ja natiivikoko: visuaalisesti neutraali mustavalkoinen, sama matalan pohjoisen niemen katselusuunta/meren ja hiekkarannan sommittelu kuin5; pieni1873-asuun pukeutunut ihminen selin, ei rakennuksia/myöhempää infraa/kylttejä/logoja. Geologinen jatkuvuus on lähteisiin kirjattu päätelmä.",
+          "inspectedAt": "2026-10-12T17:52:31.901826+00:00",
+          "rootQA": "pending",
+          "ownerAcceptance": "pending"
+        },
+        "sessionOwner": {
+          "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and rock/scrub/beach/water/periodadult detail inspected. Neutralblack/white no visible tint. Same northpromontory south-southeast coveview as modern5,sea left and curving beachright. Tiny back-facing periodadult; no modern reservefacility,paths,signs,buildings,boat,vehicle,light or text/logo. Naturalgeology continuity is explicitly inferred from three official geography/history sources.",
+          "limits": [
+            "Illustrative view; exact natural contours and individual vegetation are not surveyed."
+          ],
+          "reviewedAt": "2026-10-12T17:56:02.593060+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5
+        }
+      },
+      "technicalQA": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-8-calamosche-1873-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-8-calamosche-1873-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+        "bytes": 2683351,
+        "nativeSha256": "a22dfdcb4a4d7005637d7fcce256f99aab718df2f100d90dcc68f21312e5b077",
+        "decodedRGBSha256": "f7a075145036c7f7c300115843c4ac4e9b4b2eeac63c5d81a17130370ff4fbac",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:51:55.350206+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png?t=d9536408428e9246",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png",
+        "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+        "bytes": 2683351,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+        "canonicalGetBytes": 2683351,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:56:11.967622+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "rejectedCandidates": [
+    {
+      "slot": 7,
+      "version": 1,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/sicily-7-marzamemi-satamailta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/native/sicily-7-marzamemi-satamailta-intro-v1.png",
+      "reason": "Natiivicrop qa/slot7-boat-side-native.png vahvistaa kolmannen veneen vaalean keulan sivulla mustia rekisteri-/kirjainmerkkejä. Yksi tarpeellinen whole-new v2; v1 säilyy.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/prompts/7-marzamemi-satamailta-v1.txt"
+    }
+  ],
+  "actualCalls": 6,
+  "expectedSlots": 5,
+  "updatedAt": "2026-10-12T17:52:31.992024+00:00",
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:56:11.984863+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "deliveryQAEvidence": {
+    "mediaSlug": "sicily",
+    "gameCityId": "sisilia",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/brief.json",
+      "https://www.visitsicily.info/en/the-most-beautiful-beaches-in-sicily/",
+      "https://www.comune.noto.sr.it/it/vivere/spiaggia-della-tonnara-di-vendicari",
+      "https://www.riserve-vendicari-cavagrande-pantalica.it/wp-content/uploads/2023/08/Decreti-Vendicari.pdf"
+    ],
+    "assets": [
+      {
+        "id": "sicily-4-marzamemi-arki-intro-v1",
+        "slot": 4,
+        "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen kalastajakylän arki, aikuiset selin, merkitsemättömät veneet ja rakennukset.",
+        "observations": [
+          "Fotorealistinen tavallinen Marzamemin kalastajakylän asuinmiljöö, yksi selin verkkoa käsittelevä aikuinen ja toinen selin köyttä kantava aikuinen. Kasvot erottumattomat; näkyvät kädet ja mittasuhteet uskottavia.",
+          "Veneen runko, kalastusverkko, köydet, ovet, kalkkikivi, puunkuori ja lehdet tarkastettu natiivikokoisina. Ei kirjoitusta, numeroa, logoa, kalasaalista tai ruokaa. Luonnolliset epäsäännölliset materiaalit, koherentti valo ja perspektiivi.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot4-boat-net-back-person.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot4-doors-tree-rope-person.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "sicily-5-calamosche-luonto-intro-v1",
+        "slot": 5,
+        "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: luonnollinen matalakallioinen lahti, sama yleinen katselusuunta kuin1873-parissa, ei tekstiä tai turismirakenteita.",
+        "observations": [
+          "Fotorealistinen Calamoschen luonnonlahti: meri vasemmalla, kaareva hiekkaranta oikealla, matala kallioniemi ja etualan epäsäännöllinen kalkkikivi sekä välimerellinen pensaikko.",
+          "Yksi hyvin pieni kaukainen henkilö rannassa selin. Ei tekstiä, numeroita, logoja, rakennuksia, veneitä, polkurakenteita, ranta-aurinkotuoleja tai turismivarusteita. Vesi ja kalliot luonnollisia, ei muovisuutta tai leimattua orgaanista pintaa.",
+          "Moderni/historiallinen pari säilyttää saman yleisen pohjoisniemen meripään SSE-katselusuunnan: meri vasemmalla, hiekkaranta oikealla, matala eteläinen kallioniemi taustalla ja etualan kalliot oikealla. Kyse havainnollistavasta paikannäkymästä, ei pikselintarkasta mitatusta topografiasta.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot5-coast-walker.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot5-rock-scrub-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "sicily-6-marzamemi-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fiktiivinen aikuinen nykyajan kesäillan kokoontumisessa, luonnolliset kasvot ja kädet, geneeriset vaatteet; ei ruokaa, jalkineita tai brändiä.",
+        "observations": [
+          "Fiktiivinen aikuinen etualalla Marzamemin nykyajan kesäillan musiikkikokoontumisessa. Luonnollinen iho, silmät, hampaat ja kiharat hiukset; taustan taputtavat kädet ja kasvot tarkastettu natiivikokoisina ilman selvää anatomista virhettä.",
+          "Geneerinen yksivärinen terrakotanvärinen toppi ja tavalliset korvakorut; taustan tavalliset muodikkaat nykyvaatteet sekä pieni kitara ilman tunnistettavaa brändimerkkiä. Ei kirjoitusta, logoja tai brändikuviota.",
+          "Kaikkien henkilöiden jalat ja jalkineet poissa näkyvistä; ei ruokaa tai juomia. Luonnonvalo ja ihon/kankaan materiaalit koherentteja. Tapahtuma on kuvitteellinen, ei nimetty tai dokumentoitu festivaali.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot6-face-clothes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot6-right-hands.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot6-left-hands.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "sicily-7-marzamemi-satamailta-intro-v2",
+        "slot": 7,
+        "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty valittu v2: molemmat veneet merkitsemättömät, uskottava satama ja koherentti iltavalo.",
+        "observations": [
+          "Valittu v2: fotorealistinen pieni satama, kaksi kulunutta puista soutuvenettä, vanha kivinen laituri ja pienet merkitsemättömät asuintalot. Yksi pieni aikuinen selin kauempana.",
+          "Molempien veneiden koko näkyvä runko, sisätilat, köydet, taustan seinät ja henkilöt tarkastettu natiivikokoisina. Ei nimiä, rekisterimerkkejä, numeroita, logoja, moottoreita tai brändiä. Kulunut maali on epäsäännöllistä materiaalin kulumista, ei erottuvia kirjoitusmerkkejä.",
+          "Veden epäsäännölliset heijastukset, kivi/puu ja hämärän valo koherentteja; ei muovisuutta tai leimattua pintarakennetta.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot7-foreground-hull-ropes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot7-back-hull-houses.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "sicily-8-calamosche-1873-intro-v1",
+        "slot": 8,
+        "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: neutraali mustavalkoinen1873-luonnonrantarekonstruktio, sama yleinen katselusuunta ja lähteisiin perustuvat period exclusions täyttyvät.",
+        "observations": [
+          "Visuaalisesti neutraali mustavalkoinen1873-kuva ilman seepiaa tai muuta näkyvää värisävyä. Fotorealistinen vesi, kalkkikivi ja välimerellinen pensaikko; ei muovisuutta tai leimattua luonnon pintaa.",
+          "Sama yleinen SSE-katselusuunta ja lahden sommittelu kuin modernissa slot5:ssä. Yksi hyvin pieni rannassa selin kulkeva aikuinen tummassa takissa ja hatussa, kasvot erottumattomat ja aikakaudelle uskottava vaatetus.",
+          "Brief ja sen historialliset lähteet luettu. Noton kunnan rannikkokuvaus luettu suoraan verkosta; VisitSicilyn alueellisen tourism-portaalin Calamosche-teksti luettu hakutyökalun indeksoimana suorasta avauksesta tulleen timeoutin jälkeen. Vendicarin1984-perustamisasetus luettu PDF-tekstistä.",
+          "Lähteet tukevat matalan luonnonlahden ja kahden kallioniemen maantieteellistä asetelmaa sekä nykyisen reservaatin myöhempää perustamista. Lahden olemassaolo1873 on briefissä ilmaistu geologisen jatkuvuuden tulkinnaksi; tarkkaa tämän paikan1873-aikakausikuvaa ei löytynyt, eikä yksittäisille kasveille tai pintatekstuureille tehdä aikakausiväitettä.",
+          "Period exclusions tarkastettu: ei rakennuksia minkään aikakauden, moderneja polkuja, boardwalkeja, aitoja, opasteita, valaisimia, sähköä, muovia, betonia, ranta-aurinkotuoleja, veneitä tai kehitettyä rannikkoa. Myös läheisen muun Vendicarin rannikon historiallinen torni ja tonnara jäävät pois.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot8-headland-beach-walker.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/sicily/crops/slot8-rock-scrub-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T18:14:44.297325+00:00",
+    "sourceManifestSha256": "f6646679dbc3d2d9c36d05c77eeb6b9930b0a7572e3d5cb57f6daa5387936de9"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "sicily",
+    "verifiedAt": "2026-10-12T18:17:11.891886+00:00",
+    "assets": [
+      {
+        "id": "sicily-4-marzamemi-arki-intro-v1",
+        "slot": 4,
+        "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+        "bytes": 2784245,
+        "verifiedAt": "2026-10-12T18:17:09.612978+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+            "bytes": 2784245,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png?delivery-verify=2a29ab347405da82-1791829029612972000",
+            "http": 200,
+            "sha256": "2a29ab347405da82218ab9779e15e15687e63df90fcc1fa2e40919cc6f76e80b",
+            "bytes": 2784245,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sicily-5-calamosche-luonto-intro-v1",
+        "slot": 5,
+        "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+        "bytes": 2874145,
+        "verifiedAt": "2026-10-12T18:17:09.622302+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png",
+            "http": 200,
+            "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+            "bytes": 2874145,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png?delivery-verify=302ff2037aed03e0-1791829029622296000",
+            "http": 200,
+            "sha256": "302ff2037aed03e05e034c76d2ef0546aecd204b62d9beea921be1805e66ed70",
+            "bytes": 2874145,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sicily-6-marzamemi-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+        "bytes": 1982723,
+        "verifiedAt": "2026-10-12T18:17:09.637161+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+            "bytes": 1982723,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-6-marzamemi-juhla-intro-v1.png?delivery-verify=d115f8aa63861b85-1791829029637138000",
+            "http": 200,
+            "sha256": "d115f8aa63861b85ddd20acb9a77a36658734c1346a49d2aa098e9594c30e61c",
+            "bytes": 1982723,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sicily-7-marzamemi-satamailta-intro-v2",
+        "slot": 7,
+        "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+        "bytes": 2149098,
+        "verifiedAt": "2026-10-12T18:17:10.653637+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png",
+            "http": 200,
+            "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+            "bytes": 2149098,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png?delivery-verify=cd7d645c47fcad80-1791829030653629000",
+            "http": 200,
+            "sha256": "cd7d645c47fcad801cb44cc0560216af8a2cffbea8858ee60505ada227826685",
+            "bytes": 2149098,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sicily-8-calamosche-1873-intro-v1",
+        "slot": 8,
+        "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+        "bytes": 2683351,
+        "verifiedAt": "2026-10-12T18:17:10.790612+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+            "bytes": 2683351,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sicily/20261012-full/sicily-8-calamosche-1873-intro-v1.png?delivery-verify=d9536408428e9246-1791829030790602000",
+            "http": 200,
+            "sha256": "d9536408428e924667733c6440a9c31d1dc004a76ee648a15cbed7e9e6e9bc5f",
+            "bytes": 2683351,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/sicily/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.518818+00:00"
+}

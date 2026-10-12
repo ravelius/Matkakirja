@@ -1,0 +1,970 @@
+{
+  "cityName": "Sofia",
+  "gameCityId": "sofia",
+  "mediaSlug": "sofia",
+  "createdAt": "2026-10-12T18:01:34.882989+00:00",
+  "status": "awaitingSessionOwnerQA",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "generationRequestsIssued": 6,
+  "assets": [
+    {
+      "id": "sofia-intro-4",
+      "slot": 4,
+      "cityName": "Sofia",
+      "gameCityId": "sofia",
+      "mediaSlug": "sofia",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png",
+      "generationPrompt": "Generate ONE completely new photorealistic-natural fictional illustrative city-intro image1536x1024 landscape opaque RGB sRGB. Real camera appearance, natural light, quiet authentic muted colours, believable perspective and unique irregular surfaces/nature. ZERO text, numbers, letters, addresses, labels, signs, posters, branding, logos, brand stripes/patterns, watermarks, frames, protected artwork or named contemporary architect design. No HDR, CGI, painting, cinematic colour, plastic skin or stamped/cloned organic textures. No food. People small/far/rear-facing except invented foreground adult in celebration6. Sofia today: everyday residents collecting mineral spring water at a plain anonymous utilitarian public water point. A modest unornamented pale stone low wall with three plain metal spouts and a simple trough, no artistic design, positioned in right midground under sparse irregular tree shade; ordinary paving in foreground. Three small adults at least10meters away seen from behind/side-away with faces fully hidden, plain unbranded clothes, filling completely clear unlabelled water containers; no bottle labels/numbers/logos at all. Camera broad35mm eye-level from across quiet square, soft morning light. Background only tree foliage and anonymous plain old wall, no bath building, mosque, monuments, plaques or signs. Functional everyday water collection, not food photograph.",
+      "sources": [
+        {
+          "url": "https://www.sofia.bg/en/web/sofia-municipality/w/the-mineral-springs",
+          "publisher": "Sofia Municipality",
+          "readFacts": [
+            "Mineral springs are long-established city feature; early20th-century bath/fountain-square redevelopment; today more than40 springs in basin."
+          ],
+          "scope": "Ordinary anonymous functional spouts only; Central Baths and Banya Bashi hero excluded.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Veden hakijoita Sofian lähdehanoilla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: three small rear-facing residents filling clear unlabelled containers; no text/logos/plaques, simple anonymous functional spouts, natural stone and shade.",
+          "reviewedAt": "2026-10-12T17:54:21.578487+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:57:35.061642+00:00",
+          "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: three residents from behind filling unlabelled containers at plain functional spring spouts. No plaques, labels, logos, address numerals or recognizable faces. Irregular stone, leaves and subdued daylight; daily-life subject.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:35.480593+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+        "bytes": 3050429,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+            "bytes": 3050429,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png?t=dd278988cfc0c433",
+            "http": 200,
+            "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+            "bytes": 3050429,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sofia-4-lahdevesi-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/native/sofia-4-lahdevesi-arki-intro-v1-native.png",
+      "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+      "bytes": 3050429,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "sofia-intro-5",
+      "slot": 5,
+      "cityName": "Sofia",
+      "gameCityId": "sofia",
+      "mediaSlug": "sofia",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png",
+      "generationPrompt": "Generate ONE completely new photorealistic-natural fictional illustrative city-intro image1536x1024 landscape opaque RGB sRGB. Real camera appearance, natural light, quiet authentic muted colours, believable perspective and unique irregular surfaces/nature. ZERO text, numbers, letters, addresses, labels, signs, posters, branding, logos, brand stripes/patterns, watermarks, frames, protected artwork or named contemporary architect design. No HDR, CGI, painting, cinematic colour, plastic skin or stamped/cloned organic textures. No food. People small/far/rear-facing except invented foreground adult in celebration6. Natural Boyana Waterfall in Vitosha above Sofia today, viewed from its rocky base facing south/upstream. Landscape35mm photograph,1.6m eye height, narrow white water stream slightly right of center at x60percent descends from upper rock notch y12percent down steep dark grey irregular plutonic bedrock face into small rocky pool near bottom-center. Left midground a projecting irregular rocky ledge, natural deciduous forest branches and muted green leaves frame far left/right margins. No people. Natural actual waterfall scale about15m; jagged sloping rock face rather than tropical jungle or colossal cascade. Short1/125second-like shutter, individual spray/flow detail, no silky artificial long-exposure effect. Soft overcast daylight, believable wet stone/moss, restrained grey-green colours. NO trail markings, painted stripes, paths, railings, bridges, signs, buildings, wires, pools or sculptures. Same camera direction and main bedrock/watercourse anchors reused in1873.",
+      "sources": [
+        {
+          "url": "https://park-vitosha.org/wp-content/uploads/2016/02/spisanie-ENG_July-2012.pdf",
+          "publisher": "Vitosha Nature Park official magazine2012",
+          "readFacts": [
+            "Park declared1934, administration1935; modern visitor infrastructure not assumed in1873.",
+            "Geology section: Vitosha formation about80million years; Boyana Waterfall in plutonic rocks. Therefore natural bedrock landscape predates1873 (geological inference).",
+            "Page5 contains archival photograph captioned1925 Boyana Waterfall; image extracted and viewed, narrow falls over irregular steep rock face, rocky left ledge."
+          ],
+          "localReference": "archive-page5-3-Im3.jpg",
+          "localText": "vitosha-magazine.txt",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.visitsofia.bg/en/routes-sofia/9?view=route",
+          "publisher": "Sofia Tourism Administration",
+          "readFacts": [
+            "Indexed English hiking route leads from Boyana Church southwest/uphill to forest trail and waterfall; signs/painted trail marks are modern route features excluded from1873.",
+            "Waterfall is natural Vitosha setting, not urban water feature."
+          ],
+          "readMethod": "Indexed English hiking-route passage read; current returned page contains combined routes.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Boyanan vesiputous Vitosalla Sofian yllä. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: believable narrow waterfall over rugged plutonic bedrock, photographic spray/flow and irregular forest vegetation, no visitor infrastructure/text/marks; similar natural profile to viewed1925 reference.",
+          "reviewedAt": "2026-10-12T17:57:41.111897+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:01:00.945671+00:00",
+          "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: narrow Boyana waterfall over uneven dark bedrock in irregular forest. No people, infrastructure, text/logos or repeated texture stamps. Natural available forest light and plausible water motion;1925reference and modern park source support scene.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:38.331361+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+        "bytes": 3363676,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png",
+            "http": 200,
+            "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+            "bytes": 3363676,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png?t=21e3d5a7c0cf20ec",
+            "http": 200,
+            "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+            "bytes": 3363676,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sofia-5-boyana-putous-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/native/sofia-5-boyana-putous-intro-v1-native.png",
+      "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+      "bytes": 3363676,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "sofia-intro-6",
+      "slot": 6,
+      "cityName": "Sofia",
+      "gameCityId": "sofia",
+      "mediaSlug": "sofia",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png",
+      "generationPrompt": "Generate ONE completely new photorealistic-natural fictional illustrative city-intro image1536x1024 landscape opaque RGB sRGB. Real camera appearance, natural light, quiet authentic muted colours, believable perspective and unique irregular surfaces/nature. ZERO text, numbers, letters, addresses, labels, signs, posters, branding, logos, brand stripes/patterns, watermarks, frames, protected artwork or named contemporary architect design. No HDR, CGI, painting, cinematic colour, plastic skin or stamped/cloned organic textures. No food. People small/far/rear-facing except invented foreground adult in celebration6. Contemporary informal happy young-adult gathering in Sofia City Garden, local Bulgarian adults aged22-30 enjoying a small relaxed outdoor summer music event, one invented adult man at left foreground with dark short hair, natural unretouched skin and broad spontaneous grin, plain charcoal lightweight jacket over plain rust-red t-shirt, fashionable generic clothing without logos/patterns. Friends behind him smiling and clapping casually, varied typical local Bulgarian young-adult appearance in muted solid-colour current clothes. Background only leafy trees and a few modest out-of-focus plain old windows, no theatre facades, fountains, sculptures, stage, instruments, monuments or artistic playground. Tight upper-body photo framing; every person chest-up/shoulders, every foot and shoe completely excluded from entire frame. No food, drinks, text, banners, logos or numbers. Soft natural late-afternoon light,35mm candid optics, authentic relaxed energy, not staged row.",
+      "sources": [
+        {
+          "url": "https://www.visitsofia.bg/bg/gr/index.php?Itemid=354&lang=bg&layer=50000&obektid=1461&option=com_cityinfrastructure&view=objectdetails",
+          "publisher": "Sofia Tourism Administration",
+          "readFacts": [
+            "City Garden is popular among young people; festivals and festivities occur there.",
+            "Modern fountain sculpture/playground artistic designs are excluded from image."
+          ],
+          "readMethod": "Source search-index full text read",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Nuorten aikuisten kesäilta Sofian kaupunkipuutarhassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: unposed smiling invented adult crowd, genuine-looking skin/hair, generic solid clothes, natural clapping hands, zero feet/shoes/text/logos/food or protected background art.",
+          "reviewedAt": "2026-10-12T17:58:51.381445+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:01:42.671032+00:00",
+          "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: cheering fictional adult man foreground with joyful young-adult crowd, plain fashionable shirts, no text/logos/brand motifs/food. All footwear excluded, natural faces and clapping hands, ordinary old park surroundings.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:41.568517+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+        "bytes": 2167587,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+            "bytes": 2167587,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png?t=f56728da78269787",
+            "http": 200,
+            "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+            "bytes": 2167587,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sofia-6-kaupunkipuutarha-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/native/sofia-6-kaupunkipuutarha-juhla-intro-v1-native.png",
+      "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+      "bytes": 2167587,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "sofia-intro-7",
+      "slot": 7,
+      "cityName": "Sofia",
+      "gameCityId": "sofia",
+      "mediaSlug": "sofia",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png",
+      "generationPrompt": "Generate ONE completely new photorealistic-natural fictional illustrative city-intro image1536x1024 landscape opaque RGB sRGB. Real camera appearance, natural light, quiet authentic muted colours, believable perspective and unique irregular surfaces/nature. ZERO text, numbers, letters, addresses, labels, signs, posters, branding, logos, brand stripes/patterns, watermarks, frames, protected artwork or named contemporary architect design. No HDR, CGI, painting, cinematic colour, plastic skin or stamped/cloned organic textures. No food. People small/far/rear-facing except invented foreground adult in celebration6. Sofia today at blue hour, a quiet residential corner in older Oborishte: ordinary anonymous prewar one/two-storey houses with muted cream and pale green stucco, low tile roofs, a modest plain iron garden fence and uneven tree foliage, warm window light. Wide diagonal street view from opposite pavement,50mm camera, naturally darkening blue evening with soft available light, no dramatic cinematic colour. One small adult far away from behind, face fully hidden. Composition avoids all entrance doors and gate nameplates: only blank walls/window sides, no addresses, signage, plaques, posters, mailbox lettering, cars or license plates, shops or advertising. No monuments or named architect buildings, no recognizable modern works. Texture coherent and ordinary, no HDR glow.",
+      "sources": [
+        {
+          "url": "https://smart-cities-marketplace.ec.europa.eu/projects-and-sites/projects/staccato/staccato-site-sofia",
+          "publisher": "European Commission DG Energy",
+          "readFacts": [
+            "Oborishte is older Sofia district with prewar detached houses and multifamily blocks; depiction uses ordinary anonymous prewar houses."
+          ],
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Oborišten asuinalueen iltavaloa Sofiassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: restrained dusk houses/trees, small back-facing walker, no number plaques/signs/logos on doors or fence; believable ordinary prewar residential fabric.",
+          "reviewedAt": "2026-10-12T18:00:27.410713+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:07:32.275072+00:00",
+          "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: old anonymous Oborishte houses, blank facades/gates and small rear-facing walker, ordinary window light. No numbers, signage, logos, cars or protected works; natural subdued dusk.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:44.917096+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+        "bytes": 2873764,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+            "bytes": 2873764,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png?t=919bd8c9ba47f685",
+            "http": 200,
+            "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+            "bytes": 2873764,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sofia-7-oborishte-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/native/sofia-7-oborishte-ilta-intro-v1-native.png",
+      "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+      "bytes": 2873764,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    },
+    {
+      "id": "sofia-intro-8",
+      "slot": 8,
+      "attempt": 2,
+      "cityName": "Sofia",
+      "gameCityId": "sofia",
+      "mediaSlug": "sofia",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png",
+      "generationPrompt": "STRICT NEUTRAL BLACK AND WHITE PHOTOGRAPH. True colourless monochrome only: black, neutral grey, white; RGB R=G=B at every pixel. NO yellow, brown, sepia, warm tone, green, blue or ANY colour tint. No antique paper stain, no aged print processing, no yellowed emulsion, no duotone. Render as a neutral black-and-white real-camera image of a historical scene, not a tinted antique reproduction. Generate ONE completely new1536x1024 landscape opaque RGB sRGB illustrative image, entire image newly generated, no recolouring or editing previous pixels. Exact year1873 in scene content, Boyana Waterfall in Vitosha above Sofia, camera at rocky base facing south/upstream, same modern5 and prior8upstream arrangement: narrow waterfall slightly right of center x60percent, begins near x58percent/y8percent, descends through x60percent/y40percent into rocky pool x62percent/y79percent. Jagged projecting rock bank left, steep jointed plutonic rock face right, stream outlet bottom-center, native deciduous branches/foliage at outer margins. No people anywhere, no modern1934park infrastructure, painted trail stripes, paths, railings, bridges, signs, buildings, electrical utilities, wires, modern objects or monuments. Natural geological waterfall predates1873; native woodland conservative reconstruction. Natural gentle daytime light, coherent real-camera perspective, sharp believable unique textures, restrained contrast and fine neutral luminance grain. All leaves, rocks, shadows and water are NEUTRAL GREY, never greenish/brownish; white highlights are neutral white. Zero text, numerals, signs, plaques, letters, labels, logos, brands or branded patterns, watermarks or frames. No painting/CGI/HDR, plastic textures or cloned/stamped nature. Preserve geographical view and composition while correcting only the colour requirement in this whole-new reconstruction. Not an actual archival photograph.",
+      "sources": [
+        {
+          "url": "https://park-vitosha.org/wp-content/uploads/2016/02/spisanie-ENG_July-2012.pdf",
+          "publisher": "Vitosha Nature Park official magazine2012",
+          "readFacts": [
+            "Park declared1934, administration1935; modern visitor infrastructure not assumed in1873.",
+            "Geology section: Vitosha formation about80million years; Boyana Waterfall in plutonic rocks. Therefore natural bedrock landscape predates1873 (geological inference).",
+            "Page5 contains archival photograph captioned1925 Boyana Waterfall; image extracted and viewed, narrow falls over irregular steep rock face, rocky left ledge."
+          ],
+          "localReference": "archive-page5-3-Im3.jpg",
+          "localText": "vitosha-magazine.txt",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.visitsofia.bg/en/routes-sofia/9?view=route",
+          "publisher": "Sofia Tourism Administration",
+          "readFacts": [
+            "Indexed English hiking route leads from Boyana Church southwest/uphill to forest trail and waterfall; signs/painted trail marks are modern route features excluded from1873.",
+            "Waterfall is natural Vitosha setting, not urban water feature."
+          ],
+          "readMethod": "Indexed English hiking-route passage read; current returned page contains combined routes.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Boyanan vesiputous vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: neutral blackgreywhite without warm/green/sepia tint, narrow natural upstream waterfall in same directional framing, no modern signs/rails/objects; whole-new correction.",
+          "reviewedAt": "2026-10-12T18:21:40.142663+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:25:40.938933+00:00",
+          "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame+modern5 pair: same upstream waterfall position and natural rock/woodland setting, no modern fixtures or text. Fresh correction renders visually neutral monochrome, meanchannelspread1.573; no recoloring. Two official historical/geological sources retained.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:25:44.468723+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+        "bytes": 3521353,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png",
+            "http": 200,
+            "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+            "bytes": 3521353,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png?t=f085105bef9c8db2",
+            "http": 200,
+            "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+            "bytes": 3521353,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sofia-8-boyana1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/native/sofia-8-boyana1873-intro-v2-native.png",
+      "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+      "bytes": 3521353,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    }
+  ],
+  "omittedItems": [],
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "productionComplete": true,
+  "successfulImageReturns": 6,
+  "candidateAssets": [
+    {
+      "id": "sofia-intro-8",
+      "slot": 8,
+      "cityName": "Sofia",
+      "gameCityId": "sofia",
+      "mediaSlug": "sofia",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v1.png",
+      "generationPrompt": "Generate ONE completely new photorealistic-natural fictional illustrative city-intro image1536x1024 landscape opaque RGB sRGB. Real camera appearance, natural light, quiet authentic muted colours, believable perspective and unique irregular surfaces/nature. ZERO text, numbers, letters, addresses, labels, signs, posters, branding, logos, brand stripes/patterns, watermarks, frames, protected artwork or named contemporary architect design. No HDR, CGI, painting, cinematic colour, plastic skin or stamped/cloned organic textures. No food. People small/far/rear-facing except invented foreground adult in celebration6. Use case: historical-scene. Exact year1873. Natural Boyana Waterfall above Sofia in Vitosha, camera at rocky base facing south/upstream, SAME composition and bedrock/watercourse view as modern5: narrow stream descends slightly right of center x60percent from upper notch y12percent, dark jagged steep rock face, projecting rocky ledge at left midground, small pool below center, native deciduous branches framing outer margins. No people. Natural geological waterfall landscape, not a newly constructed park; Vitosha park only declared1934. PURE NEUTRAL BLACK AND WHITE, grey pixels only, no sepia/tint. Real nineteenth-century plate-like photo with natural fine grain and soft contrast, no border. Exclude every modern tourist element: all trail paint marks, rails, bridges, signs, steps, paving, buildings, utilities, electrical light, wires, modern bottles/objects. No monuments or artistic designs. Geological rock face and water channel existed before1873; native woodland is a conservative reconstruction. Short exposure texture of water and uneven rocks, no repeated foliage or artificial waterfall.\n Pair-specific anchors from modern5: fall begins at x58percent/y8percent, drops down the dark rocky cleft through x60percent/y40percent into pool at x62percent/y79percent; jagged projecting rock bank left, larger sheer jointed face at right, rocky stream outlet at bottom-center. Preserve same upstream bedrock-view arrangement, rather than moving falls to opposite side or widening into a multi-cascade.",
+      "sources": [
+        {
+          "url": "https://park-vitosha.org/wp-content/uploads/2016/02/spisanie-ENG_July-2012.pdf",
+          "publisher": "Vitosha Nature Park official magazine2012",
+          "readFacts": [
+            "Park declared1934, administration1935; modern visitor infrastructure not assumed in1873.",
+            "Geology section: Vitosha formation about80million years; Boyana Waterfall in plutonic rocks. Therefore natural bedrock landscape predates1873 (geological inference).",
+            "Page5 contains archival photograph captioned1925 Boyana Waterfall; image extracted and viewed, narrow falls over irregular steep rock face, rocky left ledge."
+          ],
+          "localReference": "archive-page5-3-Im3.jpg",
+          "localText": "vitosha-magazine.txt",
+          "readAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.visitsofia.bg/en/routes-sofia/9?view=route",
+          "publisher": "Sofia Tourism Administration",
+          "readFacts": [
+            "Indexed English hiking route leads from Boyana Church southwest/uphill to forest trail and waterfall; signs/painted trail marks are modern route features excluded from1873.",
+            "Waterfall is natural Vitosha setting, not urban water feature."
+          ],
+          "readMethod": "Indexed English hiking-route passage read; current returned page contains combined routes.",
+          "readAt": "2026-10-12"
+        }
+      ],
+      "caption": "Boyanan vesiputous vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "fullFrame": true,
+          "nativeResolution": true,
+          "passed": true,
+          "notes": "Native fullframe reviewed: neutral monochrome natural fall, same upstream camera arrangement and narrow x60percent watercourse as modern5; no modern markers/rails/utilities. Individual rock/vegetation reconstruction differs; root paired-view judgment pending.",
+          "reviewedAt": "2026-10-12T18:01:34.801879+00:00"
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:18:50.584754+00:00",
+          "sha256": "53c0975033f720ea6f131448c82109c63ea1c238fdfe053b21f4a946e6f8ac6c",
+          "approvedForTechnicalDelivery": false,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Approval withdrawn after neutrality audit: warm/greenish channel cast, meanRGB77.69/76.37/72.23, conflicts neutral black-and-white requirement. Preserve R2v1/native/prompt; one permitted full-new8v2 correction pending.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:07:47.880111+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "53c0975033f720ea6f131448c82109c63ea1c238fdfe053b21f4a946e6f8ac6c",
+        "bytes": 3291101,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v1.png",
+            "http": 200,
+            "sha256": "53c0975033f720ea6f131448c82109c63ea1c238fdfe053b21f4a946e6f8ac6c",
+            "bytes": 3291101,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v1.png?t=53c0975033f720ea",
+            "http": 200,
+            "sha256": "53c0975033f720ea6f131448c82109c63ea1c238fdfe053b21f4a946e6f8ac6c",
+            "bytes": 3291101,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sofia-8-boyana1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/native/sofia-8-boyana1873-intro-v1-native.png",
+      "sha256": "53c0975033f720ea6f131448c82109c63ea1c238fdfe053b21f4a946e6f8ac6c",
+      "bytes": 3291101,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      }
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "slot": 8,
+      "reason": "Session owner QA rejected: Approval withdrawn after neutrality audit: warm/greenish channel cast, meanRGB77.69/76.37/72.23, conflicts neutral black-and-white requirement. Preserve R2v1/native/prompt; one permitted full-new8v2 correction pending.",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/native/sofia-8-boyana1873-intro-v1-native.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sofia-8-boyana1873-intro-v1.png",
+      "generationPrompt": "Generate ONE completely new photorealistic-natural fictional illustrative city-intro image1536x1024 landscape opaque RGB sRGB. Real camera appearance, natural light, quiet authentic muted colours, believable perspective and unique irregular surfaces/nature. ZERO text, numbers, letters, addresses, labels, signs, posters, branding, logos, brand stripes/patterns, watermarks, frames, protected artwork or named contemporary architect design. No HDR, CGI, painting, cinematic colour, plastic skin or stamped/cloned organic textures. No food. People small/far/rear-facing except invented foreground adult in celebration6. Use case: historical-scene. Exact year1873. Natural Boyana Waterfall above Sofia in Vitosha, camera at rocky base facing south/upstream, SAME composition and bedrock/watercourse view as modern5: narrow stream descends slightly right of center x60percent from upper notch y12percent, dark jagged steep rock face, projecting rocky ledge at left midground, small pool below center, native deciduous branches framing outer margins. No people. Natural geological waterfall landscape, not a newly constructed park; Vitosha park only declared1934. PURE NEUTRAL BLACK AND WHITE, grey pixels only, no sepia/tint. Real nineteenth-century plate-like photo with natural fine grain and soft contrast, no border. Exclude every modern tourist element: all trail paint marks, rails, bridges, signs, steps, paving, buildings, utilities, electrical light, wires, modern bottles/objects. No monuments or artistic designs. Geological rock face and water channel existed before1873; native woodland is a conservative reconstruction. Short exposure texture of water and uneven rocks, no repeated foliage or artificial waterfall.\n Pair-specific anchors from modern5: fall begins at x58percent/y8percent, drops down the dark rocky cleft through x60percent/y40percent into pool at x62percent/y79percent; jagged projecting rock bank left, larger sheer jointed face at right, rocky stream outlet at bottom-center. Preserve same upstream bedrock-view arrangement, rather than moving falls to opposite side or widening into a multi-cascade."
+    }
+  ],
+  "updatedAt": "2026-10-12T18:23:33.990985+00:00",
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "sofia",
+    "gameCityId": "sofia",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/vitosha-magazine.txt",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/archive-page5-3-Im3.jpg",
+      "https://park-vitosha.org/wp-content/uploads/2016/02/spisanie-ENG_July-2012.pdf",
+      "https://www.visitsofia.bg/en/routes-sofia/9?view=route"
+    ],
+    "assets": [
+      {
+        "id": "sofia-intro-4",
+        "slot": 4,
+        "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä vedenhakijoiden/astioiden/hanojen ja lähirungon/kaarna- ja lehtiyksityiskohtien natiivirajaukset tarkastettu.",
+          "Kolme pientä selin/poispäin olevaa aikuista, kasvot eivät näy. Kirkkaat vesiastiat ja korkit geneerisiä täysin ilman etikettejä, tekstiä, numeroita tai brändejä.",
+          "Luonnollinen epäsäännöllinen kaarna/lehvistö ja kiviseinä/kiveys; koherentti varjostus, valo ja perspektiivi. Tavallinen arkinen vedenhaku, ei ruokakuvallinen asetelma.",
+          "Ei logoja, brändikuvioita, ruoka-annoksia tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sofia-intro-5",
+        "slot": 5,
+        "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä putouksen/oikean kallion ja vasemman kallioseinämän/lehtien natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen märkä kallio, kivien halkeamat, lehdet ja veden roiskeet; ei leimakuviota tai muovisuutta. Koherentti valo/perspektiivi ja kameramainen veden liike.",
+          "Putous hieman oikealla keskikohdasta ylhäältä altaaseen, vasen kallionuloke ja oikea jyrkkä kalliopinta. Kuva5 on1873-kuvan8 moderni vertailupari.",
+          "Ei ihmisiä, tekstiä, logoja, brändikuvioita, ruokaa tai nykyaikaisia turistirakennelmia/maalimerkkejä havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sofia-intro-6",
+        "slot": 6,
+        "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä etualan kasvojen/hiusten, kohotetun käsivarren/taustan ja taputtavien henkilöiden kasvojen/käsien natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla, iloinen nuorten aikuisten kesäinen puistokokoontuminen, geneeriset muodikkaat nykyvaatteet. Iho, hiukset, hampaat, korva, käsivarsi ja näkyvät taputtavat kädet uskottavia.",
+          "Kaikki henkilöt rajattu tai peitetty jalkineiden yläpuolelta. Ei jalkineita, ruokaa, juomapakkauksia, tekstiä, logoja tai brändikuvioita koko kehyksessä.",
+          "Koherentti pehmeä luonnonvalo, optinen taustan pehmeys ja perspektiivi, kasvillisuus luonnollista.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sofia-intro-7",
+        "slot": 7,
+        "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä puun/rungon/ikkunoiden/aidan ja kaukaisen henkilön/lehvistön natiivirajaukset tarkastettu.",
+          "Luonnollinen epäsäännöllinen kuori, haarautuminen, lehvistö ja kulunut rappaus; koherentti hämärävalo/ikkunavalot sekä katuperspektiivi.",
+          "Yksi pieni henkilö selin. Ei tekstiä, numeroita, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "sofia-intro-8",
+        "slot": 8,
+        "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Valittu täysin uusi8v2; koko1536x1024 kehys sekä putouksen/oikean kalliopinnan ja vasemman kallion/lehvistön natiivirajaukset tarkastettu.",
+          "Näkyvä kokonaisilme neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista värisävyä; pientä numeerista RGBeroa ei käytetty itsenäisenä hylkäysperusteena.",
+          "Vertailtu moderniin5:een: sama alhaalta ylävirtaan suuntautuva katselusuunta, putous hieman oikealla keskeltä altaaseen, vasen kallionuloke ja oikea jyrkkä jakoinen kallioseinämä. Geologiset pääankkurit ja vesiuoman sijoittuminen vastaavat; yksittäisten kivien/puuston tarkka muoto ja veden määrä rekonstruoitu havainnollisesti.",
+          "Brief/sources.json ja paikallinen Vitosha-lehden teksti luettu. Virallinen puistolehti avattu PDF:nä,1934-puistoperustaminen ja geologian erittäin vanha plutoninen kallioperä luettu. Sofia Tourism -vaellusreitin teksti luettu hakupalvelusta suorahaun aikakatkaisun jälkeen.",
+          "Vuoden1925 arkistokuva katsottu paikallisesta otteesta. Se on myöhempi kuin1873 ja käytetty luonnollisen kallio-/putousprofiilin tukena, ei1873-paikkavalokuvana.",
+          "1873-exclusions tarkastettu: ei1934-puiston vierailuinfrastruktuuria, polkujen maaliraitoja, kaiteita, siltoja, merkkejä, portaita, päällysteitä, rakennuksia, sähkörakenteita, johtoja, pulloja tai muita nykyesineitä/monumentteja.",
+          "Ei ihmisiä, tekstiä, logoja, brändikuvioita tai ruokaa havaittu. Luonnolliset epäsäännölliset kivet, lehdet ja vesi; ei leimakuviota tai muovisuutta. Koherentti kameravalo/perspektiivi.",
+          "Luonnonmaiseman olemassaolo ennen1873 on lähteiden geologiseen ikään perustuva konservatiivinen päätelmä, ei väite täsmällisestä1873-arkistopaikkakuvasta.",
+          "SHA256 alkuperäisistä PNG-tavuista vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; export/native-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "sofia-8-boyana1873-intro-v1",
+        "slot": 8,
+        "sha256": "53c0975033f720ea6f131448c82109c63ea1c238fdfe053b21f4a946e6f8ac6c",
+        "fullFrameInspected": false,
+        "nativeDetailsInspected": false,
+        "approvedForDelivery": false,
+        "status": "rejected-superseded-by-approved-v2",
+        "producerReason": "Session owner QA rejected: Approval withdrawn after neutrality audit: warm/greenish channel cast, meanRGB77.69/76.37/72.23, conflicts neutral black-and-white requirement. Preserve R2v1/native/prompt; one permitted full-new8v2 correction pending.",
+        "reason": "Tuottajan v1-värisävyhylkäys kirjattu historiasta; tämä itsenäinen rasteri-QA koski valittua8v2:ta.",
+        "producerMetadataReviewedOnly": true
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:43:00.495936+00:00",
+    "sourceManifestSha256": "db8e1c3a28cfb52268e744ad97f969cf8796a1ddd2128086979c421a0931cec9"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "sofia",
+    "verifiedAt": "2026-10-12T18:51:01.662270+00:00",
+    "assets": [
+      {
+        "id": "sofia-intro-4",
+        "slot": 4,
+        "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+        "bytes": 3050429,
+        "verifiedAt": "2026-10-12T18:51:00.375807+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+            "bytes": 3050429,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png?delivery-verify=dd278988cfc0c433-1791831060375799000",
+            "http": 200,
+            "sha256": "dd278988cfc0c433572a2d08a2ab8eb843da48e223d865965ed87aa35eda3eb2",
+            "bytes": 3050429,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sofia-intro-5",
+        "slot": 5,
+        "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+        "bytes": 3363676,
+        "verifiedAt": "2026-10-12T18:51:00.375911+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png",
+            "http": 200,
+            "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+            "bytes": 3363676,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png?delivery-verify=21e3d5a7c0cf20ec-1791831060375909000",
+            "http": 200,
+            "sha256": "21e3d5a7c0cf20eccef5874facb34288a7e9d6cadd0cd9c9b84b55354e05cb50",
+            "bytes": 3363676,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sofia-intro-6",
+        "slot": 6,
+        "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+        "bytes": 2167587,
+        "verifiedAt": "2026-10-12T18:51:00.375981+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+            "bytes": 2167587,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-6-kaupunkipuutarha-juhla-intro-v1.png?delivery-verify=f56728da78269787-1791831060375980000",
+            "http": 200,
+            "sha256": "f56728da78269787c7e698d821fad4d38740131b34b2fdb34e9ad03b3901a092",
+            "bytes": 2167587,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sofia-intro-7",
+        "slot": 7,
+        "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+        "bytes": 2873764,
+        "verifiedAt": "2026-10-12T18:51:00.941722+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+            "bytes": 2873764,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png?delivery-verify=919bd8c9ba47f685-1791831060941715000",
+            "http": 200,
+            "sha256": "919bd8c9ba47f6851014a6b66d196ec10c2c395fbf5f8ce3c39cda0684c8f071",
+            "bytes": 2873764,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "sofia-intro-8",
+        "slot": 8,
+        "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+        "bytes": 3521353,
+        "verifiedAt": "2026-10-12T18:51:01.095194+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png",
+            "http": 200,
+            "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+            "bytes": 3521353,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261012-full/sofia-8-boyana1873-intro-v2.png?delivery-verify=f085105bef9c8db2-1791831061095189000",
+            "http": 200,
+            "sha256": "f085105bef9c8db283dc98fab5fcfeca5d69e19b288b7d6ac554c97f18c4d295",
+            "bytes": 3521353,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/sofia/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.886495+00:00"
+}

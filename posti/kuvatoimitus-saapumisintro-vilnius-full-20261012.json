@@ -1,0 +1,909 @@
+{
+  "cityName": "Vilna",
+  "gameCityId": "vilna",
+  "mediaSlug": "vilnius",
+  "status": "worker-complete-root-visual-QA-passed-awaiting-root-delivery",
+  "productionComplete": true,
+  "assets": [
+    {
+      "id": "vilnius-intro-4-v1",
+      "slot": 4,
+      "cityName": "Vilna",
+      "gameCityId": "vilna",
+      "mediaSlug": "vilnius",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-4-uzupisin-koiralenkki-native-v1.png",
+      "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+      "bytes": 2806739,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Vilnius arrival intro slot4. Present-day Užupis residential side lane, ordinary anonymous old two-storey pale plaster and redbrick homes, a slightly sloping cobbled lane, simple unmarked timber doors and small plants by walls. One adult dog walker in plain modern jacket and trousers seen from behind in middle distance with a small ordinary brown mixed-breed dog on a simple unmarked leash sniffing an uneven wall, another tiny pedestrian farther away. Face hidden, dog's body and gait anatomically natural, no repeated animal figures. Eye-height45mm oblique street view, gentle overcast spring morning, candid life without staged market or tourist landmark. Exclude all Užupis art installations, constitution plaques, Angel, Mermaid and murals, no shops or signs. Photorealistic natural real-camera travel image, true restrained color, natural exposure and light, irregular actual stone timber foliage and skin textures, no HDR, CGI, illustration, plastic skin, overprocessed shadows or stamped repeated leaves/animals. Landscape1536x1024 opaque RGB sRGB. No text, lettering, address numbers, plaques, signs, posters, logos, brands, distinctive brand patterns or stripes, graffiti, sculpture, contemporary artworks, watermarks or frame. No food or drinks. No vehicles, number plates or roadway traffic. Existing hero subjects excluded: Gediminas Tower, Cathedral/belfry, Gate of Dawn, StPeterPaul church, StAnne/Bernardine churches, panoramic OldTown skyline. Only slot6 allows fictional adults close to camera; other people distant or from behind.",
+      "sources": [
+        {
+          "url": "https://www.govilnius.lt/visit-vilnius/places/uzupis-district",
+          "publisher": "Go Vilnius official agency",
+          "readFacts": "Užupis is residentialartisticcommunity acrossVilnelėfromOldTown. Scenes use ordinaryanonymous residentialfabric, deliberatelyexcludeAngel Mermaid contemporaryinstallations constitutionaltext. Fictionalgathering notdocumentedfestivalclaim."
+        }
+      ],
+      "caption": "Arkinen koiralenkki Vilnan Užupisin asuinkujalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:13:55.875315+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Ordinary side lane, distant rear-facing adults and one anatomically plausible mixed-breed dog, no vehicles artworks monuments branding food readable text or numbers."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:25:40.979975+00:00",
+          "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: ordinary Uzupis lane, rear-facing walker and anatomically plausible dog/leash, no art, signs, numerals or logos. Natural restrained daylight and irregular surfaces.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:42:09.150337+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+        "bytes": 2806739,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+            "http": 200,
+            "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+            "bytes": 2806739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png?t=feacbfba5c5362d9",
+            "http": 200,
+            "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+            "bytes": 2806739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "vilnius-intro-5-v1",
+      "slot": 5,
+      "cityName": "Vilna",
+      "gameCityId": "vilna",
+      "mediaSlug": "vilnius",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-5-vilnia-luonnonranta-native-v1.png",
+      "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+      "bytes": 3283158,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Vilnius arrival intro slot5. Current-day flowing water and natural bank of the Vilnia beside Bernardine Garden. A tight natural-bank view at the northern bend of the main Vilnia/Vilnelė river beside the Sereikiškės/Bernardine Garden in Vilnius, camera1.3m above the river on its western garden-side bank looking SOUTH-SOUTHEAST upstream toward wooded slopes beyond the eastern bank. 45mm lens. A narrow irregular shallow flowing channel enters lower center then curves toward middle right, small partly submerged smooth stones catch broken white ripples, tree roots and a leaning alder fill near-left edge, steep irregular tree-covered far bank closes all of background. Frame confined to water roots stones and individual native broadleaf trees: no buildings, path layout, bridges, dams, fountains or park structures. Soft late-summer natural daylight filtered through the leaf canopy, muted green reflections and clear brown-green shallow river water, irregular moss on actual individual stones, no person or animal necessary. No modern landscaping, rosebeds, geometric plant patterns, musical fountain, benches, art, buildings or bridge in this tight view. Preserve this exact viewpoint for1873companion. Photorealistic natural real-camera travel image, true restrained color, natural exposure and light, irregular actual stone timber foliage and skin textures, no HDR, CGI, illustration, plastic skin, overprocessed shadows or stamped repeated leaves/animals. Landscape1536x1024 opaque RGB sRGB. No text, lettering, address numbers, plaques, signs, posters, logos, brands, distinctive brand patterns or stripes, graffiti, sculpture, contemporary artworks, watermarks or frame. No food or drinks. No vehicles, number plates or roadway traffic. Existing hero subjects excluded: Gediminas Tower, Cathedral/belfry, Gate of Dawn, StPeterPaul church, StAnne/Bernardine churches, panoramic OldTown skyline. Only slot6 allows fictional adults close to camera; other people distant or from behind.",
+      "sources": [
+        {
+          "url": "https://www.govilnius.lt/visit-vilnius/places/bernardine-garden",
+          "publisher": "Go Vilnius official tourism and development agency",
+          "readFacts": "Garden byVilnelė, cultivated since15thcentury. HistoricVilnia bend includedmills/dams/workshops; we do not assume entirebenduntouched.2013restoration introducedmodernpark amenities/musicfountain; all excluded from8 andtight5view."
+        },
+        {
+          "url": "https://www.botanikos-sodas.vu.lt/en/about-us/history/copy-of-history",
+          "publisher": "Vilnius University Botanical Garden official history",
+          "readFacts": "Sereikiškėssite operated1799–1842; botanicalgarden ceased1842–1919, so1873mustNOTshowworkingbotanicalexhibition. OldandnewVilniariverbeds andmillcanal existedhistorically. Article includesSereikiškėsimagearound1877, inspectedforriver/woodedterrain context."
+        },
+        {
+          "url": "https://vilnius.lt/savivaldybe/miesto-pletra/naujai-irengiami-ir-tvarkomi-zeldynai/bernardinu-sodas",
+          "publisher": "Vilnius City Municipality",
+          "readFacts": "CurrentparkcontainsVilnelėriver;1799gardenhistoryand2013majorreconstruction described. Currentlights benches fountain playstructures andmodernpaths deliberatelyexcludedfrom1873naturalbank reconstruction."
+        }
+      ],
+      "caption": "Vilnian virtaavaa vettä Bernardinų-puutarhan reunalla Vilnassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:16:00.441379+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Natural flowing rocky channel, massive near-left alder trunk and roots, wooded far slope, irregular leaves stones and water, no structures people logos text food or landmarks. Actual generated channel recedes toward middle-left, use this pairing geometry for8."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:25:41.024675+00:00",
+          "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: large leaning tree/root bank left, stones foreground, higher woodland bank right and river receding center-left. Natural irregular leaves/water, no structures, people, text or artworks. Actual composition recorded for1873pair.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:42:11.711496+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+        "bytes": 3283158,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+            "http": 200,
+            "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+            "bytes": 3283158,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png?t=75f275a7324ad13d",
+            "http": 200,
+            "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+            "bytes": 3283158,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "vilnius-intro-6-v1",
+      "slot": 6,
+      "cityName": "Vilna",
+      "gameCityId": "vilna",
+      "mediaSlug": "vilnius",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-6-uzupisin-pihajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-6-uzupisin-pihajuhla-native-v1.png",
+      "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+      "bytes": 2223632,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Vilnius arrival intro slot6. Current-day joyful informal late-afternoon summer courtyard gathering in Užupis Vilnius, anonymous pale old residential plaster walls and leafy vine, plain open timber courtyard door. One wholly fictional Lithuanian young adult man age28 nearest camera, fair natural freckled skin, wavy dark-brown hair, fashionable generic solid pale-blue short-sleeve overshirt over plain charcoal tee, smiling naturally while chatting with a friend out of frame. Behind him a large cheerful group of local Lithuanian young adults ages23–35 talks and dances in contemporary fashionable solid generic clothes. Real candid warmth and soft late-day daylight, no glamorous staging. Shoulder-height40mm camera, main person's mid-torso-up portrait integrated into upper-body crowd. EVERY foot ankle shoe sneaker sandal and boot fully excluded by cropping or other upper bodies even deep background. All people fictional adults. No performer, stage, branded sunglasses, banner, religion, art exhibition, sculpture, murals or constitutional plaques, no food tables bottles or drinks. Photorealistic natural real-camera travel image, true restrained color, natural exposure and light, irregular actual stone timber foliage and skin textures, no HDR, CGI, illustration, plastic skin, overprocessed shadows or stamped repeated leaves/animals. Landscape1536x1024 opaque RGB sRGB. No text, lettering, address numbers, plaques, signs, posters, logos, brands, distinctive brand patterns or stripes, graffiti, sculpture, contemporary artworks, watermarks or frame. No food or drinks. No vehicles, number plates or roadway traffic. Existing hero subjects excluded: Gediminas Tower, Cathedral/belfry, Gate of Dawn, StPeterPaul church, StAnne/Bernardine churches, panoramic OldTown skyline. Only slot6 allows fictional adults close to camera; other people distant or from behind.",
+      "sources": [
+        {
+          "url": "https://www.govilnius.lt/visit-vilnius/places/uzupis-district",
+          "publisher": "Go Vilnius official agency",
+          "readFacts": "Užupis is residentialartisticcommunity acrossVilnelėfromOldTown. Scenes use ordinaryanonymous residentialfabric, deliberatelyexcludeAngel Mermaid contemporaryinstallations constitutionaltext. Fictionalgathering notdocumentedfestivalclaim."
+        }
+      ],
+      "caption": "Kuvitteellinen nuorten aikuisten kesäjuhla Vilnan Užupisin pihalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:27:13.566552+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Fictional adult main focus, natural freckles and linen textures, generic unpatterned clothes, every ankle foot and footwear cropped out including crowd, no artwork food drink text logos or real-person likeness."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:29:33.704076+00:00",
+          "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native full frame: fictional young adult foreground with natural freckles/skin and joyful adult courtyard group. Plain modern clothes, all footwear excluded, no text/logos/food/artwork. Plausible anatomy and unposed camera light.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:42:13.848387+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+        "bytes": 2223632,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+            "bytes": 2223632,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png?t=5b431d03dba19f6c",
+            "http": 200,
+            "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+            "bytes": 2223632,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "vilnius-intro-7-v1",
+      "slot": 7,
+      "cityName": "Vilna",
+      "gameCityId": "vilna",
+      "mediaSlug": "vilnius",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-7-zverynasin-puutaloilta-native-v1.png",
+      "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+      "bytes": 2829739,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Vilnius arrival intro slot7. Present-day Žvėrynas ordinary wooden residential houses in Vilnius, an anonymous row of small weathered one-and-a-half-storey timber homes with simple pitched roofs and enclosed modest leafy gardens. Blue hour in early autumn, plain warm apartment windows glow behind old wood frames, one simple generic porch lamp, damp gravel footpath edge and a few fallen leaves. An oblique50mm view from a narrow pedestrian lane, a tiny rear-facing walker far at the bend. No named architect building, ornate unique villa, church, bridge, landmark or skyline. Grounded calm color and exposure, distinctive ordinary Baltic timber domestic life. Photorealistic natural real-camera travel image, true restrained color, natural exposure and light, irregular actual stone timber foliage and skin textures, no HDR, CGI, illustration, plastic skin, overprocessed shadows or stamped repeated leaves/animals. Landscape1536x1024 opaque RGB sRGB. No text, lettering, address numbers, plaques, signs, posters, logos, brands, distinctive brand patterns or stripes, graffiti, sculpture, contemporary artworks, watermarks or frame. No food or drinks. No vehicles, number plates or roadway traffic. Existing hero subjects excluded: Gediminas Tower, Cathedral/belfry, Gate of Dawn, StPeterPaul church, StAnne/Bernardine churches, panoramic OldTown skyline. Only slot6 allows fictional adults close to camera; other people distant or from behind.",
+      "sources": [
+        {
+          "url": "https://www.govilnius.lt/visit-vilnius/places/zverynas",
+          "publisher": "Go Vilnius official agency",
+          "readFacts": "Žvėrynas standsoutwithwoodenhomes andgardens,108woodenhouses noted. Scene depictsordinaryanonymous wooden residences, avoidsnameduniquevillas and1903bridge."
+        }
+      ],
+      "caption": "Ikkunavalot Vilnan Žvėrynasin puutaloalueella. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:30:15.866291+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Ordinary anonymous timber residences and natural garden foliage, restrained window light, one tiny rear-facing pedestrian, no landmarks unique designer architecture signs lettering numbers brands food or cars."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:39:48.955635+00:00",
+          "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native whole frame: ordinary anonymous Zverynas timber homes and gardens, tiny rear-facing person, window/porch light. No text, address numbers, logos, modern named design or close faces; natural restrained twilight.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:42:20.608430+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+        "bytes": 2829739,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+            "http": 200,
+            "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+            "bytes": 2829739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png?t=ab13479da94d285a",
+            "http": 200,
+            "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+            "bytes": 2829739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "vilnius-intro-8-v1",
+      "slot": 8,
+      "cityName": "Vilna",
+      "gameCityId": "vilna",
+      "mediaSlug": "vilnius",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-8-vilnia-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-8-vilnia-1873-native-v1.png",
+      "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+      "bytes": 3489991,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. Matkakirja Vilnius arrival intro slot8. Strictly year1873, source-backed natural-bank reconstruction of the Vilnia near former Sereikiškės botanical garden. A tight natural-bank view at the northern bend of the main Vilnia/Vilnelė river beside the Sereikiškės/Bernardine Garden in Vilnius, camera1.3m above the river on its western garden-side bank looking SOUTH-SOUTHEAST upstream toward wooded slopes beyond the eastern bank. 45mm lens. A narrow irregular shallow flowing channel enters lower center then curves toward middle-left, small partly submerged smooth stones catch broken white ripples, tree roots and a leaning alder fill near-left edge, steep irregular tree-covered far bank closes all of background. Frame confined to water roots stones and individual native broadleaf trees: no buildings, path layout, bridges, dams, fountains or park structures. EXACT same western-bank spot,1.3mheight,45mm lens and SOUTH-SOUTHEAST upstream direction as modern slot5. STRICT neutralBlackAndWhite contemporary digital monochrome photographic rendering of an accurately reconstructed1873scene. Only achromatic BLACK WHITE and NEUTRAL GRAY with equal RGB channels in each pixel. NO warm historic print, NO sepia, NO brown yellow green cream or other color cast anywhere. Soft natural daylight, restrained true modern monochrome camera contrast, no vintage chemistry or antique toning, no aged paper or border. This is the former garden territory: universitygarden ceased1842, do NOT depict a working1873botanicalplant exhibition or labeledplots. Natural irregular trees, roots, mossy rounded rocks and narrow flowing water. No people or boats needed. No2013park restoration, musical fountain, electric lights, modern curved paving, benches, geometric rosebeds, tourist bridges, dams, stone embankments, concrete, railings, signs or bins. Historical mills and workshops existed elsewhere around the riverbend but are entirely out of this tight natural-bank frame; do not invent an empty wholecity panorama. No modern apartment buildings, cars, wires, plastics, sports clothes, protected art or existinghero landmark. Photorealistic natural real-camera travel image, neutral grayscale tone, natural exposure and light, irregular actual stone timber foliage and skin textures, no HDR, CGI, illustration, plastic skin, overprocessed shadows or stamped repeated leaves/animals. Landscape1536x1024 opaque RGB sRGB. No text, lettering, address numbers, plaques, signs, posters, logos, brands, distinctive brand patterns or stripes, graffiti, sculpture, contemporary artworks, watermarks or frame. No food or drinks. No vehicles, number plates or roadway traffic. Existing hero subjects excluded: Gediminas Tower, Cathedral/belfry, Gate of Dawn, StPeterPaul church, StAnne/Bernardine churches, panoramic OldTown skyline. Only slot6 allows fictional adults close to camera; other people distant or from behind. Observed companion5composition lock: river fills lower right and recedes toward middle-left, massive leaning alder at near-left fills upper-left with exposed roots on bank, several individual dark mossy stones cluster across foreground-left/center, opposite bank rises steeply on right with irregular trees. Same1.3mwestern-bankSSEview, no invented bridge or structures.",
+      "sources": [
+        {
+          "url": "https://www.govilnius.lt/visit-vilnius/places/bernardine-garden",
+          "publisher": "Go Vilnius official tourism and development agency",
+          "readFacts": "Garden byVilnelė, cultivated since15thcentury. HistoricVilnia bend includedmills/dams/workshops; we do not assume entirebenduntouched.2013restoration introducedmodernpark amenities/musicfountain; all excluded from8 andtight5view."
+        },
+        {
+          "url": "https://www.botanikos-sodas.vu.lt/en/about-us/history/copy-of-history",
+          "publisher": "Vilnius University Botanical Garden official history",
+          "readFacts": "Sereikiškėssite operated1799–1842; botanicalgarden ceased1842–1919, so1873mustNOTshowworkingbotanicalexhibition. OldandnewVilniariverbeds andmillcanal existedhistorically. Article includesSereikiškėsimagearound1877, inspectedforriver/woodedterrain context."
+        },
+        {
+          "url": "https://vilnius.lt/savivaldybe/miesto-pletra/naujai-irengiami-ir-tvarkomi-zeldynai/bernardinu-sodas",
+          "publisher": "Vilnius City Municipality",
+          "readFacts": "CurrentparkcontainsVilnelėriver;1799gardenhistoryand2013majorreconstruction described. Currentlights benches fountain playstructures andmodernpaths deliberatelyexcludedfrom1873naturalbank reconstruction."
+        }
+      ],
+      "caption": "Vilnian luonnonranta Vilnassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:32:57.782542+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Visually neutral monochrome natural-bank scene; channel metrics are diagnostics only. Parent session owns final visual assessment, no worker-made numeric rejection gate."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:39:49.009552+00:00",
+          "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native whole frame+modern5 pair: same near-left leaning root bank, foreground stones, high far woodland bank and river receding center-left. Visually neutral monochrome; channelmeans78.41/77.37/75.54 do not impose an invented exact numerical-equality requirement. No2013park amenities, buildings, signs or botanical display. Three official sources confirm old river/garden history and1842garden closure; vegetation/individual stones reconstructed.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending",
+        "monochromeProof": {
+          "channelMeansRGB": [
+            78.4146900177002,
+            77.36669667561848,
+            75.54187138875325
+          ],
+          "maxChannelMeanDifference": 2.872818628946945,
+          "maxPixelChannelDifference": 22,
+          "method": "PIL pixel-statistics read-only, no recolor",
+          "numericMetricsAreDiagnosticsOnly": true
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:42:23.485086+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+        "bytes": 3489991,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+            "bytes": 3489991,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png?t=f5e3175df7b8781d",
+            "http": 200,
+            "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+            "bytes": 3489991,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    }
+  ],
+  "omittedItems": [],
+  "generatedImageCount": 5,
+  "missingSlots": [],
+  "builtInToolOnly": true,
+  "ownerEditorialAcceptance": "pending",
+  "gameIntegration": "pending",
+  "rejectedCandidates": [],
+  "additionalCandidates": [
+    {
+      "id": "vilnius-intro-8-v2",
+      "slot": 8,
+      "cityName": "Vilna",
+      "gameCityId": "vilna",
+      "mediaSlug": "vilnius",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-8-vilnia-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/vilnius-8-vilnia-1873-native-v2.png",
+      "sha256": "63c93e9c9948171276652e096e06f911a5e0000fbfbfb863a7f06d4f4cf40841",
+      "bytes": 3424421,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": null,
+      "r2Key": null,
+      "generationPrompt": "Use case: historical-scene. Create a brand-new STRICT ACHROMATIC MONOCHROME image. Every pixel must have equal RED GREEN BLUE values: R=G=B. The only palette is BLACK, WHITE and mathematically NEUTRAL GRAYS, with absolutely NO brown, beige, cream, amber, yellow, green, blue, red, sepia or any color tint. Render it like a neutral modern digital camera in pure black-and-white mode, not like a historical print. Scene content is strictly1873, but the photographic rendering is contemporary neutral monochrome. No vintage print chemistry, warm paper, sepia toning or color grading.\nUse case: historical-scene. Matkakirja Vilnius arrival intro slot8. Strictly year1873, source-backed natural-bank reconstruction of the Vilnia near former Sereikiškės botanical garden. A tight natural-bank view at the northern bend of the main Vilnia/Vilnelė river beside the Sereikiškės/Bernardine Garden in Vilnius, camera1.3m above the river on its western garden-side bank looking SOUTH-SOUTHEAST upstream toward wooded slopes beyond the eastern bank. 45mm lens. A narrow irregular shallow flowing channel enters lower center then curves toward middle-left, small partly submerged smooth stones catch broken white ripples, tree roots and a leaning alder fill near-left edge, steep irregular tree-covered far bank closes all of background. Frame confined to water roots stones and individual native broadleaf trees: no buildings, path layout, bridges, dams, fountains or park structures. EXACT same western-bank spot,1.3mheight,45mm lens and SOUTH-SOUTHEAST upstream direction as modern slot5. STRICT neutralBlackAndWhite contemporary digital monochrome photographic rendering of an accurately reconstructed1873scene. Only achromatic BLACK WHITE and NEUTRAL GRAY with equal RGB channels in each pixel. NO warm historic print, NO sepia, NO brown yellow green cream or other color cast anywhere. Soft natural daylight, restrained true modern monochrome camera contrast, no vintage chemistry or antique toning, no aged paper or border. This is the former garden territory: universitygarden ceased1842, do NOT depict a working1873botanicalplant exhibition or labeledplots. Natural irregular trees, roots, mossy rounded rocks and narrow flowing water. No people or boats needed. No2013park restoration, musical fountain, electric lights, modern curved paving, benches, geometric rosebeds, tourist bridges, dams, stone embankments, concrete, railings, signs or bins. Historical mills and workshops existed elsewhere around the riverbend but are entirely out of this tight natural-bank frame; do not invent an empty wholecity panorama. No modern apartment buildings, cars, wires, plastics, sports clothes, protected art or existinghero landmark. Photorealistic natural real-camera travel image, neutral grayscale tone, natural exposure and light, irregular actual stone timber foliage and skin textures, no HDR, CGI, illustration, plastic skin, overprocessed shadows or stamped repeated leaves/animals. Landscape1536x1024 opaque RGB sRGB. No text, lettering, address numbers, plaques, signs, posters, logos, brands, distinctive brand patterns or stripes, graffiti, sculpture, contemporary artworks, watermarks or frame. No food or drinks. No vehicles, number plates or roadway traffic. Existing hero subjects excluded: Gediminas Tower, Cathedral/belfry, Gate of Dawn, StPeterPaul church, StAnne/Bernardine churches, panoramic OldTown skyline. Only slot6 allows fictional adults close to camera; other people distant or from behind. Observed companion5composition lock: river fills lower right and recedes toward middle-left, massive leaning alder at near-left fills upper-left with exposed roots on bank, several individual dark mossy stones cluster across foreground-left/center, opposite bank rises steeply on right with irregular trees. Same1.3mwestern-bankSSEview, no invented bridge or structures.\nQuality correction reason: previous native had averageRGB78.4147/77.3667/75.5419, a warmR-Bcast2.87. This whole-new candidate must eliminate that cast by rendering strictly NEUTRAL GRAY with equal RGB channels, including ALL water, leaves, trees, moss, bark, rocks and shadows. Preserve companion5same bank, near-left leaning alder roots, foreground rocks, river receding middle-left, wooded right slope. No scene changes or extra variant; single necessary quality correction for this slot. Keep all final photographic pixels achromatic.",
+      "sources": [
+        {
+          "url": "https://www.govilnius.lt/visit-vilnius/places/bernardine-garden",
+          "publisher": "Go Vilnius official tourism and development agency",
+          "readFacts": "Garden byVilnelė, cultivated since15thcentury. HistoricVilnia bend includedmills/dams/workshops; we do not assume entirebenduntouched.2013restoration introducedmodernpark amenities/musicfountain; all excluded from8 andtight5view."
+        },
+        {
+          "url": "https://www.botanikos-sodas.vu.lt/en/about-us/history/copy-of-history",
+          "publisher": "Vilnius University Botanical Garden official history",
+          "readFacts": "Sereikiškėssite operated1799–1842; botanicalgarden ceased1842–1919, so1873mustNOTshowworkingbotanicalexhibition. OldandnewVilniariverbeds andmillcanal existedhistorically. Article includesSereikiškėsimagearound1877, inspectedforriver/woodedterrain context."
+        },
+        {
+          "url": "https://vilnius.lt/savivaldybe/miesto-pletra/naujai-irengiami-ir-tvarkomi-zeldynai/bernardinu-sodas",
+          "publisher": "Vilnius City Municipality",
+          "readFacts": "CurrentparkcontainsVilnelėriver;1799gardenhistoryand2013majorreconstruction described. Currentlights benches fountain playstructures andmodernpaths deliberatelyexcludedfrom1873naturalbank reconstruction."
+        }
+      ],
+      "caption": "Vilnian luonnonranta Vilnassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:32:57.782542+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Whole-new candidate returned before parent clarification; no claim of necessity under owner policy. Visual natural root stones and water inspected; no tint obvious. Preserve alongside v1."
+        },
+        "rootSessionReview": {
+          "status": "pending"
+        },
+        "ownerEditorialAcceptance": "pending",
+        "monochromeProof": {
+          "channelMeansRGB": [
+            83.65755144755046,
+            83.73237609863281,
+            83.72029495239258
+          ],
+          "maxChannelMeanDifference": 0.07482465108235203,
+          "maxPixelChannelDifference": 17,
+          "numericMetricsAreDiagnosticsOnly": true,
+          "method": "Read-only statistics, no recolor"
+        }
+      },
+      "R2Proof": {
+        "status": "not-selected-no-upload"
+      },
+      "selectionStatus": "preserved-unselected-candidate",
+      "publicationAllowed": false,
+      "r2DeliverySelected": false
+    }
+  ],
+  "actualGenerationCallsIssued": 6,
+  "qualityRetriesIssued": 0,
+  "workerInitiatedAdditionalCalls": 1,
+  "workflowCorrection": {
+    "numericThresholdIsNotOwnerRequirement": true,
+    "additionalCallReturnedBeforeParentClarification": true,
+    "initialAssessmentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/initial-worker-assessment-8-v1.json",
+    "selectedSlot8": "v1 confirmed by parent native visual review"
+  },
+  "selectedSlot8": "v1",
+  "rootVisualSelection": {
+    "slot8": "v1",
+    "decision": "pass",
+    "evidence": "Parent session native visual QA confirmed all5Vilniusassets; numericchannelmeanthreshold not an owner requirement"
+  },
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "vilnius",
+    "gameCityId": "vilna",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/historical-sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/assignment.json",
+      "https://www.govilnius.lt/visit-vilnius/places/bernardine-garden",
+      "https://www.botanikos-sodas.vu.lt/en/about-us/history/copy-of-history",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/references/sereikiskes-around-1877-vu-reference.jpg"
+    ],
+    "assets": [
+      {
+        "id": "vilnius-intro-4-v1",
+        "slot": 4,
+        "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Koko kehys, koira/selin oleva taluttaja, vasemman julkisivun ja puun/lehtien yksityiskohdat sekä kaukaiset ovet tarkastettu. Koira on anatomisesti uskottava: luonnolliset raajojen mittasuhteet, häntä, kuono, korvat ja turkki sekä nuuskimiseen sopiva asento. Taluttaja ja kaukaisempi kävelijä nähdään selin, kasvot eivät näy. Näkyvä talutuskäsi on uskottava.",
+          "Kivet, tiilet, rappaus, puunkuori ja lehdet ovat epäsäännöllisiä, eikä niissä ole leimattua toistokuviota. Perspektiivi ja pehmeä päivänvalo ovat johdonmukaiset. Ei näkyvää ruokaa, tekstiä, numeroita, logoja, brändikuvioita tai taideteoksia.",
+          "Oikean syöksytorven vaaleat kulumis-/kiinnikejäljet tarkastettu erillisestä natiivirajauksesta. Niistä ei erotu selvästi kirjoitettua kirjainta/numeroa, järjestynyttä tekstiriviä tai tunnusta. Epäsäännöllistä kulumaa ei itsessään tulkita kirjoitukseksi.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot4-dog-walker-drainpipe.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot4-left-facade-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot4-far-doors-walker.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot4-drainpipe-mark.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB ja upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vilnius-intro-5-v1",
+        "slot": 5,
+        "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Koko jokinäkymä ja läheiset puunkuori, juuret, lehdet, sammal, kivet sekä vesi ja vastarinne tarkastettu natiivikoossa. Kuori ja juuret haarautuvat epäsäännöllisesti, lehdet vaihtelevat, kivien muoto ja sammal eivät toistu leimattuna. Veden virtaus ja pienet vaahtohuiput ovat johdonmukaiset.",
+          "Ei ihmisiä, eläimiä, rakennuksia, puistorakenteita, tekstiä, logoja tai ruokaa. Pari5/8 näyttää samansuuntaisen tiiviin luonnonrannan: vasemmalla kallistuva runko ja paljaat juuret, vesi etualalla oikealla ja joenuoma kohti keskivasenta, metsäinen vastarinne oikealla.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot5-bark-roots.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot5-water-far-bank.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB ja upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vilnius-intro-6-v1",
+        "slot": 6,
+        "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Fiktiivinen aikuinen mies on etualalla Užupisin pihajuhlassa geneerisessä yksivärisessä nykyajan lyhythihaisessa vaaleansinisessä paidassa ja hiilenharmaassa T-paidassa. Kasvojen pisamat, iho, silmät, hampaat, hiukset ja vartalon mittasuhteet ovat uskottavat. Valo ja syväterävyys ovat luontevat.",
+          "Natiivikoossa tarkastettu myös vasemman tanssijan kohotettu käsi sekä oikealla näkyvät käsien eleet ja taustan kasvot. Näkyvissä osissa ei selvää ylimääräistä sormea, sormien sulautumista tai nivelvirhettä. Kaikki jalkineet ja jalkaterät jäävät kehyksen ulkopuolelle tai muiden vartaloiden taakse. Ei ruokaa, juomia, tekstiä, logoja tai brändikuvioita.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot6-foreground-face.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot6-raised-hand-left.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot6-right-people-hands.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB ja upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vilnius-intro-7-v1",
+        "slot": 7,
+        "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Koko iltanäkymä, lähitalon ovi/ikkunat/kattopinta/puupinta ja puutarha sekä kaukaiset talot ja kävelijä tarkastettu natiivikoossa. Kulunut puu, vaihtelevat lehdet, kukat ja kostean polun irtokivet näyttävät luonnollisilta; ei leimattua orgaanista kuviota.",
+          "Ikkunoiden ja kuistivalon lämmin valo sopii siniseen iltavalaistukseen ja perspektiivi on yhtenäinen. Pieni kävelijä nähdään selin. Ei selvää kirjoitusta, osoitenumeroita, logoja, brändikuvioita, ruokaa tai eläimiä.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot7-near-house-garden.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot7-far-houses-walker.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB ja upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "vilnius-intro-8-v1",
+        "slot": 8,
+        "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajahyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Valittu manifest.asset on8-v1; erillistä valitsematonta8-v2-kandidaattia ei arvioitu tai valittu tässä tehtävässä. V1 kokonaisena ja kuori/juuret/lehdistö/kivet/vesi/vastarinne natiivirajauksina tarkastettu.",
+          "Yleisilme on visuaalisesti neutraali mustavalkoinen ilman näkyvää seepiaa tai värisävyä. Tuottajan RGB-kanavien mittauseroja ei käytetä omistajan määräämänä numeerisena nollatoleranssina eikä rasteria ole muunnettu.",
+          "Pari5/8 esittää saman briefin länsirannalta etelä-/kaakkoon ylävirtaan suunnatun tiiviin jokinäkymän: vasemmalla kallistuva suuri runko juurineen, edessä virtaava vesi ja kivet, joenuoma kohti keskivasenta sekä metsäinen vastarinne oikealla. Puiden yksilöllisyys ja kivien sijainti ovat havainnollistavia; tuottajan historical-sources.json ei väitä historiallista hydrologiaa pikselintarkasti samaksi.",
+          "Kaksi varsinaista ensisijaista lähdettä luettu: Go Vilnius Bernardine Garden kuvaa Vilnelė-joen ja historialliset myllyt/padot/työpajat sekä2013 puistorakenteet. Vilnius University Botanical Garden -historia vahvistaa Sereikiškės-kauden1799–1842 ja kasvitieteellisen toiminnan katkeamisen1842–1919. Vuoden1873 kuva ei siten esitä toimivaa kasvitieteellistä näyttelyä.",
+          "Yliopiston noin1877 Sereikiškės-piirros/kaiverrus nähty kokonaisena paikallisesta lähdereferenssistä. Sitä käytetään lähellä aikakautta olevan maasto-/jokikontekstin lähteenä, ei vuoden1873 samasta suunnasta otettuna valokuvana. Historiallinen luonnonranta on lähteisiin perustuva rekonstruktio; koko kaupungin luonnontilaisuutta ei väitetä.",
+          "Period exclusions täyttyvät: ei nimettyjä kasvipenkkejä,2013 puiston suihkulähteitä/polkuja/penkkejä, siltoja, patoja, myllyjä, kivisiä pengerrettyjä rantoja, betonirakenteita, valaisimia, aitoja, roskakoreja, moderneja asuntoja, autoja tai johtoja. Ei ihmisiä tai eläimiä. Kuori, juuret, lehdet, kivet ja vesi ovat luonnolliset. Ei tekstejä, numeroita, logoja tai ruokaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot8-bark-roots.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/vilnius/crops/slot8-water-far-bank.png",
+          "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB ja upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T19:03:22.302653+00:00",
+    "sourceManifestSha256": "050d2f593eccd96d01afc01271d41bc5c373ddb3bcadb0a0c43ee0c3a030b4c1"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "vilnius",
+    "verifiedAt": "2026-10-12T19:03:58.313687+00:00",
+    "assets": [
+      {
+        "id": "vilnius-intro-4-v1",
+        "slot": 4,
+        "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+        "bytes": 2806739,
+        "verifiedAt": "2026-10-12T19:03:56.821253+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+            "http": 200,
+            "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+            "bytes": 2806739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png?delivery-verify=feacbfba5c5362d9-1791831836821247000",
+            "http": 200,
+            "sha256": "feacbfba5c5362d97222596ee3eafa16c1f45990920a16742eaa47dccbef4816",
+            "bytes": 2806739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vilnius-intro-5-v1",
+        "slot": 5,
+        "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+        "bytes": 3283158,
+        "verifiedAt": "2026-10-12T19:03:56.821925+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+            "http": 200,
+            "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+            "bytes": 3283158,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png?delivery-verify=75f275a7324ad13d-1791831836821922000",
+            "http": 200,
+            "sha256": "75f275a7324ad13d1c8a9463982c17c71f79a79e0913c89e9442f4ee24fdceee",
+            "bytes": 3283158,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vilnius-intro-6-v1",
+        "slot": 6,
+        "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+        "bytes": 2223632,
+        "verifiedAt": "2026-10-12T19:03:56.822318+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+            "bytes": 2223632,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-6-uzupisin-pihajuhla-intro-v1.png?delivery-verify=5b431d03dba19f6c-1791831836822316000",
+            "http": 200,
+            "sha256": "5b431d03dba19f6c551eaee5f30340d66c79088e9dc946aa89314c25cb6cc39a",
+            "bytes": 2223632,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vilnius-intro-7-v1",
+        "slot": 7,
+        "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+        "bytes": 2829739,
+        "verifiedAt": "2026-10-12T19:03:57.488248+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+            "http": 200,
+            "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+            "bytes": 2829739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png?delivery-verify=ab13479da94d285a-1791831837488239000",
+            "http": 200,
+            "sha256": "ab13479da94d285aad3b1a8db31a9812cde5eab124b9dd67606cc136deb1d997",
+            "bytes": 2829739,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "vilnius-intro-8-v1",
+        "slot": 8,
+        "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+        "bytes": 3489991,
+        "verifiedAt": "2026-10-12T19:03:57.659292+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+            "bytes": 3489991,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/vilnius/20261012-full/vilnius-8-vilnia-1873-intro-v1.png?delivery-verify=f5e3175df7b8781d-1791831837659285000",
+            "http": 200,
+            "sha256": "f5e3175df7b8781d5bf4865e44595113824cf8258e3356e4e083dcf61377a257",
+            "bytes": 3489991,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/vilnius/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.954661+00:00"
+}

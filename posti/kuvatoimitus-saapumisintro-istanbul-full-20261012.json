@@ -1,0 +1,1003 @@
+{
+  "cityName": "Istanbul",
+  "gameCityId": "istanbul",
+  "mediaSlug": "istanbul",
+  "requestedSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "assets": [
+    {
+      "id": "istanbul-intro-4-v1",
+      "slot": 4,
+      "cityName": "Istanbul",
+      "gameCityId": "istanbul",
+      "mediaSlug": "istanbul",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/final/istanbul-4-balat-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/native/istanbul-4-balat-arki-intro-v1.png",
+      "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+      "bytes": 2875112,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Istanbul, a quiet everyday residential side lane in Balat, steep worn cobblestones, modest old wooden and plaster Cumba rowhouses with weathered ochre and faded green facades and projecting upper bay windows. Laundry in a sheltered window recess, resident carrying a plain cloth bag walking away in middle distance, two other adults far uphill with backs toward camera. Empty foreground. Eye-level35mm upward street view, mild cloudy morning, lived-in not tourist postcard. No major landmarks, no commercial storefronts, no number plates. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/prompts/slot4.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://goturkiye.com/istanbul/fener-and-balat-neighbourhoods",
+          "publisher": "GoTürkiye official tourism",
+          "readFacts": [
+            "Cobbled steep streets and historic wooden Cumba houses"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://goturkiye.com/istanbul/moda",
+          "publisher": "GoTürkiye",
+          "readFacts": [
+            "Moda is shoreline neighbourhood on Asian side byMarmara"
+          ]
+        },
+        {
+          "slot": 7,
+          "url": "https://goturkiye.com/istanbul/the-24-hour-hustle-and-bustle",
+          "publisher": "GoTürkiye",
+          "readFacts": [
+            "Moda side streets and Kadikoy backstreets host music and nightlife"
+          ]
+        }
+      ],
+      "caption": "Arkinen aamu Istanbulin Balatin asuinkujalla. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Native and full frame inspected: three small rear-facing adults, old anonymous houses, no signs, cars, plates, text or brands."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:32:30.026521+00:00",
+          "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: steep Balat lane and old ordinary wooden bay-window houses, three people walking away. No text, plates, logos, address numbers or foreground faces; naturally irregular materials and vegetation.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:47:06.642968+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+        "bytes": 2875112,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+            "bytes": 2875112,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png?t=798658f303d4bc57",
+            "http": 200,
+            "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+            "bytes": 2875112,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "istanbul-intro-5-v1",
+      "slot": 5,
+      "cityName": "Istanbul",
+      "gameCityId": "istanbul",
+      "mediaSlug": "istanbul",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/final/istanbul-5-kucuksu-bospori-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/native/istanbul-5-kucuksu-bospori-intro-v1.png",
+      "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+      "bytes": 2807535,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Istanbul, Bosphorus water in foreground and the authentic Küçüksu Pavilion on the Asian shore. Viewpoint from the water just west of the pavilion looking east perpendicular to its sea facade, level35mm camera, palace occupies middle third, rippling water lower half, wooded gentle backdrop. Accurate compact nineteenth-century pale stone neobaroque two-floor facade over low basement, finely carved relief, tall arched windows, symmetrical twin curved front stairs, low stone quay and delicate iron fence. Two small unmarked rowing boats far toleft, tiny adults no visible faces. Tight scene excludes suspension bridges, skyline towers and other palaces. Soft natural hazy morning, subdued pale limestone and blue-grey water. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/prompts/slot5.txt",
+      "sources": [
+        {
+          "url": "https://millisaraylar.gov.tr/lokasyon/6/kucuksu-kasri?search=2023",
+          "publisher": "National Palaces of Turkey",
+          "readFacts": [
+            "Present stone pavilion built1856–1857; compact15x27m, basement+two floors, period sea-facade ornaments and stairs",
+            "Facade enriched during Sultan Abdülaziz1861–1876"
+          ],
+          "application": "external sea-front geometry already available1873; do not show interior artworks"
+        },
+        {
+          "url": "https://kulturportali.gov.tr/turkiye/istanbul/gezilecekyer/kucuksu-kasri",
+          "publisher": "Turkish Ministry of Culture and Tourism",
+          "readFacts": [
+            "Completed1857; masonry compact15x27m; cast-iron railings rather than high surrounding wall",
+            "Modern extensive restoration begun1992, reopened1996; waterfront reception quay widened"
+          ],
+          "application": "exclude modern widened quay and museum facilities1873"
+        },
+        {
+          "url": "https://guimet-photo-turquie.fr/notices/notice.php?id=27",
+          "publisher": "Musée Guimet / Réunion des musées nationaux",
+          "readFacts": [
+            "Pascal Sébah photographAP10141 dated before1874",
+            "Location on Asian Bosphorus coast between Küçüksu andGöksu; small pavilion; Balyan architect dates1800–1866 and1826–1858"
+          ],
+          "application": "historical period photograph metadata and dead-more-than70years architecture evidence"
+        },
+        {
+          "url": "https://www.loc.gov/pictures/item/2003662048/",
+          "publisher": "Library of Congress",
+          "readFacts": [
+            "The Imperial Palace ofGöksu photograph; catalog dates1880–1900"
+          ],
+          "application": "downloaded and inspected external facade reference, later19thcentury only, not direct1873 dating proof",
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/references/kucuksu-period-loc.jpg"
+        }
+      ],
+      "caption": "Bosporin vesi ja Küçüksun paviljonki Istanbulissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Fullframe native checked, two-floor neobaroque palace sea facade with curved stairs and iron fence, no later landmarks or marks, tiny rear-facing boatpeople. Slight oblique western water viewpoint."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:36:36.616907+00:00",
+          "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: Bosporus foreground and nineteenth-century Kucuksu pavilion, distant small boat occupants, no near faces, text, boats with markings or bridges. Historic architecture allowed by old authorship; natural camera water/light, no modern designed work.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:47:09.871086+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+        "bytes": 2807535,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png",
+            "http": 200,
+            "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+            "bytes": 2807535,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png?t=17b84a733ff929e8",
+            "http": 200,
+            "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+            "bytes": 2807535,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "istanbul-intro-6-v1",
+      "slot": 6,
+      "cityName": "Istanbul",
+      "gameCityId": "istanbul",
+      "mediaSlug": "istanbul",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/final/istanbul-6-moda-rantajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/native/istanbul-6-moda-rantajuhla-intro-v1.png",
+      "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+      "bytes": 2027011,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Istanbul, joyful young-adult gathering on a modest shoreline terrace in Moda overlooking softly blurred Marmara water at late afternoon. One fictional Turkish man age27 in foreground, laughing naturally, wavy dark hair, unbranded plain terracotta overshirt over cream shirt; a diverse typical local Istanbul crowd of young Turkish adults behind him in generic contemporary fashionable clothes, friends chatting and lightly dancing. Camera crops foreground at chest, every background person shown only head and upper torso or occluded by crowd. ALL legs and ALL footwear completely excluded. Natural skin, breeze, candid off-center composition, no landmarks, no stage, no balloons or banners. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/prompts/slot6.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://goturkiye.com/istanbul/fener-and-balat-neighbourhoods",
+          "publisher": "GoTürkiye official tourism",
+          "readFacts": [
+            "Cobbled steep streets and historic wooden Cumba houses"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://goturkiye.com/istanbul/moda",
+          "publisher": "GoTürkiye",
+          "readFacts": [
+            "Moda is shoreline neighbourhood on Asian side byMarmara"
+          ]
+        },
+        {
+          "slot": 7,
+          "url": "https://goturkiye.com/istanbul/the-24-hour-hustle-and-bustle",
+          "publisher": "GoTürkiye",
+          "readFacts": [
+            "Moda side streets and Kadikoy backstreets host music and nightlife"
+          ]
+        }
+      ],
+      "caption": "Nuorten aikuisten iloinen rantajuhla Istanbulin Modassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole frame and native detail inspected, fictional Turkish adult foreground, allfootwear excluded, generic fashion, believable skin and hands, no textlogosfood."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:40:31.420512+00:00",
+          "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame and upper-right detail crop: wicker hanging lamp has woven slats, no lettering/sign. Joyful fictional adult man foreground and local adult crowd, all shoes/feet excluded, generic clothing, no branding or food. Natural available seaside light.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:47:12.131552+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+        "bytes": 2027011,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+            "bytes": 2027011,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png?t=0ed17dbebd191d09",
+            "http": 200,
+            "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+            "bytes": 2027011,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "istanbul-intro-7-v1",
+      "slot": 7,
+      "cityName": "Istanbul",
+      "gameCityId": "istanbul",
+      "mediaSlug": "istanbul",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/final/istanbul-7-moda-iltakatu-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/native/istanbul-7-moda-iltakatu-intro-v1.png",
+      "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+      "bytes": 2599054,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Present-day Istanbul Moda neighbourhood on a narrow quiet side street at blue hour. Old anonymous two- and three-storey residential rowhouses, hanging branches, some ordinary warm window lights and plain street lamps, a few small adults walking away far in the distance. Look lengthwise down street from eye-level35mm, soft ambient dusk; no close faces, commercial shopfronts or signs, no illuminated advertising, murals, protected artworks, landmarks or cars. Natural understated night street photograph. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/prompts/slot7.txt",
+      "sources": [
+        {
+          "slot": 4,
+          "url": "https://goturkiye.com/istanbul/fener-and-balat-neighbourhoods",
+          "publisher": "GoTürkiye official tourism",
+          "readFacts": [
+            "Cobbled steep streets and historic wooden Cumba houses"
+          ]
+        },
+        {
+          "slot": 6,
+          "url": "https://goturkiye.com/istanbul/moda",
+          "publisher": "GoTürkiye",
+          "readFacts": [
+            "Moda is shoreline neighbourhood on Asian side byMarmara"
+          ]
+        },
+        {
+          "slot": 7,
+          "url": "https://goturkiye.com/istanbul/the-24-hour-hustle-and-bustle",
+          "publisher": "GoTürkiye",
+          "readFacts": [
+            "Moda side streets and Kadikoy backstreets host music and nightlife"
+          ]
+        }
+      ],
+      "caption": "Modan asuinkadun iltavalot Istanbulissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Whole and native checked, rear-facing small adults, anonymous historic residential houses, available dusk and windowlights; no legible textlogosorvehicles."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:41:01.556725+00:00",
+          "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: ordinary old Moda residential street toward water at dusk, small rear-facing adults. Generic practical lamps and windows, no signs, logos, address numerals or contemporary named designs. Natural real-camera blue hour.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:47:15.349450+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+        "bytes": 2599054,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png",
+            "http": 200,
+            "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+            "bytes": 2599054,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png?t=8b5927e08a66bf93",
+            "http": 200,
+            "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+            "bytes": 2599054,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "istanbul-intro-8-v1",
+      "slot": 8,
+      "cityName": "Istanbul",
+      "gameCityId": "istanbul",
+      "mediaSlug": "istanbul",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/final/istanbul-8-kucuksu-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/native/istanbul-8-kucuksu-1873-intro-v2.png",
+      "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+      "bytes": 2457920,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png",
+      "generationPrompt": "Use case: historical-scene. EXACTLY Istanbul1873, the Bosphorus before any suspension bridge, from water west-southwest of Küçüksu Pavilion facing east-northeast slightly oblique to its sea facade: SAME viewpoint and framing as slot5, compact pavilion in center-right spanning roughly half the imagewidth, visible sea front and its right side, water lowerthird, wooded gentle backdrop, shore extending towardleft. Authentic1856–1857 neobaroque pale stone pavilion: two inhabited floors above low basement, tall arched windows, elaborate period facade relief, symmetrical twin curved stairs on sea front, low period stone quay, delicate cast iron fence. Sultan Abdülaziz period facade enrichment already present by1873. A narrow wooden caique distant left with tiny men in1873 dark coats and fez hats turned away; simple sailboat far away. PURE neutral black and white, no sepia, gentle period-camera contrast and fine grain. No widened modern reception quay, modern museum additions, modern boats, electric lamps, signs, asphalt, cars, bridges, towers, highrise housing. No interior artworks. Soft hazy morning, realistic water texture. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates. NECESSARY GEOMETRY QUALITY CORRECTION: authentically reproduce the sea-facing Küçüksu Pavilion exterior, not a generic rectangular neoclassical mansion. The sea facade has strong rounded corner bay projections at left and right, each with paired tall narrow arched windows between slender doubled columns; the center three bays recessed behind the corner projections, intricate deeply carved rococo relief. TWO SEPARATE CURVED STAIRWAYS at outer sides rising to front terrace, NO one central oval or giant U-shaped staircase. Long delicate iron fence parallel water, no giant gated front entry blocking facade. Frame matches contemporary pair: low water foreground, building center-right, right side also visible, leafy hillside behind, boats distant left. No people closer than tiny silhouettes.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/prompts/slot8-attempt2.txt",
+      "sources": [
+        {
+          "url": "https://millisaraylar.gov.tr/lokasyon/6/kucuksu-kasri?search=2023",
+          "publisher": "National Palaces of Turkey",
+          "readFacts": [
+            "Present stone pavilion built1856–1857; compact15x27m, basement+two floors, period sea-facade ornaments and stairs",
+            "Facade enriched during Sultan Abdülaziz1861–1876"
+          ],
+          "application": "external sea-front geometry already available1873; do not show interior artworks"
+        },
+        {
+          "url": "https://kulturportali.gov.tr/turkiye/istanbul/gezilecekyer/kucuksu-kasri",
+          "publisher": "Turkish Ministry of Culture and Tourism",
+          "readFacts": [
+            "Completed1857; masonry compact15x27m; cast-iron railings rather than high surrounding wall",
+            "Modern extensive restoration begun1992, reopened1996; waterfront reception quay widened"
+          ],
+          "application": "exclude modern widened quay and museum facilities1873"
+        },
+        {
+          "url": "https://guimet-photo-turquie.fr/notices/notice.php?id=27",
+          "publisher": "Musée Guimet / Réunion des musées nationaux",
+          "readFacts": [
+            "Pascal Sébah photographAP10141 dated before1874",
+            "Location on Asian Bosphorus coast between Küçüksu andGöksu; small pavilion; Balyan architect dates1800–1866 and1826–1858"
+          ],
+          "application": "historical period photograph metadata and dead-more-than70years architecture evidence"
+        },
+        {
+          "url": "https://www.loc.gov/pictures/item/2003662048/",
+          "publisher": "Library of Congress",
+          "readFacts": [
+            "The Imperial Palace ofGöksu photograph; catalog dates1880–1900"
+          ],
+          "application": "downloaded and inspected external facade reference, later19thcentury only, not direct1873 dating proof",
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/references/kucuksu-period-loc.jpg"
+        }
+      ],
+      "caption": "Küçüksun paviljonki Bosporin rannassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "wholeFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "pass": true,
+          "notes": "Wholeframe and native checked: corrected roundedprojectingcornerbays, recessedcenter, twoseparate curvedstairs, twofloors overlowbasement. Neutralgrayscale no modern objects. Same waterwesternview showing sea facade andrightside as5. Periodfacts stored beforecall."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T17:47:03.697144+00:00",
+          "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame compared with modern5 and period Library of Congress facade photograph. Fresh candidate restores curved projecting side bays and separate stairs with same waterside direction. Neutral monochrome, distant period boats and backs, no bridge, electricity, signs or brands; two official historical sources and pre1874 museum photo record precede call.",
+          "ownerEditorialAcceptance": "pending"
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T17:47:19.014449+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+        "bytes": 2457920,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+            "bytes": 2457920,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png?t=a0ba42bf13bd626f",
+            "http": 200,
+            "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+            "bytes": 2457920,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "producerCurrentID": "istanbul-intro-8-v2"
+    }
+  ],
+  "omittedItems": [],
+  "status": "awaitingSessionOwnerQA",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "callsIssued": 6,
+  "imagesReturned": 6,
+  "updatedAt": "2026-10-12T17:44:14.772109+00:00",
+  "rejectedCandidates": [
+    {
+      "slot": 8,
+      "reason": "Named palace geometry wrong: flat rectangularfront and one giantUstair instead of projecting curvedcornerbayrisalits and separate curvedstairs. Historicalperiod and no-textpass but geometryfails. Necessary full-newattempt2 required.",
+      "candidate": {
+        "id": "istanbul-intro-8-v1",
+        "slot": 8,
+        "cityName": "Istanbul",
+        "gameCityId": "istanbul",
+        "mediaSlug": "istanbul",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/final/istanbul-8-kucuksu-1873-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/native/istanbul-8-kucuksu-1873-intro-v1.png",
+        "sha256": "f5dd12e61565fa7654be8bfce78742082d83b4ebbce73caffb4bc793151d3dcd",
+        "bytes": 2416576,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "pixelExactMetadataExport": true,
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        },
+        "r2Key": "julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v1.png",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v1.png",
+        "generationPrompt": "Use case: historical-scene. EXACTLY Istanbul1873, the Bosphorus before any suspension bridge, from water west-southwest of Küçüksu Pavilion facing east-northeast slightly oblique to its sea facade: SAME viewpoint and framing as slot5, compact pavilion in center-right spanning roughly half the imagewidth, visible sea front and its right side, water lowerthird, wooded gentle backdrop, shore extending towardleft. Authentic1856–1857 neobaroque pale stone pavilion: two inhabited floors above low basement, tall arched windows, elaborate period facade relief, symmetrical twin curved stairs on sea front, low period stone quay, delicate cast iron fence. Sultan Abdülaziz period facade enrichment already present by1873. A narrow wooden caique distant left with tiny men in1873 dark coats and fez hats turned away; simple sailboat far away. PURE neutral black and white, no sepia, gentle period-camera contrast and fine grain. No widened modern reception quay, modern museum additions, modern boats, electric lamps, signs, asphalt, cars, bridges, towers, highrise housing. No interior artworks. Soft hazy morning, realistic water texture. One new opaque 1536x1024 RGB sRGB PNG. Photorealistic real-camera documentary image, natural available light, muted authentic colors, real irregular textures, fine skin pores and believable foliage. No HDR, CGI, illustration, plastic skin or repeated stamped textures. No text, letters, numbers, logos, shop signs, address plates, brand patterns, flags, watermark or border. No food, murals, protected contemporary art or recent architect-designed landmarks. Only entirely fictional adult people. Exclude all motorcars and registration plates.",
+        "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/prompts/slot8.txt",
+        "sources": [
+          {
+            "url": "https://millisaraylar.gov.tr/lokasyon/6/kucuksu-kasri?search=2023",
+            "publisher": "National Palaces of Turkey",
+            "readFacts": [
+              "Present stone pavilion built1856–1857; compact15x27m, basement+two floors, period sea-facade ornaments and stairs",
+              "Facade enriched during Sultan Abdülaziz1861–1876"
+            ],
+            "application": "external sea-front geometry already available1873; do not show interior artworks"
+          },
+          {
+            "url": "https://kulturportali.gov.tr/turkiye/istanbul/gezilecekyer/kucuksu-kasri",
+            "publisher": "Turkish Ministry of Culture and Tourism",
+            "readFacts": [
+              "Completed1857; masonry compact15x27m; cast-iron railings rather than high surrounding wall",
+              "Modern extensive restoration begun1992, reopened1996; waterfront reception quay widened"
+            ],
+            "application": "exclude modern widened quay and museum facilities1873"
+          },
+          {
+            "url": "https://guimet-photo-turquie.fr/notices/notice.php?id=27",
+            "publisher": "Musée Guimet / Réunion des musées nationaux",
+            "readFacts": [
+              "Pascal Sébah photographAP10141 dated before1874",
+              "Location on Asian Bosphorus coast between Küçüksu andGöksu; small pavilion; Balyan architect dates1800–1866 and1826–1858"
+            ],
+            "application": "historical period photograph metadata and dead-more-than70years architecture evidence"
+          },
+          {
+            "url": "https://www.loc.gov/pictures/item/2003662048/",
+            "publisher": "Library of Congress",
+            "readFacts": [
+              "The Imperial Palace ofGöksu photograph; catalog dates1880–1900"
+            ],
+            "application": "downloaded and inspected external facade reference, later19thcentury only, not direct1873 dating proof",
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/references/kucuksu-period-loc.jpg"
+          }
+        ],
+        "caption": "Küçüksun paviljonki Bosporin rannassa vuonna 1873. Havainnekuva.",
+        "QA": {
+          "worker": {
+            "wholeFrameInspected": true,
+            "nativeDetailsInspected": true,
+            "pass": false,
+            "notes": "Named palace geometry wrong: flat rectangularfront and one giantUstair instead of projecting curvedcornerbayrisalits and separate curvedstairs. Historicalperiod and no-textpass but geometryfails. Necessary full-newattempt2 required."
+          },
+          "rootSessionReview": {
+            "status": "pending"
+          }
+        },
+        "R2Proof": {
+          "status": "pending"
+        }
+      }
+    }
+  ],
+  "productionComplete": true,
+  "deliverySelection": {
+    "reason": "Preserve stable gallery ID after producer-only ID correction; native/final/R2 bytes are unchanged and already QA accepted.",
+    "producerCurrentSlot8ID": "istanbul-intro-8-v2",
+    "publishedStableSlot8ID": "istanbul-intro-8-v1",
+    "selectedAt": "2026-10-12T19:12:59.537727+00:00"
+  },
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "istanbul",
+    "gameCityId": "istanbul",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/sources.json",
+      "https://guimet-photo-turquie.fr/notices/notice.php?id=27",
+      "https://www.millisaraylar.gov.tr/Lokasyon/6/Kucuksu-Kasri",
+      "https://www.kulturportali.gov.tr/turkiye/istanbul/gezilecekyer/kucuksu-kasri",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/references/kucuksu-period-loc.jpg"
+    ],
+    "assets": [
+      {
+        "id": "istanbul-intro-4-v1",
+        "slot": 4,
+        "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen Balatin asuinkuja, pienet henkilöt selin, luonnolliset pinnat eikä tekstiä tai logoja.",
+        "observations": [
+          "Fotorealistinen Balatin ylämäkinen asuinkuja, kolme henkilöä selin. Epäsäännöllinen kiveys, rappaus, puu ja lehdet ovat luonnollisia, rakennusten perspektiivi ja pehmeä päivänvalo koherentteja.",
+          "Ovien, ikkunoiden, seinien, kasvien ja vaatteiden natiivikokoisissa rajauksissa ei havaittu kirjoitusta, numeroa tai logoa. Tavallinen kukkakuvio ei ole tunnistettava brändikuvio; ei muovisuutta tai leimattua luonnon pintaa.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot4-people-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot4-wood-leaves-windows.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "istanbul-intro-5-v1",
+        "slot": 5,
+        "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: uskottava paviljongin merijulkisivu ja luonnollinen Bosporin vesi, parin katselusuunta täyttyy.",
+        "observations": [
+          "Fotorealistinen Bosporin vesi ja Küçüksun paviljonki. Luonnollinen epäsäännöllinen aallokko, puusto ja kivipinnat; mittakaava, rakennuslinjat ja valaistus ovat johdonmukaisia.",
+          "Kompakti rakennus kaksi asuinkerrosta matalan kellarin päällä, ulkonevat kulmaosat, kaari-ikkunat ja kaksi erillistä kaarevaa porrasta. Julkisivun yleisrakenne vertautui luettuun LOC-periodikuvan ulkokuoreen; koristelun yksityiskohtia ei esitetä mitattuna arkkitehtuurina.",
+          "Pienet veneiden henkilöt kaukana ja kasvot erottumattomat. Ei kirjoitusta, logoja, rekisteritunnuksia, brändimerkkejä tai epäjohdonmukaista perspektiiviä.",
+          "Modernin/historiallisen parin sama vedenpuoleinen katselusuunta näkyy merijulkisivuna ja oikeana sivujulkisivuna, rakennus kuvan keski-oikealla ja ranta jatkuu vasemmalle.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot5-facade-stairs.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot5-boats-water-trees.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "istanbul-intro-6-v1",
+        "slot": 6,
+        "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fiktiivinen aikuinen nykypäivän rantajuhlassa, luonnolliset kasvot ja kädet, geneerinen vaatetus, ei ruokaa, jalkineita tai brändimerkkejä.",
+        "observations": [
+          "Fiktiivinen aikuinen mies etualalla Modan nykypäivän rantajuhlassa. Iho, silmät, hampaat ja hiukset luonnollisia; näkyvät taustan kädet ja kasvot tarkastettu, ei selvää anatomista virhettä.",
+          "Geneerinen terrakotanvärinen paita vaalean paidan päällä, taustassa tavallisia muodikkaita nykyvaatteita. Ei logoja, kirjoitusta tai tunnistettavaa brändikuviota.",
+          "Kaikkien henkilöiden jalkineet ja jalat poissa näkyvistä. Ei ruokaa. Kehyksen ylä-/alareunat ja taustan esineet tarkastettu; luonnonvalo ja Marmarameren taustan syväterävyys ovat johdonmukaisia.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot6-face-shirt.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot6-secondary-hands.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot6-left-hand.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "istanbul-intro-7-v1",
+        "slot": 7,
+        "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: fotorealistinen iltakatu, pienet henkilöt selin, koherentti valo ja merkitsemättömät seinäpinnat.",
+        "observations": [
+          "Fotorealistinen Modan ilta-asuinkatu, kolme pientä henkilöä selin. Lampun-/ikkunavalot ja sininen iltataivas ovat koherentteja; perspektiivi, kiveys, puusto ja lehtivarjot uskottavia.",
+          "Ovet, ikkunaraudat, seinäpinnat, kasvit ja kaukaiset henkilöt tarkastettu natiivikokoisina. Ei kirjoitusta, numeroita, logoja tai leimattua orgaanista tekstuuria.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot7-door-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot7-leaves-ironwork.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      },
+      {
+        "id": "istanbul-intro-8-v1",
+        "slot": 8,
+        "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty valittu v2-tiedosto: neutraali mustavalkoinen1873-paviljonki, kaksi erillistä kaarevaa porrasta ja kulmaosat vastaavat periodigeometrian yleisrakennetta; modernin parin katselusuunta ja period exclusions täyttyvät.",
+        "observations": [
+          "Tarkastettu tiedosto on istanbul-8-kucuksu-1873-intro-v2.png, SHAa0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413. Tuottajan nykyinen manifest.id on edelleen istanbul-intro-8-v1; ID säilytettiin sellaisenaan, QA kohdistuu tähän tarkkaan valitunv2:n tiedostoon ja SHAan.",
+          "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Fotorealistinen vesi, puut ja kivipinnat ovat epäsäännöllisiä ja luonnollisia; ei muovisuutta tai kaarnaleimaa.",
+          "Sama mereltä länsi-lounaan puolelta itä-koilliseen suunnattu hieman viisto merijulkisivun katselusuunta kuin slot5:ssä: paviljonki keski-oikealla, näkyvä oikea sivu, vesi alhaalla ja ranta jatkuu vasemmalle. Ei pikselintarkkaa tai mitattua arkkitehtonista vastaavuusväitettä.",
+          "V2:ssa kaksi erillistä kaarevaa porrasta ja ulkonevat pyöristetyt kulmaosat, keskiosa niiden takana; aikaisemmanv1:n jättimäinen keski-U-porras puuttuu. Kaksi asuinkerrosta ja matala kellari vastaavat lähteiden sekä nähdyn periodikuvan yleisrakennetta.",
+          "Pieni puinen caique ja kaukaiset selin nähdyt miehet, yksinkertainen purjevene. Ei luettavia veneiden nimiä tai logoja; henkilöiden kasvot erottumattomat.",
+          "Sources.json ja brief luettu. Guimetin AP10141-katalogisivu (avant1874) luettu suoraan; NationalPalaces ja MinistryofCulture ensisijaislähteiden sisältö saatiin luettua hakutyökalun indeksoituna tuloksena, kun suorissa avauksissa oli saavutettavuus-/timeout-virheitä. Ne vahvistavat1856–1857/1857 rakennuksen, Abdülazizin kauden julkisivukoristelun ja1992–1996 restauraation/laiturilaajennuksen.",
+          "LOC:n paikallinen1880–1900-periodikuva /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/references/kucuksu-period-loc.jpg luettu visuaalisesti yleisen ulkogeometrian vertailuksi. LOC-webcatalog palautti403; myöhempää kuvaa ei käytetty suoraan1873-ajoitusnäyttönä.",
+          "Period exclusions luettu ja tarkastettu: ei moderneja siltoja, laajennettua modernia vastaanottolaituria, sähkövaloja, museolisäyksiä, korkeita moderneja taloja tai modernia lauttaa. Ei tekstiä, logoja, autoja tai muovia.1873-ulkonäkö on lähteisiin perustuva havainnekuvatulkinta.",
+          "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot8-facade-stairs.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot8-caique-sail.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/istanbul/crops/slot8-trees-water.png",
+          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:59:07.472806+00:00",
+    "sourceManifestSha256": "1d62bdfa12e83ed142ee9e1db4c98b2f6be0413e75bf8101a1141af1795bd411"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "istanbul",
+    "verifiedAt": "2026-10-12T18:00:42.613053+00:00",
+    "assets": [
+      {
+        "id": "istanbul-intro-4-v1",
+        "slot": 4,
+        "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+        "bytes": 2875112,
+        "verifiedAt": "2026-10-12T18:00:39.747940+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png",
+            "http": 200,
+            "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+            "bytes": 2875112,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-4-balat-arki-intro-v1.png?delivery-verify=798658f303d4bc57-1791828039747935000",
+            "http": 200,
+            "sha256": "798658f303d4bc57880a9aef89a44d385528d10a29c439e9aacc5af8eac91ccb",
+            "bytes": 2875112,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "istanbul-intro-5-v1",
+        "slot": 5,
+        "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+        "bytes": 2807535,
+        "verifiedAt": "2026-10-12T18:00:39.748064+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png",
+            "http": 200,
+            "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+            "bytes": 2807535,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-5-kucuksu-bospori-intro-v1.png?delivery-verify=17b84a733ff929e8-1791828039748062000",
+            "http": 200,
+            "sha256": "17b84a733ff929e81724571c6dfcf925d8eeac109506f7fda1a5732141914a42",
+            "bytes": 2807535,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "istanbul-intro-6-v1",
+        "slot": 6,
+        "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+        "bytes": 2027011,
+        "verifiedAt": "2026-10-12T18:00:39.748363+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+            "bytes": 2027011,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-6-moda-rantajuhla-intro-v1.png?delivery-verify=0ed17dbebd191d09-1791828039748362000",
+            "http": 200,
+            "sha256": "0ed17dbebd191d09dd77673b92ef3b13acf89a061624e5be0df396f200df13de",
+            "bytes": 2027011,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "istanbul-intro-7-v1",
+        "slot": 7,
+        "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+        "bytes": 2599054,
+        "verifiedAt": "2026-10-12T18:00:40.737643+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png",
+            "http": 200,
+            "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+            "bytes": 2599054,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-7-moda-iltakatu-intro-v1.png?delivery-verify=8b5927e08a66bf93-1791828040737637000",
+            "http": 200,
+            "sha256": "8b5927e08a66bf9393d69dea4085af9ff9da8350d200b58b5159072e96ecddf6",
+            "bytes": 2599054,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "istanbul-intro-8-v1",
+        "slot": 8,
+        "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+        "bytes": 2457920,
+        "verifiedAt": "2026-10-12T18:00:41.851600+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+            "bytes": 2457920,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/istanbul/20261012-full/istanbul-8-kucuksu-1873-intro-v2.png?delivery-verify=a0ba42bf13bd626f-1791828041851592000",
+            "http": 200,
+            "sha256": "a0ba42bf13bd626feee4aa54cd1d1721e35560ce1020f299efcc2007d6e01413",
+            "bytes": 2457920,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/istanbul/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": 6,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.688673+00:00"
+}

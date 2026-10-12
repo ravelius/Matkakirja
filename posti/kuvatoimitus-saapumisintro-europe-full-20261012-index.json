@@ -4,36 +4,610 @@
     "lisbon": {
       "gameCityId": "lissabon",
       "mediaSlug": "lisbon",
-      "acceptedAssets": 2,
-      "omittedItems": [
-        {
-          "id": "lisbon-8-alfama-tejo-1873-intro-v1",
-          "slot": 8,
-          "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v1.png",
-          "reason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
-          "rootReview": {
-            "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
-            "fullFrameInspected": true,
-            "nativeDetailsInspected": true,
-            "approvedForTechnicalDelivery": false,
-            "observations": "Entire native1536x1024 historical frame inspected and compared visually with retained slot5. Same elevated hillside direction over Alfama roofs toward broad Tagus, near roofs bottom/left and estuary beyond/right. Neutral black and white. Old irregular tile/plaster and small sailing craft, no modern coastal road, antennas, cruise terminal, bridge, opposite-shore towers or electric lights. No text,logos,numbers or artwork observed.",
-            "historicalPairSlot": 5,
-            "historicalSourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json",
-            "limits": [
-              "Conservative illustrative1873 roofscape based on old quarter geography; individual anonymous facades are reconstructed, not a surveyed photograph."
-            ],
-            "reviewedAt": "2026-10-12T17:26:20.016873+00:00",
-            "strictNeutralBlackWhite": false,
-            "omissionReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call."
-          },
-          "generationCalls": 1
-        }
-      ],
+      "acceptedAssets": 3,
+      "omittedItems": [],
       "actualCalls": 4,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-lisbon-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
+    },
+    "amsterdam": {
+      "gameCityId": "amsterdam",
+      "mediaSlug": "amsterdam",
+      "acceptedAssets": 3,
+      "omittedItems": [],
+      "actualCalls": 4,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-amsterdam-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "bergen": {
+      "gameCityId": "bergen",
+      "mediaSlug": "bergen",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-bergen-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "oslo": {
+      "gameCityId": "oslo",
+      "mediaSlug": "oslo",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-oslo-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "dublin": {
+      "gameCityId": "dublin",
+      "mediaSlug": "dublin",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-dublin-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "edinburgh": {
+      "gameCityId": "edinburgh",
+      "mediaSlug": "edinburgh",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-edinburgh-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "helsinki": {
+      "gameCityId": "helsinki",
+      "mediaSlug": "helsinki",
+      "acceptedAssets": 4,
+      "omittedItems": [
+        {
+          "id": "helsinki-4-asuinalueen-arki-intro-v1",
+          "slot": 4,
+          "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "Hylätty toimituksesta: lähimmän pyörän mustassa etukorissa näkyy vaalea kirjainmainen logo-/tekstimerkki. Ensimmäinen candidate jää pending-quality-fix; kokonaan uusi tarpeellinen korjaus on sallittu.",
+          "observations": [
+            "Koko kehys: fotorealistinen asuinkatu, johdonmukainen perspektiivi ja pehmeä luonnonvalo. Kaksi pientä kävelijää selin.",
+            "Puiden kuori ja lehdet, kiveys, rappaus sekä ajoneuvojen pinnat tarkastettu natiivikokoisina; ei havaittua kaarnaleimaa tai muovisuutta.",
+            "HYLKÄYS: lähimmän polkupyörän mustan etukorin yläreunassa, noin x=651..677 y=599..611, näkyy vaalea noin kolmikirjaiminen BLC:n kaltainen logo-/tekstimerkki. Merkki rikkoo no text/logos -vaatimusta, vaikka tarkkaa tuotemerkkiä ei voida tunnistaa.",
+            "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-bike-basket-mark.png",
+            "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-people-bikes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-tree-cars-leaves.png",
+            "Tämä ensimmäinen candidate jää pending-quality-fix. Yksi kokonaan uusi tarpeellinen laatukorjaus kuuluu owner-order.jsonin rootWorkflowPolicyCorrectioniin; tätä tiedostoa ei retusoida eikä toimiteta.",
+            "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+          ]
+        }
+      ],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-helsinki-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "copenhagen": {
+      "gameCityId": "kobenhavn",
+      "mediaSlug": "copenhagen",
+      "acceptedAssets": 4,
+      "omittedItems": [
+        {
+          "id": "copenhagen-4-pyorailyarki-intro-v2",
+          "slot": 4,
+          "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "Toisen ehdokkaan taustakatossa (kehyksen noin x780–850,y280–340) on terävästi rajattuja vaaleita kaarevia/viivamaisia merkkejä, jotka näyttävät maalatulta graffitilta tai tekstimäiseltä kuviolta. Kirjoituksettomuutta ei voi varmistaa tästä natiiviyksityiskohdasta. Nykyinen v2 jää pending-quality-fix/needs-owner-next-decision kahden yrityksen jälkeen.",
+          "observations": [
+            "Koko kehys ja natiivirajaukset ihmisistä/pyörästä, julkisivusta/lehdistöstä sekä taustan kattolappeesta tarkastettu.",
+            "Etualan parkkeeratut tunnukselliset pyörät on poistettu, ja kaukainen pyöräilijä sekä kävelijät näkyvät selin.",
+            "Katossa on vaalea, selvärajainen kaareva viivakuvio, joka erottuu punaisesta kattotiiliverkosta. Tästä ei voi nimetä varmaa luettavaa sanaa tai brändiä, mutta kuvio näyttää lisätyltä merkiltä eikä satunnaiselta luonnolliselta kulumalta.",
+            "Muissa tarkastetuissa pinnoissa ei näkyvää tekstiä/logoa; lehdistö ja katugeometria uskottavia.",
+            "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+          ],
+          "nativeDetailCrops": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-people.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-foliage-facade.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-roof.png"
+          ],
+          "technicalEvidence": {
+            "bytes": 2987082,
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "opaque": true,
+            "profileDescription": "sRGB built-in",
+            "provenanceMetadataPass": true,
+            "captionPass": true
+          },
+          "status": "pending-quality-fix",
+          "nextDecision": "needs-owner-next-decision",
+          "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
+        }
+      ],
+      "actualCalls": 7,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-copenhagen-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "london": {
+      "gameCityId": "lontoo",
+      "mediaSlug": "london",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-london-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "tallinn": {
+      "gameCityId": "tallinna",
+      "mediaSlug": "tallinn",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-tallinn-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "iceland": {
+      "gameCityId": "islanti",
+      "mediaSlug": "iceland",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-iceland-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "riga": {
+      "gameCityId": "riika",
+      "mediaSlug": "riga",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 9,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-riga-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "lapland": {
+      "gameCityId": "lappi",
+      "mediaSlug": "lapland",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-lapland-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "tampere": {
+      "gameCityId": "tampere",
+      "mediaSlug": "tampere",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-tampere-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "tromso": {
+      "gameCityId": "tromssa",
+      "mediaSlug": "tromso",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-tromso-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "barcelona": {
+      "gameCityId": "barcelona",
+      "mediaSlug": "barcelona",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-barcelona-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "berlin": {
+      "gameCityId": "berliini",
+      "mediaSlug": "berlin",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-berlin-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "budapest": {
+      "gameCityId": "budapest",
+      "mediaSlug": "budapest",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 7,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-budapest-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "florence": {
+      "gameCityId": "firenze",
+      "mediaSlug": "florence",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 7,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-florence-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "granada": {
+      "gameCityId": "granada",
+      "mediaSlug": "granada",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-granada-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "alps": {
+      "gameCityId": "alpit",
+      "mediaSlug": "alps",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-alps-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "madrid": {
+      "gameCityId": "madrid",
+      "mediaSlug": "madrid",
+      "acceptedAssets": 3,
+      "omittedItems": [
+        {
+          "id": "madrid-4-lavapies-arki-intro-v1",
+          "slot": 4,
+          "sha256": "a3a18ae7166612964ccfbfa493cee14ca27678b3e159c082de4ce47f87882085",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "Pending-quality-fix: aivan oikeassa kehysreunassa osittainen paperilappu tummine kirjoitus-/kuviomaisine jälkineen; koko kehyksen ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa.",
+          "observations": [
+            "Koko1536x1024 kehys sekä oikean seinän/putken/kehysreunan lapun, kaukaisten ihmisten/puun ja parvekekasvien natiivirajaukset tarkastettu.",
+            "Aivan oikeassa kehysreunassa näkyy osittainen valkoinen oveen kiinnitetty paperilappu, jossa on tummia kirjoitus-/kuviomaisia viivoja. Ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa koko kehykselle; varsinainen merkintä ei ole kokonaisena luettavissa.",
+            "Oikean syöksytorven valkoiset jäljet näyttävät maalipinnan kulumalta, eikä niitä käytetty hylkäyksen perusteena.",
+            "Muuten koherentti kameranäkymä, kulunut rappaus, luonnolliset parvekekasvit/puut ja pienet selin olevat ihmiset. Ei ruokaa tai tunnistettavia brändikuvioita havaittu.",
+            "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+          ],
+          "status": "pending-quality-fix",
+          "necessaryWholeNewQualityRetryAllowed": true
+        },
+        {
+          "id": "madrid-7-latina-ilta-intro-v1",
+          "slot": 7,
+          "sha256": "37d36fdce445cc35debfeb44b2871cd0f0146249e66eab5238d252cdd7144d87",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "Pending-quality-fix: lähivasemman syöksytorven näkyvä suorakaiteinen tarra sisältää kirjain-/numeromaisia kuvioita.",
+          "observations": [
+            "Koko1536x1024 kehys sekä lähivasemman syöksytorvitarrojen, ovien/julkisivujen ja kaukaisten ihmisten/puun natiivirajaukset tarkastettu.",
+            "Lähivasemman syöksytorven kohdalla x270,y545–620 on selkeä pitkä suorakaiteinen vaalea tarra, jossa tummia kirjain-/numeromaisia kuvioita. Ei-tekstiä/merkintöjä-ehto ei täyty.",
+            "Muuten kamera-fotorealismi, luonnollinen kasvillisuus ja koherentti hämärävalotus/perspektiivi. Kaksi pientä ihmistä selin, ei ruokaa tai tunnistettavaa brändikuviota havaittu.",
+            "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+          ],
+          "status": "pending-quality-fix",
+          "necessaryWholeNewQualityRetryAllowed": true
+        }
+      ],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-madrid-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "marseille": {
+      "gameCityId": "marseille",
+      "mediaSlug": "marseille",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-marseille-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "prague": {
+      "gameCityId": "praha",
+      "mediaSlug": "prague",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-prague-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "rome": {
+      "gameCityId": "rooma",
+      "mediaSlug": "rome",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-rome-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "sicily": {
+      "gameCityId": "sisilia",
+      "mediaSlug": "sicily",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-sicily-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "seville": {
+      "gameCityId": "sevilla",
+      "mediaSlug": "seville",
+      "acceptedAssets": 4,
+      "omittedItems": [
+        {
+          "id": "seville-7-asuinkuja-ilta-intro-v1",
+          "slot": 7,
+          "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "pending-quality-fix: keskietäisen vasemman oven vieressä on pieni tekstin/numeroiden kaltainen merkitty seinälaatta noin x823–831/y496–510, vastoin täysin paljaan seinän vaatimusta.",
+          "observations": [
+            "Koko kehys sekä molemmat puoliskot ja erillinen seinälaattarajaus tarkastettu. Kuvan vasemmanpuoleisen keskietäisen oven oikealla puolella on pieni vaalea suorakulmainen seinälaatta, noin x823–831/y496–510. Laatassa näkyy kahdessa ryhmässä tummia kirjain-/numeromaisia merkkejä. Täsmällistä lukemaa ei voi luotettavasti nimetä.",
+            "Tämä merkitty laatta rikkoo tuottajan vaatimusta täysin paljaista seinistä ilman laattoja, numeroita tai kirjoitusta. Hylkäys perustuu näkyvään rajattuun merkintäalueeseen, ei seinän satunnaisen rappauksen tulkitsemiseen tekstiksi. Slot7-v1 pending-quality-fix; alkuperäistä ei ole muutettu eikä uutta kuvaa generoitu.",
+            "Muu näkymä on kameramainen: vaihtelevat köynnöslehdet, kulunut rappaus ja epäsäännölliset katukivet, johdonmukainen sinisen illan ja lämpimien lyhtyjen valo. Kaksi kävelijää on pientä ja selin. Ei muita havaittuja logoja, ruokaa tai eläimiä.",
+            "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-left-doors-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-right-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-distant-left-wall-plaque.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-wall-mark-native.png",
+            "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+          ]
+        }
+      ],
+      "actualCalls": 7,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-seville-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "venice": {
+      "gameCityId": "venetsia",
+      "mediaSlug": "venice",
+      "acceptedAssets": 4,
+      "omittedItems": [
+        {
+          "id": "venice-7-misericordia-ilta-intro-v2",
+          "slot": 7,
+          "sha256": "49617ab4a7a369a9c168f6a485b3fa82d607b327d8846d98fa0616a0e67c005a",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "pending-quality-fix: valaistun yläikkunan vasemmassa vihreässä luukussa on vaalea kilpimäinen tunnus noin x1024–1045/y89–111. Brändiä ei tunnisteta, mutta näkyvä tunnus rikkoo logottomuusvaatimusta. Valittu v2 on jo yksi laatukorjaus.",
+          "observations": [
+            "Valittu v2 tarkastettu kokonaan ja molempien julkisivujen, sillan ja kaukaisten ovien natiivirajauksina. Oikeanpuoleisen talon lämpimästi valaistun yläikkunan vasemman vihreän luukun yläosassa on vaalea, rajattu kilpi-/tunnusmainen kuvio noin x1024–1045/y89–111. Kuviossa on ulkoreuna ja sisäinen useaan osaan järjestynyt kuviointi; se erottuu ympäröivästä tasaisesta vihreästä luukusta.",
+            "Näkyvä tunnus rikkoo logottomuusvaatimusta. Tarkkaa brändiä, tunnuksen identiteettiä tai tekstiä ei väitetä tunnistetuksi. Slot7-v2 pending-quality-fix; manifestin mukaan yksi tuottajan laatukorjaus on jo käytetty, joten jatko on koordinaatiopäätös. Ei generointia tai rasterimuutoksia.",
+            "Muu näkymä on kameramainen: tyhjä kanava, luonnolliset heijastukset, kuluneet tiilet ja rappaus, johdonmukainen iltavalo ja pieni selin kävelevä hahmo. Muita selviä tekstejä tai ruokaa ei havaittu.",
+            "Natiivirajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-left-facades-bridge.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-right-facades.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-far-wall-door.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/venice/crops/slot7-upper-shutter-detail.png",
+            "Alkuperäisistä tavuista laskettu SHA256 ja tavumäärä täsmäävät manifestiin. PNG1536×1024 opaque RGB, upotettu sRGB. Description ja Source täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin dekoodatut RGB-pikselit identtiset."
+          ]
+        }
+      ],
+      "actualCalls": 8,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-venice-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "bucharest": {
+      "gameCityId": "bukarest",
+      "mediaSlug": "bucharest",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 7,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-bucharest-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "dubrovnik": {
+      "gameCityId": "dubrovnik",
+      "mediaSlug": "dubrovnik",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 7,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-dubrovnik-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "kyiv": {
+      "gameCityId": "kiova",
+      "mediaSlug": "kyiv",
+      "acceptedAssets": 4,
+      "omittedItems": [
+        {
+          "id": "kyiv-intro-7-v1",
+          "slot": 7,
+          "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "Hylätty toimituksesta: vasemman etualan sadevesiputken takaisessa seinäkilvessä näkyy numero5:n kaltainen merkki. Pending-quality-fix.",
+          "observations": [
+            "Muuten fotorealistinen Podilin iltakatu: pienet selin kävelevät henkilöt, uskottavat lämpimät valot ja märän kadun heijastukset, koherentti perspektiivi.",
+            "HYLKÄYS: vasemman etualan sadevesiputken taakse kiinnitetyssä pienessä vaaleassa seinäkilvessä näkyy tumma numero5:n kaltainen merkki noin x190..198 y539..550. No text/digits -vaatimus ei täyty.",
+            "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-plaque-mark.png",
+            "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-pipe-wall.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-doors-people.png",
+            "Ensimmäinen candidate jää pending-quality-fix. Owner-order.jsonin rootWorkflowPolicyCorrection sallii yhden tarpeellisen kokonaan uuden laatukorjauksen; alkuperäistä rasteria ei retusoida eikä tätä candidatea toimiteta.",
+            "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat."
+          ]
+        }
+      ],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-kyiv-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "istanbul": {
+      "gameCityId": "istanbul",
+      "mediaSlug": "istanbul",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-istanbul-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "krakow": {
+      "gameCityId": "krakova",
+      "mediaSlug": "krakow",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-krakow-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "crete": {
+      "gameCityId": "kreeta",
+      "mediaSlug": "crete",
+      "acceptedAssets": 4,
+      "omittedItems": [
+        {
+          "id": "crete-intro-8-v1",
+          "slot": 8,
+          "sha256": "02291f5e7e54b2ede010165cbc36e4e7de5f838bfc0c5e7b9db0b50cdfb312e8",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "Hylätty parivastaavuudesta: pysyvän paljaan kallionenäkkeen sijainti ja muoto poikkeavat modernista slot5:stä, vaikka briefi vaatii saman muuttumattoman kalliogeometrian. Neutraali mustavalkoisuus ja muistomerkkien poissulku läpäisevät. Pending-quality-fix.",
+          "observations": [
+            "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Muistomerkkien poissulku täyttyy: järvi ja luonto ilman rakennuksia, kirkkoja, linnoituksia, raunioita tai patsaita.",
+            "Vesi, kaislat, rantakivet ja kuivien rinteiden hajanaiset pensaat näyttävät luonnollisilta. Pieni kaukainen mies selin paidassa, liivissä ja löysissä housuissa on aikakaudelle uskottava; kasvot eivät erotu. Ei kirjoitusta, logoja tai modernia infrastuktuuria.",
+            "HYLKÄYS: samaa muuttumatonta kalliomaastoa/samaa framingia edellyttävä5/8pari ei täyty. Slot5:n paljas läheisempi kallionenäkkeen huippu noin x940,y210 on slot8:ssa siirtynyt noin x725,y230 ja sen kallio-/rinneprofiili on muuttunut. Myös keskitaustan harjanteen muoto ja sen suhde kallionenäkkeeseen poikkeavat.",
+            "Tämä ei ole pelkkä kasvillisuuden tai vedenpinnan historiallinen vaihtelu. Producerbriefin viimeinen kappale edellyttää Fixed terrain silhouette / This rock geometry is unchanged in1873 ja kieltää eri laakson keksimisen. Yleinen WSW-suunta ja korkein huippu vasemmalla säilyvät, mutta niiden säilyminen yksin ei vahvista vaadittua maastoparia.",
+            "Vertailutodisteet: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot5-hill-rock-geometry.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-hill-rock-geometry.png",
+            "Brief, historical-sources.json ja kaksi tutkimuslähdettä luettu verkosta. Vuoden2021 tutkimuksesta luettu kohdat5.1.5 ja5.2 sekä järvialtaan kuvaus;2003 tutkimuksesta luettu tiivistelmä ja Kournas-Delphinos-alueen järvi/pohjoisbarrier-kuvaus. Ne tukevat vanhaa luonnollista järviallasta ja harvaa pensas-/oliivikasvillisuutta, eivät kuvan muuttunutta yksittäistä kalliogeometriaa.",
+            "Apokoronasin kunnan lähdesivu aikakatkaisi verkkohakuyrityksen; sen kirjattu tuottajan lähdenäyttö luettiin historical-sources.jsonista. Kaksi muuta primaarilähdettä saatiin luettua suoraan.",
+            "Period exclusions tarkastettu: ei taloja/asumuksia, modernia turismia, pohjoista muokattua pato-/purkurakennetta, teitä, kaiteita, kahviloita, pedaaliveneitä, autoja, koneita, sähköjohtoja, valoja tai muovia. Täsmällistä1873-rantakuvaa ei briefin mukaan löytynyt; vedenpinta ja yksittäiset kaislat ovat tulkintaa.",
+            "Ensimmäinen candidate jää pending-quality-fix; yksi tarpeellinen kokonaan uusi laatukorjaus on rootWorkflowPolicyCorrectionin mukaan sallittu. Tässä QA:ssa ei tehdä generointia tai rasterimuokkausta.",
+            "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-reeds-period-walker.png",
+            "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+          ]
+        }
+      ],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-crete-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "moscow": {
+      "gameCityId": "moskova",
+      "mediaSlug": "moscow",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-moscow-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "odessa": {
+      "gameCityId": "odessa",
+      "mediaSlug": "odessa",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-odessa-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "saint-petersburg": {
+      "gameCityId": "pietari",
+      "mediaSlug": "saint-petersburg",
+      "acceptedAssets": 4,
+      "omittedItems": [
+        {
+          "id": "saint-petersburg-intro-4-v2",
+          "slot": 4,
+          "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForDelivery": false,
+          "reason": "Ei QA-hyväksyntää: valitunv2:n takaseinällä näkyy pieni merkitty osoitekilven kaltainen paneeli. Pending-quality-fix; v2 on jo laatukorjaus, joten tarvitaan jatkopäätös.",
+          "observations": [
+            "Valittu v2: fotorealistinen tavallinen asuinpiha/kadun sisäinen asuinmiljöö, kolme henkilöä selin ja geneerinen polkupyörä. Luonnollinen kiveys, rappaus, puunkuori ja lehdet; koherentti valo ja perspektiivi.",
+            "HYLKÄYS: takaseinällä ikkunan yläoikean puolen ja holvikäytävän välissä noin x948..958 y489..502 on pieni vaalea/sinikehyksinen osoitekilven kaltainen merkintä, jonka sisällä näkyy tumma kirjain-/numeromainen kuvio. Tarkkaa numeroa ei tulkita, mutta merkitty kilpi rikkoo no address numbers/text -vaatimusta.",
+            "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-rear-wall-plaque.png; laajempi konteksti /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-bark-leaves.png",
+            "Henkilöt, pyörä, muut seinäpinnat ja kuori/lehtikuvio tarkastettu: ei muuta selvää logoa, muovisuutta tai leimattua pintaa.",
+            "V2 on jo yksi tarpeellinen kokonaan uusi laatukorjaus. Tila pending-quality-fix; jatkotapa kuuluu koordinaattorin päätökseen, ei automaattista uutta generointia tai paikallista rasterikorjausta.",
+            "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-people-bike-walls.png",
+            "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+          ]
+        }
+      ],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-saint-petersburg-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "sarajevo": {
+      "gameCityId": "sarajevo",
+      "mediaSlug": "sarajevo",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 5,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-sarajevo-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "sofia": {
+      "gameCityId": "sofia",
+      "mediaSlug": "sofia",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-sofia-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "warsaw": {
+      "gameCityId": "varsova",
+      "mediaSlug": "warsaw",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-warsaw-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "vilnius": {
+      "gameCityId": "vilna",
+      "mediaSlug": "vilnius",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-vilnius-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    },
+    "vienna": {
+      "gameCityId": "wien",
+      "mediaSlug": "vienna",
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-vienna-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
     }
   },
-  "updatedAt": "2026-10-12T17:31:15.850139+00:00"
+  "updatedAt": "2026-10-12T20:05:04.986246+00:00"
 }

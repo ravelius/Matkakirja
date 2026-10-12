@@ -1,0 +1,859 @@
+{
+  "cityName": "Madrid",
+  "gameCityId": "madrid",
+  "mediaSlug": "madrid",
+  "assets": [
+    {
+      "id": "madrid-5-retiro-vesi-intro-v1",
+      "slot": 5,
+      "cityName": "Madrid",
+      "gameCityId": "madrid",
+      "mediaSlug": "madrid",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/madrid-5-retiro-vesi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/native/madrid-5-retiro-vesi-intro-v1.png",
+      "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+      "bytes": 2451113,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/madrid/20261012-full/madrid-5-retiro-vesi-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-5-retiro-vesi-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Madrid intro slot5. Generate one completely new original photorealistic illustrative image like a candid real-camera photograph. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Natural restrained colours, real irregular surfaces, credible geometry, varied organic foliage. No HDR, CGI, render, painting, cinematic grading, plastic skin, cloned textures, lettering, numbers, signs, brands, logos, watermark, borders, frames, food, protected artworks or contemporary named designer architecture. Every doorway residential and plain; bare lintels, no shop signs or address plaques. Scene: Present-day Estanque Grande in Retiro Park Madrid. Stand on EASTERN shore and face dueWEST over rectangular pond; AlfonsoXII monument is behindcamera and entirely excluded. Eye-level35mm wide horizontal photograph, weathered low straight old stone pond edge runs along bottomleft, calm open water fills lower twothirds, distant WESTERN bank is a straight low masonry edge backed by mature irregular deciduous green trees, subtle park footpath behind trees. A single tiny plain rowing boat far in water, two back-facing adults too small to identify. Soft late-afternoon natural sun filtered by light haze, varied leaf shapes and small natural ripples. No statues, fountains, monuments, pavilion, palace, modern tall buildings, text, signs or coloured installations.",
+      "sources": [
+        {
+          "url": "https://patrimonioypaisaje.madrid.es/portales/monumenta/es/Monumentos-y-Edificios-Singulares/Ano-Galdos/Estanque-grande-del-Retiro/?vgnextchannel=05d3f7c815430710VgnVCM2000001f4a900aRCRD&vgnextfmt=default&vgnextoid=2a58091d1b9c4510091d1b9c45102e085a0aRCRD",
+          "title": "Madrid municipal heritage – Estanque grande del Retiro",
+          "readFacts": [
+            "Artificial EstanqueGrande built1634–1635, among surviving components of royal estate created1632."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/tourist-information/estanque-grande-de-el-retiro",
+          "title": "Tourism Madrid – Retiro lake",
+          "readFacts": [
+            "Large rectangular pond built1634–1636, historically used for royal boating."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/informacion-turistica/monumento-alfonso-xii",
+          "title": "Tourism Madrid – AlfonsoXII monument",
+          "readFacts": [
+            "Monument overlooking lake inaugurated1922, excluded1873 and deliberately behindcamera in current image."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/tourist-information/parque-del-retiro",
+          "title": "Tourism Madrid – El Retiro Park",
+          "readFacts": [
+            "CrystalPalace built1887, excluded1873."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/madrid-neighbourhoods/lavapies",
+          "title": "Tourism Madrid – Lavapies",
+          "readFacts": [
+            "Steep narrow maze-like streets and residential neighbourhood."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/madrid-neighbourhoods/latina",
+          "title": "Tourism Madrid – LaLatina",
+          "readFacts": [
+            "Historic central district with LaPaloma festival."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/fiestas-agosto-madrid-san-cayetano-san-lorenzo-virgen-la-paloma",
+          "title": "Tourism Madrid – Fiestas de Agosto",
+          "readFacts": [
+            "LaPaloma August neighbourhood festival inLaLatina, sociable traditional outdoor celebrations."
+          ]
+        },
+        {
+          "url": "https://patrimonioypaisaje.madrid.es/portales/monumenta/es/Monumentos/Edificios-historicos/Parque-de-El-Retiro/?vgnextchannel=83bc3cb702aa4510VgnVCM1000008a4a900aRCRD&vgnextfmt=default&vgnextoid=0528f7d9560a4510f7d9560a45102e085a0aRCRD",
+          "title": "Madrid municipalheritage – Parque de ElRetiro",
+          "readFacts": [
+            "Main park development1634–1640; lake and forest present.",
+            "Public garden transferred tocity1868; eastern boathouse was on present AlfonsoXIIsite, outsidechosenWEST view."
+          ]
+        }
+      ],
+      "caption": "Retiron Estanque Grande -lammen vesi ja puut Madridissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and trees,water,boat detail inspected. Retiro pond seen westward from eastshore, with tree-lined oppositebank and no monuments/buildings. Small back-facing boatoccupants; generic unmarked rowboat and physically plausible wave/light/foliage. No signs,text,logos or protected artworks.",
+          "limits": [
+            "Generated illustrative view, not an actual event photo or surveyed architecture record."
+          ],
+          "reviewedAt": "2026-10-12T17:44:46.300500+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/madrid-5-retiro-vesi-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/native/madrid-5-retiro-vesi-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+        "bytes": 2451113,
+        "nativeSha256": "8ead168bf9b719440e155edf16121611f91419df8f8cac5b0a392d2d5de30349",
+        "decodedRGBSha256": "1301269321e4466bead02bc71b6abf0a3fa42f986127aef6199660d333b4c91c",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:41:16.752770+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/madrid/20261012-full/madrid-5-retiro-vesi-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-5-retiro-vesi-intro-v1.png?t=a70c368475153b11",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-5-retiro-vesi-intro-v1.png",
+        "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+        "bytes": 2451113,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+        "canonicalGetBytes": 2451113,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:47:09.750945+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "madrid-6-paloma-juhla-intro-v1",
+      "slot": 6,
+      "cityName": "Madrid",
+      "gameCityId": "madrid",
+      "mediaSlug": "madrid",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/madrid-6-paloma-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/native/madrid-6-paloma-juhla-intro-v1.png",
+      "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+      "bytes": 2012892,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Madrid intro slot6. Generate one completely new original photorealistic illustrative image like a candid real-camera photograph. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Natural restrained colours, real irregular surfaces, credible geometry, varied organic foliage. No HDR, CGI, render, painting, cinematic grading, plastic skin, cloned textures, lettering, numbers, signs, brands, logos, watermark, borders, frames, food, protected artworks or contemporary named designer architecture. Every doorway residential and plain; bare lintels, no shop signs or address plaques. Scene: Present-day August LaPaloma neighbourhood street celebration inLaLatina Madrid at bluehour. Ordinary old plaster residential facades, simple blank paper garlands and warm small bulbs above. A fictional Spanish adult woman aged29 with shoulder-length dark-brown hair and natural medium-light olive skin smiles spontaneously toward friend offcamera; she is foreground left, generic fashionable plain terracotta sleeveless blouse, delicate plain earrings. Many locally plausible adult Madrid neighbours behind chatting and moving to music, varied natural appearances, ages23–35, modern generic unbranded clothing, no traditional costumes.50mm candid chest-up photograph; dense crowd upper torsos fills whole lower frame. EVERY foot and shoe completely out of frame or occluded; even background people show onlyheads/shoulders. Real skin, realistic hands, warm friendly outdoor mood, no food/drinks/children/stage/banners/logos.",
+      "sources": [
+        {
+          "url": "https://patrimonioypaisaje.madrid.es/portales/monumenta/es/Monumentos-y-Edificios-Singulares/Ano-Galdos/Estanque-grande-del-Retiro/?vgnextchannel=05d3f7c815430710VgnVCM2000001f4a900aRCRD&vgnextfmt=default&vgnextoid=2a58091d1b9c4510091d1b9c45102e085a0aRCRD",
+          "title": "Madrid municipal heritage – Estanque grande del Retiro",
+          "readFacts": [
+            "Artificial EstanqueGrande built1634–1635, among surviving components of royal estate created1632."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/tourist-information/estanque-grande-de-el-retiro",
+          "title": "Tourism Madrid – Retiro lake",
+          "readFacts": [
+            "Large rectangular pond built1634–1636, historically used for royal boating."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/informacion-turistica/monumento-alfonso-xii",
+          "title": "Tourism Madrid – AlfonsoXII monument",
+          "readFacts": [
+            "Monument overlooking lake inaugurated1922, excluded1873 and deliberately behindcamera in current image."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/tourist-information/parque-del-retiro",
+          "title": "Tourism Madrid – El Retiro Park",
+          "readFacts": [
+            "CrystalPalace built1887, excluded1873."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/madrid-neighbourhoods/lavapies",
+          "title": "Tourism Madrid – Lavapies",
+          "readFacts": [
+            "Steep narrow maze-like streets and residential neighbourhood."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/madrid-neighbourhoods/latina",
+          "title": "Tourism Madrid – LaLatina",
+          "readFacts": [
+            "Historic central district with LaPaloma festival."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/fiestas-agosto-madrid-san-cayetano-san-lorenzo-virgen-la-paloma",
+          "title": "Tourism Madrid – Fiestas de Agosto",
+          "readFacts": [
+            "LaPaloma August neighbourhood festival inLaLatina, sociable traditional outdoor celebrations."
+          ]
+        },
+        {
+          "url": "https://patrimonioypaisaje.madrid.es/portales/monumenta/es/Monumentos/Edificios-historicos/Parque-de-El-Retiro/?vgnextchannel=83bc3cb702aa4510VgnVCM1000008a4a900aRCRD&vgnextfmt=default&vgnextoid=0528f7d9560a4510f7d9560a45102e085a0aRCRD",
+          "title": "Madrid municipalheritage – Parque de ElRetiro",
+          "readFacts": [
+            "Main park development1634–1640; lake and forest present.",
+            "Public garden transferred tocity1868; eastern boathouse was on present AlfonsoXIIsite, outsidechosenWEST view."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia La Paloman korttelijuhlassa Madridissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": true,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and crowd,skin,hands,clothing,bunting/backdrop inspected. Fictional adult woman at joyful adult LaPaloma streetgathering. Generic clothing,all footwear cropped or occluded,no food,logos,signtext,addressnumbers or brands. Natural warm practicallights and duskcamera rendering.",
+          "limits": [
+            "Generated illustrative view, not an actual event photo or surveyed architecture record."
+          ],
+          "reviewedAt": "2026-10-12T17:44:46.309638+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/madrid-6-paloma-juhla-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/native/madrid-6-paloma-juhla-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+        "bytes": 2012892,
+        "nativeSha256": "50d44b96a952f01de1ceaac36f8bd6d5e16906d1be40815dbb52d2a755be7ae1",
+        "decodedRGBSha256": "4e7dd47cd692b68ee5ef17941c08cfbc9ddb763d96f099647a538099d75603b4",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:42:15.361149+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png?t=31b86173e465ec66",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png",
+        "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+        "bytes": 2012892,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+        "canonicalGetBytes": 2012892,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:47:11.106155+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "madrid-8-retiro-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Madrid",
+      "gameCityId": "madrid",
+      "mediaSlug": "madrid",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/madrid-8-retiro-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/native/madrid-8-retiro-1873-intro-v1.png",
+      "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+      "bytes": 2492602,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja Madrid intro slot8. Generate one completely new original photorealistic illustrative image like a candid real-camera photograph. Landscape exactly1536x1024, opaqueRGB sRGB PNG. Neutral greys only, real irregular surfaces, credible geometry, varied organic foliage. No HDR, CGI, render, painting, cinematic grading, plastic skin, cloned textures, lettering, numbers, signs, brands, logos, watermark, borders, frames, food, protected artworks or contemporary named designer architecture. Every doorway residential and plain; bare lintels, no shop signs or address plaques. Scene: NATIVE NEUTRAL MONOCHROME CAMERA PHOTOGRAPH, strictly black white and neutral gray, no tint, no sepia or coloured noise. Year exactly1873 at Estanque Grande Retiro Madrid. Same viewpoint andWEST viewingdirection as5: onEASTERN shore, cameraeye-level35mm, lowweathered plain oldstonepondedge at bottomleft, broad rectangular calmwater across lower twothirds, distantWEST bank straight lowmasonryedge and irregular mature deciduoustrees with oldparkpath behind. Pond built1634–1636, becamepublicpark1868. A tiny plainwooden rowingboat faraway with a back-facing adult in1873 darkjacket andhat, too small for face detail. No AlfonsoXII1922monument, no1887CrystalPalace, no later pavilion, no modern railings or signs, no electrical lights, antennas, cars, sportswear, plastic boats, tallbuildings, statues or publicart. Soft natural daylight, neutral plate-photo graycontrast andfine opticalgrain, credible realwater ripples and naturallyvaried leaves, no paintedtexture.",
+      "sources": [
+        {
+          "url": "https://patrimonioypaisaje.madrid.es/portales/monumenta/es/Monumentos-y-Edificios-Singulares/Ano-Galdos/Estanque-grande-del-Retiro/?vgnextchannel=05d3f7c815430710VgnVCM2000001f4a900aRCRD&vgnextfmt=default&vgnextoid=2a58091d1b9c4510091d1b9c45102e085a0aRCRD",
+          "title": "Madrid municipal heritage – Estanque grande del Retiro",
+          "readFacts": [
+            "Artificial EstanqueGrande built1634–1635, among surviving components of royal estate created1632."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/tourist-information/estanque-grande-de-el-retiro",
+          "title": "Tourism Madrid – Retiro lake",
+          "readFacts": [
+            "Large rectangular pond built1634–1636, historically used for royal boating."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/informacion-turistica/monumento-alfonso-xii",
+          "title": "Tourism Madrid – AlfonsoXII monument",
+          "readFacts": [
+            "Monument overlooking lake inaugurated1922, excluded1873 and deliberately behindcamera in current image."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/tourist-information/parque-del-retiro",
+          "title": "Tourism Madrid – El Retiro Park",
+          "readFacts": [
+            "CrystalPalace built1887, excluded1873."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/madrid-neighbourhoods/lavapies",
+          "title": "Tourism Madrid – Lavapies",
+          "readFacts": [
+            "Steep narrow maze-like streets and residential neighbourhood."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/en/madrid-neighbourhoods/latina",
+          "title": "Tourism Madrid – LaLatina",
+          "readFacts": [
+            "Historic central district with LaPaloma festival."
+          ]
+        },
+        {
+          "url": "https://www.esmadrid.com/fiestas-agosto-madrid-san-cayetano-san-lorenzo-virgen-la-paloma",
+          "title": "Tourism Madrid – Fiestas de Agosto",
+          "readFacts": [
+            "LaPaloma August neighbourhood festival inLaLatina, sociable traditional outdoor celebrations."
+          ]
+        },
+        {
+          "url": "https://patrimonioypaisaje.madrid.es/portales/monumenta/es/Monumentos/Edificios-historicos/Parque-de-El-Retiro/?vgnextchannel=83bc3cb702aa4510VgnVCM1000008a4a900aRCRD&vgnextfmt=default&vgnextoid=0528f7d9560a4510f7d9560a45102e085a0aRCRD",
+          "title": "Madrid municipalheritage – Parque de ElRetiro",
+          "readFacts": [
+            "Main park development1634–1640; lake and forest present.",
+            "Public garden transferred tocity1868; eastern boathouse was on present AlfonsoXIIsite, outsidechosenWEST view."
+          ]
+        }
+      ],
+      "caption": "Retiron Estanque Grande -lampi Madridissa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true,
+          "visuallyNeutralBlackWhite": true,
+          "sameViewPairSlot": 5,
+          "year1873ModernExclusionsPass": true,
+          "strictRGBIdentityDiagnostic": false,
+          "maxRedGreenDifference": 11,
+          "maxRedBlueDifference": 15,
+          "meanRGB": [
+            118.5977954864502,
+            117.24374961853027,
+            115.02416102091472
+          ],
+          "meanSignedRedMinusBlue": 3.573634465535477
+        },
+        "sessionOwner": {
+          "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native entire frame and trees,stonewateredge,boat,periodrower details inspected. Neutralblack/white no visible tint. Same westward lake direction from eastshore as modern5, old stoneedge and tree-only oppositebank, generic wooden rowboat and distant back-facing periodadult. No AlfonsoXII monument1922,CrystalPalace1887,moderncraft/electriclight,text,logo,number or laterstructure.",
+          "limits": [
+            "Generated illustrative reconstruction; individual details are not measured surveys."
+          ],
+          "reviewedAt": "2026-10-12T17:47:06.858908+00:00",
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/madrid-8-retiro-1873-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/native/madrid-8-retiro-1873-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+        "bytes": 2492602,
+        "nativeSha256": "faee6cd7dfe6109aa3e6e239c977343ade7a8aa1b227e4a82d3acaf1fec79be5",
+        "decodedRGBSha256": "d03924127cb795176a5209a06d2077170bd72efd46986dd663b9350a67627d38",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:44:42.034013+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png?t=2a49d31cd4829ce9",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png",
+        "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+        "bytes": 2492602,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+        "canonicalGetBytes": 2492602,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:47:14.532242+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "madrid-4-lavapies-arki-intro-v1",
+      "slot": 4,
+      "sha256": "a3a18ae7166612964ccfbfa493cee14ca27678b3e159c082de4ce47f87882085",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Pending-quality-fix: aivan oikeassa kehysreunassa osittainen paperilappu tummine kirjoitus-/kuviomaisine jälkineen; koko kehyksen ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa.",
+      "observations": [
+        "Koko1536x1024 kehys sekä oikean seinän/putken/kehysreunan lapun, kaukaisten ihmisten/puun ja parvekekasvien natiivirajaukset tarkastettu.",
+        "Aivan oikeassa kehysreunassa näkyy osittainen valkoinen oveen kiinnitetty paperilappu, jossa on tummia kirjoitus-/kuviomaisia viivoja. Ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa koko kehykselle; varsinainen merkintä ei ole kokonaisena luettavissa.",
+        "Oikean syöksytorven valkoiset jäljet näyttävät maalipinnan kulumalta, eikä niitä käytetty hylkäyksen perusteena.",
+        "Muuten koherentti kameranäkymä, kulunut rappaus, luonnolliset parvekekasvit/puut ja pienet selin olevat ihmiset. Ei ruokaa tai tunnistettavia brändikuvioita havaittu.",
+        "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+      ],
+      "status": "pending-quality-fix",
+      "necessaryWholeNewQualityRetryAllowed": true
+    },
+    {
+      "id": "madrid-7-latina-ilta-intro-v1",
+      "slot": 7,
+      "sha256": "37d36fdce445cc35debfeb44b2871cd0f0146249e66eab5238d252cdd7144d87",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Pending-quality-fix: lähivasemman syöksytorven näkyvä suorakaiteinen tarra sisältää kirjain-/numeromaisia kuvioita.",
+      "observations": [
+        "Koko1536x1024 kehys sekä lähivasemman syöksytorvitarrojen, ovien/julkisivujen ja kaukaisten ihmisten/puun natiivirajaukset tarkastettu.",
+        "Lähivasemman syöksytorven kohdalla x270,y545–620 on selkeä pitkä suorakaiteinen vaalea tarra, jossa tummia kirjain-/numeromaisia kuvioita. Ei-tekstiä/merkintöjä-ehto ei täyty.",
+        "Muuten kamera-fotorealismi, luonnollinen kasvillisuus ja koherentti hämärävalotus/perspektiivi. Kaksi pientä ihmistä selin, ei ruokaa tai tunnistettavaa brändikuviota havaittu.",
+        "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+      ],
+      "status": "pending-quality-fix",
+      "necessaryWholeNewQualityRetryAllowed": true
+    }
+  ],
+  "rejectedCandidates": [],
+  "complete": true,
+  "status": "awaiting-root-review-and-R2",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:47:14.547491+00:00",
+  "rejectedCandidateHistory": [
+    {
+      "id": "madrid-4-lavapies-arki-intro-v1",
+      "slot": 4,
+      "sha256": "a3a18ae7166612964ccfbfa493cee14ca27678b3e159c082de4ce47f87882085",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Pending-quality-fix: aivan oikeassa kehysreunassa osittainen paperilappu tummine kirjoitus-/kuviomaisine jälkineen; koko kehyksen ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa.",
+      "observations": [
+        "Koko1536x1024 kehys sekä oikean seinän/putken/kehysreunan lapun, kaukaisten ihmisten/puun ja parvekekasvien natiivirajaukset tarkastettu.",
+        "Aivan oikeassa kehysreunassa näkyy osittainen valkoinen oveen kiinnitetty paperilappu, jossa on tummia kirjoitus-/kuviomaisia viivoja. Ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa koko kehykselle; varsinainen merkintä ei ole kokonaisena luettavissa.",
+        "Oikean syöksytorven valkoiset jäljet näyttävät maalipinnan kulumalta, eikä niitä käytetty hylkäyksen perusteena.",
+        "Muuten koherentti kameranäkymä, kulunut rappaus, luonnolliset parvekekasvit/puut ja pienet selin olevat ihmiset. Ei ruokaa tai tunnistettavia brändikuvioita havaittu.",
+        "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+      ],
+      "status": "pending-quality-fix",
+      "necessaryWholeNewQualityRetryAllowed": true
+    },
+    {
+      "id": "madrid-7-latina-ilta-intro-v1",
+      "slot": 7,
+      "sha256": "37d36fdce445cc35debfeb44b2871cd0f0146249e66eab5238d252cdd7144d87",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "Pending-quality-fix: lähivasemman syöksytorven näkyvä suorakaiteinen tarra sisältää kirjain-/numeromaisia kuvioita.",
+      "observations": [
+        "Koko1536x1024 kehys sekä lähivasemman syöksytorvitarrojen, ovien/julkisivujen ja kaukaisten ihmisten/puun natiivirajaukset tarkastettu.",
+        "Lähivasemman syöksytorven kohdalla x270,y545–620 on selkeä pitkä suorakaiteinen vaalea tarra, jossa tummia kirjain-/numeromaisia kuvioita. Ei-tekstiä/merkintöjä-ehto ei täyty.",
+        "Muuten kamera-fotorealismi, luonnollinen kasvillisuus ja koherentti hämärävalotus/perspektiivi. Kaksi pientä ihmistä selin, ei ruokaa tai tunnistettavaa brändikuviota havaittu.",
+        "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+      ],
+      "status": "pending-quality-fix",
+      "necessaryWholeNewQualityRetryAllowed": true
+    }
+  ],
+  "pendingQualityFixSlots": [
+    4,
+    7
+  ],
+  "allRequestedSlotsDelivered": false,
+  "actualCalls": 5,
+  "deliveryQAEvidence": {
+    "mediaSlug": "madrid",
+    "gameCityId": "madrid",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/sources-1873.json",
+      "https://www.esmadrid.com/en/tourist-information/estanque-grande-de-el-retiro",
+      "https://patrimonioypaisaje.madrid.es/portales/monumenta/es/Monumentos-y-Edificios-Singulares/Ano-Galdos/Estanque-grande-del-Retiro/?vgnextchannel=05d3f7c815430710VgnVCM2000001f4a900aRCRD&vgnextfmt=default&vgnextoid=2a58091d1b9c4510091d1b9c45102e085a0aRCRD",
+      "https://www.esmadrid.com/informacion-turistica/monumento-alfonso-xii",
+      "https://www.esmadrid.com/en/tourist-information/parque-del-retiro"
+    ],
+    "assets": [
+      {
+        "id": "madrid-4-lavapies-arki-intro-v1",
+        "slot": 4,
+        "sha256": "a3a18ae7166612964ccfbfa493cee14ca27678b3e159c082de4ce47f87882085",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "Pending-quality-fix: aivan oikeassa kehysreunassa osittainen paperilappu tummine kirjoitus-/kuviomaisine jälkineen; koko kehyksen ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä oikean seinän/putken/kehysreunan lapun, kaukaisten ihmisten/puun ja parvekekasvien natiivirajaukset tarkastettu.",
+          "Aivan oikeassa kehysreunassa näkyy osittainen valkoinen oveen kiinnitetty paperilappu, jossa on tummia kirjoitus-/kuviomaisia viivoja. Ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa koko kehykselle; varsinainen merkintä ei ole kokonaisena luettavissa.",
+          "Oikean syöksytorven valkoiset jäljet näyttävät maalipinnan kulumalta, eikä niitä käytetty hylkäyksen perusteena.",
+          "Muuten koherentti kameranäkymä, kulunut rappaus, luonnolliset parvekekasvit/puut ja pienet selin olevat ihmiset. Ei ruokaa tai tunnistettavia brändikuvioita havaittu.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ],
+        "status": "pending-quality-fix",
+        "necessaryWholeNewQualityRetryAllowed": true
+      },
+      {
+        "id": "madrid-5-retiro-vesi-intro-v1",
+        "slot": 5,
+        "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys sekä soutuveneen/kaukaisten henkilöiden/vastarannan puiden ja veden/lähikivireunan natiivirajaukset tarkastettu.",
+          "Uskottava avoin suorakulmaisen lammen vesinäkymä: lähellä oleva kivireuna alavasemmalla, suora matala vastaranta ja luonnollinen epäsäännöllinen puusto. Koherentti päivänvalo, aallot ja heijastukset.",
+          "Pieni merkitön soutuvene ja selin olevat aikuiset, ei tunnistettavia kasvoja. Ei tekstiä, logoja, brändikuvioita tai ruokaa havaittu.",
+          "Kuva5 on1873-kuvan8 moderni vertailupari; muistomerkit/paviljongit pois kehyksestä.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "madrid-6-paloma-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja etualan kasvojen/ihon/hiusten/vaatteiden, oikean reunan käsien/kasvojen sekä taustaväkijoukon/koristeiden natiivirajaukset tarkastettu.",
+          "Fiktiivinen aikuinen etualalla La Paloman korttelijuhlan tunnelmassa, geneeriset muodikkaat nykyvaatteet; iho, hampaat, hiukset ja näkyvät kädet anatomisesti uskottavia.",
+          "Kaikki ihmiset rajattu tai peitetty jalkineiden yläpuolelta. Ei jalkineita, ruokaa, juomapakkauksia, tekstiä, logoja tai brändikuvioita missään kehyksessä. Paperikoristeet geneerisiä ilman kirjoitusta.",
+          "Koherentti lämmin iltavalo, luonnollinen optinen taustan pehmeys ja kameran perspektiivi; kasvillisuus luonnollista.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      },
+      {
+        "id": "madrid-7-latina-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "37d36fdce445cc35debfeb44b2871cd0f0146249e66eab5238d252cdd7144d87",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "Pending-quality-fix: lähivasemman syöksytorven näkyvä suorakaiteinen tarra sisältää kirjain-/numeromaisia kuvioita.",
+        "observations": [
+          "Koko1536x1024 kehys sekä lähivasemman syöksytorvitarrojen, ovien/julkisivujen ja kaukaisten ihmisten/puun natiivirajaukset tarkastettu.",
+          "Lähivasemman syöksytorven kohdalla x270,y545–620 on selkeä pitkä suorakaiteinen vaalea tarra, jossa tummia kirjain-/numeromaisia kuvioita. Ei-tekstiä/merkintöjä-ehto ei täyty.",
+          "Muuten kamera-fotorealismi, luonnollinen kasvillisuus ja koherentti hämärävalotus/perspektiivi. Kaksi pientä ihmistä selin, ei ruokaa tai tunnistettavaa brändikuviota havaittu.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ],
+        "status": "pending-quality-fix",
+        "necessaryWholeNewQualityRetryAllowed": true
+      },
+      {
+        "id": "madrid-8-retiro-1873-intro-v1",
+        "slot": 8,
+        "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa toimitus-QA:ssa.",
+        "observations": [
+          "Koko1536x1024 kehys ja lähilehtien/puunkuoren/rannan, soutuveneen/aikakauden henkilön ja veden/vastarannan natiivirajaukset tarkastettu.",
+          "Näkyvä kokonaisilme neutraali mustavalkoinen, ei sepiaa tai tarkoituksellista sävytystä; numeerista RGB-nollatoleranssia ei käytetty hylkäysperusteena.",
+          "Vertailtu moderniin5:een: sama alavasemman kivinen lähiranta, laaja avoin vesipinta, suora lännen vastaranta ja puut taustalla. Katselusuunta ja kuvajaottelu vastaavat; yksittäiset puut/rantayksityiskohdat rekonstruoitu havainnollisesti.",
+          "Brief ja sources-1873.json luettu. Kaksi lammen rakentamista tukevaa virallista lähdettä luettu: municipal heritage -sivu löytyi hakupalvelun tekstistä suoran avauksen aikakatkaisun jälkeen; Tourism Madridin lampiartikkeli avattu. Myös muistomerkin ja CrystalPalacen ajalliset lähteet avattu.",
+          "1873-exclusions tarkastettu: ei1922-AlfonsoXII-muistomerkkiä,1887-CrystalPalacea, myöhempää paviljonkia, moderneja kaiteita/merkkejä, sähkövaloja, antenneja, autoja, urheiluvaatteita, muoviveneitä, tornitaloja, veistoksia tai moderneja taideteoksia.",
+          "Pieni merkitön puinen soutuvene ja hyvin pieni selin oleva aikakauden aikuinen. Luonnollinen puunkuori/lehvistö ja vesi, koherentti valo/perspektiivi; ei tekstiä, logoja, brändikuvioita, ruokaa tai etualan kasvoja havaittu.",
+          "Lähteiden tukema konservatiivinen1873-rekonstruktio, ei mitatun arkistopaikkakuvan tarkkuusväite.",
+          "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameDeliveryStatus": "HOLD",
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:05:21.575787+00:00",
+    "sourceManifestSha256": "d5da7a7f7aaaf659180b7917a4943c52c0c398b935eea6bd9b2b7f384f1a5188"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "madrid",
+    "verifiedAt": "2026-10-12T18:06:56.707601+00:00",
+    "assets": [
+      {
+        "id": "madrid-5-retiro-vesi-intro-v1",
+        "slot": 5,
+        "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+        "bytes": 2451113,
+        "verifiedAt": "2026-10-12T18:06:54.812181+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-5-retiro-vesi-intro-v1.png",
+            "http": 200,
+            "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+            "bytes": 2451113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-5-retiro-vesi-intro-v1.png?delivery-verify=a70c368475153b11-1791828414812173000",
+            "http": 200,
+            "sha256": "a70c368475153b11c9bcc9f1148b70743b65bb0c86a35e3d88a9f7879f772a81",
+            "bytes": 2451113,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "madrid-6-paloma-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+        "bytes": 2012892,
+        "verifiedAt": "2026-10-12T18:06:54.819132+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+            "bytes": 2012892,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-6-paloma-juhla-intro-v1.png?delivery-verify=31b86173e465ec66-1791828414819074000",
+            "http": 200,
+            "sha256": "31b86173e465ec661e82abf5c898ee730193189a471ffb30b25ec371d4b3ee46",
+            "bytes": 2012892,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "madrid-8-retiro-1873-intro-v1",
+        "slot": 8,
+        "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+        "bytes": 2492602,
+        "verifiedAt": "2026-10-12T18:06:54.820948+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+            "bytes": 2492602,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/madrid/20261012-full/madrid-8-retiro-1873-intro-v1.png?delivery-verify=2a49d31cd4829ce9-1791828414820940000",
+            "http": 200,
+            "sha256": "2a49d31cd4829ce9ff3e0231677fac833a42bb7490b34d7b1d43f998bdda01fb",
+            "bytes": 2492602,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/madrid/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 3,
+    "R2": 3,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.387237+00:00"
+}

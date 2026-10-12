@@ -1,0 +1,1018 @@
+{
+  "cityName": "Varsova",
+  "gameCityId": "varsova",
+  "mediaSlug": "warsaw",
+  "status": "quality-correction-awaiting-root-review-and-R2",
+  "productionComplete": true,
+  "assets": [
+    {
+      "id": "warsaw-intro-4-v1",
+      "slot": 4,
+      "cityName": "Varsova",
+      "gameCityId": "varsova",
+      "mediaSlug": "warsaw",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-4-pragan-pihaarki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-4-pragan-pihaarki-native-v1.png",
+      "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+      "bytes": 3035187,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Warsaw arrival intro slot4. Current-day North Praga, Warsaw, inside an ordinary weathered residential courtyard enclosed by anonymous late-nineteenth-century brick and plaster tenement houses. Small lived-in details: plain laundry of unpatterned cream sheets on a modest line high to the side, potted green plants by an unmarked doorway, uneven worn paving. A resident seen from behind watering plants in middle distance and another small neighbor far away carrying a plain linen laundry basket; no close faces. Candid eye-height45mm view into the courtyard, soft afternoon light, real mundane community moment, not a curated venue. No shrine, chapel, religious statue, named landmark or modern designer building. Photorealistic real-camera travel photography, natural lighting and exposure, muted true colors, irregular authentic stone brick foliage and skin, no CGI, illustration, HDR, cinematic oversaturation, plastic skin or repetitive stamped plants. Landscape1536x1024 opaque RGB sRGB. No lettering, numbers, address plaques, signs, posters, graffiti, logos, brand patterns, distinctive stripes, watermarks or frame. No food or drinks. No recognizable real people or famous person. Avoid protected modern art and named current architecture. Exclude all existing city hero subjects: Old Town market square, Royal Castle, Wilanow Palace, Palace on Isle, Mermaid sculpture, modern skyscrapers and Palace of Culture. No cars, motorcycles, vans, buses, number plates or roadway anywhere even background.",
+      "sources": [
+        {
+          "url": "https://go2warsaw.pl/en/walk-around-north-praga-district/",
+          "publisher": "Warsaw Tourism Office official destination portal",
+          "readFacts": "NorthPraga retains historic tenements and courtyards as ordinary lived-in urban fabric. Supports anonymous courtyard and eveningstreet views; no namedhouse claim."
+        }
+      ],
+      "caption": "Naapuruston arkea Varsovan Pragan asuinpihalla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:00:03.764479+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Ordinary courtyard with laundry and watering plants, both adults rear-facing, textures irregular and worn, no cars monuments food logos or readable text. Small entrance switch panel inspected: plain button geometry no legible address."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:03:38.998171+00:00",
+          "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame: ordinary Praga courtyard, rear-facing adults watering plants and carrying plain basket, blank laundry and unmarked paving. Entrance switch panel is plain button geometry, no visible address characters. No cars, logos, near faces or named artworks.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:26:57.763478+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+        "bytes": 3035187,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png",
+            "http": 200,
+            "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+            "bytes": 3035187,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png?t=68ba60cd5024c023",
+            "http": 200,
+            "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+            "bytes": 3035187,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "warsaw-intro-5-v1",
+      "slot": 5,
+      "cityName": "Varsova",
+      "gameCityId": "varsova",
+      "mediaSlug": "warsaw",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-5-saksilaispuiston-vesi-native-v1.png",
+      "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+      "bytes": 3375294,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Warsaw arrival intro slot5. Current-day quiet water and leafy greenery around the old Grand Fountain of Saxon Garden. East side of the Grand Fountain in Saxon Garden, Warsaw, camera1.5m above the natural gravel area looking WEST into the garden,50mm lens. Center the authentic1855 pale stone chalice-shaped fountain: one large broad shallow circular raised bowl on a thick flared pedestal, modest vertical center plume and water gently spilling from its bowl into a much wider low circular basin. Basin's stone rim forms an ellipse across lower middle. Background entirely mature deciduous trees, soft irregular leafy canopy and plain grass, no statues or buildings visible. This orientation turns away from Saxon Palace and today's Tomb of Unknown Soldier. Soft late-morning daylight, light breeze breaks the falling-water sheet and ripples into irregular droplets, pale limestone with subtle mineral marks. At most two very small distant modern walkers from behind along a far tree-lined path, no foreground face. Heritage fountain was designed1855 by Henryk Marconi, died1863; an old utilitarian public fountain with simple stone geometry, not a protected contemporary artwork. No colorful or designed light show. Preserve exact viewpoint for1873pair. Photorealistic real-camera travel photography, natural lighting and exposure, muted true colors, irregular authentic stone brick foliage and skin, no CGI, illustration, HDR, cinematic oversaturation, plastic skin or repetitive stamped plants. Landscape1536x1024 opaque RGB sRGB. No lettering, numbers, address plaques, signs, posters, graffiti, logos, brand patterns, distinctive stripes, watermarks or frame. No food or drinks. No recognizable real people or famous person. Avoid protected modern art and named current architecture. Exclude all existing city hero subjects: Old Town market square, Royal Castle, Wilanow Palace, Palace on Isle, Mermaid sculpture, modern skyscrapers and Palace of Culture. No cars, motorcycles, vans, buses, number plates or roadway anywhere even background.",
+      "sources": [
+        {
+          "url": "https://zom.waw.pl/statics/static-maps/file/Ogr%C3%B3d%20Saski%20PDF_1439287908.pdf",
+          "publisher": "Warsaw municipal green-space/public maintenance authority",
+          "readFacts": "GrandFountain inaugurated4June1855, Marconi design; restored2006–2007. Tomb ofUnknownSoldier1925, gardenmemorialboulder1927, Pilsudskiplaque1938. Historic8includesfountain andexcludeslatermemorials, allother sculptures cropped out."
+        },
+        {
+          "url": "https://zabytek.pl/pl/obiekty/warszawa-wodozbior",
+          "publisher": "National Heritage Institute of Poland",
+          "readFacts": "Marconi water system inaugurated4June1855 by fountain on SaxonPalace axis; water tower1852–1854. Supports fountain present1873. Water tower cropped out because later changes not needed."
+        },
+        {
+          "url": "https://www.warszawa.ap.gov.pl/saska/21264.html",
+          "publisher": "State Archive in Warsaw",
+          "readFacts": "Garden transformed1815–1827; fountain1855; squarecathedral1894–1912 absent1873. Palace andallarchitecturalbackdrop excluded by westward composition."
+        },
+        {
+          "url": "https://mbc.cyfrowemazowsze.pl/dlibra/publication/48840/edition/43647/content",
+          "publisher": "Mazovian Digital Library catalog",
+          "readFacts": "Catalog identifies HenrykMarconi1792–1863; fountaindesign belongs long-deceasednineteenthcenturyarchitect."
+        }
+      ],
+      "caption": "Saksilaispuiston vanha suihkulähde Varsovassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:03:13.962073+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Single old chalice fountain and circular basin, west-facing tree-only background, tiny distant rear-facing walkers, natural droplets and foliage, no statues modern architecture traffic signs lettering brands or food."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:21.837568+00:00",
+          "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame:1855Saxon fountain, circular basin, park-facing viewpoint and distant rear-facing people. No lettering, logos, modern art or structures. Old authorship permitted.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:27:02.358334+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+        "bytes": 3375294,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+            "http": 200,
+            "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+            "bytes": 3375294,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png?t=db994896b25057e4",
+            "http": 200,
+            "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+            "bytes": 3375294,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "warsaw-intro-6-v1",
+      "slot": 6,
+      "cityName": "Varsova",
+      "gameCityId": "varsova",
+      "mediaSlug": "warsaw",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-6-veikselin-kesajuhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-6-veikselin-kesajuhla-native-v1.png",
+      "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+      "bytes": 2037918,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Warsaw arrival intro slot6. Current-day joyful informal summer evening gathering beside Vistula River Warsaw, a lively local crowd and calm river with wooded far bank behind them. One entirely fictional Polish young adult man age27 nearest camera, natural light skin and short brown hair, plain fashionably cut dark charcoal overshirt over solid rust-red tee, laughing spontaneously toward friends; no fashion brand cues. Mixed local Polish young adults age23–35 behind him cheer and chat in unbranded fashionable solid clothes. Natural blue-hour river light with just a few small warm generic outdoor bulbs off to a side, real modest evening rather than stage spectacle. Shoulder-height40mm camera, foreground mid-torso-up and dense upper-body crowd filling lower frame: absolutely NO feet ankles footwear shoes sandals or sneakers visible ANYWHERE including background. Everyone fictional adult. No skyline, named bridge, stage, banner, art installation, performer, musicians, drinks, bottles or picnic; event is fictional and not a reproduction of a named festival. Photorealistic real-camera travel photography, natural lighting and exposure, muted true colors, irregular authentic stone brick foliage and skin, no CGI, illustration, HDR, cinematic oversaturation, plastic skin or repetitive stamped plants. Landscape1536x1024 opaque RGB sRGB. No lettering, numbers, address plaques, signs, posters, graffiti, logos, brand patterns, distinctive stripes, watermarks or frame. No food or drinks. No recognizable real people or famous person. Avoid protected modern art and named current architecture. Exclude all existing city hero subjects: Old Town market square, Royal Castle, Wilanow Palace, Palace on Isle, Mermaid sculpture, modern skyscrapers and Palace of Culture. No cars, motorcycles, vans, buses, number plates or roadway anywhere even background.",
+      "sources": [
+        {
+          "url": "https://go2warsaw.pl/en/open-air-warsaw/",
+          "publisher": "Warsaw Tourism Office official destination portal",
+          "readFacts": "Vistula banks become a center of cultural andmusical summer life. Supports fictionaladult riverside celebration, without asserting an actualspecific festival."
+        }
+      ],
+      "caption": "Kuvitteellinen nuorten aikuisten kesäjuhla Veikselin rannalla Varsovassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:05:19.754504+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Candid fictional adult riverbank gathering, main foreground adult focus with generic solid clothing, natural skin, all feet ankles and shoes excluded including crowd, no food beverages lettering logos stage or skyline."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:21.882938+00:00",
+          "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: fictional foreground adult and joyful riverbank young-adult crowd, generic clothes, all footwear excluded, no logos/text/food. Natural skin and light.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:27:05.209986+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+        "bytes": 2037918,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+            "bytes": 2037918,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png?t=82c02f91f03f396f",
+            "http": 200,
+            "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+            "bytes": 2037918,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "warsaw-intro-7-v1",
+      "slot": 7,
+      "cityName": "Varsova",
+      "gameCityId": "varsova",
+      "mediaSlug": "warsaw",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-7-pragan-iltavalot-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-7-pragan-iltavalot-native-v1.png",
+      "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+      "bytes": 2808899,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Matkakirja Warsaw arrival intro slot7. Present-day ordinary quiet residential side street in North Praga Warsaw at blue hour after a brief shower. Anonymous old red-brick and faded peach plaster tenements in a simple street bend, irregular worn paving reflecting a few warm apartment windows and a single generic amber wall lamp. Different composition from courtyard4: view diagonally across the narrow empty vehicle-free lane toward the front entrances,45mm eye-height lens. Two small distant pedestrians from behind, no faces close to camera. No shopfronts, memorial plaques, decorated historic landmarks, skyline or artworks, grounded exposure and cool twilight. Photorealistic real-camera travel photography, natural lighting and exposure, muted true colors, irregular authentic stone brick foliage and skin, no CGI, illustration, HDR, cinematic oversaturation, plastic skin or repetitive stamped plants. Landscape1536x1024 opaque RGB sRGB. No lettering, numbers, address plaques, signs, posters, graffiti, logos, brand patterns, distinctive stripes, watermarks or frame. No food or drinks. No recognizable real people or famous person. Avoid protected modern art and named current architecture. Exclude all existing city hero subjects: Old Town market square, Royal Castle, Wilanow Palace, Palace on Isle, Mermaid sculpture, modern skyscrapers and Palace of Culture. No cars, motorcycles, vans, buses, number plates or roadway anywhere even background.",
+      "sources": [
+        {
+          "url": "https://go2warsaw.pl/en/walk-around-north-praga-district/",
+          "publisher": "Warsaw Tourism Office official destination portal",
+          "readFacts": "NorthPraga retains historic tenements and courtyards as ordinary lived-in urban fabric. Supports anonymous courtyard and eveningstreet views; no namedhouse claim."
+        }
+      ],
+      "caption": "Ikkunavalot Varsovan Pragan vanhalla asuinkadulla. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:07:40.307898+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "Vehicle-free older ordinary residential lane, two distant rear-facing adults, wet paving natural and lamps generic, no readable text numbers brands food landmarks or artwork."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:21:21.915026+00:00",
+          "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Native frame: old Praga lane, rear-facing couple, no discernible text/address/logo/vehicles. Plain door fittings, natural damp stone and restrained twilight.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:27:07.741822+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+        "bytes": 2808899,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+            "bytes": 2808899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png?t=411ffb3bdf2efe2f",
+            "http": 200,
+            "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+            "bytes": 2808899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "warsaw-intro-8-v2",
+      "slot": 8,
+      "cityName": "Varsova",
+      "gameCityId": "varsova",
+      "mediaSlug": "warsaw",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-8-saksilaispuisto-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-8-saksilaispuisto-1873-native-v2.png",
+      "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+      "bytes": 3352815,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png",
+      "generationPrompt": "Use case: historical-scene. Matkakirja Warsaw arrival intro slot8. Strictly year1873, source-backed illustrative reconstruction of the Grand Fountain in Saxon Garden. East side of the Grand Fountain in Saxon Garden, Warsaw, camera1.5m above the natural gravel area looking WEST into the garden,50mm lens. Center the authentic1855 pale stone chalice-shaped fountain: one large broad shallow circular raised bowl on a thick flared pedestal, modest vertical center plume and water gently spilling from its bowl into a much wider low circular basin. Basin's stone rim forms an ellipse across lower middle. Background entirely mature deciduous trees, soft irregular leafy canopy and plain grass, no statues or buildings visible. This orientation turns away from Saxon Palace and today's Tomb of Unknown Soldier. EXACT same east-side camera position1.5mheight,50mm lens, WEST viewing direction and basin/bowl framing as modern slot5. STRICT neutralBlackAndWhite contemporary digital monochrome photographic rendering of an accurately reconstructed1873scene. Use only achromatic BLACK WHITE and NEUTRAL GRAY, with equal RGB channels in every pixel. NO warm historic print appearance, NO sepia, NO brown, NO yellow, NO green, NO cream, NO colored tint anywhere including paper-like highlights, tree shadows or stones. Treat monochrome as modern black-and-white camera capture. Natural daylight, restrained realistic contrast, no aged paper, no border or vintage toning. The fountain opened4June1855 and is fully present by1873: a single broad raised shallow chalice bowl on a flared solid pedestal, center water plume and much wider low circular basin. Period garden has irregular leafy deciduous trees and gravel paths, with two tiny distant rear-facing Warsaw adult walkers in1873day clothes: long skirt and plain bodice, dark frockcoat and hat, faces unreadable. No electric light, cars, concrete paths, metal safety fencing, plastics, modern bins benches or signboards. No Tomb of Unknown Soldier (1925), memorial boulder(1927), Marshal Pilsudski plaque(1938), Saxon Square cathedral(1894–1912), postwar buildings or skyline. Looking west and cropping to trees also excludes historic palace, statues and water tower; no unverified building dates enter frame. Photorealistic real-camera travel photography, natural lighting and exposure, neutral grayscale tones, irregular authentic stone brick foliage and skin, no CGI, illustration, HDR, cinematic oversaturation, plastic skin or repetitive stamped plants. Landscape1536x1024 opaque RGB sRGB. No lettering, numbers, address plaques, signs, posters, graffiti, logos, brand patterns, distinctive stripes, watermarks or frame. No food or drinks. No recognizable real people or famous person. Avoid protected modern art and named current architecture. Exclude all existing city hero subjects: Old Town market square, Royal Castle, Wilanow Palace, Palace on Isle, Mermaid sculpture, modern skyscrapers and Palace of Culture. No cars, motorcycles, vans, buses, number plates or roadway anywhere even background. Composition and fountain proportions: a single broad shallow bowl about3times the narrowest stem width centered at mid-height, smooth flared pedestal and round stepped foot in basin, bowl lies between one third and halfway down frame, round wide low basin rim around lower third. Main tall tree trunk near far-left third, another darker high trunk behind and right of fountain, irregular leafy canopy filling top. Only one bowl tier, no statue or finial on its top, a modest central water jet. Mandatory quality correction from v1: it contained a measurable warm sepia cast. Generate a completely new scene with strictly ACHROMATIC monochrome, black white neutral greys only, never warm gray. Keep same east-side WESTward fountain place and single wide bowl, flared pedestal and circular low basin as companion5, all later structures excluded. Do not emulate antique album print chemistry.",
+      "sources": [
+        {
+          "url": "https://zom.waw.pl/statics/static-maps/file/Ogr%C3%B3d%20Saski%20PDF_1439287908.pdf",
+          "publisher": "Warsaw municipal green-space/public maintenance authority",
+          "readFacts": "GrandFountain inaugurated4June1855, Marconi design; restored2006–2007. Tomb ofUnknownSoldier1925, gardenmemorialboulder1927, Pilsudskiplaque1938. Historic8includesfountain andexcludeslatermemorials, allother sculptures cropped out."
+        },
+        {
+          "url": "https://zabytek.pl/pl/obiekty/warszawa-wodozbior",
+          "publisher": "National Heritage Institute of Poland",
+          "readFacts": "Marconi water system inaugurated4June1855 by fountain on SaxonPalace axis; water tower1852–1854. Supports fountain present1873. Water tower cropped out because later changes not needed."
+        },
+        {
+          "url": "https://www.warszawa.ap.gov.pl/saska/21264.html",
+          "publisher": "State Archive in Warsaw",
+          "readFacts": "Garden transformed1815–1827; fountain1855; squarecathedral1894–1912 absent1873. Palace andallarchitecturalbackdrop excluded by westward composition."
+        },
+        {
+          "url": "https://mbc.cyfrowemazowsze.pl/dlibra/publication/48840/edition/43647/content",
+          "publisher": "Mazovian Digital Library catalog",
+          "readFacts": "Catalog identifies HenrykMarconi1792–1863; fountaindesign belongs long-deceasednineteenthcenturyarchitect."
+        }
+      ],
+      "caption": "Saksilaispuiston suihkulähde Varsovassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:23:00.019569+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": true,
+          "notes": "New neutral monochrome candidate; same west-facing single fountain bowl and basin, period distant adults from behind, no modern structures text logos food. RGB neutrality measured separately before final root review."
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T18:26:48.898681+00:00",
+          "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Full native frame+modern5 pair: same park-facing1855fountain bowl/circular basin view and distant rear-facing period walkers, no later memorials/structures. Fresh correction visually neutral monochrome; meanchannelspread0.07446. Four official/primary history sources retained, no recoloring.",
+          "ownerEditorialAcceptance": "pending"
+        },
+        "ownerEditorialAcceptance": "pending",
+        "monochromeProof": {
+          "channelMeansRGB": [
+            104.80141131083171,
+            104.79062080383301,
+            104.86507606506348
+          ],
+          "maxChannelMeanDifference": 0.07445526123046875,
+          "maxPixelChannelDifference": 18,
+          "method": "PIL pixel-statistics read-only, no recolor",
+          "workerNeutralMonochromeAssessment": true
+        }
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T18:27:11.218234+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+        "bytes": 3352815,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+            "bytes": 3352815,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png?t=1b24c10b79fa0ef0",
+            "http": 200,
+            "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+            "bytes": 3352815,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      }
+    }
+  ],
+  "omittedItems": [],
+  "generatedImageCount": 5,
+  "missingSlots": [],
+  "builtInToolOnly": true,
+  "ownerEditorialAcceptance": "pending",
+  "gameIntegration": "pending",
+  "rejectedCandidates": [
+    {
+      "id": "warsaw-intro-8-v1",
+      "slot": 8,
+      "cityName": "Varsova",
+      "gameCityId": "varsova",
+      "mediaSlug": "warsaw",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-8-saksilaispuisto-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/warsaw-8-saksilaispuisto-1873-native-v1.png",
+      "sha256": "a7dc3b3290cd46edca93184f7098f9a4e191cfee246eb47eea643f94a3bb8e8d",
+      "bytes": 3105917,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v1.png",
+      "generationPrompt": "Use case: historical-scene. Matkakirja Warsaw arrival intro slot8. Strictly year1873, source-backed illustrative reconstruction of the Grand Fountain in Saxon Garden. East side of the Grand Fountain in Saxon Garden, Warsaw, camera1.5m above the natural gravel area looking WEST into the garden,50mm lens. Center the authentic1855 pale stone chalice-shaped fountain: one large broad shallow circular raised bowl on a thick flared pedestal, modest vertical center plume and water gently spilling from its bowl into a much wider low circular basin. Basin's stone rim forms an ellipse across lower middle. Background entirely mature deciduous trees, soft irregular leafy canopy and plain grass, no statues or buildings visible. This orientation turns away from Saxon Palace and today's Tomb of Unknown Soldier. EXACT same east-side camera position1.5mheight,50mm lens, WEST viewing direction and basin/bowl framing as modern slot5. Neutral black-and-white nineteenth-century photograph appearance, grayscale only, no sepia or tint, soft natural daylight, restrained contrast and fine photographic grain without fake aged paper or border. The fountain opened4June1855 and is fully present by1873: a single broad raised shallow chalice bowl on a flared solid pedestal, center water plume and much wider low circular basin. Period garden has irregular leafy deciduous trees and gravel paths, with two tiny distant rear-facing Warsaw adult walkers in1873day clothes: long skirt and plain bodice, dark frockcoat and hat, faces unreadable. No electric light, cars, concrete paths, metal safety fencing, plastics, modern bins benches or signboards. No Tomb of Unknown Soldier (1925), memorial boulder(1927), Marshal Pilsudski plaque(1938), Saxon Square cathedral(1894–1912), postwar buildings or skyline. Looking west and cropping to trees also excludes historic palace, statues and water tower; no unverified building dates enter frame. Photorealistic real-camera travel photography, natural lighting and exposure, neutral grayscale tones, irregular authentic stone brick foliage and skin, no CGI, illustration, HDR, cinematic oversaturation, plastic skin or repetitive stamped plants. Landscape1536x1024 opaque RGB sRGB. No lettering, numbers, address plaques, signs, posters, graffiti, logos, brand patterns, distinctive stripes, watermarks or frame. No food or drinks. No recognizable real people or famous person. Avoid protected modern art and named current architecture. Exclude all existing city hero subjects: Old Town market square, Royal Castle, Wilanow Palace, Palace on Isle, Mermaid sculpture, modern skyscrapers and Palace of Culture. No cars, motorcycles, vans, buses, number plates or roadway anywhere even background. Composition and fountain proportions: a single broad shallow bowl about3times the narrowest stem width centered at mid-height, smooth flared pedestal and round stepped foot in basin, bowl lies between one third and halfway down frame, round wide low basin rim around lower third. Main tall tree trunk near far-left third, another darker high trunk behind and right of fountain, irregular leafy canopy filling top. Only one bowl tier, no statue or finial on its top, a modest central water jet.",
+      "sources": [
+        {
+          "url": "https://zom.waw.pl/statics/static-maps/file/Ogr%C3%B3d%20Saski%20PDF_1439287908.pdf",
+          "publisher": "Warsaw municipal green-space/public maintenance authority",
+          "readFacts": "GrandFountain inaugurated4June1855, Marconi design; restored2006–2007. Tomb ofUnknownSoldier1925, gardenmemorialboulder1927, Pilsudskiplaque1938. Historic8includesfountain andexcludeslatermemorials, allother sculptures cropped out."
+        },
+        {
+          "url": "https://zabytek.pl/pl/obiekty/warszawa-wodozbior",
+          "publisher": "National Heritage Institute of Poland",
+          "readFacts": "Marconi water system inaugurated4June1855 by fountain on SaxonPalace axis; water tower1852–1854. Supports fountain present1873. Water tower cropped out because later changes not needed."
+        },
+        {
+          "url": "https://www.warszawa.ap.gov.pl/saska/21264.html",
+          "publisher": "State Archive in Warsaw",
+          "readFacts": "Garden transformed1815–1827; fountain1855; squarecathedral1894–1912 absent1873. Palace andallarchitecturalbackdrop excluded by westward composition."
+        },
+        {
+          "url": "https://mbc.cyfrowemazowsze.pl/dlibra/publication/48840/edition/43647/content",
+          "publisher": "Mazovian Digital Library catalog",
+          "readFacts": "Catalog identifies HenrykMarconi1792–1863; fountaindesign belongs long-deceasednineteenthcenturyarchitect."
+        }
+      ],
+      "caption": "Saksilaispuiston suihkulähde Varsovassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T18:09:37.142118+00:00",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "approvedForRootReview": false,
+          "notes": "Neutral grayscale, same westward front fountain view with one shallow bowl wide basin left trunk and dark rear tree; two distant rear-facing period adults, no later monuments buildings electrical fixtures or modern materials.",
+          "rejectedReason": "Warm RGB cast: means108.59/105.18/101.49 R-B7.10; root revokes prior approval"
+        },
+        "rootSessionReview": {
+          "status": "pending"
+        },
+        "ownerEditorialAcceptance": "pending"
+      },
+      "R2Proof": {
+        "status": "pending"
+      }
+    }
+  ],
+  "actualGenerationCallsIssued": 6,
+  "qualityRetriesIssued": 1,
+  "rejectedCandidateCount": 1,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "warsaw",
+    "gameCityId": "varsova",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/historical-sources.json"
+    ],
+    "sourceManifestSha256": "64d343808cb89172292f73a25f97d66b7e65ce8f6be68eaf9720e374c5c1d3ab",
+    "assets": [
+      {
+        "id": "warsaw-intro-4-v1",
+        "slot": 4,
+        "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Asuinpihan kulunut rappaus, tiili, kiveys ja kasvillisuus ovat luonnollisia. Kaksi aikuista näkyy selin kehyksen kokoon nähden pieninä; kastelukannu ja pyykkikori ovat geneerisiä. Tekstiä, numeroita, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset vasemman oven pienestä laitteesta, kasveja hoitavasta aikuisesta ja pihan tiilestä/lehdistöstä tarkastettu.",
+          "Vasemman oven pieni laite sisältää fyysisiä painike-/syvennysmuotoja ilman havaittavaa kirjoitusta tai numeroriviä.",
+          "Kasvien oksat, lehdet ja kukat vaihtelevat luonnollisesti. Rappauksen halkeilu ja tiilien kuluma epäsäännöllisiä ilman leimaa.",
+          "Molempien ihmisten kasvot jäävät pois; näkyvät kädet ja kastelukannun ote uskottavia. Ei ruokaa, ajoneuvoja, kilpiä, mainoksia tai tunnuksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/4-left-fixture.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/4-person-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/4-brick-leaves.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3035187,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "warsaw-intro-5-v1",
+        "slot": 5,
+        "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vanhan yksimaljaisen suihkulähteen kivi, vesisuihku, putoavat pisarat ja allas ovat kameramaisia ja fyysisesti uskottavia. Puunkuoret ja lehdistö luonnollisen epäsäännöllisiä. Sama katselusuunta kuin1873-parissa; ei kirjoitusta tai tunnuksia.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset lähteen kivestä/vedestä, vasemmasta puunkuoresta/pienistä ihmisistä ja oikeasta lehdistöstä tarkastettu.",
+          "Yksi leveä malja, levenevä kivijalusta ja laaja matala allas muodostavat yhtenäisen rakenteen. Putoava vesi rikkoutuu vaihteleviksi pisaroiksi; kiven mineraalijäljet luonnollisia.",
+          "Puut, lehdet ja oksat vaihtelevat ilman kaarna-/lehtileimaa. Kaksi pientä taustan aikuista näkyy selin ilman tunnistettavia kasvoja.",
+          "Slot8v2:n kanssa sama länteen rajattu puistotausta ja suihkulähteen/altaan yleinen suunta. Ei patsaita, rakennuksia, kylttejä, logoja tai ruokaa.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/5-stone-water.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/5-bark-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/5-leaves.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3375294,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "warsaw-intro-6-v1",
+        "slot": 6,
+        "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivisen etualan aikuisen miehen kasvot, iho ja hiukset ovat uskottavia. Vaatteet ovat geneeristä nykymuotia. Väkijoukko näkyy ylävartaloina ilman ruokaa, jalkineita, tekstiä, logoja tai tunnistettavia brändikuvioita.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, vasemmasta väkijoukosta/vaatteista ja oikeanpuoleisesta aikuisesta tarkastettu.",
+          "Ihon huokoset, hampaat, korva ja hiukset ovat kameramaisia ilman muovisuutta. Näkyvät osittaiset käsivarret ja kasvonrakenteet ovat uskottavia.",
+          "Kaikki näkyvät henkilöt ovat aikuisia ja ylävartaloina tai muiden peittämiä. Pienet korut ja vaatteiden kuosit geneerisiä; ei jalkineita, ruokaa tai juoma-astioita.",
+          "Joen pinta ja vastarannan puusto sekä ympäristön sininen valo ja lämpimät lamput ovat yhteensopivia. Ei nimettyä tapahtumaa tai lavabrändiä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/6-crowd-left.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/6-right-person.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2037918,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "warsaw-intro-7-v1",
+        "slot": 7,
+        "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Iltakujan tiili, rappaus, kasvit ja märän kiveyksen valot ovat luonnollisia ja perspektiivi yhtenäinen. Kaksi pientä kävelijää näkyy selin. Ovikalusto ei muodosta havaittavaa kirjoitusta, numeroita tai tunnuksia.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset oven pienestä laitteesta, ihmisistä ja tiili-/kasvipinnoista tarkastettu.",
+          "Oven pieni tumma painikelaite ja postiluukun metalliosat ovat tavallista kalustoa ilman havaittavia kirjain-/numeromerkkejä tai logoja.",
+          "Tiili, rappaus, lehdet ja oksat vaihtelevat ilman leimaa. Kiveyksen märät heijastukset vastaavat ikkunavaloja ja lamppua.",
+          "Ihmiset näkyvät selin ilman tunnistettavia kasvoja. Ei ruokaa, ajoneuvoja, kilpiä, mainoksia tai muistomerkkejä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/7-door-fixture.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/7-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/7-brick-plants.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2808899,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "warsaw-intro-8-v2",
+        "slot": 8,
+        "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 v2 on näkyvästi neutraali mustavalkoinen ilman sepiaa. Suihkulähteen, altaan ja länteen rajatun puistotaustan suunta vastaa slot5:tä. Periodiaikuiset ja luonnonpinnat uskottavia; lähdepaketin myöhemmät rakennelmat puuttuvat.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset lähteen kivestä/vedestä, vasemmasta puunkuoresta/periodiaikuisista ja oikeasta lehdistöstä tarkastettu.",
+          "Slot5:n kanssa yksi leveä malja, levenevä jalusta ja laaja matala allas edestä samalla yleisellä itärannan länteen katsovalla suunnalla; puistopuita taustalla, ei arkkitehtuuria.",
+          "Kiven kuluma, pisarat, veden aallot, puunkuoren uurteet ja lehtiasennot vaihtelevat luonnollisesti ilman leimaa. Kaksi pientä aikuista näkyy selin pitkässä hameessa ja takissa/hatuissa ilman kasvojen tunnistettavuutta.",
+          "Varsovan kunnallisen puistoaineiston1855suihkulähde, National Heritage Instituten Marconin vesijärjestelmä ja State Archive -puistohistoria luettu tuottajan lähdepaketista.1873-kehyksestä puuttuvat1925Tuntemattoman sotilaan hauta,1927muistokivi,1938Pilsudski-laatta,1894–1912katedraali, sodanjälkeinen arkkitehtuuri sekä sähkövalo, autot, muovi, turvallisuuskaiteet ja modernit kalusteet.",
+          "1859lähdekuva on piirros-/painokuva ja1860–1870periodivalokuva on luetteloitu aikaväli, ei täsmällisen1873kuvakulman mittaus. Historiallinen havainnekuva ei väitä puuyksilöitä tai polkuja täsmällisiksi.",
+          "Ei näkyvää sävytystä, tekstiä, logoja tai ruokaa. Alkuperäistä rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/8-stone-water.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/8-bark-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/warsaw/crops/8-leaves.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3352815,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://zom.waw.pl/statics/static-maps/file/Ogr%C3%B3d%20Saski%20PDF_1439287908.pdf",
+          "https://zabytek.pl/pl/obiekty/warszawa-wodozbior",
+          "https://www.warszawa.ap.gov.pl/saska/21264.html"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T19:24:41.281759+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/manifest.json",
+      "manifestSHA256": "64d343808cb89172292f73a25f97d66b7e65ce8f6be68eaf9720e374c5c1d3ab",
+      "reviewedAssetIds": [
+        "warsaw-intro-4-v1",
+        "warsaw-intro-5-v1",
+        "warsaw-intro-6-v1",
+        "warsaw-intro-7-v1",
+        "warsaw-intro-8-v2"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "concreteBlockers": [],
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Historiallinen suihkulähde-/puistokuva on lähdepohjainen havainnollistava rekonstruktio, ei1873 puiston tarkka mittaus.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "warsaw",
+    "verifiedAt": "2026-10-12T19:24:59.623159+00:00",
+    "assets": [
+      {
+        "id": "warsaw-intro-4-v1",
+        "slot": 4,
+        "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+        "bytes": 3035187,
+        "verifiedAt": "2026-10-12T19:24:58.087023+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png",
+            "http": 200,
+            "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+            "bytes": 3035187,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-4-pragan-pihaarki-intro-v1.png?delivery-verify=68ba60cd5024c023-1791833098087018000",
+            "http": 200,
+            "sha256": "68ba60cd5024c0236f2eebab363ce9fb3db368e57f514658291a798cfd5b3fce",
+            "bytes": 3035187,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "warsaw-intro-5-v1",
+        "slot": 5,
+        "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+        "bytes": 3375294,
+        "verifiedAt": "2026-10-12T19:24:58.087174+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+            "http": 200,
+            "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+            "bytes": 3375294,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-5-saksilaispuiston-vesi-intro-v1.png?delivery-verify=db994896b25057e4-1791833098087171000",
+            "http": 200,
+            "sha256": "db994896b25057e4f87df7f2ad576ff1c3720308ba12179db5ada4cc881886c9",
+            "bytes": 3375294,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "warsaw-intro-6-v1",
+        "slot": 6,
+        "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+        "bytes": 2037918,
+        "verifiedAt": "2026-10-12T19:24:58.087301+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png",
+            "http": 200,
+            "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+            "bytes": 2037918,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-6-veikselin-kesajuhla-intro-v1.png?delivery-verify=82c02f91f03f396f-1791833098087298000",
+            "http": 200,
+            "sha256": "82c02f91f03f396fbbf08a925d2a2522bb5858aaa8ae17746b1cca41acb485fb",
+            "bytes": 2037918,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "warsaw-intro-7-v1",
+        "slot": 7,
+        "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+        "bytes": 2808899,
+        "verifiedAt": "2026-10-12T19:24:58.745280+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png",
+            "http": 200,
+            "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+            "bytes": 2808899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png?delivery-verify=411ffb3bdf2efe2f-1791833098745273000",
+            "http": 200,
+            "sha256": "411ffb3bdf2efe2faa9a56961fa4eb9dd1a9d92616ce74d4e30953777bd72d07",
+            "bytes": 2808899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "warsaw-intro-8-v2",
+        "slot": 8,
+        "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+        "bytes": 3352815,
+        "verifiedAt": "2026-10-12T19:24:58.994445+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+            "bytes": 3352815,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/warsaw/20261012-full/warsaw-8-saksilaispuisto-1873-intro-v2.png?delivery-verify=1b24c10b79fa0ef0-1791833098994438000",
+            "http": 200,
+            "sha256": "1b24c10b79fa0ef09a32a79afac06d44a093ce5d0e01d48ad4d0c201f8923fe7",
+            "bytes": 3352815,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/warsaw/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:04.918455+00:00"
+}

@@ -1,0 +1,1087 @@
+{
+  "cityName": "Sevilla",
+  "gameCityId": "sevilla",
+  "mediaSlug": "seville",
+  "assets": [
+    {
+      "id": "seville-4-triana-arki-intro-v2",
+      "slot": 4,
+      "cityName": "Sevilla",
+      "gameCityId": "sevilla",
+      "mediaSlug": "seville",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-4-triana-arki-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-4-triana-arki-intro-v2.png",
+      "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+      "bytes": 2675520,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Seville intro slot4. Generate one completely new original photorealistic illustrative image, like a candid photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Restrained natural colours, ordinary natural light, credible perspective, natural irregular surfaces and individually varied plants. No HDR, CGI, render, painting, cinematic grading, plastic skin, repeating organic texture. No text, letters, numbers, signs, logos, brands, brand patterns, watermark, frame, border, food, protected artwork, or contemporary named designer architecture. Bare blank walls and lintels, plain closed residential doors with no address plaques. Scene: Present-day ordinary shared residential patio in old Triana Seville. Low two-storey whitewashed homes with faded ochre lower walls, plain dark wooden doors, simple iron balcony railings, irregular terracotta and stone ground, a few plain earthenware pots with varied green foliage. Eye-level 35mm view diagonally across patio from entrance. Two small distant adults seen from behind hanging plain household laundry at far wall; no faces. Gentle midmorning light, natural shade, lived-in ordinary atmosphere. No decorative ceramic mural, no shop, no painted art, no church or monument, no numbers, no food.\n CRITICAL: every door has a completely plain undecorated bare white plaster wall surrounding it. No plaque, tile, bell panel, plate, carved digits, address number, stamp, lettering or mark anywhere on the facade. Crop close doors at side edges OUT of the picture; foreground is only unmarked blank white gardenwalls and plantpots. Far doors are small and wholly undecorated and unmarked. Zero signage of any kind in the entire frame. Keep residents distant and turned away.",
+      "sources": [
+        {
+          "url": "https://visitasevilla.es/en/triana-bridge/",
+          "title": "Official VisitaSevilla – TrianaBridge",
+          "readFacts": [
+            "IsabelII/Trianabridge completed1852.",
+            "Crossesriver andconnectsTriana withhistoriccenter."
+          ]
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/archivos/web_es/contenido?id=c5b23cdd-cb0d-11df-afea-000ae4865a5f&idActivo=&idArchivo=d9f0f1ac-58a4-11dd-b44b-31450f5b9dd5",
+          "title": "Andalusia ProvincialArchives Sevilla – IsabelIIbridgehistory",
+          "readFacts": [
+            "Bridge constructed1845–1852.",
+            "Threeequal spans supportedbytwo centralpiers andtwo abutments;eachspan fivecastiron arches.",
+            "Originaldeckreplacedwithself-supportingdeck1977, omitmodernslabdetailsfrom1873.",
+            "1873noelectrictramwires;archive distinguisheslatertractionchanges."
+          ],
+          "localReadEvidence": "references/andalucia-archive-bridge-source.html"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/iaph/servicios/actualidad/noticias/detalle/520114.html",
+          "title": "IAPH – CarmenChapel",
+          "readFacts": [
+            "CurrentCarmenchapel constructed1926–1928, exclude1873."
+          ]
+        },
+        {
+          "url": "https://www.flickr.com/photos/bibliotecabne/5552726486/in/album-72157626332060636",
+          "title": "BibliotecaNacionalEspaña – Laurent IsabelIIbridge1867",
+          "readFacts": [
+            "Collectionexplicitlydatesalbum1867 andidentifiesimageSevilla.",
+            "Periodimage inspected:threecastironarches withcircularspandrelbracing,slenderdeck,stonepiers;oldquaysandwoodensailingvessels."
+          ],
+          "localReferencePath": "references/bne-laurent-isabelII-1867.jpg",
+          "role": "periodfacts only, newimage notcopy"
+        },
+        {
+          "url": "https://visitasevilla.es/en/10-tips-to-enjoy-the-feria-de-abril-like-a-true-sevillano/",
+          "title": "OfficialVisitaSevilla – FeriaAbril",
+          "readFacts": [
+            "Casetas temporaryfairbooths become socialhomesofSevilliansduringfestival."
+          ]
+        },
+        {
+          "url": "https://visitasevilla.es/barrio-de-triana/",
+          "title": "OfficialVisitaSevilla – Triana",
+          "readFacts": [
+            "Oldneighbourhood acrossriver, riversidewalkandhistoriclocalstreets."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://visitasevilla.es/en/barrio-de-santa-cruz/",
+          "title": "OfficialVisitaSevilla – SantaCruz",
+          "readFacts": [
+            "Historicneighbourhoodwitholdstreetsandsquares."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/areas/cultura/archivos/archivos-consejeria/archivo-historico-provincial-sevilla/ahps-recomienda/paginas/documento-ahps-jun-2021.html",
+          "title": "Sevilla ProvincialArchive – Citygaslighting1854",
+          "readFacts": [
+            "Citygaslightingcontractmade1853, firstunsuccessfulattempt1846, gascompanyownership1852."
+          ]
+        },
+        {
+          "url": "https://icas.sevilla.org/espacios/sahp/noticias/gas-2020",
+          "title": "Sevilla MunicipalArchive – Gasfactory1872plan",
+          "readFacts": [
+            "Municipalarchivepreserves1872gasfactoryreformplan.",
+            "Gasfactoryinstalledtwentyyearsbefore1872andcontractedwithcitypubliclighting."
+          ]
+        }
+      ],
+      "caption": "Trianan vanhan asuinpihan arkea Sevillassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and every doorwall,laundry,clothing,paving,foliage detail inspected. Ordinary anonymous Triana domesticcourtyard with two distant back-facing adults and plainlaundry. Walls/doors now unmarked,no addressnumbers,writing,signs,logos,food or artworks. Authentic naturalmaterial/leaf detail and restrained daylight.",
+          "limits": [
+            "Illustrative scene, not an actual event photo or architectural survey."
+          ],
+          "reviewedAt": "2026-10-12T18:07:38.397051+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-4-triana-arki-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-4-triana-arki-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+        "bytes": 2675520,
+        "nativeSha256": "69ca515794799776b793944bb770b558000497487a66c63951579dda042277b5",
+        "decodedRGBSha256": "06f460e3983fe6b41340a796fbb220ffdf5722c4c10c9f38788ae80ce5548615",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:03:46.893201+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png?t=f543a3b7a7a21655",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png",
+        "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+        "bytes": 2675520,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+        "canonicalGetBytes": 2675520,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:21:31.018595+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "seville-5-triana-jokivesi-intro-v1",
+      "slot": 5,
+      "cityName": "Sevilla",
+      "gameCityId": "sevilla",
+      "mediaSlug": "seville",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-5-triana-jokivesi-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-5-triana-jokivesi-intro-v1.png",
+      "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+      "bytes": 1974296,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Seville intro slot5. Generate one completely new original photorealistic illustrative image, like a candid photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Restrained natural colours, ordinary natural light, credible perspective, natural irregular surfaces and individually varied plants. No HDR, CGI, render, painting, cinematic grading, plastic skin, repeating organic texture. No text, letters, numbers, signs, logos, brands, brand patterns, watermark, frame, border, food, protected artwork, or contemporary named designer architecture. Bare blank walls and lintels, plain closed residential doors with no address plaques. Scene: Present-day Guadalquivir water and old IsabelII/Triana bridge Seville. Stand low at EAST bank south/downstream of bridge, looking NORTHWEST at the bridge southern side; horizontal 50mm lens view centered on old iron structure across upperthird. Show three shallow castiron arches with circular spandrel bracing and two plain weathered stone piers; bridge endpoints largely outside frame. Broad gentle real river water and broken-up reflections fill lower two-thirds. Farbank is just distant low old masonry quay and a narrow hint of trees, no identifiable building. Natural pale morninglight and slight haze, restrained tones. People only a few tiny unidentifiable distant back-facing silhouettes atop bridge, no close faces. NO Carmenchapel, modern towers, TorreSevilla, cathedral, Giralda, boats with names, modern sculpture, signs, cars, trafficmarkings or decorative lighting display. Bridge surface plain, detailsphotographicallycredible.",
+      "sources": [
+        {
+          "url": "https://visitasevilla.es/en/triana-bridge/",
+          "title": "Official VisitaSevilla – TrianaBridge",
+          "readFacts": [
+            "IsabelII/Trianabridge completed1852.",
+            "Crossesriver andconnectsTriana withhistoriccenter."
+          ]
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/archivos/web_es/contenido?id=c5b23cdd-cb0d-11df-afea-000ae4865a5f&idActivo=&idArchivo=d9f0f1ac-58a4-11dd-b44b-31450f5b9dd5",
+          "title": "Andalusia ProvincialArchives Sevilla – IsabelIIbridgehistory",
+          "readFacts": [
+            "Bridge constructed1845–1852.",
+            "Threeequal spans supportedbytwo centralpiers andtwo abutments;eachspan fivecastiron arches.",
+            "Originaldeckreplacedwithself-supportingdeck1977, omitmodernslabdetailsfrom1873.",
+            "1873noelectrictramwires;archive distinguisheslatertractionchanges."
+          ],
+          "localReadEvidence": "references/andalucia-archive-bridge-source.html"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/iaph/servicios/actualidad/noticias/detalle/520114.html",
+          "title": "IAPH – CarmenChapel",
+          "readFacts": [
+            "CurrentCarmenchapel constructed1926–1928, exclude1873."
+          ]
+        },
+        {
+          "url": "https://www.flickr.com/photos/bibliotecabne/5552726486/in/album-72157626332060636",
+          "title": "BibliotecaNacionalEspaña – Laurent IsabelIIbridge1867",
+          "readFacts": [
+            "Collectionexplicitlydatesalbum1867 andidentifiesimageSevilla.",
+            "Periodimage inspected:threecastironarches withcircularspandrelbracing,slenderdeck,stonepiers;oldquaysandwoodensailingvessels."
+          ],
+          "localReferencePath": "references/bne-laurent-isabelII-1867.jpg",
+          "role": "periodfacts only, newimage notcopy"
+        },
+        {
+          "url": "https://visitasevilla.es/en/10-tips-to-enjoy-the-feria-de-abril-like-a-true-sevillano/",
+          "title": "OfficialVisitaSevilla – FeriaAbril",
+          "readFacts": [
+            "Casetas temporaryfairbooths become socialhomesofSevilliansduringfestival."
+          ]
+        },
+        {
+          "url": "https://visitasevilla.es/barrio-de-triana/",
+          "title": "OfficialVisitaSevilla – Triana",
+          "readFacts": [
+            "Oldneighbourhood acrossriver, riversidewalkandhistoriclocalstreets."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://visitasevilla.es/en/barrio-de-santa-cruz/",
+          "title": "OfficialVisitaSevilla – SantaCruz",
+          "readFacts": [
+            "Historicneighbourhoodwitholdstreetsandsquares."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/areas/cultura/archivos/archivos-consejeria/archivo-historico-provincial-sevilla/ahps-recomienda/paginas/documento-ahps-jun-2021.html",
+          "title": "Sevilla ProvincialArchive – Citygaslighting1854",
+          "readFacts": [
+            "Citygaslightingcontractmade1853, firstunsuccessfulattempt1846, gascompanyownership1852."
+          ]
+        },
+        {
+          "url": "https://icas.sevilla.org/espacios/sahp/noticias/gas-2020",
+          "title": "Sevilla MunicipalArchive – Gasfactory1872plan",
+          "readFacts": [
+            "Municipalarchivepreserves1872gasfactoryreformplan.",
+            "Gasfactoryinstalledtwentyyearsbefore1872andcontractedwithcitypubliclighting."
+          ]
+        }
+      ],
+      "caption": "Guadalquivirin vesipinta ja Trianan vanha silta Sevillassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and ironrings/archprofiles,stonepiers,lamps,tinypeople,farbank/water details inspected. Triana bridge over Guadalquivir,threearches and circularcastironspandrels plausible,people tiny,distantunidentifiable. Naturalriverlight,no signs,text,brandlogos or contemporaryprotecteddesign observed.",
+          "limits": [
+            "Illustrative scene, not an actual event photo or architectural survey."
+          ],
+          "reviewedAt": "2026-10-12T18:07:38.441886+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-5-triana-jokivesi-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-5-triana-jokivesi-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+        "bytes": 1974296,
+        "nativeSha256": "b8dba469653cc9519c24164ece05ed96a63954fd8fd8a61a6a3e6b4e1bad104c",
+        "decodedRGBSha256": "553504c9a31094ab4112c4d19dac74db180926b5f612d3aa0f6fcfc16ea0228f",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:05:13.568080+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png?t=c4be6009aad87133",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png",
+        "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+        "bytes": 1974296,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+        "canonicalGetBytes": 1974296,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:21:32.519375+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "seville-6-feria-juhla-intro-v1",
+      "slot": 6,
+      "cityName": "Sevilla",
+      "gameCityId": "sevilla",
+      "mediaSlug": "seville",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-6-feria-juhla-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-6-feria-juhla-intro-v1.png",
+      "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+      "bytes": 1977944,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Seville intro slot6. Generate one completely new original photorealistic illustrative image, like a candid photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Restrained natural colours, ordinary natural light, credible perspective, natural irregular surfaces and individually varied plants. No HDR, CGI, render, painting, cinematic grading, plastic skin, repeating organic texture. No text, letters, numbers, signs, logos, brands, brand patterns, watermark, frame, border, food, protected artwork, or contemporary named designer architecture. Bare blank walls and lintels, plain closed residential doors with no address plaques. Scene: Modern Feria deAbril in Seville, joyful gathering of adult neighbours by a plain anonymous caseta canvas awning. Background only upper portions of simple red-and-white striped canvas awnings and small warm lights, plain white paper lanterns, no elaborate main festival gateway, themed art, banners or names. One fictional Andalusian adult woman aged27 with natural medium olive skin and dark curly hair loosely tied up, warm spontaneous laughing expression looking to friend beyondcamera, at center-left foreground. Fashionable generic unbranded plain deep teal sleeveless blouse and small plain gold earrings; no traditional flamenco dress. Many locallyplausible Seville adults aged23–35 behind her in contemporary generic modern clothes, natural varied appearances, smiling and socialising. Candid 50mm chest-up framing, dense overlapping adult torsos along entirebottom. ALL FOOTWEAR and ALL FEET in foreground and background completely outside frame or occluded, background people are heads/shoulders only. Real texture of skin and credible anatomy, lateafternoonnatural sun, gentle happy festival mood. Nofood/drinks/children/branding/protectedart.",
+      "sources": [
+        {
+          "url": "https://visitasevilla.es/en/triana-bridge/",
+          "title": "Official VisitaSevilla – TrianaBridge",
+          "readFacts": [
+            "IsabelII/Trianabridge completed1852.",
+            "Crossesriver andconnectsTriana withhistoriccenter."
+          ]
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/archivos/web_es/contenido?id=c5b23cdd-cb0d-11df-afea-000ae4865a5f&idActivo=&idArchivo=d9f0f1ac-58a4-11dd-b44b-31450f5b9dd5",
+          "title": "Andalusia ProvincialArchives Sevilla – IsabelIIbridgehistory",
+          "readFacts": [
+            "Bridge constructed1845–1852.",
+            "Threeequal spans supportedbytwo centralpiers andtwo abutments;eachspan fivecastiron arches.",
+            "Originaldeckreplacedwithself-supportingdeck1977, omitmodernslabdetailsfrom1873.",
+            "1873noelectrictramwires;archive distinguisheslatertractionchanges."
+          ],
+          "localReadEvidence": "references/andalucia-archive-bridge-source.html"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/iaph/servicios/actualidad/noticias/detalle/520114.html",
+          "title": "IAPH – CarmenChapel",
+          "readFacts": [
+            "CurrentCarmenchapel constructed1926–1928, exclude1873."
+          ]
+        },
+        {
+          "url": "https://www.flickr.com/photos/bibliotecabne/5552726486/in/album-72157626332060636",
+          "title": "BibliotecaNacionalEspaña – Laurent IsabelIIbridge1867",
+          "readFacts": [
+            "Collectionexplicitlydatesalbum1867 andidentifiesimageSevilla.",
+            "Periodimage inspected:threecastironarches withcircularspandrelbracing,slenderdeck,stonepiers;oldquaysandwoodensailingvessels."
+          ],
+          "localReferencePath": "references/bne-laurent-isabelII-1867.jpg",
+          "role": "periodfacts only, newimage notcopy"
+        },
+        {
+          "url": "https://visitasevilla.es/en/10-tips-to-enjoy-the-feria-de-abril-like-a-true-sevillano/",
+          "title": "OfficialVisitaSevilla – FeriaAbril",
+          "readFacts": [
+            "Casetas temporaryfairbooths become socialhomesofSevilliansduringfestival."
+          ]
+        },
+        {
+          "url": "https://visitasevilla.es/barrio-de-triana/",
+          "title": "OfficialVisitaSevilla – Triana",
+          "readFacts": [
+            "Oldneighbourhood acrossriver, riversidewalkandhistoriclocalstreets."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://visitasevilla.es/en/barrio-de-santa-cruz/",
+          "title": "OfficialVisitaSevilla – SantaCruz",
+          "readFacts": [
+            "Historicneighbourhoodwitholdstreetsandsquares."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/areas/cultura/archivos/archivos-consejeria/archivo-historico-provincial-sevilla/ahps-recomienda/paginas/documento-ahps-jun-2021.html",
+          "title": "Sevilla ProvincialArchive – Citygaslighting1854",
+          "readFacts": [
+            "Citygaslightingcontractmade1853, firstunsuccessfulattempt1846, gascompanyownership1852."
+          ]
+        },
+        {
+          "url": "https://icas.sevilla.org/espacios/sahp/noticias/gas-2020",
+          "title": "Sevilla MunicipalArchive – Gasfactory1872plan",
+          "readFacts": [
+            "Municipalarchivepreserves1872gasfactoryreformplan.",
+            "Gasfactoryinstalledtwentyyearsbefore1872andcontractedwithcitypubliclighting."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Feria de Abrilin juhlassa Sevillassa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": true,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native fullframe and upperbody,hands,skin,clothing/caseta details inspected. Fictional adultwoman among joyful adult FeriaAbriI casetagathering,plaingenericfashionableclothes and simple striped temporarybooth. All footwear excluded,no food,text,logo,brandpattern,addressnumbers or protectedcontemporarydesign. Natural pores/hair/material/daylight.",
+          "reviewedAt": "2026-10-12T18:18:12.537316+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-6-feria-juhla-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-6-feria-juhla-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+        "bytes": 1977944,
+        "nativeSha256": "922d188b3eabf510a0906b29c65275e432bdbe1fd70535043a15ec814346213e",
+        "decodedRGBSha256": "5d18d6cf98a87e1d6785bf07639e925604260bf1d50206845fd274a6257fe2b4",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:06:43.180614+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png?t=a6bdd8413c5fed06",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png",
+        "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+        "bytes": 1977944,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+        "canonicalGetBytes": 1977944,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:21:33.746345+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "seville-8-triana-1873-intro-v2",
+      "slot": 8,
+      "cityName": "Sevilla",
+      "gameCityId": "sevilla",
+      "mediaSlug": "seville",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-8-triana-1873-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-8-triana-1873-intro-v2.png",
+      "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+      "bytes": 2272978,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png",
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja Seville intro slot8. Generate one completely new original photorealistic illustrative image, like a candid photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Neutral grey tones only, ordinary natural light, credible perspective, natural irregular surfaces and individually varied plants. No HDR, CGI, render, painting, cinematic grading, plastic skin, repeating organic texture. No text, letters, numbers, signs, logos, brands, brand patterns, watermark, frame, border, food, protected artwork, or contemporary named designer architecture. Bare blank walls and lintels, plain closed residential doors with no address plaques. Scene: NATIVE NEUTRAL MONOCHROME PHOTOGRAPH, black white and neutral grey only; no sepia or colour cast. Year exactly1873, Guadalquivir and IsabelII/Triana bridgeSeville. SAMEcamera placeanddirection as5: low on EAST bank SOUTH/downstream ofbridge lookingNORTHWEST atsouthernside, 50mmlens horizontalphoto; threeequal shallow castironarchspans with circularspandrelbracing across upperthird and twoweatheredplainstonepiers. Originalnineteenthcenturyslenderdeck andsimpleiron parapet, no1977self-supportingthickdeck, no cantileveredmodernwalkway. Endabutmentslargelyoutsideframe. Riverwaterwithnaturalripples filllower two-thirds, oppositebankplainoldstonequay andfewtree tops, NO identifiablebuilding. One tinyplain woodenrowingboat onwater faraway, noletters/numbers. A fewtinypeoplewalkingawayonthebridgewearing1873darkcoats/hats,facesinvisible. Sources:bridgecompleted1852;1867Laurentimageconfirmscastironrings/stonepiers/slenderdeck. Exclude1928Carmenchapel,electriclights,wires,trams,cars,modernskyscrapers,TorreSevilla,modernboats,containercranes,cathedral,Giralda,statues,posters. Soft natural daylight and fine realplatephoto grain, neutralgrayscalecontrast, believable water, iron andstone; noartificialborder, nocopyofexistingphoto.\n CRITICAL CAMERA AND FRAME MATCH TO THE MODERN PAIR: create a entirely new1873camera photograph with the SAME near-frontal bridge profile. The bridge deck and top railing are ABSOLUTELY LEVEL AND HORIZONTAL across the fullframe, never receding diagonally. Two inner stonepiers at about26percent and76percent of framewidth, with bases at about43percent of frameheight. The central ironarch spans between these piers; the outer left and right arches are only partlyseen and continue beyondtheimageedges. The bridge deck runs horizontally at about22percent of frameheight. Sky fills only top22percent, riverwater fills the lower57percent. The view is a square-on SIDE ELEVATION OF THE BRIDGE from a lowcamera set wellback, not from a closeabutment. Absolutely NO foregroundshore, NO rocks alongleftedge, NO grass, NO riverbank wedge. No camera tilted or diagonalbridgeperspective. Look across broadopenwater at the centralarch. Keep all bridgeendpoints outsideframe. Same oldstonepier shape andspacing as contemporarypair, original1873thiniron/wood deck instead of modernslab. Only simple unlit nineteenth-century gaslamp posts, no electriclamps, no multibranchmodernlanterns. All physicalpixels are newlygenerated; not an edit, not a recolouring and not a copiedphotograph. NO building, monument or skyline appears. Restrained neutralgrayscale, real fineplategrain, no sepia.",
+      "sources": [
+        {
+          "url": "https://visitasevilla.es/en/triana-bridge/",
+          "title": "Official VisitaSevilla – TrianaBridge",
+          "readFacts": [
+            "IsabelII/Trianabridge completed1852.",
+            "Crossesriver andconnectsTriana withhistoriccenter."
+          ]
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/archivos/web_es/contenido?id=c5b23cdd-cb0d-11df-afea-000ae4865a5f&idActivo=&idArchivo=d9f0f1ac-58a4-11dd-b44b-31450f5b9dd5",
+          "title": "Andalusia ProvincialArchives Sevilla – IsabelIIbridgehistory",
+          "readFacts": [
+            "Bridge constructed1845–1852.",
+            "Threeequal spans supportedbytwo centralpiers andtwo abutments;eachspan fivecastiron arches.",
+            "Originaldeckreplacedwithself-supportingdeck1977, omitmodernslabdetailsfrom1873.",
+            "1873noelectrictramwires;archive distinguisheslatertractionchanges."
+          ],
+          "localReadEvidence": "references/andalucia-archive-bridge-source.html"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/iaph/servicios/actualidad/noticias/detalle/520114.html",
+          "title": "IAPH – CarmenChapel",
+          "readFacts": [
+            "CurrentCarmenchapel constructed1926–1928, exclude1873."
+          ]
+        },
+        {
+          "url": "https://www.flickr.com/photos/bibliotecabne/5552726486/in/album-72157626332060636",
+          "title": "BibliotecaNacionalEspaña – Laurent IsabelIIbridge1867",
+          "readFacts": [
+            "Collectionexplicitlydatesalbum1867 andidentifiesimageSevilla.",
+            "Periodimage inspected:threecastironarches withcircularspandrelbracing,slenderdeck,stonepiers;oldquaysandwoodensailingvessels."
+          ],
+          "localReferencePath": "references/bne-laurent-isabelII-1867.jpg",
+          "role": "periodfacts only, newimage notcopy"
+        },
+        {
+          "url": "https://visitasevilla.es/en/10-tips-to-enjoy-the-feria-de-abril-like-a-true-sevillano/",
+          "title": "OfficialVisitaSevilla – FeriaAbril",
+          "readFacts": [
+            "Casetas temporaryfairbooths become socialhomesofSevilliansduringfestival."
+          ]
+        },
+        {
+          "url": "https://visitasevilla.es/barrio-de-triana/",
+          "title": "OfficialVisitaSevilla – Triana",
+          "readFacts": [
+            "Oldneighbourhood acrossriver, riversidewalkandhistoriclocalstreets."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://visitasevilla.es/en/barrio-de-santa-cruz/",
+          "title": "OfficialVisitaSevilla – SantaCruz",
+          "readFacts": [
+            "Historicneighbourhoodwitholdstreetsandsquares."
+          ],
+          "readMode": "searchsnippet;fullpagefetchfailed"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/areas/cultura/archivos/archivos-consejeria/archivo-historico-provincial-sevilla/ahps-recomienda/paginas/documento-ahps-jun-2021.html",
+          "title": "Sevilla ProvincialArchive – Citygaslighting1854",
+          "readFacts": [
+            "Citygaslightingcontractmade1853, firstunsuccessfulattempt1846, gascompanyownership1852."
+          ]
+        },
+        {
+          "url": "https://icas.sevilla.org/espacios/sahp/noticias/gas-2020",
+          "title": "Sevilla MunicipalArchive – Gasfactory1872plan",
+          "readFacts": [
+            "Municipalarchivepreserves1872gasfactoryreformplan.",
+            "Gasfactoryinstalledtwentyyearsbefore1872andcontractedwithcitypubliclighting."
+          ]
+        }
+      ],
+      "caption": "Guadalquivir ja Trianan vanha silta Sevillassa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true,
+          "visuallyNeutralBlackWhite": true,
+          "sameViewPairSlot": 5,
+          "year1873ModernExclusionsPass": true,
+          "framingNote": "Whole-newv2: level frontal bridge profile, innerpiers near26/76percentwidth, water-onlyforeground. Modernpair5viewmatched; allperiodpixelsnew, BNE1867 originaldeckfactsretained.",
+          "sameViewFramingRootReviewPending": false,
+          "strictRGBIdentityDiagnostic": false,
+          "maxRedGreenDifference": 9,
+          "maxRedBlueDifference": 10,
+          "meanRGB": [
+            147.57905451456705,
+            147.45684878031412,
+            147.398167292277
+          ],
+          "meanSignedRedMinusBlue": 0.18088722229003906,
+          "rootSameViewFramingApproved": true
+        },
+        "sessionOwner": {
+          "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "visuallyNeutralBlackWhite": true,
+          "strictRGBIdentityDiagnostic": false,
+          "historicalPairSlot": 5,
+          "observations": "Native fullframe and ironarches/circles,piers,deck,gaslamps,tinyperiodpeople,rowboat,river/farbank inspected against modern5. Nearfrontal/horizontal three-archprofile with twoinnerpiers and riverwater-onlyforeground now matches intended loweastbank direction,without diagonal leftbankshift. Oldslenderdeck and singlegaslamps supported by pre-call bridge/gashistorysources; no1977slab,1926CarmenChapel,electrictraction,motorvehicle,text,logos or numbers. Neutralblack/white no visiblecast.",
+          "limits": [
+            "Same geographicview and direction; exactpixel registration and individual pierproportions are illustrative,not a measured architecturalphotograph."
+          ],
+          "reviewedAt": "2026-10-12T18:21:28.941452+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-8-triana-1873-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-8-triana-1873-intro-v2.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+        "bytes": 2272978,
+        "nativeSha256": "a3f263d01edff2a29b6bb6f375d0ed76625ddc100e9039181eb0fbd33f2213c6",
+        "decodedRGBSha256": "48da8f8f2a66de97a0c1d24ced497ad74ecf5a7c6e3ea27964e35cedf1450ab0",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T18:17:43.120198+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png?t=3c3c6bf9e3d6d5d3",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png",
+        "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+        "bytes": 2272978,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+        "canonicalGetBytes": 2272978,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T18:21:36.897291+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "seville-7-asuinkuja-ilta-intro-v1",
+      "slot": 7,
+      "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "pending-quality-fix: keskietäisen vasemman oven vieressä on pieni tekstin/numeroiden kaltainen merkitty seinälaatta noin x823–831/y496–510, vastoin täysin paljaan seinän vaatimusta.",
+      "observations": [
+        "Koko kehys sekä molemmat puoliskot ja erillinen seinälaattarajaus tarkastettu. Kuvan vasemmanpuoleisen keskietäisen oven oikealla puolella on pieni vaalea suorakulmainen seinälaatta, noin x823–831/y496–510. Laatassa näkyy kahdessa ryhmässä tummia kirjain-/numeromaisia merkkejä. Täsmällistä lukemaa ei voi luotettavasti nimetä.",
+        "Tämä merkitty laatta rikkoo tuottajan vaatimusta täysin paljaista seinistä ilman laattoja, numeroita tai kirjoitusta. Hylkäys perustuu näkyvään rajattuun merkintäalueeseen, ei seinän satunnaisen rappauksen tulkitsemiseen tekstiksi. Slot7-v1 pending-quality-fix; alkuperäistä ei ole muutettu eikä uutta kuvaa generoitu.",
+        "Muu näkymä on kameramainen: vaihtelevat köynnöslehdet, kulunut rappaus ja epäsäännölliset katukivet, johdonmukainen sinisen illan ja lämpimien lyhtyjen valo. Kaksi kävelijää on pientä ja selin. Ei muita havaittuja logoja, ruokaa tai eläimiä.",
+        "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-left-doors-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-right-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-distant-left-wall-plaque.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-wall-mark-native.png",
+        "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+      ]
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "slot": 4,
+      "id": "seville-4-triana-arki-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-4-triana-arki-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-4-triana-arki-intro-v1.png",
+      "reason": "House number42 on rightwall in primaryv1"
+    },
+    {
+      "slot": 8,
+      "id": "seville-8-triana-1873-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/seville-8-triana-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/native/seville-8-triana-1873-intro-v1.png",
+      "reason": "Root QA rejected different camera geometry: diagonal bridge, different pier spacing and foreground bank versus frontal modern5"
+    }
+  ],
+  "complete": true,
+  "status": "awaiting-root-review-and-R2",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "technicalDeliveryComplete": true,
+  "existingDeliveredSlotsPreserved": [],
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T18:21:36.910925+00:00",
+  "rejectedCandidateHistory": [
+    {
+      "id": "seville-7-asuinkuja-ilta-intro-v1",
+      "slot": 7,
+      "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+      "fullFrameInspected": true,
+      "nativeDetailsInspected": true,
+      "approvedForDelivery": false,
+      "reason": "pending-quality-fix: keskietäisen vasemman oven vieressä on pieni tekstin/numeroiden kaltainen merkitty seinälaatta noin x823–831/y496–510, vastoin täysin paljaan seinän vaatimusta.",
+      "observations": [
+        "Koko kehys sekä molemmat puoliskot ja erillinen seinälaattarajaus tarkastettu. Kuvan vasemmanpuoleisen keskietäisen oven oikealla puolella on pieni vaalea suorakulmainen seinälaatta, noin x823–831/y496–510. Laatassa näkyy kahdessa ryhmässä tummia kirjain-/numeromaisia merkkejä. Täsmällistä lukemaa ei voi luotettavasti nimetä.",
+        "Tämä merkitty laatta rikkoo tuottajan vaatimusta täysin paljaista seinistä ilman laattoja, numeroita tai kirjoitusta. Hylkäys perustuu näkyvään rajattuun merkintäalueeseen, ei seinän satunnaisen rappauksen tulkitsemiseen tekstiksi. Slot7-v1 pending-quality-fix; alkuperäistä ei ole muutettu eikä uutta kuvaa generoitu.",
+        "Muu näkymä on kameramainen: vaihtelevat köynnöslehdet, kulunut rappaus ja epäsäännölliset katukivet, johdonmukainen sinisen illan ja lämpimien lyhtyjen valo. Kaksi kävelijää on pientä ja selin. Ei muita havaittuja logoja, ruokaa tai eläimiä.",
+        "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-left-doors-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-right-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-distant-left-wall-plaque.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-wall-mark-native.png",
+        "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+      ]
+    }
+  ],
+  "pendingQualityFixSlots": [
+    7
+  ],
+  "allRequestedSlotsDelivered": false,
+  "actualCalls": 7,
+  "deliveryQAEvidence": {
+    "mediaSlug": "seville",
+    "gameCityId": "sevilla",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/sources-1873.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/references/andalucia-archive-bridge-source.html",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/references/bne-laurent-isabelII-1867.jpg",
+      "https://visitasevilla.es/en/triana-bridge/",
+      "https://www.juntadeandalucia.es/organismos/iaph/servicios/actualidad/noticias/detalle/520114.html",
+      "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/areas/cultura/archivos/archivos-consejeria/archivo-historico-provincial-sevilla/ahps-recomienda/paginas/documento-ahps-jun-2021.html"
+    ],
+    "assets": [
+      {
+        "id": "seville-4-triana-arki-intro-v2",
+        "slot": 4,
+        "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajan hyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Valittu v2 tarkastettu kokonaan. Luonnollisesti vaihtelevat lehdet, ohuet oksat ja kuori sekä kuluneet ruukut, kalkkiseinät ja pihakivet eivät muodosta leimattua toistokuviota. Päivänvalo ja syvyysperspektiivi ovat yhtenäiset.",
+          "Kaksi pientä asukasta nähdään selin; kasvot eivät näy. Pyykinripustuksen käsien näkyvät osat ovat mittakaavassaan uskottavat. Paljaat ovien ympäristöt ja pyykit eivät sisällä tekstiä, osoitenumeroita, logoja tai brändikuviota. Ruokaa tai eläimiä ei näy.",
+          "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot4-plants-bark.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot4-people-blank-walls.png",
+          "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "seville-5-triana-jokivesi-intro-v1",
+        "slot": 5,
+        "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajan hyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Kokonainen moderni jokinäkymä ja sillan kumpikin puolisko sekä vesipinta tarkastettu. Valurautakaaret, syvyyssuunnassa näkyvät renkaat, kivipilarit, luonnollinen puusto ja katkeilevat heijastukset muodostavat kameramaisen näkymän.",
+          "Ihmiset ovat pieniä etäisiä hahmoja. Näkyviä tekstejä, logoja, nimettyjä veneitä, brändikuvioita tai ruokaa ei ole.",
+          "Historiapari8 esittää samaa matalalta joen yli nähtyä lähes vaakasuoraa eteläsivua, keskikaarta ja kahta sisäpilaria. Länsi-/luoteissuuntainen katselu on tuottajan briefin mukainen; kuva ei ole mittatarkka sillan dokumentointikuva.",
+          "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot5-bridge-left.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot5-bridge-right.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot5-water.png",
+          "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "seville-6-feria-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajan hyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Fiktiivinen aikuinen nainen on etualalla juhlatilanteessa ja käyttää geneeristä nykyaikaista yksiväristä teal-puseroa. Kasvojen ihorakenne, silmät, hampaat, hiukset, korut ja hartiat ovat luonnolliset; muissa aikuisissa ei näy selviä anatomisia virheitä. Lähikuvan syväterävyys ja valo ovat johdonmukaiset.",
+          "Käsiä ei näy etualalla. Koko kehyksen tiheä ylävartalorajaus peittää jalkaterät ja kaikki jalkineet myös taustassa. Ruokaa, juomia, tekstiä, logoja ja brändikuvioita ei näy. Casetan punavalkoinen tavallinen markiisiraidoitus ei muodosta brändikuviota.",
+          "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot6-face-skin-clothing.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot6-background-people.png",
+          "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "seville-7-asuinkuja-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "458c1e4ca90d382b48d6580d5c22a6f7f5086560c84d11e412aeb86a06fc70bc",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": false,
+        "reason": "pending-quality-fix: keskietäisen vasemman oven vieressä on pieni tekstin/numeroiden kaltainen merkitty seinälaatta noin x823–831/y496–510, vastoin täysin paljaan seinän vaatimusta.",
+        "observations": [
+          "Koko kehys sekä molemmat puoliskot ja erillinen seinälaattarajaus tarkastettu. Kuvan vasemmanpuoleisen keskietäisen oven oikealla puolella on pieni vaalea suorakulmainen seinälaatta, noin x823–831/y496–510. Laatassa näkyy kahdessa ryhmässä tummia kirjain-/numeromaisia merkkejä. Täsmällistä lukemaa ei voi luotettavasti nimetä.",
+          "Tämä merkitty laatta rikkoo tuottajan vaatimusta täysin paljaista seinistä ilman laattoja, numeroita tai kirjoitusta. Hylkäys perustuu näkyvään rajattuun merkintäalueeseen, ei seinän satunnaisen rappauksen tulkitsemiseen tekstiksi. Slot7-v1 pending-quality-fix; alkuperäistä ei ole muutettu eikä uutta kuvaa generoitu.",
+          "Muu näkymä on kameramainen: vaihtelevat köynnöslehdet, kulunut rappaus ja epäsäännölliset katukivet, johdonmukainen sinisen illan ja lämpimien lyhtyjen valo. Kaksi kävelijää on pientä ja selin. Ei muita havaittuja logoja, ruokaa tai eläimiä.",
+          "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-left-doors-leaves.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-right-doors-people.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-distant-left-wall-plaque.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot7-wall-mark-native.png",
+          "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      },
+      {
+        "id": "seville-8-triana-1873-intro-v2",
+        "slot": 8,
+        "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty QA:ssa yksityisen kuvasivun pending-arviointiin; omistajan hyväksyntä ja peli-integraatio ovat erillisiä.",
+        "observations": [
+          "Valittu v2 kokonaan ja sillan molemmat puoliskot sekä kaukainen soutuvene tarkastettu. Yleisilme on visuaalisesti neutraali mustavalkoinen, ei näkyvää seepiaa tai värisävyä. Hyväksyntä perustuu näkyvään kuvaan; yksittäisten RGB-kanavien eroja ei tulkita nollatoleranssilla eikä rasteria ole muunnettu.",
+          "Pari5/8 näyttää saman joen yli katsotun eteläsivun lähes vaakasuorana: keskikaari, kaksi sisäpilaria ja vain vesipinta etualalla. Modernin kuvan 5 kuvakulmaa vastaava suunta ja rajauksen perusrakenne täyttyvät. Pilarien kuvapisteet ja keskinäiset mittasuhteet ovat havainnollistavia, eivät pikselintarkka arkkitehtoninen rekisteröinti.",
+          "Paikallinen Andalusian maakunta-arkiston alkuperäinen HTML luettu kokonaan: rakennus1845–1852, kolme samanlaista aukkoa, kaksi sisäpilaria ja valurautarakenteet, myöhemmät1916 ulokekäytävät ja1977 itsensä kantava kansi. VisitaSevillan varsinaista ensisijaista sivutekstiä luettu ensisijaisen verkkotunnuksen indeksoidusta hakutuloksesta suoran aikakatkaisun jälkeen; se vahvistaa1852 valmistumisen ja1976–1977 kannen muutoksen.",
+          "IAPH:n sivu luettu: nykyinen Carmen-kappeli1926–1928, eikä sitä näy. Maakunta-arkiston kaasuvalaistuksen historiaa käsittelevä sivu luettu: kaupungin kaasuvalaistussopimus1853 ja palvelu1854–1941 tukevat yksinkertaisia aikakauden lyhtyjä. Ei sähköjohtoja, sähköisiä monivartisia valaisimia, raitiovaunuja, autoja, moderneja veneitä,1977 kansilaattaa, ulokekäytäviä tai modernia skylinea.",
+          "BNE:n paikallinen Laurent1867-vertailukuva nähty kokonaan: kaari-, rengas-, pilari- ja ohuen kannen rakennetta käytetty aikakausivertailuun. Flickr-verkkosivua ei saatu avattua tässä QA:ssa; sen ajoitus on tuottajan lähdemerkintä, ei uusi verkkovarmennus. Vuosi1873 on lähteisiin perustuva havainnollistus, ei kyseisen vuoden valokuva.",
+          "Ihmiset ja soutaja ovat pieniä etäisiä hahmoja; kaiteissa, kivipilareissa tai veneessä ei näy tekstiä, numeroita tai logoja. Veden aallot, kivien pinta ja valo ovat uskottavat.",
+          "Natiivirajaukset tarkastettu: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot8-bridge-left.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/seville/crops/slot8-bridge-right-boat.png",
+          "Tavut ja SHA256 täsmäävät manifestiin. PNG1536×1024, opaque RGB, upotettu sRGB; Description ja Source molemmat Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Caption päättyy Havainnekuva. Natiivin ja finalin RGB-pikselit ovat identtiset."
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T18:53:58.584653+00:00",
+    "sourceManifestSha256": "374de17c123ca35e0314a3e2511c94e9de9ea082093ba60b979b708b244f728c"
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "seville",
+    "verifiedAt": "2026-10-12T18:56:56.251076+00:00",
+    "assets": [
+      {
+        "id": "seville-4-triana-arki-intro-v2",
+        "slot": 4,
+        "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+        "bytes": 2675520,
+        "verifiedAt": "2026-10-12T18:56:53.764238+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png",
+            "http": 200,
+            "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+            "bytes": 2675520,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png?delivery-verify=f543a3b7a7a21655-1791831413764228000",
+            "http": 200,
+            "sha256": "f543a3b7a7a216558b89789d71d1c3f5845c276e26b92a8e361fe62c54651467",
+            "bytes": 2675520,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "seville-5-triana-jokivesi-intro-v1",
+        "slot": 5,
+        "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+        "bytes": 1974296,
+        "verifiedAt": "2026-10-12T18:56:53.793016+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png",
+            "http": 200,
+            "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+            "bytes": 1974296,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png?delivery-verify=c4be6009aad87133-1791831413793011000",
+            "http": 200,
+            "sha256": "c4be6009aad87133b820c058ba50f5f0fe1ba3cc4da30a01241e6b49319f875b",
+            "bytes": 1974296,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "seville-6-feria-juhla-intro-v1",
+        "slot": 6,
+        "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+        "bytes": 1977944,
+        "verifiedAt": "2026-10-12T18:56:53.794666+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png",
+            "http": 200,
+            "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+            "bytes": 1977944,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-6-feria-juhla-intro-v1.png?delivery-verify=a6bdd8413c5fed06-1791831413794663000",
+            "http": 200,
+            "sha256": "a6bdd8413c5fed06a0f59eae058e0ce6a92c21d7bee25fd98d95552cf1fd6125",
+            "bytes": 1977944,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "seville-8-triana-1873-intro-v2",
+        "slot": 8,
+        "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+        "bytes": 2272978,
+        "verifiedAt": "2026-10-12T18:56:55.024521+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png",
+            "http": 200,
+            "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+            "bytes": 2272978,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/seville/20261012-full/seville-8-triana-1873-intro-v2.png?delivery-verify=3c3c6bf9e3d6d5d3-1791831415024513000",
+            "http": 200,
+            "sha256": "3c3c6bf9e3d6d5d358aa8e1756fa84932ed53ad80d7e3893847b333fbf9a8f89",
+            "bytes": 2272978,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/seville/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 4,
+    "R2": 4,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "deliveredAt": "2026-10-12T20:05:04.538997+00:00"
+}

@@ -1,0 +1,812 @@
+{
+  "cityName": "Oslo",
+  "gameCityId": "oslo",
+  "mediaSlug": "oslo",
+  "updatedAt": "2026-10-12T18:03:44.357865+00:00",
+  "assets": [
+    {
+      "id": "oslo-4-valerenga-arki-intro-v2",
+      "slot": 4,
+      "cityName": "Oslo",
+      "gameCityId": "oslo",
+      "mediaSlug": "oslo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/final/oslo-4-valerenga-arki-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/native/oslo-4-valerenga-arki-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/oslo/20261012-full/oslo-4-valerenga-arki-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-4-valerenga-arki-intro-v2.png",
+      "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Oslo,Norway. Everyday street in Vålerenga neighborhood, small anonymous nineteenth-century painted timber homes, one and two stories, muted ochre,off-white and dusty sage, close to a quiet gently curving street. No bicycles anywhere in the scene. NO vehicles or objects with possible brand marks. Two small adults walk away in modern plain jackets with cloth bags, unreadable faces. Camera standing eye height, diagonal view along low house fronts and garden fences. Soft Nordic morning daylight, natural wood grain and uneven pavement. Do not show church,stadium,railway,trams,cars,large monuments or shop signs. No food scene. Quality correction: entirely new scene from scratch. Foreground contains only old fence, ordinary plants and weathered timber house walls. No bicycle, car, scooter, bags with graphics, branded shoes or letter-like marks. Two tiny distant pedestrians from behind remain far from camera.",
+      "sources": [
+        {
+          "url": "https://oslobyleksikon.no/side/V%C3%A5lerenga_%28str%C3%B8k%29",
+          "readFacts": "Neighborhoodpartlypreservedsuburbanwoodenfabricfrom1830s;incorporated1878,bricktenements1887-1911,church1902. Modern4focusesanonymousolderwoodhouses,notDamstredetwhichisalreadyexistingimage."
+        }
+      ],
+      "caption": "Vålerengan puutalokadun arkea Oslossa. Havainnekuva.",
+      "QA": {
+        "id": "oslo-4-valerenga-arki-intro-v2",
+        "slot": 4,
+        "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:03:27.466941+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS v2: no bicycle/vehicle or badge remains; native anonymous old facades/gardens plain, distant back-view people, natural irregular photographic foliage.",
+        "detailCrops": [
+          "session-owner-review/slot4-v2-facade-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:03:31.376157+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+        "bytes": 3120532,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-4-valerenga-arki-intro-v2.png",
+            "http": 200,
+            "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+            "bytes": 3120532,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-4-valerenga-arki-intro-v2.png?verify=north-41e2c3390b3647ea-1791828211376414000",
+            "http": 200,
+            "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+            "bytes": 3120532,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 3120532
+    },
+    {
+      "id": "oslo-5-hovedoya-ranta-intro-v1",
+      "slot": 5,
+      "cityName": "Oslo",
+      "gameCityId": "oslo",
+      "mediaSlug": "oslo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/final/oslo-5-hovedoya-ranta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/native/oslo-5-hovedoya-ranta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/oslo/20261012-full/oslo-5-hovedoya-ranta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-5-hovedoya-ranta-intro-v1.png",
+      "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Hovedøya island in the inner Oslofjord. Stand at the southwestern natural rocky shore just beyond the beach, look west-southwest across water towards Lindøya and distant low wooded Bygdøy shore. Layered tilted grey sedimentary rock slabs and a short pebble beach along lower-right, a naturally irregular pine limb framing upper-right, water in lower-left and center, distant low wooded island outlines. Light hazy Nordic summer afternoon, subdued greyblue fjord and true green foliage. One very small unlettered white passenger ferry far away, noclose boats. No people,city buildings,ruins,cannons,harbour,saunas,swimming infrastructure,piers,bridges,railings or signs. Geology and water dominate with real uneven ripples.",
+      "sources": [
+        {
+          "url": "https://www.visitoslo.com/attraction/hoved-ya-island",
+          "readFacts": "Hovedøya island has forests and western beaches, east guestharbour;1147monastery and1808batteries excluded from frame. Natureview chosen awayfromcity."
+        },
+        {
+          "url": "https://oslooyene.no/ekstern/forvaltningsplan-1.pdf",
+          "readFacts": "OsloMunicipality/Byantikvaren/Friluftsetaten/Fylkesmannen2007 managementplan pp8-9:folded470-430million-year sedimentarylimestone/shale,southwestbeachsyeniteoutcrop;islandemerged6000yearsago,landuplift3.5mm/year. pp37-39:publicbathingcomplex1914,boatclub1905 andlaterexcavation/infills.1873frame excludesallbuiltshorestructures;woodedislandsandnaturalrocksexisted."
+        }
+      ],
+      "caption": "Hovedøyan rantakallioita Oslovuonossa. Havainnekuva.",
+      "QA": {
+        "id": "oslo-5-hovedoya-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:03:27.558980+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural layered/veined gray coastal outcrop and fjord; native stone texture inspected, plausible sedimentary folds/veins supported by source validation file, no rock-species claim in caption; no text/logos/faces/protected architecture.",
+        "detailCrops": [
+          "session-owner-review/slot5-layered-rock-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:03:34.582222+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+        "bytes": 2765582,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-5-hovedoya-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+            "bytes": 2765582,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-5-hovedoya-ranta-intro-v1.png?verify=north-c4c65a997b92d0a8-1791828214582249000",
+            "http": 200,
+            "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+            "bytes": 2765582,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2765582
+    },
+    {
+      "id": "oslo-6-grunerlokka-tapahtuma-intro-v1",
+      "slot": 6,
+      "cityName": "Oslo",
+      "gameCityId": "oslo",
+      "mediaSlug": "oslo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/final/oslo-6-grunerlokka-tapahtuma-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/native/oslo-6-grunerlokka-tapahtuma-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/oslo/20261012-full/oslo-6-grunerlokka-tapahtuma-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-6-grunerlokka-tapahtuma-intro-v1.png",
+      "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Oslo,Grünerløkka. A lively joyful neighborhood outdoor music-event gathering on a tree-lined ordinary courtyard edge, anonymous old plaster and brick housing behind. One completely fictional25-year-old Norwegian woman foreground, waist-up with lowerframe cutting atmidtorso, wearing a plain modern sagegreen overshirt over a creamtop, simple unbranded fashionable clothing. She laughs naturally while looking to friends off toside. A dense crowd of young adult local Norwegian residents behind, varied natural local appearances, plain contemporary clothes, talking and celebrating. Camera shoulder height35mm environmental candid photo. All people cropped to upper bodies or hidden behind overlapping crowd so absolutely EVERYshoe and foot is completely outsideframe or hidden at any distance. No food,drink containers,stage,banners,performers or instruments. Soft early evening summer daylight with a few warm windows; natural unretouched skin and asymmetrical hair. City atmosphere remains recognizable, no artificial bokeh.",
+      "sources": [
+        {
+          "url": "https://www.visitoslo.com/no/aktiviteter-og-attraksjoner/omraader/grunerlokka/hva-skjer/",
+          "readFacts": "Grünerløkka events includeconcertsandmarketsandseveralmusicgenres. Genericmusicgatheringwithoutactualperformersorbranding."
+        }
+      ],
+      "caption": "Nuoria aikuisia Grünerløkkan kesäisessä tapahtumassa Oslossa. Havainnekuva.",
+      "QA": {
+        "id": "oslo-6-grunerlokka-tapahtuma-intro-v1",
+        "slot": 6,
+        "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:03:27.998369+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: natural fictional adult face and plain green overshirt inspected natively, cheerful young-adult neighborhood crowd, no footwear or discernible logos/text.",
+        "detailCrops": [
+          "session-owner-review/slot6-face-shirt-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:03:37.599035+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+        "bytes": 2237204,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-6-grunerlokka-tapahtuma-intro-v1.png",
+            "http": 200,
+            "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+            "bytes": 2237204,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-6-grunerlokka-tapahtuma-intro-v1.png?verify=north-3283c16054f96b07-1791828217599051000",
+            "http": 200,
+            "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+            "bytes": 2237204,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2237204
+    },
+    {
+      "id": "oslo-7-akerselva-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Oslo",
+      "gameCityId": "oslo",
+      "mediaSlug": "oslo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/final/oslo-7-akerselva-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/native/oslo-7-akerselva-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png",
+      "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. Present-day Oslo blue hour along Akerselva in Sagene district. Camera eye level from an ordinary riverbank walkway looking downstream past an anonymous old nineteenth-century redbrick former factory wall with warm window lights on the left, stream water center and damp grey walkway right. A simple old masonry bank and sparse natural alder branches. One small distant adult seen from behind, face unreadable. Restrained evening greyblue and warm amber windows, realistic moving water with unpatterned ripples, old varied brick mortar. No famous bridge,Opera House,Akershus,Holmenkollen,palace,contemporary designbuildings,grafitti,art,commercial signs or food displays. Modest believable camera exposure.",
+      "sources": [
+        {
+          "url": "https://www.visitoslo.com/articles/akerselva-river",
+          "readFacts": "Akerselvabanksdocumentindustrialdevelopmentincludingcharacteristicnineteenth-centuryredbrickfactories;Sagene/Sagveienindustrialhistory. Anonymousfactoryvernacularchosen,notnameddsignwork."
+        }
+      ],
+      "caption": "Akerselvan jokirantaa Oslon iltavaloissa. Havainnekuva.",
+      "QA": {
+        "id": "oslo-7-akerselva-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:03:28.057573+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: old anonymous riverside brick mill and ordinary river/window light; native pale tree patch is irregular natural bark, no readable writing/logo/sticker; distant rear-view walker.",
+        "detailCrops": [
+          "session-owner-review/slot7-tree-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:03:40.478147+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+        "bytes": 2962899,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+            "bytes": 2962899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png?verify=north-dc7daaf52b969fd8-1791828220478168000",
+            "http": 200,
+            "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+            "bytes": 2962899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2962899
+    },
+    {
+      "id": "oslo-8-hovedoya-1873-intro-v1",
+      "slot": 8,
+      "cityName": "Oslo",
+      "gameCityId": "oslo",
+      "mediaSlug": "oslo",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/final/oslo-8-hovedoya-1873-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/native/oslo-8-hovedoya-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/oslo/20261012-full/oslo-8-hovedoya-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-8-hovedoya-1873-intro-v1.png",
+      "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Generate one entirely new complete real-camera-looking photographic illustration, exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Natural plausible light and restrained true colors, deep optical focus and believable35mm camera perspective. Individual weathered materials, asymmetric organic forms. Strictly NO text, letters, digits, addresses, signs, plaques, logos, brands, trademark patterns, license plates, watermarks, borders, artworks or named protected contemporary architecture anywhere. No HDR, CGI, painting, plastic textures, repeated stamped foliage or decorative water patterns. The exact year1873 at Hovedøya island near Christiania,todayOslo. Pure neutral black and white, no sepia. Stand at the southwestern natural rocky shore just beyond the beach, look west-southwest across the innerfjord towards Lindøya and distant low wooded Bygdøy. Same view as modern5: tilted grey sedimentary rock slabs and little pebble beach lower-right, sparse pine limb upper-right, water lower-left and center, distant low wooded island silhouettes. No people. One tiny period wooden sailing cutter with plain sail faraway. Everything built is out of frame. Exclude modern ferry,boatswithmotors,harbours,piers,bridges,swimming facilities,fences,benches,electricity,cityblocks,saunas,cars,cannons and military. The shoreline geology existed long before1873; public swimming buildings only1914 and boat association improvements1905onward, so absent. Natural shore with sparse organicgrowth, slightly lower historical waterline offset not needed at this scale. Soft overcast daylight,1870s glassplate photograph feeling, finegrain,mild opticalvignette, moderatecontrast. Entirely new researched reconstruction,not claimed archivalphoto. Supplied modern5 image is only the exact viewing position and coastline/hill silhouette composition reference. Generate an entirely new historical1873 scene from scratch, not a recolor or retouch. Keep the same rocky bank lower-right and western island silhouettes. The surface rocks should be authentic folded sedimentary limestone/shale rather than granite; replace the modern ferry by a tiny period sailingcutter. Period facts were read before generation in2007municipalmanagementplan andOslohistoricalencyclopedia.",
+      "sources": [
+        {
+          "url": "https://www.visitoslo.com/attraction/hoved-ya-island",
+          "readFacts": "Hovedøya island has forests and western beaches, east guestharbour;1147monastery and1808batteries excluded from frame. Natureview chosen awayfromcity."
+        },
+        {
+          "url": "https://oslooyene.no/ekstern/forvaltningsplan-1.pdf",
+          "readFacts": "OsloMunicipality/Byantikvaren/Friluftsetaten/Fylkesmannen2007 managementplan pp8-9:folded470-430million-year sedimentarylimestone/shale,southwestbeachsyeniteoutcrop;islandemerged6000yearsago,landuplift3.5mm/year. pp37-39:publicbathingcomplex1914,boatclub1905 andlaterexcavation/infills.1873frame excludesallbuiltshorestructures;woodedislandsandnaturalrocksexisted."
+        },
+        {
+          "url": "https://oslobyleksikon.no/side/Hoved%C3%B8ya",
+          "readFacts": "Islanddocumentedmedievalmonastery,1820spowderhouses,1840sLavetthuset. No bridgepark everrealized. Allruins,militarybuildingsandlaterfacilitiesexcludedfromsouthwestnaturalshoreframe."
+        }
+      ],
+      "caption": "Hovedøyan luonnonrantaa Oslovuonossa vuonna 1873. Havainnekuva.",
+      "QA": {
+        "id": "oslo-8-hovedoya-1873-intro-v1",
+        "slot": 8,
+        "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+        "approvedForTechnicalDelivery": true,
+        "wholeFrameInspected": true,
+        "nativeDetailInspected": true,
+        "reviewedAt": "2026-10-12T18:03:28.127465+00:00",
+        "reviewer": "north-session-owner",
+        "reason": "PASS: neutral black-and-white1873 fjord with same5 shoreline/horizon composition, layered natural stone and tiny sailboat; native surf/rock inspected, no later baths/club/buildings, existing island geology and historical exclusions documented before call.",
+        "detailCrops": [
+          "session-owner-review/slot8-rock-surf-native-crop.png"
+        ],
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T18:03:43.359504+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+        "bytes": 2677732,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-8-hovedoya-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+            "bytes": 2677732,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-8-hovedoya-1873-intro-v1.png?verify=north-63dce318817a46ea-1791828223359525000",
+            "http": 200,
+            "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+            "bytes": 2677732,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "bytes": 2677732
+    }
+  ],
+  "omittedItems": [],
+  "existingDeliveredSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "rejectedCandidateHistory": [],
+  "pendingQualityFixSlots": [],
+  "actualCalls": 6,
+  "deliveryQAEvidence": {
+    "mediaSlug": "oslo",
+    "gameCityId": "oslo",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/sources.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/session-owner-geology-source.json"
+    ],
+    "sourceManifestSha256": "acaaae202238965cb278497fa0bae548af37d6fb18656c4140704bb3a7a467e1",
+    "assets": [
+      {
+        "id": "oslo-4-valerenga-arki-intro-v2",
+        "slot": 4,
+        "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Uuden v2:n puutalot, kulunut aita, lehdistö ja katu muodostavat uskottavan kameranäkymän. Kaksi pientä aikuista näkyy selin. Pyöriä, ajoneuvoja, kirjoitusta, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset aidasta/kasveista ja ihmisistä/taloista tarkastettu.",
+          "Laudoituksen, aidan maalin ja asfaltin kuluma sekä kasvien oksat/lehtiasennot ovat epäsäännöllisiä; ei leimattua orgaanista kuviota.",
+          "Ihmiset ovat pieniä ja selin ilman tunnistettavia kasvoja. Laukut ja asut ovat geneerisiä; ovissa tai muissa pinnoissa ei erotu numeroita, kirjaimia tai tunnuksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/4-fence-plants.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/4-people-houses.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 3120532,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "oslo-5-hovedoya-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Rantakallion kerrokset, halkeamat, pienet kivet ja männyn oksat ovat luonnollisia. Veden aallot ja valo ovat yhtenäisiä; pieni kaukainen lautta on ilman havaittavaa tekstiä tai logoa. Suuntarakenne vastaa slot8-paria.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kallioista, männystä ja lautasta/kukkuloista tarkastettu.",
+          "Kallion kerrokselliset/juoniset pinnat ja erikokoiset rantakivet vaihtelevat luonnollisesti; mäntyjen neulastupsut ja haarat epäsäännöllisiä ilman leimaa.",
+          "Luettu lisälähdetieto tukee poimuttuneita sedimenttikiviä ja kalsiittijuonia; tarkkaa kivilajia ei voi todistaa synteettisistä pikseleistä eikä kuvateksti sitä väitä.",
+          "Slot8:n kanssa kallio ja pikkukiviranta alhaalla/oikealla, vesi vasemmalla/keskellä, männyn oksa ylhäällä/oikealla ja matalat saaret taustalla. Ei ihmisiä, rakennelmia, kirjoitusta tai tunnuksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/5-rocks.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/5-pine.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/5-ferry-hills.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2765582,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "oslo-6-grunerlokka-tapahtuma-intro-v1",
+        "slot": 6,
+        "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Fiktiivisen etualan aikuisen naisen iho, kasvot ja hiukset ovat uskottavia. Vaatetus ja lakit ovat geneerisiä ilman tunnuksia. Väkijoukko näkyy ylävartaloina ilman ruokaa tai jalkineita.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset etualan kasvoista, taustan käsistä ja vasemman aikuisen lakista/vaatteista tarkastettu.",
+          "Ihon tekstuuri, hampaat, korvat ja hiukset ovat kameramaisia ilman muovisuutta. Osittain peittyvissä käsissä ei ilmeistä anatomista virhettä.",
+          "Lakin haalea kuluma ja vaatteen kudos eivät muodosta havaittavaa logoa tai kirjoitusta. Taustan ruutukangas on geneerinen kuosi ilman tunnistettavaa brändimerkkiä.",
+          "Kaikki näkyvät henkilöt ovat aikuisia ja ylävartaloina tai muiden peittämiä; ei ruokaa, juomia, jalkineita tai tekstimerkkejä.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/6-hands.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/6-left-hat-clothes.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2237204,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "oslo-7-akerselva-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Jokikuvan tiilet, kivet, puunkuoret ja virtaavan veden heijastukset ovat luonnollisia ja valaistus yhtenäinen. Yksi pieni aikuinen näkyy selin. Tekstiä, numeroita, logoja tai brändikuvioita ei havaittu.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset tiilestä/kivimuurista, puunkuorista/vedestä ja kävelijästä tarkastettu.",
+          "Tiilien laastin ja kivien värit/koot sekä puunkuorten epäsäännöllinen kuluma vaihtelevat ilman leimaa. Vaaleat pienet kuorikohdat eivät muodosta havaittavaa kirjoitusta tai tunnusta.",
+          "Veden virtauksen rikkoma pinta ja lämpimät heijastukset vastaavat ikkunoita/lamppuja. Kävelijän kasvoja ei näy. Ei ruokaa, mainoksia tai tunnettuja moderneja rakennustaiteen teoksia.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/7-brick-stone.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/7-bark-water.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/7-person.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2962899,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "oslo-8-hovedoya-1873-intro-v1",
+        "slot": 8,
+        "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Vuoden1873 ranta on näkyvästi neutraali mustavalkoinen ilman sepiaa. Kallion, männyn ja matalien saarten suuntarakenne vastaa slot5:tä. Pieni purjevene ja luonnonranta sopivat periodikehykseen; myöhemmät rakennelmat puuttuvat.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset kallioista, männystä ja purjeveneestä/kukkuloista tarkastettu.",
+          "Slot5:n kanssa same yleinen rannan katselusuunta: kallio ja pikkukivet alhaalla/oikealla, vesi vasemmalla/keskellä, männyn oksa oikealla ylhäällä ja saarten/kukkuloiden siluetti takana.",
+          "Kallion kerrokset, halkeamat, juonet ja kivet sekä männyn neulastupsut vaihtelevat luonnollisesti. Pieni plain-sail-purjevene ilman tunnuksia tai moottoria.",
+          "Kunnan2007hoitosuunnitelman luonnonranta ja1914uimalarakenteet/1905veneilyparannukset sekä Oslon historiallisen tietosanakirjan vanhat sotilas-/luostarirakenteet luettu lähdepaketista. Valitussa rajauksessa ei laituria, satamaa, siltaa, allasta, sähköä, kaupunkia, saunaa, tykkejä, sotilaita tai moottoriveneitä.",
+          "Ei näkyvää sävytystä, kirjoitusta tai logoja.1873-kuva on lähdepohjainen havainnollistava rekonstruktio; kivilajin ja rantaviivan täsmällinen mittaus ei ole synteettisen kuvan väite. Rasteria ei muutettu.",
+          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/8-rocks.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/8-pine.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/oslo/crops/8-sail-hills.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2677732,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true,
+          "neutralGrayscaleVisualPass": true
+        },
+        "historicalPairSlot": 5,
+        "historicalSourcesRead": [
+          "https://www.visitoslo.com/attraction/hoved-ya-island",
+          "https://oslooyene.no/ekstern/forvaltningsplan-1.pdf",
+          "https://oslobyleksikon.no/side/Hoved%C3%B8ya"
+        ]
+      }
+    ],
+    "producerOmissionsReviewed": [],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "gameHold": true,
+    "galleryWorkflowStatus": "pending",
+    "reviewedAt": "2026-10-12T18:17:16.741748+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/manifest.json",
+      "manifestSHA256": "acaaae202238965cb278497fa0bae548af37d6fb18656c4140704bb3a7a467e1",
+      "reviewedAssetIds": [
+        "oslo-4-valerenga-arki-intro-v2",
+        "oslo-5-hovedoya-ranta-intro-v1",
+        "oslo-6-grunerlokka-tapahtuma-intro-v1",
+        "oslo-7-akerselva-ilta-intro-v1",
+        "oslo-8-hovedoya-1873-intro-v1"
+      ],
+      "reviewedOmissionIds": [],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimitus kuuluvat toimitussessiolle.",
+        "Historiallinen rantakuva on havainnollistava rekonstruktio, ei1873 tarkka kivilaji- tai rantaviivamittaus.",
+        "Omistaja arvioi kuvasivulla ennen peliin vientiä; tekninen/kuvallinen QA ei merkitse omistajan hyväksyntää."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "oslo",
+    "verifiedAt": "2026-10-12T18:19:03.119083+00:00",
+    "assets": [
+      {
+        "id": "oslo-4-valerenga-arki-intro-v2",
+        "slot": 4,
+        "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+        "bytes": 3120532,
+        "verifiedAt": "2026-10-12T18:19:01.582037+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-4-valerenga-arki-intro-v2.png",
+            "http": 200,
+            "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+            "bytes": 3120532,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-4-valerenga-arki-intro-v2.png?delivery-verify=41e2c3390b3647ea-1791829141582029000",
+            "http": 200,
+            "sha256": "41e2c3390b3647eae8c44b0e24a587ff3bc76bea281541b22b3feefb013ee0f5",
+            "bytes": 3120532,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "oslo-5-hovedoya-ranta-intro-v1",
+        "slot": 5,
+        "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+        "bytes": 2765582,
+        "verifiedAt": "2026-10-12T18:19:01.582318+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-5-hovedoya-ranta-intro-v1.png",
+            "http": 200,
+            "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+            "bytes": 2765582,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-5-hovedoya-ranta-intro-v1.png?delivery-verify=c4c65a997b92d0a8-1791829141582315000",
+            "http": 200,
+            "sha256": "c4c65a997b92d0a8478a95b493a98978bd98af1a3d9b59a0df1a08577d6ed29c",
+            "bytes": 2765582,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "oslo-6-grunerlokka-tapahtuma-intro-v1",
+        "slot": 6,
+        "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+        "bytes": 2237204,
+        "verifiedAt": "2026-10-12T18:19:01.582399+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-6-grunerlokka-tapahtuma-intro-v1.png",
+            "http": 200,
+            "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+            "bytes": 2237204,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-6-grunerlokka-tapahtuma-intro-v1.png?delivery-verify=3283c16054f96b07-1791829141582398000",
+            "http": 200,
+            "sha256": "3283c16054f96b0797c8bcbe48e3cfca403bdd2aee91645642a486c5f8f4887d",
+            "bytes": 2237204,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "oslo-7-akerselva-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+        "bytes": 2962899,
+        "verifiedAt": "2026-10-12T18:19:02.116061+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+            "bytes": 2962899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png?delivery-verify=dc7daaf52b969fd8-1791829142116050000",
+            "http": 200,
+            "sha256": "dc7daaf52b969fd88653f32ebd914dc9336102e2b93e506b4eae2450a3020de3",
+            "bytes": 2962899,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "oslo-8-hovedoya-1873-intro-v1",
+        "slot": 8,
+        "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+        "bytes": 2677732,
+        "verifiedAt": "2026-10-12T18:19:02.311141+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-8-hovedoya-1873-intro-v1.png",
+            "http": 200,
+            "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+            "bytes": 2677732,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/oslo/20261012-full/oslo-8-hovedoya-1873-intro-v1.png?delivery-verify=63dce318817a46ea-1791829142311135000",
+            "http": 200,
+            "sha256": "63dce318817a46ea299da16a0c31a2dc8895be1afeb3f823f77d3b98680ef270",
+            "bytes": 2677732,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/oslo/manifest.json",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingDeliveredSlotsPreserved": [],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 5,
+    "QA": 5,
+    "R2": 5,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorization": {
+    "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+    "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+    "ownerReviewBeforeGameDelivery": false,
+    "pipeline": [
+      "produce",
+      "independent QA",
+      "R2 byte verification",
+      "game/Fable handoff",
+      "game integration"
+    ],
+    "R2UploadAllowedForPreview": true,
+    "privateGalleryPublicationAllowed": true,
+    "gameMailboxHandoffBeforeOwnerAcceptanceAllowed": true,
+    "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+    "localDraftHandoffAllowed": true,
+    "previousPilotHandoffsPreservedAsHistory": true,
+    "instructionOverridesEarlierDeliveryOrdering": true,
+    "instructionHistory": [
+      {
+        "ownerInstruction": "laita kuvat ensin sivulle, niin hyväksyn ne siellä ennenkuin lähetät ne peliin",
+        "receivedAt": "2026-10-12T17:37:04.118824+00:00",
+        "ownerReviewBeforeGameDelivery": true,
+        "pipeline": [
+          "produce",
+          "independent QA",
+          "R2 preview media",
+          "private review gallery pending",
+          "explicit owner acceptance in gallery",
+          "game/Fable handoff only accepted images"
+        ]
+      }
+    ],
+    "ownerAcceptanceRequired": false,
+    "deliveryAuthorizedByOwner": true,
+    "galleryBeforeGameRequired": false,
+    "independentQAStillRequired": true,
+    "R2ByteVerificationStillRequired": true,
+    "ownerAcceptanceNotImpliedByAuthorization": true
+  },
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "gameIntegrated": false,
+  "deliveredAt": "2026-10-12T20:05:03.735154+00:00"
+}
