@@ -1,0 +1,381 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "antananarivo",
+  "maa": "MDG",
+  "era": "e08",
+  "kaupunki": {
+    "id": "antananarivo",
+    "name": "Antananarivo",
+    "wiki": "Antananarivo",
+    "ambience": "ylanko",
+    "pallo": {
+      "lat": -18.91,
+      "lon": 47.525
+    }
+  },
+  "artikkeli": {
+    "intro": "Antananarivossa kaupunginosan osoite kertoo vain osan matkasta: **korkeusero on toinen puoli**. Madagaskarin pääkaupunki levittäytyy keskiylängön kukkuloille ja niiden välisiin laaksoihin. Yläkaupungin vanhojen asuintalojen rinnalla alempana ovat Analakelyn kauppakorttelit. Rinteitä yhdistävät kadut ja portaikot, mutta kaupungissa on myös kukkuloiden läpi kulkevia tunneleita.\n\nAntananarivo oli Merinan valtakunnan pääkaupunki jo ennen Ranskan siirtomaakautta. Andohalon aukiolla hallitsijat esittivät julkisia puheitaan, ja 1800-luvulla kaupunkiin perustettiin kouluja sekä käsityöteollisuutta. Samalla rakennusmateriaalien vanha raja alkoi murtua: aiemmin hautoihin varattu kivi kelpasi vähitellen myös koteihin. **Trano gasy**, tiilinen talo verantoineen, jäi osaksi kaupungin rakennuskulttuuria. Nykyisessä Tanassa ostoksia tehdään Analakelyssä, kahviloita löytyy keskustan pääkadulta ja vanhan rautatieaseman luona kulkija kohtaa kaupankäyntiä junaliikenteen sijasta.",
+    "teksti": "Antananarivon historiaa voi lukea kaupungin korkeuseroista. Kukkuloiden yläosissa ovat kuninkaallisen kaupungin vanhat alueet, rinteillä asuin- ja liikekorttelit ja laaksossa Analakelyn kauppakeskus. Yläkaupunki, keskikaupunki ja alakaupunki ovat käyttökelpoisia nimiä aivan konkreettisille maisemille.\n\nRakennustapa muuttui 1800-luvulla. Vanha käsitys liitti kiven vainajiin ja kasviaineista rakennetut talot eläviin. Kun kivirakentamisen rajoituksia lievennettiin, tiilitalot yleistyivät. Trano gasy -talossa paikalliset ja ulkomailta tulleet vaikutteet yhdistyivät verantoihin ja kerrokselliseen asumiseen.\n\nAlakaupungin suorat pääkadut ja kaupparakennukset kuuluvat myöhempään kaupunkisuunnitteluun. Analakelyn suuri perjantaitori siirrettiin viime vuosisadan lopulla useaan paikkaan, mutta alue on edelleen kaupan keskus. Soaranon asema päättää Avenue de l’Indépendancen: vanhan aseman sisällä on nykyään liikkeitä, eikä rakennus itsessään takaa junamatkaa."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Antananarivo on?",
+      "options": [
+        "Madagaskarin",
+        "Mauritiuksen",
+        "Seychellien",
+        "Komorien"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kyseessä on suuri saari Afrikan itäpuolella.",
+      "fact": "Antananarivo on Madagaskarin pääkaupunki keskiylängöllä.",
+      "source": "https://en.wikipedia.org/wiki/Antananarivo"
+    },
+    {
+      "q": "Mitä Zoma-perjantaitorin kauppiaille tehtiin kaupungin muuttuessa?",
+      "options": [
+        "Heidät siirrettiin eri alueille",
+        "Heille rakennettiin yksi satama",
+        "Heidät koottiin rautatiejunaan",
+        "Heille varattiin kuninkaallinen mäki"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Tori oli aiheuttanut keskustassa liikenteen ongelmia.",
+      "fact": "Suuren perjantaitorin kauppiaat siirrettiin viime vuosisadan lopulla eri kaupunginosiin.",
+      "source": "https://en.wikipedia.org/wiki/Antananarivo"
+    },
+    {
+      "q": "Mihin tiilisten trano gasy -talojen edessä usein törmää?",
+      "options": [
+        "Puiseen verantaan",
+        "Lasiseen kupoliin",
+        "Kiviseen nostosiltaan",
+        "Maanalaiseen atriumiin"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Talon julkisivuun kuuluu katettu ulkotila.",
+      "fact": "Trano gasy -talon tunnuspiirteisiin kuuluu puinen veranta.",
+      "source": "https://en.wikipedia.org/wiki/Antananarivo"
+    },
+    {
+      "q": "Mihin Andohalon aukiota käytettiin Merinan kuningaskunnan aikana?",
+      "options": [
+        "Hallitsijoiden julkisiin puheisiin",
+        "Merilaivojen lastaukseen",
+        "Kaukojunien lähtöasemaksi",
+        "Lentokoneiden kokoamiseen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Paikan tehtävä liittyi siihen, miten yhteisiä asioita ilmoitettiin.",
+      "fact": "Merinan kuninkaat ja kuningattaret esittivät Andohalossa julkisia puheita ja ilmoituksia.",
+      "source": "https://en.wikipedia.org/wiki/Antananarivo"
+    },
+    {
+      "q": "Mikä Antananarivon järvi syntyi rakentamalla entisestä suosta?",
+      "options": [
+        "Anosy",
+        "Alaotra",
+        "Itasy",
+        "Mantasoa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Järvi sijaitsee pääkaupungin keskustan eteläpuolella.",
+      "fact": "Anosy-järvi rakennettiin entisestä suosta 1800-luvulla.",
+      "source": "https://en.wikipedia.org/wiki/Lake_Anosy"
+    }
+  ],
+  "tiedot": [
+    "Antananarivon nimi lyhenee arkipuheessa Tanaksi; Tananarive puolestaan on vanhoissa ranskankielisissä aineistoissa käytetty kirjoitusasu.",
+    "Kaupungin kukkuloita läpäisevät tunnelit ovat siirtomaakauden yhteyksiä kaupunginosien välillä.",
+    "Anosy-järven saari oli aluksi tarkoitettu sepän työpajalle: sen sijoittamisessa huomioitiin palon leviämisen vaara puutaloihin."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Antananarivo",
+      "johdanto": "Tanan arki kulkee kukkuloiden ja laaksojen välillä. Torin, tunnelin ja aseman historia paljastaa, miten kaupunki on muuttunut.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Perjantai muutti osoitetta",
+          "teksti": "Zoma tarkoittaa perjantaita, ja Antananarivossa se oli myös suuren torin nimi. Kauppiaat pystyttivät valkoisten päivänvarjojen alle myyntipaikkoja Analakelyn laaksoon. Toripäivän määräsi jo Merinan kuningas Andrianampoinimerina. Kaupunki muuttui, ja viime vuosisadan lopulla perjantain kauppiaat siirrettiin eri kaupunginosiin liikenteen ja turvallisuuden vuoksi. Analakely ei silti lakannut olemasta kauppapaikka: sen kauppapaviljongit ja ympäröivät liikkeet jatkavat alueen arkista tehtävää.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Asema, josta ei kannata päätellä aikataulua",
+          "teksti": "Soaranon rautatieasema on Avenue de l’Indépendancen päässä, aivan kaupungin kaupallisen keskustan tuntumassa. Sen taakse kuuluu rautatiehistoriaa: Antananarivo yhdistettiin radalla itärannikon Toamasinaan. Asemarakennuksessa on nykyään pieni kauppakeskus. Matkustajajunaliikenne on ollut viime vuosina vähäistä tai olematonta, joten junan lähtö pitää selvittää erikseen. Rakennuksen osoite on yhä sama, vaikka matkalipun rinnalle tai tilalle on tullut ostoskassi.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kukkulan voi myös läpäistä",
+          "teksti": "Antananarivon korkeat ja matalat kaupunginosat eivät yhdisty pelkillä portailla. Ranskan siirtomaakaudella kukkuloihin rakennettiin tunneleita, jotta kaupunginosien välillä pääsi kulkemaan. Ambohijatovon suunnalta tunneli johtaa eteläisiin asuinalueisiin, ja toinen yhteys avautuu Anosy-järven suuntaan. Ne kuuluvat samaan kaupungin muutokseen kuin päällystetyt kadut ja alakaupungin suunnitellut korttelit. Jyrkkä rinne voi siis näkyä katukuvassa myös aukona kalliossa.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kolme nimeä samalle kaupungille",
+          "teksti": "Antananarivosta käytetään tuttavallista lyhennystä Tana. Ranskankielisissä vanhoissa aineistoissa kaupunki puolestaan esiintyy usein nimellä Tananarive: siirtomaahallinto kirjoitti nimen siihen muotoon. Vielä varhaisempi paikannimi on Analamanga, ”sininen metsä”, joka kuuluu kuninkaallisen kaupungin alkuvaiheisiin. Nimet eivät tarkoita kolmea eri paikkakuntaa. Ne kertovat saman kaupungin pitkästä historiasta, eri kielistä ja siitä, miten pitkä nimi lyhenee arkisessa puheessa.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Antananarivoon saavutaan Ivaton lentoaseman kautta. Keskustaan siirtymiseen kannattaa varata aikaa ruuhkien vuoksi. Analakelyn ympäristössä voi kulkea kävellen, ja pidempiin matkoihin on takseja sekä paikallisbusseja. Rinteillä portaat ovat osa reittiä. Kaupunkipäivään sopivat kauppakorttelit, vanhat asuintalot ja Anosy-järven ympäristö.",
+        "artikkeli": {
+          "nimi": "Matkailijan Antananarivo",
+          "taitto": "opas",
+          "teksti": "Tutustu Tanaan sekä laakson kauppakaduilla että rinteiden asuinkortteleissa.",
+          "nosto": "Kaupungin korkeuserot tekevät kävelystä kiinnostavaa. Samalla ne vaikuttavat siihen, miten päivä kannattaa rytmittää.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Ivato on Antananarivon lentoasema. Keskustan ruuhkat voivat pidentää matkaa, joten sovittu lentokenttäkuljetus helpottaa saapumista. Kaupungissa kuljetaan taksilla, paikallisbusseilla ja kävellen. Takseissa ei yleensä ole mittaria: sovi hinta ennen lähtöä. Soaranon aseman perusteella ei kannata suunnitella jatkomatkaa junalla, vaan liikenteen tilanne on selvitettävä erikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Analakely alhaalta ylöspäin",
+              "teksti": "Analakely on kaupallista keskustaa, ja Avenue de l’Indépendancen varrella on liikkeitä sekä kahviloita. Alueelta pääsee portaita ja katuja pitkin rinteiden kaupunginosiin. Täällä lyhytkin kävelymatka voi sisältää nousua. Toripaviljongit ovat eri asia kuin entinen koko laakson täyttänyt Zoma-perjantaitori, jonka kauppiaat siirrettiin eri alueille.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Anosy ja vanhat asuinkorttelit",
+              "teksti": "Anosy-järvi on rakennettu järvi keskustan eteläpuolella. Sen saari ja rantaa reunustavat jakarandat kuuluvat kaupungin maisemaan. Yläkaupungissa taas kannattaa tarkastella asuintalojen tiiltä ja verantoja: trano gasy on paikallisen rakennustavan nimi. Järvi, kauppakeskusta ja yläkaupunki tarjoavat erilaiset näkymät saman kaupungin arkeen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Keskiylängöllä illat voivat olla viileitä, vaikka Madagaskar sijaitsee tropiikissa. Kuiva kausi on miellyttävä aika kaupunkikävelyille; sateisempi osa vuotta painottuu lämpimään kauteen. Kevyt lisäkerros sopii iltoihin. Jakarandojen kukinta voi tuoda järven rannoille lisää väriä, mutta matkasuunnitelmaa ei kannata rakentaa yhden kukintapäivän varaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Analakelyn kauppakorttelit",
+                "tahdet": 3,
+                "selite": "Toripaviljongit ja liikkeet ovat kaupallisen keskustan ytimessä."
+              },
+              {
+                "mita": "Yläkaupungin asuintalot",
+                "tahdet": 3,
+                "selite": "Tiili ja verannat kertovat trano gasy -rakennustavasta."
+              },
+              {
+                "mita": "Anosy-järvi",
+                "tahdet": 2,
+                "selite": "Rakennettu järvi kuuluu keskustan eteläosan maisemaan."
+              },
+              {
+                "mita": "Soaranon aseman ympäristö",
+                "tahdet": 2,
+                "selite": "Rautatiehistoria kohtaa nykyisen kaupankäynnin."
+              },
+              {
+                "mita": "Isorakan ravintolat",
+                "tahdet": 2,
+                "selite": "Asuintaloja on muutettu ruokailupaikoiksi ja majataloiksi."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Taksin hinta",
+                "teksti": "Sovi hinta etukäteen, sillä takseissa ei yleensä ole mittaria."
+              },
+              {
+                "otsikko": "Lentokenttämatka",
+                "teksti": "Keskustan ruuhkat voivat pidentää siirtymistä Ivatoon."
+              },
+              {
+                "otsikko": "Junat",
+                "teksti": "Soaranon asema ei takaa matkustajajunaliikennettä; selvitä kulkuyhteys erikseen."
+              },
+              {
+                "otsikko": "Juomavesi",
+                "teksti": "Valitse pullotettu juomavesi."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kaupunki oppii uusia taitoja",
+      "johdanto": "Rakennusmateriaalit, talomallit ja opetuksen paikat muuttuivat 1800-luvulla. Kaupungin vanhat korttelit säilyttävät näitä kerroksia.",
+      "tehtava": {
+        "kysymys": "Millainen muutos koski ennen hautakammioihin varattua rakennusainetta?",
+        "vaihtoehdot": [
+          "Sitä alettiin käyttää asuintaloissa",
+          "Se korvattiin kaikissa taloissa lasilla",
+          "Sen käyttö rajattiin vain torikatuihin",
+          "Sitä alettiin viedä junalla satamaan"
+        ],
+        "oikea": 0,
+        "fakta": "Kivirakentamisen rajoitusten lieventyminen muutti pääkaupungin kotien materiaaleja."
+      },
+      "nostot": [
+        {
+          "otsikko": "Kivi kuului aluksi vainajille",
+          "teksti": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Veranta kertoo vaikutteiden matkasta",
+          "teksti": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Aukio oli julkinen puhujapaikka",
+          "teksti": "Andohalon aukio sijaitsi kuninkaallisen kaupungin portin ulkopuolella. Merinan hallitsijat käyttivät sitä puheiden ja julkisten ilmoitusten paikkana, joten sillä oli muutakin tehtävää kuin tarjota tilaa rakennusten välissä. Kuningas Andriamasinavalona perusti aukion osaksi kasvavaa pääkaupunkia. Myöhemmin siirtomaakauden kaupunkisuunnittelu toi sinne istutuksia ja kävelyväyliä. Samaa nimeä kantava paikka on ollut sekä hallitsijan puhujapaikka että uudelleen järjestetty kaupunkitila.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Koulut tulivat käsityöläisten mukana",
+          "teksti": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+          "wiki": "Antananarivo",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Anosy on ihmisen rakentama järvi kaupungin keskustan eteläpuolella. Sen historia liittyy 1800-luvun käsityöteollisuuteen.",
+    "rajat": {
+      "pohjoinen": -18.907,
+      "etela": -18.924,
+      "lansi": 47.513,
+      "ita": 47.53
+    },
+    "kohteet": [
+      {
+        "nimi": "Anosy-järvi",
+        "tyyppi": "luonto",
+        "lat": -18.9152,
+        "lon": 47.5216
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Anosy-järvi": {
+      "aika": "1800-luvun alkupuoli",
+      "teksti": "Anosy-järvi sijaitsee Antananarivon keskustan eteläpuolella. Se on rakennettu vesialue, jonka paikalla oli aluksi suo. Järven rakentaminen alkoi kuningas Radama I:n aikana 1800-luvun alkupuolella, ja siihen osallistui skotlantilainen James Cameron. Kaupungin historia liittää järven teollisen valmistuksen tarvitsemaan vesivoimaan. Nykyinen järvi ei siten ole vain luonnon kaupungille jättämä vesialue.\n\nKeskellä järveä on maakaistaleella rantaan liittyvä saari. Se valittiin aluksi sepän työpajan paikaksi, koska työpajan palon ei haluttu leviävän kaupungin puisiin ja kasviaineilla katettuihin taloihin. Järven rannalla kasvaa jakarandoja. Isoisän matkavuoteen 1873 mennessä järvi oli jo rakennettu, mutta ympäröivä kaupunki on muuttunut sen jälkeen. Veden, teollisen työn ja kaupungin asumisen historiat kohtaavat tällä samalla paikalla.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Ivato (TNR)",
+    "huomiot": [
+      "C-tekstiluonnos, kartta partial: vain Anosy-järven oma WP-piste varmennettu.",
+      "Kuvat odottavat erillistä kuvaputkea; kaikkien kuvaroolien neljä kenttää on jätetty tyhjiksi.",
+      "Sääpoiminnan 48/48-primäärivarmennus avoin; saatiedot:null, saa.json ei muutettu.",
+      "Anosyn saaren muistomerkki ei kuulu karttakohteeseen eikä kuva-aiheeseen.",
+      "1873-paikallista ulkoasua tai isoisän toimintaa ei keksitty."
+    ]
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "windhoek",
+  "maa": "NAM",
+  "era": "e08",
+  "kaupunki": {
+    "id": "windhoek",
+    "name": "Windhoek",
+    "wiki": "Windhoek",
+    "ambience": "ylanko",
+    "pallo": {
+      "lat": -22.57,
+      "lon": 17.0836
+    }
+  },
+  "artikkeli": {
+    "intro": "Windhoekin tärkeimpiä nähtävyyksiä ei erota kaupungin siluetista: yksi niistä kulkee vesiputkissa. **Namibian pääkaupunki** sijaitsee Khomasin ylängöllä sisämaassa, kallioisten rinteiden ympäröimänä. Paikan lämpimät lähteet vetivät asukkaita puoleensa jo ennen nykyistä kaupunkikeskustaa. Orlamyhteisö rakensi tänne kirkon, joka palveli myös kouluna. Myöhemmin saksalainen siirtomaahallinto teki Windhoekista sotilaallisen ja hallinnollisen keskuksen.\n\nKeskustan Christuskirchen hiekkakivi on paikallista, mutta sen marmori tuotiin Italiasta. Rautatieasema puolestaan muistuttaa ajasta, jolloin ylänkö yhdistettiin rannikolle kiskoilla. **Goreangabin vedenpuhdistamo** kertoo toisenlaisesta yhteydestä: käytetty vesi puhdistetaan takaisin juomavesiverkostoon. Windhoekissa kaupungin historiaa voi lukea rakennuksista, mutta sen tulevaisuuden ymmärtämiseksi kannattaa seurata myös veden kiertoa.",
+    "teksti": "Windhoekin paikka ei ollut tyhjä ennen siirtomaakaupungin rakentamista. Lämpimien lähteiden äärelle syntyi orlamyhteisön asutus 1800-luvun alkupuolella. Isoisän matkavuonna 1873 varhaisen asutuksen kukoistus oli jo hiipunut; nykyinen linnake ja Christuskirche nousivat vasta myöhemmin.\n\nSiirtomaakauden rakennuksissa materiaalit liikkuivat pitkiä matkoja. Christuskirchessä paikallinen hiekkakivi yhdistyy italialaiseen marmoriin ja Saksasta tuotuihin rakennusosiin. Asemarakennuksen tyyli taas liittyy Etelä-Afrikan rakennusperinteeseen.\n\nVesi sitoo yhteen kaupungin vanhan ja uuden historian. Lähteiden lisäksi Windhoek tarvitsee patojen ja pohjaveden varantoja sekä veden uudelleenkäyttöä. Goreangabissa jo käytetty vesi kulkee puhdistusvaiheiden läpi ja palaa juomaveden lähteeksi. Kaupunki sijaitsee kuivalla ylängöllä, mutta sen vesihuolto ei perustu vain siihen, mitä taivaalta tulee."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Windhoek on?",
+      "options": [
+        "Namibian",
+        "Botswanan",
+        "Sambian",
+        "Angolan"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa ulottuu Atlantin rannikolta eteläisen Afrikan sisämaahan.",
+      "fact": "Windhoek on Namibian pääkaupunki maan keskisessä ylänkömaisemassa.",
+      "source": "https://en.wikipedia.org/wiki/Windhoek"
+    },
+    {
+      "q": "Millaisessa maastossa Windhoek sijaitsee?",
+      "options": [
+        "Ylängöllä",
+        "Jokisuistossa",
+        "Korallisaarella",
+        "Rannikkotasangolla"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Keskustan ympärillä nousee kallioisia rinteitä.",
+      "fact": "Windhoek sijaitsee sisämaassa Khomasin ylängöllä.",
+      "source": "https://en.wikipedia.org/wiki/Windhoek"
+    },
+    {
+      "q": "Mistä Christuskirchen hiekkakivi saatiin?",
+      "options": [
+        "Avisin padon läheltä",
+        "Saksan Harzvuorilta",
+        "Italian Carrarasta",
+        "Kapkaupungin rannikolta"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennuksen eri materiaalit eivät kaikki matkustaneet yhtä pitkää matkaa.",
+      "fact": "Kirkon kvartsipitoinen hiekkakivi louhittiin Avisin padon läheltä; marmori tuotiin Italiasta.",
+      "source": "https://en.wikipedia.org/wiki/Christ_Church,_Windhoek"
+    },
+    {
+      "q": "Mihin Goreangabin laitoksessa puhdistettu jätevesi käytetään?",
+      "options": [
+        "Juomavesiverkostoon",
+        "Vain puistojen kasteluun",
+        "Vain tehtaiden jäähdytykseen",
+        "Meriveden suolanpoistoon"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Puhdistus päätyy pidemmälle kuin tavallinen jäteveden käsittely.",
+      "fact": "Windhoekissa käytettyä vettä puhdistetaan niin, että se voidaan palauttaa juomaveden lähteeksi.",
+      "source": "https://en.wikipedia.org/wiki/Windhoek"
+    },
+    {
+      "q": "Mihin rakennusperinteeseen Windhoekin aseman tyyli liittyy?",
+      "options": [
+        "Kap-hollantilaiseen",
+        "Venetsialaiseen",
+        "Japanilaiseen",
+        "Persialaiseen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rautatie yhdisti kaupungin myös eteläisen Afrikan yhteyksiin.",
+      "fact": "Asemarakennus edustaa Etelä-Afrikkaan liittyvää kap-hollantilaista tyyliä.",
+      "source": "https://en.wikipedia.org/wiki/Windhoek_railway_station"
+    }
+  ],
+  "tiedot": [
+    "Windhoekin varhainen kivikirkko palveli myös kouluna: kaupungin lähteiden äärellä uskonnollinen ja opetuksen tila mahtuivat saman katon alle.",
+    "Christuskirchen paikalliseen hiekkakiveen yhdistyy Italiasta tuotu Carraran marmori sekä Saksasta tuotuja rakennusosia.",
+    "Windhoekin kansallinen kasvitieteellinen puutarha suojelee paikallista kasvillisuutta aivan pääkaupungin keskellä."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Windhoek",
+      "johdanto": "Ylängön pääkaupungissa rakennusten materiaalit kertovat pitkistä matkoista, ja vesihuolto tekee käytetylle vedelle uuden kierroksen.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kirkko koottiin läheltä ja kaukaa",
+          "teksti": "Christuskirche näyttää ensi silmäyksellä yhdeltä rakennukselta, mutta sen materiaalien kartta ulottuu paljon Windhoekia laajemmalle. Kvartsipitoinen hiekkakivi louhittiin Avisin padon läheltä. Sisäänkäynnin Carraran marmori tuli Italiasta, ja kellolaite sekä osa katosta Saksasta. Gottlieb Redeckerin suunnittelemassa kirkossa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Paikallinen kivi ja ulkomailta saapuneet osat kohtaavat samassa siirtomaakauden rakennuksessa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Christ Church, Windhoek"
+        },
+        {
+          "otsikko": "Asema lainasi tyylinsä etelästä",
+          "teksti": "Windhoekin asema ei saanut tyyliään yksin Saksasta, vaikka kaupungin varhainen rautatie rakennettiin saksalaisen siirtomaahallinnon aikana. Bahnhof Streetin asemarakennus edustaa kap-hollantilaista rakennusperinnettä. Kiskot yhdistivät ylängön ensin Swakopmundiin ja myöhemmin myös eteläiseen ja itäiseen Namibiaan. Aseman rautatiemuseon aiheisiin kuuluvat junien lisäksi lento- ja meriliikenne. Kauas merestä rakennettu asema kertoo siis myös satamista ja lentämisestä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Windhoek railway station"
+        },
+        {
+          "otsikko": "Puutarha, joka suojelee omaa paikkaansa",
+          "teksti": "Windhoekin kansallinen kasvitieteellinen puutarha tunnetaan myös South West Nature Reservenä. Se sijaitsee kaupungin sydämessä ja suojelee alueelle ominaista kasvillisuutta kallioisine kumpuineen. Täällä kasvitieteellinen puutarha ja luonnonsuojelualue ovat sama paikka: huomio kiinnittyy myös siihen, mitä maastossa kasvaa valmiiksi. Kaupungissa kulkeva pääsee tutkimaan paikallista luontoa poistumatta kauas keskustasta. Ylänkö ei katoa rakennusten tieltä kokonaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Windhoek"
+        },
+        {
+          "otsikko": "Lentokentän nimi ratkaisee matkan",
+          "teksti": "Windhoekiin lentävä joutuu erottamaan Hosea Kutakon kansainvälisen lentoaseman ja Erosin kentän. Hosea Kutako sijaitsee kaupungin ulkopuolella ja palvelee kansainvälisiä yhteyksiä. Eros on lähempänä keskustaa, ja sillä on tärkeä tehtävä pienkoneiden sekä tilauslentojen tukikohtana. Kaupungin nimi lentolipussa ei siksi vielä kerro, missä kone laskeutuu. Ylängön pääkaupunki toimii myös lähtöpaikkana matkoille muualle Namibiaan, mutta lentokentältä kaupunkiin tarvitaan oma siirtymä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Windhoek"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita Windhoekin keskustan rakennuksista ja jätä aikaa myös kansalliselle kasvitieteelliselle puutarhalle. Christuskirche ja Alte Feste kertovat siirtomaakaupungin synnystä eri tavoin. Hosea Kutakon lentoasema sijaitsee kaupungin ulkopuolella, joten järjestä siirtymä keskustaan etukäteen. Kaupungissa liikutaan takseilla, ja yöksi kannattaa tilata kuljetus. Ruokapaikoissa voi kokeilla mahangua eli helmihirssiä lisukkeena. Vanhojen museorakennusten käyntimahdollisuudet on syytä tarkistaa erikseen.",
+        "artikkeli": {
+          "nimi": "Matkailijan Windhoek",
+          "taitto": "opas",
+          "teksti": "Tutki ylängön pääkaupunkia rakennusten, kasvien ja veden kautta.",
+          "nosto": "Keskustan arkkitehtuuri on lähellä toisiaan, mutta lentoasema ja kaupunginosat vaativat erillisen siirtymän.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Hosea Kutakon kansainvälinen lentoasema sijaitsee kaupungin ulkopuolella; Erosin pienkonekenttä on lähempänä keskustaa. Varmista lipusta oikea kenttä ja sovi lentoasemakuljetus majoituksen kanssa. Windhoekissa on sekä jaettuja takseja että etukäteen tilattavia kyytejä. Tilatussa kyydissä voit sopia määränpään suoraan, ja yöllä se on suositeltava tapa liikkua.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kiveä ja siirtomaahistoriaa",
+              "teksti": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo. Linnakkeen kunnostus ja museokäyttö ovat muuttuneet, joten tarkista käyntimahdollisuus ennen kuin rakennat päivän sen varaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ylänkö kasvaa keskellä kaupunkia",
+              "teksti": "Kansallinen kasvitieteellinen puutarha on samalla luonnonsuojelualue. Sen paikallinen kasvillisuus ja Windhoekille ominaiset kallioiset kumpareet auttavat hahmottamaan, millaiseen maastoon pääkaupunki on rakennettu. Kävely kannattaa yhdistää keskustan tutkimiseen: samana päivänä voi tarkastella sekä tuotuja rakennusmateriaaleja että kaupungin omaa luontoa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Windhoekin ruokapaikoista löytyy niin kansainvälistä ruokaa kuin namibialaisia annoksia. Mahangu eli helmihirssi sopii paikallisten ruokien lisukkeeksi. Tarjolla voi olla myös matangaraa eli sisäelinruokaa sekä grillattua lihaa. Kysy annoksen sisältöä ravintolassa: paikallisten ruokalajien nimet kertovat enemmän kuin pelkkä liha- tai kasvisannos. Kaupungin ruoka näkyy sekä ravintoloissa että ruokakojuissa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Windhoekin sateet painottuvat eteläisen pallonpuoliskon kesään, kun taas talvikausi on kuivempi. Ylängön ilta voi olla viileä lämpimänkin päivän jälkeen, joten ota kävelyretkelle mukaan myös lämmin kerros. Tarkista retkipäivän ennuste ennen lähtöä. Kaupungin rakennuksia, kasvitieteellistä puutarhaa ja ruokapaikkoja voi yhdistellä ohjelmaksi päivän sään mukaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Christuskirchen rakennusmateriaalit",
+                "tahdet": 3,
+                "selite": "Paikallinen hiekkakivi ja tuontimarmori kertovat saman rakennuksen eri yhteyksistä."
+              },
+              {
+                "mita": "Kansallinen kasvitieteellinen puutarha",
+                "tahdet": 3,
+                "selite": "Luonnonsuojelualue esittelee Windhoekille ominaista kasvillisuutta keskellä kaupunkia."
+              },
+              {
+                "mita": "Alte Festen historia",
+                "tahdet": 2,
+                "selite": "Linnakkeen eri käyttövaiheet avaavat keskustan historiaa."
+              },
+              {
+                "mita": "Vanha rautatieasema",
+                "tahdet": 2,
+                "selite": "Kap-hollantilainen tyyli liittää aseman eteläisen Afrikan rakennusperinteeseen."
+              },
+              {
+                "mita": "Namibialainen ateria",
+                "tahdet": 2,
+                "selite": "Kokeile paikallista annosta ja mahangua sen lisukkeena."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Tarkista lentokenttä",
+                "teksti": "Hosea Kutako ja Eros palvelevat eri lentoyhteyksiä; kaupungin nimi ei yksin riitä."
+              },
+              {
+                "otsikko": "Tilaa yökyyti",
+                "teksti": "Yöllä kannattaa käyttää etukäteen tilattavaa taksia."
+              },
+              {
+                "otsikko": "Museokäynti erikseen",
+                "teksti": "Alte Festen kunnostus ja museokäyttö edellyttävät ajantasaisen käyntimahdollisuuden tarkistamista."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "tiede",
+      "nimi": "Kaupunki seuraa vettä",
+      "johdanto": "Lämpimät lähteet, maanalaiset varannot ja veden uudelleenkäyttö muodostavat Windhoekissa saman pitkän tarinan.",
+      "tehtava": {
+        "kysymys": "Mikä luonnonvara vaikeuttaa teollisuuden sijoittamista kaupungin eteläpuolelle?",
+        "vaihtoehdot": [
+          "Maanalaiset vesivarannot",
+          "Kivihiilikerrostumat",
+          "Öljyn lähteet",
+          "Suolan kerrostumat"
+        ],
+        "oikea": 0,
+        "fakta": "Pohjavesikerrokset vaikuttavat siihen, millainen rakentaminen sopii Windhoekin eteläpuolelle."
+      },
+      "nostot": [
+        {
+          "otsikko": "Lähde oli ennen pääkaupunkia",
+          "teksti": "Windhoekin ensimmäinen kaupunkikerros alkaa lämpimästä vedestä. Orlamyhteisö asettui 1800-luvun alkupuolella lähteen tuntumaan nykyisen Klein Windhoekin alueella. Yhteisö rakensi kivikirkon, jossa järjestettiin myös opetusta, ja paikalle perustettiin puutarhoja. Varhainen asutus taantui ennen saksalaisen siirtomaakeskuksen rakentamista. Kaupungin alkua ei siis voi selittää pelkällä linnakkeella: sen taustalla olivat jo paikalliset asukkaat ja heidän käyttämänsä vesi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Windhoek"
+        },
+        {
+          "otsikko": "Hanalle palataan puhdistamon kautta",
+          "teksti": "Windhoekissa jo käytetty vesi voi saada uuden tehtävän juomavetenä. Goreangabin laitos puhdistaa kunnallista jätevettä takaisin vesihuollon käyttöön. Menetelmää kutsutaan juomaveden suoraksi uudelleenkäytöksi, koska puhdistettu vesi palautetaan juomavesiverkostoon. Kaupunki on kehittänyt ratkaisua vuosikymmenten ajan vesivarojen niukkuuden vuoksi. Uusi Goreangabin laitos jatkaa vanhan laitoksen työtä. Vesihanalla näkyvä tulos on arkinen, mutta veden kulkema reitti on tavallista pidempi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Windhoek"
+        },
+        {
+          "otsikko": "Turva rakennetaan vaihe vaiheelta",
+          "teksti": "Goreangabissa veden käsittely ei perustu yhteen puhdistustemppuun. Prosessiin kuuluvat muun muassa otsonikäsittely, hiukkasten kokoaminen ja erottaminen, suodatus sekä aktiivihiili ja ultrasuodatus. Eri käsittelyvaiheet muodostavat useita esteitä epäpuhtauksille ennen veden palaamista juomavesiverkostoon. Laitoksen tekniikassa kiinnostavaa on juuri ketju: jo käsitelty vesi käsitellään vielä uudestaan toisella menetelmällä. Käytetyn veden uusi kierros tarvitsee usean puhdistusvaiheen yhteistyötä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Windhoek"
+        },
+        {
+          "otsikko": "Kaupunki ei saa kasvaa mihin tahansa",
+          "teksti": "Windhoekin ympärillä on kallioisia ja vuoristoisia alueita, joiden rakentaminen on vaikeaa ja kallista. Kaupungin eteläpuolella myös maanalaiset vesivarannot rajoittavat teollisuuden sijoittamista. Pohjoisen Brakwaterin alueella on sen sijaan tilaa laajentumiselle. Kaupunkisuunnittelussa kartan tyhjä kohta ei siis välttämättä ole rakentamiseen sopiva paikka. Vesi vaikuttaa Windhoekin muotoon myös näkymättömissä, maaperän alla. Samaa varantoa tarvitaan sekä kasvavan kaupungin arkeen että sen tulevaisuuteen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Windhoek"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Christuskirche ja Alte Feste kuuluvat Windhoekin historialliseen keskustaan. Niiden rakennusvaiheet kertovat kaupungin siirtomaakaudesta.",
+    "rajat": {
+      "pohjoinen": -22.56478,
+      "etela": -22.5724,
+      "lansi": 17.084,
+      "ita": 17.0915
+    },
+    "kohteet": [
+      {
+        "nimi": "Christuskirche",
+        "lat": -22.56778,
+        "lon": 17.08722
+      },
+      {
+        "nimi": "Alte Feste",
+        "lat": -22.5694,
+        "lon": 17.0883
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Christuskirche": {
+      "aika": "1900-luvun alku",
+      "teksti": "Christuskirche on Windhoekin keskustassa sijaitseva luterilainen kirkko. Gottlieb Redeckerin suunnittelemassa rakennuksessa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Kirkon hiekkakivi saatiin Avisin padon läheltä, mutta sisäänkäynnin Carraran marmori tuotiin Italiasta. Myös kellolaite ja osa katosta kulkivat paikalle Saksasta.\n\nKirkko rakennettiin siirtomaakaudella 1900-luvun alussa. Isoisän matkavuonna 1873 sitä ei vielä ollut: kaupungin varhaisempi orlamyhteisö oli käyttänyt omaa kivikirkkoaan myös kouluna. Nämä eivät ole sama rakennus. Christuskirche sijaitsee liikennesaarekkeella Robert Mugabe Avenuen varrella. Sen materiaalit auttavat erottamaan paikallisen luonnon ja siirtomaakauden kansainväliset rakennusyhteydet.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Alte Feste": {
+      "aika": "1800-luvun loppu ja 1900-luvun alku",
+      "teksti": "Alte Feste eli Vanha linnake rakennettiin saksalaisen siirtomaajoukon päämajaksi Windhoekin keskustaan. Curt von François suunnitteli rakennuksen, jonka kokonaisuutta muutettiin rakentamisen eri vaiheissa. Korkeat seinät, sisäpiha ja kulmatornit muodostavat linnakkeen rungon. Rakennus sijaitsee Robert Mugabe Avenuen varrella.\n\nIsoisän matkavuonna 1873 linnaketta ei vielä ollut; sen rakentaminen alkoi vasta 1800-luvun lopulla. Sotilaskäytön jälkeen rakennuksessa toimi koulun asuntola ja myöhemmin museon historiallinen kokoelma. Kunnostus ja museokäyttö ovat muuttuneet, joten rakennusta ei pidä pitää automaattisesti avoimena museona. Sen käyttövaiheet näyttävät, miten sama rakennus voi palvella kaupungissa hyvin erilaisia tarkoituksia.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Hosea Kutako International Airport (WDH)",
+    "huomiot": [
+      "C-tekstiluonnos; kuvat erillisessä kuvaputkessa ja kaikki kuvaroolien neljä kenttää tyhjiä.",
+      "Kartta partial: kaksi omaan WP-pisteeseen sidottua historiallista rakennusta. Aseman tekijäketju ja puutarhan oma piste odottavat varmennusta.",
+      "Sääauditointi avoin; saatiedot null. Ilmastolukuja ei ole kirjoitettu.",
+      "Goreangabin aloitusvuosi ristiriitainen: kaupungin WP 1958, laitoksen oma historia 1968; pelaajatekstistä poistettu tarkka vuosi.",
+      "D/E/F, hyväksyntä, pelikytkentä ja julkaisu avoimia."
+    ]
+  }
+}

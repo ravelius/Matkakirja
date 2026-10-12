@@ -1,0 +1,379 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "victoria",
+  "maa": "SYC",
+  "era": "e08",
+  "kaupunki": {
+    "id": "victoria",
+    "name": "Victoria",
+    "wiki": "Victoria (Seychellit)",
+    "ambience": "satama",
+    "pallo": {
+      "lat": -4.62306,
+      "lon": 55.4525
+    }
+  },
+  "artikkeli": {
+    "intro": "Victoria on Seychellien pääkaupunki Mahén saaren koillisrannikolla. Sen itäpuolen satamassa tonnikalan kalastus ja säilöntä kuuluvat kaupungin työhön. Keskustan **Lorloz-kellotornin** esikuva on Lontoon Little Ben, vaikka se tuo mieleen paljon suuremman kellotornin. Kaupunki sai nimensä kuningatar Victorian mukaan brittiläisellä siirtomaakaudella.\n\nPaikalla oli jo 1700-luvulla ranskalainen siirtokunta, mutta isoisän matkavuonna 1873 nykyistä kellotornia ja **Mont Fleurin kasvitieteellistä puutarhaa** ei vielä ollut. Puutarha alkoi myöhemmin maatalousasemana, ja nykyään siellä kasvatetaan myös coco de mer -palmuja. Niiden merikookos-nimi on harhaanjohtava: elinkelpoinen siemen ei kellu merellä. Torin historiaan puolestaan kuuluvat kala, hedelmät ja vihannekset. Victoriaa voi lukea saaristoluonnon lisäksi sataman, kauppiaiden ja kasvikokoelmien kaupunkina.",
+    "teksti": "Victorian varhaisen asutuksen nimi oli L’Établissement. Brittiläisellä siirtomaakaudella se vaihtui kuningatar Victorian nimeksi. Mahén koillisrannikon kaupungissa toimivat saarivaltion hallinto ja satama, jonka ympärillä kalastetaan sekä jalostetaan tonnikalaa.\n\nKeskustan kellotorni kuuluu 1900-luvun alkuun. Samalta aikakaudelta on Mont Fleurin puutarha, jonka alkuperäinen tehtävä oli maatalousasema. Kokoelmaan kerättiin hyötykasveja, ja myöhemmin alue kehittyi yleiseksi puistoksi.\n\nPuutarhassa voi tutustua Seychellien kasveihin elävässä kokoelmassa. Coco de mer -palmun hede- ja emikukat kasvavat eri puissa, ja suuret lehdet keräävät sadeveden mukana ravinteita rungon tyvelle. Luonnonhistoriallisen museon näyttelyaiheet ulottuvat puolestaan kasveista ja eläimistä geologiaan sekä ihmisen kulttuureihin."
+  },
+  "kysymykset": [
+    {
+      "q": "Millä saarella Victoria sijaitsee?",
+      "options": [
+        "Mahélla",
+        "Praslinilla",
+        "Curieusella",
+        "Aldabralla"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Saari on myös saariston lentoliikenteen keskus.",
+      "fact": "Victoria sijaitsee Mahén koillisrannikolla.",
+      "source": "https://en.wikipedia.org/wiki/Victoria,_Seychelles"
+    },
+    {
+      "q": "Mikä on Victorian kellotornin esikuva?",
+      "options": [
+        "Lontoon Little Ben",
+        "Pariisin Eiffel-torni",
+        "Pisan katedraalitorni",
+        "Venetsian kellotorni"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Esikuva sijaitsee brittiläisen pääkaupungin rautatieaseman lähellä.",
+      "fact": "Lorloz-kellotornin esikuva on Lontoon Victoria-aseman lähellä sijaitseva Little Ben.",
+      "source": "https://en.wikipedia.org/wiki/Victoria,_Seychelles"
+    },
+    {
+      "q": "Mikä oli Mont Fleurin puutarhan alkuperäinen tehtävä?",
+      "options": [
+        "Maatalousasema",
+        "Laivastotukikohta",
+        "Sotilassairaala",
+        "Säähavaintoasema"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Kokoelmaan kuului esimerkiksi mauste- ja hedelmäkasveja.",
+      "fact": "Kasvitieteellinen puutarha aloitti maatalousasemana 1900-luvun alussa.",
+      "source": "https://en.wikipedia.org/wiki/National_Botanical_Garden_of_Seychelles"
+    },
+    {
+      "q": "Miksi coco de mer -siemen ei elinkelpoisena kulje kelluen merellä?",
+      "options": [
+        "Se on liian tiheä",
+        "Se on liian kuiva",
+        "Se on täynnä ilmaa",
+        "Se hajoaa heti veteen"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Siemenen massa suhteessa sen tilavuuteen ratkaisee.",
+      "fact": "Veden mukana kelluvat ontoksi muuttuneet kuoret, eivät elinkelpoiset tiheät siemenet.",
+      "source": "https://en.wikipedia.org/wiki/Lodoicea"
+    },
+    {
+      "q": "Mitä tuotteita Victorian toriperinteeseen kuuluu?",
+      "options": [
+        "Kalaa ja hedelmiä",
+        "Turkiksia ja villaa",
+        "Viiniä ja oliiveja",
+        "Vehnää ja ohraa"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Merestä ja kasveista saadut tuoreet tuotteet kuuluvat samaan ostoskierrokseen.",
+      "fact": "Victorian torilla on perinteisesti myyty kalaa, hedelmiä ja vihanneksia.",
+      "source": "https://en.wikipedia.org/wiki/Victoria,_Seychelles"
+    }
+  ],
+  "tiedot": [
+    "Coco de mer -palmun hede- ja emikukat kasvavat eri yksilöissä, joten kaikki puutarhan palmut eivät kanna hedelmiä.",
+    "Victorian kellotorni oli alun perin musta; sen hopeanvärinen pinta kuuluu myöhempään historiaan.",
+    "Mont Fleurin puutarhan kasvikokoelman alkuperäinen tarkoitus liittyi maatalouteen ja hyötykasveihin."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Victoria",
+      "johdanto": "Mahén satamakaupungissa kellotorni, toriperinne ja elävät kasvikokoelmat avaavat eri näkökulmia saareen.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Little Ben päätyi Victoriaan",
+          "teksti": "Victorian kellotornia kutsutaan kreoliksi nimellä Lorloz. Sen esikuva on Lontoon Victoria-aseman lähellä seisova Little Ben, ei parlamenttitalon suuri kellotorni. Valurautainen torni pystytettiin 1900-luvun alussa kuningatar Victorian muistoksi. Se oli aluksi musta ja maalattiin myöhemmin hopeanväriseksi. Pienen tornin ulkoasu kertoo siis sekä englantilaisesta kellonvalmistuksesta että paikallisesta tavasta hoitaa maamerkkiä. Isoisän matkavuonna 1873 tätä tuttua keskustan tunnusta ei vielä ollut.",
+          "wiki": "Victoria, Seychelles",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Puutarha aloitti työasemana",
+          "teksti": "Mont Fleurin kasvitieteellinen puutarha perustettiin 1900-luvun alussa maatalousasemaksi. Mauritiukselta tullut agronomi Dupont keräsi sinne puutavaraa tuottavia puita, palmuja, maustekasveja ja hedelmäpuita. Kokoelman lähtökohtana oli siis myös kasvien käyttö, ei pelkkä puistokävely. Myöhemmin alue kehittyi yleiseksi puistoksi. Nykyään siellä kasvaa sekä Seychellien omia kasveja että muualta tuotuja koristekasveja, joukossa coco de mer -palmuja. Puutarha on samalla paikka säilyttää ja tutkia kasvilajeja.",
+          "wiki": "National Botanical Garden of Seychelles",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Satama tekee töitä",
+          "teksti": "Port Victoria on Seychellien pääkaupungin satama. Sisäsatama sijaitsee keskustan itäpuolella, ja sen ympärille kuuluu tonnikalan kalastusta ja säilöntäteollisuutta. Rannassa on siten muutakin kuin saaristoloman maisema: kala on myös kaupungin taloudellinen tuote. Victoria sijaitsee Mahén koillispuolella, ja samassa kaupungissa yhdistyvät saarivaltion hallintokeskus ja kalatalouden työpaikat. Seychellien kansainvälinen lentoasema palvelee kaupunkia ilmasta; satama puolestaan kytkee sen merellä tehtävään työhön.",
+          "wiki": "Victoria, Seychelles",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Torin osoite voi vaihtua",
+          "teksti": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin historia ulottuu 1800-luvulle, ja sen perinteisiin kuuluvat kala, hedelmät ja vihannekset. Torin kunnostamista varten suunniteltiin kaupankäynnille väliaikaiset tilat entiseen STC Supermarketiin. Hankkeessa haluttiin parantaa muun muassa ilmanvaihtoa ja vedenpoistoa. Torikierros kannattaa siksi aloittaa tarkistamalla myyjien nykyinen käyntipaikka: tuttu nimi ei välttämättä tarkoita, että kauppa käydään vanhassa hallissa.",
+          "wiki": "Victoria, Seychelles",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita Victorian keskustan kävely Lorloz-kellotornin ympäristöstä. Yhdistä siihen Mont Fleurin kasvitieteellinen puutarha ja sen elävä kasvikokoelma. Torin kunnostukseen liittyy suunniteltu väliaikainen kaupankäyntipaikka, joten varmista myyjien nykyinen osoite. Museoiden käyntitilanne kannattaa tarkistaa ennen vierailua. Jätä ulkokierroksen järjestykseen vaihtovaraa päivän sään mukaan.",
+        "artikkeli": {
+          "nimi": "Matkailijan Victoria",
+          "taitto": "opas",
+          "teksti": "Yhdistä Victorian pieni keskusta Mont Fleurin elävään kasvikokoelmaan.",
+          "nosto": "Kellotorni kertoo kaupungin yhteyksistä, puutarha puolestaan kasveista, joita muualla harvoin kohtaa.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Seychellien kansainvälinen lentoasema palvelee Victoriaa Mahén saarella. Kaupungissa voi liikkua bussilla tai taksilla ja yhdistää lähekkäisiä keskustakohteita kävellen. Tarkista paikallisesti bussin reitti ja paluuyhteys, sillä vuorojen säännöllisyyteen ei kannata luottaa samanlaisena kuin suurkaupungissa. Mont Fleurin puutarha on keskustan tuntumassa, mutta saaren muut kohteet vaativat oman siirtymäsuunnitelman.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kellotorni ja torin historia",
+              "teksti": "Lorloz-kellotorni on selkeä kiintopiste keskustan kävelylle. Sen esikuva on Lontoon Little Ben, ja nykyinen torni on 1900-luvun alusta. Sir Selwyn Selwyn-Clarke -torin kunnostushankkeessa kaupankäynnille suunniteltiin väliaikainen paikka entiseen STC Supermarketiin. Varmista torin nykyinen käyntipaikka ennen kierrosta; vanhan kauppahallin nimi on säilynyt, vaikka toiminta voi olla muualla.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Puutarha ja luonnon kokoelmat",
+              "teksti": "Mont Fleurin kasvitieteellisessä puutarhassa on paikallisia ja muualta tuotuja kasveja, coco de mer -palmuja ja jättiläiskilpikonnia. Katso palmun lehtiä ja eri puiden kukkia, sillä hede- ja emikukat ovat eri yksilöissä. Victorian luonnonhistoriallisen museon aiheisiin kuuluvat kasvit, eläimet, geologia ja ihmisen kulttuurit. Tarkista museoiden ajantasainen käyntitilanne erikseen ennen kuin rakennat päivän näyttelyvierailun varaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Kaupungin toriperinteeseen kuuluvat kala, hedelmät ja vihannekset. Victoriassa voi tutustua myös kreolikeittiöön, ja kookosta sekä kookostuotteita on tarjolla. Kalastus näkyy sataman teollisuudessa, mutta torikierroksella se muuttuu ostettavaksi ruoaksi. Aloita saatavilla olevista tuotteista ja kysy myyjältä niiden käytöstä. Jos tavoitteena on ateria eikä raaka-aineiden ostaminen, etsi kreoliruokaa tarjoava ravintola.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Victoria on lämmin läpi vuoden, ja siellä sataa myös kuivempina jaksoina. Puutarhakävelyyn kannattaa jättää vaihtovaraa päivän ennusteen mukaan ja ottaa suojaa sekä sateelta että auringolta. Yhdistä ulkokierrokseen sisällä pidettävä tauko, jos olosuhteet muuttuvat. Käyntipaikkojen ajantasainen toiminta ja sääennuste auttavat valitsemaan päivän järjestyksen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Mont Fleurin kasvitieteellinen puutarha",
+                "tahdet": 3,
+                "selite": "Elävä kokoelma yhdistää paikalliset kasvit ja puutarhan maataloushistorian."
+              },
+              {
+                "mita": "Lorloz-kellotorni",
+                "tahdet": 2,
+                "selite": "Little Benin sukulainen kuuluu pääkaupungin keskustaan."
+              },
+              {
+                "mita": "Toriperinne",
+                "tahdet": 2,
+                "selite": "Kala ja kasvikset ovat osa paikallista kaupankäyntiä; varmista nykyinen osoite."
+              },
+              {
+                "mita": "Luonnonhistoriallinen museo",
+                "tahdet": 2,
+                "selite": "Kasvit, eläimet ja geologia avaavat saariston luontoa; tarkista käyntitilanne."
+              },
+              {
+                "mita": "Satamakaupungin kävely",
+                "tahdet": 1,
+                "selite": "Keskustan itäpuolen satama kertoo kalastuksen ja teollisuuden Victoriasta."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Torin käyntipaikka",
+                "teksti": "Vanhan hallin kunnostukseen liittyy väistötilasuunnitelma; varmista, missä myyjät toimivat nyt."
+              },
+              {
+                "otsikko": "Valuutta",
+                "teksti": "Seychellien rupian tunnus on SCR; Mauritiuksen rupia on eri valuutta."
+              },
+              {
+                "otsikko": "Kilpikonnat",
+                "teksti": "Noudata puutarhan henkilökunnan ohjeita eläinten lähellä ja mahdollisessa ruokinnassa."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Puutarhan pienet arvoitukset",
+      "johdanto": "Merikookos ei kasva merenpohjassa, ja jättiläiskilpikonnan pitkä kaula on paljon muutakin kuin erikoinen ulkonäkö.",
+      "tehtava": {
+        "kysymys": "Mikä coco de mer -palmun osa ohjaa sateen mukana ravinteita rungon tyvelle?",
+        "vaihtoehdot": [
+          "Lehtien muodostama suppilo",
+          "Siemenen kova ulkokuori",
+          "Rungon tyven ontto kolo",
+          "Hedelmien muodostama kehä"
+        ],
+        "oikea": 0,
+        "fakta": "Palmun yläosassa kerääntyvä hienoaines päätyy veden mukana puun tyvelle, jossa kasvi hyötyy siitä."
+      },
+      "nostot": [
+        {
+          "otsikko": "Siemen ei tule merenpohjasta",
+          "teksti": "Coco de mer tarkoittaa merikookosta, mutta nimi johtaa harhaan. Palmun siemenet ajautuivat kaukaisille rannoille ennen kuin niiden lähtöpaikka tunnettiin, ja kasvin uskottiin jopa kasvavan meren pohjassa. Elinkelpoinen siemen on kuitenkin liian tiheä kelluakseen. Vasta tyhjentynyt tai pilaantunut kuori voi kulkeutua veden mukana. Luonnonvaraisena palmu kasvaa Praslinilla ja Curieusella; Victorian puutarhassa se on kasvatettu kasvi. Maailmalle matkannut siemen ei siis todista meressä kasvavasta puusta.",
+          "wiki": "Lodoicea",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Palmu kerää sadetta suppilolla",
+          "teksti": "Coco de mer -palmun valtavat lehdet tekevät muutakin kuin varjostavat. Niiden muodostama suppilo kerää pienhiukkasia, kuten siitepölyä, jotka sade huuhtelee rungon tyvelle. Näin palmu saa ravinteita ja niiden hyöty ulottuu myös lähellä kasvaviin jälkeläisiin. Hede- ja emikukat kasvavat eri puissa, joten kaikki kookkaat palmut eivät kanna hedelmiä. Victorian puutarhassa voi tutustua molempiin. Kasvin näyttävä koko on vasta alku: lehtien toimintaa katsoessa huomaa myös sen tavan kerätä ympäristöstä ravintoa.",
+          "wiki": "Lodoicea",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Pitkä kaula on työväline",
+          "teksti": "Victorian kasvitieteellisessä puutarhassa elää Aldabran jättiläiskilpikonnia. Lajin luonnonvarainen pääkanta on Aldabran atollilla, joten puutarhan eläimet eivät kerro Mahén villistä kilpikonnakannasta. Eläimen pitkä kaula auttaa sitä tavoittamaan lehtiä ja oksia maanpinnan yläpuolelta. Se syö enimmäkseen kasveja, kuten ruohoa, lehtiä ja hedelmiä. Aamuisin eläimet laiduntavat, ja päivän kuumetessa ne hakeutuvat suojaan. Suuren kilven lisäksi kannattaa siis katsoa kaulaa: se on tärkeä osa eläimen ruokailua.",
+          "wiki": "Aldabra giant tortoise",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Luonto tulee postin naapuriin",
+          "teksti": "Victorian luonnonhistoriallinen museo sijaitsee pääpostin vieressä. Näyttelyiden aiheita ovat kasvitiede, eläintiede, geologia ja antropologia eli ihmisen tutkimus. Saariston historiaa tarkastellaan siis kasvien ja eläinten lisäksi kivien sekä ihmisen kulttuurien kautta. Puutarhassa kokoelma kasvaa elävänä, museossa aiheita esitellään näyttelyissä. Nämä ovat kaksi erilaista tapaa tutustua samaan saaristoon. Pääkaupungin luontokierros voi alkaa puiston polulta ja jatkua kysymyksiin siitä, millainen paikka Seychellit on.",
+          "wiki": "Seychelles Natural History Museum",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Mont Fleurin puutarha yhdistää kasvikokoelman, maataloushistorian ja yleisen puiston.",
+    "rajat": {
+      "pohjoinen": -4.6279,
+      "etela": -4.6335,
+      "lansi": 55.4502,
+      "ita": 55.4558
+    },
+    "kohteet": [
+      {
+        "nimi": "Mont Fleurin kasvitieteellinen puutarha",
+        "tyyppi": "luonto",
+        "lat": -4.63074,
+        "lon": 55.45299
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Mont Fleurin kasvitieteellinen puutarha": {
+      "aika": "1900-luvun alku",
+      "teksti": "Mont Fleurin kasvitieteellinen puutarha on Victorian keskustan tuntumassa Mahén saarella. Se alkoi maatalousasemana, jonka kokoelmaan kerättiin hyötykasveja: puita, palmuja, mausteita, hedelmäpuita ja aromaattisia kasveja. Perustaja oli Mauritiukselta tullut agronomi Dupont. Isoisän matkavuonna 1873 tätä puutarhaa ei vielä ollut.\n\nAlue kehittyi myöhemmin yleiseksi puistoksi. Nykyisessä kokoelmassa on sekä Seychellien omia kasveja että muualta tuotuja koristekasveja. Coco de mer -palmuja kasvaa täällä viljeltyinä, vaikka lajin luonnonvarainen elinalue on Praslinilla ja Curieusella. Puutarhassa elää myös Aldabran jättiläiskilpikonnia.\n\nKasvien säilyttäminen alkuperäisen elinympäristön ulkopuolella kuuluu puutarhan tehtäviin. Kierroksella voi siis nähdä samassa paikassa sekä maatalousaseman perinnön että nykyisen kasvien säilyttämisen tavoitteen. Elävien kokoelmien tunnistus ja tutkimus täydentävät puiston virkistyskäyttöä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Seychelles International Airport (SEZ)",
+    "huomiot": [
+      "C-tekstiluonnos, A rajattu ja kartta partial 1/6. Kuvat odottavat erillistä kuvaputkea; neljä kuvakenttää tyhjät joka roolissa.",
+      "Kontekstin lat +4.6236 on väärällä pallonpuoliskolla. Kaupunkipallo korjattu kaupungin WP-pisteeseen -4.62306,55.45250; kontekstiin ja pelidataan ei koskettu.",
+      "Wiki Victoria oli epätarkka; käytetään fi-kielistä otsikkoa Victoria (Seychellit), johon luettu kaupungin artikkeli linkittää.",
+      "Torin viranomaistiedote käsittelee kunnostusta ja väistötilasuunnitelmaa. Nykyistä valmistumista/toimipaikkaa ei väitetä varmennetuksi.",
+      "Sääauditointi 48/48 avoinna: saatiedot null, ei ilmastolukuja.",
+      "Väestöluku 30 145 on Central-alueen yhdeksän piirin yhteisluku, ei Victoria-kunnan väkiluku. Ei käytetä tekstissä.",
+      "Kellotornin ja muiden rakennusten koko oikeus-/pisteketju sekä D/E/F, täydentävä kartta ja pelikytkentä ovat avoinna."
+    ]
+  }
+}

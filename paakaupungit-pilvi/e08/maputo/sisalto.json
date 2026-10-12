@@ -1,0 +1,355 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "maputo",
+  "maa": "MOZ",
+  "era": "e08",
+  "kaupunki": {
+    "id": "maputo",
+    "name": "Maputo",
+    "wiki": "Maputo",
+    "ambience": "satama",
+    "pallo": {
+      "lat": -25.9689,
+      "lon": 32.5733
+    }
+  },
+  "artikkeli": {
+    "intro": "**Maputo** avautuu Intian valtamereen suuren lahden kautta, ja sen satama yhdistää Mosambikin rannikon eteläisen Afrikan sisämaahan. Maan pääkaupunki sijaitsee kaukana etelässä, Maputonlahden länsirannalla. Historiallista keskustaa kutsutaan Baixaksi, ja leveiden katujen varrella kasvaa jakarandoja ja akaasioita. Ruutukortteleiden lomassa kohtaavat uusklassismi, art deco ja modernismi.\n\nKaupungin rakennuksilla on yllättäviä tarinoita: **Casa de Ferro** tuotiin Belgiasta osina, ja kuparikupolinen rautatieasema luetaan usein virheellisesti Eiffelin työksi. Isoisän matkavuonna 1873 paikalla oli jo Lourenço Marquesin asutus ja linnoitus, mutta monet nykyiset maamerkit syntyivät myöhemmin. Itsenäistymisen jälkeen kaupunki sai nimen Maputo. Se on samalla oma maakuntatasoinen hallintoalue, jota ei pidä sekoittaa ympäröivään Maputon maakuntaan. Salmen vastaranta ja Inhacan saari kuuluvat nekin kaupungin hallinnolliseen kokonaisuuteen.",
+    "teksti": "Maputon satama ei palvele vain rannikkoa. Raiteet yhdistävät sitä eteläisen Afrikan sisämaahan, ja satamassa on eri lastityypeille omia terminaaleja. Kaupungin vanha rautatieasema tekee yhteyden näkyväksi: kuljetusten käytännöllinen solmukohta sai komean Beaux-Arts-julkisivun.\n\nKeskustassa rakennusmateriaalikin voi olla tarinan päähenkilö. Casa de Ferron metalliosat valmistettiin Belgiassa ja koottiin Mosambikissa. Kuvernöörin asunnoksi hankittu talo päätyi muihin käyttötarkoituksiin, eikä sen suunnittelua voi panna Gustave Eiffelin nimiin.\n\nVanhat rakennukset ovat myös muuttaneet tehtävää. Linnoitus toimii museona, torihallissa myydään yhä elintarvikkeita ja Tundurun puutarhassa on tennisliiton kenttiä. Nykyinen Maputo ei ole yksi säilynyt aikakausi, vaan kaupunki, jossa sataman, hallinnon, kaupan ja vapaa-ajan paikat ovat kasvaneet rinnakkain."
+  },
+  "kysymykset": [
+    {
+      "q": "Mihin valtamereen Maputonlahti avautuu?",
+      "options": [
+        "Intian valtamereen",
+        "Atlantin valtamereen",
+        "Tyyneen valtamereen",
+        "Pohjoiseen jäämereen"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Ajattele Afrikan itärannikon merialuetta.",
+      "fact": "Maputo sijaitsee Intian valtameren puolella, Maputonlahden länsirannalla.",
+      "source": "https://en.wikipedia.org/wiki/Maputo"
+    },
+    {
+      "q": "Mikä hallinnollinen erikoisuus Maputon kaupungilla on?",
+      "options": [
+        "Se on oma maakunta",
+        "Se on erillinen valtio",
+        "Se on yhteinen rajakunta",
+        "Se on maakuntien liitto"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kaupungin nimi esiintyy myös sitä ympäröivän alueen nimessä.",
+      "fact": "Maputon kaupunki on oma maakuntatasoinen hallintoalue, erillään ympäröivästä Maputon maakunnasta.",
+      "source": "https://en.wikipedia.org/wiki/Maputo"
+    },
+    {
+      "q": "Kenen kehittämään järjestelmään Casa de Ferron rakenne perustuu?",
+      "options": [
+        "Joseph Danlyn",
+        "Gustave Eiffelin",
+        "Herbert Bakerin",
+        "Antoni Gaudín"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Talon osat valmistettiin belgialaisessa tehtaassa.",
+      "fact": "Casa de Ferro rakennettiin Joseph Danlyn kehittämällä esivalmistettujen metallirakennusten järjestelmällä.",
+      "source": "https://en.wikipedia.org/wiki/Casa_de_Ferro"
+    },
+    {
+      "q": "Mitä Maputon chapas ovat?",
+      "options": [
+        "Minibusseja",
+        "Satamahinaajia",
+        "Raitiovaunuja",
+        "Polkupyörätakseja"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimi liittyy kaupungin arkiseen joukkoliikenteeseen.",
+      "fact": "Chapas ovat minibussiliikennettä; niiden turvallisuudessa on puutteita, eikä käyttöä suositella matkailijalle.",
+      "source": "https://en.wikipedia.org/wiki/Maputo"
+    },
+    {
+      "q": "Mitä arkkitehtuurityyliä Maputon vanha päärautatieasema edustaa?",
+      "options": [
+        "Beaux-Artsia",
+        "Brutalismia",
+        "Funktionalismia",
+        "Uusgotiikkaa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Rakennus on koristeellinen ja sommittelu symmetrinen.",
+      "fact": "Aseman Beaux-Arts-arkkitehtuuriin kuuluvat komea keskuskaari, kupolit ja symmetriset sivuosat.",
+      "source": "https://en.wikipedia.org/wiki/Maputo_Railway_Station"
+    }
+  ],
+  "tiedot": [
+    "Maputon kaupunki ei pääty keskustan rantaan: KaTemben kaupunginosa on salmen toisella puolella.",
+    "Casa de Ferro hankittiin kuvernöörin asunnoksi, mutta talo ei tullut asuinkäyttöön. Sen historia jatkui eri laitosten tilana.",
+    "Maputon linnoitus suojasi aikanaan kauppapaikkaa. Nykyään sama paikka palvelee sotahistorian museona."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Maputo",
+      "johdanto": "Sataman raiteet vievät sisämaahan, mutta Maputon erikoisuudet löytyvät myös kaupungin hallintorajoista ja rakennusten tarinoista.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Satama, jolla on sisämaa",
+          "teksti": "Maputon sataman takana on muutakin kuin kaupunki. Raideyhteyksiä on rakennettu eteläisen Afrikan sisämaahan, muun muassa Etelä-Afrikan, Eswatinin ja Zimbabwen suuntiin. Laitureilla lasti jakautuu omiin terminaaleihinsa: satamassa käsitellään esimerkiksi viljaa, sokeria, autoja ja kontteja. Valtameren rannalla näkyy näin maantiede, joka jatkuu kauas horisontin taakse. Satama on rannikon ja sisämaan liitoskohta, ja kaupungin kauppaan perustuva talous kytkeytyy tähän kuljetusten verkkoon.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Maputo"
+        },
+        {
+          "otsikko": "Asema ilman Eiffeliä",
+          "teksti": "Maputon rautatieaseman kupariverhoiltu kupoli saa usein väärän tekijän. Sitä ei suunnitellut Gustave Eiffel, vaan José Ferreira da Costa. Nykyinen asema rakennettiin 1900-luvun alussa aiemman puusta ja sinkistä tehdyn aseman tilalle. Beaux-Arts-julkisivun keskellä kohoaa suuri kaari, ja sivuosia yhdistävät yläkerran verandat. Asema on enemmän kuin koristeellinen portti raiteille: sen eri rakennusvaiheissa työskenteli joukko suunnittelijoita ja rakentajia, ei yksi kuuluisa ranskalainen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Maputo_Railway_Station"
+        },
+        {
+          "otsikko": "Kaupunki on myös maakunta",
+          "teksti": "Maputon nimi voi johtaa kartanlukijan harhaan. Kaupunki on oma maakuntatasoinen hallintoalue, ja sitä ympäröi erillinen Maputon maakunta. Naapurikaupunki Matola taas kuuluu laajempaan metropolialueeseen, mutta ei muutu siksi osaksi Maputon kaupunkia. Kaupungin hallinnolliseen kokonaisuuteen kuuluu myös KaTembe salmen toisella puolella sekä Inhacan saaren alue. Kun kuulet Maputon asukasluvun, kannattaa siis selvittää, mistä Maputosta puhutaan: keskustan näkymä ei yksin kerro hallintorajoja.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Maputo"
+        },
+        {
+          "otsikko": "Leveiden katujen kaupunki",
+          "teksti": "Maputon keskusta rakennettiin suunnitelluiksi ruutukortteleiksi ja leveiksi kaduiksi. Jakarandat ja akaasiat kuuluvat kaupungin katumaisemaan, mutta rakennukset eivät noudata yhtä tyyliä. Uusklassisia julkisivuja seuraavat art deco ja modernismi; eri aikojen ratkaisut ovat jääneet vierekkäin. Historiallinen Baixa on hyvä paikka hahmottaa tätä kerroksellisuutta. Kaupunkia voi lukea myös katsomalla korttelin mittakaavaa: suuret kadut, niiden varren puut ja erilaiset julkisivut ovat saman keskustan osia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Maputo"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita Maputon historiallisesta Baixasta, jossa rautatieasema, torihalli ja linnoitus kertovat kaupungin yhteydestä satamaan. Tundurun puutarha tarjoaa toisenlaisen pysähdyksen keskellä kaupunkia. Rannikon ravintoloissa kala ja äyriäiset ovat luonteva lounasvalinta. Suunnittele kävelyt päiväsaikaan ja sovi pidemmät siirtymät luotettavan kyydin avulla. Maputon matkalla tarvitaan varovaisuutta, ja pimeällä liikkumista tulee välttää.",
+        "artikkeli": {
+          "nimi": "Matkailijan Maputo",
+          "taitto": "opas",
+          "teksti": "Kulje Baixan rakennuksista puutarhaan ja jatka lounaalle kaupungin meren ääreen.",
+          "nosto": "Rautatieasema ja rautatalo näyttävät, kuinka eri tavoin kaupunki rakennettiin. Rannikon makuja voi etsiä kala- ja äyriäisruoista.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Maputon kansainvälinen lentoasema käyttää tunnusta MPM. Järjestä kuljetus kaupunkiin ja sovi taksin hinnasta ennen lähtöä. Kaduilla näkyvät chapas ovat minibussiliikennettä, mutta niiden kunto ja ajotapa aiheuttavat turvallisuusriskejä, eikä käyttöä suositella. Tee kävelykierrokset päiväsaikaan ja järjestä iltasiirtymät luotettavalla kyydillä. Portugalin osaamisesta on hyötyä, kun selvität osoitteita ja liikkumista.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Baixan rakennuksia",
+              "teksti": "Historiallinen Baixa kokoaa aseman, Mercado Centralin torihallin ja linnoituksen lähelle kaupungin satamaa. Asemalla huomio kiinnittyy keskuskaareen ja kupoleihin, torihallissa taas kauppaan, joka jatkuu vanhassa rakennuksessa. Tundurun puutarha ja Casa de Ferro tuovat kierrokseen puiston ja osista kootun talon. Rakennukset ovat eri ajoilta: niitä ei pidä kuvitella samanlaiseksi katunäkymäksi isoisän matkavuonna.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Rannasta Polanaan",
+              "teksti": "Polanan kaupunginosassa Avenida Julius Nyereren varrella on ravintoloita ja liikkeitä. Rannikon äärellä sijaitseva Polana-hotelli edustaa 1900-luvun alun suurhotellien arkkitehtuuria. Kaupungin merenpuoleista osaa voi yhdistää ravintolapysähdykseen ja katukierrokseen, mutta tyhjälle rannalle ei kannata lähteä yksin. Näkymä lahdelle ja uimapaikka ovat eri asioita: kaupunkirantaa ei tässä suositella uimakohteena.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Lounas meren äärellä",
+              "teksti": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Maputo on eteläisellä pallonpuoliskolla: paikallinen kesä osuu Suomen talveen. Kesä on lämpimämpi ja sateisempi, talvi kuivempi. Sateet voivat hankaloittaa siirtymiä, joten ulkoilupäivään on hyvä jättää joustoa ja sisätiloissa tehtävä vaihtoehto. Kuivempi kausi sopii kaupungin rakennusten tutkimiseen, mutta lahden äärellä sääkin on osa matkasuunnitelmaa. Tarkista lähipäivien ennuste ennen retkeä ja järjestä paluukyyti ajoissa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Rautatieasema",
+                "tahdet": 3,
+                "selite": "Kupolit ja symmetrinen julkisivu tekevät kuljetusten solmukohdasta arkkitehtuurikohteen."
+              },
+              {
+                "mita": "Mercado Central",
+                "tahdet": 3,
+                "selite": "Vanhassa torihallissa rakennushistoria ja elintarvikekauppa kohtaavat."
+              },
+              {
+                "mita": "Tundurun puutarha",
+                "tahdet": 2,
+                "selite": "Julkinen keskustapuisto tuo kierrokseen vihreän pysähdyksen."
+              },
+              {
+                "mita": "Casa de Ferron tarina",
+                "tahdet": 3,
+                "selite": "Belgiasta tuotu talo näyttää, mitä esivalmistaminen tarkoitti jo 1800-luvulla."
+              },
+              {
+                "mita": "Kala- ja äyriäislounas",
+                "tahdet": 2,
+                "selite": "Rannikon ravintoloiden tarjonta jatkaa kaupungin yhteyttä mereen."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Suunnittele siirtymät",
+                "teksti": "Vältä pimeällä liikkumista ja järjestä pidemmät matkat luotettavalla kyydillä. Chapojen käyttöä ei suositella turvallisuuspuutteiden vuoksi."
+              },
+              {
+                "otsikko": "Juomavesi",
+                "teksti": "Käytä pullotettua juomavettä; vesijohtovesi ei ole juotavaa."
+              },
+              {
+                "otsikko": "Portugalista on hyötyä",
+                "teksti": "Kielen osaaminen helpottaa asiointia ja osoitteiden selvittämistä."
+              },
+              {
+                "otsikko": "Maa on laaja",
+                "teksti": "Maputon matka ja Mosambikin pohjoisosiin suuntautuva matka vaativat eri suunnitelmat. Tarkista ajantasaiset matkustusrajoitukset ennen jatkomatkaa."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kaupunki koottiin monella tavalla",
+      "johdanto": "Yksi talo tuli osina, toinen rakennus säilyi purkupuheista huolimatta. Puutarha ja linnoitus puolestaan jatkavat elämäänsä uusissa tehtävissä.",
+      "tehtava": {
+        "kysymys": "Mitä urheilulajia Tundurun puutarhan kentillä harrastetaan?",
+        "vaihtoehdot": [
+          "Tennistä",
+          "Koripalloa",
+          "Krikettiä",
+          "Jalkapalloa"
+        ],
+        "oikea": 0,
+        "fakta": "Tunduru yhdistää julkisen puiston ja tennisliiton käyttämät kentät samaan keskustan paikkaan."
+      },
+      "nostot": [
+        {
+          "otsikko": "Talo tuli osina Belgiasta",
+          "teksti": "Casa de Ferro, Rautatalo, valmistettiin Belgiassa ja koottiin Maputossa 1800-luvun lopulla. Sen rakenne perustuu Joseph Danlyn kehittämään järjestelmään, jossa metallirunko ja paneelit muodostavat siirrettävän rakennuksen. Talo hankittiin kuvernöörin asunnoksi, mutta hän ei muuttanut sinne. Myöhemmin sitä käyttivät eri laitokset. Kuumuutta on tarjottu hylkäyksen selitykseksi, mutta yksiselitteinen tarina on harhaanjohtava: seinärakenteessa oli ilman kiertoa varten väli ja sisäpuolella tuuletusaukkoja.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Casa_de_Ferro"
+        },
+        {
+          "otsikko": "Torihalli päätti jäädä",
+          "teksti": "Mercado Centralin katettu halli rakennettiin 1900-luvun alussa sataman lähelle. Carlos Mendes suunnitteli sisäänkäynnin pienen tornin alle ja myyntipaikkoja kaarien yhteyteen. Myöhemmin keskustan kasvu sai kyseenalaistamaan sekä torin sijainnin että rakennuksen ulkonäön, ja hallin ajateltiin häviävän. Se kuitenkin säilyi, ja kunnostus alkoi 2000-luvulla. Vanhassa kauppapaikassa myydään kalaa, äyriäisiä, hedelmiä ja vihanneksia: rakennus ei ole vain muisto entisestä torista, vaan edelleen torikäytössä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Maputo_central_market"
+        },
+        {
+          "otsikko": "Puutarhassa on myös tenniskentät",
+          "teksti": "Tunduru on julkinen puutarha keskellä Maputoa. Brittiläinen puutarhuri Thomas Honney suunnitteli sen 1800-luvun lopulla, ja se tunnettiin aiemmin nimellä Jardim Vasco da Gama. Sisäänkäynnin uusmanueliininen muotoilu liittää puiston kaupungin historialliseen arkkitehtuuriin. Puutarhassa on myös Mosambikin tennisliiton kenttiä. Vanha puisto ei siis palvele vain rauhallista kävelyä: samalla keskustan paikalla kohtaavat puutarhan historia ja urheilukäyttö, jota pelkkä kasvitieteelliseen puutarhaan viittaava nimi ei kerro.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tunduru_Gardens"
+        },
+        {
+          "otsikko": "Linnake vaihtoi tehtävää",
+          "teksti": "Praça 25 de Junhon luona sijaitseva linnoitus kuului Lourenço Marquesin kauppapaikan puolustukseen. Sen historia ulottuu 1700-luvun lopun portugalilaiseen rakennusvaiheeseen, mutta rakennusta on muutettu ja kunnostettu myöhemmin. Nykyiset kiviseinät ympäröivät neliöpihaa, johon huoneet avautuvat. Isoisän matkavuonna 1873 paikalla oli linnoitus ja sen ympärillä asutusta; nykyistä ulkoasua ei voi siirtää sellaisenaan tuohon vuoteen. Nyt linnake toimii sotahistorian museona, joten sen tehtävä on jälleen muuttunut.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Fort_Nossa_Senhora_da_Conceição_de_Lourenço_Marques"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Maputon vanhassa keskustassa sataman, kaupan ja hallinnon paikat ovat lähellä toisiaan. Linnoitus, torihalli ja rautatieasema kertovat kaupungin eri rakennusvaiheista.",
+    "rajat": null,
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Maputon kansainvälinen lentoasema (MPM)",
+    "huomiot": [
+      "Nopea C-tekstiluonnos: 8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Riippumaton D/E/F tekemättä.",
+      "18 kuvaroolia tyhjin neljän kentän arvoin; erillinen kuvaputki. Ei Commons-valintaa.",
+      "Kartta partial: nolla hyväksyttyä kohdetta, rajaus null ja nähtävyysjutut tyhjät. Kohteiden omia WP-pisteitä ja tekijäketjun puutteita faktapohjassa.",
+      "Sääauditointi avoin; saatiedot null, saa.json koskematta. Ei ilmastolukuja.",
+      "Ei tarkkoja paikallisia vuosia tai väestölukuja; 1873 on pelin annettu aikakehys."
+    ]
+  }
+}
