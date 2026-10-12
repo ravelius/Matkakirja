@@ -443,8 +443,11 @@ export const EUROPE = {
           + 'spinelliä, keskellä timantti ja välissä helmiä. Burgundilta se '
           + 'kulki sveitsiläisten kautta Fuggereille ja 1551 Englannin '
           + 'kruunulle, ja Elisabet I kantoi sitä. Vuoden 1645 jälkeen '
-          + 'siitä ei ole havaintoa.',
-        kuva: 'assets/aarteet/aarre-europe-star.jpg',
+          + 'siitä ei ole havaintoa. (Kuva: riipuksen miniatyyri, valokuva Peter '
+          + 'Portner / Historisches Museum Basel, CC BY-SA 4.0, muokattu.)',
+        // Pelikoodari 12.10.2026: oma aarrekuva Kolme veljestä -riipuksesta (Commons File:Three Brothers jewel Basel.jpg,
+        // CC BY-SA 4.0); ämpärissä kohtaamiset/aarteet/aarre-europe-kolme-veljesta.jpg (vienti 12.10.).
+        kuva: 'assets/aarteet/aarre-europe-kolme-veljesta.jpg',
       },
       mannerAarre: {
         name: 'Kruununjalokivi', color: '#b0304a',
