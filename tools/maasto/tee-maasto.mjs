@@ -8,6 +8,14 @@
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n]
  *        [--maailma 6] [--vain-maa-alkaen 7] [--glo30-kynnys 0.001]
  *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>] [--laatat <lista>]
+ *        [--naytetaso 15]
+ *
+ * TASAN NÄYTTEET (Karttaseppä 12.10.2026, LS2:n vuoristopilotti 3): `--naytetaso Z` näytteistää
+ * jokaisen tason z < Z samalla välillä kuin taso Z (ruudukko (n−1)·2^(Z−z)+1, esim. z13 257, z14 129,
+ * z15 65). Muuten karkea taso näytteistää jyrkänteen 2–4 kertaa harvemmin, sen reuna poikkeaa
+ * tarkemman naapurin reunasta Geirangerissa jopa 75 m, ja cesium-nativen helma (5 × tasovirhe,
+ * z15 12 m) ei peitä rakoa: pelissä näkyy porras. Tasan näytteillä tasojen välinen rako on
+ * enintään noin virheraja (mitattu ≤ 7 m). RTIN harventaa tasaisen maan entiseen tapaan.
  *
  * VUORISTOKERROS (Karttaseppä 12.10.2026, PT erä 184): `--mapterhorn` lukee
  * Mapterhornin laserkeilatun maanpinnan raakalaatoista (mapterhorn.mjs) ja
@@ -241,6 +249,12 @@ export function kaksiLahdetta({ glo30 = null, glo90 = null, kynnys = GLO30_KYNNY
 }
 
 /** Yksi laatta tavuiksi (gzip). */
+/** Ruudukko tasolle z, kun näyteväli on tason `naytetaso` (null = sama ruudukko kaikille). */
+export function ruudukkoTasolle(n, z, naytetaso = null) {
+  if (naytetaso === null || z >= naytetaso) return n;
+  return (n - 1) * 2 ** (naytetaso - z) + 1;
+}
+
 export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5) {
   const a = laatanAlue(z, x, y);
   const vali = (a.east - a.west) / (n - 1);
@@ -460,6 +474,7 @@ export function lueAsetukset(argv) {
     mapterhornKansio: arvo('mapterhorn'),
     laatat: arvo('laatat'),
     virhekerroin: Number(arvo('virhekerroin', 0.5)),
+    naytetaso: arvo('naytetaso') === undefined ? null : Number(arvo('naytetaso')),
     vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
@@ -501,7 +516,7 @@ export async function aja(argv, loki = console.log) {
   const a = lueAsetukset(argv);
   const { tasot, alue, n, osa, osia, versio, maailma, vainMaaAlkaen, kynnys } = a;
   if ((!a.demKansio && !a.dem90Kansio) || (!a.ulos && !a.lista)) {
-    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--luettelo | --lista]');
+    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--naytetaso 15] [--luettelo | --lista]');
   }
   const { dem, maininta } = avaaLahteet(a);
   const lista = a.laatat ? lueLaattalista(readFileSync(a.laatat, 'utf8')) : null;
@@ -550,7 +565,7 @@ export async function aja(argv, loki = console.log) {
     const kansiot = new Set();
     for (const [x, y] of lista ? listanLaatatJarjestyksessa(lista.get(s.z) ?? [], s.z, osa, osia) : tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
       if (!kansiot.has(x)) { mkdirSync(join(a.ulos, String(s.z), String(x)), { recursive: true }); kansiot.add(x); }
-      const l = teeLaatta(dem, s.z, x, y, n, a.virhekerroin);
+      const l = teeLaatta(dem, s.z, x, y, ruudukkoTasolle(n, s.z, a.naytetaso), a.virhekerroin);
       writeFileSync(join(a.ulos, String(s.z), String(x), `${y}.terrain`), l.tavut);
       laattoja += 1; tasolla += 1; tavuja += l.tavut.length; kolmioita += l.kolmioita;
     }

@@ -69,3 +69,18 @@ test('laattalista: luku, saatavuus ja osajako', async () => {
   const osat = [0, 1].map((o) => [...listanLaatatJarjestyksessa(m.get(13), 13, o, 2)].length);
   assert.equal(osat[0] + osat[1], 4);
 });
+
+test('ruudukkoTasolle: --naytetaso 15 antaa kaikille tasoille saman näytevälin (LS2:n pilotti 3, porras)', async () => {
+  const { ruudukkoTasolle, laatanAlue } = await import('../tools/maasto/tee-maasto.mjs');
+  assert.equal(ruudukkoTasolle(65, 15, 15), 65);
+  assert.equal(ruudukkoTasolle(65, 14, 15), 129);
+  assert.equal(ruudukkoTasolle(65, 13, 15), 257);
+  assert.equal(ruudukkoTasolle(65, 12, 15), 513);
+  assert.equal(ruudukkoTasolle(65, 13, null), 65);
+  for (const z of [12, 13, 14, 15]) {
+    const a = laatanAlue(z, 0, 0);
+    assert.ok(Math.abs((a.east - a.west) / (ruudukkoTasolle(65, z, 15) - 1) - 180 / 2 ** 15 / 64) < 1e-12);
+  }
+  assert.equal(lueAsetukset(['--naytetaso', '15']).naytetaso, 15);
+  assert.equal(lueAsetukset([]).naytetaso, null);
+});
