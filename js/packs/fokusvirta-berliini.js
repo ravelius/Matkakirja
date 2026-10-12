@@ -1040,6 +1040,7 @@ export const FOKUSVIRTA_BERLIINI = {
     },
     {
       id: 'paavin-kosto',
+      wiki: 'Berliinin televisiotorni',
       nimio: 'Paavin kosto',
       otsikko: 'Aurinko piirsi torniin ristin',
       symboli: 'tekniikka',
@@ -1073,6 +1074,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       galleria: [
         {
+          otsikko: 'Työmaa toukokuussa 1968',
           tiedosto: 'Bundesarchiv Bild 183-G0521-0005-001, Berlin, Fernsehturm, Bau.jpg',
           lyhyt: 'Televisiotornia rakennettiin 1965–1969, ja pallo koottiin maassa 120 teräslohkosta ennen nostoa.',
           selite: 'Televisiotornia rakennettiin vuosina 1965–1969, ja pallo '
@@ -1107,6 +1109,7 @@ export const FOKUSVIRTA_BERLIINI = {
     },
     {
       id: 'maailmankello',
+      wiki: 'Alexanderplatz',
       nimio: 'Maailmankello',
       otsikko: 'Kelloa pyöritti Trabantin vaihteisto',
       symboli: 'tekniikka',
@@ -1143,6 +1146,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       galleria: [
         {
+          otsikko: 'Nimet lähietäisyydeltä',
           tiedosto: 'Weltzeituhr Detail Alexanderplatz.jpg',
           selite: 'Rumpuun on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan.',
           lahde: 'Gryffindor, Wikimedia Commons (Public domain)',

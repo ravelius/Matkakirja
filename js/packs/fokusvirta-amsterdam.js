@@ -1306,6 +1306,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     },
     {
       id: 'amsterdamin-maitotytto',
+      wiki: 'Maitotyttö',
       nimio: 'Maitotyttö',
       otsikko: 'Vermeer peitti omat esineensä maalilla',
       symboli: 'silma',
@@ -1461,6 +1462,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     },
     {
       id: 'amsterdamin-yovartio',
+      wiki: 'Yövartio (maalaus)',
       nimio: 'Yövartio',
       otsikko: 'Yövartiosta sahattiin palat pois',
       symboli: 'historia',
@@ -1496,6 +1498,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       galleria: [
         {
+          otsikko: 'Näin taulu näytti ennen leikkausta',
           tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
           lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
           selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on ainoa '

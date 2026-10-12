@@ -1138,6 +1138,7 @@ export const FOKUSVIRTA_LONTOO = {
     },
     {
       id: 'leake-streetin-tunneli',
+      wiki: 'Banksy',
       nimio: 'Leake Streetin tunneli',
       otsikko: 'Tunneli, jossa saa maalata',
       symboli: 'kulttuuri',
@@ -1177,6 +1178,7 @@ export const FOKUSVIRTA_LONTOO = {
     },
     {
       id: 'neljas-jalusta',
+      wiki: 'Antony Gormley',
       nimio: 'Neljäs jalusta',
       otsikko: 'Tyhjä jalusta ja 2 400 ihmistä',
       symboli: 'kulttuuri',
@@ -1216,6 +1218,7 @@ export const FOKUSVIRTA_LONTOO = {
     },
     {
       id: 'tate-modernin-turbiinihalli',
+      wiki: 'Tate Modern',
       nimio: 'Turbiinihalli',
       otsikko: 'Voimalasta tuli taidesali',
       symboli: 'kulttuuri',
@@ -1268,6 +1271,7 @@ export const FOKUSVIRTA_LONTOO = {
     },
     {
       id: 'orbitin-liukumaki',
+      wiki: 'Anish Kapoor',
       nimio: 'Liukumäkiveistos',
       otsikko: 'Veistos, jonka sisällä on liukumäki',
       symboli: 'tekniikka',
