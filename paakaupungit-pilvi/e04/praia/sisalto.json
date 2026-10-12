@@ -1,0 +1,456 @@
+{
+  "artikkeli": {
+    "intro": "Praia on Kap Verden pääkaupunki **Santiagon etelärannikolla**. Sen nimi tarkoittaa portugaliksi rantaa, mutta historiallinen keskusta kohoaa lahden yläpuoliselle tasanteelle. Plateau-nimisen ytimen ruutukaavaa kehitettiin etenkin 1800-luvulla. Muu kaupunki jatkuu myös laaksoihin ja muille tasanteille. Sataman lähelle syntynyt asutus kasvoi siirtomaahallinnon keskukseksi jo ennen isoisän matkavuotta 1873.\n\nLahden kautta laivat saivat ruokaa ja vettä sekä jatkoivat Atlantin reiteille. Santa Marian luoto kuului tullin, varastoinnin ja karanteenin historiaan, kun taas Maria Pian majakka tuli vasta myöhemmin. Nykykaupungin arkea avaavat erilliset torit sekä tabanka, jossa laulajan säkeeseen vastataan yhdessä. Etnografinen museo säilyttää tavaroiden lisäksi kertomuksia ja arvoituksia, joten **saarten muisti ei ole pelkkiä esineitä**.",
+    "teksti": "Praian maantiedettä jäsentävät tasanteet eli achadat ja niiden väliset laaksot. Plateau on historiallinen ydin sataman yläpuolella. Sen katuverkko, aukiot ja hallintotalot kuuluvat etenkin 1800-luvun kaupunkikehitykseen, mutta kaupungin satamayhteydet ovat tätä vanhempia.\n\nVuonna 1873 Praia oli olemassa siirtomaahallinnon keskuksena. Aukio tunnettiin vanhemmalla nimellä, ja kasarmin ensimmäinen rakennusvaihe oli jo paikalla. Majakkaa ei vielä ollut. Santa Marian luodon vanhat varastot ja nykyiset rakennushankkeet kuuluvat eri aikoihin.\n\nKap Verden eri saarten arkea on koottu etnografisen museon aineistoon. Praian kaupunginosissa elää myös tabanka-perinne, jossa musiikki, juhliminen ja keskinäinen avunanto liittyvät toisiinsa. Pääkaupunki on näin enemmän kuin vanha hallintotasanne."
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Praia",
+      "johdanto": "Vanha keskusta kohoaa lahden yläpuolelle; satama, torit ja paikalliset musiikkiyhteisöt avaavat pääkaupungin arkea.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Keskusta nostettiin tasanteelle",
+          "teksti": "Praian vanha keskusta Plateau on korkealla meren ja sataman yläpuolella. Nimi tarkoittaa tasannetta, ja sijainti helpotti sataman sekä kaupankäynnin valvontaa. Keskustaa kehitettiin 1800-luvulla ruutukaavalla, johon sijoittui aukioita, hallintotaloja ja koteja. Praça Alexandre Albuquerque kuuluu sen keskeisiin paikkoihin. Nykyinen Praia jatkuu kuitenkin myös laaksoihin ja muille tasanteille. Vanha katuverkko kertoo siis kaupungin yhdestä ytimestä, ei koko nykyisen pääkaupungin muodosta.",
+          "wiki": "Plateau (Praia)",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Arjen esineistä tuli aineistoa",
+          "teksti": "Praian etnografinen museo toimii Plateaulla 1800-luvun talossa, mutta sen aineisto on kerätty eri Kap Verden saarilta. Kokoelmat kertovat arjen taidoista: maataloudesta, karjanhoidosta, kalastuksesta ja käsitöistä. Kudonta, korinpunonta ja keramiikka kuuluvat museon aiheisiin. Säilytettävä perintö ei rajoitu tavaroihin, sillä myös kertomuksia ja arvoituksia on tallennettu. Museo syntyi myöhäisen 1900-luvun kulttuuriperintöhankkeesta. Vanhan talon sisälle koottiin siten monen saaren muisti, ei vain pääkaupungin historia.",
+          "wiki": "Museu Etnográfico da Praia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Laulu saa yhteisen vastauksen",
+          "teksti": "Tabankassa laulajan säkeeseen vastataan yhdessä. Rytmiä tehdään rummuilla, ja mukana voi olla kotilotorvia sekä viheltimiä. Perinne liittyy Santiago-saareen ja paikallisiin yhteisöihin; Praiassa sitä tunnetaan esimerkiksi Várzeassa, Achada Grandessa ja Achada de Santo Antóniossa. Tabanka ei ole vain musiikkilaji, vaan siihen kuuluu juhlintaa, yhteisötoimintaa ja keskinäistä avunantoa. Sen alkuperästä ei ole yhtä varmaa selitystä. Laulun ja vastauksen rakenne on silti konkreettinen tapa kuulla, kuinka yhteisö osallistuu.",
+          "wiki": "Tabanka",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaksi toria, eri nimet",
+          "teksti": "Plateaun Mercado Municipal tunnetaan myös nimellä Mercado Central. Samasta paikasta voi siis kuulla kaksi nimeä. Sucupira on sen sijaan erillinen markkinapaikka. Keskustan torilla myydään ruokaa ja käsityötuotteita, ja markkinat kuuluvat paikallisten tavalliseen asiointiin. Kaupungin kauppa ei näin rajoitu satamaan tai hallintokortteleihin. Torien nykyinen toiminta kertoo nyky-Praiasta; niiden nimistä ei voi päätellä, että kumpikaan olisi muuttumattomana säilynyt siirtomaakauden kauppapaikka.",
+          "wiki": "Praia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Praian vanhaan ytimeen tutustutaan Plateaulla. Torit ja etnografisen museon aineisto kertovat saariston arjesta. Gamboan rannalta näkee lahden ja Santa Marian luodon. Maria Pian majakka on oma kohteensa niemen päässä. Tasanteiden välillä kulkeminen vaatii nousuihin varautumista.",
+        "artikkeli": {
+          "nimi": "Matkailijan Praia",
+          "taitto": "opas",
+          "teksti": "Tasanteen kadut ja lahden reunat näyttävät Praian eri korkeuksilta.",
+          "nosto": "Tasanteen kadut ja lahden reunat näyttävät Praian eri korkeuksilta.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Nelson Mandelan kansainvälinen lentoasema palvelee Praiaa. Kaupungissa on busseja ja takseja. Plateau-ytimen paikat ovat lähellä toisiaan, mutta kaupungin tasanteiden ja laaksojen välillä maasto nousee ja laskee. Varaa reitti maaston mukaan ja huolehdi kuljetuksesta etenkin pimeällä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Plateau ja vanhat talot",
+              "teksti": "Plateaun ruutukaavaan kuuluu Praça Alexandre Albuquerque -aukio. Entinen kasarmi kertoo 1800-luvun rakennusvaiheista, ja etnografinen museo toimii vanhassa talossa. Museon aineisto käsittelee arjen taitoja eri saarilla. Selvitä vierailumahdollisuudet erikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Lahden reunalla",
+              "teksti": "Gamboa on vanhan keskustan alapuolella ja avautuu Santa Marian luodolle. Se sopii rantamaiseman katseluun; sitä ei tässä suositella uintipaikaksi. Quebra Canelalla on suosittu ranta, mutta tarkista paikalliset olot. Maria Pian majakkaa voi tarkastella Ponta Temerosa -niemen yhteydessä ilman lupausta tornin sisäänpääsystä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Maissi, pavut ja kala",
+              "teksti": "Kapverdeläisessä keittiössä maissi ja pavut ovat perustavia raaka-aineita. Cachupa on maissiin ja muihin aineksiin perustuva pataruoka, josta on eri versioita. Kala ja merenelävät kuuluvat saariston ruokaan. Praian torit ovat myös ruokakaupan paikkoja; kyse on koko maan ruokataustasta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Rannalla ja tasanteilla",
+              "teksti": "Praia on Atlantin rannikkokaupunki, mutta vanha keskusta on meren yläpuolella tasanteella. Suunnittele kävelypäivä nousujen ja rantareittien mukaan. Rantaan liittyvät paikalliset ohjeet ja olot on tarkistettava erikseen; kaupungin nimi tarkoittaa rantaa, ei lupausta jokaisen rannan uimakelpoisuudesta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Plateau",
+                "tahdet": 3,
+                "selite": "Tasanteen ruutukaava on vanhan keskustan ydin."
+              },
+              {
+                "mita": "Etnografinen museo",
+                "tahdet": 2,
+                "selite": "Aineisto kertoo useiden saarten arjen taidoista."
+              },
+              {
+                "mita": "Maria Pian majakkaniemi",
+                "tahdet": 2,
+                "selite": "Historiallinen majakka on lahden sisääntulossa."
+              },
+              {
+                "mita": "Torit",
+                "tahdet": 2,
+                "selite": "Mercado Municipal ja Sucupira ovat erillisiä markkinapaikkoja."
+              },
+              {
+                "mita": "Gamboan rantamaisema",
+                "tahdet": 1,
+                "selite": "Lahden takaa näkyy Santa Marian luoto."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Nousut",
+                "teksti": "Varaudu tasanteiden ja laaksojen väliseen korkeuden vaihteluun."
+              },
+              {
+                "otsikko": "Pimeällä",
+                "teksti": "Järjestä kuljetus ja vältä yksin liikkumista pimeässä."
+              },
+              {
+                "otsikko": "Torit",
+                "teksti": "Ota mukaan vain tarvitsemasi arvoesineet."
+              },
+              {
+                "otsikko": "Rannat",
+                "teksti": "Noudata paikallisia ohjeita; Gamboaa ei tässä suositella uimapaikaksi."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Sataman eri vuosisadat",
+      "johdanto": "Lahden laivaliikenne jätti jälkiä luodolle, niemeen ja jopa Darwinin geologisiin muistiinpanoihin.",
+      "nostot": [
+        {
+          "otsikko": "Laiva tarvitsi vettä ja ruokaa",
+          "teksti": "Praian satama kehittyi Atlantin luonnonlahteen. Laivat eivät tarvinneet pelkkää rantautumispaikkaa: ne saivat satamasta vettä ja ruokaa, hakivat myrskysuojaa ja käyttivät paikkaa korjauksiin. Lahti kuului Portugalin, Afrikan ja Amerikan välisiin reitteihin, joilla kuljetettiin myös orjuutettuja ihmisiä. Rannikkokylän kasvu liittyi tähän meriliikenteeseen. Vanhat laiturit olivat eri paikassa kuin lahden itäosan myöhemmin uudistetut rakenteet. Sataman historia on siksi pidempi kuin nykyisen terminaalin historia.",
+          "wiki": "Praia Harbor",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Luoto varastoi ja eristi",
+          "teksti": "Santa Maria on pieni tuliperäinen luoto Praian lahden suulla, Gamboan rantaa vastapäätä. Vanhoissa englanninkielisissä lähteissä se tunnetaan nimellä Quail Island. Luodolle rakennettiin 1800-luvun puolivälissä tullitalo ja varastoja, joita käytettiin myös karanteeniin. Karanteenitoiminta siirtyi myöhemmin Ponta Temerosa -niemen lazarettoon. Luoto kuului siis sataman työhön, vaikka oli rannasta erillään. Sen vanhat käyttövaiheet ja myöhemmät hotelli- tai siltahankkeet eivät ole sama kertomus eivätkä sama rakennuskerros.",
+          "wiki": "Ilhéu de Santa Maria",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Simpukankuori mustan kiven välissä",
+          "teksti": "Charles Darwinin Beagle-matka pysähtyi Praian satamaan 1800-luvun alkupuolella. Hän kuvasi rannikon kalliossa valkoisen vaakakerroksen, jossa oli kalkkipitoista materiaalia ja simpukankuoria. Alla olivat vanhemmat vulkaaniset kivet, päällä basalttilaava. Darwin tulkitsi kerroksen entiseksi merenpohjaksi, jonka päälle laava oli virrannut. Hän tutki myös lämmön muuttamaa kalkkipitoista materiaalia. Kyse on hänen dokumentoidusta havainnostaan ja tulkinnastaan; saarivierailu oli samalla tilaisuus lukea kallion historiaa.",
+          "wiki": "Praia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Majakka tuli satamaa myöhemmin",
+          "teksti": "Maria Pian majakka seisoo Ponta Temerosa -niemellä Praian lahden sisääntulossa. Valkoinen, muurattu torni on kahdeksankulmainen ja liittyy matalampaan majakanvartijan rakennukseen. Nimi tulee tuolloisesta Portugalin kuningattaresta. Majakka rakennettiin 1800-luvun loppupuolella, joten sitä ei vielä ollut isoisän matkavuonna 1873. Niemi ja satamalahti olivat jo olemassa, mutta nykyinen navigointirakennus tuli myöhemmin. Sataman pitkä historia ja sen nykyiset maamerkit eivät siten ala samasta ajankohdasta.",
+          "wiki": "Dona Maria Pia Lighthouse",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "tehtava": {
+        "kysymys": "Mitä Darwinin Praiassa kuvaama vaalea kivikerros sisälsi?",
+        "vaihtoehdot": [
+          "Simpukankuoria",
+          "Laivojen rautanauloja",
+          "Mustia hiilikappaleita",
+          "Puiden lehtiä"
+        ],
+        "oikea": 0,
+        "fakta": "Meren eliöiden kuoret kuuluivat kalkkipitoiseen kerrokseen, jonka Darwin tulkitsi vanhaksi merenpohjaksi."
+      }
+    }
+  ],
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Praia on?",
+      "options": [
+        "Kap Verden",
+        "Mauritanian",
+        "Senegalin",
+        "Guinean"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Valtio on saaristo Atlantilla.",
+      "fact": "Praia sijaitsee Santiagon saaren eteläosassa.",
+      "source": "https://en.wikipedia.org/wiki/Praia"
+    },
+    {
+      "q": "Mitä portugalin sana praia tarkoittaa?",
+      "options": [
+        "Rantaa",
+        "Laaksoa",
+        "Satamaa",
+        "Vuorta"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupungin nimi liittyy meren ja maan rajaan.",
+      "fact": "Praian nimi tarkoittaa rantaa.",
+      "source": "https://en.wikipedia.org/wiki/Praia"
+    },
+    {
+      "q": "Millaisessa paikassa vanha Plateau-keskusta sijaitsee?",
+      "options": [
+        "Tasanteella",
+        "Suistosaarella",
+        "Kraatterissa",
+        "Kanavan varrella"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Ydin kohoaa sataman yläpuolelle.",
+      "fact": "Plateau on korkeampi tasainen alue lahden yläpuolella.",
+      "source": "https://en.wikipedia.org/wiki/Plateau_(Praia)"
+    },
+    {
+      "q": "Mikä on Maria Pian majakan tehtävä?",
+      "options": [
+        "Merenkulun suunnistus",
+        "Tavaralaivojen lastaus",
+        "Sadeveden varastointi",
+        "Kalasaaliin punnitus"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennus sijaitsee lahden sisääntulossa.",
+      "fact": "Majakka palvelee navigointia.",
+      "source": "https://en.wikipedia.org/wiki/Dona_Maria_Pia_Lighthouse"
+    },
+    {
+      "q": "Mikä on tabanka-laululle tyypillistä?",
+      "options": [
+        "Yhteinen vastaus säkeeseen",
+        "Yksin laulettu pitkä kertomus",
+        "Sanaton vihellys ilman rytmiä",
+        "Pelkkä soitin ilman laulua"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Laulajan ja ryhmän osat vuorottelevat.",
+      "fact": "Tabankassa laulajan säkeeseen vastataan yhdessä.",
+      "source": "https://en.wikipedia.org/wiki/Tabanka"
+    }
+  ],
+  "tiedot": [
+    "Praian vanha keskusta on tasanteella, mutta nykykaupunki jatkuu myös laaksoihin ja muille tasanteille.",
+    "Etnografisen museon kokoelmissa on esineiden lisäksi kertomuksia ja arvoituksia eri Kap Verden saarilta.",
+    "Santa Marian luodolla oli tullivarastoja ja karanteenikäyttöä ennen nykyisiä rakennushankkeita."
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Praian vanha keskusta nousee lahden yläpuolelle. Aukio ja vanhat talot liittyvät tasanteeseen, luoto ja majakkaniemi sataman reunaan.",
+    "rajat": {
+      "pohjoinen": 14.9236,
+      "etela": 14.89772,
+      "lansi": -23.51194,
+      "ita": -23.50436
+    },
+    "kohteet": [
+      {
+        "nimi": "Praça Alexandre Albuquerque -aukio",
+        "lat": 14.9177,
+        "lon": -23.5091,
+        "tyyppi": "aukio"
+      },
+      {
+        "nimi": "Jaime Motan entinen kasarmi",
+        "lat": 14.9162,
+        "lon": -23.5088
+      },
+      {
+        "nimi": "Praian etnografinen museo",
+        "lat": 14.9209,
+        "lon": -23.5072
+      },
+      {
+        "nimi": "Maria Pian majakka",
+        "lat": 14.90042,
+        "lon": -23.50906
+      },
+      {
+        "nimi": "Santa Marian luoto",
+        "lat": 14.90778,
+        "lon": -23.5075,
+        "tyyppi": "luonto"
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Praça Alexandre Albuquerque -aukio": {
+      "aika": "vanha aukio, 1800-luvun kehitys",
+      "teksti": "Praça Alexandre Albuquerque on Praian historiallisen keskustan aukio Plateaun lounaisosassa. Sen keskellä on puistomainen julkinen tila, ja reunoilla eri-ikäisiä kaupunkitaloja sekä julkisia rakennuksia. Aukio liittyy Rua Serpa Pinton ja muiden keskustakatujen verkkoon. Se kuuluu tasanteen ruutukaavan keskeisiin paikkoihin.\n\nVuonna 1873 aukio oli olemassa, mutta tunnettiin vanhemmalla nimellä Praça do Pelourinho. Nykyinen nimi kuuluu myöhempään 1800-luvun nimenvaihtoon ja liittyy siirtomaakuvernöörin nimeen. Aukion kaikki nykyiset rakennukset ja pronssirintakuvat ovat eri kerroksista. Vanhan julkisen tilan ikä ei siis tarkoita, että sen jokainen yksityiskohta olisi ollut paikalla matkavuonna.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Jaime Motan entinen kasarmi": {
+      "aika": "1800-luku, useita vaiheita",
+      "teksti": "Jaime Motan entinen kasarmi sijaitsee Plateaun eteläpäässä, Avenida Andrade Corvon eteläpään yhteydessä. Sen ensimmäinen rakennusvaihe on 1800-luvun alkupuolelta. Kasarmi kuuluu vanhan keskustan hallinto- ja rakennushistoriaan, mutta sitä ei pidä sekoittaa lähellä olevaan myöhempään presidentinpalatsiin.\n\nKokonaisuutta muutettiin 1800-luvun lopulla ja 1900-luvun alussa, ja siihen kuuluu uusmanueliinisen tyylin piirteitä. Ensimmäinen kasarmivaihe oli olemassa vuonna 1873, mutta nykyinen nimi ja kaikki julkisivun osat eivät kuulu tuohon aikaan. Rakennuksen eri vaiheet kertovat siitä, kuinka vanha käyttötarkoitus ja myöhempi ulkoasu voivat yhdistyä samassa talossa.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Praian etnografinen museo": {
+      "aika": "1800-luvun talo, myöhempi museo",
+      "teksti": "Praian etnografinen museo sijaitsee vanhassa Plateau-keskustassa Rua 5 de Julholla. Se toimii 1800-luvun rakennuksessa, mutta museon synty liittyy myöhäisen 1900-luvun kulttuuriperintöhankkeisiin. Kokoelmia kerättiin eri Kap Verden saarilta, joten pääkaupungissa oleva museo ei esittele vain pääkaupungin omaa esineistöä.\n\nAineisto kertoo arjen taidoista ja elinkeinoista, kuten kalastuksesta, maataloudesta, kudonnasta, korinpunonnasta ja keramiikasta. Mukana on myös kertomuksia, arvoituksia ja muuta suullista perinnettä. Nykyisiä näyttelyitä ei ollut vuonna 1873. Talon tarkka rakennusvaihe suhteessa tuohon vuoteen on epävarma, joten museon ja vanhan rakennuksen ikää ei pidä samastaa toisiinsa.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Maria Pian majakka": {
+      "aika": "1800-luvun loppu",
+      "teksti": "Maria Pian majakka on Ponta Temerosa -niemellä, missä se kuuluu Praian lahden sisääntulon merenkulun maamerkkeihin. Niemi on osa Santiagon eteläistä rannikkoa. Muurattu torni on valkoinen ja kahdeksankulmainen; siihen liittyy majakanvartijan matalampi rakennus sekä valohuoneen ja parvekkeen rakenteita.\n\nMajakka rakennettiin 1800-luvun loppupuolella ja nimettiin Portugalin kuningattaren Maria Pian mukaan. Sitä ei vielä ollut vuonna 1873, vaikka satamalahti ja niemi olivat jo osa paikan maantiedettä. Majakan tehtävä on palvella merenkulun suunnistamista. Majakka kuuluu niemen ja lahden merenkulun historiaan.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Santa Marian luoto": {
+      "aika": "tuliperäinen luoto, 1800-luvun käyttö",
+      "teksti": "Santa Marian luoto on Santiagon rannan edustalla, Praian lahden suulla Gamboan rantaa vastapäätä. Luoto on tuliperäinen, ja vanhoissa englanninkielisissä lähteissä siitä käytetään nimeä Quail Island. Sen sijainti erillään mantereesta kuului myös sataman käytännön historiaan.\n\nLuodolle rakennettiin 1800-luvun puolivälissä tullitalo ja varastoja. Rakennuksia käytettiin karanteeniin, joka siirtyi myöhemmin Ponta Temerosaan. Luoto ja varhaiset rakennukset olivat olemassa vuonna 1873; karanteenin toiminta vaihtui myöhemmin toiseen paikkaan. Myöhemmät rakennushankkeet kuuluvat toiseen aikatasoon.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "ehdotukset": {
+    "lentoasema": "Nelson Mandela International Airport (RAI)",
+    "huomiot": [
+      "5 kohdetta: A:n pieni-kaupunki-/kompakti-ydin-poikkeus. Kuvien CPV-oikeusportti avoin.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
+    ]
+  },
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "praia",
+  "maa": "CPV",
+  "era": "e04",
+  "kaupunki": {
+    "id": "praia",
+    "name": "Praia",
+    "wiki": "Praia",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 14.9177,
+      "lon": -23.5092
+    }
+  },
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "saatiedot": null
+}

@@ -1,0 +1,489 @@
+{
+  "artikkeli": {
+    "intro": "Alger on Algerian pääkaupunki, jonka valkeat talot nousevat **Välimeren rannalta rinteeseen**. Sen arabiankielinen nimi tarkoittaa saaria, vaikka kaupunki sijaitsee mantereella. Nimi säilyttää muiston sataman edustan vanhoista saarista. Rannan bulevardien takana alkaa Casbah, kapeiden kujien ja sisäpihojen asuttu vanha kaupunki. Casbah tarkoitti aluksi linnoitusta, joka kohoaa kaupunginosan yläpuolella.\n\nAntiikin sataman paikalle syntyi keskiajalla medina, jota osmanikauden palatsit ja moskeijat täydensivät. **Isoisän matkavuonna 1873** Alger oli jo Ranskan siirtomaavallan alainen, ja alakaupunkia oli muokattu uusilla kaduilla. Vanhojen talojen sisäpihoilla säilyi toisenlainen tilan järjestys kuin avaralla rantakadulla. Kaupungin historiaa voi lukea myös Hamma-puutarhasta, joka aloitti toimintansa kasvien kokeilupaikkana.",
+    "teksti": "Algerin vanha kaupunki liittyy keskiajan ziridikauteen, mutta paikalla oli satama jo antiikin aikana. Arabiankielinen al-Jazāʾir viittaa rannikon saariin. Kalkittujen talojen valkeus puolestaan kuuluu ranskankieliseen nimitykseen Alger la Blanche.\n\nCasbah on maailmanperintökohde ja samalla asukkaiden kaupunginosa. Sen rakennuskulttuuri yhdistää palatsit, tavalliset kodit, hammamit, moskeijat ja kauppakujat. Sisäpiha on monen talon keskus, mutta pienillä tonteilla on myös pihattomia rakennustyyppejä.\n\nVuonna 1873 vanhojen osmanirakennusten rinnalla oli siirtomaakauden muuttama Alger. Ketchaouan nykyinen moskeijarakennus oli tuolloin katolinen katedraali. Hamma-puutarha oli jo taimitarha, mutta kaupungin metro ja palatsien nykyiset museot kuuluvat myöhempään aikaan."
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Alger",
+      "johdanto": "Valkean rantakaupungin takana alkaa Casbah, jossa talot kääntyvät sisäpihojensa ympärille.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Saaret jäivät nimeen",
+          "teksti": "Algerin arabiankielinen nimi al-Jazāʾir tarkoittaa saaria. Kaupunki ei silti seiso saarella: nimi viittaa sen rannikon vanhoihin saariin ja sataman varhaiseen paikkaan. Saaria liitettiin myöhemmin sataman yhteyteen, mutta sana jäi elämään. Sitä ennen paikalla tunnettiin antiikin Ikosim ja Icosium. Myös kaupungin ranskankielinen lisänimi kertoo maisemasta: Alger la Blanche, valkoinen Alger, liittyy kalkittuihin taloihin. Samalla paikalla on siis ollut eri nimiä, joista kukin säilyttää oman jälkensä.",
+          "wiki": "Algiers",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaupunki, joka nousee portaita",
+          "teksti": "Casbahin nimi tarkoitti aluksi linnoitusta, mutta laajeni koko vanhaan kaupunkiin. Ylhäällä olivat asuinkorttelit, alhaalla hallinto, kauppa ja satama. Niiden välillä kuljetaan kapeilla kujilla, portaissa ja sabat-nimisissä holvatuissa käytävissä. Reitti voi päättyä umpikujaan. Kujaverkko on vaatinut myös omat kuljetustapansa: toimituksia ja jätteitä on kuljetettu aaseilla. Casbah ei ole pelkkä historiallinen näyttämö, vaan asuttu kaupunginosa, jonka kodit ja kauppapaikat kuuluvat samaan kaupunkirakenteeseen.",
+          "wiki": "Casbah of Algiers",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Merenrantakorttelin muisti",
+          "teksti": "Palais des Rais eli Bastion 23 yhdistää palatseja ja vanhoja kalastajien taloja aivan merenrannassa. Se säilyttää palan alemman Casbahin rakennuskantaa. Ranskan ajan rantakortteleiden uudelleenjärjestely erotti kokonaisuuden vanhasta ympäristöstään. Rakennuksilla on ollut monia käyttötapoja; niissä on toiminut muun muassa konsulaatti ja kirjasto. Nykyisin kokonaisuus on taiteen ja kulttuurin keskus. Palatsi ei tässä tarkoita yhtä suurta taloa, vaan rannalle ryhmittynyttä historiallista korttelia.",
+          "wiki": "Palais des Rais",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Puutarhan nimessä on koe",
+          "teksti": "Jardin d’essai du Hamma on koepuutarha myös nimeltään: ranskan essai tarkoittaa kokeilua. Puutarha perustettiin 1800-luvun alkupuolella alueelle, jonka suomaata kuivattiin malliviljelmää ja kasvikokeita varten. Siitä kehittyi hallinnon taimitarha, joka tuotti puita julkisiin istutuksiin ja siirtomaakauden uudisasukkaille. Puutarha laajeni jo ennen vuotta 1873. Nykyinen kasvitieteellinen vierailukohde kasvoi siis myös käytännön työpaikasta, jossa viljeltiin ja lisättiin kasveja.",
+          "wiki": "Botanical Garden Hamma",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Algerissa rannikon bulevardit ja Casbahin rinnekujat tarjoavat erilaiset kävelyreitit. Metro tuo vanhankaupungin alareunaan. Kujille kannattaa ottaa paikallinen opas ja lähteä päiväsaikaan. Hamma-puutarha ja kukkulakirkko ovat omia retkiään keskustan ulkopuolella. Matka edellyttää huolellista suunnittelua ja maahantuloehtojen tarkistamista.",
+        "artikkeli": {
+          "nimi": "Matkailijan Alger",
+          "taitto": "opas",
+          "teksti": "Casbahin palatsit, merenrantakortteli ja Hamma avaavat kaupungin eri kerrokset.",
+          "nosto": "Casbahin palatsit, merenrantakortteli ja Hamma avaavat kaupungin eri kerrokset.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Houari Boumedienen lentoasemalta on takseja ja lähijunayhteys Algerin seudulle. Kaupungissa liikutaan metrolla, raitiovaunulla, busseilla ja takseilla. Place des Martyrs -asema on Casbahin alareunan lähellä. Vanhankaupungin kujilla kuljetaan kävellen; rinne ja portaat vaikuttavat reittiin.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Casbahin sisäpihat",
+              "teksti": "Ketchaoua-moskeija ja Dar Aziza ovat Casbahin alareunassa. Dar Mustapha Pachan palatsissa toimii miniatyyrien, illuminoinnin ja kalligrafian museo. Linnoitus on ylempänä rinteessä. Casbahissa kannattaa liikkua päiväsaikaan paikallisen oppaan kanssa ja muistaa, että kujat ovat myös asukkaiden kotikatuja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Rannalta Hammaan",
+              "teksti": "Raïsien palatsit kertovat vanhan merenrantakorttelin historiasta. Hamma-puutarha on Belouizdadin kaupunginosassa, erillään Casbahista. Kaupungin pohjoispuolen kukkulalla on Notre-Dame d’Afrique ja näkymä lahdelle. Älä rakenna retkeä vanhoihin tietoihin kaapelihissistä: yhteyden toimintaa ei voi niiden perusteella luvata.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Bourek on ohueen dyoul-taikinalevyyn tehty suolainen täytetty leivonnainen. Täytteenä voi olla esimerkiksi perunaa, lihaa, kanaa tai juustoa. Sitä tarjotaan alkupalana ja välipalana. Aterian alussa voi olla myös chorba-keittoa tai salaattia, jossa on paahdettua paprikaa, tomaattia, sipulia ja oliiviöljyä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Algerin ilmasto on välimerellinen, ja sateet painottuvat syksystä kevääseen. Kuumuus voi tehdä rinnekujien kävelystä raskasta, joten juomavesi ja levähdykset kuuluvat retkeen. Sää ja valittu kävelyreitti kannattaa ottaa huomioon päivän suunnitelmassa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Casbahin kujat",
+                "tahdet": 3,
+                "selite": "Asuttu vanha kaupunki nousee rannalta rinteeseen."
+              },
+              {
+                "mita": "Dar Mustapha Pacha",
+                "tahdet": 3,
+                "selite": "Palatsin sisäänkäynti ja piha kertovat rakennuskulttuurista."
+              },
+              {
+                "mita": "Raïsien palatsi",
+                "tahdet": 3,
+                "selite": "Palatsit ja kalastajien talot säilyttävät merenrantakorttelia."
+              },
+              {
+                "mita": "Hamma-puutarha",
+                "tahdet": 2,
+                "selite": "Koepuutarhasta kasvoi kasvitieteellinen vierailukohde."
+              },
+              {
+                "mita": "Notre-Dame d’Afrique",
+                "tahdet": 2,
+                "selite": "Kukkulakirkon ympäristö avautuu Algerin lahdelle."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Oppaan kanssa",
+                "teksti": "Casbahissa kannattaa kulkea päiväsaikaan paikallisen oppaan kanssa."
+              },
+              {
+                "otsikko": "Portaat",
+                "teksti": "Rinnekujat vaativat kävelyä ja voivat sisältää jyrkkiä portaita."
+              },
+              {
+                "otsikko": "Kuvaaminen",
+                "teksti": "Noudata paikallisia kuvausrajoituksia ja pyydä ihmisiltä lupa."
+              },
+              {
+                "otsikko": "Matkan valmistelu",
+                "teksti": "Tarkista ajantasaiset maahantuloehdot ja matkustustiedote."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Casbahin talojen sisällä",
+      "johdanto": "Sisäpiha, ikkunat ja kujan ylle ulottuvat huoneet jakavat tiheän kaupungin tilaa.",
+      "nostot": [
+        {
+          "otsikko": "Isossa ovessa pieni ovi",
+          "teksti": "Dar Mustapha Pachan palatsin suureen pääoveen on sovitettu pieni kulkuovi. Pronssiniitein koristellun oven jälkeen vastaan tulee sqifa, sisäänkäyntihalli. Holvien alla on seinäsyvennyksiin tehtyjä penkkejä, ja sisäänkäyntitilat jatkuvat ennen varsinaista sisäpihaa. Pihalla marmorisarakkeet kannattavat kaarikäytäviä. Kaakelit, marmoriset ovenkehykset ja gallerioiden pienet puupalkit kuuluvat saman rakennuksen yksityiskohtiin. Palatsin sisäänkäynti on jo itsessään sarja tiloja, ennen kuin saavutaan talon keskelle.",
+          "wiki": "Dar Mustapha Pacha",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Talon keskellä on taivas",
+          "teksti": "Wast ad-dar tarkoittaa talon keskustaa: sisäpihaa, jonka ympärille huoneet ja käytävät järjestyvät. Dar Azizan palatsissa marmorisarakkeet kannattavat pihan kaaria, ja koristeluun kuuluu kaakeleita, veistettyä stukkoa sekä suihkulähde. Rinnetontin alimpiin tiloihin kuului varastoja, keittiöitä ja talleja. Myös tavallisten Casbah-talojen sisäpihat olivat perheiden yhteisiä tiloja ja vastaanottopaikkoja. Pihan kautta tuli valoa huoneisiin. Talon keskus ei siis välttämättä ollut huone, vaan avoin tila.",
+          "wiki": "Dar Aziza",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Talo kurottaa kujan päälle",
+          "teksti": "Kaikissa Casbahin taloissa ei ole sisäpihaa. Alaoui-talossa valo ja ilma tulevat ikkunoista, ja rakennustyyppi sopii pienelle tontille. Alimmissa tiloissa voi olla kauppaa tai varastointia, kun taas ylemmät huoneet ulottuvat ulokkeina kadun ylle. Näin talo käyttää tilaa myös kujan yläpuolelta. Chebk-talossa taas kapea piha sijaitsee yläkerrassa, usein suuremman talon pienen liitteen yhteydessä. Näitä taloja ei voi ymmärtää yhden palatsipihan mallilla: Casbahin tiheään rakenteeseen mahtuu monta ratkaisua.",
+          "wiki": "Casbah of Algiers",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Katto, kaivo ja kujan vesipiste",
+          "teksti": "Casbahin vesi kulki monenlaisten rakenteiden kautta. Akveduktit toivat sitä porttien lähistön säiliöihin ja edelleen julkisille vesipisteille. Talojen pihoilla oli kaivoja, ja katolta kerättiin sadevesiä maanalaisiin säiliöihin. Julkiseen juomavesipisteeseen liittyy sana sabil, paikannimissä myös sebala. Vesipisteiden rakentaminen kuului julkisen anteliaisuuden perinteeseen. Kadun alla oli lisäksi tiilinen viemäriverkosto, jonka putkissa käytettiin yhteen sovitettavia keramiikkaosia. Kaupungin historia jatkuu myös maanpinnan alla.",
+          "wiki": "Casbah of Algiers",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "tehtava": {
+        "kysymys": "Missä Casbahin talotyypissä valo ja ilma tulevat ikkunoista ilman sisäpihaa?",
+        "vaihtoehdot": [
+          "Alaoui-talossa",
+          "Chebk-talossa",
+          "Portiikkotalossa",
+          "Pihapalatsissa"
+        ],
+        "oikea": 0,
+        "fakta": "Alaoui-rakennuksessa ikkunat hoitavat tehtävää, joka monissa muissa taloissa kuuluu pihalle."
+      }
+    }
+  ],
+  "kysymykset": [
+    {
+      "q": "Minkä meren rannalla Alger sijaitsee?",
+      "options": [
+        "Välimeren",
+        "Punaisenmeren",
+        "Mustanmeren",
+        "Arabianmeren"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Meri erottaa Pohjois-Afrikan Etelä-Euroopasta.",
+      "fact": "Algerin satama on Algerian pohjoisrannikolla.",
+      "source": "https://en.wikipedia.org/wiki/Algiers"
+    },
+    {
+      "q": "Mitä Algerin arabiankielinen nimi tarkoittaa?",
+      "options": [
+        "Saaria",
+        "Portaita",
+        "Palatseja",
+        "Puistoja"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimi säilyttää muiston sataman varhaisesta ympäristöstä.",
+      "fact": "Al-Jazāʾir viittaa rannikon vanhoihin saariin.",
+      "source": "https://en.wikipedia.org/wiki/Algiers"
+    },
+    {
+      "q": "Mihin Casbah-nimi alun perin viittasi?",
+      "options": [
+        "Linnoitukseen",
+        "Taimitarhaan",
+        "Satamalaituriin",
+        "Kylpylään"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimen alkuperäinen paikka on vanhankaupungin korkealla puolella.",
+      "fact": "Linnoituksen nimi laajeni koko vanhaan kaupunkiin.",
+      "source": "https://en.wikipedia.org/wiki/Casbah_of_Algiers"
+    },
+    {
+      "q": "Mikä Hamma-puutarha oli alkuvaiheessaan?",
+      "options": [
+        "Koepuutarha",
+        "Eläintarha",
+        "Urheilupuisto",
+        "Hautausmaa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Ranskankielisessä nimessä on kokeilua tarkoittava sana.",
+      "fact": "Hamma alkoi malliviljelmänä ja kasvien kokeilupaikkana.",
+      "source": "https://en.wikipedia.org/wiki/Botanical_Garden_Hamma"
+    },
+    {
+      "q": "Missä käytössä Ketchaouan rakennus oli vuonna 1873?",
+      "options": [
+        "Katedraalina",
+        "Moskeijana",
+        "Museona",
+        "Kirjastona"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Rakennuksen nykyinen nimi ei kerro sen siirtomaakauden käytöstä.",
+      "fact": "Ketchaoua oli tuolloin Saint-Philippen katolinen kirkko.",
+      "source": "https://en.wikipedia.org/wiki/Ketchaoua_Mosque"
+    }
+  ],
+  "tiedot": [
+    "Djamaa el Djedidin osmanityyliset kupolit yhdistyvät pohjoisafrikkalaiseen nelikulmaiseen minareettiin.",
+    "Dar Mustapha Pachan suureen pääoveen on sovitettu pieni kulkuovi.",
+    "Djamaa el Kebirin vanha puinen saarnatuoli liikkui pyörillä; nykyään se on museossa."
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Casbah yhdistää linnoituksen, moskeijat, palatsit ja asuinkorttelit. Sen historiallinen ydin ulottuu rinteestä merenrantaan.",
+    "rajat": {
+      "pohjoinen": 36.7912,
+      "etela": 36.7817,
+      "lansi": 3.0515,
+      "ita": 3.0677
+    },
+    "kohteet": [
+      {
+        "nimi": "Casbahin linnoitus",
+        "lat": 36.78444,
+        "lon": 3.055
+      },
+      {
+        "nimi": "Ketchaoua-moskeija",
+        "lat": 36.785,
+        "lon": 3.06056
+      },
+      {
+        "nimi": "Dar Mustapha Pacha",
+        "lat": 36.78566,
+        "lon": 3.06084
+      },
+      {
+        "nimi": "Djamaa el Djedid",
+        "lat": 36.7849,
+        "lon": 3.06301
+      },
+      {
+        "nimi": "Djamaa el Kebir",
+        "lat": 36.78528,
+        "lon": 3.06417
+      },
+      {
+        "nimi": "Raïsien palatsi",
+        "lat": 36.7884,
+        "lon": 3.0641
+      },
+      {
+        "nimi": "Sidi Abderrahmanen mausoleumi",
+        "lat": 36.78846,
+        "lon": 3.05956
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Casbahin linnoitus": {
+      "aika": "1500-luku",
+      "teksti": "Casbahin linnoitus sijaitsee vanhankaupungin korkealla puolella. Se antoi nimensä kaupunginosalle, joka levittäytyy rinnettä alas kohti merta. Osmanikauden kokonaisuuteen kuului hallitsijan palatsin lisäksi moskeijoita, kylpytiloja, puutarhoja ja puolustusrakennuksia. Palatsin huoneet, keittiöt ja hammamit liittyivät sisäpihan ympärille rakentuvaan kokonaisuuteen.\n\nDeyt siirsivät hallintonsa ja asuinpaikkansa tänne 1800-luvun alkupuolella. Rakennusten koristelussa käytettiin keramiikkaa, ja arkkitehtuurissa yhdistyvät maurilaiset, osmaniset ja eurooppalaiset piirteet. Linnoitus oli olemassa vuonna 1873, mutta Alger oli jo Ranskan siirtomaavallan alainen. Siirtomaakaudella tie halkaisi vanhaa linnoituskokonaisuutta.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Ketchaoua-moskeija": {
+      "aika": "1600-luku; nykyinen rakennus 1800-luvulta",
+      "teksti": "Ketchaoua sijaitsee Casbahin alareunassa. Moskeijan dokumentoitu historia ulottuu 1600-luvulle, mutta nykyistä rakennusta ei voi pitää sellaisenaan tuon ajan moskeijana. Ranskan siirtomaakauden alussa paikasta tehtiin Saint-Philippen katedraali. Vanhaa rakennusta purettiin ja tilalle rakennettiin katedraali 1800-luvun puolivaiheilla.\n\nVuonna 1873 rakennus oli siis katolisessa kirkkokäytössä. Nykyisin se toimii jälleen moskeijana. Sisäänkäyntiin noustaan portaita, ja sitä kehystävät minareetit. Rakennuksen marmoriset osat ja maurilaisia sekä bysanttilaisia piirteitä yhdistävä koristelu kuuluvat sen kerroksiseen historiaan. Sama paikka ja nykyinen nimi eivät tässä merkitse yhtä muuttumatonta rakennusta tai käyttötapaa.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Dar Mustapha Pacha": {
+      "aika": "1700-luvun loppu",
+      "teksti": "Dar Mustapha Pacha rakennettiin Casbahiin Mustapha Pachalle 1700-luvun lopulla. Palatsin suureen pääoveen on sovitettu pieni kulkuovi, ja ovessa on pronssiniittikoristelua. Sisäänkäyntihalleissa on holveja ja seinäsyvennyksiin tehtyjä penkkejä. Sisäpihaa ympäröivät marmorisarakkeiden kannattamat kaarikäytävät, joista avautuu suuria huoneita.\n\nKaakeliseinät, marmoriset ovenkehykset ja gallerioiden puupalkit ovat osa talon rakennuskulttuuria. Palatsi oli olemassa jo vuonna 1873. Sen nykyinen tehtävä on myöhempi: rakennuksessa toimii miniatyyrien, illuminoinnin ja kalligrafian kansallismuseo. Palatsin rakennusvaihe ja nykyinen museo kuuluvat eri aikoihin.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Djamaa el Djedid": {
+      "aika": "1600-luku",
+      "teksti": "Djamaa el Djedid tarkoittaa Uutta moskeijaa, vaikka rakennus on peräisin osmanikauden 1600-luvulta. Se sijaitsee Place des Martyrs -aukion merenpuoleisella laidalla ja tunnettiin myös kalastajien moskeijana. Suuren keskuskupolin ympärillä on pienempiä kupoleita ja holvattuja osia. Kupolien osmaniset piirteet yhdistyvät nelikulmaiseen pohjoisafrikkalaiseen minareettiin.\n\nSisätiloissa eri rakennusperinteet kohtaavat edelleen: rukoussyvennyksessä on andalusialaisia piirteitä ja saarnatuolissa italialaista marmoria. Moskeija oli olemassa vuonna 1873. Sen nimi kertoo vanhasta erosta muihin kaupungin moskeijoihin, eikä siitä, että rakennus olisi nykyajan uusi tulokas.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Djamaa el Kebir": {
+      "aika": "1000-luku; myöhempiä lisäyksiä",
+      "teksti": "Djamaa el Kebir on Casbahin historiallinen moskeija sataman lähellä. Sen alkuperäinen rakennus kuuluu almoravidikaudelle, 1000-luvun loppuun. Myöhemmät rakentajat täydensivät ja uudistivat kokonaisuutta: minareetti on alkuperäistä rakennusta nuorempi keskiaikainen lisäys. Rukoussalissa valkoiset pilarit ja hevosenkenkäkaaret jakavat tilan pitkittäisiin käytäviin.\n\nRanskan siirtomaakauden alkupuolella ulkopuolelle lisättiin kaarikäytävä, jossa käytettiin puretun al-Sa’ida-moskeijan marmorisarakkeita. Tämäkin kerros oli olemassa vuonna 1873. Vanha puinen minbar eli saarnatuoli oli pyörillä liikuteltava; sitä säilytetään nykyään museossa. Paikan nykyinen saarnatuoli ja historiallinen esine kuuluvat siten eri vaiheisiin.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Raïsien palatsi": {
+      "aika": "1500–1700-luvut",
+      "teksti": "Raïsien palatsi eli Palais des Rais on merenrannan rakennuskokonaisuus, joka tunnetaan myös nimellä Bastion 23. Siihen kuuluu palatseja ja vanhoja kalastajien taloja. Alueen puolustusrakenteiden historia alkaa 1500-luvulta, kun taas palatsiosat ovat nuorempia. Kokonaisuus säilyttää alemman Casbahin merenrantaperintöä kaupungissa, jonka rantakortteleita järjestettiin siirtomaakaudella uudelleen.\n\nRakennuksia käytettiin eri aikoina asuntoina, konsulaattina ja kirjastona. Vanha kokonaisuus oli olemassa vuonna 1873, mutta sen kaikkien talojen käyttötapaa juuri tuolloin ei tunneta. Restauroituna se toimii nykyisin taiteen ja kulttuurin keskuksena. Bastion-nimi ja rakennusten numerointi kuuluvat alueen Ranskan ajan kartoituksen historiaan.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Sidi Abderrahmanen mausoleumi": {
+      "aika": "1400-luvun hautapaikka; mausoleumi 1600-luvulta",
+      "teksti": "Mausoleumi liittyy oppineeseen Sidi Abd al-Rahman al-Tha’alibiin, jota Algerissa pidetään kaupungin suojeluspyhimyksenä. Hautapaikan ja uskonnollisen yhteisön juuret ovat 1400-luvulla; historiallisen mausoleumin arkkitehtuuri kuuluu myöhempään 1600-luvun vaiheeseen. Zawiya-kokonaisuuteen kuuluu hautarakennuksen lisäksi moskeija ja hautausmaata.\n\nMausoleumin sisustuksessa on kalligrafisia tekstiaiheita, ja siihen liittyvässä moskeijassa kupoleita sekä koristeltu minareetti. Hautausmaalle on haudattu myös muita Algerin historian henkilöitä. Kokonaisuuden vanhat osat olivat olemassa vuonna 1873. Vieressä oleva Thaâlibiyya-madrassa on sen sijaan 1900-luvun alusta, joten kaikkia naapurirakennuksia ei pidä tulkita saman ikäisiksi.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "ehdotukset": {
+    "lentoasema": "Houari Boumediene Airport (ALG)",
+    "huomiot": [
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
+    ]
+  },
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "alger",
+  "maa": "DZA",
+  "era": "e04",
+  "kaupunki": {
+    "id": "alger",
+    "name": "Alger",
+    "wiki": "Alger",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 36.7764,
+      "lon": 3.0586
+    }
+  },
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "saatiedot": null
+}

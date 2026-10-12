@@ -1,0 +1,383 @@
+{
+  "artikkeli": {
+    "intro": "Nouakchott on Mauritanian pääkaupunki **Saharan ja Atlantin rajalla**. Sen nykyinen kaupunkisuunnitelma syntyi 1900-luvun puolivälissä. Paikka ei kuitenkaan ollut tyhjä: pääkaupunkia edelsi linnoitettu rannikon kalastajakylä. Isoisän matkavuonna 1873 nykyistä suunniteltua suurkaupunkia ei vielä ollut. Myöhemmän 1900-luvun kuivuudet ja aavikoituminen vauhdittivat muuttoa kaupunkiin.\n\nLeveiden katujen hallintokeskuksesta kasvoi myös kaupan ja työn kaupunki. Kalastajarannassa puuveneiden saalis myydään ja kuljetetaan eteenpäin, kun taas tavaralaivojen syväsatama on erillinen paikka. Toreilla kaupungin yhteydet ulottuvat joskus avaruuteen asti, sillä Nouakchottissa myydään Saharasta löydettyjä meteoriitteja. Kaupungin reunoilla on puolestaan tehty työtä liikkuvan hiekan sitomiseksi oksa-aidoilla ja **elävällä vihervyöhykkeellä**.",
+    "teksti": "Nouakchottin pääkaupunkiasema kuuluu Mauritanian itsenäistymistä edeltäneeseen 1900-luvun puoliväliin. Vanhempi rannikkokylä jäi uuden kaupungin lähtökohdaksi. Suunnitelman hallintopainotus ei ennakoinut kaupan myöhempää merkitystä: asuinalueille syntyi myös laajoja ulkoilmamarkkinoita.\n\nAtlantin ranta yhdistää kaupungin kalastukseen. Saalis tuodaan pienveneistä rantaan, missä toimivat jälleenmyyjät ja kalankäsittelijät. Tuotteita kuljetetaan kaupunkiin ja myös käsittelyyn sekä vientiin. Kalastajaranta ja teollinen Friendship Port ovat eri kohteita.\n\nAavikon puolella kaupungin kasvua on seurannut hiekan sitomisen työ. Dokumentoiduissa hankkeissa oksa-aidat vakauttivat dyynejä ennen istutuksia. Taimien suojaaminen ja asukkaiden osallistuminen kuuluivat vihervyöhykkeen kunnostamiseen."
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Nouakchott",
+      "johdanto": "Saharan laidalle suunniteltu pääkaupunki kasvoi toreista ja työpaikoista; Atlantin rannassa jatkuu kalastuksen arki.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Ruudukko täyttyi kaupasta",
+          "teksti": "Nouakchottin uusi keskusta suunniteltiin leveiden katujen ruudukoksi. Sen päätehtäväksi ajateltiin hallintoa, eikä kaupalle ja muille elinkeinoille odotettu suurta roolia. Kaupungin arki kehittyi toisin. Cinquième Quartierista tuli asuinalue ja suuren ulkoilmamarkkinan paikka, ja uudet kaupunginosat kasvoivat vanhan ksarin ohi merkitykseltään. Nykyiseen keskustaan kuuluvat yritykset, pankit ja torit. Alkuperäinen suunnitelma on osa kaupungin historiaa, mutta sen perusteella ei voi arvata, millaista elämää kaduille syntyi.",
+          "wiki": "Nouakchott",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Saalis vaihtaa kulkuneuvoa",
+          "teksti": "Atlantin kalastajarannalle tuodaan saalista puuveneillä. Rannassa työ jatkuu: kalaa myydään, perataan ja kuljetetaan edelleen kaupungin myyntipaikkoihin. Osa tuotteista menee käsittelyyn, pakkaamiseen ja vientiin. Tämä on pienimuotoisen kalastuksen rantautumisalue, eikä sama paikka kuin tavaralaivojen Friendship Port -syväsatama. Veneistä käytetään nimeä pirogue, mutta sana ei tarkoita, että jokainen alus olisi koverrettu yhdestä rungosta. Ranta on työpaikka, jossa merimatka muuttuu saaliin seuraavaksi matkaksi.",
+          "wiki": "Fish market (Nouakchott)",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Avaruuskivi kauppatiskillä",
+          "teksti": "Nouakchottissa myydään myös Saharan alueelta löydettyjä meteoriitteja. Taivaalla näkyvä valoilmiö on meteori, mutta maahan asti päätynyt kappale on meteoriitti. Se voi olla kivinen, rautapitoinen tai näiden yhdistelmä. Paljaalla kivitasangolla tumma kappale voi erottua ympäristöstään. Kaupassa sillä ei silti aina ole mukana tarkkaa löytöpaikkaa: monen Luoteis-Afrikan meteoriitin löytötiedot puuttuvat. Kiven myyntipaikka ei kerro sen putoamispaikkaa, eikä pelkkä kauppanimi todista kappaleen aitoutta.",
+          "wiki": "Nouakchott",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Teen vaahto tehdään kaatamalla",
+          "teksti": "Mauritaniassa juodaan yleisesti minttuteetä, joka kaadetaan korkealta lasiin vaahdon muodostamiseksi. Pinnalle syntyvä vaahto kuuluu siis valmistustapaan. Tee voi tulla vastaan myös kaupassa tarjottuna, mutta sitä ei pidä odottaa jokaisessa liikkeessä. Maan ruokaperinteessä aterioita nautitaan yhdessä, ja keittiössä on vaikutteita sekä pohjoisesta että etelästä. Nouakchottin syöminen ei kuitenkaan rajoitu yhteen perinteeseen: ruokapaikoissa on myös voileipiä ja muita nykyisen kaupungin arkisia ruokia.",
+          "wiki": "Mauritanian cuisine",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Nouakchottissa keskusta ja kalastajaranta ovat eri retkikohteita. Jaetut taksit kuuluvat kaupungin liikkumiseen. Ranta on ennen kaikkea työn ja kaupankäynnin paikka. Torit ja museon vanhat kokoelmat avaavat kaupungin toisen puolen. Matkustaminen vaatii valmistautumista, ja kaupungin ulkopuolisilla retkillä on huomioitava aluekohtaiset rajoitukset.",
+        "artikkeli": {
+          "nimi": "Matkailijan Nouakchott",
+          "taitto": "opas",
+          "teksti": "Tutustu kalastajarannan työhön ja nykyisen pääkaupungin torielämään.",
+          "nosto": "Tutustu kalastajarannan työhön ja nykyisen pääkaupungin torielämään.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Nouakchott–Oumtounsyn kansainvälinen lentoasema on kaupungin pohjoispuolella. Kaupungissa käytetään myös jaettuja takseja; sovi kulkuehdoista ennen lähtöä. Kaupunkialueen ulkopuolelle suuntautuva retki vaatii paikallista osaamista ja aluekohtaisten rajoitusten selvittämistä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kalastajarannan työpäivä",
+              "teksti": "Port de Pêche on pienveneiden rantautumis- ja kalakaupan alue. Saaliin purkaminen riippuu päivän toiminnasta. Anna tilaa työntekijöille, veneille ja kuljetuksille. Kalastajaranta on eri paikka kuin teollinen syväsatama, eikä sitä pidä tulkita tavalliseksi uimarannaksi: meressä on voimakkaita virtauksia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Torit ja vanhat kokoelmat",
+              "teksti": "Marché Capitale, Marché Sixième ja Marocaine ovat erillisiä torinimiä. Kansallismuseon arkeologisiin ja etnografisiin aineistoihin kuuluu kivityökaluja, keramiikansirpaleita, nuolenkärkiä ja pukeutumiseen liittyviä kokoelmia. Vanhojen esineiden historia on paljon nykyistä pääkaupunkia pidempi; selvitä museon vierailumahdollisuus erikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kala, riisi ja tee",
+              "teksti": "Kala-riisiruoka thieboudienne kuuluu Mauritanian rannikon ruokaperinteeseen. Nouakchottissa tarjotaan myös kalaa, mereneläviä ja arkisia voileipiä. Minttuteessä korkea kaato muodostaa vaahtoa. Nämä ovat maan ja rannikon ruokataustaa, eivät kaupungin yksinoikeudella keksimiä ruokia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Saharan ja Atlantin välissä",
+              "teksti": "Nouakchott on aavikon rannikkokaupunki, jonka ympärillä tuuli liikuttaa hiekkaa. Rantaretken ja keskustassa liikkumisen olot voivat siksi poiketa toisistaan. Varaudu aurinkoon ja tuuleen sekä pidä päivän reitti joustavana.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Kalastajaranta",
+                "tahdet": 3,
+                "selite": "Saalis tuodaan pienveneistä rantakauppaan."
+              },
+              {
+                "mita": "Torielämä",
+                "tahdet": 2,
+                "selite": "Markkinat ovat kaupungin asioinnin ja työn paikkoja."
+              },
+              {
+                "mita": "Museon vanhat kokoelmat",
+                "tahdet": 2,
+                "selite": "Arkeologinen aineisto kertoo pääkaupunkia vanhemmasta historiasta."
+              },
+              {
+                "mita": "Eläinmarkkina",
+                "tahdet": 2,
+                "selite": "Itälaidalla kaupataan dromedaareja ja muita kotieläimiä."
+              },
+              {
+                "mita": "Minttutee",
+                "tahdet": 1,
+                "selite": "Korkea kaato tekee teen pinnalle vaahtoa."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Kuljetukset",
+                "teksti": "Suosi valoisaan aikaan tehtäviä siirtymiä ja järjestä kuljetus etukäteen."
+              },
+              {
+                "otsikko": "Käteinen",
+                "teksti": "Korttimaksua ei voi olettaa kaikkialla."
+              },
+              {
+                "otsikko": "Ranta",
+                "teksti": "Voimakkaat virtaukset vaativat varovaisuutta; älä suunnittele yksin tehtävää pimeän rantaretkeä."
+              },
+              {
+                "otsikko": "Kuvaaminen",
+                "teksti": "Pyydä ihmisiltä lupa ja noudata kuvauskieltoja."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Hiekka ei pysy paikallaan",
+      "johdanto": "Dyynien sitominen on yhdistänyt oksa-aitoja, kasveja ja paikallisten toimijoiden työtä.",
+      "nostot": [
+        {
+          "otsikko": "Hiekanjyvä voi hypätä",
+          "teksti": "Tuuli kuljettaa hiekkaa eri tavoin. Suuret jyvät vierivät tai liukuvat maata pitkin, toiset etenevät hypyin. Hieno pöly voi puolestaan jäädä ilmaan pidemmäksi aikaa. Nouakchottiin kulkeutuu hiekkaa myös kaupungin itäpuolen dyyneiltä. Kasvillisuus auttaa pitämään maanpintaa koossa, mutta pelkkä kasvin läsnäolo ei kerro koko alueen suojauksesta. Hiekan liikkeen ymmärtäminen on kuulunut kaupungin ympärillä tehtyyn dyynien vakauttamistyöhön: kaikki tuulen mukana kulkeva aines ei etene samalla tavalla.",
+          "wiki": "Nouakchott",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Aita, jonka läpi tuuli kulkee",
+          "teksti": "Nouakchottin dyynien vakauttamishankkeessa käytettiin oksa-aitoja ennen kasvien istuttamista. Aidan tehtävä oli hidastaa tuulta ja saada hiekkaa kertymään. Siksi sen piti päästää ilmaa lävitseen, eikä muodostaa täysin umpinaista seinää. Aitoja asetettiin ruudukoksi ja korotettiin hiekan kertyessä. Mekaaninen vakauttaminen auttoi luomaan istutuksille vakaamman pinnan. Menetelmä kertoo dokumentoidusta työstä kaupungin ympärillä; se ei tarkoita, että jokainen nykyinen dyyni olisi aidattu samalla tavalla.",
+          "wiki": "Nouakchott",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Vihervyö tarvitsee hoitajia",
+          "teksti": "Nouakchottin ympärille on istutettu vihervyöhykettä, jonka tarkoitus on suojata kaupunkia hiekan kertymiseltä. Vanhoja istutuksia kuormittivat kasvava kaupunki ja maankäyttö, joten vyöhykettä kunnostettiin ja laajennettiin. Vakaammille pinnoille istutettiin ruoho- ja puuvartisia kasveja. Nuoret istutukset tarvitsivat suojaa myös laidunnukselta. Työhön osallistui asukkaita ja paikallisia toimijoita. Vihervyö ei näin ollut vain kartalle piirretty vihreä kaista, vaan istutuksia ja niiden suojaamiseen liittyvää työtä.",
+          "wiki": "Nouakchott",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Rannikkokasvin täytyy kestää suolaa",
+          "teksti": "Rannikon ja sisämaan dyyneille ei Nouakchottin hankkeessa valittu automaattisesti samoja kasveja. Rannikkoistutuksissa tarvittiin suolaisuutta kestäviä lajeja, kuten Nitraria retusaa ja tamariskeja. Istuttaminen ajoitettiin maan kostumiseen, ja taimia kasteltiin tarvittaessa. Kuljetuksen aikana niitä suojattiin kuivattavalta auringolta ja tuulelta. Kasvin valinta oli siis vain osa työtä: myös siirtäminen, oikea kasvupaikka ja taimien hoito kuuluivat istutusten perustamiseen. Tämä kuvaa hanketta, ei kaikkien dyynien yleistä ohjetta.",
+          "wiki": "Nouakchott",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "tehtava": {
+        "kysymys": "Mitä varten hiekan sitomisessa käytetään läpäisevää oksa-aitaa?",
+        "vaihtoehdot": [
+          "Hidastamaan tuulta",
+          "Varastoimaan vettä",
+          "Laskemaan veneitä",
+          "Luokittelemaan kiviä"
+        ],
+        "oikea": 0,
+        "fakta": "Ilmaa läpäisevä este vaimentaa tuulen liikettä ja auttaa hiekkaa kertymään."
+      }
+    }
+  ],
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Nouakchott on?",
+      "options": [
+        "Mauritanian",
+        "Senegalin",
+        "Algerian",
+        "Marokon"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa sijaitsee Saharan länsilaidalla.",
+      "fact": "Nouakchott on Mauritanian hallinnon pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Nouakchott"
+    },
+    {
+      "q": "Mikä valtameri on Nouakchottin kalastajarannan edustalla?",
+      "options": [
+        "Atlantti",
+        "Intian valtameri",
+        "Tyynimeri",
+        "Jäämeri"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Ranta on Afrikan länsipuolella.",
+      "fact": "Nouakchottin rannikko avautuu länteen.",
+      "source": "https://en.wikipedia.org/wiki/Nouakchott"
+    },
+    {
+      "q": "Mikä asutus edelsi nykyistä suunniteltua pääkaupunkia?",
+      "options": [
+        "Kalastajakylä",
+        "Rautatiekeskus",
+        "Kaivoskaupunki",
+        "Yliopistoalue"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Paikan vanhempi elämä liittyi rantaan.",
+      "fact": "Nouakchottia edelsi linnoitettu rannikon kylä.",
+      "source": "https://en.wikipedia.org/wiki/Nouakchott"
+    },
+    {
+      "q": "Mikä on kalastajarannan keskeinen tehtävä?",
+      "options": [
+        "Saaliin maihintuonti",
+        "Tavaralaivojen huolto",
+        "Suolan teollinen louhinta",
+        "Öljysäiliöiden täyttö"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Pienveneiden työ jatkuu rannassa.",
+      "fact": "Kala myydään ja siirretään rannan kautta kaupungin myyntipaikoille.",
+      "source": "https://en.wikipedia.org/wiki/Fish_market_(Nouakchott)"
+    },
+    {
+      "q": "Miksi kutsutaan avaruudesta maanpinnalle asti päätynyttä kappaletta?",
+      "options": [
+        "Meteoriitiksi",
+        "Meteoriksi",
+        "Komeetaksi",
+        "Nebulaksi"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Taivaan valoilmiöllä ja maasta löytyvällä kappaleella on eri nimet.",
+      "fact": "Meteoriitti on maanpinnalle päätynyt kappale; meteori on valoilmiö.",
+      "source": "https://en.wikipedia.org/wiki/Meteorite"
+    }
+  ],
+  "tiedot": [
+    "Nouakchottin suunniteltu pääkaupunki kasvoi vanhemman linnoitetun kalastajakylän paikalle.",
+    "Kalastajaranta ja tavaralaivojen Friendship Port -syväsatama ovat eri paikkoja.",
+    "Saharasta myydyn meteoriitin tarkka löytöpaikka voi olla tuntematon; kauppapaikka ei ole putoamispaikka."
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Atlantin kalastajaranta on nykyisen kaupungin työpaikka. Sen kautta saalis siirtyy mereltä kauppaan ja jatkokäsittelyyn.",
+    "rajat": {
+      "pohjoinen": 18.10633,
+      "etela": 18.10033,
+      "lansi": -16.02911,
+      "ita": -16.02311
+    },
+    "kohteet": [
+      {
+        "nimi": "Kalastajaranta",
+        "tyyppi": "luonto",
+        "lat": 18.10333,
+        "lon": -16.02611
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Kalastajaranta": {
+      "aika": "nykykaupunki",
+      "teksti": "Nouakchottin kalastajaranta sijaitsee kaupungin länsipuolella Atlantin äärellä. Pienveneiden saalis tuodaan tänne myyntiin ja jatkokuljetukseen. Puuveneitä vedetään rannalle, ja työntekijät käsittelevät niiden tuomaa kalaa. Alueella toimivat jälleenmyyjät ja kalanperkaajat; osa tuotteista kulkee myös käsittelyyn, pakkaamiseen ja vientiin.\n\nPaikka tunnetaan nimellä Port de Pêche, mutta se ei ole sama satama kuin kaupungin teollinen Friendship Port. Markkina-alueen tarkkaa perustamisaikaa ei tunneta. Vuonna 1873 paikalla oli nykyistä pääkaupunkia edeltävää rannikon asutusta, mutta tämän päivän venejonoa tai markkinarakenteita ei voi siirtää siihen aikaan. Ranta on toimiva työalue, jonka kävijä kohtaa työn ehdoilla.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "ehdotukset": {
+    "lentoasema": "Nouakchott–Oumtounsy International Airport (NKC)",
+    "huomiot": [
+      "Kartta partial: vain Kalastajaranta. Muut A5:n paikat odottavat paikallisfaktoja, WP/WD-pistettä tai kohde-/teosrajausta.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
+    ]
+  },
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "nouakchott",
+  "maa": "MRT",
+  "era": "e04",
+  "kaupunki": {
+    "id": "nouakchott",
+    "name": "Nouakchott",
+    "wiki": "Nouakchott",
+    "ambience": "aavikko",
+    "pallo": {
+      "lat": 18.0858,
+      "lon": -15.9785
+    }
+  },
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "saatiedot": null
+}

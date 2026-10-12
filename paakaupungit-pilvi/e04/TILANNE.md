@@ -53,3 +53,9 @@ Conakry D: 2 VÄÄRIN, 2 EPÄVARMA. E1 teki seitsemän sanatarkkaa JSON-korjaust
 Tunis B/C: 22 katsottua kuvaa ja kaksi sallittua kuvatonta opasjaksoa; C:n alkuperäinen kone- ja verkkotarkistus 0 virhettä / 0 varoitusta. D:n riippumaton tarkistus on kesken, erityisesti kaakeli-, stukko- ja puukoristepinnat sekä epäselvät kasvot. Luonnosta ei lasketa valmiiksi B/C/F-vaiheeksi pelkän koneportin perusteella.
 
 Tunis D: 1 VÄÄRIN / 6 EPÄVARMA, 22 alkuperäistä kuvaa katsottu. E1 toteutti 28 kokonaisen merkkijonokentän tyhjennystä: C3:n luettavat kasvot sekä H2/H3/H4/O3/N5/N6:n erilliset koristepinnat ilman riittävää oikeusketjua. Muu JSON, kartta, numerot ja D/C-raporttien alkuperäiset osat säilyivät byte-/arvotarkasti. Pääsession F: 7 kuvavirhettä / 0 varoitusta / 15 kuvaa. Ei valmis-C/E/F tai valmis-kaupunki. Sää48/48 ja karttapisteet6/6 varmennettiin alkuperäislähteistä; koristeiden oikeuksia ei väitetä ratkaistuiksi.
+
+## Omistajan uusi tekstityön nopeutus12.10.2026
+
+Omistaja pyysi oleellista nopeutusta sekä enemmän sessioita/agentteja tavoitteenaan10x nopeus.30 pysyvää rinnakkaista sessiota luotu erillisille kaupunkijaoille. Kuvat pyydetty erillisestä Matkakirjan kuvat -putkesta, ensimmäinen Conakryn Camayennen kapokkipuut. Kirjoitetut tekstit eivät odota kuvia, puuttuvia karttapisteitä tai erillistä sääauditointia; puutteita ei arvata. Tekstiluonnoksen valmius ei ole sama kuin valmis-A–F, sisältöhyväksyntä, pelikytkentä tai julkaisu.
+
+Välitallennus 2026-10-12T07:40:36.871526+00:00: tekstiluonnoksia 91/93 (97,8 %), osaluonnokset ja edelleen keskeneräiset kohdat omissa C-muistioissaan. Tässä erässä tallennetut ydinluonnokset: rabat, alger, nouakchott, praia, banjul, bissau, conakry, monrovia, tunis. Riippumattomat D-tarkistukset ja kuvien täydentäminen jatkossa. Tämä commit on tuotannon välitallennus, ei valmis-erätoimitus.
