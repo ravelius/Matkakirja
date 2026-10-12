@@ -1,0 +1,1657 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e09",
+  "city": "biskek",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+  "assets": [
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e09-biskek-o3-20261012-v1",
+      "galleryImageID": "e09-biskek-o3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ruokatorin tuoreista elintarvikkeista.",
+        "lyhyt": "Havainnekuva ruokatorin tuoreista elintarvikkeista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ruokatorin tuoreista elintarvikkeista.",
+        "lyhyt": "Havainnekuva ruokatorin tuoreista elintarvikkeista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2bf8076234215440cc80629b667daf3091d5abe8db28fd5a92d472fc6506ae6b",
+      "exportSHA256": "3ffbc1ee76dac08b36409991b7d2688d42cef980f1c9e1790a10ce1ade913041",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6",
+        "subjectTitle": "Torille tai konttikujille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-o3-20261012-v1/original.png",
+            "nativeSha256Verified": "2bf8076234215440cc80629b667daf3091d5abe8db28fd5a92d472fc6506ae6b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vihanneksia, juureksia ja hedelmiä puisissa laatikoissa. Epäsäännölliset muodot, multaisuus ja lehtisuonet luontevia; ei henkilöitä tai hintakylttejä.",
+            "captionFi": "Havainnekuva ruokatorin tuoreista elintarvikkeista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Osh-tori on Biškekin arkinen ostospaikka: myynnissä on ruokaa, vaatteita ja kodin tavaroita. Dordoi kaupungin pohjoispuolella on toisen mittakaavan kauppapaikka, jossa tuontituotteita myydään konttien muodostamilla kujilla. Torin nimi Osh ei tarkoita, että olisit siirtynyt Oshin kaupunkiin. Valitse ostosretken kohde sen mukaan, haluatko tutustua tavalliseen ruokatoriin vai laajaan tukku- ja vähittäiskaupan alueeseen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "O3 kertoo Osh-torista ruoan ostospaikkana; paikallisen lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Buy / Osh Bazaar: fresh farm produce",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Tuoretuotteiden yleinen toriasetelma sopii oppaan ruokatori-aiheeseen. Selite ei väitä kuvaa todelliseksi Osh-torin kojuksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva ruokatorin tuoreista elintarvikkeista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e09-biskek-o3-20261012-v1",
+          "sha256": "2bf8076234215440cc80629b667daf3091d5abe8db28fd5a92d472fc6506ae6b",
+          "verdict": "accepted",
+          "reason": "Tuoretuotteiden yleinen toriasetelma sopii oppaan ruokatori-aiheeseen. Selite ei väitä kuvaa todelliseksi Osh-torin kojuksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-o3-20261012-v1/original.png",
+            "nativeSha256Verified": "2bf8076234215440cc80629b667daf3091d5abe8db28fd5a92d472fc6506ae6b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vihanneksia, juureksia ja hedelmiä puisissa laatikoissa. Epäsäännölliset muodot, multaisuus ja lehtisuonet luontevia; ei henkilöitä tai hintakylttejä.",
+            "captionFi": "Havainnekuva ruokatorin tuoreista elintarvikkeista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Osh-tori on Biškekin arkinen ostospaikka: myynnissä on ruokaa, vaatteita ja kodin tavaroita. Dordoi kaupungin pohjoispuolella on toisen mittakaavan kauppapaikka, jossa tuontituotteita myydään konttien muodostamilla kujilla. Torin nimi Osh ei tarkoita, että olisit siirtynyt Oshin kaupunkiin. Valitse ostosretken kohde sen mukaan, haluatko tutustua tavalliseen ruokatoriin vai laajaan tukku- ja vähittäiskaupan alueeseen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "O3 kertoo Osh-torista ruoan ostospaikkana; paikallisen lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Buy / Osh Bazaar: fresh farm produce",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:28:18.862440+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png?t=3ffbc1ee76dac08b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+        "sha256": "3ffbc1ee76dac08b36409991b7d2688d42cef980f1c9e1790a10ce1ade913041",
+        "bytes": 2784021,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-biskek-o3-20261012-v1",
+        "nativeSHA256": "2bf8076234215440cc80629b667daf3091d5abe8db28fd5a92d472fc6506ae6b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "biskek",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T18:31:15.059077+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
+        "sha256": "3ffbc1ee76dac08b36409991b7d2688d42cef980f1c9e1790a10ce1ade913041",
+        "bytes": 2784021,
+        "SHAReadAt": "2026-10-12T18:29:54.794580+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2bf8076234215440cc80629b667daf3091d5abe8db28fd5a92d472fc6506ae6b",
+        "rgbPixelSHA256": "dfd27c6f16addda838adce794524a69ebb5032d13e0d5b0c14ba6995bf6a2801",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e09-biskek-o4-20261012-v1",
+      "galleryImageID": "e09-biskek-o4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva lagman-nuudeleista.",
+        "lyhyt": "Havainnekuva lagman-nuudeleista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva lagman-nuudeleista.",
+        "lyhyt": "Havainnekuva lagman-nuudeleista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7c4d121070204c5534fa30ca564ce2951d377bb530a90c53fb082dd4d2d47a80",
+      "exportSHA256": "3ff42922b3edfeb1c58412e3ab3d4739bd74627c3a6ca559573ebcb0af3aa000",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-o4-20261012-v1/original.png",
+            "nativeSha256Verified": "7c4d121070204c5534fa30ca564ce2951d377bb530a90c53fb082dd4d2d47a80",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulhossa paksuja mutkittelevia nuudeleita, kasviksia ja lihapaloja. Luonteva kastike, vaihteleva muoto ja päivänvalo; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Havainnekuva lagman-nuudeleista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ruokalistalta voi etsiä bešbarmakia, plov-riisiruokaa, šašlik-vartaita tai samsa-leivonnaisia. Kaupungissa tarjotaan myös uiguurilaista ruokaa, kuten lagman-nuudeleita, ja venäläisiä ruokia. Paikallinen gamburger on oma katuruokansa: sämpylän välissä on tavallisesti dönerin tapaan leikattua lihaa ja lisukkeita. Ruoan nimi ei aina kerro koko sisältöä, joten kysy täytteistä ja lihasta, jos jokin aines ei sovi sinulle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "O4 ja hash-varmennettu lähdetiedosto mainitsevat lagman-nuudelit.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Eat: Uyghur lagman",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Paksut nuudelit, kasvikset ja liha sopivat lagmanin yleiseen havainnollistukseen. Selite ei liitä annosta tiettyyn ruokapaikkaan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva lagman-nuudeleista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e09-biskek-o4-20261012-v1",
+          "sha256": "7c4d121070204c5534fa30ca564ce2951d377bb530a90c53fb082dd4d2d47a80",
+          "verdict": "accepted",
+          "reason": "Paksut nuudelit, kasvikset ja liha sopivat lagmanin yleiseen havainnollistukseen. Selite ei liitä annosta tiettyyn ruokapaikkaan.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-o4-20261012-v1/original.png",
+            "nativeSha256Verified": "7c4d121070204c5534fa30ca564ce2951d377bb530a90c53fb082dd4d2d47a80",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulhossa paksuja mutkittelevia nuudeleita, kasviksia ja lihapaloja. Luonteva kastike, vaihteleva muoto ja päivänvalo; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Havainnekuva lagman-nuudeleista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ruokalistalta voi etsiä bešbarmakia, plov-riisiruokaa, šašlik-vartaita tai samsa-leivonnaisia. Kaupungissa tarjotaan myös uiguurilaista ruokaa, kuten lagman-nuudeleita, ja venäläisiä ruokia. Paikallinen gamburger on oma katuruokansa: sämpylän välissä on tavallisesti dönerin tapaan leikattua lihaa ja lisukkeita. Ruoan nimi ei aina kerro koko sisältöä, joten kysy täytteistä ja lihasta, jos jokin aines ei sovi sinulle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "O4 ja hash-varmennettu lähdetiedosto mainitsevat lagman-nuudelit.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Eat: Uyghur lagman",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:27:51.245944+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png?t=3ff42922b3edfeb1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+        "sha256": "3ff42922b3edfeb1c58412e3ab3d4739bd74627c3a6ca559573ebcb0af3aa000",
+        "bytes": 2325622,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-biskek-o4-20261012-v1",
+        "nativeSHA256": "7c4d121070204c5534fa30ca564ce2951d377bb530a90c53fb082dd4d2d47a80",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "biskek",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:31:12.746522+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
+        "sha256": "3ff42922b3edfeb1c58412e3ab3d4739bd74627c3a6ca559573ebcb0af3aa000",
+        "bytes": 2325622,
+        "SHAReadAt": "2026-10-12T18:29:54.681060+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7c4d121070204c5534fa30ca564ce2951d377bb530a90c53fb082dd4d2d47a80",
+        "rgbPixelSHA256": "7677311bc751462bb573dae75649a903083d26f7149a6431457e316dbb21ddfd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e09-biskek-k1-20261012-v1",
+      "galleryImageID": "e09-biskek-k1-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahteen kerrokseen pinotuista konteista.",
+        "lyhyt": "Havainnekuva kahteen kerrokseen pinotuista konteista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahteen kerrokseen pinotuista konteista.",
+        "lyhyt": "Havainnekuva kahteen kerrokseen pinotuista konteista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f3078244db8ee37d3469889e6e4908a82575755b35c4c3d13fea043158d3fe90",
+      "exportSHA256": "56ed3f46369f7aa97c9d7e5c18c10bfa07b451537424ed9c755fc9cdfa33dfba",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+        "semanticContextSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+        "subjectTitle": "Kontti kahdessa kerroksessa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-k1-20261012-v1/original.png",
+            "nativeSha256Verified": "f3078244db8ee37d3469889e6e4908a82575755b35c4c3d13fea043158d3fe90",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tekstittömiä aaltopeltikontteja, alemmat avattu kauppakäyttöön ja ylempi kontti niiden yläpuolella. Luontevaa ruostetta ja anonyymejä tavaroita; ei ihmisiä, kylttejä tai kaupunkipanoraamaa.",
+            "captionFi": "Havainnekuva kahteen kerrokseen pinotuista konteista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dordoin basaarissa laivakontti saa uuden ammatin. Kontteja on pinottu päällekkäin: alakerrassa myydään, yläkerta palvelee varastona. Kujat ja tavaralajeittain jakautuvat alueet muodostavat suuren kauppapaikan Biškekin pohjoispuolelle. Täältä kulkee etenkin Kiinasta tuotuja tuotteita myös muihin Keski-Aasian maihin. Kyseessä on sekä tukku- että vähittäiskaupan paikka, joten vierekkäin liikkuvat yksittäinen ostaja ja jälleenmyyjä. Kaupan rakennusaine on sama laatikko, jolla tavaraa kuljetetaan maailmalla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "K1 ja hash-varmennettu lähdetiedosto kuvaavat alakerran myynti- ja yläkerran varastokäyttöä. Kuva hyväksytään yleisenä järjestelyn havainnollistuksena.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Dordoy_Bazaar",
+                "section": "Stacked-container trading arrangement",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Dordoy_Bazaar.txt",
+                "sha256": "bbeadb70cf2347521c9a97bc1d3c9b72915798ffa4db4cf5fad711b275857b8d"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Konttien pinoaminen kahteen tasoon havainnollistaa tekstin toiminnallista rakennetta. Selite ei nimeä kuvaa Dordoin todelliseksi kujuksi tai kojuksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kahteen kerrokseen pinotuista konteista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e09-biskek-k1-20261012-v1",
+          "sha256": "f3078244db8ee37d3469889e6e4908a82575755b35c4c3d13fea043158d3fe90",
+          "verdict": "accepted",
+          "reason": "Konttien pinoaminen kahteen tasoon havainnollistaa tekstin toiminnallista rakennetta. Selite ei nimeä kuvaa Dordoin todelliseksi kujuksi tai kojuksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-k1-20261012-v1/original.png",
+            "nativeSha256Verified": "f3078244db8ee37d3469889e6e4908a82575755b35c4c3d13fea043158d3fe90",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tekstittömiä aaltopeltikontteja, alemmat avattu kauppakäyttöön ja ylempi kontti niiden yläpuolella. Luontevaa ruostetta ja anonyymejä tavaroita; ei ihmisiä, kylttejä tai kaupunkipanoraamaa.",
+            "captionFi": "Havainnekuva kahteen kerrokseen pinotuista konteista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dordoin basaarissa laivakontti saa uuden ammatin. Kontteja on pinottu päällekkäin: alakerrassa myydään, yläkerta palvelee varastona. Kujat ja tavaralajeittain jakautuvat alueet muodostavat suuren kauppapaikan Biškekin pohjoispuolelle. Täältä kulkee etenkin Kiinasta tuotuja tuotteita myös muihin Keski-Aasian maihin. Kyseessä on sekä tukku- että vähittäiskaupan paikka, joten vierekkäin liikkuvat yksittäinen ostaja ja jälleenmyyjä. Kaupan rakennusaine on sama laatikko, jolla tavaraa kuljetetaan maailmalla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "K1 ja hash-varmennettu lähdetiedosto kuvaavat alakerran myynti- ja yläkerran varastokäyttöä. Kuva hyväksytään yleisenä järjestelyn havainnollistuksena.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Dordoy_Bazaar",
+                "section": "Stacked-container trading arrangement",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Dordoy_Bazaar.txt",
+                "sha256": "bbeadb70cf2347521c9a97bc1d3c9b72915798ffa4db4cf5fad711b275857b8d"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:26:18.485442+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png?t=56ed3f46369f7aa9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+        "sha256": "56ed3f46369f7aa97c9d7e5c18c10bfa07b451537424ed9c755fc9cdfa33dfba",
+        "bytes": 2606213,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-biskek-k1-20261012-v1",
+        "nativeSHA256": "f3078244db8ee37d3469889e6e4908a82575755b35c4c3d13fea043158d3fe90",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "biskek",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T18:28:02.628616+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
+        "sha256": "56ed3f46369f7aa97c9d7e5c18c10bfa07b451537424ed9c755fc9cdfa33dfba",
+        "bytes": 2606213,
+        "SHAReadAt": "2026-10-12T18:29:54.576193+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f3078244db8ee37d3469889e6e4908a82575755b35c4c3d13fea043158d3fe90",
+        "rgbPixelSHA256": "b31bfef4efb427a87910c4fe3ac405db2e4b270687dc3065ea33511388bc4b0d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+      "contextAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e09-biskek-k3-20261012-v1",
+      "galleryImageID": "e09-biskek-k3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa.",
+        "lyhyt": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa.",
+        "lyhyt": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0126754ed8fc7343c0736b6711dad685c01a817a2fafd1ecc70233aeac966c2a",
+      "exportSHA256": "146ee0cb4875de590778cd1deb7fb1f1448175b67e0459ccaca0b550cf574564",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+        "semanticContextSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+        "subjectTitle": "Hampurilainen lainausmerkeissä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-k3-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "pngColorType": 2,
+            "captionFi": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape educational editorial illustration for a Finnish travel game, preferably native PNG in sRGB, 1536x1024, 3:2. This is a generalized illustrative scene, not a documentary photograph of a named location. Natural photographic realism with plausible daylight, restrained color, tactile nonrepeating materials, honest depth of field. No text, letters, logos, watermark, border, identifiable faces, buildings, sculptures, protected artwork or brand packaging. Primary request: Photorealistic close food photograph of a Kyrgyz gamburger: a modest bread bun filled with thin shaved döner-style cooked meat, cabbage slaw, cucumber, mayonnaise and ketchup, with a few potato pieces as a side. The filling must visibly be sliced meat, not a round minced-beef burger patty. Plain small plate, anonymous street-food counter, soft daylight, no hands or faces, no brand.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Eat: gamburger ingredients",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "sourceContentSHA256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "reviewedAt": "2026-10-12T18:15:23.631995+00:00"
+          },
+          "qaReason": "Katsottu silmin: sämpylän välissä on selvästi ohuita leikattuja lihaviipaleita, kaalisalaattia, kurkkua sekä valkoista ja punaista kastiketta, vierellä perunalohkoja. Ei jauhelihapihviä. Leipä, täytteet, lautanen ja nimetön taustatiski ovat uskottavia; ei kasvoja, tekstiä, brändejä tai suojattua teosta. Wikivoyagen gamburger-kohdan mukainen yleiskuvitus, ei tietyn ruokapaikan aito kuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+        "fileSHA256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e09-biskek-k3-20261012-v1",
+          "sha256": "0126754ed8fc7343c0736b6711dad685c01a817a2fafd1ecc70233aeac966c2a",
+          "verdict": "accepted",
+          "reason": "Katsottu silmin: sämpylän välissä on selvästi ohuita leikattuja lihaviipaleita, kaalisalaattia, kurkkua sekä valkoista ja punaista kastiketta, vierellä perunalohkoja. Ei jauhelihapihviä. Leipä, täytteet, lautanen ja nimetön taustatiski ovat uskottavia; ei kasvoja, tekstiä, brändejä tai suojattua teosta. Wikivoyagen gamburger-kohdan mukainen yleiskuvitus, ei tietyn ruokapaikan aito kuva.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-k3-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "pngColorType": 2,
+            "captionFi": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape educational editorial illustration for a Finnish travel game, preferably native PNG in sRGB, 1536x1024, 3:2. This is a generalized illustrative scene, not a documentary photograph of a named location. Natural photographic realism with plausible daylight, restrained color, tactile nonrepeating materials, honest depth of field. No text, letters, logos, watermark, border, identifiable faces, buildings, sculptures, protected artwork or brand packaging. Primary request: Photorealistic close food photograph of a Kyrgyz gamburger: a modest bread bun filled with thin shaved döner-style cooked meat, cabbage slaw, cucumber, mayonnaise and ketchup, with a few potato pieces as a side. The filling must visibly be sliced meat, not a round minced-beef burger patty. Plain small plate, anonymous street-food counter, soft daylight, no hands or faces, no brand.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Eat: gamburger ingredients",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "sourceContentSHA256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "reviewedAt": "2026-10-12T18:15:23.631995+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png?t=146ee0cb4875de59",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+        "sha256": "146ee0cb4875de590778cd1deb7fb1f1448175b67e0459ccaca0b550cf574564",
+        "bytes": 2266576,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-biskek-k3-20261012-v1",
+        "nativeSHA256": "0126754ed8fc7343c0736b6711dad685c01a817a2fafd1ecc70233aeac966c2a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "biskek",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:16:22.112636+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
+        "sha256": "146ee0cb4875de590778cd1deb7fb1f1448175b67e0459ccaca0b550cf574564",
+        "bytes": 2266576,
+        "SHAReadAt": "2026-10-12T18:29:54.471840+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0126754ed8fc7343c0736b6711dad685c01a817a2fafd1ecc70233aeac966c2a",
+        "rgbPixelSHA256": "f919f014a92ec193445ddc69bd23392e2307476ac8f189c14e1e90fe8edb662e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+      "contextAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e09-biskek-l1-20261012-v1",
+      "galleryImageID": "e09-biskek-l1-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva savesta rakennusmateriaalina.",
+        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva savesta rakennusmateriaalina.",
+        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0a3cd7d2ac5a48f3b56e4fb43831ebdac8d15c0240ae84e5c6a831b321b5463b",
+      "exportSHA256": "62b4a8a953ee6ad72a672410a1c2f3a80d1c286b6b66867504bb19267b2b41fd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+        "semanticContextSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+        "subjectTitle": "Ensin oli Pišpek",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-l1-20261012-v1/original.png",
+            "nativeSha256Verified": "0a3cd7d2ac5a48f3b56e4fb43831ebdac8d15c0240ae84e5c6a831b321b5463b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kuivunut savinen maa-aineskappale säröineen ja rakeineen. Luontevat murtopinnat ja irtomurut, ei rakennuksia, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva savesta rakennusmateriaalina.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Biškekin paikalla oli karavaanireittejä palvellut Pišpekin linnoitus ennen nykyistä pääkaupunkia. Kokandin kaanikunta rakennutti savilinnoituksen 1800-luvulla, ja myöhemmin alue siirtyi Venäjän vallan alle. Linnoitus tuhoutui ja asutus kasvoi uudelleen. Isoisän matkavuosi 1873 osuu tähän Pišpekin vaiheeseen. Nykyisen ruutukaavan, museoiden ja kerrostalojen kaupunkia ei pidä siirtää sellaisenaan hänen aikaansa. Paikalla oli jo asutusta, mutta pääkaupunkiasema tuli vasta neuvostokaudella seuraavalla vuosisadalla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "L1 mainitsee savilinnoituksen; kuvateksti rajaa kuvan materiaalin havainnollistukseksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bishkek",
+                "section": "Kokhand rule: fortified location with a mud fort",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek.txt",
+                "sha256": "fa2585b8b179f61fa5958a97a3678e5d390ff84063b16fae3f3de1ee0decfbe3"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Savinen rakennusmateriaali sopii Pišpekin savilinnoituksen aiheeseen. Kuva ei rekonstruoi linnoitusta tai väitä näytettä historialliseksi löydöksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva savesta rakennusmateriaalina.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e09-biskek-l1-20261012-v1",
+          "sha256": "0a3cd7d2ac5a48f3b56e4fb43831ebdac8d15c0240ae84e5c6a831b321b5463b",
+          "verdict": "accepted",
+          "reason": "Savinen rakennusmateriaali sopii Pišpekin savilinnoituksen aiheeseen. Kuva ei rekonstruoi linnoitusta tai väitä näytettä historialliseksi löydöksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-l1-20261012-v1/original.png",
+            "nativeSha256Verified": "0a3cd7d2ac5a48f3b56e4fb43831ebdac8d15c0240ae84e5c6a831b321b5463b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kuivunut savinen maa-aineskappale säröineen ja rakeineen. Luontevat murtopinnat ja irtomurut, ei rakennuksia, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva savesta rakennusmateriaalina.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "targetCurrentlyPresent": true,
+            "targetText": "Biškekin paikalla oli karavaanireittejä palvellut Pišpekin linnoitus ennen nykyistä pääkaupunkia. Kokandin kaanikunta rakennutti savilinnoituksen 1800-luvulla, ja myöhemmin alue siirtyi Venäjän vallan alle. Linnoitus tuhoutui ja asutus kasvoi uudelleen. Isoisän matkavuosi 1873 osuu tähän Pišpekin vaiheeseen. Nykyisen ruutukaavan, museoiden ja kerrostalojen kaupunkia ei pidä siirtää sellaisenaan hänen aikaansa. Paikalla oli jo asutusta, mutta pääkaupunkiasema tuli vasta neuvostokaudella seuraavalla vuosisadalla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "L1 mainitsee savilinnoituksen; kuvateksti rajaa kuvan materiaalin havainnollistukseksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bishkek",
+                "section": "Kokhand rule: fortified location with a mud fort",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek.txt",
+                "sha256": "fa2585b8b179f61fa5958a97a3678e5d390ff84063b16fae3f3de1ee0decfbe3"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:28:55.304604+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png?t=62b4a8a953ee6ad7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+        "sha256": "62b4a8a953ee6ad72a672410a1c2f3a80d1c286b6b66867504bb19267b2b41fd",
+        "bytes": 2586706,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-biskek-l1-20261012-v1",
+        "nativeSHA256": "0a3cd7d2ac5a48f3b56e4fb43831ebdac8d15c0240ae84e5c6a831b321b5463b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "biskek",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:31:16.827505+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
+        "sha256": "62b4a8a953ee6ad72a672410a1c2f3a80d1c286b6b66867504bb19267b2b41fd",
+        "bytes": 2586706,
+        "SHAReadAt": "2026-10-12T18:29:54.902712+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0a3cd7d2ac5a48f3b56e4fb43831ebdac8d15c0240ae84e5c6a831b321b5463b",
+        "rgbPixelSHA256": "02f2593a6def57ff13569ee4014866894450bb88adc5e03f9ea09549d644ecbe",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+      "contextAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e09-biskek-photo-2035e8ad840c5be7",
+      "galleryImageID": "capital-cc-e09-biskek-photo-2035e8ad840c5be7",
+      "commonsFile": "Бишкек, Карагачевая роща, крапива.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
+        "suora": true,
+        "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
+        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
+        "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
+        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
+        "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
+        "suora": true,
+        "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
+        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
+        "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2035e8ad840c5be7b889ddb920ea21ca3d39bef75ff57c405e6e511a958931a0",
+      "exportSHA256": "2035e8ad840c5be7b889ddb920ea21ca3d39bef75ff57c405e6e511a958931a0",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/cc-search/original-04.jpg",
+      "dimensions": [
+        4896,
+        3672
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+        "semanticContextSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+        "subjectTitle": "biskek — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Екатерина Борисова",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D1%87%D0%B5%D0%B2%D0%B0%D1%8F_%D1%80%D0%BE%D1%89%D0%B0,_%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D0%B0.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C_%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D1%87%D0%B5%D0%B2%D0%B0%D1%8F_%D1%80%D0%BE%D1%89%D0%B0%2C_%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D0%B0.jpg",
+        "rightsEvidence": {
+          "selection": "Alkuperäinen Description nimeää Urtica dioica in Karagach grove, Bishkek, Kyrgyzstan. Author Екатерина Борисова, Own work, CC BY-SA 4.0. Luonnon kasveja, ei tekijänoikeuden suojaamaa veistosta, arkkitehtuuria tai kuvitettua teospintaa. Suojelualueen nimitys koskee luontoa; ei rakennuksen iästä tehtyä oikeusvapausoletusta.",
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-500deb44081c8e9c/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-500deb44081c8e9c/source.html",
+            "sourceHTMLSHA256": "e977de507de1fad09c5795274bc788ef9f108a2d3269e4032d97c2fc4b51d6f3",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D1%87%D0%B5%D0%B2%D0%B0%D1%8F_%D1%80%D0%BE%D1%89%D0%B0,_%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D0%B0.jpg",
+            "sourceDescription": "Русский: Карагачёвая роща: Бишкек, Свердловский район English: Urtica dioica in Karagach grove, Bishkek , Kyrgyzstan",
+            "sourceDate": "27 April 2025, 13:57:15",
+            "author": "Екатерина Борисова",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4896,
+            "height": 3672,
+            "rightsEvidence": "Alkuperäinen Description nimeää Urtica dioica in Karagach grove, Bishkek, Kyrgyzstan. Author Екатерина Борисова, Own work, CC BY-SA 4.0. Luonnon kasveja, ei tekijänoikeuden suojaamaa veistosta, arkkitehtuuria tai kuvitettua teospintaa. Suojelualueen nimitys koskee luontoa; ei rakennuksen iästä tehtyä oikeusvapausoletusta.",
+            "sourceContentSHA256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
+          },
+          "qaReason": "Alkuperäinen luontovalokuva katsottu: aidot nokkoskasvit ja maa, ei kasvoja tai tekstiä. Lähteen Description nimeää Karagach groven, Bishkek, Kyrgyzstan; näin tarkka kaupunkipaikka on osoitettu. Captionin paikallinen puistoyhteys sopii. Екатерина Борисова / CC BY-SA4.0 Author/Licensing-kentistä. PHOTO voi olla kaupungin luontoyksityiskohta; sille ei lisätä panoraamapakkoa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nokkosia Biškekin Karagach-lehdossa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+        "fileSHA256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Бишкек, Карагачевая роща, крапива.jpg",
+          "sha256": "2035e8ad840c5be7b889ddb920ea21ca3d39bef75ff57c405e6e511a958931a0",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen luontovalokuva katsottu: aidot nokkoskasvit ja maa, ei kasvoja tai tekstiä. Lähteen Description nimeää Karagach groven, Bishkek, Kyrgyzstan; näin tarkka kaupunkipaikka on osoitettu. Captionin paikallinen puistoyhteys sopii. Екатерина Борисова / CC BY-SA4.0 Author/Licensing-kentistä. PHOTO voi olla kaupungin luontoyksityiskohta; sille ei lisätä panoraamapakkoa.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-500deb44081c8e9c/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-500deb44081c8e9c/source.html",
+            "sourceHTMLSHA256": "e977de507de1fad09c5795274bc788ef9f108a2d3269e4032d97c2fc4b51d6f3",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D1%87%D0%B5%D0%B2%D0%B0%D1%8F_%D1%80%D0%BE%D1%89%D0%B0,_%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D0%B0.jpg",
+            "sourceDescription": "Русский: Карагачёвая роща: Бишкек, Свердловский район English: Urtica dioica in Karagach grove, Bishkek , Kyrgyzstan",
+            "sourceDate": "27 April 2025, 13:57:15",
+            "author": "Екатерина Борисова",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4896,
+            "height": 3672,
+            "rightsEvidence": "Alkuperäinen Description nimeää Urtica dioica in Karagach grove, Bishkek, Kyrgyzstan. Author Екатерина Борисова, Own work, CC BY-SA 4.0. Luonnon kasveja, ei tekijänoikeuden suojaamaa veistosta, arkkitehtuuria tai kuvitettua teospintaa. Suojelualueen nimitys koskee luontoa; ei rakennuksen iästä tehtyä oikeusvapausoletusta.",
+            "sourceContentSHA256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "biskek",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Бишкек, Карагачевая роща, крапива.jpg",
+        "sha256": "2035e8ad840c5be7b889ddb920ea21ca3d39bef75ff57c405e6e511a958931a0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D1%87%D0%B5%D0%B2%D0%B0%D1%8F_%D1%80%D0%BE%D1%89%D0%B0,_%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D0%B0.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C_%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D1%87%D0%B5%D0%B2%D0%B0%D1%8F_%D1%80%D0%BE%D1%89%D0%B0%2C_%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D0%B0.jpg",
+        "author": "Екатерина Борисова",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4896,
+        "height": 3672,
+        "originalSHA256": "2035e8ad840c5be7b889ddb920ea21ca3d39bef75ff57c405e6e511a958931a0",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
+        "bytes": 11387928,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:21:48.063202+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg",
+        "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
+        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "lyhyt": "Nokkosia Biškekin Karagach-lehdossa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
+        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
+        "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+      "contextAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e09-biskek-n1-605a07c3f1fc2238",
+      "galleryImageID": "capital-cc-e09-biskek-n1-605a07c3f1fc2238",
+      "commonsFile": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Osh-tori\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Osh-tori",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
+        "suora": true,
+        "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
+        "suora": true,
+        "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "605a07c3f1fc2238ba20bacb727d97549b81638abc42aaeb427f5f8e31364d00",
+      "exportSHA256": "605a07c3f1fc2238ba20bacb727d97549b81638abc42aaeb427f5f8e31364d00",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/cc-gap-search/original-06.jpg",
+      "dimensions": [
+        4476,
+        3581
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e41c0a9e871e3bca50280658e7a9527cc9d497d90277ebb539532e6628e64bc6",
+        "semanticContextSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31",
+        "subjectTitle": "Osh-tori",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "ElenaLitera",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%8B%D1%80%D0%B3%D0%B7%D1%81%D1%82%D0%B0%D0%BD,_%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9E%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D0%B0%D0%B7%D0%B0%D1%80,_%D1%82%D0%B0%D0%BD%D0%B4%D1%8B%D1%80%D0%BD%D1%8B%D0%B5_%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%BA%D0%B8_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/%D0%9A%D1%8B%D1%80%D0%B3%D0%B7%D1%81%D1%82%D0%B0%D0%BD%2C_%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C_%D0%9E%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D0%B0%D0%B7%D0%B0%D1%80%2C_%D1%82%D0%B0%D0%BD%D0%B4%D1%8B%D1%80%D0%BD%D1%8B%D0%B5_%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%BA%D0%B8_%281%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+            "subject": "Tavallinen leipä ja perinteiset paisto-/siemenkuviot. Ei yksilöityä suojattua taideteosta tai arkkitehtuuria. Alkuperäisen kuvan kuvaus nimeää Osh Bazaar, Bishkek; ei eri kaupungin tori. Kuva rajaa mainonnan ja henkilöt pois jo alkuperäisessä sommittelussa.",
+            "placeEvidence": [
+              "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan This media has been taken in the country: Kyrgyzstan",
+              "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан",
+              "English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan",
+              "I, the copyright holder of this work, hereby publish it under the following license:",
+              "This media was uploaded as part of Wiki Loves Folklore 2026 international photographic contest.",
+              "Quality image This image has been assessed using the Quality image guidelines and is considered a Quality image ."
+            ],
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/47df591d2d143b1e8213f4e89cb1f583e27cb54d65f24d59cd0613d84f35ce88.html",
+            "noBlanketFopOrAgeAssumption": true
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-106dfa8df214dda9/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-106dfa8df214dda9/source.html",
+            "sourceHTMLSHA256": "a8418a40b5d09c704ab553c3f80bfdbdb1a50ee81c5e3b57f575e1821b82c910",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%8B%D1%80%D0%B3%D0%B7%D1%81%D1%82%D0%B0%D0%BD,_%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9E%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D0%B0%D0%B7%D0%B0%D1%80,_%D1%82%D0%B0%D0%BD%D0%B4%D1%8B%D1%80%D0%BD%D1%8B%D0%B5_%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%BA%D0%B8_(1).jpg",
+            "sourceDescription": "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan",
+            "sourceDate": "27 April 2025, 11:29:45",
+            "author": "ElenaLitera",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 4476,
+            "height": 3581,
+            "rightsEvidence": {
+              "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+              "subject": "Tavallinen leipä ja perinteiset paisto-/siemenkuviot. Ei yksilöityä suojattua taideteosta tai arkkitehtuuria. Alkuperäisen kuvan kuvaus nimeää Osh Bazaar, Bishkek; ei eri kaupungin tori. Kuva rajaa mainonnan ja henkilöt pois jo alkuperäisessä sommittelussa.",
+              "placeEvidence": [
+                "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan This media has been taken in the country: Kyrgyzstan",
+                "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан",
+                "English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan",
+                "I, the copyright holder of this work, hereby publish it under the following license:",
+                "This media was uploaded as part of Wiki Loves Folklore 2026 international photographic contest.",
+                "Quality image This image has been assessed using the Quality image guidelines and is considered a Quality image ."
+              ],
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/47df591d2d143b1e8213f4e89cb1f583e27cb54d65f24d59cd0613d84f35ce88.html",
+              "noBlanketFopOrAgeAssumption": true
+            },
+            "sourceContentSHA256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "reviewedAt": "2026-10-12T20:00:03.932943+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/cc-gap-selection.json",
+            "selectionSHA256": "c82b7f3229b5a802b69ac73a141801e70921789490c76ee266062a6d671d7fbc"
+          },
+          "qaReason": "Alkuperäinen kuva katsottu itse: aidot tandoorileivät myyntitasolla, luonnollinen paistopinta/siemenet/taikinan leikkauskuviot. Ei ihmisiä/kasvoja, pakkausmainosta, tekstiä, vesileimaa tai kehystä. Lähteen venäjän- ja englanninkielinen Description nimeää nimenomaan Osh Bazaar, Bishkek, Kyrgyzstan; ei Oshin kaupungin toriksi vaihdettu paikkatieto. N1:n Osh-torin teksti kertoo elintarvikemyynnistä, joten paikallinen leipädetalji vastaa aihetta. ElenaLitera/CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä ja4476×3581/nativeSHA varmistettu. Kuvaus27.4.2025 säilyy. Tavallinen leipä ja paistojäljet eivät tässä yksilöi erillistä suojattua nykytaideteosta; Wiki Loves Folklore -kilpailumerkintä ei yksin nimeä tällaista teosta tai vapauta muita perinnekuvioita. Sama tiedosto ei ole toisessa kaupungin kuvapaikassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+        "fileSHA256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Osh-tori\"].kuvat[0]",
+          "commonsFile": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg",
+          "sha256": "605a07c3f1fc2238ba20bacb727d97549b81638abc42aaeb427f5f8e31364d00",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen kuva katsottu itse: aidot tandoorileivät myyntitasolla, luonnollinen paistopinta/siemenet/taikinan leikkauskuviot. Ei ihmisiä/kasvoja, pakkausmainosta, tekstiä, vesileimaa tai kehystä. Lähteen venäjän- ja englanninkielinen Description nimeää nimenomaan Osh Bazaar, Bishkek, Kyrgyzstan; ei Oshin kaupungin toriksi vaihdettu paikkatieto. N1:n Osh-torin teksti kertoo elintarvikemyynnistä, joten paikallinen leipädetalji vastaa aihetta. ElenaLitera/CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä ja4476×3581/nativeSHA varmistettu. Kuvaus27.4.2025 säilyy. Tavallinen leipä ja paistojäljet eivät tässä yksilöi erillistä suojattua nykytaideteosta; Wiki Loves Folklore -kilpailumerkintä ei yksin nimeä tällaista teosta tai vapauta muita perinnekuvioita. Sama tiedosto ei ole toisessa kaupungin kuvapaikassa.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-106dfa8df214dda9/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa-evidence/cc-106dfa8df214dda9/source.html",
+            "sourceHTMLSHA256": "a8418a40b5d09c704ab553c3f80bfdbdb1a50ee81c5e3b57f575e1821b82c910",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%8B%D1%80%D0%B3%D0%B7%D1%81%D1%82%D0%B0%D0%BD,_%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9E%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D0%B0%D0%B7%D0%B0%D1%80,_%D1%82%D0%B0%D0%BD%D0%B4%D1%8B%D1%80%D0%BD%D1%8B%D0%B5_%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%BA%D0%B8_(1).jpg",
+            "sourceDescription": "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan",
+            "sourceDate": "27 April 2025, 11:29:45",
+            "author": "ElenaLitera",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 4476,
+            "height": 3581,
+            "rightsEvidence": {
+              "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+              "subject": "Tavallinen leipä ja perinteiset paisto-/siemenkuviot. Ei yksilöityä suojattua taideteosta tai arkkitehtuuria. Alkuperäisen kuvan kuvaus nimeää Osh Bazaar, Bishkek; ei eri kaupungin tori. Kuva rajaa mainonnan ja henkilöt pois jo alkuperäisessä sommittelussa.",
+              "placeEvidence": [
+                "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan This media has been taken in the country: Kyrgyzstan",
+                "Русский: Продажа тандырных лепешек (национальный хлеб), Ошский базар, Бишкек, Кыргызстан",
+                "English: Tandoor lavash bread sale, Osh Bazaar, Bishkek, Kyrgyzstan",
+                "I, the copyright holder of this work, hereby publish it under the following license:",
+                "This media was uploaded as part of Wiki Loves Folklore 2026 international photographic contest.",
+                "Quality image This image has been assessed using the Quality image guidelines and is considered a Quality image ."
+              ],
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/47df591d2d143b1e8213f4e89cb1f583e27cb54d65f24d59cd0613d84f35ce88.html",
+              "noBlanketFopOrAgeAssumption": true
+            },
+            "sourceContentSHA256": "64209e5c1a68581d47e4d1ff7bd45cd0922d805823a52f0c3e061438ba1bd9ed",
+            "reviewedAt": "2026-10-12T20:00:03.932943+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/cc-gap-selection.json",
+            "selectionSHA256": "c82b7f3229b5a802b69ac73a141801e70921789490c76ee266062a6d671d7fbc"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "biskek",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Osh-tori\"].kuvat[0]",
+        "commonsFile": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg",
+        "sha256": "605a07c3f1fc2238ba20bacb727d97549b81638abc42aaeb427f5f8e31364d00",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%8B%D1%80%D0%B3%D0%B7%D1%81%D1%82%D0%B0%D0%BD,_%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,_%D0%9E%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D0%B0%D0%B7%D0%B0%D1%80,_%D1%82%D0%B0%D0%BD%D0%B4%D1%8B%D1%80%D0%BD%D1%8B%D0%B5_%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%BA%D0%B8_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/%D0%9A%D1%8B%D1%80%D0%B3%D0%B7%D1%81%D1%82%D0%B0%D0%BD%2C_%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C_%D0%9E%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D0%B0%D0%B7%D0%B0%D1%80%2C_%D1%82%D0%B0%D0%BD%D0%B4%D1%8B%D1%80%D0%BD%D1%8B%D0%B5_%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%BA%D0%B8_%281%29.jpg",
+        "author": "ElenaLitera",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4476,
+        "height": 3581,
+        "originalSHA256": "605a07c3f1fc2238ba20bacb727d97549b81638abc42aaeb427f5f8e31364d00",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
+        "bytes": 11507975,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:00:46.020812+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg",
+        "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "e41c0a9e871e3bca50280658e7a9527cc9d497d90277ebb539532e6628e64bc6",
+      "contextAfterSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

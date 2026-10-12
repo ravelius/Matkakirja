@@ -1,0 +1,1497 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e09",
+  "city": "islamabad",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+  "assets": [
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e09-islamabad-o4-20261012-v1",
+      "galleryImageID": "e09-islamabad-o4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva grillatusta ruoasta ja leivonnaisesta.",
+        "lyhyt": "Havainnekuva grillatusta ruoasta ja leivonnaisesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva grillatusta ruoasta ja leivonnaisesta.",
+        "lyhyt": "Havainnekuva grillatusta ruoasta ja leivonnaisesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f62e2b4b8837bc43c96c01fc21b9c98bf009332f2232e0be86e0b39180e662fb",
+      "exportSHA256": "6b185c9cc2d92053ba67983e088e304309df3c24fa0e84e014ba10abb67c9353",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "a86d2471041b5f4972d8f5705b880ffd3900c958f1c4dfaf3faa496ba95b944b",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-o4-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva grillatusta ruoasta ja leivonnaisesta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Islamabad",
+                "section": "Eat: grill restaurants and bakeries",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/voyage.txt",
+                "sha256": "5f1120cc065d839631842a09cbcaab393b1740bc36e56dc7c1cf196bc1b5ba32"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "independentOfProducer": true
+          },
+          "qaReason": "Jo aloitetun version oma katselu valmis: metallivartaiden ja lihojen rakenne johdonmukainen, kypsyys/pinnat luonnollisia, leipä ja tavalliset astiat ehjiä. Lähteen grilliravintolat ja leipomot tukevat yleistä ruokahavainnollistusta; ei nimettyä täsmäreseptiä, ravintolaa, paikkaa, kasvoja, logoja tai suojattua esinettä. Ei väitetä aidoksi Islamabadissa otetuksi annosvalokuvaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva grillatusta ruoasta ja leivonnaisesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+        "fileSHA256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e09-islamabad-o4-20261012-v1",
+          "sha256": "f62e2b4b8837bc43c96c01fc21b9c98bf009332f2232e0be86e0b39180e662fb",
+          "verdict": "accepted",
+          "reason": "Jo aloitetun version oma katselu valmis: metallivartaiden ja lihojen rakenne johdonmukainen, kypsyys/pinnat luonnollisia, leipä ja tavalliset astiat ehjiä. Lähteen grilliravintolat ja leipomot tukevat yleistä ruokahavainnollistusta; ei nimettyä täsmäreseptiä, ravintolaa, paikkaa, kasvoja, logoja tai suojattua esinettä. Ei väitetä aidoksi Islamabadissa otetuksi annosvalokuvaksi.",
+          "required": true,
+          "reviewedAt": "2026-10-12T18:17:00.695813+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-o4-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva grillatusta ruoasta ja leivonnaisesta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Islamabad",
+                "section": "Eat: grill restaurants and bakeries",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/voyage.txt",
+                "sha256": "5f1120cc065d839631842a09cbcaab393b1740bc36e56dc7c1cf196bc1b5ba32"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "independentOfProducer": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png?t=6b185c9cc2d92053",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+        "sha256": "6b185c9cc2d92053ba67983e088e304309df3c24fa0e84e014ba10abb67c9353",
+        "bytes": 2285296,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-islamabad-o4-20261012-v1",
+        "nativeSHA256": "f62e2b4b8837bc43c96c01fc21b9c98bf009332f2232e0be86e0b39180e662fb",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:19:24.496908+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-o4-20261012-v1-f62e2b4b8837.png",
+        "sha256": "6b185c9cc2d92053ba67983e088e304309df3c24fa0e84e014ba10abb67c9353",
+        "bytes": 2285296,
+        "SHAReadAt": "2026-10-12T18:29:55.947891+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f62e2b4b8837bc43c96c01fc21b9c98bf009332f2232e0be86e0b39180e662fb",
+        "rgbPixelSHA256": "6e236e62b5d5df67d997d91e074041f14e7271ce9b971185a1237c5093eb7d47",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "a86d2471041b5f4972d8f5705b880ffd3900c958f1c4dfaf3faa496ba95b944b"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e09-islamabad-k4-20261012-v1",
+      "galleryImageID": "e09-islamabad-k4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva luonnonkivien erilaisista rakenteista.",
+        "lyhyt": "Havainnekuva luonnonkivien erilaisista rakenteista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva luonnonkivien erilaisista rakenteista.",
+        "lyhyt": "Havainnekuva luonnonkivien erilaisista rakenteista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "afd1c00d4c958611a91298330563578eab3184e04b446194553dbf233181eae2",
+      "exportSHA256": "b64216e17d2a3f77350b37db7131e665da7b2f3de688e61b194a5ee028df2678",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a7e77d3c0de9fe7be9a64f08b51f47c13423996796776eeda7fc5b3b2f1852d0",
+        "semanticContextSHA256": "a7e77d3c0de9fe7be9a64f08b51f47c13423996796776eeda7fc5b3b2f1852d0",
+        "subjectTitle": "Sinivalas saapui sisämaahan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-k4-20261012-v1/original.png",
+            "nativeSha256Verified": "afd1c00d4c958611a91298330563578eab3184e04b446194553dbf233181eae2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme kiveä, joissa rakeinen, juovainen ja kerroksellinen rakenne. Luontevat mineraali- ja murtopinnat, ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva luonnonkivien erilaisista rakenteista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+            "contentSha256": "611f8d0a6bd72a98f5ee5137c0ddc5897d82c5a3ab498f8282841f8370633f68",
+            "targetCurrentlyPresent": true,
+            "targetText": "Pakistanin luonnonhistoriallisen museon ulkona on sinivalaan luuranko. Mereneläimeen voi siis tutustua pääkaupungissa kaukana rannikosta. Museon näyttelyissä on myös kasveja ja eläimiä niiden elinympäristöissä, fossiileja sekä raakakiviä ja hiottuja jalokiviä. Ekologiset kierrot ja ympäristön ongelmat kuuluvat opetukseen yhtä lailla kuin yksittäiset näytteet. Museo toimii lisäksi tutkimuskeskuksena. Suuri luuranko on katseenvangitsija, mutta sen ympärillä luonnosta kysytään monenlaisia kysymyksiä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/faktapohja.md",
+            "factSheetSha256": "40517099355b35e841ca63a75f79bd9fb9d1c807997e3ea241507bcc345b7b96",
+            "topicEvidence": "K4 mainitsee museon raakakivet; museon oman näyttelylähteen tallennetun tiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://www.pmnh.gov.pk/exhibits/",
+                "section": "Rock garden: igneous, sedimentary and metamorphic samples",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/pmnh-exhibits.txt",
+                "sha256": "d1b1c5a3a895bb5753a6d075249a0dee64064cc4d62595a94c51f94319d6961a"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Erilaiset luonnonkivet havainnollistavat tekstissä mainittuja raakakiviä. Selite ei väitä niitä museon omiksi esineiksi eikä nimeä virheellisesti valaaksi tai fossiileiksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva luonnonkivien erilaisista rakenteista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+        "fileSHA256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e09-islamabad-k4-20261012-v1",
+          "sha256": "afd1c00d4c958611a91298330563578eab3184e04b446194553dbf233181eae2",
+          "verdict": "accepted",
+          "reason": "Erilaiset luonnonkivet havainnollistavat tekstissä mainittuja raakakiviä. Selite ei väitä niitä museon omiksi esineiksi eikä nimeä virheellisesti valaaksi tai fossiileiksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-k4-20261012-v1/original.png",
+            "nativeSha256Verified": "afd1c00d4c958611a91298330563578eab3184e04b446194553dbf233181eae2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme kiveä, joissa rakeinen, juovainen ja kerroksellinen rakenne. Luontevat mineraali- ja murtopinnat, ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva luonnonkivien erilaisista rakenteista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+            "contentSha256": "611f8d0a6bd72a98f5ee5137c0ddc5897d82c5a3ab498f8282841f8370633f68",
+            "targetCurrentlyPresent": true,
+            "targetText": "Pakistanin luonnonhistoriallisen museon ulkona on sinivalaan luuranko. Mereneläimeen voi siis tutustua pääkaupungissa kaukana rannikosta. Museon näyttelyissä on myös kasveja ja eläimiä niiden elinympäristöissä, fossiileja sekä raakakiviä ja hiottuja jalokiviä. Ekologiset kierrot ja ympäristön ongelmat kuuluvat opetukseen yhtä lailla kuin yksittäiset näytteet. Museo toimii lisäksi tutkimuskeskuksena. Suuri luuranko on katseenvangitsija, mutta sen ympärillä luonnosta kysytään monenlaisia kysymyksiä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/faktapohja.md",
+            "factSheetSha256": "40517099355b35e841ca63a75f79bd9fb9d1c807997e3ea241507bcc345b7b96",
+            "topicEvidence": "K4 mainitsee museon raakakivet; museon oman näyttelylähteen tallennetun tiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://www.pmnh.gov.pk/exhibits/",
+                "section": "Rock garden: igneous, sedimentary and metamorphic samples",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/pmnh-exhibits.txt",
+                "sha256": "d1b1c5a3a895bb5753a6d075249a0dee64064cc4d62595a94c51f94319d6961a"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:54:19.011856+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png?t=b64216e17d2a3f77",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+        "sha256": "b64216e17d2a3f77350b37db7131e665da7b2f3de688e61b194a5ee028df2678",
+        "bytes": 2857344,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-islamabad-k4-20261012-v1",
+        "nativeSHA256": "afd1c00d4c958611a91298330563578eab3184e04b446194553dbf233181eae2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:55:37.455271+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-k4-20261012-v1-afd1c00d4c95.png",
+        "sha256": "b64216e17d2a3f77350b37db7131e665da7b2f3de688e61b194a5ee028df2678",
+        "bytes": 2857344,
+        "SHAReadAt": "2026-10-12T19:03:37.280547+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "afd1c00d4c958611a91298330563578eab3184e04b446194553dbf233181eae2",
+        "rgbPixelSHA256": "80f1bfa68e469b330f60a9f228bd6e89b23eeda60631e681edfa84fc8e5b748a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "a7e77d3c0de9fe7be9a64f08b51f47c13423996796776eeda7fc5b3b2f1852d0",
+      "contextAfterSHA256": "a7e77d3c0de9fe7be9a64f08b51f47c13423996796776eeda7fc5b3b2f1852d0"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e09-islamabad-l2-20261012-v1",
+      "galleryImageID": "e09-islamabad-l2-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sinisorsista makean veden äärellä.",
+        "lyhyt": "Havainnekuva sinisorsista makean veden äärellä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sinisorsista makean veden äärellä.",
+        "lyhyt": "Havainnekuva sinisorsista makean veden äärellä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b4d8e89df0755def0f66e84fc998ce94c0f065374449aaaed8750237a9010831",
+      "exportSHA256": "3b1efa2768bac913a5e146999580f8fb77924d394c0a58184c2e605ca505306c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f60d38555681882f3210e7019e2f600e173ab9db3fbbab7dcec60a6109a90bee",
+        "semanticContextSHA256": "f60d38555681882f3210e7019e2f600e173ab9db3fbbab7dcec60a6109a90bee",
+        "subjectTitle": "Vesilinnut tulevat talveksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-l2-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva sinisorsista makean veden äärellä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Rawal_Lake",
+                "section": "Wildlife: wintering waterfowl, Anas platyrhynchos",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/rawal.txt",
+                "sha256": "5cc17f91992d0fa4af7bbb443e315752a5b75ed1429fb7919aa364195540f034"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "independentOfProducer": true
+          },
+          "qaReason": "Sinisorsakoiraan vihreä pää, keltainen nokka, valkea kaularengas ja pyrstökiehkurat sekä naaraan ruskea kirjava höyhenpuku sopivat lajiin. Nokat, vesirajat, heijastukset ja vanat luontevia. Rawalin lähde nimeää Anas platyrhynchos -lajin. CaptionFi sanoo havainnekuvaksi eikä väitä aitoa Rawalin rantaa. Ei tekstiä, logoa, ihmiskasvoja tai ihmisteosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva sinisorsista makean veden äärellä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+        "fileSHA256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e09-islamabad-l2-20261012-v1",
+          "sha256": "b4d8e89df0755def0f66e84fc998ce94c0f065374449aaaed8750237a9010831",
+          "verdict": "accepted",
+          "reason": "Sinisorsakoiraan vihreä pää, keltainen nokka, valkea kaularengas ja pyrstökiehkurat sekä naaraan ruskea kirjava höyhenpuku sopivat lajiin. Nokat, vesirajat, heijastukset ja vanat luontevia. Rawalin lähde nimeää Anas platyrhynchos -lajin. CaptionFi sanoo havainnekuvaksi eikä väitä aitoa Rawalin rantaa. Ei tekstiä, logoa, ihmiskasvoja tai ihmisteosta.",
+          "required": true,
+          "reviewedAt": "2026-10-12T18:07:28.589279+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-l2-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva sinisorsista makean veden äärellä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Rawal_Lake",
+                "section": "Wildlife: wintering waterfowl, Anas platyrhynchos",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/rawal.txt",
+                "sha256": "5cc17f91992d0fa4af7bbb443e315752a5b75ed1429fb7919aa364195540f034"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "independentOfProducer": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png?t=3b1efa2768bac913",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+        "sha256": "3b1efa2768bac913a5e146999580f8fb77924d394c0a58184c2e605ca505306c",
+        "bytes": 2348496,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-islamabad-l2-20261012-v1",
+        "nativeSHA256": "b4d8e89df0755def0f66e84fc998ce94c0f065374449aaaed8750237a9010831",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:11:05.017553+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l2-20261012-v1-b4d8e89df075.png",
+        "sha256": "3b1efa2768bac913a5e146999580f8fb77924d394c0a58184c2e605ca505306c",
+        "bytes": 2348496,
+        "SHAReadAt": "2026-10-12T18:29:55.847197+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b4d8e89df0755def0f66e84fc998ce94c0f065374449aaaed8750237a9010831",
+        "rgbPixelSHA256": "60b5e15e218c825b55beb992c66d465a7c3169c87b344886124fb5a9abb09947",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "f60d38555681882f3210e7019e2f600e173ab9db3fbbab7dcec60a6109a90bee",
+      "contextAfterSHA256": "f60d38555681882f3210e7019e2f600e173ab9db3fbbab7dcec60a6109a90bee"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e09-islamabad-l3-20261012-v1",
+      "galleryImageID": "e09-islamabad-l3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva leopardista metsäisessä ympäristössä.",
+        "lyhyt": "Havainnekuva leopardista metsäisessä ympäristössä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva leopardista metsäisessä ympäristössä.",
+        "lyhyt": "Havainnekuva leopardista metsäisessä ympäristössä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "da66dc89f277151322f07503ad4f6655879cafc1df29f726d5e5b3f02dd44eb2",
+      "exportSHA256": "946f5c9210776c66429e233588a3e5cab63e0a540cd017ea366ea45ed9b9bb5b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0d0578aa18517c175282f6d1a37dd0f209f006ab50f39806b2eaeedceeed30a9",
+        "semanticContextSHA256": "0d0578aa18517c175282f6d1a37dd0f209f006ab50f39806b2eaeedceeed30a9",
+        "subjectTitle": "Leopardi kuuluu pääkaupungin naapureihin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-l3-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva leopardista metsäisessä ympäristössä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Margalla_Hills_National_Park",
+                "section": "Flora and fauna: Indian leopard",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/margalla.txt",
+                "sha256": "05661df2b4a1b1fe8c04226bb27aab1abe111acfd63d50a324ded28947b915be"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "independentOfProducer": true
+          },
+          "qaReason": "Leopardin perusrakenne, rosetit, viikset/korvat ja yksi häntä johdonmukaisia; raajat osin päällekkäin kuten sivuviistosta nähdyllä eläimellä. Turkki, kuori, lehdet ja valo luontevia ilman ilmeistä kaakelimaista toistoa. Margallan lähde nimeää leopardin. Yleinen metsäeläimen havainne, ei dokumentoitu Margallan havainto tai tunnistettavan puistomaiseman rekonstruktio. Ei ihmiskasvoja, tekstiä, logoa tai suojattua teosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva leopardista metsäisessä ympäristössä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+        "fileSHA256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e09-islamabad-l3-20261012-v1",
+          "sha256": "da66dc89f277151322f07503ad4f6655879cafc1df29f726d5e5b3f02dd44eb2",
+          "verdict": "accepted",
+          "reason": "Leopardin perusrakenne, rosetit, viikset/korvat ja yksi häntä johdonmukaisia; raajat osin päällekkäin kuten sivuviistosta nähdyllä eläimellä. Turkki, kuori, lehdet ja valo luontevia ilman ilmeistä kaakelimaista toistoa. Margallan lähde nimeää leopardin. Yleinen metsäeläimen havainne, ei dokumentoitu Margallan havainto tai tunnistettavan puistomaiseman rekonstruktio. Ei ihmiskasvoja, tekstiä, logoa tai suojattua teosta.",
+          "required": true,
+          "reviewedAt": "2026-10-12T18:04:58.093206+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-l3-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorSpace": "RGB",
+            "embeddedProfile": null,
+            "sRGBProfileVerified": false,
+            "captionFi": "Havainnekuva leopardista metsäisessä ympäristössä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Margalla_Hills_National_Park",
+                "section": "Flora and fauna: Indian leopard",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/margalla.txt",
+                "sha256": "05661df2b4a1b1fe8c04226bb27aab1abe111acfd63d50a324ded28947b915be"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "independentOfProducer": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png?t=946f5c9210776c66",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+        "sha256": "946f5c9210776c66429e233588a3e5cab63e0a540cd017ea366ea45ed9b9bb5b",
+        "bytes": 3085800,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-islamabad-l3-20261012-v1",
+        "nativeSHA256": "da66dc89f277151322f07503ad4f6655879cafc1df29f726d5e5b3f02dd44eb2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:11:03.443435+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l3-20261012-v1-da66dc89f277.png",
+        "sha256": "946f5c9210776c66429e233588a3e5cab63e0a540cd017ea366ea45ed9b9bb5b",
+        "bytes": 3085800,
+        "SHAReadAt": "2026-10-12T18:29:55.741909+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "da66dc89f277151322f07503ad4f6655879cafc1df29f726d5e5b3f02dd44eb2",
+        "rgbPixelSHA256": "075536af85bb02c67f258d97073895545035ff3fc399438faf3f17495d8bb7a3",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "0d0578aa18517c175282f6d1a37dd0f209f006ab50f39806b2eaeedceeed30a9",
+      "contextAfterSHA256": "0d0578aa18517c175282f6d1a37dd0f209f006ab50f39806b2eaeedceeed30a9"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e09-islamabad-photo-ea2db55d3b564bb1",
+      "galleryImageID": "capital-cc-e09-islamabad-photo-ea2db55d3b564bb1",
+      "commonsFile": "Flowers red one - Islamabad spring blooms.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
+        "suora": true,
+        "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
+        "selite": "Punaisia kukkia Islamabadissa.",
+        "lyhyt": "Punaisia kukkia Islamabadissa.",
+        "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
+        "selite": "Punaisia kukkia Islamabadissa.",
+        "lyhyt": "Punaisia kukkia Islamabadissa.",
+        "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
+        "suora": true,
+        "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
+        "selite": "Punaisia kukkia Islamabadissa.",
+        "lyhyt": "Punaisia kukkia Islamabadissa.",
+        "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ea2db55d3b564bb157bd6df991ab66bbec14a9c150684b2d506f68fe4cf0f076",
+      "exportSHA256": "ea2db55d3b564bb157bd6df991ab66bbec14a9c150684b2d506f68fe4cf0f076",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/cc-search/original-01.jpg",
+      "dimensions": [
+        5184,
+        3456
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "fe62c517d83a885f7ae74270d9b066b7e134f1a440277776e20328057cc423d6",
+        "semanticContextSHA256": "fe62c517d83a885f7ae74270d9b066b7e134f1a440277776e20328057cc423d6",
+        "subjectTitle": "islamabad — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mubashirkhan111",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+        "rightsEvidence": {
+          "selection": "Commons-kuvasivun alkuperäinen kuvaus on Islamabad spring blooms ja kaupunkiluokitus Islamabad. Author Mubashirkhan111, Own work, CC BY-SA 4.0. Kuvassa luonnollisia kukkia/lehtiä; ei yksittäistä arkkitehtuuri-, taide- tai muotoiluteosta. Ei FOP-oletusta. Kuvausajankohta 2016, ei väitetä tämän päivän tai tuoreeksi oppaan kuvaksi.",
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/cc-search/original-01.jpg",
+            "originalResolutionAlsoViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa-evidence/photo-source.html",
+            "sourcePageSha256": "6c71dc8111c1159bbc40ed9a7e1cca255581090e5f04ca74bc0a812c52f9e6fb",
+            "sourceRows": [
+              [
+                "Description Flowers red one - Islamabad spring blooms.jpg",
+                "English: Islamabad spring blooms"
+              ],
+              [
+                "Date",
+                "30 November 2016, 13:56:50"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Mubashirkhan111"
+              ]
+            ],
+            "author": "Mubashirkhan111",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+            "actualWidth": 5184,
+            "actualHeight": 3456,
+            "captureDateAsStated": "30 November 2016, 13:56:50",
+            "placeEvidence": "Commons Description: English: Islamabad spring blooms; kaupungin nimi on itse kuvan kuvauksessa, ei pelkkä Pakistan/tekijän kotipaikka.",
+            "rightsEvidence": "Kuvan pääaihe luonnolliset kukat ja lehdet; ei kuvattavaa yksilöityä ihmisteosta eikä FOP-/rakennuksen ikäoletusta.",
+            "existingGameUseHits": [],
+            "formatRule": "PHOTO ei vaadi panoraamaa, vaakamuotoa eikä oppaan tuoreutta."
+          },
+          "qaReason": "Aito luonnon lähikuva, jonka alkuperäinen Description nimeää Islamabadin. Tekijä Mubashirkhan111 ja CC BY-SA 4.0 tarkistettu Author-/license-laatikosta, ei uploaderin nimestä päätellen. Punaiset kukat ja vihreät lehdet ovat tunnistettava pääaihe; alkuperäisen tarkkuuden katselu erottaa terävän keskeisen kukinnon matalan syväterävyyden taustasta. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai suojattua ihmisteosta. PHOTO voi olla paikkasidonnainen luontoyksityiskohta. Lajinimeä tai kevät-/nykyvuosiväitettä ei lisätä; kuvausajankohta 2016 lähteen ilmoituksena."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Punaisia kukkia Islamabadissa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+        "fileSHA256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Flowers red one - Islamabad spring blooms.jpg",
+          "sha256": "ea2db55d3b564bb157bd6df991ab66bbec14a9c150684b2d506f68fe4cf0f076",
+          "verdict": "accepted",
+          "reason": "Aito luonnon lähikuva, jonka alkuperäinen Description nimeää Islamabadin. Tekijä Mubashirkhan111 ja CC BY-SA 4.0 tarkistettu Author-/license-laatikosta, ei uploaderin nimestä päätellen. Punaiset kukat ja vihreät lehdet ovat tunnistettava pääaihe; alkuperäisen tarkkuuden katselu erottaa terävän keskeisen kukinnon matalan syväterävyyden taustasta. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai suojattua ihmisteosta. PHOTO voi olla paikkasidonnainen luontoyksityiskohta. Lajinimeä tai kevät-/nykyvuosiväitettä ei lisätä; kuvausajankohta 2016 lähteen ilmoituksena.",
+          "required": true,
+          "reviewedAt": "2026-10-12T18:31:19.668983+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/cc-search/original-01.jpg",
+            "originalResolutionAlsoViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa-evidence/photo-source.html",
+            "sourcePageSha256": "6c71dc8111c1159bbc40ed9a7e1cca255581090e5f04ca74bc0a812c52f9e6fb",
+            "sourceRows": [
+              [
+                "Description Flowers red one - Islamabad spring blooms.jpg",
+                "English: Islamabad spring blooms"
+              ],
+              [
+                "Date",
+                "30 November 2016, 13:56:50"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Mubashirkhan111"
+              ]
+            ],
+            "author": "Mubashirkhan111",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+            "actualWidth": 5184,
+            "actualHeight": 3456,
+            "captureDateAsStated": "30 November 2016, 13:56:50",
+            "placeEvidence": "Commons Description: English: Islamabad spring blooms; kaupungin nimi on itse kuvan kuvauksessa, ei pelkkä Pakistan/tekijän kotipaikka.",
+            "rightsEvidence": "Kuvan pääaihe luonnolliset kukat ja lehdet; ei kuvattavaa yksilöityä ihmisteosta eikä FOP-/rakennuksen ikäoletusta.",
+            "existingGameUseHits": [],
+            "formatRule": "PHOTO ei vaadi panoraamaa, vaakamuotoa eikä oppaan tuoreutta."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Flowers red one - Islamabad spring blooms.jpg",
+        "sha256": "ea2db55d3b564bb157bd6df991ab66bbec14a9c150684b2d506f68fe4cf0f076",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flowers_red_one_-_Islamabad_spring_blooms.jpg",
+        "author": "Mubashirkhan111",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 5184,
+        "height": 3456,
+        "originalSHA256": "ea2db55d3b564bb157bd6df991ab66bbec14a9c150684b2d506f68fe4cf0f076",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
+        "bytes": 6026492,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:31:46.514599+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Flowers red one - Islamabad spring blooms.jpg",
+        "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
+        "selite": "Punaisia kukkia Islamabadissa.",
+        "lyhyt": "Punaisia kukkia Islamabadissa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
+        "selite": "Punaisia kukkia Islamabadissa.",
+        "lyhyt": "Punaisia kukkia Islamabadissa.",
+        "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "fe62c517d83a885f7ae74270d9b066b7e134f1a440277776e20328057cc423d6",
+      "contextAfterSHA256": "fe62c517d83a885f7ae74270d9b066b7e134f1a440277776e20328057cc423d6"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "N2",
+      "type": "commons",
+      "assetID": "capital-cc-e09-islamabad-n2-fa9d3352939ec06e",
+      "galleryImageID": "capital-cc-e09-islamabad-n2-fa9d3352939ec06e",
+      "commonsFile": "Rawal Lake Eastern Bank.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Rawal-järvi\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Rawal-järvi",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg",
+        "suora": true,
+        "lahde": "ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "lyhyt": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "tiedosto": "Rawal Lake Eastern Bank.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "lyhyt": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "tiedosto": "Rawal Lake Eastern Bank.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg",
+        "suora": true,
+        "lahde": "ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "lyhyt": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "tiedosto": "Rawal Lake Eastern Bank.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
+      "exportSHA256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/cc-search/original-10.jpg",
+      "dimensions": [
+        4285,
+        2412
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f37ebc864eec04048da59624cd8967d1d4d7a314fe74f1c6933b7244792a59a0",
+        "semanticContextSHA256": "6f918468afdf698335947896f180ef8cf2874fb409bbdde3c87ae56330579603",
+        "subjectTitle": "Rawal-järvi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "ZILL NIAZI",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rawal_Lake_Eastern_Bank.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Rawal_Lake_Eastern_Bank.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuva: ZILL NIAZI, CC BY-SA 4.0, alkuperäisen Author- ja lisenssitaulukon mukaan. Pääaihe on todellinen järvivesi, kivinen/nurmikkoinen ranta, puusto ja kukkulat. Etäällä olevat kapeat sähkö-/antennirakenteet ja tavallinen aita ovat toiminnallisia metallirakenteita; kuvassa ei havaittu koristetta, veistosta, omaperäistä julkisivuteosta tai muuta itsenäistä suojattua ihmisteosta. Ei päätelmää Islamabadin yleisestä arkkitehtuurioikeudesta.",
+          "QA": {
+            "rows": [
+              [
+                "Description Rawal Lake Eastern Bank.jpg",
+                "English: Eastern banks of Rawal Lake with Margalla Hills in the background"
+              ],
+              [
+                "Date",
+                "12 May 2012, 07:15:55"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "ZILL NIAZI"
+              ],
+              [
+                "Author",
+                "ZILL NIAZI"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4285,
+              2412
+            ],
+            "actualDimensions": [
+              4285,
+              2412
+            ],
+            "pageSha256": "dbbf8bda2cdc90615726def0c77610f7cb3c5cf2c7e384aa3d0a160f3911009e",
+            "nativeSha256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rawal_Lake_Eastern_Bank.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa-evidence/source-n2-1e785bae3607.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/cc-search/original-10.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa-evidence/source-n2-1e785bae3607.json",
+            "author": "ZILL NIAZI",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+            "sourceContentSHA256": "611f8d0a6bd72a98f5ee5137c0ddc5897d82c5a3ab498f8282841f8370633f68",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Aito Rawal-järven itärannan valokuva: lähteen Description nimeää järven ja taustan Margalla-kukkulat. Vedessä, kivirannassa, kasvillisuudessa ja kalliorinteessä ei ole epäluontevia pintoja. Ei kasvoja tai lisättyjä merkintöjä. Kaukaiset tavalliset sähköpylväät ja rantarakenteet ovat sivuosia, eivät itsenäinen suojatun nykyteoksen pääaihe. Sopii olemassa olevaan Rawal Lake -kohteeseen. Vuosi2012."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+        "fileSHA256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Rawal-järvi\"].kuvat[0]",
+          "commonsFile": "Rawal Lake Eastern Bank.jpg",
+          "sha256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
+          "verdict": "accepted",
+          "reason": "Aito Rawal-järven itärannan valokuva: lähteen Description nimeää järven ja taustan Margalla-kukkulat. Vedessä, kivirannassa, kasvillisuudessa ja kalliorinteessä ei ole epäluontevia pintoja. Ei kasvoja tai lisättyjä merkintöjä. Kaukaiset tavalliset sähköpylväät ja rantarakenteet ovat sivuosia, eivät itsenäinen suojatun nykyteoksen pääaihe. Sopii olemassa olevaan Rawal Lake -kohteeseen. Vuosi2012.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Rawal Lake Eastern Bank.jpg",
+                "English: Eastern banks of Rawal Lake with Margalla Hills in the background"
+              ],
+              [
+                "Date",
+                "12 May 2012, 07:15:55"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "ZILL NIAZI"
+              ],
+              [
+                "Author",
+                "ZILL NIAZI"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4285,
+              2412
+            ],
+            "actualDimensions": [
+              4285,
+              2412
+            ],
+            "pageSha256": "dbbf8bda2cdc90615726def0c77610f7cb3c5cf2c7e384aa3d0a160f3911009e",
+            "nativeSha256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rawal_Lake_Eastern_Bank.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa-evidence/source-n2-1e785bae3607.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/cc-search/original-10.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa-evidence/source-n2-1e785bae3607.json",
+            "author": "ZILL NIAZI",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+            "sourceContentSHA256": "611f8d0a6bd72a98f5ee5137c0ddc5897d82c5a3ab498f8282841f8370633f68",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Rawal-järvi\"].kuvat[0]",
+        "commonsFile": "Rawal Lake Eastern Bank.jpg",
+        "sha256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rawal_Lake_Eastern_Bank.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Rawal_Lake_Eastern_Bank.jpg",
+        "author": "ZILL NIAZI",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4285,
+        "height": 2412,
+        "originalSHA256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg",
+        "bytes": 3300388,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:10.074434+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Rawal Lake Eastern Bank.jpg",
+        "lahde": "ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "lyhyt": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "lyhyt": "Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.",
+        "tiedosto": "Rawal Lake Eastern Bank.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "f37ebc864eec04048da59624cd8967d1d4d7a314fe74f1c6933b7244792a59a0",
+      "contextAfterSHA256": "6f918468afdf698335947896f180ef8cf2874fb409bbdde3c87ae56330579603"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

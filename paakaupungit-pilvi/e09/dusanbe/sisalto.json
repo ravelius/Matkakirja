@@ -1,351 +1,352 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "dusanbe",
- "maa": "TJK",
- "era": "e09",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "dusanbe",
-  "name": "Dušanbe",
-  "wiki": "Dušanbe",
-  "ambience": "kaupunki",
-  "pallo": {
-   "lat": 38.5731,
-   "lon": 68.7864
-  }
- },
- "artikkeli": {
-  "intro": "**Dušanbe on Tadžikistanin pääkaupunki** Hisorin laaksossa, jossa vuoret rajaavat kaupunkimaisemaa. Nimi tarkoittaa maanantaita ja muistaa kylän viikoittaista markkinapäivää. Nykyinen pääkaupunki kasvoi suureksi vasta neuvostoaikana, jolloin se tunnettiin myös nimellä Stalinabad. Varzob-joki ja Rudaki-katu auttavat hahmottamaan laajaksi kasvanutta kaupunkia.\n\nDušanben kulttuuriin voi tutustua **soitinten kautta**: Gurminjin museossa on Pamirin ja Badakhšanin musiikkiperinteeseen kuuluvia kielisoittimia ja rumpuja. Ayni-teatterissa sama laitos kokoaa oopperan ja baletin, ja kaupungin musiikkielämään kuuluu myös shashmaqom-perinne. Kasvitieteellinen puutarha ja istutetut viheralueet kertovat siitä, kuinka pääkaupungin vihreys on osittain rakennettu. Kaupungin käsityöosaaminen matkusti kauas, kun Dušanbe lahjoitti teehuoneen ystävyyskaupunkiinsa Boulderiin Yhdysvaltoihin.",
-  "teksti": "Isoisän matkavuonna 1873 Dušanbe oli jo olemassa markkinapaikkana, mutta nykyinen pääkaupunkiasema kuuluu myöhempään historiaan. Kylä sijaitsi karavaanireittien risteyksessä. Sen kaupassa liikkuivat kankaat, nahat ja karja; kaupungin kasvuvaihe alkoi neuvostoaikaisen hallintokeskuksen rakentamisesta.\n\nPääkaupungin myötä kehittyivät yliopistot, museot ja esittävien taiteiden laitokset. Ayni-teatterin nimi viittaa kirjailija Sadriddin Ayniin, ja Gurminjin soitinmuseon kokoelma syntyi näyttelijän ja muusikon keräilytyöstä. Kulttuurielämä näkyy siksi sekä suurilla näyttämöillä että pienessä soittimille omistetussa museossa.\n\nDušanbe kasvoi vähitellen myös Varzob-joen vastakkaiselle rannalle. Kaupungin viheralueille tuotiin uusia kasveja, ja kasvitieteellinen puutarha on osa tätä istutettua maisemaa. Pääkaupungissa on silti muutakin kuin ihmisen suunnittelemaa elämää: sen eläimistöön on kirjattu siilejä, kettuja, lepakoita ja monenlaisia lintuja."
- },
- "kysymykset": [
-  {
-   "q": "Minkä maan pääkaupunki Dušanbe on?",
-   "options": [
-    "Tadžikistanin",
-    "Kirgisian",
-    "Turkmenistanin",
-    "Uzbekistanin"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Maa sijaitsee Keski-Aasian vuoristoisessa osassa.",
-   "fact": "Dušanbe on Tadžikistanin pääkaupunki.",
-   "source": "https://en.wikipedia.org/wiki/Dushanbe"
-  },
-  {
-   "q": "Mikä soitinryhmä on Gurminjin museon kokoelmassa keskeinen?",
-   "options": [
-    "Kielisoittimet",
-    "Vaskipuhaltimet",
-    "Kosketinsoittimet",
-    "Elektroniset soittimet"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Rubab, tanbur ja dutor kuuluvat tähän ryhmään.",
-   "fact": "Gurminjin museon kokoelmassa painottuvat kielisoittimet, mutta mukana on myös rumpuja.",
-   "source": "https://en.wikipedia.org/wiki/Gurminj_Museum_of_Musical_Instruments"
-  },
-  {
-   "q": "Minkä rakennuksen Dušanbe lahjoitti Boulderiin?",
-   "options": [
-    "Teehuoneen",
-    "Rautatieaseman",
-    "Oopperatalon",
-    "Tähtitornin"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Rakennuksessa yhdistyvät käsityötaito ja yhdessä istuminen.",
-   "fact": "Dušanbe lahjoitti ystävyyskaupunki Boulderille tadžikkilaisen teehuoneen.",
-   "source": "https://en.wikipedia.org/wiki/Dushanbe"
-  },
-  {
-   "q": "Mikä joki virtaa Dušanben halki pohjoisesta etelään?",
-   "options": [
-    "Varzob",
-    "Zeravšan",
-    "Syrdarja",
-    "Vahš"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Sen laakso on myös pääkaupungin lähiseudun retkikohde.",
-   "fact": "Varzob virtaa Dušanben halki pohjoisesta etelään.",
-   "source": "https://en.wikipedia.org/wiki/Dushanbe"
-  },
-  {
-   "q": "Miksi mestarin ja oppilaan suhde on tärkeä shashmaqomissa?",
-   "options": [
-    "Nuotit eivät tallenna kaikkea",
-    "Soittimet valmistetaan pareittain",
-    "Laulaminen on sallittu vain yhdessä",
-    "Esitykset määräytyvät kilpailuissa"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Perinteessä kuulon ja käytännön esityksen kautta oppimisella on suuri tehtävä.",
-   "fact": "Shashmaqomin nuotinnos tallentaa vain osan esityksestä, joten suullinen opetus säilyttää myös tulkinnan tietoa.",
-   "source": "https://ich.unesco.org/en/RL/shashmaqom-music-00089"
-  }
- ],
- "tiedot": [
-  "Dušanbe lahjoitti ystävyyskaupunki Boulderille teehuoneen, joka rakennettiin tadžikkilaisten käsityöläisten tekemistä osista.",
-  "Dušanben viheralueiden ja kasvitieteellisen puutarhan istutukset toivat kaupunkiin uusia kasveja.",
-  "Dušanbe tunnettiin osan neuvostokaudesta myös nimellä Stalinabad."
- ],
- "valokuva": {
-  "tiedosto": "",
-  "lyhyt": "",
-  "selite": "",
-  "lahde": ""
- },
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "Dušanbe",
-   "johdanto": "Dušanben tarina kulkee joenrannasta istutettuihin puistoihin ja käsityöläisten tekemästä teehuoneesta toiselle mantereelle. Pääkaupungissa elää myös luonnon oma kaupunki.",
-   "kansikuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "maa": "TJK",
+  "era": "e09",
+  "kaupunki": {
+    "id": "dusanbe",
+    "name": "Dušanbe",
+    "wiki": "Dušanbe",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 38.5731,
+      "lon": 68.7864
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "**Dušanbe on Tadžikistanin pääkaupunki** Hisorin laaksossa, jossa vuoret rajaavat kaupunkimaisemaa. Nimi tarkoittaa maanantaita ja muistaa kylän viikoittaista markkinapäivää. Nykyinen pääkaupunki kasvoi suureksi vasta neuvostoaikana, jolloin se tunnettiin myös nimellä Stalinabad. Varzob-joki ja Rudaki-katu auttavat hahmottamaan laajaksi kasvanutta kaupunkia.\n\nDušanben kulttuuriin voi tutustua **soitinten kautta**: Gurminjin museossa on Pamirin ja Badakhšanin musiikkiperinteeseen kuuluvia kielisoittimia ja rumpuja. Ayni-teatterissa sama laitos kokoaa oopperan ja baletin, ja kaupungin musiikkielämään kuuluu myös shashmaqom-perinne. Kasvitieteellinen puutarha ja istutetut viheralueet kertovat siitä, kuinka pääkaupungin vihreys on osittain rakennettu. Kaupungin käsityöosaaminen matkusti kauas, kun Dušanbe lahjoitti teehuoneen ystävyyskaupunkiinsa Boulderiin Yhdysvaltoihin.",
+    "teksti": "Isoisän matkavuonna 1873 Dušanbe oli jo olemassa markkinapaikkana, mutta nykyinen pääkaupunkiasema kuuluu myöhempään historiaan. Kylä sijaitsi karavaanireittien risteyksessä. Sen kaupassa liikkuivat kankaat, nahat ja karja; kaupungin kasvuvaihe alkoi neuvostoaikaisen hallintokeskuksen rakentamisesta.\n\nPääkaupungin myötä kehittyivät yliopistot, museot ja esittävien taiteiden laitokset. Ayni-teatterin nimi viittaa kirjailija Sadriddin Ayniin, ja Gurminjin soitinmuseon kokoelma syntyi näyttelijän ja muusikon keräilytyöstä. Kulttuurielämä näkyy siksi sekä suurilla näyttämöillä että pienessä soittimille omistetussa museossa.\n\nDušanbe kasvoi vähitellen myös Varzob-joen vastakkaiselle rannalle. Kaupungin viheralueille tuotiin uusia kasveja, ja kasvitieteellinen puutarha on osa tätä istutettua maisemaa. Pääkaupungissa on silti muutakin kuin ihmisen suunnittelemaa elämää: sen eläimistöön on kirjattu siilejä, kettuja, lepakoita ja monenlaisia lintuja."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Teehuone matkusti valtameren yli",
-     "teksti": "Dušanben lahja ystävyyskaupungilleen Boulderille oli teehuone. Tadžikkilaiset käsityöläiset valmistivat sen koristeltuja osia kotimaassaan, ja rakennus koottiin myöhemmin Yhdysvalloissa. Pylväiden puukaiverrukset, maalattu katto ja keraamiset pinnat välittävät tekijöiden käsityötaitoa toiseen kaupunkiin. Teehuone on samalla käytössä oleva ruokailupaikka. Ystävyyskaupunkisuhde sai siis rakennuksen, johon ihmiset voivat tulla istumaan: kaukana Dušanbesta avautuva ovi johtaa tadžikkilaisten käsityöläisten tekemään tilaan.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Dushanbe Tea House"
-    },
-    {
-     "otsikko": "Kaupunki ylitti oman jokensa",
-     "teksti": "Varzob virtaa Dušanben halki pohjoisesta etelään. Kaupunki kasvoi pitkään pääasiassa joen vasemmalla rannalla, kunnes rakentaminen laajeni myös vastakkaiselle puolelle. Joen sijainti auttaa ymmärtämään kaupungin rakennetta paremmin kuin yksittäinen monumentti. Dušanbe sijaitsee Hisorin laakson vuorten välisessä altaassa, mutta asutus ei ole jäänyt vanhan kylän mittaan. Varzobin laakso jatkuu kaupungista kohti vuoristoa, jossa joen varrella on retki- ja vapaa-ajan paikkoja. Sama vesi liittyy sekä pääkaupungin karttaan että lähiseudun retkiin.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Dushanbe"
-    },
-    {
-     "otsikko": "Vihreyskin on rakennettua",
-     "teksti": "Dušanben nykyinen puusto ei ole pelkkä jäänne maisemasta ennen kaupunkia. Pääkaupungin rakentaminen poisti vanhaa kasvillisuutta, ja viheralueiden sekä kasvitieteellisen puutarhan istutukset toivat tilalle uusia kasveja. Tiedakatemian puutarha perustettiin 1900-luvulla, ja sen varhaisia istutuksia on säilynyt. Rudaki-kadun varrella kasvaa suuria plataaneja. Kun kävelijä löytää niiden alta varjon, hän liikkuu samalla kaupungin rakentamisen historiassa: viheralueet ovat osa sitä, kuinka laakson asutuksesta tehtiin pääkaupunki.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Dushanbe"
-    },
-    {
-     "otsikko": "Siilit eivät tarvitse katuosoitetta",
-     "teksti": "Dušanben eläimistöön on kirjattu kettuja, pitkäkorvaisia siilejä ja lepakoita. Lintuihin kuuluu kyyhkyjä ja muuttavia lajeja, ja kaupungin vesissä elää myös kaloja. Gekot ja liskot kuuluvat matelijoihin; puhtaammissa vesissä tavataan sammakoita ja rupikonnia. Kaupunkikartta näyttää kadut ja korttelit, mutta eläimille samoissa paikoissa on toisenlaisia elinympäristöjä. Tämä lajisto ei tarkoita, että kaikki eläimet näkyisivät tavallisella puistokävelyllä. Se kertoo, että vuorten väliin rakennettu pääkaupunki on myös muiden lajien asuinalue.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Dushanbe"
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "Aloita Dušanben kävely Rudaki-kadun suunnalta. Gurminjin museossa soittimet avaavat näkymän Pamirin ja Badakhšanin kulttuuriin. Ooppera- tai baletti-ilta löytyy Ayni-teatterin ajankohtaisesta ohjelmasta. Puistot ja kasvitieteellinen puutarha sopivat toiseen kävelyyn. Varzobin laakson retki vaatii oman kuljetuksensa ja päivän suunnitelman.",
-    "artikkeli": {
-     "nimi": "Matkailijan Dušanbe",
-     "taitto": "opas",
-     "teksti": "Yhdistä keskustan kävely soitinmuseoon ja varaa illaksi esitys, jos ohjelmistosta löytyy sopiva.",
-     "nosto": "Soitinmuseo ja ooppera kertovat kaupungin kulttuurista eri mittakaavoissa. Puistokävelyn voi puolestaan vaihtaa erilliseksi retkeksi Varzobin laaksoon.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Dušanben kansainvälinen lentoasema palvelee kaupunkia. Keskustassa Rudaki-katu on käyttökelpoinen suunta, sillä sen varrella tai lähellä on museoita, teattereita ja majoitusta. Busseja, johdinautoja, maršrutka-pikkubusseja ja takseja käytetään kaupungin sisäisiin matkoihin. Tarkista käyttämäsi reitti paikallisesti ennen lähtöä. Tallenna määränpään osoitteen lisäksi läheinen tunnettu maamerkki, jotta kuljettajan kanssa löytyy yhteinen paikka.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Valitse museosta yksi maailma",
-       "teksti": "Gurminjin soitinmuseossa voi tutustua Pamirin ja Badakhšanin soittimiin. Tarkista etukäteen, järjestetäänkö vierailun aikaan musiikkitapahtumaa. Kansallismuseo ja kansallinen muinaismuseo ovat eri laitoksia, joten varmista juuri haluamasi museon nimi ja osoite. Nimen perusteella ei kannata päätellä, että kaikki arkeologiset kokoelmat olisivat samassa rakennuksessa. Museoiden väliin voi jättää kävelyä keskustan puistojen kautta.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Ilta näyttämöllä",
-       "teksti": "Ayni-teatterin ohjelmistoon kuuluvat ooppera ja baletti. Valitse esitys ajankohtaisesta ohjelmasta, sillä vierailupäivä ratkaisee, mitä näyttämöllä on. Gurminjin museon kulttuuritapahtuma tarjoaa toisen mittakaavan kuuntelupaikan. Soitinten katsomisen jälkeen voi olla kiinnostavaa kuulla, miten niitä käytetään esityksessä. Varmista tapahtuma ja sen paikka ennen kuin rakennat illan suunnitelman sen varaan.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Dušanben ruokapaikoista löytyy plov-riisiruokaa, samsa-leivonnaisia ja grillattuja šašlik-vartaita. Tarjolla on myös esimerkiksi turkkilaista, intialaista ja georgialaista ruokaa. Valitse ruokapaikka annoksen perusteella ja kysy täytteistä tai lihasta, jos jokin aines ei sovi sinulle. Oopperan ympäristössä on pieniä ruokapaikkoja, joten museon tai esityksen yhteyteen voi yhdistää tavallisen kaupunkilounaan.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Puistopäivä vai jokilaakso",
-       "teksti": "Rudaki-puisto ja kasvitieteellinen puutarha kuuluvat kaupungin kävelykohteisiin. Varzobin laaksossa on joen varren retki- ja vapaa-ajan paikkoja, mutta niiden tavoittaminen vaatii erillisen kuljetuksen. Selvitä retken määränpää ja paluukyyti etukäteen; jokilaakso ei ole yhden puiston nimi. Vuoriston reitti ja päivän sää on tarkistettava erikseen. Kaupunkikävelyn voi pitää omana ohjelmanaan ja varata retkelle toisen päivän.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "Gurminjin soitinmuseo",
-        "tahdet": 3,
-        "selite": "Pamirin ja Badakhšanin soittimia sekä kulttuuritapahtumia."
-       },
-       {
-        "mita": "Ooppera tai baletti",
-        "tahdet": 3,
-        "selite": "Valitse Ayni-teatterin ajankohtaisesta ohjelmistosta esitys."
-       },
-       {
-        "mita": "Rudaki-katu",
-        "tahdet": 2,
-        "selite": "Keskustan kävelysuunta museoiden ja teattereiden välillä."
-       },
-       {
-        "mita": "Kasvitieteellinen puutarha",
-        "tahdet": 2,
-        "selite": "Pääkaupungin istutettuun vihermaisemaan kuuluva puutarha."
-       },
-       {
-        "mita": "Varzobin laakso",
-        "tahdet": 2,
-        "selite": "Joen varren retkikohteet vaativat erillisen kuljetussuunnitelman."
-       }
+      "q": "Minkä maan pääkaupunki Dušanbe on?",
+      "options": [
+        "Tadžikistanin",
+        "Kirgisian",
+        "Turkmenistanin",
+        "Uzbekistanin"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Kaksi eri museota",
-        "teksti": "Kansallismuseo ja muinaismuseo ovat eri laitoksia; varmista nimi ja osoite."
-       },
-       {
-        "otsikko": "Ohjelma ratkaisee",
-        "teksti": "Tarkista esitys tai museon musiikkitapahtuma ennen illan suunnittelua."
-       },
-       {
-        "otsikko": "Retken paluu",
-        "teksti": "Sovi jokilaakson retkelle myös paluukuljetus."
-       }
-      ]
-     },
-     "lahde": "Wikipedia"
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa sijaitsee Keski-Aasian vuoristoisessa osassa.",
+      "fact": "Dušanbe on Tadžikistanin pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Dushanbe"
+    },
+    {
+      "q": "Mikä soitinryhmä on Gurminjin museon kokoelmassa keskeinen?",
+      "options": [
+        "Kielisoittimet",
+        "Vaskipuhaltimet",
+        "Kosketinsoittimet",
+        "Elektroniset soittimet"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rubab, tanbur ja dutor kuuluvat tähän ryhmään.",
+      "fact": "Gurminjin museon kokoelmassa painottuvat kielisoittimet, mutta mukana on myös rumpuja.",
+      "source": "https://en.wikipedia.org/wiki/Gurminj_Museum_of_Musical_Instruments"
+    },
+    {
+      "q": "Minkä rakennuksen Dušanbe lahjoitti Boulderiin?",
+      "options": [
+        "Teehuoneen",
+        "Rautatieaseman",
+        "Oopperatalon",
+        "Tähtitornin"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennuksessa yhdistyvät käsityötaito ja yhdessä istuminen.",
+      "fact": "Dušanbe lahjoitti ystävyyskaupunki Boulderille tadžikkilaisen teehuoneen.",
+      "source": "https://en.wikipedia.org/wiki/Dushanbe"
+    },
+    {
+      "q": "Mikä joki virtaa Dušanben halki pohjoisesta etelään?",
+      "options": [
+        "Varzob",
+        "Zeravšan",
+        "Syrdarja",
+        "Vahš"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Sen laakso on myös pääkaupungin lähiseudun retkikohde.",
+      "fact": "Varzob virtaa Dušanben halki pohjoisesta etelään.",
+      "source": "https://en.wikipedia.org/wiki/Dushanbe"
+    },
+    {
+      "q": "Miksi mestarin ja oppilaan suhde on tärkeä shashmaqomissa?",
+      "options": [
+        "Nuotit eivät tallenna kaikkea",
+        "Soittimet valmistetaan pareittain",
+        "Laulaminen on sallittu vain yhdessä",
+        "Esitykset määräytyvät kilpailuissa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Perinteessä kuulon ja käytännön esityksen kautta oppimisella on suuri tehtävä.",
+      "fact": "Shashmaqomin nuotinnos tallentaa vain osan esityksestä, joten suullinen opetus säilyttää myös tulkinnan tietoa.",
+      "source": "https://ich.unesco.org/en/RL/shashmaqom-music-00089"
     }
-   }
+  ],
+  "tiedot": [
+    "Dušanbe lahjoitti ystävyyskaupunki Boulderille teehuoneen, joka rakennettiin tadžikkilaisten käsityöläisten tekemistä osista.",
+    "Dušanben viheralueiden ja kasvitieteellisen puutarhan istutukset toivat kaupunkiin uusia kasveja.",
+    "Dušanbe tunnettiin osan neuvostokaudesta myös nimellä Stalinabad."
+  ],
+  "valokuva": {
+    "tiedosto": "Tulip of Dushanbe.jpg",
+    "lyhyt": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
+    "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
+    "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
+    "vuosi": "2026"
   },
-  {
-   "id": "musiikki",
-   "nimi": "Soitinten ja näyttämöiden kaupunki",
-   "johdanto": "Dušanbessa musiikki kuuluu sekä soitinkokoelmaan että esitykseen. Pamirin soittimet, shashmaqom, ooppera ja baletti avaavat erilaisia kuuntelureittejä.",
-   "tehtava": {
-    "kysymys": "Mistä kotiseudustaan Gurminj keräsi museonsa soittimia?",
-    "vaihtoehdot": [
-     "Badakhšanista",
-     "Ferganasta",
-     "Karakumista",
-     "Semiretšjestä"
-    ],
-    "oikea": 0,
-    "fakta": "Gurminjin matkat omalla Badakhšanin kotiseudulla toivat soitinkokoelmaan Pamirin perinteen esineitä."
-   },
-   "nostot": [
+  "kaupunkilehti": [
     {
-     "otsikko": "Näyttelijä keräsi soivan museon",
-     "teksti": "Gurminj Zavkibekov oli tadžikkilainen näyttelijä ja muusikko, joka keräsi soittimia retkillään kotiseudullaan Badakhšanissa. Kokoelmasta syntyi Dušanbeen Gurminjin soitinmuseo. Sen painopiste on Pamirin ja Badakhšanin musiikkiperinteessä: vitriineihin kuuluvat esimerkiksi rubab, tanbur ja dutor sekä erilaiset rummut. Museo ei palvele vain esineiden säilyttämistä, vaan siellä järjestetään myös kulttuuritapahtumia. Yksityisestä keräilytyöstä kasvoi paikka, jossa kotiseudun soittimet voivat liittyä pääkaupungin elävään musiikkielämään.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Gurminj Museum of Musical Instruments"
+      "id": "kaupunki",
+      "nimi": "Dušanbe",
+      "johdanto": "Dušanben tarina kulkee joenrannasta istutettuihin puistoihin ja käsityöläisten tekemästä teehuoneesta toiselle mantereelle. Pääkaupungissa elää myös luonnon oma kaupunki.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Teehuone matkusti valtameren yli",
+          "teksti": "Dušanben lahja ystävyyskaupungilleen Boulderille oli teehuone. Tadžikkilaiset käsityöläiset valmistivat sen koristeltuja osia kotimaassaan, ja rakennus koottiin myöhemmin Yhdysvalloissa. Pylväiden puukaiverrukset, maalattu katto ja keraamiset pinnat välittävät tekijöiden käsityötaitoa toiseen kaupunkiin. Teehuone on samalla käytössä oleva ruokailupaikka. Ystävyyskaupunkisuhde sai siis rakennuksen, johon ihmiset voivat tulla istumaan: kaukana Dušanbesta avautuva ovi johtaa tadžikkilaisten käsityöläisten tekemään tilaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dushanbe Tea House"
+        },
+        {
+          "otsikko": "Kaupunki ylitti oman jokensa",
+          "teksti": "Varzob virtaa Dušanben halki pohjoisesta etelään. Kaupunki kasvoi pitkään pääasiassa joen vasemmalla rannalla, kunnes rakentaminen laajeni myös vastakkaiselle puolelle. Joen sijainti auttaa ymmärtämään kaupungin rakennetta paremmin kuin yksittäinen monumentti. Dušanbe sijaitsee Hisorin laakson vuorten välisessä altaassa, mutta asutus ei ole jäänyt vanhan kylän mittaan. Varzobin laakso jatkuu kaupungista kohti vuoristoa, jossa joen varrella on retki- ja vapaa-ajan paikkoja. Sama vesi liittyy sekä pääkaupungin karttaan että lähiseudun retkiin.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dushanbe"
+        },
+        {
+          "otsikko": "Vihreyskin on rakennettua",
+          "teksti": "Dušanben nykyinen puusto ei ole pelkkä jäänne maisemasta ennen kaupunkia. Pääkaupungin rakentaminen poisti vanhaa kasvillisuutta, ja viheralueiden sekä kasvitieteellisen puutarhan istutukset toivat tilalle uusia kasveja. Tiedakatemian puutarha perustettiin 1900-luvulla, ja sen varhaisia istutuksia on säilynyt. Rudaki-kadun varrella kasvaa suuria plataaneja. Kun kävelijä löytää niiden alta varjon, hän liikkuu samalla kaupungin rakentamisen historiassa: viheralueet ovat osa sitä, kuinka laakson asutuksesta tehtiin pääkaupunki.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dushanbe"
+        },
+        {
+          "otsikko": "Siilit eivät tarvitse katuosoitetta",
+          "teksti": "Dušanben eläimistöön on kirjattu kettuja, pitkäkorvaisia siilejä ja lepakoita. Lintuihin kuuluu kyyhkyjä ja muuttavia lajeja, ja kaupungin vesissä elää myös kaloja. Gekot ja liskot kuuluvat matelijoihin; puhtaammissa vesissä tavataan sammakoita ja rupikonnia. Kaupunkikartta näyttää kadut ja korttelit, mutta eläimille samoissa paikoissa on toisenlaisia elinympäristöjä. Tämä lajisto ei tarkoita, että kaikki eläimet näkyisivät tavallisella puistokävelyllä. Se kertoo, että vuorten väliin rakennettu pääkaupunki on myös muiden lajien asuinalue.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dushanbe"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita Dušanben kävely Rudaki-kadun suunnalta. Gurminjin museossa soittimet avaavat näkymän Pamirin ja Badakhšanin kulttuuriin. Ooppera- tai baletti-ilta löytyy Ayni-teatterin ajankohtaisesta ohjelmasta. Puistot ja kasvitieteellinen puutarha sopivat toiseen kävelyyn. Varzobin laakson retki vaatii oman kuljetuksensa ja päivän suunnitelman.",
+        "artikkeli": {
+          "nimi": "Matkailijan Dušanbe",
+          "taitto": "opas",
+          "teksti": "Yhdistä keskustan kävely soitinmuseoon ja varaa illaksi esitys, jos ohjelmistosta löytyy sopiva.",
+          "nosto": "Soitinmuseo ja ooppera kertovat kaupungin kulttuurista eri mittakaavoissa. Puistokävelyn voi puolestaan vaihtaa erilliseksi retkeksi Varzobin laaksoon.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Dušanben kansainvälinen lentoasema palvelee kaupunkia. Keskustassa Rudaki-katu on käyttökelpoinen suunta, sillä sen varrella tai lähellä on museoita, teattereita ja majoitusta. Busseja, johdinautoja, maršrutka-pikkubusseja ja takseja käytetään kaupungin sisäisiin matkoihin. Tarkista käyttämäsi reitti paikallisesti ennen lähtöä. Tallenna määränpään osoitteen lisäksi läheinen tunnettu maamerkki, jotta kuljettajan kanssa löytyy yhteinen paikka.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Valitse museosta yksi maailma",
+              "teksti": "Gurminjin soitinmuseossa voi tutustua Pamirin ja Badakhšanin soittimiin. Tarkista etukäteen, järjestetäänkö vierailun aikaan musiikkitapahtumaa. Kansallismuseo ja kansallinen muinaismuseo ovat eri laitoksia, joten varmista juuri haluamasi museon nimi ja osoite. Nimen perusteella ei kannata päätellä, että kaikki arkeologiset kokoelmat olisivat samassa rakennuksessa. Museoiden väliin voi jättää kävelyä keskustan puistojen kautta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ilta näyttämöllä",
+              "teksti": "Ayni-teatterin ohjelmistoon kuuluvat ooppera ja baletti. Valitse esitys ajankohtaisesta ohjelmasta, sillä vierailupäivä ratkaisee, mitä näyttämöllä on. Gurminjin museon kulttuuritapahtuma tarjoaa toisen mittakaavan kuuntelupaikan. Soitinten katsomisen jälkeen voi olla kiinnostavaa kuulla, miten niitä käytetään esityksessä. Varmista tapahtuma ja sen paikka ennen kuin rakennat illan suunnitelman sen varaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Dušanben ruokapaikoista löytyy plov-riisiruokaa, samsa-leivonnaisia ja grillattuja šašlik-vartaita. Tarjolla on myös esimerkiksi turkkilaista, intialaista ja georgialaista ruokaa. Valitse ruokapaikka annoksen perusteella ja kysy täytteistä tai lihasta, jos jokin aines ei sovi sinulle. Oopperan ympäristössä on pieniä ruokapaikkoja, joten museon tai esityksen yhteyteen voi yhdistää tavallisen kaupunkilounaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Puistopäivä vai jokilaakso",
+              "teksti": "Rudaki-puisto ja kasvitieteellinen puutarha kuuluvat kaupungin kävelykohteisiin. Varzobin laaksossa on joen varren retki- ja vapaa-ajan paikkoja, mutta niiden tavoittaminen vaatii erillisen kuljetuksen. Selvitä retken määränpää ja paluukyyti etukäteen; jokilaakso ei ole yhden puiston nimi. Vuoriston reitti ja päivän sää on tarkistettava erikseen. Kaupunkikävelyn voi pitää omana ohjelmanaan ja varata retkelle toisen päivän.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Gurminjin soitinmuseo",
+                "tahdet": 3,
+                "selite": "Pamirin ja Badakhšanin soittimia sekä kulttuuritapahtumia."
+              },
+              {
+                "mita": "Ooppera tai baletti",
+                "tahdet": 3,
+                "selite": "Valitse Ayni-teatterin ajankohtaisesta ohjelmistosta esitys."
+              },
+              {
+                "mita": "Rudaki-katu",
+                "tahdet": 2,
+                "selite": "Keskustan kävelysuunta museoiden ja teattereiden välillä."
+              },
+              {
+                "mita": "Kasvitieteellinen puutarha",
+                "tahdet": 2,
+                "selite": "Pääkaupungin istutettuun vihermaisemaan kuuluva puutarha."
+              },
+              {
+                "mita": "Varzobin laakso",
+                "tahdet": 2,
+                "selite": "Joen varren retkikohteet vaativat erillisen kuljetussuunnitelman."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Kaksi eri museota",
+                "teksti": "Kansallismuseo ja muinaismuseo ovat eri laitoksia; varmista nimi ja osoite."
+              },
+              {
+                "otsikko": "Ohjelma ratkaisee",
+                "teksti": "Tarkista esitys tai museon musiikkitapahtuma ennen illan suunnittelua."
+              },
+              {
+                "otsikko": "Retken paluu",
+                "teksti": "Sovi jokilaakson retkelle myös paluukuljetus."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
     },
     {
-     "otsikko": "Shashmaqom opitaan ihmiseltä",
-     "teksti": "Dušanben musiikkielämään kuuluu shashmaqom, Keski-Aasian kaupungeissa kehittynyt perinne. Se yhdistää laulua, soittimia, säveljärjestelmiä ja runoutta. Musiikin välittymisessä mestarin ja oppilaan suhde on keskeinen: kaikkea esityksen tietoa ei voi tallettaa pelkillä nuoteilla. Ääni ja soittimet kulkevat rinnakkain, eikä perinne rajaudu yhden valtion sisään, vaan se kuuluu sekä tadžikkilaiseen että uzbekkilaiseen kulttuuriin. Konserttisalissa kuultava esitys on näin myös jatkoa ihmiseltä toiselle siirtyneelle musiikkitaidolle.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Shashmaqam"
-    },
-    {
-     "otsikko": "Oopperan nimessä on kirjailija",
-     "teksti": "Dušanben ooppera- ja balettiteatteri on nimetty kirjailija Sadriddin Aynin mukaan. Laitos kasvoi neuvostoaikana osana kaupungin esittävien taiteiden rakentamista. Siellä työskenteli esimerkiksi laulaja Hanifa Mavlianova; säveltäjä Aleksandr Lensky vaikutti kaupungissa myös filharmonian ja teatterin johdossa. Ooppera yhdisti säveltäjiä, laulajia ja orkesterin samaan esitykseen. Rakennuksen nimi puolestaan yhdistää näyttämön kirjalliseen kulttuuriin: kaupungin taidelaitosten historia ei mahdu vain yhden taiteenalan sisälle.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Dushanbe"
-    },
-    {
-     "otsikko": "Baletti tuli koulutuksen mukana",
-     "teksti": "Dušanben balettiryhmä kasvoi neuvostoaikana, ja siihen tuli Leningradin koreografisesta koulusta valmistuneita tanssijoita. Ryhmään kuului myös Malika Sabirova, jonka nimi liittyy tadžikkilaisen baletin historiaan. Kaupungin varhaisiin baletteihin kuului Two Roses, Kaksi ruusua. Ooppera ja baletti kehittyivät saman Ayni-teatterin rinnakkaisiksi esitysmuodoiksi. Koulutus toisessa kaupungissa ja työ Dušanben näyttämöllä kuuluivat saman esiintyjäkunnan kehitykseen. Teatterin historiaan liittyy siis myös kaupunkien välillä kulkenutta tanssitaitoa.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Dushanbe"
+      "id": "musiikki",
+      "nimi": "Soitinten ja näyttämöiden kaupunki",
+      "johdanto": "Dušanbessa musiikki kuuluu sekä soitinkokoelmaan että esitykseen. Pamirin soittimet, shashmaqom, ooppera ja baletti avaavat erilaisia kuuntelureittejä.",
+      "tehtava": {
+        "kysymys": "Mistä kotiseudustaan Gurminj keräsi museonsa soittimia?",
+        "vaihtoehdot": [
+          "Badakhšanista",
+          "Ferganasta",
+          "Karakumista",
+          "Semiretšjestä"
+        ],
+        "oikea": 0,
+        "fakta": "Gurminjin matkat omalla Badakhšanin kotiseudulla toivat soitinkokoelmaan Pamirin perinteen esineitä."
+      },
+      "nostot": [
+        {
+          "otsikko": "Näyttelijä keräsi soivan museon",
+          "teksti": "Gurminj Zavkibekov oli tadžikkilainen näyttelijä ja muusikko, joka keräsi soittimia retkillään kotiseudullaan Badakhšanissa. Kokoelmasta syntyi Dušanbeen Gurminjin soitinmuseo. Sen painopiste on Pamirin ja Badakhšanin musiikkiperinteessä: vitriineihin kuuluvat esimerkiksi rubab, tanbur ja dutor sekä erilaiset rummut. Museo ei palvele vain esineiden säilyttämistä, vaan siellä järjestetään myös kulttuuritapahtumia. Yksityisestä keräilytyöstä kasvoi paikka, jossa kotiseudun soittimet voivat liittyä pääkaupungin elävään musiikkielämään.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Gurminj Museum of Musical Instruments"
+        },
+        {
+          "otsikko": "Shashmaqom opitaan ihmiseltä",
+          "teksti": "Dušanben musiikkielämään kuuluu shashmaqom, Keski-Aasian kaupungeissa kehittynyt perinne. Se yhdistää laulua, soittimia, säveljärjestelmiä ja runoutta. Musiikin välittymisessä mestarin ja oppilaan suhde on keskeinen: kaikkea esityksen tietoa ei voi tallettaa pelkillä nuoteilla. Ääni ja soittimet kulkevat rinnakkain, eikä perinne rajaudu yhden valtion sisään, vaan se kuuluu sekä tadžikkilaiseen että uzbekkilaiseen kulttuuriin. Konserttisalissa kuultava esitys on näin myös jatkoa ihmiseltä toiselle siirtyneelle musiikkitaidolle.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Shashmaqam"
+        },
+        {
+          "otsikko": "Oopperan nimessä on kirjailija",
+          "teksti": "Dušanben ooppera- ja balettiteatteri on nimetty kirjailija Sadriddin Aynin mukaan. Laitos kasvoi neuvostoaikana osana kaupungin esittävien taiteiden rakentamista. Siellä työskenteli esimerkiksi laulaja Hanifa Mavlianova; säveltäjä Aleksandr Lensky vaikutti kaupungissa myös filharmonian ja teatterin johdossa. Ooppera yhdisti säveltäjiä, laulajia ja orkesterin samaan esitykseen. Rakennuksen nimi puolestaan yhdistää näyttämön kirjalliseen kulttuuriin: kaupungin taidelaitosten historia ei mahdu vain yhden taiteenalan sisälle.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dushanbe"
+        },
+        {
+          "otsikko": "Baletti tuli koulutuksen mukana",
+          "teksti": "Dušanben balettiryhmä kasvoi neuvostoaikana, ja siihen tuli Leningradin koreografisesta koulusta valmistuneita tanssijoita. Ryhmään kuului myös Malika Sabirova, jonka nimi liittyy tadžikkilaisen baletin historiaan. Kaupungin varhaisiin baletteihin kuului Two Roses, Kaksi ruusua. Ooppera ja baletti kehittyivät saman Ayni-teatterin rinnakkaisiksi esitysmuodoiksi. Koulutus toisessa kaupungissa ja työ Dušanben näyttämöllä kuuluivat saman esiintyjäkunnan kehitykseen. Teatterin historiaan liittyy siis myös kaupunkien välillä kulkenutta tanssitaitoa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dushanbe"
+        }
+      ]
     }
-   ]
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Dušanben keskustassa museot, näyttämöt ja puistot tarjoavat erilaisia pysähdyksiä. Rudaki-katu auttaa suunnittelemaan kävelyä niiden välillä.",
+    "rajat": null,
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": null,
+    "huomiot": [
+      "C-tekstiluonnos; kuvat ja D/E/F odottavat. Kaikkien kuvaroolien tiedosto/lyhyt/selite/lahde tyhjiä.",
+      "Kartta partial, 0 kohdetta: Rudaki Park -polku palauttaa kaupungin sivun. Gurminjin rakennuksen tekijäketju avoin; eläintarhan siirtosuunnitelman nykytila tarkistamatta.",
+      "Saatiedot:null, 48/48 primääriauditointi avoin. Ei ilmastolukuja eikä muutoksia saa.jsoniin.",
+      "Kontekstin Hisorin linnoitus on kaupunkikeskustan ulkopuolella, eikä sitä lisätty karttatavoitteen täytteeksi.",
+      "Boulder-teehuoneen käsityöpinnat ovat moderneja suojattuja teoksia; teksti ei ole niitä koskeva kuva- tai karttatilaus."
+    ]
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Dušanben keskustassa museot, näyttämöt ja puistot tarjoavat erilaisia pysähdyksiä. Rudaki-katu auttaa suunnittelemaan kävelyä niiden välillä.",
-  "rajat": null,
-  "kohteet": []
- },
- "nahtavyydet": {},
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": null,
-  "huomiot": [
-   "C-tekstiluonnos; kuvat ja D/E/F odottavat. Kaikkien kuvaroolien tiedosto/lyhyt/selite/lahde tyhjiä.",
-   "Kartta partial, 0 kohdetta: Rudaki Park -polku palauttaa kaupungin sivun. Gurminjin rakennuksen tekijäketju avoin; eläintarhan siirtosuunnitelman nykytila tarkistamatta.",
-   "Saatiedot:null, 48/48 primääriauditointi avoin. Ei ilmastolukuja eikä muutoksia saa.jsoniin.",
-   "Kontekstin Hisorin linnoitus on kaupunkikeskustan ulkopuolella, eikä sitä lisätty karttatavoitteen täytteeksi.",
-   "Boulder-teehuoneen käsityöpinnat ovat moderneja suojattuja teoksia; teksti ei ole niitä koskeva kuva- tai karttatilaus."
-  ]
- }
 }

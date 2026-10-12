@@ -1,0 +1,1999 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e09",
+  "city": "asgabat",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+  "assets": [
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e09-asgabat-o4-20261012-v2",
+      "galleryImageID": "e09-asgabat-o4-20261012-v2",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva šašlik-lihavartaista.",
+        "lyhyt": "Havainnekuva šašlik-lihavartaista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva šašlik-lihavartaista.",
+        "lyhyt": "Havainnekuva šašlik-lihavartaista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9b1c131f81a6bf855e3c666419fb2f0aed5396d66065ddd895d8e3263fc0f482",
+      "exportSHA256": "f922eafcfa592515ac1147fd394d2be910b41692913b63398f7d316b037d401e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "58b38af27d495b426e7e994b8931f60d1ee0e6aad6980c2dc774e0559897f1a2",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-o4-20261012-v2/original.png",
+            "nativeSha256Verified": "9b1c131f81a6bf855e3c666419fb2f0aed5396d66065ddd895d8e3263fc0f482",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme metallivarrasta epäsäännöllisine paistettuine lihapaloineen, pieni salaattikulho. Vartaiden kärjet ja kahvat johdonmukaisia, luonnolliset paistopinnat; ei tekstiä.",
+            "captionFi": "Havainnekuva šašlik-lihavartaista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "contentSha256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kaupungin ravintoloissa on tarjolla turkmeeniruokaa, kuten šašlikia eli grillattuja lihavartaita, sekä kansainvälisiä annoksia. Joissakin ruokapaikoissa voi valita pöydän tai perinteistä istumistapaa mukailevan paikan. Gülistanin basaarissa myydään hedelmiä ja vihanneksia muiden arkisten ostosten rinnalla. Ruokapaikka ja tori näyttävät kaupunkia eri tavoilla: toisessa annos valmistetaan, toisessa ostetaan sen aineksia.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/faktapohja.md",
+            "factSheetSha256": "204fc3ace598a224e9d7d7b8054c00cc19815d839edbe81aac739809e71be40b",
+            "topicEvidence": "O4 mainitsee šašlikin. Paikallisen Wikivoyage-lähdetiedoston Eat-kohta mainitsee shashlikin; lähde ei määritä tämän annoksen ulkonäköä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Ashgabat",
+                "section": "Eat: shashlik / grilled meat",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/voyage.txt",
+                "sha256": "8e1c9b0471b5dda652aaab7b0c5de62da1171c5a862aa3243228391803a1b53d"
+              },
+              {
+                "url": "https://en.wikivoyage.org/wiki/Ashgabat",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/voyage.txt",
+                "usage": "Food subject retained; background generalized and no location claim."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kolme grillattua lihavarrasta sopivat šašlik-aiheeseen. Selite kertoo havainnekuvasta, eikä yleistä annosta esitetä Hezzet-ravintolan valokuvana."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva šašlik-lihavartaista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+        "fileSHA256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e09-asgabat-o4-20261012-v2",
+          "sha256": "9b1c131f81a6bf855e3c666419fb2f0aed5396d66065ddd895d8e3263fc0f482",
+          "verdict": "accepted",
+          "reason": "Kolme grillattua lihavarrasta sopivat šašlik-aiheeseen. Selite kertoo havainnekuvasta, eikä yleistä annosta esitetä Hezzet-ravintolan valokuvana.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-o4-20261012-v2/original.png",
+            "nativeSha256Verified": "9b1c131f81a6bf855e3c666419fb2f0aed5396d66065ddd895d8e3263fc0f482",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme metallivarrasta epäsäännöllisine paistettuine lihapaloineen, pieni salaattikulho. Vartaiden kärjet ja kahvat johdonmukaisia, luonnolliset paistopinnat; ei tekstiä.",
+            "captionFi": "Havainnekuva šašlik-lihavartaista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "contentSha256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kaupungin ravintoloissa on tarjolla turkmeeniruokaa, kuten šašlikia eli grillattuja lihavartaita, sekä kansainvälisiä annoksia. Joissakin ruokapaikoissa voi valita pöydän tai perinteistä istumistapaa mukailevan paikan. Gülistanin basaarissa myydään hedelmiä ja vihanneksia muiden arkisten ostosten rinnalla. Ruokapaikka ja tori näyttävät kaupunkia eri tavoilla: toisessa annos valmistetaan, toisessa ostetaan sen aineksia.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/faktapohja.md",
+            "factSheetSha256": "204fc3ace598a224e9d7d7b8054c00cc19815d839edbe81aac739809e71be40b",
+            "topicEvidence": "O4 mainitsee šašlikin. Paikallisen Wikivoyage-lähdetiedoston Eat-kohta mainitsee shashlikin; lähde ei määritä tämän annoksen ulkonäköä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Ashgabat",
+                "section": "Eat: shashlik / grilled meat",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/voyage.txt",
+                "sha256": "8e1c9b0471b5dda652aaab7b0c5de62da1171c5a862aa3243228391803a1b53d"
+              },
+              {
+                "url": "https://en.wikivoyage.org/wiki/Ashgabat",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/voyage.txt",
+                "usage": "Food subject retained; background generalized and no location claim."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:21:51.822975+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png?t=f922eafcfa592515",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+        "sha256": "f922eafcfa592515ac1147fd394d2be910b41692913b63398f7d316b037d401e",
+        "bytes": 2370333,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-asgabat-o4-20261012-v2",
+        "nativeSHA256": "9b1c131f81a6bf855e3c666419fb2f0aed5396d66065ddd895d8e3263fc0f482",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:23:01.249399+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-o4-20261012-v2-9b1c131f81a6.png",
+        "sha256": "f922eafcfa592515ac1147fd394d2be910b41692913b63398f7d316b037d401e",
+        "bytes": 2370333,
+        "SHAReadAt": "2026-10-12T18:29:54.244505+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "9b1c131f81a6bf855e3c666419fb2f0aed5396d66065ddd895d8e3263fc0f482",
+        "rgbPixelSHA256": "42513bba20869352621b5043591ab2a1f5d83c1837454a965d29af8fcbdff601",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "58b38af27d495b426e7e994b8931f60d1ee0e6aad6980c2dc774e0559897f1a2"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e09-asgabat-k4-20261012-v1",
+      "galleryImageID": "e09-asgabat-k4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvien taimikasvatuksesta.",
+        "lyhyt": "Havainnekuva kasvien taimikasvatuksesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvien taimikasvatuksesta.",
+        "lyhyt": "Havainnekuva kasvien taimikasvatuksesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "bb1eebf9ed122158059220d15cf7f002abe499d98306940d30e19d7634d4add4",
+      "exportSHA256": "5189e3daaf6cedcc40c793a6e811cce925bd74d4dcd011a4e3e9dba38dd0ecd6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cf921aa35245f83c674797281b9099c430c012815c9f572355eedb17ae4d373c",
+        "semanticContextSHA256": "cf921aa35245f83c674797281b9099c430c012815c9f572355eedb17ae4d373c",
+        "subjectTitle": "Puutarha kokeilee kasvien kotiutumista",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-k4-20261012-v1/original.png",
+            "nativeSha256Verified": "bb1eebf9ed122158059220d15cf7f002abe499d98306940d30e19d7634d4add4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme ruukutettua lehtevää taimea puupöydällä, multaa ja istutuslapio. Luontevat lehtisuonet, multa ja ruukkujen kuluminen; ei henkilöitä tai etikettejä.",
+            "captionFi": "Havainnekuva kasvien taimikasvatuksesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "contentSha256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ašgabatin kasvitieteellisen puutarhan juuret ovat 1800-luvun lopun tutkimusasemassa ja puutarhakoulussa. Varsinainen puutarha syntyi seuraavalla vuosisadalla. Siellä on tutkittu ja kokeiltu koristekukkia, puita ja pensaita sekä koottu paikallisia kasveja samaan kokoelmaan. Kasvihuoneet ja eri alueille järjestetyt istutukset kuuluvat tutkimustyöhön, ja siemeniä kerätään vuosittain. Puutarha ei ole pelkkä kokoelma valmiita maisemia: siellä selvitetään myös, miten kasvit kasvavat uudessa ympäristössä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/faktapohja.md",
+            "factSheetSha256": "204fc3ace598a224e9d7d7b8054c00cc19815d839edbe81aac739809e71be40b",
+            "topicEvidence": "K4 käsittelee kasvien kokeellista kasvatusta ja kotiutumista puutarhassa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Ashgabat_Botanical_Garden",
+                "section": "Botanical garden and plant introduction/acclimatization",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/botanical.txt",
+                "sha256": "5f81da3081714dc3f46b57626230831a0a8936503c786236a3745d18475c3a5f"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Taimet ja kasvatusvälineet havainnollistavat kasvien kasvatusta. Selite ei nimeä niitä Ašgabatin puutarhan todellisiksi kokoelmataimiksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kasvien taimikasvatuksesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+        "fileSHA256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e09-asgabat-k4-20261012-v1",
+          "sha256": "bb1eebf9ed122158059220d15cf7f002abe499d98306940d30e19d7634d4add4",
+          "verdict": "accepted",
+          "reason": "Taimet ja kasvatusvälineet havainnollistavat kasvien kasvatusta. Selite ei nimeä niitä Ašgabatin puutarhan todellisiksi kokoelmataimiksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-k4-20261012-v1/original.png",
+            "nativeSha256Verified": "bb1eebf9ed122158059220d15cf7f002abe499d98306940d30e19d7634d4add4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme ruukutettua lehtevää taimea puupöydällä, multaa ja istutuslapio. Luontevat lehtisuonet, multa ja ruukkujen kuluminen; ei henkilöitä tai etikettejä.",
+            "captionFi": "Havainnekuva kasvien taimikasvatuksesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "contentSha256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ašgabatin kasvitieteellisen puutarhan juuret ovat 1800-luvun lopun tutkimusasemassa ja puutarhakoulussa. Varsinainen puutarha syntyi seuraavalla vuosisadalla. Siellä on tutkittu ja kokeiltu koristekukkia, puita ja pensaita sekä koottu paikallisia kasveja samaan kokoelmaan. Kasvihuoneet ja eri alueille järjestetyt istutukset kuuluvat tutkimustyöhön, ja siemeniä kerätään vuosittain. Puutarha ei ole pelkkä kokoelma valmiita maisemia: siellä selvitetään myös, miten kasvit kasvavat uudessa ympäristössä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/faktapohja.md",
+            "factSheetSha256": "204fc3ace598a224e9d7d7b8054c00cc19815d839edbe81aac739809e71be40b",
+            "topicEvidence": "K4 käsittelee kasvien kokeellista kasvatusta ja kotiutumista puutarhassa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Ashgabat_Botanical_Garden",
+                "section": "Botanical garden and plant introduction/acclimatization",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/botanical.txt",
+                "sha256": "5f81da3081714dc3f46b57626230831a0a8936503c786236a3745d18475c3a5f"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:25:22.632313+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png?t=5189e3daaf6cedcc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+        "sha256": "5189e3daaf6cedcc40c793a6e811cce925bd74d4dcd011a4e3e9dba38dd0ecd6",
+        "bytes": 2663575,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-asgabat-k4-20261012-v1",
+        "nativeSHA256": "bb1eebf9ed122158059220d15cf7f002abe499d98306940d30e19d7634d4add4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:28:01.182191+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-k4-20261012-v1-bb1eebf9ed12.png",
+        "sha256": "5189e3daaf6cedcc40c793a6e811cce925bd74d4dcd011a4e3e9dba38dd0ecd6",
+        "bytes": 2663575,
+        "SHAReadAt": "2026-10-12T18:29:54.365818+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "bb1eebf9ed122158059220d15cf7f002abe499d98306940d30e19d7634d4add4",
+        "rgbPixelSHA256": "d2a64ae951e567cdc3a9a86fddc21bc7d3accd01f6786ba35ff6fdcdabf482d8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "cf921aa35245f83c674797281b9099c430c012815c9f572355eedb17ae4d373c",
+      "contextAfterSHA256": "cf921aa35245f83c674797281b9099c430c012815c9f572355eedb17ae4d373c"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e09-asgabat-l1-20261012-v1",
+      "galleryImageID": "e09-asgabat-l1-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva dutarista, jonka eri osiin käytetään mulperi- ja aprikoosipuuta.",
+        "lyhyt": "Havainnekuva dutarista, jonka eri osiin käytetään mulperi- ja aprikoosipuuta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva dutarista, jonka eri osiin käytetään mulperi- ja aprikoosipuuta.",
+        "lyhyt": "Havainnekuva dutarista, jonka eri osiin käytetään mulperi- ja aprikoosipuuta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2303de5aa1ef95cea7194150181f96f3124d1dabfc2d8fa1e6bd74a63aee1756",
+      "exportSHA256": "515e6fdcbf75f176d2b7bb67451013cf6a0dfdca6bee5fc18f7fc8388b4c4b0e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
+        "semanticContextSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
+        "subjectTitle": "Kaikuosa ja kaula kasvavat eri puissa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:05:38.013668+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-l1-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://ich.unesco.org/en/RL/dutar-making-craftsmanship-and-traditional-music-performing-art-combined-with-singing-01565",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/dutar.txt",
+              "savedSHA256": "5734bd47eaea1e87aef27f0f925bf5dc3a27260b388270c7bec1e066af06466d",
+              "line": 384,
+              "finding": "Pitkäkaulainen kaksikielinen päärynämäinen luuttu; mulperinen kaikuosa ja kansi, kuivattu aprikoosikaula."
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Havainnekuva dutarista, jonka eri osiin käytetään mulperi- ja aprikoosipuuta.",
+            "duplicateInCity": false,
+            "rights": "Yleistetty perinteinen toiminnallinen soitin ja anonyymi tausta, ei nimettyä suojattua nykyteosta tai CC-valokuvaa.",
+            "referenceLimitation": "UNESCO:n ensimmäinen galleriakuva 14149 esittää puuta; sitä ei käytetty soittimen visuaalisena todisteena. Rakenne arvioitiin lähteen nimenomaisesta kuvauksesta ja alkuperäiskuvan omasta katselusta."
+          },
+          "qaReason": "Silmin tarkistettu dutarin yleishavainne sopii nykyisen L1-tekstin pitkään kaulaan, päärynämäiseen kaikuosaan ja ohueen puukanteen. Näkyvissä kaksi kieltä, kaksi viritystappia, nauhat, talla ja uskottava puupinta. UNESCO vahvistaa kaksikielisen soitintyypin sekä mulperi-/aprikoosimateriaalit. Kuvasta ei yksin tunnisteta puulajia; kuvateksti kuvaa tekstissä selostettua rakennustapaa. Ei kasvoja, tekstiä, logoja, vesileimaa tai kehystä. Taustalla yleistettyä perinteistä tekstiilikuviota ja tavallisia esineitä; mitään nimettyä nykyteosta, rakennusta tai tietyn tekijän instrumenttia ei toisinneta. Kuvan anonyymi työtila ei ole Asgabatin todellisen paikan väite."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva dutarista, jonka eri osiin käytetään mulperi- ja aprikoosipuuta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+        "fileSHA256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e09-asgabat-l1-20261012-v1",
+          "sha256": "2303de5aa1ef95cea7194150181f96f3124d1dabfc2d8fa1e6bd74a63aee1756",
+          "verdict": "accepted",
+          "reason": "Silmin tarkistettu dutarin yleishavainne sopii nykyisen L1-tekstin pitkään kaulaan, päärynämäiseen kaikuosaan ja ohueen puukanteen. Näkyvissä kaksi kieltä, kaksi viritystappia, nauhat, talla ja uskottava puupinta. UNESCO vahvistaa kaksikielisen soitintyypin sekä mulperi-/aprikoosimateriaalit. Kuvasta ei yksin tunnisteta puulajia; kuvateksti kuvaa tekstissä selostettua rakennustapaa. Ei kasvoja, tekstiä, logoja, vesileimaa tai kehystä. Taustalla yleistettyä perinteistä tekstiilikuviota ja tavallisia esineitä; mitään nimettyä nykyteosta, rakennusta tai tietyn tekijän instrumenttia ei toisinneta. Kuvan anonyymi työtila ei ole Asgabatin todellisen paikan väite.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:05:38.013668+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-l1-20261012-v1/original.png",
+            "actualWidth": 1536,
+            "actualHeight": 1024,
+            "actualFormat": "PNG",
+            "actualColorMode": "8-bit RGB",
+            "colorProfile": "Ei sRGB/iCCP/gAMA-chunkkia; upotettua sRGB-profiilia ei väitetä varmennetuksi.",
+            "subjectSource": {
+              "url": "https://ich.unesco.org/en/RL/dutar-making-craftsmanship-and-traditional-music-performing-art-combined-with-singing-01565",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/dutar.txt",
+              "savedSHA256": "5734bd47eaea1e87aef27f0f925bf5dc3a27260b388270c7bec1e066af06466d",
+              "line": 384,
+              "finding": "Pitkäkaulainen kaksikielinen päärynämäinen luuttu; mulperinen kaikuosa ja kansi, kuivattu aprikoosikaula."
+            },
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Havainnekuva dutarista, jonka eri osiin käytetään mulperi- ja aprikoosipuuta.",
+            "duplicateInCity": false,
+            "rights": "Yleistetty perinteinen toiminnallinen soitin ja anonyymi tausta, ei nimettyä suojattua nykyteosta tai CC-valokuvaa.",
+            "referenceLimitation": "UNESCO:n ensimmäinen galleriakuva 14149 esittää puuta; sitä ei käytetty soittimen visuaalisena todisteena. Rakenne arvioitiin lähteen nimenomaisesta kuvauksesta ja alkuperäiskuvan omasta katselusta."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png?t=515e6fdcbf75f176",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+        "sha256": "515e6fdcbf75f176d2b7bb67451013cf6a0dfdca6bee5fc18f7fc8388b4c4b0e",
+        "bytes": 2510296,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-asgabat-l1-20261012-v1",
+        "nativeSHA256": "2303de5aa1ef95cea7194150181f96f3124d1dabfc2d8fa1e6bd74a63aee1756",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:11:01.721856+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-l1-20261012-v1-2303de5aa1ef.png",
+        "sha256": "515e6fdcbf75f176d2b7bb67451013cf6a0dfdca6bee5fc18f7fc8388b4c4b0e",
+        "bytes": 2510296,
+        "SHAReadAt": "2026-10-12T18:29:54.139147+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2303de5aa1ef95cea7194150181f96f3124d1dabfc2d8fa1e6bd74a63aee1756",
+        "rgbPixelSHA256": "b838a3573a27ee7dbf5b1552792650ce916dd627616780c7563328fcfbeb2ac2",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
+      "contextAfterSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e09-asgabat-photo-8ba740b4146510b6",
+      "galleryImageID": "capital-cc-e09-asgabat-photo-8ba740b4146510b6",
+      "commonsFile": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/photo-8ba740b4146510b6d41f.jpg",
+        "suora": true,
+        "lahde": "Richard Mortel, Commons (CC BY 2.0)",
+        "selite": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "lyhyt": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "tiedosto": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+        "vuosi": "2023"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Richard Mortel, Commons (CC BY 2.0)",
+        "selite": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "lyhyt": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "tiedosto": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+        "vuosi": "2023"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/photo-8ba740b4146510b6d41f.jpg",
+        "suora": true,
+        "lahde": "Richard Mortel, Commons (CC BY 2.0)",
+        "selite": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "lyhyt": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "tiedosto": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+        "vuosi": "2023"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8ba740b4146510b6d41f37e4abf715d56012caa4b36fab2220d423fc3a417a0f",
+      "exportSHA256": "8ba740b4146510b6d41f37e4abf715d56012caa4b36fab2220d423fc3a417a0f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/photo-8ba740b4146510b6d41f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/photo-8ba740b4146510b6d41f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-06.jpg",
+      "dimensions": [
+        3004,
+        2026
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b1223275d1b07b0f90fbb8850cb559cb2b3bd2166df4758e04a18b6b6ad99538",
+        "semanticContextSHA256": "b1223275d1b07b0f90fbb8850cb559cb2b3bd2166df4758e04a18b6b6ad99538",
+        "subjectTitle": "asgabat — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Richard Mortel",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Architectural_pieces_from_old_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Architectural_pieces_from_old_Nisa%2C_2nd_cent._BCE%3B_National_Museum_of_History%2C_Ashgabat%2C_Turkmenistan.jpg",
+        "rightsEvidence": {
+          "selection": "Alkuperäinen Description nimeää arkkitehtuuriosat Vanhan Nisan antiikin löydöiksi ja kuvauspaikan National Museum of History, Ashgabat. Richard Mortel, CC BY 2.0; tekijä ja lisenssi alkuperäisestä File-sivusta. Museoetiketti näkyy itse pikseleissä ja ajoittaa juuri esillä olevat palat antiikkiin (II century B.C.), ei pelkän museorakennuksen ikä. Anonyymit antiikin tekijät ovat kuolleet yli 70 vuotta sitten. Kuvassa ei replikoida nykyistä museorakennusta, modernia patsasta tai yksilöityä modernia teosta. Vitriini/etiketti ovat tavallista näyttelyä ja tietoa, eivät valittu moderni taideaihe.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:45:05.886343+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-06.jpg",
+            "actualWidth": 3004,
+            "actualHeight": 2026,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3004,
+            "nativePixelHeight": 2026,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Architectural_pieces_from_old_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/2cd24da36f45da3bf6ace17ac5235ca4737cad92a4cd8976b08972a17e6c1e30.html",
+            "savedSourceSHA256": "3c278a01c404226955eded7feeec220f65d9b5906633831ac49e930d0ee83259",
+            "authorVerified": "Richard Mortel",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "captureDate": "29 June 2023, 14:35:19",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+            "depictedWorkLayer": "Esitetyt koristellut rakennusosat on nimenomaisesti ajoitettu antiikkiin sekä kuvalähteessä että kuvan fyysisessä museoetiketissä. Tämän muinaisen teoskerroksen suoja-ajat ovat päättyneet; peruste koskee kuvattuja antiikin kappaleita, ei museorakennuksen ikää. Tavallinen vitriini, punainen alusta ja pieni informatiivinen etiketti eivät toisinna yksilöityä modernia taideteosta pääaiheeksi.",
+            "duplicateInCity": false,
+            "placeVerified": "Commons Description: National Museum of History, Ashgabat, Turkmenistan; camera37.885220,58.349487.",
+            "artifactDatingEvidence": {
+              "sourceDescription": "Architectural pieces from old Nisa, 2nd cent. BCE",
+              "visibleMuseumLabel": "Architectural pieces. Old Nisa. Terracotta, stone. II century B.C.",
+              "layer": "Ancient pictured objects; no claim inferred from the museum building age."
+            },
+            "flickrLicenseReview": "Original file page confirms FlickreviewR2 verified cc-by-2.0 on12 November2024.",
+            "sourceMetadataJSON": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/candidate-06.json"
+          },
+          "qaReason": "Silmin katsottu alkuperäinen näyttää kaksi halkeillutta Vanhan Nisan antiikin rakennusosaa lasivitriinissä. Kuvan tarkkuus ja luonnolliset materiaalit ovat riittäviä, eivätkä lasiheijastukset peitä pääaihetta. Ei tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai mainospakkausta. Fyysinen pieni museon asiallinen selitekyltti on kuvaustilanteen osa ja vahvistaa kohteen sekä ajoituksen; se ei ole päälle lisätty teksti. Commonsin Description yksilöi juuri 2.vuosisadan eaa. Nisan kappaleet ja kuvauspaikan National Museum of History, Ashgabat; kamerakoordinaatti vahvistaa kaupungin. Richard Mortel ja CC BY2.0 luettu alkuperäisen Author/License-kentistä. Kuvateksti nimeää todellisen museokokoelman, ei Nisan raunioalueen nykyiseksi näkymäksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+        "fileSHA256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+          "sha256": "8ba740b4146510b6d41f37e4abf715d56012caa4b36fab2220d423fc3a417a0f",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen näyttää kaksi halkeillutta Vanhan Nisan antiikin rakennusosaa lasivitriinissä. Kuvan tarkkuus ja luonnolliset materiaalit ovat riittäviä, eivätkä lasiheijastukset peitä pääaihetta. Ei tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai mainospakkausta. Fyysinen pieni museon asiallinen selitekyltti on kuvaustilanteen osa ja vahvistaa kohteen sekä ajoituksen; se ei ole päälle lisätty teksti. Commonsin Description yksilöi juuri 2.vuosisadan eaa. Nisan kappaleet ja kuvauspaikan National Museum of History, Ashgabat; kamerakoordinaatti vahvistaa kaupungin. Richard Mortel ja CC BY2.0 luettu alkuperäisen Author/License-kentistä. Kuvateksti nimeää todellisen museokokoelman, ei Nisan raunioalueen nykyiseksi näkymäksi.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:45:05.886343+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-06.jpg",
+            "actualWidth": 3004,
+            "actualHeight": 2026,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3004,
+            "nativePixelHeight": 2026,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Architectural_pieces_from_old_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/2cd24da36f45da3bf6ace17ac5235ca4737cad92a4cd8976b08972a17e6c1e30.html",
+            "savedSourceSHA256": "3c278a01c404226955eded7feeec220f65d9b5906633831ac49e930d0ee83259",
+            "authorVerified": "Richard Mortel",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "captureDate": "29 June 2023, 14:35:19",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+            "depictedWorkLayer": "Esitetyt koristellut rakennusosat on nimenomaisesti ajoitettu antiikkiin sekä kuvalähteessä että kuvan fyysisessä museoetiketissä. Tämän muinaisen teoskerroksen suoja-ajat ovat päättyneet; peruste koskee kuvattuja antiikin kappaleita, ei museorakennuksen ikää. Tavallinen vitriini, punainen alusta ja pieni informatiivinen etiketti eivät toisinna yksilöityä modernia taideteosta pääaiheeksi.",
+            "duplicateInCity": false,
+            "placeVerified": "Commons Description: National Museum of History, Ashgabat, Turkmenistan; camera37.885220,58.349487.",
+            "artifactDatingEvidence": {
+              "sourceDescription": "Architectural pieces from old Nisa, 2nd cent. BCE",
+              "visibleMuseumLabel": "Architectural pieces. Old Nisa. Terracotta, stone. II century B.C.",
+              "layer": "Ancient pictured objects; no claim inferred from the museum building age."
+            },
+            "flickrLicenseReview": "Original file page confirms FlickreviewR2 verified cc-by-2.0 on12 November2024.",
+            "sourceMetadataJSON": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/candidate-06.json"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+        "sha256": "8ba740b4146510b6d41f37e4abf715d56012caa4b36fab2220d423fc3a417a0f",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Architectural_pieces_from_old_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Architectural_pieces_from_old_Nisa%2C_2nd_cent._BCE%3B_National_Museum_of_History%2C_Ashgabat%2C_Turkmenistan.jpg",
+        "author": "Richard Mortel",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 3004,
+        "height": 2026,
+        "originalSHA256": "8ba740b4146510b6d41f37e4abf715d56012caa4b36fab2220d423fc3a417a0f",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/photo-8ba740b4146510b6d41f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/photo-8ba740b4146510b6d41f.jpg",
+        "bytes": 2244886,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:45:35.386266+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+        "lahde": "Richard Mortel, Commons (CC BY 2.0)",
+        "selite": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "lyhyt": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "vuosi": "2023"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Richard Mortel, Commons (CC BY 2.0)",
+        "selite": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "lyhyt": "Antiikin rakennusosia Ašgabatin historiamuseon kokoelmassa.",
+        "tiedosto": "Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg",
+        "vuosi": "2023"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "b1223275d1b07b0f90fbb8850cb559cb2b3bd2166df4758e04a18b6b6ad99538",
+      "contextAfterSHA256": "b1223275d1b07b0f90fbb8850cb559cb2b3bd2166df4758e04a18b6b6ad99538"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "O3",
+      "type": "commons",
+      "assetID": "capital-cc-e09-asgabat-o3-10b722ac1730a814",
+      "galleryImageID": "capital-cc-e09-asgabat-o3-10b722ac1730a814",
+      "commonsFile": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/o3-10b722ac1730a814e5ad.jpg",
+        "suora": true,
+        "lahde": "Richard Mortel, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "lyhyt": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "tiedosto": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Richard Mortel, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "lyhyt": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "tiedosto": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/o3-10b722ac1730a814e5ad.jpg",
+        "suora": true,
+        "lahde": "Richard Mortel, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "lyhyt": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "tiedosto": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "10b722ac1730a814e5ad2376e3a4b7ed0d845d23f739c79d8aaed968a9f31a7b",
+      "exportSHA256": "10b722ac1730a814e5ad2376e3a4b7ed0d845d23f739c79d8aaed968a9f31a7b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/o3-10b722ac1730a814e5ad.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/o3-10b722ac1730a814e5ad.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-07.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "46b92edc6382bb59a182d998a26ff6131559a48da098d04ccebdeb0c1d1917a2",
+        "semanticContextSHA256": "f68cdd4f1927ee1bff8444e51584fb3dbfc51ad5825ca4b4a5ba8d5a7777a825",
+        "subjectTitle": "Nisa ja museon löydöt",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Richard Mortel",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fresco_fragments_from_the_old_Parthian_settlement_of_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Fresco_fragments_from_the_old_Parthian_settlement_of_Nisa%2C_2nd_cent._BCE%3B_National_Museum_of_History%2C_Ashgabat%2C_Turkmenistan_%281%29.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuva: Richard Mortel, CC BY 2.0, alkuperäisen Author- ja lisenssikentän perusteella. Kuvasivu yksilöi juuri kuvassa olevan seinämaalauskatkelman Old Nisan partialaiseen asutukseen, 2. vuosisata eaa.; teos on antiikin tuntemattomien tekijöiden työ, joiden kuolemasta on yli 70 vuotta. Perustelu koskee tätä fragmenttia, ei museon tai kaupungin rakennusten ikää. Kuvassa ei jäljennetä nykyistä museofasadia tai modernia taideteosta. Tausta ja suojalasin heijastus ovat tavallista esillepanoa.",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:58:36.325201+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-07.jpg",
+            "actualWidth": 4000,
+            "actualHeight": 3000,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4000,
+            "nativePixelHeight": 3000,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fresco_fragments_from_the_old_Parthian_settlement_of_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan_(1).jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/2ec44b7f7220f6a92967e49270fe7de3416e385a98a4de4d49fd801b6f2f181e.html",
+            "savedSourceSHA256": "f63beeb8b310057cffdee7fa0472e135515d2127eb3b75c295f0c1620f9c668d",
+            "authorVerified": "Richard Mortel",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "captureDate": "29 June 2023, 14:35:57",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+            "depictedWorkLayer": "Valokuvan tekijä Richard Mortel ja CC BY 2.0 luettu alkuperäisestä Author-taulukosta ja tiedostokohtaisesta lisenssimallista. Flickr-lähde prof_richard/53177521281; Commons-sivun FlickreviewR2-tarkistus 12.11.2024 vahvistaa CC BY 2.0:n. Erillinen kuvattu teoskerros on juuri lähdesivun yksilöimä antiikin 2. vuosisadan eaa. seinämaalausfragmentti. Antiikin alkuperäisen teoksen suoja-aika on päättynyt; museorakennuksen iästä tai FOP:sta ei päätellä fragmentin oikeuksia. Tavallinen esillepanotausta ja pieni lasiheijastus eivät ole nimetyn suojatun nykytaideteoksen pääaihe.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "f63beeb8b310057cffdee7fa0472e135515d2127eb3b75c295f0c1620f9c668d",
+            "captureDateAsStated": "29 June 2023, 14:35:57",
+            "placeEvidence": {
+              "sourceDescription": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1)",
+              "cameraLocation": [
+                37.88522,
+                58.349487
+              ],
+              "currentTargetHeading": "Nisa ja museon löydöt"
+            },
+            "depictedWorkIdentity": "Ancient fresco fragments from Old Nisa, 2nd century BCE; exact dated object identity from original Commons Description",
+            "flickrSource": "https://www.flickr.com/photos/prof_richard/53177521281/",
+            "licenseReview": "FlickreviewR 2, 12 November 2024, cc-by-2.0"
+          },
+          "qaReason": "Silmin katsottu alkuperäinen: murentunut punainen, vaalea ja tummansininen geometrinen seinämaalauskatkelma. Pinnan halkeamat ja värialueet erottuvat, tumma punainen tausta; pieni valkoinen suojalasin heijastus ei peitä pääaihetta. Ei kasvoja, ihmisiä, lisättyä tekstiä, vesileimaa, kehystä tai mainospakkausta. Nykyisen oppaan Nisa ja museon löydöt -jakso mainitsee kansallismuseossa esitellyt Nisan esinelöydöt. Commonsin alkuperäinen Description nimeää tämän fragmentin vanhasta partialaisesta Nisasta, 2. vuosisadalta eaa., ja kuvauspaikaksi National Museum of History, Ashgabat. Kuvateksti ei väitä sitä raunioalueen paikalla otetuksi näkymäksi. Kuvausvuosi 2023 kirjattu, ei tämän päivän tuoreusväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+        "fileSHA256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "commonsFile": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg",
+          "sha256": "10b722ac1730a814e5ad2376e3a4b7ed0d845d23f739c79d8aaed968a9f31a7b",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen: murentunut punainen, vaalea ja tummansininen geometrinen seinämaalauskatkelma. Pinnan halkeamat ja värialueet erottuvat, tumma punainen tausta; pieni valkoinen suojalasin heijastus ei peitä pääaihetta. Ei kasvoja, ihmisiä, lisättyä tekstiä, vesileimaa, kehystä tai mainospakkausta. Nykyisen oppaan Nisa ja museon löydöt -jakso mainitsee kansallismuseossa esitellyt Nisan esinelöydöt. Commonsin alkuperäinen Description nimeää tämän fragmentin vanhasta partialaisesta Nisasta, 2. vuosisadalta eaa., ja kuvauspaikaksi National Museum of History, Ashgabat. Kuvateksti ei väitä sitä raunioalueen paikalla otetuksi näkymäksi. Kuvausvuosi 2023 kirjattu, ei tämän päivän tuoreusväitettä.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T18:58:36.325201+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-07.jpg",
+            "actualWidth": 4000,
+            "actualHeight": 3000,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4000,
+            "nativePixelHeight": 3000,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Fresco_fragments_from_the_old_Parthian_settlement_of_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan_(1).jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/2ec44b7f7220f6a92967e49270fe7de3416e385a98a4de4d49fd801b6f2f181e.html",
+            "savedSourceSHA256": "f63beeb8b310057cffdee7fa0472e135515d2127eb3b75c295f0c1620f9c668d",
+            "authorVerified": "Richard Mortel",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "captureDate": "29 June 2023, 14:35:57",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+            "depictedWorkLayer": "Valokuvan tekijä Richard Mortel ja CC BY 2.0 luettu alkuperäisestä Author-taulukosta ja tiedostokohtaisesta lisenssimallista. Flickr-lähde prof_richard/53177521281; Commons-sivun FlickreviewR2-tarkistus 12.11.2024 vahvistaa CC BY 2.0:n. Erillinen kuvattu teoskerros on juuri lähdesivun yksilöimä antiikin 2. vuosisadan eaa. seinämaalausfragmentti. Antiikin alkuperäisen teoksen suoja-aika on päättynyt; museorakennuksen iästä tai FOP:sta ei päätellä fragmentin oikeuksia. Tavallinen esillepanotausta ja pieni lasiheijastus eivät ole nimetyn suojatun nykytaideteoksen pääaihe.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "f63beeb8b310057cffdee7fa0472e135515d2127eb3b75c295f0c1620f9c668d",
+            "captureDateAsStated": "29 June 2023, 14:35:57",
+            "placeEvidence": {
+              "sourceDescription": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1)",
+              "cameraLocation": [
+                37.88522,
+                58.349487
+              ],
+              "currentTargetHeading": "Nisa ja museon löydöt"
+            },
+            "depictedWorkIdentity": "Ancient fresco fragments from Old Nisa, 2nd century BCE; exact dated object identity from original Commons Description",
+            "flickrSource": "https://www.flickr.com/photos/prof_richard/53177521281/",
+            "licenseReview": "FlickreviewR 2, 12 November 2024, cc-by-2.0"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "commonsFile": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg",
+        "sha256": "10b722ac1730a814e5ad2376e3a4b7ed0d845d23f739c79d8aaed968a9f31a7b",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Fresco_fragments_from_the_old_Parthian_settlement_of_Nisa,_2nd_cent._BCE%3B_National_Museum_of_History,_Ashgabat,_Turkmenistan_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Fresco_fragments_from_the_old_Parthian_settlement_of_Nisa%2C_2nd_cent._BCE%3B_National_Museum_of_History%2C_Ashgabat%2C_Turkmenistan_%281%29.jpg",
+        "author": "Richard Mortel",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "10b722ac1730a814e5ad2376e3a4b7ed0d845d23f739c79d8aaed968a9f31a7b",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/o3-10b722ac1730a814e5ad.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/o3-10b722ac1730a814e5ad.jpg",
+        "bytes": 4714667,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:59:06.906730+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg",
+        "lahde": "Richard Mortel, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "lyhyt": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Richard Mortel, Wikimedia Commons (CC BY 2.0)",
+        "selite": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "lyhyt": "Nisan antiikin seinämaalausten katkelmia Ašgabatin historiamuseossa.",
+        "tiedosto": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "46b92edc6382bb59a182d998a26ff6131559a48da098d04ccebdeb0c1d1917a2",
+      "contextAfterSHA256": "f68cdd4f1927ee1bff8444e51584fb3dbfc51ad5825ca4b4a5ba8d5a7777a825"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e09-asgabat-c1-63ac95725373a856",
+      "galleryImageID": "capital-cc-e09-asgabat-c1-63ac95725373a856",
+      "commonsFile": "Iss071e672006 lrg Ashgabat at night 20240916.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c1-63ac95725373a8563e60.jpg",
+        "suora": true,
+        "lahde": "Expedition 71:n astronautti / NASA JSC, Wikimedia Commons (PD)",
+        "selite": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "lyhyt": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "tiedosto": "Iss071e672006 lrg Ashgabat at night 20240916.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Expedition 71:n astronautti / NASA JSC, Wikimedia Commons (PD)",
+        "selite": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "lyhyt": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "tiedosto": "Iss071e672006 lrg Ashgabat at night 20240916.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c1-63ac95725373a8563e60.jpg",
+        "suora": true,
+        "lahde": "Expedition 71:n astronautti / NASA JSC, Wikimedia Commons (PD)",
+        "selite": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "lyhyt": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "tiedosto": "Iss071e672006 lrg Ashgabat at night 20240916.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "63ac95725373a8563e60a83a63975913bb644ece2400ec47caba0e357496dfb7",
+      "exportSHA256": "63ac95725373a8563e60a83a63975913bb644ece2400ec47caba0e357496dfb7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c1-63ac95725373a8563e60.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c1-63ac95725373a8563e60.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-search/original-01.jpg",
+      "dimensions": [
+        5504,
+        3669
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Ašgabat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Expedition 71:n astronautti / NASA JSC",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+            "subject": "Tiedostokohtainen Commons PD-USGov-NASA ja PhotoId ISS071-E-672006 sekä alkuperäinen kuvaajalausuma luettu. Orbitaalietäisyydeltä kuvataan todellista katujen/alueiden sijaintia valoina; yksittäisen rakennuksen julkisivun tai modernin veistoksen luovaa ilmaisua ei erotu. Ei Turkmenistanin blanket-FOP:ta tai iästä pääteltyä rakennuslupaa. NASA:n oma lähteessä mainittu kontrastiprosessointi/crop, ei tämän työn pikselimuokkausta. Nimeämätön Expedition71:n astronautti, NASA/JSC; kuvatekstin kirjoittajaa ei väitetä kuvaajaksi.",
+            "placeEvidence": [
+              "Deutsch: Aşgabat bei Nacht am 16. September 2024 NASA Earth Observatory Bild des Tages für 23. Februar 2025 English: Ashgabat at night on September 16, 2024 NASA Earth Observatory Image of the Day for February 23, 2025 --- An astronaut aboard the International Space Station took this nighttime photograph of Ashgabat, the capital city of Turkmenistan. Located in Central Asia, the city lies at the foot of the Kopetdag mountains to the south and the edge of the Garagum (Kara Kum) desert to the north. Both regions appear dark and unlit in this photo. Approximately half of Turkmenistan’s population of 5.6 million lives in or near Ashgabat. In the middle of the city, the brightly lit international airport and M37 highway serve as major transportation conduits. Several smaller neighborhoods that appear dimmer are located along the highway. Thin, yellow-hued lines in the southern sector of the city are brightly lit roadways serving neighborhoods close to the mountains. Water flowing from the nearby mountains and foothills makes irrigated agriculture possible in Ashgabat. In this nighttime image, some unlit regions within city limits are agricultural fields or small water reservoirs. The cultivation of wheat, cotton, and rice is possible despite the desert climate. The M37 highway connects other towns that are also situated along the base of the Kopetdag range. This highway stretches more than 1,500 kilometers (930 miles) from neighboring Uzbekistan to Turkmenistan’s Caspian Sea coast.",
+              "Deutsch: Aşgabat bei Nacht am 16. September 2024 NASA Earth Observatory Bild des Tages für 23. Februar 2025",
+              "English: Ashgabat at night on September 16, 2024 NASA Earth Observatory Image of the Day for February 23, 2025 --- An astronaut aboard the International Space Station took this nighttime photograph of Ashgabat, the capital city of Turkmenistan. Located in Central Asia, the city lies at the foot of the Kopetdag mountains to the south and the edge of the Garagum (Kara Kum) desert to the north. Both regions appear dark and unlit in this photo. Approximately half of Turkmenistan’s population of 5.6 million lives in or near Ashgabat. In the middle of the city, the brightly lit international airport and M37 highway serve as major transportation conduits. Several smaller neighborhoods that appear dimmer are located along the highway. Thin, yellow-hued lines in the southern sector of the city are brightly lit roadways serving neighborhoods close to the mountains. Water flowing from the nearby mountains and foothills makes irrigated agriculture possible in Ashgabat. In this nighttime image, some unlit regions within city limits are agricultural fields or small water reservoirs. The cultivation of wheat, cotton, and rice is possible despite the desert climate. The M37 highway connects other towns that are also situated along the base of the Kopetdag range. This highway stretches more than 1,500 kilometers (930 miles) from neighboring Uzbekistan to Turkmenistan’s Caspian Sea coast."
+            ],
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/3b59d933fa0c48c4651ce144682f1ec1d30e6d16034c66c3e95c17c4a2936d15.html",
+            "noBlanketFopOrAgeAssumption": true,
+            "nasaSpecificPdClaim": "Commons Licensing explicitly states file solely created by NASA and PD-USGov-NASA; not inferred solely from NASA-hosting.",
+            "nasaPrimaryFetchLimitation": "Earth Observatory robots301 stopped primary fetch; not bypassed, not counted as an opened primary source."
+          },
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:16:08.801947+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-search/original-01.jpg",
+            "actualWidth": 5504,
+            "actualHeight": 3669,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 5504,
+            "nativePixelHeight": 3669,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/3b59d933fa0c48c4651ce144682f1ec1d30e6d16034c66c3e95c17c4a2936d15.html",
+            "savedSourceSHA256": "9507026ad92ef89ba916333b04499398c7c2997b22f5647685f5d62ec6195435",
+            "authorVerified": "Unnamed Expedition71 astronaut; NASA Johnson Space Center / ISS Crew Earth Observations Facility and Earth Science and Remote Sensing Unit",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg#Licensing",
+            "captureDate": "16 September2024",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+            "depictedWorkLayer": "Valokuvakerros: nimenomaisesti Expedition71:n jäsenen ottama astronauttivalokuva, NASA Johnson Space Center / ISS Crew Earth Observations Facility / Earth Science and Remote Sensing Unit; yksittäisen astronautin nimeä ei ilmoiteta. Andrea Wenzel on selitteen kirjoittaja, Lupe Commons-uploader, kumpikaan ei ole väitetty kuvaajaksi. TiedostokohtainenPD-USGov-NASA-lausuma ja tekijä-/lähdeketju luettu itse, ei NASA-palvelimesta päätelty yleinenPD. Lähde kertoo crop/contrast/lens-artifact-käsittelystä; tämä on valmiin lähdetiedoston versio, ei QA:n muutos. Erillinen teoskerros: orbitaalietäisyydeltä näkyvät todelliset katujen/alueiden sijainnit valoina; ei tunnistettavaa veistoksen, muraalin tai julkisivun luovaa ilmaisua pääaiheena. Ei Turkmenistanin yleistä panoraamaoikeusväitettä tai rakennusiästä laskettua vapautusta. NASA-credit säilytettävä ilman endorsement-väitettä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1040158721,
+            "sourcePublicationDate": "23 February2025",
+            "photoIdentifier": "ISS071-E-672006",
+            "creditForPublication": "NASA/JSC, Expedition71 astronaut photograph ISS071-E-672006",
+            "sourceVersionProcessing": "Source states cropped, contrast enhanced and lens artifacts removed; preserved actual published bytes; QA did not edit",
+            "primaryMediaPolicy": {
+              "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+              "sha256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+              "readPersonallyEarlierInQA": true
+            }
+          },
+          "qaReason": "Laaja todellinen Ašgabatin yövaloihin piirtyvä katu- ja kortteliverkko vastaa kaupungin asettelua. Alkuperäinen Commons Author-teksti yksilöi ISS071-E-672006:n ja kuvauspäivän16.9.2024; Date-rivin23.2.2025 on julkaisupäivä. Kohinaa näkyy tummilla alueilla, mutta kaupunkiverkon viivat ja alueiden väliset yhteydet erottuvat. Ei kasvoja, lisättyjä karttatekstejä, vesileimaa tai kehystä. Vuosi/päivä on oikein kuvatekstissä; kuvaa ei esitetä1873näkymänä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+        "fileSHA256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Iss071e672006 lrg Ashgabat at night 20240916.jpg",
+          "sha256": "63ac95725373a8563e60a83a63975913bb644ece2400ec47caba0e357496dfb7",
+          "verdict": "accepted",
+          "reason": "Laaja todellinen Ašgabatin yövaloihin piirtyvä katu- ja kortteliverkko vastaa kaupungin asettelua. Alkuperäinen Commons Author-teksti yksilöi ISS071-E-672006:n ja kuvauspäivän16.9.2024; Date-rivin23.2.2025 on julkaisupäivä. Kohinaa näkyy tummilla alueilla, mutta kaupunkiverkon viivat ja alueiden väliset yhteydet erottuvat. Ei kasvoja, lisättyjä karttatekstejä, vesileimaa tai kehystä. Vuosi/päivä on oikein kuvatekstissä; kuvaa ei esitetä1873näkymänä.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:16:08.801947+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-search/original-01.jpg",
+            "actualWidth": 5504,
+            "actualHeight": 3669,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 5504,
+            "nativePixelHeight": 3669,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/3b59d933fa0c48c4651ce144682f1ec1d30e6d16034c66c3e95c17c4a2936d15.html",
+            "savedSourceSHA256": "9507026ad92ef89ba916333b04499398c7c2997b22f5647685f5d62ec6195435",
+            "authorVerified": "Unnamed Expedition71 astronaut; NASA Johnson Space Center / ISS Crew Earth Observations Facility and Earth Science and Remote Sensing Unit",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg#Licensing",
+            "captureDate": "16 September2024",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+            "depictedWorkLayer": "Valokuvakerros: nimenomaisesti Expedition71:n jäsenen ottama astronauttivalokuva, NASA Johnson Space Center / ISS Crew Earth Observations Facility / Earth Science and Remote Sensing Unit; yksittäisen astronautin nimeä ei ilmoiteta. Andrea Wenzel on selitteen kirjoittaja, Lupe Commons-uploader, kumpikaan ei ole väitetty kuvaajaksi. TiedostokohtainenPD-USGov-NASA-lausuma ja tekijä-/lähdeketju luettu itse, ei NASA-palvelimesta päätelty yleinenPD. Lähde kertoo crop/contrast/lens-artifact-käsittelystä; tämä on valmiin lähdetiedoston versio, ei QA:n muutos. Erillinen teoskerros: orbitaalietäisyydeltä näkyvät todelliset katujen/alueiden sijainnit valoina; ei tunnistettavaa veistoksen, muraalin tai julkisivun luovaa ilmaisua pääaiheena. Ei Turkmenistanin yleistä panoraamaoikeusväitettä tai rakennusiästä laskettua vapautusta. NASA-credit säilytettävä ilman endorsement-väitettä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1040158721,
+            "sourcePublicationDate": "23 February2025",
+            "photoIdentifier": "ISS071-E-672006",
+            "creditForPublication": "NASA/JSC, Expedition71 astronaut photograph ISS071-E-672006",
+            "sourceVersionProcessing": "Source states cropped, contrast enhanced and lens artifacts removed; preserved actual published bytes; QA did not edit",
+            "primaryMediaPolicy": {
+              "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+              "sha256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+              "readPersonallyEarlierInQA": true
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Iss071e672006 lrg Ashgabat at night 20240916.jpg",
+        "sha256": "63ac95725373a8563e60a83a63975913bb644ece2400ec47caba0e357496dfb7",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg",
+        "author": "Expedition 71:n astronautti / NASA JSC",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Iss071e672006_lrg_Ashgabat_at_night_20240916.jpg#Licensing",
+        "width": 5504,
+        "height": 3669,
+        "originalSHA256": "63ac95725373a8563e60a83a63975913bb644ece2400ec47caba0e357496dfb7",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c1-63ac95725373a8563e60.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c1-63ac95725373a8563e60.jpg",
+        "bytes": 8059825,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:17:07.305289+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Expedition 71:n astronautti / NASA JSC, Wikimedia Commons (PD)",
+        "selite": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "lyhyt": "Ašgabat ISS-avaruusasemalta kuvattuna yöllä 16. syyskuuta 2024.",
+        "tiedosto": "Iss071e672006 lrg Ashgabat at night 20240916.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "9732e7426643d510c97ac6ac31e9cf3209626caf6b931497e9e855722565f88d",
+      "contextAfterSHA256": "9732e7426643d510c97ac6ac31e9cf3209626caf6b931497e9e855722565f88d"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e09-asgabat-c2-d82d5308a00c42f2",
+      "galleryImageID": "capital-cc-e09-asgabat-c2-d82d5308a00c42f2",
+      "commonsFile": "Ashgabat, Turkmenistan Astronaut Imagery.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "lyhyt": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "lyhyt": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "lyhyt": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d82d5308a00c42f2ba10985349ede3e46d217b40585ead7d80ce4d8a73155023",
+      "exportSHA256": "d82d5308a00c42f2ba10985349ede3e46d217b40585ead7d80ce4d8a73155023",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-search/original-02.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Ašgabat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Ashgabat%2C_Turkmenistan_Astronaut_Imagery.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+            "subject": "Commons Author NASA Astronauts ja tiedostokohtainen PD-USGov-NASA luettu; lähde yksilöi NASA/JSC PhotoId ISS022-E-66231. Orbitaalikuva maastosta ja kaupungin sijainnista, ei yksilöidyn suojatun veistoksen tai luovan julkisivun toistoa. Ei maakohtaista FOP/70v-oletusta; lähteen kuvaus todistaa Ašgabatin. NASA-primäärireitin robots301-estettä ei kierretä tai käytetä onnistuneena lähteenä.",
+            "placeEvidence": [
+              "English: Astronaut Photo of Ashgabat, Turkmenistan taken from the International Space Station (ISS) during Expedition 22 on February 14, 2010.",
+              "This image or video was catalogued by Lyndon B. Johnson Space Center of the United States National Aeronautics and Space Administration (NASA) under Photo ID: ISS022-E-66231 ."
+            ],
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d618ade0fe5f300ed6c26aaad743c49185fc0679a0194078c57ce9f2b4ff1c56.html",
+            "noBlanketFopOrAgeAssumption": true,
+            "nasaSpecificPdClaim": "Commons Licensing explicitly states file solely created by NASA and PD-USGov-NASA; not inferred solely from NASA-hosting.",
+            "nasaPrimaryFetchLimitation": "Earth Observatory robots301 stopped primary fetch; not bypassed, not counted as an opened primary source."
+          },
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:16:09.318228+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-search/original-02.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d618ade0fe5f300ed6c26aaad743c49185fc0679a0194078c57ce9f2b4ff1c56.html",
+            "savedSourceSHA256": "b3807c55035b1a00cd40cfb2ab074b795783d6eaf6f455e6c803a990e5032475",
+            "authorVerified": "NASA Astronauts",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG#Licensing",
+            "captureDate": "14 February2010",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+            "depictedWorkLayer": "Valokuvakerros: NASA Astronauts, tiedostokohtainenPD-USGov-NASA-lausuma ja Expedition22/ISS022-E-66231 luettu itse; NASA-kuvatunniste erotettu varsinaisesta lisenssimallista. TheDJ jaAresceo ovat Commons-historian lataajia, eivät varmistettuja kuvaajia. NASA:n alkuperäisen kuvareitin robots/redirect-este ei ole onnistunut lähde eikä sitä kierretä; käytetään luettua tiedostosivun kuvaus-/tekijä-/PD-ketjua ja aiemmin luettua NASAn omaa mediaohjetta. Erillinen teoskerros: todellisen kaupungin maantieteellinen kokonaisasettelu ja pienet kattojen tasopinnat, ei yksilöityä veistosta, muraalia tai luovaa julkisivua lähiesittelynä. Ei Turkmenistanin yleistä panoraamaoikeusväitettä tai rakennusiästä pääteltyäPD:tä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1143879477,
+            "photoIdentifier": "ISS022-E-66231",
+            "creditForPublication": "NASA Astronauts / Johnson Space Center, ISS022-E-66231",
+            "primaryMediaPolicy": {
+              "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+              "sha256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+              "readPersonallyEarlierInQA": true
+            }
+          },
+          "qaReason": "Todellinen Ašgabatin kaupunkialue ISS-avaruusasemalta14.2.2010. Alkuperäinen Description, Author NASA Astronauts ja PhotoID ISS022-E-66231 luettu itse. Kokonainen katu-/kortteliverkko, kiitotie, kaupunkialueen rajat ja ympäröivä maasto erottuvat. Harmaa ilmakehähuntu ja pehmeät yksityiskohdat kirjataan, mutta laaja todellinen asettelu on luettavissa. Ei kasvoja, lisättyjä karttatekstejä, vesileimaa tai kehystä. Kuvateksti kertoo vuoden2010 eikä lupaa nykytilannetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+        "fileSHA256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Ashgabat, Turkmenistan Astronaut Imagery.JPG",
+          "sha256": "d82d5308a00c42f2ba10985349ede3e46d217b40585ead7d80ce4d8a73155023",
+          "verdict": "accepted",
+          "reason": "Todellinen Ašgabatin kaupunkialue ISS-avaruusasemalta14.2.2010. Alkuperäinen Description, Author NASA Astronauts ja PhotoID ISS022-E-66231 luettu itse. Kokonainen katu-/kortteliverkko, kiitotie, kaupunkialueen rajat ja ympäröivä maasto erottuvat. Harmaa ilmakehähuntu ja pehmeät yksityiskohdat kirjataan, mutta laaja todellinen asettelu on luettavissa. Ei kasvoja, lisättyjä karttatekstejä, vesileimaa tai kehystä. Kuvateksti kertoo vuoden2010 eikä lupaa nykytilannetta.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:16:09.318228+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-gap-search/original-02.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d618ade0fe5f300ed6c26aaad743c49185fc0679a0194078c57ce9f2b4ff1c56.html",
+            "savedSourceSHA256": "b3807c55035b1a00cd40cfb2ab074b795783d6eaf6f455e6c803a990e5032475",
+            "authorVerified": "NASA Astronauts",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG#Licensing",
+            "captureDate": "14 February2010",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+            "depictedWorkLayer": "Valokuvakerros: NASA Astronauts, tiedostokohtainenPD-USGov-NASA-lausuma ja Expedition22/ISS022-E-66231 luettu itse; NASA-kuvatunniste erotettu varsinaisesta lisenssimallista. TheDJ jaAresceo ovat Commons-historian lataajia, eivät varmistettuja kuvaajia. NASA:n alkuperäisen kuvareitin robots/redirect-este ei ole onnistunut lähde eikä sitä kierretä; käytetään luettua tiedostosivun kuvaus-/tekijä-/PD-ketjua ja aiemmin luettua NASAn omaa mediaohjetta. Erillinen teoskerros: todellisen kaupungin maantieteellinen kokonaisasettelu ja pienet kattojen tasopinnat, ei yksilöityä veistosta, muraalia tai luovaa julkisivua lähiesittelynä. Ei Turkmenistanin yleistä panoraamaoikeusväitettä tai rakennusiästä pääteltyäPD:tä.",
+            "duplicateInCity": false,
+            "sourceRevision": 1143879477,
+            "photoIdentifier": "ISS022-E-66231",
+            "creditForPublication": "NASA Astronauts / Johnson Space Center, ISS022-E-66231",
+            "primaryMediaPolicy": {
+              "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+              "sha256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+              "readPersonallyEarlierInQA": true
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Ashgabat, Turkmenistan Astronaut Imagery.JPG",
+        "sha256": "d82d5308a00c42f2ba10985349ede3e46d217b40585ead7d80ce4d8a73155023",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Ashgabat%2C_Turkmenistan_Astronaut_Imagery.JPG",
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Ashgabat,_Turkmenistan_Astronaut_Imagery.JPG#Licensing",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "d82d5308a00c42f2ba10985349ede3e46d217b40585ead7d80ce4d8a73155023",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
+        "bytes": 2705882,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:17:09.018929+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "lyhyt": "Ašgabatin kaupunkialuetta ISS-avaruusasemalta 14. helmikuuta 2010.",
+        "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "af5f0c49cd40ff94ea05af45e2df2a40163d59ecfe1feeca18a0896560788eb0",
+      "contextAfterSHA256": "af5f0c49cd40ff94ea05af45e2df2a40163d59ecfe1feeca18a0896560788eb0"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e09-asgabat-n1-71d9ec11b75cd9a4",
+      "galleryImageID": "capital-cc-e09-asgabat-n1-71d9ec11b75cd9a4",
+      "commonsFile": "Nisa fortress walls close to Ashgabat (44675736824).jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Nisa\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Nisa",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
+        "suora": true,
+        "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "lyhyt": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "lyhyt": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
+        "suora": true,
+        "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "lyhyt": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "71d9ec11b75cd9a4bd3fd0bc0d04cd3df58ae05211977b615d72e714188dc690",
+      "exportSHA256": "71d9ec11b75cd9a4bd3fd0bc0d04cd3df58ae05211977b615d72e714188dc690",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-08.jpg",
+      "dimensions": [
+        3610,
+        2503
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "adbcf8c42eb77a614bbf801c2c8c0e48804bf33efd84daa22039785d618b73aa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "823f6f5146e39bf3c5ac484cee674d55724ee57f76b13d42a403071de4215612",
+        "semanticContextSHA256": "9516a96ac5284bb90a8328288f167e9826e0e45a5078d881b8923ef135fa6fa9",
+        "subjectTitle": "Nisa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Hans Birger Nilsen",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nisa_fortress_walls_close_to_Ashgabat_(44675736824).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Nisa_fortress_walls_close_to_Ashgabat_%2844675736824%29.jpg",
+        "rightsEvidence": {
+          "selection": "Valokuva Hans Birger Nilsen, CC BY-SA 2.0, alkuperäisen Commons Author/Licensing-taulukon mukaan. Kuvan pääaihe on Nisan muinaisen linnoitusalueen kulunut maavalli/tell, ei nykyinen uudisrakennus tai restauroitu koristeteos. UNESCO:n alkuperäinen Parthian Fortresses of Nisa -kuvaus, Integrity and authenticity -kohta (https://whc.unesco.org/en/list/1242), erottaa kaksi telliä nykyisistä kaivausrakenteista ja toteaa niiden nykyisen ulkoasun johtuvan luonnollisesta eroosiosta. Tämän kuvan maa-ainekseen muovautunut valli sopii juuri tähän rajaukseen; ei rakennuksen ikään perustuvaa vapautusta kaikille Nisan restauroinneille. Antiikin maavallin tuntemattomien tekijöiden suoja-aika on päättynyt. Vasemmalla etäiset talot näkyvät tavallisina suorakulmaisina käyttömuotoina ja tasaisina/peltisinä katoina, ilman havaittua yksilöityä julkisivukoristetta tai erottuvaa omaperäistä taideteosta. Pieni metallinen verkkoaita on toiminnallinen rajaus.",
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:08:45.646424+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-08.jpg",
+            "actualWidth": 3610,
+            "actualHeight": 2503,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3610,
+            "nativePixelHeight": 2503,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nisa_fortress_walls_close_to_Ashgabat_(44675736824).jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/823bb17d43bd0bb266be74de4731c2ed358c40fc904c8dfe69eab4e01bd1cbf3.html",
+            "savedSourceSHA256": "63db01160606dc029be6aca947516ed789f912156e3554a1e180e61a880fcf76",
+            "authorVerified": "Hans Birger Nilsen",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "captureDate": "8 October 2018, 10:10 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+            "depictedWorkLayer": "Valokuvakerros: Hans Birger Nilsen / CC BY-SA 2.0, alkuperäinen Author- ja Licensing-taulukko luettu itse; Flickr-tiedosto44675736824 ja FlickreviewR2:n 9.5.2021 lisenssitarkistus erikseen todettu. Erillinen teoskerros: tässä kuvassa pääaiheena on antiikin Nisan maavallin luonnollisesti erodoitunut muoto, jonka ajoituksen ja nykyisen eroosioulkoasun UNESCO:n alkuperäinen Nisa-kuvaus vahvistaa. Ei näkyvää nykyistä koristeltua rekonstruktiota tai yksilöityä suojattua taideteosta. Taustan tavalliset taso-/harjakattoiset talot ja toiminnallinen verkkoaita arvioitu tämän kuvan ilmaisun perusteella; ei yleistä Turkmenistanin panoraamaoikeusväitettä.",
+            "duplicateInCity": false,
+            "underlyingWorkPrimarySource": {
+              "url": "https://whc.unesco.org/en/list/1242",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/nisa-unesco.html",
+              "sha256": "6bcfa27ca1fbcf813753ab089428ba9bfda47fbc0f9f1114b6e1e0cff2721c30",
+              "readPersonally": true,
+              "scope": "two tells, ancient Parthian chronology; present appearance from natural erosion; modern excavated/restored structures not automatically cleared"
+            },
+            "locationEvidenceVerified": "Original Description: Nisa fortress walls close to Ashgabat; camera37.952100,58.210061; categoryNisa,Turkmenistan. Caption does not choose Old versus New Nisa or equate camera point with map marker.",
+            "targetObjectVerified": true,
+            "sourceRevision": 878851692,
+            "sourceCreatorFlickr": "https://www.flickr.com/photos/110608682@N04/44675736824/"
+          },
+          "qaReason": "Alkuperäinen kuva näyttää Nisan eroosion pyöristämää maavallia, ja Commonsin kuvaus sekä kamerakoordinaatit sitovat sen Nisan alueeseen. Nykyinen Nisa-kohdejuttu ja karttakohde ovat olemassa. Kuvateksti rajautuu vuoden 2018 valleihin; se ei väitä näyttävänsä antiikin alkuperäistä ulkoasua tai nykyistä restaurointia. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Kevyt etäisyyshuntu ja pehmeä kaukotausta eivät estä maavallin muotojen lukemista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+        "fileSHA256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Nisa\"].kuvat[0]",
+          "commonsFile": "Nisa fortress walls close to Ashgabat (44675736824).jpg",
+          "sha256": "71d9ec11b75cd9a4bd3fd0bc0d04cd3df58ae05211977b615d72e714188dc690",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen kuva näyttää Nisan eroosion pyöristämää maavallia, ja Commonsin kuvaus sekä kamerakoordinaatit sitovat sen Nisan alueeseen. Nykyinen Nisa-kohdejuttu ja karttakohde ovat olemassa. Kuvateksti rajautuu vuoden 2018 valleihin; se ei väitä näyttävänsä antiikin alkuperäistä ulkoasua tai nykyistä restaurointia. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Kevyt etäisyyshuntu ja pehmeä kaukotausta eivät estä maavallin muotojen lukemista.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:08:45.646424+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/cc-search/original-08.jpg",
+            "actualWidth": 3610,
+            "actualHeight": 2503,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 3610,
+            "nativePixelHeight": 2503,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nisa_fortress_walls_close_to_Ashgabat_(44675736824).jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/823bb17d43bd0bb266be74de4731c2ed358c40fc904c8dfe69eab4e01bd1cbf3.html",
+            "savedSourceSHA256": "63db01160606dc029be6aca947516ed789f912156e3554a1e180e61a880fcf76",
+            "authorVerified": "Hans Birger Nilsen",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "captureDate": "8 October 2018, 10:10 (according to Exif data)",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "sourceContentSHA256": "e2580176e6d636d245b318f9bcf3824be8df558429c069dabbbb3f57e20599ca",
+            "captionFi": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+            "depictedWorkLayer": "Valokuvakerros: Hans Birger Nilsen / CC BY-SA 2.0, alkuperäinen Author- ja Licensing-taulukko luettu itse; Flickr-tiedosto44675736824 ja FlickreviewR2:n 9.5.2021 lisenssitarkistus erikseen todettu. Erillinen teoskerros: tässä kuvassa pääaiheena on antiikin Nisan maavallin luonnollisesti erodoitunut muoto, jonka ajoituksen ja nykyisen eroosioulkoasun UNESCO:n alkuperäinen Nisa-kuvaus vahvistaa. Ei näkyvää nykyistä koristeltua rekonstruktiota tai yksilöityä suojattua taideteosta. Taustan tavalliset taso-/harjakattoiset talot ja toiminnallinen verkkoaita arvioitu tämän kuvan ilmaisun perusteella; ei yleistä Turkmenistanin panoraamaoikeusväitettä.",
+            "duplicateInCity": false,
+            "underlyingWorkPrimarySource": {
+              "url": "https://whc.unesco.org/en/list/1242",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/nisa-unesco.html",
+              "sha256": "6bcfa27ca1fbcf813753ab089428ba9bfda47fbc0f9f1114b6e1e0cff2721c30",
+              "readPersonally": true,
+              "scope": "two tells, ancient Parthian chronology; present appearance from natural erosion; modern excavated/restored structures not automatically cleared"
+            },
+            "locationEvidenceVerified": "Original Description: Nisa fortress walls close to Ashgabat; camera37.952100,58.210061; categoryNisa,Turkmenistan. Caption does not choose Old versus New Nisa or equate camera point with map marker.",
+            "targetObjectVerified": true,
+            "sourceRevision": 878851692,
+            "sourceCreatorFlickr": "https://www.flickr.com/photos/110608682@N04/44675736824/"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1454974cbd0700d15095076c898e5fb7c9abc491bbe14c4de73d47ff3f1e4b11"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "cdefc5b6f192690eb17cc5123009fd1bc4872fb1ae3aeae36eac7875ad78d844"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Nisa\"].kuvat[0]",
+        "commonsFile": "Nisa fortress walls close to Ashgabat (44675736824).jpg",
+        "sha256": "71d9ec11b75cd9a4bd3fd0bc0d04cd3df58ae05211977b615d72e714188dc690",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nisa_fortress_walls_close_to_Ashgabat_(44675736824).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Nisa_fortress_walls_close_to_Ashgabat_%2844675736824%29.jpg",
+        "author": "Hans Birger Nilsen",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "width": 3610,
+        "height": 2503,
+        "originalSHA256": "71d9ec11b75cd9a4bd3fd0bc0d04cd3df58ae05211977b615d72e714188dc690",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
+        "bytes": 6407151,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:09:13.307598+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg",
+        "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "lyhyt": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "lyhyt": "Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.",
+        "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "823f6f5146e39bf3c5ac484cee674d55724ee57f76b13d42a403071de4215612",
+      "contextAfterSHA256": "9516a96ac5284bb90a8328288f167e9826e0e45a5078d881b8923ef135fa6fa9"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

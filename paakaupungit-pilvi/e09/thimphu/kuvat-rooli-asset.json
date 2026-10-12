@@ -1,0 +1,1634 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e09",
+  "city": "thimphu",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+  "assets": [
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e09-thimphu-o4-20261012-v1",
+      "galleryImageID": "e09-thimphu-o4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva höyrytetyistä momo-nyyteistä.",
+        "lyhyt": "Havainnekuva höyrytetyistä momo-nyyteistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva höyrytetyistä momo-nyyteistä.",
+        "lyhyt": "Havainnekuva höyrytetyistä momo-nyyteistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "66f152b03aad5531b84312e04369bdc40fc9094c67a7d096e06cbbf4ada7b58e",
+      "exportSHA256": "8b10bdf68fef92ce54e70be5aa56ea564c035e58c355a8c9d81e533efb1dfbab",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sourceContentSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "2dc1aa234d60302312823d80d30aecd56352b5e85a024638cc0dd4a4f68effe2",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-o4-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva höyrytetyistä momo-nyyteistä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Thimphu",
+                "section": "Eat: meat or vegetable filled steamed momos",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu_opas.txt",
+                "sha256": "2fc445aeb54c35c0c90e6c824036bbc36db8788213db3d229074646e4ebd4883"
+              }
+            ],
+            "rightsScope": "New generic editorial natural/food/material/tool illustration; no claimed real-place reconstruction or protected artwork reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "qaReason": "Höyrytetyt momo-nyytit vaalealla kuvioimattomalla keramiikalla; yhden avattu kasvistäyte ja uskottavasti taiteltu pehmeä taikina. Luonteva sivuvalo, ei kasvoja, tekstiä, brändiä tai tunnistettavaa ravintolaa. Caption on rehellinen nyyttien havainnollistus ja aihe esiintyy nykyisessä Thimphun ruokaoppaassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva höyrytetyistä momo-nyyteistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+        "fileSHA256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "verdict": "accepted",
+          "reason": "Höyrytetyt momo-nyytit vaalealla kuvioimattomalla keramiikalla; yhden avattu kasvistäyte ja uskottavasti taiteltu pehmeä taikina. Luonteva sivuvalo, ei kasvoja, tekstiä, brändiä tai tunnistettavaa ravintolaa. Caption on rehellinen nyyttien havainnollistus ja aihe esiintyy nykyisessä Thimphun ruokaoppaassa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-o4-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva höyrytetyistä momo-nyyteistä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Thimphu",
+                "section": "Eat: meat or vegetable filled steamed momos",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu_opas.txt",
+                "sha256": "2fc445aeb54c35c0c90e6c824036bbc36db8788213db3d229074646e4ebd4883"
+              }
+            ],
+            "rightsScope": "New generic editorial natural/food/material/tool illustration; no claimed real-place reconstruction or protected artwork reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:06:45.429241+00:00",
+          "assetID": "e09-thimphu-o4-20261012-v1",
+          "sha256": "66f152b03aad5531b84312e04369bdc40fc9094c67a7d096e06cbbf4ada7b58e"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+            "sha256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+            "sha256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png?t=8b10bdf68fef92ce",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+        "sha256": "8b10bdf68fef92ce54e70be5aa56ea564c035e58c355a8c9d81e533efb1dfbab",
+        "bytes": 2149398,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-thimphu-o4-20261012-v1",
+        "nativeSHA256": "66f152b03aad5531b84312e04369bdc40fc9094c67a7d096e06cbbf4ada7b58e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "thimphu",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:11:06.786969+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-o4-20261012-v1-66f152b03aad.png",
+        "sha256": "8b10bdf68fef92ce54e70be5aa56ea564c035e58c355a8c9d81e533efb1dfbab",
+        "bytes": 2149398,
+        "SHAReadAt": "2026-10-12T18:29:56.171867+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "66f152b03aad5531b84312e04369bdc40fc9094c67a7d096e06cbbf4ada7b58e",
+        "rgbPixelSHA256": "f3d8161efc871bb95243387cd4bf8fd2ba58d556234f50eededb5f51f37865b0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "2dc1aa234d60302312823d80d30aecd56352b5e85a024638cc0dd4a4f68effe2"
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e09-thimphu-k3-20261012-v1",
+      "galleryImageID": "e09-thimphu-k3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva takinista.",
+        "lyhyt": "Havainnekuva takinista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva takinista.",
+        "lyhyt": "Havainnekuva takinista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c1ee4a378d275d606352175daa4cab6ebcb88d2af0b052bfabf0b0b55bbde4fb",
+      "exportSHA256": "7d1f9e583dd65dcc7fd50a77e29060dba167cea25ed01fac251083b3b80399cf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sourceContentSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "32f02b6e5a0da059875418ed5e95b61fec449b91f559382b6fdb31a0892dc571",
+        "semanticContextSHA256": "32f02b6e5a0da059875418ed5e95b61fec449b91f559382b6fdb31a0892dc571",
+        "subjectTitle": "Eläimet jäivät kaupunkiin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-k3-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva takinista.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Thimphu",
+                "section": "Motithang Takin Preserve / takins",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu.txt",
+                "sha256": "70c4eb436daa5357403ed468980d72cb1bd3c18f1d9b34e5db2f5cd0926ad374"
+              }
+            ],
+            "rightsScope": "New generic editorial natural/food/material/tool illustration; no claimed real-place reconstruction or protected artwork reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "qaReason": "Yksittäinen takin: raskas kuono, kaksi paksua kaartuvaa sarvea, kullanruskea/densesti vaihteleva turkki ja uskottavat neljä raajaa, sorkat osin kasvillisuuden takana. Ei fantastista eläinyhdistelmää, tekstiä, logoa, ihmistä tai Motithangin keksittyä aitausta. Yleinen takinihavainnollistus, ei oikean yksilön valokuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva takinista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+        "fileSHA256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "verdict": "accepted",
+          "reason": "Yksittäinen takin: raskas kuono, kaksi paksua kaartuvaa sarvea, kullanruskea/densesti vaihteleva turkki ja uskottavat neljä raajaa, sorkat osin kasvillisuuden takana. Ei fantastista eläinyhdistelmää, tekstiä, logoa, ihmistä tai Motithangin keksittyä aitausta. Yleinen takinihavainnollistus, ei oikean yksilön valokuva.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-k3-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva takinista.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Thimphu",
+                "section": "Motithang Takin Preserve / takins",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu.txt",
+                "sha256": "70c4eb436daa5357403ed468980d72cb1bd3c18f1d9b34e5db2f5cd0926ad374"
+              }
+            ],
+            "rightsScope": "New generic editorial natural/food/material/tool illustration; no claimed real-place reconstruction or protected artwork reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:06:45.971524+00:00",
+          "assetID": "e09-thimphu-k3-20261012-v1",
+          "sha256": "c1ee4a378d275d606352175daa4cab6ebcb88d2af0b052bfabf0b0b55bbde4fb"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+            "sha256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+            "sha256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png?t=7d1f9e583dd65dcc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+        "sha256": "7d1f9e583dd65dcc7fd50a77e29060dba167cea25ed01fac251083b3b80399cf",
+        "bytes": 2797237,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-thimphu-k3-20261012-v1",
+        "nativeSHA256": "c1ee4a378d275d606352175daa4cab6ebcb88d2af0b052bfabf0b0b55bbde4fb",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "thimphu",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:11:08.423663+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-k3-20261012-v1-c1ee4a378d27.png",
+        "sha256": "7d1f9e583dd65dcc7fd50a77e29060dba167cea25ed01fac251083b3b80399cf",
+        "bytes": 2797237,
+        "SHAReadAt": "2026-10-12T18:29:56.291564+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c1ee4a378d275d606352175daa4cab6ebcb88d2af0b052bfabf0b0b55bbde4fb",
+        "rgbPixelSHA256": "28c91f0c6a5725f349c8108178cd91e842ee2e85760a6be16c59480786d2f8c4",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "targetAfterSHA256": "32f02b6e5a0da059875418ed5e95b61fec449b91f559382b6fdb31a0892dc571",
+      "contextAfterSHA256": "32f02b6e5a0da059875418ed5e95b61fec449b91f559382b6fdb31a0892dc571"
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e09-thimphu-l1-20261012-v1",
+      "galleryImageID": "e09-thimphu-l1-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva käsintehdystä kuorikuitupaperista.",
+        "lyhyt": "Havainnekuva käsintehdystä kuorikuitupaperista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva käsintehdystä kuorikuitupaperista.",
+        "lyhyt": "Havainnekuva käsintehdystä kuorikuitupaperista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "385ff1e98cda958459bfef65c8bcdef1f19964922d828e7483124789c0c9f5b2",
+      "exportSHA256": "23c6b9f9084440748e70b8f51a7d21875c69393bd37b468875764d82387ed10f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sourceContentSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9bd1c01977004cd62f26dc12d9c4fc4cd5fb4573776e75b6ac863c98e3f1661c",
+        "semanticContextSHA256": "9bd1c01977004cd62f26dc12d9c4fc4cd5fb4573776e75b6ac863c98e3f1661c",
+        "subjectTitle": "Paperi alkaa pensaasta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-l1-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva käsintehdystä kuorikuitupaperista.",
+            "sourceEvidence": [
+              {
+                "url": "https://bhutan.travel/experiences-shopping",
+                "section": "Dezo: traditional paper made from Daphne bark",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Kasityot.txt",
+                "sha256": "6af6e72659a420e9dc3a87d53a38c1925e4d3797e021c8ab8d1cd3e3f99b5e76"
+              }
+            ],
+            "rightsScope": "anonymous functional paper/book form without writing, protected artwork, identifiable venue or religious manuscript reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "qaReason": "Käsintehdyn paperin epätasaiset kuorikuidut, luonnolliset reunat ja kuorisuikale näkyvät. Ei tekstiä, leimoja, uskonnollista kuvaa, tekijäkirjoitusta tai nimettyä työpajaa. Yleinen paperimateriaalien havainnollistus; ei väite tästä lajista, tietystä Dezo-valmistuksesta tai oikeasta museoesineestä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva käsintehdystä kuorikuitupaperista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+        "fileSHA256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "verdict": "accepted",
+          "reason": "Käsintehdyn paperin epätasaiset kuorikuidut, luonnolliset reunat ja kuorisuikale näkyvät. Ei tekstiä, leimoja, uskonnollista kuvaa, tekijäkirjoitusta tai nimettyä työpajaa. Yleinen paperimateriaalien havainnollistus; ei väite tästä lajista, tietystä Dezo-valmistuksesta tai oikeasta museoesineestä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-l1-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva käsintehdystä kuorikuitupaperista.",
+            "sourceEvidence": [
+              {
+                "url": "https://bhutan.travel/experiences-shopping",
+                "section": "Dezo: traditional paper made from Daphne bark",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Kasityot.txt",
+                "sha256": "6af6e72659a420e9dc3a87d53a38c1925e4d3797e021c8ab8d1cd3e3f99b5e76"
+              }
+            ],
+            "rightsScope": "anonymous functional paper/book form without writing, protected artwork, identifiable venue or religious manuscript reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:11:34.620183+00:00",
+          "assetID": "e09-thimphu-l1-20261012-v1",
+          "sha256": "385ff1e98cda958459bfef65c8bcdef1f19964922d828e7483124789c0c9f5b2"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+            "sha256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+            "sha256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png?t=23c6b9f908444074",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+        "sha256": "23c6b9f9084440748e70b8f51a7d21875c69393bd37b468875764d82387ed10f",
+        "bytes": 2661326,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-thimphu-l1-20261012-v1",
+        "nativeSHA256": "385ff1e98cda958459bfef65c8bcdef1f19964922d828e7483124789c0c9f5b2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "thimphu",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:12:36.970121+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l1-20261012-v1-385ff1e98cda.png",
+        "sha256": "23c6b9f9084440748e70b8f51a7d21875c69393bd37b468875764d82387ed10f",
+        "bytes": 2661326,
+        "SHAReadAt": "2026-10-12T18:29:56.402040+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "385ff1e98cda958459bfef65c8bcdef1f19964922d828e7483124789c0c9f5b2",
+        "rgbPixelSHA256": "902144239ba39b24c0bd6882341f4c1ffb5201340af0aadf5aa87035151eb8c9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "targetAfterSHA256": "9bd1c01977004cd62f26dc12d9c4fc4cd5fb4573776e75b6ac863c98e3f1661c",
+      "contextAfterSHA256": "9bd1c01977004cd62f26dc12d9c4fc4cd5fb4573776e75b6ac863c98e3f1661c"
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e09-thimphu-l3-20261012-v1",
+      "galleryImageID": "e09-thimphu-l3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puulevyjen välissä säilytettävän kirjan muodosta.",
+        "lyhyt": "Havainnekuva puulevyjen välissä säilytettävän kirjan muodosta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puulevyjen välissä säilytettävän kirjan muodosta.",
+        "lyhyt": "Havainnekuva puulevyjen välissä säilytettävän kirjan muodosta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ef60658464e545fb1f9bd95549e91dc4478f118a492ff295d98383932720226b",
+      "exportSHA256": "28cb8c2587c7adc1cdab1d85be0d3db5feda90aee89c7fa011d945162550b48b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sourceContentSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d54cb9a1b9c65efe54c5d8d98c1cd3c00c0300a8e170b4af7a3746933a3005d2",
+        "semanticContextSHA256": "d54cb9a1b9c65efe54c5d8d98c1cd3c00c0300a8e170b4af7a3746933a3005d2",
+        "subjectTitle": "Kirja puulevyjen välissä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-l3-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva puulevyjen välissä säilytettävän kirjan muodosta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Thimphu",
+                "section": "Literature / National Library: wooden boards, handmade paper and binding",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu.txt",
+                "sha256": "70c4eb436daa5357403ed468980d72cb1bd3c18f1d9b34e5db2f5cd0926ad374"
+              }
+            ],
+            "rightsScope": "anonymous functional paper/book form without writing, protected artwork, identifiable venue or religious manuscript reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "qaReason": "Pitkänomaiset blankot paperilehdet kahden tavallisen puulevyn välissä ja yksinkertainen kangasside. Materiaalit ja sidonta uskottavia, ei tekstiä, käsikirjoitusta, uskonnollista kuvaa tai suojattua teosta. Caption kuvaa perinteistä kirjan muotoa, ei Kansalliskirjaston tunnistettua alkuperäiskappaletta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puulevyjen välissä säilytettävän kirjan muodosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+        "fileSHA256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "verdict": "accepted",
+          "reason": "Pitkänomaiset blankot paperilehdet kahden tavallisen puulevyn välissä ja yksinkertainen kangasside. Materiaalit ja sidonta uskottavia, ei tekstiä, käsikirjoitusta, uskonnollista kuvaa tai suojattua teosta. Caption kuvaa perinteistä kirjan muotoa, ei Kansalliskirjaston tunnistettua alkuperäiskappaletta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-l3-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva puulevyjen välissä säilytettävän kirjan muodosta.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Thimphu",
+                "section": "Literature / National Library: wooden boards, handmade paper and binding",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu.txt",
+                "sha256": "70c4eb436daa5357403ed468980d72cb1bd3c18f1d9b34e5db2f5cd0926ad374"
+              }
+            ],
+            "rightsScope": "anonymous functional paper/book form without writing, protected artwork, identifiable venue or religious manuscript reproduction",
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:11:34.638224+00:00",
+          "assetID": "e09-thimphu-l3-20261012-v1",
+          "sha256": "ef60658464e545fb1f9bd95549e91dc4478f118a492ff295d98383932720226b"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+            "sha256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+            "sha256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png?t=28cb8c2587c7adc1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+        "sha256": "28cb8c2587c7adc1cdab1d85be0d3db5feda90aee89c7fa011d945162550b48b",
+        "bytes": 2124424,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-thimphu-l3-20261012-v1",
+        "nativeSHA256": "ef60658464e545fb1f9bd95549e91dc4478f118a492ff295d98383932720226b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "thimphu",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:12:38.602456+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l3-20261012-v1-ef60658464e5.png",
+        "sha256": "28cb8c2587c7adc1cdab1d85be0d3db5feda90aee89c7fa011d945162550b48b",
+        "bytes": 2124424,
+        "SHAReadAt": "2026-10-12T18:29:56.511474+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ef60658464e545fb1f9bd95549e91dc4478f118a492ff295d98383932720226b",
+        "rgbPixelSHA256": "1b889079f003a8e033de5ffe1d50af451d741aa6322c44a1ea94c24e196376a0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "targetAfterSHA256": "d54cb9a1b9c65efe54c5d8d98c1cd3c00c0300a8e170b4af7a3746933a3005d2",
+      "contextAfterSHA256": "d54cb9a1b9c65efe54c5d8d98c1cd3c00c0300a8e170b4af7a3746933a3005d2"
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e09-thimphu-k4-20261012-v1",
+      "galleryImageID": "e09-thimphu-k4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva perinteisestä bambujousesta ja nuolista.",
+        "lyhyt": "Havainnekuva perinteisestä bambujousesta ja nuolista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva perinteisestä bambujousesta ja nuolista.",
+        "lyhyt": "Havainnekuva perinteisestä bambujousesta ja nuolista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4cf6091b1d47c236577d30a1c96c4b5919d2ddb0cccc2d00569aad7a82d87b24",
+      "exportSHA256": "95fc3083284d7d43eaff995bd16183d79f7ac76c1262139093aa3f436471f562",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sourceContentSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f4fbfd35b35a8f457457e43cd631c4b96e2f1b9f47b8eeb6c1e515b0c250d170",
+        "semanticContextSHA256": "f4fbfd35b35a8f457457e43cd631c4b96e2f1b9f47b8eeb6c1e515b0c250d170",
+        "subjectTitle": "Osuma tarvitsee tanssin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-k4-20261012-v1/original.png",
+            "nativeSha256Verified": "4cf6091b1d47c236577d30a1c96c4b5919d2ddb0cccc2d00569aad7a82d87b24",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi kaareva bambujousi jänteineen ja kaksi nuolta sulkineen sekä kärjineen. Ehjät muodot, luontevat bambun nivelet ja sidokset; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva perinteisestä bambujousesta ja nuolista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+            "contentSha256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetCurrentlyPresent": true,
+            "targetText": "Changlimithangissa jousiammunta kuuluu Thimphun urheiluelämään. Kentällä käytetään sekä perinteisiä bambujousia että nykyaikaisia taljajousia, eikä kilpailu rajoitu nuolen lentoon. Joukkueita kannustetaan, vastustajia kiusoitellaan ja onnistumisia juhlistetaan laulaen ja tanssien. Jousiammunta on Bhutanin kansallislaji, mutta katsomossa ymmärtää, että se on myös yhdessäoloa. Kentän ympärillä tapahtuva kuuluu kilpailuun yhtä olennaisesti kuin tauluun osuva nuoli. Urheilu ja esitys mahtuvat samalle paikalle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/faktapohja.md",
+            "factSheetSha256": "a4fb1e571b6896d517738906a14a04d0e0f4d6074dbcce95fc975c1b800f9a3c",
+            "topicEvidence": "K4 nimeää perinteiset bambujouset; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Thimphu",
+                "section": "Sports: archery with traditional bamboo bows",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu.txt",
+                "sha256": "70c4eb436daa5357403ed468980d72cb1bd3c18f1d9b34e5db2f5cd0926ad374"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Bambujousi ja nuolet sopivat tekstin perinteiseen urheiluvälineeseen. Kuva ei väitä aitoa Changlimithangin kalustoa tai kilpailutilannetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva perinteisestä bambujousesta ja nuolista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+        "fileSHA256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e09-thimphu-k4-20261012-v1",
+          "sha256": "4cf6091b1d47c236577d30a1c96c4b5919d2ddb0cccc2d00569aad7a82d87b24",
+          "verdict": "accepted",
+          "reason": "Bambujousi ja nuolet sopivat tekstin perinteiseen urheiluvälineeseen. Kuva ei väitä aitoa Changlimithangin kalustoa tai kilpailutilannetta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-k4-20261012-v1/original.png",
+            "nativeSha256Verified": "4cf6091b1d47c236577d30a1c96c4b5919d2ddb0cccc2d00569aad7a82d87b24",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi kaareva bambujousi jänteineen ja kaksi nuolta sulkineen sekä kärjineen. Ehjät muodot, luontevat bambun nivelet ja sidokset; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva perinteisestä bambujousesta ja nuolista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+            "contentSha256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetCurrentlyPresent": true,
+            "targetText": "Changlimithangissa jousiammunta kuuluu Thimphun urheiluelämään. Kentällä käytetään sekä perinteisiä bambujousia että nykyaikaisia taljajousia, eikä kilpailu rajoitu nuolen lentoon. Joukkueita kannustetaan, vastustajia kiusoitellaan ja onnistumisia juhlistetaan laulaen ja tanssien. Jousiammunta on Bhutanin kansallislaji, mutta katsomossa ymmärtää, että se on myös yhdessäoloa. Kentän ympärillä tapahtuva kuuluu kilpailuun yhtä olennaisesti kuin tauluun osuva nuoli. Urheilu ja esitys mahtuvat samalle paikalle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/faktapohja.md",
+            "factSheetSha256": "a4fb1e571b6896d517738906a14a04d0e0f4d6074dbcce95fc975c1b800f9a3c",
+            "topicEvidence": "K4 nimeää perinteiset bambujouset; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Thimphu",
+                "section": "Sports: archery with traditional bamboo bows",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Thimphu.txt",
+                "sha256": "70c4eb436daa5357403ed468980d72cb1bd3c18f1d9b34e5db2f5cd0926ad374"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T20:14:07.231456+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+            "sha256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+            "sha256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png?t=95fc3083284d7d43",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+        "sha256": "95fc3083284d7d43eaff995bd16183d79f7ac76c1262139093aa3f436471f562",
+        "bytes": 3077534,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-thimphu-k4-20261012-v1",
+        "nativeSHA256": "4cf6091b1d47c236577d30a1c96c4b5919d2ddb0cccc2d00569aad7a82d87b24",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "thimphu",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T20:14:24.642076+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-k4-20261012-v1-4cf6091b1d47.png",
+        "sha256": "95fc3083284d7d43eaff995bd16183d79f7ac76c1262139093aa3f436471f562",
+        "bytes": 3077534,
+        "SHAReadAt": "2026-10-12T20:14:20.316458+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4cf6091b1d47c236577d30a1c96c4b5919d2ddb0cccc2d00569aad7a82d87b24",
+        "rgbPixelSHA256": "d056fbe5aa6b9f6197dc1574c4af148ecf4c849ab8d47f974505c2eeb7e73119",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "targetAfterSHA256": "f4fbfd35b35a8f457457e43cd631c4b96e2f1b9f47b8eeb6c1e515b0c250d170",
+      "contextAfterSHA256": "f4fbfd35b35a8f457457e43cd631c4b96e2f1b9f47b8eeb6c1e515b0c250d170"
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e09-thimphu-l2-20261012-v1",
+      "galleryImageID": "e09-thimphu-l2-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kankaan kudonnasta ja loimi- sekä kudelangoista.",
+        "lyhyt": "Havainnekuva kankaan kudonnasta ja loimi- sekä kudelangoista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kankaan kudonnasta ja loimi- sekä kudelangoista.",
+        "lyhyt": "Havainnekuva kankaan kudonnasta ja loimi- sekä kudelangoista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fed18b8502b65343c3f5233ae24dedc92e676619cd080204a595f49cf6e0ec86",
+      "exportSHA256": "315a46ec4a0fcac07c99707b68e086473cddb074deb032748ee802112b667520",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sourceContentSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "94a351aeea387341c932240ecdb905a9d0a324b63fa401e19d8ba1b4d83d0795",
+        "semanticContextSHA256": "94a351aeea387341c932240ecdb905a9d0a324b63fa401e19d8ba1b4d83d0795",
+        "subjectTitle": "Kangas kertoo tekijästään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-l2-20261012-v1/original.png",
+            "nativeSha256Verified": "fed18b8502b65343c3f5233ae24dedc92e676619cd080204a595f49cf6e0ec86",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaaleita loimilankoja, kudottua kangasta ja puinen sukkula lähikuvassa. Luontevat kuidut, puunsyyt ja reunalankojen irtoaminen; ei käsiä tai tekstiä.",
+            "captionFi": "Havainnekuva kankaan kudonnasta ja loimi- sekä kudelangoista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+            "contentSha256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetCurrentlyPresent": true,
+            "targetText": "Thimphun tekstiilimuseo käsittelee Bhutanin kudontaa sekä taitona että kulttuuriperintönä. Näyttelyissä esitellään loimi- ja kudekuviointia, uskonnollisia tekstiilejä ja kansallispukuja. Naisten kira ja miesten gho kuuluvat kokoelmiin, samoin kuninkaalliset vaatteet. Museon rinnalla perinne jatkuu kutojien työssä ja opetuksessa. Kankaassa huomio voi siirtyä vaatekappaleesta siihen, miten se on tehty: väri, kuvio ja kudontatapa kantavat eri tietoa, vaikka ne lopulta näkyvät yhdessä pinnassa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/faktapohja.md",
+            "factSheetSha256": "a4fb1e571b6896d517738906a14a04d0e0f4d6074dbcce95fc975c1b800f9a3c",
+            "topicEvidence": "L2 käsittelee kudontaa ja kudontatapaa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bhutan_Textile_Museum",
+                "section": "Textile museum displays: warp and weft pattern weaving",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Tekstiili_WP.txt",
+                "sha256": "9aba9dcda88ee0caa4eb952123e39f6d4727bceed449a9971b2cabbdce2e03de"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleinen kudontatyö havainnollistaa loimi- ja kudelankoja jäljentämättä tiettyä suojattua tekstiiliä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kankaan kudonnasta ja loimi- sekä kudelangoista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+        "fileSHA256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e09-thimphu-l2-20261012-v1",
+          "sha256": "fed18b8502b65343c3f5233ae24dedc92e676619cd080204a595f49cf6e0ec86",
+          "verdict": "accepted",
+          "reason": "Yleinen kudontatyö havainnollistaa loimi- ja kudelankoja jäljentämättä tiettyä suojattua tekstiiliä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/assets/e09-thimphu-l2-20261012-v1/original.png",
+            "nativeSha256Verified": "fed18b8502b65343c3f5233ae24dedc92e676619cd080204a595f49cf6e0ec86",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vaaleita loimilankoja, kudottua kangasta ja puinen sukkula lähikuvassa. Luontevat kuidut, puunsyyt ja reunalankojen irtoaminen; ei käsiä tai tekstiä.",
+            "captionFi": "Havainnekuva kankaan kudonnasta ja loimi- sekä kudelangoista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+            "contentSha256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetCurrentlyPresent": true,
+            "targetText": "Thimphun tekstiilimuseo käsittelee Bhutanin kudontaa sekä taitona että kulttuuriperintönä. Näyttelyissä esitellään loimi- ja kudekuviointia, uskonnollisia tekstiilejä ja kansallispukuja. Naisten kira ja miesten gho kuuluvat kokoelmiin, samoin kuninkaalliset vaatteet. Museon rinnalla perinne jatkuu kutojien työssä ja opetuksessa. Kankaassa huomio voi siirtyä vaatekappaleesta siihen, miten se on tehty: väri, kuvio ja kudontatapa kantavat eri tietoa, vaikka ne lopulta näkyvät yhdessä pinnassa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/faktapohja.md",
+            "factSheetSha256": "a4fb1e571b6896d517738906a14a04d0e0f4d6074dbcce95fc975c1b800f9a3c",
+            "topicEvidence": "L2 käsittelee kudontaa ja kudontatapaa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Bhutan_Textile_Museum",
+                "section": "Textile museum displays: warp and weft pattern weaving",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-thimphu/Tekstiili_WP.txt",
+                "sha256": "9aba9dcda88ee0caa4eb952123e39f6d4727bceed449a9971b2cabbdce2e03de"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T20:11:00.366224+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+            "sha256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+            "sha256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png?t=315a46ec4a0fcac0",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+        "sha256": "315a46ec4a0fcac07c99707b68e086473cddb074deb032748ee802112b667520",
+        "bytes": 2662780,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-thimphu-l2-20261012-v1",
+        "nativeSHA256": "fed18b8502b65343c3f5233ae24dedc92e676619cd080204a595f49cf6e0ec86",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "thimphu",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T20:11:15.464516+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/thimphu/e09-thimphu-l2-20261012-v1-fed18b8502b6.png",
+        "sha256": "315a46ec4a0fcac07c99707b68e086473cddb074deb032748ee802112b667520",
+        "bytes": 2662780,
+        "SHAReadAt": "2026-10-12T20:11:05.676202+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fed18b8502b65343c3f5233ae24dedc92e676619cd080204a595f49cf6e0ec86",
+        "rgbPixelSHA256": "ce163eb90b231b7256d148768587c347e0f2ce1ea794c85c7151503bfc1143d2",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "targetAfterSHA256": "94a351aeea387341c932240ecdb905a9d0a324b63fa401e19d8ba1b4d83d0795",
+      "contextAfterSHA256": "94a351aeea387341c932240ecdb905a9d0a324b63fa401e19d8ba1b4d83d0795"
+    },
+    {
+      "era": "e09",
+      "city": "thimphu",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e09-thimphu-photo-c00dd0108bebf5b7",
+      "galleryImageID": "capital-cc-e09-thimphu-photo-c00dd0108bebf5b7",
+      "commonsFile": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
+        "suora": true,
+        "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
+        "selite": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "lyhyt": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
+        "selite": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "lyhyt": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
+        "suora": true,
+        "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
+        "selite": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "lyhyt": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
+      "exportSHA256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/cc-search/original-01.jpg",
+      "dimensions": [
+        4000,
+        1868
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
+      "sourceContentSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9d668c9038f482ca30e79cf006d179b7bea33d033aad848c2d78b4c3a069813d",
+        "semanticContextSHA256": "9d668c9038f482ca30e79cf006d179b7bea33d033aad848c2d78b4c3a069813d",
+        "subjectTitle": "thimphu — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Nabin K. Sapkota",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Momo_at_lunch_-_Dzonkha_Wikipedia_Edit-a-thon-September_02,_2025_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Momo_at_lunch_-_Dzonkha_Wikipedia_Edit-a-thon-September_02%2C_2025_01.jpg",
+        "rightsEvidence": {
+          "selection": "Original Commons Author Nabin K. Sapkota, Own work, CC BY-SA 4.0. Kuvan kamerapaikka 27°27′28.14″N / 89°38′48.55″E ja Thimphu-luokitus osoittavat kaupungin. Ruoka tavallisella valkoisella lautasella; ei nimetyn ravintolan, koristekuvion tai modernin taideteoksen jäljennöstä. Täytteen lihaa/kasvista ei päätellä.",
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Momo_at_lunch_-_Dzonkha_Wikipedia_Edit-a-thon-September_02,_2025_01.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/696dd4483f420f60021914daf810088db4c4841501e7fff01664b8a491116dd5.html",
+            "sourceSHA256": "d29aa85fc4f54e5bf0334b9ab8340f75fab076e06ed886609671aed56b7302c6",
+            "directAuthors": [
+              "Nabin K. Sapkota"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "2 September 2025, 11:25:21",
+              "Camera location": "27° 27′ 28.14″ N, 89° 38′ 48.55″ E"
+            },
+            "sourceOriginalDimensions": [
+              4000,
+              1868
+            ],
+            "localDimensions": [
+              4000,
+              1868
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/cc-search/original-01.jpg",
+            "mediaSHA256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "fullImageViewed": true,
+            "captionFi": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+            "placeEvidence": {
+              "cameraLocation": "27°27′28.14″N, 89°38′48.55″E",
+              "sourceCategories": [
+                "Thimphu",
+                "Food of Bhutan",
+                "Dzongkha Wikipedia Edit-a-thon",
+                "Momos"
+              ],
+              "scope": "actual Thimphu lunch photograph; no filling/restaurant guessed"
+            },
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito Thimphussa kuvattu lounaslautanen: momo-nyyttejä, punaista kastiketta ja tavallisen lautasen/aterimien reunoja. Ei ihmisiä, mainospakkausta, lisättyä tekstiä tai logoa. Nabin K. Sapkota, CC BY-SA 4.0, 4000×1868 ja kamerapaikka Thimphussa luettu alkuperäisestä sivusta ja tiedostosta. Täytettä tai ravintolaa ei arvata; PHOTO voi olla paikallinen ruokayksityiskohta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+        "fileSHA256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "verdict": "accepted",
+          "reason": "Aito Thimphussa kuvattu lounaslautanen: momo-nyyttejä, punaista kastiketta ja tavallisen lautasen/aterimien reunoja. Ei ihmisiä, mainospakkausta, lisättyä tekstiä tai logoa. Nabin K. Sapkota, CC BY-SA 4.0, 4000×1868 ja kamerapaikka Thimphussa luettu alkuperäisestä sivusta ja tiedostosta. Täytettä tai ravintolaa ei arvata; PHOTO voi olla paikallinen ruokayksityiskohta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Momo_at_lunch_-_Dzonkha_Wikipedia_Edit-a-thon-September_02,_2025_01.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/696dd4483f420f60021914daf810088db4c4841501e7fff01664b8a491116dd5.html",
+            "sourceSHA256": "d29aa85fc4f54e5bf0334b9ab8340f75fab076e06ed886609671aed56b7302c6",
+            "directAuthors": [
+              "Nabin K. Sapkota"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "2 September 2025, 11:25:21",
+              "Camera location": "27° 27′ 28.14″ N, 89° 38′ 48.55″ E"
+            },
+            "sourceOriginalDimensions": [
+              4000,
+              1868
+            ],
+            "localDimensions": [
+              4000,
+              1868
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/cc-search/original-01.jpg",
+            "mediaSHA256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "fullImageViewed": true,
+            "captionFi": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+            "placeEvidence": {
+              "cameraLocation": "27°27′28.14″N, 89°38′48.55″E",
+              "sourceCategories": [
+                "Thimphu",
+                "Food of Bhutan",
+                "Dzongkha Wikipedia Edit-a-thon",
+                "Momos"
+              ],
+              "scope": "actual Thimphu lunch photograph; no filling/restaurant guessed"
+            },
+            "currentContentSHA256": "2b0fab10d161acbde51cd2dbf39856ea90f2d90d56467cad7977fa50b115824e",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:30:26.665726+00:00",
+          "commonsFile": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg",
+          "sha256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/qa.json",
+            "sha256": "04f1fb32942e3d032f20401ed5986646d44bb7c8a709b5d6ff36805a59987713"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/thimphu/illustration-qa-extra.json",
+            "sha256": "87ad18f9faf7cab593519d6d96379428b3200ce29543721ce2809134758fb544"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "thimphu",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg",
+        "sha256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Momo_at_lunch_-_Dzonkha_Wikipedia_Edit-a-thon-September_02,_2025_01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Momo_at_lunch_-_Dzonkha_Wikipedia_Edit-a-thon-September_02%2C_2025_01.jpg",
+        "author": "Nabin K. Sapkota",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4000,
+        "height": 1868,
+        "originalSHA256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
+        "bytes": 1240851,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:31:47.880874+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg",
+        "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
+        "selite": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "lyhyt": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
+        "selite": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "lyhyt": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+        "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6cb4254c4bd2a6ad4d0e95025ae9cbb59b97268739fd7e78dec1ff6d1ff09036",
+      "targetAfterSHA256": "9d668c9038f482ca30e79cf006d179b7bea33d033aad848c2d78b4c3a069813d",
+      "contextAfterSHA256": "9d668c9038f482ca30e79cf006d179b7bea33d033aad848c2d78b4c3a069813d"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

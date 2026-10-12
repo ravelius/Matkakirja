@@ -1,0 +1,2460 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e09",
+  "city": "taskent",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+  "assets": [
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e09-taskent-o3-20261012-v1",
+      "galleryImageID": "e09-taskent-o3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puiden lehvästöstä.",
+        "lyhyt": "Havainnekuva puiden lehvästöstä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puiden lehvästöstä.",
+        "lyhyt": "Havainnekuva puiden lehvästöstä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0a5a01a1f418359d3c498fd0b08d0d5e708c4b3c60647c1a1eb4977edd67853c",
+      "exportSHA256": "32621b93d93f572a750d6a67a9aeb56bf0f1803219b0f23b90a3c23c1e996474",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "81f7ab1e6e55ad9e22bdb1bba0147d3734862f511985c2b98affa5a10ece914f",
+        "subjectTitle": "Puiden keskelle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-o3-20261012-v1/original.png",
+            "nativeSha256Verified": "0a5a01a1f418359d3c498fd0b08d0d5e708c4b3c60647c1a1eb4977edd67853c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vihreitä lehtiä oksassa vastavalossa. Lehtisuonet, sahalaitaiset reunat ja varjot luonnollisia; ei henkilöitä, tekstiä tai rakennuksia.",
+            "captionFi": "Havainnekuva puiden lehvästöstä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Taškentin kasvitieteellinen puutarha tarjoaa puustoisen kävelypaikan eri kaupunginosien tutkimisen rinnalle. Puustoisessa puutarhassa voi kävellä rauhallisessa ympäristössä. Se on oma retkikohteensa, joten sen ja vanhan kaupungin välistä siirtymistä ei kannata ajatella vain basaarikävelyn jatkona. Taškent on laaja kaupunki: eri alueiden välillä metro, bussit ja taksit säästävät kävelyä itse kohteisiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "O3 kertoo puustoisen puutarhan kävelystä. Kuva on yleinen kasvihavainnollistus.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Tashkent",
+                "section": "See / Botanical Gardens",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/voyage.txt",
+                "sha256": "e4bdef3ac7b0c30fcabcbe367c757428a31d024267f6131efd7ce4fd6f510f1c"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Puiden lehtien yleinen lähikuva sopii puustoiseen puutarha-aiheeseen. Selite ei väitä kyseistä lajia tai puuta Taškentin kokoelmasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puiden lehvästöstä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+        "fileSHA256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e09-taskent-o3-20261012-v1",
+          "sha256": "0a5a01a1f418359d3c498fd0b08d0d5e708c4b3c60647c1a1eb4977edd67853c",
+          "verdict": "accepted",
+          "reason": "Puiden lehtien yleinen lähikuva sopii puustoiseen puutarha-aiheeseen. Selite ei väitä kyseistä lajia tai puuta Taškentin kokoelmasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-o3-20261012-v1/original.png",
+            "nativeSha256Verified": "0a5a01a1f418359d3c498fd0b08d0d5e708c4b3c60647c1a1eb4977edd67853c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Vihreitä lehtiä oksassa vastavalossa. Lehtisuonet, sahalaitaiset reunat ja varjot luonnollisia; ei henkilöitä, tekstiä tai rakennuksia.",
+            "captionFi": "Havainnekuva puiden lehvästöstä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Taškentin kasvitieteellinen puutarha tarjoaa puustoisen kävelypaikan eri kaupunginosien tutkimisen rinnalle. Puustoisessa puutarhassa voi kävellä rauhallisessa ympäristössä. Se on oma retkikohteensa, joten sen ja vanhan kaupungin välistä siirtymistä ei kannata ajatella vain basaarikävelyn jatkona. Taškent on laaja kaupunki: eri alueiden välillä metro, bussit ja taksit säästävät kävelyä itse kohteisiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "O3 kertoo puustoisen puutarhan kävelystä. Kuva on yleinen kasvihavainnollistus.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Tashkent",
+                "section": "See / Botanical Gardens",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/voyage.txt",
+                "sha256": "e4bdef3ac7b0c30fcabcbe367c757428a31d024267f6131efd7ce4fd6f510f1c"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:14:46.421519+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png?t=32621b93d93f572a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+        "sha256": "32621b93d93f572a750d6a67a9aeb56bf0f1803219b0f23b90a3c23c1e996474",
+        "bytes": 2182841,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-o3-20261012-v1",
+        "nativeSHA256": "0a5a01a1f418359d3c498fd0b08d0d5e708c4b3c60647c1a1eb4977edd67853c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T19:15:44.657656+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
+        "sha256": "32621b93d93f572a750d6a67a9aeb56bf0f1803219b0f23b90a3c23c1e996474",
+        "bytes": 2182841,
+        "SHAReadAt": "2026-10-12T19:32:07.907762+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0a5a01a1f418359d3c498fd0b08d0d5e708c4b3c60647c1a1eb4977edd67853c",
+        "rgbPixelSHA256": "f6cf87bd8e64bbb521dea12fdce60f734ce750a81a2eadb7f6427005e81cdcf3",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "81f7ab1e6e55ad9e22bdb1bba0147d3734862f511985c2b98affa5a10ece914f"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e09-taskent-o4-20261012-v1",
+      "galleryImageID": "e09-taskent-o4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvilan leivonnaisesta ja kahvista.",
+        "lyhyt": "Havainnekuva kahvilan leivonnaisesta ja kahvista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvilan leivonnaisesta ja kahvista.",
+        "lyhyt": "Havainnekuva kahvilan leivonnaisesta ja kahvista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5e003a356e907b285dce667fb007247684ed24c94b86e858c8271b82fdec7299",
+      "exportSHA256": "b5b3bcb4c173f35da5f4e08fef2e96a555fb7bbc343264699f824a2f86a12e2e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "579fe6d26bf8496d4890529d7cc7860c88f53664030283251bb7089607b9a1d8",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-o4-20261012-v1/original.png",
+            "nativeSha256Verified": "5e003a356e907b285dce667fb007247684ed24c94b86e858c8271b82fdec7299",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kakkupala tomusokerineen ja kahvikuppi. Luontevat murut, huokoinen sisus ja varjot, ei tekstiä, henkilöitä tai logoja.",
+            "captionFi": "Havainnekuva kahvilan leivonnaisesta ja kahvista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Chorsun ympäristössä on kauppakojujen lisäksi ruokailupaikkoja. Basaari on hyvä paikka nähdä hedelmien, vihannesten ja mausteiden tarjontaa ennen ateriaa. Taškentin ravintoloissa saa paikallista uzbekkiruokaa, mutta tarjolla on myös muuta keskiaasialaista sekä kiinalaista ja eurooppalaista ruokaa. Paikallinen kahvila voi puolestaan yhdistää ruokailun kahviin ja leivonnaisiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "O4 mainitsee kahvin ja leivonnaiset; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Tashkent",
+                "section": "Eat / Bravissimo coffee shop with cakes and local food",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/voyage.txt",
+                "sha256": "e4bdef3ac7b0c30fcabcbe367c757428a31d024267f6131efd7ce4fd6f510f1c"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleinen kakku ja kahvi sopivat oppaan kahvila-aiheeseen. Selite ei nimeä reseptiä tai tiettyä Taškentin kahvilaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kahvilan leivonnaisesta ja kahvista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+        "fileSHA256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e09-taskent-o4-20261012-v1",
+          "sha256": "5e003a356e907b285dce667fb007247684ed24c94b86e858c8271b82fdec7299",
+          "verdict": "accepted",
+          "reason": "Yleinen kakku ja kahvi sopivat oppaan kahvila-aiheeseen. Selite ei nimeä reseptiä tai tiettyä Taškentin kahvilaa.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-o4-20261012-v1/original.png",
+            "nativeSha256Verified": "5e003a356e907b285dce667fb007247684ed24c94b86e858c8271b82fdec7299",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kakkupala tomusokerineen ja kahvikuppi. Luontevat murut, huokoinen sisus ja varjot, ei tekstiä, henkilöitä tai logoja.",
+            "captionFi": "Havainnekuva kahvilan leivonnaisesta ja kahvista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Chorsun ympäristössä on kauppakojujen lisäksi ruokailupaikkoja. Basaari on hyvä paikka nähdä hedelmien, vihannesten ja mausteiden tarjontaa ennen ateriaa. Taškentin ravintoloissa saa paikallista uzbekkiruokaa, mutta tarjolla on myös muuta keskiaasialaista sekä kiinalaista ja eurooppalaista ruokaa. Paikallinen kahvila voi puolestaan yhdistää ruokailun kahviin ja leivonnaisiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "O4 mainitsee kahvin ja leivonnaiset; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Tashkent",
+                "section": "Eat / Bravissimo coffee shop with cakes and local food",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/voyage.txt",
+                "sha256": "e4bdef3ac7b0c30fcabcbe367c757428a31d024267f6131efd7ce4fd6f510f1c"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:02:26.602256+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png?t=b5b3bcb4c173f35d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+        "sha256": "b5b3bcb4c173f35da5f4e08fef2e96a555fb7bbc343264699f824a2f86a12e2e",
+        "bytes": 2239490,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-o4-20261012-v1",
+        "nativeSHA256": "5e003a356e907b285dce667fb007247684ed24c94b86e858c8271b82fdec7299",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T19:03:30.196576+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
+        "sha256": "b5b3bcb4c173f35da5f4e08fef2e96a555fb7bbc343264699f824a2f86a12e2e",
+        "bytes": 2239490,
+        "SHAReadAt": "2026-10-12T19:03:37.629685+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5e003a356e907b285dce667fb007247684ed24c94b86e858c8271b82fdec7299",
+        "rgbPixelSHA256": "ee8971ffdb0d5d0ee1a36e272c895b4cbfc1269ac16e9720e899b194da33e6c8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "579fe6d26bf8496d4890529d7cc7860c88f53664030283251bb7089607b9a1d8"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e09-taskent-k1-20261012-v1",
+      "galleryImageID": "e09-taskent-k1-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä.",
+        "lyhyt": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä.",
+        "lyhyt": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "03bf95f47c965e97e8823771c9700f4737aaf04f8d80473ddb431945e7d0a822",
+      "exportSHA256": "b35f02b01b329ffe27e83042836c6721d97d621f71ce17f2bf9ba38befb9deeb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+        "semanticContextSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+        "subjectTitle": "Kivikaupungin nimessä on monta kerrosta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-k1-20261012-v1/original.png",
+            "nativeSha256Verified": "03bf95f47c965e97e8823771c9700f4737aaf04f8d80473ddb431945e7d0a822",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Viisi erilaista pyöristynyttä kiveä soralla. Luontevat suonet ja mineraalirakeet, ei rakennuksia, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Taškentin nimi tunnetaan tavallisesti ”kivikaupunkina”: sen osat liitetään kiveä ja kaupunkia tarkoittaviin sanoihin. Varhaisissa lähteissä kaupunki ja sen alue esiintyvät nimellä Chach, ja arabian kielessä nimi sai muodon Shash. Myös Binkath kuuluu kaupungin nimihistoriaan. Vanhan Chach-nimen alkuperästä tutkijat ovat esittäneet erilaisia tulkintoja, joten se ei ratkea yhdellä suomennoksella. Kivikaupunki on käyttökelpoinen nimenselitys, mutta Taškentin historia on yhtä sanaa pidempi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "K1 käsittelee kaupungin nimen kivi-osaa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tashkent",
+                "section": "Etymology: stone city interpretation",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/city.txt",
+                "sha256": "9fa89cba3edd9ba2ecd62def64a892fe34b5c9360d63b5727bfe29e96685ca5b"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Luonnonkivet sopivat kivikaupunki-nimenselityksen yleiseen havainnollistukseen. Selite ei väitä niitä Taškentin paikallisiksi näytteiksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+        "fileSHA256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e09-taskent-k1-20261012-v1",
+          "sha256": "03bf95f47c965e97e8823771c9700f4737aaf04f8d80473ddb431945e7d0a822",
+          "verdict": "accepted",
+          "reason": "Luonnonkivet sopivat kivikaupunki-nimenselityksen yleiseen havainnollistukseen. Selite ei väitä niitä Taškentin paikallisiksi näytteiksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-k1-20261012-v1/original.png",
+            "nativeSha256Verified": "03bf95f47c965e97e8823771c9700f4737aaf04f8d80473ddb431945e7d0a822",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Viisi erilaista pyöristynyttä kiveä soralla. Luontevat suonet ja mineraalirakeet, ei rakennuksia, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Taškentin nimi tunnetaan tavallisesti ”kivikaupunkina”: sen osat liitetään kiveä ja kaupunkia tarkoittaviin sanoihin. Varhaisissa lähteissä kaupunki ja sen alue esiintyvät nimellä Chach, ja arabian kielessä nimi sai muodon Shash. Myös Binkath kuuluu kaupungin nimihistoriaan. Vanhan Chach-nimen alkuperästä tutkijat ovat esittäneet erilaisia tulkintoja, joten se ei ratkea yhdellä suomennoksella. Kivikaupunki on käyttökelpoinen nimenselitys, mutta Taškentin historia on yhtä sanaa pidempi.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "K1 käsittelee kaupungin nimen kivi-osaa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tashkent",
+                "section": "Etymology: stone city interpretation",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/city.txt",
+                "sha256": "9fa89cba3edd9ba2ecd62def64a892fe34b5c9360d63b5727bfe29e96685ca5b"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:09:42.595457+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png?t=b35f02b01b329ffe",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+        "sha256": "b35f02b01b329ffe27e83042836c6721d97d621f71ce17f2bf9ba38befb9deeb",
+        "bytes": 2826415,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-k1-20261012-v1",
+        "nativeSHA256": "03bf95f47c965e97e8823771c9700f4737aaf04f8d80473ddb431945e7d0a822",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T19:10:11.504178+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
+        "sha256": "b35f02b01b329ffe27e83042836c6721d97d621f71ce17f2bf9ba38befb9deeb",
+        "bytes": 2826415,
+        "SHAReadAt": "2026-10-12T19:32:07.574962+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "03bf95f47c965e97e8823771c9700f4737aaf04f8d80473ddb431945e7d0a822",
+        "rgbPixelSHA256": "4435abb97bd2f3fbd6f4bb645deb7e87a169a6b2b35785ae666e6aef969992ab",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+      "contextAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e09-taskent-k2-20261012-v1",
+      "galleryImageID": "e09-taskent-k2-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta.",
+        "lyhyt": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta.",
+        "lyhyt": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5a37a0a1c4070ef5c686619d46b6a115ac8b98aa914430d41947341fee6df47b",
+      "exportSHA256": "1308206d60fb891d193c85a52e31d34409b0ee239ea1d365da6d11930f4dd666",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
+        "semanticContextSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
+        "subjectTitle": "Basaari on samalla kaupungin osoite",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-k2-20261012-v1/original.png",
+            "nativeSha256Verified": "5a37a0a1c4070ef5c686619d46b6a115ac8b98aa914430d41947341fee6df47b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Värikkäitä kasviksia ja hedelmiä puulaatikoissa. Kuorissa, lehdissä ja juureksissa luontevaa vaihtelua; ei myyjiä, kylttejä tai logoja.",
+            "captionFi": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Chorsu on Taškentin vanhan kaupungin kauppapaikka, ja Kukeldashin medresa sijaitsee sen lähellä. Kaupungin historiallista ydintä voi siis lähestyä myös ostosten kautta. Basaarin tarjontaan kuuluvat hedelmät, vihannekset ja mausteet sekä käsityöpajojen tuotteet. Alueella on myös ruokailupaikkoja. Chorsu ei ole vain matkailijoille nimetty nähtävyys: sen kaupankäynti liittyy siihen vanhaan kaupunginosaan, jossa markkinapaikka, opinnot ja asuminen olivat lähellä toisiaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "K2 nimeää hedelmät ja vihannekset Chorsun tarjontaan; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Tashkent",
+                "section": "Buy / Chorsu produce",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/voyage.txt",
+                "sha256": "e4bdef3ac7b0c30fcabcbe367c757428a31d024267f6131efd7ce4fd6f510f1c"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Vihannes- ja hedelmäasetelma sopii basaarin tuotteiden aiheeseen. Selite ei väitä kuvaa Chorsun todelliseksi kojuksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+        "fileSHA256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e09-taskent-k2-20261012-v1",
+          "sha256": "5a37a0a1c4070ef5c686619d46b6a115ac8b98aa914430d41947341fee6df47b",
+          "verdict": "accepted",
+          "reason": "Vihannes- ja hedelmäasetelma sopii basaarin tuotteiden aiheeseen. Selite ei väitä kuvaa Chorsun todelliseksi kojuksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-k2-20261012-v1/original.png",
+            "nativeSha256Verified": "5a37a0a1c4070ef5c686619d46b6a115ac8b98aa914430d41947341fee6df47b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Värikkäitä kasviksia ja hedelmiä puulaatikoissa. Kuorissa, lehdissä ja juureksissa luontevaa vaihtelua; ei myyjiä, kylttejä tai logoja.",
+            "captionFi": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Chorsu on Taškentin vanhan kaupungin kauppapaikka, ja Kukeldashin medresa sijaitsee sen lähellä. Kaupungin historiallista ydintä voi siis lähestyä myös ostosten kautta. Basaarin tarjontaan kuuluvat hedelmät, vihannekset ja mausteet sekä käsityöpajojen tuotteet. Alueella on myös ruokailupaikkoja. Chorsu ei ole vain matkailijoille nimetty nähtävyys: sen kaupankäynti liittyy siihen vanhaan kaupunginosaan, jossa markkinapaikka, opinnot ja asuminen olivat lähellä toisiaan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "K2 nimeää hedelmät ja vihannekset Chorsun tarjontaan; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Tashkent",
+                "section": "Buy / Chorsu produce",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/voyage.txt",
+                "sha256": "e4bdef3ac7b0c30fcabcbe367c757428a31d024267f6131efd7ce4fd6f510f1c"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:59:53.285598+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png?t=1308206d60fb891d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+        "sha256": "1308206d60fb891d193c85a52e31d34409b0ee239ea1d365da6d11930f4dd666",
+        "bytes": 2516883,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-k2-20261012-v1",
+        "nativeSHA256": "5a37a0a1c4070ef5c686619d46b6a115ac8b98aa914430d41947341fee6df47b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T19:00:10.515996+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
+        "sha256": "1308206d60fb891d193c85a52e31d34409b0ee239ea1d365da6d11930f4dd666",
+        "bytes": 2516883,
+        "SHAReadAt": "2026-10-12T19:03:37.501385+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5a37a0a1c4070ef5c686619d46b6a115ac8b98aa914430d41947341fee6df47b",
+        "rgbPixelSHA256": "8217ac2fbd0f0865619eb634a22be009a1eed7613d80449869a4ec7507ade424",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
+      "contextAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e09-taskent-k3-20261012-v1",
+      "galleryImageID": "e09-taskent-k3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva.",
+        "lyhyt": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva.",
+        "lyhyt": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "72f633016661fe75b1b79cc1b7bc5a186cc1fe5564cdefa863f83eb36887a068",
+      "exportSHA256": "764244b85b809b6c1b634c48f7db0f212b52927291875222908319761b875144",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
+        "semanticContextSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
+        "subjectTitle": "Kanavan toiselle puolelle kasvoi uusi kaupunki",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-k3-20261012-v1/original.png",
+            "nativeSha256Verified": "72f633016661fe75b1b79cc1b7bc5a186cc1fe5564cdefa863f83eb36887a068",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kapean uoman veden pinta, ruohopientareet ja vaihtelevat heijastukset. Luonteva veden liike, ei kaupunkinäkymää, ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ankhor-kanava kuuluu Taškentin 1800-luvun kaupunkihistoriaan. Venäjän vallan alettua uusi asutus ja varuskunta sijoitettiin kanavan toiselle puolelle vanhaan kaupunkiin nähden. Paikalle tuli venäläisiä asukkaita ja kauppiaita, kun Taškentista tehtiin Venäjän Turkestanin hallinnollinen keskus. Vanhan kaupungin rinnalle muodostui siten uusi alue, eikä kaikki myöhempi kaupunkikuva kasvanut saman basaarin ympärille. Vesiyhteys auttaa paikantamaan myös hallinnon ja asutuksen muutosta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "K3 käsittelee kanavan roolia kaupungin alueiden välillä. Kuva ei todista kanavan mittakaavaa tai historiallista muotoa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tashkent",
+                "section": "Russian Empire history: new settlement across the Ankhor canal",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/city.txt",
+                "sha256": "9fa89cba3edd9ba2ecd62def64a892fe34b5c9360d63b5727bfe29e96685ca5b"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Virtaavan vesiuoman yleinen lähikuva sopii tekstin vesiyhteysaiheeseen. Selite erottaa sen nimenomaisesti Ankhor-kanavan paikkavalokuvasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+        "fileSHA256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e09-taskent-k3-20261012-v1",
+          "sha256": "72f633016661fe75b1b79cc1b7bc5a186cc1fe5564cdefa863f83eb36887a068",
+          "verdict": "accepted",
+          "reason": "Virtaavan vesiuoman yleinen lähikuva sopii tekstin vesiyhteysaiheeseen. Selite erottaa sen nimenomaisesti Ankhor-kanavan paikkavalokuvasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-k3-20261012-v1/original.png",
+            "nativeSha256Verified": "72f633016661fe75b1b79cc1b7bc5a186cc1fe5564cdefa863f83eb36887a068",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kapean uoman veden pinta, ruohopientareet ja vaihtelevat heijastukset. Luonteva veden liike, ei kaupunkinäkymää, ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ankhor-kanava kuuluu Taškentin 1800-luvun kaupunkihistoriaan. Venäjän vallan alettua uusi asutus ja varuskunta sijoitettiin kanavan toiselle puolelle vanhaan kaupunkiin nähden. Paikalle tuli venäläisiä asukkaita ja kauppiaita, kun Taškentista tehtiin Venäjän Turkestanin hallinnollinen keskus. Vanhan kaupungin rinnalle muodostui siten uusi alue, eikä kaikki myöhempi kaupunkikuva kasvanut saman basaarin ympärille. Vesiyhteys auttaa paikantamaan myös hallinnon ja asutuksen muutosta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "K3 käsittelee kanavan roolia kaupungin alueiden välillä. Kuva ei todista kanavan mittakaavaa tai historiallista muotoa.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tashkent",
+                "section": "Russian Empire history: new settlement across the Ankhor canal",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/city.txt",
+                "sha256": "9fa89cba3edd9ba2ecd62def64a892fe34b5c9360d63b5727bfe29e96685ca5b"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:10:31.737879+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png?t=764244b85b809b6c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+        "sha256": "764244b85b809b6c1b634c48f7db0f212b52927291875222908319761b875144",
+        "bytes": 2812494,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-k3-20261012-v1",
+        "nativeSHA256": "72f633016661fe75b1b79cc1b7bc5a186cc1fe5564cdefa863f83eb36887a068",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T19:11:04.950109+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
+        "sha256": "764244b85b809b6c1b634c48f7db0f212b52927291875222908319761b875144",
+        "bytes": 2812494,
+        "SHAReadAt": "2026-10-12T19:32:07.708102+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "72f633016661fe75b1b79cc1b7bc5a186cc1fe5564cdefa863f83eb36887a068",
+        "rgbPixelSHA256": "1886642437b9bd744ad952fb6ccc110117063e00d57a5a6c466c4df8c5a024aa",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
+      "contextAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e09-taskent-l1-20261012-v1",
+      "galleryImageID": "e09-taskent-l1-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva savitiilistä rakennusmateriaalina.",
+        "lyhyt": "Havainnekuva savitiilistä rakennusmateriaalina."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva savitiilistä rakennusmateriaalina.",
+        "lyhyt": "Havainnekuva savitiilistä rakennusmateriaalina."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "70dc4c9d35763f5ccb18d2ff2dc71d978561f4e0c2396dd98c18798a0514ff72",
+      "exportSHA256": "b612944f981755520a9ee7729eaf59ad619becff945b4f4a958141d11d96d7b7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
+        "semanticContextSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
+        "subjectTitle": "Medresan tiilet päätyivät toiseen kouluun",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-l1-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "visuallyInspected": true,
+            "captionFi": "Havainnekuva savitiilistä rakennusmateriaalina.",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kukeldash_Madrasah_(Tashkent)",
+                "section": "History: dismantling and reusing bricks",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/kukeldash.txt",
+                "sha256": "1157a6868a42398b23e1a69013545c0b76c620923a461334f75480af75a269e2"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "sourceClaimChecked": "Kukeldash built of yellow brick; bricks reused for Beklarbegi Madrasah",
+            "scope": "independent QA only; no owner acceptance, integration or publication"
+          },
+          "qaReason": "Katsottu valmis PNG alkuperäisenä. Kellertävät/ruskeat savitiilet, epäsäännölliset huokoset, lohkeamat ja laastijäljet näyttävät luonnollisilta. Ei tekstiä, logoja, henkilöitä tai rekonstruoitua medresaa. Sopii tiilien uudelleenkäytön materiaalihavainnollistukseksi; ei väite Kukeldashin omista esinenäytteistä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva savitiilistä rakennusmateriaalina.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+        "fileSHA256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e09-taskent-l1-20261012-v1",
+          "sha256": "70dc4c9d35763f5ccb18d2ff2dc71d978561f4e0c2396dd98c18798a0514ff72",
+          "verdict": "accepted",
+          "reason": "Katsottu valmis PNG alkuperäisenä. Kellertävät/ruskeat savitiilet, epäsäännölliset huokoset, lohkeamat ja laastijäljet näyttävät luonnollisilta. Ei tekstiä, logoja, henkilöitä tai rekonstruoitua medresaa. Sopii tiilien uudelleenkäytön materiaalihavainnollistukseksi; ei väite Kukeldashin omista esinenäytteistä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-l1-20261012-v1/original.png",
+            "width": 1536,
+            "height": 1024,
+            "visuallyInspected": true,
+            "captionFi": "Havainnekuva savitiilistä rakennusmateriaalina.",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Kukeldash_Madrasah_(Tashkent)",
+                "section": "History: dismantling and reusing bricks",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/kukeldash.txt",
+                "sha256": "1157a6868a42398b23e1a69013545c0b76c620923a461334f75480af75a269e2"
+              }
+            ],
+            "rightsEvidence": {
+              "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+              "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+              "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+              "faces": "No identifiable faces"
+            },
+            "sourceClaimChecked": "Kukeldash built of yellow brick; bricks reused for Beklarbegi Madrasah",
+            "scope": "independent QA only; no owner acceptance, integration or publication"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png?t=b612944f98175552",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+        "sha256": "b612944f981755520a9ee7729eaf59ad619becff945b4f4a958141d11d96d7b7",
+        "bytes": 2758467,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-l1-20261012-v1",
+        "nativeSHA256": "70dc4c9d35763f5ccb18d2ff2dc71d978561f4e0c2396dd98c18798a0514ff72",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T17:57:32.518378+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
+        "sha256": "b612944f981755520a9ee7729eaf59ad619becff945b4f4a958141d11d96d7b7",
+        "bytes": 2758467,
+        "SHAReadAt": "2026-10-12T18:29:56.060672+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "70dc4c9d35763f5ccb18d2ff2dc71d978561f4e0c2396dd98c18798a0514ff72",
+        "rgbPixelSHA256": "e20b9d37393b78062311085bf25acfdb8cbdeac752e8346b7267dcb5b76e6c04",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
+      "contextAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e09-taskent-l3-20261012-v1",
+      "galleryImageID": "e09-taskent-l3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kirjontatyön välineistä.",
+        "lyhyt": "Havainnekuva kirjontatyön välineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kirjontatyön välineistä.",
+        "lyhyt": "Havainnekuva kirjontatyön välineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3773216a823885f91b9c51be3aa333a12b39f1966802b035c8c9666bf587bf3f",
+      "exportSHA256": "f9463667d9369c4d0f516d0503c99459fb9ac3e2c2918230084520cdd3b04b59",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
+        "semanticContextSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
+        "subjectTitle": "Koti, orpokoti ja käsityömuseo",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-l3-20261012-v1/original.png",
+            "nativeSha256Verified": "3773216a823885f91b9c51be3aa333a12b39f1966802b035c8c9666bf587bf3f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Pyöreä puinen kirjontakehys, pellavamainen kangas ja yksinkertainen vihreä pistojono, lanka ja irrallinen neula. Luontevat kuitupinnat, ei käsiä tai tekstiä.",
+            "captionFi": "Havainnekuva kirjontatyön välineistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Polovtsevin taloksi kutsuttu rakennus kuuluu Taškentin soveltavan taiteen museon historiaan. Se rakennettiin asuintaloksi tsaarikauden lopulla, ja myöhemmin sen sisustusta muokkasivat paikalliset käsityömestarit. Talossa toimi myös orpokoti, minkä jälkeen siellä järjestettiin muun muassa kipsikoristeiden ja metallin työstämisen opetusta sekä kirjontatyötä. Viime vuosisadalla rakennuksesta tuli käsityömuseo. Saman talon historiaan mahtuu siis asumista, lasten hoitoa ja käsityötaitojen opettamista.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "L3 mainitsee kirjontatyön osana talon historiaa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/State_Museum_of_Applied_Arts_of_Uzbekistan",
+                "section": "Applied arts museum: embroidery and local handicrafts",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/museum-wiki.txt",
+                "sha256": "ceb8ffbb59198f3bcf6a3e07642486f62f3b329c247a45eca2a30370061a4d8e"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kirjontakehys, lanka ja neula sopivat kirjontatyön aiheeseen. Kuva ei jäljennä suojattua kirjontateosta tai nimeä aitoa museoesinettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kirjontatyön välineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+        "fileSHA256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e09-taskent-l3-20261012-v1",
+          "sha256": "3773216a823885f91b9c51be3aa333a12b39f1966802b035c8c9666bf587bf3f",
+          "verdict": "accepted",
+          "reason": "Kirjontakehys, lanka ja neula sopivat kirjontatyön aiheeseen. Kuva ei jäljennä suojattua kirjontateosta tai nimeä aitoa museoesinettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-l3-20261012-v1/original.png",
+            "nativeSha256Verified": "3773216a823885f91b9c51be3aa333a12b39f1966802b035c8c9666bf587bf3f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Pyöreä puinen kirjontakehys, pellavamainen kangas ja yksinkertainen vihreä pistojono, lanka ja irrallinen neula. Luontevat kuitupinnat, ei käsiä tai tekstiä.",
+            "captionFi": "Havainnekuva kirjontatyön välineistä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Polovtsevin taloksi kutsuttu rakennus kuuluu Taškentin soveltavan taiteen museon historiaan. Se rakennettiin asuintaloksi tsaarikauden lopulla, ja myöhemmin sen sisustusta muokkasivat paikalliset käsityömestarit. Talossa toimi myös orpokoti, minkä jälkeen siellä järjestettiin muun muassa kipsikoristeiden ja metallin työstämisen opetusta sekä kirjontatyötä. Viime vuosisadalla rakennuksesta tuli käsityömuseo. Saman talon historiaan mahtuu siis asumista, lasten hoitoa ja käsityötaitojen opettamista.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "L3 mainitsee kirjontatyön osana talon historiaa; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/State_Museum_of_Applied_Arts_of_Uzbekistan",
+                "section": "Applied arts museum: embroidery and local handicrafts",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/museum-wiki.txt",
+                "sha256": "ceb8ffbb59198f3bcf6a3e07642486f62f3b329c247a45eca2a30370061a4d8e"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:05:05.502364+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png?t=f9463667d9369c4d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+        "sha256": "f9463667d9369c4d0f516d0503c99459fb9ac3e2c2918230084520cdd3b04b59",
+        "bytes": 2746718,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-l3-20261012-v1",
+        "nativeSHA256": "3773216a823885f91b9c51be3aa333a12b39f1966802b035c8c9666bf587bf3f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:05:33.563345+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
+        "sha256": "f9463667d9369c4d0f516d0503c99459fb9ac3e2c2918230084520cdd3b04b59",
+        "bytes": 2746718,
+        "SHAReadAt": "2026-10-12T19:32:07.273091+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3773216a823885f91b9c51be3aa333a12b39f1966802b035c8c9666bf587bf3f",
+        "rgbPixelSHA256": "1f1c7625481ff416df6def210dcf37cd714c4e16abc713dc15518a25cad77e35",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
+      "contextAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e09-taskent-l4-20261012-v1",
+      "galleryImageID": "e09-taskent-l4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva savesta rakennusmateriaalina.",
+        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva savesta rakennusmateriaalina.",
+        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "cee0117175503b876690b78815b5255a45afff24076bcd7bae1e271f4631a890",
+      "exportSHA256": "3c48fbe41e52a074a9bcb5903a175fd77b4e8ce66965eecc9a846ae4fa531b27",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
+        "semanticContextSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
+        "subjectTitle": "Kivikaupungin puolustusmuuri oli savinen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-l4-20261012-v1/original.png",
+            "nativeSha256Verified": "cee0117175503b876690b78815b5255a45afff24076bcd7bae1e271f4631a890",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Savisen kerroksellisen pinnan kulma, hienoa ainesta ja kivirakeita. Epäsäännöllinen kuluminen ja murtopinnat luonnollisia; ei linnoituksen rekonstruktiota tai tekstiä.",
+            "captionFi": "Havainnekuva savesta rakennusmateriaalina.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Savimuuri ja vallihauta kuuluivat Taškentin puolustukseen Kokandin kaanikunnan vallan aikana. Muuriin rakennettiin portteja, ja kaupunki kävi vilkasta kauppaa Venäjän kanssa. Taškentin linnoitettu historia oli kuitenkin tätä vanhempi. Varhaisemman Shashin kuvauksissa erotettiin linnoitus, varsinainen kaupunki ja esikaupunkialueet. Linnoituksen sisällä olivat hallitsijan palatsi ja vankila. Yksi kaupungin raja ei siis kertonut koko sen rakennetta: keskuksella, asutuksella ja ulommilla alueilla oli omat tehtävänsä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "L4 kertoo savisesta puolustusmuurista; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tashkent",
+                "section": "History: clay defensive wall",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/city.txt",
+                "sha256": "9fa89cba3edd9ba2ecd62def64a892fe34b5c9360d63b5727bfe29e96685ca5b"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Savisen maa-ainesrakenteen lähikuva sopii puolustusmuurin materiaaliaiheeseen. Selite ei esitä Taškentin todellista historiallista muuria."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva savesta rakennusmateriaalina.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+        "fileSHA256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e09-taskent-l4-20261012-v1",
+          "sha256": "cee0117175503b876690b78815b5255a45afff24076bcd7bae1e271f4631a890",
+          "verdict": "accepted",
+          "reason": "Savisen maa-ainesrakenteen lähikuva sopii puolustusmuurin materiaaliaiheeseen. Selite ei esitä Taškentin todellista historiallista muuria.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/assets/e09-taskent-l4-20261012-v1/original.png",
+            "nativeSha256Verified": "cee0117175503b876690b78815b5255a45afff24076bcd7bae1e271f4631a890",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Savisen kerroksellisen pinnan kulma, hienoa ainesta ja kivirakeita. Epäsäännöllinen kuluminen ja murtopinnat luonnollisia; ei linnoituksen rekonstruktiota tai tekstiä.",
+            "captionFi": "Havainnekuva savesta rakennusmateriaalina.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "contentSha256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Savimuuri ja vallihauta kuuluivat Taškentin puolustukseen Kokandin kaanikunnan vallan aikana. Muuriin rakennettiin portteja, ja kaupunki kävi vilkasta kauppaa Venäjän kanssa. Taškentin linnoitettu historia oli kuitenkin tätä vanhempi. Varhaisemman Shashin kuvauksissa erotettiin linnoitus, varsinainen kaupunki ja esikaupunkialueet. Linnoituksen sisällä olivat hallitsijan palatsi ja vankila. Yksi kaupungin raja ei siis kertonut koko sen rakennetta: keskuksella, asutuksella ja ulommilla alueilla oli omat tehtävänsä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/faktapohja.md",
+            "factSheetSha256": "e968eb4ec96b79c6c4d1a2e6367ca1650c008b31cc3ee2e6c4e3bd64ec01b386",
+            "topicEvidence": "L4 kertoo savisesta puolustusmuurista; lähdetiedoston SHA täsmää.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Tashkent",
+                "section": "History: clay defensive wall",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-taskent/city.txt",
+                "sha256": "9fa89cba3edd9ba2ecd62def64a892fe34b5c9360d63b5727bfe29e96685ca5b"
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:09:17.993108+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png?t=3c48fbe41e52a074",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+        "sha256": "3c48fbe41e52a074a9bcb5903a175fd77b4e8ce66965eecc9a846ae4fa531b27",
+        "bytes": 3335456,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-taskent-l4-20261012-v1",
+        "nativeSHA256": "cee0117175503b876690b78815b5255a45afff24076bcd7bae1e271f4631a890",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "taskent",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:10:10.165228+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
+        "sha256": "3c48fbe41e52a074a9bcb5903a175fd77b4e8ce66965eecc9a846ae4fa531b27",
+        "bytes": 3335456,
+        "SHAReadAt": "2026-10-12T19:32:07.442683+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "cee0117175503b876690b78815b5255a45afff24076bcd7bae1e271f4631a890",
+        "rgbPixelSHA256": "e5e477706903c32f7efb6c77f73c7af262bd411764becbbb29e5ad46b1a55be1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
+      "contextAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e09-taskent-photo-86de1f2ce880698a",
+      "galleryImageID": "capital-cc-e09-taskent-photo-86de1f2ce880698a",
+      "commonsFile": "Ant on a leaf.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
+        "suora": true,
+        "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
+        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
+        "tiedosto": "Ant on a leaf.jpg",
+        "vuosi": "2024"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
+        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
+        "tiedosto": "Ant on a leaf.jpg",
+        "vuosi": "2024"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
+        "suora": true,
+        "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
+        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
+        "tiedosto": "Ant on a leaf.jpg",
+        "vuosi": "2024"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "86de1f2ce880698aa8ef2c3cd5969f9280fbae562869c7b46958cb7b1e94434c",
+      "exportSHA256": "86de1f2ce880698aa8ef2c3cd5969f9280fbae562869c7b46958cb7b1e94434c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-search/original-09.jpg",
+      "dimensions": [
+        4080,
+        3060
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+        "semanticContextSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+        "subjectTitle": "taskent — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Tahrirchiqiz",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ant_on_a_leaf.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Ant_on_a_leaf.jpg",
+        "rightsEvidence": {
+          "selection": "Alkuperäisen Commons-tiedostosivun kuvaus on Ant in Tashkent ja tiedosto on luokiteltu Taškentiin. Author Tahrirchiqiz, Own work, CC BY 4.0. Luonnon muurahainen/lehti, ei arkkitehtuuria, patsasta, muotoiluteosta tai nykykonfliktia. Ei FOP-oletusta.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-search/original-09.jpg",
+            "visuallyInspected": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ant_on_a_leaf.jpg",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/photo-ant-source.json",
+            "author": "Tahrirchiqiz",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "width": 4080,
+            "height": 3060,
+            "captureDate": "30 April 2024, 13:25:31",
+            "locationEvidence": "Original description: Ant in Tashkent",
+            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "sameFileOtherSlot": false,
+            "gameUseHits": [],
+            "scope": "independent QA only",
+            "reviewedCandidateRecordSHA256": "ccf4a4822f82c68c6d8748ed3c9d218b68f13a61e4b309c0c3ba149dda6d368d",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.262178+00:00"
+          },
+          "qaReason": "Katsottu aito lähivalokuva muurahaisesta lehden pinnalla. Muurahainen on riittävän selvä, ei tunnistettavaa ihmistä, lisättyä tekstiä, logoa tai kehystä. Kuvasivun Description sanoo Ant in Tashkent; Author Tahrirchiqiz, Own work, CC BY4.0, 4080×3060 ja kuvauspäivä30.4.2024 varmennettu itse lähdesivusta. PHOTO voi olla paikkasidonnainen luontoyksityiskohta, ei panoraamapakkoa. Kasvi-/muurahaislajia ei arvata. Ei pelipakettien käyttöosumia."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Muurahainen kasvin lehdellä Taškentissa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+        "fileSHA256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Ant on a leaf.jpg",
+          "sha256": "86de1f2ce880698aa8ef2c3cd5969f9280fbae562869c7b46958cb7b1e94434c",
+          "verdict": "accepted",
+          "reason": "Katsottu aito lähivalokuva muurahaisesta lehden pinnalla. Muurahainen on riittävän selvä, ei tunnistettavaa ihmistä, lisättyä tekstiä, logoa tai kehystä. Kuvasivun Description sanoo Ant in Tashkent; Author Tahrirchiqiz, Own work, CC BY4.0, 4080×3060 ja kuvauspäivä30.4.2024 varmennettu itse lähdesivusta. PHOTO voi olla paikkasidonnainen luontoyksityiskohta, ei panoraamapakkoa. Kasvi-/muurahaislajia ei arvata. Ei pelipakettien käyttöosumia.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-search/original-09.jpg",
+            "visuallyInspected": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ant_on_a_leaf.jpg",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/photo-ant-source.json",
+            "author": "Tahrirchiqiz",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "width": 4080,
+            "height": 3060,
+            "captureDate": "30 April 2024, 13:25:31",
+            "locationEvidence": "Original description: Ant in Tashkent",
+            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "sameFileOtherSlot": false,
+            "gameUseHits": [],
+            "scope": "independent QA only",
+            "reviewedCandidateRecordSHA256": "ccf4a4822f82c68c6d8748ed3c9d218b68f13a61e4b309c0c3ba149dda6d368d",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.262178+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "taskent",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Ant on a leaf.jpg",
+        "sha256": "86de1f2ce880698aa8ef2c3cd5969f9280fbae562869c7b46958cb7b1e94434c",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ant_on_a_leaf.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Ant_on_a_leaf.jpg",
+        "author": "Tahrirchiqiz",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "width": 4080,
+        "height": 3060,
+        "originalSHA256": "86de1f2ce880698aa8ef2c3cd5969f9280fbae562869c7b46958cb7b1e94434c",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
+        "bytes": 3940758,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:20:37.702486+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Ant on a leaf.jpg",
+        "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
+        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
+        "vuosi": "2024"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
+        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
+        "tiedosto": "Ant on a leaf.jpg",
+        "vuosi": "2024"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+      "contextAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "TRAVELER",
+      "type": "commons",
+      "assetID": "capital-cc-e09-taskent-traveler-d9fa9a514dc876a0",
+      "galleryImageID": "capital-cc-e09-taskent-traveler-d9fa9a514dc876a0",
+      "commonsFile": "Chestnut tree in Tashkent.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
+        "suora": true,
+        "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "tiedosto": "Chestnut tree in Tashkent.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "tiedosto": "Chestnut tree in Tashkent.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
+        "suora": true,
+        "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "tiedosto": "Chestnut tree in Tashkent.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d9fa9a514dc876a06ce3ce1e092d316f993033912d6a780438ee0f0422126386",
+      "exportSHA256": "d9fa9a514dc876a06ce3ce1e092d316f993033912d6a780438ee0f0422126386",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-gap-search/original-04.jpg",
+      "dimensions": [
+        3060,
+        4080
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "664f308ee8ab9d73b36f0f1fbd82daec8d535a44c252ece8d5e6666b20ab1b9e",
+        "semanticContextSHA256": "228501249400f0ff85f92a7885b57e0c71ee241e6f7290ccab22ecd2374090dd",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Tahrirchiqiz",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chestnut_tree_in_Tashkent.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Chestnut_tree_in_Tashkent.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original Commons own-work author table and CC BY4.0 template read.",
+            "subject": "Elävä puu ja tavallinen katu/puusto; ei näkyvää suojattua teosta pääaiheena. Ei maakohtaista FOP-blanketlupaa.",
+            "place": "Commons Description: A picture of Chestnut tree grown in Tashkent.",
+            "scope": "Ei nimetä kasvitieteellisen puutarhan puuksi, koska lähde todistaa vain Taškentin.",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/910b7ef53e0cc75bf2ee857908a7f96d92a485ece738c311f711ebc952679e4f.html"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-gap-search/original-04.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              3060,
+              4080
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chestnut_tree_in_Tashkent.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/910b7ef53e0cc75bf2ee857908a7f96d92a485ece738c311f711ebc952679e4f.html",
+            "sourceSHA256": "bee9c6e1a6d202f74354ac43487ae0f600ab915256694eeead7beb2dc2490bff",
+            "authorsFromSource": [
+              "Tahrirchiqiz"
+            ],
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "sourceFields": [
+              [
+                "Description Chestnut tree in Tashkent.jpg",
+                "English: A picture of Chestnut tree grown in Tashkent"
+              ],
+              [
+                "Date",
+                "30 April 2024, 13:29:47"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Tahrirchiqiz"
+              ],
+              [
+                "Date and time of data generation",
+                "13:29, 30 April 2024"
+              ],
+              [
+                "Date and time of digitizing",
+                "13:29, 30 April 2024"
+              ],
+              [
+                "DateTime subseconds",
+                "096"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "09"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "09"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "encodedDimensions": [
+              4080,
+              3060
+            ],
+            "exifOrientation": 6,
+            "displayDimensions": [
+              3060,
+              4080
+            ],
+            "displayRatio": 0.75,
+            "placeBoundary": "Tashkent street vegetation only; no botanical-garden identification or specific tree species assertion.",
+            "reviewedCandidateRecordSHA256": "68a0ebb9bf6112cbcfe527c244fc4ec4e55ca44dbbba120acd1d0f02480213b6",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-gap-selection.json",
+            "orientationProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/chestnut-native-orientation.json"
+          },
+          "qaReason": "Alkuperäinen aito Taškentissa kuvattu lehtevä katupuu katsottu. Selkeä luonnonvalo, yksi puu pääaiheena, tavallinen katu ja kasvillisuus; ei suojatun rakennuksen/taideteoksen pääaihetta, lisättyjä merkintöjä tai watermarkia. Etäiset kävelijät ovat pieniä eikä kasvonpiirteitä erota. Source Description nimeää puun Taškentissa, mutta ei kasvitieteellistä puutarhaa; kuvateksti pysyy kaupungin katujen vehreydessä. Sopii oppaan puusto-/kävelyaiheeseen ja kevääseen. Tahrirchiqiz/Own work/CC BY4.0 ja30.4.2024 varmennettu; lähde ja selite säilyttävät kuvausajankohdan, eikä kuvasta päätellä nykyisiä palveluita, reittiä tai säätilaa. Tuoreahko vuoden2024 luonnon-/katuaihe täyttää ajankohtaisen opasaiheen ilman keksittyä vuotta tai mielivaltaista ikärajaa. EXIF6:n jälkeen natiivi näyttö3060×4080, w/h0.75; encoded4080×3060 ei ole maisemakuvan rajaus eikä pixel-editointi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+        "fileSHA256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "commonsFile": "Chestnut tree in Tashkent.jpg",
+          "sha256": "d9fa9a514dc876a06ce3ce1e092d316f993033912d6a780438ee0f0422126386",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen aito Taškentissa kuvattu lehtevä katupuu katsottu. Selkeä luonnonvalo, yksi puu pääaiheena, tavallinen katu ja kasvillisuus; ei suojatun rakennuksen/taideteoksen pääaihetta, lisättyjä merkintöjä tai watermarkia. Etäiset kävelijät ovat pieniä eikä kasvonpiirteitä erota. Source Description nimeää puun Taškentissa, mutta ei kasvitieteellistä puutarhaa; kuvateksti pysyy kaupungin katujen vehreydessä. Sopii oppaan puusto-/kävelyaiheeseen ja kevääseen. Tahrirchiqiz/Own work/CC BY4.0 ja30.4.2024 varmennettu; lähde ja selite säilyttävät kuvausajankohdan, eikä kuvasta päätellä nykyisiä palveluita, reittiä tai säätilaa. Tuoreahko vuoden2024 luonnon-/katuaihe täyttää ajankohtaisen opasaiheen ilman keksittyä vuotta tai mielivaltaista ikärajaa. EXIF6:n jälkeen natiivi näyttö3060×4080, w/h0.75; encoded4080×3060 ei ole maisemakuvan rajaus eikä pixel-editointi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-gap-search/original-04.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              3060,
+              4080
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chestnut_tree_in_Tashkent.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/910b7ef53e0cc75bf2ee857908a7f96d92a485ece738c311f711ebc952679e4f.html",
+            "sourceSHA256": "bee9c6e1a6d202f74354ac43487ae0f600ab915256694eeead7beb2dc2490bff",
+            "authorsFromSource": [
+              "Tahrirchiqiz"
+            ],
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "sourceFields": [
+              [
+                "Description Chestnut tree in Tashkent.jpg",
+                "English: A picture of Chestnut tree grown in Tashkent"
+              ],
+              [
+                "Date",
+                "30 April 2024, 13:29:47"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Tahrirchiqiz"
+              ],
+              [
+                "Date and time of data generation",
+                "13:29, 30 April 2024"
+              ],
+              [
+                "Date and time of digitizing",
+                "13:29, 30 April 2024"
+              ],
+              [
+                "DateTime subseconds",
+                "096"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "09"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "09"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "encodedDimensions": [
+              4080,
+              3060
+            ],
+            "exifOrientation": 6,
+            "displayDimensions": [
+              3060,
+              4080
+            ],
+            "displayRatio": 0.75,
+            "placeBoundary": "Tashkent street vegetation only; no botanical-garden identification or specific tree species assertion.",
+            "reviewedCandidateRecordSHA256": "68a0ebb9bf6112cbcfe527c244fc4ec4e55ca44dbbba120acd1d0f02480213b6",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-gap-selection.json",
+            "orientationProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/chestnut-native-orientation.json"
+          },
+          "reviewedAt": "2026-10-12T19:48:25.079241+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "taskent",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "commonsFile": "Chestnut tree in Tashkent.jpg",
+        "sha256": "d9fa9a514dc876a06ce3ce1e092d316f993033912d6a780438ee0f0422126386",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chestnut_tree_in_Tashkent.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Chestnut_tree_in_Tashkent.jpg",
+        "author": "Tahrirchiqiz",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "width": 3060,
+        "height": 4080,
+        "originalSHA256": "d9fa9a514dc876a06ce3ce1e092d316f993033912d6a780438ee0f0422126386",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
+        "bytes": 4470028,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:48:48.701632+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Chestnut tree in Tashkent.jpg",
+        "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "tiedosto": "Chestnut tree in Tashkent.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "targetAfterSHA256": "664f308ee8ab9d73b36f0f1fbd82daec8d535a44c252ece8d5e6666b20ab1b9e",
+      "contextAfterSHA256": "228501249400f0ff85f92a7885b57e0c71ee241e6f7290ccab22ecd2374090dd"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
