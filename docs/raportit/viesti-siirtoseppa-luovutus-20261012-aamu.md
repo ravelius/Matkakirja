@@ -22,3 +22,15 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   näkyvä ilman törmäystä (harja). NavMesh-seinäkokeet (r 0,2 ja 0,3) heikensivät → pois. NavMesh: solu 0,05, korkeus 1,75.
 - Perustaso 182:n v47f nykybotilla 7/17 (61 läpäisi v47f:llä → korjattu v48g/i).
 - CC: height 1,75, radius 0,30, skin 0,03, step 0,35, slope 40.
+
+## PÄIVITYS 12.10. ~11.15
+- Linnahaara **95f30c4c3**, paketti **v48o** (siirtoseppa/v48o 5a3228a37, pala 3e5e938d7957d540 / nyky 33468a6d087b503f). BOTTI 17/17 yhdellä ajolla
+  (käännös b03c72a06, app proto-3d/lokit/olavinlinna-auto-1012-1058). LT:n uusinta 3 käynnissä samalla appilla → puhdas = tunnus NS:lle + PT:lle.
+- LT 8 (0/17) → korjaukset: aloitussuunta ≥ 4 m (681b5d212), pelaajan jatko samalla säännöllä (JatkonKohta), armo liikkeeseen asti, komero/pako sisään;
+  REITTIPAIKKA (078b01dd7, 2290ae9d4, 06a83291d): aloitus/jatko reitin ensimmäiseen kohtaan eteen ≥ 4 m ja sivut ≥ 1 m, katse mitattuun suuntaan
+  (ensiaskel-ehdolla), ei hahmon 1 m:n sisälle, kiipeilyn loppu reitille (komero → 94). Pako EI siirry (köysilasku komerosta; 6b5151e9f peruttu).
+- Botin kävelyraja 120 s (napautuskävely hiipii, kun vartija ei partiossa). MH v3 -kuvat lokit/siirtoseppa-botti-v48l/mh-pelikuvat-v3/.
+- Omistajan palaute 09.38: apulaisen asu outo ja vaatteet tiukkoja → LR korjaa (183 tavoite).
+- UUSI SÄÄNTÖ (omistaja 12.10. 10.3x, Raamattu ASEMATAULU: VAATII TOIMIA, PR #4489): omistajan toimia vaativat asiat heti Asemataululle:
+  ArtifactData set url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix kokoelma "talo" doc_id "toimi-siirtoseppa" {rooli, kysymys, ts};
+  epäonnistuessa Postivahdille "VAATII TOIMIA: Siirtoseppä: …"; hoidettuna dokumentti pois.
