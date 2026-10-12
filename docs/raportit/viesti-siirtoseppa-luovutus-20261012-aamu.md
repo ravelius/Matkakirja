@@ -101,3 +101,13 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   → parit v48s2 (vahdin klooni 9f41b0fcb + v48s) | v48v + uusinnat soutaja ja vartija2 (mh-koko: odota 10 s veneessä).
 - Odottaja lokit/siirtoseppa-botti-nakyma/odota-ja-aja.sh (9f41b0fcb + v48s, `touch lupa` = SIMU NYT 1) → yhteenveto.txt + askel0-arkki → PT + NS.
 - Julkaisijan jono: TF 185 → NS → LS1 → vahti 9f41b0fcb; simut: LT 185 (60–90 min) → botti → MH.
+
+## PÄIVITYS 12.10. 23.5x
+
+- Linnahaara **4b9f577af** = 0c96d8f40 (omistaja: monivalinnoissa vain a-vaihtoehto) + merge master 0c68947bd (BUILD 184.1; sonniss-aanet-v6,
+  PuuttuvatAanetTestit repliikit-lapi-v3). Puhdas kopio 1669/1669.
+- Paketit: **v48t** 8fe620546 (kappeli, ihralamput; rekvisiitta 57), **v48u** b0847d347 (Kuninkaansali ilman kaappia/lippua, laattalattia,
+  keittokulho; rekvisiitta 55, merkit 372). Vahdissa v48u.
+- Odottaja lokit/siirtoseppa-botti-nakyma/odota-ja-aja.sh (4b9f577af + v48u, `touch lupa`) → botti A+B → skenaario v48t-kuvat (kappeli, lamput,
+  partiot pimeässä, keittokulho, sali) → yhteenveto.txt (KUVAT-rivi) → askel 0 -arkki + kuvat PT:lle, NS:lle (186) ja LR:lle.
+- LR:n v48v (asut) tulossa → kiinnitä v48u:n päälle → MH-parit v48s2 (lokit/olavinlinna-mh-v48s2-1012-2256) | v48v + soutaja + vartija2.
