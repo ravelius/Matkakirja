@@ -1,0 +1,1268 @@
+{
+  "taskNumber": 81,
+  "task": "paakaupungit-havainnekuvat-era2-20261012",
+  "requestedImages": 17,
+  "generationCalls": 18,
+  "generationRequestsIssued": 18,
+  "generationCallsCompleted": 18,
+  "generationLimit": 18,
+  "returnedCandidateCount": 18,
+  "rejectedCandidateCount": 1,
+  "wholeNewCorrections": 1,
+  "rootReviewedCandidateCount": 18,
+  "deliveredImageCount": 17,
+  "allReturnedImagesProcessed": true,
+  "allRequestedImagesDeliveredToR2": true,
+  "allReadbacksByteExact": true,
+  "allCanonicalReadbacksByteExact": true,
+  "currentReadyBatchComplete": true,
+  "productionComplete": true,
+  "productionActive": false,
+  "originalCandidateRoles": 36,
+  "intentionalEmptyGuideRoles": 14,
+  "remainingBuildingRolesRequiringBrief": 5,
+  "existingCommonsImageCountPreserved": 115,
+  "overallIllustrationProgramComplete": false,
+  "ownerAcceptanceVerified": false,
+  "contentAcceptanceVerified": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-12T10:49:12.636624+00:00",
+  "assets": [
+    {
+      "id": "banjul-k3-lautta",
+      "city": "banjul",
+      "era": "e04",
+      "slot": "K3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-k3-lautta.png?t=c642c657fc731e66",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-k3-lautta.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/banjul-k3-lautta.png",
+      "sha256": "c642c657fc731e669a12498a800f5f00eabb2533528fb5cc17ccc41d0fe2fe9d",
+      "bytes": 1832131,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: source-backed generic illustrative image for a Finnish educational travel game; clearly an AI-produced illustration, not a real place photograph.\nPrimary request: create ONE completely new landscape image, 1536 x 1024 pixels, with opaque background. Show an ordinary passenger-and-vehicle river ferry crossing a broad, flat Gambia River estuary in present-day West Africa.\nSubject: a modest functional steel ferry with a small wheelhouse and low open vehicle deck, a few plain unbranded everyday cars on board, a small number of distant passengers whose faces cannot be read. A physically plausible generic vessel, no named or recognizable operator. All ramps secured for the crossing. The ferry is the clear focal subject yet seen at a comfortable distance, occupying roughly one third of the width.\nComposition/framing: eye-level view as if photographed with a 35 mm lens from near the water; natural oblique side view with the full vessel visible, substantial open water around it. Broad flat estuary, a distant low soft shoreline, subdued hazy sky. No terminal or specific harbour layout and no bridge.\nStyle/medium: camera-looking photorealistic illustration with believable perspective and documentary restraint. Realistic natural variation in steel wear, water ripples and a modest wake; soft late-morning daylight, restrained natural colour and contrast. Fine irregular real-world surface detail, not synthetic procedural patterns.\nConstraints: this is a generic illustration of the passenger and vehicle ferry concept described by the Banjul source text, NOT an exact reconstruction of any current Banjul-Barra vessel, harbour, pier or route layout. No claim that this is an actual photograph. Contemporary scene, not 1873.\nAvoid: words, numbers, letters, signage, vessel names, logos, license-plate text, flags, branding, watermarks, borders, readable faces, close portraits, modern protected art or monuments, precise landmark buildings, dramatic fantasy styling, HDR, excessive saturation, oversharpening, plasticky CGI surfaces, repeated identical wave patterns, impossible hull/deck/rail geometry.",
+      "caption": "Lautta yhdistää jokisuun rannat, yleishavainnollistus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].nostot[2]",
+      "currentCSourceSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceFactSheetSHA256": "9b2e60128a4163973ffcc4aafdf013af561b1abd2251c0628ea7f48d51f933bf",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "B1",
+          "line": 13,
+          "text": "| B1 | [Banjul](https://en.wikipedia.org/wiki/Banjul), en: johdanto, Etymology, History, Economy, Transport, Attractions. Climate vain taustan vertailuun, luvut saa.json:sta. Nykyhallinto-/vallankaappaussisältö pois. |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Banjul),"
+          ]
+        },
+        {
+          "sourceID": "B6",
+          "line": 18,
+          "text": "| B6 | [Gambia River](https://en.wikipedia.org/wiki/Gambia_River), en: johdanto, Geography, Crossings ja Bolongs sekä infolaatikon **Mouth**-koordinaatti. Lähdepiste Fouta Djallonissa on eri asia. |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Gambia_River),"
+          ]
+        },
+        {
+          "sourceID": "B7",
+          "line": 19,
+          "text": "| B7 | [Banjul, Wikivoyage](https://en.wikivoyage.org/wiki/Banjul), en: Understand, Get in, Get around, See, Eat ja Go next / Barra. Monet ravintola-/resortit ovat muualla Suur-Banjulissa, eivät saarikaupungissa. Ei hintoja, aikatauluja tai nykyisiä pikkutarkkoja lauttalupauksia. |",
+          "urls": [
+            "https://en.wikivoyage.org/wiki/Banjul),"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "sourceId": "B1",
+          "url": "https://en.wikipedia.org/wiki/Banjul",
+          "scope": "Introduction: island at Gambia River mouth; cross-river ferries",
+          "role": "factual text source, not visual reproduction reference",
+          "sha256": "d7d5d4b5c79903fe479ef6220aaec968d04c698ed8d4a0043d8bcf8557fddf85",
+          "archivedSourceReadDate": "2026-10-11",
+          "liveVerifiedDate": "2026-10-12",
+          "revisionIds": [
+            "1377725086"
+          ]
+        },
+        {
+          "sourceId": "B6",
+          "url": "https://en.wikipedia.org/wiki/Gambia_River",
+          "scope": "Geography and Crossings: wide estuary and Banjul-Barra ferry",
+          "role": "factual text source, not visual reproduction reference",
+          "sha256": "ff0afdd3ef4d2ff9a2c023fea2150f40173326d2d0fd3735da9a4cdfaea1b169",
+          "archivedSourceReadDate": "2026-10-11",
+          "liveVerifiedDate": "2026-10-12",
+          "revisionIds": [
+            "1367426579"
+          ]
+        },
+        {
+          "sourceId": "B7",
+          "url": "https://en.wikivoyage.org/wiki/Banjul",
+          "scope": "Go next / Barra: passenger and vehicle ferry",
+          "role": "factual text source, not visual reproduction reference",
+          "sha256": "810b903ac3702b651e54f7318627f9f83f77aed34773bacc083179ef768f2d5b",
+          "archivedSourceReadDate": "2026-10-11",
+          "liveVerifiedDate": "2026-10-12",
+          "revisionIds": [
+            "5367765"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banjul-traveler-havainne-v1",
+      "city": "banjul",
+      "era": "e04",
+      "slot": "TRAVELER",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-traveler-havainne-v1.png?t=690390ec20db0032",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-traveler-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/banjul-traveler-havainne-v1.png",
+      "sha256": "690390ec20db00321276b7d87652da855380ee4ab7d114d0feee891b69bad9a0",
+      "bytes": 2694522,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nTrooppisen rannikkokosteikon mangrovekasvillisuus ja leveä vuorovesikanava.\nPysty, 35 mm rantatasolta: veden pinta ja matala kasvillisuusranta, latvukset rajaavat yläreunaa; ei juuriston makroa eikä lajintunnistusväitettä.\nNykyajan rauhallinen aamu, lämmin hajavalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Tanbin tarkkaa rantaa, kasvillisuuskarttaa, retkilaituria tai nykyistä palvelua.\nEi eläimiä, tunnistettavia kasviyksilöitä tai kaarnan lähikuvaa.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nPystykuva 1024×1536, w/h 0,667.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.",
+      "caption": "Mangroveranta jokisuun ympäristön yleiskuvituksena. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "currentCSourceSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceFactSheetSHA256": "9b2e60128a4163973ffcc4aafdf013af561b1abd2251c0628ea7f48d51f933bf",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "B4",
+          "line": 16,
+          "text": "| B4 | [Tanbi Wetland Complex](https://en.wikipedia.org/wiki/Tanbi_Wetland_Complex), en: Geography, Flora and habitat, Fauna, Human activities. Climate change -ennusteluvut eivät tähän lehtisisältöön. |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Tanbi_Wetland_Complex),"
+          ]
+        },
+        {
+          "sourceID": "B5",
+          "line": 17,
+          "text": "| B5 | [Ramsar Sites Information Service: Tanbi Wetlands Complex](https://rsis.ramsar.org/ris/1657), en: virallinen Overview ja paikkametadata. Viimeisin RIS-tieto sivulla vuodelta 2006, julkaisu 2.2.2007; historiallinen aluekuvaus, ei nykyhetken käyntipalvelu- tai lajilaskentalupaus. |",
+          "urls": [
+            "https://rsis.ramsar.org/ris/1657),"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "sourceId": "B4",
+          "url": "https://en.wikipedia.org/wiki/Tanbi_Wetland_Complex",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 16,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "2829dc4c7a5eaf15373f60e261ffd9f489c960a884dac472c6bb6452af781d40",
+          "revisionIds": [
+            "1347467710"
+          ],
+          "liveRead20261012": true
+        },
+        {
+          "sourceId": "B5",
+          "url": "https://rsis.ramsar.org/ris/1657",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 17,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "0d438b358749323dac0faa93c6f1b1b669d0017eb66691afd10a0f5c7949ef14",
+          "revisionIds": [],
+          "liveRead20261012": false
+        }
+      ]
+    },
+    {
+      "id": "tunis-c3-havainne-v1",
+      "city": "tunis",
+      "era": "e04",
+      "slot": "C3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-c3-havainne-v1.png?t=400207692cd84d26",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-c3-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/tunis-c3-havainne-v1.png",
+      "sha256": "400207692cd84d26a3173947d63c82770f397882a138d6557637ef27a60b6914",
+      "bytes": 2758580,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nMedinan kaupankäynnin ulkotila yleishavainnollistuksena: kapea kulkukuja, tavalliset kauppakojut ja historiallinen matala katutilan mittakaava.\nLaaja 28–35 mm katutason kamerakuva, kuja avautuu taakse; tavallisia arkiastioita ja tavaroita, selin olevat etäiset hahmot pieniä.\nNykyajan aamupäivä, pehmeä luonnonvalo ja varjo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi tarkkaa Tunisin kujaa, julkisivua, Zitounan minareettia, suojattuja koristepintoja tai todellisen paikan kuvausväitettä.\nKansi on ulkotilan laaja yleiskuva; eroaa nykyisistä kahdesta kattokuvasta.\nEi käsityöornamenttien jäljentämistä, mattojen kuvioita, kalligrafiaa tai modernia taidetta.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.",
+      "caption": "Medinan kauppakuja, Tunisin teeman yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "currentCSourceSHA256": "d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f",
+      "sourceFactSheetSHA256": "5309af5a3be4ab40070e07454d10587ee38585ed9d4159d6788a283ed58e6ddf",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "E",
+          "line": 13,
+          "text": "| E | [Tunis, en-Wikipedia](https://en.wikipedia.org/wiki/Tunis) | johdanto, Etymology, History, Geography, Medina, Souks, Walls and gates, uskonto, palatsit, liikenne; säätaulukon otsikko | 21.21.53 / 1379639654 |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Tunis)"
+          ]
+        },
+        {
+          "sourceID": "U",
+          "line": 16,
+          "text": "| U | [Medina of Tunis, UNESCO](https://whc.unesco.org/en/list/36/) | Description, Brief synthesis, Criteria, Integrity, Authenticity, Date of inscription | 21.22.27 |",
+          "urls": [
+            "https://whc.unesco.org/en/list/36/)"
+          ]
+        },
+        {
+          "sourceID": "S",
+          "line": 20,
+          "text": "| S | [Souks of Tunis, en-Wikipedia](https://en.wikipedia.org/wiki/Souks_of_Tunis) | johdanto ja nimettyjen kauppakujien luettelo | 21.22.23 / 1363683989 |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Souks_of_Tunis)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "sourceId": "E",
+          "url": "https://en.wikipedia.org/wiki/Tunis",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 13,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "c1790cd0ed6da5f0fa06741dffde586121c1c97fcacfce9eff0d6753a719d067",
+          "revisionIds": [
+            "1379639654"
+          ],
+          "liveRead20261012": true
+        },
+        {
+          "sourceId": "U",
+          "url": "https://whc.unesco.org/en/list/36/",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 16,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "4e87b38561ff7d21d149bc50e78167cab11707bc47a59fef826f41ab80fe8e09",
+          "revisionIds": [],
+          "liveRead20261012": true
+        },
+        {
+          "sourceId": "S",
+          "url": "https://en.wikipedia.org/wiki/Souks_of_Tunis",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 20,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "968868eaff76c97a5a56ba88683e672bd84a256da6247c7241019985ef7d1647",
+          "revisionIds": [
+            "1363683989"
+          ],
+          "liveRead20261012": true
+        }
+      ]
+    },
+    {
+      "id": "tunis-o3-havainne-v1",
+      "city": "tunis",
+      "era": "e04",
+      "slot": "O3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png?t=928405fcd6a0b8cc",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
+      "sha256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+      "bytes": 2604588,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nSisäpihan ja arkadin tilallinen idea Tunisin palatsikertomusten yleishavainnollistuksena: pieni avoin piha ja yksi tavallinen kaarigalleria.\nLaaja 28–35 mm ihmissilmän korkeudelta, valoisa avoin piha ja varjoisa arkadi; yksinkertaiset pylväät, rappaus ja kivipinta ilman koristeita.\nNykyajan hajavalo; yleinen tilallinen havainnollistus, ei nimetty palatsi tai nykyinen sisustus.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Dar Husseinin, Dar Lasramin, Dar Othmanin tai Dar Ben Abdallahin tarkan pihan, kaarimäärän tai pohjapiirroksen kuvaa.\nEi kaakelikuviota, stukkoteosta, maalattua kattoa, korinttilaista kapiteelia tai vanhan hylätyn kuvan koristeiden uusintaa.\nYleishavainnollistus ei todista käyntimahdollisuutta tai nykytilaa.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.",
+      "caption": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "currentCSourceSHA256": "d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f",
+      "sourceFactSheetSHA256": "5309af5a3be4ab40070e07454d10587ee38585ed9d4159d6788a283ed58e6ddf",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "L",
+          "line": 22,
+          "text": "| L | [Dar Lasram, en-Wikipedia](https://en.wikipedia.org/wiki/Dar_Lasram) | johdanto, History, Architecture, koordinaatti | 21.23.22 / 1351347809 |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Dar_Lasram)"
+          ]
+        },
+        {
+          "sourceID": "DF",
+          "line": 25,
+          "text": "| DF | [Dar Ben Abdallah, fr-Wikipedia](https://fr.wikipedia.org/wiki/Dar_Ben_Abdallah) | sijainti, historia, Architecture, koordinaatit | 21.25.06 / 213792276 |",
+          "urls": [
+            "https://fr.wikipedia.org/wiki/Dar_Ben_Abdallah)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "sourceId": "L",
+          "url": "https://en.wikipedia.org/wiki/Dar_Lasram",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 22,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "f5e9848f585bf68439f6e14d769865b91cbd17d6b3b945225f89541d636225f9",
+          "revisionIds": [
+            "1351347809"
+          ],
+          "liveRead20261012": true
+        },
+        {
+          "sourceId": "DF",
+          "url": "https://fr.wikipedia.org/wiki/Dar_Ben_Abdallah",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 25,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "7a5c615f978d58e8b8019b9baa0749c22c919b37fbb7165ce3e92627b62b0da1",
+          "revisionIds": [
+            "213792276"
+          ],
+          "liveRead20261012": true
+        }
+      ]
+    },
+    {
+      "id": "tunis-l4-havainne-v1",
+      "city": "tunis",
+      "era": "e04",
+      "slot": "L4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-l4-havainne-v1.png?t=2e75b84b8d51282a",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-l4-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/tunis-l4-havainne-v1.png",
+      "sha256": "2e75b84b8d51282a22f7c4617c74aea7de0c0d4b466203262b7a5bedb326bbed",
+      "bytes": 2306791,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nTarvikkeiden varastoinnin yleinen esinetilanne: yksinkertaisia suljettuja puisia laatikoita ja koristamattomia kangassäkkejä tavallisessa varastotilassa.\nLaaja 28–35 mm huonenäkymä, vapaa kulkutila ja muutama erilainen materiaalipino; ei lattia-/seinärakenteen tai säkin makroa.\n1800-luvun alkupuolen varastokäytön yleishavainnollistus, epäsuora päivänvalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Dar Othmanin täsmällistä dribaa, huonejakoa, pihaa, julkisivua tai suojattuja koristeita.\nLähde ei nimeä varastossa olleita tarvikkeita; kuva ei esitä historiallisesti todistettua esinevalikoimaa.\nEi aseita, tunnuksia, tekstejä, ihmisiä, tiettyä sotilaallista tapahtumaa tai vanhan oven ornamentiikkaa.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nEarly nineteenth century only: use period-plausible plain timber boxes and natural cloth sacks; no electric lights, wiring, plastic, modern industrial packaging, plywood, pallets or contemporary labels. No extra objects.",
+      "caption": "Tarvikkeiden varastointi 1800-luvulla, yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[1].nostot[3]",
+      "currentCSourceSHA256": "d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f",
+      "sourceFactSheetSHA256": "5309af5a3be4ab40070e07454d10587ee38585ed9d4159d6788a283ed58e6ddf",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "O",
+          "line": 23,
+          "text": "| O | [Dar Othman, en-Wikipedia](https://en.wikipedia.org/wiki/Dar_Othman) | johdanto, History, Description, koordinaatti | 21.23.27 / 1351343539 |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Dar_Othman)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "sourceId": "O",
+          "url": "https://en.wikipedia.org/wiki/Dar_Othman",
+          "role": "factual text source, not visual reproduction reference",
+          "sourceLine": 23,
+          "sourceReadDate": "2026-10-11",
+          "sha256": "e721e64881e0ae3cfcebb5529f02b18311feb8eae8db57c1a581e952cb84f56a",
+          "revisionIds": [
+            "1351343539"
+          ],
+          "liveRead20261012": true
+        }
+      ]
+    },
+    {
+      "id": "monrovia-k2-torikaytava",
+      "city": "monrovia",
+      "era": "e04",
+      "slot": "K2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-k2-torikaytava.png?t=6efe90e45ddd2ffd",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-k2-torikaytava.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/monrovia-k2-torikaytava.png",
+      "sha256": "6efe90e45ddd2ffd52c9a168a18e08eea8f7933a312e821eade3aa551df9961d",
+      "bytes": 2522646,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one original landscape educational illustrative image for a city article; clearly an AI illustration in accompanying metadata, not an actual location photograph.\nPrimary request: A believable ordinary West African street-market passage at the boundary of sheltered indoor stalls and open outdoor space. This is a GENERIC illustrative scene supporting the idea of market walkways and everyday shopping in the Monrovia article. Do not reconstruct, identify, or claim the exact layout of Waterside Market or any actual place.\nScene/backdrop: A narrow usable pedestrian aisle receding into a naturally brighter outdoor opening, modest non-distinctive stall shelters and plain corrugated awnings along both sides. Ordinary clothing and everyday household goods occupy side stalls: several plain shirts and trousers on a rail or casually folded; unbranded plastic wash basins and buckets, plain metal bowls, and a few simple kitchen utensils. Goods remain secondary to the readable passage. No landmark architecture, no monumental structures, no artworks.\nStyle/medium: Highly photorealistic camera-like image, candid documentary appearance, not a drawing, not a render. Natural muted daylight, realistic exposure, restrained contrast and color, no HDR, no dramatic lighting, no exaggerated dirt or poverty spectacle.\nComposition/framing: Landscape 3:2, 1536 by 1024 pixels. Eye-level 35 mm lens, modest perspective, grounded human scale. An unobstructed central route and clearly different side stalls. People are only a few small figures in the distant middle/background, facing away or obscured so that all faces are unreadable; nobody in the foreground. No identifiable individual. Contemporary ordinary plain clothing, no costumes.\nMaterials/textures: Cloth is soft woven fabric with plausible folds and non-repeating imperfections. Wood is plain subdued wood with normal grain, not embossed or etched. Plastic household goods have ordinary smooth surfaces and irregular minor wear; dull metal shows realistic roughness. Avoid repeated AI textures, carved-looking fabric, stamped patterns, repeated identical merchandise, glossy plastic atmosphere, and artificial over-sharpening.\nConstraints: Absolutely no visible letters, numbers, signage, price cards, brands, logos, labels, packaging text, posters, flags, watermarks, or frames anywhere, including garments and background stalls. No recognizable protected architecture, sculpture, installation, painting, decorative artwork or copyrighted imagery. No precise 2026 layout claim, no historical 1873 reconstruction, no actual-place-photo claim. Opaque full image, no transparency. Generate exactly one wholly new candidate.",
+      "caption": "Torikäytävä ja arjen tavarat, yleishavainnollistus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].nostot[1]",
+      "currentCSourceSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "S1",
+          "line": 13,
+          "text": "| S1 | [Monrovia, en-Wikipedia](https://en.wikipedia.org/wiki/Monrovia) | Kaupungin pääartikkeli: niemimaa, Mesurado, Bushrod, Broad Street, Waterside, alueet, historia, kulttuuri, liikenne. Väestön otsikointi virheellinen suhteessa kontekstin aluejakoon; ilmastoleipäteksti ei numeroiden lähde. |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Monrovia)"
+          ]
+        },
+        {
+          "sourceID": "S14",
+          "line": 26,
+          "text": "| S14 | [Monrovia, Wikivoyage](https://en.wikivoyage.org/wiki/Monrovia) | Opas: kaupunkialueet, torin tavarat, cook shops, liberialainen/lebanonilainen ruoka, lentoasema ja liikkuminen. Ravintola-, hinta-, lentoreitti- ja pääsytiedot osin vanhoja; ei lupauksia vuoden 2026 tarjonnasta. Ilmastoluvut hylätään. |",
+          "urls": [
+            "https://en.wikivoyage.org/wiki/Monrovia)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "S1",
+          "url": "https://en.wikipedia.org/wiki/Monrovia",
+          "finalUrl": "https://en.wikipedia.org/wiki/Monrovia",
+          "http": 200,
+          "readAt": "2026-10-12T10:14:54.386388+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://en.wikipedia.org/robots.txt",
+          "robotsSHA256": "48b98d80c8444d37cdf50cc9a4d2257b66039477e581066d2356062a4cbd678f",
+          "sha256": "15a95bf09df9c335d35650804f4ff2fc54323aed42ed71aad2fe91021ff0ef73",
+          "role": "factual text context only; no source image supplied to generation",
+          "scope": "S1 Neighborhoods Waterside location"
+        },
+        {
+          "id": "S14",
+          "url": "https://en.wikivoyage.org/wiki/Monrovia",
+          "finalUrl": "https://en.wikivoyage.org/wiki/Monrovia",
+          "http": 200,
+          "readAt": "2026-10-12T10:14:54.724425+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://en.wikivoyage.org/robots.txt",
+          "robotsSHA256": "ff45bc7ad23dd924142d51a680d9aaab6edce4f005233d095407c656da1d51cf",
+          "sha256": "c0549270022fbab4fca434215aa86dfd4ecf964ff3424be78bdfd99a317d7f46",
+          "role": "factual text context only; no source image supplied to generation",
+          "scope": "S14 Understand indoor/outdoor market, narrow walkways, used clothing and household wares"
+        }
+      ]
+    },
+    {
+      "id": "monrovia-k3-havainne-v1",
+      "city": "monrovia",
+      "era": "e04",
+      "slot": "K3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-k3-havainne-v1.png?t=065997f3508ac5ec",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-k3-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/monrovia-k3-havainne-v1.png",
+      "sha256": "065997f3508ac5ec30118a990a4b0babe60bfce580be42d1933355b364aa9f57",
+      "bytes": 2338142,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nAsiakirjojen säilyttämistä havainnollistava tavallinen museon työhuone: paperiaineistoja, yksinkertaisia arkistolaatikoita ja tyhjä työpöytä.\nLaaja 35 mm koko huoneen osan näkymä; neutraali hylly, laatikot ja pöytä, paperipinnat pieniä ja tekstittömiä.\nNykyajan epäsuora ikkunavalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Liberian kansallismuseon oikeaa sisätilaa tai oikeustalon julkisivua.\nEi oikeita karttoja, valokuvia, modernia taidetta, nimettyjä esineitä tai asiakirjatekstejä.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nUse a camera-like neutral present-day archive workspace. Show a whole desk and adjacent shelving in a medium-wide room view. Plain matte acid-free boxes have completely blank faces, no labels or numbers; documents are closed and contain no visible handwriting, diagrams, maps, photographs or printing. An empty work surface, simple unpainted or painted shelving. Plausible irregular paper edges, ordinary cardboard and wood, no ornate or carved surfaces, no stamped or repeated procedural textures. No people. Restrained color, realistic diffuse window light, no HDR.",
+      "caption": "Asiakirjojen säilytys museotyön yleiskuvituksena. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].nostot[2]",
+      "currentCSourceSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "S3",
+          "line": 15,
+          "text": "| S3 | [Liberian National Museum](https://en.wikipedia.org/wiki/Liberian_National_Museum) | Museon tehtävä, paikanvaihdot, vanha Supreme Court -talo ja kokoelmien lajit. Esineiden ikä/lukumäärä, näyttelyiden nykytila ja teoskohtaiset oikeudet eivät varmennettuja. |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Liberian_National_Museum)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "S3",
+          "url": "https://en.wikipedia.org/wiki/Liberian_National_Museum",
+          "role": "factual text context only; no source image supplied to generation",
+          "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+          "finalUrl": "https://en.wikipedia.org/wiki/Liberian_National_Museum",
+          "http": 200,
+          "readAt": "2026-10-12T10:19:51.757194+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://en.wikipedia.org/robots.txt",
+          "robotsSHA256": "48b98d80c8444d37cdf50cc9a4d2257b66039477e581066d2356062a4cbd678f",
+          "sha256": "e5203d76654a6cba0ba4ef8e85746ab79ada223879ae7247c68223ff6c101d78"
+        }
+      ]
+    },
+    {
+      "id": "monrovia-traveler-havainne-v1",
+      "city": "monrovia",
+      "era": "e04",
+      "slot": "TRAVELER",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-traveler-havainne-v1.png?t=a0710566edaae83d",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-traveler-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/monrovia-traveler-havainne-v1.png",
+      "sha256": "a0710566edaae83dd0852dd8ae00a89e0fbf4715d4aa6f7f18622d3c8d286103",
+      "bytes": 2266419,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nRannikkokaupungin luonnonvesi ja matala puustoinen ranta, merellisen ympäristön yleishavainnollistus.\nPysty 35 mm vesirajalta; vesi avautuu kuvan keskellä, puustoa reunassa, etäinen pehmeä rantaviiva.\nNykyajan aamupäivä, pilvinen luonnonvalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi tiettyä Monrovian rantaa, uimapaikkaa, vierailureittiä, Providence Islandin puuyksilöä tai sataman layoutia.\nEi ihmisiä vedessä tai retkipalvelulupausta.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nPystykuva 1024×1536, w/h 0,667.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nPortrait 1024 by 1536 camera-like view of a generic West African coastal natural water environment, 35 mm lens from the shore. The water occupies most of the center and lower picture, with a modest nearby fringe of ordinary green coastal trees at one side and a soft low distant tree-lined shoreline, no extreme macro roots. Natural slightly silty gray-green water, gentle irregular ripples, overcast morning daylight and restrained color. A believable plain shoreline, no beach resort, no turquoise paradise styling, no dramatic HDR. No people, swimming, boats, buildings, bridges, signs, lettering, maps, labels, artwork, logos or watermarks. Do not imply a named Monrovia beach or actual visit route.",
+      "caption": "Rannan vesi ja puusto, kaupunkiympäristön yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "currentCSourceSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "S1",
+          "line": 13,
+          "text": "| S1 | [Monrovia, en-Wikipedia](https://en.wikipedia.org/wiki/Monrovia) | Kaupungin pääartikkeli: niemimaa, Mesurado, Bushrod, Broad Street, Waterside, alueet, historia, kulttuuri, liikenne. Väestön otsikointi virheellinen suhteessa kontekstin aluejakoon; ilmastoleipäteksti ei numeroiden lähde. |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Monrovia)"
+          ]
+        },
+        {
+          "sourceID": "S9",
+          "line": 21,
+          "text": "| S9 | [Mesurado Wetlands, Ramsar RSIS 1631](https://rsis.ramsar.org/ris/1631) | Mangrove, lintujen ravinnonhaku, rantaviivan vakauttaminen ja sedimentin pidättäminen. Sivun viimeisin RIS-aineisto 2006: lajitiedot ovat dokumentoitua taustaa, eivät lupaus nykyisestä havaintoretkestä tai nykyinen hoitosuunnitelma. |",
+          "urls": [
+            "https://rsis.ramsar.org/ris/1631)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "S1",
+          "url": "https://en.wikipedia.org/wiki/Monrovia",
+          "finalUrl": "https://en.wikipedia.org/wiki/Monrovia",
+          "http": 200,
+          "readAt": "2026-10-12T10:14:54.386388+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://en.wikipedia.org/robots.txt",
+          "robotsSHA256": "48b98d80c8444d37cdf50cc9a4d2257b66039477e581066d2356062a4cbd678f",
+          "sha256": "15a95bf09df9c335d35650804f4ff2fc54323aed42ed71aad2fe91021ff0ef73",
+          "role": "factual text context only; no source image supplied to generation",
+          "scope": "S1 Neighborhoods Waterside location"
+        },
+        {
+          "id": "S9",
+          "url": "https://rsis.ramsar.org/ris/1631",
+          "role": "factual text context only; no source image supplied to generation",
+          "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+          "finalUrl": "https://rsis.ramsar.org/ris/1631",
+          "http": 200,
+          "readAt": "2026-10-12T10:19:52.965246+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://rsis.ramsar.org/robots.txt",
+          "robotsSHA256": "773fb8d35bb9a39d35335ee6db8dc5c912d2aacbfb823152d9c61cd647dd902d",
+          "sha256": "e3ac65a2bcbf52d64a735f428f1ca3a0b8327f3a818163ccdf02217f73d8439d"
+        }
+      ]
+    },
+    {
+      "id": "monrovia-o3-havainne-v1",
+      "city": "monrovia",
+      "era": "e04",
+      "slot": "O3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-o3-havainne-v1.png?t=0f4b2437ae7712ff",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-o3-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/monrovia-o3-havainne-v1.png",
+      "sha256": "0f4b2437ae7712fff671e2677d1db8aa9e3c9b3a1b255e2e0ba263ea5319768b",
+      "bytes": 2536810,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nMangroveranta, matala vuorovesivesi ja vihreä rantakasvillisuus Mesuradon luontoaiheiden yleiskuvituksena.\nLaaja 28–35 mm katse veden yli, kaksi kasvillisuuskerrosta ja avoin kanava; puiden juuret jäävät osaksi maisemaa.\nNykyajan pilvinen aamupäivä, realistinen mutainen veden sävy.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi todellisen Mesuradon paikkavalokuvan väitettä, tarkkaa rantaviivaa, opastusreittiä tai nykytilan dokumenttia.\nEi yksilöityä mangrovelajia, linnustoa, puun ikää, suojelurajoja tai metallipuuta.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nLandscape medium-wide 28–35 mm camera-like scene of an anonymous West African tidal mangrove fringe. Look across a shallow open water channel toward layered natural coastal greenery. Roots are part of the distant-to-middle-distance landscape, not a macro subject. Realistic silty brown-gray tidal water with gentle irregular ripples, green vegetation in varied depths and modest irregular root shapes at the shore, soft overcast late-morning light, restrained colors and exposure. No exact place geometry, species identification, wildlife, designated path, boats, people, buildings, bridges, sculpture, artwork, signs, letters, logos, watermarks or HDR. Avoid repeated sculpted root forms and plastic bark.",
+      "caption": "Mangrove ja vuorovesivesi, luontoaiheen yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "currentCSourceSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "S6",
+          "line": 18,
+          "text": "| S6 | [Providence Island, UNESCO Tentative List 6247](https://whc.unesco.org/en/tentativelists/6247/) | Liberian valtion toimittama ehdotus, ei maailmanperintöluettelon hyväksyntä. Saari, vesi, mangrove, kaivo, puu ja myöhemmät rakennelmat. Tekstissä sisäisiä päiväys-/kirjoitusvirheitä; puun tarkkaa ikää, pinta-alaa tai rantautumispäivää ei nosteta leipätekstiin. |",
+          "urls": [
+            "https://whc.unesco.org/en/tentativelists/6247/)"
+          ]
+        },
+        {
+          "sourceID": "S9",
+          "line": 21,
+          "text": "| S9 | [Mesurado Wetlands, Ramsar RSIS 1631](https://rsis.ramsar.org/ris/1631) | Mangrove, lintujen ravinnonhaku, rantaviivan vakauttaminen ja sedimentin pidättäminen. Sivun viimeisin RIS-aineisto 2006: lajitiedot ovat dokumentoitua taustaa, eivät lupaus nykyisestä havaintoretkestä tai nykyinen hoitosuunnitelma. |",
+          "urls": [
+            "https://rsis.ramsar.org/ris/1631)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "S9",
+          "url": "https://rsis.ramsar.org/ris/1631",
+          "role": "factual text context only; no source image supplied to generation",
+          "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+          "finalUrl": "https://rsis.ramsar.org/ris/1631",
+          "http": 200,
+          "readAt": "2026-10-12T10:19:52.965246+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://rsis.ramsar.org/robots.txt",
+          "robotsSHA256": "773fb8d35bb9a39d35335ee6db8dc5c912d2aacbfb823152d9c61cd647dd902d",
+          "sha256": "e3ac65a2bcbf52d64a735f428f1ca3a0b8327f3a818163ccdf02217f73d8439d"
+        },
+        {
+          "id": "S6",
+          "url": "https://whc.unesco.org/en/tentativelists/6247/",
+          "role": "factual text context only; no source image supplied to generation",
+          "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+          "finalUrl": "https://whc.unesco.org/en/tentativelists/6247/",
+          "http": 200,
+          "readAt": "2026-10-12T10:19:53.571130+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://whc.unesco.org/robots.txt",
+          "robotsSHA256": "4308ec674188cb9aeb416518e6469586d02a0b54f5fd586832d0ec23753bbe8a",
+          "sha256": "93e91a8b282d26675e1fde6ddc4294476ca44a21081c8ed07349e2634c5d3234"
+        }
+      ]
+    },
+    {
+      "id": "monrovia-l3-havainne-v1",
+      "city": "monrovia",
+      "era": "e04",
+      "slot": "L3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-l3-havainne-v1.png?t=26ff1e68c9b71a79",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/monrovia-l3-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/monrovia-l3-havainne-v1.png",
+      "sha256": "26ff1e68c9b71a79109b06ccfbc316d313b330f5ed25023b2bdefd20f4e9e55b",
+      "bytes": 2415203,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\n1800-luvun opiskelun ja rakentamisen yleiskuvitus: pieni pino suljettuja tekstittömiä kirjoja, tavallisia tiiliä ja puutavaraa samassa työtilassa.\nKeskilaaja 35 mm koko työpöydän ja sen vierellä olevan materiaalipinon näkymä, eri aineet erottuvat; ei kirjan tai tiilen makroa.\n1800-luvun puolivälin yleinen esinetilanne, päivänvalo; ei väitettä tietystä lahjoituserästä tai vuodesta.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Liberia Collegen tarkkaa rakennusta, lahjoitusta, kuljetushetkeä tai aitoa 1873 valokuvaa.\nKirjankannet ja selät täysin tekstittömiä; ei painokuvia, logoja tai tiettyä kirjaa.\nAitojen materiaalien epäsäännöllinen rakenne, ei muovista kaarnaa, identtisesti toistuvia tiiliä tai liimautuneita esineitä. Materiaalinäkymä pidetään keskilaajana; tiukempi lähirajaus vaatii myös tiilen ja paperin valokuvaviitteet.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nInput image 1 is a MATERIAL REFERENCE ONLY: the actual PD photograph by Liudmila & Nelson of the Susse Frères camera. Use only the irregular worn real wood surface and plausible seam/join structure to judge natural material, never copy the camera, brass, lenses, label, lettering, design, color or object. Generate a wholly new unrelated scene. Medium-wide 35 mm camera-like view including an entire simple work table and a modest stack of lumber and bricks beside it, with a small pile of fully closed completely blank bound books on the tabletop. Plain mid-19th-century ordinary tools-free workspace, no identifiable institution or exact historical interior. The books are modest props at medium distance, no macro paper study. Natural wooden planks with subtle irregular grain and individual scuffs, ordinary uneven reddish fired bricks, separate plausible pale paper page edges and plain muted cloth or leather book covers. Do not create bark-like plastic wood, identical repeated bricks, glued objects, ornate embossed covers or artificial etching. No visible letters, titles, numbers, logos, maps, illustrations, printed panels, stamps or labels on any book spine, cover, crate, wall or object. No camera, metal lens, golden plate, reference-object copy, people, artworks or protected architecture. Soft side window daylight, realistic exposure, quiet muted colors, no HDR. Full landscape 1536 by 1024 composition retained.",
+      "caption": "Kirjat ja rakennusaineet, collegen historian yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[1].nostot[2]",
+      "currentCSourceSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "S13",
+          "line": 25,
+          "text": "| S13 | [University of Liberia](https://en.wikipedia.org/wiki/University_of_Liberia) | Liberia Collegen 1800-luvun vaihe, lahjoitetut kirjat/rakennusaineet ja opetuksen alat. Vanhaa collegea ei samasteta nykyisiin kampusrakennuksiin. Ei nykyisiä opiskelijalukuja tai hallinnon henkilötietoja. |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/University_of_Liberia)"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "S13",
+          "url": "https://en.wikipedia.org/wiki/University_of_Liberia",
+          "role": "factual text context only; no source image supplied to generation",
+          "sourceFactSheetSHA256": "4591600d457f4b555bb51513f71f42892dca5ec3c27e4f6ce30c5bd50ef8b73e",
+          "finalUrl": "https://en.wikipedia.org/wiki/University_of_Liberia",
+          "http": 200,
+          "readAt": "2026-10-12T10:19:52.255367+00:00",
+          "robotsAllowed": true,
+          "robotsUrl": "https://en.wikipedia.org/robots.txt",
+          "robotsSHA256": "48b98d80c8444d37cdf50cc9a4d2257b66039477e581066d2356062a4cbd678f",
+          "sha256": "c9dd1617b1d686457e34b93252eab7260229fbc779b31e25166895b41f9bc668"
+        }
+      ]
+    },
+    {
+      "id": "accra-o1-tro-tro",
+      "city": "accra",
+      "era": "e05",
+      "slot": "O1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-o1-tro-tro.png?t=9d6c6a51f426064c",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-o1-tro-tro.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/accra-o1-tro-tro.png",
+      "sha256": "9d6c6a51f426064c406e98fb4b423291ca27f4d92eba37c35010eb5fd5bedef1",
+      "bytes": 2275894,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural.\nTavallinen yhteiskäytössä oleva nimetön pikkubussi tien reunassa, avoin sivuovi ja kulkusuunta näkyvät; kaupunkiliikenteen yleishavainnollistus, nykyaikainen Ghana, silmänkorkeuden 35 mm kameranäkymä pehmeässä päivänvalossa. Ei tarkkaa reittiä, rakennuksia, suojattuja koristeita, tunnistettavia logoja tai luettavia kasvoja.\nFotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nYhteiskäytössä oleva tavallinen pikkubussi tien reunassa; tro tro -liikenteen yleishavainnollistus.\n35 mm katutason sivuviisto näkymä, ajoneuvon ovi ja kulkusuunta näkyvät, pysähtymiseen vapaa tila; etäiset matkustajat selin.\nNykyajan päivänvalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi tiettyä reittiä, nykyistä liikennöitsijää, terminaalia, hintaa tai palvelun toimintalupausta.\nEi kylkisanontoja, taidekuvitusta, logoja, rekisteritekstiä tai luettavia kasvoja.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nLuonnollinen tavallisen kameran valotus ja optiikka, realistinen aineiden pinta ja epäsäännöllinen kuluma. Ei HDR:ää, ylikäsiteltyä terävyyttä, kohokuvioista toistuvaa puuta, lehtiä tai vettä. Yhtenäinen koko kuva, ei kollaasi. Rekisterikilvissä, pakkauksissa ja pinnoissa ei lainkaan kirjaimia tai numeroita.",
+      "caption": "Tro tro on yhteinen pikkubussikyyti, yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].kuva",
+      "currentCSourceSHA256": "934de020f94466cd9c25d25f6bf7d98104a0e580b5d1c89ed0c39f33b73e4f0d",
+      "sourceFactSheetSHA256": "12b1a3e20e6cfaa1ca32a637e4d7dbd44480b17bc23c3027f30fcd6f2f2cdec5",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "A",
+          "line": 11,
+          "text": "| A | Accra en: johdanto, Etymology, History, Transportation/Aviation/Taxis/Tro tros, Culture | https://en.wikipedia.org/wiki/Accra |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Accra"
+          ]
+        },
+        {
+          "sourceID": "V",
+          "line": 13,
+          "text": "| V | Accra en-Wikivoyage: Get in, Get around, See, Eat; hinnat/aukioloajat pois | https://en.wikivoyage.org/wiki/Accra |",
+          "urls": [
+            "https://en.wikivoyage.org/wiki/Accra"
+          ]
+        }
+      ],
+      "references": {
+        "inputReferenceImages": [],
+        "mode": "original-generation-from-source-backed-generic-brief",
+        "linkedSources": [
+          {
+            "sourceID": "A",
+            "line": 11,
+            "text": "| A | Accra en: johdanto, Etymology, History, Transportation/Aviation/Taxis/Tro tros, Culture | https://en.wikipedia.org/wiki/Accra |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Accra"
+            ]
+          },
+          {
+            "sourceID": "V",
+            "line": 13,
+            "text": "| V | Accra en-Wikivoyage: Get in, Get around, See, Eat; hinnat/aukioloajat pois | https://en.wikivoyage.org/wiki/Accra |",
+            "urls": [
+              "https://en.wikivoyage.org/wiki/Accra"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "accra-c1-havainne-v1",
+      "city": "accra",
+      "era": "e05",
+      "slot": "C1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-c1-havainne-v1.png?t=68fa3dfd9232e361",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-c1-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/accra-c1-havainne-v1.png",
+      "sha256": "68fa3dfd9232e361fabbd44188878b280290b42c5e44a84a0573d6c5e5267e8c",
+      "bytes": 2488023,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nRannikon asumisen, arkisen työn ja meren yhteys Ghanan pääkaupungin teeman yleishavainnollistuksena.\nLaaja 28 mm rantatason näkymä: meri toisella puolella, matala tavallinen asutuksen reuna toisella, toiminnallinen yksinkertainen kalastusvene keskialalla.\nNykyajan aamu, lämmin luonnonvalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Jamestownin tarkkaa katulinjaa, linnoitusta, majakkaa, uutta satamaa tai suojattua rakennusta.\nEi vahvistamattoman nykyisen sataman jäljentämistä eikä väitettä vuoden 1873 rannasta.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nLuonnollinen tavallisen kameran valotus ja optiikka, realistinen aineiden pinta ja epäsäännöllinen kuluma. Ei HDR:ää, ylikäsiteltyä terävyyttä, kohokuvioista toistuvaa puuta, lehtiä tai vettä. Yhtenäinen koko kuva, ei kollaasi. Rekisterikilvissä, pakkauksissa ja pinnoissa ei lainkaan kirjaimia tai numeroita.",
+      "caption": "Rannikon asuminen ja työ, Accran teeman yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "currentCSourceSHA256": "934de020f94466cd9c25d25f6bf7d98104a0e580b5d1c89ed0c39f33b73e4f0d",
+      "sourceFactSheetSHA256": "12b1a3e20e6cfaa1ca32a637e4d7dbd44480b17bc23c3027f30fcd6f2f2cdec5",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "A",
+          "line": 11,
+          "text": "| A | Accra en: johdanto, Etymology, History, Transportation/Aviation/Taxis/Tro tros, Culture | https://en.wikipedia.org/wiki/Accra |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Accra"
+          ]
+        },
+        {
+          "sourceID": "F",
+          "line": 23,
+          "text": "| F | Jamestown/Usshertown, Accra en: johdanto, History, paikalliset alueet | https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra"
+          ]
+        }
+      ],
+      "references": {
+        "inputReferenceImages": [],
+        "mode": "original-generation-from-source-backed-generic-brief",
+        "linkedSources": [
+          {
+            "sourceID": "A",
+            "line": 11,
+            "text": "| A | Accra en: johdanto, Etymology, History, Transportation/Aviation/Taxis/Tro tros, Culture | https://en.wikipedia.org/wiki/Accra |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Accra"
+            ]
+          },
+          {
+            "sourceID": "F",
+            "line": 23,
+            "text": "| F | Jamestown/Usshertown, Accra en: johdanto, History, paikalliset alueet | https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "accra-c2-havainne-v1",
+      "city": "accra",
+      "era": "e05",
+      "slot": "C2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-c2-havainne-v1.png?t=1ccd1f3a7e74912c",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-c2-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/accra-c2-havainne-v1.png",
+      "sha256": "1ccd1f3a7e74912c0f48757702e924b172b8b81c9bd208f98d903b44600c201b",
+      "bytes": 2518278,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nKeskustan kaupankäynnin yleishavainnollistus: tuoreita elintarvikkeita, tavallisia kattiloita ja arkisia käyttövälineitä samassa kauppaympäristössä.\nLaaja 28–35 mm katutasolta poikittain myyntipöytien ja kulkutilan yli; tuotteet näkyvät joukkoina, ei esineen makroa; etäiset hahmot selin.\nNykyajan keskipäivä, varjoisa kauppakäytävä.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Makolan täsmällistä markkinahallia, kojujakoa, nykyvalikoimaa, myyjää tai tietyn päivän dokumenttia.\nEi helmikoruja, kenteä, adinkraa, brändejä, pakkauskuvia tai luettavia kasvoja.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nLuonnollinen tavallisen kameran valotus ja optiikka, realistinen aineiden pinta ja epäsäännöllinen kuluma. Ei HDR:ää, ylikäsiteltyä terävyyttä, kohokuvioista toistuvaa puuta, lehtiä tai vettä. Yhtenäinen koko kuva, ei kollaasi. Rekisterikilvissä, pakkauksissa ja pinnoissa ei lainkaan kirjaimia tai numeroita.",
+      "caption": "Ruoka ja käyttöastiat samassa kauppaympäristössä. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "currentCSourceSHA256": "934de020f94466cd9c25d25f6bf7d98104a0e580b5d1c89ed0c39f33b73e4f0d",
+      "sourceFactSheetSHA256": "12b1a3e20e6cfaa1ca32a637e4d7dbd44480b17bc23c3027f30fcd6f2f2cdec5",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "M",
+          "line": 22,
+          "text": "| M | Makola Market en: johdanto, Historical background; kiistat pois | https://en.wikipedia.org/wiki/Makola_Market |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Makola_Market"
+          ]
+        }
+      ],
+      "references": {
+        "inputReferenceImages": [],
+        "mode": "original-generation-from-source-backed-generic-brief",
+        "linkedSources": [
+          {
+            "sourceID": "M",
+            "line": 22,
+            "text": "| M | Makola Market en: johdanto, Historical background; kiistat pois | https://en.wikipedia.org/wiki/Makola_Market |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Makola_Market"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "accra-c3-havainne-v1",
+      "city": "accra",
+      "era": "e05",
+      "slot": "C3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-c3-havainne-v1.png?t=16383761ababaae4",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-c3-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/accra-c3-havainne-v1.png",
+      "sha256": "16383761ababaae416696460c0d69b689ea2322cade2b6abca212f593a0aa1c7",
+      "bytes": 2372042,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nAvoin Guineanlahden tyyppinen hiekkaranta ja meri Accran rannikkoteeman yleiskuvituksena.\nLaaja 28 mm matalalta rantatasolta, vaahto ja hiekan märkävyöhyke etualalla, avara horisontti; ei rakennuksia tai ihmisiä.\nNykyajan myöhäinen aamupäivä, pilvien pehmentämä päivänvalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Labadin tarkan rannan, nykyisten hotellien tai uimarannan dokumenttia.\nEi kirkkaan paratiisirannan tai uimaturvallisuuden lupausta; luonnollinen Atlantin aallokko.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nLuonnollinen tavallisen kameran valotus ja optiikka, realistinen aineiden pinta ja epäsäännöllinen kuluma. Ei HDR:ää, ylikäsiteltyä terävyyttä, kohokuvioista toistuvaa puuta, lehtiä tai vettä. Yhtenäinen koko kuva, ei kollaasi. Rekisterikilvissä, pakkauksissa ja pinnoissa ei lainkaan kirjaimia tai numeroita.",
+      "caption": "Hiekkaranta ja meri, Accran rannikkoteeman yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "currentCSourceSHA256": "934de020f94466cd9c25d25f6bf7d98104a0e580b5d1c89ed0c39f33b73e4f0d",
+      "sourceFactSheetSHA256": "12b1a3e20e6cfaa1ca32a637e4d7dbd44480b17bc23c3027f30fcd6f2f2cdec5",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "A",
+          "line": 11,
+          "text": "| A | Accra en: johdanto, Etymology, History, Transportation/Aviation/Taxis/Tro tros, Culture | https://en.wikipedia.org/wiki/Accra |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Accra"
+          ]
+        },
+        {
+          "sourceID": "B",
+          "line": 20,
+          "text": "| B | Labadi Beach en: koko lyhyen artikkelin asiasisältö ja ristiriitainen koordinaatti | https://en.wikipedia.org/wiki/Labadi_Beach |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Labadi_Beach"
+          ]
+        }
+      ],
+      "references": {
+        "inputReferenceImages": [],
+        "mode": "original-generation-from-source-backed-generic-brief",
+        "linkedSources": [
+          {
+            "sourceID": "A",
+            "line": 11,
+            "text": "| A | Accra en: johdanto, Etymology, History, Transportation/Aviation/Taxis/Tro tros, Culture | https://en.wikipedia.org/wiki/Accra |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Accra"
+            ]
+          },
+          {
+            "sourceID": "B",
+            "line": 20,
+            "text": "| B | Labadi Beach en: koko lyhyen artikkelin asiasisältö ja ristiriitainen koordinaatti | https://en.wikipedia.org/wiki/Labadi_Beach |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Labadi_Beach"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "accra-k1-havainne-v1",
+      "city": "accra",
+      "era": "e05",
+      "slot": "K1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-k1-havainne-v1.png?t=468ab2860f5190c7",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-k1-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/accra-k1-havainne-v1.png",
+      "sha256": "468ab2860f5190c709e2c8ab1fab8776439358df5bc07f635b51502c00292776",
+      "bytes": 2586865,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nAsumisen ja arjen kaupankäynnin yhteys vanhan rannikkokaupungin yleiskuvituksena: yksinkertainen matala katutila, avoin kotiovi ja tavallisia käyttöastioita.\nLaaja 35 mm katutasolta, kulkutila ja asunnon/kaupan reuna yhdessä; etäiset selin olevat arkiset hahmot, ei turistilavastetta.\nNykyajan aamupäivä, tavallinen luonnonvalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Jamestownin tai Usshertownin täsmällistä katua, taloa, porttia tai nyrkkeilysalia.\nEi koristetaidetta, kente-/adinkrakuvioita, logoja tai nykyistä suojattua rakennusta.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nLuonnollinen tavallisen kameran valotus ja optiikka, realistinen aineiden pinta ja epäsäännöllinen kuluma. Ei HDR:ää, ylikäsiteltyä terävyyttä, kohokuvioista toistuvaa puuta, lehtiä tai vettä. Yhtenäinen koko kuva, ei kollaasi. Rekisterikilvissä, pakkauksissa ja pinnoissa ei lainkaan kirjaimia tai numeroita.",
+      "caption": "Asuminen ja kaupankäynti rinnakkain, yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[0].nostot[0]",
+      "currentCSourceSHA256": "934de020f94466cd9c25d25f6bf7d98104a0e580b5d1c89ed0c39f33b73e4f0d",
+      "sourceFactSheetSHA256": "12b1a3e20e6cfaa1ca32a637e4d7dbd44480b17bc23c3027f30fcd6f2f2cdec5",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "F",
+          "line": 23,
+          "text": "| F | Jamestown/Usshertown, Accra en: johdanto, History, paikalliset alueet | https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra"
+          ]
+        }
+      ],
+      "references": {
+        "inputReferenceImages": [],
+        "mode": "original-generation-from-source-backed-generic-brief",
+        "linkedSources": [
+          {
+            "sourceID": "F",
+            "line": 23,
+            "text": "| F | Jamestown/Usshertown, Accra en: johdanto, History, paikalliset alueet | https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "accra-l2-havainne-v1",
+      "city": "accra",
+      "era": "e05",
+      "slot": "L2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l2-havainne-v1.png?t=21f7eea9641d0124",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l2-havainne-v1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/accra-l2-havainne-v1.png",
+      "sha256": "21f7eea9641d01248b2119c64f8ccb344f6c10ba24f72baa5ab9eba67a9bb20e",
+      "bytes": 2358240,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Fotorealistinen kameran kuvaa muistuttava alkuperäinen havainnekuva; ei maalaus, piirros, dioraama tai CGI.\nMerirannan aamukäytön yleishavainnollistus: hiekka, aallot ja muutama etäinen kävelijä rantaviivan tuntumassa.\nLaaja 35 mm vinottain rantaa pitkin, ihmiset hyvin pieninä selin, meri pääaiheena; ei hotelleja, esiintymislavaa tai yksittäistä rantaesineen lähikuvaa.\nNykyajan varhainen aamu, luonnollinen sivuvalo.\nTämä on yleishavainnollistus; älä tee jäljitelmää nimetyn paikan täsmällisestä rakennuksesta, maisemasta tai nykytilasta.\nEi Labadin tarkkaa nykymaisemaa, pääsyjärjestelyä, ohjelmaa, hotelleja tai uimatilannetta.\nEi ihmisiä vedessä, musiikkiesitystä tai suojattua perinneteosta.\nEi tekstiä, logoa, vesileimaa, kehystä, luettavia kasvoja, tunnistettavaa nykyistä yksityishenkilöä, modernia suojattua teosta tai tunnetun koristepinnan jäljennöstä. Luonnolliset aineet ja liitokset, ei toistuvia muovipintoja.\nVaakakuva 1536×1024.\nPNG, sRGB, RGB, täysin peittävä; koko generointialue säilytetään.\nLuonnollinen tavallisen kameran valotus ja optiikka, realistinen aineiden pinta ja epäsäännöllinen kuluma. Ei HDR:ää, ylikäsiteltyä terävyyttä, kohokuvioista toistuvaa puuta, lehtiä tai vettä. Yhtenäinen koko kuva, ei kollaasi. Rekisterikilvissä, pakkauksissa ja pinnoissa ei lainkaan kirjaimia tai numeroita.",
+      "caption": "Rannan aamukäyttö, Labadin aiheen yleiskuvitus. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[1].nostot[1]",
+      "currentCSourceSHA256": "934de020f94466cd9c25d25f6bf7d98104a0e580b5d1c89ed0c39f33b73e4f0d",
+      "sourceFactSheetSHA256": "12b1a3e20e6cfaa1ca32a637e4d7dbd44480b17bc23c3027f30fcd6f2f2cdec5",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "B",
+          "line": 20,
+          "text": "| B | Labadi Beach en: koko lyhyen artikkelin asiasisältö ja ristiriitainen koordinaatti | https://en.wikipedia.org/wiki/Labadi_Beach |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Labadi_Beach"
+          ]
+        }
+      ],
+      "references": {
+        "inputReferenceImages": [],
+        "mode": "original-generation-from-source-backed-generic-brief",
+        "linkedSources": [
+          {
+            "sourceID": "B",
+            "line": 20,
+            "text": "| B | Labadi Beach en: koko lyhyen artikkelin asiasisältö ja ristiriitainen koordinaatti | https://en.wikipedia.org/wiki/Labadi_Beach |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Labadi_Beach"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "accra-l3-havainne-v2",
+      "city": "accra",
+      "era": "e05",
+      "slot": "L3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l3-havainne-v2.png?t=dee329fb3028ac2e",
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l3-havainne-v2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/accra-l3-havainne-v2.png",
+      "sha256": "dee329fb3028ac2e48d4ebb9794708d54d164455fc04f085c7130ad94fa31a4d",
+      "bytes": 2757081,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural.\nPrimary request: Make a completely new, natural camera-like educational illustration of coastal fishing livelihood on the Gulf of Guinea Atlantic coast in Accra, Ghana, WEST AFRICA. This is a TROPICAL GHANAIAN coastal environment with ordinary low cement and plastered coastal dwellings behind a sandy shore, NOT a northern European or North American port.\nMain subject: one whole, plain, undecorated OPEN WOODEN PIROGUE pulled onto the sand. It is an open canoe-like fishing boat with no cabin, no deckhouse, no radar, no mast and no tugboat or trawler equipment. A loosely gathered fishing net and a few ordinary work tools lie beside it. Include the whole boat and its surrounding working space, with everyday coastal dwellings farther back; the connection between fishing and living on this same coast is visible.\nComposition: distinct medium-wide 35 mm camera view from beach level. The complete open boat is central-left, loose net on the sandy working area nearby, low dwelling edge in the distance and Gulf of Guinea sea to the right. Do not make a net macro or a postcard tourist view. No people are needed; if present, only a few very small dark-skinned people seen from the back with no visible facial features.\nEnvironment: warm West African tropical coast, sandy and locally low-rock shore. Sparse coconut palms and a little tropical broadleaf vegetation near the plain low dwellings. Simple ordinary unadorned cement and plaster houses, naturally faded materials, modest flat or corrugated roofs. Soft, muted natural late-morning daylight; real ordinary camera exposure and natural color, physically plausible perspective and materials.\nSource scope: an original generic illustration of the Accra/Ghana coastal fishing-and-dwelling topic, not an actual place photograph and not an exact reconstruction of Jamestown or a named current harbor layout. Do not invent a documented 1873 shoreline or boat model. No identifiable landmark, modern harbor building, sculpture or protected modern artwork.\nAvoid: Nordic or New England architecture, conifers, red timber cabins, white wooden seaside houses, steep fjords, cold northern rocky harbors, cabin boats, trawlers, radar domes, signs, letters, numbers, boat names, license plates, logos, watermarks, framing, readable faces, known art or traditional decorative artwork. Plain natural wood with irregular weathering, no embossed repeated wood grain, leaves or water. No HDR, CGI, diorama, painting, illustration strokes or oversharpening.\nSingle complete landscape image, opaque PNG, RGB, embedded sRGB, 1536 x 1024. Preserve the whole generation area.",
+      "caption": "Kalastus ja asuminen samalla rannikkovyöhykkeellä. Havainnekuva.",
+      "provenanceLabel": "Tekoälyllä tuotettu havainnekuva. Lähteisiin perustuva yleishavainnollistus, ei aito paikkavalokuva eikä nimetyn paikan tarkan nykyulkoasun todiste.",
+      "exactTargetJSONPath": "$.kaupunkilehti[1].nostot[2]",
+      "currentCSourceSHA256": "934de020f94466cd9c25d25f6bf7d98104a0e580b5d1c89ed0c39f33b73e4f0d",
+      "sourceFactSheetSHA256": "12b1a3e20e6cfaa1ca32a637e4d7dbd44480b17bc23c3027f30fcd6f2f2cdec5",
+      "sourceOrderSHA256": "f8e7aae472a6c2ba983894b8052ab1000ee9501688f1b5a7db15f02d0f79d1ff",
+      "realPlacePhotograph": false,
+      "exactCurrentLayoutClaimed": false,
+      "AIgenerated": true,
+      "generationTool": "builtin image_gen",
+      "rootVisuallyReviewed": true,
+      "R2ReadbackByteExact": true,
+      "contentAcceptanceVerified": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sources": [
+        {
+          "sourceID": "F",
+          "line": 23,
+          "text": "| F | Jamestown/Usshertown, Accra en: johdanto, History, paikalliset alueet | https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra |",
+          "urls": [
+            "https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra"
+          ]
+        }
+      ],
+      "references": {
+        "inputReferenceImages": [],
+        "mode": "original-generation-from-source-backed-generic-brief",
+        "linkedSources": [
+          {
+            "sourceID": "F",
+            "line": 23,
+            "text": "| F | Jamestown/Usshertown, Accra en: johdanto, History, paikalliset alueet | https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra |",
+            "urls": [
+              "https://en.wikipedia.org/wiki/Jamestown/Usshertown,_Accra"
+            ]
+          }
+        ],
+        "failedCandidateNotUsedAsReference": true
+      }
+    }
+  ],
+  "remainingBuildingRoles": [
+    {
+      "id": "monrovia-l4",
+      "city": "monrovia",
+      "slot": "L4",
+      "exactTargetJSONPath": "$.kaupunkilehti[1].nostot[3]",
+      "reason": "Nimetyssä kirkossa vanha ja moderni viereinen pyhäkkö on erotettava valokuvaviitteestä; generointi ei saa keksiä niiden mittakaavaa tai jäljentää epävarmaa nykyteosta.",
+      "state": "needs-source-backed-visual-brief-no-generation-issued"
+    },
+    {
+      "id": "tunis-l2",
+      "city": "tunis",
+      "slot": "L2",
+      "exactTargetJSONPath": "$.kaupunkilehti[1].nostot[1]",
+      "reason": "Dar Lasramin kerrosjako ja historialliset tilat vaativat täsmällisen kuvakulman/kuvaviitteen; koristepintojen ikä ja oikeudet jäivät D/E:ssä avoimiksi.",
+      "state": "needs-source-backed-visual-brief-no-generation-issued"
+    },
+    {
+      "id": "tunis-l3",
+      "city": "tunis",
+      "slot": "L3",
+      "exactTargetJSONPath": "$.kaupunkilehti[1].nostot[2]",
+      "reason": "Dar Ben Abdallahin talon ja museon nykytilaa, arkadeja tai sisäänkäynnin mutkia ei voi todistaa pelkällä tekstillä; tarvitaan lähteisiin sidottu tarkka rajaus tai hyväksyttävä yleisesineaihe.",
+      "state": "needs-source-backed-visual-brief-no-generation-issued"
+    },
+    {
+      "id": "tunis-n-dar-othman",
+      "city": "tunis",
+      "slot": "N",
+      "exactTargetJSONPath": "$.nahtavyydet[\"Dar Othman\"].kuvat[0]",
+      "reason": "Nimetyn palatsin kohdekuva tarvitsee varmennetun visuaalisen viitteen historialliseen rakennusosaan; hylättyä koristeltua ovea ei generoida takaisin.",
+      "state": "needs-source-backed-visual-brief-no-generation-issued"
+    },
+    {
+      "id": "tunis-n-dar-hussein",
+      "city": "tunis",
+      "slot": "N",
+      "exactTargetJSONPath": "$.nahtavyydet[\"Dar Hussein\"].kuvat[0]",
+      "reason": "Nimetyn palatsin kohdekuvan geometria ja tunnistettavuus tarvitsevat kuvaviitteen; Qallaline-kaakelien, stukon, maalatun puun ja kapiteelien erilliset oikeudet eivät ratkea palatsin iästä.",
+      "state": "needs-source-backed-visual-brief-no-generation-issued"
+    }
+  ],
+  "omittedItems": [],
+  "firstFailedCandidateReplaced": {
+    "id": "accra-l3-havainne-v1",
+    "state": "preserved-rejected-not-uploaded",
+    "replacementID": "accra-l3-havainne-v2",
+    "reason": "Northern fishing harbor instead of Ghana; whole new correction."
+  }
+}
