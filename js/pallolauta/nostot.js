@@ -58,6 +58,7 @@ import {
   maanKohdetiedot, naapurienPoltetutMerkit, suljeFokuskohde,
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
+import { elaintakyKartalla } from '../elaintaky-rivit.js';
 import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
 import { hetkiKohdetieto } from '../historian-hetket.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
@@ -2058,13 +2059,17 @@ export function luoNostot({
       }
     }
     /*
-     * Eläintäyt: koko laudalla, vasta kun maanosa täyttää ruudun.
+     * Eläintäyt: VAIN KARTAN MAAN TÄKY (omistaja 12.10.2026 21.5x, ks.
+     * js/elaintaky-rivit.js elaintakyKartalla; löydöksen 125 "koko
+     * laudalla" kumottu — muiden maiden täyt eivät näy), vasta kun
+     * maanosa täyttää ruudun.
      * PORTTI ON NÄKYMÄN KORKEUS, EI LEVEYS (ks. ELÄINTÄKY: SAMA ASIA,
      * OMA LUKU PALLOLLE) — tasokartan oma 90 asteen leveysraja jäi
      * puhelimen pystyruudulla auki joka zoomilla.
      */
     if (alueenMerkitNakyvat(nakyva, ELAINTAKY_NAKYY_KORKEUS) && !liikkuu) {
       for (const t of elaintakyLaudalla(ui)) {
+        if (!elaintakyKartalla(t.iso, iso)) continue;
         const a = asteet(t);
         if (!a) continue;
         const tiiviste = nostoladontaTiiviste({
