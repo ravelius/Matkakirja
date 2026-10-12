@@ -78,7 +78,7 @@ const TARUT = {
   CHE: 'Wilhelm Tellin varsijousi',
   HUN: 'Attilan hauta-aarre',
   UKR: 'Hetmani Polubotokin kultakätkö',
-  MDA: 'Uroksen pään hopeagrosi',
+  MDA: 'Alkuhärän pään hopeagrosi',
   MCO: 'Pyhän Devotan pyhäinjäännökset',
 };
 const TARUSANAT = ['taru', 'tarina', 'saaga', 'legend', 'myytti', 'runo'];

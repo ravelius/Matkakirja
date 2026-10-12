@@ -826,7 +826,7 @@ export const PAIKALLISAARTEET = {
    * KYMMENEN PÄÄKAUPUNKIMAAN PARIT (12.10.2026, Sisältökirjuri; PT:n tilaus). Maalla on vain pääkaupunkipiste,
    * joten pari kuuluu pääkaupungin aarretehtävän maa-vihjeelle (docs/raportit/paikallisaarteet-10-maata-20261012.json).
    * Faktat kahdesta lähteestä, itsenäinen tarkistus; ei kuvia vielä (KUVAA_ODOTTAVAT-lista, tests/paikallisaarteet.test.mjs).
-   * Legendat: MDA (uroksen pää, Dragoşin taru) ja MCO (Pyhä Devota, legenda) merkitty taruiksi.
+   * Legendat: MDA (alkuhärän pää, Dragoşin taru) ja MCO (Pyhä Devota, legenda) merkitty taruiksi.
    */
   ALB: {
     pieniAarre: {
@@ -935,11 +935,11 @@ export const PAIKALLISAARTEET = {
         + 'Bulgarian, Romanian ja Pohjois-Makedonian kanssa.',
     },
     isoAarre: {
-      name: 'Uroksen pään hopeagrosi',
-      fakta: 'Taru kertoo metsästäjä Dragoşista, joka ajoi urosta Karpaattien '
-        + 'yli ja jäi Moldova-joen rannalle. Tarun mukaan uroksen pää tuli '
+      name: 'Alkuhärän pään hopeagrosi',
+      fakta: 'Taru kertoo metsästäjä Dragoşista, joka ajoi alkuhärkää Karpaattien '
+        + 'yli ja jäi Moldova-joen rannalle. Tarun mukaan alkuhärän pää tuli '
         + 'sen jälkeen Moldovan vaakunaan. Se komeilee myös keskiaikaisissa '
-        + 'hopeagroseissa 1300-luvun lopulta: uroksen pää, sarvien välissä '
+        + 'hopeagroseissa 1300-luvun lopulta: alkuhärän pää, sarvien välissä '
         + 'tähti, vieressä ruusu ja kuunsirppi.',
     },
   },
