@@ -1,7 +1,7 @@
 {
   "versio": 1,
   "laatija": "Sisältökirjuri 12.10.2026",
-  "huomio": "Kokoelma \"alueellisetpiilotukset\": Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas piilotetaan vain Kreikan App Storessa (GRC), PT/omistaja 12.10.2026, Raamattu #4493. Päälista. Harkinnanvaraiset kohteet erillisessä tiedostossa ja raportissa.",
+  "huomio": "Kokoelma \"alueellisetpiilotukset\": Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas piilotetaan vain Kreikan App Storessa (GRC), PT/omistaja 12.10.2026, Raamattu #4493. Päälista. Harkinnanvaraiset kohteet erillisessä tiedostossa ja raportissa. PT 12.10.: laki koskee kuvia, ei tekstiä, joten tehtävä ateena:aikajana (ei kuvia) ei ole listalla ja Kolme veljestä valmistuu GRC:ssäkin.",
   "alkiot": [
     {
       "maa": "GRC",
@@ -9,7 +9,6 @@
         "opas:ateena",
         "opas:kreeta",
         "tehtava:ateena:katso",
-        "tehtava:ateena:aikajana",
         "kuva:herokoe/hero-ateena-akropoliskallio",
         "kuva:herokoe/hero-ateena-aamu",
         "kuva:herokoe/hero-ateena-keskipaiva",
