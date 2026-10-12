@@ -35,3 +35,13 @@ Tila: JONO TYHJÄ (PT kirjasi, lepo). PT herättää, kun Codexin pääkaupunkie
   merkintä isona alareunaan, JPEG laatu 90. Pienennettyjä monen ruudun arkkeja EI omistajalle; PT:lle saa arkin, täysikokoiset samalla.
 - Aarretehtävät käyttöön: ecdcb9e7f KUITATTU 183 (omistajan kyllä 11.2x). SK suunnittelee kaikkiin Euroopan kaupunkeihin + 2–3 uutta
   lajia; moottorin uudet lajit vasta suunnitelman hyväksynnän jälkeen. Katso ja löydä v2: pelikoodari/katso-v2 f7162ddc4 (LS1 yhdistää).
+
+## Tila 12.10. iltapäivä (jono)
+- Linnan äänikierros KUITATTU 184: pelikoodari/linna-aanet-184 0c361ebeb (sonniss-aanet-v6 ym.); linnahaaraan vasta PT:n vapaa-ilmoituksella.
+- Lautapelipuhe KUITATTU 183: 2ce277f77 NS:llä (juna-183 70ae55223). Ämpäri aanet/pelit/opas-v1.
+- Katso ja löydä v2: pelikoodari/katso-v2 f7162ddc4 + ef4f60592; LS1:n yhdistelmä linssiseppa/katso2-yhd-184 (simu LS1:llä).
+- Aarretehtävien lajit 184: pelikoodari/aarre-lajit-184 b331119d8 (Valinta, Kartta, Eurooppa-muoto, maavihje, palkkiot × 0,4). Kartta-näkymä odottaa omistajan pohjapäätöstä (kohdekartan kokoruutu + tähtäin).
+- Retkikunta: päätepisteet täsmäävät; LT ajaa kahden simun testin (simukäännös natiiviseppa/juna-183 → lokit/laitetestaaja-app-183).
+- Pallot näkyviin (#4501 hyväksytty, juna 185): toteutus retkikuntatestin jälkeen. Hibernation-WebSocket, 1 Hz vain pallonäkymässä, yhteys kiinni muuten, Free-tason ylitys → hallittu siirtymä ilman palloja. Nimilappu vain omalle retkikunnalle, Googlen nimeäminen aina näkyvissä.
+- Shakki: kartoitus #4503 (docs).
+- Äänisivu: nopeat introt Pelissä (90), kippi + jazz palautettu Odottaa-osioon (46).
