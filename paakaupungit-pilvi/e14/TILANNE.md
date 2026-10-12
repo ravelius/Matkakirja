@@ -17,3 +17,9 @@ Omistaja hyväksyi robots-sallitut alkuperäiset Wiki/Commons-sivut estettyjen A
 | palikir | jonossa | — | — | — | — | — |
 | yaren | jonossa | — | — | — | — | — |
 | ngerulmud | jonossa | — | — | — | — | — |
+
+## Omistajan uusi tekstityön nopeutus12.10.2026
+
+Omistaja pyysi oleellista nopeutusta sekä enemmän sessioita/agentteja tavoitteenaan10x nopeus.30 pysyvää rinnakkaista sessiota luotu erillisille kaupunkijaoille. Kuvat pyydetty erillisestä Matkakirjan kuvat -putkesta, ensimmäinen Conakryn Camayennen kapokkipuut. Kirjoitetut tekstit eivät odota kuvia, puuttuvia karttapisteitä tai erillistä sääauditointia; puutteita ei arvata. Tekstiluonnoksen valmius ei ole sama kuin valmis-A–F, sisältöhyväksyntä, pelikytkentä tai julkaisu.
+
+Välitallennus 2026-10-12T07:40:36.871526+00:00: tekstiluonnoksia 91/93 (97,8 %), osaluonnokset ja edelleen keskeneräiset kohdat omissa C-muistioissaan. Tässä erässä tallennetut ydinluonnokset: canberra, apia, nukualofa, funafuti, southtarawa, majuro, palikir, yaren, ngerulmud. Riippumattomat D-tarkistukset ja kuvien täydentäminen jatkossa. Tämä commit on tuotannon välitallennus, ei valmis-erätoimitus.

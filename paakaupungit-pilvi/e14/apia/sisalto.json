@@ -1,0 +1,379 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "apia",
+  "maa": "WSM",
+  "era": "e14",
+  "kaupunki": {
+    "id": "apia",
+    "name": "Apia",
+    "wiki": "Apia",
+    "ambience": "satama",
+    "pallo": {
+      "lat": -13.8333,
+      "lon": -171.8333
+    }
+  },
+  "artikkeli": {
+    "intro": "Apia on Samoan pääkaupunki Upolun pohjoisrannikolla, missä Vaisiganojoki laskee luonnonsatamaan. Kaupunki levittäytyy kapealle rannikkotasangolle, ja sisämaan puolella nousee Mount Vaea. **Apia-kylä** on yhä olemassa suuremman pääkaupungin sisällä: ympärille kasvanut kaupunki yhdistää monia kyliä. Satama, torit ja liikeyhteydet tekevät siitä koko saarivaltion keskuksen.\n\nIsoisän matkavuonna 1873 Apia oli jo olemassa, mutta kirjailija Robert Louis Stevensonin Samoa-vuodet tulivat myöhemmin. Hän asettui Vailimaan, kaupungin eteläpuolelle, ja tunnettiin täällä nimellä **Tusitala**, tarinankertoja. Aarresaari oli ilmestynyt jo ennen hänen saapumistaan Samoaan. Kirjailijan entinen koti on nyt museo ja hänen hautansa Mount Vaealla. Apian kiinnostavin retki voikin kulkea torilta metsäpolulle: kaupungin arjesta paikkaan, jossa kaukaa tullut kirjailija eli viimeiset vuotensa.",
+    "teksti": "Apia kasvoi 1800-luvulla pienestä kylästä sataman ympärille levittäytyväksi kaupungiksi. Vanha Apia-kylä säilyi muiden kylien joukossa. Nykyinen pääkaupunki on siksi myös kylien kokonaisuus, jonka kaupunkinimi ja alkuperäinen paikannimi eivät tarkoita aivan samaa aluetta.\n\nSataman historiaan kuuluu 1800-luvun lopun hirmumyrsky, joka upotti tai vaurioitti siellä olleita aluksia. Brittiläinen Calliope onnistui pääsemään ulos merelle. Vaisiganojoen suulla oleva satama on edelleen tärkeä kuljetusten keskus, mutta kaupungin maaston runko jatkuu rannasta sisämaan harjanteisiin.\n\nVailimassa asunut Robert Louis Stevenson yhdistää Apian maailmankirjallisuuteen. Hänen kotinsa toimii museona, ja Mount Vaealle johtava polku vie kirjailijan haudalle. Kaupungin historia ei silti rajoitu tähän vieraaseen: torit, kylät ja paikalliset kulttuuritaidot ovat Apian elävää arkea."
+  },
+  "kysymykset": [
+    {
+      "q": "Millä Samoan saarella Apia sijaitsee?",
+      "options": [
+        "Upolulla",
+        "Savai'illa",
+        "Manonolla",
+        "Tutuilalla"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Pääkaupunki sijaitsee saaren pohjoisrannikolla.",
+      "fact": "Apia sijaitsee Upolun saarella.",
+      "source": "https://en.wikipedia.org/wiki/Apia"
+    },
+    {
+      "q": "Mikä joki laskee Apian luonnonsatamaan?",
+      "options": [
+        "Vaisiganojoki",
+        "Mulivaijoki",
+        "Murrayjoki",
+        "Cluthajoki"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Joki kulkee sisämaan harjanteiden välissä.",
+      "fact": "Vaisigano laskee mereen Apian satamassa.",
+      "source": "https://en.wikipedia.org/wiki/Apia"
+    },
+    {
+      "q": "Kenen entinen koti toimii museona Vailimassa?",
+      "options": [
+        "Robert Louis Stevensonin",
+        "Arthur Conan Doylen",
+        "Charles Dickensin",
+        "Rudyard Kiplingin"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Hän kirjoitti Aarresaaren.",
+      "fact": "Skotlantilainen kirjailija vietti elämänsä viimeiset vuodet Vailimassa.",
+      "source": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+    },
+    {
+      "q": "Mitä Stevensonin samoalainen nimi Tusitala tarkoittaa?",
+      "options": [
+        "Tarinoiden kertojaa",
+        "Merenkulkijaa",
+        "Vuorten kulkijaa",
+        "Kylän johtajaa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Nimi liittyy hänen ammattiinsa.",
+      "fact": "Tusitala viittaa tarinoiden kertomiseen tai kirjoittamiseen.",
+      "source": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+    },
+    {
+      "q": "Mihin Apian nimi alun perin viittasi?",
+      "options": [
+        "Pieneen paikalliseen kylään",
+        "Vuoren korkeimpaan huippuun",
+        "Ulkomaisen aluksen nimeen",
+        "Saarta hallinneeseen linnaan"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Alkuperäinen paikka on yhä pääkaupungin sisällä.",
+      "fact": "Apia-kylä antoi nimensä ympärille kasvaneelle pääkaupungille.",
+      "source": "https://en.wikipedia.org/wiki/Apia"
+    }
+  ],
+  "tiedot": [
+    "Apia-nimi kuuluu edelleen pienelle kylälle suuren pääkaupunkialueen sisällä.",
+    "Stevensonin Aarresaari oli julkaistu ennen hänen muuttoaan Samoaan.",
+    "Vailiman kirjailijakoti ja Mount Vaean hautapaikka ovat eri paikkoja, joita yhdistää kävelypolku."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "saatiedot": null,
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Apia",
+      "johdanto": "Apia on sataman ja kylien ympärille kasvanut pääkaupunki. Torilta matka jatkuu helposti rantaan tai sisämaan rinteille.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Pieni Apia suuren Apian sisällä",
+          "teksti": "Apia-nimi tarkoittaa sekä pääkaupunkia että pientä kylää sen sisällä. Kaupunki on kasvanut monien kylien ympärille, eikä vanha Apia-kylä ole vain kadonnut vanhaksi paikannimeksi. Tämän huomaa myös paikan etsimisessä: osoite voi perustua kylän nimeen, tiehen tai tunnettuun rakennukseen. Matkailijalle kaupungin nimi on lähtöpiste, paikalliselle kylän nimi voi kertoa paljon tarkemmin, missä ollaan. Apian historiaa voi näin lukea kahdessa mittakaavassa, samannimisen kylän ja laajan kaupunkialueen kautta.",
+          "wiki": "Apia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Laiva, joka pääsi ulos satamasta",
+          "teksti": "Apian satamassa oli eri maiden aluksia, kun voimakas hirmumyrsky saapui 1800-luvun lopulla. Brittiläinen Calliope onnistui lähtemään satamasta ja selvisi merellä; muut mukana olleet sotalaivat upposivat tai vaurioituivat. Pohjoiseen avoin satama päästi tuulen ja aallot sisään. Calliopen selviytymistä auttoivat sen voimakkaat, uudenaikaiset koneet, joilla se pääsi vastatuulta ja merta vastaan ulos lahdelta. Sataman historian yllättävä käänne on siten laiva, joka löysi myrskyssä turvansa lähtemällä avomerelle.",
+          "wiki": "1889 Apia cyclone",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaupunki joen ja harjanteiden välissä",
+          "teksti": "Vaisiganojoki laskee Apian luonnonsatamaan. Rannan kapea tasanko saa kaupungin näyttämään mereltä käsin rannikkokaupungilta, mutta sen takana maasto nousee nopeasti sisämaahan. Mount Vaea sijaitsee keskustan eteläpuolella, ja Vaisiganon molemmin puolin kulkee harjanteita. Apian retket voivat siksi johtaa saman päivän aikana rantatieltä kukkulalle. Kaupungin perustamisen aikoihin joki ja vuori olivat jo paikallaan; nykyinen satama- ja liikekeskus kasvoi niiden väliin.",
+          "wiki": "Apia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Torilta oppii muutakin kuin ostamaan",
+          "teksti": "Fugalein ruokatori sijaitsee sisempänä kaupungissa, ja samalta seudulta lähtee myös busseja. Torilla myydään paikallisia hedelmiä, vihanneksia ja valmiita samoalaisia ruokia. Tuoreiden tuotteiden joukossa ovat taro, leipäpuun hedelmät ja kookokset; lisäksi löytyy käsitöitä. Apian kalatori on oma paikkansa rannan lähellä. Torikäynti näyttää käytännössä, mitä kaupunki syö ja mitä ympäröiviltä kyliltä tulee myyntiin. Aamupäivä sopii tuotteiden katsomiseen ja ruokien maistamiseen ilman ravintolaan sitoutumista.",
+          "wiki": "Apia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Apian keskusta sopii sataman ja torien katsomiseen kävellen. Fugaleissa voi maistaa samoalaista ruokaa ja etsiä käsitöitä. Vailima ja Mount Vaea tarjoavat erillisen kirjallisuus- ja kävelyretken sisämaan puolella. Trooppinen lämpö ja sade vaikuttavat siihen, milloin kävely on miellyttävintä. Kysy majapaikasta päivän kuljetukset ja retkireittien kunto.",
+        "artikkeli": {
+          "nimi": "Matkailijan Apia",
+          "taitto": "opas",
+          "teksti": "Aloita satamasta ja torilta, ja jatka Vailiman kirjailijakotiin.",
+          "nosto": "Rannikkokaupungin ja metsäisen vuoren retket tarvitsevat erilaiset kengät ja aikataulut.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Faleolon kansainvälinen lentoasema sijaitsee Apian länsipuolella. Kaupunkiin voi järjestää taksin tai majoituspaikan kuljetuksen etukäteen. Apiasta lähtee busseja eri puolille Upolua, ja keskustassa monet paikat ovat kävelymatkan päässä toisistaan. Kylän nimi tai tunnettu rakennus voi auttaa osoitteen löytämisessä enemmän kuin kadunnumero. Vailimaan ja sisämaan retkipaikkoihin kannattaa suunnitella oma yhteys.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Satama ja torit",
+              "teksti": "Kulje Beach Roadin ja sataman ympäristössä, ja jatka Fugalein ruokatorille sisemmäs kaupunkiin. Kalatori ja tuoretori ovat eri paikkoja: toisessa tutustuu päivän merisaaliiseen, toisessa hedelmiin, vihanneksiin ja valmisruokiin. Samoa Cultural Village esittelee muun muassa puunveistoa, korinpunontaa ja siapon valmistusta. Kysy paikan ohjelmasta, sillä kaikkia työvaiheita ei esitellä joka käynnillä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Vailimasta Mount Vaealle",
+              "teksti": "Stevensonin entinen koti Vailimassa toimii museona. Samalta alueelta johtaa metsäpolku Mount Vaealla sijaitsevalle haudalle. Retki yhdistää talon historian ja vuoren maiseman; se on kävelyretki eikä pelkkä museon sisäänkäynti. Ota vettä ja pitävät kengät, ja kysy reitin kunnosta etenkin sateen jälkeen. Papase'ean vesiputoukset ja veden kuluttamat kalliot ovat erillinen sisämaan retkipaikka.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Apian torilla voi aloittaa kookoksista, hedelmistä, tarosta ja leipäpuun hedelmistä. Umu on kuumilla kivillä valmistettavan ruoan keittotapa: tarjolla voi olla kalaa, lihaa tai kasviksia. Palusami on kookoskermasta valmistettu lehtikäärö, ja oka tarkoittaa kookoskerman ja sitruksen kanssa tarjottavaa raakaa kalaa. Ravintoloiden lisäksi maisteltavaa löytyy ruokatorilta; kysy myyjältä ruoan ainekset ja päivän valikoima.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Apiassa on trooppisen lämmintä ympäri vuoden, ja sateisuus vaihtelee vuodenajasta toiseen. Kuivemmanakin kautena voi sataa, joten metsäretkeä ei kannata lukita pelkän kalenterin perusteella. Aamupäivä sopii torille ja viileämpi hetki kävelylle. Sateen jälkeen Mount Vaean polun kunto on hyvä tarkistaa paikan päällä. Sunnuntai vaikuttaa monien liikkeiden ja ravintoloiden palveluihin, joten kysy majoituspaikasta ajantasaiset vaihtoehdot.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Fugalein ruokatori",
+                "tahdet": 3,
+                "selite": "Paikalliset tuotteet ja valmiit ruoat avaavat kaupungin ruokakulttuuria."
+              },
+              {
+                "mita": "Stevensonin museo",
+                "tahdet": 3,
+                "selite": "Vailiman koti kertoo kirjailijan viimeisistä vuosista."
+              },
+              {
+                "mita": "Mount Vaean kävely",
+                "tahdet": 2,
+                "selite": "Metsäpolku yhdistää kirjailijan kodin ja hautapaikan."
+              },
+              {
+                "mita": "Sataman rantareitti",
+                "tahdet": 2,
+                "selite": "Beach Road ja satama näyttävät Apian merellisen sijainnin."
+              },
+              {
+                "mita": "Samoa Cultural Village",
+                "tahdet": 2,
+                "selite": "Paikassa esitellään samoalaisia käsityötaitoja."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Retki vaatii kävelyä",
+                "teksti": "Mount Vaean polun kunto kannattaa kysyä etenkin sateen jälkeen."
+              },
+              {
+                "otsikko": "Osoitteissa kylä auttaa",
+                "teksti": "Tarkista kylän nimi, tie ja lähin tunnettu rakennus ennen lähtöä."
+              },
+              {
+                "otsikko": "Sunnuntain palvelut",
+                "teksti": "Kysy majoituspaikasta, mitkä ravintolat ja liikkeet palvelevat vierailupäivänä."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "kirjallisuus",
+      "nimi": "Tusitalan todellinen saarikoti",
+      "johdanto": "Aarresaaren tekijä eli viimeiset vuotensa Samoassa. Hänen tunnetuin saarensa ja todellinen kotisaarensa kuuluivat eri vaiheisiin elämässä.",
+      "tehtava": {
+        "kysymys": "Mikä väite Aarresaaresta pitää paikkansa?",
+        "vaihtoehdot": [
+          "Se julkaistiin ennen Samoa-vuosia.",
+          "Se syntyi Vailiman museotalossa.",
+          "Se julkaistiin vasta hänen kuoltuaan.",
+          "Se kertoo Apian sataman myrskystä."
+        ],
+        "oikea": 0,
+        "fakta": "Vailiman koti liittyy kirjailijan myöhempään elämänvaiheeseen kuin hänen tunnetuin saariseikkailunsa."
+      },
+      "nostot": [
+        {
+          "otsikko": "Aarresaari tuli ennen Samoa-vuosia",
+          "teksti": "Aarresaari tekee Robert Louis Stevensonin nimestä tutun, mutta kirja ei syntynyt hänen Vailiman-kodissaan. Se julkaistiin jo ennen kirjailijan muuttoa Samoaan, samoin Tohtori Jekyll ja herra Hyde. Samoan-vuosina hän kirjoitti uusia Tyynenmeren tarinoita ja jatkoi myös Skotlantiin sijoittuvaa tuotantoaan. Vailiman museo kertoo siis kirjailijan elämän viimeisestä vaiheesta, ei kaikkien hänen kirjojensa yhteisestä syntypaikasta. Tunnettu saariseikkailu ja todellinen saarikoti kuuluvat eri kohtiin hänen elämässään.",
+          "wiki": "Robert Louis Stevenson",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Tusitala oli paikallinen nimi",
+          "teksti": "Stevenson tunnettiin Samoassa nimellä Tusitala, joka tarkoittaa tarinankertojaa tai tarinoiden kirjoittajaa. Nimi tuo hänen ammattinsa paikalliseen kieleen, vaikka hän oli syntynyt Skotlannissa. Hän asui perheineen Vailimassa ja kirjoitti siellä muun muassa Tyynenmeren saariin liittyviä kertomuksia. Entinen koti on nykyään hänen elämäänsä esittelevä museo. Apian kirjallisuushistoriassa sama henkilö löytyy siten sekä kirjan kannen eurooppalaisella nimellä että samoalaisella nimellä, joka kertoo mitä hän teki.",
+          "wiki": "Robert Louis Stevenson",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Haudalla on kirjailijan oma runo",
+          "teksti": "Robert Louis Stevenson valitsi Mount Vaean viimeiseksi leposijakseen. Hänen kuoltuaan samoalaiset kantoivat arkun vuorelle, ja hautaan kaiverrettiin hänen oma Requiem-runonsa. Teksti kuvaa kotiin palaavaa merimiestä ja metsästäjää; se ei ole myöhemmän matkailumainoksen keksimä tunnelma. Vailiman talo sijaitsee vuoren juurella, ja polku yhdistää kodin hautapaikkaan. Apian kirjallisuusretkellä rakennus, metsäpolku ja lyhyt runo ovat näin osia saman ihmisen todellisesta elämänvaiheesta.",
+          "wiki": "Mount Vaea",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kutsu, joka jäi kirjeeseen",
+          "teksti": "Stevenson oli pitkään kirjeenvaihdossa skotlantilaisen J. M. Barrien kanssa. Hän kutsui tämän käymään Samoassa, mutta kirjailijat eivät koskaan tavanneet. Vailiman arkeen kuuluivat myös kirjeet hänen kirjalliselle neuvonantajalleen Sidney Colvinille. Niitä julkaistiin Stevensonin kuoleman jälkeen nimellä Vailima Letters. Saarikoti oli kaukana Britannian kirjallisista piireistä, mutta yhteys kulki postissa. Kirjailijoiden tuttavuus voi joskus olla aivan todellinen, vaikka sitä ei voi paikantaa yhteiseen kahvipöytään.",
+          "wiki": "Robert Louis Stevenson",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Mount Vaea kohoaa Apian eteläpuolella. Vuoren polku yhdistää rannikkokaupungin kirjallisuushistorian sisämaan maisemaan.",
+    "rajat": {
+      "pohjoinen": -13.86091,
+      "etela": -13.86631,
+      "lansi": -171.77639,
+      "ita": -171.77083
+    },
+    "kohteet": [
+      {
+        "nimi": "Mount Vaea",
+        "tyyppi": "luonto",
+        "lat": -13.86361,
+        "lon": -171.77361
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Mount Vaea": {
+      "aika": "Luonnonvuori; kirjailijan hautapaikka 1800-luvun lopulta",
+      "teksti": "Mount Vaea kohoaa Apian eteläpuolella, Upolun sisämaan suunnassa. Vuoren juurella on Lalovaea, jonka nimi tarkoittaa Vaean alapuolta. Itäisellä rinteellä sijaitseva Vailima tunnetaan Robert Louis Stevensonin entisestä kodista. Vuoren maisema ja kirjailijan muistopaikka kuuluvat suojeltuun alueeseen.\n\nStevenson valitsi vuoren viimeiseksi leposijakseen, ja samoalaiset kantoivat hänen arkkunsa sinne hänen kuoltuaan 1800-luvun lopulla. Myös hänen puolisonsa Fannyn tuhka tuotiin myöhemmin Samoaan. Vailiman museolta johtaa kävelypolku hautapaikalle. Isoisän matkavuonna 1873 vuori oli jo paikallaan, mutta Stevensonin koti ja hauta tulivat vasta myöhemmin. Retki yhdistää luonnonmaaston ja kirjallisuushistorian: nousu tapahtuu polulla, jonka kuntoon sade voi vaikuttaa. Reitin ajantasaiset ohjeet kannattaa kysyä museolta ennen lähtöä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "ehdotukset": {
+    "lentoasema": "Faleolo International Airport (APW)",
+    "huomiot": [
+      "C-tekstiluonnos, ei valmis kaupungin toimitus. D/E/F ja pelikytkentä avoinna.",
+      "Kohdekartta partial: yksi varmennettu luonnonvuori. Papaseean WP-haku palautti 404; kohteelle ei lainata toisen paikan pistettä.",
+      "Kontekstin pallo.lon -171.8333 ja Apian WP-artikkelin kaupunkipiste -171.750 poikkeavat; pallo säilytetty ohjeen mukaisesti kontekstista, yhteensopivuus tarkistettava.",
+      "Vailiman WP-piste kuuluu kylälle eikä varmennetusti museorakennukselle; sitä ei käytetä museon kohdepisteenä.",
+      "Kuvat odottavat kuvaputkea; neljä kuvakenttää kaikissa rooleissa tyhjiä.",
+      "Saatiedot null: sääaseman 48/48 primääriauditointi puuttuu. saa.json koskematon.",
+      "Modernit kirkot, parlamentti, kellotorni ja museon myöhemmät lisärakennukset eivät ole kuva- tai karttakohteina."
+    ]
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "yaren",
+  "maa": "NRU",
+  "era": "e14",
+  "kaupunki": {
+    "id": "yaren",
+    "name": "Yaren",
+    "wiki": "Yaren",
+    "ambience": "meri",
+    "pallo": {
+      "lat": -0.5477,
+      "lon": 166.9209
+    }
+  },
+  "artikkeli": {
+    "intro": "**Yarenin kohdalla pääkaupunki on käyttökelpoinen mutta epätäsmällinen sana.** Naurulla ei ole virallista pääkaupunkia, ja Yaren on saaren etelärannikon hallintopiiri. Siellä sijaitsevat parlamentti ja hallinnon toimistoja sekä kansainvälinen lentoasema. Piirin pohjoispuolella on Buada, idässä Meneng ja lännessä Boe. Rannikon tie yhdistää piirejä, ja lentokoneen siirtyminen terminaalille voi katkaista tieliikenteen.\n\nYarenissa on myös **Nauru Learning Village**, jossa toimivat koulu, ammatillinen koulutus ja University of the South Pacificin kampus. Maanalainen Moqua-järvi tuo samaan piiriin aivan toisenlaisen paikan: vesi ei täällä aina näy maan pinnalla. Naurulla ei ole jokia, ja vettä kerätään myös talojen katoilta. Naapuripiirin Buada-järvi liittyy vanhaan kalankasvatustaitoon. Isoisän matkavuonna 1873 nykyistä Yarenin hallintopiiriä ei vielä ollut.",
+    "teksti": "Yaren ei ole Naurun muista piireistä irrallinen kaupunkikunta. Sen tosiasiallinen pääkaupunkiasema perustuu siellä sijaitsevaan hallintoon. Sana piiri on olennainen myös väestöä lukiessa: Yarenin asukasluku koskee tätä hallintoaluetta, ei koko saarta.\n\nRannikon arjessa lentoliikenne, tie ja koulu ovat lähellä toisiaan. Nauru Learning Village kokoaa eri koulutustasoja samaan paikkaan. Maan pääkaupunkilistassa näkyvä nimi on näin myös oppilaiden ja opiskelijoiden osoite.\n\nMoqua on maanalainen järvi, vaikka sen englanninkielinen nimi Well tarkoittaa kaivoa. Buada taas on Yarenin pohjoispuolisen piirin järvi, jolla ei ole laskuyhteyttä mereen. Naurulaiset kasvattivat siellä rannikon vesistä pyydettyjä nuoria kaloja. Saaren vesien tuntemiseen kuului siten sekä juomaveden hankkiminen että kalojen kasvattaminen ruoaksi."
+  },
+  "kysymykset": [
+    {
+      "q": "Mikä Yaren on hallinnollisesti?",
+      "options": [
+        "Naurun piiri",
+        "Erillinen saarivaltio",
+        "Koralliriutan atolli",
+        "Itsenäinen kaupunkikunta"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Naurun paikallishallinnon alueita kutsutaan tällä sanalla.",
+      "fact": "Yaren on Naurun hallintopiiri ja maan tosiasiallinen hallintokeskus.",
+      "source": "https://en.wikipedia.org/wiki/Yaren"
+    },
+    {
+      "q": "Millä Naurun rannikolla Yaren sijaitsee?",
+      "options": [
+        "Etelärannikolla",
+        "Pohjoisrannikolla",
+        "Itärannikolla",
+        "Länsirannikolla"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Piirin pohjoispuolella on Buada.",
+      "fact": "Yaren sijaitsee saaren eteläosassa.",
+      "source": "https://en.wikipedia.org/wiki/Yaren"
+    },
+    {
+      "q": "Minkä yliopiston kampus on Nauru Learning Villagessa?",
+      "options": [
+        "University of the South Pacificin",
+        "University of Aucklandin",
+        "University of Guamin",
+        "University of Hawaiʻin"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Oppilaitoksen nimessä on eteläinen Tyynimeri.",
+      "fact": "University of the South Pacificin Naurun kampus sijaitsee Yarenin oppimiskylässä.",
+      "source": "https://en.wikipedia.org/wiki/Yaren"
+    },
+    {
+      "q": "Mikä Moqua Well on nimestään huolimatta?",
+      "options": [
+        "Maanalainen järvi",
+        "Avoin merisatama",
+        "Tuliperäinen kraatteri",
+        "Rannikon majakka"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kohde löytyy maanpinnan alapuolelta.",
+      "fact": "Well tarkoittaa kaivoa, mutta Moqua on Yarenin maanalainen järvi.",
+      "source": "https://en.wikipedia.org/wiki/Moqua_Well"
+    },
+    {
+      "q": "Mitä Buadan järven laskujoen puuttuminen tarkoittaa?",
+      "options": [
+        "Vedellä ei ole laskuyhteyttä muihin vesistöihin",
+        "Vesi vaihtuu mereen jokaisella laskuvedellä",
+        "Järvi saa kaiken vetensä vuoristojäätiköstä",
+        "Järvi on tehty pelkästään sadeveden säiliöksi"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Kyse on vesistöstä, jonka vedet eivät purkaudu jokea pitkin eteenpäin.",
+      "fact": "Buada on laskujoeton järvi; Lagoon-nimi ei tarkoita avointa yhteyttä mereen.",
+      "source": "https://en.wikipedia.org/wiki/Buada_Lagoon"
+    }
+  ],
+  "tiedot": [
+    "Yarenin oppimiskylässä koululaiset, ammatillisen koulutuksen opiskelijat ja yliopiston kampus kuuluvat samaan koulutusalueeseen.",
+    "Moqua tunnetaan nimellä Well eli kaivo, vaikka se on maanalainen järvi. Sen vettä käytettiin saarelaisten juomavetenä toisen maailmansodan aikana.",
+    "Buadan kalankasvatuksessa nuoret milkfish-kalat pyydettiin rannikon vesistä ja siirrettiin sisämaan järveen. Paikallinen kalannimi on ibija."
+  ],
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Yaren",
+      "johdanto": "Hallinnon osoite, lentokenttä ja oppimiskylä ovat samassa piirissä. Yarenin maan alle kätkeytyvä järvi avaa näkymän koko saaren vesien käyttöön.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Piiri pääkaupungin paikalla",
+          "teksti": "Yarenilla on pääkaupungin tehtäviä ilman virallisen pääkaupungin asemaa. Naurulla ei ole erikseen nimettyä pääkaupunkia, ja Yaren on yksi sen piireistä. Parlamentti ja hallinnon toimistot sijaitsevat siellä. Piirin pohjoispuolella on Buada, idässä Meneng ja lännessä Boe. Rajat ovat siis saman saaren hallintoalueiden rajoja. Pääkaupunkiluettelon sana ei muuta Yarenia omaksi kaupunkikunnaksi, ja piirin väestö on erotettava koko Naurun väestöstä. Paikan tehtävä ja sen hallinnollinen muoto ovat eri asioita.",
+          "wiki": "Yaren",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Tie odottaa lentokonetta",
+          "teksti": "Naurun rannikkoa kiertävä tie kulkee lentoaseman yhteydessä. Tieliikennettä pysäytetään liikennevaloilla, kun lentokone siirtyy terminaalille. Lentoliikenteen ja tien kohtaaminen on täällä konkreettista: sama matka, joka yhdistää rannikon piirejä, odottaa välillä lentokonetta. Terminaali ja lentoyhtiön pääkonttori sijaitsevat Yarenissa. Saarta ei tarvitse kuvitella yhdeksi suureksi lentoasemaksi, mutta etelärannikon arjessa lentokenttä on aivan oman alueensa tieverkon keskellä.",
+          "wiki": "Yaren",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Oppimiskylä samassa osoitteessa",
+          "teksti": "Nauru Learning Village sijaitsee Yarenissa ja kokoaa samaan koulutusalueeseen Nauru Secondary Schoolin, ammatillisen koulutuskeskuksen ja University of the South Pacificin Naurun kampuksen. Lukijan pääkaupunkilistassa oleva nimi on myös oppilaiden ja opiskelijoiden arjen paikka. Oppimiskylän kiinnostava piirre on eri koulutustasojen rinnakkaisuus: samassa aluekokonaisuudessa ovat koulun, ammattitaidon ja yliopisto-opiskelun osoitteet. Sana village tarkoittaa tässä oppimiskylää, ei uutta hallintopiiriä.",
+          "wiki": "Yaren",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Naoero kertoo omasta historiasta",
+          "teksti": "Yarenin Naoero-museo on Naurun kansallismuseo. Sen toiminta sai alkunsa yksityisestä toisen maailmansodan esinekokoelmasta. Kokoelmissa on myös radioon ja poliisiin liittyviä esineitä sekä valokuvia: sodan lisäksi säilyy saaren viestinnän ja hallinnon arkea. Kaikki Naurun menneisyyden aineisto ei silti ole Naurulla. Saaren esineitä ja kuva-arkistoa on ulkomaisissa laitoksissa, esimerkiksi British Museumissa ja Uuden-Seelannin Te Papa -museossa. Yarenin museo on paikallinen osoite historialle, jota on hajallaan eri puolilla maailmaa.",
+          "wiki": "Nauru Museum",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Yarenissa ovat Naurun lentoasema ja hallinnon toimistoja. Rantatie jatkuu piirin ulkopuolelle ympäri saarta. Majoitus ja kuljetus kannattaa järjestää ennen lähtöä ja maahantulon ehdot tarkistaa ajantasaisesti. Oppimiskylä on toimiva koulutusalue, ei vapaasti kuljettava nähtävyys. Moquan käynti vaatii tiedon nykyisestä pääsystä. Rannikkoa katsellessa ei pidä olettaa jokaista riuttarantaa uimapaikaksi.",
+        "artikkeli": {
+          "nimi": "Matkailijan Yaren",
+          "taitto": "opas",
+          "teksti": "Katso hallintopiiriä myös koulun, rantatien ja veden kautta.",
+          "nosto": "Yaren on osa samaa pientä saarta kuin sen naapuripiirit. Buadan järvelle lähtevä retki ylittää piirin rajan, vaikka meri pysyy lähellä.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Naurun kansainvälinen lentoasema on Yarenissa. Rannikkoa kiertävä tie yhdistää saaren piirejä, ja liikkumiseen käytetään esimerkiksi vuokrattua autoa tai polkupyörää. Kuumuus vaikuttaa jalan tehtävään matkaan. Lentoaikataulu, majoitus, kuljetus ja maahantulon ehdot on tarkistettava matkan ajankohdalle.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Hallintoa, koulua ja museota",
+              "teksti": "Yarenissa sijaitsevat parlamentti, hallinnon toimistoja, Naoero-museo ja Nauru Learning Village. Hallinto- ja koulurakennukset ovat toimivia työpaikkoja. Vierailun pääsy ja museon käyntijärjestelyt kannattaa selvittää erikseen. Rakennuksen sijainti piirissä ei yksin tarkoita, että sen sisälle voisi astua matkailijana.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Moqua ja Buada",
+              "teksti": "Moqua on Yarenin maanalainen järvi. Sen ympärille on rakennettu aita onnettomuuksien ehkäisemiseksi, joten pääsyä ei pidä olettaa vapaaksi. Buada-järvi sijaitsee toisessa piirissä Yarenin pohjoispuolella; se on sisämaan retkikohde, ei Yarenin kaupunginosa. Järven rantoja ympäröivät myös yksityiset asuinpaikat ja puutarhat. Kumpaakaan järveä ei esitellä uintikohteena.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Naurun ravintoloissa tarjotaan kalaa ja mereneläviä sekä esimerkiksi kiinalaistyylisiä riisi- ja nuudeliruokia. Suuri osa elintarvikkeista tulee saarelle tuontina. Paikalliseen ravintohistoriaan kuuluvat kookos, pandanuksen hedelmät ja Buadassa kasvatetut milkfish-kalat.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Naurulla on kuuma ja kostea ilmasto, mutta sateiden määrä vaihtelee voimakkaasti. Saarella on ollut myös pitkiä kuivia jaksoja. Pitkän kävelyn voi ajoittaa aamun viileämpiin hetkiin. Rannikon aallokko ja riutta on arvioitava paikan päällä ennen veteen menoa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Yarenin rantatie",
+                "tahdet": 2,
+                "selite": "Hallintopiiri liittyy samaan tiehen kuin saaren muut piirit."
+              },
+              {
+                "mita": "Naoero-museo",
+                "tahdet": 3,
+                "selite": "Kansallismuseo kokoaa saaren historiaa ja kulttuuria."
+              },
+              {
+                "mita": "Moqua",
+                "tahdet": 3,
+                "selite": "Maanalainen järvi näyttää Yarenin vesien toisen puolen."
+              },
+              {
+                "mita": "Buadan järvi",
+                "tahdet": 3,
+                "selite": "Naapuripiirin sisämaan järvi liittyy vanhaan kalankasvatukseen."
+              },
+              {
+                "mita": "Rannikon kalastus",
+                "tahdet": 2,
+                "selite": "Merellinen ravintohistoria jatkuu kalan käytössä saarella."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Järjestelyt ennakkoon",
+                "teksti": "Lennot, majoitus, kuljetus ja maahantulo varmistetaan ennen matkaa."
+              },
+              {
+                "otsikko": "Piirien ero",
+                "teksti": "Buada on Yarenin pohjoispuolinen naapuripiiri, ei osa Yarenia."
+              },
+              {
+                "otsikko": "Riutta ei ole uimaranta",
+                "teksti": "Monet rannat ovat kivisiä ja matalia; turvallinen pääsy veteen selvitetään paikallisesti."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Veden eri osoitteet",
+      "johdanto": "Naurun vedet löytyvät maan alta, sisämaan painanteesta ja talojen katoilta. Buadan kalankasvatus kertoo myös saarelaisten vesiosaamisesta.",
+      "tehtava": {
+        "kysymys": "Mistä talojen sadeveden keräysjärjestelmät saavat vetensä?",
+        "vaihtoehdot": [
+          "Katoilta",
+          "Jokivarsilta",
+          "Vuoristojäätiköltä",
+          "Meripohjan lähteistä"
+        ],
+        "oikea": 0,
+        "fakta": "Talojen kattopinnat ohjaavat sadevettä säiliöihin saarella, jolla ei ole jokia."
+      },
+      "nostot": [
+        {
+          "otsikko": "Kaivo, joka onkin järvi",
+          "teksti": "Moqua Well tarkoittaa nimeltään Moqua-kaivoa, mutta kyseessä on Yarenin alla sijaitseva pieni järvi. Sitä käytettiin saarelaisten juomaveden lähteenä toisen maailmansodan aikana. Lähellä ovat myös Moquan luolat. Maanpinnan alapuolelle jäävä vesi on aivan eri ympäristö kuin saarta kiertävä meri. Järven ympärille rakennettiin aita onnettomuuksien ehkäisemiseksi. Paikan käynti on siksi järjestettävä pääsyn mukaan: maanalaisen veden kiinnostavuus ei tarkoita vapaata kulkua tai turvallista uimapaikkaa.",
+          "wiki": "Moqua Well",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Vettä katolta, vettä merestä",
+          "teksti": "Naurulla ei ole jokia eikä puroja. Talojen katoilta kerätään sadevettä säiliöihin, ja saarella käytetään myös meriveden suolanpoistoa. Molemmat kuuluvat veden hankintaan, mutta ne alkavat aivan eri paikoista: toinen sateesta, toinen merestä. Naurun sateet vaihtelevat voimakkaasti, ja saarella on koettu kuivia jaksoja. Pienen saaren vesihuoltoa ei siis voi päätellä siitä, että joka puolella näkyy vettä. Rannikon meri, järvien vesi ja talouden käyttövesi ovat eri asioita.",
+          "wiki": "Nauru",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Laguuni ilman meriyhteyttä",
+          "teksti": "Buada Lagoon on nimestään huolimatta järvi ilman laskuyhteyttä mereen. Se sijaitsee Buadan piirissä Yarenin pohjoispuolella, ja sen vesi on lievästi suolaista. Järvi on sadeveden täyttämässä painanteessa, eikä siltä lähde laskujokea. Rantoja ympäröivät asuintalot, hedelmäpuut ja puutarhat. Siellä kasvatetaan esimerkiksi banaaneja, mangoja, pandanusta ja leipäpuuta. Nimi Lagoon saattaa tuoda mieleen avoimen rannikkolaguunin, mutta Buadan paikka on saaren sisämaassa.",
+          "wiki": "Buada Lagoon",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kalalle toinen kasvupaikka",
+          "teksti": "Naurulaiset kasvattivat Buadan järvessä milkfish-kalaa, jonka paikallinen nimi on ibija. Nuoret kalat pyydettiin saaren rannikkovesistä, totutettiin makeampaan veteen ja siirrettiin sisämaan järveen kasvamaan. Kalankasvatus oli näin osa paikallista osaamista jo kauan ennen nykyisiä kehittämishankkeita. Järveen tuotiin myöhemmin myös tilapioita, jotka kilpailivat kasvatettavien kalojen kanssa. Buadan historia näyttää, että kalapaikka voi olla samalla rakennettu ruokajärjestelmä, ei vain luonnosta löytyvä saalis.",
+          "wiki": "Buada Lagoon",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Moqua on Yarenin maan alle jäävä järvi ja saaren historiallinen juomaveden lähde. Nykyinen pääsy on selvitettävä erikseen; kohdetta ei esitellä uimapaikkana.",
+    "rajat": {
+      "pohjoinen": -0.5436,
+      "etela": -0.5496,
+      "lansi": 166.917,
+      "ita": 166.923
+    },
+    "kohteet": [
+      {
+        "nimi": "Moquan maanalainen järvi",
+        "tyyppi": "luonto",
+        "lat": -0.5466,
+        "lon": 166.92
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Moquan maanalainen järvi": {
+      "aika": "Luonnonmuodostuma",
+      "teksti": "Moqua Well on Yarenin alla sijaitseva pieni maanalainen järvi. Nimen Well suora merkitys on kaivo, mutta vesipaikka ei ole tavallinen kaivettu kaivo. Toisen maailmansodan aikana sen vettä käytettiin saarelaisten juomavetenä. Lähellä sijaitsevat myös Moquan luolat.\n\nMoqua ja Makwa ovat Yarenin entisiä nimimuotoja, jotka liittyvät samaan paikannimistöön. Järven ympärille on rakennettu aita onnettomuuksien ehkäisemiseksi. Vierailu järjestetään nykyisen paikallisen pääsytiedon perusteella. Aidan tarkoitus on ehkäistä onnettomuuksia, eikä järveä käsitellä uintipaikkana.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Nauru International Airport (INU)",
+    "huomiot": [
+      "C-tekstiluonnos, kaikki kuvaroolit tyhjiä. Ei kuvia eikä nykyisten rakennusten teossuojan kiertoa.",
+      "Kartta partial: vain Moqua, oma Wikipedia-piste -0.5466/166.920. Muita pisteitä ei arvattu. Buada on naapuripiiri, ei Yarenin osa.",
+      "Sää null: primäärivarmennus avoin, ei sääarvoja tekstissä eikä saa.json-muutoksia.",
+      "Väestöluku koskee Yarenin piiriä; lukuarvo jätetty pois. Makwa/Moqua-nimien alkuperän selitykset lähteissä eri suuntaisia, ei varmaa etymologiaa.",
+      "Museon käyntikäytäntö, koulutusalueen vierailupääsy, Moquan pääsy ja ajantasaiset matkajärjestelyt avoimia. Fosfaatin pääkertomusta ei toisteta."
+    ]
+  }
+}

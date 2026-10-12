@@ -1,0 +1,351 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "palikir",
+  "maa": "FSM",
+  "era": "e14",
+  "kaupunki": {
+    "id": "palikir",
+    "name": "Palikir",
+    "wiki": "Palikir",
+    "ambience": "sademetsa",
+    "pallo": {
+      "lat": 6.9178,
+      "lon": 158.185
+    }
+  },
+  "artikkeli": {
+    "intro": "**Palikir on pääkaupunki, jonka rinnalla toinen kaupunki hoitaa suuren osan saaren kaupunkielämästä.** Mikronesian liittovaltion hallintokeskus sijaitsee Pohnpein metsäisellä sisämaalla, Sokehsin kunnassa. Koillisempana rannikolla on Kolonia, Pohnpein osavaltion pääkaupunki ja saaren kaupan keskus. Liittovaltion hallinto siirtyi sieltä Palikiriin 1900-luvun lopulla. Palikirin nimi ja Sokehsin kunnan nimi eivät siis tarkoita samaa väestöaluetta.\n\nHallintorakennusten lisäksi Palikirissa toimii College of Micronesia-FSM:n kansallinen kampus. Sen yhteydet ulottuvat maan muille saarille. Pohnpei taas on korkea tuliperäinen saari, jonka ympärillä on koralliriutta. **Pääkaupungin tausta on metsää**, ja saarella elää lintuja, joita ei tavata luonnossa muualla. Isoisän matkavuonna 1873 nykyistä liittovaltion hallintokeskusta ei vielä ollut.",
+    "teksti": "Palikirin ja Kolonian työnjako tekee Pohnpein pohjoisosasta kiinnostavan. Liittovaltion hallinnon osoite on Palikir, mutta Kolonia on osavaltion keskus sekä kauppojen, ravintoloiden ja majoituksen keskittymä. Lentoasemakin sijaitsee Kolonian lähellä, pienellä Deketikin saarella.\n\nPalikir on osa Sokehsin kuntaa. Kunnan väestöluku ei ole sama asia kuin hallintokeskuksen väkiluku, vaikka nimien alle kerätään toisinaan samoja lukuja. College of Micronesia-FSM:n kansallinen kampus tuo Palikiriin toisen tehtävän: se on myös opiskelun paikka.\n\nMetsä ei ole täällä pelkkä hallintorakennusten taustakulissi. Pohnpeilla elää omia lintulajeja, ja ka-puun luontainen levinneisyys rajoittuu Pohnpeille ja Kosraelle. Myös sakau-juoman kasvi kuuluu paikalliseen arkeen: sen juurista valmistetaan juomaa, jolla on seremoniallisia ja seurusteluun liittyviä käyttötapoja."
+  },
+  "kysymykset": [
+    {
+      "q": "Millä saarella Palikir sijaitsee?",
+      "options": [
+        "Pohnpeilla",
+        "Babeldaobilla",
+        "Kiritimatilla",
+        "Upolulla"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Saari kuuluu samaan osavaltioon kuin rannikon Kolonia.",
+      "fact": "Palikir sijaitsee Pohnpein saarella Mikronesian liittovaltiossa.",
+      "source": "https://en.wikipedia.org/wiki/Palikir"
+    },
+    {
+      "q": "Minkä hallintoalueen osa Palikir on?",
+      "options": [
+        "Sokehsin kunnan",
+        "Nettin kunnan",
+        "Kittin kunnan",
+        "U:n kunnan"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Pääkaupungin nimi ja kunnan nimi ovat eri asioita.",
+      "fact": "Palikir kuuluu Sokehsiin; koko kunnan asukaslukua ei pidä esittää Palikirin omana väkilukuna.",
+      "source": "https://en.wikipedia.org/wiki/Pohnpei"
+    },
+    {
+      "q": "Mikä korkeakoulun yksikkö toimii Palikirissa?",
+      "options": [
+        "Kansallinen kampus",
+        "Merikoulun kampus",
+        "Lääketieteen keskus",
+        "Tähtiobservatorio"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Oppilaitoksen nimi on College of Micronesia-FSM.",
+      "fact": "College of Micronesia-FSM:n kansallinen kampus on Palikirissa.",
+      "source": "https://en.wikipedia.org/wiki/Pohnpei"
+    },
+    {
+      "q": "Mistä kasvin osasta sakau-juoma valmistetaan?",
+      "options": [
+        "Juurista",
+        "Lehdistä",
+        "Kukista",
+        "Hedelmistä"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Valmistus alkaa maan alta saatavasta osasta.",
+      "fact": "Sakau on kavan paikallinen nimi, ja juoma valmistetaan kasvin juurista.",
+      "source": "https://en.wikipedia.org/wiki/Kava"
+    },
+    {
+      "q": "Mitä Pohnpein linnun endeemisyys tarkoittaa?",
+      "options": [
+        "Laji elää luonnossa vain siellä",
+        "Laji muuttaa joka talvi pois",
+        "Laji pesii pelkästään veden alla",
+        "Laji on aina ihmisen kasvattama"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Termi kuvaa lajin luontaista levinneisyyttä.",
+      "fact": "Pohnpein omiin lintulajeihin kuuluvat esimerkiksi Pohnpei fantail ja Pohnpei lorikeet.",
+      "source": "https://en.wikipedia.org/wiki/Pohnpei"
+    }
+  ],
+  "tiedot": [
+    "Palikirin korkeakoululla on yhteys muihin osavaltioihin: College of Micronesia-FSM:llä on kampuksia eri puolilla liittovaltiota.",
+    "Pohnpein ka-puu, Terminalia carolinensis, kasvaa luonnossa Pohnpeilla ja Kosraella. Sen levinneisyys on paljon saaren ympäri kulkevaa merta pienempi.",
+    "Kolonian paikalla käytettiin ennen nimeä Mesenieng, jonka merkitys liittyy vastatuuleen tai tuulen kohtaamiseen. Nykyinen nimi kantaa siirtomaa-ajan kerrostumaa."
+  ],
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Palikir",
+      "johdanto": "Palikirissa kohtaavat liittovaltion hallinto ja opiskelijat. Rannikon Kolonia ja metsäinen sisämaa näyttävät saman pääkaupunkiseudun eri puolet.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Pääkaupunki ja arjen keskus",
+          "teksti": "Palikirin ja Kolonian nimiä tarvitaan eri asioihin. Palikir on liittovaltion hallinnon paikka, Kolonia Pohnpein osavaltion pääkaupunki. Kolonia on myös saaren kaupan keskus: siellä ovat kaupat, ravintolat ja hotellit. Liittovaltion hallinto siirtyi Palikiriin 1900-luvun lopulla, mutta Kolonia jäi omine tehtävineen paikalleen. Matkalla pääkaupunkiin voi siis majoittua osavaltion pääkaupungissa. Saaren poliittinen osoite ja arkisten palvelujen osoite eivät osu yhteen.",
+          "wiki": "Kolonia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Luku tarvitsee alueen",
+          "teksti": "Palikir sijaitsee Sokehsin kunnassa, jonka alue ei pääty hallintokeskuksen rakennuksiin. Sokehsiin kuuluu pääkaupungin lisäksi myös Pakinin atolli. Kunnan asukasluku kokoaa siten väkeä hyvin erilaisista paikoista, eikä se kerro Palikirin omasta väestöstä. Sama nimi voi lähteessä tarkoittaa kylää, hallintokeskusta tai kunnan osaa. Palikirissa pieni sana ”kunta” on olennainen: se kertoo, keitä lukuun on laskettu, ja estää tekemästä saarista yhden kaupungin asukkaita.",
+          "wiki": "Pohnpei",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaupunki ennen uutta pääkaupunkia",
+          "teksti": "Kolonian paikalla oli ennen siirtomaa-ajan kaupunkia Mesenieng. Sen nimi liittyy vastatuuleen tai tuulen kohtaamiseen. Espanjalaiset perustivat sinne 1800-luvun lopulla hallinnollisen ja sotilaallisen keskuksen, Santiago de la Ascensiónin. Kaupungissa on säilynyt vanhan linnoituksen muurin osia. Isoisän matkavuosi 1873 osuu tätä rakennusvaihetta varhaisemmaksi. Nykyisen pääkaupunkiseudun historia ei siis ala Palikirin virastoista eikä myöskään espanjalaisesta kaupunginnimestä.",
+          "wiki": "Kolonia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Opiskelupaikka saarien välissä",
+          "teksti": "Palikirissa toimii College of Micronesia-FSM:n kansallinen kampus. Oppilaitoksella on osavaltiokampuksia muuallakin liittovaltiossa, ja Yapilla toimii sen kalastus- ja merenkulkualan koulutusyksikkö. Palikir on siten hallinnon lisäksi osa saarille ulottuvaa koulutusverkkoa. Pääkaupungin tarkastelu pelkkänä virastojen kokoelmana jättäisi opiskelijat näkymättömiin. Kansallinen kampus tuo samalle paikalle toisenlaisen syyn matkustaa: opiskelu yhdistää erillisiä saaria.",
+          "wiki": "College of Micronesia-FSM",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Pohnpein lentoasema on Kolonian lähellä Deketikin saarella. Kolonia tarjoaa majoitusta ja ravintoloita, Palikir on erillinen hallinnon ja kampuksen käyntikohde. Liikkumiseen on takseja ja vuokra-autoja. Saaren ympäri kulkee kehätie. Metsäretkelle ja riutalle lähteminen vaatii oman suunnitelmansa. Varaudu sateeseen myös silloin, kun päivä alkaa aurinkoisena.",
+        "artikkeli": {
+          "nimi": "Matkailijan Palikir",
+          "taitto": "opas",
+          "teksti": "Yhdistä Palikirin käynti Kolonian arkeen ja Pohnpein luontoon.",
+          "nosto": "Liittovaltion pääkaupunki ja rannikon palvelukeskus ovat eri paikkoja. Niiden eron ymmärtäminen helpottaa koko saaren hahmottamista.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Lentoasema sijaitsee pienellä Deketikin saarella Kolonian vieressä, ja pengertie yhdistää sen rannikon kaupunkiin. Palikiriin jatketaan maanteitse. Taksit ja vuokra-autot ovat saarella käytettyjä liikkumistapoja; Koloniassa voi kulkea myös jalan. Lentoaikataulut ja kyydin järjestäminen kannattaa varmistaa matkan ajankohdalle.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Palikir ja kampus",
+              "teksti": "Palikirin keskeiset paikat liittyvät hallintoon ja College of Micronesia-FSM:n kansalliseen kampukseen. Kumpikin on toimiva työ- tai opiskelupaikka. Vierailun kulku ja sallitut alueet on hyvä selvittää paikan päällä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kolonia ja metsän reuna",
+              "teksti": "Kolonia on saaren kauppojen, ravintoloiden ja majoituksen keskus. Sen lähellä Sokehs Ridge tarjoaa retkeilyreitin ja näkymän pohjoisrannikolle. Saaren rannalla on mangrovemetsää ja riuttoja; tavallista hiekkarantaa ei kannata olettaa löytyvän kaupungin joka laidalta. Riutan sukelluspaikoille tarvitaan venekyyti.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Kolonian ravintoloissa näkyy saaren ja Tyynenmeren ruokakulttuurien rinnakkaisuus: tarjolla on esimerkiksi kalaa, sashimia ja riisiä. Leipäpuun hedelmä ja banaani kuuluvat saarella käytettyihin kasveihin. Sakau on kavan paikallinen nimi, ja juoma valmistetaan kasvin juurista. Sen käyttö kuuluu myös seremonioihin; sitä ei pidä käsitellä pelkkänä matkailijan erikoisuutena.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Pohnpeilla on lämmin, sateinen ilmasto, eikä saarella ole selvästi kuivaa kautta. Sateeseen kannattaa varautua vuodenajasta riippumatta. Metsäretken reitti ja venekyydin olosuhteet varmistetaan paikallisesti.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Palikir",
+                "tahdet": 3,
+                "selite": "Liittovaltion hallintokeskus erottuu saaren rannikkokaupungista."
+              },
+              {
+                "mita": "Kolonia",
+                "tahdet": 3,
+                "selite": "Osavaltion keskus kokoaa palveluja ja saaren historiallisia kerrostumia."
+              },
+              {
+                "mita": "Kansallinen kampus",
+                "tahdet": 2,
+                "selite": "College of Micronesia-FSM tekee Palikirista myös opiskelupaikan."
+              },
+              {
+                "mita": "Sokehs Ridge",
+                "tahdet": 2,
+                "selite": "Pohjoisrannikon retkireitti avaa näkymän Kolonian ympäristöön."
+              },
+              {
+                "mita": "Pohnpein metsä",
+                "tahdet": 3,
+                "selite": "Saarella elää omia lintulajeja ja suppean levinneisyyden puita."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Kaksi keskusta",
+                "teksti": "Majoitus ja ravintolat painottuvat Koloniaan; Palikir on eri käyntikohde."
+              },
+              {
+                "otsikko": "Sade kuuluu matkaan",
+                "teksti": "Kuivaa kautta ei voi käyttää varmana sateettoman matkan lupauksena."
+              },
+              {
+                "otsikko": "Riutta vaatii kyydin",
+                "teksti": "Sukelluspaikoille lähdetään veneellä; retken järjestelyt varmistetaan paikallisesti."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Pääkaupungin vihreä tausta",
+      "johdanto": "Pohnpein metsässä on omia lintulajeja ja ka-puita. Myös paikallinen sakau kertoo, kuinka kasvit liittyvät ihmisten arkeen.",
+      "tehtava": {
+        "kysymys": "Millä Pohnpein sakau-valmistusta täydentävällä materiaalilla juuria käsitellään?",
+        "vaihtoehdot": [
+          "Hibiskuspuun kuorella",
+          "Banaaninkuoren vahalla",
+          "Korallista jauhetulla kalkilla",
+          "Merilevästä tehdyllä kankaalla"
+        ],
+        "oikea": 0,
+        "fakta": "Paikallisessa valmistuksessa käytetään Hibiscus tiliaceus -puun kuituista kuorta juurten kanssa ennen puristamista."
+      },
+      "nostot": [
+        {
+          "otsikko": "Saari, jolla on korkeutta",
+          "teksti": "Pohnpei on korkea tuliperäinen saari koralliriutan ympäröimänä. Se ei ole samanlainen matala rengassaari kuin kuntaan kuuluva Pakinin atolli. Sisämaassa maasto kohoaa vuoriksi, ja rannikon laguuneissa elää kaloja, nilviäisiä ja kilpikonnia. Palikir sijaitsee tällä metsäisellä saarella, sisämaassa rannikon Koloniasta. Pääkaupungin paikka on siksi helpompi ymmärtää katsomalla koko saaren rakennetta: keskellä on kohoava maa, reunoilla riutta ja niiden välissä hyvin erilaisia ympäristöjä.",
+          "wiki": "Pohnpei",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Linnut, joiden maailma on Pohnpei",
+          "teksti": "Pohnpeilla elää endeemisiä lintuja: niiden luontainen levinneisyys rajoittuu tälle saarelle. Näihin kuuluvat Pohnpei lorikeet, Pohnpei fantail, Pohnpei flycatcher ja long-billed white-eye. Nimet eivät tarkoita kaikkia saaren lintuja, vaan juuri tiettyjä lajeja, joille Pohnpei on oma elinalue. Saarelta tunnettu Pohnpei starling puolestaan on arvioitu hävinneeksi. Pääkaupungin ympäröivä vihreys kuuluu näin paljon Palikiria laajempaan saaren luontoon, jonka lajeja ei voi korvata toiselta saarelta katsomalla.",
+          "wiki": "Pohnpei",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Ka-puun pieni maailmanpiiri",
+          "teksti": "Ka-puu tunnetaan tieteessä nimellä Terminalia carolinensis. Sen luontainen levinneisyys rajoittuu Pohnpeille ja Kosraelle. Pohnpein oma luonto ei siis tarkoita vain lintuja: myös puulla voi olla hyvin suppea kotialue keskellä laajaa Tyyntämerta. Saaren metsän katsomiseen tulee uusi kysymys, kun tunnistaa tällaisen nimen. Mikä kasvaa tässä luonnostaan, mikä on tuotu muualta? Pohnpeille tuotiin myös sikoja, rottia ja koiria; saaren alkuperäiset maalla elävät nisäkkäät olivat lepakoita.",
+          "wiki": "Pohnpei",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Juuri, kuori ja sakau",
+          "teksti": "Pohnpein sakau on muualla Tyynellämerellä kavana tunnettu juoma. Se valmistetaan Piper methysticum -kasvin juurista. Pohnpeilaisessa valmistuksessa juurten kanssa käytetään Hibiscus tiliaceus -puun kuituista kuorta ennen puristamista. Juoma on osa sekä seremoniallista että seurusteluun liittyvää perinnettä. Sana sakau kertoo siis paikallisesta käytöstä, vaikka sama kasvi tunnetaan monilla saarilla. Valmistus yhdistää kasvin juuren ja toisen kasvin kuoren; koko tarina ei mahdu pelkkään juomalajin nimeen.",
+          "wiki": "Kava",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Palikirin hallintokeskus ja kansallinen kampus sijaitsevat Pohnpein sisämaassa. Kolonia on erillinen rannikon keskus, ja saaren luontokohteet ulottuvat pääkaupungin ympäristöä laajemmalle.",
+    "rajat": null,
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Pohnpei International Airport (PNI)",
+    "huomiot": [
+      "C-tekstiluonnos; kaikki kuvaroolit odottavat erillistä kuvaputkea.",
+      "Kartta partial: ei varmennettuja kohteiden omia WP/WD-pisteitä eikä modernien hallinto- ja kampusrakennusten tekijäoikeusketjua. Ei karttakohteita eikä kohdejuttuja.",
+      "Sääauditointi avoin: saatiedot null, ei ilmastolukuja tekstissä eikä muutoksia saa.json-tiedostoon.",
+      "Kontekstin väkiluku koskee Sokehsin kuntaa, ei Palikirin omaa väestöä. Wikipedian ristiriitaisia väestölukuja ei kopioitu.",
+      "Nan Madolin pääkertomus jätetty maan perustietojen vuoksi pois. Tarkat vuodet ja määrät jätetty pois yhden lähdeketjun varassa."
+    ]
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "majuro",
+  "maa": "MHL",
+  "era": "e14",
+  "kaupunki": {
+    "id": "majuro",
+    "name": "Majuro",
+    "wiki": "Majuro",
+    "ambience": "meri",
+    "pallo": {
+      "lat": 7.0918,
+      "lon": 171.3802
+    }
+  },
+  "artikkeli": {
+    "intro": "Majuro on Marshallinsaarten pääkaupunki ja samalla kokonaisen atollin nimi, joten kaupunkiydin ja saarten rengas eivät tarkoita samaa aluetta. Ydin tunnetaan nimellä **Delap–Uliga–Djarrit**, lyhyesti DUD. Sen satamayhteydet palvelevat kaukana merellä työskenteleviä kalastusaluksia, joiden tonnikalaa siirretään Majurossa kuljetusaluksiin. Myös lentoliikenne kuuluu saariston yhteyksiin, ja kiitotielle satavaa vettä kerätään vesihuollon käyttöön.\n\nAlele-museossa säilytetään saariston esineitä ja tietoa, mutta merenkulun osaaminen elää myös WAM-ohjelman venekäsityössä. **Tikkukartat** auttoivat opettelemaan aaltojen käyttäytymistä ennen matkaa; itse merellä suunnistaja luotti aisteihinsa ja muistiinsa. Atollilla asuttiin jo kauan ennen isoisän matkavuotta 1873, ja Lauran maauunilöydöt kertovat tästä vanhasta asutuksesta. Nykyinen pääkaupunkiasema on paljon myöhempi kerros Majuron historiassa.",
+    "teksti": "Majuron kaupungin ja atollin ero on tärkeä myös arjessa. Delap–Uliga–Djarrit muodostaa kaupunkiytimen, kun taas Laura sijaitsee atollin länsiosassa. Maan kapeus näkyy siinä, miten laguuni, valtameri, tie ja asutus mahtuvat lähekkäin.\n\nLaguuni on kaupallinen satama, jossa tonnikalasaaliit vaihtavat alusta. Kaupungin vesihuollossa puolestaan hyödynnetään sekä kiitotien sadevesiä että pohjavesikaivoja. Vesiyhtiön toimintaan kuuluu myös meriveden toimittaminen WC-huuhteluun: kaikki putkissa kulkeva vesi ei siis ole samaa vettä.\n\nAlele yhdistää museon, kirjaston ja kansallisen arkiston. Sen nimi viittaa koriin tai laukkuun, jossa perhe on säilyttänyt arvoesineitään. WAM:n ohjaajat ja oppilaat tekevät puolestaan puutyötuotteita käsin ja ohjaavat myynnin tuoton takaisin ohjelmaan. Perinne voi olla sekä säilyttämistä että uuden osaamisen rakentamista."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä valtion pääkaupunki Majuro on?",
+      "options": [
+        "Marshallinsaarten",
+        "Salomonsaarten",
+        "Cookinsaarten",
+        "Marianasaarten"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Valtion atollit muodostavat Ratakin ja Ralikin saarijonot.",
+      "fact": "Majuro on Marshallinsaarten pääkaupunki ja myös atollin nimi.",
+      "source": "https://en.wikipedia.org/wiki/Majuro"
+    },
+    {
+      "q": "Miltä pinnalta Majuron vesihuolto kerää sadevettä?",
+      "options": [
+        "Kiitotieltä",
+        "Jalkapallokentältä",
+        "Satamalaiturilta",
+        "Kauppatorilta"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Pinnalla on myös lentoliikenteeseen liittyvä tehtävä.",
+      "fact": "Majuron lentoaseman kiitotieltä kerätään sadevettä vesihuollon käyttöön.",
+      "source": "https://en.wikipedia.org/wiki/Majuro"
+    },
+    {
+      "q": "Mihin Alele-museon nimi viittaa?",
+      "options": [
+        "Koriin tai laukkuun",
+        "Riuttaan tai väylään",
+        "Purjeeseen tai airoon",
+        "Aaltoon tai tuuleen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimen taustalla on perheen arvoesineiden säilyttäminen.",
+      "fact": "Alele tarkoittaa laukkua tai koria, jossa perhe on perinteisesti säilyttänyt arvoesineitä.",
+      "source": "https://en.wikipedia.org/wiki/Alele_Museum_%26_Public_Library"
+    },
+    {
+      "q": "Mitä kalaa siirretään Majurossa kalastusaluksista kuljetusaluksiin?",
+      "options": [
+        "Tonnikalaa",
+        "Miekkakalaa",
+        "Purjekalaa",
+        "Barrakudaa"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kyseessä on valtamerikalastuksen saalis.",
+      "fact": "Majuron laguuni on tonnikalan siirtokuormauksen paikka.",
+      "source": "https://en.wikipedia.org/wiki/Majuro"
+    },
+    {
+      "q": "Miten marshallilaisia tikkukarttoja käytettiin merimatkalla?",
+      "options": [
+        "Ne opeteltiin ennen lähtöä",
+        "Ne luettiin joka ilta",
+        "Ne sidottiin laivan perään",
+        "Ne kastettiin ennen käyttöä"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Tärkeä osa suunnistajan välineistöä oli hänen oma muistinsa.",
+      "fact": "Tikkukarttoja tutkittiin ja opeteltiin ennen matkaa; merellä suunnistettiin aistien ja muistin avulla.",
+      "source": "https://en.wikipedia.org/wiki/Marshall_Islands_stick_chart"
+    }
+  ],
+  "tiedot": [
+    "Majuron kiitotiellä on myös vesihuollon tehtävä: sieltä kerätään sadevettä kaupungin käyttöön.",
+    "Alele-museon radio-ohjelma on yhdistänyt ulkosaarten asukkaita museon työhön. Kulttuuriperintöä on viety myös radioaaltojen mukana.",
+    "WAM:n puutyöohjaajat ja oppilaat valmistavat käsin muun muassa malliveneitä ja kookosraastimia; tuotteiden myyntitulot palautuvat ohjelmaan."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Majuro",
+      "johdanto": "Majuron laguuni on työn paikka, kiitotie myös veden kerääjä ja museon nimi perheen aarreastian perillinen. Pääkaupungin arki avautuu pienistä, käytännöllisistä oivalluksista.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Lentoasema kerää vettä",
+          "teksti": "Majuron kiitotiellä on tehtävä, jota saapuva lentomatkustaja ei välttämättä huomaa: sieltä kerätään sadevettä kaupungin vesihuoltoon. Atollin vesiyhtiö käyttää tämän lisäksi pohjavesikaivoja, ja Lauran kaivot toimivat varalähteenä kuivan kauden aikana. Kiitotie kuuluu siten sekä saariston lentoyhteyksiin että päivittäiseen vedenhankintaan. Sade ei ole Majurossa vain säätila tai matkailijan suunnitelmien muuttaja. Sen kerääminen on osa kaupungin järjestelmää, joka tuo makeaa vettä asukkaiden käyttöön.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Majuro"
+        },
+        {
+          "otsikko": "Tonnikalan vaihtopaikka",
+          "teksti": "Majuron laguunilla kalasaalis jatkaa matkaansa toisessa laivassa. Kurenuotta-aluksilla pyydettyä tonnikalaa siirretään kuljetusaluksiin, jotka vievät sitä eteenpäin. Tätä kutsutaan siirtokuormaukseksi, ja se kuuluu laguunin kaupalliseen satamatoimintaan. Rannalla näkyvä alus ei siis välttämättä ole tuomassa kalaa kaupungin ruokapöytiin, vaan voi olla osa kauemmas ulottuvaa kuljetusketjua. Majuron merkitys kalastukselle ei rajoitu sen omiin veneisiin tai lähellä atollia pyydettyyn saaliiseen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Majuro"
+        },
+        {
+          "otsikko": "Dieselin kookoskokeilu",
+          "teksti": "Majuron Tobolar-kopralaitoksen yhteydessä on kerrottu kokeiluista, joissa kookosöljyä käytettiin dieselpolttoaineen vaihtoehtona. 2000-luvulla öljyä testattiin ajoneuvoihin, generaattoreihin ja laivoihin liittyvissä käyttötarkoituksissa. Kyse oli kokeiluista, ei tiedosta, että koko kaupungin liikenne kulkisi kookoksella. Kopra, josta öljy puristetaan, on kuivattua kookospähkinän ydintä. Sama saarten raaka-aine on siten päätynyt tutkittavaksi myös moottorin voimanlähteenä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Majuro"
+        },
+        {
+          "otsikko": "Aarreastia ja radioaallot",
+          "teksti": "Alele tarkoittaa marshallin kielessä laukkua tai koria, jossa perhe on perinteisesti säilyttänyt arvoesineitään. Majuron museo kantaa tätä nimeä ja kerää saariston työkaluja, käsitöitä, kalastusvälineitä sekä merenkulkuun liittyviä esineitä. Samassa laitoksessa ovat kirjasto ja kansallinen arkisto. Museon työ on ulottunut myös rakennuksen ulkopuolelle: sen radio-ohjelma on yhdistänyt erityisesti ulkosaarten asukkaita museon toimintaan. Nimen aarreastia on näin saanut sekä kokoelmia että kuulijoita.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Alele Museum & Public Library"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Majuron kansainvälinen lentoasema on portti Marshallinsaarten saaristoon. Kaupunkiytimessä voi liikkua taksilla, ja jaetut kyydit ovat tavallisia. Lauraan suuntautuva retki vie atollin länsiosaan ja vaatii oman kuljetussuunnitelmansa. Alele-museo ja WAM:n vierailukeskus avaavat saariston kulttuuria eri suunnista. Vesihuoltoon kuuluu sadeveden keruu, joten myös juomaveden järjestäminen kannattaa selvittää majoituksessa.",
+        "artikkeli": {
+          "nimi": "Matkailijan Majuro",
+          "taitto": "opas",
+          "teksti": "Lue kaupunkia satamana, asuinpaikkana ja marshallilaisen merenkulun osaamisen keskuksena.",
+          "nosto": "Kaupunkiretki ja matka Lauran suuntaan näyttävät saman atollin eri puolia.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Majuron kansainvälinen lentoasema palvelee kansainvälisiä ja saariston sisäisiä yhteyksiä. Kaupunkiytimessä on takseja ja autonvuokrausta; taksin jakaminen muiden matkustajien kanssa on tavallista. Laura sijaitsee atollin länsiosassa, erillään Delap–Uliga–Djarritin ytimestä. Tarkista lennot ja sovi retken paluukuljetus omaa matkaa varten, sillä vanhojen oppaiden hinnat ja aikataulut eivät ole matkalupauksia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Alele ja elävä venetaito",
+              "teksti": "Alelen kokoelmissa on käsitöitä, kalastusvälineitä, veneisiin liittyvää aineistoa ja tikkukarttoja. Museo toimii yhdessä kirjaston ja kansallisen arkiston kanssa. WAM:n vierailukeskuksessa esitellään marshallilaisia veneitä ja niiden historiaa, ja ohjelmalta voi tiedustella purjehdusta Majuron laguunilla. Varmista vierailu ja veneilyn mahdollisuus suoraan paikasta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Laguuni ja Lauran suunta",
+              "teksti": "Majuron laguuni on myös toimiva kaupallinen satama, jossa kalastusalukset ja kuljetusalukset tekevät työtään. Lauran suosittu ranta sijaitsee atollin länsiosassa. Rantaretki ja kaupunkiytimen kävely eivät ole sama matka: järjestä kuljetus määränpäähän ja takaisin. Jos haluat vesille, sovi retki paikallisen toimijan kanssa ja tarkista olosuhteet.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Majuron ruokapaikoissa voi löytää tonnikalaa, ja kaupungissa tarjotaan myös kiinalaisia sekä länsimaisia ruokia. Saariston pääkaupunki ei siis mahdu yhteen ruokaperinteeseen. Laguunilla siirtokuormattava kalasaalis ja ravintolan päivän kala ovat eri asioita; paikallinen tarjonta kannattaa kysyä paikan päällä. Pelkkä suuri kalasatama ei kerro, mitä juuri tänään on saatavilla.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Sää ja veden saatavuus",
+              "teksti": "Majuro on lämmin ja sateinen, mutta atollin vesihuollossa on varauduttava myös kuiviin jaksoihin. Kiitotieltä kerättyä sadevettä täydentävät pohjavesikaivot. Tarkista ajankohtainen sääennuste ennen ranta- tai veneretkeä ja selvitä majoituksen juomavesijärjestelyt. Sademäärä tai lämmin sää eivät yksin takaa, että käyttövesi olisi kaikkialla samalla tavalla saatavilla.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Alele-museon saaristotieto",
+                "tahdet": 3,
+                "selite": "Kokoelmat yhdistävät merenkulun, käsityöt ja paikallisen historian."
+              },
+              {
+                "mita": "WAM:n venekäsityö",
+                "tahdet": 3,
+                "selite": "Vierailukeskus esittelee marshallilaisia veneitä ja niiden historiaa."
+              },
+              {
+                "mita": "Lauran rantaretki",
+                "tahdet": 3,
+                "selite": "Atollin länsiosa tarjoaa kaupunkiytimestä erillisen retkikohteen."
+              },
+              {
+                "mita": "Laguunin meriyhteydet",
+                "tahdet": 2,
+                "selite": "Satamatoiminta näyttää Majuron yhteyden valtameren kalastukseen."
+              },
+              {
+                "mita": "Kaupungin ruokapaikat",
+                "tahdet": 2,
+                "selite": "Tonnikalan rinnalla tarjolla on myös eri ruokakulttuurien ruokia."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Majuro on myös atolli",
+                "teksti": "Delap–Uliga–Djarrit on kaupunkiydin, kun taas Majuro voi tarkoittaa koko atollia."
+              },
+              {
+                "otsikko": "Sovi retken paluu",
+                "teksti": "Lauran retken kuljetus on suunniteltava erikseen kaupunkiytimen liikkumisesta."
+              },
+              {
+                "otsikko": "Juomavesi selvitettävä",
+                "teksti": "Kysy majoituksessa juomaveden järjestelyistä ja veden käytöstä."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "tiede",
+      "nimi": "Atollin taitoja",
+      "johdanto": "Meren ja veden tunteminen on Majurossa käytännöllistä osaamista. Aallot, tikkukartat, venekäsityö ja vesihuolto kertovat kukin siitä oman tarinansa.",
+      "tehtava": {
+        "kysymys": "Mihin WAM:n käsityötuotteiden myynnin tuotto palautuu?",
+        "vaihtoehdot": [
+          "WAM:n ohjelmaan",
+          "Lentoyhtiön kassaan",
+          "Sataman tullimaksuihin",
+          "Hotellin varausmaksuihin"
+        ],
+        "oikea": 0,
+        "fakta": "Ohjaajien ja oppilaiden käsin valmistamien tuotteiden myynti tukee itse ohjelmaa."
+      },
+      "nostot": [
+        {
+          "otsikko": "Kartta jätettiin muistiin",
+          "teksti": "Marshallilainen tikkukartta näyttää erilaiselta kuin paperille piirretty rannikko. Kookoslehden ruodeista sidottuun kehikkoon voitiin kiinnittää simpukankuoria kuvaamaan saaria; myös tikkujen risteykset merkitsivät paikkoja. Kartat esittivät ennen kaikkea aaltojen järjestystä ja saarten vaikutusta niihin. Niitä tutkittiin ja opeteltiin ennen merimatkaa, eikä niitä luettu veneessä reittikarttana. Alelen kokoelmissa nämä välineet säilyvät esimerkkeinä siitä, että kartta voi opettaa myös liikkuvaa merta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Marshall Islands stick chart"
+        },
+        {
+          "otsikko": "Saari tuntuu veneen liikkeessä",
+          "teksti": "Perinteinen marshallilainen navigointi on hyödyntänyt valtameriaallokon käyttäytymistä. Saaret ja niiden vedenalaiset rinteet taittavat aaltoja, jotka myös kaartuvat saarten ympärillä ja kohtaavat muista suunnista tulevaa aallokkoa. Navigoija saattoi tuntea veneen keinunnan kyyristymällä tai asettumalla makuulle. Tieto ei siis ollut vain silmien varassa. Majuron museon tikkukartat ja WAM:n navigointiosaamiseen liittyvä työ avaavat tätä taitoa, jossa merestä luetaan saarten vaikutuksia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Marshall Islands stick chart"
+        },
+        {
+          "otsikko": "Veneestä osaamista nuorille",
+          "teksti": "Majuron Waan Aelõñ in Majel eli WAM yhdistää marshallilaista venekäsityötä nuorten taitojen kehittämiseen. Ohjelman puutyöohjaajat ja oppilaat valmistavat käsin malliveneitä, kookosraastimia ja tikkukarttoja. Tuotteiden myyntitulot palaavat ohjelmaan. Vierailukeskus esittelee veneitä ja niiden historiaa, ja ohjelma tarjoaa mahdollisuutta tiedustella purjehdusta Majuron laguunilla. Perinteinen vene kuuluu täällä samalla historian esittelyyn, käsillä oppimiseen ja tämän päivän saaristoelämään.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Majuro"
+        },
+        {
+          "otsikko": "Veden eri tehtävät",
+          "teksti": "Majuron vesiyhtiö huolehtii makean veden lisäksi jätevesistä ja meriveden jakelusta. Merivettä käytetään WC-huuhteluun osassa atollin verkostoa. Makeaa vettä saadaan lentoaseman sadevesien keruusta sekä pohjavesikaivoista; Lauran kaivot ovat myös varalähde kuivana kautena. Lähteet ja käyttötarkoitukset täytyy pitää erillään. Atollin vedenhankinnassa ei siten ole kyse yhdestä hanasta tai yhdestä varannosta, vaan erilaisista järjestelmistä, jotka palvelevat kaupungin päivittäisiä tarpeita.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Majuro"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Majuron kaupunkiydin sijaitsee atollin itäosassa ja Laura lännessä. Laguuni on sekä saariston meriyhteyksien että kaupallisen satamatoiminnan paikka.",
+    "rajat": {},
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Marshallinsaarten kansainvälinen lentoasema (MAJ)",
+    "huomiot": [
+      "C-tekstiluonnos; rajattu A-lähdekooste. B/D/E/F, kohdekartta ja sääauditointi avoinna.",
+      "Kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde tyhjiä; erillinen kuvaputki.",
+      "Ei varmennettuja yksittäisiä WP/WD-karttapisteitä eikä suojattujen modernien rakennusten tekijäketjuja. Rajat tyhjät ja kohteet 0; ei kaupunkipisteen lainaamista nähtävyydelle.",
+      "Kontekstin 23 156 (2021) tarkoittaa koko Majuron atollia, kun WP lead nimeää luvun DUD-ytimen väkiluvuksi. Kaikki väkiluvut jätetty pois.",
+      "Kookosöljyä koskeva nosto kertoo 2000-luvun kokeiluista eikä väitä nykyisen liikenteen kulkevan kookosöljyllä.",
+      "Tikkukarttojen katoamista koskeva WP:n yleistys jätetty pois; WAM:n oma sivu näyttää opetuskäyttöä ja tuotteita."
+    ]
+  }
+}
