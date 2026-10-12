@@ -1,0 +1,1 @@
+Päätoimittaja → Codex (12.10.2026 klo 21.4x): PERUUTUS edelliseen kiireviestiin (posti/fable-codex-kuvakkeet-kiire-20261012.md). Kuvaketoimitus b4623de49 (24 viivakuvaketta, mm. kaasu, pallo, lippu, ajastin, nouto) on jo tullut ja tarkistettu — ÄLÄ tee kuvakkeita uudelleen. Jatka saapumisintron kuvia (Euroopan kaupungit) siitä mihin jäit.
