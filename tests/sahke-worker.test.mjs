@@ -15,7 +15,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  JASENIA_ENINTAAN, KIRJOITUKSIA_IKKUNASSA, KYSYMYKSEN_KATTO, POHJAT,
+  JASENIA_ENINTAAN, KIRJOITUKSIA_IKKUNASSA, KOODIN_ARVONTAMERKIT, teeKoodi, KYSYMYKSEN_KATTO, POHJAT,
   NATIIVIT_OLETUS, SAILYTYS_VRK, VAIHTOEHDON_KATTO, kasittele, normalisoiKoodi,
   sallittuNatiivi, sallittuOrigin, siivoaTeksti, vertaaSalaisuus, ylimaarainenKentta,
 } from '../worker/sahke/kasittelija.js';
@@ -695,4 +695,35 @@ test('js/sahke.js:n nimimerkkisanat ovat täsmälleen workerin listat samassa j�
   const lista = (nimi) => [...koodi.match(new RegExp(`const ${nimi} = \\[([\\s\\S]*?)\\];`))[1].matchAll(/'([^']+)'/g)].map((m) => m[1]);
   assert.deepEqual(lista('SAHKE_ADJEKTIIVIT'), [...ADJEKTIIVIT]);
   assert.deepEqual(lista('SAHKE_SUBSTANTIIVIT'), [...SUBSTANTIIVIT]);
+});
+
+/*
+ * LIITTYMISKOODIN AAKKOSTO (PT 12.10., kiire): jokaisen arvotun koodin on mentävä asiakkaiden koodikenttään
+ * sellaisenaan. Asiakkaiden suodattimet luetaan lähteestä, jotta aakkostojen ero huomataan heti.
+ */
+test('jokainen arvottu koodi läpäisee webin ja natiivin koodikentän suodattimen', async () => {
+  const fs = await import('node:fs');
+  const web = /const SAHKE_KOODIN_MERKIT = '([^']+)'/.exec(fs.readFileSync(new URL('../js/sahke.js', import.meta.url), 'utf8'))[1];
+  assert.ok(!/[S5]/.test(KOODIN_ARVONTAMERKIT), 'arvonnassa ei S:ää eikä 5:tä');
+  for (const m of KOODIN_ARVONTAMERKIT) assert.ok(web.includes(m), `webin kenttä hylkää merkin ${m}`);
+  for (let i = 0; i < 5000; i++) {
+    const koodi = teeKoodi();
+    assert.equal(koodi.length, 6);
+    const kentta = [...koodi].filter((m) => web.includes(m)).join('');
+    assert.equal(kentta, koodi, `koodi ${koodi} ei mene kenttään`);
+  }
+});
+
+test('vanhan aakkoston koodi (S tai 5) kelpaa yhä tilakyselyyn', async () => {
+  // Ennen korjausta perustettu retkikunta: koodissa S ja 5. Perustajan laite pollaa sillä edelleen.
+  const apurit = { varasto: teeVarasto(), nyt: teeKello().nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit);
+  const vanha = 'AS5S2D';
+  const rivi = apurit.varasto.retkikunnat.get(koodi);
+  apurit.varasto.retkikunnat.delete(koodi); apurit.varasto.retkikunnat.set(vanha, { ...rivi, koodi: vanha });
+  for (const j of apurit.varasto.jasenet) if (j.koodi === koodi) j.koodi = vanha;
+  const tila = await aja(`/retkikunta/tila?koodi=${vanha}&jasenId=${ilves.jasenId}`,
+    { metodi: 'GET', otsakkeet: { 'x-sahke-avain': ilves.avain } }, apurit);
+  assert.equal(tila.status, 200, JSON.stringify(tila.data));
+  assert.equal(normalisoiKoodi('as5d-2s'), 'AS5D2S');
 });

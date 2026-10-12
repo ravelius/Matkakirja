@@ -83,11 +83,19 @@ export const JASENIA_ENINTAAN = 8;
 /*
  * LIITTYMISKOODI luetaan ääneen ja näpytellään puhelimella, joten
  * aakkostosta puuttuvat sekoittuvat merkit I, O, 0 ja 1 (sama
- * aakkosto kuin pro-koodeissa). 32 merkkiä jakaa 256 tasan, joten
- * arvonta ei vinoudu. Kuusi merkkiä = noin miljardi koodia.
+ * aakkosto kuin pro-koodeissa). Kuusi merkkiä = noin 730 miljoonaa koodia.
+ *
+ * ARVONTA ILMAN S:ÄÄ JA 5:TÄ (PT 12.10., kiire): asiakkaiden koodikenttä
+ * (web js/sahke.js SAHKE_KOODIN_MERKIT, natiivi SahkeVakiot.KoodinMerkit)
+ * suodattaa pois myös S:n ja 5:n, joten noin kolmannes vanhan aakkoston
+ * koodeista ei mennyt kenttään ja liittyminen epäonnistui. Arvonta käyttää
+ * nyt asiakkaiden aakkostoa (30 merkkiä, hylkäysotanta: ei vinoumaa).
+ * TARKISTUS hyväksyy yhä vanhan aakkoston, jotta jo perustetut koodit
+ * (S tai 5 mukana) toimivat perustajan omalla laitteella.
  */
 export const KOODIN_PITUUS = 6;
 const KOODIN_MERKIT = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+export const KOODIN_ARVONTAMERKIT = 'ABCDEFGHJKLMNPQRTUVWXYZ2346789';
 
 /** Jäsentunnus on julkinen retkikunnan sisällä; avain ei ole koskaan. */
 const TUNNUKSEN_MERKIT = 'abcdefghijkmnpqrstuvwxyz23456789';
@@ -212,7 +220,19 @@ function arvo(merkit, pituus) {
   return ulos;
 }
 
-export function teeKoodi() { return arvo(KOODIN_MERKIT, KOODIN_PITUUS); }
+/** Tasajakauma mille tahansa aakkoston koolle: tavut ≥ suurin monikerta hylätään. */
+function arvoTasan(merkit, pituus) {
+  const katto = 256 - (256 % merkit.length);
+  let ulos = '';
+  while (ulos.length < pituus) {
+    const tavut = new Uint8Array(pituus * 2);
+    crypto.getRandomValues(tavut);
+    for (const tavu of tavut) if (tavu < katto && ulos.length < pituus) ulos += merkit[tavu % merkit.length];
+  }
+  return ulos;
+}
+
+export function teeKoodi() { return arvoTasan(KOODIN_ARVONTAMERKIT, KOODIN_PITUUS); }
 export function teeJasenId() { return arvo(TUNNUKSEN_MERKIT, JASENTUNNUKSEN_PITUUS); }
 export function teeAvain() { return arvo(TUNNUKSEN_MERKIT, AVAIMEN_PITUUS); }
 
