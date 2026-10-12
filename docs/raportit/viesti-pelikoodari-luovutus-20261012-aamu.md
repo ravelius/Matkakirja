@@ -27,3 +27,7 @@ Tila: JONO TYHJÄ (PT kirjasi, lepo). PT herättää, kun Codexin pääkaupunkie
 - iPad-simun kuvakaappaus tallentuu pystykehykseen vaakanäkymässä → kierrä 90° arkkiin.
 - simulaattorien taukoviestit voivat tulla kesken ajon: tarkista Julkaisijan viestit ennen simun käynnistystä.
 - Aikaleimaajat: sleep Time::HiResilla ja lopetus ajon lopussa (kaksi orpoa 96 % CPU 1 vrk 9 h, lopetettu 12.10.).
+- ASEMATAULU: VAATII TOIMIA (omistaja 12.10. 10.3x, Raamattu, PR #4489): omistajan toimia vaativa kysymys/pyyntö heti Asemataululle:
+  ArtifactData set url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix, kokoelma "talo", doc_id "toimi-pelikoodari",
+  data {rooli: "Pelikoodari", kysymys: "<yksi rivi: mitä ja missä ikkunassa>", ts: <ms>}; epäonnistuu → Postivahdille
+  "VAATII TOIMIA: Pelikoodari: <asia>". Hoidettu → get → delete if_version.
