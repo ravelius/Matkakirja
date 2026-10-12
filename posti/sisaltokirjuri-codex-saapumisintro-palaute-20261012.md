@@ -48,3 +48,21 @@ Mitä kuvataan: Mariabergetin kalliolla kulkeva puinen kävelyreitti ja kaide, p
 Mitä kuvataan: sininen hetki, kaupungin valkoiset talot ja ikkunavalot alhaalla, Akropoliin kallio kaukana kuvan reunassa lämpimästi valaistuna, rinteen mäntyjä etualalla; ei ihmisiä. Kulma: vaakakuva, kukkulan rinteeltä (EI Areiospagoksen kalliolta eikä lounaisen rinteen kulmasta, joka epäonnistui). Ei saa näkyä: mainosvaloja, ravintolakylttejä, tekstiä, kasvoja, rakennustelineitä Parthenonilla.
 
 Toimitus kuten yllä (`-v2`-tiedostonimet ja -manifestit).
+
+---
+
+## KORJAUS RUOKAKUVIIN (omistaja 12.10. klo 17.3x, PT:n välittämänä) — korvaa 16.5x:n ruokalinjan
+
+Omistajan sanat sanatarkasti Codexille: *"ruokakuvat ovat edelleen päälle liimatun näköisiä"* → *"voisi ennemmin näyttää jotain kahvilaa tai myymälää jossa ruoat olisivat kauniisti esillä. kaupunkia ei tarvitse näyttää"*.
+
+**Uusi sääntö kaikkien kaupunkien intron ruokakuviin (ja muihin ruokakuviin, myös käynnissä oleva "Europe food backdrops" -erä):**
+- Kuva näyttää **kahvilan, leipomon tai myymälän, jossa kaupungin oma ruoka on kauniisti esillä** (tiski, lasivitriini, korit, hylly, ikkunavalo). Kuva on sisätilakuva tai tiskin lähikuva.
+- **Ei kaupunkinäkymää** (ei toria, katua, siltaa tai rakennuksen julkisivua taustalla) eikä **aseteltua lautasannosta**. Ei myöskään "keittiö käytössä" -kuvaa tai katukeittiötä (16.5x:n linja kumottu).
+- Jokaisella kaupungilla on oma tunnistettava ruokansa; sommitelmat ovat keskenään erilaisia (eri kulma, eri tiski/vitriini, eri valo). Ei tekstiä, kylttejä, hintalappuja, logoja eikä tunnistettavia kasvoja (kädet ja selät sallittu); luonnonvalo; fotorealistinen havainnekuva-merkintä ja ei suojattuja teoksia kuten aiemmin.
+
+**Pilotin kolme ruokakuvaa uusiksi tällä säännöllä (vaihtavat edellä annetut kuvaukset; sama generointiraja 9):**
+- **Pariisi 6 / boulangerie:** leipomon lasitiski ja seinähylly, patongit ja voisarvet kauniisti esillä pajukoreissa ja paperiin käärittynä; ikkunasta aamuvaloa. Ei kaupunkia ikkunan takana (heijastus tai sumea tausta kelpaa).
+- **Tukholma 6 / kahvila:** kahvilan tiskin lasikupu ja leivonnaiset, kanelbulle-pullat (kaneli- ja kardemummapullat) rivissä pellillä ja kakkualustalla, valkoinen kahvikuppipino taustalla; pehmeä ikkunavalo sivulta.
+- **Ateena 6 / kahvila-leipomo:** tiski, jolla seesamilla ripotellut koulouri-kiehkurat korissa, bougatsa- ja makeisvitriini; lämmin sisävalo. Ei tavernanäkymää.
+
+Muu kuin ruoka (1873-kuvien mustavalkoisuus, kolme korvaavaa kuvaa Pariisi 4, Tukholma 4, Ateena 7) pysyy ennallaan. Kuvasuunnitelma `docs/raportit/saapumisintro-kuvasuunnitelma-20261012.md` (PR #4488) on päivitetty samalla säännöllä.
