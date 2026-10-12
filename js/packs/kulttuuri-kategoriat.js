@@ -5759,6 +5759,18 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
+          /*
+           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus d5f796079,
+           * PT/omistaja hyväksyi): elämän makuinen juhla- tai tapahtumakuva
+           * nykyaikana, keksittyjä aikuisia. Kirsikankukinnan päivä.
+           */
+          ampari: 'saapumisintro/stockholm/20261012-v6/stockholm-6-kungstradgarden-kirsikankukkajuhla-v6.png',
+          lyhyt: 'Kungsträdgårdenin 63 japaninkirsikkaa istutettiin 1998 ja kukkivat huhti–toukokuun taitteessa.',
+          selite: 'Kungsträdgårdenin 63 japaninkirsikkaa istutettiin 1998, ja ne '
+            + 'kukkivat huhtikuun lopulla tai toukokuun alussa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           tiedosto: 'Stockholm (15103231170).jpg',
           selite: 'Tukholman kunnassa asuu noin miljoona ihmistä ja koko '
             + 'kaupunkiseudulla 1,6 miljoonaa.',
@@ -6030,6 +6042,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Sacré-Cœurin basilikaa rakennettiin Montmartren '
             + 'kukkulalle 1875–1914, ja sen travertiinikivi valkaisee '
             + 'itsensä sateessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus d5f796079,
+           * PT/omistaja hyväksyi): elämän makuinen juhla- tai tapahtumakuva
+           * nykyaikana, keksittyjä aikuisia. Kanavan ranta kesäiltana.
+           */
+          ampari: 'saapumisintro/paris/20261012-v5/paris-6-canal-saint-martin-juhla-v5.png',
+          lyhyt: 'Canal Saint-Martin tilattiin 1802 ja valmistui 1825; kesäisin sen laitureilla vietetään iltaa.',
+          selite: 'Canal Saint-Martin tilattiin Napoleonin aikana 1802 ja valmistui '
+            + '1825, ja kesäisin sen laitureilla vietetään iltaa ja piknikkejä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -7572,6 +7596,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laidalla seisova Hefaistoksen temppeli säilyi ehjänä, koska se '
             + 'toimi kirkkona 600-luvulta vuoteen 1834.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (12.10.2026, Codex-toimitus d5f796079,
+           * PT/omistaja hyväksyi): elämän makuinen juhla- tai tapahtumakuva
+           * nykyaikana, keksittyjä aikuisia. Psyrrin kuja kesäiltana, ei muistomerkkejä.
+           */
+          ampari: 'saapumisintro/athens/20261012-v5/athens-6-psyrri-juhla-v5.png',
+          lyhyt: 'Psyrrin työpajakortteli rappeutui 1900-luvulla ja on 1990-luvulta ollut ravintola- ja baarialue.',
+          selite: 'Psyrrin työpajakortteli rappeutui 1900-luvulla, ja 1990-luvulta '
+            + 'lähtien siitä on kasvanut Monastirakin vieressä ravintola- ja '
+            + 'baarialue.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'The Acropolis from Mount Hymettus on February 9, 2020.jpg',
