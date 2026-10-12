@@ -84,3 +84,4 @@ Vientiketju: worktree `/Users/Shared/Claude/wt/linnanrakentaja-linna-v45k` (haar
   jokaisesta erästä. Jokaisesta erästä PT:lle ennen | jälkeen -pari samasta kulmasta → Siirtosepän botti. LS2 varjostimet, Siirtoseppä kytkentä.
 - **PORTTIKÄYTÄVÄ (laajennuksen 1. erä, PT 23.2x: v9d hyväksytty):** kartoitus + työsuunnitelma `docs/raportit/linnanrakentaja-porttikaytava-suunnitelma-20261012.md`.
   LS2 tekee natiiviin tilakohtaisen tasokuvauksen (tila-id porttikaytava-t102). Palatsin ihralampuilla ei liekki:-solmuja → kynttilaliekit erässä 3.
+- **v48v VIETY** (13.10. 00.xx): 1499 ea94444a853a79bb, NYKY a130a778d62de2e4 (v45k 03e6d4090) → Siirtoseppä kuvaa v48s | v48v, NS muistirivi lähetetty. Keittiö v3f (halon säröt ilman Voronoita) LS2:lla. Porttikäytävä v1: Opus-agentti työssä `_valmiit/olavinlinna-porttikaytava-v1/`.
