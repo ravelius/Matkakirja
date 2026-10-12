@@ -111,3 +111,14 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Odottaja lokit/siirtoseppa-botti-nakyma/odota-ja-aja.sh (4b9f577af + v48u, `touch lupa`) → botti A+B → skenaario v48t-kuvat (kappeli, lamput,
   partiot pimeässä, keittokulho, sali) → yhteenveto.txt (KUVAT-rivi) → askel 0 -arkki + kuvat PT:lle, NS:lle (186) ja LR:lle.
 - LR:n v48v (asut) tulossa → kiinnitä v48u:n päälle → MH-parit v48s2 (lokit/olavinlinna-mh-v48s2-1012-2256) | v48v + soutaja + vartija2.
+
+## PÄIVITYS 13.10. 01.1x
+
+- PT kuittasi linnahaaran **cbad45ba9** junaan 186 (koodi). Paketti: **v48w** (LR: v48v + kierreportaiden valokorjaus) kun botti 17/17, varalla v48s.
+  v48v 953be516b HYVÄKSYTTY (PT omistajan puolesta, parit6 → omistajalle aamulla).
+- Botti 4b9f577af + v48u 15/17: muurikäytävä 86 ja harja 90 mustia (v48t:n ihralamput pimensivät leivotun valon) → LR v48w tulossa.
+- Kun LR:n v48w-tunnukset tulevat: kiinnitä (kiinnita-paketti.sh v48w v48v …) → Julkaisija vaihtaa vahtiin → yksi simuvuoro: botti A+B (17/17 → PT + NS),
+  skenaariot mh-tarkistus (vartija2 K3:n jälkeen, istuva vartija, vesipoika hetkillä 300/90/200: rintakaista varjo vai malli) ja v48tu-kuvat3
+  (kulho tuvassa ja kädessä, kappelin holvi ja sivualttari taka-suunnasta).
+- Uusi testikomento katso p:x,y,z [d] [taka] (cbad45ba9). Vartija2:n vika: siirto muurikäytävään käynnistää kaukokuvan K3.
+- Porttikäytävän äänimaisema: Linssiseppä 2 kytkee (ei linnahaaraan), omistaja ei vielä kuunnellut.
