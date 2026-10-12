@@ -1,0 +1,402 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "dhaka",
+  "maa": "BGD",
+  "era": "e09",
+  "kaupunki": {
+    "id": "dhaka",
+    "name": "Dhaka",
+    "wiki": "Dhaka",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 23.7289,
+      "lon": 90.3944
+    }
+  },
+  "artikkeli": {
+    "intro": "Dhakassa kaupunki liikkuu myös veden päällä. Bangladeshin pääkaupunki sijaitsee **Burigangan rannalla**, ja Sadarghatin satamasta matkustajat jatkavat jokireiteille. Vanhankaupungin kujilla menneisyys näkyy kauppiaiden ja käsityöläisten mukaan nimetyissä alueissa. Rikshoissa taas kulkee oma kuvamaailmansa: kukkia, eläimiä ja elokuvien tähtiä.\n\nDhaka kasvoi mogulikaudella hallinnon ja kaupan keskukseksi, jonka puuvillakankaita ostettiin kaukaa. Isoisän matkavuonna 1873 se oli jo vanha kaupunki brittihallinnon alaisessa Bengalissa. Musliinin kudonta, Shankharin simpukkakäsityöt ja armenialaisen kirkon historia avaavat sen kansainvälisiä yhteyksiä eri suunnista. **Vanha Dhaka on myös ruokakaupunki**, jossa biryani ja bakarkhani-leipä kuuluvat paikalliseen perinteeseen. Nykypäivän suurkaupungissa liikkuminen vaatii aikaa, mutta samassa kaupungissa kohtaavat joen liikenne, vanhat ammatit ja liikkuva katutaide.",
+    "teksti": "Dhakan vanha keskusta liittyy Burigangaan. Sadarghatin satama kuljettaa matkustajia ja tavaraa muualle Bangladeshin jokiseuduille. Joen varrella oleva kaupunki on ollut yhteydessä kaukaisiin markkinoihin jo ennen nykyisiä katuja ja liikennevälineitä.\n\nMogulikauden Dhaka tunnettiin hienoista puuvillatekstiileistä. Musliinia tuotettiin kaupungin ympäristössä ja vietiin kauas, ja kauppaan osallistui eri puolilta saapuneita yhteisöjä. Armenialaisten jälki säilyy Armanitolan nimessä ja vanhassa kirkossa. Shankhari Bazaarin nimi puolestaan liittyy simpukankuoria työstäviin käsityöläisiin.\n\nKaupungin kulttuuri kulkee myös rikshan mukana. Maalatut pinnat esittävät kukkia, lintuja, eläimiä ja elokuvatähtiä; sama kulkuneuvo voi olla sekä työväline että kuvien alusta. Ruokaperinteessä menneisyys jatkuu biryanin ja bakarkhanin kaltaisissa ruoissa. Dhakan historiaa voi lähestyä siksi yhtä hyvin kankaan, kuvan tai leivän kuin rakennuksen kautta."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Dhaka on?",
+      "options": [
+        "Bangladeshin",
+        "Pakistanin",
+        "Bhutanin",
+        "Malediivien"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maan nimi liittyy Bengalin alueeseen.",
+      "fact": "Dhaka on Bangladeshin pääkaupunki ja tärkeä kaupan sekä kulttuurin keskus.",
+      "source": "https://en.wikipedia.org/wiki/Dhaka"
+    },
+    {
+      "q": "Minkä joen rannalla sijaitsee Dhakan Sadarghatin satama?",
+      "options": [
+        "Burigangan",
+        "Mekongin",
+        "Irrawaddyn",
+        "Brahmaputran"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Satama liittyy vanhankaupungin jokirantaan.",
+      "fact": "Sadarghat toimii Burigangan rannalla ja palvelee matkustaja- sekä tavaraliikennettä.",
+      "source": "https://en.wikipedia.org/wiki/Dhaka"
+    },
+    {
+      "q": "Mihin Lalbaghin linnakkeen hammamia käytettiin?",
+      "options": [
+        "Kylpylänä",
+        "Tähtitornina",
+        "Viljavarastona",
+        "Painotalona"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakenteisiin kuului vedenlämmitys ja putkisto.",
+      "fact": "Kuvernöörin asuintiloihin liittyneessä hammamissa oli lämmitettävän veden järjestelmä.",
+      "source": "https://en.wikipedia.org/wiki/Lalbagh_Fort"
+    },
+    {
+      "q": "Mikä lisäke kuuluu Dhakan kacchi biryaniin riisin ja lihan ohella?",
+      "options": [
+        "Peruna",
+        "Porkkana",
+        "Bataatti",
+        "Kukkakaali"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kyseessä on mukula, jonka voi valmistaa monella tavalla.",
+      "fact": "Dhakan kacchi biryani tunnetaan vuohenlihan ja perunan yhdistelmästä.",
+      "source": "https://en.wikipedia.org/wiki/Dhaka"
+    },
+    {
+      "q": "Millä nimellä Dhakan hieno musliini tunnettiin Keski-Aasian markkinoilla?",
+      "options": [
+        "Daka",
+        "Calico",
+        "Batiste",
+        "Mulmul"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Kangasta kuljetettiin Bengalista kaukaisiin kauppapaikkoihin.",
+      "fact": "Dhakan musliinin kauppanimi Daka säilytti kankaan yhteyden sen kauppakeskukseen.",
+      "source": "https://en.wikipedia.org/wiki/Muslin"
+    }
+  ],
+  "tiedot": [
+    "Lalbaghin linnakkeen kylpylässä vettä lämmitettiin lattian alla olevassa huoneessa ja johdettiin terrakottaputkia pitkin.",
+    "Dhakan rikshamaalaus on elävää kaupunkikulttuuria: kukkia, lintuja ja elokuvatähtiä kulkee katuliikenteen mukana.",
+    "Dhakan musliinin hienoja laatuja kutsuttiin nimillä, jotka tarkoittavat kudottua ilmaa, aamukastetta ja virtaavaa vettä."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Dhaka",
+      "johdanto": "Jokisatama, maalatut rikshat ja vanhat käsityöammatit yhdistävät Dhakan menneisyyden nykypäivän kaupunkiin.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Joki on liikenneväylä",
+          "teksti": "Sadarghatin satamassa Buriganga kuuluu Dhakan arjen liikenteeseen. Sieltä kuljetetaan sekä matkustajia että tavaraa muualle Bangladeshin jokialueille. Alukset yhdistävät pääkaupungin paikkoihin, joihin vesireitti on luonteva yhteys. Jokiranta ei siis ole vain paikka, josta kaupunkia katsotaan, vaan paikka, josta lähdetään. Dhaka on kasvanut jokien keskellä, ja sen satama jatkaa vanhaa kauppakaupungin tehtävää. Suurkaupungin reitit eivät lopu kadun reunaan: osa matkasta alkaa laiturilta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dhaka"
+        },
+        {
+          "otsikko": "Liikkuva kuvakertomus",
+          "teksti": "Dhakan rikshoja koristavat kukat, linnut, eläimet ja elokuvatähdet. Maalaus muuttaa arkisen kulkuneuvon kuvien alustaksi, joka liikkuu kaupungin kaduilla työn mukana. Rikshat ja niiden maalausperinne kuuluvat Unescon aineettoman kulttuuriperinnön luetteloon. Kyse on koko taidosta ja sen jatkumisesta, ei yhden maalauksen arvosta. Kaupungin kuvakulttuuria ei siis tarvitse etsiä vain näyttelysalista: sitä kulkee ohitse liikenteessä, matkustajien ja kuljettajien tavallisen päivän osana.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dhaka"
+        },
+        {
+          "otsikko": "Biryaniin kuuluu peruna",
+          "teksti": "Dhakan kacchi biryani yhdistää riisin, vuohenlihan ja perunan. Kaupungin ravintoloissa riisiruoan rinnalla tarjotaan myös muita paikallisia muotoja: naudanlihasta tehtyä teharia ja kanan kanssa valmistettua pulaota. Biryaniin voi liittyä juomana borhani. Pelkkä sana riisi ei siis kerro, millainen ateria tulee pöytään. Dhakan oma ruokaperinne on kehittynyt bengalilaisen ja mogulikeittiön kohtaamisessa, ja samaan ruokaperheeseen mahtuu eri lihoja sekä omia valmistustapoja. Peruna on täällä osa tunnetun ruoan luonnetta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Dhaka"
+        },
+        {
+          "otsikko": "Linnoituksen lämmin vesi",
+          "teksti": "Lalbaghin linnakkeen kuvernöörin asuintiloihin liittyi hammam, kylpylä. Sen alla olevassa huoneessa lämmitettiin vettä, ja sitä johdettiin kylpylään terrakottaputkilla. Arkeologit ovat löytäneet järjestelmän jäänteitä sekä tulen käytöstä kertovia mustia jälkiä. Linnake ei siis ollut pelkkä muuri tai sotilaiden paikka: siihen suunniteltiin myös hallitsijan asumista ja mukavuuksia. Kesken jääneen mogulikompleksin historiaa voi lukea putkistosta yhtä hyvin kuin sen porteista. Menneisyyden arki piilee välillä lattian alla.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Lalbagh_Fort"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Dhakan matka vaatii tällä hetkellä erityistä varovaisuutta. Järjestä siirtymät taksilla tai kuljettajan kanssa ja varaa aikaa ruuhkiin. Vanhankaupungin Lalbagh ja armenialainen kirkko avaavat kaupungin historiaa. Shankhari Bazaar ja paikallinen ruoka näyttävät käsityön ja kaupan jatkuvuutta. Jokiliikenteen turvallisuus ja monsuunin vaikutukset on otettava huomioon matkasuunnitelmassa.",
+        "artikkeli": {
+          "nimi": "Matkailijan Dhaka",
+          "taitto": "opas",
+          "teksti": "Tutustu vanhankaupungin kauppaan, rakentamiseen ja ruokaan ennalta suunnitelluilla käynneillä.",
+          "nosto": "Varaa aikaa ruuhkiin ja järjestä siirtymät: Dhakan matka vaatii nyt erityistä varovaisuutta.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Dhakan kansainvälinen lentoasema on Hazrat Shahjalal (DAC). Kaupunkiin ja sen sisällä liikkumiseen kannattaa järjestää taksi tai auto kuljettajineen; runsaat rikshat kuuluvat kaupunkikuvaan, mutta niiden käyttöön liittyy turvallisuusriskejä. Ruuhkat voivat tehdä lyhyestäkin matkasta hitaan, joten varaa siirtymiin aikaa. Dhakan matkailu edellyttää tällä hetkellä erityistä varovaisuutta. Vältä liikkumista pimeällä ja selvitä maahantulon ehdot ennen lähtöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Lalbaghin toinen puoli",
+              "teksti": "Lalbaghin linnakkeen historia avautuu muutakin kautta kuin muureja katsomalla. Kuvernöörin asuintiloihin liittynyt hammam kertoo vedestä, lämmityksestä ja asumisesta; moskeija ja Pari Bibin hautarakennus ovat saman kokonaisuuden muita osia. Hanke alkoi mogulikaudella ja jäi keskeneräiseksi. Kohteessa kannattaa hahmottaa rakennusten keskinäisiä tehtäviä: linnoitus oli tarkoitettu myös hallinnon ja asumisen paikaksi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kauppiaiden vanha kaupunki",
+              "teksti": "Armanitolan armenialainen kirkko vie Dhakan vanhojen kauppayhteisöjen historiaan. Sen rinnalla Shankhari Bazaar liittyy simpukankuorista tehtyihin rannekoruihin ja käsityöammattiin. Burigangan Sadarghat on edelleen toimiva jokisatama. Vanha kaupunki kannattaa hahmottaa erillisinä käyntikohteina ja sopia siirtymät ennakkoon: kapeat kadut ja sataman väentungos hidastavat kulkua. Laivamatkaa ei pidä olettaa turvalliseksi pelkän runsaan liikenteen perusteella.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Kacchi biryani on Dhakan tunnettu riisiruoka, johon kuuluu vuohenlihaa ja perunaa. Naudanlihasta tehtyä riisiruokaa kutsutaan tehariksi, ja kanan kanssa valmistetaan pulaota. Biryaniaterian rinnalla voi olla borhania. Bakarkhani tuo vanhankaupungin ruokaan kuivan, kovan leivän, jonka rakenne muistuttaa keksiä. Nimet kannattaa opetella ennen tilaamista: samantapainen riisiateria voi sisältää eri lihaa. Ruoka- ja juomahygieniaan on syytä kiinnittää huomiota.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Viileämpi ja kuivempi talvikausi helpottaa Dhakassa liikkumista. Monsuunikausi on kuuma, kostea ja sateinen, ja tulvat voivat vaikeuttaa matkustamista. Talvella sumu voi puolestaan häiritä lentoja ja jokiliikennettä. Vuodenaika on siksi myös yhteyskysymys, ei pelkkä vaatetusvalinta. Tarkista ennen retkeä päivän tilanne ja varaa joustoa suunnitelmaan. Kaupungin ilmanlaatu voi olla ajoittain hyvin huono myös kuivempana aikana.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Lalbaghin linnake",
+                "tahdet": 3,
+                "selite": "Kylpylä ja vesirakenteet avaavat moguliajan asumista."
+              },
+              {
+                "mita": "Armenialainen kirkko",
+                "tahdet": 3,
+                "selite": "Historiallinen rakennus ja hautausmaa kertovat kauppayhteisön elämästä."
+              },
+              {
+                "mita": "Shankhari Bazaar",
+                "tahdet": 2,
+                "selite": "Vanhan kaupunginosan nimi liittyy simpukkakäsityöhön."
+              },
+              {
+                "mita": "Rikshamaalauksen perinne",
+                "tahdet": 2,
+                "selite": "Liikkuva kaupunkikulttuuri kuuluu Unescon aineettoman perinnön luetteloon."
+              },
+              {
+                "mita": "Vanhankaupungin ruokaperinne",
+                "tahdet": 3,
+                "selite": "Biryani ja bakarkhani näyttävät Dhakan oman ruokakulttuurin."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Turvallisuustilanne",
+                "teksti": "Matka edellyttää tällä hetkellä erityistä varovaisuutta; vältä pimeällä liikkumista."
+              },
+              {
+                "otsikko": "Siirtymät",
+                "teksti": "Järjestä taksi tai auto kuljettajineen ja varaa aikaa ruuhkiin."
+              },
+              {
+                "otsikko": "Jokiliikenne",
+                "teksti": "Lautoissa on turvallisuuspuutteita, jotka korostuvat tulva-aikoina."
+              },
+              {
+                "otsikko": "Maahantulo",
+                "teksti": "Varmista ajantasaiset viisumi- ja muut maahantulovaatimukset ennen lähtöä."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kankaan ja käsityön jäljet",
+      "johdanto": "Kauppakaupungin historiaa säilyy kankaissa, rannekoruissa, kirkossa ja pienessä leivässä.",
+      "tehtava": {
+        "kysymys": "Mikä esine liittyy Shankhari Bazaarin nimen taustalla olevaan ammattiin?",
+        "vaihtoehdot": [
+          "Rannerengas simpukankuoresta",
+          "Kaulakoru maalatuista helmistä",
+          "Vyö värjätyistä nahkasuikaleista",
+          "Pikari taotusta hopealevystä"
+        ],
+        "oikea": 0,
+        "fakta": "Shankhari-yhteisö tunnetaan shankha-rannerenkaista, joiden raaka-aine on simpukankuori."
+      },
+      "nostot": [
+        {
+          "otsikko": "Kudottua ilmaa",
+          "teksti": "Dhakan seudun musliini on hienosta puuvillalangasta kudottua kangasta. Sitä valmistettiin kaupungin ympäristössä, muun muassa Sonargaonissa, ja kauppiaat veivät sitä kauas. Joidenkin hienojen musliinilaatujen nimet vertasivat kangasta ilmaan, aamukasteeseen ja virtaavaan veteen. Nimet kuvaavat kankaan keveyttä ja läpikuultavuutta, eivät sen raaka-ainetta: musliini on puuvillaa. Dhakan nimi kulki myös kankaan mukana. Keski-Aasian markkinoilla hieno musliini tunnettiin nimellä Daka, joten paikan maine saattoi mahtua yhteen sanaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Muslin"
+        },
+        {
+          "otsikko": "Simpukasta rannerenkaaksi",
+          "teksti": "Shankhari Bazaarin nimi liittyy simpukankuoria työstävien käsityöläisten yhteisöön. Kuoresta leikattu ja koristeltu shankha-rannerengas kuuluu bengalilaiseen hinduperinteeseen ja kertoo naisen olevan naimisissa. Vanhankaupungin kapean kadun myymälöissä rannekorut ovat osa uskonnolliseen ja perhe-elämään liittyvää kauppaa. Kadun historia avautuu näin pienestä esineestä: materiaalin, ammatin ja alueen nimi kulkevat yhdessä. Rannerenkaan merkitys ei rajoitu koristautumiseen, vaan siihen liittyy myös sosiaalinen tieto.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Shankhari_Bazaar"
+        },
+        {
+          "otsikko": "Kirkko kauppiaiden jäljillä",
+          "teksti": "Armanitolan armenialainen kirkko rakennettiin 1700-luvulla paikalle, jota oli jo käytetty hautausmaana. Hautakivet säilyttävät alueen armenialaisten elämäntarinoita. Yhteisön kauppiaat osallistuivat Dhakan tekstiili-, juutti- ja nahkakauppaan, ja kaupunginosan nimi kantaa heidän nimeään edelleen. Kirkko ei kerro vain uskonnosta, vaan myös kaupan mukana syntyneestä asutuksesta. Rakennus ja sen hautausmaa ovat konkreettinen jälki ihmisistä, joiden yhteydet ulottuivat Bengalista paljon kaupungin rajojen ulkopuolelle.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Armenian_Church,_Dhaka"
+        },
+        {
+          "otsikko": "Leipä korpun rajalla",
+          "teksti": "Bakarkhani on Dhakan ruokaperinteeseen kuuluva leipä, jonka kuori on kova ja rakenne voi muistuttaa keksiä. Se kuuluu mogulikeittiön perintöön, mutta eri seuduilla siitä tehdään erilaisia versioita. Taikinaan käytetään jauhoja ja gheetä eli kirkastettua voita; valmistuksessa taikinalevyä venytetään ja kerrostetaan ennen paistamista. Dhakan kuivaa muotoa kutsutaan myös kuivaksi naaniksi tai rotiksi. Pieni leipä kantaa siis sekä paikallista tapaa että laajan ruokakulttuurin yhteyksiä, eikä nimi lupaa kaikkialla samanlaista suutuntumaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bakarkhani"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Lalbaghin linnake ja armenialainen kirkko kuuluvat Dhakan vanhankaupungin historiallisiin kerroksiin. Niissä näkyvät mogulihallinnon ja kauppiaiden yhteisöjen jäljet.",
+    "rajat": {
+      "pohjoinen": 23.722,
+      "etela": 23.70949,
+      "lansi": 90.38482,
+      "ita": 90.40537
+    },
+    "kohteet": [
+      {
+        "nimi": "Lalbaghin linnake",
+        "lat": 23.719,
+        "lon": 90.3881
+      },
+      {
+        "nimi": "Armenialainen kirkko",
+        "lat": 23.71249,
+        "lon": 90.40209
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Lalbaghin linnake": {
+      "aika": "1600-luku",
+      "teksti": "Lalbaghin linnake rakennettiin Dhakan vanhaankaupunkiin mogulikauden Bengalin kuvernöörin asuinpaikaksi. Työt aloitti 1600-luvulla prinssi Muhammad Azam Shah, keisari Aurangzebin poika. Prinssin lähdettyä Shaista Khan jatkoi hanketta, mutta kokonaisuus jäi keskeneräiseksi. Kesken jäänyt ei tässä tarkoita tyhjää: paikalla on kuvernöörin asuintiloja, moskeija ja Pari Bibin hautarakennus.\n\nKuvernöörin asuintiloihin liittyy hammam, jonka veden lämmitys- ja jakelujärjestelmän osia on löydetty arkeologisissa tutkimuksissa. Vesikanavat ja suihkulähteet kuuluvat myös kompleksin puutarhoihin. Linnake on siten ollut asumisen, hallinnon ja uskonnollisen elämän ympäristö, eikä pelkkä sotilaallinen rakennus.\n\nIsoisän matkavuonna 1873 linnakkeen mogulihistoria oli jo vanhaa. Sen alkuperäisen sijainnin ymmärtämistä vaikeuttaa myös joen muutos: Buriganga kulki aiemmin linnakkeen vierellä, mutta on sittemmin siirtynyt kauemmas. Nykyinen alue on säilynyt osa suuremmasta hankkeesta, eikä sen tämän päivän kunnostettua ilmettä voi sellaisenaan pitää 1800-luvun näkymänä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Armenialainen kirkko": {
+      "aika": "1700-luku",
+      "teksti": "Pyhän ylösnousemuksen armenialainen kirkko sijaitsee Armanitolassa Dhakan vanhassakaupungissa. Kirkko valmistui 1700-luvulla alueelle, jolla oli jo armenialainen hautausmaa. Kauppiaiden yhteisö oli asettunut kaupunkiin ja osallistui muun muassa juutin ja nahan kauppaan. Armanitolan nimi säilyttää tämän historian kaupungin kartassa.\n\nRakennuksessa on rukoussali ja sivuilla suorakulmaiset siivet, joiden yhteydessä ovat sisäänkäynnit. Vanhan hautausmaan säilyneet kivet ovat toinen tapa seurata yhteisön historiaa: ne kertovat kaupungissa eläneistä ihmisistä. Kirkon yhteydessä oli myös kellotorni, joka tuhoutui myöhemmin maanjäristyksessä.\n\nIsoisän matkavuonna 1873 kirkko oli jo olemassa. Sen tämän päivän rakennus ja hautausmaa kertovat vanhan kauppakaupungin yhteyksistä, mutta kaikkia myöhempiä korjauksia ja muutoksia ei voi palauttaa tuon vuoden tilanteeseen.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Hazrat Shahjalalin kansainvälinen lentoasema (DAC)",
+    "huomiot": [
+      "C-tekstiluonnos; B ja riippumattomat D/E/F avoinna.",
+      "20 kuvaroolin tiedosto/lahde/lyhyt/selite tyhjiä; erillinen kuvaputki täydentää.",
+      "Kartta partial: kaksi omaa WP-koordinaattia varmennettu, 6–8 kohteen portti avoin.",
+      "Sääauditointi avoin; saatiedot:null eikä ilmastolukuja.",
+      "Parlamenttitalo (Louis Kahn) ja muut varmistamattomat modernit teokset pois kohteista ja kuvista. Rikshamaalaus käsitellään perinteenä tekstissä, yksittäisiä suojattuja maalauksia ei tilata kuviin.",
+      "Shankhari Bazaarin WP-sivulla on lähdepuutevaroitus; käsityö-/nimiperustan riippumaton tarkistus avoin. BSS-lisävarmennus HTTP 403, ei käytetty.",
+      "Banglapedia-haut toistuvia HTTP 301 -ohjauksia, ei käytetty.",
+      "Kontekstin väestöluku koskee North+South City Corporation -alueita, ei metropolia; jätetty tekstistä pois.",
+      "UM:n live-tiedote: erityinen varovaisuus; tarpeettoman matkustamisen välttäminen koskee Chittagong Hill Tractsia, sitä ei yleistetty Dhakan matkustuskielloksi."
+    ]
+  }
+}

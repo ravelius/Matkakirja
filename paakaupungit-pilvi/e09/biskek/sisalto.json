@@ -1,0 +1,376 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "biskek",
+ "maa": "KGZ",
+ "era": "e09",
+ "kaupunki": {
+  "id": "biskek",
+  "name": "Biškek",
+  "wiki": "Biškek",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 42.8667,
+   "lon": 74.5667
+  }
+ },
+ "artikkeli": {
+  "intro": "**Biškek on Kirgisian pääkaupunki**, jonka leveiden katujen takana kohoaa Ala-Too-vuoristo. Keskustan ruutukaava kuuluu nuoreen kaupunkiin, vaikka seutu on tuntenut karavaaneja paljon kauemmin. Pišpekin linnoitus ja sen ympärille kasvanut asutus edelsivät nykyistä pääkaupunkia. Neuvostoaikana kaupunki tunnettiin nimellä Frunze, joka elää yhä museon nimessä.\n\nKaupan mittakaavan näkee **Dordoin basaarissa**, jossa laivakontit palvelevat myymälöinä ja varastoina. Osh-torilla ostetaan arkisia ruokia, vaatteita ja kodin tavaroita, vaikka tori sijaitsee Biškekissä eikä Oshin kaupungissa. Ruokalistoilla kohtaavat kirgisialaiset, venäläiset ja uiguurilaiset ruoat, ja paikallinen gamburger muistuttaa enemmän döneriä kuin pihvihampurilaista. Kaupungissa ilmestyy myös dungaaninkielinen sanomalehti Huimin Bao, joten pääkaupungin kulttuuriin kuuluu muutakin kuin valtakielten kirjoa.",
+  "teksti": "Biškekin historia alkaa ennen sen nykyistä nimeä. Kokandin kaanikunnan savilinnoitus valvoi karavaanireittejä, ja linnoituksen tuhoutumisen jälkeen paikalle kasvoi Venäjän vallan aikainen asutus. Isoisän matkavuosi 1873 sijoittuu Pišpekin vaiheeseen; pääkaupungiksi nousu kuuluu vasta seuraavan vuosisadan historiaan.\n\nNeuvostokauden Frunze jätti kaupunkiin leveitä katuja ja kerrostalokortteleita, joiden keskelle jää pihoja. Keskustan ulkopuolella on myös paljon yksityisiä pientaloja. Erkindik-bulevardi yhdistää rautatieaseman ympäristön keskustan museoalueeseen: puistokatu on käyttökelpoinen kävelyreitti eri kaupunkikerrosten välillä.\n\nBiškek on myös kaupan solmukohta. Dordoin basaarissa tuontitavara jatkaa matkaansa muihin Keski-Aasian kaupunkeihin, kun taas Osh-torilla näkyy päivittäinen ostosarki. Pääkaupungin asemaa vahvistavat museot, kansalliskirjasto ja yliopistot. Vuoret ovat lähellä, mutta kaupunki ansaitsee oman pysähdyksensä ennen vuoristoretkeä."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä maan pääkaupunki Biškek on?",
+   "options": [
+    "Kirgisian",
+    "Tadžikistanin",
+    "Uzbekistanin",
+    "Kazakstanin"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Maan vuoristo kuuluu Tian Šanin alueeseen.",
+   "fact": "Biškek on Kirgisian pääkaupunki.",
+   "source": "https://en.wikipedia.org/wiki/Bishkek"
+  },
+  {
+   "q": "Mistä Dordoin basaarin myymälöitä on tehty?",
+   "options": [
+    "Laivakonteista",
+    "Rautatievaunuista",
+    "Kivisistä holveista",
+    "Puisista veneistä"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Rakennusosa on kuljettanut tavaroita ennen uutta tehtäväänsä.",
+   "fact": "Dordoin basaarissa pinotut laivakontit toimivat myymälöinä ja varastoina.",
+   "source": "https://en.wikipedia.org/wiki/Dordoy_Bazaar"
+  },
+  {
+   "q": "Millä nimellä Biškek tunnettiin neuvostoaikana?",
+   "options": [
+    "Frunze",
+    "Kokand",
+    "Semiretšje",
+    "Alamedin"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimi oli kaupungissa syntyneen henkilön sukunimi.",
+   "fact": "Kaupunki tunnettiin neuvostoaikana nimellä Frunze.",
+   "source": "https://en.wikipedia.org/wiki/Bishkek"
+  },
+  {
+   "q": "Mikä liha kuuluu tyypilliseen Biškekin gamburgeriin?",
+   "options": [
+    "Dönerin tapaan leikattu",
+    "Paksuksi pihviksi paistettu",
+    "Kokonaisena fileenä höyrytetty",
+    "Raakana ohueksi viipaloitu"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Sämpylä muistuttaa tutulta, mutta täyte seuraa toista katuruokaa.",
+   "fact": "Paikallisessa gamburgerissa on yleensä dönerin tapaan leikattua lihaa ja useita lisukkeita.",
+   "source": "https://en.wikivoyage.org/wiki/Bishkek"
+  },
+  {
+   "q": "Mihin rataverkkoon Biškek liittyy sivuradan kautta?",
+   "options": [
+    "Turkestanin–Siperian",
+    "Baikalin–Amurin",
+    "Kiinan–Tiibetin",
+    "Intian–Nepalin"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Yhteys vie pohjoisen suuntaan Kazakstanin kautta.",
+   "fact": "Biškekin sivurata liittyy Turkestanin ja Siperian väliseen rataverkkoon.",
+   "source": "https://en.wikipedia.org/wiki/Bishkek"
+  }
+ ],
+ "tiedot": [
+  "Osh-tori sijaitsee Biškekissä: torin nimi ja Oshin kaupunki eivät ole sama paikka.",
+  "Biškekissä ilmestyy dungaaninkielinen sanomalehti Huimin Bao.",
+  "Erkindik-bulevardi yhdistää rautatieaseman suunnan keskustan museoalueeseen."
+ ],
+ "valokuva": {
+  "tiedosto": "",
+  "lyhyt": "",
+  "selite": "",
+  "lahde": ""
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Biškek",
+   "johdanto": "Konttikujat, puistokatu ja oma versio hampurilaisesta paljastavat Biškekin arkisen puolen. Pääkaupungin kauppa ja kulttuuri puhuvat useammalla kuin yhdellä kielellä.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kontti kahdessa kerroksessa",
+     "teksti": "Dordoin basaarissa laivakontti saa uuden ammatin. Kontteja on pinottu päällekkäin: alakerrassa myydään, yläkerta palvelee varastona. Kujat ja tavaralajeittain jakautuvat alueet muodostavat suuren kauppapaikan Biškekin pohjoispuolelle. Täältä kulkee etenkin Kiinasta tuotuja tuotteita myös muihin Keski-Aasian maihin. Kyseessä on sekä tukku- että vähittäiskaupan paikka, joten vierekkäin liikkuvat yksittäinen ostaja ja jälleenmyyjä. Kaupan rakennusaine on sama laatikko, jolla tavaraa kuljetetaan maailmalla.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Dordoy Bazaar"
+    },
+    {
+     "otsikko": "Rautatie tekee mutkan",
+     "teksti": "Biškekin rautatie ei kulje suoraan vuoriston läpi etelään. Kaupunki liittyy sivurataa pitkin Turkestanin ja Siperian väliseen rataverkkoon, ja kaukojunat käyttävät Kazakstanin kautta kulkevia yhteyksiä. Kartalla läheinen paikka voi siksi olla junalla suuren kiertomatkan päässä. Keskustan eteläpuolella sijaitseva Biškek II on kaupungin rautatieasemia, ja sen luota alkaa pohjoiseen kulkeva Erkindik-bulevardi. Asema ja puistokatu liittyvät samaan kaupunkikävelyyn, vaikka junamatka jatkuu aivan toiseen suuntaan.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Bishkek"
+    },
+    {
+     "otsikko": "Hampurilainen lainausmerkeissä",
+     "teksti": "Biškekin gamburger lainaa hampurilaiselta nimen ja sämpylän, mutta sisällä on yleensä dönerin tapaan leikattua lihaa. Mukana voi olla kaalisalaattia, kurkkua, majoneesia, ketsuppia ja perunalisuke. Pihvihampurilaista odottava saa siis toisenlaisen lounaan. Kaupungin katuruokaan kuuluvat myös täytetyt samsa-leivonnaiset ja grillatut šašlik-vartaat. Ravintoloiden tarjonnassa on kirgisialaisten ruokien rinnalla venäläisiä ja uiguurilaisia ruokia. Yhden sämpylänkin kohdalla kannattaa katsoa, mitä nimi täällä tarkoittaa.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Bishkek"
+    },
+    {
+     "otsikko": "Sanomalehti dungaaniksi",
+     "teksti": "Biškekissä ilmestyvä Huimin Bao on dungaaninkielinen sanomalehti. Se tuo kaupungin julkiseen elämään kielen, jota harva suomalainen tunnistaa edes nimeltä. Kirgiisi ja venäjä eivät siis kata kaikkea pääkaupungin kielikirjoa. Samassa kaupungissa toimivat kansalliskirjasto, paikallisia museoita ja useita yliopistoja. Lehtikioskin nimi voi avata erilaisen näkymän kaupunkiin kuin monumentti: täällä tuotetaan uutisia ja tekstejä myös pienemmän kieliyhteisön omalla kielellä. Huimin Bao kuuluu Biškekin kulttuurielämään omana julkaisunaan.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Bishkek"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Aloita Biškekiin tutustuminen keskustan kävelyllä. Erkindik-bulevardi yhdistää rautatieaseman suunnan museoalueeseen. Osh-tori sopii ruokaan ja arkisiin ostoksiin, Dordoi laajempaan kaupan tutkimiseen. Ruokalistalla voi kokeilla samsaa, lagmania tai paikallista gamburgeria. Jätä vuoristoretki omaksi ohjelmakseen ja selvitä sen kuljetus erikseen.",
+    "artikkeli": {
+     "nimi": "Matkailijan Biškek",
+     "taitto": "opas",
+     "teksti": "Kulje ensin puistokatua, pysähdy museoon ja vaihda sitten torikujille.",
+     "nosto": "Biškekissä voi tutustua sekä tavalliseen ruokatoriin että laivakonteista koottuun kauppapaikkaan. Ne palvelevat erilaisia ostajia ja kertovat kaupungista eri asioita.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Biškekiä palvelee Manasin kansainvälinen lentoasema kaupungin ulkopuolella. Kaupungissa liikutaan busseilla, takseilla ja maršrutka-pikkubusseilla; tarkista oma yhteys ennen lähtöä, sillä reitit muuttuvat. Rautatieasema Biškek II sijaitsee keskustan eteläpuolella. Keskustan katujen ruutukaava ja Erkindik-bulevardi auttavat kävelyreitin suunnittelussa. Tallenna majoituksen osoite myös kyrillisin kirjaimin, jotta sen voi näyttää kuljettajalle.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Museot ja puistokatu",
+       "teksti": "Erkindik-bulevardia voi seurata aseman suunnalta kohti Tšui-katua ja museoaluetta. Kansallinen historiallinen museo kertoo alueen historiasta ja kirgisialaisesta kulttuurista. Frunzen kotimuseossa vanha kotitalo on säilytetty museorakennuksen sisällä. Valitse museoon yksi aihe, johon haluat syventyä, ja jätä kävelylle tilaa sen ympärille. Tarkista näyttelyiden ajankohtainen käytettävyys ennen vierailua.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Torille tai konttikujille",
+       "teksti": "Osh-tori on Biškekin arkinen ostospaikka: myynnissä on ruokaa, vaatteita ja kodin tavaroita. Dordoi kaupungin pohjoispuolella on toisen mittakaavan kauppapaikka, jossa tuontituotteita myydään konttien muodostamilla kujilla. Torin nimi Osh ei tarkoita, että olisit siirtynyt Oshin kaupunkiin. Valitse ostosretken kohde sen mukaan, haluatko tutustua tavalliseen ruokatoriin vai laajaan tukku- ja vähittäiskaupan alueeseen.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Ruokalistalta voi etsiä bešbarmakia, plov-riisiruokaa, šašlik-vartaita tai samsa-leivonnaisia. Kaupungissa tarjotaan myös uiguurilaista ruokaa, kuten lagman-nuudeleita, ja venäläisiä ruokia. Paikallinen gamburger on oma katuruokansa: sämpylän välissä on tavallisesti dönerin tapaan leikattua lihaa ja lisukkeita. Ruoan nimi ei aina kerro koko sisältöä, joten kysy täytteistä ja lihasta, jos jokin aines ei sovi sinulle.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kaupungista vuorille",
+       "teksti": "Ala-Archan kansallispuisto ja Alamedinin laakso kuuluvat Biškekin lähiseudun retkikohteisiin. Vuoristoretki on eri ohjelma kuin keskustan museo- ja torikävely: selvitä kuljetus, reitti ja päivän sää erikseen. Puistoa ei kannata ajatella keskustan seuraavana korttelina, vaikka vuoret näkyvät kaupungista. Varaa kaupunkiin oma päivä ennen retkeä, jotta Biškek ei jää pelkäksi varusteiden hankintapaikaksi.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Erkindik-bulevardi",
+        "tahdet": 3,
+        "selite": "Kävelyreitti aseman suunnalta kohti keskustan museoaluetta."
+       },
+       {
+        "mita": "Osh-tori",
+        "tahdet": 3,
+        "selite": "Ruokaa, vaatteita ja kodin tavaroita samalla torialueella."
+       },
+       {
+        "mita": "Dordoin basaari",
+        "tahdet": 2,
+        "selite": "Konttien kujilla näkyy tukku- ja vähittäiskaupan mittakaava."
+       },
+       {
+        "mita": "Historiallinen museo",
+        "tahdet": 2,
+        "selite": "Alueen historiaa ja kirgisialaista kulttuuria keskustassa."
+       },
+       {
+        "mita": "Katuruoka",
+        "tahdet": 2,
+        "selite": "Gamburger ja samsa avaavat kaupungin arkista ruokalistaa."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kadulla kaksi nimeä",
+        "teksti": "Vanha kadunnimi voi elää puheessa nykyisen virallisen nimen rinnalla."
+       },
+       {
+        "otsikko": "Osoite mukaan",
+        "teksti": "Tallenna majoituksen osoite myös kyrillisin kirjaimin kuljettajalle näytettäväksi."
+       },
+       {
+        "otsikko": "Retki erikseen",
+        "teksti": "Vuoristoon lähtiessä selvitä kuljetus ja päivän reitti ennen lähtöä."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Pišpekistä pääkaupungiksi",
+   "johdanto": "Biškekin historian voi löytää linnoituksen paikasta, vanhasta kodista ja arkisesta katuosoitteesta. Kaupunki on kasvanut usean nimen alla.",
+   "tehtava": {
+    "kysymys": "Mitä Frunzen museorakennuksen sisälle on säilytetty?",
+    "vaihtoehdot": [
+     "Vanha asuintalo",
+     "Savinen linnoitus",
+     "Rautatieasema",
+     "Kaupungin portti"
+    ],
+    "oikea": 0,
+    "fakta": "Museo ympäröi Frunzen lapsuuden kotitaloa, joten vierailija siirtyy näyttelyrakennuksesta sen sisällä olevaan kotiin."
+   },
+   "nostot": [
+    {
+     "otsikko": "Ensin oli Pišpek",
+     "teksti": "Biškekin paikalla oli karavaanireittejä palvellut Pišpekin linnoitus ennen nykyistä pääkaupunkia. Kokandin kaanikunta rakennutti savilinnoituksen 1800-luvulla, ja myöhemmin alue siirtyi Venäjän vallan alle. Linnoitus tuhoutui ja asutus kasvoi uudelleen. Isoisän matkavuosi 1873 osuu tähän Pišpekin vaiheeseen. Nykyisen ruutukaavan, museoiden ja kerrostalojen kaupunkia ei pidä siirtää sellaisenaan hänen aikaansa. Paikalla oli jo asutusta, mutta pääkaupunkiasema tuli vasta neuvostokaudella seuraavalla vuosisadalla.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Bishkek"
+    },
+    {
+     "otsikko": "Talo talon sisällä",
+     "teksti": "Frunzen kotimuseossa pieni vanha asuintalo on säilytetty myöhemmän museorakennuksen sisällä. Näyttelytilasta siirrytään siis taloon, jonka ympärille on rakennettu toinen talo. Museo kertoo Biškekissä syntyneestä Mihail Frunzesta ja kaupungin varhaisesta neuvostokaudesta. Frunzen sukunimi oli pitkään myös kaupungin nimi. Sisään jäänyt kotitalo tekee aikakerrokset konkreettisiksi: samassa museossa kohtaavat vaatimaton asumisen mittakaava ja myöhempi muistamisen rakennus. Kohde kertoo myös kaupungin muuttuneista nimistä.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Bishkek"
+    },
+    {
+     "otsikko": "Katu muistaa vanhan nimensä",
+     "teksti": "Biškekissä osoite voi kuulua yhtä aikaa nykyiseen karttaan ja vanhaan puheeseen. Sovietskaja-kadun keskiosan virallinen nimi on Jusup Abdrahmanov, mutta vanha nimi on edelleen käytössä. Keskustan poikittainen Tšui-katu oli neuvostoaikana Lenin-katu. Myös nykyinen Erkindik-bulevardi kantoi aiemmin Dzeržinskin nimeä; Erkindik tarkoittaa vapautta. Kadunnimissä näkyy, miten kaupungin historia asettuu arkisten reittien päälle. Sama kulma voi löytyä eri nimellä riippuen siitä, lukeeko osoitteen kartasta vai kuuleeko sen kaupungilla.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Bishkek"
+    },
+    {
+     "otsikko": "Kerrostalon sisään jää piha",
+     "teksti": "Biškekin neuvostoaikaisissa asuinkortteleissa kerrostalot ympäröivät sisäpihoja. Pääkatua pitkin kulkeva näkee ensin rakennusten ulkosivut, vaikka niiden takana on toinen tilan mittakaava. Kaupungin rakenne ei kuitenkaan koostu pelkistä kerrostaloista: erityisesti keskustan ulkopuolella on paljon yksityisiä pientaloja. Leveät bulevardit, pihalliset kerrostalokorttelit ja matala asutus kuuluvat kaikki samaan pääkaupunkiin. Ne kertovat eri tavoista rakentaa ja asua, joita pelkkä keskustan monumentaalinen näkymä ei näytä.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Bishkek"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Osh-tori on Biškekin markkinapaikka, jossa ruokakauppa ja kodin tavarat kohtaavat. Torin kansallistuotteiden osastolla myydään myös paikallisia vaatteita ja käyttötavaroita.",
+  "rajat": {
+   "pohjoinen": 42.878,
+   "etela": 42.872,
+   "lansi": 74.566,
+   "ita": 74.574
+  },
+  "kohteet": [
+   {
+    "nimi": "Osh-tori",
+    "tyyppi": "aukio",
+    "lat": 42.875,
+    "lon": 74.57
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Osh-tori": {
+   "aika": "1900-luku",
+   "teksti": "Osh-tori sijaitsee Biškekin länsipuolella. Nimi voi hämätä, sillä Osh on myös toinen Kirgisian kaupunki. Tällä torilla myydään elintarvikkeita, vaatteita, kodin tavaroita ja matkamuistoja, mutta tarjontaan kuuluvat myös soittimet. Tori syntyi 1900-luvulla, joten isoisän matkavuonna 1873 tätä nykyistä markkinapaikkaa ei vielä ollut.\n\nKansallistuotteiden osasto tunnetaan nimellä Kyyal, joka merkitsee unelmaa tai mielikuvitusta. Sieltä löytyy kirgisialaisia vaatteita, puisia säilytysarkkuja, vuodevaatteita ja kehtoja. Vaatteita voi myös tilata myyjiltä toivotussa koossa tai värissä. Samassa torikokonaisuudessa ovat siis rinnakkain tavalliset päivittäisostokset ja paikalliseen asumiseen sekä pukeutumiseen liittyvät tuotteet. Esine on täällä ennen kaikkea käyttötavara, vaikka matkailija näkisi sen ensi kertaa.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": null,
+  "huomiot": [
+   "C-tekstiluonnos; B-kuvat ja D/E/F puuttuvat. Kaikki kuvaroolien tiedosto/lyhyt/selite/lahde tyhjiä.",
+   "Kartta partial: oma WP/WD-piste sekä suojattujen rakennusten tekijäketju tarkistetaan ennen kohteen lisäämistä.",
+   "Sääauditointi avoin: saatiedot null, ei ilmastolukuja eikä muutoksia saa.json-numeroihin.",
+   "Manasin lentoaseman nykyinen IATA-koodi jätetty avoimeksi; vanhaa FRU-koodia ei kopioitu."
+  ]
+ }
+}

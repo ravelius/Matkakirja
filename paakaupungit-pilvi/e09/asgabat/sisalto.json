@@ -1,0 +1,380 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "asgabat",
+  "maa": "TKM",
+  "era": "e09",
+  "kaupunki": {
+    "id": "asgabat",
+    "name": "Ašgabat",
+    "wiki": "Ašgabat",
+    "ambience": "aavikko",
+    "pallo": {
+      "lat": 37.95,
+      "lon": 58.3833
+    }
+  },
+  "artikkeli": {
+    "intro": "Ašgabat on Turkmenistanin pääkaupunki aavikon ja vuoriston välisellä tasangolla. **Vaalea marmori** näkyy kauas, mutta kaupungin tarina ei ala uusista julkisivuista. Paikalla oli turkmeenikylä ennen kuin venäläinen varuskuntakaupunki kasvoi sen viereen 1800-luvun lopulla. Isoisän matkavuonna 1873 nykyistä kaupunkia ei siis vielä ollut. Rautatie toi kauppiaita, käsityöläisiä ja yhteyden Kaspianmeren suuntaan.\n\nKaupungin nimi voidaan lukea persiaksi rakkauden kaupungiksi, vaikka nimen alkuperästä on muitakin tulkintoja. **Mattomuseossa** tekstiili voi olla sekä säilytyspussi että valtava esiripuksi suunniteltu kudos. Musiikissa pitkäkaulainen dutar säestää laulua ja kertomuksia, eikä soittimen valmistusta eroteta sen käytöstä. Läheisen Nisan raunioista puolestaan avautuu paljon nykyistä pääkaupunkia vanhempi maailma, jossa iranilaiset ja kreikkalaiset taideperinteet kohtasivat.",
+    "teksti": "Ašgabatin kaupunkihistoria on nuori, mutta sen ympäristön asutushistoria ei ole. Nykyinen kaupunki kasvoi turkmeenikylän yhteyteen 1800-luvun lopulla. Varuskunnan, rautatieaseman ja kauppapaikan ympärille muodostui erilaisia kortteleita: kauppiaat, rautatieläiset ja käsityöläiset eivät asuneet kaikki samanlaisessa kaupungissa.\n\nVanha katuverkko on säilynyt osittain jälleenrakennuksen läpi. Viime vuosisadan tuhoisa maanjäristys muutti rakennuskantaa, ja myöhemmät suunnitelmat laajensivat kaupunkia etelään ja länteen. Marmori kertoo vain tämän pitkän rakennushistorian uusimmasta kerroksesta.\n\nKulttuuria voi lähestyä myös ilman suuria julkisivuja. Mattomuseo esittelee kudottujen tekstiilien monia käyttötapoja, ja kansallismuseossa on Nisan arkeologisia löytöjä sekä soittimia. Dutar-perinteessä käsityö, sävelmä ja tarinankerronta kuuluvat yhteen: luuttu on sekä esine että esityksen kumppani."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Ašgabat on?",
+      "options": [
+        "Turkmenistan",
+        "Tadžikistan",
+        "Uzbekistan",
+        "Kirgisia"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maan nimi ja sen enemmistökansan nimi muistuttavat toisiaan.",
+      "fact": "Ašgabat on Turkmenistanin pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Ashgabat"
+    },
+    {
+      "q": "Mihin Ašgabatin nimen tavallinen persialainen tulkinta viittaa?",
+      "options": [
+        "Rakkauteen",
+        "Rautatiehen",
+        "Vuoristoon",
+        "Suolajärveen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Tulkinta on tunnepitoinen, mutta nimen historiallinen alkuperä on epävarma.",
+      "fact": "Nimi voidaan lukea rakkauden tai kiintymyksen kaupungiksi; tästä ei seuraa varmaa perustamistarinaa.",
+      "source": "https://en.wikipedia.org/wiki/Ashgabat"
+    },
+    {
+      "q": "Mikä yhteys auttoi Ašgabatia kasvamaan 1800-luvun lopulla?",
+      "options": [
+        "Kaspianmeren suunnan rautatie",
+        "Persianlahden suunnan kanava",
+        "Kaukasuksen ylittävä köysirata",
+        "Intianmeren suora laivareitti"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kulkuneuvo tarvitsee raiteet.",
+      "fact": "Kaspianmeren suunnasta rakennettu rata toi Ašgabatiin kauppaa sekä rautatieläisiä ja käsityöläisiä.",
+      "source": "https://en.wikipedia.org/wiki/Ashgabat"
+    },
+    {
+      "q": "Mihin vanhaan valtakuntaan Nisan rauniot liittyvät?",
+      "options": [
+        "Partiaan",
+        "Bysanttiin",
+        "Egyptiin",
+        "Karthagoon"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Valtakunnan historia liittyy iranilaiseen maailmaan.",
+      "fact": "Nisa oli partialaisten keskus, ja sen löydöissä kohtaavat iranilaiset ja hellenistiset vaikutteet.",
+      "source": "https://en.wikipedia.org/wiki/Nisa,_Turkmenistan"
+    },
+    {
+      "q": "Miksi yksi mattomuseon matoista ei päätynyt teatterin esiripuksi?",
+      "options": [
+        "Se oli liian painava",
+        "Se oli liian kapea",
+        "Se oli väärän värinen",
+        "Se oli jo pahoin kulunut"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Ongelma liittyi suuren kudoksen liikuttamiseen.",
+      "fact": "Bolšoi-teatteria varten tehty matto osoittautui liian raskaaksi aiottuun käyttöön.",
+      "source": "https://en.wikipedia.org/wiki/Turkmen_Carpet_Museum"
+    }
+  ],
+  "tiedot": [
+    "Ašgabatin vanhassa kaupungissa hallinnon, aseman ja torin ympärille syntyi erilaisia asuinalueita.",
+    "Turkmenistanin mattomuseossa on myös tekstiilejä, joiden eri puolilla on erilaiset kuviot.",
+    "Dutarin valmistuksessa käytetään mulperipuuta ja aprikoosipuuta eri osiin: soitinrakennus on oma käsityöperinteensä."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Ašgabat",
+      "johdanto": "Rautatie, kudotut käyttöesineet ja elävä musiikki kertovat pääkaupungista marmorin takana.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Rakkauden kaupunki, ehkä",
+          "teksti": "Aşgabat voidaan lukea nyky­persiassa rakkauden tai kiintymyksen kaupungiksi. Kaunis käännös ei kuitenkaan ratkaise nimen historiaa: alkuperää on yhdistetty myös partialaisten hallitsijan nimeen. Kaupunki on kulkenut kartoissa muodoissa Askhabad ja Ashkhabad, ja jonkin aikaa sen nimi oli Poltoratsk. Kyse ei siis ole vain siitä, miten ääntää vieras sana. Sama paikka on saanut eri kielissä eri asun, ja sen vanha nimi on myös palautettu käyttöön. Rakkaustulkinta on yksi selitys, ei varma perustamistarina.",
+          "wiki": "Ashgabat",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Asema sai omat naapurinsa",
+          "teksti": "Rautatie saapui Ašgabatiin 1800-luvun lopulla. Kaspianmeren suunnasta tuleva rata yhdisti kaupungin muuhun Keski-Aasiaan, ja aseman ympärille asettui rautatieläisiä ja käsityöläisiä. Vanhan kaupunkikuvauksen mukaan heidän talonsa olivat matalia ja lähekkäin, puutarhat pienempiä kuin linnoituksen lähellä. Kauppiaille muodostui vielä oma keskus torin ympärille. Kaupunki kasvoi siis useasta arkisesta solmukohdasta: yksi palveli hallintoa, toinen liikennettä ja kolmas kaupankäyntiä.",
+          "wiki": "Ashgabat",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Esirippu, joka jäi museoon",
+          "teksti": "Turkmenistanin mattomuseossa on matto, joka tehtiin Moskovan Bolšoi-teatterin esiripuksi mutta osoittautui siihen liian painavaksi. Kudottu tekstiili ei täällä muutenkaan tarkoita pelkkää lattiamattoa. Kokoelmissa on säilytykseen käytettyjä pusseja ja laukkuja sekä vanhoja ja uudempia mattoja. Mukana on myös kudoksia, joiden eri puolilla näkyvät erilaiset kuviot. Museossa käsityön mittakaava vaihtuu kodin käyttöesineestä niin suureen työhön, ettei sille aiottu käyttötarkoitus lopulta sopinut.",
+          "wiki": "Turkmen Carpet Museum",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Puutarha kokeilee kasvien kotiutumista",
+          "teksti": "Ašgabatin kasvitieteellisen puutarhan juuret ovat 1800-luvun lopun tutkimusasemassa ja puutarhakoulussa. Varsinainen puutarha syntyi seuraavalla vuosisadalla. Siellä on tutkittu ja kokeiltu koristekukkia, puita ja pensaita sekä koottu paikallisia kasveja samaan kokoelmaan. Kasvihuoneet ja eri alueille järjestetyt istutukset kuuluvat tutkimustyöhön, ja siemeniä kerätään vuosittain. Puutarha ei ole pelkkä kokoelma valmiita maisemia: siellä selvitetään myös, miten kasvit kasvavat uudessa ympäristössä.",
+          "wiki": "Ashgabat Botanical Garden",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Ašgabatiin saavutaan usein lentäen, ja kaupungissa voi liikkua busseilla tai virallisella taksilla. Mattomuseo ja kansallismuseo tarjoavat kaksi erilaista reittiä seudun kulttuuriin. Nisan rauniot ovat erillinen retkikohde kaupungin länsipuolella. Gülistanin basaarissa myydään arkisia ostoksia hedelmistä vaatteisiin. Maahantuloasiakirjat ja paikalliset kuvaussäännöt on selvitettävä etukäteen.",
+        "artikkeli": {
+          "nimi": "Matkailijan Ašgabat",
+          "taitto": "opas",
+          "teksti": "Tutustu kaupunkiin museoiden, kauppapaikkojen ja sen vanhan rautatieyhteyden kautta.",
+          "nosto": "Matot, soittimet ja arkeologiset löydöt avaavat kaupungin kulttuuria eri suunnista.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Ašgabatin kansainvälinen lentoasema palvelee kaupunkia, ja sieltä on bussiyhteyksiä keskustaan. Virallisia takseja löytyy lentoasemalta ja rautatieasemalta. Kaupungin sisäinen joukkoliikenne perustuu busseihin; Teke-basaari on yksi liikenteen solmukohdista. Turkmenistaniin matkustaminen vaatii ennakkovalmisteluja: selvitä viisumi, kutsu ja saapumisen jälkeinen rekisteröinti ennen lähtöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Maton monet tehtävät",
+              "teksti": "Mattomuseossa kannattaa katsoa kuvioiden lisäksi tekstiilien käyttötapoja. Näyttelyssä on mattojen ohella pusseja ja laukkuja, eikä jokainen kudos ole tarkoitettu lattialle. Jos ostat maton kotiin vietäväksi, selvitä vientiasiakirjat ennen kauppaa. Myyjän kuitti ei yksin ratkaise, saako vanhan tekstiilin viedä maasta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Nisa ja museon löydöt",
+              "teksti": "Kaupungin länsipuolella sijaitseva Nisa on partialaisten arkeologinen alue. Raunioihin tutustumista voi täydentää kansallismuseossa, jossa esitellään Nisan esinelöytöjä. Näin rakennusten jäänteet ja niistä löytyneet käyttö- ja taide-esineet saavat eri paikoissa tilaa. Kasvitieteellisen puutarhan käyntimahdollisuus on syytä varmistaa erikseen: sitä on kunnostettu, eikä vanha matkaopas takaa nykyistä pääsyä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Kaupungin ravintoloissa on tarjolla turkmeeniruokaa, kuten šašlikia eli grillattuja lihavartaita, sekä kansainvälisiä annoksia. Joissakin ruokapaikoissa voi valita pöydän tai perinteistä istumistapaa mukailevan paikan. Gülistanin basaarissa myydään hedelmiä ja vihanneksia muiden arkisten ostosten rinnalla. Ruokapaikka ja tori näyttävät kaupunkia eri tavoilla: toisessa annos valmistetaan, toisessa ostetaan sen aineksia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Ašgabatin kesä on kuuma ja talvi selvästi viileämpi. Kevät ja syksy sopivat ulkona liikkumiseen paremmin kuin kuumin keskikesä. Valitse museoille ja ulkokohteille omat käyntiajat päivän sään mukaan; Nisan raunioilla ollaan avoimessa maastossa. Puutarhojen ja museoiden pääsy kannattaa varmistaa ennen retkeä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Mattomuseo",
+                "tahdet": 3,
+                "selite": "Kudokset kertovat käyttötavoista, eivät vain kuvioista."
+              },
+              {
+                "mita": "Nisan arkeologinen alue",
+                "tahdet": 3,
+                "selite": "Partialaisten rakennusjäänteet avaavat kaupungin ympäristön vanhempaa historiaa."
+              },
+              {
+                "mita": "Kansallismuseon Nisa-kokoelma",
+                "tahdet": 3,
+                "selite": "Esinelöydöt täydentävät raunioihin tutustumista."
+              },
+              {
+                "mita": "Gülistanin basaari",
+                "tahdet": 2,
+                "selite": "Hedelmä- ja vihannesmyynti tuo kaupunkikäyntiin arkisen pysähdyksen."
+              },
+              {
+                "mita": "Dutar-musiikki",
+                "tahdet": 2,
+                "selite": "Etsi ohjelmasta esitys, jossa luuttu säestää laulua ja kertomista."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Maahantulo",
+                "teksti": "Selvitä maahantuloasiakirjat ja rekisteröinti ennen lähtöä."
+              },
+              {
+                "otsikko": "Kuvaaminen",
+                "teksti": "Kuvaamista on rajoitettu esimerkiksi viranomaisten rakennusten lähellä; tarkista säännöt paikan päällä."
+              },
+              {
+                "otsikko": "Maton vienti",
+                "teksti": "Maton maastavientiin voi tarvita tarkastuksen ja erilliset asiakirjat."
+              },
+              {
+                "otsikko": "Puutarhan pääsy",
+                "teksti": "Kasvitieteellisen puutarhan nykyinen käyntimahdollisuus vaatii erillisen varmistuksen."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "musiikki",
+      "nimi": "Soitin, ääni ja kertomus",
+      "johdanto": "Dutar-perinteessä soittimen rakentaja ja tarinankertoja kuuluvat samaan kulttuuriin; tanssissa mukaan tulee koko yhteisö.",
+      "tehtava": {
+        "kysymys": "Mikä hedelmäpuu antaa puuaineen dutarin pitkään kaulaan?",
+        "vaihtoehdot": [
+          "Aprikoosipuu",
+          "Omenapuu",
+          "Viikunapuu",
+          "Sitruunapuu"
+        ],
+        "oikea": 0,
+        "fakta": "Aprikoosipuuta käytetään kaulaan, kun taas soittimen kaikuosa valmistetaan mulperipuusta."
+      },
+      "nostot": [
+        {
+          "otsikko": "Kaikuosa ja kaula kasvavat eri puissa",
+          "teksti": "Dutar on pitkäkaulainen luuttu, jonka päärynämäisen kaikuosan päälle kiinnitetään ohut puinen kansi. Kaikuosa ja kansi tehdään mulperipuusta, kaula kuivatusta aprikoosipuun rungosta. Rakentaja pyöristää, kovertaa ja hioo puun; kannen puuta kuumennetaan kosteuden poistamiseksi. Kansi liimataan paikalleen luuliimalla ennen kaulan, nauhojen ja kielten viimeistelyä. Soitin syntyy monesta työvaiheesta, eikä puulajia valita kaikkialle samaksi: sama luuttu yhdistää eri puiden aineksen.",
+          "wiki": "Dutar",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kertoja vaihtaa puheesta lauluun",
+          "teksti": "Dutar-musiikki voi olla soittoa yksinään tai laulajan säestystä. Bagshy-perinteessä mukana on laulu, ja sen kertovassa muodossa esittäjä vuorottelee tarinankerrontaa, laulamista ja äänen improvisointia. Runous ja suorasanaiset osuudet kuuluvat samaan esitykseen. Kuulija ei siis seuraa vain sävelmää tai vain kertomusta, vaan niiden vaihtumista. Dutar soi juhlissa, seremonioissa ja yhteisissä kokoontumisissa; soittimen arvo ei rajoitu konserttiin, vaan se on osa ihmisten yhteisiä tilaisuuksia.",
+          "wiki": "Music of Turkmenistan",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Eepos istuu esiintyjän mukana",
+          "teksti": "Gorogly on turkmeenien suullinen eepos, jonka päähenkilö on tarun sankari. Esitykseen kuuluu proosaa, runoutta, laulua ja improvisointia, ja sitä esitetään perinteisesti istuen kielisoittimen säestyksellä. Sankaritarinan mukana kulkee myös tietoa tavoista ja arkisista taidoista. Sekä naiset että miehet toimivat eepoksen esittäjinä. Mestari opettaa oppilastaan epämuodollisesti, mutta tietoa siirtyy myös julkisissa esityksissä. Eepos elää siis esittäjän työssä eikä ainoastaan kirjan sivuilla.",
+          "wiki": "Epic of Koroghlu",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Hyvä toivotus saa askelia",
+          "teksti": "Kushtdepdi yhdistää runollisen laulun, äänen improvisoinnin ja tanssin. Laulun mukana käsien liikkeet, eleet ja askeleet välittävät hyviä toivotuksia; esitys kuuluu seremonioihin ja yhteisiin juhliin. Kokeneet laulajat ja tanssijat opettavat taitoja muille käytännössä ja suullisesti. Perinne välittyy myös musiikkikouluissa ja kulttuurikeskuksissa, joissa sitä voi harjoitella järjestetysti. Hyvän toivottaminen ei näin jää pelkäksi tervehdykseksi: sille annetaan ääni, rytmi ja liike.",
+          "wiki": "Kushtdepdi",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Nisa avaa näkymän partialaisten maailmaan nykyisen pääkaupungin länsipuolella.",
+    "rajat": {
+      "pohjoinen": 37.97,
+      "etela": 37.963,
+      "lansi": 58.191,
+      "ita": 58.199
+    },
+    "kohteet": [
+      {
+        "nimi": "Nisa",
+        "lat": 37.96667,
+        "lon": 58.195
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Nisa": {
+      "aika": "Antiikin aika",
+      "teksti": "Nisa on partialaisten arkeologinen alue nykyisen Ašgabatin länsipuolella. Maailmanperintökohteeseen kuuluvat Vanhan ja Uuden Nisan jäänteet. Kaivauksissa on löytynyt asumiseen, hallintoon ja uskonnolliseen käyttöön liittyneitä rakennuksia. Alue oli kauppa- ja kulkureittien risteyksessä, ja löydöissä näkyy Keski-Aasian sekä Välimeren kulttuurien vuorovaikutus. Iranilainen perinne kohtasi täällä hellenistisen maailman.\n\nNisan löydöissä on kirjoitettuja asiakirjoja, taideteoksia ja norsunluisia juomasarvia eli rhyton-astioita. Raunioilla nähtävä rakennusten hahmo ei vastaa muinaisen kaupungin alkuperäistä ulkoasua: eroosio on muuttanut maavalleja ja rakennusten jäänteitä. Isoisän matkavuonna 1873 Nisa oli jo muinainen paikka, ei uuden pääkaupungin rakennushanke. Sen tarkkaa silloista ulkoasua ei näistä lähteistä voi kuvata.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Ašgabatin kansainvälinen lentoasema (ASB)",
+    "huomiot": [
+      "C-tekstiluonnos; kuvat odottavat erillistä kuvaputkea.",
+      "Kartta partial: Nisan oma WP-piste; muut kohteet ja historiallisen ytimen rajaus vaativat jatkotarkistuksen.",
+      "Kasvitieteellisen puutarhan WP-piste ja tekstin itäinen sijaintikuvaus ovat ristiriidassa; puutarhaa ei lisätty karttaan.",
+      "saatiedot:null; sääaseman normaalien primääriauditointi avoinna.",
+      "D/E/F-tarkistus, pelikytkentä ja julkaisu ovat tekemättä."
+    ]
+  }
+}

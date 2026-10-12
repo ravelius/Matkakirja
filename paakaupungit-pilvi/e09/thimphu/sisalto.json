@@ -1,0 +1,378 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "thimphu",
+  "maa": "BTN",
+  "era": "e09",
+  "kaupunki": {
+    "id": "thimphu",
+    "name": "Thimphu",
+    "wiki": "Thimphu",
+    "ambience": "vuoristo",
+    "pallo": {
+      "lat": 27.4713,
+      "lon": 89.6337
+    }
+  },
+  "artikkeli": {
+    "intro": "Thimphussa pääkaupungin liikennettä voi ohjata poliisin käsi. **Wang Chhun laaksoon** kasvanut Bhutanin pääkaupunki levittäytyy joen vartta pitkin ja nousee ympäröiville rinteille. Nykyisen keskustan taustalla on joukko kyliä, joista monet elävät edelleen kaupunginosien nimissä. Isoisän matkavuonna 1873 laaksossa oli jo asutusta ja luostareita, mutta nykyinen pääkaupunki syntyi vasta myöhemmin.\n\nThimphusta tuli maan pääkaupunki 1900-luvun puolivälissä, ja vanha Punakha väistyi hallinnon keskuksena. Kaupungissa voi siirtyä vilkkaalta kauppakadulta kansalliskirjaston vanhojen käsikirjoitusten ääreen. **Käsityö on täällä myös opiskelua ja työtä**: tekstiilejä kudotaan, paperia valmistetaan ja perinteisiä taitoja opetetaan. Changlimithangin jousiammunnassa osumaa seuraa laulu ja tanssi. Vuoristokaupunki näyttääkin oman luonteensa yhtä hyvin työpajassa ja urheilukentällä kuin linnoitusluostarin seinissä.",
+    "teksti": "Thimphun kasvussa näkyy laakson muoto. Wang Chhu kulkee kaupungin läpi, ja asutus jatkuu pohjoisesta etelään sekä rinteille. Motithangin, Changangkhan ja Taban kaltaiset nimet ovat peräisin laakson aiemmista kylistä. Pääkaupungin historia on siksi nuorempi kuin sen paikkojen historia.\n\nSimtokhan dzong rakennettiin 1600-luvulla kaupungin eteläpuolen harjanteelle. Se kuuluu Bhutanin linnoitusluostareihin, joissa uskonnollinen elämä ja hallinto ovat liittyneet toisiinsa. Isoisän matkavuonna 1873 se oli jo vanha rakennus; nykyinen Thimphu ei vielä ollut maan pääkaupunki.\n\nKansalliskirjastossa säilytetään käsintehdylle paperille kirjoitettuja tekstejä, ja tekstiilimuseo esittelee kudonnan menetelmiä. Samat taidot jatkuvat kaupungin oppilaitoksissa ja työpajoissa. Thimphun perinteet eivät siten rajoitu näyttelyvitriineihin: niitä harjoitellaan ja valmistetaan edelleen."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Thimphu on?",
+      "options": [
+        "Bhutanin",
+        "Nepalin",
+        "Laosin",
+        "Mongolian"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Himalajan valtio tunnetaan linnoitusluostareistaan.",
+      "fact": "Thimphu on Bhutanin pääkaupunki Wang Chhun laaksossa.",
+      "source": "https://en.wikipedia.org/wiki/Thimphu"
+    },
+    {
+      "q": "Mikä on Thimphun linnoitusluostareista käytetty nimitys?",
+      "options": [
+        "Dzong",
+        "Gopuram",
+        "Pagodi",
+        "Minareetti"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennustyyppi yhdistää hallinnon ja uskonnollisen yhteisön tiloja.",
+      "fact": "Dzong on linnoitusluostari; Simtokha on yksi laakson historiallisista esimerkeistä.",
+      "source": "https://en.wikipedia.org/wiki/Simtokha_Dzong"
+    },
+    {
+      "q": "Mikä laji tuo Changlimithangiin joukkueita ja tanssivia kannustajia?",
+      "options": [
+        "Jousiammunta",
+        "Maahockey",
+        "Pöytätennis",
+        "Sulkapallo"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kilpailija lähettää välineensä pitkän matkan päähän kohti taulua.",
+      "fact": "Jousiammunta on Bhutanin kansallislaji, ja Thimphussa kilpailuihin liittyy laulua ja tanssia.",
+      "source": "https://en.wikipedia.org/wiki/Thimphu"
+    },
+    {
+      "q": "Mistä Thimphun kaupunginosien nimet Motithang ja Taba muistuttavat?",
+      "options": [
+        "Laakson aiemmista kylistä",
+        "Vanhasta rautatieverkosta",
+        "Jokisatamien laitureista",
+        "Keskiajan yliopistoista"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Nykyinen kaupunki on kasvanut usean aiemman asutuksen paikalle.",
+      "fact": "Ennen pääkaupungin kasvua Thimphun laaksossa oli hajallaan olevia kyliä.",
+      "source": "https://en.wikipedia.org/wiki/Thimphu"
+    },
+    {
+      "q": "Minkä eläimen alue löytyy Thimphun Motithangista?",
+      "options": [
+        "Takinin",
+        "Pandan",
+        "Jakin",
+        "Lumileopardin"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kyseessä on Bhutanin kansalliseläin, joka pysytteli vapauttamisen jälkeen kaupungin lähellä.",
+      "fact": "Motithangissa on takinien alue; eläimet eivät aikoinaan lähteneet vapautettuina ympäröivään metsään.",
+      "source": "https://en.wikipedia.org/wiki/Thimphu"
+    }
+  ],
+  "tiedot": [
+    "Thimphun risteyksessä liikenteen rytmi tulee poliisin käsistä: kuljettajat seuraavat käsimerkkejä liikennevalojen sijasta.",
+    "Motithangin takinit eivät lähteneet metsään, kun pieni eläintarha suljettiin. Kaupungin tuntumassa pysyneille eläimille järjestettiin oma alue.",
+    "Thimphun kansalliskirjaston perinteisiä kirjoja säilytetään käsintehdyllä paperilla puulevyjen välissä, yhteen sidottuina."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Thimphu",
+      "johdanto": "Wang Chhun laaksossa pääkaupunki kasvoi kylien ympärille, ja vanhat taidot jatkuvat kaupungin arjessa.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Pääkaupunki kylien päälle",
+          "teksti": "Motithang, Changangkha ja Taba olivat laakson kyliä ennen kuin niistä tuli Thimphun kaupunginosia. Vielä 1900-luvun puolivälissä nykyisen kaupungin paikalla oli hajallaan olevia asutuksia. Hallinnon siirtyminen Punakhasta Thimphuun teki laaksosta pääkaupungin, joka kasvoi joen vartta ja rinteitä pitkin. Vanhat nimet eivät kadonneet kasvun mukana. Kaupunkia voi lukea myös niiden kautta: nykyisen katuverkon alla on kylien maantiede, ja paikkojen historia ulottuu paljon pääkaupungin historiaa kauemmas.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Thimphu"
+        },
+        {
+          "otsikko": "Risteyksen kapellimestari",
+          "teksti": "Thimphun liikenteestä tunnettu yksityiskohta on käsimerkein ohjaava poliisi. Kaupungin liikennevaloista luovuttiin, ja liikennettä ohjataan risteyksessä käsien ja käsivarsien liikkeillä. Liikkeiden rytmiä on verrattu tanssiin, mutta tehtävä on arkinen: autoilijoiden on tiedettävä, kuka saa edetä ja kenen pitää odottaa. Risteys tekee suuren kaupungin järjestelmästä hetkeksi henkilökohtaisen. Ohjaus tulee ihmiseltä, jonka eleitä kuljettajat seuraavat, eikä pelkästä vaihtuvasta valosta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Thimphu"
+        },
+        {
+          "otsikko": "Eläimet jäivät kaupunkiin",
+          "teksti": "Motithangin takinalueen tarina alkoi pienestä eläintarhasta. Kun se suljettiin ja eläimet vapautettiin ympäröivään metsään, takinit eivät lähteneetkään kauas: niitä tavattiin kaupungin kaduilla etsimässä syötävää. Niille järjestettiin oma suojelualue. Takin on Bhutanin kansalliseläin, ja sen paikka Thimphussa on siksi muutakin kuin yksi nähtävyys muiden joukossa. Tarinan yllättävä käänne on eläinten oma käytös. Ihmiset avasivat tien metsään, mutta takinit pysyttelivät kaupungin tuntumassa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Thimphu"
+        },
+        {
+          "otsikko": "Osuma tarvitsee tanssin",
+          "teksti": "Changlimithangissa jousiammunta kuuluu Thimphun urheiluelämään. Kentällä käytetään sekä perinteisiä bambujousia että nykyaikaisia taljajousia, eikä kilpailu rajoitu nuolen lentoon. Joukkueita kannustetaan, vastustajia kiusoitellaan ja onnistumisia juhlistetaan laulaen ja tanssien. Jousiammunta on Bhutanin kansallislaji, mutta katsomossa ymmärtää, että se on myös yhdessäoloa. Kentän ympärillä tapahtuva kuuluu kilpailuun yhtä olennaisesti kuin tauluun osuva nuoli. Urheilu ja esitys mahtuvat samalle paikalle.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Thimphu"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Thimphun keskusta sopii jalkaisin kiertämiseen. Paron lentoasemalta kaupunkiin jatketaan maanteitse. Simtokhan dzong vie laakson vanhaan historiaan, ja museot avaavat kankaiden, kirjojen ja postimerkkien maailmaa. Changlimithangissa voi nähdä paikallista jousiammuntaa. Retket rinteille ja kauemmas laaksoon on hyvä sovittaa säähän ja tieyhteyksiin.",
+        "artikkeli": {
+          "nimi": "Matkailijan Thimphu",
+          "taitto": "opas",
+          "teksti": "Kulje joen laakson kaupungista kirjojen, kankaiden ja nuolten ääreen.",
+          "nosto": "Thimphun omaleimaisuus löytyy myös työpajasta ja urheilukentältä.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Thimphuun saavutaan maanteitse Paron lentoasemalta. Keskustan voi kiertää jalan, ja pidemmille matkoille on takseja sekä paikallisbusseja. Norzin Lam auttaa hahmottamaan kaupunkia: sen varrella ja lähellä on kauppoja, ravintoloita ja palveluja. Muista, että laakson rinteille siirtyminen on eri asia kuin tasainen keskustakävely. Maahantulon ehdot ja matkasuunnitelman luvat kannattaa selvittää ennen lähtöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Vanha linnoitusluostari",
+              "teksti": "Simtokhan dzong sijaitsee etelässä laakson harjanteella. Sen historia alkaa 1600-luvulta, joten se tarjoaa kaupungin nuorta pääkaupunkia vanhemman kerroksen. Rakennus on yhdistänyt linnoituksen, luostarin ja hallinnon tehtäviä. Nykyisessä Thimphussa historiallinen kohde ja kasvava kaupunki ovat samalla retkellä nähtävissä. Uskonnollisessa kohteessa vierailu edellyttää paikan ohjeiden ja käynnissä olevien toimitusten kunnioittamista.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Taitoja katsomaan",
+              "teksti": "Tekstiilimuseossa tutustu kudontaan ja kansallispukuihin. Kansalliskirjastossa huomio siirtyy paperiin, kirjoitukseen ja perinteisen kirjan muotoon. Pääpostitoimiston postimuseo jatkaa viestinnän tarinaa kirjeistä postimerkkeihin. Näiden väliin sopii paperityöpaja: siellä voi nähdä, miten vanha materiaali tehdään. Kohteita yhdistää käsillä valmistamisen taito, vaikka lopputuote on yhdessä kangas, toisessa arkki ja kolmannessa viesti.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Thimphun ravintoloissa ja ruokakojuissa tarjotaan momoja, höyrytettyjä liha- tai kasvistäytteisiä nyyttejä. Toinen kaupungin ruokapaikoissa tavattava ruoka on thukpa, paikallinen nuudeliruoka. Norzin Lamin ympäristö on hyvä lähtökohta ruokapaikkojen etsimiseen. Momojen täyte kannattaa kysyä erikseen: saman näköinen nyytti voi sisältää lihaa tai kasviksia. Ruokailuun voi yhdistää kävelyn keskustassa ilman, että jokaisesta ateriasta tarvitsee tehdä oman retkensä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Kevät ja syksy sopivat Thimphun vierailuun. Kesä on monsuunin sateista aikaa, talvi puolestaan kylmä ja kuivempi. Myös tien kunto vaikuttaa vuoristossa matkan toteutumiseen: sateet voivat katkaista yhteyksiä maanvyöryillä. Jos haluat nähdä jousiammuntaa tai juhlan, varmista sen ajankohta erikseen. Kaupungin ja luostarien tapahtumat eivät seuraa yhtä yksinkertaista vuodenkiertoa kuin sää.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Simtokhan dzong",
+                "tahdet": 3,
+                "selite": "Linnoitusluostari näyttää laakson pääkaupunkia vanhemman historian."
+              },
+              {
+                "mita": "Tekstiilimuseo",
+                "tahdet": 3,
+                "selite": "Kudonnan menetelmät ja kansallispuvut avaavat kankaiden merkityksiä."
+              },
+              {
+                "mita": "Kansalliskirjasto",
+                "tahdet": 2,
+                "selite": "Perinteiset käsikirjoitukset näyttävät kirjan toisenlaisen muodon."
+              },
+              {
+                "mita": "Postimuseo",
+                "tahdet": 2,
+                "selite": "Postimerkkien kautta pääsee viestien kulkemisen historiaan."
+              },
+              {
+                "mita": "Jousiammunta",
+                "tahdet": 3,
+                "selite": "Changlimithangissa kilpailuun liittyvät kannustus, laulu ja tanssi."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Maahantulo",
+                "teksti": "Selvitä viisumi ja matkan lupavaatimukset ennen lähtöä."
+              },
+              {
+                "otsikko": "Vuoristotiet",
+                "teksti": "Sateet ja maanvyöryt voivat haitata maantieyhteyksiä."
+              },
+              {
+                "otsikko": "Uskonnolliset kohteet",
+                "teksti": "Noudata pukeutumis- ja vierailuohjeita sekä anna toimituksille tilaa."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "kuvataide",
+      "nimi": "Käsissä syntyvä kaupunki",
+      "johdanto": "Kangas, paperi ja postimerkki näyttävät eri mittakaavoissa, miten tieto ja taito kulkevat Thimphussa.",
+      "tehtava": {
+        "kysymys": "Mistä raaka-aineesta perinteinen bhutanilainen paperi valmistetaan?",
+        "vaihtoehdot": [
+          "Daphne-pensaan kuoresta",
+          "Lampaan keritystä villasta",
+          "Riisin kuorituista jyvistä",
+          "Havupuun sulatetusta pihkasta"
+        ],
+        "oikea": 0,
+        "fakta": "Paperin raaka-aineena käytetään daphnen kuorta, josta käsityöprosessissa valmistetaan arkkeja."
+      },
+      "nostot": [
+        {
+          "otsikko": "Paperi alkaa pensaasta",
+          "teksti": "Bhutanilainen käsintehty paperi valmistetaan daphne-pensaan kuoresta. Thimphussa perinnettä voi seurata paperityöpajoissa, joissa kasviraaka-aineesta syntyy kirjoittamiseen sopiva arkki. Kaupungin kansalliskirjastossa säilytetään myös vanhoja käsintehdylle paperille valmistettuja tekstejä. Työpajan tuote ja kirjaston käsikirjoitus kuuluvat näin samaan pitkään taitoketjuun. Paperi näyttää valmiina yksinkertaiselta, vaikka sen lähtökohta on yllättävä: tämän arkin tie alkaa puuvillan tai teollisen sellun sijasta pensaasta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Thimphu"
+        },
+        {
+          "otsikko": "Kangas kertoo tekijästään",
+          "teksti": "Thimphun tekstiilimuseo käsittelee Bhutanin kudontaa sekä taitona että kulttuuriperintönä. Näyttelyissä esitellään loimi- ja kudekuviointia, uskonnollisia tekstiilejä ja kansallispukuja. Naisten kira ja miesten gho kuuluvat kokoelmiin, samoin kuninkaalliset vaatteet. Museon rinnalla perinne jatkuu kutojien työssä ja opetuksessa. Kankaassa huomio voi siirtyä vaatekappaleesta siihen, miten se on tehty: väri, kuvio ja kudontatapa kantavat eri tietoa, vaikka ne lopulta näkyvät yhdessä pinnassa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bhutan_Textile_Museum"
+        },
+        {
+          "otsikko": "Kirja puulevyjen välissä",
+          "teksti": "Kansalliskirjastossa kirja voi näyttää erilaiselta kuin kotona hyllyssä. Perinteisiä käsikirjoituksia säilytetään puulevyjen välissä, yhteen sidottuina. Tekstit ovat käsintehdyllä paperilla, ja kokoelmissa on dzongkhan- ja tiibetinkielistä aineistoa. Kirjastossa esitellään myös vanhaa painamista: vanhaa painolaitetta käytettiin kirjojen ja rukouslippujen valmistukseen. Kirjan muoto kertoo siis sen valmistustavasta. Sidonta pitää lehdet koossa, mutta puisten kansien sisällä säilyy samalla uskonnollista ja kirjallista perintöä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Thimphu"
+        },
+        {
+          "otsikko": "Postimerkillä on oma museo",
+          "teksti": "Thimphun pääpostitoimistossa toimii postimuseo, joka kertoo viestien kulusta Bhutanissa. Sen aiheita ovat varhaiset postinkuljettajat, postipalvelun kehittyminen ja postimerkit. Merkit ovat olleet maalle myös tapa kertoa kulttuuristaan maailmalle: niissä esiintyvät perinteet, luonto ja tärkeät tapahtumat. Museossa pienen paperipalan historia avautuu viestintäjärjestelmän historiaksi. Postimerkki ei ole vain maksu kirjeen kuljettamisesta. Se on myös kuva, jonka lähettäjä antaa matkustaa osoitteen mukana.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bhutan_Postal_Museum"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Simtokhan linnoitusluostari kuuluu laakson pääkaupunkia vanhempaan historiaan.",
+    "rajat": {
+      "pohjoinen": 27.44106,
+      "etela": 27.43506,
+      "lansi": 89.66604,
+      "ita": 89.67284
+    },
+    "kohteet": [
+      {
+        "nimi": "Simtokhan dzong",
+        "lat": 27.43806,
+        "lon": 89.66944
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Simtokhan dzong": {
+      "aika": "1600-luku",
+      "teksti": "Simtokhan dzong kohoaa Thimphun eteläpuolisella harjanteella. Sen sijainti liittyy laaksoon sekä kulkureitteihin, jotka johtavat Paron ja itäisen Bhutanin suuntiin. Dzong tarkoittaa linnoitusluostaria: samassa kokonaisuudessa on ollut sekä uskonnollisia että hallinnollisia tehtäviä. Simtokhan rakennutti 1600-luvulla Zhabdrung Ngawang Namgyal, joka yhdisti Bhutania.\n\nSisällä ja ulkoseinillä on kappeleita, maalauksia, rukouspyöriä ja liuskekivireliefejä. Ne kertovat rakennuksen uskonnollisesta käytöstä; linnoituksen historia ei näy vain muurien paksuudessa. Kokonaisuutta on korjattu ja laajennettu useaan otteeseen, joten nykyistä ulkoasua ei voi sellaisenaan siirtää menneisyyteen.\n\nIsoisän matkavuonna 1873 Simtokha oli jo vanha linnoitusluostari, mutta Thimphu ei ollut nykyinen pääkaupunki. Rakennukseen on myöhemmin liittynyt myös dzongkhan kielen opetusta. Historiallinen kohde antaa siten mahdollisuuden seurata sekä uskonnollisen paikan että oppimisen jatkuvuutta.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Paron lentoasema (PBH)",
+    "huomiot": [
+      "C-tekstiluonnos; B ja riippumattomat D/E/F ovat avoinna.",
+      "Kaikki 19 kuvaroolia ovat neljältä kentältään tyhjiä; erillinen kuvaputki täydentää.",
+      "Kartta partial: yksi oma WP-koordinaatti varmennettu, 6–8 kohteen portti avoin.",
+      "Sääauditointi avoin; saatiedot:null eikä ilmastolukuja käytetä.",
+      "Kevyen kuvauksen Aasian korkein -superlatiivia ei toisteta ilman riippumatonta korkeuden ja vertailujoukon varmennusta.",
+      "Simtokhan artikkelissa perustamisvuosi vaihtelee; käytetty 1600-lukua.",
+      "Tashichho Dzongin nykyinen jälleenrakennus, Memorial Chorten ja Buddha Dordenma jätetty kartasta: modernin tekijäketjun suoja ei varmennettu."
+    ]
+  }
+}
