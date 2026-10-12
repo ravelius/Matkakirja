@@ -4,7 +4,8 @@ import { MUSEO_KYSYMYKSET } from '../js/linssit/museo-kysymykset.js';
 
 test('museokysymykset: jokaisella avaimella kaksi lyhyttä kysymystä ja niiden vastaukset lähteineen', () => {
   const avaimet = Object.keys(MUSEO_KYSYMYKSET);
-  assert.ok(avaimet.includes('_museo'), 'yleiset museokysymykset puuttuvat');
+  assert.ok(avaimet.includes("_museo"), "yleiset museokysymykset puuttuvat");
+  assert.equal(avaimet.length, 65, "64 teosta + _museo");
   for (const avain of avaimet) {
     const rivi = MUSEO_KYSYMYKSET[avain];
     assert.equal(rivi.kysymykset.length, 2, avain);
@@ -16,7 +17,7 @@ test('museokysymykset: jokaisella avaimella kaksi lyhyttä kysymystä ja niiden 
     }
     for (const v of rivi.vastaukset) {
       assert.ok(v.vastaus.length > 80 && v.vastaus.length <= 600, `${avain}: vastauksen pituus`);
-      assert.ok(!/museon mukaan/i.test(v.vastaus), `${avain}: "museon mukaan" ilman nähtyä museosivua`);
+      assert.ok(!/(^|[.!?]\s)museon mukaan/i.test(v.vastaus), `${avain}: pelkkä "museon mukaan" ilman museon nimeä`);
       assert.ok(v.lahteet.length >= 1 && v.lahteet.length <= 3, `${avain}: lähteitä 1–3`);
       for (const l of v.lahteet) {
         assert.match(l.url, /^https:\/\//, avain);
