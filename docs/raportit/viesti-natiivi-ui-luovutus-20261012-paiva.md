@@ -39,5 +39,9 @@ Ajoskriptit tämän session scratchpadissa: /private/tmp/claude-502/-Users-Share
   439ce04a2 (wt/proto-natiivi-ui-napitkuulto). PT:n päätös: paperipinnat, ISS LCD/kamera ja lautapelin kytkimet ennallaan; astronautin
   ▾ ja ISS-ohjauksen nahkanapit kuulto (tehty); pikkukuvat kiinteät. Kuvat: napitkuulto-ajo.sh (nyk: APPDIR=lokit/natiivi-ui-app-metro
   NIMI=nyk HAARA=natiivi-ui/metro-vapaa-183; uusi: kaanna + iphone/ipad) → linnan jälkeen samaan arkkiin kohta 2 + d.
+- **Aarrekysymys päällimmäiseksi** (LT retkikunta, PT, 184): natiivi-ui/kysymys-paalle-184 d84cd1552 (wt/proto-natiivi-ui-kysymys):
+  Kysymys.Avattu sulkee nostokortin ja chatin. Testataan samalla käännöksellä kuin napit (napitkuulto-ajo.sh kaanna = molemmat
+  haarat; kysymys-ajo.sh iphone|ipad + sk-kysymys*.txt).
+- Linnahaara: natiivi-ui/linna-kuulto-184 pohjattu 4eccb3a27:ään → c9b9158eb; Siirtoseppä yhdistää itse SHA:n saatuaan.
 - Julkaisijan ikkuna ~15.05: 1) linna-kuulto 2) aarre-lajit (aarrekartta-ajo.sh) 3) asettelutesti (taidehalli-parit.sh).
 - **184**: varivakiot 2c2054d8a + web #4482; museo-nyt-184 b2599db7f; Pelikoodarin säädin-paperi 028764614.
