@@ -1,0 +1,1476 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "kingstown",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e12-kingstown-L2-d08ff60aa1",
+      "galleryImageID": "e12-kingstown-L2-d08ff60aa1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen.",
+        "lyhyt": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen.",
+        "lyhyt": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2df9ab161871845b32a7325447d5ac7c13c4679d4ad8bf825667baec809b6779",
+      "exportSHA256": "c51f0a0ad8512411ec6303c65d8821b46ac5b37e55bdae68ada6a0c60d9ca231",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+        "semanticContextSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+        "subjectTitle": "Bounty ei tuonut leipäpuita perille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L2-d08ff60aa1/original.png",
+            "nativeSHA256": "2df9ab161871845b32a7325447d5ac7c13c4679d4ad8bf825667baec809b6779",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "William Blighin Bounty-matkan tehtävänä oli hakea Tahitilta leipäpuita Länsi-Intiaan. Kapina keskeytti matkan, mutta kasvien kuljetusyritys jatkui. Bligh purjehti myöhemmin uudelleen Tahitille Providencella ja toi kasvit Kingstowniin. Puutarhan hoitaja Alexander Anderson huolehti niistä määränpäässä. Puutarhassa on edelleen kloonijälkeläinen yhdestä tuodusta leipäpuusta. Merimatkan jälki ei siis ole pelkkä tapahtuma asiakirjassa, vaan kasvilinja, jota on jatkettu lisäämällä alkuperäisestä puusta uusia yksilöitä.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "https://en.wikipedia.org/wiki/William_Bligh"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L2/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural botanical close view of a breadfruit branch with its large lobed green leaves and an unripe green breadfruit. Accurate Artocarpus altilis plant morphology, naturally irregular leaf veins and green fruit surface, no ship, historical scene, plaque or claim that this is a documented descendant tree. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Bounty ei tuonut leipäpuita perille",
+                "teksti": "William Blighin Bounty-matkan tehtävänä oli hakea Tahitilta leipäpuita Länsi-Intiaan. Kapina keskeytti matkan, mutta kasvien kuljetusyritys jatkui. Bligh purjehti myöhemmin uudelleen Tahitille Providencella ja toi kasvit Kingstowniin. Puutarhan hoitaja Alexander Anderson huolehti niistä määränpäässä. Puutarhassa on edelleen kloonijälkeläinen yhdestä tuodusta leipäpuusta. Merimatkan jälki ei siis ole pelkkä tapahtuma asiakirjassa, vaan kasvilinja, jota on jatkettu lisäämällä alkuperäisestä puusta uusia yksilöitä.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L2-d08ff60aa1/original.png",
+              "detail": "original",
+              "observations": "Oksassa vihreä leipäpuun hedelmä ja suuria syvään liuskaisia lehtiä. Hedelmälle ominainen monikulmainen pinta vaihtelee koon, kuluman ja värin mukaan; lehtisuonet sekä varren liittyminen uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Leipäpuun hedelmä ja lehdet liittyvät L2-noston historiallisten kasvinsiirtojen aiheeseen. Kuvateksti ei väitä kuvaa Kingstownin tietyn kloonipuun valokuvaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+        "fileSHA256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e12-kingstown-L2-d08ff60aa1",
+          "sha256": "2df9ab161871845b32a7325447d5ac7c13c4679d4ad8bf825667baec809b6779",
+          "verdict": "accepted",
+          "reason": "Leipäpuun hedelmä ja lehdet liittyvät L2-noston historiallisten kasvinsiirtojen aiheeseen. Kuvateksti ei väitä kuvaa Kingstownin tietyn kloonipuun valokuvaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L2-d08ff60aa1/original.png",
+            "nativeSHA256": "2df9ab161871845b32a7325447d5ac7c13c4679d4ad8bf825667baec809b6779",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Leipäpuun havainnekuva historiallisten kasvinsiirtojen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "William Blighin Bounty-matkan tehtävänä oli hakea Tahitilta leipäpuita Länsi-Intiaan. Kapina keskeytti matkan, mutta kasvien kuljetusyritys jatkui. Bligh purjehti myöhemmin uudelleen Tahitille Providencella ja toi kasvit Kingstowniin. Puutarhan hoitaja Alexander Anderson huolehti niistä määränpäässä. Puutarhassa on edelleen kloonijälkeläinen yhdestä tuodusta leipäpuusta. Merimatkan jälki ei siis ole pelkkä tapahtuma asiakirjassa, vaan kasvilinja, jota on jatkettu lisäämällä alkuperäisestä puusta uusia yksilöitä.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "https://en.wikipedia.org/wiki/William_Bligh"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L2/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural botanical close view of a breadfruit branch with its large lobed green leaves and an unripe green breadfruit. Accurate Artocarpus altilis plant morphology, naturally irregular leaf veins and green fruit surface, no ship, historical scene, plaque or claim that this is a documented descendant tree. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Bounty ei tuonut leipäpuita perille",
+                "teksti": "William Blighin Bounty-matkan tehtävänä oli hakea Tahitilta leipäpuita Länsi-Intiaan. Kapina keskeytti matkan, mutta kasvien kuljetusyritys jatkui. Bligh purjehti myöhemmin uudelleen Tahitille Providencella ja toi kasvit Kingstowniin. Puutarhan hoitaja Alexander Anderson huolehti niistä määränpäässä. Puutarhassa on edelleen kloonijälkeläinen yhdestä tuodusta leipäpuusta. Merimatkan jälki ei siis ole pelkkä tapahtuma asiakirjassa, vaan kasvilinja, jota on jatkettu lisäämällä alkuperäisestä puusta uusia yksilöitä.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L2-d08ff60aa1/original.png",
+              "detail": "original",
+              "observations": "Oksassa vihreä leipäpuun hedelmä ja suuria syvään liuskaisia lehtiä. Hedelmälle ominainen monikulmainen pinta vaihtelee koon, kuluman ja värin mukaan; lehtisuonet sekä varren liittyminen uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:30:17.014976+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png?t=c51f0a0ad8512411",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+        "sha256": "c51f0a0ad8512411ec6303c65d8821b46ac5b37e55bdae68ada6a0c60d9ca231",
+        "bytes": 2487071,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-kingstown-L2-d08ff60aa1",
+        "nativeSHA256": "2df9ab161871845b32a7325447d5ac7c13c4679d4ad8bf825667baec809b6779",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:31:29.867008+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L2-d08ff60aa1-2df9ab161871.png",
+        "sha256": "c51f0a0ad8512411ec6303c65d8821b46ac5b37e55bdae68ada6a0c60d9ca231",
+        "bytes": 2487071,
+        "SHAReadAt": "2026-10-12T18:30:56.665590+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2df9ab161871845b32a7325447d5ac7c13c4679d4ad8bf825667baec809b6779",
+        "rgbPixelSHA256": "de374795f1f9c382be6774267d11ea27f1cf4a31db19529d3f45eb3c6886e654",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0",
+      "contextAfterSHA256": "0912c0d23e0a87150bbe03ad5ef0ab901067e908365c94bc582a985fc874d5b0"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e12-kingstown-L3-425c8e3467",
+      "galleryImageID": "e12-kingstown-L3-425c8e3467",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen.",
+        "lyhyt": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen.",
+        "lyhyt": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "dd8dbb34f5ad5c894184007ee12ff9a2063a86ce50f2cd6ca407e3bc1607c1cb",
+      "exportSHA256": "94ed93ecb680300cf0aeea92d46b9b4f52d1b916543d68adec1cfc33a9bfc2b7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+        "semanticContextSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+        "subjectTitle": "Kaneli kulki saarien välillä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L3-425c8e3467/original.png",
+            "nativeSHA256": "dd8dbb34f5ad5c894184007ee12ff9a2063a86ce50f2cd6ca407e3bc1607c1cb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin puutarhan kasvit eivät saapuneet vain Britannian kautta. Ranskalaiset kasvitieteilijät ja Karibian saarten toimijat osallistuivat kasvinsiirtoihin esimerkiksi Martiniquelta, Guadeloupelta ja Cayennesta. Kanelia lähetettiin Guadeloupelta puutarhan varhaisiin kokoelmiin. Muualta saatiin myös Aasian kasveja ja Kiinasta tulleita siemeniä Kew’n puutarhan kautta. Paikallinen kasvatusalue kuului laajaan verkostoon: eri paikoissa kasvaneita kasveja kokeiltiin uudessa ympäristössä ja niiden hyötyä arvioitiin.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L3/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. Close natural botanical and material still life of cinnamon bark: several irregular curled brown cinnamon quills with an unbranded background, subtle real fibrous bark layers, naturally varied shape and soft light. No labels, packaging, logos, map or claim to a particular tree in the historical garden. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kaneli kulki saarien välillä",
+                "teksti": "Kingstownin puutarhan kasvit eivät saapuneet vain Britannian kautta. Ranskalaiset kasvitieteilijät ja Karibian saarten toimijat osallistuivat kasvinsiirtoihin esimerkiksi Martiniquelta, Guadeloupelta ja Cayennesta. Kanelia lähetettiin Guadeloupelta puutarhan varhaisiin kokoelmiin. Muualta saatiin myös Aasian kasveja ja Kiinasta tulleita siemeniä Kew’n puutarhan kautta. Paikallinen kasvatusalue kuului laajaan verkostoon: eri paikoissa kasvaneita kasveja kokeiltiin uudessa ympäristössä ja niiden hyötyä arvioitiin.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L3-425c8e3467/original.png",
+              "detail": "original",
+              "observations": "Pöydällä eripaksuisia ruskeita kanelinkuorirullia ja irtonaisia kuoripaloja, taustalla vihreitä lehtiä. Rullien kerrokset, halkeamat ja reunat vaihtelevat uskottavasti. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kaneli on L3-nostossa nimetty kasviaihe. Kuva toimii yleishavainteena eikä todista Kingstownin puutarhan tiettyä kasvia tai historiallista siirtoerää. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+        "fileSHA256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e12-kingstown-L3-425c8e3467",
+          "sha256": "dd8dbb34f5ad5c894184007ee12ff9a2063a86ce50f2cd6ca407e3bc1607c1cb",
+          "verdict": "accepted",
+          "reason": "Kaneli on L3-nostossa nimetty kasviaihe. Kuva toimii yleishavainteena eikä todista Kingstownin puutarhan tiettyä kasvia tai historiallista siirtoerää. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L3-425c8e3467/original.png",
+            "nativeSHA256": "dd8dbb34f5ad5c894184007ee12ff9a2063a86ce50f2cd6ca407e3bc1607c1cb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Kanelin havainnekuva Kingstownin kasvinsiirtojen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "sourceText": "Kingstownin puutarhan kasvit eivät saapuneet vain Britannian kautta. Ranskalaiset kasvitieteilijät ja Karibian saarten toimijat osallistuivat kasvinsiirtoihin esimerkiksi Martiniquelta, Guadeloupelta ja Cayennesta. Kanelia lähetettiin Guadeloupelta puutarhan varhaisiin kokoelmiin. Muualta saatiin myös Aasian kasveja ja Kiinasta tulleita siemeniä Kew’n puutarhan kautta. Paikallinen kasvatusalue kuului laajaan verkostoon: eri paikoissa kasvaneita kasveja kokeiltiin uudessa ympäristössä ja niiden hyötyä arvioitiin.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines_Botanic_Gardens"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/kingstown/L3/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. Close natural botanical and material still life of cinnamon bark: several irregular curled brown cinnamon quills with an unbranded background, subtle real fibrous bark layers, naturally varied shape and soft light. No labels, packaging, logos, map or claim to a particular tree in the historical garden. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+              "contentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kaneli kulki saarien välillä",
+                "teksti": "Kingstownin puutarhan kasvit eivät saapuneet vain Britannian kautta. Ranskalaiset kasvitieteilijät ja Karibian saarten toimijat osallistuivat kasvinsiirtoihin esimerkiksi Martiniquelta, Guadeloupelta ja Cayennesta. Kanelia lähetettiin Guadeloupelta puutarhan varhaisiin kokoelmiin. Muualta saatiin myös Aasian kasveja ja Kiinasta tulleita siemeniä Kew’n puutarhan kautta. Paikallinen kasvatusalue kuului laajaan verkostoon: eri paikoissa kasvaneita kasveja kokeiltiin uudessa ympäristössä ja niiden hyötyä arvioitiin.",
+                "wiki": "Saint_Vincent_and_the_Grenadines_Botanic_Gardens",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/assets/e12-kingstown-L3-425c8e3467/original.png",
+              "detail": "original",
+              "observations": "Pöydällä eripaksuisia ruskeita kanelinkuorirullia ja irtonaisia kuoripaloja, taustalla vihreitä lehtiä. Rullien kerrokset, halkeamat ja reunat vaihtelevat uskottavasti. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:29:48.406729+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png?t=94ed93ecb680300c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+        "sha256": "94ed93ecb680300cf0aeea92d46b9b4f52d1b916543d68adec1cfc33a9bfc2b7",
+        "bytes": 2404543,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-kingstown-L3-425c8e3467",
+        "nativeSHA256": "dd8dbb34f5ad5c894184007ee12ff9a2063a86ce50f2cd6ca407e3bc1607c1cb",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:31:28.253211+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/kingstown/e12-kingstown-L3-425c8e3467-dd8dbb34f5ad.png",
+        "sha256": "94ed93ecb680300cf0aeea92d46b9b4f52d1b916543d68adec1cfc33a9bfc2b7",
+        "bytes": 2404543,
+        "SHAReadAt": "2026-10-12T18:30:01.536485+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "dd8dbb34f5ad5c894184007ee12ff9a2063a86ce50f2cd6ca407e3bc1607c1cb",
+        "rgbPixelSHA256": "22994487245396305d5d761dc228837dddae671d866827398617927a9c8fc6c3",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450",
+      "contextAfterSHA256": "0b559b7316c229aaf7c7cb4c746ad3efe9ea3478bdce75dcc22ad4955e2ec450"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-kingstown-photo-09fd3fa86f4815c4",
+      "galleryImageID": "capital-cc-e12-kingstown-photo-09fd3fa86f4815c4",
+      "commonsFile": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
+        "suora": true,
+        "lahde": "giggel, Commons (CC BY 3.0)",
+        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "giggel, Commons (CC BY 3.0)",
+        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
+        "suora": true,
+        "lahde": "giggel, Commons (CC BY 3.0)",
+        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+      "exportSHA256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/e3ff4dcfacc4-original.jpg",
+      "dimensions": [
+        3000,
+        4000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+        "semanticContextSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+        "subjectTitle": "kingstown — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_Eucalyptus_tree_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/St._Vincent%2C_Karibik_-_Botanical_Garden_of_Kingstown_-_Eucalyptus_tree_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä giggel alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY 3.0 tiedostosivusta.",
+            "placeEvidence": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree",
+            "workLayer": "Luonnollinen puu, kasvillisuus ja taivas ovat pääaihe. Ei rakennusta, veistosta, muistomerkkiä tai muuta teosta pääaiheena. Paikka alkuperäisen tiedostosivun nimessä/kuvauksessa Botanical Garden of Kingstown.",
+            "visualInspection": "Katsottu alkuperäinen 3000×4000. Terävä luonnollinen vaalea puunrunko lehvästöineen; ei ihmisiä, lisättyjä tekstejä, vesileimoja tai pakkauksia. Pystymuoto ei ole PHOTO-hylkäysperuste. Kuvan vuoden 2012 ikää ei kutsuta oppaan tuoreeksi kuvaksi.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/e3ff4dcfacc4.html",
+            "sourceSha256": "6d5b9d48a47ec2c092e7ccf9e71d460f9eb3cce00d877e451d77ac29bb68dcb6"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg",
+                "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree"
+              ],
+              [
+                "Date",
+                "Taken on 26 February 2012"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161020073929/http://www.panoramio.com/photo/68396518"
+              ],
+              [
+                "Author",
+                "giggel"
+              ]
+            ],
+            "licenses": [
+              "CC BY 3.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              3000,
+              4000
+            ],
+            "actualDimensions": [
+              3000,
+              4000
+            ],
+            "pageSha256": "6d5b9d48a47ec2c092e7ccf9e71d460f9eb3cce00d877e451d77ac29bb68dcb6",
+            "nativeSha256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_Eucalyptus_tree_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-photo-eff458313565.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/e3ff4dcfacc4-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-photo-eff458313565.json",
+            "author": "giggel",
+            "authorFieldVerified": true,
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+            "sourceContentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Lähteen Description ja Panoramio-otsikko nimeävät Kingstownin kasvitieteellisen puutarhan. Aito puu ja kasvillisuus, pääaiheen runko/lehvästö teräviä ja luonnollisia; ei ihmisiä, tekstiä, logosommitelmaa tai ihmisteosta. 3000×4000 pystykuva sallittu PHOTO-paikkaan. Caption puu on lähteeseen sopiva eikä väitä tämänhetkistä tilaa; kuva2012."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+        "fileSHA256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg",
+          "sha256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+          "verdict": "accepted",
+          "reason": "Lähteen Description ja Panoramio-otsikko nimeävät Kingstownin kasvitieteellisen puutarhan. Aito puu ja kasvillisuus, pääaiheen runko/lehvästö teräviä ja luonnollisia; ei ihmisiä, tekstiä, logosommitelmaa tai ihmisteosta. 3000×4000 pystykuva sallittu PHOTO-paikkaan. Caption puu on lähteeseen sopiva eikä väitä tämänhetkistä tilaa; kuva2012.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg",
+                "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree"
+              ],
+              [
+                "Date",
+                "Taken on 26 February 2012"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161020073929/http://www.panoramio.com/photo/68396518"
+              ],
+              [
+                "Author",
+                "giggel"
+              ]
+            ],
+            "licenses": [
+              "CC BY 3.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              3000,
+              4000
+            ],
+            "actualDimensions": [
+              3000,
+              4000
+            ],
+            "pageSha256": "6d5b9d48a47ec2c092e7ccf9e71d460f9eb3cce00d877e451d77ac29bb68dcb6",
+            "nativeSha256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_Eucalyptus_tree_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-photo-eff458313565.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/e3ff4dcfacc4-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-photo-eff458313565.json",
+            "author": "giggel",
+            "authorFieldVerified": true,
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+            "sourceContentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg",
+        "sha256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_Eucalyptus_tree_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/St._Vincent%2C_Karibik_-_Botanical_Garden_of_Kingstown_-_Eucalyptus_tree_-_panoramio.jpg",
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 3000,
+        "height": 4000,
+        "originalSHA256": "09fd3fa86f4815c4535eb44e7571204b81cd2baf6b414fb0f59fb5b42e71dc70",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg",
+        "bytes": 4492237,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:27.906178+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg",
+        "lahde": "giggel, Commons (CC BY 3.0)",
+        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "giggel, Commons (CC BY 3.0)",
+        "selite": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "lyhyt": "Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef",
+      "contextAfterSHA256": "bb868a05a1e7f87837a12372a6ef384e0000e2c1197b8a8fac501a4dadc0cbef"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-kingstown-c1-700329447353b254",
+      "galleryImageID": "capital-cc-e12-kingstown-c1-700329447353b254",
+      "commonsFile": "St. Vincent, Karibik - Kingstown City - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
+        "suora": true,
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
+        "suora": true,
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+      "exportSHA256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/8c05836aac94-original.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+        "semanticContextSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+        "subjectTitle": "Kingstown",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Kingstown_City_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/St._Vincent%2C_Karibik_-_Kingstown_City_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä giggel alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY 3.0 tiedostosivusta.",
+            "placeEvidence": "St. Vincent, Karibik - Kingstown City",
+            "workLayer": "Aito laaja kaupungin hajautunut asettelu, luonnollinen metsäinen rinne ja satamaranta. Lukuisat rakennukset ovat pieniä osia kokonaismaisemaa; ei yksittäisen nimetyn suojatun rakennuksen tai nykytaideteoksen pääaiheista jäljennöstä. Description nimeää nimenomaisesti St.Vincent,Karibik,Kingstown City. Ei oletettua rakennusiän PD-statusta eikä yleistä FoP-väitettä.",
+            "visualInspection": "Alkuperäinen4000×3000 katsottu: lukuisat kaupungin rakennukset, rinteen asettelu, lehvästö ja satamaranta luettavia. Ei tunnistettavia kasvoja tai lisättyä tekstiä/vesileimaa/kehystä. Vähäisiä luonnollisia kaupan merkintöjä etäisenä kaupunkimaiseman sivuosana, ei mainos-/pakkauskuva.26.2.2012 kirjattu, ei tuore-opaskuvaksi.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/8c05836aac94.html",
+            "sourceSha256": "5186b2c9105509929ffe966ce036969bae3f94f38524498a6eebb395f27e1018",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+            "currentContentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description St. Vincent, Karibik - Kingstown City - panoramio.jpg",
+                "St. Vincent, Karibik - Kingstown City"
+              ],
+              [
+                "Date",
+                "Taken on 26 February 2012"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161020220317/http://www.panoramio.com/photo/68395999"
+              ],
+              [
+                "Author",
+                "giggel"
+              ]
+            ],
+            "licenses": [
+              "CC BY 3.0"
+            ],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "5186b2c9105509929ffe966ce036969bae3f94f38524498a6eebb395f27e1018",
+            "nativeSha256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Kingstown_City_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-c1-94fd60e1e507.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/8c05836aac94-original.jpg",
+            "localMatchesManifestSHA": true,
+            "manifestNativeSHADeclared": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+            "originalFetchedByThisJob": false,
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-selection.json",
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-c1-94fd60e1e507.json",
+            "author": "giggel",
+            "authorFieldVerified": true,
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa2012.",
+            "sourceContentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+            "rightsScope": "Laaja todellinen kaupunkiasettelu, ei yksittäisen suojatun nykyteoksen pääaiheista toisintoa; rajauskohtainen näkyvän teoskerroksen arvio, valokuvan kaupallinen CC BY3.0 erillinen."
+          },
+          "qaReason": "Aito laaja Kingstownin ranta-/kaupunki-/rinnenäkymä. Alkuperäinen Description yksilöi St.Vincent, Karibik, Kingstown City. Kaupungin todellinen hajautunut rakennuskanta ja metsäinen rinne erottuvat. Rakennusrivit ja kirkontornit ovat laajan kaupunginäkymän pieniä osia, eivät yksittäisen julkisivun tai nimetyn nykyteoksen pääkuva. Fyysiset pienet kauppamerkinnät ympäristön sivuosia, eivät overlay tai mainoskuvan pääaihe. Ei tunnistettavia kasvoja, vesileimaa tai kehystä.4000×3000 ja26.2.2012 varmennettu; ei väitetä tuoreeksi opaskuvaksi. Hyväksyntä koskee kokonaista kaupunkinäkymää, ei lupaa irrottaa siitä rakennus-/taidepääkuvaa. Ei rakennusiästä pääteltyä PD:tä tai maanlaajuista FOP-väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+        "fileSHA256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "St. Vincent, Karibik - Kingstown City - panoramio.jpg",
+          "sha256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+          "verdict": "accepted",
+          "reason": "Aito laaja Kingstownin ranta-/kaupunki-/rinnenäkymä. Alkuperäinen Description yksilöi St.Vincent, Karibik, Kingstown City. Kaupungin todellinen hajautunut rakennuskanta ja metsäinen rinne erottuvat. Rakennusrivit ja kirkontornit ovat laajan kaupunginäkymän pieniä osia, eivät yksittäisen julkisivun tai nimetyn nykyteoksen pääkuva. Fyysiset pienet kauppamerkinnät ympäristön sivuosia, eivät overlay tai mainoskuvan pääaihe. Ei tunnistettavia kasvoja, vesileimaa tai kehystä.4000×3000 ja26.2.2012 varmennettu; ei väitetä tuoreeksi opaskuvaksi. Hyväksyntä koskee kokonaista kaupunkinäkymää, ei lupaa irrottaa siitä rakennus-/taidepääkuvaa. Ei rakennusiästä pääteltyä PD:tä tai maanlaajuista FOP-väitettä.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:50:27.033197+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description St. Vincent, Karibik - Kingstown City - panoramio.jpg",
+                "St. Vincent, Karibik - Kingstown City"
+              ],
+              [
+                "Date",
+                "Taken on 26 February 2012"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161020220317/http://www.panoramio.com/photo/68395999"
+              ],
+              [
+                "Author",
+                "giggel"
+              ]
+            ],
+            "licenses": [
+              "CC BY 3.0"
+            ],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "5186b2c9105509929ffe966ce036969bae3f94f38524498a6eebb395f27e1018",
+            "nativeSha256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Kingstown_City_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-c1-94fd60e1e507.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/8c05836aac94-original.jpg",
+            "localMatchesManifestSHA": true,
+            "manifestNativeSHADeclared": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+            "originalFetchedByThisJob": false,
+            "candidateSourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-selection.json",
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-c1-94fd60e1e507.json",
+            "author": "giggel",
+            "authorFieldVerified": true,
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "All existing task clones e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/original URL aliases",
+            "sameNativeFileElsewhereInCity": [],
+            "captionFi": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa2012.",
+            "sourceContentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+            "rightsScope": "Laaja todellinen kaupunkiasettelu, ei yksittäisen suojatun nykyteoksen pääaiheista toisintoa; rajauskohtainen näkyvän teoskerroksen arvio, valokuvan kaupallinen CC BY3.0 erillinen."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "St. Vincent, Karibik - Kingstown City - panoramio.jpg",
+        "sha256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Kingstown_City_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/St._Vincent%2C_Karibik_-_Kingstown_City_-_panoramio.jpg",
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "700329447353b254cd30cdaa253ddb55b234aaaafec0be0442d66d533deb27d5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/c1-700329447353b254cd30.jpg",
+        "bytes": 6460559,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:50:40.153095+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg",
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "lyhyt": "Kingstownin laaja kaupunki- ja rinnenäkymä helmikuussa 2012.",
+        "tiedosto": "St. Vincent, Karibik - Kingstown City - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c",
+      "contextAfterSHA256": "8183a4f686549314e896874782c50fe28198fc52eeb459820b36d8b94699b03c"
+    },
+    {
+      "era": "e12",
+      "city": "kingstown",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-kingstown-n1-8e284ce6021da00b",
+      "galleryImageID": "capital-cc-e12-kingstown-n1-8e284ce6021da00b",
+      "commonsFile": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Kingstownin kasvitieteellinen puutarha\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Kingstownin kasvitieteellinen puutarha",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
+        "suora": true,
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
+        "suora": true,
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+      "exportSHA256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/d46c787c7317-original.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/kingstown/sisalto.json",
+      "sourceContentSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c48b0feb6a254d87436c58828b4a567b2d67cdc6b9668fce301cf8f676cedba4",
+        "semanticContextSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318",
+        "subjectTitle": "Kingstownin kasvitieteellinen puutarha",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/St._Vincent%2C_Karibik_-_Botanical_Garden_of_Kingstown_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä giggel alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY 3.0 tiedostosivusta.",
+            "placeEvidence": "St. Vincent, Karibik - Botanical Garden of Kingstown",
+            "workLayer": "Kasvillisuus ja tavallinen puutarhapolku pääaiheina; pieni paviljonki kaukana taustalla ei ole erikseen nimetty teospääaihe. Ei rakennuksen vanhuudesta pääteltyä PD-väitettä. Named-place source: Botanical Garden of Kingstown alkuperäisessä kuvauksessa.",
+            "visualInspection": "4000×3000 alkuperäinen katsottu: palmujen reunustama polku, punaiset kukat ja vihreä kasvillisuus; ei ihmisiä/kasvoja, vesileimaa, lisättyä tekstiä, pakkauksia tai veistoksia pääaiheena. Kuvausvuosi 2012 kirjattu, ei tuore-opaskuvaksi.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/d46c787c7317.html",
+            "sourceSha256": "1b33d306dcd87b2ecb83c6f7565f8c7bce116c182d98eebbf97791b606380825"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg",
+                "St. Vincent, Karibik - Botanical Garden of Kingstown"
+              ],
+              [
+                "Date",
+                "Taken on 26 February 2012"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161024033707/http://www.panoramio.com/photo/68395389"
+              ],
+              [
+                "Author",
+                "giggel"
+              ]
+            ],
+            "licenses": [
+              "CC BY 3.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "1b33d306dcd87b2ecb83c6f7565f8c7bce116c182d98eebbf97791b606380825",
+            "nativeSha256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-n1-65e8a051e345.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/d46c787c7317-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-n1-65e8a051e345.json",
+            "author": "giggel",
+            "authorFieldVerified": true,
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+            "sourceContentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Lähde nimeää Kingstownin kasvitieteellisen puutarhan. Aito kasvillisuuden ja tavallisen puutarhapolun näkymä, ei kasvoja tai lisättyjä merkintöjä. Etualan palmut ja kukkapensaat pääaiheita; pieni vihreä paviljonki näkyy kaukana polun päässä sivuosana eikä sitä kuvata erillisenä arkkitehtuurin pääaiheena. Ei veistosta tai nykytaidetta pääaiheessa. Ei rakennusikä-/maanlaajuista FOP-väitettä. Kuva2012, nykyhetkeä ei oleteta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+        "fileSHA256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Kingstownin kasvitieteellinen puutarha\"].kuvat[0]",
+          "commonsFile": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg",
+          "sha256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+          "verdict": "accepted",
+          "reason": "Lähde nimeää Kingstownin kasvitieteellisen puutarhan. Aito kasvillisuuden ja tavallisen puutarhapolun näkymä, ei kasvoja tai lisättyjä merkintöjä. Etualan palmut ja kukkapensaat pääaiheita; pieni vihreä paviljonki näkyy kaukana polun päässä sivuosana eikä sitä kuvata erillisenä arkkitehtuurin pääaiheena. Ei veistosta tai nykytaidetta pääaiheessa. Ei rakennusikä-/maanlaajuista FOP-väitettä. Kuva2012, nykyhetkeä ei oleteta.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg",
+                "St. Vincent, Karibik - Botanical Garden of Kingstown"
+              ],
+              [
+                "Date",
+                "Taken on 26 February 2012"
+              ],
+              [
+                "Source",
+                "https://web.archive.org/web/20161024033707/http://www.panoramio.com/photo/68395389"
+              ],
+              [
+                "Author",
+                "giggel"
+              ]
+            ],
+            "licenses": [
+              "CC BY 3.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "1b33d306dcd87b2ecb83c6f7565f8c7bce116c182d98eebbf97791b606380825",
+            "nativeSha256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_panoramio.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-n1-65e8a051e345.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/cc-search/d46c787c7317-original.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa-evidence/source-n1-65e8a051e345.json",
+            "author": "giggel",
+            "authorFieldVerified": true,
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+            "sourceContentSHA256": "67ce65f3eeddc85f42ceb176d3b94195787bc4af84071a62127b3b13e99b1fae",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/qa.json",
+            "sha256": "22a9f0fd7dbd79f1fec05058d3b447a67fe789f679469212109716c28578ab5c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/kingstown/illustration-qa-extra.json",
+            "sha256": "f8c511b654b3a91f4f23253c4aed5e3d30415fedb742ffd41c5258d04b619f06"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "kingstown",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Kingstownin kasvitieteellinen puutarha\"].kuvat[0]",
+        "commonsFile": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg",
+        "sha256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Botanical_Garden_of_Kingstown_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/St._Vincent%2C_Karibik_-_Botanical_Garden_of_Kingstown_-_panoramio.jpg",
+        "author": "giggel",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "8e284ce6021da00bf11e3d173a1cae5c8b88cda4de7886780829efa4fb57ce80",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg",
+        "bytes": 3817093,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:20:29.867787+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg",
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "giggel, Wikimedia Commons (CC BY 3.0)",
+        "selite": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "lyhyt": "Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.",
+        "tiedosto": "St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d32acbf1cdb20106854a566e67882358ac25f05ebd6837284edd3ac88bd72dce",
+      "targetAfterSHA256": "c48b0feb6a254d87436c58828b4a567b2d67cdc6b9668fce301cf8f676cedba4",
+      "contextAfterSHA256": "fbf366fdbe61f79a148bd030a47f2aec317281ea6fd3bf6ec78ea55f35f33318"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

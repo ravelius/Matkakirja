@@ -1,0 +1,941 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "saintjohns",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e12-saintjohns-O4-0a57ed7930",
+      "galleryImageID": "e12-saintjohns-O4-0a57ed7930",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva maissijauhosta valmistetusta fungeesta.",
+        "lyhyt": "Havainnekuva maissijauhosta valmistetusta fungeesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva maissijauhosta valmistetusta fungeesta.",
+        "lyhyt": "Havainnekuva maissijauhosta valmistetusta fungeesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+      "exportSHA256": "394cfb1e9c848c4fc8bd4f0bb8c654b166c85e3a723196079d130cec9315226e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-O4-0a57ed7930/original.png",
+            "nativeSHA256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva maissijauhosta valmistetusta fungeesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Antigua_and_Barbuda_cuisine"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/O4/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A simple white ceramic plate holding a modest mound of cooked yellow cornmeal fungee, with a soft dense polenta-like texture. Neutral ordinary tabletop, close view. Show the food itself without claiming a particular restaurant or adding an invented pepperpot recipe. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-O4-0a57ed7930/original.png",
+              "detail": "original",
+              "observations": "Vaalealla lautasella keltainen pehmeä maissijauhoannos. Hieno rakeisuus, lusikan jäljet ja ruoan kosteus luontevia; astian reuna ehjä. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Maissijauhosta tehty polentamainen ruoka vastaa O4:n fungee-kuvausta ja faktapohjaa. Rehellinen havainne ei lisää pepperpotin keksittyä reseptiä. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva maissijauhosta valmistetusta fungeesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+        "fileSHA256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e12-saintjohns-O4-0a57ed7930",
+          "sha256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+          "verdict": "accepted",
+          "reason": "Maissijauhosta tehty polentamainen ruoka vastaa O4:n fungee-kuvausta ja faktapohjaa. Rehellinen havainne ei lisää pepperpotin keksittyä reseptiä. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-O4-0a57ed7930/original.png",
+            "nativeSHA256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva maissijauhosta valmistetusta fungeesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "sourceText": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Antigua_and_Barbuda_cuisine"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/saintjohns/O4/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A simple white ceramic plate holding a modest mound of cooked yellow cornmeal fungee, with a soft dense polenta-like texture. Neutral ordinary tabletop, close view. Show the food itself without claiming a particular restaurant or adding an invented pepperpot recipe. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+              "contentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Fungee on maissijauhosta valmistettu, polentaa muistuttava ruoka, ja sitä pidetään pepperpotin kanssa maan kansallisruokana. Paikallisessa keittiössä ovat tuttuja myös suolakala ja ducana. Aamiaisella voi tulla vastaan munakoiso, josta käytetään nimeä troba. Butter bread on pehmeä voinen leipä, jota syödään esimerkiksi juuston kanssa. Kaupungin ruokatorilta löytyvät kasvikset, liha ja tuore kala yhdistävät satamakierroksen saarikeittiön raaka-aineisiin.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/assets/e12-saintjohns-O4-0a57ed7930/original.png",
+              "detail": "original",
+              "observations": "Vaalealla lautasella keltainen pehmeä maissijauhoannos. Hieno rakeisuus, lusikan jäljet ja ruoan kosteus luontevia; astian reuna ehjä. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:38:50.264856+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png?t=394cfb1e9c848c4f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+        "sha256": "394cfb1e9c848c4fc8bd4f0bb8c654b166c85e3a723196079d130cec9315226e",
+        "bytes": 2229056,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-saintjohns-O4-0a57ed7930",
+        "nativeSHA256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:39:51.269234+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/saintjohns/e12-saintjohns-O4-0a57ed7930-92d979e2804c.png",
+        "sha256": "394cfb1e9c848c4fc8bd4f0bb8c654b166c85e3a723196079d130cec9315226e",
+        "bytes": 2229056,
+        "SHAReadAt": "2026-10-12T18:38:55.966675+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+        "rgbPixelSHA256": "9b9635605d8c305c5f99205d51dda26507c9ab1d92141fba2aad7c79873f5a08",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-saintjohns-photo-72bf118a45bfbb2d",
+      "galleryImageID": "capital-cc-e12-saintjohns-photo-72bf118a45bfbb2d",
+      "commonsFile": "AG-Stjohns-fort-james.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
+        "suora": true,
+        "lahde": "Balou46, Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "tiedosto": "AG-Stjohns-fort-james.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Balou46, Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "tiedosto": "AG-Stjohns-fort-james.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
+        "suora": true,
+        "lahde": "Balou46, Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "tiedosto": "AG-Stjohns-fort-james.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+      "exportSHA256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/saintjohns/3de557a72c4e9920f0a5d7d9d2116ca3fa8eadaa5813c558347f0b7837b657e2.jpg",
+      "dimensions": [
+        4672,
+        3104
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+        "semanticContextSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+        "subjectTitle": "saintjohns — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Balou46",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-fort-james.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/AG-Stjohns-fort-james.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Balou46 alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "Deutsch: Halbinsel nördlich des Deepwater Harbabour von Saint John's English: Peninsula north of Deepwater Harbabour from St. John's",
+            "workLayer": "Laaja meri ja satamaympäristö: tavallinen työvene ja sataman käyttörakenteet; linnakerakenteet hyvin etäisellä pienellä kukkulalla sivuosana. Ei yksittäistä nimettyä rakennus- tai nykytaideteosta pääaiheena, eikä rakennusiästä arvattua PD-statusta. Description sanoo Peninsula north of Deepwater Harbour from St.John’s; filename Fort James EI osoita linnakkeen identiteettiä, eikä sitä nimetty kuvatekstissä.",
+            "visualInspection": "Alkuperäinen katsottu: sininen meri, työvene ja niemi, ei tunnistettavia kasvoja/overlayta/vesileimaa/kehystä. Veneen nimi ja rahtikonttien kuljetusyhtiömerkinnät fyysisen satamaympäristön sivuosia; ei mainos- tai pakkauskuva. Ei väitetä vuoden2015 kuvaa tuoreeksi oppaaseen.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-search/64671f4e31b3.html",
+            "sourceSha256": "a686a052c5cc14b88bbe23a4f55cb61b239a78ee10933498d472e32c96be98b7"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-search/64671f4e31b3-original.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              4672,
+              3104
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-fort-james.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/434518304584cf941abf788a939d020b6171a0a862f82e564eda9ba52d89ed89.body",
+            "sourceSHA256": "a686a052c5cc14b88bbe23a4f55cb61b239a78ee10933498d472e32c96be98b7",
+            "authorsFromSource": [
+              "Balou46"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceFields": [
+              [
+                "Description AG-Stjohns-fort-james.jpg",
+                "Deutsch: Halbinsel nördlich des Deepwater Harbabour von Saint John's English: Peninsula north of Deepwater Harbabour from St. John's"
+              ],
+              [
+                "Date",
+                "29 November 2015, 18:25:31"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Balou46"
+              ],
+              [
+                "Date and time of data generation",
+                "18:25, 29 November 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "18:25, 29 November 2015"
+              ],
+              [
+                "DateTime subseconds",
+                "726"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeBoundary": "Explicit source Description supports St.John’s Deepwater Harbour; no Fort James identification from filename.",
+            "reviewedCandidateRecordSHA256": "0419a0436f13383ea685764edbb8a45323fa34066062a7d4c35f15893cba010e",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-selection.json",
+            "metadataRechecks": [
+              {
+                "checkedAt": "2026-10-12T19:53:45.861247+00:00",
+                "previousCaptionFi": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna2015.",
+                "captionFi": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+                "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
+              }
+            ],
+            "captionFiReviewed": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015."
+          },
+          "qaReason": "Aito Saint John’sin Deepwater Harbourin meri-/satamanäkymä katsottu. Vesi, työvene, laiturit ja käyttörakenteet pääaiheina; linnakerakenteet pienellä etäisellä kukkulalla sivuosassa, ei erillisen rakennus-/taideteoksen pääaihekuva. Ei luettavia kasvoja, lisättyä tekstiä, watermarkia tai kehystä. Veneen nimi ja konttien fyysiset kuljetusyhtiömerkinnät kuuluvat satamaympäristöön; tämä ei ole mainos-/tuotepakkauskuva. Description nimeää St.John’sin Deepwater Harbourin pohjoispuolisen niemen. Fort James -tiedostonimi ei yksin todista näkyvän linnakkeen identiteettiä; kuvateksti pysyy todetussa merimaisemassa. Balou46/Own work/CC BY-SA4.0,4672×3104 ja29.11.2015 varmennettu. PHOTOssa ei tuoreuspakkoa, eikä kuvaa nimetä nykyiseksi opas- tai linnakenäkymäksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+        "fileSHA256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "AG-Stjohns-fort-james.jpg",
+          "sha256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+          "verdict": "accepted",
+          "reason": "Aito Saint John’sin Deepwater Harbourin meri-/satamanäkymä katsottu. Vesi, työvene, laiturit ja käyttörakenteet pääaiheina; linnakerakenteet pienellä etäisellä kukkulalla sivuosassa, ei erillisen rakennus-/taideteoksen pääaihekuva. Ei luettavia kasvoja, lisättyä tekstiä, watermarkia tai kehystä. Veneen nimi ja konttien fyysiset kuljetusyhtiömerkinnät kuuluvat satamaympäristöön; tämä ei ole mainos-/tuotepakkauskuva. Description nimeää St.John’sin Deepwater Harbourin pohjoispuolisen niemen. Fort James -tiedostonimi ei yksin todista näkyvän linnakkeen identiteettiä; kuvateksti pysyy todetussa merimaisemassa. Balou46/Own work/CC BY-SA4.0,4672×3104 ja29.11.2015 varmennettu. PHOTOssa ei tuoreuspakkoa, eikä kuvaa nimetä nykyiseksi opas- tai linnakenäkymäksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-search/64671f4e31b3-original.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              4672,
+              3104
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-fort-james.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/434518304584cf941abf788a939d020b6171a0a862f82e564eda9ba52d89ed89.body",
+            "sourceSHA256": "a686a052c5cc14b88bbe23a4f55cb61b239a78ee10933498d472e32c96be98b7",
+            "authorsFromSource": [
+              "Balou46"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceFields": [
+              [
+                "Description AG-Stjohns-fort-james.jpg",
+                "Deutsch: Halbinsel nördlich des Deepwater Harbabour von Saint John's English: Peninsula north of Deepwater Harbabour from St. John's"
+              ],
+              [
+                "Date",
+                "29 November 2015, 18:25:31"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Balou46"
+              ],
+              [
+                "Date and time of data generation",
+                "18:25, 29 November 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "18:25, 29 November 2015"
+              ],
+              [
+                "DateTime subseconds",
+                "726"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeBoundary": "Explicit source Description supports St.John’s Deepwater Harbour; no Fort James identification from filename.",
+            "reviewedCandidateRecordSHA256": "0419a0436f13383ea685764edbb8a45323fa34066062a7d4c35f15893cba010e",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-selection.json",
+            "metadataRechecks": [
+              {
+                "checkedAt": "2026-10-12T19:53:45.861247+00:00",
+                "previousCaptionFi": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna2015.",
+                "captionFi": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+                "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
+              }
+            ],
+            "captionFiReviewed": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015."
+          },
+          "reviewedAt": "2026-10-12T19:43:33.681168+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "AG-Stjohns-fort-james.jpg",
+        "sha256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-fort-james.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/AG-Stjohns-fort-james.jpg",
+        "author": "Balou46",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4672,
+        "height": 3104,
+        "originalSHA256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
+        "bytes": 3969833,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:44:24.953913+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "AG-Stjohns-fort-james.jpg",
+        "lahde": "Balou46, Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Balou46, Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "lyhyt": "Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.",
+        "tiedosto": "AG-Stjohns-fort-james.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6",
+      "contextAfterSHA256": "872f86f84ddc3663b512874b08d1cf7d67e21b1553b3c285ca0c0692688f47a6"
+    },
+    {
+      "era": "e12",
+      "city": "saintjohns",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-saintjohns-c1-49a90da2f9e5770a",
+      "galleryImageID": "capital-cc-e12-saintjohns-c1-49a90da2f9e5770a",
+      "commonsFile": "AG-Stjohns-pano-01.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
+        "suora": true,
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "tiedosto": "AG-Stjohns-pano-01.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "tiedosto": "AG-Stjohns-pano-01.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
+        "suora": true,
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "tiedosto": "AG-Stjohns-pano-01.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+      "exportSHA256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/saintjohns/fd135f7cb47bd30dbbe89c25aaea21b6556f76ea6e7f6b2be365365e5905d437.jpg",
+      "dimensions": [
+        11008,
+        2522
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+      "sourceContentSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+        "semanticContextSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+        "subjectTitle": "Saint John's",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Balou46",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-pano-01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/AG-Stjohns-pano-01.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Balou46 alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "Deutsch: Pano St. John's",
+            "workLayer": "Laaja kaupungin ja ympäröivien kukkuloiden todellinen asettelu; rakennukset muodostavat hajautuneen kaupunkikokonaisuuden. Ei yksittäinen nimetty rakennus- tai nykytaideteos pääaiheena eikä rakennuksen iästä oletettu PD-statusta. Tiedoston Description ja St.John’s,Antigua and Barbuda-luokka todistavat paikan. Valokuvan Balou46/CC BY-SA4.0 on alkuperäisen tiedostosivun erillinen kuvaoikeus, ei oletus rakennustekijöiden lisenssistä.",
+            "visualInspection": "Alkuperäinen11008×2522 katsottu: todellinen kaupunkirakenne ja kukkulat; kadun ihmiset etäisiä, kasvot eivät luettavia. Fyysisiä kaupan kylttejä vähäisessä sivuosassa, ei mainos-/pakkauskuva. Ei lisättyä tekstiä/vesileimaa/kehystä. Päiväys29.11.2015 kirjattu; panoraman muoto sallittu C-kannessa.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-search/c37af3877cbf.html",
+            "sourceSha256": "e4787e6df6f2138fe4200dfd9a1924e8f9195fe8004e39ae1d3072a01c37bda0",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-search/c37af3877cbf-original.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              11008,
+              2522
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-pano-01.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/156188306533e7f85bad69ec447fddd356a0d61b539d3b5cdcfc913705d9489d.body",
+            "sourceSHA256": "e4787e6df6f2138fe4200dfd9a1924e8f9195fe8004e39ae1d3072a01c37bda0",
+            "authorsFromSource": [
+              "Balou46"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceFields": [
+              [
+                "Description AG-Stjohns-pano-01.jpg",
+                "Deutsch: Pano St. John's"
+              ],
+              [
+                "Date",
+                "29 November 2015, 22:06:25"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Balou46"
+              ],
+              [
+                "Date and time of data generation",
+                "22:06, 29 November 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "22:06, 29 November 2015"
+              ],
+              [
+                "DateTime subseconds",
+                "530"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "layoutScope": "Complete broad city layout; no isolated building or shop-sign crop approved.",
+            "reviewedCandidateRecordSHA256": "b450190b086f50a6a9533be3259cefc3e61f2cf97591b2c746060a309aeded08",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-selection.json",
+            "metadataRechecks": [
+              {
+                "checkedAt": "2026-10-12T19:53:45.879336+00:00",
+                "previousCaptionFi": "Saint John’sin laaja kaupunkipanoraama marraskuussa2015.",
+                "captionFi": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+                "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
+              }
+            ],
+            "captionFiReviewed": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015."
+          },
+          "qaReason": "Kokonainen laaja aito Saint John’sin kaupunkipanoraama katsottu. Satama, kadut, katot, puusto ja kaupungin ympäröivät kukkulat näyttävät todellisen maantieteellisen asettelun; rakennukset muodostavat hajautuneen kokonaisuuden, eikä yksittäinen nimetty omaperäinen nykyteos ole jäljennöspääaiheena. Ei luettavia kasvopiirteitä, päälle lisättyä tekstiä, watermarkia tai kehystä. Kaukaiset fyysiset liikekyltit ovat kaupunkiympäristön osia, ei mainos-/pakkauskuva. Description Pano St.John’s ja kaupungin lähdeluokittelu tukevat paikkaa. Balou46/Own work/CC BY-SA4.0,11008×2522 ja29.11.2015 varmennettu. Äärimmäinen panoraamasuhde ei ole C1:n automaattinen hylkäysperuste; hyväksyntä koskee tätä koko laajaa sommittelua. Yksittäisen rakennuksen/kyltin eristävä suurennus tarvitsee erillisen arvion. Ei nykytilan tuoreusväitettä eikä blanket-lupaa taustatalojen tekijänoikeuksista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+        "fileSHA256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "AG-Stjohns-pano-01.jpg",
+          "sha256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+          "verdict": "accepted",
+          "reason": "Kokonainen laaja aito Saint John’sin kaupunkipanoraama katsottu. Satama, kadut, katot, puusto ja kaupungin ympäröivät kukkulat näyttävät todellisen maantieteellisen asettelun; rakennukset muodostavat hajautuneen kokonaisuuden, eikä yksittäinen nimetty omaperäinen nykyteos ole jäljennöspääaiheena. Ei luettavia kasvopiirteitä, päälle lisättyä tekstiä, watermarkia tai kehystä. Kaukaiset fyysiset liikekyltit ovat kaupunkiympäristön osia, ei mainos-/pakkauskuva. Description Pano St.John’s ja kaupungin lähdeluokittelu tukevat paikkaa. Balou46/Own work/CC BY-SA4.0,11008×2522 ja29.11.2015 varmennettu. Äärimmäinen panoraamasuhde ei ole C1:n automaattinen hylkäysperuste; hyväksyntä koskee tätä koko laajaa sommittelua. Yksittäisen rakennuksen/kyltin eristävä suurennus tarvitsee erillisen arvion. Ei nykytilan tuoreusväitettä eikä blanket-lupaa taustatalojen tekijänoikeuksista.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-search/c37af3877cbf-original.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              11008,
+              2522
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-pano-01.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/156188306533e7f85bad69ec447fddd356a0d61b539d3b5cdcfc913705d9489d.body",
+            "sourceSHA256": "e4787e6df6f2138fe4200dfd9a1924e8f9195fe8004e39ae1d3072a01c37bda0",
+            "authorsFromSource": [
+              "Balou46"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceFields": [
+              [
+                "Description AG-Stjohns-pano-01.jpg",
+                "Deutsch: Pano St. John's"
+              ],
+              [
+                "Date",
+                "29 November 2015, 22:06:25"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Balou46"
+              ],
+              [
+                "Date and time of data generation",
+                "22:06, 29 November 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "22:06, 29 November 2015"
+              ],
+              [
+                "DateTime subseconds",
+                "530"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
+            "currentContentSHA256": "1b4e08c38ad9594c5a640eebfa0a08d4a11432a4e6c9ec0fba9b1657283732be",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "layoutScope": "Complete broad city layout; no isolated building or shop-sign crop approved.",
+            "reviewedCandidateRecordSHA256": "b450190b086f50a6a9533be3259cefc3e61f2cf97591b2c746060a309aeded08",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/cc-selection.json",
+            "metadataRechecks": [
+              {
+                "checkedAt": "2026-10-12T19:53:45.879336+00:00",
+                "previousCaptionFi": "Saint John’sin laaja kaupunkipanoraama marraskuussa2015.",
+                "captionFi": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+                "change": "Only spacing before the year; source, credit, license, dimensions and visually inspected bytes unchanged."
+              }
+            ],
+            "captionFiReviewed": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015."
+          },
+          "reviewedAt": "2026-10-12T19:50:15.629835+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/qa.json",
+            "sha256": "01e9c405e86cf678d2e03ac1f2349c5098c28839cb7ffb0bf25f1db5b0e67f0a"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/saintjohns/illustration-qa-extra.json",
+            "sha256": "30fd907dc00b07b67d3ce14dedd16cc64c66479ee0ee86736cec06df1beb5e0a"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "saintjohns",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "AG-Stjohns-pano-01.jpg",
+        "sha256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AG-Stjohns-pano-01.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/AG-Stjohns-pano-01.jpg",
+        "author": "Balou46",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 11008,
+        "height": 2522,
+        "originalSHA256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
+        "bytes": 5140901,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:50:41.866317+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "AG-Stjohns-pano-01.jpg",
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "lyhyt": "Saint John’sin laaja kaupunkipanoraama marraskuussa 2015.",
+        "tiedosto": "AG-Stjohns-pano-01.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "166dc94921e2aa33bf3ddf2c42518d76eeed26d64ef95b72811effedd4aea96a",
+      "targetAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce",
+      "contextAfterSHA256": "e9139ba362eb26433ba7a4b7847eb6a491d28b197a33a0d8af32230a1b7dd5ce"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

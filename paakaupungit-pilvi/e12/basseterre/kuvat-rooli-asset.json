@@ -1,0 +1,849 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "basseterre",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e12-basseterre-O4-215f38fe48",
+      "galleryImageID": "e12-basseterre-O4-215f38fe48",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Saint Kittsin ja Nevisin suolakala-annoksesta lisäkkeineen.",
+        "lyhyt": "Havainnekuva Saint Kittsin ja Nevisin suolakala-annoksesta lisäkkeineen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Saint Kittsin ja Nevisin suolakala-annoksesta lisäkkeineen.",
+        "lyhyt": "Havainnekuva Saint Kittsin ja Nevisin suolakala-annoksesta lisäkkeineen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "31c641c3c53f17742b739ef42e733abe3e25cf53461cd2a403d65e70a7160d9c",
+      "exportSHA256": "542fc375759e7b145c0aacf60a99d27bc9ec90788552fadd12891cd566db60f6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "a6b757272031e1d427b592c8688718f733e180c96a67a55308ae6c1fa6a16112",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-O4-215f38fe48/original.png",
+            "nativeSHA256": "31c641c3c53f17742b739ef42e733abe3e25cf53461cd2a403d65e70a7160d9c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Saint Kittsin ja Nevisin suolakala-annoksesta lisäkkeineen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://www.gov.kn/skn-national-symbols/"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/O4/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural editorial food photograph of a traditional Saint Kitts and Nevis national meal on one plain ceramic plate: cooked stewed salted fish, spicy cooked plantain, seasoned cooked breadfruit and coconut dumplings. Each component visibly distinct and simply plated, with realistic cooked food texture. No raw fish and no invented restaurant branding. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-O4-215f38fe48/original.png",
+              "detail": "original",
+              "observations": "Lautasella haudutetun kalan hiutaleita kasvisten kanssa, paistettuja keittobanaaniviipaleita, vaaleita maustettuja hedelmälohkoja ja kookosmykyjä. Annoksen osat erottuvat, pintojen ja muotojen vaihtelu uskottavaa. Ei kasvoja, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Suolakala ja tekstissä nimetyt kolme lisäkettä vastaavat O4-jaksoa sekä faktapohjan kansallisannosta. Kuvateksti nimeää saarivaltion annoksen havainnekuvaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Saint Kittsin ja Nevisin suolakala-annoksesta lisäkkeineen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+        "fileSHA256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e12-basseterre-O4-215f38fe48",
+          "sha256": "31c641c3c53f17742b739ef42e733abe3e25cf53461cd2a403d65e70a7160d9c",
+          "verdict": "accepted",
+          "reason": "Suolakala ja tekstissä nimetyt kolme lisäkettä vastaavat O4-jaksoa sekä faktapohjan kansallisannosta. Kuvateksti nimeää saarivaltion annoksen havainnekuvaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-O4-215f38fe48/original.png",
+            "nativeSHA256": "31c641c3c53f17742b739ef42e733abe3e25cf53461cd2a403d65e70a7160d9c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Saint Kittsin ja Nevisin suolakala-annoksesta lisäkkeineen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://www.gov.kn/skn-national-symbols/"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/O4/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural editorial food photograph of a traditional Saint Kitts and Nevis national meal on one plain ceramic plate: cooked stewed salted fish, spicy cooked plantain, seasoned cooked breadfruit and coconut dumplings. Each component visibly distinct and simply plated, with realistic cooked food texture. No raw fish and no invented restaurant branding. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Saint Kittsin ja Nevisin kansallisannoksessa haudutettu suolakala saa rinnalleen mausteista keittobanaania, maustettua leipäpuun hedelmää ja kookosmykyjä. Annos yhdistää kalan ja kasviperäiset lisäkkeet yhdeksi ateriaksi. Suolakala ei tässä tarkoita suoraan merestä nostettua, vain kevyesti suolattua kalaa: hallituksen reseptissä se liotetaan ja keitetään ennen haudutusta. Kaupungin ruokapaikassa voi aloittaa kysymällä tätä kokonaisuutta tai päivän kalaa. Kansallisannos on koko saarivaltion ruokaa, ei vain Basseterreen oma erikoisuus.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-O4-215f38fe48/original.png",
+              "detail": "original",
+              "observations": "Lautasella haudutetun kalan hiutaleita kasvisten kanssa, paistettuja keittobanaaniviipaleita, vaaleita maustettuja hedelmälohkoja ja kookosmykyjä. Annoksen osat erottuvat, pintojen ja muotojen vaihtelu uskottavaa. Ei kasvoja, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:24:52.411596+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png?t=542fc375759e7b14",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+        "sha256": "542fc375759e7b145c0aacf60a99d27bc9ec90788552fadd12891cd566db60f6",
+        "bytes": 2560548,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-basseterre-O4-215f38fe48",
+        "nativeSHA256": "31c641c3c53f17742b739ef42e733abe3e25cf53461cd2a403d65e70a7160d9c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:28:16.595300+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-O4-215f38fe48-31c641c3c53f.png",
+        "sha256": "542fc375759e7b145c0aacf60a99d27bc9ec90788552fadd12891cd566db60f6",
+        "bytes": 2560548,
+        "SHAReadAt": "2026-10-12T18:30:00.870826+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "31c641c3c53f17742b739ef42e733abe3e25cf53461cd2a403d65e70a7160d9c",
+        "rgbPixelSHA256": "35b28aaafd021d09953acb700297e37fc55b32291f0729e9992a30721a8ccca6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "a6b757272031e1d427b592c8688718f733e180c96a67a55308ae6c1fa6a16112"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e12-basseterre-K3-46fd3bc294",
+      "galleryImageID": "e12-basseterre-K3-46fd3bc294",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Soitinhavainnekuva laulujen tekemisen aiheeseen.",
+        "lyhyt": "Soitinhavainnekuva laulujen tekemisen aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Soitinhavainnekuva laulujen tekemisen aiheeseen.",
+        "lyhyt": "Soitinhavainnekuva laulujen tekemisen aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "253ba6043a78a3114a17ae42d30bd1cff13fcbc1d376c31fa2cc3b9de5d37050",
+      "exportSHA256": "2588397e952ac53310edf9625cd9a9d2735a61c27bb86db955c4be679e28b4b7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
+        "semanticContextSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
+        "subjectTitle": "Basseterresta lauluntekijäksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K3-46fd3bc294/original.png",
+            "nativeSHA256": "253ba6043a78a3114a17ae42d30bd1cff13fcbc1d376c31fa2cc3b9de5d37050",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Soitinhavainnekuva laulujen tekemisen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Lauluntekijä Joan Armatrading syntyi Basseterressa, vietti osan lapsuudestaan Antigualla ja muutti myöhemmin vanhempiensa luo Birminghamiin. Hänen ensimmäiset laulunsa syntyivät pianolla, jonka äiti oli ostanut kotiin huonekaluksi. Kitaraa hän opetteli soittamaan itse. Armatradingin musiikissa kohtaavat muun muassa folk, rock, blues ja reggae, joten synnyinkaupunki ei lokeroi hänen taidettaan yhteen tyyliin. Hänen tarinansa yhdistää Karibian saaret ja Britannian myös lapsuuden ja omatoimisen musiikin tekemisen kautta.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Joan_Armatrading"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/K3/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial still life illustrating the ordinary instruments used to learn to write songs. Close composition of an unbranded old upright wooden piano with the keyboard cover completely closed and a plain acoustic guitar body beside it. Frame the scene so the entire guitar headstock and upper neck are outside the image; only the body and lower neck appear. No piano keys are visible. Plain neutral wall and soft side daylight. Smooth naturally worn wood, simple realistic materials and instrument proportions. This is a generalized instrument illustration, not Joan Armatrading's real home or belongings. No lettering, printed markings, brands, logos, musical notation, people, hands, faces, books, artworks, watermarks or borders. Landscape 3:2, preferred 1536x1024 PNG sRGB. No synthetic repeating grain.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Basseterresta lauluntekijäksi",
+                "teksti": "Lauluntekijä Joan Armatrading syntyi Basseterressa, vietti osan lapsuudestaan Antigualla ja muutti myöhemmin vanhempiensa luo Birminghamiin. Hänen ensimmäiset laulunsa syntyivät pianolla, jonka äiti oli ostanut kotiin huonekaluksi. Kitaraa hän opetteli soittamaan itse. Armatradingin musiikissa kohtaavat muun muassa folk, rock, blues ja reggae, joten synnyinkaupunki ei lokeroi hänen taidettaan yhteen tyyliin. Hänen tarinansa yhdistää Karibian saaret ja Britannian myös lapsuuden ja omatoimisen musiikin tekemisen kautta.",
+                "wiki": "Joan Armatrading",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K3-46fd3bc294/original.png",
+              "detail": "original",
+              "observations": "Lähikuva suljetusta puisesta pystypianosta ja akustisen kitaran rungosta sekä osasta kaulaa. Kitarassa kuusi kieltä ja kuusi tallakiinnitystä, lava kuvan ulkopuolella. Puusyyt, soitinliitokset ja heijastukset luontevia. Ei kasvoja, tekstiä, logoja tai vesileimaa.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Uusi soitinhavainne vastaa K3-noston piano- ja kitara-aihetta. Suljettu piano ja lavan rajaus poistavat aiempien versioiden rakenne- ja merkintävirheet. Kuvateksti ei esitä Armatradingin todellisia soittimia. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Soitinhavainnekuva laulujen tekemisen aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+        "fileSHA256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e12-basseterre-K3-46fd3bc294",
+          "sha256": "253ba6043a78a3114a17ae42d30bd1cff13fcbc1d376c31fa2cc3b9de5d37050",
+          "verdict": "accepted",
+          "reason": "Uusi soitinhavainne vastaa K3-noston piano- ja kitara-aihetta. Suljettu piano ja lavan rajaus poistavat aiempien versioiden rakenne- ja merkintävirheet. Kuvateksti ei esitä Armatradingin todellisia soittimia. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K3-46fd3bc294/original.png",
+            "nativeSHA256": "253ba6043a78a3114a17ae42d30bd1cff13fcbc1d376c31fa2cc3b9de5d37050",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Soitinhavainnekuva laulujen tekemisen aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "sourceText": "Lauluntekijä Joan Armatrading syntyi Basseterressa, vietti osan lapsuudestaan Antigualla ja muutti myöhemmin vanhempiensa luo Birminghamiin. Hänen ensimmäiset laulunsa syntyivät pianolla, jonka äiti oli ostanut kotiin huonekaluksi. Kitaraa hän opetteli soittamaan itse. Armatradingin musiikissa kohtaavat muun muassa folk, rock, blues ja reggae, joten synnyinkaupunki ei lokeroi hänen taidettaan yhteen tyyliin. Hänen tarinansa yhdistää Karibian saaret ja Britannian myös lapsuuden ja omatoimisen musiikin tekemisen kautta.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Joan_Armatrading"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/basseterre/K3/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial still life illustrating the ordinary instruments used to learn to write songs. Close composition of an unbranded old upright wooden piano with the keyboard cover completely closed and a plain acoustic guitar body beside it. Frame the scene so the entire guitar headstock and upper neck are outside the image; only the body and lower neck appear. No piano keys are visible. Plain neutral wall and soft side daylight. Smooth naturally worn wood, simple realistic materials and instrument proportions. This is a generalized instrument illustration, not Joan Armatrading's real home or belongings. No lettering, printed markings, brands, logos, musical notation, people, hands, faces, books, artworks, watermarks or borders. Landscape 3:2, preferred 1536x1024 PNG sRGB. No synthetic repeating grain.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+              "contentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Basseterresta lauluntekijäksi",
+                "teksti": "Lauluntekijä Joan Armatrading syntyi Basseterressa, vietti osan lapsuudestaan Antigualla ja muutti myöhemmin vanhempiensa luo Birminghamiin. Hänen ensimmäiset laulunsa syntyivät pianolla, jonka äiti oli ostanut kotiin huonekaluksi. Kitaraa hän opetteli soittamaan itse. Armatradingin musiikissa kohtaavat muun muassa folk, rock, blues ja reggae, joten synnyinkaupunki ei lokeroi hänen taidettaan yhteen tyyliin. Hänen tarinansa yhdistää Karibian saaret ja Britannian myös lapsuuden ja omatoimisen musiikin tekemisen kautta.",
+                "wiki": "Joan Armatrading",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/assets/e12-basseterre-K3-46fd3bc294/original.png",
+              "detail": "original",
+              "observations": "Lähikuva suljetusta puisesta pystypianosta ja akustisen kitaran rungosta sekä osasta kaulaa. Kitarassa kuusi kieltä ja kuusi tallakiinnitystä, lava kuvan ulkopuolella. Puusyyt, soitinliitokset ja heijastukset luontevia. Ei kasvoja, tekstiä, logoja tai vesileimaa.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:26:39.437872+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png?t=2588397e952ac533",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+        "sha256": "2588397e952ac53310edf9625cd9a9d2735a61c27bb86db955c4be679e28b4b7",
+        "bytes": 2545361,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-basseterre-K3-46fd3bc294",
+        "nativeSHA256": "253ba6043a78a3114a17ae42d30bd1cff13fcbc1d376c31fa2cc3b9de5d37050",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:28:18.168564+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/basseterre/e12-basseterre-K3-46fd3bc294-253ba6043a78.png",
+        "sha256": "2588397e952ac53310edf9625cd9a9d2735a61c27bb86db955c4be679e28b4b7",
+        "bytes": 2545361,
+        "SHAReadAt": "2026-10-12T18:30:01.007906+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "253ba6043a78a3114a17ae42d30bd1cff13fcbc1d376c31fa2cc3b9de5d37050",
+        "rgbPixelSHA256": "8c8f69f29a24a27b6cdfec4a98e72375381a9410c4a615a1a48f90d400449022",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "targetAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
+      "contextAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320"
+    },
+    {
+      "era": "e12",
+      "city": "basseterre",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-basseterre-photo-dbbb17bcbf414111",
+      "galleryImageID": "capital-cc-e12-basseterre-photo-dbbb17bcbf414111",
+      "commonsFile": "Basseterre from sea.JPG",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/photo-dbbb17bcbf414111613f.jpg",
+        "suora": true,
+        "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "lyhyt": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "lyhyt": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/photo-dbbb17bcbf414111613f.jpg",
+        "suora": true,
+        "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "lyhyt": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "dbbb17bcbf414111613fa9f9a677bd4f23c2c0af9f8974715e0afd287274e12a",
+      "exportSHA256": "dbbb17bcbf414111613fa9f9a677bd4f23c2c0af9f8974715e0afd287274e12a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/photo-dbbb17bcbf414111613f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/photo-dbbb17bcbf414111613f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/basseterre/31fab739ff2acd5fa54069ce58ec197303964f6da6df6f25c5368d34b285d5fb.jpg",
+      "dimensions": [
+        4320,
+        3240
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
+      "sourceContentSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
+        "semanticContextSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
+        "subjectTitle": "basseterre — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Gertjan R.",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Basseterre_from_sea.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Gertjan R. alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+            "workLayer": "Pääkohde on luonnollinen meri ja pilvitaivas; kaupungin rakennukset muodostavat etäisen rantaviivan, ei yhden nimetyn suojatun rakennuksen tai nykytaideteoksen jäljennöstä. Ei rakennusten iästä johdettua PD-väitettä eikä yleistä FoP-lupaa. Lähteen Basseterre from sea -nimi/Description ja kaupunkiluokka sekä katsottu merinäkymä osoittavat kaupungin.",
+            "visualInspection": "Alkuperäinen katsottu: meri, pilvet, kaukana kaupungin ranta ja linnut. Ei tunnistettavia kasvoja, pääaiheisia mainoksia tai lisättyä tekstiä/vesileimaa/kehystä. Kaupunkiranta jonkin verran pehmeä, meri ja taivas luettavia;2014 eikä väitetä tuoreeksi oppaaseen.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-search/ddd3878cc487.html",
+            "sourceSha256": "117d8f25b7976f940d4e29d7945b3316729f7c4aacd68c72734000d264bb13bb"
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-96a962ec5ed93e60/original.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-96a962ec5ed93e60/source.html",
+            "sourceHTMLSHA256": "117d8f25b7976f940d4e29d7945b3316729f7c4aacd68c72734000d264bb13bb",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea.JPG",
+            "sourceDescription": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+            "sourceDate": "5 July 2014, 13:02:50",
+            "author": "Gertjan R.",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4320,
+            "height": 3240,
+            "rightsEvidence": {
+              "photoLicense": "Tekijä Gertjan R. alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+              "placeEvidence": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+              "workLayer": "Pääkohde on luonnollinen meri ja pilvitaivas; kaupungin rakennukset muodostavat etäisen rantaviivan, ei yhden nimetyn suojatun rakennuksen tai nykytaideteoksen jäljennöstä. Ei rakennusten iästä johdettua PD-väitettä eikä yleistä FoP-lupaa. Lähteen Basseterre from sea -nimi/Description ja kaupunkiluokka sekä katsottu merinäkymä osoittavat kaupungin.",
+              "visualInspection": "Alkuperäinen katsottu: meri, pilvet, kaukana kaupungin ranta ja linnut. Ei tunnistettavia kasvoja, pääaiheisia mainoksia tai lisättyä tekstiä/vesileimaa/kehystä. Kaupunkiranta jonkin verran pehmeä, meri ja taivas luettavia;2014 eikä väitetä tuoreeksi oppaaseen.",
+              "previousGameUse": [],
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-search/ddd3878cc487.html",
+              "sourceSha256": "117d8f25b7976f940d4e29d7945b3316729f7c4aacd68c72734000d264bb13bb"
+            },
+            "sourceContentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+            "reviewedAt": "2026-10-12T19:57:51.933102+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-selection.json",
+            "selectionSHA256": "e27236774bbb8f51f29fcf06934bfe571f31a98fb898ed51ed1578e93f3fedab"
+          },
+          "qaReason": "Oma alkuperäiskatselu: todellinen Basseterre mereltä, luonnollinen meri/pilvitaivas/linnut ja rantakaupungin kokonaisuus. Lähteen Description yksilöi Basseterre, Saint Kitts and Nevis; ei muualta siirrettyä kaupunkia. Ranta pehmeähkö mutta luettavissa, ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yksittäistä nykytaide-/arkkitehtuuriteosta pääaiheena. Valokuvatekijä Gertjan R. ja CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä,4320×3240/nativeSHA varmistettu. Caption heinäkuu2014 rehellinen; PHOTOlle ei lisätä O/TRAVELER-tuoreuspakkoa tai muun rakennuskannan blanket-oikeusväitettä. Kaupungissa eri tiedosto kuin muut valinnat."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+        "fileSHA256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Basseterre from sea.JPG",
+          "sha256": "dbbb17bcbf414111613fa9f9a677bd4f23c2c0af9f8974715e0afd287274e12a",
+          "verdict": "accepted",
+          "reason": "Oma alkuperäiskatselu: todellinen Basseterre mereltä, luonnollinen meri/pilvitaivas/linnut ja rantakaupungin kokonaisuus. Lähteen Description yksilöi Basseterre, Saint Kitts and Nevis; ei muualta siirrettyä kaupunkia. Ranta pehmeähkö mutta luettavissa, ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yksittäistä nykytaide-/arkkitehtuuriteosta pääaiheena. Valokuvatekijä Gertjan R. ja CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä,4320×3240/nativeSHA varmistettu. Caption heinäkuu2014 rehellinen; PHOTOlle ei lisätä O/TRAVELER-tuoreuspakkoa tai muun rakennuskannan blanket-oikeusväitettä. Kaupungissa eri tiedosto kuin muut valinnat.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-96a962ec5ed93e60/original.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa-evidence/cc-96a962ec5ed93e60/source.html",
+            "sourceHTMLSHA256": "117d8f25b7976f940d4e29d7945b3316729f7c4aacd68c72734000d264bb13bb",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea.JPG",
+            "sourceDescription": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+            "sourceDate": "5 July 2014, 13:02:50",
+            "author": "Gertjan R.",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4320,
+            "height": 3240,
+            "rightsEvidence": {
+              "photoLicense": "Tekijä Gertjan R. alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+              "placeEvidence": "English: View from the water of Basseterre, Saint Kitts and Nevis",
+              "workLayer": "Pääkohde on luonnollinen meri ja pilvitaivas; kaupungin rakennukset muodostavat etäisen rantaviivan, ei yhden nimetyn suojatun rakennuksen tai nykytaideteoksen jäljennöstä. Ei rakennusten iästä johdettua PD-väitettä eikä yleistä FoP-lupaa. Lähteen Basseterre from sea -nimi/Description ja kaupunkiluokka sekä katsottu merinäkymä osoittavat kaupungin.",
+              "visualInspection": "Alkuperäinen katsottu: meri, pilvet, kaukana kaupungin ranta ja linnut. Ei tunnistettavia kasvoja, pääaiheisia mainoksia tai lisättyä tekstiä/vesileimaa/kehystä. Kaupunkiranta jonkin verran pehmeä, meri ja taivas luettavia;2014 eikä väitetä tuoreeksi oppaaseen.",
+              "previousGameUse": [],
+              "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-search/ddd3878cc487.html",
+              "sourceSha256": "117d8f25b7976f940d4e29d7945b3316729f7c4aacd68c72734000d264bb13bb"
+            },
+            "sourceContentSHA256": "b1cdd250aba418c97319c1b8694863604db679447f81eff45bcbe7fe46ad875a",
+            "reviewedAt": "2026-10-12T19:57:51.933102+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/cc-selection.json",
+            "selectionSHA256": "e27236774bbb8f51f29fcf06934bfe571f31a98fb898ed51ed1578e93f3fedab"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/qa.json",
+            "sha256": "769df3513d67001d6179f7fce87c17421f6f735aabd193d993f4d7dd22a342bb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/basseterre/illustration-qa-extra.json",
+            "sha256": "2a120275e1a5bb6281735bd019dfb757ddc5a5566c3b09d1fc277dbcedd03bbd"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "basseterre",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Basseterre from sea.JPG",
+        "sha256": "dbbb17bcbf414111613fa9f9a677bd4f23c2c0af9f8974715e0afd287274e12a",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Basseterre_from_sea.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Basseterre_from_sea.JPG",
+        "author": "Gertjan R.",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4320,
+        "height": 3240,
+        "originalSHA256": "dbbb17bcbf414111613fa9f9a677bd4f23c2c0af9f8974715e0afd287274e12a",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/photo-dbbb17bcbf414111613f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/photo-dbbb17bcbf414111613f.jpg",
+        "bytes": 3112562,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:58:21.096018+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Basseterre from sea.JPG",
+        "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "lyhyt": "Basseterre mereltä nähtynä heinäkuussa 2014."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
+        "selite": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "lyhyt": "Basseterre mereltä nähtynä heinäkuussa 2014.",
+        "tiedosto": "Basseterre from sea.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "505614d583facb582a8cff8784048c501319709a57572391a5fa132f7f3935d8",
+      "targetAfterSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb",
+      "contextAfterSHA256": "91af33db09f50f062cfc34925872fea8b134d7250323032d0cb213067695b8cb"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

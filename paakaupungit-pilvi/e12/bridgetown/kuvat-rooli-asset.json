@@ -1,0 +1,858 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "bridgetown",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "bridgetown",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e12-bridgetown-L4-e9d1998f23",
+      "galleryImageID": "e12-bridgetown-L4-e9d1998f23",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Korallikalkkikiven havainnekuva Bridgetownin rakennusaineiden aiheeseen.",
+        "lyhyt": "Korallikalkkikiven havainnekuva Bridgetownin rakennusaineiden aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Korallikalkkikiven havainnekuva Bridgetownin rakennusaineiden aiheeseen.",
+        "lyhyt": "Korallikalkkikiven havainnekuva Bridgetownin rakennusaineiden aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "38af43766757eceb74bb39cc622bda703cf92ea033ca321c6e56a27b31cebbab",
+      "exportSHA256": "ba51cd8eefaae6668a29ee029361a665a0e5213db8c00e18040dfa678cdfd8a6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
+        "semanticContextSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
+        "subjectTitle": "Kellotorni vaihtoi puolta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/assets/e12-bridgetown-L4-e9d1998f23/original.png",
+            "nativeSHA256": "38af43766757eceb74bb39cc622bda703cf92ea033ca321c6e56a27b31cebbab",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Korallikalkkikiven havainnekuva Bridgetownin rakennusaineiden aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+              "contentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+              "sourceText": "Parlamenttirakennusten kellotorni ei ole aina seissyt nykyisessä paikassaan. Vanha torni oli itäsiiven yhteydessä, mutta sen perustukset alkoivat vajota. Torni purettiin, ja uusi rakennettiin länsisiiven viereen. Nykyistä kelloa katsoessa näkee siis rakennuskokonaisuuden myöhemmän vaiheen. Parlamentin uusgoottilainen ilme ja paikallinen korallikalkkikivi yhdistyvät taloissa, joiden rakentaminen ja muuttaminen jatkuivat eri aikoina. Rakennushistoriaa löytyy myös siitä, mikä on siirtynyt pois alkuperäiseltä paikaltaan.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Parliament_Buildings_(Barbados)"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/bridgetown/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A close material study of two rough pieces of pale coral limestone, showing its natural porous irregular stone texture in soft daylight on a simple neutral surface. No building, carved artwork, actual parliamentary facade or claim to a particular stone specimen. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+              "contentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Kellotorni vaihtoi puolta",
+                "teksti": "Parlamenttirakennusten kellotorni ei ole aina seissyt nykyisessä paikassaan. Vanha torni oli itäsiiven yhteydessä, mutta sen perustukset alkoivat vajota. Torni purettiin, ja uusi rakennettiin länsisiiven viereen. Nykyistä kelloa katsoessa näkee siis rakennuskokonaisuuden myöhemmän vaiheen. Parlamentin uusgoottilainen ilme ja paikallinen korallikalkkikivi yhdistyvät taloissa, joiden rakentaminen ja muuttaminen jatkuivat eri aikoina. Rakennushistoriaa löytyy myös siitä, mikä on siirtynyt pois alkuperäiseltä paikaltaan.",
+                "wiki": "Parliament Buildings (Barbados)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/assets/e12-bridgetown-L4-e9d1998f23/original.png",
+              "detail": "original",
+              "observations": "Kaksi vaaleaa huokoista kivikappaletta neutraalilla pinnalla. Erikokoiset onkalot, rakeet ja kuluneet reunat vaihtelevat uskottavasti; varjot ja paino hahmottuvat. Ei rakennuksia, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Korallikalkkikivi liittyy L4-nostossa mainittuun rakennusmateriaaliin. Kuvateksti on materiaalihavainne eikä parlamenttirakennuksen valokuva. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Korallikalkkikiven havainnekuva Bridgetownin rakennusaineiden aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/illustration-qa-extra.json",
+        "fileSHA256": "8dcf54ae8516bcce834b5c1be04eca0254c1802f30dc49226e8ff589509645b0",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e12-bridgetown-L4-e9d1998f23",
+          "sha256": "38af43766757eceb74bb39cc622bda703cf92ea033ca321c6e56a27b31cebbab",
+          "verdict": "accepted",
+          "reason": "Korallikalkkikivi liittyy L4-nostossa mainittuun rakennusmateriaaliin. Kuvateksti on materiaalihavainne eikä parlamenttirakennuksen valokuva. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/assets/e12-bridgetown-L4-e9d1998f23/original.png",
+            "nativeSHA256": "38af43766757eceb74bb39cc622bda703cf92ea033ca321c6e56a27b31cebbab",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Korallikalkkikiven havainnekuva Bridgetownin rakennusaineiden aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+              "contentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+              "sourceText": "Parlamenttirakennusten kellotorni ei ole aina seissyt nykyisessä paikassaan. Vanha torni oli itäsiiven yhteydessä, mutta sen perustukset alkoivat vajota. Torni purettiin, ja uusi rakennettiin länsisiiven viereen. Nykyistä kelloa katsoessa näkee siis rakennuskokonaisuuden myöhemmän vaiheen. Parlamentin uusgoottilainen ilme ja paikallinen korallikalkkikivi yhdistyvät taloissa, joiden rakentaminen ja muuttaminen jatkuivat eri aikoina. Rakennushistoriaa löytyy myös siitä, mikä on siirtynyt pois alkuperäiseltä paikaltaan.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/Parliament_Buildings_(Barbados)"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/bridgetown/L4/owner.json",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A close material study of two rough pieces of pale coral limestone, showing its natural porous irregular stone texture in soft daylight on a simple neutral surface. No building, carved artwork, actual parliamentary facade or claim to a particular stone specimen. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+              "contentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Kellotorni vaihtoi puolta",
+                "teksti": "Parlamenttirakennusten kellotorni ei ole aina seissyt nykyisessä paikassaan. Vanha torni oli itäsiiven yhteydessä, mutta sen perustukset alkoivat vajota. Torni purettiin, ja uusi rakennettiin länsisiiven viereen. Nykyistä kelloa katsoessa näkee siis rakennuskokonaisuuden myöhemmän vaiheen. Parlamentin uusgoottilainen ilme ja paikallinen korallikalkkikivi yhdistyvät taloissa, joiden rakentaminen ja muuttaminen jatkuivat eri aikoina. Rakennushistoriaa löytyy myös siitä, mikä on siirtynyt pois alkuperäiseltä paikaltaan.",
+                "wiki": "Parliament Buildings (Barbados)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/assets/e12-bridgetown-L4-e9d1998f23/original.png",
+              "detail": "original",
+              "observations": "Kaksi vaaleaa huokoista kivikappaletta neutraalilla pinnalla. Erikokoiset onkalot, rakeet ja kuluneet reunat vaihtelevat uskottavasti; varjot ja paino hahmottuvat. Ei rakennuksia, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:27:26.412575+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/qa.json",
+            "sha256": "d63a43309fc7b1cc244ee05fbe8daa473c68a8b2de14d2ac4ef43bb039187e2b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/illustration-qa-extra.json",
+            "sha256": "8dcf54ae8516bcce834b5c1be04eca0254c1802f30dc49226e8ff589509645b0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png?t=ba51cd8eefaae666",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+        "sha256": "ba51cd8eefaae6668a29ee029361a665a0e5213db8c00e18040dfa678cdfd8a6",
+        "bytes": 2421344,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-bridgetown-L4-e9d1998f23",
+        "nativeSHA256": "38af43766757eceb74bb39cc622bda703cf92ea033ca321c6e56a27b31cebbab",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "bridgetown",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:28:19.659313+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/bridgetown/e12-bridgetown-L4-e9d1998f23-38af43766757.png",
+        "sha256": "ba51cd8eefaae6668a29ee029361a665a0e5213db8c00e18040dfa678cdfd8a6",
+        "bytes": 2421344,
+        "SHAReadAt": "2026-10-12T18:30:01.111915+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "38af43766757eceb74bb39cc622bda703cf92ea033ca321c6e56a27b31cebbab",
+        "rgbPixelSHA256": "fdf7b3d307aa6076f198afb03f77bc2626de6d85772a31809f0ffa55437f9040",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "targetAfterSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
+      "contextAfterSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0"
+    },
+    {
+      "era": "e12",
+      "city": "bridgetown",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-bridgetown-photo-e41b58c9edff18c1",
+      "galleryImageID": "capital-cc-e12-bridgetown-photo-e41b58c9edff18c1",
+      "commonsFile": "Bridgetown beach.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
+        "suora": true,
+        "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
+        "selite": "Bridgetownin rantaa vuonna 2010.",
+        "lyhyt": "Bridgetownin rantaa vuonna 2010.",
+        "tiedosto": "Bridgetown beach.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
+        "selite": "Bridgetownin rantaa vuonna 2010.",
+        "lyhyt": "Bridgetownin rantaa vuonna 2010.",
+        "tiedosto": "Bridgetown beach.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
+        "suora": true,
+        "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
+        "selite": "Bridgetownin rantaa vuonna 2010.",
+        "lyhyt": "Bridgetownin rantaa vuonna 2010.",
+        "tiedosto": "Bridgetown beach.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+      "exportSHA256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/bridgetown/1594441b5ad08a8cf8ea14653cf29da9cbb617cce69e987561c7e58cc31b8028.jpg",
+      "dimensions": [
+        4288,
+        3216
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545",
+        "semanticContextSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545",
+        "subjectTitle": "bridgetown — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "WalkingGeek from Westport, CT, USA",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bridgetown_beach.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Bridgetown_beach.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä WalkingGeek from Westport, CT, USA alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY 2.0 tiedostosivusta.",
+            "placeEvidence": "Alkuperäisen Commons-lähdesivun nimi Bridgetown beach.jpg ja sen paikkaluokitus Bridgetown. Description on valokuvaajan numerotunnus 229, eikä siitä päätellä tarkkaa rantanimeä. Kuvateksti käyttää vain lähdesivun ilmoittamaa kaupunkia.",
+            "workLayer": "Hiekka, meri ja rannan luonnollinen maisema ovat pääaihe. Pieniä purjeveneitä ja rakennuksia taustalla, ei erikseen nostettua arkkitehtuuri-/taideteospääaihetta. Ei kuvattu nykytaideteosta; ei kuvaa naamioitu rakennuslähikuvasta luontokuvaksi. Paikkasidoksen lähde on tiedostosivun oma nimi ja paikkaluokitus, ei Descriptionin numerotunnus.",
+            "visualInspection": "Alkuperäinen 4288×3216 katsottu. Laaja hiekkaranta, vesi, taivas ja kaukaiset ihmiset; kasvoista ei erota yksilöiviä piirteitä. Ei lisättyä tekstiä, vesileimaa tai kehystä. Purjeen luonnollinen pieni merkintä ei ole kuvan päälle lisätty teksti/mainospakkaus; maisema on pääaihe. Vuosi 2010 kirjattu, ei tuore-opaskuva.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/d84b92242743.html",
+            "sourceSha256": "efb030da31a0bef1bb744e2b2aa3762d2c972c1612fbbd65f67b139782caf46e"
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bridgetown_beach.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/d84b92242743.html",
+            "sourceSHA256": "efb030da31a0bef1bb744e2b2aa3762d2c972c1612fbbd65f67b139782caf46e",
+            "directAuthors": [
+              "WalkingGeek from Westport, CT, USA"
+            ],
+            "directLicenses": [
+              "CC BY 2.0"
+            ],
+            "directRows": {
+              "Date": "28 December 2010, 12:51"
+            },
+            "sourceOriginalDimensions": [
+              4288,
+              3216
+            ],
+            "localDimensions": [
+              4288,
+              3216
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/d84b92242743-original.jpg",
+            "mediaSHA256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceRows": [
+              "Date 28 December 2010, 12:51",
+              "Source 229",
+              "Author WalkingGeek from Westport, CT, USA"
+            ],
+            "sourceCategories": [
+              "Barbados",
+              "Bridgetown",
+              "CC-BY-2.0",
+              "Flickr images reviewed by FlickreviewR"
+            ],
+            "fullImageViewed": true,
+            "viewMethod": "view_image high and original; whole frame; original output resized by viewer",
+            "personallyViewedByJob27": true,
+            "placeScope": "Bridgetown beach; no finer beach name inferred",
+            "currentContentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+            "targetStillExists": true
+          },
+          "qaReason": "Koko kuva itse katsottu sekä laajassa että alkuperäisen tiedoston tarkemmassa katselussa. Aito Bridgetownin ranta: Commonsin tiedostonimi ja oma Bridgetown-luokitus sitovat kaupungin; lähteen Flickr-kuvan neutraali otsikko 229 ei yksin ole paikkatodiste. Tekijä WalkingGeek from Westport, CT, USA ja CC BY 2.0 tarkistettu tiedostosivun Author/lisenssitaulukosta. Alkuperäinen 4288×3216 ja SHA vastaavat. Vuosi 2010 selitteessä. Ihmiset ovat kaukaisia eikä kasvonpiirteitä erota; lähimmän oikean reunan henkilön kasvot eivät näy. Ranta/meri/taivas ovat pääaihe; pienet taustarakennukset ja veneen luonnollinen mallimerkintä eivät ole erikseen nostettu suojattu teospääaihe tai lisätty mainosteksti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Bridgetownin rantaa vuonna 2010.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/qa.json",
+        "fileSHA256": "d63a43309fc7b1cc244ee05fbe8daa473c68a8b2de14d2ac4ef43bb039187e2b",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "verdict": "accepted",
+          "reason": "Koko kuva itse katsottu sekä laajassa että alkuperäisen tiedoston tarkemmassa katselussa. Aito Bridgetownin ranta: Commonsin tiedostonimi ja oma Bridgetown-luokitus sitovat kaupungin; lähteen Flickr-kuvan neutraali otsikko 229 ei yksin ole paikkatodiste. Tekijä WalkingGeek from Westport, CT, USA ja CC BY 2.0 tarkistettu tiedostosivun Author/lisenssitaulukosta. Alkuperäinen 4288×3216 ja SHA vastaavat. Vuosi 2010 selitteessä. Ihmiset ovat kaukaisia eikä kasvonpiirteitä erota; lähimmän oikean reunan henkilön kasvot eivät näy. Ranta/meri/taivas ovat pääaihe; pienet taustarakennukset ja veneen luonnollinen mallimerkintä eivät ole erikseen nostettu suojattu teospääaihe tai lisätty mainosteksti.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bridgetown_beach.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/d84b92242743.html",
+            "sourceSHA256": "efb030da31a0bef1bb744e2b2aa3762d2c972c1612fbbd65f67b139782caf46e",
+            "directAuthors": [
+              "WalkingGeek from Westport, CT, USA"
+            ],
+            "directLicenses": [
+              "CC BY 2.0"
+            ],
+            "directRows": {
+              "Date": "28 December 2010, 12:51"
+            },
+            "sourceOriginalDimensions": [
+              4288,
+              3216
+            ],
+            "localDimensions": [
+              4288,
+              3216
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/d84b92242743-original.jpg",
+            "mediaSHA256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceRows": [
+              "Date 28 December 2010, 12:51",
+              "Source 229",
+              "Author WalkingGeek from Westport, CT, USA"
+            ],
+            "sourceCategories": [
+              "Barbados",
+              "Bridgetown",
+              "CC-BY-2.0",
+              "Flickr images reviewed by FlickreviewR"
+            ],
+            "fullImageViewed": true,
+            "viewMethod": "view_image high and original; whole frame; original output resized by viewer",
+            "personallyViewedByJob27": true,
+            "placeScope": "Bridgetown beach; no finer beach name inferred",
+            "currentContentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:18:38.983748+00:00",
+          "commonsFile": "Bridgetown beach.jpg",
+          "sha256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/qa.json",
+            "sha256": "d63a43309fc7b1cc244ee05fbe8daa473c68a8b2de14d2ac4ef43bb039187e2b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/illustration-qa-extra.json",
+            "sha256": "8dcf54ae8516bcce834b5c1be04eca0254c1802f30dc49226e8ff589509645b0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "bridgetown",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Bridgetown beach.jpg",
+        "sha256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bridgetown_beach.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Bridgetown_beach.jpg",
+        "author": "WalkingGeek from Westport, CT, USA",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 4288,
+        "height": 3216,
+        "originalSHA256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
+        "bytes": 3060363,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:19:00.215069+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Bridgetown beach.jpg",
+        "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
+        "selite": "Bridgetownin rantaa vuonna 2010.",
+        "lyhyt": "Bridgetownin rantaa vuonna 2010."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
+        "selite": "Bridgetownin rantaa vuonna 2010.",
+        "lyhyt": "Bridgetownin rantaa vuonna 2010.",
+        "tiedosto": "Bridgetown beach.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "targetAfterSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545",
+      "contextAfterSHA256": "5617ba0ce26096d4a3ddb047c08ce3c85350d159b6a60499e9d96615f4a0c545"
+    },
+    {
+      "era": "e12",
+      "city": "bridgetown",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-bridgetown-c1-0e2b9f04ae3b2113",
+      "galleryImageID": "capital-cc-e12-bridgetown-c1-0e2b9f04ae3b2113",
+      "commonsFile": "Drill Hall Beach Barbados.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
+        "suora": true,
+        "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "lyhyt": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "tiedosto": "Drill Hall Beach Barbados.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "lyhyt": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "tiedosto": "Drill Hall Beach Barbados.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
+        "suora": true,
+        "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "lyhyt": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "tiedosto": "Drill Hall Beach Barbados.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+      "exportSHA256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/bridgetown/49133166142add25d32b84a8148445e00fe37d75611497371c53e7386c1a85ff.jpg",
+      "dimensions": [
+        5120,
+        3418
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
+      "sourceContentSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de",
+        "semanticContextSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de",
+        "subjectTitle": "Bridgetown",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Barry haynes",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Drill_Hall_Beach_Barbados.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Drill_Hall_Beach_Barbados.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Barry haynes alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 4.0 tiedostosivusta.",
+            "placeEvidence": "English: Drill Hall Beach near Needhams Point in the parish of St. Michael in Barbados in the West Indies, Caribbean on a sunny day with the beach and the blue waters promiment with trees to the right of the scene",
+            "workLayer": "Laaja aito luonnollinen rantaviiva, meri ja palmut; ei ihmisiä, rakennusta tai taideteosta. Tiedostosivun Description nimeää Drill Hall Beach near Needhams Point; saman alkuperäisen tiedostosivun Bridgetown- ja Needhams Point-luokat sitovat kohteen kaupunkiin. Ei yleisestä Barbados-nimestä päätelty paikka, eikä katsojan päätelty luonto-AI.",
+            "visualInspection": "Alkuperäinen katsottu: todellinen hiekkaranta ja palmut merimaisemassa, ei tunnistettavia kasvoja, lisättyä tekstiä, mainoksia, vesileimaa tai kehystä. Rannan asettelu näkyy laajana aidon paikan kuvana. Vuosi2014 kirjattu; ei tuore-opasväitettä.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/99cd2570677f.html",
+            "sourceSha256": "960698176492498bc50a681aaa3a7af62990b6e14c9f8a72bcaca40cde0da80f"
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Drill_Hall_Beach_Barbados.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/99cd2570677f.html",
+            "sourceSHA256": "960698176492498bc50a681aaa3a7af62990b6e14c9f8a72bcaca40cde0da80f",
+            "directAuthors": [
+              "Barry haynes",
+              "18 11:40:54"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "9 December 2014, 08:27:40"
+            },
+            "sourceOriginalDimensions": [
+              5120,
+              3418
+            ],
+            "localDimensions": [
+              5120,
+              3418
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/99cd2570677f-original.jpg",
+            "mediaSHA256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceCategories": [
+              "Needhams Point",
+              "Beaches of Barbados",
+              "Christ Church, Barbados",
+              "Bridgetown",
+              "Shorelines of Barbados",
+              "CC-BY-SA-4.0",
+              "Self-published work"
+            ],
+            "sourceDescriptions": [
+              "English: Drill Hall Beach near Needhams Point in the parish of St. Michael in Barbados in the West Indies, Caribbean on a sunny day with the beach and the blue waters promiment with trees to the right of the scene",
+              "I, the copyright holder of this work, hereby publish it under the following license:",
+              "Image title Beach at Needhams Point in the parish of St. Michael in Barbados in the West Indies, Caribbean on a sunny day with the beach and the blue waters promiment with trees to the right of the scene"
+            ],
+            "fullImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; entire native 5120x3418 displayed resized to 1917x1279",
+            "authorFieldUsed": "Summary Author: Barry haynes",
+            "placeScope": "Drill Hall Beach near Needhams Point, city association in original Bridgetown category; no parish boundary inferred",
+            "currentContentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+            "targetStillExists": true
+          },
+          "qaReason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: aito laaja rantaviivan, meren ja rantapalmujen asettelu Drill Hall Beachilla. Sopii kannen todelliseen laajaan paikkanäkymään; kuvateksti rajaa aiheen rannikkoon, ei koko kaupunkiverkon panoraamaksi. Paikka alkuperäisen kuvaajan Descriptionissa ja EXIF Image title -kentässä on Drill Hall Beach near Needhams Point; sivulla myös Bridgetown-luokitus, joten kaupungin yhteyttä ei päätellä vain yleisestä Barbados-otsikosta. Barry haynes on Summary Author, CC BY-SA 4.0, 5120×3418 ja 9.12.2014 tarkistettu lähde-HTML:stä, SHA ja mitat paikallisesta tiedostosta. Parserin toinen Author-rivi on EXIF-aikaleiman kaltainen arvo, jota ei käytetä tekijänä. Ei ihmisiä, kuvattua erillistä teosta/rakennusta, mainoksia, lisättyä tekstiä, vesileimaa tai kehystä. Vuosi 2014 säilytettävä, ei tuore-opaskuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/qa.json",
+        "fileSHA256": "d63a43309fc7b1cc244ee05fbe8daa473c68a8b2de14d2ac4ef43bb039187e2b",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "verdict": "accepted",
+          "reason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: aito laaja rantaviivan, meren ja rantapalmujen asettelu Drill Hall Beachilla. Sopii kannen todelliseen laajaan paikkanäkymään; kuvateksti rajaa aiheen rannikkoon, ei koko kaupunkiverkon panoraamaksi. Paikka alkuperäisen kuvaajan Descriptionissa ja EXIF Image title -kentässä on Drill Hall Beach near Needhams Point; sivulla myös Bridgetown-luokitus, joten kaupungin yhteyttä ei päätellä vain yleisestä Barbados-otsikosta. Barry haynes on Summary Author, CC BY-SA 4.0, 5120×3418 ja 9.12.2014 tarkistettu lähde-HTML:stä, SHA ja mitat paikallisesta tiedostosta. Parserin toinen Author-rivi on EXIF-aikaleiman kaltainen arvo, jota ei käytetä tekijänä. Ei ihmisiä, kuvattua erillistä teosta/rakennusta, mainoksia, lisättyä tekstiä, vesileimaa tai kehystä. Vuosi 2014 säilytettävä, ei tuore-opaskuva.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Drill_Hall_Beach_Barbados.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/99cd2570677f.html",
+            "sourceSHA256": "960698176492498bc50a681aaa3a7af62990b6e14c9f8a72bcaca40cde0da80f",
+            "directAuthors": [
+              "Barry haynes",
+              "18 11:40:54"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "9 December 2014, 08:27:40"
+            },
+            "sourceOriginalDimensions": [
+              5120,
+              3418
+            ],
+            "localDimensions": [
+              5120,
+              3418
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/cc-search/99cd2570677f-original.jpg",
+            "mediaSHA256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceCategories": [
+              "Needhams Point",
+              "Beaches of Barbados",
+              "Christ Church, Barbados",
+              "Bridgetown",
+              "Shorelines of Barbados",
+              "CC-BY-SA-4.0",
+              "Self-published work"
+            ],
+            "sourceDescriptions": [
+              "English: Drill Hall Beach near Needhams Point in the parish of St. Michael in Barbados in the West Indies, Caribbean on a sunny day with the beach and the blue waters promiment with trees to the right of the scene",
+              "I, the copyright holder of this work, hereby publish it under the following license:",
+              "Image title Beach at Needhams Point in the parish of St. Michael in Barbados in the West Indies, Caribbean on a sunny day with the beach and the blue waters promiment with trees to the right of the scene"
+            ],
+            "fullImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; entire native 5120x3418 displayed resized to 1917x1279",
+            "authorFieldUsed": "Summary Author: Barry haynes",
+            "placeScope": "Drill Hall Beach near Needhams Point, city association in original Bridgetown category; no parish boundary inferred",
+            "currentContentSHA256": "451af9afd8afd5ee44333dbbb13f2accdac74aecf67ae03f7b36f4bdcd96638e",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:43:41.817016+00:00",
+          "commonsFile": "Drill Hall Beach Barbados.jpg",
+          "sha256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/qa.json",
+            "sha256": "d63a43309fc7b1cc244ee05fbe8daa473c68a8b2de14d2ac4ef43bb039187e2b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/bridgetown/illustration-qa-extra.json",
+            "sha256": "8dcf54ae8516bcce834b5c1be04eca0254c1802f30dc49226e8ff589509645b0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "bridgetown",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Drill Hall Beach Barbados.jpg",
+        "sha256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Drill_Hall_Beach_Barbados.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Drill_Hall_Beach_Barbados.jpg",
+        "author": "Barry haynes",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 5120,
+        "height": 3418,
+        "originalSHA256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
+        "bytes": 14385827,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:44:29.471264+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Drill Hall Beach Barbados.jpg",
+        "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "lyhyt": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "lyhyt": "Drill Hall Beachin rannikkoa Bridgetownissa joulukuussa 2014.",
+        "tiedosto": "Drill Hall Beach Barbados.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aa556c8c56fe83e664c5c598936e2395af9e3d3b6fb13d4d9892948083cd7b27",
+      "targetAfterSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de",
+      "contextAfterSHA256": "3e4b951b725822075a7d02b154dc614ca596b214243d7fe6b1e20dc87d09c2de"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

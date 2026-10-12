@@ -1,0 +1,1671 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "portofspain",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e12-portofspain-O4-de98c3b22f",
+      "galleryImageID": "e12-portofspain-O4-de98c3b22f",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+        "lyhyt": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+        "lyhyt": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+      "exportSHA256": "d192fcd3f8aa1bbaf3fd5f2c65cf7874d443ecce141d88e03fc2fc7a1fd9e8ee",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/a04fe48e1b2e-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "cdb00bbf2c7b2b8861fcf12cfa4d64c32edc9c1ee659157e0581f40cfaadc6c2",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-O4-de98c3b22f",
+              "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+              "verdict": "accepted",
+              "reason": "Pehmeät leivät ja kikhernetäyte vastaavat O4:n doubles-aihetta. Kuvateksti nimeää yleishavainteen eikä tietyn Port of Spainin kojun annosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikivoyage.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/O4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close food photograph of Trinidadian doubles: two soft golden fried bara flatbreads holding a modest portion of curried chickpeas, folded lightly so the individual chickpeas and cooked bread texture remain visible. Plain unbranded plate on an ordinary table, no invented restaurant or scenic skyline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella kaksi pehmeiden kellertävien leipien ja maustettujen kikherneiden kokonaisuutta. Leipien rakkulat ja reunat sekä kikherneiden muodot vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja, pakkausta tai kehystä.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-3 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Pehmeät leivät ja kikhernetäyte vastaavat O4:n doubles-aihetta. Kuvateksti nimeää yleishavainteen eikä tietyn Port of Spainin kojun annosta. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e12-portofspain-O4-de98c3b22f",
+          "sha256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-3 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Pehmeät leivät ja kikhernetäyte vastaavat O4:n doubles-aihetta. Kuvateksti nimeää yleishavainteen eikä tietyn Port of Spainin kojun annosta. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/a04fe48e1b2e-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "cdb00bbf2c7b2b8861fcf12cfa4d64c32edc9c1ee659157e0581f40cfaadc6c2",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-O4-de98c3b22f",
+              "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+              "verdict": "accepted",
+              "reason": "Pehmeät leivät ja kikhernetäyte vastaavat O4:n doubles-aihetta. Kuvateksti nimeää yleishavainteen eikä tietyn Port of Spainin kojun annosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikivoyage.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/O4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close food photograph of Trinidadian doubles: two soft golden fried bara flatbreads holding a modest portion of curried chickpeas, folded lightly so the individual chickpeas and cooked bread texture remain visible. Plain unbranded plate on an ordinary table, no invented restaurant or scenic skyline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella kaksi pehmeiden kellertävien leipien ja maustettujen kikherneiden kokonaisuutta. Leipien rakkulat ja reunat sekä kikherneiden muodot vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja, pakkausta tai kehystä.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "cdb00bbf2c7b2b8861fcf12cfa4d64c32edc9c1ee659157e0581f40cfaadc6c2",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-O4-de98c3b22f",
+              "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+              "verdict": "accepted",
+              "reason": "Pehmeät leivät ja kikhernetäyte vastaavat O4:n doubles-aihetta. Kuvateksti nimeää yleishavainteen eikä tietyn Port of Spainin kojun annosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikivoyage.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/O4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close food photograph of Trinidadian doubles: two soft golden fried bara flatbreads holding a modest portion of curried chickpeas, folded lightly so the individual chickpeas and cooked bread texture remain visible. Plain unbranded plate on an ordinary table, no invented restaurant or scenic skyline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella kaksi pehmeiden kellertävien leipien ja maustettujen kikherneiden kokonaisuutta. Leipien rakkulat ja reunat sekä kikherneiden muodot vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja, pakkausta tai kehystä.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-O4-de98c3b22f",
+              "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+              "verdict": "accepted",
+              "reason": "Pehmeät leivät ja kikhernetäyte vastaavat O4:n doubles-aihetta. Kuvateksti nimeää yleishavainteen eikä tietyn Port of Spainin kojun annosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikivoyage.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/O4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close food photograph of Trinidadian doubles: two soft golden fried bara flatbreads holding a modest portion of curried chickpeas, folded lightly so the individual chickpeas and cooked bread texture remain visible. Plain unbranded plate on an ordinary table, no invented restaurant or scenic skyline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella kaksi pehmeiden kellertävien leipien ja maustettujen kikherneiden kokonaisuutta. Leipien rakkulat ja reunat sekä kikherneiden muodot vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja, pakkausta tai kehystä.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-O4-de98c3b22f",
+              "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+              "verdict": "accepted",
+              "reason": "Pehmeät leivät ja kikhernetäyte vastaavat O4:n doubles-aihetta. Kuvateksti nimeää yleishavainteen eikä tietyn Port of Spainin kojun annosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva doubles-annoksesta, jonka pohjana ovat leivät ja kikherneet.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikivoyage.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/O4/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close food photograph of Trinidadian doubles: two soft golden fried bara flatbreads holding a modest portion of curried chickpeas, folded lightly so the individual chickpeas and cooked bread texture remain visible. Plain unbranded plate on an ordinary table, no invented restaurant or scenic skyline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Doubles on paikallinen jauhoista ja kikherneistä tehty ruoka, jota myydään myös Port of Spainin keskustassa. Savannahin ruokakojujen tarjontaan kuuluvat doublesin lisäksi muun muassa maissikeitto, shawarma ja jerk-kana. Kaupungin ruokatarjonta ei mahdu yhteen alkuperään. Iltaisin toimiva ruokatori on eri kokemus kuin puiston päiväkävely, joten järjestä myös paluukuljetus etukäteen. Kojujen aukioloajat ja valikoima on tarkistettava paikan päällä.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-O4-de98c3b22f/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella kaksi pehmeiden kellertävien leipien ja maustettujen kikherneiden kokonaisuutta. Leipien rakkulat ja reunat sekä kikherneiden muodot vaihtelevat luontevasti. Ei ihmisiä, tekstiä, logoja, pakkausta tai kehystä.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              },
+              "opinionSHA256": "5d64f4f87ec711da15c5ff8d6718a90648aaaac683ab3c58ed9573b9b6debc87",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/extra-review-snapshots/e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:48:21.014065+00:00",
+          "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png?t=d192fcd3f8aa1bba",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+        "sha256": "d192fcd3f8aa1bbaf3fd5f2c65cf7874d443ecce141d88e03fc2fc7a1fd9e8ee",
+        "bytes": 2319148,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-portofspain-O4-de98c3b22f",
+        "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:33:50.953863+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-O4-de98c3b22f-a592319a7944.png",
+        "sha256": "d192fcd3f8aa1bbaf3fd5f2c65cf7874d443ecce141d88e03fc2fc7a1fd9e8ee",
+        "bytes": 2319148,
+        "SHAReadAt": "2026-10-12T18:32:51.412291+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+        "rgbPixelSHA256": "dd98e9dbf1f65bb89cef0b6fe780ea6664373967342d84e7bcf550d8cacd75bf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e12-portofspain-L3-aaaaf5865c",
+      "galleryImageID": "e12-portofspain-L3-aaaaf5865c",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+        "lyhyt": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+        "lyhyt": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+      "exportSHA256": "cb345c89d0bd308cd721214ff3bc63a9bbac964d3c98485cea67bb9c80c6e0db",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
+        "semanticContextSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
+        "subjectTitle": "Maa jatkoi merelle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/4a4f21637570-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-L3-aaaaf5865c",
+              "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+              "verdict": "accepted",
+              "reason": "Mangrovekasvillisuus havainnollistaa L3-noston entistä rantamaa. Kuvateksti ei väitä näkymää Port of Spainin vuoden 1873 maisemaksi tai nykyiseksi paikaksi. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikipedia.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/L3/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close view of mangrove stilt roots at the edge of shallow tidal water and mud, with a little living green foliage. Show irregular real roots and gentle water reflections, no buildings, imaginary historical skyline, person or claim that this is the actual former Port of Spain shoreline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+                  "targetText": {
+                    "otsikko": "Maa jatkoi merelle",
+                    "teksti": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": "",
+                    "wiki": "Port of Spain"
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                  "detail": "original",
+                  "observations": "Mangroven juuria ja vihreitä lehtiä matalan veden äärellä. Juurien haarautuminen, mutaiset tyvet, heijastukset ja veden pienet aallot vaihtelevat luonnollisesti. Ei keksittyä kaupunkipanoraamaa, rakennuksia, ihmisiä, tekstiä tai logoja.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-3 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Mangrovekasvillisuus havainnollistaa L3-noston entistä rantamaa. Kuvateksti ei väitä näkymää Port of Spainin vuoden 1873 maisemaksi tai nykyiseksi paikaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e12-portofspain-L3-aaaaf5865c",
+          "sha256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-3 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Mangrovekasvillisuus havainnollistaa L3-noston entistä rantamaa. Kuvateksti ei väitä näkymää Port of Spainin vuoden 1873 maisemaksi tai nykyiseksi paikaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/4a4f21637570-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-L3-aaaaf5865c",
+              "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+              "verdict": "accepted",
+              "reason": "Mangrovekasvillisuus havainnollistaa L3-noston entistä rantamaa. Kuvateksti ei väitä näkymää Port of Spainin vuoden 1873 maisemaksi tai nykyiseksi paikaksi. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikipedia.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/L3/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close view of mangrove stilt roots at the edge of shallow tidal water and mud, with a little living green foliage. Show irregular real roots and gentle water reflections, no buildings, imaginary historical skyline, person or claim that this is the actual former Port of Spain shoreline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+                  "targetText": {
+                    "otsikko": "Maa jatkoi merelle",
+                    "teksti": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": "",
+                    "wiki": "Port of Spain"
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                  "detail": "original",
+                  "observations": "Mangroven juuria ja vihreitä lehtiä matalan veden äärellä. Juurien haarautuminen, mutaiset tyvet, heijastukset ja veden pienet aallot vaihtelevat luonnollisesti. Ei keksittyä kaupunkipanoraamaa, rakennuksia, ihmisiä, tekstiä tai logoja.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-L3-aaaaf5865c",
+              "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+              "verdict": "accepted",
+              "reason": "Mangrovekasvillisuus havainnollistaa L3-noston entistä rantamaa. Kuvateksti ei väitä näkymää Port of Spainin vuoden 1873 maisemaksi tai nykyiseksi paikaksi. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikipedia.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/L3/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close view of mangrove stilt roots at the edge of shallow tidal water and mud, with a little living green foliage. Show irregular real roots and gentle water reflections, no buildings, imaginary historical skyline, person or claim that this is the actual former Port of Spain shoreline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+                  "targetText": {
+                    "otsikko": "Maa jatkoi merelle",
+                    "teksti": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": "",
+                    "wiki": "Port of Spain"
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                  "detail": "original",
+                  "observations": "Mangroven juuria ja vihreitä lehtiä matalan veden äärellä. Juurien haarautuminen, mutaiset tyvet, heijastukset ja veden pienet aallot vaihtelevat luonnollisesti. Ei keksittyä kaupunkipanoraamaa, rakennuksia, ihmisiä, tekstiä tai logoja.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+              "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-portofspain-L3-aaaaf5865c",
+              "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+              "verdict": "accepted",
+              "reason": "Mangrovekasvillisuus havainnollistaa L3-noston entistä rantamaa. Kuvateksti ei väitä näkymää Port of Spainin vuoden 1873 maisemaksi tai nykyiseksi paikaksi. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Mangroven havainnekuva Port of Spainin entisen rantamaan aiheeseen.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "sourceText": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "originalSources": [
+                    "https://en.wikipedia.org/wiki/Port_of_Spain"
+                  ],
+                  "ccRelease": {},
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/portofspain/L3/owner.json",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed; ei PHOTO/C1-C3 tai nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A natural close view of mangrove stilt roots at the edge of shallow tidal water and mud, with a little living green foliage. Show irregular real roots and gentle water reflections, no buildings, imaginary historical skyline, person or claim that this is the actual former Port of Spain shoreline. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+                  "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+                  "targetText": {
+                    "otsikko": "Maa jatkoi merelle",
+                    "teksti": "Lähimpänä merta oleva osa Port of Spainin nykyisestä keskustasta oli aikoinaan mangrovea kasvavia vuorovesilietteitä. Rantaa alettiin täyttää 1800-luvun alussa Laventillen kukkuloilta tuodulla maalla, ja täyttöjä jatkettiin myöhemminkin. Satamakaupungin rantaviiva ei siten ole pysynyt paikallaan. Marine Square oli vanha rantaan liittynyt aukio; myöhemmin se sai nimen Independence Square. Kaupungin kasvua voi ajatella kahteen suuntaan: talot etenivät maalla, ja kaupunki teki lisää maata veden puolelle.",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": "",
+                    "wiki": "Port of Spain"
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/assets/e12-portofspain-L3-aaaaf5865c/original.png",
+                  "detail": "original",
+                  "observations": "Mangroven juuria ja vihreitä lehtiä matalan veden äärellä. Juurien haarautuminen, mutaiset tyvet, heijastukset ja veden pienet aallot vaihtelevat luonnollisesti. Ei keksittyä kaupunkipanoraamaa, rakennuksia, ihmisiä, tekstiä tai logoja.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              },
+              "opinionSHA256": "5c881e519d845f24d9c2e6c4931cbba463e79e3594fcaa8c3d5a37b6560e4be2",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/extra-review-snapshots/e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:48:21.014118+00:00",
+          "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+          "targetSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png?t=cb345c89d0bd308c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+        "sha256": "cb345c89d0bd308cd721214ff3bc63a9bbac964d3c98485cea67bb9c80c6e0db",
+        "bytes": 2989823,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-portofspain-L3-aaaaf5865c",
+        "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:36:42.333783+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/portofspain/e12-portofspain-L3-aaaaf5865c-a5ade9116c2f.png",
+        "sha256": "cb345c89d0bd308cd721214ff3bc63a9bbac964d3c98485cea67bb9c80c6e0db",
+        "bytes": 2989823,
+        "SHAReadAt": "2026-10-12T18:36:34.766438+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+        "rgbPixelSHA256": "af90a59929a1c9fe5dc9e267fd31397620784be0fd37f1ce8b85609c3a1585cd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "targetAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
+      "contextAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-portofspain-photo-29a9bce9d099ae90",
+      "galleryImageID": "capital-cc-e12-portofspain-photo-29a9bce9d099ae90",
+      "commonsFile": "Overview of Port of Spain.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
+        "suora": true,
+        "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
+        "selite": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "lyhyt": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "tiedosto": "Overview of Port of Spain.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
+        "selite": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "lyhyt": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "tiedosto": "Overview of Port of Spain.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
+        "suora": true,
+        "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
+        "selite": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "lyhyt": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "tiedosto": "Overview of Port of Spain.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+      "exportSHA256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/portofspain/02dc7f7acde7b5a26f0039f9b55c054047108ac5a1fdbac76802e1ac5619f904.jpg",
+      "dimensions": [
+        1300,
+        663
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
+        "semanticContextSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
+        "subjectTitle": "portofspain — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Overview_of_Port_of_Spain.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi Public domain tiedostosivusta.",
+            "placeEvidence": "English: Port of Spain. Overview of Port of Spain, Trinidad, Port of Spain.",
+            "workLayer": "Näkymän etualan ruoho ja kauempana kaupungin/meren yleismaisema. Ei yksittäistä nykytaideteosta tai rakennusta teospääaiheena. Rakennusten iästä ei tehdä PD-oletusta; source description Overview of Port of Spain. Valokuvaaja on nimenomaisesti luovuttanut valokuvansa public domainiin lähdesivun Licensing-osiossa.",
+            "visualInspection": "Alkuperäinen 1300×663 katsottu. Luonnollinen ruoho etualalla, laaja kaupunki ja meri kaukana; ei ihmisiä/kasvoja, vesileimaa tai päälle lisättyjä tekstejä. Ei lähikuvaa tämän kaupungin moderneista vesirantatorneista. 2006 kirjattu, ei nykyiseksi opaskuvaksi.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/f955d06b3852.html",
+            "sourceSha256": "1a5ce3fce9f8a71473a95f6284f3ae3254a3d485e093f968aba920c424ac3704",
+            "licenseInterpretation": "Kuvaajan oma maailmanlaajuinen public domain -vapautus alkuperäisen tiedostosivun Licensing-osiossa. CC0-deediä ei valittu; lähdesivun yleinen CC0-opaslinkki ei ole tämän kuvan lisenssi."
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/f955d06b3852-original.jpg",
+            "width": 1300,
+            "height": 663,
+            "sha256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+            "nativeGeometry": {
+              "rawWidth": 1300,
+              "rawHeight": 663,
+              "exifOrientation": 1,
+              "width": 1300,
+              "height": 663
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/1a5ce3fce9f8a71473a95f6284f3ae3254a3d485e093f968aba920c424ac3704.html",
+            "sourcePageSHA256": "1a5ce3fce9f8a71473a95f6284f3ae3254a3d485e093f968aba920c424ac3704",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2fcb6d316a82a382d7c11a8380a08e4e0a1d1e8a071d824c6932f72e4c603749.body",
+            "sourceFields": {
+              "Date": "August 2006",
+              "Source": "Own work",
+              "Author": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage"
+            },
+            "authors": [
+              "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "Public domain"
+            ],
+            "license": "PD (photographer self release)",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/90dd993cdc46-technical-source.json",
+            "sourceDescriptionAndWaiverExcerpt": "Summary [ edit ] Description Overview of Port of Spain.jpg English: Port of Spain. Overview of Port of Spain, Trinidad, Port of Spain. Date August 2006 Source Own work Author Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage Licensing [ edit ] Public domain Public domain false false This work has been released into the public domain by its author, User: (WT-shared) Kevin James at wts wikivoyage . This applies worldwide. In some countries this may not be legally possible; if so: User: (WT-shared) Kevin James at wts wikivoyage grants anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. Public domain Public domain false false Original upload log [ edit ] This file was imported from Wikivoyage WTS. The original description page was here . All following user names refer to wts.wikivoyage-old. 2008-06-10 01:22 (WT-shared) Kevin James [ dead link ] 1300×663 (388300 bytes) {{Imagecredit|credit=Kevin Gabbert|captureDate=August 2006|location=Port of Spain|source=myself|caption=Port of Spain|description=Overview o (Import from wikitravel.org/shared) File history Click on a date/time to view the file as it appeared at that time. Date",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 1300×663 itse katsottu: etualan ruoho, laaja Port of Spainin kaupunkimassa ja meri. Ei ihmisiä, lisättyä tekstiä, kehystä, mainos-/pakkausaihetta tai yksittäistä suojattua teosta pääaiheena. Rakennukset ovat laajan kaupunkinäkymän etäisiä osia; niiden iästä ei päätellä PD-oikeutta. Paikka nimenomaisesta kuvaajan kuvauksesta; Kevin Gabbert on ilmoitettu krediitti ja Kevin James -käyttäjä hänen lähteessä mainittu tunnisteensa. Valokuvaajan oma maailmanlaajuinen PD-vapautus ja unrestricted fallback lähdesivulla, ei CC0-deediä. Elokuu 2006 säilyy eikä PHOTOa väitetä nykyiseksi opaskuvaksi.",
+            "workLayerAssessment": "Alkuperäinen 1300×663 itse katsottu: etualan ruoho, laaja Port of Spainin kaupunkimassa ja meri. Ei ihmisiä, lisättyä tekstiä, kehystä, mainos-/pakkausaihetta tai yksittäistä suojattua teosta pääaiheena. Rakennukset ovat laajan kaupunkinäkymän etäisiä osia; niiden iästä ei päätellä PD-oikeutta. Paikka nimenomaisesta kuvaajan kuvauksesta; Kevin Gabbert on ilmoitettu krediitti ja Kevin James -käyttäjä hänen lähteessä mainittu tunnisteensa. Valokuvaajan oma maailmanlaajuinen PD-vapautus ja unrestricted fallback lähdesivulla, ei CC0-deediä. Elokuu 2006 säilyy eikä PHOTOa väitetä nykyiseksi opaskuvaksi.",
+            "photographerCanonical": "Kevin Gabbert",
+            "deliveryMetadataCorrectionNeeded": {
+              "field": "licenseUrl",
+              "producerValue": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "requiredValue": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+              "reason": "Source is PD-self waiver, not CC0. Preserve its worldwide unrestricted fallback and real photographer credit."
+            },
+            "requiredDeliveryMetadata": {
+              "author": "Kevin Gabbert",
+              "license": "PD",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+              "captureDate": "August 2006"
+            }
+          },
+          "qaReason": "Alkuperäinen 1300×663 itse katsottu: etualan ruoho, laaja Port of Spainin kaupunkimassa ja meri. Ei ihmisiä, lisättyä tekstiä, kehystä, mainos-/pakkausaihetta tai yksittäistä suojattua teosta pääaiheena. Rakennukset ovat laajan kaupunkinäkymän etäisiä osia; niiden iästä ei päätellä PD-oikeutta. Paikka nimenomaisesta kuvaajan kuvauksesta; Kevin Gabbert on ilmoitettu krediitti ja Kevin James -käyttäjä hänen lähteessä mainittu tunnisteensa. Valokuvaajan oma maailmanlaajuinen PD-vapautus ja unrestricted fallback lähdesivulla, ei CC0-deediä. Elokuu 2006 säilyy eikä PHOTOa väitetä nykyiseksi opaskuvaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "type": "commons",
+          "commonsFile": "Overview of Port of Spain.jpg",
+          "sha256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+          "nativeSHA256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/f955d06b3852-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 1300×663 itse katsottu: etualan ruoho, laaja Port of Spainin kaupunkimassa ja meri. Ei ihmisiä, lisättyä tekstiä, kehystä, mainos-/pakkausaihetta tai yksittäistä suojattua teosta pääaiheena. Rakennukset ovat laajan kaupunkinäkymän etäisiä osia; niiden iästä ei päätellä PD-oikeutta. Paikka nimenomaisesta kuvaajan kuvauksesta; Kevin Gabbert on ilmoitettu krediitti ja Kevin James -käyttäjä hänen lähteessä mainittu tunnisteensa. Valokuvaajan oma maailmanlaajuinen PD-vapautus ja unrestricted fallback lähdesivulla, ei CC0-deediä. Elokuu 2006 säilyy eikä PHOTOa väitetä nykyiseksi opaskuvaksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/f955d06b3852-original.jpg",
+            "width": 1300,
+            "height": 663,
+            "sha256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+            "nativeGeometry": {
+              "rawWidth": 1300,
+              "rawHeight": 663,
+              "exifOrientation": 1,
+              "width": 1300,
+              "height": 663
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/1a5ce3fce9f8a71473a95f6284f3ae3254a3d485e093f968aba920c424ac3704.html",
+            "sourcePageSHA256": "1a5ce3fce9f8a71473a95f6284f3ae3254a3d485e093f968aba920c424ac3704",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/2fcb6d316a82a382d7c11a8380a08e4e0a1d1e8a071d824c6932f72e4c603749.body",
+            "sourceFields": {
+              "Date": "August 2006",
+              "Source": "Own work",
+              "Author": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage"
+            },
+            "authors": [
+              "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "Public domain"
+            ],
+            "license": "PD (photographer self release)",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/90dd993cdc46-technical-source.json",
+            "sourceDescriptionAndWaiverExcerpt": "Summary [ edit ] Description Overview of Port of Spain.jpg English: Port of Spain. Overview of Port of Spain, Trinidad, Port of Spain. Date August 2006 Source Own work Author Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage Licensing [ edit ] Public domain Public domain false false This work has been released into the public domain by its author, User: (WT-shared) Kevin James at wts wikivoyage . This applies worldwide. In some countries this may not be legally possible; if so: User: (WT-shared) Kevin James at wts wikivoyage grants anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. Public domain Public domain false false Original upload log [ edit ] This file was imported from Wikivoyage WTS. The original description page was here . All following user names refer to wts.wikivoyage-old. 2008-06-10 01:22 (WT-shared) Kevin James [ dead link ] 1300×663 (388300 bytes) {{Imagecredit|credit=Kevin Gabbert|captureDate=August 2006|location=Port of Spain|source=myself|caption=Port of Spain|description=Overview o (Import from wikitravel.org/shared) File history Click on a date/time to view the file as it appeared at that time. Date",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 1300×663 itse katsottu: etualan ruoho, laaja Port of Spainin kaupunkimassa ja meri. Ei ihmisiä, lisättyä tekstiä, kehystä, mainos-/pakkausaihetta tai yksittäistä suojattua teosta pääaiheena. Rakennukset ovat laajan kaupunkinäkymän etäisiä osia; niiden iästä ei päätellä PD-oikeutta. Paikka nimenomaisesta kuvaajan kuvauksesta; Kevin Gabbert on ilmoitettu krediitti ja Kevin James -käyttäjä hänen lähteessä mainittu tunnisteensa. Valokuvaajan oma maailmanlaajuinen PD-vapautus ja unrestricted fallback lähdesivulla, ei CC0-deediä. Elokuu 2006 säilyy eikä PHOTOa väitetä nykyiseksi opaskuvaksi.",
+            "workLayerAssessment": "Alkuperäinen 1300×663 itse katsottu: etualan ruoho, laaja Port of Spainin kaupunkimassa ja meri. Ei ihmisiä, lisättyä tekstiä, kehystä, mainos-/pakkausaihetta tai yksittäistä suojattua teosta pääaiheena. Rakennukset ovat laajan kaupunkinäkymän etäisiä osia; niiden iästä ei päätellä PD-oikeutta. Paikka nimenomaisesta kuvaajan kuvauksesta; Kevin Gabbert on ilmoitettu krediitti ja Kevin James -käyttäjä hänen lähteessä mainittu tunnisteensa. Valokuvaajan oma maailmanlaajuinen PD-vapautus ja unrestricted fallback lähdesivulla, ei CC0-deediä. Elokuu 2006 säilyy eikä PHOTOa väitetä nykyiseksi opaskuvaksi.",
+            "photographerCanonical": "Kevin Gabbert",
+            "deliveryMetadataCorrectionNeeded": {
+              "field": "licenseUrl",
+              "producerValue": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "requiredValue": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+              "reason": "Source is PD-self waiver, not CC0. Preserve its worldwide unrestricted fallback and real photographer credit."
+            },
+            "requiredDeliveryMetadata": {
+              "author": "Kevin Gabbert",
+              "license": "PD",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+              "captureDate": "August 2006"
+            }
+          },
+          "checkedAt": "2026-10-12T19:42:07.853080+00:00",
+          "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Overview of Port of Spain.jpg",
+        "sha256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Overview_of_Port_of_Spain.jpg",
+        "author": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Overview_of_Port_of_Spain.jpg#Licensing",
+        "width": 1300,
+        "height": 663,
+        "originalSHA256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
+        "bytes": 388300,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:42:30.047636+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Overview of Port of Spain.jpg",
+        "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
+        "selite": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "lyhyt": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
+        "selite": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "lyhyt": "Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.",
+        "tiedosto": "Overview of Port of Spain.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "targetAfterSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba",
+      "contextAfterSHA256": "1147747ecff88a33ef826d0060e2071cbbb36e9c38d29911d3a9669ab51b04ba"
+    },
+    {
+      "era": "e12",
+      "city": "portofspain",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-portofspain-c1-824182c5668d3fcd",
+      "galleryImageID": "capital-cc-e12-portofspain-c1-824182c5668d3fcd",
+      "commonsFile": "PanoramaofPOSwest.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
+        "suora": true,
+        "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
+        "selite": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "lyhyt": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "tiedosto": "PanoramaofPOSwest.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
+        "selite": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "lyhyt": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "tiedosto": "PanoramaofPOSwest.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
+        "suora": true,
+        "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
+        "selite": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "lyhyt": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "tiedosto": "PanoramaofPOSwest.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+      "exportSHA256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/portofspain/4bb9756636236411e9f3edb5edc1cde4fd7ad36bd47d7b036ea9c686f52bbfe5.jpg",
+      "dimensions": [
+        6768,
+        1856
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
+      "sourceContentSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
+        "semanticContextSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
+        "subjectTitle": "Port of Spain",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "en:User:Christianwelsh",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/PanoramaofPOSwest.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä en:User:Christianwelsh alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi Public domain tiedostosivusta.",
+            "placeEvidence": "Photo of west Port of Spain and downtown (original description: photo of west Port of Spain and downtown)",
+            "workLayer": "Laaja todellinen kaupungin asettelu: meri, rantaviiva, kaupungin hajautunut rakennuskanta ja metsäiset kukkulat. Eri rakennukset ovat pienenä osana kaupunkimaisemaa, ei yksittäisen nimetyn nykyteoksen pääaiheista jäljennöstä. Alkuperäinen Description/otsikko Panorama POS west nimeää kaupungin. Ei oletettua rakennusiän PD-statusta eikä blanket FoP-väitettä; valokuvan PD-vapautus on eri kerros ja lähdesivulta.",
+            "visualInspection": "Alkuperäinen6768×1856 katsottu: laaja kaupungin, rannikon ja kukkuloiden asettelu, ei tunnistettavia kasvoja/overlayta/vesileimaa/kehystä. Natiivin panoraman muoto sallittu C-kansissa; kuvaus2008 kirjattu, ei tuore-opaskuvaksi.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/24c2034ca6e9.html",
+            "sourceSha256": "6f42ab3481686a780437f149fba70efeeaff5f6251912aabbe1594143e7a7571",
+            "licenseInterpretation": "Kuvaajan oma maailmanlaajuinen public domain -vapautus alkuperäisen tiedostosivun Licensing-osiossa. CC0-deediä ei valittu; lähdesivun yleinen CC0-opaslinkki ei ole tämän kuvan lisenssi."
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/24c2034ca6e9-original.jpg",
+            "width": 6768,
+            "height": 1856,
+            "sha256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+            "nativeGeometry": {
+              "rawWidth": 6768,
+              "rawHeight": 1856,
+              "exifOrientation": 1,
+              "width": 6768,
+              "height": 1856
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/6f42ab3481686a780437f149fba70efeeaff5f6251912aabbe1594143e7a7571.html",
+            "sourcePageSHA256": "6f42ab3481686a780437f149fba70efeeaff5f6251912aabbe1594143e7a7571",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/989fce40300fe858ddd047cb0a5bc38790caaaf8702a039a249b0ade22aad10a.body",
+            "sourceFields": {
+              "Date": "2008",
+              "Source": "en:PanoramaofPOSwest.jpg (original source: self)",
+              "Author": "en:User:Christianwelsh"
+            },
+            "authors": [
+              "en:User:Christianwelsh"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "Public domain"
+            ],
+            "license": "PD (photographer self release)",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/97c4ef066d47-technical-source.json",
+            "sourceSummaryExcerpt": "",
+            "licensePanelText": [
+              "Public domain Public domain false false"
+            ],
+            "sourcePDReleaseExcerpt": "Permission ( Reusing this file ) Public domain Public domain false false I, the copyright holder of this work, release this work into the public domain . This applies worldwide. In some countries this may not be legally possible; if so: I grant anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. Other versions This image has an extracted file : Port of Spain Trinidad.jpg . File history Click on a date/time to",
+            "relatedExtractedVersion": "Port of Spain Trinidad.jpg",
+            "deliveryMetadataCorrectionNeeded": {
+              "field": "licenseUrl",
+              "producerValue": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "requiredValue": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+              "reason": "Permission has PD-self worldwide release, not CC0."
+            },
+            "requiredDeliveryMetadata": {
+              "author": "en:User:Christianwelsh",
+              "license": "PD",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+              "captureDate": "2008 (EXIF 2008-08-02)"
+            },
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia.",
+            "workLayerAssessment": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia.",
+            "coverLayoutAssessment": {
+              "required": "broad real city/place view",
+              "passes": true,
+              "observed": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia."
+            }
+          },
+          "qaReason": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+        "fileSHA256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "type": "commons",
+          "commonsFile": "PanoramaofPOSwest.jpg",
+          "sha256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+          "nativeSHA256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/24c2034ca6e9-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/cc-search/24c2034ca6e9-original.jpg",
+            "width": 6768,
+            "height": 1856,
+            "sha256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+            "nativeGeometry": {
+              "rawWidth": 6768,
+              "rawHeight": 1856,
+              "exifOrientation": 1,
+              "width": 6768,
+              "height": 1856
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/cc-source-snapshots/6f42ab3481686a780437f149fba70efeeaff5f6251912aabbe1594143e7a7571.html",
+            "sourcePageSHA256": "6f42ab3481686a780437f149fba70efeeaff5f6251912aabbe1594143e7a7571",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/989fce40300fe858ddd047cb0a5bc38790caaaf8702a039a249b0ade22aad10a.body",
+            "sourceFields": {
+              "Date": "2008",
+              "Source": "en:PanoramaofPOSwest.jpg (original source: self)",
+              "Author": "en:User:Christianwelsh"
+            },
+            "authors": [
+              "en:User:Christianwelsh"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "Public domain"
+            ],
+            "license": "PD (photographer self release)",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa-evidence/97c4ef066d47-technical-source.json",
+            "sourceSummaryExcerpt": "",
+            "licensePanelText": [
+              "Public domain Public domain false false"
+            ],
+            "sourcePDReleaseExcerpt": "Permission ( Reusing this file ) Public domain Public domain false false I, the copyright holder of this work, release this work into the public domain . This applies worldwide. In some countries this may not be legally possible; if so: I grant anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. Other versions This image has an extracted file : Port of Spain Trinidad.jpg . File history Click on a date/time to",
+            "relatedExtractedVersion": "Port of Spain Trinidad.jpg",
+            "deliveryMetadataCorrectionNeeded": {
+              "field": "licenseUrl",
+              "producerValue": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "requiredValue": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+              "reason": "Permission has PD-self worldwide release, not CC0."
+            },
+            "requiredDeliveryMetadata": {
+              "author": "en:User:Christianwelsh",
+              "license": "PD",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+              "captureDate": "2008 (EXIF 2008-08-02)"
+            },
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia.",
+            "workLayerAssessment": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia.",
+            "coverLayoutAssessment": {
+              "required": "broad real city/place view",
+              "passes": true,
+              "observed": "Alkuperäinen 6768×1856 itse katsottu: aito laaja Port of Spainin länsiosan ja keskustan panorama, meri ja metsäiset kukkulat. Rakennukset muodostavat kaupunkimassan, eivät yhden nimetyn suojatun nykyteoksen pääaihetta. Ei luettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. en:User:Christianwelsh on lähteen nimenomainen Author; valokuvaajan PD-self-vapautus ja unrestricted fallback luettu Permission-kentästä. Date 2008, EXIF-data generation 2.8.2008; ei nykypäivän opaskuva. Vaakapano on C1:een sallittu, koska TRAVELERin kiinteä ratio ei koske kansia."
+            }
+          },
+          "checkedAt": "2026-10-12T19:53:57.816350+00:00",
+          "contentSHA256": "07e34b9ccb7525f4b0410b0b7b15808fd1969b1e81b2d73c38f5e056977f6360",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/qa.json",
+            "sha256": "bc36b5925bc6551fcbd73287c8950e3aa3031716e205fe26920f3baec919123b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/portofspain/illustration-qa-extra.json",
+            "sha256": "e381bd27e0ec04ccd27d44e508394aa886b5f8105c5894fd62d2cb3a2e3a88a3"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "portofspain",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "PanoramaofPOSwest.jpg",
+        "sha256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/PanoramaofPOSwest.jpg",
+        "author": "en:User:Christianwelsh",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:PanoramaofPOSwest.jpg#Licensing",
+        "width": 6768,
+        "height": 1856,
+        "originalSHA256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
+        "bytes": 2962390,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:54:58.492473+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "PanoramaofPOSwest.jpg",
+        "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
+        "selite": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "lyhyt": "Port of Spainin laaja maisema lännestä vuonna 2008."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
+        "selite": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "lyhyt": "Port of Spainin laaja maisema lännestä vuonna 2008.",
+        "tiedosto": "PanoramaofPOSwest.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c3ea2c54ea6afadcf4eb81779ab41f1c5254a5c42114bdc0ac959ce0ff155c74",
+      "targetAfterSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69",
+      "contextAfterSHA256": "3b2d4fdfcdd99989f3513bdf93f22286c6ee9e744d2905b032aa8f39b3ab8e69"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

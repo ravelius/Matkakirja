@@ -1,0 +1,1699 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "nassau",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e12-nassau-O4-157be13177",
+      "galleryImageID": "e12-nassau-O4-157be13177",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+        "lyhyt": "Havainnekuva friteeratuista conch-merikotilopaloista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+        "lyhyt": "Havainnekuva friteeratuista conch-merikotilopaloista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+      "exportSHA256": "79095a85568fa3219da3b3598fae8a7ed716766e24e3e6f117ca75bae40e7e16",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruokahavainnekuva; ei suojattua teosta/arkkitehtuuria, ihmisiä, pakkausta tai nimetyn ravintolan valokuvaa. PHOTO-paikkaan ei käytetä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+            "width": 1536,
+            "height": 1024,
+            "visualViewed": true,
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e12-nassau/opas.txt",
+            "sourceSHA256": "e88f83843270e4b73103e0571b7fc70dbeace9eda1ed1987e2947cc307b34ec3",
+            "sourceSection": "Potters Cay and Eat: fresh conch salad, conch fritters and other Bahamian seafood",
+            "captionFi": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+            "rightsLayer": "Tavallinen ruoka, valkoinen astia ja pöytä; ei teoskerrosta",
+            "imageType": "illustration",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Friteerattujen conch-fritters-palojen epäsäännöllinen rapea taikinapinta, halkaistu pala ja vaalea täyte ovat uskottavia. Ei toistuvaa synteettistä pintaa, ihmisiä, tekstiä, logoja tai suojattua teosta. Lähde tukee Nassau/Potters Cay -ruoka-aihetta; yleishavainnollistus ei väitä tiettyä ravintolaa tai kojuannosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e12-nassau-O4-157be13177",
+          "sha256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+          "verdict": "accepted",
+          "reason": "Friteerattujen conch-fritters-palojen epäsäännöllinen rapea taikinapinta, halkaistu pala ja vaalea täyte ovat uskottavia. Ei toistuvaa synteettistä pintaa, ihmisiä, tekstiä, logoja tai suojattua teosta. Lähde tukee Nassau/Potters Cay -ruoka-aihetta; yleishavainnollistus ei väitä tiettyä ravintolaa tai kojuannosta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+            "width": 1536,
+            "height": 1024,
+            "visualViewed": true,
+            "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e12-nassau/opas.txt",
+            "sourceSHA256": "e88f83843270e4b73103e0571b7fc70dbeace9eda1ed1987e2947cc307b34ec3",
+            "sourceSection": "Potters Cay and Eat: fresh conch salad, conch fritters and other Bahamian seafood",
+            "captionFi": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+            "rightsLayer": "Tavallinen ruoka, valkoinen astia ja pöytä; ei teoskerrosta",
+            "imageType": "illustration",
+            "realPlacePhotograph": false
+          },
+          "checkedAt": "2026-10-12T18:48:20.914189+00:00",
+          "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+              "sha256": "1fd432855bd603a9ab83d61174f3e2f1a082a2fcb6f2042ce1ef0e67f022c423",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-nassau-O4-157be13177",
+              "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+              "verdict": "accepted",
+              "reason": "Conch-fritters vastaa O4-jakson ja faktapohjan friteerattua merikotiloruokaa. Kuvateksti nimeää havainteen eikä esitä tiettyä Potters Cayn kojuannosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+                "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                  "sourceText": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Nassau",
+                  "ccEarlyRelease": {
+                    "slot": "O4",
+                    "subject": "Conch eli merikotilo, tekstissä conch salad / conch fritters",
+                    "sourceContentPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                    "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                    "source": "N6 Wikivoyage Nassau See/Eat; merikotiloruoka, ei nimetyn ravintolan valokuva",
+                    "quickCommonsInspection": {
+                      "result": "not_usable_in_quick_pass",
+                      "error": "HTTPError: HTTP Error 404: Not Found"
+                    },
+                    "scope": "Rehellinen merikotiloruoan havainnekuva; ei keksittyä kaupunkinäkymää tai PHOTO-paikkaa"
+                  },
+                  "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e12-nassau/opas.txt",
+                  "sourceSHA256": "e88f83843270e4b73103e0571b7fc70dbeace9eda1ed1987e2947cc307b34ec3"
+                },
+                "rightsEvidence": "Yleistetty ruokahavainnekuva; ei suojattua teosta/arkkitehtuuria, ihmisiä, pakkausta tai nimetyn ravintolan valokuvaa. PHOTO-paikkaan ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial food illustration for the Matkakirja travel guide, clearly a newly generated illustration of conch fritters, not evidence of a named restaurant or actual location. Create a highly realistic natural food photograph of a simple white ceramic plate of freshly fried Bahamian-style conch fritters on an ordinary unbranded table. The fritters have irregular golden crisp batter surfaces with subtle natural frying variation; one fritter is cut open showing cooked soft batter and small pieces of pale minced conch flesh. Keep the scene simple and appetizing, with realistic food proportions, ordinary material texture, soft daylight and gentle shadows. Three-quarter close view, landscape 3:2 framing, preferred 1536x1024 PNG in sRGB. No people, hands, identifiable faces, raw animal bodies, text, labels, brands, logos, watermarks, borders, architecture or invented city landmarks. No repetitive synthetic texture, no glossy plastic food, no cartoon or painting style.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [
+                  {
+                    "assetID": "e12-nassau-O4-157be13177",
+                    "sha256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+                    "verdict": "accepted",
+                    "reason": "Friteerattujen conch-fritters-palojen epäsäännöllinen rapea taikinapinta, halkaistu pala ja vaalea täyte ovat uskottavia. Ei toistuvaa synteettistä pintaa, ihmisiä, tekstiä, logoja tai suojattua teosta. Lähde tukee Nassau/Potters Cay -ruoka-aihetta; yleishavainnollistus ei väitä tiettyä ravintolaa tai kojuannosta."
+                  }
+                ],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella epäsäännöllisiä kullanruskeita frittersejä ja avattu pala, jossa vaaleita lihapaloja taikinan joukossa; vieressä sitruslohkoja. Rapeat reunat, sisuksen huokoset ja lisäkkeet uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+              "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-nassau-O4-157be13177",
+              "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+              "verdict": "accepted",
+              "reason": "Conch-fritters vastaa O4-jakson ja faktapohjan friteerattua merikotiloruokaa. Kuvateksti nimeää havainteen eikä esitä tiettyä Potters Cayn kojuannosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+                "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                  "sourceText": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Nassau",
+                  "ccEarlyRelease": {
+                    "slot": "O4",
+                    "subject": "Conch eli merikotilo, tekstissä conch salad / conch fritters",
+                    "sourceContentPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                    "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                    "source": "N6 Wikivoyage Nassau See/Eat; merikotiloruoka, ei nimetyn ravintolan valokuva",
+                    "quickCommonsInspection": {
+                      "result": "not_usable_in_quick_pass",
+                      "error": "HTTPError: HTTP Error 404: Not Found"
+                    },
+                    "scope": "Rehellinen merikotiloruoan havainnekuva; ei keksittyä kaupunkinäkymää tai PHOTO-paikkaa"
+                  },
+                  "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e12-nassau/opas.txt",
+                  "sourceSHA256": "e88f83843270e4b73103e0571b7fc70dbeace9eda1ed1987e2947cc307b34ec3"
+                },
+                "rightsEvidence": "Yleistetty ruokahavainnekuva; ei suojattua teosta/arkkitehtuuria, ihmisiä, pakkausta tai nimetyn ravintolan valokuvaa. PHOTO-paikkaan ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial food illustration for the Matkakirja travel guide, clearly a newly generated illustration of conch fritters, not evidence of a named restaurant or actual location. Create a highly realistic natural food photograph of a simple white ceramic plate of freshly fried Bahamian-style conch fritters on an ordinary unbranded table. The fritters have irregular golden crisp batter surfaces with subtle natural frying variation; one fritter is cut open showing cooked soft batter and small pieces of pale minced conch flesh. Keep the scene simple and appetizing, with realistic food proportions, ordinary material texture, soft daylight and gentle shadows. Three-quarter close view, landscape 3:2 framing, preferred 1536x1024 PNG in sRGB. No people, hands, identifiable faces, raw animal bodies, text, labels, brands, logos, watermarks, borders, architecture or invented city landmarks. No repetitive synthetic texture, no glossy plastic food, no cartoon or painting style.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [
+                  {
+                    "assetID": "e12-nassau-O4-157be13177",
+                    "sha256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+                    "verdict": "accepted",
+                    "reason": "Friteerattujen conch-fritters-palojen epäsäännöllinen rapea taikinapinta, halkaistu pala ja vaalea täyte ovat uskottavia. Ei toistuvaa synteettistä pintaa, ihmisiä, tekstiä, logoja tai suojattua teosta. Lähde tukee Nassau/Potters Cay -ruoka-aihetta; yleishavainnollistus ei väitä tiettyä ravintolaa tai kojuannosta."
+                  }
+                ],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella epäsäännöllisiä kullanruskeita frittersejä ja avattu pala, jossa vaaleita lihapaloja taikinan joukossa; vieressä sitruslohkoja. Rapeat reunat, sisuksen huokoset ja lisäkkeet uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+              "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-nassau-O4-157be13177",
+              "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+              "verdict": "accepted",
+              "reason": "Conch-fritters vastaa O4-jakson ja faktapohjan friteerattua merikotiloruokaa. Kuvateksti nimeää havainteen eikä esitä tiettyä Potters Cayn kojuannosta. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+                "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva friteeratuista conch-merikotilopaloista.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                  "sourceText": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "originalSource": "https://en.wikivoyage.org/wiki/Nassau",
+                  "ccEarlyRelease": {
+                    "slot": "O4",
+                    "subject": "Conch eli merikotilo, tekstissä conch salad / conch fritters",
+                    "sourceContentPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                    "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                    "source": "N6 Wikivoyage Nassau See/Eat; merikotiloruoka, ei nimetyn ravintolan valokuva",
+                    "quickCommonsInspection": {
+                      "result": "not_usable_in_quick_pass",
+                      "error": "HTTPError: HTTP Error 404: Not Found"
+                    },
+                    "scope": "Rehellinen merikotiloruoan havainnekuva; ei keksittyä kaupunkinäkymää tai PHOTO-paikkaa"
+                  },
+                  "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e12-nassau/opas.txt",
+                  "sourceSHA256": "e88f83843270e4b73103e0571b7fc70dbeace9eda1ed1987e2947cc307b34ec3"
+                },
+                "rightsEvidence": "Yleistetty ruokahavainnekuva; ei suojattua teosta/arkkitehtuuria, ihmisiä, pakkausta tai nimetyn ravintolan valokuvaa. PHOTO-paikkaan ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial food illustration for the Matkakirja travel guide, clearly a newly generated illustration of conch fritters, not evidence of a named restaurant or actual location. Create a highly realistic natural food photograph of a simple white ceramic plate of freshly fried Bahamian-style conch fritters on an ordinary unbranded table. The fritters have irregular golden crisp batter surfaces with subtle natural frying variation; one fritter is cut open showing cooked soft batter and small pieces of pale minced conch flesh. Keep the scene simple and appetizing, with realistic food proportions, ordinary material texture, soft daylight and gentle shadows. Three-quarter close view, landscape 3:2 framing, preferred 1536x1024 PNG in sRGB. No people, hands, identifiable faces, raw animal bodies, text, labels, brands, logos, watermarks, borders, architecture or invented city landmarks. No repetitive synthetic texture, no glossy plastic food, no cartoon or painting style.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+                  "targetText": {
+                    "otsikko": "Mitä täällä syödään",
+                    "teksti": "Conch on merikotilo, jota tarjotaan esimerkiksi salaattina ja friteerattuina fritters-paloina. Potters Cayn kalatorin kojuissa valmistetaan näitä ruokia sekä muita bahamalaisia meren antimia. Keskustan ravintoloissa on myös kalaa ja paikallisia jälkiruokia. Jos kotilo ei ole entuudestaan tuttu ruoka, kysy valmistustavasta: conch salad ja conch fritters ovat samasta raaka-aineesta tehtyjä hyvin erilaisia annoksia.",
+                    "kuva": {
+                      "tiedosto": "",
+                      "lyhyt": "",
+                      "selite": "",
+                      "lahde": ""
+                    }
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [
+                  {
+                    "assetID": "e12-nassau-O4-157be13177",
+                    "sha256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+                    "verdict": "accepted",
+                    "reason": "Friteerattujen conch-fritters-palojen epäsäännöllinen rapea taikinapinta, halkaistu pala ja vaalea täyte ovat uskottavia. Ei toistuvaa synteettistä pintaa, ihmisiä, tekstiä, logoja tai suojattua teosta. Lähde tukee Nassau/Potters Cay -ruoka-aihetta; yleishavainnollistus ei väitä tiettyä ravintolaa tai kojuannosta."
+                  }
+                ],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-O4-157be13177/original.png",
+                  "detail": "original",
+                  "observations": "Lautasella epäsäännöllisiä kullanruskeita frittersejä ja avattu pala, jossa vaaleita lihapaloja taikinan joukossa; vieressä sitruslohkoja. Rapeat reunat, sisuksen huokoset ja lisäkkeet uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              },
+              "opinionSHA256": "43a41baaed0fa6855125f1e1ca1064302485f2791f6c2b67bf50cd11001ad875",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/extra-review-snapshots/90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d.json"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png?t=79095a85568fa321",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+        "sha256": "79095a85568fa3219da3b3598fae8a7ed716766e24e3e6f117ca75bae40e7e16",
+        "bytes": 2377516,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-nassau-O4-157be13177",
+        "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "nassau",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T17:57:38.535954+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-O4-157be13177-0ac9a35c9925.png",
+        "sha256": "79095a85568fa3219da3b3598fae8a7ed716766e24e3e6f117ca75bae40e7e16",
+        "bytes": 2377516,
+        "SHAReadAt": "2026-10-12T18:30:01.646320+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0ac9a35c99256a59e77ccb144ffc06d0a0aed48538fa44dea9c93cceccbf8b28",
+        "rgbPixelSHA256": "de80764bbd1c6a2d6c88cc4212c6b3481641379c50e742f80660515eeada4f7b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "4dfad821d791c0785aedaa9e84722bdf282dcea98f29f177f6e8c55b9ce32d9c"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e12-nassau-K1-056177d902",
+      "galleryImageID": "e12-nassau-K1-056177d902",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
+        "lyhyt": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
+        "lyhyt": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+      "exportSHA256": "fdc68b85bbeb6bbff9ee4328cd319197d612bfa81a23caefe45ba795e3c95458",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+        "semanticContextSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+        "subjectTitle": "Koko vuosi paperia varten",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K1-056177d902/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/2a04cbe0f0a7-technical-source.json",
+            "visualViewed": true,
+            "visualVerdict": "accepted-as-general-material-illustration",
+            "visualNotes": "Kreppipaperin rypyt, rullat/suikaleet ja kartonki luontevia. Ei valmista pukusuunnitelmaa tai tunnistettavaa taideteosta. Ei kasvoja, tekstiä/logoja.",
+            "captionFi": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "workflowEvidence": {
+              "ccStatusSHA256": "dfdeca98e5824e749cdc6a91a3e7ef666eb54ce35895092797e20a5d641c4c2a",
+              "readySlots": [
+                "O4"
+              ],
+              "assetCCReleaseSlot": "O4"
+            },
+            "workflowPolicyCorrection": "CC-odotus ei vaadittu turvalliselle yleishavainnollistukselle; aikaisempi blocked ei enää sovellu",
+            "producerMetadataCorrectionNeeded": "ccRelease.slot=O4 on väärä tässä K1-assetissa; tuottaja korjaa omassa manifestissa"
+          },
+          "qaReason": "Kuva katsottu itse: tavallisen kreppipaperin rypyt, rullat/suikaleet ja kartonki luontevia. Ei valmista pukusuunnitelmaa, kasvoja, tekstiä tai teosta. Junkanoon materiaalilähde ja nykyinen K1-nosto tukevat aihetta. Uuden OHJEET-tarkennuksen perusteella turvallinen yleisaihe ei tarvitse CC-jonon odotusta; vanha CC-vapautusgate oikaistaan. Tuottajan ccRelease/O4-metatieto on edelleen korjattava kuvaamaan oikeaa K1-aihetta, mutta se ei tämän säännön mukaan estä itse kuvan käyttöä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e12-nassau-K1-056177d902",
+          "sha256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+          "verdict": "accepted",
+          "reason": "Kuva katsottu itse: tavallisen kreppipaperin rypyt, rullat/suikaleet ja kartonki luontevia. Ei valmista pukusuunnitelmaa, kasvoja, tekstiä tai teosta. Junkanoon materiaalilähde ja nykyinen K1-nosto tukevat aihetta. Uuden OHJEET-tarkennuksen perusteella turvallinen yleisaihe ei tarvitse CC-jonon odotusta; vanha CC-vapautusgate oikaistaan. Tuottajan ccRelease/O4-metatieto on edelleen korjattava kuvaamaan oikeaa K1-aihetta, mutta se ei tämän säännön mukaan estä itse kuvan käyttöä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K1-056177d902/original.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/2a04cbe0f0a7-technical-source.json",
+            "visualViewed": true,
+            "visualVerdict": "accepted-as-general-material-illustration",
+            "visualNotes": "Kreppipaperin rypyt, rullat/suikaleet ja kartonki luontevia. Ei valmista pukusuunnitelmaa tai tunnistettavaa taideteosta. Ei kasvoja, tekstiä/logoja.",
+            "captionFi": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "workflowEvidence": {
+              "ccStatusSHA256": "dfdeca98e5824e749cdc6a91a3e7ef666eb54ce35895092797e20a5d641c4c2a",
+              "readySlots": [
+                "O4"
+              ],
+              "assetCCReleaseSlot": "O4"
+            },
+            "workflowPolicyCorrection": "CC-odotus ei vaadittu turvalliselle yleishavainnollistukselle; aikaisempi blocked ei enää sovellu",
+            "producerMetadataCorrectionNeeded": "ccRelease.slot=O4 on väärä tässä K1-assetissa; tuottaja korjaa omassa manifestissa"
+          },
+          "checkedAt": "2026-10-12T18:48:20.914234+00:00",
+          "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+          "targetSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+          "corrections": [
+            {
+              "previousVerdict": "blocked",
+              "previousReason": "Kuva on visuaalisesti ja aiheeltaan käyttökelpoinen yleinen kreppipaperi-/kartonkihavainne. Tuottajan ccRelease-todiste viittaa O4:n merikotiloruokaan, ja nykyinen cc-status vapauttaa vain O4:n. K1:n kohdistettu CC-ensitarkastelu/vapautus puuttuu; tuottaja/CC korjaa oman metadatansa tai tekee puuttuvan tarkastelun. Ei tarvetta uuteen generointiin, eikä kuvaa nimetä hyväksytyksi CC/generointi-yhteensovitukselta.",
+              "correctedAt": "2026-10-12T18:16:51.833390+00:00",
+              "basis": "Uusi OHJEET Nopeutus: turvallinen lähdeperustainen yleishavainnollistus ei odota CC-ensikierrosta; vanhat jo issued/candidate-assetit säilyvät"
+            }
+          ],
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+              "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-nassau-K1-056177d902",
+              "nativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+              "verdict": "accepted",
+              "reason": "Kreppipaperi ja kartonki vastaavat K1-noston Junkanoo-pukujen materiaaleja ja UNESCO-lähteellä sidottua faktapohjaa. Kuvateksti on materiaalihavainne; ei valmista pukusuunnitelmaa. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K1-056177d902/original.png",
+                "nativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "sourceText": "Junkanoo-kulkueessa kartonki ja kreppipaperi muuttuvat käsin tehdyiksi puvuiksi. Ryhmät valmistelevat asujaan pitkin vuotta, vaikka suuri yleisö näkee ne vasta kadulla. Nassaun kulkueessa tanssia säestävät rummut, kellot ja pillit, ja ryhmiä arvioidaan sekä musiikin että pukujen perusteella. Tapahtuman historia liittyy orjuutettujen afrikkalaisten ja heidän jälkeläistensä juhlintaan. Nykyinen kilpailumuoto yhdistää samaan esitykseen käsityön, liikkeen ja yhteisen rytmin.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "originalSources": [
+                    "https://ich.unesco.org/en/RL/01988",
+                    "https://en.wikipedia.org/wiki/Junkanoo"
+                  ],
+                  "ccRelease": null,
+                  "withdrawnMismatchedCCSnapshot": {
+                    "slot": "O4",
+                    "subject": "Conch eli merikotilo, tekstissä conch salad / conch fritters",
+                    "sourceContentPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                    "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                    "source": "N6 Wikivoyage Nassau See/Eat; merikotiloruoka, ei nimetyn ravintolan valokuva",
+                    "quickCommonsInspection": {
+                      "result": "not_usable_in_quick_pass",
+                      "error": "HTTPError: HTTP Error 404: Not Found"
+                    },
+                    "scope": "Rehellinen merikotiloruoan havainnekuva; ei keksittyä kaupunkinäkymää tai PHOTO-paikkaa"
+                  },
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/nassau/K1/owner.json",
+                    "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. Close editorial still life of loose colourful crepe-paper strips and undecorated cardboard on a craft table. Show their distinct real material textures and the preparation of paper craft materials, without a finished costume, recognizable festival design or lettering. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].nostot[0]",
+                  "targetText": {
+                    "otsikko": "Koko vuosi paperia varten",
+                    "teksti": "Junkanoo-kulkueessa kartonki ja kreppipaperi muuttuvat käsin tehdyiksi puvuiksi. Ryhmät valmistelevat asujaan pitkin vuotta, vaikka suuri yleisö näkee ne vasta kadulla. Nassaun kulkueessa tanssia säestävät rummut, kellot ja pillit, ja ryhmiä arvioidaan sekä musiikin että pukujen perusteella. Tapahtuman historia liittyy orjuutettujen afrikkalaisten ja heidän jälkeläistensä juhlintaan. Nykyinen kilpailumuoto yhdistää samaan esitykseen käsityön, liikkeen ja yhteisen rytmin.",
+                    "wiki": "Junkanoo",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": ""
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [
+                  {
+                    "assetID": "e12-nassau-K1-056177d902",
+                    "sha256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+                    "verdict": "accepted",
+                    "reason": "Kuva katsottu itse: tavallisen kreppipaperin rypyt, rullat/suikaleet ja kartonki luontevia. Ei valmista pukusuunnitelmaa, kasvoja, tekstiä tai teosta. Junkanoon materiaalilähde ja nykyinen K1-nosto tukevat aihetta. Uuden OHJEET-tarkennuksen perusteella turvallinen yleisaihe ei tarvitse CC-jonon odotusta; vanha CC-vapautusgate oikaistaan. Tuottajan ccRelease/O4-metatieto on edelleen korjattava kuvaamaan oikeaa K1-aihetta, mutta se ei tämän säännön mukaan estä itse kuvan käyttöä."
+                  }
+                ],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K1-056177d902/original.png",
+                  "detail": "original",
+                  "observations": "Pöydällä värikkäitä kreppipaperirullia ja suikaleita sekä painamattomia ruskeita kartonkiarkkeja. Paperin rypyt, kerrokset ja kaareutuminen uskottavia, ilman tekstiä. Ei ihmisiä, logoja, vesileimaa, kehystä tai nimettyä teosta.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+              "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d",
+              "reviewerGroup": "kuvitus-3",
+              "assetID": "e12-nassau-K1-056177d902",
+              "nativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+              "verdict": "accepted",
+              "reason": "Kreppipaperi ja kartonki vastaavat K1-noston Junkanoo-pukujen materiaaleja ja UNESCO-lähteellä sidottua faktapohjaa. Kuvateksti on materiaalihavainne; ei valmista pukusuunnitelmaa. Native-SHA ja mitat täsmäävät.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K1-056177d902/original.png",
+                "nativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "pngChunks": [
+                  "IHDR",
+                  "caBX",
+                  "IDAT",
+                  "IEND"
+                ],
+                "manifestMatch": true,
+                "captionFi": "Havainnekuva Junkanoo-pukujen kreppipaperista ja kartongista.",
+                "sourceEvidence": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "sourceText": "Junkanoo-kulkueessa kartonki ja kreppipaperi muuttuvat käsin tehdyiksi puvuiksi. Ryhmät valmistelevat asujaan pitkin vuotta, vaikka suuri yleisö näkee ne vasta kadulla. Nassaun kulkueessa tanssia säestävät rummut, kellot ja pillit, ja ryhmiä arvioidaan sekä musiikin että pukujen perusteella. Tapahtuman historia liittyy orjuutettujen afrikkalaisten ja heidän jälkeläistensä juhlintaan. Nykyinen kilpailumuoto yhdistää samaan esitykseen käsityön, liikkeen ja yhteisen rytmin.",
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "originalSources": [
+                    "https://ich.unesco.org/en/RL/01988",
+                    "https://en.wikipedia.org/wiki/Junkanoo"
+                  ],
+                  "ccRelease": null,
+                  "withdrawnMismatchedCCSnapshot": {
+                    "slot": "O4",
+                    "subject": "Conch eli merikotilo, tekstissä conch salad / conch fritters",
+                    "sourceContentPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].teksti",
+                    "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                    "source": "N6 Wikivoyage Nassau See/Eat; merikotiloruoka, ei nimetyn ravintolan valokuva",
+                    "quickCommonsInspection": {
+                      "result": "not_usable_in_quick_pass",
+                      "error": "HTTPError: HTTP Error 404: Not Found"
+                    },
+                    "scope": "Rehellinen merikotiloruoan havainnekuva; ei keksittyä kaupunkinäkymää tai PHOTO-paikkaa"
+                  },
+                  "generationAuthorization": {
+                    "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                    "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/nassau/K1/owner.json",
+                    "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                    "ccReleaseRequired": false,
+                    "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+                  }
+                },
+                "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+                "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. Close editorial still life of loose colourful crepe-paper strips and undecorated cardboard on a craft table. Show their distinct real material textures and the preparation of paper craft materials, without a finished costume, recognizable festival design or lettering. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+                "content": {
+                  "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+                  "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+                  "targetObjectExists": true,
+                  "targetContainer": "$.kaupunkilehti[0].nostot[0]",
+                  "targetText": {
+                    "otsikko": "Koko vuosi paperia varten",
+                    "teksti": "Junkanoo-kulkueessa kartonki ja kreppipaperi muuttuvat käsin tehdyiksi puvuiksi. Ryhmät valmistelevat asujaan pitkin vuotta, vaikka suuri yleisö näkee ne vasta kadulla. Nassaun kulkueessa tanssia säestävät rummut, kellot ja pillit, ja ryhmiä arvioidaan sekä musiikin että pukujen perusteella. Tapahtuman historia liittyy orjuutettujen afrikkalaisten ja heidän jälkeläistensä juhlintaan. Nykyinen kilpailumuoto yhdistää samaan esitykseen käsityön, liikkeen ja yhteisen rytmin.",
+                    "wiki": "Junkanoo",
+                    "tiedosto": "",
+                    "lyhyt": "",
+                    "selite": "",
+                    "lahde": ""
+                  },
+                  "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/faktapohja.md",
+                  "factSheetExists": true
+                },
+                "otherReviewerVerdicts": [
+                  {
+                    "assetID": "e12-nassau-K1-056177d902",
+                    "sha256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+                    "verdict": "accepted",
+                    "reason": "Kuva katsottu itse: tavallisen kreppipaperin rypyt, rullat/suikaleet ja kartonki luontevia. Ei valmista pukusuunnitelmaa, kasvoja, tekstiä tai teosta. Junkanoon materiaalilähde ja nykyinen K1-nosto tukevat aihetta. Uuden OHJEET-tarkennuksen perusteella turvallinen yleisaihe ei tarvitse CC-jonon odotusta; vanha CC-vapautusgate oikaistaan. Tuottajan ccRelease/O4-metatieto on edelleen korjattava kuvaamaan oikeaa K1-aihetta, mutta se ei tämän säännön mukaan estä itse kuvan käyttöä."
+                  }
+                ],
+                "visualInspection": {
+                  "tool": "view_image",
+                  "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/assets/e12-nassau-K1-056177d902/original.png",
+                  "detail": "original",
+                  "observations": "Pöydällä värikkäitä kreppipaperirullia ja suikaleita sekä painamattomia ruskeita kartonkiarkkeja. Paperin rypyt, kerrokset ja kaareutuminen uskottavia, ilman tekstiä. Ei ihmisiä, logoja, vesileimaa, kehystä tai nimettyä teosta.",
+                  "inspectedBy": "kuvitus-3"
+                },
+                "openConflict": false
+              },
+              "opinionSHA256": "42a80e3f0881ce68561165cbd9b51110a6e5489b4e430164d34881ed98d97413",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/extra-review-snapshots/90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d.json"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png?t=fdc68b85bbeb6bbf",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+        "sha256": "fdc68b85bbeb6bbff9ee4328cd319197d612bfa81a23caefe45ba795e3c95458",
+        "bytes": 2547643,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-nassau-K1-056177d902",
+        "nativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "nassau",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T18:19:51.877221+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/nassau/e12-nassau-K1-056177d902-37953dae01f6.png",
+        "sha256": "fdc68b85bbeb6bbff9ee4328cd319197d612bfa81a23caefe45ba795e3c95458",
+        "bytes": 2547643,
+        "SHAReadAt": "2026-10-12T18:30:01.779096+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "37953dae01f6cee153fee9c3baea18a42832e5759cecb8c922220039932b0f80",
+        "rgbPixelSHA256": "e06c260ae0d5212e21466e5e72b76f44a02a41391d98d6f5502d51e957f6fbfa",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "targetAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359",
+      "contextAfterSHA256": "0f28b2e98056d3f8112bfdaad789ef9205754af7b7243d1ea6474bc5da8a3359"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-nassau-photo-5968eab004a92702",
+      "galleryImageID": "capital-cc-e12-nassau-photo-5968eab004a92702",
+      "commonsFile": "Nassau - conch shells.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
+        "suora": true,
+        "lahde": "P. Hughes, Commons (CC BY 4.0)",
+        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
+        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "tiedosto": "Nassau - conch shells.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "P. Hughes, Commons (CC BY 4.0)",
+        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
+        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "tiedosto": "Nassau - conch shells.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
+        "suora": true,
+        "lahde": "P. Hughes, Commons (CC BY 4.0)",
+        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
+        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "tiedosto": "Nassau - conch shells.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+      "exportSHA256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/nassau/1a0a06f7c9eddf5a438972a28f43d92dbf6ff252c5ff887427edd589f04598b6.jpg",
+      "dimensions": [
+        5704,
+        4024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+        "semanticContextSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+        "subjectTitle": "nassau — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "P. Hughes",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau_-_conch_shells.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Nassau_-_conch_shells.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä P. Hughes alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY 4.0 tiedostosivusta.",
+            "placeEvidence": "Alkuperäisen sivun oma nimi/Description ja katseltu paikallinen tiedosto.",
+            "workLayer": "Luonnollisia merikotilonkuoria, kasveja ja soraa. Tavallinen metallipylväs sivuosassa; ei arkkitehtuuri-/veistos-/muistomerkkipääaihetta tai nimettyä taideteosta. Oma Description: English: Conch shells, Nassau, Bahamas.",
+            "visualInspection": "Alkuperäinen 5704×4024 katsottu view_image-työkalulla. Maassa olevat vaaleanpunaiset kuoret ja kasvit; ei ihmisiä/kasvoja, lisättyä tekstiä, vesileimaa tai mainos-/pakkauspääaihetta. PHOTO ei vaadi panoraamaa. Kuvaus 16 March 2026.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/751a2de62f6c.html",
+            "sourceSha256": "b6114aa4a320aa276d66baf59b00838f48a0b8db6df4610770784031f5c3367e"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/c42acbef8dcb-original.jpg",
+            "width": 5704,
+            "height": 4024,
+            "sha256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau_-_conch_shells.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/b6114aa4a320aa276d66baf59b00838f48a0b8db6df4610770784031f5c3367e.html",
+            "sourcePageSHA256": "b6114aa4a320aa276d66baf59b00838f48a0b8db6df4610770784031f5c3367e",
+            "sourceFields": {
+              "Date": "16 March 2026",
+              "Source": "Own work",
+              "Author": "P. Hughes"
+            },
+            "authors": [
+              "P. Hughes",
+              "P. Hughes"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 4.0"
+            ],
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/c42acbef8dcb-technical-source.json",
+            "sourceDescription": [
+              "English: Conch shells, Nassau, Bahamas"
+            ],
+            "visualViewedByThisSession": true,
+            "visualObservation": "Aito Nassaussa kuvattu luonnonaihe: conch-kuoret, sora ja kasvillisuus. Lähdesivun Description nimeää Nassaun, Bahaman; P. Hughes/CC BY 4.0, 16.3.2026 vahvistettu itsenäisesti. Ei ihmisiä, lisättyä tekstiä, logoja tai suojattua teosta pääaiheena. Tavallinen metallipylväs sivuosassa. PHOTO ei edellytä panoraamaa.",
+            "workLayerAssessment": "Aito Nassaussa kuvattu luonnonaihe: conch-kuoret, sora ja kasvillisuus. Lähdesivun Description nimeää Nassaun, Bahaman; P. Hughes/CC BY 4.0, 16.3.2026 vahvistettu itsenäisesti. Ei ihmisiä, lisättyä tekstiä, logoja tai suojattua teosta pääaiheena. Tavallinen metallipylväs sivuosassa. PHOTO ei edellytä panoraamaa.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/7e7bd66285a25cd3e1b81f8def0dfe88fc3d703a9425541e69b25b875da340db.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Aito Nassaussa kuvattu luonnonaihe: conch-kuoret, sora ja kasvillisuus. Lähdesivun Description nimeää Nassaun, Bahaman; P. Hughes/CC BY 4.0, 16.3.2026 vahvistettu itsenäisesti. Ei ihmisiä, lisättyä tekstiä, logoja tai suojattua teosta pääaiheena. Tavallinen metallipylväs sivuosassa. PHOTO ei edellytä panoraamaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Conch-merikotiloiden kuoria Nassaussa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Nassau - conch shells.jpg",
+          "type": "commons",
+          "sha256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+          "verdict": "accepted",
+          "reason": "Aito Nassaussa kuvattu luonnonaihe: conch-kuoret, sora ja kasvillisuus. Lähdesivun Description nimeää Nassaun, Bahaman; P. Hughes/CC BY 4.0, 16.3.2026 vahvistettu itsenäisesti. Ei ihmisiä, lisättyä tekstiä, logoja tai suojattua teosta pääaiheena. Tavallinen metallipylväs sivuosassa. PHOTO ei edellytä panoraamaa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/c42acbef8dcb-original.jpg",
+            "width": 5704,
+            "height": 4024,
+            "sha256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau_-_conch_shells.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/b6114aa4a320aa276d66baf59b00838f48a0b8db6df4610770784031f5c3367e.html",
+            "sourcePageSHA256": "b6114aa4a320aa276d66baf59b00838f48a0b8db6df4610770784031f5c3367e",
+            "sourceFields": {
+              "Date": "16 March 2026",
+              "Source": "Own work",
+              "Author": "P. Hughes"
+            },
+            "authors": [
+              "P. Hughes",
+              "P. Hughes"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY 4.0"
+            ],
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/c42acbef8dcb-technical-source.json",
+            "sourceDescription": [
+              "English: Conch shells, Nassau, Bahamas"
+            ],
+            "visualViewedByThisSession": true,
+            "visualObservation": "Aito Nassaussa kuvattu luonnonaihe: conch-kuoret, sora ja kasvillisuus. Lähdesivun Description nimeää Nassaun, Bahaman; P. Hughes/CC BY 4.0, 16.3.2026 vahvistettu itsenäisesti. Ei ihmisiä, lisättyä tekstiä, logoja tai suojattua teosta pääaiheena. Tavallinen metallipylväs sivuosassa. PHOTO ei edellytä panoraamaa.",
+            "workLayerAssessment": "Aito Nassaussa kuvattu luonnonaihe: conch-kuoret, sora ja kasvillisuus. Lähdesivun Description nimeää Nassaun, Bahaman; P. Hughes/CC BY 4.0, 16.3.2026 vahvistettu itsenäisesti. Ei ihmisiä, lisättyä tekstiä, logoja tai suojattua teosta pääaiheena. Tavallinen metallipylväs sivuosassa. PHOTO ei edellytä panoraamaa.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/7e7bd66285a25cd3e1b81f8def0dfe88fc3d703a9425541e69b25b875da340db.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.794316+00:00",
+          "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "nassau",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Nassau - conch shells.jpg",
+        "sha256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau_-_conch_shells.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Nassau_-_conch_shells.jpg",
+        "author": "P. Hughes",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 5704,
+        "height": 4024,
+        "originalSHA256": "5968eab004a92702dc02d23fa44d0dcb96d6c60fad2b6013e99c0de05d20dfd6",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg",
+        "bytes": 23515168,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:31:52.625706+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Nassau - conch shells.jpg",
+        "lahde": "P. Hughes, Commons (CC BY 4.0)",
+        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
+        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "P. Hughes, Commons (CC BY 4.0)",
+        "selite": "Conch-merikotiloiden kuoria Nassaussa.",
+        "lyhyt": "Conch-merikotiloiden kuoria Nassaussa.",
+        "tiedosto": "Nassau - conch shells.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "targetAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115",
+      "contextAfterSHA256": "cac6e12bd4e5c88d5c5d180c2fd6f44cebb81d5ff9926ee36737315116d3a115"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e12-nassau-c2-c9cf5098f4abc2fb",
+      "galleryImageID": "capital-cc-e12-nassau-c2-c9cf5098f4abc2fb",
+      "commonsFile": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
+        "suora": true,
+        "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
+        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
+        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
+        "suora": true,
+        "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
+        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+      "exportSHA256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/nassau/ace44dbbac5c0d3ed077a5be5e626bafebd6bab23c60cdbae4f1e09cd73dcb8e.jpg",
+      "dimensions": [
+        5090,
+        3394
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+        "semanticContextSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+        "subjectTitle": "Nassau",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Clem Onojeghuo clemono2",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(Unsplash_6ieXV38E3h8).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Nassau%2C_The_Bahamas_%28Unsplash_6ieXV38E3h8%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Clem Onojeghuo clemono2 alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC0 tiedostosivusta.",
+            "placeEvidence": "Alkuperäisen sivun oma nimi/Description ja katseltu paikallinen tiedosto.",
+            "workLayer": "Pääaihe meri ja luonnollinen rantaviiva, pieni etäinen majakka sivuosana. Ei nimettyä nykyteosta, mainosta tai taideteospääaihetta. Ei väitettä majakan PD-statuksesta tai blanket-FOP-luvasta. Lähdesivun oma Description on English: Nassau, The Bahamas. Tarkka majakan/isletin nimi jätetty väittämättä.",
+            "visualInspection": "Alkuperäinen 5090×3394 katsottu silmin. Laaja todellinen meri/rantanäkymä, majakka ja puut kauempana; ei ihmisiä/kasvoja, vesileimaa tai lisättyä tekstiä. Tämä on oikeaan Nassauseen lähteellä sidottu ranta-/maamerkin ympäristön yleisnäkymä, ei fiktiivinen AI-panoraama. Ei nimettyä rakennuksen lähikuvaa. Vuosi 2015 kirjattu.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/ceea88ea3b3e.html",
+            "sourceSha256": "63fe9546871cad560fcf4d5adbcc2118539d3cdc6f55c4b74db9c95c14c9170e"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/ceea88ea3b3e-original.jpg",
+            "width": 5090,
+            "height": 3394,
+            "sha256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+            "nativeGeometry": {
+              "rawWidth": 5090,
+              "rawHeight": 3394,
+              "exifOrientation": 1,
+              "width": 5090,
+              "height": 3394
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(Unsplash_6ieXV38E3h8).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/63fe9546871cad560fcf4d5adbcc2118539d3cdc6f55c4b74db9c95c14c9170e.html",
+            "sourcePageSHA256": "63fe9546871cad560fcf4d5adbcc2118539d3cdc6f55c4b74db9c95c14c9170e",
+            "sourceFields": {
+              "Date": "9 September 2015",
+              "Source": "https://unsplash.com/photos/6ieXV38E3h8 Image at the Wayback Machine Gallery at the Wayback Machine",
+              "Author": "Clem Onojeghuo clemono2"
+            },
+            "authors": [
+              "Clem Onojeghuo clemono2"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC0"
+            ],
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/ceed38a57408-technical-source.json",
+            "sourceDescriptionAndLicenseExcerpt": "Summary [ edit ] Description Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg English: Nassau, The Bahamas Date 9 September 2015 Source https://unsplash.com/photos/6ieXV38E3h8 Image at the Wayback Machine Gallery at the Wayback Machine Author Clem Onojeghuo clemono2 Unsplash title InfoField None Categories InfoField Nature EXIF InfoField exposure_time: 1/4000 · make: Canon · iso: 160 · focal_length: 90 · aperture: 4 · model: Canon EOS 5D Mark II Place InfoField Nassau, The Bahamas Camera location 25° 02′ 52.74″ N, 77° 21′ 19.49″ W View this and other nearby images on: OpenStreetMap 25.047984; -77.355413 Licensing [ edit ] This image is from Unsplash and was published prior to 5 June 2017 under the Creative Commons CC0 1.0 Universal Public Domain Dedication . Note : On 5 June 2017, Unsplash switched the old sitewide license for all uploads from Creative Commons CC0 to a custom license arrangement which does not meet the free content licensing requirements for Commons. Therefore, media published on Unsplash from 5 June 2017 onwards is not considered to be freely licensed and can't be accepted on Commons. Files uploaded to Commons after this date should be subject to careful license review , verifying that the publication date on Unsplash is prior to 5 June 2017. This file is made available under the Creative Commons CC0 1.0 Universal Public Domain Dedication . The person who associated a work with this deed has dedicated the work to the public domain by waiving all of their rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. http://creativecommons.org/publicdomain/zero/1.0/deed.en CC0 Creative Commons Zero, Public Domain Dedication fals",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Aito Nassaun laaja rannikkonäkymä: meri, rantaviiva ja kasvillisuus näyttävät todellisen paikan asettelua. Lähdesivun Description, Place ja kamerakoordinaatit nimeävät Nassaun; kuvateksti ei arvaa majakan tai luodon nimeä. Clem Onojeghuo clemono2/CC0, 9.9.2015 lähdesivulta; Commonsin lisenssiosio kertoo kuvan kuuluvan ennen 5.6.2017 julkaistuihin Unsplash CC0 -kuviin. Alkuperäinen itse katsottu: ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä. Pieni etäinen, tavanomainen majakkatorni jää rantaviivan sivuosaksi, eikä kuvassa yksilöidy luovaa nykyteosta pääaiheeksi. Ei majakan iästä johdettua PD- tai yleistä FOP-väitettä. Vuoden 2015 historiallinen päiväys säilyy.",
+            "workLayerAssessment": "Aito Nassaun laaja rannikkonäkymä: meri, rantaviiva ja kasvillisuus näyttävät todellisen paikan asettelua. Lähdesivun Description, Place ja kamerakoordinaatit nimeävät Nassaun; kuvateksti ei arvaa majakan tai luodon nimeä. Clem Onojeghuo clemono2/CC0, 9.9.2015 lähdesivulta; Commonsin lisenssiosio kertoo kuvan kuuluvan ennen 5.6.2017 julkaistuihin Unsplash CC0 -kuviin. Alkuperäinen itse katsottu: ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä. Pieni etäinen, tavanomainen majakkatorni jää rantaviivan sivuosaksi, eikä kuvassa yksilöidy luovaa nykyteosta pääaiheeksi. Ei majakan iästä johdettua PD- tai yleistä FOP-väitettä. Vuoden 2015 historiallinen päiväys säilyy.",
+            "coverLayoutAssessment": {
+              "required": "genuinely broad real city/place view",
+              "observed": "wide sea/shoreline arrangement with small incidental tower",
+              "passes": true
+            },
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/8d4e00ba59bac200361a4a92f14de4643e916c643d2b3d2dcf0cdd9f256606ce.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Aito Nassaun laaja rannikkonäkymä: meri, rantaviiva ja kasvillisuus näyttävät todellisen paikan asettelua. Lähdesivun Description, Place ja kamerakoordinaatit nimeävät Nassaun; kuvateksti ei arvaa majakan tai luodon nimeä. Clem Onojeghuo clemono2/CC0, 9.9.2015 lähdesivulta; Commonsin lisenssiosio kertoo kuvan kuuluvan ennen 5.6.2017 julkaistuihin Unsplash CC0 -kuviin. Alkuperäinen itse katsottu: ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä. Pieni etäinen, tavanomainen majakkatorni jää rantaviivan sivuosaksi, eikä kuvassa yksilöidy luovaa nykyteosta pääaiheeksi. Ei majakan iästä johdettua PD- tai yleistä FOP-väitettä. Vuoden 2015 historiallinen päiväys säilyy."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg",
+          "sha256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+          "nativeSHA256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/ceea88ea3b3e-original.jpg",
+          "type": "commons",
+          "verdict": "accepted",
+          "reason": "Aito Nassaun laaja rannikkonäkymä: meri, rantaviiva ja kasvillisuus näyttävät todellisen paikan asettelua. Lähdesivun Description, Place ja kamerakoordinaatit nimeävät Nassaun; kuvateksti ei arvaa majakan tai luodon nimeä. Clem Onojeghuo clemono2/CC0, 9.9.2015 lähdesivulta; Commonsin lisenssiosio kertoo kuvan kuuluvan ennen 5.6.2017 julkaistuihin Unsplash CC0 -kuviin. Alkuperäinen itse katsottu: ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä. Pieni etäinen, tavanomainen majakkatorni jää rantaviivan sivuosaksi, eikä kuvassa yksilöidy luovaa nykyteosta pääaiheeksi. Ei majakan iästä johdettua PD- tai yleistä FOP-väitettä. Vuoden 2015 historiallinen päiväys säilyy.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/ceea88ea3b3e-original.jpg",
+            "width": 5090,
+            "height": 3394,
+            "sha256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+            "nativeGeometry": {
+              "rawWidth": 5090,
+              "rawHeight": 3394,
+              "exifOrientation": 1,
+              "width": 5090,
+              "height": 3394
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(Unsplash_6ieXV38E3h8).jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/63fe9546871cad560fcf4d5adbcc2118539d3cdc6f55c4b74db9c95c14c9170e.html",
+            "sourcePageSHA256": "63fe9546871cad560fcf4d5adbcc2118539d3cdc6f55c4b74db9c95c14c9170e",
+            "sourceFields": {
+              "Date": "9 September 2015",
+              "Source": "https://unsplash.com/photos/6ieXV38E3h8 Image at the Wayback Machine Gallery at the Wayback Machine",
+              "Author": "Clem Onojeghuo clemono2"
+            },
+            "authors": [
+              "Clem Onojeghuo clemono2"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC0"
+            ],
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/ceed38a57408-technical-source.json",
+            "sourceDescriptionAndLicenseExcerpt": "Summary [ edit ] Description Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg English: Nassau, The Bahamas Date 9 September 2015 Source https://unsplash.com/photos/6ieXV38E3h8 Image at the Wayback Machine Gallery at the Wayback Machine Author Clem Onojeghuo clemono2 Unsplash title InfoField None Categories InfoField Nature EXIF InfoField exposure_time: 1/4000 · make: Canon · iso: 160 · focal_length: 90 · aperture: 4 · model: Canon EOS 5D Mark II Place InfoField Nassau, The Bahamas Camera location 25° 02′ 52.74″ N, 77° 21′ 19.49″ W View this and other nearby images on: OpenStreetMap 25.047984; -77.355413 Licensing [ edit ] This image is from Unsplash and was published prior to 5 June 2017 under the Creative Commons CC0 1.0 Universal Public Domain Dedication . Note : On 5 June 2017, Unsplash switched the old sitewide license for all uploads from Creative Commons CC0 to a custom license arrangement which does not meet the free content licensing requirements for Commons. Therefore, media published on Unsplash from 5 June 2017 onwards is not considered to be freely licensed and can't be accepted on Commons. Files uploaded to Commons after this date should be subject to careful license review , verifying that the publication date on Unsplash is prior to 5 June 2017. This file is made available under the Creative Commons CC0 1.0 Universal Public Domain Dedication . The person who associated a work with this deed has dedicated the work to the public domain by waiving all of their rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. http://creativecommons.org/publicdomain/zero/1.0/deed.en CC0 Creative Commons Zero, Public Domain Dedication fals",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Aito Nassaun laaja rannikkonäkymä: meri, rantaviiva ja kasvillisuus näyttävät todellisen paikan asettelua. Lähdesivun Description, Place ja kamerakoordinaatit nimeävät Nassaun; kuvateksti ei arvaa majakan tai luodon nimeä. Clem Onojeghuo clemono2/CC0, 9.9.2015 lähdesivulta; Commonsin lisenssiosio kertoo kuvan kuuluvan ennen 5.6.2017 julkaistuihin Unsplash CC0 -kuviin. Alkuperäinen itse katsottu: ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä. Pieni etäinen, tavanomainen majakkatorni jää rantaviivan sivuosaksi, eikä kuvassa yksilöidy luovaa nykyteosta pääaiheeksi. Ei majakan iästä johdettua PD- tai yleistä FOP-väitettä. Vuoden 2015 historiallinen päiväys säilyy.",
+            "workLayerAssessment": "Aito Nassaun laaja rannikkonäkymä: meri, rantaviiva ja kasvillisuus näyttävät todellisen paikan asettelua. Lähdesivun Description, Place ja kamerakoordinaatit nimeävät Nassaun; kuvateksti ei arvaa majakan tai luodon nimeä. Clem Onojeghuo clemono2/CC0, 9.9.2015 lähdesivulta; Commonsin lisenssiosio kertoo kuvan kuuluvan ennen 5.6.2017 julkaistuihin Unsplash CC0 -kuviin. Alkuperäinen itse katsottu: ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä. Pieni etäinen, tavanomainen majakkatorni jää rantaviivan sivuosaksi, eikä kuvassa yksilöidy luovaa nykyteosta pääaiheeksi. Ei majakan iästä johdettua PD- tai yleistä FOP-väitettä. Vuoden 2015 historiallinen päiväys säilyy.",
+            "coverLayoutAssessment": {
+              "required": "genuinely broad real city/place view",
+              "observed": "wide sea/shoreline arrangement with small incidental tower",
+              "passes": true
+            },
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/8d4e00ba59bac200361a4a92f14de4643e916c643d2b3d2dcf0cdd9f256606ce.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.794345+00:00",
+          "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "nassau",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg",
+        "sha256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassau,_The_Bahamas_(Unsplash_6ieXV38E3h8).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Nassau%2C_The_Bahamas_%28Unsplash_6ieXV38E3h8%29.jpg",
+        "author": "Clem Onojeghuo clemono2",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "width": 5090,
+        "height": 3394,
+        "originalSHA256": "c9cf5098f4abc2fb441560048032f74b2d481cb4f9f4c8f1e4b13b39dc40adfd",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c2-c9cf5098f4abc2fb4415.jpg",
+        "bytes": 14080196,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:51:45.359234+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg",
+        "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
+        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Clem Onojeghuo clemono2, Wikimedia Commons (CC0)",
+        "selite": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "lyhyt": "Nassaun rannikkonäkymä, valokuva vuodelta 2015.",
+        "tiedosto": "Nassau, The Bahamas (Unsplash 6ieXV38E3h8).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "targetAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924",
+      "contextAfterSHA256": "e64115ed0a6ddb7248578efedfed722ef0d2ff504277404aa9d278281d3e4924"
+    },
+    {
+      "era": "e12",
+      "city": "nassau",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e12-nassau-c3-91770d002b2fd0d0",
+      "galleryImageID": "capital-cc-e12-nassau-c3-91770d002b2fd0d0",
+      "commonsFile": "Nirvanha Beach - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
+        "suora": true,
+        "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "tiedosto": "Nirvanha Beach - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "tiedosto": "Nirvanha Beach - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
+        "suora": true,
+        "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "tiedosto": "Nirvanha Beach - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+      "exportSHA256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/nassau/223bcc3c121dedd7eba645334f2c0a7368f47e4e79f0a0198a93f4bddb8830cf.jpg",
+      "dimensions": [
+        3726,
+        2061
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/nassau/sisalto.json",
+      "sourceContentSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+        "semanticContextSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+        "subjectTitle": "Nassau",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Oscar Flowers",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nirvanha_Beach_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Nirvanha_Beach_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Oscar Flowers alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+            "placeEvidence": "Nirvanha Beach",
+            "workLayer": "Pääkohteena laaja todellinen hiekkaranta, merivesi ja rantapuut. Tavalliset pienet rantapalvelumajat sivuosassa, ei yksittäistä nimettyä suojattua rakennus- tai taideteosta jäljennettynä. Alkuperäinen Description Nirvanha Beach, Nassau,Bahamas-luokka ja kamerakoordinaatit25.063005,-77.494651 paikantavat rannan New Providenceen. Ei Nassaun keskustaksi eikä Cable Beachiksi nimetty.",
+            "visualInspection": "Alkuperäinen3726×2061 katsottu: todellinen ranta asetteluineen, meri, hiekka, levä ja puut; ei kasvoja tai lisättyä tekstiä/vesileimaa/kehystä. Pienen fyysisen palvelumajan WATERSPORTS-merkintä on taustalla eikä kuva ole mainos/pakkaus. Vuosi2009 ei tuoreeksi oppaaseen.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/b6b9f1d1884d.html",
+            "sourceSha256": "d2556ce1bdca4ba2defcc98f80bda927291d0babfd4f7a248e6570175ee8dc91"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/b6b9f1d1884d-original.jpg",
+            "width": 3726,
+            "height": 2061,
+            "sha256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+            "nativeGeometry": {
+              "rawWidth": 3726,
+              "rawHeight": 2061,
+              "exifOrientation": 1,
+              "width": 3726,
+              "height": 2061
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nirvanha_Beach_-_panoramio.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/d2556ce1bdca4ba2defcc98f80bda927291d0babfd4f7a248e6570175ee8dc91.html",
+            "sourcePageSHA256": "d2556ce1bdca4ba2defcc98f80bda927291d0babfd4f7a248e6570175ee8dc91",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/398072f2700452355e4976be10483fac48f10c894b494b1eeb5dd68faf3d8833.body",
+            "sourceFields": {
+              "Date": "Taken on 17 January 2009",
+              "Source": "https://web.archive.org/web/20161014202041/http://www.panoramio.com/photo/33571308",
+              "Author": "Oscar Flowers"
+            },
+            "authors": [
+              "Oscar Flowers"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 3.0"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/85308dd22105-technical-source.json",
+            "sourceSummaryExcerpt": "",
+            "licensePanelText": [
+              "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Oscar Flowers You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true"
+            ],
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin.",
+            "workLayerAssessment": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin.",
+            "coverLayoutAssessment": {
+              "required": "broad real city/place view",
+              "passes": true,
+              "observed": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin."
+            }
+          },
+          "qaReason": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+        "fileSHA256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "type": "commons",
+          "commonsFile": "Nirvanha Beach - panoramio.jpg",
+          "sha256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+          "nativeSHA256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/b6b9f1d1884d-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/cc-search/b6b9f1d1884d-original.jpg",
+            "width": 3726,
+            "height": 2061,
+            "sha256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+            "nativeGeometry": {
+              "rawWidth": 3726,
+              "rawHeight": 2061,
+              "exifOrientation": 1,
+              "width": 3726,
+              "height": 2061
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nirvanha_Beach_-_panoramio.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/cc-source-snapshots/d2556ce1bdca4ba2defcc98f80bda927291d0babfd4f7a248e6570175ee8dc91.html",
+            "sourcePageSHA256": "d2556ce1bdca4ba2defcc98f80bda927291d0babfd4f7a248e6570175ee8dc91",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/398072f2700452355e4976be10483fac48f10c894b494b1eeb5dd68faf3d8833.body",
+            "sourceFields": {
+              "Date": "Taken on 17 January 2009",
+              "Source": "https://web.archive.org/web/20161014202041/http://www.panoramio.com/photo/33571308",
+              "Author": "Oscar Flowers"
+            },
+            "authors": [
+              "Oscar Flowers"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 3.0"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa-evidence/85308dd22105-technical-source.json",
+            "sourceSummaryExcerpt": "",
+            "licensePanelText": [
+              "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Oscar Flowers You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true"
+            ],
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin.",
+            "workLayerAssessment": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin.",
+            "coverLayoutAssessment": {
+              "required": "broad real city/place view",
+              "passes": true,
+              "observed": "Alkuperäinen 3726×2061 itse katsottu: laaja Nirvanha Beachin ranta, vesi, hiekka, levä ja puut. Ei ihmisiä, lisättyä tekstiä, vesileimaa tai kehystä. Pieni tavanomainen rantapalvelumaja ja sen fyysinen WATERSPORTS-kyltti ovat rantanäkymän sivuosia, eivät mainos-/pakkauspääaihe tai tunnistettu yksittäinen luova nykyteos. Oscar Flowers ja CC BY-SA 3.0 nimenomaisilta Author/licence-riveiltä; 17.1.2009. Kuvauspaikka nimetty Nirvanha Beachiksi ja koordinaatit 25.063005,-77.494651 tukevat New Providencen rantaa. Kuvateksti säilyttää tämän rajauksen, ei väitä Nassaun keskustaa tai Cable Beachiä. Aito laaja paikan asettelu täyttää C3-roolin."
+            }
+          },
+          "checkedAt": "2026-10-12T19:53:57.401851+00:00",
+          "contentSHA256": "76571e04610b6d59a6d3b99ce50e59f317ffdafeca3c74af4e8d0f557111836d",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/qa.json",
+            "sha256": "e6b0a3df70b7ce166906c6522b1277169f7c8424dcda59e51fc65170585e49fd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/nassau/illustration-qa-extra.json",
+            "sha256": "90a3935f9c49a641c384f0dc375b4266e0dd746d3a555336f208e0dcdd5e668d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "nassau",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Nirvanha Beach - panoramio.jpg",
+        "sha256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nirvanha_Beach_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Nirvanha_Beach_-_panoramio.jpg",
+        "author": "Oscar Flowers",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3726,
+        "height": 2061,
+        "originalSHA256": "91770d002b2fd0d01f0e5e1bfbc69f11fc02e21dd73ad357f5612e3a028db317",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/c3-91770d002b2fd0d01f0e.jpg",
+        "bytes": 3162362,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:54:56.661645+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Nirvanha Beach - panoramio.jpg",
+        "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Oscar Flowers, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "lyhyt": "Rantaviivaa New Providencen länsiosassa tammikuussa 2009.",
+        "tiedosto": "Nirvanha Beach - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "836a23b7047697263a30d535db52048cb05e0ee77bc09253cb62d84b11edcb68",
+      "targetAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5",
+      "contextAfterSHA256": "4622f7699dc484e79d595ed6f21a4688899296d97e09a74b6b59516703b1f2d5"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

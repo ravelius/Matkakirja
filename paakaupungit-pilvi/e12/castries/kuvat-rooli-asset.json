@@ -1,0 +1,1159 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "castries",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e12-castries-O4-391fd8e494",
+      "galleryImageID": "e12-castries-O4-391fd8e494",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta.",
+        "lyhyt": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta.",
+        "lyhyt": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "83a5ffddf8400d481a9b51ead2828a7a20cb7a4829a3ceb2bfdadc853ff073d3",
+      "exportSHA256": "41328b56d1cff89462c72b1fcdcda97ca2a84d4cb3c8bb311a01f82a543e6ef3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O4-391fd8e494/original.png",
+            "nativeSHA256": "83a5ffddf8400d481a9b51ead2828a7a20cb7a4829a3ceb2bfdadc853ff073d3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Torin vieressä Jeremie Streetille johtavalla kujalla on paikallisia ruokapaikkoja, ja Vendor’s Arcadessa toimii ravintoloita. Aloita niiden päivän tarjonnasta: kauppapaikka ja ruokailu kuuluvat täällä samaan kokonaisuuteen. Torilta voi hankkia myös kasviksia, yrttejä ja mausteita.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Castries"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/O4/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A close natural produce still life of ordinary local-market vegetables, culinary herbs and spices on a plain unbranded table. Focus on the ingredients and their real material texture; do not invent a named local dish, restaurant, person or city street. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Torin vieressä Jeremie Streetille johtavalla kujalla on paikallisia ruokapaikkoja, ja Vendor’s Arcadessa toimii ravintoloita. Aloita niiden päivän tarjonnasta: kauppapaikka ja ruokailu kuuluvat täällä samaan kokonaisuuteen. Torilta voi hankkia myös kasviksia, yrttejä ja mausteita.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O4-391fd8e494/original.png",
+              "detail": "original",
+              "observations": "Pöydällä porkkanoita, sipuleita, kesäkurpitsa, tomaatteja, paprikoita, valkosipulia, chiliä, basilikaa ja muita yrttejä; kulhossa pippureita. Kasvimuodot, märät sekä kuivat pinnat ja astiat uskottavia. Ei ihmisiä, kylttejä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kasvikset, yrtit ja mausteet vastaavat O4-jakson toriruoka-aihetta. Havainnekuvateksti ei väitä asetelmaa Castriesin tietyn kojun valokuvaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+        "fileSHA256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e12-castries-O4-391fd8e494",
+          "sha256": "83a5ffddf8400d481a9b51ead2828a7a20cb7a4829a3ceb2bfdadc853ff073d3",
+          "verdict": "accepted",
+          "reason": "Kasvikset, yrtit ja mausteet vastaavat O4-jakson toriruoka-aihetta. Havainnekuvateksti ei väitä asetelmaa Castriesin tietyn kojun valokuvaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O4-391fd8e494/original.png",
+            "nativeSHA256": "83a5ffddf8400d481a9b51ead2828a7a20cb7a4829a3ceb2bfdadc853ff073d3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva Castriesin ruokatorin kasvis- ja yrttiaiheesta.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Torin vieressä Jeremie Streetille johtavalla kujalla on paikallisia ruokapaikkoja, ja Vendor’s Arcadessa toimii ravintoloita. Aloita niiden päivän tarjonnasta: kauppapaikka ja ruokailu kuuluvat täällä samaan kokonaisuuteen. Torilta voi hankkia myös kasviksia, yrttejä ja mausteita.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikivoyage.org/wiki/Castries"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/O4/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: landscape magazine illustration for Matkakirja. This is a generalized subject illustration, not a photograph proving the appearance of a named place, person or business. A close natural produce still life of ordinary local-market vegetables, culinary herbs and spices on a plain unbranded table. Focus on the ingredients and their real material texture; do not invent a named local dish, restaurant, person or city street. Photorealistic, believable ordinary proportions and physically natural materials, soft daylight with gentle shadows, landscape 3:2 framing, preferred 1536x1024 PNG sRGB. No people, hands, identifiable faces, written text, labels, logos, watermarks, borders, copyrighted artworks, recognizable buildings or invented city panoramas. Avoid plastic food and repeating artificial surface patterns.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Torin vieressä Jeremie Streetille johtavalla kujalla on paikallisia ruokapaikkoja, ja Vendor’s Arcadessa toimii ravintoloita. Aloita niiden päivän tarjonnasta: kauppapaikka ja ruokailu kuuluvat täällä samaan kokonaisuuteen. Torilta voi hankkia myös kasviksia, yrttejä ja mausteita.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-O4-391fd8e494/original.png",
+              "detail": "original",
+              "observations": "Pöydällä porkkanoita, sipuleita, kesäkurpitsa, tomaatteja, paprikoita, valkosipulia, chiliä, basilikaa ja muita yrttejä; kulhossa pippureita. Kasvimuodot, märät sekä kuivat pinnat ja astiat uskottavia. Ei ihmisiä, kylttejä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:27:54.870501+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png?t=41328b56d1cff894",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+        "sha256": "41328b56d1cff89462c72b1fcdcda97ca2a84d4cb3c8bb311a01f82a543e6ef3",
+        "bytes": 2716768,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-castries-O4-391fd8e494",
+        "nativeSHA256": "83a5ffddf8400d481a9b51ead2828a7a20cb7a4829a3ceb2bfdadc853ff073d3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "castries",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:31:25.228512+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-O4-391fd8e494-83a5ffddf840.png",
+        "sha256": "41328b56d1cff89462c72b1fcdcda97ca2a84d4cb3c8bb311a01f82a543e6ef3",
+        "bytes": 2716768,
+        "SHAReadAt": "2026-10-12T18:30:01.222077+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "83a5ffddf8400d481a9b51ead2828a7a20cb7a4829a3ceb2bfdadc853ff073d3",
+        "rgbPixelSHA256": "c9d43defad1a88c2645d1bc79f31acd78864ad59de5204ef8dd398516eb53675",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "823467df31beb8957d64ed1517151e74952e797f65feacbaf75cebb1c3fb0467"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e12-castries-L3-9f6a4d437b",
+      "galleryImageID": "e12-castries-L3-9f6a4d437b",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen.",
+        "lyhyt": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen.",
+        "lyhyt": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a331846940818e4c069df21cfb8dceb96b3d9a666d84a268f1e2667298ecc53a",
+      "exportSHA256": "4c50aebbdf6ec0a815c8e00878e16929d3660620bce5e04c59a345868987ec94",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+        "semanticContextSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+        "subjectTitle": "Kirjuri ennen taloustieteilijää",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L3-9f6a4d437b/original.png",
+            "nativeSHA256": "a331846940818e4c069df21cfb8dceb96b3d9a666d84a268f1e2667298ecc53a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Arthur Lewis syntyi Castriesissa opettajien perheeseen. Ennen yliopistoa hän työskenteli virastossa kirjurina ja oppi konekirjoitusta, arkistointia ja järjestelmällisyyttä. Lontooseen hän lähti opiskelemaan kaupallisia aineita; tuleva taloustieteilijä ei tuolloin vielä tuntenut omaa alaansa. Myöhemmin hän tutki talouden kehitystä ja sai taloustieteen Nobel-muistopalkinnon. Morne Fortunella toimivan Sir Arthur Lewis Community Collegen nimi palauttaa tämän kansainvälisen tutkijantien Castriesin opiskelijoiden arkeen.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/W._Arthur_Lewis",
+                "https://www.nobelprize.org/prizes/economic-sciences/1979/lewis/biographical/"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/L3/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial object still life about clerical work and filing. An ordinary unbranded vintage manual typewriter seen from a rear three-quarter angle, with the keyboard facing away from the camera and hidden from readable view. Focus on the plain metal body, carriage and a completely blank sheet of paper. A few closed, unlabeled file folders rest beside it on a simple desk. No person, handwriting, printed page, typewriter name plate, key lettering visible, logo, invented office building or claim that this was Arthur Lewis's real desk. Realistic metal and paper surfaces, soft natural daylight, plain background. Landscape 3:2, preferred 1536x1024 PNG sRGB. No written text anywhere, watermarks, brands, decorative artworks or borders.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kirjuri ennen taloustieteilijää",
+                "teksti": "Arthur Lewis syntyi Castriesissa opettajien perheeseen. Ennen yliopistoa hän työskenteli virastossa kirjurina ja oppi konekirjoitusta, arkistointia ja järjestelmällisyyttä. Lontooseen hän lähti opiskelemaan kaupallisia aineita; tuleva taloustieteilijä ei tuolloin vielä tuntenut omaa alaansa. Myöhemmin hän tutki talouden kehitystä ja sai taloustieteen Nobel-muistopalkinnon. Morne Fortunella toimivan Sir Arthur Lewis Community Collegen nimi palauttaa tämän kansainvälisen tutkijantien Castriesin opiskelijoiden arkeen.",
+                "wiki": "W._Arthur_Lewis",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L3-9f6a4d437b/original.png",
+              "detail": "original",
+              "observations": "Kirjoituskone takaa nähtynä, telalla tyhjä paperi; pöydällä nimeämättömiä kansioita ja kyniä. Metalli, tela, paperi ja puu uskottavia. Näppäimet rajautuvat pois, eikä koneeseen tai paperiin ole generoitu tekstiä. Ei ihmisiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Konekirjoitus- ja arkistointivälineet vastaavat L3-noston Arthur Lewisin kirjurityön aihetta. Havainnekuvateksti ei esitä hänen todellista työpöytäänsä. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+        "fileSHA256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e12-castries-L3-9f6a4d437b",
+          "sha256": "a331846940818e4c069df21cfb8dceb96b3d9a666d84a268f1e2667298ecc53a",
+          "verdict": "accepted",
+          "reason": "Konekirjoitus- ja arkistointivälineet vastaavat L3-noston Arthur Lewisin kirjurityön aihetta. Havainnekuvateksti ei esitä hänen todellista työpöytäänsä. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L3-9f6a4d437b/original.png",
+            "nativeSHA256": "a331846940818e4c069df21cfb8dceb96b3d9a666d84a268f1e2667298ecc53a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Työpöydän havainnekuva Arthur Lewisin varhaisen kirjurityön aiheeseen.",
+            "sourceEvidence": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "sourceText": "Arthur Lewis syntyi Castriesissa opettajien perheeseen. Ennen yliopistoa hän työskenteli virastossa kirjurina ja oppi konekirjoitusta, arkistointia ja järjestelmällisyyttä. Lontooseen hän lähti opiskelemaan kaupallisia aineita; tuleva taloustieteilijä ei tuolloin vielä tuntenut omaa alaansa. Myöhemmin hän tutki talouden kehitystä ja sai taloustieteen Nobel-muistopalkinnon. Morne Fortunella toimivan Sir Arthur Lewis Community Collegen nimi palauttaa tämän kansainvälisen tutkijantien Castriesin opiskelijoiden arkeen.",
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "originalSources": [
+                "https://en.wikipedia.org/wiki/W._Arthur_Lewis",
+                "https://www.nobelprize.org/prizes/economic-sciences/1979/lewis/biographical/"
+              ],
+              "ccRelease": {},
+              "generationAuthorization": {
+                "rule": "OHJEET: turvallinen yleishavainnollistus ilman CC-odotusta",
+                "sharedReservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/castries/L3/owner.json",
+                "clarifiedAt": "2026-10-12T18:16:50.716559+00:00",
+                "ccReleaseRequired": false,
+                "scope": "lähdeperustainen turvallinen avoin mixed, ei PHOTO/C1-C3 eikä keksitty nimetty kaupunkiasettelu"
+              }
+            },
+            "rightsEvidence": "Yleistetty lähteeseen perustuva aihehavainne; ei nimetyn paikan todistuskuva, henkilö, pakkaus tai suojattu teos. PHOTO-rooliin ei käytetä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial object still life about clerical work and filing. An ordinary unbranded vintage manual typewriter seen from a rear three-quarter angle, with the keyboard facing away from the camera and hidden from readable view. Focus on the plain metal body, carriage and a completely blank sheet of paper. A few closed, unlabeled file folders rest beside it on a simple desk. No person, handwriting, printed page, typewriter name plate, key lettering visible, logo, invented office building or claim that this was Arthur Lewis's real desk. Realistic metal and paper surfaces, soft natural daylight, plain background. Landscape 3:2, preferred 1536x1024 PNG sRGB. No written text anywhere, watermarks, brands, decorative artworks or borders.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+              "contentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kirjuri ennen taloustieteilijää",
+                "teksti": "Arthur Lewis syntyi Castriesissa opettajien perheeseen. Ennen yliopistoa hän työskenteli virastossa kirjurina ja oppi konekirjoitusta, arkistointia ja järjestelmällisyyttä. Lontooseen hän lähti opiskelemaan kaupallisia aineita; tuleva taloustieteilijä ei tuolloin vielä tuntenut omaa alaansa. Myöhemmin hän tutki talouden kehitystä ja sai taloustieteen Nobel-muistopalkinnon. Morne Fortunella toimivan Sir Arthur Lewis Community Collegen nimi palauttaa tämän kansainvälisen tutkijantien Castriesin opiskelijoiden arkeen.",
+                "wiki": "W._Arthur_Lewis",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/assets/e12-castries-L3-9f6a4d437b/original.png",
+              "detail": "original",
+              "observations": "Kirjoituskone takaa nähtynä, telalla tyhjä paperi; pöydällä nimeämättömiä kansioita ja kyniä. Metalli, tela, paperi ja puu uskottavia. Näppäimet rajautuvat pois, eikä koneeseen tai paperiin ole generoitu tekstiä. Ei ihmisiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:28:14.031474+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png?t=4c50aebbdf6ec0a8",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+        "sha256": "4c50aebbdf6ec0a815c8e00878e16929d3660620bce5e04c59a345868987ec94",
+        "bytes": 1982813,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e12-castries-L3-9f6a4d437b",
+        "nativeSHA256": "a331846940818e4c069df21cfb8dceb96b3d9a666d84a268f1e2667298ecc53a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e12",
+        "city": "castries",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:31:26.515986+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e12/castries/e12-castries-L3-9f6a4d437b-a33184694081.png",
+        "sha256": "4c50aebbdf6ec0a815c8e00878e16929d3660620bce5e04c59a345868987ec94",
+        "bytes": 1982813,
+        "SHAReadAt": "2026-10-12T18:30:01.325970+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a331846940818e4c069df21cfb8dceb96b3d9a666d84a268f1e2667298ecc53a",
+        "rgbPixelSHA256": "a1cdc9afe243823cb405178b27416408cfe3ed627ffd15f6b38b32e1622530c9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "targetAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947",
+      "contextAfterSHA256": "a74a6461b7f89da8a523944f360c056474e264fbc7f63b895c353acbb1087947"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-castries-photo-ea848a9c1a77fe7d",
+      "galleryImageID": "capital-cc-e12-castries-photo-ea848a9c1a77fe7d",
+      "commonsFile": "Coast at the Baghaws Studios - panoramio.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
+        "suora": true,
+        "lahde": "Edgar El, Commons (CC BY 3.0)",
+        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
+        "vuosi": "2012"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Edgar El, Commons (CC BY 3.0)",
+        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
+        "vuosi": "2012"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
+        "suora": true,
+        "lahde": "Edgar El, Commons (CC BY 3.0)",
+        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
+        "vuosi": "2012"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ea848a9c1a77fe7d592b89751d1312f976566a8a9397326205ab1712d33f95a7",
+      "exportSHA256": "ea848a9c1a77fe7d592b89751d1312f976566a8a9397326205ab1712d33f95a7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/bcc8b6a0fe50-original.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+        "semanticContextSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+        "subjectTitle": "castries — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Edgar El",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Coast_at_the_Baghaws_Studios_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Coast_at_the_Baghaws_Studios_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Edgar El alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY 3.0 tiedostosivusta.",
+            "placeEvidence": "Coast at the Baghaws Studios",
+            "workLayer": "Pääaihe luonnollinen kalliorannikko, meri ja kasvit; ei arkkitehtuuria, veistosta tai suojattua taideteospintaa pääaiheena. Paikkasidoksen näyttö: alkuperäinen kuvaus Coast at the Baghaws Studios, lähdesivun kamera-geo 14.010439; −61.007572 ja lähdesivun Castries-paikkaluokitus. Geo on Castriesin rannikon kohdalla, ei pelkkä Saint Lucia -maan nimi.",
+            "visualInspection": "Alkuperäinen 4000×3000 katsottu: meri, vaahtoava luonnollinen rantaviiva ja lehvästö; ei ihmisiä, rakennuksia, vesileimoja tai lisättyä tekstiä. Ei kuvattu studion taideteoksia; studio on lähteen kuvauspaikka. 2012 kirjattu, ei tuore-opaskuvaksi.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/bcc8b6a0fe50.html",
+            "sourceSha256": "d0c58935bfd5abd7e5397b376adbe34bddef1588d132c59235f6dc5f4b285970"
+          },
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:41:05.676346+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/bcc8b6a0fe50-original.jpg",
+            "actualWidth": 4000,
+            "actualHeight": 3000,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4000,
+            "nativePixelHeight": 3000,
+            "exifOrientation": 0,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Coast_at_the_Baghaws_Studios_-_panoramio.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/bcc8b6a0fe50.html",
+            "savedSourceSHA256": "d0c58935bfd5abd7e5397b376adbe34bddef1588d132c59235f6dc5f4b285970",
+            "authorVerified": "Edgar El",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "captureDate": "Taken on 27 February 2012",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+            "sourceContentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+            "captionFi": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+            "depictedWorkLayer": "Alkuperäinen Author Edgar El ja attribution Edgar El sekä CC BY3.0 Unported luettu itse tiedostokohtaisesta Permission/Licensing-osiosta. Lähde on Panoramion kuva68480975, jonka lisenssin Panoramio upload bot vahvisti30.12.2016; bot ei kuvaaja. Pääaihe on luonnollinen rannikko/meri/kasvit, eikä lähdekuva jäljennä nimetyn studion modernia taideteosta. Studios-nimi yksilöi lähteen paikkakuvausta, ei kuvattua teoskerrosta.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "d0c58935bfd5abd7e5397b376adbe34bddef1588d132c59235f6dc5f4b285970",
+            "captureDateAsStated": "Taken on27 February2012",
+            "placeEvidence": {
+              "cameraLocation": [
+                14.010439,
+                -61.007572
+              ],
+              "commonsCategory": "Castries",
+              "commonsDescription": "Coast at the Baghaws Studios",
+              "notClaimed": "No exact studio artwork, harbour berth or vegetation species claim."
+            },
+            "licenseReview": "Panoramio upload bot automatically reviewed30 December2016; above CC BY3.0 license confirmed.",
+            "qualityNote": "Voimakas sininen/vihreä värikylläisyys; rantaviivan, vaahdon ja lehtien muotojen lukeminen säilyy.",
+            "exifOrientationNote": "Tag value0 in original JPEG; no justified rotation inferred, stored4000×3000 dimensions are separately verified."
+          },
+          "qaReason": "Silmin katsottu alkuperäinen4000×3000: luonnollinen kalliorannikko, meri, vaahtoava rantaviiva ja lehvästö. Voimakas sininen/vihreä värikylläisyys kirjattu, mutta rantaviiva ja kasvillisuus ovat luettavia. Ei henkilöitä, kasvoja, rakennusta tai studion taideteoksia, lisättyä tekstiä, vesileimaa tai kehystä. Commonsin tiedostokohtainen Description nimeää Coast at the Baghaws Studios; alkuperäinen kamerapiste14.010439,-61.007572 ja Castries-luokka tukevat kaupungin rannikon paikannusta. Ei pelkkään Saint Lucia -maan nimeen perustuvaa päätelmää. Nykyinen intro käsittelee Castriesin rannikko-/satamaympäristöä; kuvateksti on rannikon luonnonmaisema eikä väitä näkymää itse satamasta tai studion kokoelmista. Vuosi2012 kerrotaan, ei tuore-opaskuvaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+        "fileSHA256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Coast at the Baghaws Studios - panoramio.jpg",
+          "sha256": "ea848a9c1a77fe7d592b89751d1312f976566a8a9397326205ab1712d33f95a7",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen4000×3000: luonnollinen kalliorannikko, meri, vaahtoava rantaviiva ja lehvästö. Voimakas sininen/vihreä värikylläisyys kirjattu, mutta rantaviiva ja kasvillisuus ovat luettavia. Ei henkilöitä, kasvoja, rakennusta tai studion taideteoksia, lisättyä tekstiä, vesileimaa tai kehystä. Commonsin tiedostokohtainen Description nimeää Coast at the Baghaws Studios; alkuperäinen kamerapiste14.010439,-61.007572 ja Castries-luokka tukevat kaupungin rannikon paikannusta. Ei pelkkään Saint Lucia -maan nimeen perustuvaa päätelmää. Nykyinen intro käsittelee Castriesin rannikko-/satamaympäristöä; kuvateksti on rannikon luonnonmaisema eikä väitä näkymää itse satamasta tai studion kokoelmista. Vuosi2012 kerrotaan, ei tuore-opaskuvaksi.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:41:05.676346+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/bcc8b6a0fe50-original.jpg",
+            "actualWidth": 4000,
+            "actualHeight": 3000,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4000,
+            "nativePixelHeight": 3000,
+            "exifOrientation": 0,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Coast_at_the_Baghaws_Studios_-_panoramio.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/bcc8b6a0fe50.html",
+            "savedSourceSHA256": "d0c58935bfd5abd7e5397b376adbe34bddef1588d132c59235f6dc5f4b285970",
+            "authorVerified": "Edgar El",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+            "captureDate": "Taken on 27 February 2012",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+            "sourceContentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+            "captionFi": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+            "depictedWorkLayer": "Alkuperäinen Author Edgar El ja attribution Edgar El sekä CC BY3.0 Unported luettu itse tiedostokohtaisesta Permission/Licensing-osiosta. Lähde on Panoramion kuva68480975, jonka lisenssin Panoramio upload bot vahvisti30.12.2016; bot ei kuvaaja. Pääaihe on luonnollinen rannikko/meri/kasvit, eikä lähdekuva jäljennä nimetyn studion modernia taideteosta. Studios-nimi yksilöi lähteen paikkakuvausta, ei kuvattua teoskerrosta.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "d0c58935bfd5abd7e5397b376adbe34bddef1588d132c59235f6dc5f4b285970",
+            "captureDateAsStated": "Taken on27 February2012",
+            "placeEvidence": {
+              "cameraLocation": [
+                14.010439,
+                -61.007572
+              ],
+              "commonsCategory": "Castries",
+              "commonsDescription": "Coast at the Baghaws Studios",
+              "notClaimed": "No exact studio artwork, harbour berth or vegetation species claim."
+            },
+            "licenseReview": "Panoramio upload bot automatically reviewed30 December2016; above CC BY3.0 license confirmed.",
+            "qualityNote": "Voimakas sininen/vihreä värikylläisyys; rantaviivan, vaahdon ja lehtien muotojen lukeminen säilyy.",
+            "exifOrientationNote": "Tag value0 in original JPEG; no justified rotation inferred, stored4000×3000 dimensions are separately verified."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "castries",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Coast at the Baghaws Studios - panoramio.jpg",
+        "sha256": "ea848a9c1a77fe7d592b89751d1312f976566a8a9397326205ab1712d33f95a7",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Coast_at_the_Baghaws_Studios_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Coast_at_the_Baghaws_Studios_-_panoramio.jpg",
+        "author": "Edgar El",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "ea848a9c1a77fe7d592b89751d1312f976566a8a9397326205ab1712d33f95a7",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg",
+        "bytes": 4409241,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:41:28.987669+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
+        "lahde": "Edgar El, Commons (CC BY 3.0)",
+        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "vuosi": "2012"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Edgar El, Commons (CC BY 3.0)",
+        "selite": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "lyhyt": "Castriesin rannikon luonnonmaisemaa vuonna 2012.",
+        "tiedosto": "Coast at the Baghaws Studios - panoramio.jpg",
+        "vuosi": "2012"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "targetAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124",
+      "contextAfterSHA256": "baa550719c9abb41f43ac625e3d29b049ee8b7d1f7506d1415b098d9debb8124"
+    },
+    {
+      "era": "e12",
+      "city": "castries",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-castries-c1-02865c8db4a4be7e",
+      "galleryImageID": "capital-cc-e12-castries-c1-02865c8db4a4be7e",
+      "commonsFile": "CastriesStLucia.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
+        "suora": true,
+        "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "tiedosto": "CastriesStLucia.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "tiedosto": "CastriesStLucia.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
+        "suora": true,
+        "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "tiedosto": "CastriesStLucia.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "02865c8db4a4be7e575cc5a0084dbf2af6c8b4382c96bfa53bca14a21f396b7d",
+      "exportSHA256": "02865c8db4a4be7e575cc5a0084dbf2af6c8b4382c96bfa53bca14a21f396b7d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/e5ab97d1e9e9-original.jpg",
+      "dimensions": [
+        2592,
+        1944
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+      "sourceContentSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+        "semanticContextSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+        "subjectTitle": "Castries",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "UpstateNYer",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:CastriesStLucia.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/CastriesStLucia.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä UpstateNYer alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+            "placeEvidence": "English: Port of Castries , Saint Lucia , West Indies",
+            "workLayer": "Kuva on laaja todellinen satama-/kaupunkimaisema: meri, risteilyliikenne, kasvillisuus ja kaupungin hajautunut asettelu. Ei yksittäisen nimetyn suojatun rakennuksen tai taideteoksen pääaiheista jäljennöstä, ei oletettua rakennusiän PD-statusta tai yleistä FoP-väitettä. Lähteen Description Port Castries Saint Lucia ja tiedoston kaupunkiluokka todistavat paikan.",
+            "visualInspection": "Alkuperäinen2592×1944 katsottu: todellinen satama, alus, kaupungin rinteet ja etualan kasvillisuus. Ei tunnistettavia kasvoja, mainos-/pakkauskuvaa, lisättyä tekstiä, vesileimaa tai kehystä. Vanha kuva9.1.2008 kirjattu, ei käytetä tuoreeksi oppaaseen.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/e5ab97d1e9e9.html",
+            "sourceSha256": "88c2064aa9da4c1ed1441f619a1eeed2e62ec0371c8b0f3557527b4f13ec72e8"
+          },
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:51:44.816891+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/e5ab97d1e9e9-original.jpg",
+            "actualWidth": 2592,
+            "actualHeight": 1944,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 2592,
+            "nativePixelHeight": 1944,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:CastriesStLucia.JPG",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/e5ab97d1e9e9.html",
+            "savedSourceSHA256": "88c2064aa9da4c1ed1441f619a1eeed2e62ec0371c8b0f3557527b4f13ec72e8",
+            "authorVerified": "Matt H.Wade (UpstateNYer)",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "captureDate": "9 January 2008",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+            "sourceContentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+            "captionFi": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+            "depictedWorkLayer": "Author-taulukon UpstateNYer on kuvaajan tilinimi, ja kuvasivun oma tekijäblokki nimeää todellisen tekijän Matt H.Wadeksi. CC BY-SA3.0 Unported on nimenomaisesti valokuvan lisenssi; copyright-banneri ei tarkoita PD:tä eikä poista annettua CC-lupaa. Tekijän linkitetty ImageAttribution-sivu luettu itse sallittu_haku.py-väylällä: tekijän nimi/linkki ja lisenssilinkki kuuluvat krediittiin. Valokuvan pääaihe on laaja sataman ja kaupungin yleisnäkymä, luonnollinen maasto sekä toiminnallinen alus-/satamaympäristö. Yksilöityä suojattua taideteosta, julkisivureliefiä tai eristettyä nykyarkkitehtuuriteosta ei esitetä pääaiheena. Ei oletettua rakennusikä-PD:tä tai yleistä FOP-väitettä.",
+            "duplicateInCity": false,
+            "authorTableAliasVerified": "UpstateNYer",
+            "sourceSHA256Verified": "88c2064aa9da4c1ed1441f619a1eeed2e62ec0371c8b0f3557527b4f13ec72e8",
+            "captureDateAsStated": "9 January2008",
+            "placeEvidence": {
+              "commonsDescription": "English: Port of Castries, Saint Lucia, West Indies",
+              "cameraLocation": [
+                14.006806,
+                -60.998333
+              ]
+            },
+            "creditForPublication": "CC-BY-SA-3.0 / Matt H. Wade at Wikipedia",
+            "creditCreatorLink": "https://en.wikipedia.org/wiki/User:UpstateNYer",
+            "creditLicenseLink": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "creatorAttributionSource": {
+              "url": "https://en.wikipedia.org/wiki/User:MattWade/ImageAttribution",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/ab1242431f22165dec35ac5506512e9a6383158da333efc31b9e354178f4a3be.body",
+              "sha256": "d7bc72830502f4bce0193941c1e4314ffd0c1c87d773457f08ea483aaea11423",
+              "readEvidence": "Credit creator as Matt H.Wade at Wikipedia near image, creator name to userpage and license to CC BY-SA3.0; native QA is separate from actual downstream credit placement."
+            },
+            "producerMetadataCorrection": "Julkaisukrediitti täydennettävä Matt H.Wade -nimellä ja tekijä-/lisenssilinkillä; UpstateNYer on alkuperäinen tilialias, ei tuntemattoman uploaderin tekijyys."
+          },
+          "qaReason": "Silmin katsottu alkuperäinen2592×1944: laaja Castriesin satama, risteilyalus, kaupungin rakennuskanta ja rinteet. Todellinen kaupungin ja sataman asettelu näkyy eri puolille kuvaa; alus on satamaliikenteen toiminnallinen osa. Ei tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. LähdeDescription Port of Castries, Saint Lucia ja kamerapaikka14.006806,-60.998333 yksilöivät paikan. Nykyinen intro käsittelee luonnonsatamaa, risteilyliikennettä ja rinnemaisemaa. Kuvausvuosi2008 kirjattu, ei nykyisten alusten tai tämän päivän palvelujen väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+        "fileSHA256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "CastriesStLucia.JPG",
+          "sha256": "02865c8db4a4be7e575cc5a0084dbf2af6c8b4382c96bfa53bca14a21f396b7d",
+          "verdict": "accepted",
+          "reason": "Silmin katsottu alkuperäinen2592×1944: laaja Castriesin satama, risteilyalus, kaupungin rakennuskanta ja rinteet. Todellinen kaupungin ja sataman asettelu näkyy eri puolille kuvaa; alus on satamaliikenteen toiminnallinen osa. Ei tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. LähdeDescription Port of Castries, Saint Lucia ja kamerapaikka14.006806,-60.998333 yksilöivät paikan. Nykyinen intro käsittelee luonnonsatamaa, risteilyliikennettä ja rinnemaisemaa. Kuvausvuosi2008 kirjattu, ei nykyisten alusten tai tämän päivän palvelujen väitettä.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:51:44.816891+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/e5ab97d1e9e9-original.jpg",
+            "actualWidth": 2592,
+            "actualHeight": 1944,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 2592,
+            "nativePixelHeight": 1944,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:CastriesStLucia.JPG",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/cc-search/e5ab97d1e9e9.html",
+            "savedSourceSHA256": "88c2064aa9da4c1ed1441f619a1eeed2e62ec0371c8b0f3557527b4f13ec72e8",
+            "authorVerified": "Matt H.Wade (UpstateNYer)",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "captureDate": "9 January 2008",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/castries/sisalto.json",
+            "sourceContentSHA256": "1c2d97f69e8f14e2f86832dd5868d4d61aba2d1b666a17d0cba56c5774376371",
+            "captionFi": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+            "depictedWorkLayer": "Author-taulukon UpstateNYer on kuvaajan tilinimi, ja kuvasivun oma tekijäblokki nimeää todellisen tekijän Matt H.Wadeksi. CC BY-SA3.0 Unported on nimenomaisesti valokuvan lisenssi; copyright-banneri ei tarkoita PD:tä eikä poista annettua CC-lupaa. Tekijän linkitetty ImageAttribution-sivu luettu itse sallittu_haku.py-väylällä: tekijän nimi/linkki ja lisenssilinkki kuuluvat krediittiin. Valokuvan pääaihe on laaja sataman ja kaupungin yleisnäkymä, luonnollinen maasto sekä toiminnallinen alus-/satamaympäristö. Yksilöityä suojattua taideteosta, julkisivureliefiä tai eristettyä nykyarkkitehtuuriteosta ei esitetä pääaiheena. Ei oletettua rakennusikä-PD:tä tai yleistä FOP-väitettä.",
+            "duplicateInCity": false,
+            "authorTableAliasVerified": "UpstateNYer",
+            "sourceSHA256Verified": "88c2064aa9da4c1ed1441f619a1eeed2e62ec0371c8b0f3557527b4f13ec72e8",
+            "captureDateAsStated": "9 January2008",
+            "placeEvidence": {
+              "commonsDescription": "English: Port of Castries, Saint Lucia, West Indies",
+              "cameraLocation": [
+                14.006806,
+                -60.998333
+              ]
+            },
+            "creditForPublication": "CC-BY-SA-3.0 / Matt H. Wade at Wikipedia",
+            "creditCreatorLink": "https://en.wikipedia.org/wiki/User:UpstateNYer",
+            "creditLicenseLink": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "creatorAttributionSource": {
+              "url": "https://en.wikipedia.org/wiki/User:MattWade/ImageAttribution",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/ab1242431f22165dec35ac5506512e9a6383158da333efc31b9e354178f4a3be.body",
+              "sha256": "d7bc72830502f4bce0193941c1e4314ffd0c1c87d773457f08ea483aaea11423",
+              "readEvidence": "Credit creator as Matt H.Wade at Wikipedia near image, creator name to userpage and license to CC BY-SA3.0; native QA is separate from actual downstream credit placement."
+            },
+            "producerMetadataCorrection": "Julkaisukrediitti täydennettävä Matt H.Wade -nimellä ja tekijä-/lisenssilinkillä; UpstateNYer on alkuperäinen tilialias, ei tuntemattoman uploaderin tekijyys."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/qa.json",
+            "sha256": "5250cb357eb5adb34902ca3f94edc4c1572245b5d85aab7738bc0d8e965bfe98"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/castries/illustration-qa-extra.json",
+            "sha256": "f9b65d0d9e4b191bcb66d83dfc378912bf6a498a999e2fa2180d7161d38de280"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "castries",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "CastriesStLucia.JPG",
+        "sha256": "02865c8db4a4be7e575cc5a0084dbf2af6c8b4382c96bfa53bca14a21f396b7d",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:CastriesStLucia.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/CastriesStLucia.JPG",
+        "author": "UpstateNYer",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 2592,
+        "height": 1944,
+        "originalSHA256": "02865c8db4a4be7e575cc5a0084dbf2af6c8b4382c96bfa53bca14a21f396b7d",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/c1-02865c8db4a4be7e575c.jpg",
+        "bytes": 868686,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:52:38.418805+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "CastriesStLucia.JPG",
+        "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "UpstateNYer, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "lyhyt": "Laaja näkymä Castriesin satamaan ja kaupunkiin tammikuussa 2008.",
+        "tiedosto": "CastriesStLucia.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e5b0612495f534dceb34a7e5cfa90989717b0ab7460572daa1144dab27e7391c",
+      "targetAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44",
+      "contextAfterSHA256": "6c020ffae7be1f8a87ff6ae48ef8e439b0ee3d0ee2a4ec15528f812a7018ef44"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

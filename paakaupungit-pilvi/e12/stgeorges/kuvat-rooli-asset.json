@@ -1,0 +1,748 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e12",
+  "city": "stgeorges",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+  "assets": [
+    {
+      "era": "e12",
+      "city": "stgeorges",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e12-stgeorges-photo-58deca4ffd888f70",
+      "galleryImageID": "capital-cc-e12-stgeorges-photo-58deca4ffd888f70",
+      "commonsFile": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
+        "suora": true,
+        "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
+        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+        "vuosi": "2003"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
+        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+        "vuosi": "2003"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
+        "suora": true,
+        "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
+        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+        "vuosi": "2003"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+      "exportSHA256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/stgeorges/caac76771d1457d8b0106ff6abcdcb1139e0cd9984dabf6a585b107ea49656f6.jpg",
+      "dimensions": [
+        2288,
+        1520
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+      "sourceContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+        "semanticContextSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+        "subjectTitle": "stgeorges — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Stefan_und_Bille",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Stefan_und_Bille alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+            "placeEvidence": "Grenada, Aquarium Beach",
+            "workLayer": "Pääkohteena luonnollinen meri ja hiekkaranta, kaukana pienet rakennukset sivuosassa; ei named artwork tai rakennusteoksen pääaiheista jäljennöstä. Alkuperäinen Description Grenada,Aquarium Beach; tiedostosivun Aquarium Beach,Grenada ja St.George’s,Grenada -luokat sekä kamerakoordinaatit12.008596,-61.792345 todistavat tarkan nimetyn rannan. Kyse on pääkaupungin eteläpuolen rannasta, ei keskustasta; kuvateksti ei väitä keskustan rantaa tai Grand Ansea.",
+            "visualInspection": "Alkuperäinen2288×1520 katsottu: meri, hiekka ja luonnollinen rantaviiva, ei ihmisiä tai tunnistettavia kasvoja, mainosta, lisättyä tekstiä/vesileimaa/kehystä. Vuosi2003 kuvatekstissä; ei tuoreeksi oppaaseen.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773.html",
+            "sourceSha256": "41a1884aa7764ceace30eb7b8d1e8f71414639f4c481b3b564c97c131e0d8214"
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+              "author": "Stefan_und_Bille",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 2288,
+              "height": 1520,
+              "captionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+              "rightsEvidence": {
+                "photoLicense": "Tekijä Stefan_und_Bille alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+                "placeEvidence": "Grenada, Aquarium Beach",
+                "workLayer": "Pääkohteena luonnollinen meri ja hiekkaranta, kaukana pienet rakennukset sivuosassa; ei named artwork tai rakennusteoksen pääaiheista jäljennöstä. Alkuperäinen Description Grenada,Aquarium Beach; tiedostosivun Aquarium Beach,Grenada ja St.George’s,Grenada -luokat sekä kamerakoordinaatit12.008596,-61.792345 todistavat tarkan nimetyn rannan. Kyse on pääkaupungin eteläpuolen rannasta, ei keskustasta; kuvateksti ei väitä keskustan rantaa tai Grand Ansea.",
+                "visualInspection": "Alkuperäinen2288×1520 katsottu: meri, hiekka ja luonnollinen rantaviiva, ei ihmisiä tai tunnistettavia kasvoja, mainosta, lisättyä tekstiä/vesileimaa/kehystä. Vuosi2003 kuvatekstissä; ei tuoreeksi oppaaseen.",
+                "previousGameUse": [],
+                "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773.html",
+                "sourceSha256": "41a1884aa7764ceace30eb7b8d1e8f71414639f4c481b3b564c97c131e0d8214"
+              },
+              "date": "14 October 2003 (according to Exif data)",
+              "localOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773-original.jpg",
+              "sha256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+              "reviewState": "candidate",
+              "claimEvidence": {
+                "claimed": true,
+                "record": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/stgeorges/PHOTO/owner.json"
+              }
+            },
+            "candidateFingerprintSHA256": "7df9b4f8812702fadb60cfe88288d78076bd4b4c76868d69731a96e94a8ef998",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+            "currentContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin 2288×1520 alkuperäisen. Luonnollinen merivesi, hiekka, puustoinen rantaniemi ja kaukaiset rannikkokukkulat muodostavat pääaiheen; muutama kaukainen talo ja purjevene sivuosassa. Ei ihmisiä, tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Tämä on lähialueen Aquarium Beachin paikkakuva, jota ei käytetä kantena, keskustan Carenage-kuvana tai Grand Ansen todisteena.",
+            "reviewedAt": "2026-10-12T19:47:17.461684+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773-original.jpg",
+            "pixelSHA256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773.html",
+            "sourceMetadata": {
+              "author": [
+                "Stefan_und_Bille"
+              ],
+              "licenses": [
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                2288,
+                1520
+              ],
+              "sourceSHA256": "41a1884aa7764ceace30eb7b8d1e8f71414639f4c481b3b564c97c131e0d8214"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M47536209\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":12.008596,\"lon\":-61.792345},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"a6926de2-6cf1-4a71-9b66-4d3f2c896422\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg\",\"wgTitle\":\"Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg\",\"wgCurRevisionId\":1251207716,\"wgRevisionId\":1251207716,\"wgArticleId\":47536209,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Photographs taken on 2003-10-14\",\"CC-BY-SA-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Panoramio files uploaded by Panoramio upload bot\",\"Photos from Panoramio ID 1678932\",\"Aquarium Beach, Grenada\",\"St. George's, Grenada\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPa",
+            "sourceAuthorExcerpt": "Author Stefan_und_Bille Permission ( Reusing this file ) This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Stefan_und_Bille You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true .mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);co",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 12° 00′ 30.95″ N, 61° 47′ 32.44″ W View this and other nearby images on: OpenStreetMap 12.008596; -61.792345 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 04:34, 15 March 2016 2,288 × 1,520 (701 KB) Panoramio upload bot ( talk | contribs ) {{Information |description=Grenada Aquarium Beach |date={{Taken on|2003-10-14}} |source=http://www.panoramio.com/photo/9845415 |author=[http://www.panoramio.com/user/1678932?with_photo_id=9845415 Stefan_und_Bille] |permission={{cc-by-sa-3.0|Stefan_und_... You cannot overwrite this file. File usage on Commons There are no pages that use this file. Metadata This file contains additional information such as Exif metadata which may have been added by the digital camera, scanner, or software program used to create or digitize it. If the file has been modified from its original state, some details such as the timestamp may not fully reflect those of the or",
+            "actualDimensions": [
+              2288,
+              1520
+            ],
+            "photographedAt": "2003-10-14",
+            "placeEvidence": "Commons Description: Grenada, Aquarium Beach. Categories: Aquarium Beach, Grenada; St. George’s, Grenada. Camera location 12.008596, -61.792345, southwest coastal area rather than old city centre.",
+            "sourceLicenseReviewEvidence": "Panoramio upload bot reviewed 15 March 2016 and confirmed availability under the above CC BY-SA 3.0 license.",
+            "placeBoundary": "Specifically Aquarium Beach near the city’s southwest surroundings; not Grand Anse or a city-centre beach. Existing travel text distinguishes southwest airport/coastal excursion region from the centre.",
+            "depictedWorkAssessment": "Luonnonranta ja meri pääaiheena; kaukaiset arkiset talot vähäisinä sivuosina, ei suojatun teoksen itsenäistä jäljennöstä.",
+            "roleBoundary": "PHOTO may show a real named local natural place; broad urban arrangement is not required for PHOTO.",
+            "metadataRevisionReviews": [
+              {
+                "reviewedAt": "2026-10-12T19:55:32.783141+00:00",
+                "changedFields": [
+                  "captionFi"
+                ],
+                "previousCaptionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna2003.",
+                "captionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+                "assessment": "Whitespace added before year only; place and date unchanged. Existing visual/source verdict remains applicable.",
+                "nativeSHA256Verified": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+                "personallyViewedAgain": false
+              }
+            ]
+          },
+          "qaReason": "Todellinen Aquarium Beachin luonnonrantakuva sopii PHOTO-rooliin St. George’sin lähialueen nimettynä rannikkopaikkana. Tarkka ranta on alkuperäisessä Descriptionissa, kamerakoordinaateissa ja St. George’s -lähdeluokassa. Selite nimeää Aquarium Beachin Grenadalla vuonna 2003 eikä väitä rantaa keskustaksi tai Grand Anseksi. Tekijä Stefan_und_Bille, CC BY-SA 3.0 ja Panoramio-lisenssitarkistus todettu. Alkuperäinen 2288×1520 sekä SHA varmennettu; ei kasvoja tai teospääaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
+        "fileSHA256": "0bbd7168a76480bc76362e911194c57de5cf00180b3bbde3e53bba1a2eb7aa40",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+          "verdict": "accepted",
+          "reason": "Todellinen Aquarium Beachin luonnonrantakuva sopii PHOTO-rooliin St. George’sin lähialueen nimettynä rannikkopaikkana. Tarkka ranta on alkuperäisessä Descriptionissa, kamerakoordinaateissa ja St. George’s -lähdeluokassa. Selite nimeää Aquarium Beachin Grenadalla vuonna 2003 eikä väitä rantaa keskustaksi tai Grand Anseksi. Tekijä Stefan_und_Bille, CC BY-SA 3.0 ja Panoramio-lisenssitarkistus todettu. Alkuperäinen 2288×1520 sekä SHA varmennettu; ei kasvoja tai teospääaihetta.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+              "author": "Stefan_und_Bille",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 2288,
+              "height": 1520,
+              "captionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+              "rightsEvidence": {
+                "photoLicense": "Tekijä Stefan_und_Bille alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+                "placeEvidence": "Grenada, Aquarium Beach",
+                "workLayer": "Pääkohteena luonnollinen meri ja hiekkaranta, kaukana pienet rakennukset sivuosassa; ei named artwork tai rakennusteoksen pääaiheista jäljennöstä. Alkuperäinen Description Grenada,Aquarium Beach; tiedostosivun Aquarium Beach,Grenada ja St.George’s,Grenada -luokat sekä kamerakoordinaatit12.008596,-61.792345 todistavat tarkan nimetyn rannan. Kyse on pääkaupungin eteläpuolen rannasta, ei keskustasta; kuvateksti ei väitä keskustan rantaa tai Grand Ansea.",
+                "visualInspection": "Alkuperäinen2288×1520 katsottu: meri, hiekka ja luonnollinen rantaviiva, ei ihmisiä tai tunnistettavia kasvoja, mainosta, lisättyä tekstiä/vesileimaa/kehystä. Vuosi2003 kuvatekstissä; ei tuoreeksi oppaaseen.",
+                "previousGameUse": [],
+                "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773.html",
+                "sourceSha256": "41a1884aa7764ceace30eb7b8d1e8f71414639f4c481b3b564c97c131e0d8214"
+              },
+              "date": "14 October 2003 (according to Exif data)",
+              "localOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773-original.jpg",
+              "sha256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+              "reviewState": "candidate",
+              "claimEvidence": {
+                "claimed": true,
+                "record": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/stgeorges/PHOTO/owner.json"
+              }
+            },
+            "candidateFingerprintSHA256": "7df9b4f8812702fadb60cfe88288d78076bd4b4c76868d69731a96e94a8ef998",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+            "currentContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin 2288×1520 alkuperäisen. Luonnollinen merivesi, hiekka, puustoinen rantaniemi ja kaukaiset rannikkokukkulat muodostavat pääaiheen; muutama kaukainen talo ja purjevene sivuosassa. Ei ihmisiä, tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Tämä on lähialueen Aquarium Beachin paikkakuva, jota ei käytetä kantena, keskustan Carenage-kuvana tai Grand Ansen todisteena.",
+            "reviewedAt": "2026-10-12T19:47:17.461684+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773-original.jpg",
+            "pixelSHA256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/505ddc167773.html",
+            "sourceMetadata": {
+              "author": [
+                "Stefan_und_Bille"
+              ],
+              "licenses": [
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                2288,
+                1520
+              ],
+              "sourceSHA256": "41a1884aa7764ceace30eb7b8d1e8f71414639f4c481b3b564c97c131e0d8214"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M47536209\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":12.008596,\"lon\":-61.792345},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"a6926de2-6cf1-4a71-9b66-4d3f2c896422\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg\",\"wgTitle\":\"Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg\",\"wgCurRevisionId\":1251207716,\"wgRevisionId\":1251207716,\"wgArticleId\":47536209,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Photographs taken on 2003-10-14\",\"CC-BY-SA-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Panoramio files uploaded by Panoramio upload bot\",\"Photos from Panoramio ID 1678932\",\"Aquarium Beach, Grenada\",\"St. George's, Grenada\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPa",
+            "sourceAuthorExcerpt": "Author Stefan_und_Bille Permission ( Reusing this file ) This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Stefan_und_Bille You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true .mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);co",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 12° 00′ 30.95″ N, 61° 47′ 32.44″ W View this and other nearby images on: OpenStreetMap 12.008596; -61.792345 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 04:34, 15 March 2016 2,288 × 1,520 (701 KB) Panoramio upload bot ( talk | contribs ) {{Information |description=Grenada Aquarium Beach |date={{Taken on|2003-10-14}} |source=http://www.panoramio.com/photo/9845415 |author=[http://www.panoramio.com/user/1678932?with_photo_id=9845415 Stefan_und_Bille] |permission={{cc-by-sa-3.0|Stefan_und_... You cannot overwrite this file. File usage on Commons There are no pages that use this file. Metadata This file contains additional information such as Exif metadata which may have been added by the digital camera, scanner, or software program used to create or digitize it. If the file has been modified from its original state, some details such as the timestamp may not fully reflect those of the or",
+            "actualDimensions": [
+              2288,
+              1520
+            ],
+            "photographedAt": "2003-10-14",
+            "placeEvidence": "Commons Description: Grenada, Aquarium Beach. Categories: Aquarium Beach, Grenada; St. George’s, Grenada. Camera location 12.008596, -61.792345, southwest coastal area rather than old city centre.",
+            "sourceLicenseReviewEvidence": "Panoramio upload bot reviewed 15 March 2016 and confirmed availability under the above CC BY-SA 3.0 license.",
+            "placeBoundary": "Specifically Aquarium Beach near the city’s southwest surroundings; not Grand Anse or a city-centre beach. Existing travel text distinguishes southwest airport/coastal excursion region from the centre.",
+            "depictedWorkAssessment": "Luonnonranta ja meri pääaiheena; kaukaiset arkiset talot vähäisinä sivuosina, ei suojatun teoksen itsenäistä jäljennöstä.",
+            "roleBoundary": "PHOTO may show a real named local natural place; broad urban arrangement is not required for PHOTO.",
+            "metadataRevisionReviews": [
+              {
+                "reviewedAt": "2026-10-12T19:55:32.783141+00:00",
+                "changedFields": [
+                  "captionFi"
+                ],
+                "previousCaptionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna2003.",
+                "captionFi": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+                "assessment": "Whitespace added before year only; place and date unchanged. Existing visual/source verdict remains applicable.",
+                "nativeSHA256Verified": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+                "personallyViewedAgain": false
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T19:47:17.475859+00:00",
+          "sha256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
+            "sha256": "0bbd7168a76480bc76362e911194c57de5cf00180b3bbde3e53bba1a2eb7aa40"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "stgeorges",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+        "sha256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Grenada_Aquarium_Beach_-_panoramio_-_Stefan_und_Bille.jpg",
+        "author": "Stefan_und_Bille",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 2288,
+        "height": 1520,
+        "originalSHA256": "58deca4ffd888f7000c765711163aa71f7bda3498cd770e4be7d2da37681572e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg",
+        "bytes": 717872,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:47:51.050991+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+        "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
+        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "vuosi": "2003"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
+        "selite": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "lyhyt": "Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.",
+        "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+        "vuosi": "2003"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "targetAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6",
+      "contextAfterSHA256": "ff91cb662cf30c05b24031d799d496ca30250400290f71f5ef005c4aaf5076b6"
+    },
+    {
+      "era": "e12",
+      "city": "stgeorges",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e12-stgeorges-c1-570819ce72a7506b",
+      "galleryImageID": "capital-cc-e12-stgeorges-c1-570819ce72a7506b",
+      "commonsFile": "St. Georges from Fort George - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
+        "suora": true,
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "tiedosto": "St. Georges from Fort George - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "tiedosto": "St. Georges from Fort George - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
+        "suora": true,
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "tiedosto": "St. Georges from Fort George - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+      "exportSHA256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e12/stgeorges/6c70f71dbea138564197279c78571891287ba9d7059d52470999161ed3d06bea.jpg",
+      "dimensions": [
+        2288,
+        1712
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+      "sourceContentSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+        "semanticContextSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+        "subjectTitle": "St. George's",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Stefan_und_Bille",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Georges_from_Fort_George_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/St._Georges_from_Fort_George_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Tekijä Stefan_und_Bille alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+            "placeEvidence": "Grenada: St. Georges from Fort George",
+            "workLayer": "Laaja kaupunkisataman asettelu, meri, rinteet, kattokerrokset ja kasvillisuus; ei yksittäistä nimettyä nykytaideteosta tai rakennusta pääkohteena. Description/tiedostonimi nimeävät St.Georges from Fort George, ja Commonsin oma kaupunkiluokka sitoo kuvauspaikan. Ei kuvan ottajan väitettyä PD-rakennushistoriaa, ei rakennusiästä pääteltyä70vuoden vapautusta eikä yleistä FoP-lupaa.",
+            "visualInspection": "Alkuperäinen2288×1712 katsottu: todellinen kaupungin sataman ja kukkuloiden laaja asettelu; ei tunnistettavia kasvoja tai lisättyä tekstiä/vesileimaa/kehystä. Tarkka päiväys1.4.2004 säilyy, ei tuore-opaskuvaksi.",
+            "previousGameUse": [],
+            "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1.html",
+            "sourceSha256": "c5cf434075f180f90b1757ead760ffb8853ba38fb4eb4649a3eac37fd0fceb54"
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "St. Georges from Fort George - panoramio.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Georges_from_Fort_George_-_panoramio.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/St._Georges_from_Fort_George_-_panoramio.jpg",
+              "author": "Stefan_und_Bille",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 2288,
+              "height": 1712,
+              "captionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+              "rightsEvidence": {
+                "photoLicense": "Tekijä Stefan_und_Bille alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+                "placeEvidence": "Grenada: St. Georges from Fort George",
+                "workLayer": "Laaja kaupunkisataman asettelu, meri, rinteet, kattokerrokset ja kasvillisuus; ei yksittäistä nimettyä nykytaideteosta tai rakennusta pääkohteena. Description/tiedostonimi nimeävät St.Georges from Fort George, ja Commonsin oma kaupunkiluokka sitoo kuvauspaikan. Ei kuvan ottajan väitettyä PD-rakennushistoriaa, ei rakennusiästä pääteltyä70vuoden vapautusta eikä yleistä FoP-lupaa.",
+                "visualInspection": "Alkuperäinen2288×1712 katsottu: todellinen kaupungin sataman ja kukkuloiden laaja asettelu; ei tunnistettavia kasvoja tai lisättyä tekstiä/vesileimaa/kehystä. Tarkka päiväys1.4.2004 säilyy, ei tuore-opaskuvaksi.",
+                "previousGameUse": [],
+                "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1.html",
+                "sourceSha256": "c5cf434075f180f90b1757ead760ffb8853ba38fb4eb4649a3eac37fd0fceb54"
+              },
+              "date": "1 April 2004 (according to Exif data)",
+              "localOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1-original.jpg",
+              "sha256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+              "reviewState": "candidate",
+              "claimEvidence": {
+                "claimed": true,
+                "record": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/stgeorges/C1/owner.json"
+              }
+            },
+            "candidateFingerprintSHA256": "2f63e7c7299cf86537de29d68d18544a089f40da8056bcfb0164449fe3a840fc",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+            "currentContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin 2288×1712 alkuperäisen. Sisäsatama, monen rakennuksen kattokerrokset, katu-/rantavyöhyke, kukkulat ja kasvillisuus näkyvät laajana todellisena kaupunkinäkymänä. Kuvassa ei ole yksilöitäviä ihmiskasvoja. Tavalliset ympäristön pienet liikemerkit ovat luonnollisia sivuosia, eivät päälle lisättyä mainosta tai vesileimaa. Rakennukset muodostavat kaupunkikokonaisuuden; ei erillistä taideteosta tai yhden nykyisen rakennusteoksen julkisivua päämotiivina.",
+            "reviewedAt": "2026-10-12T19:47:17.390687+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1-original.jpg",
+            "pixelSHA256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1.html",
+            "sourceMetadata": {
+              "author": [
+                "Stefan_und_Bille"
+              ],
+              "licenses": [
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                2288,
+                1712
+              ],
+              "sourceSHA256": "c5cf434075f180f90b1757ead760ffb8853ba38fb4eb4649a3eac37fd0fceb54"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M47535919\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":12.04847,\"lon\":-61.754837},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects ",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"f3c6e52a-2569-4162-8c2f-02dc88c6023f\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:St._Georges_from_Fort_George_-_panoramio.jpg\",\"wgTitle\":\"St. Georges from Fort George - panoramio.jpg\",\"wgCurRevisionId\":1129562689,\"wgRevisionId\":1129562689,\"wgArticleId\":47535919,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Grenada photographs taken on 2004-04-01\",\"CC-BY-SA-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Panoramio files uploaded by Panoramio upload bot\",\"Photos from Panoramio ID 1678932\",\"St. George's, Grenada\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageNa",
+            "sourceAuthorExcerpt": "Author Stefan_und_Bille Permission ( Reusing this file ) This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Stefan_und_Bille You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true .mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);co",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 12° 02′ 54.49″ N, 61° 45′ 17.41″ W View this and other nearby images on: OpenStreetMap 12.048470; -61.754837 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 04:08, 15 March 2016 2,288 × 1,712 (1.04 MB) Panoramio upload bot ( talk | contribs ) {{Information |description=St. Georges from Fort George |date={{Taken on|2004-04-01}} |source=http://www.panoramio.com/photo/9843711 |author=[http://www.panoramio.com/user/1678932?with_photo_id=9843711 Stefan_und_Bille] |permission={{cc-by-sa-3.0|Stefa... You cannot overwrite this file. File usage on Commons There are no pages that use this file. Metadata This file contains additional information such as Exif metadata which may have been added by the digital camera, scanner, or software program used to create or digitize it. If the file has been modified from its original state, some details such as the timestamp may not fully reflect those of the o",
+            "actualDimensions": [
+              2288,
+              1712
+            ],
+            "photographedAt": "2004-04-01",
+            "placeEvidence": "Commons Description: Grenada: St. Georges from Fort George. Camera location 12.048470, -61.754837. Current content names Carenage and Fort George.",
+            "sourceLicenseReviewEvidence": "Panoramio upload bot reviewed 15 March 2016 and confirmed availability under the above CC BY-SA 3.0 license.",
+            "depictedWorkAssessment": "Aito laaja kaupungin sataman/rinteiden kokonaisasettelu. Hajanaista tavallista rakennuskantaa ympäristönä, ei yksilöidyn itsenäisen nykyteoksen pääaiheinen jäljennös. Ei rakennusten iästä pääteltyä PD:tä tai yleistä FOP-lupaa.",
+            "historicalBoundary": "April 2004 view; not asserted to show present-day building condition or access.",
+            "metadataRevisionReviews": [
+              {
+                "reviewedAt": "2026-10-12T19:55:32.781036+00:00",
+                "changedFields": [
+                  "captionFi"
+                ],
+                "previousCaptionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa2004.",
+                "captionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+                "assessment": "Whitespace added before year only; place and date unchanged. Existing visual/source verdict remains applicable.",
+                "nativeSHA256Verified": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+                "personallyViewedAgain": false
+              }
+            ]
+          },
+          "qaReason": "Aito laaja St. George’sin Carenagen sataman ja kaupungin rinteiden asettelu sopii C1-kanteen. Stefan_und_Bille ja CC BY-SA 3.0 alkuperäissivulla; Panoramio-lisenssitarkistus 15.3.2016 kirjattu. Alkuperäisen 2288×1712 mitat ja SHA varmennettu. Kuvauspäivä 1.4.2004 nimetty selitteessä eikä kuvaa esitetä tuoreena; ei luettavia kasvoja tai yksittäistä teospääaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
+        "fileSHA256": "0bbd7168a76480bc76362e911194c57de5cf00180b3bbde3e53bba1a2eb7aa40",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "St. Georges from Fort George - panoramio.jpg",
+          "verdict": "accepted",
+          "reason": "Aito laaja St. George’sin Carenagen sataman ja kaupungin rinteiden asettelu sopii C1-kanteen. Stefan_und_Bille ja CC BY-SA 3.0 alkuperäissivulla; Panoramio-lisenssitarkistus 15.3.2016 kirjattu. Alkuperäisen 2288×1712 mitat ja SHA varmennettu. Kuvauspäivä 1.4.2004 nimetty selitteessä eikä kuvaa esitetä tuoreena; ei luettavia kasvoja tai yksittäistä teospääaihetta.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "St. Georges from Fort George - panoramio.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Georges_from_Fort_George_-_panoramio.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/St._Georges_from_Fort_George_-_panoramio.jpg",
+              "author": "Stefan_und_Bille",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 2288,
+              "height": 1712,
+              "captionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+              "rightsEvidence": {
+                "photoLicense": "Tekijä Stefan_und_Bille alkuperäisen tiedostosivun Author table -kentästä, ei uploaderista päätelty. Lisenssi CC BY-SA 3.0 tiedostosivusta.",
+                "placeEvidence": "Grenada: St. Georges from Fort George",
+                "workLayer": "Laaja kaupunkisataman asettelu, meri, rinteet, kattokerrokset ja kasvillisuus; ei yksittäistä nimettyä nykytaideteosta tai rakennusta pääkohteena. Description/tiedostonimi nimeävät St.Georges from Fort George, ja Commonsin oma kaupunkiluokka sitoo kuvauspaikan. Ei kuvan ottajan väitettyä PD-rakennushistoriaa, ei rakennusiästä pääteltyä70vuoden vapautusta eikä yleistä FoP-lupaa.",
+                "visualInspection": "Alkuperäinen2288×1712 katsottu: todellinen kaupungin sataman ja kukkuloiden laaja asettelu; ei tunnistettavia kasvoja tai lisättyä tekstiä/vesileimaa/kehystä. Tarkka päiväys1.4.2004 säilyy, ei tuore-opaskuvaksi.",
+                "previousGameUse": [],
+                "sourceHtml": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1.html",
+                "sourceSha256": "c5cf434075f180f90b1757ead760ffb8853ba38fb4eb4649a3eac37fd0fceb54"
+              },
+              "date": "1 April 2004 (according to Exif data)",
+              "localOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1-original.jpg",
+              "sha256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+              "reviewState": "candidate",
+              "claimEvidence": {
+                "claimed": true,
+                "record": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e12/stgeorges/C1/owner.json"
+              }
+            },
+            "candidateFingerprintSHA256": "2f63e7c7299cf86537de29d68d18544a089f40da8056bcfb0164449fe3a840fc",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/stgeorges/sisalto.json",
+            "currentContentSHA256": "c7c644b3f37ab98f13c2f12cdb77751d5542251e32ec8b63309ca975b8fb0138",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin 2288×1712 alkuperäisen. Sisäsatama, monen rakennuksen kattokerrokset, katu-/rantavyöhyke, kukkulat ja kasvillisuus näkyvät laajana todellisena kaupunkinäkymänä. Kuvassa ei ole yksilöitäviä ihmiskasvoja. Tavalliset ympäristön pienet liikemerkit ovat luonnollisia sivuosia, eivät päälle lisättyä mainosta tai vesileimaa. Rakennukset muodostavat kaupunkikokonaisuuden; ei erillistä taideteosta tai yhden nykyisen rakennusteoksen julkisivua päämotiivina.",
+            "reviewedAt": "2026-10-12T19:47:17.390687+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1-original.jpg",
+            "pixelSHA256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/cc-search/bb394be3ffb1.html",
+            "sourceMetadata": {
+              "author": [
+                "Stefan_und_Bille"
+              ],
+              "licenses": [
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                2288,
+                1712
+              ],
+              "sourceSHA256": "c5cf434075f180f90b1757ead760ffb8853ba38fb4eb4649a3eac37fd0fceb54"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":700,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M47535919\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":12.04847,\"lon\":-61.754837},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects ",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"f3c6e52a-2569-4162-8c2f-02dc88c6023f\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:St._Georges_from_Fort_George_-_panoramio.jpg\",\"wgTitle\":\"St. Georges from Fort George - panoramio.jpg\",\"wgCurRevisionId\":1129562689,\"wgRevisionId\":1129562689,\"wgArticleId\":47535919,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Grenada photographs taken on 2004-04-01\",\"CC-BY-SA-3.0\",\"Panoramio images reviewed by trusted users\",\"Photos from Panoramio\",\"Files with coordinates missing SDC location of creation\",\"Panoramio files uploaded by Panoramio upload bot\",\"Photos from Panoramio ID 1678932\",\"St. George's, Grenada\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageNa",
+            "sourceAuthorExcerpt": "Author Stefan_und_Bille Permission ( Reusing this file ) This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Stefan_und_Bille You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true .mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);co",
+            "sourceLicensingExcerpt": null,
+            "sourceCameralocationExcerpt": "Camera location 12° 02′ 54.49″ N, 61° 45′ 17.41″ W View this and other nearby images on: OpenStreetMap 12.048470; -61.754837 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 04:08, 15 March 2016 2,288 × 1,712 (1.04 MB) Panoramio upload bot ( talk | contribs ) {{Information |description=St. Georges from Fort George |date={{Taken on|2004-04-01}} |source=http://www.panoramio.com/photo/9843711 |author=[http://www.panoramio.com/user/1678932?with_photo_id=9843711 Stefan_und_Bille] |permission={{cc-by-sa-3.0|Stefa... You cannot overwrite this file. File usage on Commons There are no pages that use this file. Metadata This file contains additional information such as Exif metadata which may have been added by the digital camera, scanner, or software program used to create or digitize it. If the file has been modified from its original state, some details such as the timestamp may not fully reflect those of the o",
+            "actualDimensions": [
+              2288,
+              1712
+            ],
+            "photographedAt": "2004-04-01",
+            "placeEvidence": "Commons Description: Grenada: St. Georges from Fort George. Camera location 12.048470, -61.754837. Current content names Carenage and Fort George.",
+            "sourceLicenseReviewEvidence": "Panoramio upload bot reviewed 15 March 2016 and confirmed availability under the above CC BY-SA 3.0 license.",
+            "depictedWorkAssessment": "Aito laaja kaupungin sataman/rinteiden kokonaisasettelu. Hajanaista tavallista rakennuskantaa ympäristönä, ei yksilöidyn itsenäisen nykyteoksen pääaiheinen jäljennös. Ei rakennusten iästä pääteltyä PD:tä tai yleistä FOP-lupaa.",
+            "historicalBoundary": "April 2004 view; not asserted to show present-day building condition or access.",
+            "metadataRevisionReviews": [
+              {
+                "reviewedAt": "2026-10-12T19:55:32.781036+00:00",
+                "changedFields": [
+                  "captionFi"
+                ],
+                "previousCaptionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa2004.",
+                "captionFi": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+                "assessment": "Whitespace added before year only; place and date unchanged. Existing visual/source verdict remains applicable.",
+                "nativeSHA256Verified": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+                "personallyViewedAgain": false
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T19:47:17.407820+00:00",
+          "sha256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e12/stgeorges/qa.json",
+            "sha256": "0bbd7168a76480bc76362e911194c57de5cf00180b3bbde3e53bba1a2eb7aa40"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e12",
+        "city": "stgeorges",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "St. Georges from Fort George - panoramio.jpg",
+        "sha256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Georges_from_Fort_George_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/St._Georges_from_Fort_George_-_panoramio.jpg",
+        "author": "Stefan_und_Bille",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 2288,
+        "height": 1712,
+        "originalSHA256": "570819ce72a7506bf32c56a6f6ab32a7e9f26c9f64a90da5ebf08b792dabc404",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/c1-570819ce72a7506bf32c.jpg",
+        "bytes": 1087686,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:47:52.614704+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "St. Georges from Fort George - panoramio.jpg",
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "lyhyt": "St. George’sin satama ja kaupungin rinteitä huhtikuussa 2004.",
+        "tiedosto": "St. Georges from Fort George - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f92282c0b614649a159c8582ce80f67fe03e966d2520211d4940f689de164483",
+      "targetAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb",
+      "contextAfterSHA256": "eabe9dbd16f337a24b550e31c0e824961ded1337a9381d3a84ddd26fc28830fb"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
