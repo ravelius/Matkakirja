@@ -33,4 +33,9 @@ Ajoskriptit tämän session scratchpadissa: /private/tmp/claude-502/-Users-Share
 - **Aarretehtävän Kartta-laji** (omistajan lupa 14.2x, juna 184): natiivi-ui/aarre-kartta-184 559496447 (worktree
   wt/proto-natiivi-ui-aarrekartta): Kohdekartan.AvaaValinta + Kohdekartta.Paikka. Pelikoodari yhdistää pelikoodari/aarre-lajit-184:ään
   → kuvat iPhone + iPad (Pariisi Notre-Dame -testitehtävä) PT:lle Julkaisijan vuorolla.
+- **Napit läpinäkyviksi** (omistaja 14.5x, juna 184): linna natiivi-ui/linna-kuulto-184 57d0142cc (wt/proto-natiivi-ui-linnakuulto,
+  pohja siirtoseppa/laituri-varoitus; Siirtosepän kanssa sovittava linnahaaraan tuonti) → kuvapari scratchpad linnakuulto-ajo.sh
+  (nyk = vahdin appi olavinlinna-auto-1012-1346, uusi = vahdin haarat + tämä, LINJA=2). Oletus kaikkiin: natiivi-ui/napit-kuulto-184
+  bf6d0f805 (wt/proto-natiivi-ui-napitkuulto); poikkeukset PT:llä päätettävänä (paperipinnat, ISS LCD, lautapelin kytkimet, kiinteät uss-taustat).
+- Julkaisijan ikkuna ~15.05: 1) linna-kuulto 2) aarre-lajit (aarrekartta-ajo.sh) 3) asettelutesti (taidehalli-parit.sh).
 - **184**: varivakiot 2c2054d8a + web #4482; museo-nyt-184 b2599db7f; Pelikoodarin säädin-paperi 028764614.
