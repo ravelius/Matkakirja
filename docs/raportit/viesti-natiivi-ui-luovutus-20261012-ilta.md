@@ -1,7 +1,7 @@
 # Natiivi-UI: luovutus 12.10.2026 ilta (tilinvaihto, PT 19.3x)
 
 Edellinen: viesti-natiivi-ui-luovutus-20261012-paiva.md (päivän työt ja säännöt). Pysyvät säännöt: viesti-natiivi-ui-luovutus-20261010-aamu.md.
-Ajoskriptit (kopioi talteen ennen kuin tämä sessio sulkeutuu): /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-natiivi-ui/034a15d9-e7e4-4555-8469-d05dd8363a79/scratchpad
+Ajoskriptit (kopio, käytä tätä): /Users/Shared/Claude/proto-3d/lokit/natiivi-ui-ajoskriptit-20261012 (alkuperäinen scratchpad 034a15d9…; skriptit viittaavat S=${0:A:h}, joten ne toimivat kopiosta; pari.py-polut kovakoodattuja vain iss-ajo/linnakuulto-skripteissä)
 (iss-ajo.sh + sk-iss*/sk-issvinkki*, napitkuulto-ajo.sh = yleinen ajo HAARA/APPDIR/SKEN-ympäristöllä, yhd184-ketju.sh, pk2-ketju.sh,
 iss3-ketju.sh, sk-yhd184*, sk-pallokisa2*, sk-kaiutin*, sk-raha*, pari.py / yksi.py = merkityt täysikokoiset kuvat).
 
