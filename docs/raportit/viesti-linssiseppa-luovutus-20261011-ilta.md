@@ -27,6 +27,20 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   lokit/todistus-houkuttimet-iphone-182d-20261011-1652/arkki-houkuttimet-iphone.jpg (+ ipad-182d-1654).
   Avoin (ei pyydetty): tavalliset himmeät pisteet jäävät iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle.
 
+## Lisäys 12.10. 12.2x
+- **Taidehalli v4** (proto linssiseppa/museo-sali3-184, wt proto-linssiseppa-sali3, kärki 01db510ff ⊃ a0aaf4bd7 lippu, c1bbc10b7 6×6-atlas,
+  7c5fd7b4d kulta, e8ff0509f porras): ämpärissä taidemuseo/alankomaat/sali-v4/ (Julkaisija vei). Pelikuvat PT:llä:
+  lokit/taidehalli-v4-pelikuvat-20261012/korjattu/ (täysikokoiset). Skenaario sk-sali4-184.txt (tap-teksti Kunniagalleria; odota 20 s).
+- **Museon muisti**: museo-kamera-183 9266ccb13 (porras, e195edd0a kumottu) KUITATTU 183:een (PT). Avauksen kartan vapautus = 184.
+- **Katso ja löydä v2** yhdistelmä linssiseppa/katso2-yhd-184 (wt proto-linssiseppa-katso2) a3da13195 (⊃ 4dcb56b47 + Pelikoodari
+  f7162ddc4; Linssit 1515, Peli 538); simu ketju-katso2-184.zsh + sk-katso2-{iphone,ipad}.txt (QA + korttireitti) Julkaisijan jonossa.
+- **Vapaa lento kohteeseen 183** c0eecc5d2 (wt proto-linssiseppa-vapaakohde) — NUI yhdisti ef1bc2818, simu OK iPhone + iPad.
+- **Maanpinta v2** linssiseppa/maa-v2-184 85830da35 (käännös 4bb5ca408), paketti ämpärissä; simu ketju-maav2b-184.zsh jonossa.
+- **Lähestyminen 184** linssiseppa/museo-lahestyminen-183 000654cba (yövalot pois lennon ajaksi; 7c8e02120 laskeutuu laattojen tahdissa):
+  kylmä simu ei ehdi (aikaraja 8 s), laitemittaus puuttuu. Raidat = simun yövalot (laitteella oppaassa ei vikaa, ipad-yovalot-20261012-1006).
+- **Jonossa (PT)**: kuumailmapallokierrokset Ateena + Lontoo (juna 184) 183-töiden jälkeen; kartan vapautus ennen museon latausta (184).
+- Kuormaportit: kuormaportti-<nimi>.zsh pitää simu-portin kunnes 1 min kuorma < 40 (ei aikarajaa).
+
 ## SÄÄNTÖ 12.10. 11.1x (omistaja): omistajalle kuvat TÄYDELLÄ TARKKUUDELLA, yksittäin tai pari nykyinen | uusi natiivikorkeudella;
   ei pienennettyjä monen ruudun arkkeja (PT:lle saa arkin, täysikokoiset tehdään samalla). Kolmikko: scratchpad-skripti kolmikko.py
   (K = natiivikorkeus) tai kolme erillistä kuvaa.
