@@ -32,5 +32,3 @@ Aloitusviesti kullekin: "Olet <Rooli> (<malli>). Aja ensin git fetch origin, lue
 | Sisältökirjuri | Matkakirja-sisaltokirjuri | Sonnet 5.5, high | 10 maan aarrekuvat Commonsista; PR:t #4510 #4512 #4516–#4519 #4521 #4523 #4524 #4526 junaan 184 |
 | Laitetestaaja | Matkakirja-laitetestaaja | Sonnet 5.5, high | pallokisan uusinta 2, Olavinlinna 5, raketin oikea polku |
 | Äänittäjä | Matkakirja-aanittaja | Sonnet 5.5, high | kipin musiikki v2 (6 × 120 BPM), uusittavat äänet, shakin äänet |
-</content>
-</invoke>

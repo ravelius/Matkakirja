@@ -32,7 +32,5 @@ Session local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc (CLI 8bae393f-…). Edellinen
 - SK: aarrekuvat 10 maalle Commonsista (#4519:n parit), sitten vapaa.
 - PT:N AVOIMET OMAT: shakkisuunnitelma #4504 luku 9 → kortti omistajalle; lokikirjaukset (kirjattavat 14.3x–19.3x) raamattu-kirjaa.mjs:llä erillisessä docs-PR:ssä; tyojonot.md Päivitetty-rivi.
 - Asemataulu päivitetty 18.51 (mittarit, roolit, laitteet) ja työlista v80 (uudet paketit: nostot lehteen, vasta ansaittuina, raketti/torni, aarretehtävien palaute, Pulu).
-</content>
-</invoke>
 
 LISÄYS 19.2x: OMISTAJAN PALAUTE TAIDEHALLI v5b (kolmikot 1–2 lähetetty 19.0x): "ei taulu ole oikeasti tuollaisessa syvennyksessä. syvennyksen takana on oikeasti ihan normaali huone. lisäksi kehys menee nyt liian vaaleaksi osassa ja liian tummaksi toisessa kohtaa. samoin itse kuva. vertaa huolella … kannattaa katsoa lisää kuvia museosta … nyt ihmiset peittävät näkymää ja se saattaa huijata sinua" → LS1:lle 19.1x: ≥ 6 väkijoukotonta vertailukuvaa Commonsista, Yövartion sali kaaren taakse, tasainen valo tauluun ja kehykseen, kehys ja kirkkaus kuvien mukaan, nuolirivit → PT TARKISTAA HUOLELLA (PT:n virhe: hyväksyin syvennyksen yhden väkijoukkokuvan perusteella). KUITATTU 184: Pelikoodari cc49cbc1d kipin soittolista (väistö −9,5 dB, vaihto, paluu). Postivahti osui käyttörajaan noin 18.00, kierros pysähtyi → pyydetty jatkamaan 19.2x, ja PT päivitti taulun käsin 18.51 ja 19.2x. Omistajalle kerrottu: Codexin ruokakuvien korjaus lähti 1106174af.

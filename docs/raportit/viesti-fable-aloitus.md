@@ -10,5 +10,3 @@ Lue: CLAUDE.md ja docs/raportit/viesti-fable-luovutus-20261012-ilta2.md KOKONAAN
 4) ASEMATAULU: Postivahdin kierros pysähtyi 18.00 käyttörajaan (pyydetty jatkamaan 19.2x). Tarkista, että mittarit päivittyvät; jos eivät, aja python3 -I scratchpad/asemataulu/paivita.py ja vie vienti/{mittarit,roolit,laitteet}.json batchilla (if_version).
 5) TÄRKEIN: TAIDEHALLI (omistajan palaute 19.1x: Yövartion sali kaaren takana eikä syvennys, kehys ja kuva tasaisesti valaistuiksi vertailukuvien mukaan, katso useita kuvia ilman väkijoukkoa) → LS1 → PT tarkistaa HUOLELLA useita vertailukuvia vasten → omistajalle.
 6) Avoimet omat: shakkisuunnitelma #4504 (luku 9) → kortti; lokikirjaukset (kirjattavat 14.3x–19.3x) docs-PR:llä; viikkokäyttö 47 % → 50 %:ssa siirtoprompti.
-</content>
-</invoke>
