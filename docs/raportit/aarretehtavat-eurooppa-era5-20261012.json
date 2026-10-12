@@ -1,0 +1,358 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Aarretehtävät, erä 5 (PT 12.10.): 13 pääkaupunkipistettä, yksi tehtävä kullekin (a = etsi_kartalta, 25 £, muistomerkki false): Tirana, Andorra la Vella, Minsk, Zagreb, Reykjavík, Vaduz, Monaco, Chișinău, Skopje, Podgorica, San Marino, Belgrad, Bratislava (Bern oli mallierässä). Ei b-tehtävää eikä maa-vihjettä: ALB, AND, BLR, LIE, MCO, MDA, MKD, MNE, SMR ja SRB eivät vielä saa vihjettä, koska paikallisaarreparia ei ole (ISL, HRV, SVK saavat vihjeen muista kaupungeistaan). Faktat 2 lähteestä, itsenäinen Sonnet-tarkistus, korjaukset tehty.",
+  "kaupungit": [
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "tirana",
+      "nimi": "Tirana",
+      "maa": "ALB",
+      "hahmo": "Kahvilanpitäjä Arben Dervishi, joka muistaa jokaisen vakioasiakkaansa kahvitoiveen",
+      "saapumispiste": {
+        "nimi": "Kahvila Skanderbeg-aukion laidalla",
+        "lat": 41.32833,
+        "lon": 19.81833
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Etsi kartalta pieni kivisilta itään täältä. Se on 1600–1700-luvulta, eikä joki enää kulje sen alta: joki siirrettiin 1930-luvulla.",
+        "kohde": {
+          "nimi": "Tabakkien silta",
+          "lat": 41.32642,
+          "lon": 19.82605,
+          "etaisyys_saapumispisteesta_m": 679
+        },
+        "vihje_vaarin": "Ei se. Kävele aukiolta itään linnoituksen ohi, kunnes tulet vanhaan nahkurien kaupunginosaan. Silta on pieni ja kivinen.",
+        "tiesitko": "Sillan nimi tulee alueen nahkureista. Joki siirrettiin 1930-luvulla ja silta jäi pois käytöstä; nykyään sillalla kävelevät vain jalankulkijat.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "andorralavella",
+      "nimi": "Andorra la Vella",
+      "maa": "AND",
+      "hahmo": "Suksivuokraamon pitäjä Jordi Pons (kertoo aina ensin sään)",
+      "saapumispiste": {
+        "nimi": "Pont de Paris -silta, suksivuokraamon edessä",
+        "lat": 42.50926,
+        "lon": 1.53073
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Karu kivitalo, jonka kulmassa on kyyhkyslakan näköinen torni. Se oli suvun koti, sitten yli 300 vuotta maan neuvoston talo. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Casa de la Vall",
+          "lat": 42.50667,
+          "lon": 1.52056,
+          "etaisyys_saapumispisteesta_m": 882
+        },
+        "vihje_vaarin": "Ei se. Etsi talo, ei kirkkoa eikä kylpylää: kokeile Sant Esteven kirkon lounaispuolelta.",
+        "tiesitko": "Talossa on kaappi, joka aukeni vain, kun jokaisen pitäjän edustaja toi oman avaimensa. Avaimia on seitsemän.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "minsk",
+      "nimi": "Minsk",
+      "maa": "BLR",
+      "hahmo": "Kahvilanpitäjä Alena Kavalenka",
+      "saapumispiste": {
+        "nimi": "Kolminaisuuden esikaupunki, Alenan kahvilan edusta Svislač-joen rannalla",
+        "lat": 53.90854,
+        "lon": 27.55598
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "vihjelause": "Etsi kartalta Ylemmän kaupungin barokkikirkko, jossa on kaksi tornia. Katoliset bernardiinit rakensivat sen 1600-luvulla; nyt se on ortodoksien pääkirkko.",
+        "kohde": {
+          "nimi": "Pyhän Hengen katedraali",
+          "lat": 53.905,
+          "lon": 27.5562,
+          "etaisyys_saapumispisteesta_m": 394
+        },
+        "vihje_vaarin": "Ei se. Ylemmässä kaupungissa on kaksi kaksitornista barokkikirkkoa lähellä toisiaan. Etsi se, jossa pidetään nykyään ortodoksien jumalanpalveluksia.",
+        "tiesitko": "Kirkossa on Minskin Jumalansynnyttäjän ikoni, jota uskovat pitävät ihmeitä tekevänä.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "zagreb",
+      "nimi": "Zagreb",
+      "maa": "HRV",
+      "hahmo": "Piparkakkusydänten tekijä Ivana Horvat (koristaa sydämet punaisella kuorrutteella)",
+      "saapumispiste": {
+        "nimi": "Keskustori Trg bana Jelačića, Ivanan myyntipöydän kohdalla",
+        "lat": 45.81306,
+        "lon": 15.97722
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Ylhäällä vanhassa kaupungissa on ainoa jäljellä oleva vanha portti, jonka holvissa palaa kynttilöitä. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Kivinen portti",
+          "lat": 45.8158,
+          "lon": 15.9753,
+          "etaisyys_saapumispisteesta_m": 339
+        },
+        "vihje_vaarin": "Ei se. Kävele torilta pohjoiseen ylös mäkeä vanhaan Yläkaupunkiin: portin holvissa palaa kynttilöitä ja seinillä on kiitoslaattoja.",
+        "tiesitko": "Tarun mukaan Neitsyt Marian kuva säilyi 1731 tulipalossa. Siitä asti portin holvissa on ollut pyhäkkö, jossa sytytetään kynttilöitä.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "reykjavik",
+      "nimi": "Reykjavík",
+      "maa": "ISL",
+      "hahmo": "Villapaitamyyjä Sigrún Magnúsdóttir (myy käsin neulottuja villapaitoja ja puhuu aina säästä)",
+      "saapumispiste": {
+        "nimi": "Austurstræti, kävelykatu Sigrúnin villapaitakojun kohdalla",
+        "lat": 64.14781,
+        "lon": -21.93981
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Kaupungin keskellä on matala lampi, jossa uiskentelee vesilintuja. Kaupungintalo seisoo sen reunalla. Etsi lampi kartalta.",
+        "kohde": {
+          "nimi": "Tjörnin",
+          "lat": 64.14444,
+          "lon": -21.9425,
+          "etaisyys_saapumispisteesta_m": 397
+        },
+        "vihje_vaarin": "Ei se. Kävele etelään vain muutama sata metriä: kaupungintalo on lammen reunalla ja joutsenet ja ankat uivat sen edessä.",
+        "tiesitko": "Lampea sanotaan leikillä maailman suurimmaksi leipäkeitoksi, koska sille on viety paljon leipää lintujen ruoaksi. Nykyään kaupunki pyytää olemaan syöttämättä.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "vaduz",
+      "nimi": "Vaduz",
+      "maa": "LIE",
+      "hahmo": "Postimerkkikauppias Anna Frick (katsoo kaiken suurennuslasilla)",
+      "saapumispiste": {
+        "nimi": "Peter-Kaiser-Platz, postimerkkikaupan edessä",
+        "lat": 47.13735,
+        "lon": 9.52264
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Kaupungin yläpuolella kallioterassilla kohoaa linna, jossa maan ruhtinasperhe yhä asuu. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Vaduzin linna",
+          "lat": 47.13944,
+          "lon": 9.52444,
+          "etaisyys_saapumispisteesta_m": 269
+        },
+        "vihje_vaarin": "Ei se. Nosta katse rinteelle: linna on kaupungin yläpuolella kallioterassilla, katedraalista pohjoiseen.",
+        "tiesitko": "Asuintorni ajoitetaan puunrenkaiden avulla vuoteen 1287. Ruhtinasperhe asuu linnassa vuodesta 1938, siksi se ei ole yleisölle auki.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "monaco",
+      "nimi": "Monaco",
+      "maa": "MCO",
+      "hahmo": "Veneenkorjaaja Marc Orengo (vertaa kaikkea purjeisiin)",
+      "saapumispiste": {
+        "nimi": "Quai des États-Unis, Port Hercule -sataman laituri",
+        "lat": 43.73695,
+        "lon": 7.42386
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Täällä on maailmankuulu pelitalo. Sen konserttisalin ja laajennuksen suunnitteli sama arkkitehti, joka suunnitteli Pariisin oopperan. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Monte Carlon kasino",
+          "lat": 43.73944,
+          "lon": 7.42889,
+          "etaisyys_saapumispisteesta_m": 490
+        },
+        "vihje_vaarin": "Ei se. Kävele satamasta koilliseen ylämäkeen, aukiolle, jonka laidalla pelitalo seisoo.",
+        "tiesitko": "Monte Carlo tarkoittaa Kaarlen vuorta. Alue sai nimensä vuonna 1866 ruhtinas Kaarle III:n mukaan.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "chisinau",
+      "nimi": "Chișinău",
+      "maa": "MDA",
+      "hahmo": "Kukkakauppias Maria Rusu",
+      "saapumispiste": {
+        "nimi": "Tapani Suuren keskuspuisto, Marian kukkakojun edusta",
+        "lat": 47.02553,
+        "lon": 28.82802
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "vihjelause": "Etsi kartalta keskustan katedraali, jonka sisäänkäyntiä kehystää kuusi yksinkertaista antiikkityylistä pylvästä. Se valmistui 1836.",
+        "kohde": {
+          "nimi": "Kristuksen syntymän katedraali",
+          "lat": 47.02606,
+          "lon": 28.83453,
+          "etaisyys_saapumispisteesta_m": 497
+        },
+        "vihje_vaarin": "Ei se. Kävele puiston poikki itään. Etsit uusklassista kirkkoa, jonka sisäänkäynnillä kohoaa korkea pylväikkö.",
+        "tiesitko": "Katedraalin suunnitteli Abram Melnikov. Hän suunnitteli samankaltaisen kirkon myös Bolgradiin, joka vihittiin käyttöön 1838.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "skopje",
+      "nimi": "Skopje",
+      "maa": "MKD",
+      "hahmo": "Kupariseppä Zoran Trajkovski, joka naputtaa kuparia pajassaan basaarissa",
+      "saapumispiste": {
+        "nimi": "Vanha basaari, kuparisepän paja",
+        "lat": 42.0006,
+        "lon": 21.4365
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Etsi kartalta Vardar-joen yli kulkeva, yli 200 metriä pitkä jalankulkusilta. Se on 1400-luvulta ja yhdistää kaupungin pääaukion tähän basaariin.",
+        "kohde": {
+          "nimi": "Kivisilta",
+          "lat": 41.99699,
+          "lon": 21.43307,
+          "etaisyys_saapumispisteesta_m": 491
+        },
+        "vihje_vaarin": "Ei se. Kävele basaarin kujilta alas joen rantaan: siellä alkaa pitkä kaarisilta, jonka toisessa päässä on iso aukio.",
+        "tiesitko": "Siltaa pidetään Skopjen tunnuksena. Nykyinen silta on sulttaani Mehmed II:n ajalta 1400-luvulta, ja sen perustukset ovat vielä vanhemmat.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "podgorica",
+      "nimi": "Podgorica",
+      "maa": "MNE",
+      "hahmo": "Kukkakauppias Ivana Radonjić, joka puhuu kukilleen kuin vanhoille ystäville",
+      "saapumispiste": {
+        "nimi": "Kukkakauppa Itsenäisyydenaukion laidalla",
+        "lat": 42.4413,
+        "lon": 19.2628
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Etsi kartalta Vanhankaupungin kivitorni, joka on 1600-luvulta ja jonka huipulla on kello. Se on täältä noin 700 metriä etelään.",
+        "kohde": {
+          "nimi": "Sahat kula -kellotorni",
+          "lat": 42.43556,
+          "lon": 19.26001,
+          "etaisyys_saapumispisteesta_m": 678
+        },
+        "vihje_vaarin": "Ei se. Etsi vanhan kaupungin, Stara Varošin, kapeat kujat; sieltä kivitorni nousee matalien talojen yläpuolelle.",
+        "tiesitko": "Podgorican nimi tarkoittaa 'kukkulan alla'. Kaupunki on Gorica-kukkulan juurella, Ribnica- ja Morača-jokien yhtymäkohdassa.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "sanmarino",
+      "nimi": "San Marino",
+      "maa": "SMR",
+      "hahmo": "Keramiikkaseppä Chiara Gasperoni (kädet aina savessa)",
+      "saapumispiste": {
+        "nimi": "Contrada Omagnano, keramiikkapajan edessä",
+        "lat": 43.93719,
+        "lon": 12.44626
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Vuorella on kolme tornia. Etsi kartalta niistä ensimmäinen: vanhin ja suurin, kaksinkertaisten muurien suojassa.",
+        "kohde": {
+          "nimi": "Guaitan torni",
+          "lat": 43.9354,
+          "lon": 12.4496,
+          "etaisyys_saapumispisteesta_m": 333
+        },
+        "vihje_vaarin": "Ei se. Etsi vanhin ja suurin kolmesta. Se on kolmikon pohjoisin, siis lähinnä vanhaa kaupunkia.",
+        "tiesitko": "Guaitan muurien sisällä oli vankila, jota käytettiin vielä 1970-luvulla. Linnakkeen ydin on peräisin 1000-luvulta.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "belgrad",
+      "nimi": "Belgrad",
+      "maa": "SRB",
+      "hahmo": "Kirjakauppias Milan Petrović",
+      "saapumispiste": {
+        "nimi": "Knez Mihailovan kävelykatu, Milanin kirjakaupan edusta",
+        "lat": 44.81966,
+        "lon": 20.45384
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "vihjelause": "Etsi kartalta linnoituksen alakaupungin kahdeksankulmainen tykkitorni 1400-luvulta, joka vartioi aikoinaan Tonavan sataman suuta.",
+        "kohde": {
+          "nimi": "Nebojšan torni",
+          "lat": 44.82737,
+          "lon": 20.44788,
+          "etaisyys_saapumispisteesta_m": 978
+        },
+        "vihje_vaarin": "Ei se. Kävele linnoitukselle ja alas kohti Tonavaa. Torni seisoo joen rannalla, vanhan sataman sisäänkäynnin luona.",
+        "tiesitko": "Nebojša tarkoittaa serbiaksi pelkäämätöntä. Nykyään tornissa on näyttely.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "bratislava",
+      "nimi": "Bratislava",
+      "maa": "SVK",
+      "hahmo": "Kahvilanpitäjä Katarína Hudecová (leipoo aamuisin unikko- ja pähkinärullia)",
+      "saapumispiste": {
+        "nimi": "Hlavné námestie, Katarínan kahvilan terassi",
+        "lat": 48.14323,
+        "lon": 17.10843
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Linnan juurella seisoo goottilainen kirkko, jonka tornin huipulla kimaltaa kultainen kruunu. Siellä kruunattiin kuninkaita. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Pyhän Martinin tuomiokirkko",
+          "lat": 48.14214,
+          "lon": 17.10478,
+          "etaisyys_saapumispisteesta_m": 297
+        },
+        "vihje_vaarin": "Ei se. Kävele länteen linnaa kohti: kirkko on vanhan kaupungin länsilaidalla, ja sen torni on rakennettu osaksi vanhaa kaupunginmuuria.",
+        "tiesitko": "Kirkossa kruunattiin Unkarin hallitsijoita 1563–1830, muun muassa Maria Teresia 1741. Tornin huipun kultainen kruunu on 1800-luvun jäljennös.",
+        "palkkio": 25,
+        "muistomerkki": false
+      }
+    }
+  ]
+}
