@@ -61,6 +61,36 @@ export function rajoita(kori, nyt) {
   return { sallittu: true, kori: { mahd: mahd - 1, aika: nyt } };
 }
 
+/** Pallokisan lähtölaskenta (yhteislähtö, suunnitelma luku 7): kaikille sama aloitusaika nyt + tämä. */
+export const KISA_LAHTO_MS = 5000;
+/** Uutta lähtöä ei hyväksytä tätä tiheämmin samassa huoneessa (estää lähtöjen tulvan). */
+export const KISA_LAHTOVALI_MS = 30 * 1000;
+/** Kisan enimmäismäärät: palloja kierroksella ja maaliaika (s). */
+const KISA_PALLOJA_ENINTAAN = 64, KISA_AIKA_ENINTAAN_S = 6 * 3600;
+
+/**
+ * Kisaviesti (tyyppi nouto | lahto | maali) → siivottu tai virhe. Nouto: pallon järjestysnumero ja kerätyt; maali: aika sekunteina.
+ * Vain nämä kentät; kaikki muu hylätään kuten paikkaviestissä.
+ */
+export function tarkistaKisa(o) {
+  if (!o || typeof o !== 'object') return { virhe: 'ei olio' };
+  const kokonais = (x, ala, yla) => Number.isInteger(x) && x >= ala && x <= yla;
+  const avaimet = Object.keys(o).sort().join(',');
+  switch (o.tyyppi) {
+    case 'nouto':
+      if (avaimet !== 'n,pallo,tyyppi' || !kokonais(o.pallo, 0, KISA_PALLOJA_ENINTAAN - 1) || !kokonais(o.n, 1, KISA_PALLOJA_ENINTAAN)) return { virhe: 'nouto' };
+      return { kisa: { tyyppi: 'nouto', pallo: o.pallo, n: o.n } };
+    case 'lahto':
+      if (avaimet !== 'tyyppi') return { virhe: 'lahto' };
+      return { kisa: { tyyppi: 'lahto' } };
+    case 'maali':
+      if (avaimet !== 'aika,tyyppi' || typeof o.aika !== 'number' || !Number.isFinite(o.aika) || o.aika <= 0 || o.aika > KISA_AIKA_ENINTAAN_S) return { virhe: 'maali' };
+      return { kisa: { tyyppi: 'maali', aika: Math.round(o.aika * 10) / 10 } };
+    default:
+      return { virhe: 'tuntematon tyyppi' };
+  }
+}
+
 /** Muiden jäsenten tuoreet tilat uudelle tulijalle: liitteet [{ j, viim: { …tila, t } }]. */
 export function tilannekuva(liitteet, itse, nyt) {
   return liitteet
@@ -92,10 +122,14 @@ export class PalloHuone {
     const [asiakas, palvelin] = Object.values(new WebSocketPair());
     this.ctx.acceptWebSocket(palvelin, [jasen]);
     const nyt = this.nyt();
-    palvelin.serializeAttachment({ j: jasen, viim: null, kori: null });
+    palvelin.serializeAttachment({ j: jasen, viim: null, kori: null, noudetut: [] });
+    const liitteet = this.ctx.getWebSockets().map((ws) => this.liite(ws));
     palvelin.send(JSON.stringify({
       tyyppi: 'tila',
-      pallot: tilannekuva(this.ctx.getWebSockets().map((ws) => this.liite(ws)), jasen, nyt),
+      pallot: tilannekuva(liitteet, jasen, nyt),
+      // Kisan tilanne uudelle tai palaavalle: muiden kerätyt ja retkikunnan parhaat ajat tässä kaupungissa.
+      noudot: liitteet.filter((l) => l && l.j !== jasen && l.noudetut?.length).map((l) => ({ j: l.j, n: l.noudetut.length })),
+      parhaat: await this.parhaat(),
     }));
     return new Response(null, { status: 101, webSocket: asiakas });
   }
@@ -112,11 +146,56 @@ export class PalloHuone {
     const raja = rajoita(l.kori, nyt);
     l.kori = raja.kori;
     if (!raja.sallittu) { ws.serializeAttachment(l); return; }
-    const { tila } = tarkistaPaikka(typeof viesti === 'string' ? viesti : null);
+    const teksti = typeof viesti === 'string' ? viesti : null;
+    if (teksti && teksti.includes('"tyyppi"')) { await this.kisa(ws, l, teksti, nyt); return; }
+    const { tila } = tarkistaPaikka(teksti);
     if (!tila) { ws.serializeAttachment(l); return; }
     l.viim = { ...tila, t: nyt };
     ws.serializeAttachment(l);
     this.levita(ws, { tyyppi: 'pallo', j: l.j, ...l.viim });
+  }
+
+  /**
+   * PALLOKISA (suunnitelma luku 7, omistaja 15.5x: reaaliaikainen): nouto välitetään heti muille (sama pallo vain kerran jäsentä
+   * kohden), lähtö antaa kaikille saman aloitusajan, maali tallentaa jäsenen parhaan ajan huoneen omaan SQLite-tallennukseen
+   * (ajat ovat retkikunnan sisäisiä; sijainteja ei tallenneta).
+   */
+  async kisa(ws, l, teksti, nyt) {
+    if (new TextEncoder().encode(teksti).length > PALLO_VIESTIN_KATTO) { ws.serializeAttachment(l); return; }
+    let o; try { o = JSON.parse(teksti); } catch { ws.serializeAttachment(l); return; }
+    const { kisa } = tarkistaKisa(o);
+    if (!kisa) { ws.serializeAttachment(l); return; }
+    if (kisa.tyyppi === 'nouto') {
+      l.noudetut = l.noudetut ?? [];
+      if (l.noudetut.includes(kisa.pallo)) { ws.serializeAttachment(l); return; }   // uudelleenlähetys katkoksen jälkeen
+      l.noudetut.push(kisa.pallo);
+      ws.serializeAttachment(l);
+      this.levita(ws, { tyyppi: 'nouto', j: l.j, pallo: kisa.pallo, n: l.noudetut.length, t: nyt });
+      return;
+    }
+    if (kisa.tyyppi === 'lahto') {
+      const edellinen = await this.ctx.storage.get('lahto');
+      if (edellinen != null && nyt - edellinen < KISA_LAHTOVALI_MS) { ws.serializeAttachment(l); return; }
+      await this.ctx.storage.put('lahto', nyt);
+      for (const muu of this.ctx.getWebSockets()) {
+        const ml = this.liite(muu); if (!ml) continue;
+        ml.noudetut = []; muu.serializeAttachment(ml);   // uusi kisa: kerätyt nollaan kaikilla
+      }
+      this.levita(null, { tyyppi: 'lahto', j: l.j, t0: nyt + KISA_LAHTO_MS, t: nyt });
+      return;
+    }
+    // maali
+    ws.serializeAttachment(l);
+    const avain = `paras:${l.j}`;
+    const paras = await this.ctx.storage.get(avain);
+    if (paras == null || kisa.aika < paras) await this.ctx.storage.put(avain, kisa.aika);
+    this.levita(null, { tyyppi: 'maali', j: l.j, aika: kisa.aika, t: nyt, parhaat: await this.parhaat() });
+  }
+
+  /** Retkikunnan parhaat ajat tässä kaupungissa (nopein ensin). */
+  async parhaat() {
+    const kaikki = await this.ctx.storage.list({ prefix: 'paras:' });
+    return [...kaikki].map(([k, aika]) => ({ j: k.slice(6), aika })).sort((a, b) => a.aika - b.aika);
   }
 
   async webSocketClose(ws) { this.poistu(ws); }

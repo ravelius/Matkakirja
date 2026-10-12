@@ -9,7 +9,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  PALLO_JASEN_OTSAKE, PALLO_TUOREUS_MS, PALLO_VIESTEJA_SEKUNNISSA, PalloHuone, rajoita, tarkistaPaikka, tilannekuva,
+  KISA_LAHTO_MS, PALLO_JASEN_OTSAKE, PALLO_TUOREUS_MS, PALLO_VIESTEJA_SEKUNNISSA, PalloHuone, rajoita, tarkistaKisa, tarkistaPaikka, tilannekuva,
 } from '../worker/sahke/pallohuone.js';
 import { avainTiiviste, kasittele } from '../worker/sahke/kasittelija.js';
 
@@ -64,10 +64,15 @@ function teeSocket(j) {
   };
 }
 
-function teeHuone(socketit, nyt = () => 5000) {
+function teeHuone(socketit, nyt = () => 5000, tallennus = new Map()) {
   const ctx = {
     getWebSockets: (tagi) => socketit.filter((ws) => !tagi || ws.j === tagi),
     acceptWebSocket: () => {},
+    storage: {
+      get: async (k) => tallennus.get(k),
+      put: async (k, v) => { tallennus.set(k, v); },
+      list: async ({ prefix }) => new Map([...tallennus].filter(([k]) => k.startsWith(prefix))),
+    },
   };
   return new PalloHuone(ctx, {}, { nyt });
 }
@@ -95,6 +100,38 @@ test('huone: poistuminen kerrotaan muille, mutta ei korvatusta yhteydestä', asy
   assert.equal(b.lahetetyt.length, 0, 'A jatkaa uudella yhteydellä');
   await teeHuone([a2, b]).webSocketClose(a2);
   assert.deepEqual(b.lahetetyt[0], { tyyppi: 'pois', j: 'A' });
+});
+
+/* ---------- pallokisa (suunnitelma luku 7) ---------- */
+
+test('tarkistaKisa: vain nouto, lähtö ja maali, tarkat kentät', () => {
+  assert.deepEqual(tarkistaKisa({ tyyppi: 'nouto', pallo: 3, n: 2 }).kisa, { tyyppi: 'nouto', pallo: 3, n: 2 });
+  assert.deepEqual(tarkistaKisa({ tyyppi: 'lahto' }).kisa, { tyyppi: 'lahto' });
+  assert.deepEqual(tarkistaKisa({ tyyppi: 'maali', aika: 151.234 }).kisa, { tyyppi: 'maali', aika: 151.2 });
+  for (const v of [{ tyyppi: 'nouto', pallo: -1, n: 1 }, { tyyppi: 'nouto', pallo: 1, n: 1, nimi: 'x' }, { tyyppi: 'nouto', pallo: 1.5, n: 1 },
+    { tyyppi: 'maali', aika: -3 }, { tyyppi: 'lahto', t0: 1 }, { tyyppi: 'huuto' }]) assert.ok(tarkistaKisa(v).virhe, JSON.stringify(v));
+});
+
+test('kisa: nouto heti muille, sama pallo vain kerran; lähtö yhteinen ja harva; maali tallentaa parhaan', async () => {
+  const a = teeSocket('A'); const b = teeSocket('B');
+  for (const ws of [a, b]) ws.serializeAttachment({ j: ws.j, viim: null, kori: null, noudetut: [] });
+  let nyt = 10000; const tallennus = new Map();
+  const huone = teeHuone([a, b], () => nyt, tallennus);
+  await huone.webSocketMessage(a, JSON.stringify({ tyyppi: 'nouto', pallo: 2, n: 1 }));
+  assert.deepEqual(b.lahetetyt.at(-1), { tyyppi: 'nouto', j: 'A', pallo: 2, n: 1, t: 10000 });
+  assert.equal(a.lahetetyt.length, 0, 'ei omaa takaisin');
+  nyt += 300; await huone.webSocketMessage(a, JSON.stringify({ tyyppi: 'nouto', pallo: 2, n: 1 }));
+  assert.equal(b.lahetetyt.length, 1, 'uudelleenlähetys ei laske kahdesti');
+  nyt += 300; await huone.webSocketMessage(b, JSON.stringify({ tyyppi: 'lahto' }));
+  for (const ws of [a, b]) assert.deepEqual(ws.lahetetyt.at(-1), { tyyppi: 'lahto', j: 'B', t0: nyt + KISA_LAHTO_MS, t: nyt });
+  assert.deepEqual(a.deserializeAttachment().noudetut, [], 'uusi kisa nollaa kerätyt');
+  const ennen = a.lahetetyt.length;
+  nyt += 1000; await huone.webSocketMessage(a, JSON.stringify({ tyyppi: 'lahto' }));
+  assert.equal(a.lahetetyt.length, ennen, 'toinen lähtö alle 30 s:ssa hylätään');
+  nyt += 1000; await huone.webSocketMessage(a, JSON.stringify({ tyyppi: 'maali', aika: 180 }));
+  nyt += 1000; await huone.webSocketMessage(b, JSON.stringify({ tyyppi: 'maali', aika: 150 }));
+  nyt += 1000; await huone.webSocketMessage(a, JSON.stringify({ tyyppi: 'maali', aika: 200 }));
+  assert.deepEqual(b.lahetetyt.at(-1).parhaat, [{ j: 'B', aika: 150 }, { j: 'A', aika: 180 }], 'paras säilyy, nopein ensin');
 });
 
 /* ---------- reitti /pallot (kasittelija.js) ---------- */
