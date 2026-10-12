@@ -69,3 +69,14 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Lyhty (4eccb3a27): varoitus 2,5 s + askeleet/narina + valopiiri + epäily 1,5 s + liiketapin korostus. Äänittäjältä tulossa lyhty-lahestyy.
 - v48p fb151114c, v48r 78f2f37d3 kiinnitetty (vahdissa v48r). NUI:n kuulto-napit yhdistetty (3f178beb2).
 - Botin askel kompensoi kuorman (DtMax 0,05 s, aeb2108de).
+
+## PÄIVITYS 12.10. 19.1x
+
+- Linnahaara **986f1b23e** (kaikki tarkistettu puhtaalla kopiolla): 167be0bfc näkymä (näkyvyys, hahmot, matalat esineet), c62e3727f katso v:<henkilö>,
+  986f1b23e kohde reitin suunnassa + botin syvyys ilman liikkuvia hahmoja. Botti 986f1b23e + v48r odottaa (lokit/siirtoseppa-botti-nakyma, A+B peräkkäin 1 simulla).
+- **ajo-botti-osat.sh** ajaa nyt todistusajon omasta linnahaaran työpuusta (TYOPUU; proto-natiiviseppa-tyokalut poistettiin).
+- **MH-kuvat omistajalle**: PT ei vielä lähetä (LR v48s: kypärä, voudin hihat, kappalaisen asento). Vertailupuoli v48o = lokit/olavinlinna-mh-v48o-1012-1848
+  (c62e3727f + v48o + msaa, säilytetty). Kun v48s viety: kiinnitä (kiinnita-paketti.sh v48s v48r …), Julkaisija vaihtaa vahtiin, sitten skenaario
+  **mh-koko** (veneyö-soutaja + 10 hahmoa + istuva vartija, kavely seis 300) molemmilla apeilla rinnakkain (65 s väli) → mh-parit.py (raakakuvat, kuvat/raaka)
+  → itsetarkistus → koko sarja PT:lle. 16 hyvää v48r-paria: lokit/siirtoseppa-mh-omistaja/omistajalle/ (vanhentuvat v48s:n myötä).
+- Askel 0 -arkki: PT:llä 1729-versio (8/10); uusi arkki 986f1b23e-botista (scratchpad askel0-arkki.py).
