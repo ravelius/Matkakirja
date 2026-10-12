@@ -241,7 +241,7 @@ export function kaksiLahdetta({ glo30 = null, glo90 = null, kynnys = GLO30_KYNNY
 }
 
 /** Yksi laatta tavuiksi (gzip). */
-export function teeLaatta(dem, z, x, y, n = 65) {
+export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5) {
   const a = laatanAlue(z, x, y);
   const vali = (a.east - a.west) / (n - 1);
   const h = new Float32Array(n * n);
@@ -249,7 +249,8 @@ export function teeLaatta(dem, z, x, y, n = 65) {
     const lat = a.north - j * vali;
     for (let i = 0; i < n; i += 1) h[j * n + i] = dem.korkeus(a.west + i * vali, lat, vali);
   }
-  const kynnys = Math.max(0.5, (CESIUM_TASO0_VIRHE / 2 ** z) * 0.5);
+  // Virheraja: oletuksena puolet Cesiumin tasovirheestä; --virhekerroin harventaa (vuoristokerros 12.10.2026).
+  const kynnys = Math.max(0.5, (CESIUM_TASO0_VIRHE / 2 ** z) * virhekerroin);
   // Ruutupiste (i, j) → (lon, lat); kaarevuus virheeseen (ks. rtin.mjs).
   const kaarevuus = (ax, ay, bx, by) => janteenPainuma(a.west + ax * vali, a.north - ay * vali, a.west + bx * vali, a.north - by * vali);
   const { pisteet, kolmiot } = rtinVerkko(h, n, kynnys, rtinVirheet(h, n, kaarevuus));
@@ -458,6 +459,7 @@ export function lueAsetukset(argv) {
     kynnys: Number(arvo('glo30-kynnys', GLO30_KYNNYS)),
     mapterhornKansio: arvo('mapterhorn'),
     laatat: arvo('laatat'),
+    virhekerroin: Number(arvo('virhekerroin', 0.5)),
     vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
@@ -499,7 +501,7 @@ export async function aja(argv, loki = console.log) {
   const a = lueAsetukset(argv);
   const { tasot, alue, n, osa, osia, versio, maailma, vainMaaAlkaen, kynnys } = a;
   if ((!a.demKansio && !a.dem90Kansio) || (!a.ulos && !a.lista)) {
-    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--luettelo | --lista]');
+    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--luettelo | --lista]');
   }
   const { dem, maininta } = avaaLahteet(a);
   const lista = a.laatat ? lueLaattalista(readFileSync(a.laatat, 'utf8')) : null;
@@ -548,7 +550,7 @@ export async function aja(argv, loki = console.log) {
     const kansiot = new Set();
     for (const [x, y] of lista ? listanLaatatJarjestyksessa(lista.get(s.z) ?? [], s.z, osa, osia) : tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
       if (!kansiot.has(x)) { mkdirSync(join(a.ulos, String(s.z), String(x)), { recursive: true }); kansiot.add(x); }
-      const l = teeLaatta(dem, s.z, x, y, n);
+      const l = teeLaatta(dem, s.z, x, y, n, a.virhekerroin);
       writeFileSync(join(a.ulos, String(s.z), String(x), `${y}.terrain`), l.tavut);
       laattoja += 1; tasolla += 1; tavuja += l.tavut.length; kolmioita += l.kolmioita;
     }
