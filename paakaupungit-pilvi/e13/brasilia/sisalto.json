@@ -1,0 +1,400 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "brasilia",
+  "maa": "BRA",
+  "era": "e13",
+  "kaupunki": {
+    "id": "brasilia",
+    "name": "Brasília",
+    "wiki": "Brasília",
+    "ambience": "ylanko",
+    "pallo": {
+      "lat": -15.7939,
+      "lon": -47.8828
+    }
+  },
+  "artikkeli": {
+    "intro": "Brasília on Brasilian pääkaupunki **sisämaan ylängöllä**, maan keskisellä länsialueella. Nykyinen kaupunki rakennettiin 1900-luvulla valtakunnan uudeksi hallintokeskukseksi. Isoisän matkavuonna 1873 Brasíliaa ei vielä ollut. Sen suunnittelussa hallinto, asuminen ja liikkuminen saivat omat suuret kokonaisuutensa.\n\nArjessa kaava tuntuu myös osoitteissa, joissa numeroidut korttelit ja eri toimintojen sektorit korvaavat monia tavallisia kadunnimiä. Asumisen superquadra-kortteleihin suunniteltiin asuntojen rinnalle lähikauppaa, kouluja ja vapaa-ajan paikkoja. Vanhan suunnitellun ytimen ympärille on kasvanut paljon laajempi kaupunkiseutu, joten Brasília tarkoittaa yhteydestä riippuen myös koko liittovaltiopiiriä. Keinotekoinen **Paranoá-järvi** kuuluu kaupungin maisemaan ja vapaa-aikaan. Ympäröivä cerrado on savanniluontoa, jossa ruohostot, pensaat, puut ja vesistöjen metsät muodostavat vaihtelevan kokonaisuuden.",
+    "teksti": "Brasílian suunniteltu ydin on Plano Piloto. Sen suuret akselit järjestävät hallinnon ja asumisen alueita, ja toimintoja on jaettu omiin sektoreihinsa. Suunnitelman rinnalle kasvoi myös muita asuinalueita, joten nykyisen liittovaltiopiirin elämä ulottuu kauas alkuperäisen ytimen ulkopuolelle.\n\nParanoá on patoamalla syntynyt järvi. Sen alle jäi Vila Amauryn asutus, jossa oli elänyt uuden pääkaupungin rakentajia. Nykyisin järvellä harrastetaan vesiurheilua, ja myös sukeltajat etsivät upoksissa olevan asutuksen jälkiä. Pääkaupungin synty näkyy siten vedessäkin.\n\nBrasílian kansallispuisto säilyttää cerradon eri elinympäristöjä lähellä kaupunkia. Avointen alueiden lisäksi puistossa on purojen ja jokien varsia seuraavia metsiä. Lähdevesien yhteyteen syntyneet uima-altaat ovat tunnettu vierailukohde; maisema kertoo samalla rakentamisen ja luonnon yhteisestä historiasta."
+  },
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Brasília",
+      "johdanto": "Suunnitellun pääkaupungin arkea voi lukea osoitteista ja asuinkortteleista. Rakentamisen historia jatkuu myös järven pinnan alla.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Osoite näyttää koodilta",
+          "teksti": "Brasílian osoitteet tiivistyvät usein lyhenteiksi. SHN ja SHS tarkoittavat hotellisektoreita, SCN ja SCS kaupallisia sektoreita. Viimeinen kirjain kertoo suunnan: N viittaa pohjoiseen, S etelään. Asuinkortteleissa vastaan tulevat SQN ja SQS, joissa SQ liittyy superquadra-kortteliin. Lyhenteiden rinnalla käytetään numeroita, joten osoite muistuttaa helposti koodia. Sen avaaminen paljastaa kuitenkin kaupungin perusjärjestyksen: ensin alueen tehtävä ja suunta, sitten tarkempi paikka. Suunnittelun historia on näin läsnä jo hotellin osoiterivillä.",
+          "wiki": "Brasília",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kortteliin suunniteltiin kokonainen arki",
+          "teksti": "Superquadra tarkoittaa Brasílian suurta asuinkorttelia. Suunnitelmassa asuntojen yhteyteen liitettiin paikallista kauppaa, kouluja, virkistystä ja kirkkoja, jotta arjen tarpeita löytyisi läheltä. Rakennusten ympärille varattiin puita ja muuta kasvillisuutta; korttelit oli tarkoitus sulauttaa maisemaan. Kaupungin hallinnolliset akselit voivat tuntua valtavilta, mutta asuinalueille tavoiteltiin toisenlaista mittakaavaa. Korttelin idea selviääkin parhaiten seuraamalla arkisia reittejä kodilta palveluihin.",
+          "wiki": "Brasília",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Rakentajien kylä jäi järven alle",
+          "teksti": "Paranoá-järven pohjassa on Brasílian rakentamisen historiaa. Vila Amauryssa asui uuden pääkaupungin työmaille tulleita ihmisiä, mutta asutus jäi veden alle, kun tekoallas täytettiin. Sen jälkiä on myöhemmin tutkittu sukeltamalla. Nykyinen järvi palvelee veneilyä ja muita vesiharrastuksia, joten sama vesialue yhdistää kaupungin rakentajien menneisyyttä ja asukkaiden vapaa-aikaa. Rannalta näkyvä avoin vesi ei kerro kaikkea paikasta: osa pääkaupungin varhaisesta asutuksesta on sen pinnan alla.",
+          "wiki": "Brasília",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Pääkaupungin oma ääni",
+          "teksti": "Brasíliasta lähteneitä rockyhtyeitä ovat Legião Urbana, Capital Inicial ja Plebe Rude. Niiden rinnalla kaupungissa toimii elokuvakulttuuri, jonka vuotuinen Brasília-festivaali valitsee kilpailuunsa brasilialaisia elokuvia. Hallinnon ympärille rakennettu kaupunki on siis myös paikka, josta kulttuuri kulkee muualle maahan. Musiikin ja elokuvan paikallinen historia tuo kaupunkikuvaan oman mittakaavansa: yhtyeen kotipaikka tai festivaalin ohjelma kertoo eri asioita kuin hallintorakennuksen julkisivu.",
+          "wiki": "Brasília",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Brasíliassa päivän alue kannattaa valita etukäteen. Asuinsiivet tarjoavat pieniä kauppoja ja ruokapaikkoja, mutta sektorien välillä etäisyydet kasvavat. Osoitteiden lyhenteet auttavat suunnistamaan, kun niiden perusidean tuntee. Paranoá-järvi ja kansallispuisto avaavat pääkaupungin luontopuolta. Metro palvelee osaa matkoista, ja muille siirtymille tarvitaan esimerkiksi bussia tai taksia.",
+        "artikkeli": {
+          "nimi": "Matkailijan Brasília",
+          "taitto": "opas",
+          "teksti": "Lue osoitteen kirjaimet, valitse päivän alue ja jätä aikaa järvelle tai cerradolle.",
+          "nosto": "Suuret etäisyydet vaativat kuljetusten suunnittelua. Pienemmillä asuinalueilla, järven rannalla ja luonnon keskellä pääkaupungin mittakaava vaihtuu.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Brasíliaa palvelee Presidente Juscelino Kubitschek International Airport, tunnukseltaan BSB. Kentältä keskustaan kuljetaan maanteitse; metro ei ulotu lentoasemalle. Plano Piloton Rodoviária on paikallisbussien ja metron tärkeä vaihtopaikka. Kaukoliikenteen terminaali on eri paikka, joten tarkista terminaalin koko nimi. Metro sopii osaan matkoista, mutta suuria alueita jää sen ulkopuolelle. Valitse kävelykierrokselle yksi alue ja käytä pidempiin siirtymiin bussia tai taksia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Osoite on pieni kartta",
+              "teksti": "Hotellien osoitteissa SHN tarkoittaa pohjoista ja SHS eteläistä hotellisektoria. N ja S palaavat myös muiden sektorien nimissä. Asuinsiivet ovat Asa Norte ja Asa Sul, joissa on paikalliskauppoja, leipomoita ja ravintoloita. Suuret asuinkorttelit voivat olla mukavia paikkoja lyhyelle kierrokselle, mutta eri sektorien väliin jää pitkiä siirtymiä. Tarkista sekä lyhenne että korttelinumero ennen lähtöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Järvi ja cerrado",
+              "teksti": "Paranoá-järven rannoilla ja vedessä vietetään vapaa-aikaa. Järvellä harrastetaan muun muassa purjehdusta ja muita vesiurheilulajeja. Luontopäivän voi suunnata Brasílian kansallispuistoon, jossa on cerradon kasvillisuutta, jokivarsien metsää ja lähdevesien uima-altaita. Retki on eri mittainen kuin keskustan korttelikierros: valitse puiston vierailualue ja kuljetus etukäteen. Puistossa eläimiä seurataan etäältä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Brasílian ravintolat kokoavat makuja monista Brasilian osavaltioista ja myös ulkomailta. Tavallinen lounasvaihtoehto on por quilo -itsepalveluravintola, jossa valittu ruoka punnitaan ja maksu määräytyy painon perusteella. Asuinsiipien paikalliskaupan alueilla on runsaasti ruokapaikkoja. Niihin kannattaa poiketa myös silloin, kun päivän pääkohde on muualla: hotellisektori ja ruokapaikkojen keskittymät eivät ole sama asia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Brasíliassa on selvä kuiva kausi ja sadekausi. Kuivalla kaudella ilmankosteus voi olla hyvin alhainen, ja aurinkosuoja sekä juomavesi kuuluvat ulkopäivään. Sadekaudella ulkoretket kannattaa suunnitella joustavasti ja tarkistaa lähiajan ennuste. Sisämaan ylängöllä olosuhteet poikkeavat Brasilian rannikkokaupungeista. Järviretki, pitkä kävely ja kansallispuiston polku vaativat kukin oman varautumisensa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Paranoá-järvi",
+                "tahdet": 3,
+                "selite": "Tekoallas kuuluu kaupungin historiaan ja nykyiseen vapaa-aikaan."
+              },
+              {
+                "mita": "Brasílian kansallispuisto",
+                "tahdet": 3,
+                "selite": "Cerradon eri kasvillisuustyypit ja lähdevesien altaat ovat lähellä pääkaupunkia."
+              },
+              {
+                "mita": "Asa Nortessa ja Asa Sulissa liikkuminen",
+                "tahdet": 2,
+                "selite": "Paikalliskaupan alueilla pääsee kaupungin arjen palveluihin."
+              },
+              {
+                "mita": "Por quilo -lounas",
+                "tahdet": 2,
+                "selite": "Itse valittu annos maksetaan painon mukaan."
+              },
+              {
+                "mita": "Elokuva- ja musiikkiohjelma",
+                "tahdet": 2,
+                "selite": "Kaupungilla on omaa rockhistoriaa ja brasilialaiseen elokuvaan keskittyvä festivaali."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Terminaalit erikseen",
+                "teksti": "Plano Piloton paikallisliikenteen Rodoviária ja kaukoliikenteen terminaali ovat eri paikkoja."
+              },
+              {
+                "otsikko": "Tarkista lyhenne",
+                "teksti": "Osoitteen N viittaa pohjoiseen ja S etelään; korttelinumero täsmentää paikkaa."
+              },
+              {
+                "otsikko": "Metro kattaa vain osan",
+                "teksti": "Lentoasema ja monet vierailupaikat vaativat muuta kuljetusta."
+              },
+              {
+                "otsikko": "Varaa aikaa siirtymille",
+                "teksti": "Suunnitellun keskustan suuret akselit ja pitkät välimatkat tuntuvat erityisesti jalan."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Cerrado kaupungin ympärillä",
+      "johdanto": "Brasílian luonto vaihtuu ruohostoista vesistöjen metsiin. Paksu puunkuori ja hedelmiä syövä harjasusi kertovat savannin erilaisista tavoista elää.",
+      "tehtava": {
+        "kysymys": "Mitä hyötyä paksusta korkkimaisesta kuoresta on monille cerradon puille?",
+        "vaihtoehdot": [
+          "Se auttaa kestämään kuumuutta",
+          "Se houkuttelee lisää pölyttäjiä",
+          "Se korvaa puun maanpäälliset lehdet",
+          "Se muuttaa pintaveden suolaiseksi"
+        ],
+        "oikea": 0,
+        "fakta": "Kuori toimii suojana ympäristössä, jonka kasvillisuuteen tuli on vaikuttanut pitkään."
+      },
+      "nostot": [
+        {
+          "otsikko": "Savanni vaihtaa muotoa",
+          "teksti": "Cerrado on monien elinympäristöjen mosaiikki. Avoimilla alueilla kasvaa ruohoa ja harvakseltaan puita, toisaalla puusto tihenee lähes metsäksi. Vesistöjen varsilla kulkevat omat metsävyöhykkeensä, ja myös kosteikkoja kuuluu kokonaisuuteen. Brasílian kansallispuisto säilyttää näitä pääkaupunkiseudun luontotyyppejä. Samalla retkellä maisema voi siis vaihtua, vaikka ollaan edelleen cerradossa. Savanni ei tarkoita yhtä tasaista ruohomattoa: veden määrä, maaperä ja tuli vaikuttavat kasvillisuuden rakenteeseen.",
+          "wiki": "Cerrado",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Puun kuori suojaa kuumuudelta",
+          "teksti": "Tuli kuuluu cerradon maisemaa muovanneisiin tekijöihin. Monet alueen kasvit ovat sopeutuneet siihen, ja osalla puista on paksu korkkimainen kuori, joka auttaa kestämään kuumuutta. Myös maaperä ja veden liikkeet vaikuttavat siihen, millaista kasvillisuutta missäkin kasvaa. Puun pinnan erikoinen rakenne voi siten kertoa sen elinympäristöstä. Cerradon maaperä on usein hapanta, ja kalsiumia sekä magnesiumia on niukasti. Kasvillisuuden kuvaamiseen tarvitaan siten myös tietoa alueen maasta ja veden liikkeistä.",
+          "wiki": "Cerrado",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Metsä seuraa vettä",
+          "teksti": "Cerradon avoimien alueiden välissä purojen varsia seuraavat galleriametsät. Niissä korkeat puut muodostavat suljetun latvuskerroksen, ja elinympäristö tarjoaa vettä sekä suojaa monille nisäkkäille. Avoimen savannin palot eivät vaikuta näihin metsävyöhykkeisiin samalla tavalla. Brasílian kansallispuistossa vesistöjen metsät kuuluvat maiseman vaihteluun. Pieneltä näyttävä metsäkaistale voi siksi olla eläimille tärkeä osa paljon laajempaa aluetta: kartan vihreää nauhaa kannattaa lukea myös vesireitin merkkinä.",
+          "wiki": "Cerrado",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Harjasusi kuljettaa hedelmän siemeniä",
+          "teksti": "Pitkäjalkainen harjasusi elää cerradon avoimissa ja puoliavoimissa ympäristöissä, ja lajia tavataan myös Brasílian kansallispuistossa. Se syö sekä pieniä eläimiä että kasviravintoa. Tärkeä ruoka on lobeira eli tomaattia muistuttava Solanum lycocarpum -kasvin hedelmä. Siemeniä kulkee eläimen ruuansulatuksen läpi ehjinä ja päätyy ulosteiden mukana uusille paikoille. Hedelmää etsivä koiraeläin toimii näin myös kasvin levittäjänä. Harjasusi liikkuu tavallisesti yksin, joten lajiin ei pidä liittää susilauman elintapoja.",
+          "wiki": "Maned wolf",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Brasílian luontopuoli ulottuu Paranoá-järveltä kansallispuiston cerradoon ja lähteille. Kaupungin rakentamisen historia liittyy molempiin vesimaisemiin.",
+    "rajat": {
+      "pohjoinen": -15.7353,
+      "etela": -15.7833,
+      "lansi": -47.9296,
+      "ita": -47.8195
+    },
+    "kohteet": [
+      {
+        "nimi": "Brasílian kansallispuisto",
+        "tyyppi": "luonto",
+        "lat": -15.73806,
+        "lon": -47.92667
+      },
+      {
+        "nimi": "Paranoá-järvi",
+        "tyyppi": "luonto",
+        "lat": -15.78056,
+        "lon": -47.8225
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Brasílian kansallispuisto": {
+      "aika": "1900-luvun jälkipuoliskolta",
+      "teksti": "Brasílian kansallispuisto sijaitsee pääkaupungin luoteispuolella. Se perustettiin uuden pääkaupungin syntymisen yhteydessä suojelemaan sen ympäristön luontoa. Isoisän matkavuonna 1873 täällä ei vielä ollut kansallispuistoa eikä nykyistä Brasíliaa, mutta alueen savannit, metsät ja lähteet kuuluvat kaupunkia vanhempaan maisemaan.\n\nPuistossa cerrado vaihtelee avoimista kasvillisuusalueista vesistöjen varsia seuraaviin metsiin. Lähteet ja purot ovat tärkeä osa aluetta, ja vierailijoita houkuttelevat myös vedestä muodostuneet uima-altaat. Alueella on retkeilypolkuja ja ympäristökasvatusta. Puistoa hallinnoi luonnonsuojelusta vastaava ICMBio, joten retki kuuluu suojelualueelle. Sen eläimistöön lukeutuvat esimerkiksi harjasusi, jättiläismuurahaiskarhu ja vesialueiden kapybara, mutta yksittäinen käynti ei takaa niiden näkemistä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Paranoá-järvi": {
+      "aika": "Brasílian rakentamisen ajalta",
+      "teksti": "Paranoá on Brasílian rakentamisen yhteydessä patoamalla muodostettu järvi. Sen rannoilla on Lago Norten ja Lago Sulin asuinalueita, urheiluseuroja, ravintoloita ja yliopiston toimintoja. Isoisän matkavuonna 1873 tätä tekoallasta ei vielä ollut. Nykyinen laaja vesimaisema on osa pääkaupungin rakentamista, vaikka järven vettä ja rantojen luontoa tarkastellaan nyt myös virkistysympäristönä.\n\nJärven pinnan alle jäi Vila Amaury, jossa asui Brasílian työmaille tulleita rakentajia. Vedenalaisia asutuksen jälkiä on myöhemmin etsitty sukeltamalla. Pinnalla vietetään vapaa-aikaa esimerkiksi purjelautailun ja muiden vesiharrastusten parissa. Järven saaria on myös suojeltu ekologisina alueina. Järven vesi tulee muun muassa Torto-, Gama-, Riacho Fundo- ja Bananal-joista, joten vesialue liittyy useisiin pääkaupunkiseudun valuma-alueisiin.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Brasília–Presidente Juscelino Kubitschek International Airport (BSB)",
+    "huomiot": [
+      "C-tekstiluonnos; kuva-, kartta- ja sääportit avoinna.",
+      "Kontekstin 2 817 381 (2022) tarkoittaa koko Distrito Federalin aluetta, ei pelkkää Plano Pilotoa. Väestölukua ei käytetä lukijatekstissä.",
+      "Tekijäsuojatut rakennukset, sillat, veistokset ja taideteokset on jätetty karttakohteista ja kuvien valinnasta pois.",
+      "Sääauditointi avoin: saa.json säilytetty muuttamatta; saatiedot null.",
+      "Oppaan liikennepalvelut ja nykyinen matkustusturvallisuus tarkastettava D-vaiheessa."
+    ]
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Brasília on?",
+      "options": [
+        "Brasilian",
+        "Bolivian",
+        "Argentiinan",
+        "Venezuelan"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupunki rakennettiin Etelä-Amerikan sisämaan ylängölle.",
+      "fact": "Brasília on Brasilian liittovaltion pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Bras%C3%ADlia"
+    },
+    {
+      "q": "Mitä viimeinen N kertoo monessa Brasílian sektorilyhenteessä?",
+      "options": [
+        "Sektori on pohjoispuolella",
+        "Sektori on eteläpuolella",
+        "Sektori kuuluu lentoasemalle",
+        "Sektori on kansallispuistossa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Sama suuntajako näkyy nimissä Asa Norte ja Asa Sul.",
+      "fact": "Esimerkiksi SHN tarkoittaa pohjoista hotellisektoria ja SHS eteläistä.",
+      "source": "https://en.wikivoyage.org/wiki/Bras%C3%ADlia"
+    },
+    {
+      "q": "Mikä luonnehtii Paranoá-järven syntyä?",
+      "options": [
+        "Joki padottiin tekoaltaaksi",
+        "Jäätikkö kaiversi kallioaltaan",
+        "Tulivuoren kraatteri täyttyi vedellä",
+        "Merenlahti eristyi maankohoamisessa"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Järven muodostuminen liittyy kaupungin rakentamiseen.",
+      "fact": "Paranoájoki padottiin uuden pääkaupungin rakentamisen yhteydessä.",
+      "source": "https://en.wikipedia.org/wiki/Lake_Parano%C3%A1"
+    },
+    {
+      "q": "Minkä hedelmän siemeniä harjasusi levittää ravintonsa mukana?",
+      "options": [
+        "Lobeira-hedelmän",
+        "Mangohedelmän",
+        "Avokadohedelmän",
+        "Kookospähkinän"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Kyseessä on tomaattia muistuttava hedelmä.",
+      "fact": "Harjasusi syö Solanum lycocarpum -kasvin hedelmiä ja levittää ehjinä säilyviä siemeniä ulosteissaan.",
+      "source": "https://en.wikipedia.org/wiki/Maned_wolf"
+    },
+    {
+      "q": "Mitä superquadra-kortteleihin suunniteltiin asuntojen rinnalle?",
+      "options": [
+        "Arjen palveluja ja virkistystä",
+        "Hotelleja ja kongressihalleja",
+        "Ministeriöitä ja pankkikonttoreita",
+        "Tukkukauppaa ja teollisuusvarastoja"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Suunnittelussa huomioitiin asukkaan tavallinen päivä.",
+      "fact": "Asuinkorttelien yhteyteen suunniteltiin paikallista kauppaa, kouluja, virkistystä ja kirkkoja.",
+      "source": "https://en.wikipedia.org/wiki/Bras%C3%ADlia"
+    }
+  ],
+  "tiedot": [
+    "Brasílian osoitteessa SHN tarkoittaa pohjoista hotellisektoria ja SHS eteläistä; viimeinen kirjain kertoo suunnan.",
+    "Vila Amauryn rakentajayhteisön asutus jäi Paranoá-järven alle, ja sen jälkiä on myöhemmin etsitty sukeltamalla.",
+    "Harjasusi syö myös hedelmiä ja levittää niiden siemeniä. Lajia tavataan Brasílian kansallispuistossa."
+  ]
+}

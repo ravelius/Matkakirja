@@ -1,0 +1,432 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "santiagodechile",
+  "maa": "CHL",
+  "era": "e13",
+  "kaupunki": {
+    "id": "santiagodechile",
+    "name": "Santiago de Chile",
+    "wiki": "Santiago de Chile",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": -33.4375,
+      "lon": -70.65
+    }
+  },
+  "artikkeli": {
+    "intro": "Santiago de Chile on Chilen pääkaupunki Andien ja rannikkovuoriston välisessä laaksossa. Mapocho-joki kulkee kaupungin halki, ja keskellä asutusta kohoavat Santa Lucían ja San Cristóbalin kukkulat. **Plaza de Armas** on espanjalaisen ruutukaavakaupungin historiallinen ydin, mutta laaksossa asuttiin jo ennen espanjalaisten tuloa. Kaupungin nykyinen laajuus ei myöskään mahdu Santiago-nimisen keskustakunnan rajoihin. Nimen tarkoittama alue vaihtuu sen mukaan, puhutaanko kunnasta vai koko suurkaupungista.\n\nSantiagossa monet tutut paikat ovat vaihtaneet tehtäväänsä: La Moneda rakennettiin rahapajaksi ja Mapochon rautatieasema toimii kulttuuritilana. Isoisän matkavuonna 1873 kauppahalli oli jo avattu, mutta Santa Lucían muuttaminen puistoksi oli vielä kesken. **Quinta Normalin puisto** puolestaan syntyi maatalouden ja kasvien tutkimuksen ympärille. Kaupungin historiaa voi lukea niin katujen suunnasta kuin rakennuksista, joiden vanha nimi muistuttaa aivan toisesta käyttötarkoituksesta.",
+    "teksti": "Santiagon espanjalainen kaupunki perustettiin 1500-luvulla Mapochon laaksoon. Keskustan ruutukaavassa Plaza de Armasille sijoitettiin hallinnon ja kirkon rakennuksia. Nykyisen aukion ympärillä ovat katedraali, posti, entinen kuninkaallinen oikeusistuin ja kaupunginhallinto. Koko laakson asutushistoria on tätä kaupunkisuunnitelmaa vanhempi.\n\nSanta Lucía tunnettiin jo ennen espanjalaisten tuloa Hueléninä. Kukkulasta on otettu rakennuskiveä, siellä on ollut hautausmaa ja 1800-luvulla myös tähtitieteellinen havaintopaikka. Vuosisadan loppupuolen puistotyöt toivat paikalle puutarhoja ja kävelyreittejä. Isoisän matkavuosi 1873 osuu juuri tähän muutokseen.\n\nRakennusten tehtävät ovat vaihtuneet muuallakin. La Monedassa lyötiin kolikoita, ja Mapochon asemahalliin saapuivat junat. Quinta Normalissa tutkittiin viljelykasveja ennen kuin puisto sai nykyisiä museoitaan. Museo Chileno de Arte Precolombino taas esittelee Amerikan vanhoja kulttuureja entisessä tullitalossa."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Santiago de Chile on?",
+      "options": [
+        "Chilen",
+        "Bolivian",
+        "Paraguayn",
+        "Ecuadorin"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Nimen loppuosa auttaa erottamaan kaupungin samannimisistä paikoista.",
+      "fact": "Santiago de Chile on Chilen pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Santiago"
+    },
+    {
+      "q": "Mitä tarkoitusta varten La Moneda rakennettiin?",
+      "options": [
+        "Rahapajaksi",
+        "Asemahalliksi",
+        "Tullivarastoksi",
+        "Kirkkosaliksi"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Rakennuksen nimi liittyy kolikoihin.",
+      "fact": "Joaquín Toesca suunnitteli La Monedan alun perin kolikoiden valmistamiseen.",
+      "source": "https://en.wikipedia.org/wiki/La_Moneda_Palace"
+    },
+    {
+      "q": "Missä Mercado Centralin rautakatto valmistettiin?",
+      "options": [
+        "Skotlannissa",
+        "Argentiinassa",
+        "Portugalissa",
+        "Yhdysvalloissa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Katto tehtiin Glasgow’n kaupungissa ennen matkaa Chileen.",
+      "fact": "Kauppahallin valurautainen katto ja tukirakenne valmistettiin Glasgow’ssa.",
+      "source": "https://en.wikipedia.org/wiki/Mercado_Central_de_Santiago"
+    },
+    {
+      "q": "Mikä oli Santiagon esikolumbiaanisen taiteen museorakennus aiemmin?",
+      "options": [
+        "Tullitalo",
+        "Rautatieasema",
+        "Katedraali",
+        "Postitalo"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennuksen entinen tehtävä liittyi tavaroiden liikkumiseen ja maksuihin.",
+      "fact": "Museo Chileno de Arte Precolombino sijaitsee vanhassa tullitalossa.",
+      "source": "https://en.wikipedia.org/wiki/Chilean_Museum_of_Pre-Columbian_Art"
+    },
+    {
+      "q": "Mitä Santa Lucían tähtitieteellisellä havaintopaikalla tutkittiin?",
+      "options": [
+        "Auringon parallaksia",
+        "Kuun pinnan kraattereita",
+        "Marsin napajäätiköitä",
+        "Saturnuksen renkaiden rakennetta"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Mittauksia tehtiin 1800-luvun tieteellisellä tutkimusretkellä.",
+      "fact": "Santa Lucíalle perustettiin 1800-luvulla havaintopaikka Auringon parallaksin tutkimista varten.",
+      "source": "https://en.wikipedia.org/wiki/Santa_Luc%C3%ADa_Hill"
+    }
+  ],
+  "tiedot": [
+    "La Monedassa valmistettiin kolikoita vielä sen jälkeen, kun hallinto oli muuttanut rakennukseen.",
+    "Quinta Normalin nykyinen museo- ja puistoalue syntyi maatalouden tutkimuksen ja opetuksen ympärille.",
+    "Santiagon kansalliskirjasto on laitoksena vanhempi kuin sen nykyinen rakennus."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Santiago de Chile",
+      "johdanto": "Santiagon rakennuksista ja kaduista löytyy odottamattomia entisiä tehtäviä. Rahapaja, jokiuoma ja Skotlannista tuotu katto ovat yhä osa keskustaa.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Alameda alkoi joenhaarana",
+          "teksti": "Santiagon pääväylä Alameda ei syntynyt tavalliselle kortteliriville. Paikalla oli Mapocho-joen eteläinen haara, joka kuivui ja tunnettiin nimellä La Cañada. Uomaa käytettiin myös kaatopaikkana ennen kuin siitä tehtiin kaupungin puistokatu. Alameda de las Delicias muistuttaa vanhasta muodonmuutoksesta, vaikka nykyinen väylä on osa vilkasta suurkaupunkia. Sen varrella sijaitsevat muun muassa Chilen yliopiston päärakennus ja kansalliskirjasto, ja Santa Lucían kukkula rajautuu katuun. Kaupungin pääkadun alla on siis myös joen historia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Santiago"
+        },
+        {
+          "otsikko": "Palatsi, jossa lyötiin rahaa",
+          "teksti": "La Moneda merkitsee rahapajaa, eikä nimi ole sattuma. Italialaissyntyinen Joaquín Toesca suunnitteli rakennuksen siirtomaa-ajan Chilen kolikoiden valmistamiseen. Se avattiin 1800-luvun alussa, Toescan kuoleman jälkeen, ja muuttui myöhemmin samalla vuosisadalla hallinnon kotipaikaksi. Kolikoita valmistettiin siellä vielä hallinnon muutettuakin rakennukseen. Pelkistetty uusklassinen palatsi ei siten ollut alun perin palatsi tavallisessa merkityksessä: sen saleissa ja pihoissa toimivat myös rahapajan työpajat. Vanha käyttötarkoitus on säilynyt sen nimessä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "La Moneda Palace"
+        },
+        {
+          "otsikko": "Kukkula vaihtoi tehtävää",
+          "teksti": "Santa Lucían kukkula tunnettiin ennen espanjalaisten tuloa nimellä Huelén. Sen rinteiltä louhittiin kiveä kaupungin rakennuksiin, ja osa kukkulasta toimi hautausmaana katoliseen kirkkoon kuulumattomille. Myöhemmin sinne perustettiin tähtitieteellinen havaintopaikka, jossa tutkittiin Auringon parallaksia. Puistoksi muuttaminen käynnistyi 1800-luvun loppupuolella Benjamín Vicuña Mackennan johdolla. Isoisän matkavuonna 1873 työt olivat vielä kesken. Nykyinen kävelypuisto peittää alleen historian, johon kuuluu paljon muutakin kuin näköalan ihaileminen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Santa Lucía Hill"
+        },
+        {
+          "otsikko": "Skotlantilainen katto Chilen torilla",
+          "teksti": "Mercado Centralin valurautainen katto ja tukirakenne valmistettiin Glasgow’ssa Skotlannissa. Rakenteen suunnittelussa olivat mukana Edward Woods ja Charles Henry Driver, ja Santiagoa varten sitä valmisti Laidlaw’n yritys. Kauppahallin rakentamista johti paikallinen Fermín Vivaceta. Rautarakenne yhdistettiin muuratun rakennuksen ympäröimään keskiosaan, jonka katon keskellä kohoaa kupolitorni. Halli korvasi tulipalossa tuhoutuneen aiemman kauppapaikan. Se oli avattu jo isoisän matkavuoteen 1873 mennessä: keskustan kaupankäyntiin oli tullut uusi, kaukaa valmistettu katto.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Mercado Central de Santiago"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Santiagon vanhaa keskustaa voi hahmottaa Plaza de Armasin, La Monedan ja Alamedan kautta. Metro auttaa siirtymään alueelta toiselle. Santa Lucía tarjoaa keskustan kukkulalta näköalan, ja Quinta Normal kokoaa museoita puiston ympärille. Mercado Central yhdistää kauppahallin historian ruokataukoon. Vuorten näkyminen riippuu säästä ja ilman kirkkaudesta.",
+        "artikkeli": {
+          "nimi": "Matkailijan Santiago de Chile",
+          "taitto": "opas",
+          "teksti": "Etsi keskustasta paikkoja, joiden nimi kertoo niiden entisestä tehtävästä.",
+          "nosto": "Kaupunki avautuu sekä aukiolta että kukkulalta; museot jatkavat kävelyn tarinoita sisätiloissa.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Santiagon kansainvälinen lentoasema Arturo Merino Benítez sijaitsee Pudahuelissa keskustan länsipuolella. Lentoasemalta kaupunkiin kulkee linja-autoja ja järjestettyjä kuljetuksia. Keskustassa liikutaan metrolla, busseilla ja kävellen. Pajaritos on yksi lentoasemayhteyksien ja metron vaihtopaikoista. Plaza de Armasin, La Monedan ja Santa Lucían ympäristöjä voi yhdistää samaan keskustapäivään; kauempana lännessä sijaitseva Quinta Normal sopii omaksi museokäynnikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Aukio, rahapaja ja kauppahalli",
+              "teksti": "Plaza de Armasin ympärille kokoontuvat vanhan keskustan katedraali, posti ja historialliset hallintorakennukset. La Monedan alkuperäinen käyttötarkoitus selittää sen nimen: rakennus tehtiin rahapajaksi. Mapochon joen lähellä Mercado Centralin rautakatto kertoo puolestaan rakennusosien matkasta Skotlannista Chileen. Näitä paikkoja katsellessa kannattaa erottaa rakennuksen vanha tehtävä nykyisestä käytöstä. Aukion metroasema helpottaa keskustan kävelyn aloittamista.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Puisto ja museoita",
+              "teksti": "Santa Lucía on keskustan kukkula, jonka huipulta avautuu näkymä kaupungille. Puiston reitti sisältää portaita ja nousuja. Quinta Normalissa yhdistyvät kävelypuisto sekä luonnonhistorian, tieteen ja tekniikan museot. Museo Chileno de Arte Precolombino on erilainen museopäivän valinta: entisessä tullitalossa esitellään Amerikan kulttuureja ennen eurooppalaisten saapumista. Valitse käynti kokoelman aiheen mukaan, sillä museot käsittelevät keskenään hyvin erilaisia asioita.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Completo on chileläinen täytetty nakkisämpylä. Italiano-versiossa täytteisiin kuuluvat tomaatti, avokado ja majoneesi. Keskustassa on pieniä voileipäpaikkoja sekä katukeittiöitä, ja mote con huesillo yhdistää juomassa persikan ja vehnän. Mercado Centralissa on myös ravintoloita. Toriateria ja voileipätauko tarjoavat erilaiset tavat katkaista keskustan kävely; Chilen ruokakulttuuri ei rajoitu yhteen ruokalajiin.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Santiagossa kesä on lämmin ja kuiva, talvi viileämpi ja sateisempi. Vuodenajat ovat eteläisen pallonpuoliskon järjestyksessä, joten Suomen talvi osuu kaupungin kesään. Keskustan kävelyn, Santa Lucían nousun ja museokäynnit voi jakaa sään mukaan eri päiville. Laaksossa esiintyy etenkin talvisin savusumua, joten Andien näkyminen ei ole varmaa joka päivä. Kaupungin historiaan tutustuminen onnistuu myös silloin, kun vuoriston näkymä jää ilman taakse.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Plaza de Armas",
+                "tahdet": 3,
+                "selite": "Ruutukaavakaupungin aukio ja sen historialliset rakennukset."
+              },
+              {
+                "mita": "Santa Lucía",
+                "tahdet": 3,
+                "selite": "Keskustan kukkula, puistoreitit ja näköalapaikka."
+              },
+              {
+                "mita": "Esikolumbiaanisen taiteen museo",
+                "tahdet": 3,
+                "selite": "Amerikan kulttuureja vanhassa tullitalossa."
+              },
+              {
+                "mita": "Mercado Central",
+                "tahdet": 2,
+                "selite": "Kauppahallin rautarakenne ja ravintoloita keskustassa."
+              },
+              {
+                "mita": "Quinta Normal",
+                "tahdet": 2,
+                "selite": "Maatalouden kokeilupaikasta kasvanut puisto ja museoalue."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Santiago tarkoittaa eri alueita",
+                "teksti": "Keskustakunta ja koko suurkaupunki eivät ole sama hallinnollinen alue."
+              },
+              {
+                "otsikko": "Kukkulalla on portaita",
+                "teksti": "Santa Lucían puistoon kuuluu nousuja ja porrastettuja reittejä."
+              },
+              {
+                "otsikko": "Andit eivät aina näy",
+                "teksti": "Laakson savusumu ja sää voivat peittää vuoriston näkymän."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Vanha paikka, uusi tehtävä",
+      "johdanto": "Asema muuttuu kulttuuritilaksi ja tullitalo museoksi. Santiagon paikkojen historia jatkuu uusissa tehtävissä.",
+      "tehtava": {
+        "kysymys": "Mitä varten Quinta Normal alun perin perustettiin?",
+        "vaihtoehdot": [
+          "Maatalouden tutkimukseen",
+          "Rautatievaunujen korjaamiseen",
+          "Kolikoiden valmistamiseen",
+          "Tullimaksujen keräämiseen"
+        ],
+        "oikea": 0,
+        "fakta": "Puiston varhaiseen tehtävään kuuluivat viljelykasveja koskevat kokeet ja maatalouden opetus."
+      },
+      "nostot": [
+        {
+          "otsikko": "Asemahalli ilman lähtevää junaa",
+          "teksti": "Mapochon rautatieasema rakennettiin Santiagoon 1900-luvun alussa. Sen suuri halli palveli junaliikennettä, mutta aseman käytön päätyttyä rakennukselle löytyi uusi tehtävä kulttuurikeskuksena. Nykyään entisissä asematiloissa järjestetään näyttelyitä ja muita tapahtumia. Rakennuksen metallinen kattorakenne kuuluu yhä sen tunnusmerkkeihin, vaikka hallissa liikkuvat junamatkustajien sijaan tapahtumien kävijät. Nimi Estación Mapocho muistuttaa alkuperäisestä käytöstä, ja aseman nimi viittaa samaan Mapochoon kuin kaupungin halki kulkeva joki.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Estación Mapocho"
+        },
+        {
+          "otsikko": "Puisto, jossa opeteltiin viljelemään",
+          "teksti": "Quinta Normal syntyi 1800-luvulla maatalouden tutkimus- ja opetuspaikaksi. Siellä selvitettiin viljelyyn ja metsätalouteen sopivien kasvien käyttöä sekä kokeiltiin maatalouden ja kasvitieteen menetelmiä. Puiston historiaan kuuluivat myös viininviljelyn tutkimus ja kasvien totuttaminen paikallisiin oloihin. Myöhemmin alueelle sijoittui museoita, joiden aiheita ovat luonnonhistoria, tiede ja tekniikka. Nykyinen kävelypuisto ja sen lampi ovat siten vain yksi kerros paikasta, joka perustettiin tiedon ja käytännön kokeiden ympärille.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Quinta Normal Park"
+        },
+        {
+          "otsikko": "Tullitalosta Amerikan kulttuureihin",
+          "teksti": "Museo Chileno de Arte Precolombino toimii Santiagon vanhassa tullitalossa. Sen kokoelmat eivät rajoitu nykyisen Chilen alueeseen, vaan käsittelevät Amerikan kulttuureja ennen eurooppalaisten saapumista. Museossa voi nähdä esimerkiksi keramiikkaa ja tekstiilejä sekä eri alueiden tapoja valmistaa esineitä. Museo syntyi keräilijä Sergio Larraín García-Morenon kokoelman pohjalta, ja sen taustalla oli yhteistyö Santiagon kaupungin kanssa. Vanha tullirakennus on saanut näin uuden tehtävän: sen sisällä tutustutaan kulttuureihin, joiden alueet eivät seuranneet nykyisiä valtiorajoja.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Chilean Museum of Pre-Columbian Art"
+        },
+        {
+          "otsikko": "Kirjasto on rakennusta vanhempi",
+          "teksti": "Chilen kansalliskirjasto perustettiin Santiagoon 1800-luvun alussa, mutta sen nykyinen rakennus on seuraavalta vuosisadalta. Laitoksen ja talon ikä eivät siis ole sama asia. Kirjaston sijainti Alamedan varrella tuo sen keskustan pääväylän ääreen, muiden julkisten rakennusten joukkoon. Santiagossa toimii myös Biblioteca de Santiago, joka sijaitsee kaupungin länsiosassa Matucanan alueella. Nimet kuulostavat samankaltaisilta, mutta kyse on eri kirjastoista. Kun etsii kansalliskirjastoa, kannattaa erottaa koko maan kokoelmia hoitava laitos kaupungin nimeä kantavasta kirjastosta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Santiago"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Santiagon keskusta kasvoi Plaza de Armasin ympärille. Rahapaja, kauppahalli ja puistoksi muutettu kukkula kertovat paikkojen muuttuneista tehtävistä.",
+    "rajat": {
+      "pohjoinen": -33.43068,
+      "etela": -33.44602,
+      "lansi": -70.65737,
+      "ita": -70.6405
+    },
+    "kohteet": [
+      {
+        "nimi": "Plaza de Armas",
+        "tyyppi": "aukio",
+        "lat": -33.43791,
+        "lon": -70.65036
+      },
+      {
+        "nimi": "La Moneda",
+        "lat": -33.44302,
+        "lon": -70.65387
+      },
+      {
+        "nimi": "Mercado Central",
+        "lat": -33.43368,
+        "lon": -70.65103
+      },
+      {
+        "nimi": "Santa Lucían kukkula",
+        "tyyppi": "luonto",
+        "lat": -33.44,
+        "lon": -70.644
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Plaza de Armas": {
+      "aika": "1500-luvulta kehittynyt aukio",
+      "teksti": "Plaza de Armas on Santiagon keskustan pääaukio. Espanjalainen kaupunki suunniteltiin 1500-luvulla ruutukaavaksi, jonka keskelle sijoitettiin aukio hallintoa ja kirkkoa varten. Nykyään sen ympärillä ovat katedraali, keskusposti, entinen kuninkaallinen oikeusistuin ja kaupunginhallinnon rakennus. Metroasema sijaitsee aukion alapuolella.\n\nAukio oli Santiagon ydintä jo isoisän matkavuonna 1873, mutta kaikki nykyiset rakennusosat eivät kuulu samaan aikaan. Kaupungin pääartikkelissa postitalo ja aukion laidalla oleva Edwardsin liikerakennus ajoittuvat matkaa myöhemmälle 1800-luvulle. Vanhan ruutukaavan pääaukio ja sen nykyiset reunat ovat siis eri-ikäisiä. Lähellä sijaitsevat myös Casa Colorada ja esikolumbiaanisen taiteen museo. Aukion ympärille sijoittuneet julkiset rakennukset kertovat sen asemasta vanhan keskustan ytimenä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "La Moneda": {
+      "aika": "1800-luvun alku; hallintokäyttö samalla vuosisadalla",
+      "teksti": "La Moneda suunniteltiin siirtomaa-ajan Chilen rahapajaksi. Italialaissyntyinen Joaquín Toesca laati uusklassisen rakennuksen suunnitelmat, mutta kuoli ennen sen valmistumista. Rakennus otettiin käyttöön 1800-luvun alussa. Sen nimi muistuttaa edelleen kolikoista, vaikka paikka tunnetaan nykyään hallinnon kotina.\n\nHallinto muutti rakennukseen 1800-luvulla, ja kolikoiden valmistus jatkui sen rinnalla. Isoisän matkavuoteen 1873 mennessä rakennus oli siis jo saanut myös hallinnollisen tehtävän. Rakennuksen huoneet ja pihat muodostavat useita sisäpihoja. Nykyinen palatsi ei silti ole sellaisenaan sama kokonaisuus kuin varhaisen rahapajan aikana: rakennus on saanut myöhempiä osia, korjauksia ja muutoksia. Vanha pääjulkisivu osoittaa Moneda-kadulle. Nimi säilyttää rakennuksen alkuperäisen työn paremmin kuin sana palatsi.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Mercado Central": {
+      "aika": "1800-luvun jälkipuolisko",
+      "teksti": "Mercado Central on Santiagon keskustan kauppahalli. Sen valurautainen katto ja tukirakenne valmistettiin Glasgow’ssa Skotlannissa. Suunnitteluun osallistuivat Edward Woods ja Charles Henry Driver, ja metalliosat teki Laidlaw’n yritys. Santiagossa rakennustyötä johti Fermín Vivaceta. Kauppahalli korvasi aiemman Plaza del Abaston, joka oli tuhoutunut tulipalossa.\n\nHalli oli käytössä jo isoisän matkavuonna 1873. Sen rakenne yhdistää keskiosan metallikaton ja sitä ympäröivän muuratun rakennuksen. Katon keskellä on pyramidimainen osa, jonka yläpuolella kohoaa kupolitorni; pienemmät kattotasot jatkavat kokonaisuutta sen ympärillä. Kauppahallin ympäristöön kuuluu myös ravintoloita. Rakennuksen historiaan kuuluu siten sekä paikallinen kaupankäynti että rakennusosien valmistus toisella puolella Atlanttia.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Santa Lucían kukkula": {
+      "aika": "Luonnonkukkula; puistotyöt 1800-luvun loppupuolella",
+      "teksti": "Santa Lucía, aiemmalta nimeltään Huelén, on kukkula Santiagon keskustassa. Sen eteläpuolella kulkee Alameda, ja kukkulan huipulla on näköalapaikka. Nykyisessä puistossa kulkee portaita ja kävelyreittejä, mutta ennen puistoa kukkulalla oli useita käytännön tehtäviä. Sen rinteiltä otettiin kiveä katujen, talojen ja julkisten rakennusten rakentamiseen.\n\nOsa paikasta oli hautausmaana katoliseen kirkkoon kuulumattomille. Kukkulalla toimi myös tähtitieteellinen havaintopaikka, jossa tutkittiin Auringon parallaksia. Benjamín Vicuña Mackennan aloittama puistoksi muuttaminen käynnistyi 1800-luvun loppupuolella, ja isoisän matkavuonna 1873 työt olivat vielä kesken. Kukkula itsessään oli vanha maamerkki: muutos koski sen käyttöä, reittejä ja istutuksia. Paikan luonnollinen muoto ja kaupunkilaisten rakentama puisto kertovat eri kerroksista.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Arturo Merino Benítezin kansainvälinen lentoasema (SCL)",
+    "huomiot": [
+      "C-tekstiluonnos; rajattu A, B/D/E/F avoinna.",
+      "Kuvat tyhjät: erillinen kuvaputki.",
+      "Kartta partial: neljä omalla WP-pisteellä varmennettua kohdetta; 6–8 kohteen portti avoin.",
+      "Santa Lucía on luonnonkukkula; yksittäiset monumentit/taideteokset eivät kohteita.",
+      "Saatiedot null: 48/48 primääriauditointi puuttuu. Väestö jätetty pois."
+    ]
+  }
+}
