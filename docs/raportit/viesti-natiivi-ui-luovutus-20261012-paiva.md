@@ -54,5 +54,17 @@ Ajoskriptit tämän session scratchpadissa: /private/tmp/claude-502/-Users-Share
   Taidemuseon fontti: PT d) ei muutosta.
 - **184-testikäännös** (Julkaisijan jonossa): napitkuulto-ajo.sh kaanna = napit+kysymys+jaa+kaasu+pienet; kuvat SKEN=napitkuulto|kysymys|
   jaa|pallokisa|iss (iphone/ipad). NYKYINEN napeille: APPDIR=lokit/natiivi-ui-app-metro NIMI=nyk HAARA=natiivi-ui/metro-vapaa-183.
+- **ILTA 12.10. (17.4x) AUKI, kaikki juna-184:n päällä:**
+  - ISS-jumi natiivi-ui/iss-jumi-184 3757d0760 (wt/proto-natiivi-ui-issjumi): lasin napautus vaihtaa iso/mini, kertavinkki
+    "Napauta Pulua palataksesi" (omistaja), ☰ POIS (omistaja: Pulu on poistumistie), JUURISYY: Pulun kosketusalue jäi lepopaikalle
+    robottikädessä → nyt kypärän päällä. Testi: scratchpad iss-ajo.sh SKEN=sk-issvinkki (+SKENLAITE=ipad), käännös jonossa 18.20 jälkeen.
+  - Mac-vieritys natiivi-ui/mac-vieritys-184 d894ca762 (wt/proto-natiivi-ui-macvieritys): Unityn listarulla pois Macilla, MacSyote 1:1;
+    testikomento ui mac unityrulla. Todiste simusta + Mac (omistajan kone vapaana).
+  - Kehittäjätila + ansaitut natiivi-ui/kehittaja-184 737f3ec24 (wt/proto-natiivi-ui-kehittaja): PT hyväksyi a–d; pallokisan rivi
+    odottaa yhdistämistä Pelikoodarin PallokisaOhjain.KehittajaKoe (pelikoodari/pallokisa-184 528ec19c0). Skenaario sk-kehittaja.txt.
+  - Pallokisa pelikoodari/pallokisa-184 7ed08d802 (sis. 0c46f9776 tulostaulun paikka) → kuvat SKEN=pallokisa2 + hehku pito.
+  - Lehden nostot: web natiivi-ui/lehtinostot-184 (wt/natiivi-ui-lehtinostot, #4518:n päällä) agentti tekee vientiä; natiivi
+    natiivi-ui/lehtinostot-184 af860a109 (wt/proto-natiivi-ui-lehtinostot): Näytä kartalla + ui kohdekartta nayta. Natiivin lehtitodiste
+    vasta, kun paketti viety (ei paikallista ohitusta).
 - Julkaisijan ikkuna ~15.05: 1) linna-kuulto 2) aarre-lajit (aarrekartta-ajo.sh) 3) asettelutesti (taidehalli-parit.sh).
 - **184**: varivakiot 2c2054d8a + web #4482; museo-nyt-184 b2599db7f; Pelikoodarin säädin-paperi 028764614.
