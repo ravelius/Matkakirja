@@ -143,3 +143,6 @@ SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb 
   (linna-hahmot/vaatteet-v1/; pilotti apulainen + soutaja → pilotti-arkki.jpg, sitten kaikki 11 → kaikki-arkki.jpg PT:lle ennen
   vientiä). Sen jälkeen mh_kevenna.py uusille glb:ille ja v48p (asut + kevennys). Tavoite juna 183.
 - Keittiön koehuone v2 valmis ja LS2:lla (947d84827); päiväleivonta KESKEYTETTY (jatkokomennot koehuoneen LUEMINUT.md:n lopussa).
+- SÄÄNTÖ (omistaja 12.10. 11.1x): omistajalle kuvat TÄYDELLÄ TARKKUUDELLA (yksittäinen pelikuva natiivikoossa tai pari nykyinen | uusi
+  vierekkäin natiivikorkeudella, merkintä isona alareunaan, JPEG 90). Pienennetyt monen ruudun arkit vain PT:lle, täysikokoiset samalla.
+- KESKEN 11.2x: raketti v2 (agentti; _valmiit/iss-raketti-v2/ raketti.py:stä, solmut/origot/LOD ennallaan LS2:n RakettiMallille).
