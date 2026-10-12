@@ -24,5 +24,18 @@ App: `lokit/natiiviseppa-app-1841` (67c88856e, = TF 185). iPhone `0AC1815C` (A, 
 
 Lisää: iPadin ilmapallo lentää kaupunkikierrosta itse (nouti pallon 1 ilman komentoa); iPhonella pallo seisoo "Notre-Dame"-kohdassa kunnes `Jatka kierrosta` painetaan.
 
-## Ei vielä testattu 185:ssä
-Kisan kuvakkeet / muiden maiden eläinmerkit, kipistä paluu (aukot), kehittäjätilan kohdekaupungit kaikissa näkymissä, Googlen laatat -kytkin kipissä; raketti, Olavinlinna 5, ISS. Jatkan samassa vuorossa.
+## Raketin oikea polku + ISS + kippi (samassa vuorossa, iPad / iPhone)
+
+| # | Askel | Tulos |
+|---|---|---|
+| R1 | `uusi-peli 5 tromssa`, `koetila raha 800`, napautus Andøyan raketti-nappiin kartalla | **OK**: raketti käynnistyy suoraan, £800 → **£300** (£500 veloitettu), ISS-ohjaamo "T+ 0:00 · 1,2 G"; NUI:n vinkkiteksti ylhäällä ("ISS:lle lennetään Floridasta tai Baikonurista… Andøyalta raketit kiertävät napojen yli"). MERKITTY-6 |
+| R2 | Lento: nousu → 200 km → ISS-ohjaamo (Tyynimeri, laaja/tele, suunta) | OK, ei jumeja; "Ohita"-teksti pieni ja osin paneelin reunan päällä (alaoikealla) |
+| R3 | ISS:stä pois: Pulu ("Napauta Pulua palataksesi") → taulu "Minne katsotaan?" → Poistu | **OK** (kosketusalue korjattu): kartta palaa, raha 300 |
+| K1 | Kippi (kaupunkikierros ilman kisaa): Googlen laatat pois/päällä | Sama kuin kisassa: pois → vain puita, ei rakennuksia; päällä → palaa |
+| K2 | Poistu linssistä Pariisista kartalle | Kartta palaa, raha 300 → 100 (£200 pallo). **Pelinappula ei näy kartalla** ja alareunassa (Liiku-napin takana) on vaalea suorakulmainen laikku — MERKITTY-8, epävarma (voi olla animaatio kesken tai tyylivalinta) |
+| E1 | Muiden maiden eläinmerkit kartalla (Ranska, Norja) | Ei havaittu vääriä merkkejä (Norjassa vain Dovrefjellin tassut) |
+
+Ei vielä testattu: raketin hintalappu "ISS £500" kun pelaaja EI ole Tromssassa; "ei aukkoja kipistä palatessa" muissa kaupungeissa; kisan kuvakkeet erikseen (pallot näkyvät pistetaulun lukuina 0/8, ei erillistä katselukuvaa); kehittäjätilan kohdekaupungit kaikissa näkymissä; Olavinlinna 5 (odottaa PT:n askel 0 -kuittausta).
+
+## Ei vielä testattu 185:ssä (jäljellä)
+Olavinlinna 5; yllä mainitut. Jatkan ohjeen mukaan.
