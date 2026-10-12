@@ -1,17 +1,19 @@
-# Natiivisepän aloitusviesti (12.10.2026 klo 19.2x; luovutus -20261012-ilta, tilinvaihto)
+# Natiivisepän aloitusviesti (12.10.2026 klo 22.3x; luovutus -20261012-yo)
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja (haara selvittaja-3d-luovutus),
 proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto (Unity 6.7 päälinja), junaworktree /Users/Shared/Claude/wt/proto-natiiviseppa-j175
-(natiiviseppa/juna-184), lisäksi wt/proto-natiiviseppa-alue (Kreikka) ja wt/proto-natiiviseppa-apuraha (apuraha-184b).
+(natiiviseppa/juna-184), ehdokastyöpuu wt/proto-natiiviseppa-ehdokas (yhdistykset, juna184/yhdista-erat.sh).
 Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se) ja luovutus KOKONAAN: `git fetch origin && git checkout selvittaja-3d-luovutus && git pull`
-→ docs/raportit/viesti-natiiviseppa-luovutus-20261012-ilta.md + /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt.
+→ docs/raportit/viesti-natiiviseppa-luovutus-20261012-yo.md + /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt
++ juna184/jono-184.txt.
 Muisti: muistijuna-ipad-ajo-ennen-vie, testaus-vain-automaattiset, ei-shell-c-eika-evalia, sha-vain-git-logista, ei-pkill-f-jaetulla-koneella,
 worktree-poisto-tarkista-viittaukset, julkaisu-vasta-omistajan-pyynnosta.
 Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)". Vertaisille SendMessage nimellä.
 
 ## KÄRKI
-1. Juna 184 = natiiviseppa/juna-184 (BUILD 183:n päällä): kokoa PT:n kuittaamat; LUKITUS/TF/web-merget VASTA "OMISTAJA PYYSI JULKAISUA".
-2. Auki-lista luovutuksessa: LT:n uusinta 2 -käännös, Kreikka GRC | FIN -pari PT:lle, apurahatodiste NUI:n yhdistelmäappista.
+1. TF 184 ja pikajuna 185 (iOS) ovat ulkona. Muistiportti A/B (183 vs 185) iPadilla Julkaisijan KÄÄNNÖS NYT + LAITE NYT -vuoroilla (luovutus kohta 1).
+2. Juna 186 -runko master 0c68947bd:n päälle: kokoa PT:n kuittaamat (mac-nimi-185 b594e46a8, aanitesti-185 7c7b11525, taidehalli v6 …).
+   LUKITUS/TF/web-merget vasta "OMISTAJA PYYSI JULKAISUA".
 3. Unity-beetaseuranta (alla).
 
 ## PYSYVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x)
