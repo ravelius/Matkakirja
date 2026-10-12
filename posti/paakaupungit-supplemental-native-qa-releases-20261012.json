@@ -1,16 +1,13 @@
 {
-  "updatedAt": "2026-10-12T22:35:23.057401+00:00",
+  "updatedAt": "2026-10-12T22:40:44.242384+00:00",
   "sourceSnapshot": "batch-0016",
   "sourceSnapshotRoleBindings": 829,
-  "releaseCount": 46,
+  "releaseCount": 50,
   "addedIDs": [
-    "capital-cc-e04-bissau-l4-7213dccfd06facb4",
-    "capital-cc-e04-rabat-n7-d2117c6c38e7e5e9",
-    "capital-cc-e04-rabat-n6-24091cc6837de1b2",
-    "capital-cc-e06-luanda-o1-0fc0b3066150f68c",
-    "capital-cc-e06-luanda-o4-1ce5c211f5cae94b",
-    "capital-cc-e04-tunis-o4-84ad1a15512b344c",
-    "capital-cc-e06-luanda-k2-213f7b5fcfb4a330"
+    "capital-cc-e04-tunis-n3-9a69b66f73db22cb",
+    "capital-cc-e04-tunis-n2-74df334f116edecb",
+    "capital-cc-e06-luanda-k4-8db53c0b49f2836d",
+    "capital-cc-e04-monrovia-k1-f388ab4ffb004f84"
   ],
   "assets": [
     {
@@ -19883,10 +19880,1648 @@
         }
       ],
       "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "slot": "N3",
+      "type": "commons",
+      "assetID": "capital-cc-e04-tunis-n3-9a69b66f73db22cb",
+      "galleryImageID": "capital-cc-e04-tunis-n3-9a69b66f73db22cb",
+      "commonsFile": "Tunis Mosqué Kasbah.JPG",
+      "targetJsonPath": "$.nahtavyydet[\"Kasbah-moskeija\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Kasbah-moskeija",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
+        "suora": true,
+        "lahde": "Rais67, Wikimedia Commons (PD)",
+        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
+        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "tiedosto": "Tunis Mosqué Kasbah.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Rais67, Wikimedia Commons (PD)",
+        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
+        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "tiedosto": "Tunis Mosqué Kasbah.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
+        "suora": true,
+        "lahde": "Rais67, Wikimedia Commons (PD)",
+        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
+        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "tiedosto": "Tunis Mosqué Kasbah.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+      "exportSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/3aa7926b1af98581439ce60cdb8e21a0ac2d8dcd88f4158bb1ac8aadc8f9d304.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        3072,
+        2304
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8e64d3bde842ea488bca183dc885954635af6b8915a3582b85d05fec5deced0b",
+        "semanticContextSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22",
+        "subjectTitle": "Kasbah-moskeija",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Rais67",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Tunis_Mosqu%C3%A9_Kasbah.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-13.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-13.html",
+            "sourceHTMLSHA256": "b54e10fcae21030e8f58cf2cae4047cec539f9945ffe52f6c036dbb82d57ade6",
+            "author": "Rais67",
+            "license": "PD",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3072,
+            "height": 2304,
+            "ratio": 1.3333333333333333,
+            "date": [
+              "2009"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          },
+          "qaReason": "Tunisin Kasbah-moskeijan minareetti ja rakennusympäristö, eri tiedosto kuin L1; kasvoton. Photographer Rais67 / Public domain todettu alkuperäisestä lisenssilaatikosta, ei oletettu username-ehdosta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+        "item": {
+          "slot": "N3",
+          "targetJsonPath": "$.nahtavyydet[\"Kasbah-moskeija\"].kuvat[0]",
+          "commonsFile": "Tunis Mosqué Kasbah.JPG",
+          "verdict": "accepted",
+          "reason": "Tunisin Kasbah-moskeijan minareetti ja rakennusympäristö, eri tiedosto kuin L1; kasvoton. Photographer Rais67 / Public domain todettu alkuperäisestä lisenssilaatikosta, ei oletettu username-ehdosta.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-13.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-13.html",
+            "sourceHTMLSHA256": "b54e10fcae21030e8f58cf2cae4047cec539f9945ffe52f6c036dbb82d57ade6",
+            "author": "Rais67",
+            "license": "PD",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3072,
+            "height": 2304,
+            "ratio": 1.3333333333333333,
+            "date": [
+              "2009"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "N3",
+        "targetJsonPath": "$.nahtavyydet[\"Kasbah-moskeija\"].kuvat[0]",
+        "commonsFile": "Tunis Mosqué Kasbah.JPG",
+        "sha256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Tunis_Mosqu%C3%A9_Kasbah.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Rais67",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG#Licensing",
+        "width": 3072,
+        "height": 2304,
+        "originalSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
+        "bytes": 1813536,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:12:18.866300+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Tunis Mosqué Kasbah.JPG",
+        "lahde": "Rais67, Wikimedia Commons (PD)",
+        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
+        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Rais67, Wikimedia Commons (PD)",
+        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
+        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "tiedosto": "Tunis Mosqué Kasbah.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "targetAfterSHA256": "8e64d3bde842ea488bca183dc885954635af6b8915a3582b85d05fec5deced0b",
+      "contextAfterSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "N3",
+        "targetJsonPath": "$.nahtavyydet[\"Kasbah-moskeija\"].kuvat[0]",
+        "commonsFile": "Tunis Mosqué Kasbah.JPG",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/3aa7926b1af98581439ce60cdb8e21a0ac2d8dcd88f4158bb1ac8aadc8f9d304.org&utm_campaign=index&utm_content=original",
+        "sha256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+        "actualSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+        "actualOriginalSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/3aa7926b1af98581439ce60cdb8e21a0ac2d8dcd88f4158bb1ac8aadc8f9d304.org&utm_campaign=index&utm_content=original",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Alkuperäinen Kasbah-moskeijan rakennuskuva ja kolme natiivirajausta tarkastettu. SHA täsmää jonoon. File-sivu nimeää Tunisin Kasbah-moskeijan, vuoden 2009 ja Rais67:n oman PD-vapautuksen. Nykyinen keskiaika/toimeksiantaja-caption vastaa tallennettua faktapohjaa. Pieni kaiteen takainen henkilö ei paljasta luettavia yksilöiviä kasvonpiirteitä; ei erillistä modernia teosaihetta.",
+        "observations": [
+          "Koko 3072×2304 NAS-JPEG katsottu tools.view_image detail original natiivikoossa. Alavasemman mahdolliset ihmiset, tornin julkisivurakenne ja etualan kaide katsottu kolmesta erillisestä 1:1-rajauksesta.",
+          "Kiviminareetin geometrinen verkkorakenne, kaari-ikkunat ja pienet toistuvat ympyräpinnat ovat näkyviä arkkitehtuuriosia. Niitä ei peitetä väitteellä koristeiden puuttumisesta. Tämä kuva näyttää koko historiallisen tornin ympäristössään; se ei toisinna erillistä kaakeli-/maalauspaneelia tai museon koristetaideteosta pääaiheena.",
+          "Kaiteessa näkyy yksinkertainen toistuva geometrinen rakennuskuvio. Se on käyttökaiteen sivuosa; ei tunnistettu itsenäiseksi kuvataideteokseksi. Moskeijan vanha arkkitehtuuriperuste ja mahdollisen erillisen nykyteoksen oikeuskerros pidetään erillään eikä myöhempien pintojen PD:stä anneta blanket-väitettä.",
+          "Lehtien ja kaiteen takana oleva henkilö näkyy vain pieneltä osin; natiivissa ei voi lukea yksilöiviä silmän, nenän ja suun piirteitä. Koko ruudussa ei ole lähikasvoja tai henkilökuvapääaihetta.",
+          "Tallennetun File-sivun Description/Date/Author/Licensing luettu. Rais67 vapauttaa oman valokuvansa public domainiin maailmanlaajuisesti, tai antaa vaihtoehtoisen kaikkien käyttötarkoitusten luvan siellä missä PD-vapautus ei ole mahdollinen. Tämä koskee valokuvaa eikä tee kaikkia kuvattuja esineitä automaattisesti PD:ksi.",
+          "Tallennetun faktapohja.md:n Kasbah-johdanto/History kertoo keskiajan ja Abu Zakariya Yahyan toimeksiannon. Tarkkojen 1230/1231/1233/1235-vuosien vaihtelu on rajattu captionissa pois. Paikan nimi ja kamerapaikka File-sivulla tukevat juuri Tunisin kohdetta. Vanhan kuvat.md:n Tunisia-arkkitehtuurin käyttöperuste ja D:n N3-arvio luettu.",
+          "Valo, lehvästö, pylväät, torni ja perspektiivi ovat luonnollisia. Teknisiä antenneja, kaapeleita/lippupuomia ja myöhempiä ympäristöosia näkyy; niitä ei väitetä keskiaikaisiksi. Ei lisättyä vesileimaa tai käyttöä estävää rasterivauriota."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/N3-lower-left-people.png",
+            "sha256": "1a51ed00571bf028beec53bd4ccfb401272a1b9b3281297f67acd1e83bb6fa7a",
+            "originalPixelBox": [
+              390,
+              1830,
+              680,
+              2050
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/N3-tower-facade.png",
+            "sha256": "413258a71eb77ec40465f73732e27cf35f420cad0a5efd7daa394cf2cf1c3285",
+            "originalPixelBox": [
+              1300,
+              590,
+              1740,
+              1160
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/N3-front-balustrade.png",
+            "sha256": "0c21609f848617fae98a6cff29c5c49139bf62fac2c0ee99c2650cc0da449f3c",
+            "originalPixelBox": [
+              2180,
+              1540,
+              2840,
+              1800
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          }
+        ],
+        "evidence": {
+          "sourceEvidenceRecords": [
+            {
+              "kind": "current-original-queue",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/next-original-queue.json",
+              "sha256": "0d3ff87a18e31fdec6f36dae848b50be05ba0f462ba66febf0ec289acf061286",
+              "readLocally": true,
+              "expectedOriginalSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+              "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+              "readLocally": true,
+              "verdict": "accepted",
+              "previousVisualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-13.jpg",
+              "previousOriginalInspectedPath": null,
+              "exactOriginalShaViewingBindingAbsentBeforeThisReview": true
+            },
+            {
+              "kind": "saved-original-Commons-File-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-13.html",
+              "sha256": "b54e10fcae21030e8f58cf2cae4047cec539f9945ffe52f6c036dbb82d57ade6",
+              "readLocally": true,
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG",
+              "summaryAndLicense": "Summary [ edit ] Description Tunis Mosqué Kasbah.JPG Français : Medina de Tunis Mosquée de Kasbah Date 2009 Source Own work Author Rais67 Camera location 36° 47′ 48.3″ N, 10° 10′ 03.4″ E View this and other nearby images on: OpenStreetMap 36.796750; 10.167611 Licensing [ edit ] Public domain Public domain false false I, the copyright holder of this work, release this work into the public domain . This applies worldwide. In some countries this may not be legally possible; if so: I grant anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 17:54, 28 July 2009 3,072 × 2,304 (1.73 MB) Rais67 ( talk | contribs ) {{Information |Description={{fr|1=Medina de Tunis Mosquée de Kasbah}} |Source=travail personnel (own work) |Author= Rais67 |Date=2009 |Permission= |other_versions= }} {{location|36|47|48.3|N|10|10|3.4|E|region:TN}} [[Category:Medina of Tu You cannot overwrite this file. File usage on Commons The following page uses this file: Category:Kasbah Mosque, Tunis File usage on other wikis The following other wikis use this file: Usage on ar.wikipedia.org جامع القصبة (تونس) الدولة الحفصية Usage on arz.wikipedia.org جامع القصبه Usage on bn.wikipedia.org তিউনিসিয়ার মসজিদের তালিকা কসবাহ মসজিদ Usage on cs.wikipedia.org Tunis Usage on en.wikipedia.org Kasbah Mosque, Tunis List of mosques in",
+              "author": "Rais67",
+              "license": "PD",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG#Licensing",
+              "readMethod": "Summary/Date/Author/Licensing read from saved HTML; no live refetch or search"
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+              "sha256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+              "readLocally": true,
+              "targetJsonPath": "$.nahtavyydet[\"Kasbah-moskeija\"].kuvat[0]",
+              "currentTarget": {
+                "tiedosto": "Tunis Mosqué Kasbah.JPG",
+                "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+                "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
+                "lahde": "Rais67, Wikimedia Commons (PD)"
+              }
+            },
+            {
+              "kind": "saved-per-image-rights-background",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md",
+              "sha256": "f73a0c4f9e054eb54c2fb0ff50b7de5fad73819594e929e1cac6b257ef1b9bbb",
+              "readLocally": true
+            },
+            {
+              "kind": "saved-caption-historical-facts",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+              "sha256": "5309af5a3be4ab40070e07454d10587ee38585ed9d4159d6788a283ed58e6ddf",
+              "readLocally": true
+            },
+            {
+              "kind": "saved-independent-D-review",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/tarkistus.md",
+              "sha256": "e36a295980dbcddbf3e2e4c360a71df6a4417fe05357dd87f7a3066b83d3ed16",
+              "readLocally": true
+            }
+          ],
+          "originalPixelsViewed": true
+        },
+        "rightsAssessment": {
+          "photoLayer": "Saved original File-page Author and Licensing checked",
+          "subjectLayer": "Vanhan moskeijan kiviminareetti ja rakennusryhmä ympäristössään. Tornin geometrinen arkkitehtuuripinta kuuluu koko rakennusnäkymään; ei irrallista kuvataidepaneelia, museoesinettä tai modernin taideteoksen pääkuvaa. Kaiteen yksinkertainen geometrinen sivuosa arvioitu erikseen.",
+          "personLayer": "Alavasemmalla näkyy pieni osittain lehtien/kaiteen peittämä henkilö. Pää/hahmo erottuu, yksilöiviä kasvonpiirteitä ei lueta natiivista; ei lähietualan kasvoja.",
+          "placeAndCaption": "File Summary Medina de Tunis Mosquée de Kasbah, Date 2009, kamerapaikka 36.796750,10.167611. Paikallinen faktapohja K/History tukee keskiaikaista Kasbah-moskeijaa ja Abu Zakariya Yahyan toimeksiantoa. Kuvausvuotta 2009 ei sekoiteta rakennuksen ajoitukseen eikä kaikkia nykyosia väitetä keskiaikaisiksi.",
+          "attribution": {
+            "author": "Rais67",
+            "license": "PD",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG#Licensing",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Tunis_Mosqu%C3%A9_Kasbah.JPG"
+          },
+          "originalRasterChanged": false,
+          "acceptedScope": "Unchanged full original in its current specified content role; QA crops are evidence only"
+        },
+        "technicalDetails": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "bytes": 1813536,
+          "encodedWidth": 3072,
+          "encodedHeight": 2304,
+          "exifOrientation": 1,
+          "displayWidth": 3072,
+          "displayHeight": 2304,
+          "originalByteSHA256MatchesQueue": true,
+          "decodedOrientedPixelSHA256": "d8d71256c143c89558596a35d6a844ef49bbffff38c00ed9b7762dfd6c9b0e56"
+        },
+        "reviewedAt": "2026-10-12T22:34:57.482698+00:00",
+        "R2IndependentlyRechecked": false,
+        "gameIntegrationRechecked": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-N3.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-N3.json",
+      "supplementalQAFileSHA256": "56a5a4bccf34f61ce4c785c321ba328eb8aebf01e15a321a14fdfa65fb19f403",
+      "nativeQAHashResolved": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
+          "http": 200,
+          "sha256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+          "bytes": 1813536,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg?gallery-verify=9a69b66f73db22cb-1791844637005682000",
+          "http": 200,
+          "sha256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+          "bytes": 1813536,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "slot": "N2",
+      "type": "commons",
+      "assetID": "capital-cc-e04-tunis-n2-74df334f116edecb",
+      "galleryImageID": "capital-cc-e04-tunis-n2-74df334f116edecb",
+      "commonsFile": "Corridor of Al-Zaytuna Mosque.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Zitouna-moskeija\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Zitouna-moskeija",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg",
+        "suora": true,
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
+        "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat.",
+        "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
+        "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat.",
+        "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg",
+        "suora": true,
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
+        "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat.",
+        "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+      "exportSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/49e0db35c5b687412a4bd00dc79b292c39f55a139fe0b99b6cda6beb736d0372.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        3456,
+        2304
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
+        "semanticContextSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2",
+        "subjectTitle": "Zitouna-moskeija",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Sami Mlouhi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Corridor_of_Al-Zaytuna_Mosque.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Corridor_of_Al-Zaytuna_Mosque.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-60.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Corridor_of_Al-Zaytuna_Mosque.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-60.html",
+            "sourceHTMLSHA256": "2afa52487cd2178c1462863002a9204775e637f10420f8c1eeb8248ca10aa289",
+            "author": "Sami Mlouhi",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3456,
+            "height": 2304,
+            "ratio": 1.5,
+            "date": [
+              "4 January 2018, 15:58:24"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          },
+          "qaReason": "Zitounan kaarigalleria ja piha, pieni selin oleva ihminen käytävän perällä; ei luettavia kasvoja tai nykyistä taideteosta pääaiheena."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Zitouna-moskeija\"].kuvat[0]",
+          "commonsFile": "Corridor of Al-Zaytuna Mosque.jpg",
+          "verdict": "accepted",
+          "reason": "Zitounan kaarigalleria ja piha, pieni selin oleva ihminen käytävän perällä; ei luettavia kasvoja tai nykyistä taideteosta pääaiheena.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-60.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Corridor_of_Al-Zaytuna_Mosque.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-60.html",
+            "sourceHTMLSHA256": "2afa52487cd2178c1462863002a9204775e637f10420f8c1eeb8248ca10aa289",
+            "author": "Sami Mlouhi",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3456,
+            "height": 2304,
+            "ratio": 1.5,
+            "date": [
+              "4 January 2018, 15:58:24"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Zitouna-moskeija\"].kuvat[0]",
+        "commonsFile": "Corridor of Al-Zaytuna Mosque.jpg",
+        "sha256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Corridor_of_Al-Zaytuna_Mosque.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Corridor_of_Al-Zaytuna_Mosque.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Sami Mlouhi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3456,
+        "height": 2304,
+        "originalSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg",
+        "bytes": 3068228,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:12:17.427973+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg",
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
+        "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
+        "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat.",
+        "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "targetAfterSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
+      "contextAfterSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Zitouna-moskeija\"].kuvat[0]",
+        "commonsFile": "Corridor of Al-Zaytuna Mosque.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Corridor_of_Al-Zaytuna_Mosque.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/49e0db35c5b687412a4bd00dc79b292c39f55a139fe0b99b6cda6beb736d0372.org&utm_campaign=index&utm_content=original",
+        "sha256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+        "actualSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+        "actualOriginalSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/49e0db35c5b687412a4bd00dc79b292c39f55a139fe0b99b6cda6beb736d0372.org&utm_campaign=index&utm_content=original",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Alkuperäinen Zitouna-moskeijan arkadikäytävä ja kolme natiivirajausta tarkastettu. SHA täsmää jonoon. Sami Mlouhi, kuvauspäivä 4.1.2018 ja CC BY-SA 4.0 vastaavat File-sivua. Nykyinen kaarigallerian caption vastaa rakennusnäkymää ja tallennettua faktapohjaa. Etäinen tumma henkilö ei näytä kasvoja; ei erillistä teosreproduktiota pääaiheena.",
+        "observations": [
+          "Koko 3456×2304 NAS-JPEG katsottu tools.view_image detail original natiivikoossa. Henkilö, puuoven naularivit ja pylvään kapiteeli tarkistettu kolmesta natiivirajauksesta ilman skaalausta tai terävöitystä.",
+          "Arkadipylväät ja kaaret jatkuvat koherentissa perspektiivissä käytävän päätyyn; vasemmalla avautuu piha. Valo/varjo ja lattian materiaalit ovat luonnollisia. Kuva on tumma varjoalueeltaan, mutta arkkitehtuuritila ja oven rakenne erottuvat dokumentaariseen käyttöön.",
+          "Käytävän hahmo on natiivissa tumma selin/siluettina näkyvä pieni henkilö. Päässä ei näy silmän, nenän ja suun yksilöiviä piirteitä. Koko ruudussa ei ole etualan kasvoja.",
+          "Puuovessa on suoria toistuvia naularivejä ja tavalliset vetimet; ei palatsin oviin muualla kirjattuja erillisiä kasvi-/tähtikuvateoksia. Kapiteelissa näkyy kivistä muotoilua osana pylväsrakennetta, ei itsenäistä museon veistosesinettä pääaiheena. Yksittäisen oven/kapiteelin tarkkaa tekijää, uusimisvaihetta tai ikää ei päätellä kuvasta.",
+          "Tallennetun kuvat.md:n Tunisia-arkkitehtuurin käyttöperuste erottaa vanhan rakennuskuvan ja erillisen taideteoksen portin. D:n N2-arvio tunnistaa saman käytävä-/piha-arkkitehtuurin ja tavallisen käyttöoven. Oma koko kehys ja natiivit tukevat tätä rajattua rakennuskokonaisuuden käyttöä; ei kaikkien nykyisten pintojen blanket-PD-väitettä.",
+          "Tallennetun File-sivun Summary, Date, Author ja Licensing-osio luettu: Sami Mlouhi, 4 January 2018 15:58:24, CC BY-SA 4.0. Valokuvan oma lisenssi luettu erikseen sivun alaviitteiden lisensseistä.",
+          "Nykyinen caption kaarigallerioista vastaa tallennetun faktapohja.md:n Z/Courtyard-faktaa. Kuva ei toimi todistuksena kaikkien nykyisten osien iästä tai nykyisestä käyntioikeudesta. Ei lisättyä vesileimaa, sanallista kuvalehimaa tai havaittua rasterivauriota."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/N2-distant-back-person.png",
+            "sha256": "6d54f10b1711ae461eb79c31603135d210bf0e78ed209101f080e5639a1ee671",
+            "originalPixelBox": [
+              1710,
+              1480,
+              1910,
+              1760
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/N2-door-nail-rows.png",
+            "sha256": "a2b1d3e9a3c053a401df172a77bc2e2d674b8e79c5ef927471d8425ffbf7ff6c",
+            "originalPixelBox": [
+              2730,
+              700,
+              3456,
+              1580
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-tunis/N2-column-capital.png",
+            "sha256": "d35bca1af009dc0879e07692db3b62fb6e629395590e175d11555f611f140482",
+            "originalPixelBox": [
+              350,
+              540,
+              780,
+              910
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          }
+        ],
+        "evidence": {
+          "sourceEvidenceRecords": [
+            {
+              "kind": "current-original-queue",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/next-original-queue.json",
+              "sha256": "0d3ff87a18e31fdec6f36dae848b50be05ba0f462ba66febf0ec289acf061286",
+              "readLocally": true,
+              "expectedOriginalSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+              "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+              "readLocally": true,
+              "verdict": "accepted",
+              "previousVisualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-60.jpg",
+              "previousOriginalInspectedPath": null,
+              "exactOriginalShaViewingBindingAbsentBeforeThisReview": true
+            },
+            {
+              "kind": "saved-original-Commons-File-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-60.html",
+              "sha256": "2afa52487cd2178c1462863002a9204775e637f10420f8c1eeb8248ca10aa289",
+              "readLocally": true,
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Corridor_of_Al-Zaytuna_Mosque.jpg",
+              "summaryAndLicense": "Summary [ edit ] Description Corridor of Al-Zaytuna Mosque.jpg English: Medina old town of Tunis, Tunisia Date 4 January 2018, 15:58:24 Source Own work Author Sami Mlouhi Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 18:38, 3 April 2018 3,456 × 2,304 (2.93 MB) Sami Mlouhi ( talk | contribs ) User created page with UploadWizard You cannot overwrite this file. File usage on Commons The following page uses this file: User:Sami Mlouhi/100wikiCommonsDays Metadata This file contains additional information such as Exif metadata which may have been added by the digital camera, scann",
+              "author": "Sami Mlouhi",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "readMethod": "Summary/Date/Author/Licensing read from saved HTML; no live refetch or search"
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+              "sha256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+              "readLocally": true,
+              "targetJsonPath": "$.nahtavyydet[\"Zitouna-moskeija\"].kuvat[0]",
+              "currentTarget": {
+                "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg",
+                "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat.",
+                "selite": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
+                "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "kind": "saved-per-image-rights-background",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md",
+              "sha256": "f73a0c4f9e054eb54c2fb0ff50b7de5fad73819594e929e1cac6b257ef1b9bbb",
+              "readLocally": true
+            },
+            {
+              "kind": "saved-caption-historical-facts",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+              "sha256": "5309af5a3be4ab40070e07454d10587ee38585ed9d4159d6788a283ed58e6ddf",
+              "readLocally": true
+            },
+            {
+              "kind": "saved-independent-D-review",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/tarkistus.md",
+              "sha256": "e36a295980dbcddbf3e2e4c360a71df6a4417fe05357dd87f7a3066b83d3ed16",
+              "readLocally": true
+            }
+          ],
+          "originalPixelsViewed": true
+        },
+        "rightsAssessment": {
+          "photoLayer": "Saved original File-page Author and Licensing checked",
+          "subjectLayer": "Kokonainen historiallinen arkadikäytävä/piha, pylväät/kapiteelit, kaaret, lattia ja tavallinen puuovi. Rakennusosien muotoilu näkyy, mutta ei irrallista maalausta, kaakelitaiteen lähikuvaa, museoesinettä tai itsenäistä modernia taideteospääaihetta.",
+          "personLayer": "Käytävän päässä pieni tumma selin/siluettina näkyvä hahmo. Natiivirajauksessa ei luettavia kasvoja tai yksilöiviä piirteitä; ei lähihenkilöitä.",
+          "placeAndCaption": "File-nimi Corridor of Al-Zaytuna Mosque, Summary Medina old town of Tunis, Date 4 January 2018 15:58:24. Nykyinen caption kertoo Zitounan sisäpihaa reunustavista kaarigallerioista; paikallisen faktapohjan Z/Courtyard tukee sitä. Ei nykyistä sisäänpääsylupausta eikä kaikkien rakennusosien valmistumisvuotta.",
+          "attribution": {
+            "author": "Sami Mlouhi",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Corridor_of_Al-Zaytuna_Mosque.jpg"
+          },
+          "originalRasterChanged": false,
+          "acceptedScope": "Unchanged full original in its current specified content role; QA crops are evidence only"
+        },
+        "technicalDetails": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "bytes": 3068228,
+          "encodedWidth": 3456,
+          "encodedHeight": 2304,
+          "exifOrientation": 1,
+          "displayWidth": 3456,
+          "displayHeight": 2304,
+          "originalByteSHA256MatchesQueue": true,
+          "decodedOrientedPixelSHA256": "5ee67c6571bb9ae070b41f2af05ea925eeebf73f7768346a8819404d955c8d62"
+        },
+        "reviewedAt": "2026-10-12T22:36:57.473137+00:00",
+        "R2IndependentlyRechecked": false,
+        "gameIntegrationRechecked": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-N2.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-N2.json",
+      "supplementalQAFileSHA256": "67893b9d6439bc26535efc991567c6a801d61fe18598ee2f4f65f573236bbbcc",
+      "nativeQAHashResolved": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg",
+          "http": 200,
+          "sha256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+          "bytes": 3068228,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg?gallery-verify=74df334f116edecb-1791844739035070000",
+          "http": 200,
+          "sha256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+          "bytes": 3068228,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e06",
+      "city": "luanda",
+      "slot": "K4",
+      "type": "commons",
+      "assetID": "capital-cc-e06-luanda-k4-8db53c0b49f2836d",
+      "galleryImageID": "capital-cc-e06-luanda-k4-8db53c0b49f2836d",
+      "commonsFile": "NAIL 24L Runway.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg",
+        "suora": true,
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
+        "lyhyt": "NBJ-lentoasema palvelee Luandan kansainvälistä liikennettä.",
+        "tiedosto": "NAIL 24L Runway.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
+        "lyhyt": "NBJ-lentoasema palvelee Luandan kansainvälistä liikennettä.",
+        "tiedosto": "NAIL 24L Runway.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg",
+        "suora": true,
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
+        "lyhyt": "NBJ-lentoasema palvelee Luandan kansainvälistä liikennettä.",
+        "tiedosto": "NAIL 24L Runway.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+      "exportSHA256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/9682f8ff8e86f94808382ef737b4e35b36e59f07d8ead442b554cb85968b2cac.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        2077,
+        1179
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+      "sourceContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
+        "semanticContextSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
+        "subjectTitle": "Lentolipussa kannattaa katsoa kenttätunnus",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Yezzispapi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_24L_Runway.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/NAIL_24L_Runway.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_24L_Runway.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-29.html",
+            "sourceSHA256": "ca5d0a1dd85feec763252ec888b19fefaaeb212cf727b9f8f8545847039db291",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Yezzispapi"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 2077,
+            "height": 1179,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-29.jpg",
+            "previewSHA256": "158413bf74a64b921979e2f790178e7098f0c18877746bf64e60b4affcd0f6e7",
+            "capturedDate": "16 August 2023",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          },
+          "qaReason": "Katsottu NBJ/NAIL:n kiitorata ja rullaustiet: tekninen toiminnallinen kenttä, ei erillinen terminaaliarkkitehtuuri tai nykytaideteos pääaiheena. Kuvasivu/CC BY-SA4.0/Yezzispapi/2077×1179 täsmäävät. Kuva ei lupaa lentoreittejä, kapasiteettia tai päivittäistä palvelua."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+        "fileSHA256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "commonsFile": "NAIL 24L Runway.jpg",
+          "verdict": "accepted",
+          "reason": "Katsottu NBJ/NAIL:n kiitorata ja rullaustiet: tekninen toiminnallinen kenttä, ei erillinen terminaaliarkkitehtuuri tai nykytaideteos pääaiheena. Kuvasivu/CC BY-SA4.0/Yezzispapi/2077×1179 täsmäävät. Kuva ei lupaa lentoreittejä, kapasiteettia tai päivittäistä palvelua.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_24L_Runway.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-29.html",
+            "sourceSHA256": "ca5d0a1dd85feec763252ec888b19fefaaeb212cf727b9f8f8545847039db291",
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Yezzispapi"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 2077,
+            "height": 1179,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-29.jpg",
+            "previewSHA256": "158413bf74a64b921979e2f790178e7098f0c18877746bf64e60b4affcd0f6e7",
+            "capturedDate": "16 August 2023",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+            "currentContentSHA256": "898d0260525cbe666cd58427801a8d3ec6fe358f1fb7328e235ac06fcd51c544",
+            "sourceCheck": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+            "ccLayoutRule": "Only TRAVELER mandatory portrait; other CC orientation allowed",
+            "scope": "independent QA only; not owner acceptance/integration/publication"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+            "sha256": "8c14481b8b23d041e6121f453b06db4d550b8a28d78986979bb56ff8c90714ba"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/illustration-qa-extra.json",
+            "sha256": "04afea2fb892b0ff9a48d7dbf4312b964db7950fb3e0d0d3c3e225103b1a7776"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "commonsFile": "NAIL 24L Runway.jpg",
+        "sha256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_24L_Runway.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/NAIL_24L_Runway.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Yezzispapi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 2077,
+        "height": 1179,
+        "originalSHA256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg",
+        "bytes": 380924,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:25:14.753485+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "NAIL 24L Runway.jpg",
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
+        "lyhyt": "NBJ-lentoasema palvelee Luandan kansainvälistä liikennettä."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
+        "lyhyt": "NBJ-lentoasema palvelee Luandan kansainvälistä liikennettä.",
+        "tiedosto": "NAIL 24L Runway.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+      "targetAfterSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
+      "contextAfterSHA256": "002d3c5c1238ee938f253536150a30e5028ce9a0e2f2f42fac024d817c3d155a",
+      "sourceCommit": "a6d4240fcc770b675a988a424f0d5c402d210fa8",
+      "sourceBranch": "paakaupungit-e06-codex",
+      "supplementalNativeQA": {
+        "era": "e06",
+        "city": "luanda",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "commonsFile": "NAIL 24L Runway.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_24L_Runway.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/9682f8ff8e86f94808382ef737b4e35b36e59f07d8ead442b554cb85968b2cac.org&utm_campaign=index&utm_content=original",
+        "sha256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "reason": "Alkuperäinen2077×1179 NAIL24L Runway -kuva ja kolme skaalaamatonta natiivirajausta tarkastettu. Kiitorata, rullaustiet ja kentän tekniset rakenteet ovat pääaihe; ei kasvoja, päälle lisättyä tekstiä, vesileimaa tai itsenäistä nykytaidetta päämotiivina. Yezzispapin CC BY-SA4.0,16.8.2023 ja Angola International Airport -lähdeluokitus vastaavat nykyistä NBJ-kohdetta. Luonnolliset kiitoratamerkinnät kuuluvat infrastruktuuriin.",
+        "evidence": {
+          "roleHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "roleHandoffSHA256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+          "roleAssetId": "capital-cc-e06-luanda-k4-8db53c0b49f2836d",
+          "expectedNativeSHA256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+          "actualNativeSHAMatchesHandoff": true,
+          "primaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa.json",
+          "primaryQASHA256": "beba8e9e064bea0e90959e28581fbf582c715787def5564df1336d940f65ec2e",
+          "sourceQASelectionBasis": "Current exact slot and commonsFile",
+          "previousPrimaryVerdict": "accepted",
+          "previousEvidenceWasPreviewOnly": true,
+          "originalSHA256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+          "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e06/luanda/9682f8ff8e86f94808382ef737b4e35b36e59f07d8ead442b554cb85968b2cac.org&utm_campaign=index&utm_content=original",
+          "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-29.html",
+          "sourceSHA256": "ca5d0a1dd85feec763252ec888b19fefaaeb212cf727b9f8f8545847039db291",
+          "sourcePageRead": true,
+          "sourceCheckPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/luanda/qa-evidence/existing-commons-source-checks.json",
+          "sourceCheckSHA256": "3439753c8fe6955de1ef4ce650c732888178397335af2381bf2f76d8aa5895e0",
+          "sourceCheckRowRead": {
+            "slot": "K4",
+            "index": 29,
+            "commonsFile": "NAIL 24L Runway.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:NAIL_24L_Runway.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/candidate-29.html",
+            "sourceSHA256": "ca5d0a1dd85feec763252ec888b19fefaaeb212cf727b9f8f8545847039db291",
+            "savedSourceHashMatches": true,
+            "authorsFromSource": [
+              {
+                "label": "Author",
+                "text": "Yezzispapi"
+              }
+            ],
+            "candidateAuthor": "Yezzispapi",
+            "authorMatches": true,
+            "licensesFromSource": [
+              "CC BY-SA 4.0"
+            ],
+            "candidateLicense": "CC BY-SA 4.0",
+            "dimensionsFromSource": [
+              2077,
+              1179
+            ],
+            "dimensionsMatch": true,
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "preview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/luanda-B/preview-29.jpg",
+            "previewSHA256": "158413bf74a64b921979e2f790178e7098f0c18877746bf64e60b4affcd0f6e7",
+            "date": "16 August 2023",
+            "rightsClaimToVerify": "NAIL/Angola International Airport -luokitus ja Description runway24l paikantavat NBJ:lle, eivät vanhalle LDA:lle tai Pointe-Noiren samannimiselle kentälle. Pääaihe toiminnallinen kiitorata ja liikenteen tekniset merkinnät. Niitä ei automaattisesti luokitella suojatuksi taideteokseksi; moderni terminaali ei ole päämotiivi. Ei näyttävää terminaaliarkkitehtuuria FOP:n perusteella, ei reitti-, kapasiteetti-, ajoaika- tai palveluväitettä. D vahvistaa tavallisen toiminnallisen rakenteen ja itsenäisen arkkitehtuuriteoksen eron."
+          },
+          "author": "Yezzispapi",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+          "licenseScope": "Tiedoston oma luettu lisenssiosa; Commonsin alatunnisteen CC0/CC BY-SA ei ole valokuvan lisenssi.",
+          "rightsLayers": {
+            "photograph": "Yezzispapin oma työ ja tiedoston CC BY-SA4.0 International luettu.",
+            "depictedWorksAndInfrastructure": "Pääaiheena tekninen toiminnallinen kiitorata/rullaustiejärjestelmä, kentän reunat ja maasto. Taustan kaukaiset terminaali-/hallirakenteet ovat lentokenttäkokonaisuuden sivuosia, eivät nimetyn omaperäisen terminaaliteoksen tai nykytaiteen esittelyä. Yleistä blanket-FOP-lupaa kaikelle modernille arkkitehtuurille ei anneta.",
+            "peopleAndFaces": "Ei havaittavia ihmisiä tai kasvoja koko ruudussa tai natiivirajauksissa.",
+            "textAndMarks": "Kiitoradan numerot, kynnys-/suuntamerkit ja muut tavanomaiset fyysiset kenttämerkinnät on nähty natiivikoossa. Ei overlay-tekstiä, vesileimaa tai brändiaihetta päämotiivina."
+          },
+          "captionAssessment": "Nykyinen lyhyt ja selite nimeävät Luandan uuden NBJ-lentoaseman kiitoradan kansainväliseksi saapumisympäristöksi. Tiedoston NAIL24L-nimi, South facing view of runway24l -kuvaus ja Angola International Airport -luokitus luettu. Kuva ei toimi nykyisen lentoreitin, vuoron, kapasiteetin tai päivittäisen palvelun todisteena; nykyistä julkaisutekstiä ei muokattu.",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/luanda/sisalto.json",
+          "currentContentSHA256": "9635dc22ba09cc53f45cc136595cd14f17f4fd7f9f81a30585dde8aabc233245",
+          "currentTarget": {
+            "otsikko": "Lentolipussa kannattaa katsoa kenttätunnus",
+            "teksti": "Luandan kansainvälinen saapumispaikka on muuttunut. Dr. António Agostinho Neto International Airport käyttää tunnusta NBJ, kun vanhan Quatro de Fevereiro -kentän tunnus oli LDA. Uusi lentoasema sijaitsee Bom Jesusin alueella Icolo e Bengon maakunnassa, kaupungin kaakkoispuolella. Airlink on vahvistanut omien Luandan lentojensa siirron uudelle kentälle. Lentoasemalta on maantieyhteys kaupunkiin, mutta jatkokuljetus kannattaa sopia oman toimijan kanssa. Pelkkä Luanda lentolipussa ei siis korvaa kenttätunnuksen tarkistamista.",
+            "tiedosto": "NAIL 24L Runway.jpg",
+            "lyhyt": "NBJ-lentoasema palvelee Luandan kansainvälistä liikennettä.",
+            "selite": "Luandan uuden NBJ-lentoaseman kiitorata kuuluu kaupungin kansainväliseen saapumisympäristöön.",
+            "lahde": "Yezzispapi, Wikimedia Commons (CC BY-SA 4.0)",
+            "wiki": "Dr. António Agostinho Neto International Airport"
+          },
+          "capturedDate": "2023-08-16",
+          "sourceDescription": "South facing view of runway24l",
+          "sourceOrigin": "Own work",
+          "sourceCategory": "Angola International Airport",
+          "sourceCategoryReadFromSavedHTML": true,
+          "airportServiceClaimsIndependentlyReverified": false,
+          "originalPixelsViewed": true
+        },
+        "technical": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 2077,
+          "height": 1179,
+          "encodedWidth": 2077,
+          "encodedHeight": 1179,
+          "exifOrientation": 1,
+          "dimensionsBasis": "EXIF-oriented display",
+          "byteSize": 380924,
+          "originalUntouched": true
+        },
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K4-crops/runway-threshold-and-natural-markings.png",
+            "box": [
+              750,
+              610,
+              1230,
+              990
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "959906a4523185d09d5eae2f920a5666f0a5d99753934803bc3775a604c7b611",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K4-crops/distant-functional-airport-structures.png",
+            "box": [
+              1230,
+              190,
+              2077,
+              670
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "aed69696f42a04995cfa4d74df57a435cce08a2203296091b8307c294e2a8e20",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K4-crops/terrain-vegetation-and-edge.png",
+            "box": [
+              0,
+              200,
+              730,
+              1179
+            ],
+            "coordinateSystem": "EXIF-oriented native pixels",
+            "sha256": "9d5c03419bb0864e1fc785d0e2f55cbd3ec1880385bd4390767543feb416ac4d",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          }
+        ],
+        "observations": [
+          "Runwayn geometria, kiitorata-/rullaustiemerkinnät, kasvillisuus ja pitkät varjot ovat koherentteja.",
+          "Kuvassa on voimakasta utua ja yleistä pehmeyttä, erityisesti etäisissä rakennuksissa. Kiitoradan ja rullausteiden pääaihe säilyy selkeänä, joten poikkeama ei estä nykyistä K4-käyttöä.",
+          "Kuvan vuotta2023 ei pidetä nykyisen lennon tai porttipalvelun live-varmennuksena."
+        ],
+        "reviewedAt": "2026-10-12T22:36:32.632819+00:00",
+        "gameIntegrated": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K4.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e06-luanda-K4.json",
+      "supplementalQAFileSHA256": "e21fa68f0aa4652e8ae6fd919e49bbffb4e7df779725c251f87d9db8f88fd6a3",
+      "nativeQAHashResolved": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg",
+          "http": 200,
+          "sha256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+          "bytes": 380924,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/k4-8db53c0b49f2836df335.jpg?gallery-verify=8db53c0b49f2836d-1791844738885115000",
+          "http": 200,
+          "sha256": "8db53c0b49f2836df33536afeb6961f4610904b2a03a4b2a650f8620b108d7a6",
+          "bytes": 380924,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "K1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-monrovia-k1-f388ab4ffb004f84",
+      "galleryImageID": "capital-cc-e04-monrovia-k1-f388ab4ffb004f84",
+      "commonsFile": "Mangroves near Marshall, Liberia 2.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "suora": true,
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "suora": true,
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+      "exportSHA256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/9aa9e8f3ffd64cc636c35ecfbe3707d9c8a4664ea159d7feed6e82431974a2e0.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+        "semanticContextSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+        "subjectTitle": "Rantametsä pitää maata paikallaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "(c) B. Phalan, some rights reserved (CC BY)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Mangroves_near_Marshall%2C_Liberia_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-34.html",
+            "sourceSHA256": "14fe58e5af338bd62a32d932d6cba3a159e240344f539bd0b8da67001f67ec90",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "(c) B. Phalan, some rights reserved (CC BY)"
+              }
+            ],
+            "license": "CC BY 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1536,
+            "height": 2048,
+            "displayRatio": 0.75,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-34.jpg",
+            "previewSHA256": "6dfc3903bb7774f410ea5808440c76d284c4d537cfd34d53937788acd7e9617a",
+            "capturedDate": "3 January 2013",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          },
+          "qaReason": "Katsottu mangrovepuusto ja juuristo ilman henkilöitä/tekstiä/teoksia. Lähdesivu ja nykyinen kuvateksti nimeävät Marshallin Liberiassa, eivät Monroviaa. Hyväksytty yleiseksi kasvi-/rantaympäristökuvaksi; pystyformaatti sallittu K-roolissa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "commonsFile": "Mangroves near Marshall, Liberia 2.jpg",
+          "verdict": "accepted",
+          "reason": "Katsottu mangrovepuusto ja juuristo ilman henkilöitä/tekstiä/teoksia. Lähdesivu ja nykyinen kuvateksti nimeävät Marshallin Liberiassa, eivät Monroviaa. Hyväksytty yleiseksi kasvi-/rantaympäristökuvaksi; pystyformaatti sallittu K-roolissa.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-34.html",
+            "sourceSHA256": "14fe58e5af338bd62a32d932d6cba3a159e240344f539bd0b8da67001f67ec90",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "(c) B. Phalan, some rights reserved (CC BY)"
+              }
+            ],
+            "license": "CC BY 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1536,
+            "height": 2048,
+            "displayRatio": 0.75,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-34.jpg",
+            "previewSHA256": "6dfc3903bb7774f410ea5808440c76d284c4d537cfd34d53937788acd7e9617a",
+            "capturedDate": "3 January 2013",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "Mangroves near Marshall, Liberia 2.jpg",
+        "sha256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Mangroves_near_Marshall%2C_Liberia_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "(c) B. Phalan, some rights reserved (CC BY)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 1536,
+        "height": 2048,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "bytes": 1761079,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:32.487652+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg",
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+      "contextAfterSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "Mangroves near Marshall, Liberia 2.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/9aa9e8f3ffd64cc636c35ecfbe3707d9c8a4664ea159d7feed6e82431974a2e0.org&utm_campaign=index&utm_content=original",
+        "sha256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+        "actualSHA256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+        "actualOriginalSHA256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/9aa9e8f3ffd64cc636c35ecfbe3707d9c8a4664ea159d7feed6e82431974a2e0.org&utm_campaign=index&utm_content=original",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Alkuperäinen mangrovevalokuva ja kaksi natiivirajausta tarkastettu. SHA täsmää jonoon. Marshall/Liberia, 3.1.2013, täsmällinen B. Phalan -tekijärivi ja CC BY 4.0 vastaavat tallennettua File-sivua. Luonnollinen lehvästö, kuori ja juuristo; ei ihmisiä tai teoskerrosta. Nykyinen caption kertoo Marshallin yleisestä rantakasvillisuuskuvasta, ei Monroviassa/Mesuradolla otetusta kuvasta.",
+        "observations": [
+          "Koko 1536×2048 NAS-JPEG katsottu tools.view_image detail original natiivikoossa. Lehdet/kuori ja juuret/muta tarkistettu kahdesta erillisestä 1:1-rajauksesta ilman skaalausta tai terävöitystä.",
+          "Lehtien eri kasvuvaiheet, kuoren vaihtelu, oksat ja haarautuvat juuret ovat luonnollisia. Juuristo muodostaa maahan jatkuvan yhtenäisen verkon; ei epäkoherenttia rakennetta tai generointihavaintoa. Uutta lajimääritystä ei lisätä; File-kuvaus sanoo true mangroves (undefined).",
+          "Koko ruudussa ja natiiveissa ei näy ihmisiä, kasvoja, arkkitehtuuria, maalauksia, julisteita, perinne-esineitä, tekstiä tai lisättyä vesileimaa. Luontomotiivi ei ole tekijän taideteoskerros.",
+          "Tallennetun File-sivun Summary, Date, Author, iNaturalist-lähde, Object location ja Licensing luettu. Author on sanatarkasti (c) B. Phalan, some rights reserved (CC BY). Käyttäjänimeä deboas ei muuteta uudeksi henkilönnimeksi tai krediitiksi. Valokuvan lisenssi on CC BY 4.0; INaturalistReviewBotin 15.10.2025 sha1-perusteinen lisenssivarmennus näkyy lähdetallenteessa.",
+          "Nykyinen nostoteksti kertoo Mesuradon/Monrovian rantametsäilmiöstä, mutta kuvaobjektin lyhyt/selite ilmoittaa Marshallin ja vuoden 2013 sekä yleiskuvituksen. Se ei väitä tätä paikalliseksi Monrovia/Mesurado-otoksi, eikä kuva todista yksin tekstin ekosysteemifaktoja.",
+          "Tallennetun kuvat.md:n luonnonaiheen oikeuskerrosraja ja D:n K1-arvio luettu: luonnonkasvi/vesi ei yksin muutu perinteisen taiteen ilmaisuksi. Hyväksyntä koskee nykyistä yleistä rantakasvillisuuden havainnollistusta ja täsmällistä kuvauspaikka-/vuosikrediittiä.",
+          "Kuvan kirkkaimmissa lehdissä/taivaassa on ylivalottuneita kohtia ja varjoissa tummuutta, mutta lehvästö ja juuristo erottuvat dokumentaariseen verkkokäyttöön. Ei käyttöä estävää rasterivauriota."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-monrovia/K1-leaves-bark.png",
+            "sha256": "0275dee3158b2f704c9227d12c71c79e77c0a4b10fa3ffb9fe2ac22355da96ca",
+            "originalPixelBox": [
+              420,
+              550,
+              980,
+              1210
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/crops/e04-monrovia/K1-roots-mud.png",
+            "sha256": "350699257bb0f0f62da1b0fc500b9080b5ae138b915394dc315adab1b48d18c8",
+            "originalPixelBox": [
+              580,
+              1180,
+              1330,
+              1950
+            ],
+            "coordinateSpace": "EXIF-oriented original pixels",
+            "resized": false,
+            "sharpened": false,
+            "pixelContentMatchesOriginalRegion": true,
+            "inspected": true
+          }
+        ],
+        "evidence": {
+          "sourceEvidenceRecords": [
+            {
+              "kind": "current-original-queue",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/next-original-queue.json",
+              "sha256": "0d3ff87a18e31fdec6f36dae848b50be05ba0f462ba66febf0ec289acf061286",
+              "readLocally": true,
+              "expectedOriginalSHA256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+              "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
+              "readLocally": true,
+              "verdict": "accepted",
+              "previousVisualPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-34.jpg",
+              "previousOriginalInspectedPath": null,
+              "exactOriginalShaViewingBindingAbsentBeforeThisReview": true
+            },
+            {
+              "kind": "saved-original-Commons-File-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-34.html",
+              "sha256": "14fe58e5af338bd62a32d932d6cba3a159e240344f539bd0b8da67001f67ec90",
+              "readLocally": true,
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+              "summaryAndLicense": "Summary [ edit ] Description Mangroves near Marshall, Liberia 2.jpg English: Photo of true mangroves (undefined) uploaded from iNaturalist . Date 3 January 2013 Source https://www.inaturalist.org/photos/460251896 Author (c) B. Phalan, some rights reserved (CC BY) This image was originally posted to iNaturalist by deboas at https://www.inaturalist.org/photos/460251896 . It was reviewed on 15 October 2025 by INaturalistReviewBot and found to be published under the terms of the Cc-by-4.0 license. Reason: sha1 Object location 6° 08′ 02.4″ N, 10° 21′ 25.2″ W View this and other nearby images on: OpenStreetMap 6.134000; -10.357000 This media file is part of an observation on iNaturalist : inaturalist.org/observations/256670622 This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing . Licensing [ edit ] This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/4.0 CC BY 4.0 Creative Commons Attribution 4.0 true true File history Click on a date/time to view the file as it appeared at that t",
+              "author": "(c) B. Phalan, some rights reserved (CC BY)",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+              "readMethod": "Summary/Date/Author/Licensing read from saved HTML; no live refetch or search"
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+              "sha256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+              "readLocally": true,
+              "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+              "currentTarget": {
+                "otsikko": "Rantametsä pitää maata paikallaan",
+                "teksti": "Mesuradon kosteikkojen mangrove kuuluu Monrovian ja Montserradon alueen vesimaisemaan. Rantakasvillisuus auttaa vakauttamaan rantaviivaa, ja kosteikko pidättää veden mukana kulkevaa sedimenttiä. Metsän tehtävä ulottuu siis sen puiden ulkopuolelle, veden ja maan rajaan. Linnut käyttävät kosteikkoa ravinnonhakuun. Kalat ja äyriäiset liittävät ympäristön myös kaupunkilaisten ruokaan ja elinkeinoihin. Kaupungin rinnalla kasvava rantametsä on samalla ruokapaikka, elinympäristö ja rannan rakennetta ylläpitävä alue.",
+                "wiki": "Monrovia",
+                "tiedosto": "Mangroves near Marshall, Liberia 2.jpg",
+                "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+                "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+                "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)"
+              }
+            },
+            {
+              "kind": "saved-per-image-rights-background",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/kuvat.md",
+              "sha256": "7179b6db434a156bc88767843f884a30ad855dc8370cc783c42b87f2eb80f157",
+              "readLocally": true
+            },
+            {
+              "kind": "saved-independent-D-review",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/tarkistus.md",
+              "sha256": "ae82c3369dbdf78908a97cf09a9b1f3409880f974758c2e9ff4431610f78af87",
+              "readLocally": true
+            }
+          ],
+          "originalPixelsViewed": true
+        },
+        "rightsAssessment": {
+          "photoLayer": "Saved original File-page Author and Licensing checked",
+          "subjectLayer": "Luonnollinen mangrovelehvästö, oksat/rungot/juuret, mutainen maa ja valon heijastukset; ei rakennettua teosta, perinne-esinettä tai itsenäistä kuvateosta.",
+          "personLayer": "Ei ihmisiä tai kasvoja koko kuvassa tai natiivirajauksissa.",
+          "placeAndCaption": "File-nimi Mangroves near Marshall, Liberia 2; Date 3 January 2013; Object location 6.134000,-10.357000. Nykyinen selite nimeää Liberian Marshallin ja yleisen rantakasvillisuuden; ei paikallisen Mesuradon otoksen tai tarkan lajin/puuiän väitettä.",
+          "attribution": {
+            "author": "(c) B. Phalan, some rights reserved (CC BY)",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg"
+          },
+          "originalRasterChanged": false,
+          "acceptedScope": "Unchanged full original in its current specified content role; QA crops are evidence only"
+        },
+        "technicalDetails": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "bytes": 1761079,
+          "encodedWidth": 1536,
+          "encodedHeight": 2048,
+          "exifOrientation": null,
+          "displayWidth": 1536,
+          "displayHeight": 2048,
+          "originalByteSHA256MatchesQueue": true,
+          "decodedOrientedPixelSHA256": "8f7b540aae46223b6800add87e3398fe94f74abe88f24f814bd9d10201eb529e"
+        },
+        "reviewedAt": "2026-10-12T22:39:02.300201+00:00",
+        "R2IndependentlyRechecked": false,
+        "gameIntegrationRechecked": false,
+        "qaAssetSHA256CalculatedFromViewedBytes": true,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-K1.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-K1.json",
+      "supplementalQAFileSHA256": "e477bd283081ec09367a2c74b05f4b355bb88824599773f3c1ed8f7593602dba",
+      "nativeQAHashResolved": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+          "http": 200,
+          "sha256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+          "bytes": 1761079,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg?gallery-verify=f388ab4ffb004f84-1791844791367083000",
+          "http": 200,
+          "sha256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+          "bytes": 1761079,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
     }
   ],
-  "effectiveQualifiedOriginalSnapshotBindings": 810,
-  "effectiveRemainingOriginalSnapshotHolds": 19,
+  "effectiveQualifiedOriginalSnapshotBindings": 814,
+  "effectiveRemainingOriginalSnapshotHolds": 15,
   "instructions": [
     "Add these exact-version originals to the previously qualified755 handoff and current-primary-original QA releases. Use their embedded full-native QA; do not infer approval for other preview-only images.",
     "The exact Bissau PHOTO rights hold remains active. Preserve captions, text, maps and all other images."
