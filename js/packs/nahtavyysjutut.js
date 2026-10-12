@@ -64475,7 +64475,21 @@ export const NAHTAVYYSJUTUT = {
   reykjavik: {
     'Hallgrímskirkja': {
       aika: '1945–1986',
-      teksti: 'Hallgrímskirkja on luterilainen seurakuntakirkko Skólavörðuholt-kukkulalla lähellä keskustaa. Kirkon korkeus on noin 74 metriä, ja lähteen mukaan se on Islannin suurin kirkko. Nimi tulee runoilija ja pappi Hallgrímur Péturssonin (1614–1674) mukaan, joka kirjoitti Passiovirret.\n\nValtion arkkitehti Guðjón Samúelsson sai suunnittelutehtävän 1937, ja hänen sanotaan suunnitelleen kirkon muistuttamaan Islannin basalttipylväsmuodostumia. Rakentaminen alkoi 1945 ja päättyi 1986: krypta vihittiin 1948, torni ja siivet valmistuivat 1974 ja laivasto vihittiin 1986. Lähteen mukaan kirkko on ekspressionistista arkkitehtuuria.\n\nTornissa on 29 kellon kellopeli, ja suuremmat Klais-urut valmistuivat joulukuussa 1992. Kirkon edessä on Leif Erikssonin patsas, lahja Yhdysvalloista Alþingin tuhatvuotisjuhlaan 1930. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kirkkoa, sillä suunnittelu tilattiin vasta 1937.',
+      teksti: 'Hallgrímskirkja on luterilainen seurakuntakirkko '
+          + 'Skólavörðuholt-kukkulalla lähellä keskustaa. Se on noin 74 metriä '
+          + 'korkea ja Islannin suurin kirkko. Nimi tulee runoilija ja pappi '
+          + 'Hallgrímur Péturssonista (1614–1674), joka kirjoitti Passiovirret.'
+        + '\n\n'
+          + 'Valtion arkkitehti Guðjón Samúelsson aloitti suunnittelun 1937, ja '
+          + 'hänen kerrotaan ottaneen mallia Islannin basalttipylväistä. '
+          + 'Rakentaminen alkoi 1945 ja päättyi 1986: krypta vihittiin 1948, '
+          + 'torni ja siivet valmistuivat 1974 ja päälaiva eli kirkkosali '
+          + 'vihittiin 1986. Urut valmistuivat joulukuussa 1992.'
+        + '\n\n'
+          + 'Kirkon edessä on Leif Erikssonin patsas, Yhdysvaltain lahja '
+          + 'Alþingin tuhatvuotisjuhlaan 1930. Isoisän matkavuonna 1873 '
+          + 'kukkulalla ei vielä ollut kirkkoa, sillä suunnittelu aloitettiin '
+          + 'vasta 1937.',
       kuvat: [
         {
           tiedosto: 'Hallgrimskirkja 2026.jpg',
@@ -64488,12 +64502,29 @@ export const NAHTAVYYSJUTUT = {
     },
     Harpa: {
       aika: '2007–2011',
-      teksti: 'Harpa on konsertti- ja kongressitalo, jonka avajaiskonsertti pidettiin 4.5.2011 ja jossa toimii Islannin sinfoniaorkesteri. Talon suunnittelivat tanskalainen Henning Larsen Architects ja taiteilija Olafur Eliasson. Rakennustyöt alkoivat 2007, ja 2008 alkanut rahoituskriisi pysäytti hankkeen, kunnes työt jatkuivat 2009 valtion ja kaupungin päätöksellä. Nimi Harpa annettiin 11.12.2009 islantilaisen musiikin päivänä.\n\nJulkisivussa on 714 LED-valoa, jotka näyttävät Eliassonin suunnittelemaa videoteosta. Vuonna 2021 hän teki 12 uutta valoteosta, yhden kullekin kuukaudelle. Harpa sai Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon 2013.\n\nTalon edessä vedessä on Ólöf Pálsdóttirin veistos Selloa soittava muusikko, jonka malli oli tanskalainen sellisti Erling Blöndal Bengtsson. Veistos seurasi orkesteria Harpaan 2014. Isoisän matkavuonna 1873 talosta ei ollut vielä suunnitelmaakaan.',
+      teksti: 'Harpa on konsertti- ja kongressitalo Reykjavíkin satamassa. '
+          + 'Ensimmäiset konsertit pidettiin 4.5.2011, ja talossa toimii '
+          + 'Islannin sinfoniaorkesteri. Rakennuksen suunnittelivat '
+          + 'tanskalainen Henning Larsen Architects ja islantilainen Batteríið '
+          + 'arkitektar, ja lasisen julkisivun suunnitteli taiteilija Ólafur '
+          + 'Elíasson. Rakennustyöt alkoivat 2007. Vuoden 2008 pankkikriisi '
+          + 'keskeytti ne, mutta valtio ja kaupunki rahoittivat talon '
+          + 'valmiiksi, ja työt jatkuivat 2009. Nimi Harpa annettiin 11.12.2009 '
+          + 'islantilaisen musiikin päivänä.'
+        + '\n\n'
+          + 'Julkisivussa on 714 LED-valoa, jotka näyttävät videoteoksia. Talo '
+          + 'sai Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon '
+          + '2013.'
+        + '\n\n'
+          + 'Talon edessä vedessä on Ólöf Pálsdóttirin Muusikko-veistos, jonka '
+          + 'mallina oli sellisti Erling Blöndal Bengtsson. Veistos muutti '
+          + 'orkesterin mukana Harpaan 2014. Isoisän matkavuonna 1873 talosta '
+          + 'ei ollut vielä suunnitelmaakaan.',
       kuvat: [
         {
           tiedosto: "Reykjavik-40-vom Hallgrimskirchturm-2018-gje.jpg",
           lyhyt: "Reykjavíkin satama ja Harpa Hallgrímskirkjan tornista nähtynä",
-          selite: "Hallgrímskirkjan tornista näkee kattojen yli satamaan, jonka rannalla Harpa-konserttitalon lasipintainen runko erottuu kaukaa.",
+          selite: "Hallgrímskirkjan tornista näkee kattojen yli satamaan, jonka rannalla Harpa-konserttitalo sijaitsee.",
           lahde: "Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
@@ -64501,7 +64532,22 @@ export const NAHTAVYYSJUTUT = {
     },
     'Tjörnin': {
       aika: 'lampi; silta 1920, uusi silta 1942',
-      teksti: 'Tjörnin on pieni lampi Reykjavíkin keskustassa, ja useimmat kaupunkiin tulijat kulkevat sen rantaa. Lampea ruokkii Vatnsmýrin suo, ja lammella käy noin 40 vesilintulajia. Etelässä on Hljómskálagarður-puisto patsaineen, ja lammen eteläpuolella Hringbrautin toisella puolella on Reykjavík Airport.\n\nLammen luonnollinen laskupuro Lækurinn kulki aiemmin avoimena kanavana keskustan läpi, ja se on ollut viemärijärjestelmän osa Lækjargatan alla vuodesta 1911. Lammen yli rakennettiin 1920 puinen jalankulkusilta, jonka tilalle tuli 1942 betonisilta, joka on yhä käytössä.\n\nIsoisän matkavuonna 1873 kumpaakaan siltaa ei vielä ollut. Suojelualue Vatnsmýri on heikentynyt, ja lintulajiston parantamiseksi suunnitellaan toimenpiteitä.',
+      teksti: 'Tjörnin on pieni lampi Reykjavíkin keskustassa, ja sen nimi '
+          + 'tarkoittaa suomeksi lampea. Sitä ruokkii Vatnsmýrin suo, ja '
+          + 'lammella käy kymmeniä vesilintulajeja, kuten sorsia ja hanhia. '
+          + 'Lammen eteläpuolella on Hljómskálagarður-puisto, ja Vatnsmýrin '
+          + 'alueella on Reykjavíkin lentokenttä. Talvella lampi jäätyy usein, '
+          + 'ja jäällä luistellaan.'
+        + '\n\n'
+          + 'Lammen laskupuro Lækurinn kulki ennen avoimena kanavana keskustan '
+          + 'läpi, mutta se on ollut viemärijärjestelmän osa Lækjargatan alla '
+          + 'vuodesta 1911. Lammen yli rakennettiin 1920 jalankulkusilta, ja '
+          + '1942 sen tilalle tuli betonisilta, joka kestää myös '
+          + 'autoliikenteen.'
+        + '\n\n'
+          + 'Isoisän matkavuonna 1873 kumpaakaan siltaa ei vielä ollut. Lammen '
+          + 'ympärillä oleva suojelualue Vatnsmýri on heikentynyt, ja sen '
+          + 'kunnostamiseksi on tehty suunnitelmia.',
       kuvat: [
         {
           tiedosto: 'Lago Tjörnin, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 087.JPG',
@@ -64514,7 +64560,23 @@ export const NAHTAVYYSJUTUT = {
     },
     'Austurvöllur': {
       aika: '1700-luvun alussa nykyistä suurempi',
-      teksti: 'Austurvöllur on Reykjavíkin julkinen aukio, joka on suosittu kokoontumispaikka etenkin hyvällä säällä aukion laidan kahviloiden vuoksi. Aukion ympäröivät kadut ovat Vallarstræti, Pósthússtræti, Kirkjustræti ja Thorvaldsensstræti. Lähteen mukaan se oli 1700-luvun alussa paljon nykyistä suurempi.\n\nAukiolla on itsenäisyysliikkeen johtajan Jón Sigurðssonin iso patsas. Thorvaldsensstræti on nimetty kuvanveistäjä Bertel Thorvaldsenin mukaan, jonka patsas oli aukion keskellä pitkään ennen Sigurðssonin patsasta. Aukion laidalla ovat Alþingishúsið, tuomiokirkko Dómkirkjan, Hotel Borg ja kahviloita.\n\nAlþingishúsið on klassismin tyylinen rakennus, jonka suunnitteli Ferdinand Meldahl ja joka rakennettiin hakatusta dolerittikivestä 1880–1881. Tuomiokirkko vihittiin käyttöön 1796, ja sitä suurennettiin 1840-luvun lopulla. Isoisän matkavuonna 1873 aukion laidalla ei siis vielä ollut Alþingishúsiðia, mutta kirkko seisoi jo.',
+      teksti: 'Austurvöllur on Reykjavíkin keskustan julkinen aukio ja suosittu '
+          + 'kokoontumispaikka etenkin hyvällä säällä, kun laitojen kahvilat '
+          + 'täyttyvät. Aukiota ympäröivät kadut ovat Vallarstræti, '
+          + 'Pósthússtræti, Kirkjustræti ja Thorvaldsensstræti. Aukio oli '
+          + 'aiemmin heinäpelto ja paljon nykyistä laajempi.'
+        + '\n\n'
+          + 'Aukion keskellä on itsenäisyysliikkeen johtajan Jón Sigurðssonin '
+          + 'iso patsas. Sitä ennen keskellä seisoi pitkään kuvanveistäjä '
+          + 'Bertel Thorvaldsenin patsas, jonka mukaan Thorvaldsensstræti on '
+          + 'nimetty. Aukion laidalla ovat parlamenttitalo Alþingishúsið, '
+          + 'tuomiokirkko Dómkirkjan, Hotel Borg ja kahviloita.'
+        + '\n\n'
+          + 'Tanskalaisen Ferdinand Meldahlin suunnittelema Alþingishúsið '
+          + 'rakennettiin kivestä 1880–1881. Tuomiokirkko vihittiin käyttöön '
+          + '1796, ja sitä suurennettiin 1840-luvun lopulla. Isoisän '
+          + 'matkavuonna 1873 aukion laidalla ei siis vielä ollut '
+          + 'parlamenttitaloa, mutta kirkko seisoi jo.',
       kuvat: [
         {
           tiedosto: 'Austurvöllur panoramic.jpg',
@@ -64527,7 +64589,22 @@ export const NAHTAVYYSJUTUT = {
     },
     Perlan: {
       aika: '1939–1991',
-      teksti: 'Perlan seisoo Öskjuhlíð-kukkulalla 61 metrin korkeudessa merenpinnasta. Paine riittää viemään kukkulan säiliöistä vettä 38 metrin korkeudella merenpinnasta olevan rakennuksen kymmenenteen kerrokseen. Jokaiseen säiliöön mahtuu noin neljä miljoonaa litraa vettä, mikä vastaa noin 4 000 kuutiometriä.\n\nNäyttelyihin kuuluvat Wonders of Iceland, revontulista kertova Áróra-planetaariohjelma ja Lava Show sekä Látrabjargin lintuvuoren kymmenen metrin korkuinen kopio. Näköalatasanteelta näkee kaupungin, ympäristön vuoret ja Atlantin, ja sisällä on ravintola, joka kiertää 360 astetta.\n\nEnsimmäinen säiliö valmistui 1939 ja loput viisi seuraavien kahden vuosikymmenen aikana. Isoisän matkavuonna 1873 Öskjuhlíð oli vielä rakentamaton kukkula. Perlan sijaitsee kauempana keskustasta kuin useimmat muut kohteet.',
+      teksti: 'Perlan seisoo Öskjuhlíð-kukkulalla noin 61 metrin korkeudessa '
+          + 'merenpinnasta. Kukkulan korkeus antoi kuumavesisäiliöille '
+          + 'riittävän paineen: vesi nousi sen avulla 38 metrin korkeudelle '
+          + 'merenpinnasta suunnitellun rakennuksen kymmenenteen kerrokseen. '
+          + 'Jokaiseen kuudesta säiliöstä mahtuu noin neljä miljoonaa litraa '
+          + 'vettä, mikä vastaa noin 4 000 kuutiometriä.'
+        + '\n\n'
+          + 'Näyttelyihin kuuluvat Wonders of Iceland, revontulista kertova '
+          + 'Áróra-planetaariohjelma ja Látrabjargin lintuvuoren kymmenen '
+          + 'metrin korkuinen kopio. Näköalatasanteelta näkee kaupungin, '
+          + 'ympäröivät vuoret ja Atlantin, ja sisällä on ravintola, joka '
+          + 'kiertää 360 astetta.'
+        + '\n\n'
+          + 'Ensimmäinen säiliö valmistui 1939 ja loput viisi seuraavien kahden '
+          + 'vuosikymmenen aikana. Perlan avattiin yleisölle 21.6.1991. Isoisän '
+          + 'matkavuonna 1873 Öskjuhlíð oli vielä rakentamaton kukkula.',
       kuvat: [
         {
           tiedosto: "View of Reykjavík from Perlan, 20230507 1341 5757.jpg",
@@ -64540,7 +64617,19 @@ export const NAHTAVYYSJUTUT = {
     },
     'Höfði': {
       aika: '1909',
-      teksti: 'Höfði on vuonna 1909 rakennettu talo, joka valmistettiin osina Norjassa ja pystytettiin Reykjavíkiin Ranskan konsulille Jean-Paul Brillouinille. Rakennuslupaa ei ollut vielä myönnetty, kun talo pystytettiin, ja tuolloin se oli lähteen mukaan kaupungin suurin yksityinen kiinteistö. Kaupunki osti talon 1958 ja kunnosti sen, ja sitä käytetään juhlavastaanottoihin.\n\nRunoilija Einar Benediktsson asui talossa 1910-luvulla, ja Louisa Matthíasdóttir kasvoi siinä 1920- ja 1930-luvuilla. Sisällä on ristiin ripustetut Yhdysvaltojen ja Neuvostoliiton liput 1986 pidetyn huippukokouksen muistoksi. Tulipalo vaurioitti taloa syyskuussa 2009 sen 100-vuotispäivänä, mutta korvaamattomat esineet pelastettiin. Talossa kerrotaan kummittelevan nuoren naisen henki.\n\nIsoisän matkavuonna 1873 paikalla ei vielä ollut taloa. Radioantenni tuli paikalle vasta 1905.',
+      teksti: 'Höfði on vuonna 1909 valmistunut talo, joka suunniteltiin Norjassa '
+          + 'ja kuljetettiin osina Reykjavíkiin Ranskan konsulille Jean-Paul '
+          + 'Brillouinille. Kaupunki osti talon 1958 ja kunnosti sen, ja sitä '
+          + 'käytetään juhlavastaanottoihin.'
+        + '\n\n'
+          + 'Runoilija Einar Benediktsson asui talossa perheineen 1910-luvulta '
+          + 'alkaen, ja taiteilija Louisa Matthíasdóttir asui siinä lapsena '
+          + '1920- ja 1930-luvuilla. Talo on tunnetuin Reaganin ja Gorbatšovin '
+          + 'huippukokouksen paikkana lokakuussa 1986, ja sisällä on ristiin '
+          + 'ripustetut Yhdysvaltojen ja Neuvostoliiton liput kokouksen '
+          + 'muistoksi.'
+        + '\n\n'
+          + 'Isoisän matkavuonna 1873 nykyistä taloa ei vielä ollut.',
       kuvat: [
         {
           tiedosto: 'Höfði 5528.JPG',
@@ -64553,12 +64642,26 @@ export const NAHTAVYYSJUTUT = {
     },
     'Viðey': {
       aika: '900-luvulta',
-      teksti: 'Viðey on Kollafjörðurin lahden suurin saari, ja sen pinta-ala on noin 1,6 neliökilometriä. Saari jakautuu kapealla kannaksella Länsisaareen, Itäsaareen ja Kotisaareen. Lähteen mukaan se oli kahdesta kolmeen miljoonaa vuotta sitten aktiivinen tulivuori. Sinne pääsee lautalla, ja lauttoja kulkee kesäisin päivittäin.\n\nSaarella on arkeologisia jäänteitä 900-luvun alusta ja augustinolaisluostari vuosilta 1225–1539. Länsisaaressa on Viðeyjarstofa-talo, jonka tanskalainen arkkitehti Nicolai Eigtved suunnitteli ja Tanskan hallitus rakennutti 1753–1755. Talossa on nykyään ravintola. Saarella on Richard Serran Áfangar sekä Yoko Onon Imagine Peace Tower, joka sytytetään vuosittain Lennonin syntymäpäivän 9.10. ja kuolinpäivän 8.12. välillä.\n\nIsoisän matkavuonna 1873 saari oli vielä asuttu, sillä viimeiset asukkaat lähtivät sieltä vasta 1943.',
+      teksti: 'Viðey on Kollafjörður-lahden suurin saari aivan Reykjavíkin '
+          + 'edustalla, ja sen pinta-ala on noin 1,6 neliökilometriä. Saari oli '
+          + 'noin kahdesta kolmeen miljoonaa vuotta sitten aktiivinen '
+          + 'tulivuori. Sinne pääsee lautalla Skarfabakkin laiturilta: kesäisin '
+          + 'lautta kulkee päivittäin, talvella vain viikonloppuisin.'
+        + '\n\n'
+          + 'Saarella on arkeologisia jäänteitä 900-luvun alusta, ja '
+          + 'keskiajalla siellä toimi augustinolaisluostari. Viðeyjarstofa-talo '
+          + 'valmistui 1755 Skúli Magnússonille, ja se on Islannin vanhimpia '
+          + 'kivitaloja. Nykyään talossa on ravintola. Saarella on myös Richard '
+          + 'Serran Áfangar-teos, yhdeksän basalttipylväsparia, sekä Yoko Onon '
+          + 'Imagine Peace Tower, joka sytytetään vuosittain Lennonin '
+          + 'syntymäpäivän 9.10. ja kuolinpäivän 8.12. välillä.'
+        + '\n\n'
+          + 'Isoisän matkavuonna 1873 saari oli vielä asuttu.',
       kuvat: [
         {
           tiedosto: 'Viðey island.jpg',
-          lyhyt: 'Viðey on Kollafjörðurin lahden suurin saari aivan Reykjavíkin edustalla.',
-          selite: 'Saaren nimen arvellaan viittaavan siihen, että se oli metsäinen tai että sinne ajautui ajopuuta.',
+          lyhyt: 'Viðey on Kollafjörður-lahden suurin saari aivan Reykjavíkin edustalla.',
+          selite: 'Viðeyn nimi tarkoittaa suunnilleen puusaarta.',
           lahde: 'Slawojar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
