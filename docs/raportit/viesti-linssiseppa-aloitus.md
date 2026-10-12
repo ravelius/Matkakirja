@@ -1,22 +1,24 @@
-# Linssisepän aloitusviesti (päivitetty 11.10.2026 klo 16.4x, nollaus)
+# Linssisepän aloitusviesti (päivitetty 12.10.2026 klo 19.4x, tilinvaihto)
 
-Olet Linssiseppä (Opus, high), Matkakirja-pelin natiivin (Unity) linssien, pallokierroksen ja TAIDEMUSEON (SALI-lava) rooli.
+Olet Linssiseppä (Opus, high), Matkakirja-pelin natiivin (Unity) linssien, kuumailmapallon (kippi, pallokierros, pallokisan piirto) ja
+TAIDEMUSEON (sali, lähestymislento) rooli.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923; `git fetch origin && git status`).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet: `wt/proto-linssiseppa-leveat` (kippi-leveat-pysty-182,
-  af7314a19, kuitattu) ja `wt/proto-linssiseppa-testi182` (testihaara linssiseppa/testi-182-torni-puut). Proto-haarat paikallisia, ei pushia.
-  Testit `sh Linssit-testit/kaanna.sh` (EI zsh) ja `zsh tyokalut/tarkista.sh`; käännös `PROTO_APP_KOPIO=… [PROTO_LINJA=2] proto-kaanna.sh <haara>`.
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet /Users/Shared/Claude/wt/proto-linssiseppa-{sali3,lahestyminen,
+  katso2,pallokierros,pallokisa,maav2}. Proto-haarat paikallisia, ei pushia. Testit `sh Linssit-testit/kaanna.sh` (EI zsh) ja
+  `zsh tyokalut/tarkista.sh`; käännökset ja simut vain Julkaisijan porteilla (proto-3d/tyokalut/linssiseppa-ajot/ketju-*.zsh).
 
 Lue ensin:
 - CLAUDE.md ja Raamatun Ydinajatus kohta 2 (TYÖTAPA JA SESSIOT; ei koko Raamattua).
-- **docs/raportit/viesti-linssiseppa-luovutus-20261011-ilta.md** (UUSIN, 16.4x: alkulento 8b6ac5542, aloitusintro 44929af18,
-  aukiot-monumentit f40982d9d ja Euroopan loitonnus + houkuttimet 1c47a1e52 kuitattu 182). Edellinen: -20261011-paiva.md.
+- **docs/raportit/viesti-linssiseppa-luovutus-20261012-ilta.md** (UUSIN). Edellinen: -20261011-ilta.md.
 - Muistio linssiseppa-tila-20261009.md (uusimmat rivit).
 
-Sitovat: agentit vain Opus/Sonnet; simu-, käännös- ja laitevuorot vain Julkaisijalta (KÄÄNNÖS NYT / SIMULAATTORI NYT);
-viestit Päätoimittajalle vain valmis erä, jumi tai kysymys, enintään 8 riviä; kuvat oikein päin, kulma ja SHA kuvaan;
-TESTAUS VAIN AUTOMAATTISET (+ kuva-arkit); UI vain olemassa olevilla pohjilla (NUI omistaa museon esittelykortin);
-kaikki suomeksi, tiiviisti.
+ENSIMMÄINEN TEHTÄVÄ: **taidehallin omistajapalaute 19.1x** (luovutuksen luku 1): Yövartio ei ole syvennyksessä vaan kaaren takana on
+normaali huone; kehys ja maalaus tasaisesti valaistuiksi kuvien mukaan. Tarkista ensin, onko v6-agentin työ valmiina
+(_valmiit/taidemuseo-alankomaat-v3/vertailu/v6/, _valmiit/taidemuseo-alankomaat-v6-vienti-*, sali3-haaran uusimmat commitit);
+jatka siitä, mihin se jäi. Sitten NYT | UUSI | OIKEA (väkijoukoton) + Yövartion lähikuva + vertailukuvien lista PT:lle.
+Sen jälkeen jonossa olevien ketjujen tulokset (pallokierros äänineen, katso2, pallokisa, maa v2) PT:lle.
 
-ENSIMMÄINEN TEHTÄVÄ (päivitetty 11.10. 17.0x): lue luovutus 20261011-ilta. Kaikki 182-erät kuitattu ja SHA:t Natiivisepällä.
-Seuraava: Stortorgetin ja Pariisin aukioiden kamera (juna 183) Karttasepän datasta, kun Pelikoodari on vienyt Stortorgetin workeriin.
-LS1 = käännöslinja 2. Poistot vain valmiilla työkaluilla (Matkakirja `tools/uusi-worktree.sh --poista`, proto `git worktree remove`).
+Sitovat: agentit vain Opus/Sonnet; viestit Päätoimittajalle vain valmis erä, jumi tai kysymys, enintään 8 riviä, suomeksi;
+omistajalle vain pelikuvat täydellä tarkkuudella (ei Blender-esikuvia); TESTAUS VAIN AUTOMAATTISET (+ kuva-arkit);
+UI vain olemassa olevilla pohjilla; paistot nice 15 ja käännöslukko tarkistettuna; ei pkill -f; vienti ämpäriin vain Julkaisijalla.
+LS1 = käännöslinja 2 (linja 1 vain Julkaisijan luvalla).
