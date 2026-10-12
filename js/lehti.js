@@ -29,6 +29,7 @@ import {
 } from './maalehti.js';
 import { asetaKuva, julisteUrl } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
+import { kaupunkilehdenSivuNostoineen } from './lehtinostot.js';
 import { aloitaLivianLehtikierros, reagoiLivianLehtisivuun } from './livia-lehtireaktiot.js';
 // Reaktiolaskurit työhuoneen arviointinäkymään (js/reaktiot.js).
 import {
@@ -237,7 +238,15 @@ export function rakennaSivut(ui, cityId) {
   }
   // Maa-etusivun kuvanosto ei kuulu etusivun maaosastoon.
   ui.arrivalMaa.querySelector(':scope > .maa-etusivu-nosto')?.remove();
-  const kategoriat = cityId ? [...(KULTTUURI_KATEGORIAT[cityId] ?? [])] : [];
+  /*
+   * KARTALLE SIIRTYNEET JUTUT TAKAISIN SIVULLE (omistaja 12.10.2026):
+   * sivu, jonka omat nostot tyhjennettiin karttauudistuksessa, saa ne
+   * kartan lähteistä samassa nostomuodossa (js/lehtinostot.js). Sama
+   * reitti vie ne natiiviin (tools/vienti/lehdet.mjs).
+   */
+  const kategoriat = cityId
+    ? (KULTTUURI_KATEGORIAT[cityId] ?? []).map((sivu) => kaupunkilehdenSivuNostoineen(cityId, sivu))
+    : [];
   const kaupunginOmia = kategoriat.length;
   /*
    * Kaupungit, joilla ei ole kategorioita mutta on litteä nostolista,

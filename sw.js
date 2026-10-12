@@ -92,6 +92,7 @@ const SHELL = [
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
+  './js/lehtinostot.js',
   // Sivunkääntö (5.9.2026): teatteri kuuluu SHELLiin; itse kirjasto
   // (page-flip) tulee ämpärin vendor/-polusta ja säilyy VENDORCACHEssa.
   './js/sivunkaanto.js',

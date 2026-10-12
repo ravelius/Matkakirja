@@ -38,6 +38,7 @@ import { WIKI_LANGS, summaryUrl, articleUrl } from '../../js/wiki.js';
 import { uutislahde } from '../../js/uutiset.js';
 import { piirraMaaNumerot } from '../../js/maakayrat.js';
 import { vuosiSaaSelite } from '../../js/saa.js';
+import { kaupunkilehdenSivuNostoineen } from '../../js/lehtinostot.js';
 
 const LAUDAN_TUNNUS = 'maailmankartta';
 
@@ -145,6 +146,10 @@ function rakentajat(media, ARTIKKELIT) {
       esikuuntelu,
       linkki: n.linkki ? { url: n.linkki, nimi: n.linkkiNimi ?? null } : null,
       wiki: wiki(n.wiki),
+      // Kartalle siirtynyt juttu (js/lehtinostot.js): kohdekartan pisteen
+      // nosto-tunnus tai pääkartan merkin id — "Näytä kartalla".
+      ...(n.karttaKohde ? { karttaKohde: n.karttaKohde } : {}),
+      ...(n.paakartta ? { paakartta: n.paakartta } : {}),
     };
   };
 
@@ -287,7 +292,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
     const maa = maaKaupungille(id);
     const kansiAihe = littea ? null : aiheet.find((a) => a.id === 'kaupunki') ?? null;
     const vinkit = kansiAihe && maa && (MAA_KATEGORIAT[maa] ?? []).some((a) => a.id === 'menovinkit') ? maa : null;
-    const typ = aiheet.map((a) => R.aihe(a, { littea }));
+    // Kartalle siirtyneet jutut takaisin sivulle samalla reitillä kuin
+    // webissä (js/lehti.js rakennaSivut → js/lehtinostot.js).
+    const typ = aiheet.map((a) => R.aihe(littea ? a : kaupunkilehdenSivuNostoineen(id, a), { littea }));
     return {
       laji: littea ? 'elama' : 'lehti',
       maa,
@@ -327,7 +334,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
     + 'jaaKappaleiksi; ensimmäisen kappaleen LEIPAN_ALOITUS_SANOJA sanaa lihavoidaan; littea: yksi kappale), kuva, galleria[] '
     + '(lisäteokset noston oman kuvan jälkeen), lahderivi (kuvan alle / littealla nostoon), aani { url, varat, alku s, voima, '
     + 'lahde }, musiikki [{ url, nakyva, otsake }] (Apple Music -linkit), musiikkiNayte { url, varat, alku, voima, nimi }, '
-    + 'esikuuntelu { termi, musiikki, musiikkiNimi } | null, linkki { url, nimi } | null, wiki { otsikko, omaArtikkeli, haut } | null }. '
+    + 'esikuuntelu { termi, musiikki, musiikkiNimi } | null, linkki { url, nimi } | null, wiki { otsikko, omaArtikkeli, haut } | null, '
+    + 'karttaKohde (vain kartalle siirtyneellä jutulla: kohdekartan pisteen nosto-tunnus, Näytä kartalla -napille), paakartta (pääkartan '
+    + 'merkin id, kun juttu ei ole kohdekartan piste; js/lehtinostot.js) }. '
     + 'kuva = { arvo (media.json), url, varat, leveys?, korkeus? (px), lyhyt (sivulla), selite (suurennoksessa), lahde, '
     + 'otsikko?, vuosi?, tekija?, tekijaId?, lisenssi?, lahdeUrl?, lisenssiUrl?, vanha? (harmaasävy) }. LIVE, ei paketissa: '
     + 'esikuuntelu = iTunes: jos termi, https://itunes.apple.com/search?term=<termi>&entity=song&limit=1&country=fi; muuten '
