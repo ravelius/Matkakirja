@@ -16,7 +16,7 @@ Sisältökirjuri 12.10.2026 (PT:n tilaus; omistaja 12.10. klo 11.2x: "aarreteht�
 
 ## 2. Kaupunkilista ja tehtävät
 
-Jokaiselle pelilaudan kaupungille **kaksi** tehtävää: **a = löytötehtävä** (Katso ja löydä hyvän 3D:n kaupungeissa; muualla Etsi kartalta; kaupungeille ilman kohdekarttaa Valinta) ja **b = toinen laji** (kierrätetty tasaisesti lajien kesken). Pääkaupunkipisteille (ei introa, ei kaaria) **yksi** tehtävä. * = ehdollinen: Kuuntele vaatii olemassa olevan luennan (`puhe-europe-saapuminen-<id>`), Vanha kartta vaatii PD-karttakuvan Commonsista; jos ei löydy, vaihdetaan Aikajanaan. 3D-sarake = `sallitut-3d` (Kööpenhamina mukana). Pilottikaupungit (Ateena, Pariisi, Tukholma) on jo kirjoitettu.
+Jokaiselle pelilaudan kaupungille **kaksi** tehtävää: **a = löytötehtävä** (Katso ja löydä hyvän 3D:n kaupungeissa; muualla Etsi kartalta; kaupungeille ilman kohdekarttaa Valinta) ja **b = toinen laji** (kierrätetty tasaisesti lajien kesken). Pääkaupunkipisteille (ei introa, ei kaaria) **yksi** tehtävä. * = ehdollinen: Kuuntele vaatii olemassa olevan matkakirjaluennan (`puhe-fokus-matkakirja-<id>`, fokusvirtapakin `matkakirja.aanite`), Vanha kartta vaatii PD-karttakuvan Commonsista; jos ei löydy, vaihdetaan Aikajanaan. 3D-sarake = `sallitut-3d` (Kööpenhamina mukana). Pilottikaupungit (Ateena, Pariisi, Tukholma) on jo kirjoitettu.
 
 | Maa | Kaupunki | 3D | Intro | a | b |
 |---|---|---|---|---|---|
@@ -66,7 +66,7 @@ Jokaiselle pelilaudan kaupungille **kaksi** tehtävää: **a = löytötehtävä*
 | MLT | Valletta | ✓ | – | Katso | Aikajana |
 | MNE | Podgorica | – | – | Etsi kartalta | – |
 | NLD | Amsterdam | ✓ | ✓ | Katso | Aikajana |
-| NOR | Bergen | ✓ | ✓ | Katso | Aikajana |
+| NOR | Bergen | ✓ | ✓ | Katso | Kuuntele* |
 | NOR | Oslo | ✓ | ✓ | Katso | Kuuntele* |
 | NOR | Tromssa | – | ✓ | Etsi kartalta | Arvio |
 | POL | Krakova | ✓ | ✓ | Katso | Salakirjoitus |
@@ -94,7 +94,7 @@ Henkilö: jokaisessa kaupungissa tehtävän antaa kaupungin oma kohtaamishahmo (
 Nykyiset (moottorissa): **Katso ja löydä**, **Aikajana**, **Arvio**, **Salakirjoitus**. Uudet 3 lajia, jotka vaativat moottoriin vain **kaksi uutta `TehtavaLaji`-arvoa** (Valinta ja Kartta):
 
 1. **1873 vs. nyt** (Valinta + kuva): näytetään kaupungin 1873-havainnekuva (saapumisintron kuva 8, kun pilotti on hyväksytty) ja kysytään: "Mikä näistä ei vielä ollut paikalla 1873?" Kolme vaihtoehtoa, yksi oikea. Faktat ovat samoja, jotka on jo varmistettu kahdesta lähteestä kuvan 8 ohjeissa (esim. Pariisi: Eiffel-torni 1889 ei vielä, Tuileries-rauniot kyllä). Ei kuvaa → ei tehtävää: **vain kaupunkeihin, joissa intron kuva 8 on hyväksytty** (PT 12.10.); alkuun korkeintaan 3 pilottia, ja vasta kun omistaja on hyväksynyt kuvat.
-2. **Kuuntele** (Valinta + ääni): soitetaan kaupungin olemassa oleva isoisän luenta (`puhe-europe-saapuminen-<id>`, 41 kaupunkia) ja kysytään yksi asia luennasta tai paikasta, jonka luennassa mainitaan. Ei uusia ääniä, ei generointia.
+2. **Kuuntele** (Valinta + ääni): soitetaan kaupungin olemassa oleva isoisän matkakirjaluenta (`puhe-fokus-matkakirja-<id>`, fokusvirtapakin `matkakirja.aanite`; Euroopan vanhat saapumisluennat eivät ole enää käytössä) ja kysytään yksi asia luennasta tai paikasta, jonka luennassa mainitaan. Ei uusia ääniä, ei generointia.
 3. **Vanha kartta** (Kartta): PD-karttakuva (Commons, 1800-luku, esim. Baedeker tai kaupunkikartta); "Napauta kohtaa, jossa …" (tähtäin sallii toleranssin). Vain jos kaupungille löytyy vapaasti lisensoitu kartta; muuten Aikajana.
 
 **Etsi kartalta** = sama Kartta-laji nykyaikaisella kohdekartalla (KAUPUNKIKARTAT, 60 Euroopan kaupungilla on kohteet nimillä ja koordinaateilla). Moottorimuutos: **Valinta** (kysymys + 3–4 vaihtoehtoa + oikea + valinnainen kuva tai ääni) ja **Kartta** (kuva tai kohdekartta + oikea piste + toleranssi). Pelikoodari tekee ne suunnitelman hyväksynnän jälkeen. Aikajana, Arvio ja Salakirjoitus toimivat sellaisinaan.
