@@ -27,6 +27,10 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   lokit/todistus-houkuttimet-iphone-182d-20261011-1652/arkki-houkuttimet-iphone.jpg (+ ipad-182d-1654).
   Avoin (ei pyydetty): tavalliset himmeät pisteet jäävät iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle.
 
+## SÄÄNTÖ 12.10. 11.1x (omistaja): omistajalle kuvat TÄYDELLÄ TARKKUUDELLA, yksittäin tai pari nykyinen | uusi natiivikorkeudella;
+  ei pienennettyjä monen ruudun arkkeja (PT:lle saa arkin, täysikokoiset tehdään samalla). Kolmikko: scratchpad-skripti kolmikko.py
+  (K = natiivikorkeus) tai kolme erillistä kuvaa.
+
 ## SÄÄNTÖ 12.10. 10.3x (omistaja, Raamattu ASEMATAULU: VAATII TOIMIA, PR #4489)
 - Kun omistajan pitää toimia (lupaikkuna/vastaus LS1:n ikkunassa, kirjautuminen, ostos, vain hänen päätöksensä): heti Asemataululle
   ArtifactData set url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix, kokoelma "talo", doc_id "toimi-linssiseppa",
