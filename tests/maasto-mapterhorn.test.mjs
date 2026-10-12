@@ -84,3 +84,10 @@ test('ruudukkoTasolle: --naytetaso 15 antaa kaikille tasoille saman näytevälin
   assert.equal(lueAsetukset(['--naytetaso', '15']).naytetaso, 15);
   assert.equal(lueAsetukset([]).naytetaso, null);
 });
+
+test('teeLaatta: ruudukko 513 (z12 tasan näyttein) ei kaadu pinon ylitykseen', async () => {
+  const { teeLaatta } = await import('../tools/maasto/tee-maasto.mjs');
+  const dem = { korkeus: (lon, lat) => 800 + 700 * Math.sin(lon * 900) * Math.cos(lat * 700) };
+  const l = teeLaatta(dem, 12, 4256, 3461, 513);
+  assert.ok(l.pisteita > 4 && l.hMax > 800 && l.hMax <= 1500);
+});

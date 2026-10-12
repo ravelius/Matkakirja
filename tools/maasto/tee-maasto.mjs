@@ -275,7 +275,7 @@ export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5) {
     return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax) >= 0 ? [p, q, r] : [p, r, q];
   });
   const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T });
-  return { tavut: gzipSync(raaka, { level: 9 }), pisteita: P.length, kolmioita: T.length, hMax: Math.max(...h) };
+  return { tavut: gzipSync(raaka, { level: 9 }), pisteita: P.length, kolmioita: T.length, hMax: h.reduce((m, v) => (v > m ? v : m), -Infinity) };
 }
 
 /** layer.json (Cesium CesiumTerrainProvider). */
