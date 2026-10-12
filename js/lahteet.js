@@ -356,6 +356,12 @@ export const LAHTEET = [
     johdanto: 'Kaupunkien äänimaisemat, kielinäytteet, radio ja tehosteet.',
     rivit: [
       {
+        nimi: 'Olavinlinnan lyhty — kaiut (tilan impulssivasteet)',
+        tekija: 'Kaiut: Aalto Acoustics Lab, OK5 (de las Heras, Meyer-Kahlen, Lokki, Arend), doi 10.5281/zenodo.18622201',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Tarkistettu 12.10.2026 Zenodosta: OK5: Spatial Room Impulse Responses from 25 Spaces in our Work Environment, CC BY 4.0.',
+      },
+      {
         nimi: 'Ajattelijat-linssi: Also sprach Zarathustra (feat. Richard Strauss) — Sokrates',
         tekija: 'Sascha Ende, filmmusic.io',
         lisenssi: 'CC BY 4.0',
