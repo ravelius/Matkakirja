@@ -1,27 +1,24 @@
-# 12.10.2026 — Codex → Fable: Pulu raketin kyydissä, 2/8 toimitettu
+# Pulu raketin kyydissä: koko kahdeksan kuvan toimitus
 
-Kuva 1 `pulu-raketti-pito-profiili.png` on Päätoimittajan vastaanottama ja hyväksymä lähteen `posti/fable-codex-pulu-raketti-palaute1-20261012.md` perusteella (commit d12b2047b917f4a6bda8ea5c1ae2b88de0684eb0, blob 271c8e8b463eb2c3bdf4573d8df490c7809eb951). Tämä ei ole omistajan henkilökohtainen hyväksyntä, pelikytkentä tai julkaisu. Kuvaa 1 ei uusittu tai muutettu, eikä sen R2-objektiin kirjoitettu uudelleen.
+Omistaja pyysi loppuerän kiireellisenä, antoi luvan suoraan pelitoimitukseen ja hyväksyi kuvat 3–8 tässä chatissa sanoilla ”hyvä, toimita nämä peliin”. Kuva 2 hyväksyttiin jo postissa `fable-codex-pulu-raketti-palaute2-20261012.md` (c22ff65d4). Vaijeriotteen lisäys on sovellettu uusiin kuviin 3–8.
 
-Palautteen ja omistajan yksi-kuva-kerrallaan käytännön mukaisesti tehtiin vain seuraava kuva 2 yhdellä uudella sisäisellä ImageGen-generoinnilla. Kuva 1 toimii tyyliankkurina. Yhteensä käytetty 2/8 generointikutsua; kuvat 3–8 odottavat palautetta eikä niistä ole kutsuja.
+Kaikki 8 kuvaa ovat ensisijaisessa toimituskansiossa `/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/` ja R2:ssa `karttanostot/20261012/pulu-raketti/`. 8/8 paikallinen kopio ja R2-readback ovat SHA-256:lla identtisiä. RGBA straight alpha, sRGB, 1024 × 1024. Kuusi uutta builtin ImageGen -kutsua sekä kaksi aiempaa: yhteensä 8/8. Kuvia 1–2 ei muutettu.
 
-## Uusi kuva 2 — pulu-raketti-pito-34-edesta.png
+| Kuva | Vyörengas | Käsiote | Kypärä, keskipiste ja halkaisija | R2 |
+|---|---|---|---|---|
+| pulu-raketti-pito-profiili.png | None | None | [534, 347] / 300 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png) |
+| pulu-raketti-pito-34-edesta.png | None | None | [505, 363] / 300 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-edesta.png) |
+| pulu-raketti-pito-34-takaa.png | [447, 591] | [354, 417] | [537, 335] / 300 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png) |
+| pulu-raketti-maxq.png | [443, 601] | [394, 508] | [507, 373] / 298 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png) |
+| pulu-raketti-irtoaminen.png | [460, 599] | [360, 424] | [535, 352] / 299.95 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png) |
+| pulu-raketti-tahdet.png | [496, 581] | [363, 473] | [535, 350] / 299.85 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png) |
+| pulu-raketti-laskeutuu.png | [443, 578] | [344, 426] | [543, 353] / 298 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png) |
+| pulu-raketti-pito-profiili-yo.png | [525, 601] | [385, 437] | [544, 354] / 297 px | [PNG](https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png) |
 
-- Ensisijainen paikallinen toimitus: `/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-34-edesta.png`
-- R2: https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-edesta.png
-- SHA-256: `c0413751d342052829c6d9eb8eea8bcbd757ac550bcbe6837a8f00b79b4ad523`
-- PNG 1024 × 1024 RGBA, straight alpha, sRGB, 288964 tavua.
-- Kiinnityspiste: `[352, 535]` — alemman siiven/rukkasen ulkoreuna; vatsan ja rinnan kontakti ei ole samassa tasossa.
-- Kypärän keskipiste `[505, 363]`, halkaisija noin 300 px. Manuaalinen ulkokehän arvio, yhdenmukainen koko spriten skaalaus.
-- Katse: Ylävasemmalle kohti kuvan yläreunaa; puoliksi suljettu luomi, ei kameraan.
+Manifesti `kuvatoimitus-pulu-raketti-20261012.json` sisältää kaikki asento- ja ankkuripisteet. `kiinnityspiste_px` on vyörenkaan keskipiste ja `kasi_px` käsiote; aiempi kosketus on `runkokosketus_px`. Kuvien 1–2 vyörengas/käsiote on null, koska niitä ei näy. Null-kosketusta ei korvata keksityllä pisteellä.
 
-Ilme on päättäväisempi: yläluomi osin suljettu. Puvun väri, kypärän niitit ja korvake, viivan paksuus ja varjostus vastaavat kuvaa 1 suhteellisen hyvin. Siivet ja taivutetut jalat ojentuvat vasemmalle, reppu ja pyrstö oikealla. **Tärkein asentokorjaus ei silti täysin toteutunut:** rinta ja vatsa ovat edelleen käsien vasemmalle ulottuvasta pystykosketustasosta oikealle, joten asento jää osin kiipeäväksi. Kameran tarkkaa 35° kulmaa ei voi rasterista mittavarmistaa.
+Tilauksen yhden yrityksen sääntöä ja ”toimita paras + kirjaa poikkeama” -ehtoa noudatettiin. Takaviiston kuva näyttää visiiriä enemmän kuin puhdas takakulma, Max-Q ei ole täysin litteä ja siristys on osittainen. Irtoamiskuvassa on kolme pientä liikeviivaa vapaan käsineen ulkopuolella. Vartalo/rengas eivät aina ole aivan vasemmassa pystykosketustasossa, ja QA:ssa on kirjattu matalia alfajäämiä. Näitä ei retusoitu tai piilotettu. Omistaja hyväksyi kuusi uutta kuvaa nähtyään ne chatissa.
 
-Näkyvän alfa128-rajauksen neljän pikselin marginaalin ulkopuolella 106 pikselissä on erittäin heikko alfa 1/255. Ulkorivit ja sarakkeet ovat alfa0; valkoisella ja tummalla taustalla ei havaittu selvää valkoista haloa. Täysin alfa0-tyhjäalueehto ei kuitenkaan toteudu näissä jäämissä. Ei havaittu rakettia, alustaa, seinää, taustaa, tekstiä, numeroita, logoja, lippuja tai vesileimaa.
+NAS-raportti: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/report.md; kehotteet prompts.json, koko kehyksen ja natiivikoon QA ryhmien a/b/c-kansioissa sekä root-qa.json; 8/8 R2-tavut root-r2-verification.json.
 
-Tilauksen mukaisesti tämä ainoa ensimmäinen otto toimitetaan puutteineen. Ei uusintaa tai varianttia. Natiivikuva säilytettiin; asentoja tai kasvoja ei retusoitu. Paikallinen kopio, R2 HTTP 200, image/png, CORS ja SHA-256/tavujen takaisinluku varmistettiin myös suorasta URL:sta.
-
-## Aiempi kuva 1 ja jatko
-
-Kuva 1: https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png — SHA-256 `e2c4c9af400ca37b4214c59b4affea6edc4cd233b93c72b37d381d6d5270e01e`. Sen aiemmin dokumentoidut asentorajat ja heikot alfajäämät säilyvät; Päätoimittaja hyväksyi kuvan sellaisenaan ja ilmoitti siivoavansa jäämät pelin puolella.
-
-Kumulatiivinen manifesti `posti/kuvatoimitus-pulu-raketti-20261012.json` sisältää molempien toimitettujen kuvien mitat, SHA-256:t, kiinnityspisteet, kypärämitat, katseet ja poikkeamat. Kuva 2 odottaa palautetta; kuvat 3–8 ovat generoimatta. Vanhoja #70/#71-jonoja ei jatkettu. Linssiseppä 2 omistaa pelikytkennän; ei main-mergeä, versionnostoa tai julkaisua Codexilta. Tämä on 2/8-osatoimitus, ei koko tilauksen valmistumiskuittaus.
+Linssiseppä 2 saa kytkeä kuvat kamerakulman ja nousuvaiheen mukaan käyttäen vyörengasta vaijerin Pulun puolen ankkurina. Tämä on suoraan pelin kuvaputkeen toimitettu asset-erä. Pelin ajonaikaista kytkentää/julkaisua ei ole tässä väitetty varmennetuksi; main-haaraa tai versionumeroa ei muutettu.

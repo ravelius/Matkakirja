@@ -1,85 +1,170 @@
 {
   "taskNumber": 77,
   "task": "pulu-raketti-20261012",
-  "sourcePath": "posti/fable-codex-pulu-raketti-20261012.md",
-  "sourceCommit": "99cac747d9bb146ffb737cda41fc3c89708510fe",
-  "sourceBlob": "96d7f261ecc3f9133648f1a97dd8cfc25b3c68c1",
-  "sourceReadInFull": true,
   "requestedImages": 8,
-  "imageCount": 2,
-  "generationRequestsIssued": 2,
-  "generationCallsCompleted": 2,
+  "imageCount": 8,
+  "generationCalls": 8,
+  "generationCallsCompleted": 8,
   "generationLimit": 8,
-  "partialDelivery": true,
-  "productionComplete": false,
+  "productionComplete": true,
   "allReturnedImagesProcessed": true,
-  "productionActive": false,
-  "waitingForOwnerFeedback": true,
-  "remainingUnissuedImages": 6,
-  "ownerFeedbackAfterEachImage": true,
-  "allContentConstraintsPassed": false,
-  "firstCandidateDeliveredPerOrderDespiteDeviations": true,
+  "allRequestedImagesDeliveredToR2": true,
   "allR2ReadbacksByteExact": true,
+  "partialDelivery": false,
+  "waitingForOwnerFeedback": false,
+  "remainingUnissuedImages": 0,
+  "contentReviewPending": true,
+  "allContentConstraintsPassed": false,
+  "mailboxDeliveryConfirmed": true,
+  "editorAcceptance": false,
   "gameIntegrated": false,
   "published": false,
+  "omittedItems": [],
   "assets": [
     {
       "id": "pulu-raketti-pito-profiili",
       "filename": "pulu-raketti-pito-profiili.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-raketti-20261012/production/pulu-raketti-pito-profiili/pulu-raketti-pito-profiili.png",
       "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-profiili.png",
-      "localDeliveryByteExactVerified": true,
-      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png",
-      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png",
-      "dimensions": [
+      "size": [
         1024,
         1024
       ],
-      "width": 1024,
-      "height": 1024,
-      "format": "PNG",
-      "mode": "RGBA",
-      "alpha": "straight",
-      "colorSpace": "sRGB",
       "sha256": "e2c4c9af400ca37b4214c59b4affea6edc4cd233b93c72b37d381d6d5270e01e",
-      "bytes": 294481,
-      "kiinnityspiste_px": [
-        353,
-        490
-      ],
-      "kiinnityspiste_kuvaus": "Alempi vasemmalle ojennettu siipi/rukkanen. Vatsa ei tässä ehdokkaassa ole samassa kosketustasossa siipien kanssa.",
+      "kiinnityspiste_px": null,
+      "kiinnityspiste_kuvaus": "ei vyörengasta",
       "kypara_keskipiste_px": [
         534,
         347
       ],
       "kypara_halkaisija_px": 300,
-      "kypara_mittaus": "Manuaalinen ulkokehän arvio, jonka perusteella koko sprite skaalattiin yhdenmukaisesti; ei automaattista kypäräsegmentointia.",
       "katse": "Ylävasemmalle kohti kuvan yläreunaa, ei kameraan.",
-      "deviations": [
-        {
-          "type": "body-contact",
-          "detail": "Vatsa ei ole samassa vasemmanpuoleisessa pystysuorassa kosketustasossa siipien kanssa. Asento on osin kiipeävä; tilattu runkoon painautuminen ei täysin toteudu."
+      "technicalVerification": {
+        "id": "pulu-raketti-pito-profiili",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "straightAlphaEncoding": true,
+        "sRGBProfileVerified": true,
+        "alphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroPixelCount": 893910,
+        "alphaEdgeRowsAndColumnsZero": true,
+        "visibleAlpha128Bounds": [
+          339,
+          216,
+          695,
+          796
+        ],
+        "nativeLowAlpha1To15PixelCount": 8382,
+        "lowAlphaResiduePossible": true,
+        "helmetBoundsManualNativePx": [
+          425,
+          152,
+          900,
+          578
+        ],
+        "helmetBoundsMethod": "Manual visual estimate of outer helmet ring, used for uniform whole-sprite scaling; not automatic object segmentation",
+        "wholeSpriteScale": 0.631578947368421,
+        "wholeCanvasSizeAfterScale": [
+          792,
+          792
+        ],
+        "transparentCanvasOffset": [
+          116,
+          116
+        ],
+        "noPoseRetouching": true,
+        "kiinnityspiste_px": [
+          353,
+          490
+        ],
+        "kiinnityspiste_kuvaus": "Alempi vasemmalle ojennettu siipi/rukkanen. Vatsa ei tässä ehdokkaassa ole samassa kosketustasossa siipien kanssa.",
+        "kypara_keskipiste_px": [
+          534,
+          347
+        ],
+        "kypara_halkaisija_px": 300,
+        "katse": "Ylävasemmalle kohti kuvan yläreunaa, ei kameraan.",
+        "sha256": "e2c4c9af400ca37b4214c59b4affea6edc4cd233b93c72b37d381d6d5270e01e",
+        "bytes": 294481,
+        "nativeSHA256": "3e64294dfd84e94d4e54ad0ee95a1f5dd266b598af9124aaacf1fbb8ecee0fff",
+        "verifiedAt": "2026-10-12T01:19:35.136720+00:00",
+        "alphaResidualCheck": {
+          "alphaNonzeroOutsideVisibleBoundsPlus4px": 614,
+          "maxAlphaOutsideVisibleBoundsPlus4px": 1,
+          "anchorAlpha": 235
         },
-        {
-          "type": "view-and-gaze",
-          "detail": "Kypärä ja visiiri ovat hieman etuviistossa ja katse ylävasemmalle; puhdas sivuprofiili ja aivan suora ylöspäin suunta eivät täysin toteudu."
-        },
-        {
-          "type": "identity-style",
-          "detail": "Uusi generointi lisää puvun ja kypärän yksityiskohtia sekä pehmeämpää varjostusta verrattuna viitteen yksinkertaiseen 2D-spriteen. Täsmällistä hahmo- ja piirrostyyliyhtäläisyyttä ei väitetä."
-        },
-        {
-          "type": "alpha-residue",
-          "detail": "Näkyvän alfa128-rajauksen ympärille jätetyn 4px marginaalin ulkopuolella 614 pikselissä on hyvin heikko alfa 1/255. Ei selvää valkoista haloa havaittu valkoisella ja tummalla taustalla, mutta täysin alfa0-taustaehto ei matalissa jäämissä toteudu."
-        }
-      ],
-      "allContentConstraintsPassed": false,
-      "ownerAcceptanceVerified": false,
-      "gameIntegrationEligible": false,
-      "http": 200,
-      "mime": "image/png",
-      "cors": "https://matkakirja.app",
-      "byteExactReadback": true,
-      "canonicalByteExactReadback": true,
+        "backgroundFullyZeroOutsideVisibleSpriteNotProven": true
+      },
+      "visualReview": {
+        "rootVisuallyReviewed": true,
+        "nativeAndWhiteDarkCompositesReviewed": true,
+        "reviewedAt": "2026-10-12T01:21:10.593322+00:00",
+        "observations": [
+          "Yksi silmä näkyy ja katse on ylävasemmalle, ei kameraan.",
+          "Molemmat siivet/rukkaset ja taivutetut jalat ojentuvat vasemmalle; reppu ja pyrstö ovat oikealla.",
+          "Harmaansininen lintu, meripihkanruskea silmä, vaalea lyhyt nokka, pyöreä kypärä ja vaalea EVA-puku ovat mukana.",
+          "Ei havaittu rakettia, taustarakennetta, alustaa, tekstiä, numeroita, logoja, lippuja tai vesileimaa.",
+          "Koko hahmo mahtuu marginaaleineen 1024 x 1024 RGBA-kuvaan, kypärä teknisesti skaalattu noin 300 pikselin halkaisijaan."
+        ],
+        "deviations": [
+          {
+            "type": "body-contact",
+            "detail": "Vatsa ei ole samassa vasemmanpuoleisessa pystysuorassa kosketustasossa siipien kanssa. Asento on osin kiipeävä; tilattu runkoon painautuminen ei täysin toteudu."
+          },
+          {
+            "type": "view-and-gaze",
+            "detail": "Kypärä ja visiiri ovat hieman etuviistossa ja katse ylävasemmalle; puhdas sivuprofiili ja aivan suora ylöspäin suunta eivät täysin toteudu."
+          },
+          {
+            "type": "identity-style",
+            "detail": "Uusi generointi lisää puvun ja kypärän yksityiskohtia sekä pehmeämpää varjostusta verrattuna viitteen yksinkertaiseen 2D-spriteen. Täsmällistä hahmo- ja piirrostyyliyhtäläisyyttä ei väitetä."
+          },
+          {
+            "type": "alpha-residue",
+            "detail": "Näkyvän alfa128-rajauksen ympärille jätetyn 4px marginaalin ulkopuolella 614 pikselissä on hyvin heikko alfa 1/255. Ei selvää valkoista haloa havaittu valkoisella ja tummalla taustalla, mutta täysin alfa0-taustaehto ei matalissa jäämissä toteudu."
+          }
+        ],
+        "allContentConstraintsPassed": false,
+        "approvedForFirstAttemptDeliveryPerOrder": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrationEligible": false
+      },
+      "localReceipt": {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-profiili.png",
+        "sha256": "e2c4c9af400ca37b4214c59b4affea6edc4cd233b93c72b37d381d6d5270e01e",
+        "bytes": 294481,
+        "byteExactCopyVerified": true,
+        "copiedAt": "2026-10-12T01:21:10.593322+00:00"
+      },
+      "receipt": {
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png?t=e2c4c9af400ca37b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png",
+        "sha256": "e2c4c9af400ca37b4214c59b4affea6edc4cd233b93c72b37d381d6d5270e01e",
+        "bytes": 294481,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalHTTP": 200,
+        "canonicalByteExactReadback": true,
+        "uploadedAt": "2026-10-12T01:21:10.593322+00:00"
+      },
       "editorAcceptanceVerified": true,
       "editorAcceptanceSource": {
         "path": "posti/fable-codex-pulu-raketti-palaute1-20261012.md",
@@ -89,120 +174,1289 @@
         "readInFull": true,
         "receiverAndEditorAcceptanceOfFirstImage": true,
         "ownerPersonalAcceptanceVerified": false
-      }
+      },
+      "ownerAcceptanceVerified": false,
+      "runkokosketus_px": [
+        353,
+        490
+      ],
+      "runkokosketus_kuvaus": "Alempi vasemmalle ojennettu siipi/rukkanen. Vatsa ei tässä ehdokkaassa ole samassa kosketustasossa siipien kanssa.",
+      "kasi_px": null,
+      "kasi_kuvaus": "ei vaijeriotetta",
+      "vaijeriHuomautus": "ei vyörengasta/ei vaijeriotetta; aiempi kosketus on siirretty runkokosketus_px-kenttään. PNG säilyy muuttumatta.",
+      "originalVerificationPointSchema": "technicalVerification.kiinnityspiste_px is historical body-contact metadata, before the task82 ring/hand schema"
     },
     {
       "id": "pulu-raketti-pito-34-edesta",
       "filename": "pulu-raketti-pito-34-edesta.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-raketti-20261012/production/pulu-raketti-pito-34-edesta/pulu-raketti-pito-34-edesta.png",
       "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-34-edesta.png",
-      "localDeliveryByteExactVerified": true,
-      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-edesta.png",
-      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-edesta.png",
-      "dimensions": [
+      "size": [
         1024,
         1024
       ],
-      "width": 1024,
-      "height": 1024,
-      "format": "PNG",
-      "mode": "RGBA",
-      "alpha": "straight",
-      "colorSpace": "sRGB",
       "sha256": "c0413751d342052829c6d9eb8eea8bcbd757ac550bcbe6837a8f00b79b4ad523",
-      "bytes": 288964,
-      "kiinnityspiste_px": [
-        352,
-        535
-      ],
-      "kiinnityspiste_kuvaus": "Alemman vasemmalle ojentuvan siiven/rukkasen ulkoreuna; rinta ja vatsa eivät ole samassa tasossa.",
+      "kiinnityspiste_px": null,
+      "kiinnityspiste_kuvaus": "ei vyörengasta",
       "kypara_keskipiste_px": [
         505,
         363
       ],
       "kypara_halkaisija_px": 300,
-      "kypara_mittaus": "Manuaalinen ulkokehän arvio ja yhtenäinen koko spriten skaalaus.",
       "katse": "Ylävasemmalle kohti kuvan yläreunaa; puoliksi suljettu luomi, ei kameraan.",
-      "deviations": [
-        {
-          "type": "body-contact",
-          "detail": "Tärkein asentokorjaus ei täysin toteutunut: rinta ja vatsa ovat edelleen käsien vasemmanpuoleisesta pystykosketustasosta oikealle. Asento on osittain kiipeävä."
+      "technicalVerification": {
+        "id": "pulu-raketti-pito-34-edesta",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "straightAlphaEncoding": true,
+        "sRGBProfileVerified": true,
+        "alphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroPixelCount": 908697,
+        "alphaEdgeRowsAndColumnsZero": true,
+        "visibleAlpha128Bounds": [
+          335,
+          234,
+          670,
+          805
+        ],
+        "alphaResidualCheck": {
+          "nonZeroPixelsOutsideVisibleBoundsPlus4px": 106,
+          "maxAlphaOutsideVisibleBoundsPlus4px": 1
         },
-        {
-          "type": "camera-angle",
-          "detail": "Etuviston 35 asteen kamerakulmaa ei voida yksittäisestä rasterista mittavarmistaa; kasvon suunta on edelleen sivu-/etuviistoinen."
-        },
-        {
-          "type": "alpha-residue",
-          "detail": "Näkyvän alfa128-rajauksen 4px marginaalin ulkopuolella 106 pikseliä sisältää erittäin heikkoa alfa 1/255 -jäämää. Ulkorivit ja sarakkeet alfa0; ei selvää valkoista haloa havaittu."
-        }
+        "helmetBoundsManualNativePx": [
+          374,
+          173,
+          859,
+          600
+        ],
+        "helmetBoundsMethod": "Manual visual estimate of outer ring; uniform whole-sprite scaling, not automatic segmentation",
+        "wholeSpriteScale": 0.6185567010309279,
+        "wholeCanvasSizeAfterScale": [
+          776,
+          776
+        ],
+        "transparentCanvasOffset": [
+          124,
+          124
+        ],
+        "noPoseRetouching": true,
+        "kiinnityspiste_px": [
+          352,
+          535
+        ],
+        "kiinnityspiste_kuvaus": "Alemman vasemmalle ojentuvan siiven/rukkasen ulkoreuna; rinta ja vatsa eivät ole samassa tasossa.",
+        "kypara_keskipiste_px": [
+          505,
+          363
+        ],
+        "kypara_halkaisija_px": 300,
+        "katse": "Ylävasemmalle kohti kuvan yläreunaa; puoliksi suljettu luomi, ei kameraan.",
+        "sha256": "c0413751d342052829c6d9eb8eea8bcbd757ac550bcbe6837a8f00b79b4ad523",
+        "bytes": 288964,
+        "nativeSHA256": "39fd97b7e21f4852b010bf8c3b9b536da4e0830e0d7020bea8b866bb7315e108",
+        "verifiedAt": "2026-10-12T02:27:13.907094+00:00"
+      },
+      "visualReview": {
+        "rootVisuallyReviewed": true,
+        "nativeAndWhiteDarkCompositesReviewed": true,
+        "reviewedAt": "2026-10-12T02:28:03.986137+00:00",
+        "observations": [
+          "Puoliksi suljettu yläluomi ja päättäväisempi ilme; katse ylävasemmalle, ei kameraan.",
+          "Puvun väri, kypärän niitit ja korvake, ääriviivojen paksuus sekä varjostus vastaavat hyväksyttyä kuvaa 1 suhteellisen hyvin.",
+          "Siivet ja taivutetut jalat ojentuvat vasemmalle; reppu ja pyrstö oikealla.",
+          "Ei havaittu rakettia, seinää, alustaa, taustaa, tekstiä, numeroita, logoja, lippuja tai vesileimaa.",
+          "Koko hahmo mahtuu marginaaleineen 1024 x 1024 RGBA-kuvaan; kypärä skaalattu noin 300 px halkaisijaan."
+        ],
+        "deviations": [
+          {
+            "type": "body-contact",
+            "detail": "Tärkein asentokorjaus ei täysin toteutunut: rinta ja vatsa ovat edelleen käsien vasemmanpuoleisesta pystykosketustasosta oikealle. Asento on osittain kiipeävä."
+          },
+          {
+            "type": "camera-angle",
+            "detail": "Etuviston 35 asteen kamerakulmaa ei voida yksittäisestä rasterista mittavarmistaa; kasvon suunta on edelleen sivu-/etuviistoinen."
+          },
+          {
+            "type": "alpha-residue",
+            "detail": "Näkyvän alfa128-rajauksen 4px marginaalin ulkopuolella 106 pikseliä sisältää erittäin heikkoa alfa 1/255 -jäämää. Ulkorivit ja sarakkeet alfa0; ei selvää valkoista haloa havaittu."
+          }
+        ],
+        "allContentConstraintsPassed": false,
+        "approvedForSingleAttemptDeliveryPerOrder": true,
+        "ownerAcceptanceVerified": false,
+        "editorAcceptanceVerified": false,
+        "gameIntegrationEligible": false
+      },
+      "localReceipt": {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-34-edesta.png",
+        "sha256": "c0413751d342052829c6d9eb8eea8bcbd757ac550bcbe6837a8f00b79b4ad523",
+        "bytes": 288964,
+        "byteExactCopyVerified": true,
+        "copiedAt": "2026-10-12T02:28:03.986137+00:00"
+      },
+      "receipt": {
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-edesta.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-edesta.png?t=c0413751d3420528",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-edesta.png",
+        "sha256": "c0413751d342052829c6d9eb8eea8bcbd757ac550bcbe6837a8f00b79b4ad523",
+        "bytes": 288964,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalHTTP": 200,
+        "canonicalByteExactReadback": true,
+        "uploadedAt": "2026-10-12T02:28:03.986137+00:00"
+      },
+      "runkokosketus_px": [
+        352,
+        535
       ],
-      "allContentConstraintsPassed": false,
-      "ownerAcceptanceVerified": false,
-      "editorAcceptanceVerified": false,
-      "gameIntegrationEligible": false,
-      "http": 200,
-      "mime": "image/png",
-      "cors": "https://matkakirja.app",
-      "byteExactReadback": true,
-      "canonicalByteExactReadback": true,
-      "feedbackSource": {
-        "path": "posti/fable-codex-pulu-raketti-palaute1-20261012.md",
-        "commit": "d12b2047b917f4a6bda8ea5c1ae2b88de0684eb0",
-        "blob": "271c8e8b463eb2c3bdf4573d8df490c7809eb951",
-        "sha256": "4d5351ca373e8140e654d04c7d4c0fb5f84b9ac66b720fc83030fe3c8907adf8",
-        "readInFull": true,
-        "receiverAndEditorAcceptanceOfFirstImage": true,
-        "ownerPersonalAcceptanceVerified": false
+      "runkokosketus_kuvaus": "Alemman vasemmalle ojentuvan siiven/rukkasen ulkoreuna; rinta ja vatsa eivät ole samassa tasossa.",
+      "kasi_px": null,
+      "kasi_kuvaus": "ei vaijeriotetta",
+      "vaijeriHuomautus": "ei vyörengasta/ei vaijeriotetta; aiempi kosketus on siirretty runkokosketus_px-kenttään. PNG säilyy muuttumatta.",
+      "originalVerificationPointSchema": "technicalVerification.kiinnityspiste_px is historical body-contact metadata, before the task82 ring/hand schema",
+      "editorAcceptanceVerified": true,
+      "editorAcceptanceSource": {
+        "path": "posti/fable-codex-pulu-raketti-palaute2-20261012.md",
+        "commit": "c22ff65d4",
+        "image2AcceptedUnchanged": true
       }
-    }
-  ],
-  "pendingImages": [
+    },
     {
       "id": "pulu-raketti-pito-34-takaa",
       "filename": "pulu-raketti-pito-34-takaa.png",
-      "state": "waiting-for-owner-feedback-no-generation-issued",
-      "generationRequestsIssued": 0
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-pito-34-takaa/pulu-raketti-pito-34-takaa.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-pito-34-takaa/raw.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a1313a-6e9c-7102-aa67-213199287483/exec-8c8b8d5f-a9d6-45f6-914e-b2cc8933d695.png",
+      "sha256": "951cc78da73a5bcdce5eb5a1e3a8dd3d66ca4bb596ec70f6863acf05d2e37788",
+      "rawSha256": "ad74abad83857a27cec335c7d40d7a16e13b9ecf820b54d9612a6140f0fcb78d",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 330321,
+      "mode": "RGBA",
+      "colorSpace": "sRGB",
+      "straightAlpha": true,
+      "kiinnityspiste_px": [
+        447,
+        591
+      ],
+      "kasi_px": [
+        354,
+        417
+      ],
+      "runkokosketus_px": null,
+      "kypara_keskipiste_px": [
+        537,
+        335
+      ],
+      "kypara_halkaisija_px": 300,
+      "katse": "Ylös vasemmalle kulkusuuntaan, ei kameraan.",
+      "poikkeamat": [
+        "The view shows the backpack and tail clearly, but the helmet/visor is closer to side profile than a full rear three-quarter view.",
+        "Chest and belly remain separated from the invisible left rocket plane; no actual continuous body contact is visible. runkokosketus_px is null.",
+        "Helmet and gaze point up-left toward travel, never at camera; the orange eye remains relatively open rather than strongly half-lidded.",
+        "Visible figure is approximately 630 px high after matching the approximately 300 px helmet, versus nominal 580 px target.",
+        "Low-alpha background residue and slightly translucent sprite interior (typically raw alpha253) preserved without retouch."
+      ],
+      "measurementMethod": "Manual native visual outer helmet bounds and feature centers transformed by recorded whole uniform scale and offset; final QA overlay inspected.",
+      "coordinatePrecisionPxEstimate": 3,
+      "export": {
+        "assetId": "pulu-raketti-pito-34-takaa",
+        "generationMode": "built-in image_gen",
+        "rawSha256": "ad74abad83857a27cec335c7d40d7a16e13b9ecf820b54d9612a6140f0fcb78d",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "manualHelmetBoundsNative": [
+          460,
+          185,
+          881,
+          571
+        ],
+        "wholeScaleRequested": 0.7125890736342043,
+        "wholeScale": 0.7129186602870813,
+        "scaledCanvasSize": [
+          894,
+          894
+        ],
+        "offset": [
+          59,
+          66
+        ],
+        "pixelContentChangedOnlyUniformResampling": true,
+        "retouch": false,
+        "alphaCleanup": false,
+        "generatedAlphaPreservedExceptUniformResampling": true
+      },
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-pito-34-takaa/qa.json",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-pito-34-takaa/prompt.json",
+      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png",
+      "sceneInvariants": {
+        "singlePigeon": true,
+        "sameApprovedIllustratedStyle": true,
+        "orangeEye": true,
+        "visibleLeftBeltRing": true,
+        "leftGripAtChest": true,
+        "rightWingFree": true,
+        "backpackAndTailVisible": true,
+        "noCableRocketBackgroundTextLogos": true,
+        "allBodyPartsInsideFrame": true,
+        "continuousBellyChestContact": false,
+        "rearThreeQuarterFullyAchieved": false
+      },
+      "status": "r2-ready-with-documented-deviations",
+      "generatedAt": "2026-10-12T17:51:30.317716+00:00",
+      "r2": {
+        "id": "pulu-raketti-pito-34-takaa",
+        "state": "verified",
+        "issuedAt": "2026-10-12T17:51:56.931032+00:00",
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png",
+        "sha256": "951cc78da73a5bcdce5eb5a1e3a8dd3d66ca4bb596ec70f6863acf05d2e37788",
+        "bytes": 330321,
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png?t=951cc78da73a5bcd",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png",
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGET": {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png",
+          "http": 200,
+          "sha256": "951cc78da73a5bcdce5eb5a1e3a8dd3d66ca4bb596ec70f6863acf05d2e37788",
+          "bytes": 330321,
+          "byteExact": true,
+          "contentType": "image/png",
+          "corsOriginRequest": "https://matkakirja.app",
+          "corsResponse": "https://matkakirja.app",
+          "pngSignature": true,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "sRGBICCEmbedded": true
+        },
+        "cacheBustedGET": {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png?verify=951cc78da73a5bcd-1791827517775397000",
+          "http": 200,
+          "sha256": "951cc78da73a5bcdce5eb5a1e3a8dd3d66ca4bb596ec70f6863acf05d2e37788",
+          "bytes": 330321,
+          "byteExact": true,
+          "contentType": "image/png",
+          "corsOriginRequest": "https://matkakirja.app",
+          "corsResponse": "https://matkakirja.app",
+          "pngSignature": true,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "sRGBICCEmbedded": true
+        },
+        "verifiedAt": "2026-10-12T17:51:58.258755+00:00",
+        "canonicalAndCacheBustedGETVerified": true
+      },
+      "state": "ready-with-documented-deviations",
+      "r2UploadState": "verified",
+      "generationRequestsIssued": 1,
+      "generationCallsCompleted": 1,
+      "actualReturnedCounts": {
+        "images": 1
+      },
+      "parentQA": {
+        "wholeFrame": true,
+        "whiteDarkComposites": true,
+        "alpha": true,
+        "edges": true,
+        "coordinateOverlay": true,
+        "checkedAt": "2026-10-12T17:54:37.712535+00:00",
+        "reviewScope": "Own two-item group QA; coordinating root retains final whole-series review."
+      },
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-pito-34-takaa/pulu-raketti-pito-34-takaa.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/manifest.json",
+      "rootVisuallyReviewed": true,
+      "directOwnerGameDeliveryAuthorized": true,
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-34-takaa.png",
+      "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-34-takaa.png",
+      "primaryLocalCopyByteExact": true,
+      "ownerAcceptanceVerified": true,
+      "contentAcceptanceVerified": true,
+      "ownerAcceptanceEvidence": {
+        "ownerMessage": "hyvä, toimita nämä peliin",
+        "reviewedHereInChat": true,
+        "displayedWhiteCompositeCorrespondsToThisRGBAFinalSHA": "951cc78da73a5bcdce5eb5a1e3a8dd3d66ca4bb596ec70f6863acf05d2e37788",
+        "acceptedAt": "2026-10-12T18:01:31.377002+00:00"
+      },
+      "gameIntegrationEligible": true,
+      "generationPrompt": "Use case: illustration-story.\nAsset type: a single transparent PNG game sprite, Pulu the pigeon astronaut, rear three-quarter riding pose.\nInput image 1 is ONLY the approved STYLE AND CHARACTER IDENTITY REFERENCE, not an edit target. Generate a completely new drawing and pose from scratch. Match its hand-drawn cartoon dark thick outlines, restrained blue-grey cel shading, grey pigeon, white/grey EVA spacesuit, round helmet with the same segmented outer rim, rivets and circular ear mount, compact backpack and tail feather design. Keep the orange eye if visible; no style or silhouette identity change.\nScene/backdrop: genuinely transparent alpha-zero background, no depicted environment.\nPose and camera: three-quarter REAR view, camera about 35 degrees around toward the tail, as seen from behind and below on the rocket. The back of the helmet, backpack and tail feathers are clearly visible; enough left-side profile remains visible for the left grip and belt ring. Travel direction is always UP the image. The invisible rocket is a vertical surface to the character's LEFT; do not draw it. Pulu rides with belly and chest pressed toward that left vertical plane, feet braced to the left, helmet and face pointed UP along the rocket's path, never looking at the camera. Determined slightly half-closed eyelid.\nThe LEFT wing/mitten, on the image-left side toward the invisible rocket, is a clenched grip at CHEST height as if grasping an invisible cable slightly out from the body. The cable itself is not drawn. The RIGHT wing is FREE, slightly raised or back for balancing. On the LEFT SIDE OF THE WAIST BELT draw one clearly readable small metallic circular attachment ring, visible from this rear oblique angle. This small belt hardware ring is required; no text on it.\nCanvas and scale: 1024 by 1024 square transparent canvas. Match the reference anchor framing: helmet OUTER DIAMETER approximately 300 pixels, total figure height approximately 580 pixels, centered around x512 and y510, with generous fully transparent margins. The entire helmet, hands, feet, backpack and tail must fit. Render only one whole character.\nLighting: soft upper-left light and same muted colors as the reference.\nNo rocket, platform, engine, rope, tether, cable, drawn cable loop, stars, space scenery, ground shadow, background gradient, flags, letters, numerals, logos or watermark. True RGBA transparency, clean crisp outlined sprite edges; no fake checkerboard."
     },
     {
       "id": "pulu-raketti-maxq",
       "filename": "pulu-raketti-maxq.png",
-      "state": "waiting-for-owner-feedback-no-generation-issued",
-      "generationRequestsIssued": 0
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/pulu-raketti-maxq.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/raw.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a1313b-2522-7e21-93a8-e1c4126085da/exec-28170ab2-8ff3-4737-b533-6c22c6b1a8ea.png",
+      "sha256": "d6d604bb37580b54adc32cca56e5ed01d0afdee9b779f1c4dc05b7acc7832b88",
+      "rawSha256": "c05c88d1280cc2d573b146f1f97c87c99a206a5200439c3877a4e97f42ae26ce",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 284462,
+      "rawBytes": 544163,
+      "mode": "RGBA",
+      "colorSpace": "sRGB embedded ICC",
+      "alpha": "straight",
+      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png",
+      "r2UploadState": "verified",
+      "generationRequestsIssued": 1,
+      "generationCallsCompleted": 1,
+      "actualReturnedCounts": {
+        "images": 1
+      },
+      "kiinnityspiste_px": [
+        443,
+        601
+      ],
+      "kasi_px": [
+        394,
+        508
+      ],
+      "runkokosketus_px": null,
+      "runkokosketus_selite": "Raketin pintaa ei piirretä; vatsa ja rinta eivät muodosta nyrkin kanssa samaa pystytasoa. Näkyvää todellista kosketuspistettä ei ole.",
+      "kypara_keskipiste_px": [
+        507,
+        373
+      ],
+      "kypara_halkaisija_px": 298,
+      "kypara_mittaus": "Lopullisesta kuvasta visuaalisesti mitattu ulkoreunan vaakalaajuus x=358..656, y=245..500; halkaisija-arvion epävarmuus noin 3 px. Kypärä piirtyy perspektiivissä pystysuunnassa lyhyempänä.",
+      "coordinateMethod": "manual measurement on final 1024x1024 white and dark composites; QA coordinates overlay saved",
+      "coordinateEstimatedUncertainty_px": 3,
+      "katse": "Siristävä silmä ja nokka osoittavat ylävasemmalle raketin kärjen suuntaan; ei katsetta kameraan.",
+      "poikkeamat": [
+        "Max-Q:n litteys jää osittaiseksi: vatsa ja rinta eivät muodosta vasemman nyrkin kanssa samaa pystysuoraa runkokosketustasoa. Runkokosketus ei ole todettavissa ja koordinaatti on null.",
+        "Pää ei ole selvästi alas painunut; siristävä katse ja nokka suuntautuvat ylävasemmalle, kulkusuunnan puolelle.",
+        "Näkyvän pääspriten korkeus on 535 px (alfa > 8), noin 580 px tavoitetta lyhyempi; kypärän mittakaava on säilytetty noin 300 px.",
+        "Taustassa on heikkoja alfa 1–8 jäämiä: esimerkiksi lopullisessa kuvassa 820 alfa-1- ja 415 alfa-2-pikseliä. Niitä ei retusoitu."
+      ],
+      "exportProvenance": {
+        "mode": "built-in image_gen",
+        "intent": "new pose; reference is identity/style only",
+        "generationRequestsIssued": 1,
+        "generationCallsCompleted": 1,
+        "actualReturnedCounts": {
+          "images": 1
+        },
+        "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/raw.png",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "manualHelmetBoundsNative": [
+          405,
+          244,
+          835,
+          611
+        ],
+        "manualHelmetDiameterNative": 430,
+        "helmetDiameterMethod": "visible outer helmet horizontal diameter; perspective causes shorter vertical span",
+        "requestedWholeScale": 0.6976744186046512,
+        "wholeScale": 0.6977671451355661,
+        "resizedWholeCanvasSize": [
+          875,
+          875
+        ],
+        "offset": [
+          74,
+          74
+        ],
+        "pixelContentChangedOnlyUniformResampling": true,
+        "alphaRetouched": false,
+        "retouchedPoseFaceShapeRing": false,
+        "rawPreserved": true,
+        "exportSize": [
+          1024,
+          1024
+        ],
+        "colorSpace": "sRGB",
+        "alpha": "straight RGBA PNG",
+        "nativeICC": false,
+        "manualHelmetBoundsFinal": [
+          357,
+          244,
+          657,
+          500
+        ]
+      },
+      "qa": {
+        "wholeFrame": true,
+        "alpha": true,
+        "whiteComposite": true,
+        "darkComposite": true,
+        "edges": true,
+        "spriteAndIdentity": "Same grey illustrated pigeon with orange eye, grey-white suit, blue-grey shading, dark outline, helmet rivets and side fitting.",
+        "maxqExpression": "Narrow squint and puffed curled grey head feathers visible inside helmet.",
+        "leftGrip": "Closed left mitten at chest height; no cable drawn.",
+        "rightArm": "Free right arm extends back/outward for balance.",
+        "beltRing": "Clear metal circular attachment on the image-left belt.",
+        "noForbiddenSceneElements": true,
+        "wholeCharacterInMargins": true,
+        "sceneInvariantsAssessment": "Deliverable with explicitly recorded pose/contact deviations, under one-call-per-slot best-result allowance.",
+        "alphaInspectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/qa/alpha-inspection.json",
+        "coordinateOverlayPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/qa/coordinates.png",
+        "edgeCompositesPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/qa/edge-composites.png"
+      },
+      "state": "ready-with-documented-deviations",
+      "completedAt": "2026-10-12T17:53:07.028249+00:00",
+      "r2": {
+        "id": "pulu-raketti-maxq",
+        "state": "verified",
+        "issuedAt": "2026-10-12T17:53:34.513214+00:00",
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png",
+        "sha256": "d6d604bb37580b54adc32cca56e5ed01d0afdee9b779f1c4dc05b7acc7832b88",
+        "bytes": 284462,
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png?t=d6d604bb37580b54",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png",
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGET": {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png",
+          "http": 200,
+          "sha256": "d6d604bb37580b54adc32cca56e5ed01d0afdee9b779f1c4dc05b7acc7832b88",
+          "bytes": 284462,
+          "byteExact": true,
+          "contentType": "image/png",
+          "corsOriginRequest": "https://matkakirja.app",
+          "corsResponse": "https://matkakirja.app",
+          "pngSignature": true,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "sRGBICCEmbedded": true
+        },
+        "cacheBustedGET": {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png?verify=d6d604bb37580b54-1791827615533353000",
+          "http": 200,
+          "sha256": "d6d604bb37580b54adc32cca56e5ed01d0afdee9b779f1c4dc05b7acc7832b88",
+          "bytes": 284462,
+          "byteExact": true,
+          "contentType": "image/png",
+          "corsOriginRequest": "https://matkakirja.app",
+          "corsResponse": "https://matkakirja.app",
+          "pngSignature": true,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "sRGBICCEmbedded": true
+        },
+        "verifiedAt": "2026-10-12T17:53:36.059165+00:00",
+        "canonicalAndCacheBustedGETVerified": true
+      },
+      "status": "r2-ready-with-documented-deviations",
+      "parentQA": {
+        "wholeFrame": true,
+        "whiteDarkComposites": true,
+        "alpha": true,
+        "edges": true,
+        "coordinateOverlay": true,
+        "checkedAt": "2026-10-12T17:54:37.712535+00:00",
+        "reviewScope": "Own two-item group QA; coordinating root retains final whole-series review."
+      },
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/prompt.json",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/pulu-raketti-maxq/pulu-raketti-maxq.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/a/manifest.json",
+      "rootVisuallyReviewed": true,
+      "directOwnerGameDeliveryAuthorized": true,
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-maxq.png",
+      "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-maxq.png",
+      "primaryLocalCopyByteExact": true,
+      "ownerAcceptanceVerified": true,
+      "contentAcceptanceVerified": true,
+      "ownerAcceptanceEvidence": {
+        "ownerMessage": "hyvä, toimita nämä peliin",
+        "reviewedHereInChat": true,
+        "displayedWhiteCompositeCorrespondsToThisRGBAFinalSHA": "d6d604bb37580b54adc32cca56e5ed01d0afdee9b779f1c4dc05b7acc7832b88",
+        "acceptedAt": "2026-10-12T18:01:31.377002+00:00"
+      },
+      "gameIntegrationEligible": true,
+      "generationPrompt": "Use case: illustration-story\nAsset type: one transparent PNG astronaut pigeon sprite for Matkakirja game, pulu-raketti-maxq.png.\nPrimary request: Generate ONE completely new pose of the SAME illustrated pigeon astronaut as the reference, in the Max-Q moment of a rocket ascent. The supplied image is ONLY the identity, drawing-style, helmet, suit, palette, and sprite-scale reference; do not reproduce its pose.\nCanvas/framing: 1024 x 1024 square transparent canvas. One whole character centered, including complete helmet, backpack, feet and tail, with generous empty transparent margins. Match the reference framing: helmet outer diameter approximately 300 pixels; entire character approximately 580 pixels tall. Do not enlarge the character to fill the canvas.\nSubject/style invariants: same grey pigeon, orange iris, white/light-grey EVA suit, round transparent visor, helmet rivets and circular side fitting, dark clean drawn outlines, restrained blue-grey cel-like shading and soft upper-left light, exactly the reference's hand-drawn cartoon style and silhouette identity.\nPOSE: strict SIDE PROFILE, facing image LEFT but face and gaze point UP toward the rocket's direction of travel at the TOP of the image. Imagine an invisible vertical rocket wall at image LEFT. Flatten the belly and chest toward that wall, crouch and tuck the whole body tightly against it under severe airflow; head slightly lowered/tucked but the beak, visor and visible orange squinting eye still direct attention UPWARD along that invisible wall. No eye contact with the camera. The eye has a narrow squinting eyelid, an expression of strained determination. Inside the clear helmet, the grey head feathers are visibly puffed into small curly tufts, a funny feather perm, integrated into the pigeon's head rather than separate decoration.\nARM AND BELT: the image-left wing/mitten is closed in a firm fist at chest height, visibly gripping an INVISIBLE cable point slightly out from the wall; the other, image-right wing/arm is FREE, bent back or slightly outward for balance. Only one hand grips. At the image-left side of the WAIST BELT, draw a clearly visible small metallic attachment ring with its open center distinguishable; this belt ring is the ONLY allowed ring-like attachment outside the helmet. It is not in the hand. Boots tuck toward image-left as in a braced crouching rider, with the feet and tail completely visible.\nBackground: genuine empty transparent alpha-0 background. Shadows and highlights only ON the sprite. No ground shadow.\nAvoid: absolutely NO visible cable, rope, loop held by the hand, cord or tether; NO rocket, vehicle, rocket wall, platform, engine, stars, space scene or any background; NO flags, letters, numbers, text, logo or watermark; no realistic photograph, no new rendering style, no front-facing head, no cropped anatomy, no second character. The left belt attachment ring MUST remain visible."
     },
     {
       "id": "pulu-raketti-irtoaminen",
       "filename": "pulu-raketti-irtoaminen.png",
-      "state": "waiting-for-owner-feedback-no-generation-issued",
-      "generationRequestsIssued": 0
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-irtoaminen/pulu-raketti-irtoaminen.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-irtoaminen/native.png",
+      "originalToolPath": "/Users/samireivinen/.codex/generated_images/01a1313a-8529-7c40-b9ba-4357da7412a4/exec-0893b292-e9ea-4f4d-9de0-aba7bc71ef84.png",
+      "sha256": "c525c5c4ec37d068f11da6d709a1f4e1af91cfd58c7795fa27b0c09d558ce506",
+      "rawSha256": "e4d61fe0066dc5bf5b6e66d125b08e2c216cade2c858d78ca869f77e2331205d",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 321477,
+      "kiinnityspiste_px": [
+        460,
+        599
+      ],
+      "kasi_px": [
+        360,
+        424
+      ],
+      "runkokosketus_px": [
+        399,
+        519
+      ],
+      "runkokosketus_note": "Lähin vasemman rinnan/reiden suunta; vatsa ja rinta eivät osu samaan pystytasoon vasemman kämmenen kanssa. Runkoa ei kuvassa.",
+      "kypara_keskipiste_px": [
+        535,
+        352
+      ],
+      "kypara_halkaisija_px": 299.95,
+      "manualHelmetBoundsFinal": [
+        385,
+        214,
+        685,
+        490
+      ],
+      "coordinateMethod": "Manual native visual bounds and centers, mapped by recorded uniform scale and offset, then final grid inspected",
+      "katse": "Olan yli oikealle taakse, lähinnä vaakasuoraan; katse ei kameraan. Irtoamisasennon poikkeus ylöspäin katsomisesta.",
+      "poikkeamat": [
+        "Vilkuttavan käden vieressä on pääsession tarkastuksen mukaan kolme pientä erillistä piirrettyä liikeviivaa eli ylimääräistä grafiikkaa läpinäkyvällä tausta-alueella. Ei poistettu.",
+        "Pää katsoo taakse oikealle enemmän vaakasuoraan kuin alas kohti putoavaa vaihetta.",
+        "Vatsa/rinta on vasempaan käteen nähden oikeammalla, eikä koko etupuoli osu samaan pystytasoon. Palaute2 sallii vaijerikiinnityksen ilman runkokosketusta.",
+        "Native-taustan heikot alfa 1/255 jäämät säilytetty. Alfa ei retusoitu.",
+        "Kuvan pääsisällön alfa on enimmäkseen 253–254/255, kuten built-in palautti; ei muutettu täysin peittäväksi."
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-irtoaminen/qa.json",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-irtoaminen/prompt.json",
+      "generationRequestsIssued": 1,
+      "generationCallsCompleted": 1,
+      "actualReturnedCounts": {
+        "images": 1
+      },
+      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png",
+      "provenance": {
+        "tool": "built-in image_gen",
+        "generationCalls": 1,
+        "intent": "new pose using approved style reference",
+        "rawSHA256": "e4d61fe0066dc5bf5b6e66d125b08e2c216cade2c858d78ca869f77e2331205d",
+        "promptJSONSHA256": "2cf250ca5d1ac3afd531c1cfbe2b5ae097b9b0d5d3b73d14f6285a5b38b47124",
+        "exportOperation": "uniform whole sprite resampling and placement only",
+        "noPoseShapeFaceRingOrAlphaRetouching": true,
+        "alphaEncoding": "straight RGBA PNG",
+        "colorSpace": "sRGB",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "wholeScale": 0.6786283891547049,
+        "offset": [
+          80,
+          81
+        ],
+        "sourceFiles": [
+          {
+            "path": "posti/fable-codex-pulu-raketti-20261012.md",
+            "sha256": "8546c580239bca91a50345db187c4dee57ffcc252b2f77d5e78a77fe7661c0ec"
+          },
+          {
+            "path": "posti/fable-codex-pulu-raketti-palaute1-20261012.md",
+            "sha256": "4d5351ca373e8140e654d04c7d4c0fb5f84b9ac66b720fc83030fe3c8907adf8"
+          },
+          {
+            "path": "posti/sisaltokirjuri-codex-pulu-raketti-vaijeri-20261012.md",
+            "sha256": "f78990b5ce210aabb5d1a5516cc9c8763989b728c92772e1ee5b777b1aa9cd21"
+          },
+          {
+            "path": "posti/fable-codex-pulu-raketti-palaute2-20261012.md",
+            "sha256": "7c65dea19168d4c63952b44a6027c12012e4c288c95bf0e2d2f4566bc53bd5ba"
+          }
+        ]
+      },
+      "gameIntegratedVerified": false,
+      "rootReview": "pending-final-series-review",
+      "r2": {
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png?t=c525c5c4ec37d068",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png",
+        "sha256": "c525c5c4ec37d068f11da6d709a1f4e1af91cfd58c7795fa27b0c09d558ce506",
+        "bytes": 321477,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalAndCacheBustedGETVerified": true,
+        "readbacks": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png",
+            "http": 200,
+            "sha256": "c525c5c4ec37d068f11da6d709a1f4e1af91cfd58c7795fa27b0c09d558ce506",
+            "bytes": 321477,
+            "mime": "image/png",
+            "corsOrigin": "https://matkakirja.app",
+            "accessControlAllowOrigin": "https://matkakirja.app",
+            "pngDecoded": true,
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA",
+            "sRGBICCVerified": true,
+            "byteExact": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png?verify=c525c5c4ec37d068f11d-1791827503657392000",
+            "http": 200,
+            "sha256": "c525c5c4ec37d068f11da6d709a1f4e1af91cfd58c7795fa27b0c09d558ce506",
+            "bytes": 321477,
+            "mime": "image/png",
+            "corsOrigin": "https://matkakirja.app",
+            "accessControlAllowOrigin": "https://matkakirja.app",
+            "pngDecoded": true,
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA",
+            "sRGBICCVerified": true,
+            "byteExact": true
+          }
+        ]
+      },
+      "deliveryState": "local-and-r2-byte-verified-root-review-pending",
+      "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-irtoaminen/original.png",
+      "allContentConstraintsPassed": false,
+      "contentExceptionsRecorded": true,
+      "technicalVerificationPassed": true,
+      "alphaResiduesRetained": true,
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-irtoaminen/pulu-raketti-irtoaminen.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/manifest.json",
+      "rootVisuallyReviewed": true,
+      "directOwnerGameDeliveryAuthorized": true,
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-irtoaminen.png",
+      "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-irtoaminen.png",
+      "primaryLocalCopyByteExact": true,
+      "ownerAcceptanceVerified": true,
+      "contentAcceptanceVerified": true,
+      "ownerAcceptanceEvidence": {
+        "ownerMessage": "hyvä, toimita nämä peliin",
+        "reviewedHereInChat": true,
+        "displayedWhiteCompositeCorrespondsToThisRGBAFinalSHA": "c525c5c4ec37d068f11da6d709a1f4e1af91cfd58c7795fa27b0c09d558ce506",
+        "acceptedAt": "2026-10-12T18:01:31.377002+00:00"
+      },
+      "gameIntegrationEligible": true,
+      "generationPrompt": "Use case: illustration-story. Asset type: a single transparent PNG game character sprite, pulu-raketti-irtoaminen.png, first rocket-stage separation reaction.\nREFERENCE IMAGE ROLE: the attached approved pigeon astronaut is a STYLE AND CHARACTER IDENTITY REFERENCE ONLY. Generate a completely NEW full-body pose from scratch, not a local edit and not a copy of its old pose. Match this exact hand-drawn cartoon style: the same grey pigeon with orange eye and grey beak, white/light grey EVA suit, dark blue-grey outlines of the same thickness, restrained blue-grey cel shading, round domed visor, helmet rim rivets and round side earpiece, small backpack, feather tail and boot shape. No photorealism, no 3D rendered toy look.\nCANVAS/FRAMING: 1024 by 1024 square canvas with genuinely transparent alpha-zero empty background. Use the reference's scale and roomy framing: outer helmet diameter approximately 300 pixels, complete character roughly 580 pixels high centered near x=520, y=505. All helmet, backpack, gloves, boots and tail fully within canvas with generous empty margins. Single character only.\nPOSE: side view astronaut riding upright against an IMAGINARY vertical rocket surface to image LEFT. Flight direction remains UP in the image. Torso/chest/belly lean toward the imaginary left surface; legs bent riding the rocket. LEFT wing mitten stays closed in a clear gripping fist at chest height toward the left, grasping an INVISIBLE cable. Do not draw the cable. A clearly visible small silver metal ATTACHMENT RING hangs on the LEFT side of the belt at waist height, facing the imaginary rocket, with an open center and no text. This waist ring is the only metal attachment loop.\nSPECIFIC REACTION: happy goodbye to the falling first stage. RIGHT wing is free and waves backward and DOWN, on the right/back side of the body; mitten visible in a waving gesture toward the departing stage, which is off-frame and must not be drawn. The HEAD is turned OVER THE SHOULDER BACKWARD toward image right and slightly DOWN, looking at that off-frame falling stage rather than the viewer. This deliberate backward gaze is the separation pose exception to the normal upward gaze. Joyful pigeon expression. Body still rides with up as travel direction.\nLIGHTING: soft light from upper left, same subdued white, grey and blue-grey palette as reference. Shadows only on the character.\nDO NOT DRAW: rocket, rocket stage, platform, engine, cable, rope, cord, drawn reins, connecting line, cable loop, stars, space, background, cast shadow on the canvas, text, letters, numbers, flags, patches, logos, watermark or frame. Actual transparent background, not a checkerboard drawing. Preserve character identity and approved illustration style."
     },
     {
       "id": "pulu-raketti-tahdet",
       "filename": "pulu-raketti-tahdet.png",
-      "state": "waiting-for-owner-feedback-no-generation-issued",
-      "generationRequestsIssued": 0
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-tahdet/pulu-raketti-tahdet.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-tahdet/native.png",
+      "originalToolPath": "/Users/samireivinen/.codex/generated_images/01a1313a-8529-7c40-b9ba-4357da7412a4/exec-650d9728-ba87-4dc2-b884-8dbeb53df0ca.png",
+      "sha256": "4f6a1cd798b912e522a213e6b07f64db9bebae0479265e30e9f94a1688dbfb7b",
+      "rawSha256": "5a610a31eadee7899bc86654da39b6c97c94d096ad9849e002321bda1a6089e3",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 318044,
+      "kiinnityspiste_px": [
+        496,
+        581
+      ],
+      "kasi_px": [
+        363,
+        473
+      ],
+      "runkokosketus_px": [
+        410,
+        539
+      ],
+      "runkokosketus_note": "Vasemman rinnan lähin pinta, ei todistettu kosketus: vartalo jää kämmenen x-tason oikealle puolelle. Palaute2 hyväksyy kiinnityksen renkaasta ilman runkokosketusta.",
+      "kypara_keskipiste_px": [
+        535,
+        350
+      ],
+      "kypara_halkaisija_px": 299.85,
+      "manualHelmetBoundsFinal": [
+        385,
+        217,
+        685,
+        483
+      ],
+      "coordinateMethod": "Manual native visual bounds and centers, mapped by recorded uniform scale and offset, then final grid inspected",
+      "katse": "Ylävasemmalle sivuun, hiljainen ihmettelevä ilme; silmän pupilli ja nokka ylös, ei katse kameraan.",
+      "poikkeamat": [
+        "Vyörengas näkyy selkeästi, mutta sijoittuu kuvassa vyön keskikohdan oikealle puolelle eikä vaaditulle vasemmalle runkoon päin osoittavalle sivulle. Kiinnityspiste merkitty todellisen renkaan keskelle.",
+        "Vatsa/rinta jää vasemman käden tasosta oikealle. Palaute2 sallii vaijerikiinnityksen ilman runkokosketusta.",
+        "Native-kuvassa on heikkoja alfa 1/255 taustajäämiä (myös native-alareunassa). Ne on säilytetty; eksportin ulkoreunalla alfa 0.",
+        "Kuvan pääsisällön alfa on enimmäkseen 253–254/255, kuten built-in palautti; ei muutettu täysin peittäväksi."
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-tahdet/qa.json",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-tahdet/prompt.json",
+      "generationRequestsIssued": 1,
+      "generationCallsCompleted": 1,
+      "actualReturnedCounts": {
+        "images": 1
+      },
+      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png",
+      "provenance": {
+        "tool": "built-in image_gen",
+        "generationCalls": 1,
+        "intent": "new pose using approved style reference",
+        "rawSHA256": "5a610a31eadee7899bc86654da39b6c97c94d096ad9849e002321bda1a6089e3",
+        "promptJSONSHA256": "79bd2be78200db2a3b9b4b8f67024bfc10a8a541428ad9d777fd4b05af07aa6b",
+        "exportOperation": "uniform whole sprite resampling and placement only",
+        "noPoseShapeFaceRingOrAlphaRetouching": true,
+        "alphaEncoding": "straight RGBA PNG",
+        "colorSpace": "sRGB",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "wholeScale": 0.6547049441786283,
+        "offset": [
+          86,
+          97
+        ],
+        "sourceFiles": [
+          {
+            "path": "posti/fable-codex-pulu-raketti-20261012.md",
+            "sha256": "8546c580239bca91a50345db187c4dee57ffcc252b2f77d5e78a77fe7661c0ec"
+          },
+          {
+            "path": "posti/fable-codex-pulu-raketti-palaute1-20261012.md",
+            "sha256": "4d5351ca373e8140e654d04c7d4c0fb5f84b9ac66b720fc83030fe3c8907adf8"
+          },
+          {
+            "path": "posti/sisaltokirjuri-codex-pulu-raketti-vaijeri-20261012.md",
+            "sha256": "f78990b5ce210aabb5d1a5516cc9c8763989b728c92772e1ee5b777b1aa9cd21"
+          },
+          {
+            "path": "posti/fable-codex-pulu-raketti-palaute2-20261012.md",
+            "sha256": "7c65dea19168d4c63952b44a6027c12012e4c288c95bf0e2d2f4566bc53bd5ba"
+          }
+        ]
+      },
+      "gameIntegratedVerified": false,
+      "rootReview": "pending-final-series-review",
+      "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-tahdet/original.png",
+      "r2": {
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png?t=4f6a1cd798b912e5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png",
+        "sha256": "4f6a1cd798b912e522a213e6b07f64db9bebae0479265e30e9f94a1688dbfb7b",
+        "bytes": 318044,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalAndCacheBustedGETVerified": true,
+        "readbacks": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png",
+            "http": 200,
+            "sha256": "4f6a1cd798b912e522a213e6b07f64db9bebae0479265e30e9f94a1688dbfb7b",
+            "bytes": 318044,
+            "mime": "image/png",
+            "corsOrigin": "https://matkakirja.app",
+            "accessControlAllowOrigin": "https://matkakirja.app",
+            "pngDecoded": true,
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA",
+            "sRGBICCVerified": true,
+            "byteExact": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png?verify=4f6a1cd798b912e522a2-1791827643510515000",
+            "http": 200,
+            "sha256": "4f6a1cd798b912e522a213e6b07f64db9bebae0479265e30e9f94a1688dbfb7b",
+            "bytes": 318044,
+            "mime": "image/png",
+            "corsOrigin": "https://matkakirja.app",
+            "accessControlAllowOrigin": "https://matkakirja.app",
+            "pngDecoded": true,
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA",
+            "sRGBICCVerified": true,
+            "byteExact": true
+          }
+        ]
+      },
+      "deliveryState": "local-and-r2-byte-verified-root-review-pending",
+      "allContentConstraintsPassed": false,
+      "contentExceptionsRecorded": true,
+      "technicalVerificationPassed": true,
+      "alphaResiduesRetained": true,
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/pulu-raketti-tahdet/pulu-raketti-tahdet.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/b/manifest.json",
+      "rootVisuallyReviewed": true,
+      "directOwnerGameDeliveryAuthorized": true,
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-tahdet.png",
+      "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-tahdet.png",
+      "primaryLocalCopyByteExact": true,
+      "ownerAcceptanceVerified": true,
+      "contentAcceptanceVerified": true,
+      "ownerAcceptanceEvidence": {
+        "ownerMessage": "hyvä, toimita nämä peliin",
+        "reviewedHereInChat": true,
+        "displayedWhiteCompositeCorrespondsToThisRGBAFinalSHA": "4f6a1cd798b912e522a213e6b07f64db9bebae0479265e30e9f94a1688dbfb7b",
+        "acceptedAt": "2026-10-12T18:01:31.377002+00:00"
+      },
+      "gameIntegrationEligible": true,
+      "generationPrompt": "Use case: illustration-story. Asset type: one transparent game character sprite, pulu-raketti-tahdet.png, engines-off quiet wonder reaction.\nREFERENCE IMAGE ROLE: approved grey pigeon astronaut, STYLE AND CHARACTER IDENTITY REFERENCE ONLY. Generate a completely NEW pose from scratch. Preserve the same hand-drawn cartoon pigeon, white/light grey EVA suit, dark blue-grey outline thickness, restrained blue-grey cel shading, round visor with helmet rim rivets and circular earpiece, orange eye, grey beak, backpack, feather tail and boots. Keep the approved cartoon identity; no photorealism, no 3D rendering.\nCANVAS: 1024 by 1024 square with real alpha-zero transparent empty background. Anchor framing and size: outer helmet diameter approximately 300 pixels; whole character about 580 pixels high, centered with generous empty margins around all helmet, backpack, feet, hands and tail. Single full-body pigeon astronaut.\nPOSE AND CAMERA: three-quarter FRONT view, camera about 35 degrees from the rocket tip side. Up in the image is the flight direction. An invisible vertical rocket body would be on image LEFT; do not draw it. The body leans chest and belly to image left with bent riding legs. LEFT wing mitten at chest height toward image left holds an INVISIBLE cable in a relaxed but still clearly closed gripping hand. There must be NO visible cable or drawn object in this hand. A distinct small silver metal attachment ring with an open center is clearly visible on the LEFT side of the waist belt, facing the imaginary rocket. No text on the ring. RIGHT wing is FREE and hangs relaxed DOWN on the right side; no wave, no raised arm.\nREACTION AND GAZE: engines have shut off and the pigeon silently marvels at stars which remain OFF-FRAME AND UNDRAWN. Head tilts upward and a little to the side; orange eye looks diagonally UP toward upper-left or upper-side space rather than at the camera. Beak and visor point upward with that head tilt. The expression is quiet, wide-eyed wonder, calm awe, slightly parted beak, relaxed shoulders. No startled scream and no happy waving. The three-quarter camera reveals more face, but the pupil's gaze remains clearly upward away from the viewer.\nLIGHTING: same soft upper-left light and muted white, grey, blue-grey palette as reference; shading on character only.\nNO ADDITIONAL MARKS OR OBJECTS: no stars, sparkles, background, space scene, rocket, stage, platform, engine, rope, cable, cord, line, loops connecting anything, gesture/motion lines, drop shadow on canvas, text, letters, numbers, flags, patches, logos, watermark or frame. Only the pigeon character including the visible waist attachment ring, on true transparent background."
     },
     {
       "id": "pulu-raketti-laskeutuu",
       "filename": "pulu-raketti-laskeutuu.png",
-      "state": "waiting-for-owner-feedback-no-generation-issued",
-      "generationRequestsIssued": 0
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/final/pulu-raketti-laskeutuu.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/native/pulu-raketti-laskeutuu.png",
+      "sha256": "34a4a4c9baf63f6328b23e0ce4e1a2bfc04d863bb5ffa6299b214e0b32b571b2",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 348971,
+      "kiinnityspiste_px": [
+        443,
+        578
+      ],
+      "kasi_px": [
+        344,
+        426
+      ],
+      "runkokosketus_px": null,
+      "runkokosketus_note": "Laskeutumisvaiheen poikkeus: ilmassa lähestyy runkoa, ei vielä kosketa. Jalat edessä vasemmalle.",
+      "kypara_keskipiste_px": [
+        543,
+        353
+      ],
+      "kypara_halkaisija_px": 298,
+      "measurementMethod": "Manually inspected final 1024 image; outer helmet horizontal diameter including ear fitting estimated from [394,218,692,488], uncertainty about 5px.",
+      "katse": "Ylös ja vasemmalle pitkin kuvitteellista runkoa, ei kameraan.",
+      "poikkeamat": [
+        "Säilytetty 1707 irrallista alfa 1/255 -pikseliä yli 4 px etäisyydellä alfa >=16 -sisällöstä; ei alfaretusointia.",
+        "Näkyvän hahmon alfa >=16 -korkeus 540 px, noin 40 px alle 580 px tavoitteen; kypärä mitattuna noin 298 px ja sama mittakaava kuin ankkurissa."
+      ],
+      "sceneQA": {
+        "wholeCharacterFits": true,
+        "styleMatchesAnchor": true,
+        "leftPalmOpenReaching": true,
+        "otherWingSpreadForBraking": true,
+        "feetForwardLeft": true,
+        "beltMetalRingVisible": true,
+        "gazeUp": true,
+        "noVisibleCableOrRocket": true,
+        "noBackgroundOrTextLogosFlags": true,
+        "whiteAndDarkCompositesInspected": true,
+        "edgesInspected": true
+      },
+      "generationRequestsIssued": 1,
+      "actualReturnedCounts": 1,
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/pulu-raketti-laskeutuu.prompt.json",
+      "export": {
+        "id": "pulu-raketti-laskeutuu",
+        "generationMode": "built-in image_gen",
+        "generationCalls": 1,
+        "originalPath": "/Users/samireivinen/.codex/generated_images/01a1313a-919c-7f30-b4cd-c78671f4c2c6/exec-bd75fca7-2b18-4504-8bfc-7588081b90c0.png",
+        "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/native/pulu-raketti-laskeutuu.png",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "manualHelmetBounds": [
+          445,
+          198,
+          895,
+          605
+        ],
+        "manualHelmetBoundsMethod": "Visual estimate of outer helmet, including ear fitting; coordinates on native pixels",
+        "wholeScale": 0.6666666666666666,
+        "offset": [
+          96,
+          85
+        ],
+        "resampledCanvasSize": [
+          836,
+          836
+        ],
+        "finalSize": [
+          1024,
+          1024
+        ],
+        "helmetBoundsFinal": [
+          392.67,
+          217.0,
+          692.67,
+          488.33
+        ],
+        "helmetDiameterFinal": 300.0,
+        "pixelContentChangedOnlyUniformResampling": true,
+        "alphaRetouched": false,
+        "poseRetouched": false,
+        "exportMethod": "Uniform resize of entire native RGBA canvas with LANCZOS; unmasked paste onto empty transparent 1024 canvas; sRGB and provenance metadata embedded",
+        "rawSha256": "3070b26888d247b0750104b8ade32a9c63fc6b34eb412ec04997e06d3c7eeb38",
+        "exportedAt": "2026-10-12T17:51:13.923946+00:00"
+      },
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/QA/pulu-raketti-laskeutuu/technical.json",
+      "r2": {
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png?t=34a4a4c9baf63f63",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png",
+        "sha256": "34a4a4c9baf63f6328b23e0ce4e1a2bfc04d863bb5ffa6299b214e0b32b571b2",
+        "bytes": 348971,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T17:51:39.627070+00:00",
+        "checks": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png",
+            "http": 200,
+            "bytes": 348971,
+            "sha256": "34a4a4c9baf63f6328b23e0ce4e1a2bfc04d863bb5ffa6299b214e0b32b571b2",
+            "byteExact": true,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "origin": "https://matkakirja.app",
+            "pngFormat": "PNG",
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA"
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png?t=34a4a4c9baf63f63",
+            "http": 200,
+            "bytes": 348971,
+            "sha256": "34a4a4c9baf63f6328b23e0ce4e1a2bfc04d863bb5ffa6299b214e0b32b571b2",
+            "byteExact": true,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "origin": "https://matkakirja.app",
+            "pngFormat": "PNG",
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA"
+          }
+        ],
+        "canonicalAndCacheBustedVerified": true
+      },
+      "readyForRootReview": true,
+      "gameIntegrated": false,
+      "originalArchivePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/original/pulu-raketti-laskeutuu.png",
+      "originalToolPath": "/Users/samireivinen/.codex/generated_images/01a1313a-919c-7f30-b4cd-c78671f4c2c6/exec-bd75fca7-2b18-4504-8bfc-7588081b90c0.png",
+      "rawSha256": "3070b26888d247b0750104b8ade32a9c63fc6b34eb412ec04997e06d3c7eeb38",
+      "sRGBProfileDescription": "sRGB built-in",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/final/pulu-raketti-laskeutuu.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/manifest.json",
+      "rootVisuallyReviewed": true,
+      "directOwnerGameDeliveryAuthorized": true,
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png",
+      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-laskeutuu.png",
+      "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-laskeutuu.png",
+      "primaryLocalCopyByteExact": true,
+      "ownerAcceptanceVerified": true,
+      "contentAcceptanceVerified": true,
+      "ownerAcceptanceEvidence": {
+        "ownerMessage": "hyvä, toimita nämä peliin",
+        "reviewedHereInChat": true,
+        "displayedWhiteCompositeCorrespondsToThisRGBAFinalSHA": "34a4a4c9baf63f6328b23e0ce4e1a2bfc04d863bb5ffa6299b214e0b32b571b2",
+        "acceptedAt": "2026-10-12T18:01:31.377002+00:00"
+      },
+      "gameIntegrationEligible": true,
+      "generationPrompt": "Use case: illustration-story\nAsset type: transparent RGBA astronaut pigeon game sprite, pulu-raketti-laskeutuu.png, image 7 of an established series.\nPrimary request: Generate ONE completely new pose of the SAME Pulu pigeon astronaut shown in reference image 1. Reference image 1 is STYLE AND CHARACTER IDENTITY ONLY, not an edit target. Match its gray pigeon, orange eye, white/light gray EVA suit, round blue-gray glass helmet, helmet rivets, circular ear fitting, backpack, feathers, bold dark outlines and restrained blue-gray cel shading exactly. Keep the approved illustrated drawing style.\n\nPose and viewpoint: side profile landing/braking in midair toward an INVISIBLE vertical rocket surface on the LEFT of the canvas, before ignition. Both wings/arms are spread to brake; the LEFT glove toward the invisible surface is OPEN and reaches forward to grab, not yet gripping. The other/right wing extends freely backward/right for braking balance. Both legs and boots thrust forward LEFT toward that invisible vertical surface. The belly/chest faces left and is approaching the surface; this is the landing exception, so there is an airborne gap before contact. Head high, pigeon beak, face, visor and gaze tilted UP along the invisible rocket toward the TOP edge, never facing or looking at the viewer. The travel direction is always UP. Alert concentrated but curious landing expression.\nAttachment: a clearly visible small METALLIC CLOSED RING/CARABINER fitting on the LEFT side of the WAIST BELT facing the invisible rocket; its open center is visible. This small metal hardware ring is mandatory. No cable is attached to it in the drawing; the game adds the cable. The left open palm is reaching to catch the invisible cable point near chest height.\nComposition/framing: 1024 x 1024 square TRANSPARENT canvas, exactly one whole character. Match reference anchor scale: OUTER helmet diameter approximately 300 pixels, helmet centered roughly [540,350], whole character roughly 580 pixels high. Keep the entire helmet, backpack, spread arms, boots, and tail within generous transparent margins. Use reference proportions and silhouette identity, allowing only the requested new landing pose.\nLighting: the same soft upper-left light and restrained gray/blue-gray shadows as the approved anchor.\nStrict constraints: actual empty transparent background with alpha zero. No rocket or surface, no platform, engine, scenery, space, stars, glow cloud, cast shadow outside the sprite, text, letters, numerals, flags, logos or watermark. Do not draw any wire, cable, tether, rope, dangling loop or line between hands/belt and empty space. The small visible METAL BELT RING is the only ring attachment hardware. All shading stays ON the character. Straight RGBA sRGB PNG. Return just one image."
     },
     {
       "id": "pulu-raketti-pito-profiili-yo",
       "filename": "pulu-raketti-pito-profiili-yo.png",
-      "state": "waiting-for-owner-feedback-no-generation-issued",
-      "generationRequestsIssued": 0
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/final/pulu-raketti-pito-profiili-yo.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/native/pulu-raketti-pito-profiili-yo.png",
+      "sha256": "6030360e22ebdedb98fe3c04a6a214dbd2226f9b982c38ca473f5589b4e6c658",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 325513,
+      "kiinnityspiste_px": [
+        525,
+        601
+      ],
+      "kasi_px": [
+        385,
+        437
+      ],
+      "runkokosketus_px": [
+        425,
+        565
+      ],
+      "runkokosketus_note": "Mitattu rinnan/vatsan etureunan kohta; jää noin 40 px oikealle käden keskikohdan x-tasosta. Ei väitetä samaa pystytasoa toteutuneeksi.",
+      "kypara_keskipiste_px": [
+        544,
+        354
+      ],
+      "kypara_halkaisija_px": 297,
+      "measurementMethod": "Manually inspected final 1024 image; outer helmet horizontal diameter including ear fitting estimated from [395,218,692,489], uncertainty about 5px.",
+      "katse": "Ylös ja vasemmalle pitkin kuvitteellista runkoa, ei kameraan.",
+      "poikkeamat": [
+        "Vyörengas näkyy vyön etuosan keskellä [525,601], ei selvästi vasemmassa ulkoreunassa.",
+        "Rinnan ja vatsan etureuna [425,565] jää noin 40 px käden keskikohdan [385,437] pystytasosta oikealle; koko etupuolen painautuminen samaan tasoon ei täysin toteudu.",
+        "Säilytetty 397 irrallista alfa 1/255 -pikseliä yli 4 px etäisyydellä alfa >=16 -sisällöstä; ei alfaretusointia."
+      ],
+      "sceneQA": {
+        "wholeCharacterFits": true,
+        "styleMatchesAnchor": true,
+        "leftPalmGrippingInvisibleCable": true,
+        "otherWingFreeForBalance": true,
+        "bootsBracedLeft": true,
+        "beltMetalRingVisible": true,
+        "beltRingClearlyAtLeftSide": false,
+        "bodyFrontOnSamePlaneAsHand": false,
+        "gazeUp": true,
+        "warmLightBelowAndSideOnSprite": true,
+        "noVisibleCableOrRocket": true,
+        "noBackgroundOrTextLogosFlags": true,
+        "whiteAndDarkCompositesInspected": true,
+        "edgesInspected": true
+      },
+      "generationRequestsIssued": 1,
+      "actualReturnedCounts": 1,
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/pulu-raketti-pito-profiili-yo.prompt.json",
+      "export": {
+        "id": "pulu-raketti-pito-profiili-yo",
+        "generationMode": "built-in image_gen",
+        "generationCalls": 1,
+        "originalPath": "/Users/samireivinen/.codex/generated_images/01a1313a-919c-7f30-b4cd-c78671f4c2c6/exec-73d1fa47-6432-4f75-b66a-8e39e21bab15.png",
+        "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/native/pulu-raketti-pito-profiili-yo.png",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "manualHelmetBounds": [
+          446,
+          211,
+          865,
+          592
+        ],
+        "manualHelmetBoundsMethod": "Visual estimate of outer helmet, including ear fitting; coordinates on native pixels",
+        "wholeScale": 0.7161084529505582,
+        "offset": [
+          74,
+          65
+        ],
+        "resampledCanvasSize": [
+          898,
+          898
+        ],
+        "finalSize": [
+          1024,
+          1024
+        ],
+        "helmetBoundsFinal": [
+          393.38,
+          216.1,
+          693.43,
+          488.94
+        ],
+        "helmetDiameterFinal": 300.0494417862839,
+        "pixelContentChangedOnlyUniformResampling": true,
+        "alphaRetouched": false,
+        "poseRetouched": false,
+        "exportMethod": "Uniform resize of entire native RGBA canvas with LANCZOS; unmasked paste onto empty transparent 1024 canvas; sRGB and provenance metadata embedded",
+        "rawSha256": "fcefca3979f0ab3c3e06f6e396dbe7b7e50e6456d2355c6a23e81fbee5978881",
+        "exportedAt": "2026-10-12T17:53:39.004715+00:00"
+      },
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/QA/pulu-raketti-pito-profiili-yo/technical.json",
+      "r2": {
+        "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png?t=6030360e22ebdedb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png",
+        "sha256": "6030360e22ebdedb98fe3c04a6a214dbd2226f9b982c38ca473f5589b4e6c658",
+        "bytes": 325513,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T17:53:41.114354+00:00",
+        "checks": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png",
+            "http": 200,
+            "bytes": 325513,
+            "sha256": "6030360e22ebdedb98fe3c04a6a214dbd2226f9b982c38ca473f5589b4e6c658",
+            "byteExact": true,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "origin": "https://matkakirja.app",
+            "pngFormat": "PNG",
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA"
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png?t=6030360e22ebdedb",
+            "http": 200,
+            "bytes": 325513,
+            "sha256": "6030360e22ebdedb98fe3c04a6a214dbd2226f9b982c38ca473f5589b4e6c658",
+            "byteExact": true,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "origin": "https://matkakirja.app",
+            "pngFormat": "PNG",
+            "dimensions": [
+              1024,
+              1024
+            ],
+            "mode": "RGBA"
+          }
+        ],
+        "canonicalAndCacheBustedVerified": true
+      },
+      "readyForRootReview": true,
+      "gameIntegrated": false,
+      "firstCandidateDeliveredWithExceptionsPerOrder": true,
+      "originalArchivePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/original/pulu-raketti-pito-profiili-yo.png",
+      "originalToolPath": "/Users/samireivinen/.codex/generated_images/01a1313a-919c-7f30-b4cd-c78671f4c2c6/exec-73d1fa47-6432-4f75-b66a-8e39e21bab15.png",
+      "rawSha256": "fcefca3979f0ab3c3e06f6e396dbe7b7e50e6456d2355c6a23e81fbee5978881",
+      "sRGBProfileDescription": "sRGB built-in",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/final/pulu-raketti-pito-profiili-yo.png",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/pulu-raketti-20261012/loput-kiireellinen/c/manifest.json",
+      "rootVisuallyReviewed": true,
+      "directOwnerGameDeliveryAuthorized": true,
+      "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png",
+      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili-yo.png",
+      "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-profiili-yo.png",
+      "primaryLocalCopyByteExact": true,
+      "ownerAcceptanceVerified": true,
+      "contentAcceptanceVerified": true,
+      "ownerAcceptanceEvidence": {
+        "ownerMessage": "hyvä, toimita nämä peliin",
+        "reviewedHereInChat": true,
+        "displayedWhiteCompositeCorrespondsToThisRGBAFinalSHA": "6030360e22ebdedb98fe3c04a6a214dbd2226f9b982c38ca473f5589b4e6c658",
+        "acceptedAt": "2026-10-12T18:01:31.377002+00:00"
+      },
+      "gameIntegrationEligible": true,
+      "generationPrompt": "Use case: illustration-story\nAsset type: transparent RGBA astronaut pigeon game sprite, pulu-raketti-pito-profiili-yo.png, image 8 of an established series.\nPrimary request: Generate ONE complete new illustrated sprite of the SAME Pulu pigeon astronaut in the approved reference image 1, in side-profile riding/gripping pose at night. Reference image 1 is STYLE AND CHARACTER IDENTITY ONLY, not an edit target. Match its gray pigeon face, orange eye, white/light gray EVA suit, round blue-gray glass helmet, rivets, circular ear fitting, backpack, gray tail feathers, bold dark outlines, drawing proportions and restrained cel shading exactly. Preserve this cartoon drawing style and silhouette identity.\n\nPose and direction: side profile riding an INVISIBLE upright rocket surface on the LEFT. Travel direction is always UP toward the TOP edge. Belly and chest lean/push LEFT, toward the same imaginary vertical surface plane as the gripping hand and boot soles; bring the chest and belly visibly close to that left plane, rather than sitting back with a large gap. Head stays high; visor and beak tilt UP and the orange eye gazes UP along the invisible rocket toward its tip, never at the viewer. Determined, gently excited upward-looking face.\nThe LEFT glove on the rocket side firmly closes in a readable rope-holding fist at chest height, gripping an INVISIBLE cable point a little off that imaginary left surface. Draw only the gripping glove, absolutely no actual cable. The other/right arm is FREE and extends somewhat up/back to the right for riding balance. Both boots are braced toward the LEFT imaginary upright surface.\nMandatory attachment: a clearly visible small CLOSED METALLIC RING or carabiner eye on the LEFT side of the WAIST BELT, facing the invisible rocket. The metal ring has a visible open center and is not covered by a hand or arm. No line emerges from the ring; the game will draw the cable.\nLighting exception for this sprite: NIGHT on the launchpad. The rest of the scene is dim, so the CHARACTER has subdued cool blue-gray shadow planes and warm amber floodlight illumination arriving from BELOW and the lower-left SIDE. Warm highlights rise along the lower left boots, belly, glove and helmet underside; preserve identifiable pale suit colors and dark outlined illustration. Shadow and warm light are ON THE SPRITE ONLY, never in the background. No drawn floodlight or glow cloud.\nComposition/framing: exactly one whole character on a 1024 x 1024 square genuinely TRANSPARENT canvas. Match the approved reference anchor scale and framing: outer helmet diameter approximately 300 pixels, its center around [540,350], whole character approximately 580 pixels high. Entire helmet, free arm, backpack, boots and tail fit with generous empty margins.\nStrict constraints: empty alpha-zero background. No rocket, vertical surface, launchpad, platform, engine, background, stars or space scenery. No cable, rope, wire, tether, dangling loop or connecting stroke anywhere. The small METAL BELT RING is the mandatory attachment hardware and is allowed. No text, letters, numbers, logos, flags, watermark, background shadow or light halo. Straight RGBA sRGB PNG. One image only."
     }
   ],
-  "feedbackSource": {
-    "path": "posti/fable-codex-pulu-raketti-palaute1-20261012.md",
-    "commit": "d12b2047b917f4a6bda8ea5c1ae2b88de0684eb0",
-    "blob": "271c8e8b463eb2c3bdf4573d8df490c7809eb951",
-    "sha256": "4d5351ca373e8140e654d04c7d4c0fb5f84b9ac66b720fc83030fe3c8907adf8",
-    "readInFull": true,
-    "receiverAndEditorAcceptanceOfFirstImage": true,
-    "ownerPersonalAcceptanceVerified": false
-  },
-  "firstImageEditorAccepted": true,
-  "ownerPersonalAcceptanceVerified": false
+  "updatedAt": "2026-10-12T18:04:47.162139+00:00",
+  "mailboxCommit": "252d53159e0391ced0b88e94aa2c98259a55e38c",
+  "normalPushConfirmed": true,
+  "productionActive": false,
+  "pointSchemaCorrectionTaskNumber": 82,
+  "pointSchemaCorrectionPublicMailboxConfirmed": false,
+  "imagePNGsUnchanged": true,
+  "directOwnerGameDeliveryAuthorization": "pulun kuvat voi toimittaa suoraan peliin",
+  "sixNewImageCount": 6,
+  "sourceFeedback2Path": "posti/fable-codex-pulu-raketti-palaute2-20261012.md",
+  "primaryLocalByteExact": true,
+  "ownerAcceptanceVerified": false,
+  "ownerAcceptanceVerifiedForNewSix": true,
+  "ownerAcceptanceOfImages1and2": "editor approval preserved from source feedback; not relabelled personal owner acceptance",
+  "contentExceptionsPreserved": true,
+  "pointSchemaCorrectionIsStaged": false,
+  "generationRequestsIssued": 8,
+  "rootAllEightReadbacksByteExact": true,
+  "ownerAcceptedNewSixMessage": "hyvä, toimita nämä peliin",
+  "sourceFiles": [
+    {
+      "path": "posti/fable-codex-pulu-raketti-20261012.md",
+      "sha256": "8546c580239bca91a50345db187c4dee57ffcc252b2f77d5e78a77fe7661c0ec"
+    },
+    {
+      "path": "posti/fable-codex-pulu-raketti-palaute1-20261012.md",
+      "sha256": "4d5351ca373e8140e654d04c7d4c0fb5f84b9ac66b720fc83030fe3c8907adf8"
+    },
+    {
+      "path": "posti/sisaltokirjuri-codex-pulu-raketti-vaijeri-20261012.md",
+      "sha256": "f78990b5ce210aabb5d1a5516cc9c8763989b728c92772e1ee5b777b1aa9cd21"
+    },
+    {
+      "path": "posti/fable-codex-pulu-raketti-palaute2-20261012.md",
+      "sha256": "7c65dea19168d4c63952b44a6027c12012e4c288c95bf0e2d2f4566bc53bd5ba"
+    }
+  ],
+  "noMainMergeOrGamePublicationByCodex": true
 }
