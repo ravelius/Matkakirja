@@ -1842,6 +1842,8 @@ const SHELL = [
   './assets/kartat/ljubljana-varikartta.png',
   './assets/kartat/kosice-keskusta.png',
   './assets/kartat/kosice-varikartta.png',
+  './assets/kartat/sisilia-keskusta.png',
+  './assets/kartat/sisilia-varikartta.png',
   './assets/kartat/lappi-keskusta.png',
   './assets/kartat/lappi-varikartta.png',
   './assets/kartat/valletta-keskusta.png',
