@@ -17,3 +17,10 @@ Tarvitaan viisi ääntä, tunnukset sytytys, maxq, irtoaminen, toinen-vaihe, hil
 - Äänisivun julkaisu: aanisivu-julkaise.zsh kopioituna scratchpadiin; aja sieltä (ei _valmiit-kansiosta).
 - Lyria: avain ~/.zshrc (ei ~/.matkakirja-avaimet-koodaus.zsh, antoi API_KEY_INVALID); virhemerkinnät kehotteet.json:ssa poistettava ennen uusintaa.
 - Pelikoodarin istunto pidätti aiempia viestejä (lupatila), SendMessage toimii nyt.
+
+## Päivitys 12.10.2026 klo ~10.4x
+- Valmiit ja viedyt erät 12.10.: kaari 184 (18 luentaa, v2-nimet, -14,6 LUFS), taidehallin äänimaisema + lähestyminen ulkoa, ISS-raketti v1–v7 (alusta mukana), keittiö yö v1/v1b/v2/v2b ja päivä v1/v1b (Suomen linnut, Yle-lokit CC BY), fokus-luennat + aikaleimat (5 kaupunkia), nopeat 36+5, Moskova -nopea-2.
+- Pysyvät luvat: omistaja 12.10.: saa ladata vapaasti lisensoituja (CC0, CC BY, PD) aineistoja; Freesoundin avain vain Actionsissa (aanihaku.yml, tila ehdokkaat, haku, lahteet=freesound), Commons /w/api.php kuvaavalla UA:lla.
+- Viestiraja: SendMessage pysähtyy ~10 viestiin; PT on pyytänyt tulokset vuoron loppuun (ei varakanavaa), kunnes käyttäjä kirjoittaa.
+- UUSI SITOVA SÄÄNTÖ (omistaja 12.10. klo 10.3x, PT): kun on omistajalle kysymys/pyyntö joka vaatii HÄNEN toimiaan (lupaikkuna, vastaus, kirjautuminen, ostos, päätös), nosta se heti Asemataululle: ArtifactData set, url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix, kokoelma "talo", doc_id "toimi-aanittaja", data {rooli:"Äänittäjä", kysymys:"<yksi rivi>", ts:<ms>}; epäonnistuessa "VAATII TOIMIA: …" vuoron loppuun. Hoidettuna poista dokumentti (get → delete if_version).
+- Kuuntelematta (kaikki erät): äänet on tarkistettu vain mittareilla (ääniportti, häiriötarkistus, STT raketti v6); aitoutta ei ole kuunneltu.
