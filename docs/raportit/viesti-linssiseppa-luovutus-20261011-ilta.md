@@ -1,10 +1,30 @@
-# Linssisepän luovutus 11.10.2026 ilta (päivitetty 12.10. 09.3x)
+# Linssisepän luovutus 11.10.2026 ilta (päivitetty 12.10. 18.4x)
 
 Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto (paikalliset haarat, ei pushia). Simu- ja käännösvuorot vain Julkaisijalta;
 **LS1 = käännöslinja 2** (`PROTO_LINJA=2`), linja 1 vain Julkaisijan luvalla (ilman PROTO_LINJA:a). Ajoskriptit ja skenaariot:
 proto-3d/tyokalut/linssiseppa-ajot/ (ketju-*.zsh, sk-*.txt; portit `<nimi>.nyt`). Ketjut irrotettuna `perl -MPOSIX=setsid …`.
 HUOM: kaksi ketjua samalla iPhonella (BD64C8E4) ei saa ajaa yhtä aikaa – järjestä portit peräkkäin.
 Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-testit/kaanna.sh` (EI zsh), `zsh tyokalut/tarkista.sh`.
+
+## Lisäys 12.10. 18.4x (juna 184; worktreet siivottu: jäljellä sali3, lahestyminen, katso2, pallokierros, pallokisa, maav2)
+- **Taidehalli v5b** (linssiseppa/museo-sali3-184 **618e606dd**: 810084fc5 sali-v5b + UudenLeivottuKehysvarjo = false, sokkeli_tumma
+  karheus 0,55; 75762cdf2 taidemuseo julkaistu, pois KESKENERÄISET, PT): ämpärissä taidemuseo/alankomaat/sali-v5b/ (Julkaisija 18.10).
+  Julkaisija kääntää 618e606dd + 47ce13980 linjalla 2 → lokit/linssiseppa-museo-sali3-184 → `zsh ajo-sali5c.zsh <sha>` (iPad-simu,
+  sk-sali4-184 NYT v2g | UUSI v5b) → PT:lle NYT | UUSI | OIKEA (+ Yövartion lähikuva), kolmikko.py, < 8000 px. Blender-esikuvat
+  (_valmiit/taidemuseo-alankomaat-v3/esikatselu/v5b/) EIVÄT mene omistajalle.
+- **Lähestyminen 184** **47ce13980**: leijunta korkealla kunnes laatat 80 % (LaskuAste), enintään 15 s kalvon avauksesta
+  (LeijuntaMaxS, QA "museo lahestyminen aikaraja <s>"); iPad-mittaus 000654cba: 45 % 6 s:ssa, 65 % 23 s:ssa. Esihaku EI tehty
+  (vaatisi piilotetun toisen laattanäkymän = tuplamuisti) → oma mitattava erä myöhemmin, PT tietää.
+- **Katso2** 96973b93e (master yhdistetty, ui.fi.json --ours: superset) käännetty 1e4e6a090; ketju-katso2-184 odottaa simu-katso2.nyt.
+- **Pallokierros Praha + Lontoo** käännetty 0cab54294; ketju-pallokierros-184 odottaa simu-pallokierros.nyt (kuormaportti).
+- **Pallokisa 184** linssiseppa/pallokisa-184 (wt proto-linssiseppa-pallokisa) **cfb100db5** (⊃ Pelikoodari 9d2567502): kisapallot,
+  keräyslento, nippu (LS2:n köysi), kompassi, kaasupullot, värilliset jäsenpallot + PallokisaUi-kyltit, kaasuraja vapaaseen lentoon
+  (vain vaaka), häivytys 25–60 m (ElavaKohdeHaivytys, kääntämättä), koristepallojen väistö, KilpailuKaynnissa-estot; QA
+  `opas kisa alku|loppu|tila|keraa <i>|jasen <väri> [m]|jasenet pois|lippu 0|1`. Linssit 1549. Simu ketju-pallokisa-184 +
+  kuormaportti-pallokisa jonossa (Julkaisijalta kaannos-pallokisa.nyt). Avoin: nipun kiinnityspiste kuvasta, piilotettujen
+  koristepallojen polttimen ääni.
+- **LT-savukierros 183**: kipin ☰ › Poistu → vahvistus "Haluatko varmasti poistua kuumailmapallosta?" (PT hyväksyi) = NUI;
+  Yövartion pieni rivi = omistajan toive (edellinen/seuraava teos), ei vika.
 
 ## Kuitattu junaan 182 ja SHA Natiivisepällä
 - **Alkulento** linssiseppa/alkulento-kaupungit-182 **8b6ac5542**: Ateena, Pariisi (ohitus Picardiessa), Tukholma; taivas korkeuden
