@@ -256,6 +256,10 @@ function kaupunkilehdenNosto(kaupunki, tunnus, paakartalla) {
     if (lahde.kuva?.[k] != null) nosto[k] = lahde.kuva[k];
   }
   if (lahde.juttu.galleria?.length) nosto.galleria = lahde.juttu.galleria;
+  // "Lue lisää aiheesta" (SK #4524 palautti 13.9. edeltävät linkit): merkkijono tai lista; lukijat (web ja natiivi)
+  // odottavat yhtä artikkelia, joten listasta ensimmäinen.
+  const wiki = Array.isArray(lahde.juttu.wiki) ? lahde.juttu.wiki.find((w) => typeof w === 'string' && w) : lahde.juttu.wiki;
+  if (typeof wiki === 'string' && wiki) nosto.wiki = wiki;
   for (const k of KAUPUNKILEHDEN_AANIKENTAT) {
     if (lahde.juttu[k] != null) nosto[k] = lahde.juttu[k];
   }
