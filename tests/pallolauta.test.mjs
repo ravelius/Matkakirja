@@ -39,6 +39,7 @@ const {
 } = await import('../js/pallolauta/lauta.js');
 const { PALLO_FOV } = await import('../js/pallolauta/kamera.js');
 const { Game } = await import('../js/game.js');
+const { FLIGHT_PRICE } = await import('../js/rules.js');
 const { packById } = await import('../js/pack.js');
 const { PALLO_SUKELLUSLEVEYS } = await import('../js/pallo.js');
 const { MERKIN_KORKEUS } = await import('../js/pallolauta/merkit.js');
@@ -1208,6 +1209,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
    * kaupunkirajaus lukee näytettävät merkit.
    */
   kaupunkiin('berliini');
+  peli.player.money = FLIGHT_PRICE; // juna 183: alkuraha 300 ei riitä lentoon (350)
   const berliininLennot = peli.airportDestinations();
   assert.ok(berliininLennot.length > 0, 'Berliinistä pitää olla lentoja mitattavaksi');
   const lentonakymaUi = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'air', matkaSessio: 'berliini' });

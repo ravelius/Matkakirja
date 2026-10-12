@@ -1,0 +1,946 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "kaupunki": "lontoo",
+  "huomio": "Lontoon pallokierros (PT 12.10.2026; Ateenan tilalle Praha lakiriskin vuoksi). Kertoja ja kuvat tarkistettu itsenäisellä Sonnet-kierroksella; ääni vasta omistajan luvalla (Äänittäjä), toteutus LS1. Kuvat vain PD/CC0/CC BY.",
+  "muistettavat": [
+    "Lontoo kasvoi Thamesin varrelle: joki kulkee koko kierroksen läpi lännestä itään Westminsteristä Greenwichiin.",
+    "Kaupungissa on kaksi keskustaa: Westminster (valta: parlamentti, Abbey, palatsi) ja City (kauppa ja usko: St Paulin katedraali), ja itäisenä porttina Tower ja Tower Bridge.",
+    "Lontoo on rakennettu uudelleen tulesta ja sodasta: vuoden 1666 suuren palon jälkeen Wrenin St Paul, vuoden 1834 palon jälkeen Barryn ja Pugin palatsi."
+  ],
+  "avaus": {
+    "virkkeet": [
+      "Tervetuloa Lontooseen.",
+      "Ylhäältä kaupunki näyttää laajalta kivimereltä, jonka halki Thames mutkittelee lännestä itään ja jonka rannoille on kasvanut kaksi keskustaa, Westminster ja City.",
+      "Kierros alkaa Westminsteristä, jossa parlamentti kokoontuu joen rannalla palatsissa, jonka kellotorni tunnetaan kaikkialla."
+    ],
+    "kerronta": "Tervetuloa Lontooseen. Ylhäältä kaupunki näyttää laajalta kivimereltä, jonka halki Thames mutkittelee lännestä itään ja jonka rannoille on kasvanut kaksi keskustaa, Westminster ja City. Kierros alkaa Westminsteristä, jossa parlamentti kokoontuu joen rannalla palatsissa, jonka kellotorni tunnetaan kaikkialla."
+  },
+  "loppu": {
+    "kerronta": "Kierros päättyy Greenwichin kukkulalle, josta nollameridiaani jatkaa pohjoisesta etelään koko maapallon ympäri, ja alhaalla virtaa sama joki, jonka varrelle Lontoo kasvoi."
+  },
+  "metrokartta": [
+    {
+      "nro": 1,
+      "nimi": "Westminsterin palatsi ja Big Ben",
+      "selite": "Westminsterin palatsi ja Elizabeth Tower kohoavat Thamesin rannalla"
+    },
+    {
+      "nro": 2,
+      "nimi": "Westminster Abbey",
+      "selite": "Westminster Abbey seisoo Westminsterin palatsin vieressä"
+    },
+    {
+      "nro": 3,
+      "nimi": "Buckinghamin palatsi",
+      "selite": "Buckinghamin palatsi on The Mall -kadun päässä"
+    },
+    {
+      "nro": 4,
+      "nimi": "Trafalgar Square",
+      "selite": "Trafalgar Squarella kohoaa keskellä korkea Nelsonin pylväs."
+    },
+    {
+      "nro": 5,
+      "nimi": "St Paulin katedraali",
+      "selite": "St Paulin katedraalin valtava kupoli oli yli kaksisataa vuotta Lontoon korkein rakennus"
+    },
+    {
+      "nro": 6,
+      "nimi": "Lontoon Tower",
+      "selite": "Lontoon Towerin keskellä kohoaa vaalea Valkoinen torni"
+    },
+    {
+      "nro": 7,
+      "nimi": "Tower Bridge",
+      "selite": "Tower Bridge on Thamesin ylittävä silta"
+    },
+    {
+      "nro": 8,
+      "nimi": "Greenwichin kuninkaallinen observatorio",
+      "selite": "Greenwichin kuninkaallinen observatorio seisoo joen yllä kohoavan puiston kukkulalla"
+    }
+  ],
+  "reitti": [
+    {
+      "mista": "Westminsterin palatsi ja Big Ben (Elizabeth Tower)",
+      "mihin": "Westminster Abbey",
+      "matka_m": 222,
+      "tyyppi": "kaari"
+    },
+    {
+      "mista": "Westminster Abbey",
+      "mihin": "Buckinghamin palatsi",
+      "matka_m": 1028,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Buckinghamin palatsi",
+      "mihin": "Trafalgar Square",
+      "matka_m": 1244,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Trafalgar Square",
+      "mihin": "St Paulin katedraali",
+      "matka_m": 2155,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "St Paulin katedraali",
+      "mihin": "Lontoon Tower",
+      "matka_m": 1651,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Lontoon Tower",
+      "mihin": "Tower Bridge",
+      "matka_m": 300,
+      "tyyppi": "kaari"
+    },
+    {
+      "mista": "Tower Bridge",
+      "mihin": "Greenwichin kuninkaallinen observatorio",
+      "matka_m": 5973,
+      "tyyppi": "nopea"
+    }
+  ],
+  "pysahdykset": [
+    {
+      "nro": 1,
+      "nimi": "Westminsterin palatsi ja Big Ben (Elizabeth Tower)",
+      "q": "Q62408 / Q41225",
+      "lat": 51.49944,
+      "lon": -0.12417,
+      "lat_torni": 51.50067,
+      "lon_torni": -0.12457,
+      "H_m": 96,
+      "H_lahteet": [
+        "https://virtualtours-assets.parliament.uk/elizabeth-tower/index.html",
+        "https://en.wikipedia.org/wiki/Big_Ben"
+      ],
+      "virkkeet": [
+        "Westminsterin palatsi ja Elizabeth Tower kohoavat Thamesin rannalla, ja tornin kellotaulut ovat nykyään berliininsiniset.",
+        "Ne maalattiin mustiksi 1930-luvulla, ja alkuperäinen väri palautettiin vasta viime vuosien korjauksessa.",
+        "Big Ben on oikeastaan tornin sisällä riippuvan suuren kellon nimi, ja se soi ensimmäisen kerran vuonna 1859.",
+        "Nykyisen uusgoottilaisen palatsin suunnittelivat Charles Barry ja Augustus Pugin sen jälkeen, kun vuoden 1834 tulipalo oli tuhonnut vanhan, ja parlamentti kokoontuu siellä yhä."
+      ],
+      "faktat": [
+        {
+          "vaite": "Elizabeth Towerin kellotaulut maalattiin mustiksi 1930-luvulla; alkuperäinen berliininsininen (Prussian blue) palautettiin ja paljastettiin 2022.",
+          "lahde1": "https://virtualtours-assets.parliament.uk/elizabeth-tower/index.html",
+          "lahde2": "https://en.wikipedia.org/wiki/Elizabeth_Tower"
+        },
+        {
+          "vaite": "Big Ben on tornin sisällä riippuvan Great Bellin nimi, ei tornin.",
+          "lahde1": "https://virtualtours-assets.parliament.uk/elizabeth-tower/index.html",
+          "lahde2": "https://en.wikipedia.org/wiki/Big_Ben"
+        },
+        {
+          "vaite": "Kello on lyönyt tunteja vuodesta 1859 (korvaava kello soi ensi kerran 11.7.1859).",
+          "lahde1": "https://en.wikipedia.org/wiki/Big_Ben",
+          "lahde2": "https://www.parliament.uk/about/living-heritage/building/palace/architecture/key-dates-fire1834-to-present"
+        },
+        {
+          "vaite": "Vanha palatsi tuhoutui tulipalossa 16.10.1834; uusgoottilaisen palatsin suunnittelivat Charles Barry (k. 1860) ja Augustus Pugin (k. 1852).",
+          "lahde1": "https://en.wikipedia.org/wiki/Palace_of_Westminster",
+          "lahde2": "https://www.ebsco.com/research-starters/history/british-houses-parliament-are-rebuilt"
+        },
+        {
+          "vaite": "Tornin korkeus 96 m (96,3 m).",
+          "lahde1": "https://virtualtours-assets.parliament.uk/elizabeth-tower/index.html",
+          "lahde2": "https://en.wikipedia.org/wiki/Big_Ben"
+        },
+        {
+          "vaite": "Parlamentin molemmat kamarit kokoontuvat palatsissa edelleen.",
+          "lahde1": "https://en.wikipedia.org/wiki/Palace_of_Westminster",
+          "lahde2": "https://virtualtours-assets.parliament.uk/elizabeth-tower/index.html"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "commons_tiedosto": "Newly restored Elizabeth Tower 2022-12-27.jpg",
+          "tekija": "Nate Loper",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Newly_restored_Elizabeth_Tower_2022-12-27.jpg",
+          "leveys": 1440,
+          "selite": "Elizabeth Tower korjauksen jälkeen joulukuussa 2022, kellotaulut palautettu alkuperäiseen sävyynsä.",
+          "virke": 1,
+          "aihe": "Elizabeth Towerin uudelleen maalatut sinisävyiset kellotaulut"
+        },
+        {
+          "virke": 4,
+          "aihe": "Palatsin joenpuoleinen julkisivu",
+          "commons_tiedosto": "Houses of Parliament 2026-07-08.jpg",
+          "tekija": "Matt Brown",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Houses_of_Parliament_2026-07-08.jpg",
+          "leveys": 4032,
+          "selite": "Westminsterin palatsi Thamesin rannalta."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Central London (48953565888).jpg",
+          "tekija": "Mike McBey",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_London_(48953565888).jpg",
+          "leveys": 8368,
+          "selite": "Keski-Lontoo kaukaa ylhäältä: Westminster Abbey, parlamenttitalo ja kellotorni samassa kuvassa."
+        },
+        {
+          "commons_tiedosto": "Big Ben (first version) 1856.png",
+          "tekija": "Illustrated London News",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Ben_(first_version)_1856.png",
+          "leveys": 1417,
+          "selite": "Ensimmäisen Big Ben -kellon kuljetus Westminster Abbeyn ohi vuonna 1856; kello halkesi ja valettiin uudelleen."
+        },
+        {
+          "commons_tiedosto": "Westminster Clock (Big Ben) – mechanism plan, c.1854 (design by Edmund Beckett Denison; made by E J Dent).png",
+          "tekija": "Edmund Beckett Denison",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Westminster_Clock_(Big_Ben)_–_mechanism_plan,_c.1854_(design_by_Edmund_Beckett_Denison;_made_by_E_J_Dent).png",
+          "leveys": 4058,
+          "selite": "Suuren kellon koneiston piirros noin vuodelta 1854."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Pois jätetty: Ayrton-lyhty (palaa kun parlamentti istuu pimeän jälkeen): lähteet ristiriidassa asennusvuodesta (1873/1885) ja nykytilasta (restaurointi 2018-2021), joten epävarma.",
+        "Kellotaulujen väri: Parlamentin sivu puhuu kellotauluista (dials), Wikipedia kehyksistä (frames); kappale sanoo vain kellotaulut ja viime vuosien korjaus (Parlamentin mukaan paljastus 2022, Wikipedian mukaan työt 2017-2021) ilman vuosilukuja.",
+        "Isoisää ei mainita (merkintä koskee metroa ja sumua). Vuosi 1859 on myös pelin aineiston omassa taustatiedossa.",
+        "parliament.uk key-dates -sivu löytyi hakutuloksesta webtest-aliaksella; www-osoite on johdettu, suoraa hakua ei saatu (403/ENOTFOUND). Britannica ja parliament.uk-pääsivut palauttivat 403 WebFetchillä.",
+        "Kuvia ei ladattu eikä katsottu (ohje: ei lataamista); sisältö päätelty Commonsin kuvauksista ja luokista. Kuvaaja Nate Lopern kuvassa voi olla ihmisiä kaukaa, tarkista kuvakatselmuksessa.",
+        "Elizabeth Towerin kuvia on runsaasti CC0-lisenssillä (esim. CAPTAIN RAJU, Dmarcovitz) jos halutaan vaihtoehtoja.",
+        "Uusi tarinakuva (virke 4) vaihtoehtona Houses of Parliament from the air 2011-06-30.jpg; alkuperäinen Thames-kuva poistettu (Uber Boat -logo, Portcullis House)."
+      ],
+      "kerronta": "Westminsterin palatsi ja Elizabeth Tower kohoavat Thamesin rannalla, ja tornin kellotaulut ovat nykyään berliininsiniset. Ne maalattiin mustiksi 1930-luvulla, ja alkuperäinen väri palautettiin vasta viime vuosien korjauksessa. Big Ben on oikeastaan tornin sisällä riippuvan suuren kellon nimi, ja se soi ensimmäisen kerran vuonna 1859. Nykyisen uusgoottilaisen palatsin suunnittelivat Charles Barry ja Augustus Pugin sen jälkeen, kun vuoden 1834 tulipalo oli tuhonnut vanhan, ja parlamentti kokoontuu siellä yhä.",
+      "sanoja": 66
+    },
+    {
+      "nro": 2,
+      "nimi": "Westminster Abbey",
+      "q": "Q5933",
+      "lat": 51.4994,
+      "lon": -0.12737,
+      "H_m": 69,
+      "H_lahteet": [
+        "https://prod-v7-archive.westminster-abbey.org/media/4101/abbey-dimensions-for-web.pdf (länsitornit, pinnaclien huippuun; löytyi hakutuloksesta, WebFetch ei toiminut)",
+        "https://en.wikipedia.org/wiki/Westminster_Abbey (arkistoitu infoboksi 2022: 69 m)"
+      ],
+      "virkkeet": [
+        "Westminster Abbey seisoo Westminsterin palatsin vieressä, ja sen länsipäädyssä kohoavat kaksi vaaleaa tornia.",
+        "Nicholas Hawksmoorin suunnittelemat tornit ovat goottilaisen ja barokin sekoitus ja valmistuivat 1700-luvulla, vaikka muu kirkko on keskiaikainen.",
+        "Itäpäässä on Henrik seitsemännen kappeli, joka rakennettiin 1500-luvun alussa.",
+        "Henrik itse on haudattu sinne, ja kappelin holvikatto on veistetty viuhkaholviksi.",
+        "Vilhelm Valloittajasta lähtien jokainen kruunattu hallitsija on saanut kruununsa tässä kirkossa, viimeksi kuningas Kaarle kolmas vuonna 2023."
+      ],
+      "faktat": [
+        {
+          "vaite": "Länsitornit valmistuivat 1700-luvulla (1745) Nicholas Hawksmoorin suunnitelman mukaan; John James viimeisteli.",
+          "lahde1": "https://www.westminster-abbey.org/history/history-of-westminster-abbey",
+          "lahde2": "https://en.wikipedia.org/wiki/Westminster_Abbey"
+        },
+        {
+          "vaite": "Henrik VII:n kappeli on kirkon itäpäässä ja rakennettiin 1500-luvun alussa (aloitettu 1503, vihitty 1516).",
+          "lahde1": "https://www.westminster-abbey.org/history/history-of-westminster-abbey",
+          "lahde2": "https://en.wikipedia.org/wiki/Westminster_Abbey"
+        },
+        {
+          "vaite": "Henrik VII ja Elizabeth of York on haudattu kappeliin.",
+          "lahde1": "https://www.westminster-abbey.org/abbey-commemorations/royals/henry-vii-and-elizabeth-of-york",
+          "lahde2": "https://en.wikipedia.org/wiki/Westminster_Abbey"
+        },
+        {
+          "vaite": "Tornien tyyli on goottilaisen ja barokin sekoitus (Historic England: Gothic verticality with Baroque details; Wikipedia: Gothic-Baroque).",
+          "lahde1": "https://historicengland.org.uk/listing/the-list/list-entry/1291494",
+          "lahde2": "https://en.wikipedia.org/wiki/Westminster_Abbey"
+        },
+        {
+          "vaite": "Kappelin katto on viuhkaholvi (fan vault).",
+          "lahde1": "https://www.britannica.com/place/Henry-VIIs-Chapel",
+          "lahde2": "https://historicengland.org.uk/listing/the-list/list-entry/1291494"
+        },
+        {
+          "vaite": "Jokainen Vilhelm Valloittajasta lähtien kruunattu hallitsija on kruunattu Abbeyssa (Edward V ja Edward VIII eivät koskaan saaneet kruunua). Vilhelm kruunattiin joulupäivänä 1066.",
+          "lahde1": "https://www.westminster-abbey.org/history/history-of-westminster-abbey",
+          "lahde2": "https://www.westminster-abbey.org/history/coronations-at-the-abbey/coronation-stories"
+        },
+        {
+          "vaite": "Kaarle III kruunattiin Westminster Abbeyssa 6.5.2023.",
+          "lahde1": "https://en.wikipedia.org/wiki/Coronation_of_Charles_III_and_Camilla",
+          "lahde2": "https://www.westminster-abbey.org/media/xxzmznsb/kings-queens-and-coronations-trail.pdf"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "commons_tiedosto": "Westminster Abbey Hawksmoor towers.jpg",
+          "tekija": "Matt Brown",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Westminster_Abbey_Hawksmoor_towers.jpg",
+          "leveys": 3024,
+          "selite": "Westminster Abbeyn länsijulkisivu ja Hawksmoorin kaksi tornia.",
+          "virke": 2,
+          "aihe": "Länsitornit"
+        },
+        {
+          "commons_tiedosto": "Henry VII Chapel Westminster Abbey (5133296937).jpg",
+          "tekija": "Tony Hisgett",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Henry_VII_Chapel_Westminster_Abbey_(5133296937).jpg",
+          "leveys": 4416,
+          "selite": "Henrik seitsemännen kappelin ulkopuoli Westminster Abbeyn itäpäässä.",
+          "virke": 3,
+          "aihe": "Henrik seitsemännen kappelin ulkopuoli itäpäässä"
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Ceiling of our lady chapel Westminster Abbey London England.jpg",
+          "tekija": "amanderson2",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ceiling_of_our_lady_chapel_Westminster_Abbey_London_England.jpg",
+          "leveys": 3456,
+          "selite": "Henrik seitsemännen kappelin holvikatto Westminster Abbeyssa."
+        },
+        {
+          "commons_tiedosto": "Howard 1911 Plate 14 Westminser Henry VII 916.jpg",
+          "tekija": "Frank Ernest Howard",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Howard_1911_Plate_14_Westminser_Henry_VII_916.jpg",
+          "leveys": 3529,
+          "selite": "Henrik seitsemännen kappelin viuhkaholvi vuoden 1911 valokuvassa."
+        },
+        {
+          "commons_tiedosto": "Coronation chair Westminster Abbey London England.jpg",
+          "tekija": "amanderson2",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coronation_chair_Westminster_Abbey_London_England.jpg",
+          "leveys": 3888,
+          "selite": "Kruunajaistuoli Westminster Abbeyssa."
+        },
+        {
+          "commons_tiedosto": "Houses of Parliament from the air 2011-06-30.jpg",
+          "tekija": "(tarkistettava Commonsista)",
+          "lisenssi": "vapaa (tarkistettu)",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Houses_of_Parliament_from_the_air_2011-06-30.jpg",
+          "leveys": null,
+          "selite": "Ilmakuva Westminsterin palatsista; Abbey näkyy sen vieressä."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Siirtymä pysähdyksestä 1 vain 222 m: kappale ei toista kellotornin, kellon eikä Barry/Pugin-aiheita; sama vaatimus vaikuttaa kolmoseen (ei Westminsterin palatsia).",
+        "Hawksmoor-torneista lähteet ristiriidassa tarkasta vuodesta (Historic England 1735-40, Abbey 1745, Wikipedia 1740-luku), joten kappale sanoo vain 1700-luku. Hawksmoor k. 1736, John James k. 1746: PD.",
+        "Henrik VII:n kappelin rakennusvuosi vaihtelee (1503 aloitus, 1509/1512 valmis, 1516 vihkiäiset); kappale sanoo vain 1500-luvun alku.",
+        "Kruunajaiskohdassa Britannian/Englannin erottelua ei tehdä: kappale sanoo vain 'hallitsija'. Kuvapuuttuvia: tornien ja kappelin kuvat ovat maatasokuvia, ei ilmakuvia.",
+        "Kuvia ei ladattu eikä katsottu. Kruunajaiskuva (amanderson2) on sisätiloista, ei ihmisiä todennäköisesti; tarkista kuvakatselmuksessa. Frank Ernest Howard k. 1934 (PD).",
+        "Vihjerivi mahdollinen myöhemmin: Unknown Warrior -hauta (1920), jätetty pois koska ei näy ylhäältä ja liittyy sotamuistoon."
+      ],
+      "kerronta": "Westminster Abbey seisoo Westminsterin palatsin vieressä, ja sen länsipäädyssä kohoavat kaksi vaaleaa tornia. Nicholas Hawksmoorin suunnittelemat tornit ovat goottilaisen ja barokin sekoitus ja valmistuivat 1700-luvulla, vaikka muu kirkko on keskiaikainen. Itäpäässä on Henrik seitsemännen kappeli, joka rakennettiin 1500-luvun alussa. Henrik itse on haudattu sinne, ja kappelin holvikatto on veistetty viuhkaholviksi. Vilhelm Valloittajasta lähtien jokainen kruunattu hallitsija on saanut kruununsa tässä kirkossa, viimeksi kuningas Kaarle kolmas vuonna 2023.",
+      "sanoja": 67
+    },
+    {
+      "nro": 3,
+      "nimi": "Buckinghamin palatsi",
+      "q": "Q42182",
+      "lat": 51.501,
+      "lon": -0.142,
+      "H_m": null,
+      "H_lahteet": [],
+      "virkkeet": [
+        "Buckinghamin palatsi on The Mall -kadun päässä, ja sen vaalea julkisivu avautuu kuningatar Victorian muistomerkin taakse.",
+        "Kuningatar Victorian muistomerkin on veistänyt Thomas Brock, ja se paljastettiin vuonna 1911.",
+        "Julkisivu valmistui vuonna 1913 Aston Webbin suunnitelmien mukaan, koska vanha kivi oli murentunut ja Lontoon noen mustuttama.",
+        "Palatsi oli alun perin Buckingham House, jonka kuningas George kolmas osti 1760-luvulla, ja Victoria oli ensimmäinen hallitsija, joka asui siinä.",
+        "Rakennuksen takana on Lontoon suurin yksityinen puutarha, jossa on järvi."
+      ],
+      "faktat": [
+        {
+          "vaite": "Itäjulkisivu uusittiin Portland-kivellä Aston Webbin suunnitelman mukaan; työ valmistui 1.11.1913. Webb k. 1930.",
+          "lahde1": "https://col.rct.uk/collection/2303715-e/the-victoria-memorial-and-buckingham-palace-1913",
+          "lahde2": "https://en.wikipedia.org/wiki/Buckingham_Palace"
+        },
+        {
+          "vaite": "Vanha julkisivu oli murenevaa ja Lontoon ilman nokimaa mustuttamaa; uusi suunniteltiin Victoria-muistomerkin taustaksi.",
+          "lahde1": "https://col.rct.uk/collection/2303715-e/the-victoria-memorial-and-buckingham-palace-1913",
+          "lahde2": "https://www.britannica.com/topic/Buckingham-Palace"
+        },
+        {
+          "vaite": "Victoria-muistomerkki seisoo palatsin edessä (kuvanveistäjä Thomas Brock); Webb suunnitteli sen ympäristön ja julkisivun taustaksi.",
+          "lahde1": "https://en.wikipedia.org/wiki/Buckingham_Palace",
+          "lahde2": "https://col.rct.uk/collection/2303715-e/the-victoria-memorial-and-buckingham-palace-1913"
+        },
+        {
+          "vaite": "Buckingham House rakennettiin 1700-luvun alussa; George III osti sen 1760-luvulla (royal.uk ja Wikipedia 1761, Britannica 1762).",
+          "lahde1": "https://www.royal.uk/royal-residences-buckingham-palace",
+          "lahde2": "https://en.wikipedia.org/wiki/Buckingham_Palace"
+        },
+        {
+          "vaite": "Victoria oli ensimmäinen hallitsija, joka asui palatsissa (1837).",
+          "lahde1": "https://en.wikipedia.org/wiki/Buckingham_Palace",
+          "lahde2": "https://www.britannica.com/topic/Buckingham-Palace"
+        },
+        {
+          "vaite": "Palatsin puutarha on Lontoon suurin yksityinen puutarha ja sen keskellä on järvi.",
+          "lahde1": "https://www.rct.uk/visit/buckingham-palace/buckingham-palace-garden",
+          "lahde2": "https://en.wikipedia.org/wiki/Buckingham_Palace_Garden"
+        },
+        {
+          "vaite": "Vartionvaihto järjestetään palatsin pihalla vain tiettyinä päivinä, ei päivittäin.",
+          "lahde1": "https://www.householddivision.org.uk/changing-the-guard-origins",
+          "lahde2": "https://en.wikipedia.org/wiki/King%27s_Guard"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "commons_tiedosto": "Buckingham Palace and the Victoria Memorial seen from The Mall, 2024.jpg",
+          "tekija": "Hotolmo22",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace_and_the_Victoria_Memorial_seen_from_The_Mall,_2024.jpg",
+          "leveys": 2676,
+          "selite": "Buckinghamin palatsin julkisivu ja Victoria-muistomerkki The Mall -kadulta.",
+          "virke": 1,
+          "aihe": "Julkisivu ja Victoria-muistomerkki"
+        },
+        {
+          "virke": 5,
+          "aihe": "Palatsin puutarha ylhäältä",
+          "commons_tiedosto": "Aerial view of Buckingham Palace, 1934.jpg",
+          "tekija": "Aerofilms",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Buckingham_Palace,_1934.jpg",
+          "leveys": null,
+          "selite": "Palatsi ja sen puutarha ylhäältä vuonna 1934."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Buckingham Palace and St James's Park 2026-07-08.jpg",
+          "tekija": "Matt Brown",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace_and_St_James's_Park_2026-07-08.jpg",
+          "leveys": 4032,
+          "selite": "Buckinghamin palatsi ja St. Jamesin puisto ylhäältä."
+        },
+        {
+          "commons_tiedosto": "Buckingham Palace and The Mall 2026-07-08.jpg",
+          "tekija": "Matt Brown",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace_and_The_Mall_2026-07-08.jpg",
+          "leveys": 4032,
+          "selite": "Buckinghamin palatsi ja The Mall ylhäältä."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Pois jätetty: kuninkaan lippu katolla (Royal Standard = kuningas paikalla): royal.uk vahvistaa säännön, mutta kuningas asuu Clarence Housessa remontin ajan ja Wikipedia kertoo viirin liehuvan molemmilla, joten nykyinen tulkinta epävarma.",
+        "Vartionvaihto: ei kellonaikaa eikä päiviä (lähteet ristiriidassa); household division: ma/ke/pe, Wikipedia: eri määrä viikossa.",
+        "George III:n osto: 1761 (royal.uk, Wikipedia) tai 1762 (Britannica), siksi 1760-luvulla. Buckingham House 1703 vs noin 1705, ei käytetty.",
+        "Julkisivun viimeistelypäivä 1.11.1913 (Royal Collection); työ kesti noin 13 viikkoa, ei kappaleessa. Kappale sanoo 'valmistui 1913'.",
+        "Isoisää ei mainita. Elävien suunnittelijoiden teoksia ei kuvissa. Britannica ja rct.uk palauttivat 403 WebFetchillä; niihin viitataan hakutulosten kautta, joten kahden lähteen vaatimus täyttyy Wikipedian ja Royal Collectionin/royal.ukin avulla.",
+        "Kuvia ei ladattu eikä katsottu. Hotolmo22:n kuvassa ja Kachkaev 2012 -ilmakuvassa tarkista kuvakatselmuksessa, näkyykö puutarha riittävästi. Matt Brownin 2026-kuvat ovat ilmakuvia (Commons-luokka Aerial photographs of Buckingham Palace).",
+        "Kachkaevin 2012-ilmakuva poistettu (vesileima). Tarinakuva 4 = 1934 ilmakuva (PD); LS1 katselmoi, että puutarha näkyy. Buckingham Palace and The Mall 2026-07-08.jpg: rajattava (London Eye pois oikeasta yläkulmasta). Vartionvaihto-virke poistettu (lähteet ristiriitaiset)."
+      ],
+      "kerronta": "Buckinghamin palatsi on The Mall -kadun päässä, ja sen vaalea julkisivu avautuu kuningatar Victorian muistomerkin taakse. Kuningatar Victorian muistomerkin on veistänyt Thomas Brock, ja se paljastettiin vuonna 1911. Julkisivu valmistui vuonna 1913 Aston Webbin suunnitelmien mukaan, koska vanha kivi oli murentunut ja Lontoon noen mustuttama. Palatsi oli alun perin Buckingham House, jonka kuningas George kolmas osti 1760-luvulla, ja Victoria oli ensimmäinen hallitsija, joka asui siinä. Rakennuksen takana on Lontoon suurin yksityinen puutarha, jossa on järvi.",
+      "sanoja": 75
+    },
+    {
+      "nro": 4,
+      "nimi": "Trafalgar Square",
+      "q": "Q129143",
+      "lat": 51.50806,
+      "lon": -0.12806,
+      "H_m": 52,
+      "H_lahteet": [
+        "https://www.britannica.com/place/Nelsons-Column",
+        "https://www.historyhit.com/locations/nelsons-column/"
+      ],
+      "kerronta": "Trafalgar Squarella kohoaa keskellä korkea Nelsonin pylväs. Sen huipulla seisoo amiraalin patsas ja juurella makaa neljä pronssileijonaa. Pylväs valmistui vuonna 1843 amiraali Nelsonin muistoksi, sillä hän kaatui Trafalgarin meritaistelussa vuonna 1805. Leijonat tulivat paikalleen vasta vuonna 1867, ja ne suunnitteli taiteilija Edwin Landseer. Joka joulun alla aukiolle pystytetään suuri kuusi, jonka Oslon kaupunki on lahjoittanut Lontoolle vuodesta 1947 lähtien kiitokseksi Britannian tuesta toisen maailmansodan aikana.",
+      "virkkeet": [
+        "Trafalgar Squarella kohoaa keskellä korkea Nelsonin pylväs.",
+        "Sen huipulla seisoo amiraalin patsas ja juurella makaa neljä pronssileijonaa.",
+        "Pylväs valmistui vuonna 1843 amiraali Nelsonin muistoksi, sillä hän kaatui Trafalgarin meritaistelussa vuonna 1805.",
+        "Leijonat tulivat paikalleen vasta vuonna 1867, ja ne suunnitteli taiteilija Edwin Landseer.",
+        "Joka joulun alla aukiolle pystytetään suuri kuusi, jonka Oslon kaupunki on lahjoittanut Lontoolle vuodesta 1947 lähtien kiitokseksi Britannian tuesta toisen maailmansodan aikana."
+      ],
+      "faktat": [
+        {
+          "vaite": "Nelsonin pylväs rakennettiin 1840-1843 (William Railton) amiraali Nelsonin muistoksi; Nelson kaatui Trafalgarin taistelussa 1805.",
+          "lahde1": "https://en.wikipedia.org/wiki/Trafalgar_Square",
+          "lahde2": "https://www.britannica.com/place/Nelsons-Column"
+        },
+        {
+          "vaite": "Pylvään juurella on neljä pronssileijonaa, jotka Edwin Landseer suunnitteli ja jotka asennettiin 1867 (Marochetti valoi ne).",
+          "lahde1": "https://en.wikipedia.org/wiki/Trafalgar_Square",
+          "lahde2": "https://www.britannica.com/place/Nelsons-Column"
+        },
+        {
+          "vaite": "Landseerin leijonat tilattiin 1858 ja asennettiin 1867; Landseer tunnettiin eläinmaalauksistaan (kappale sanoo vain taiteilija).",
+          "lahde1": "https://en.wikipedia.org/wiki/Edwin_Landseer",
+          "lahde2": "https://en.wikipedia.org/wiki/Trafalgar_Square"
+        },
+        {
+          "vaite": "Oslon kaupunki lahjoittaa Trafalgar Squarelle joulukuusen joka vuosi vuodesta 1947, kiitokseksi Britannian tuesta toisessa maailmansodassa.",
+          "lahde1": "https://en.wikipedia.org/wiki/Trafalgar_Square",
+          "lahde2": "https://artsandculture.google.com/story/_gWBWvnebRUxHw"
+        },
+        {
+          "vaite": "Pylvään huipulla on Nelsonin patsas (Edward Hodges Baily).",
+          "lahde1": "https://www.britannica.com/place/Nelsons-Column",
+          "lahde2": "https://www.historyhit.com/locations/nelsons-column/"
+        },
+        {
+          "vaite": "Pylvään korkeus noin 52 m (Britannica 51,59 m; History Hit 52 m); Wikipedian runko antaa ristiriitaisesti 44,27 m, siksi lukua ei ole kappaleessa.",
+          "lahde1": "https://www.britannica.com/place/Nelsons-Column",
+          "lahde2": "https://www.historyhit.com/locations/nelsons-column/"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 4,
+          "aihe": "Landseerin pronssileijona ja Nelsonin pylväs",
+          "commons_tiedosto": "Landseer Lion and Nelson's Column.jpg",
+          "tekija": "Farbades420",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Landseer_Lion_and_Nelson's_Column.jpg",
+          "leveys": 1257,
+          "selite": "Yksi Landseerin pronssileijonista Nelsonin pylvään juurella."
+        },
+        {
+          "virke": 5,
+          "aihe": "Oslon lahjoittama joulukuusi aukiolla",
+          "commons_tiedosto": "Trafalgar Square Christmas tree 2011 at night.JPG",
+          "tekija": "Editor5807",
+          "lisenssi": "CC BY 3.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trafalgar_Square_Christmas_tree_2011_at_night.JPG",
+          "leveys": 4000,
+          "selite": "Oslon lahjoittama joulukuusi valaistuna Trafalgar Squarella joulukuussa 2011."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Nelson's Column under Construction, Trafalgar Square MET DP210935.jpg",
+          "tekija": "William Henry Fox Talbot",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nelson's_Column_under_Construction,_Trafalgar_Square_MET_DP210935.jpg",
+          "leveys": 3136,
+          "selite": "Talbotin valokuva Nelsonin pylväästä huhtikuun alussa 1844, kun aukiota vielä viimeisteltiin."
+        },
+        {
+          "commons_tiedosto": "Nelson's Column Trafalgar Square, London 2012-12-28.jpg",
+          "tekija": "Daniel X. O'Neil",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nelson's_Column_Trafalgar_Square,_London_2012-12-28.jpg",
+          "leveys": 4954,
+          "selite": "Nelsonin pylväs Trafalgar Squarella."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Neljättä jalustaa (vaihtuvat nykytaideteokset) ei mainita kappaleessa; tarkista lisäkuvia valitessa ettei kuvassa näy elävän taiteilijan teos neljännellä jalustalla.",
+        "Pylvään korkeus jätetty pois kappaleesta, koska lähteet antavat 44-52 m; H_m 52 on Britannican (51,59 m) ja History Hitin (52 m) mukainen, ei varmistettu virallisesta lähteestä (RMG/london.gov.uk palauttivat 404/403).",
+        "Kuvat voivat sisältää ihmisiä kaukaa; lisäkuvan Talbot 1844 näyttää pylvään kesken aukion viimeistelyn, ei valmista aukiota. Suihkulähteiden suunnittelijan (Lutyens 1930-luvulla, kuollut 1944) vuoksi kappale ei mainitse niitä, koska tieto vain yhdestä lähteestä.",
+        "Joulukuusen ajankohta kirjoitettu 'joulun alla' (tarkka päivämäärä vaihtelee).",
+        "Ei isoisäviittausta (isoisän 1873-merkintä koskee metroa ja sumua).",
+        "Poistettu lisäkuva Trafalgar Square Jori Samonen 2014.jpg (ihmisiä lähellä, banderolli). H_m 52 on lähteissä 44–52 m (ei virallista lähdettä): LS1 mittaa jalanjäljestä."
+      ],
+      "sanoja": 65
+    },
+    {
+      "nro": 5,
+      "nimi": "St Paulin katedraali",
+      "q": "Q173882",
+      "lat": 51.51378,
+      "lon": -0.09831,
+      "H_m": 111,
+      "H_lahteet": [
+        "https://www.stpauls.co.uk/explore-our-map",
+        "https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral",
+        "https://www.historyhit.com/locations/st-pauls-cathedral/",
+        "https://www.visitheritage.co.uk/inspiration/10-fascinating-facts-about-st-pauls-cathedral-in-london/"
+      ],
+      "kerronta": "St Paulin katedraalin valtava kupoli oli yli kaksisataa vuotta Lontoon korkein rakennus, ja ylhäältä se erottuu yhä lähikorttelien kattojen yli. Christopher Wren suunnitteli kirkon sen jälkeen, kun suuri palo tuhosi keskiaikaisen edeltäjän vuonna 1666, ja uusi katedraali valmistui vuonna 1710. Wren itse on haudattu katedraalin kryptaan, ja hänen hautansa luona oleva latinankielinen teksti neuvoo muistomerkkiä etsivää katsomaan ympärilleen. Kupolin sisällä kiertää kuiskausgalleria, jossa seinää vasten kuiskattu sana kuuluu vastakkaiselle seinälle asti.",
+      "virkkeet": [
+        "St Paulin katedraalin valtava kupoli oli yli kaksisataa vuotta Lontoon korkein rakennus, ja ylhäältä se erottuu yhä lähikorttelien kattojen yli.",
+        "Christopher Wren suunnitteli kirkon sen jälkeen, kun suuri palo tuhosi keskiaikaisen edeltäjän vuonna 1666, ja uusi katedraali valmistui vuonna 1710.",
+        "Wren itse on haudattu katedraalin kryptaan, ja hänen hautansa luona oleva latinankielinen teksti neuvoo muistomerkkiä etsivää katsomaan ympärilleen.",
+        "Kupolin sisällä kiertää kuiskausgalleria, jossa seinää vasten kuiskattu sana kuuluu vastakkaiselle seinälle asti."
+      ],
+      "faktat": [
+        {
+          "vaite": "Kupolin ja katedraalin kokonaiskorkeus on 111 metriä.",
+          "lahde1": "https://www.stpauls.co.uk/explore-our-map",
+          "lahde2": "https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral"
+        },
+        {
+          "vaite": "St Paul's oli Lontoon korkein rakennus yli kaksisataa vuotta (1710 - noin 1962/1963; lähteet eroavat vuodesta, siksi kappale sanoo vain 'yli kaksisataa vuotta').",
+          "lahde1": "https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral",
+          "lahde2": "https://www.historyhit.com/locations/st-pauls-cathedral/"
+        },
+        {
+          "vaite": "Suuri palo 1666 tuhosi keskiaikaisen St Paul'sin; Wrenin katedraali rakennettiin 1675-1710 (pelin aineisto: valmistui 1710).",
+          "lahde1": "https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral",
+          "lahde2": "https://www.historyhit.com/locations/st-pauls-cathedral/"
+        },
+        {
+          "vaite": "Christopher Wren on haudattu St Paul'sin kryptaan; latinankielinen teksti 'Lector, si monumentum requiris, circumspice' (lukija, jos etsit hänen muistomerkkiään, katso ympärillesi) on haudan luona.",
+          "lahde1": "https://en.wikipedia.org/wiki/Christopher_Wren",
+          "lahde2": "https://www.stpauls.co.uk/explore-our-map"
+        },
+        {
+          "vaite": "Kupolin sisällä on Whispering Gallery, jossa seinää pitkin kulkeva kuiskaus kuuluu galleriassa vastakkaiselle puolelle.",
+          "lahde1": "https://en.wikipedia.org/wiki/Whispering_gallery",
+          "lahde2": "https://kids.britannica.com/students/article/Saint-Pauls-Cathedral/603704"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 1,
+          "aihe": "Katedraalin kupoli",
+          "commons_tiedosto": "St Paul's Cathedral Dome 2020 Exterior Ground.jpg",
+          "tekija": "Julian Herzog",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Paul's_Cathedral_Dome_2020_Exterior_Ground.jpg",
+          "leveys": 5539,
+          "selite": "St Paulin katedraalin kupoli kuvattuna maan tasolta."
+        },
+        {
+          "virke": 2,
+          "aihe": "Suuri palo 1666",
+          "commons_tiedosto": "Verschuier-fire.jpg",
+          "tekija": "Lieve Verschuier",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Verschuier-fire.jpg",
+          "leveys": 5870,
+          "selite": "Lieve Verschuierin maalaus Lontoon suuresta palosta vuonna 1666."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Old.St.Pauls.Ruins.1666.png",
+          "tekija": "Thomas Wyck",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old.St.Pauls.Ruins.1666.png",
+          "leveys": 3188,
+          "selite": "Thomas Wyckin kuva keskiaikaisen St Paulin raunioista suuren palon jälkeen."
+        },
+        {
+          "commons_tiedosto": "St Paul's Cathedral – Whispering Gallery.jpg",
+          "tekija": "JackPeasePhotography",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Paul's_Cathedral_%E2%80%93_Whispering_Gallery.jpg",
+          "leveys": 6016,
+          "selite": "Näkymä kuiskausgalleriasta katedraalin lattialle."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Korkeus: virallinen sivusto ja Wikipedia antavat 111 m (366 ft); Britannica mittaa pallo ja risti mukana noin 112 m. Kappaleessa 111 m.",
+        "Lähteiden ero 'korkein rakennus' päättyy 1962 (Visit Heritage) / 1963 (Wikipedia, History Hit), siksi kappaleessa ei vuotta.",
+        "Wrenin muotokuvaa (Kneller 1711, PD) ei otettu ihmiskuvana pois jätetyistä syistä; hänen hautaansa ei löytynyt vapaata kuvaa.",
+        "Kuiskausgallerian valokuvassa voi näkyä vierailijoita pieninä hahmoina.",
+        "Ei isoisäviittausta (1873-merkintä koskee metroa ja sumua). Britannican sivut palauttivat 403; Britannica Kids -viite perustuu hakutulosyhteenvetoon.",
+        "Mitta 111 m on vain kamerasuunnittelua varten (H_m); kappale ei mainitse sitä (pelin kertojasääntö). Lisäkuva London, St Paul's Cathedral (48682458346).jpg poistettu (Millennium Bridge ja nykyarkkitehtuuri)."
+      ],
+      "sanoja": 71
+    },
+    {
+      "nro": 6,
+      "nimi": "Lontoon Tower",
+      "q": "Q62378",
+      "lat": 51.5082,
+      "lon": -0.0762,
+      "H_m": null,
+      "H_lahteet": [],
+      "kerronta": "Lontoon Towerin keskellä kohoaa vaalea Valkoinen torni, jonka Vilhelm Valloittaja rakennutti 1000-luvun lopulla. Linnan jalokivikammiossa säilytetään yhä Britannian kruununjalokiviä. Suuri osa niistä tehtiin vuosina 1660 ja 1661, koska keskiaikaiset kruunut ja valtikat hajotettiin vuonna 1649, ja keskiaikaisista esineistä säilyi vain 1100-luvulta peräisin oleva kruunajaislusikka. Linnan pihoilla asustaa korppeja, joita hoitaa korppimestari, yksi linnan vartijoista. Taru väittää, että kuningaskunta kaatuu, jos korpit lähtevät, mutta tarun alkuperää ei tunneta varmasti.",
+      "virkkeet": [
+        "Lontoon Towerin keskellä kohoaa vaalea Valkoinen torni, jonka Vilhelm Valloittaja rakennutti 1000-luvun lopulla.",
+        "Linnan jalokivikammiossa säilytetään yhä Britannian kruununjalokiviä.",
+        "Suuri osa niistä tehtiin vuosina 1660 ja 1661, koska keskiaikaiset kruunut ja valtikat hajotettiin vuonna 1649, ja keskiaikaisista esineistä säilyi vain 1100-luvulta peräisin oleva kruunajaislusikka.",
+        "Linnan pihoilla asustaa korppeja, joita hoitaa korppimestari, yksi linnan vartijoista.",
+        "Taru väittää, että kuningaskunta kaatuu, jos korpit lähtevät, mutta tarun alkuperää ei tunneta varmasti."
+      ],
+      "faktat": [
+        {
+          "vaite": "Valkoisen tornin rakennutti Vilhelm Valloittaja; työ aloitettiin noin 1078 (valmistui 1000-luvun lopulla/1100 mennessä).",
+          "lahde1": "https://en.wikipedia.org/wiki/Tower_of_London",
+          "lahde2": "https://www.hrp.org.uk/tower-of-london/whats-on/white-tower/"
+        },
+        {
+          "vaite": "Kruununjalokivet säilytetään Towerin Jewel Housessa (Waterloo Block).",
+          "lahde1": "https://en.wikipedia.org/wiki/Crown_Jewels_of_the_United_Kingdom",
+          "lahde2": "https://www.hrp.org.uk/tower-of-london/whats-on/the-crown-jewels/"
+        },
+        {
+          "vaite": "Keskiaikaiset kruunajaisvaltiomerkit rikottiin 1649; nykyiset tehtiin Kaarle II:n kruunajaisiin 1661; vain 1100-luvun kruunajaislusikka säilyi.",
+          "lahde1": "https://www.royal.uk/crown-jewels",
+          "lahde2": "https://en.wikipedia.org/wiki/Crown_Jewels_of_the_United_Kingdom"
+        },
+        {
+          "vaite": "Korppeja hoitaa korppimestari (Ravenmaster), joka on yksi Yeoman Warder -vartijoista.",
+          "lahde1": "https://en.wikipedia.org/wiki/Ravens_of_the_Tower_of_London",
+          "lahde2": "https://csmonitor.com/layout/set/amphtml/World/Europe/2024/0301/Tower-of-London-has-a-new-ravenmaster.-His-mission-is-unflappable"
+        },
+        {
+          "vaite": "Taru: kuningaskunta kaatuu, jos korpit lähtevät. Taru on taru: alkuperää ei tunneta varmasti, vanhin dokumentoitu maininta on vuodelta 1918, ja nykyinen korppimestari sanoo, ettei tiedä pitääkö se paikkaansa.",
+          "lahde1": "https://en.wikipedia.org/wiki/Ravens_of_the_Tower_of_London",
+          "lahde2": "https://www.euronews.com/2024/03/02/meet-the-tower-of-londons-new-ravenmaster-protecting-the-kingdom-from-a-dark-prophecy"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 2,
+          "aihe": "Valkoinen torni",
+          "commons_tiedosto": "Exterior of the White Tower in Tower of London.jpg",
+          "tekija": "SkyRose18",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_the_White_Tower_in_Tower_of_London.jpg",
+          "leveys": 3024,
+          "selite": "Valkoisen tornin julkisivu Lontoon Towerissa."
+        },
+        {
+          "virke": 4,
+          "aihe": "Korppi Towerin alueella",
+          "commons_tiedosto": "Ravens at the Tower of London.jpg",
+          "tekija": "APK",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ravens_at_the_Tower_of_London.jpg",
+          "leveys": 3902,
+          "selite": "Korppeja Lontoon Towerin nurmella."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Tower of London 2011 15.jpg",
+          "tekija": "Perituss",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_of_London_2011_15.jpg",
+          "leveys": 5184,
+          "selite": "Waterloo Barracks, jossa kruununjalokivien Jewel House sijaitsee."
+        },
+        {
+          "commons_tiedosto": "Coronation Spoon.png",
+          "tekija": "Cyril James Humphries Davenport",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coronation_Spoon.png",
+          "leveys": 3000,
+          "selite": "Kruunajaislusikka, vanhin säilynyt osa kruununjalokivistä (piirros noin 1897)."
+        },
+        {
+          "commons_tiedosto": "Tower-of-London-0006.jpg",
+          "tekija": "Duncan from Nottingham, UK (derivative MathKnight)",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower-of-London-0006.jpg",
+          "leveys": 4746,
+          "selite": "Lontoon Tower ylhäältä päin kuvattuna."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Kappale ei mainitse Tower Bridgea (etäisyys 300 m). Lisäkuva Tower-of-London-0006 on ylhäältä ja siinä voi näkyä siltaa taustalla; jos näkyy selvästi, käytä Waterloo-kuvaa ja Valkoista tornia.",
+        "Kuvan 0006 ottopaikka on The Shard, mutta Shard ei ole kuvassa; vaihda jos halutaan välttää viittausta.",
+        "HRP- ja Britannica-sivut palauttivat 403 suoralla haulla; HRP-viitteet (Valkoinen torni 1078-1100, Jewel House) perustuvat hakutulosyhteenvetoon. Wikipedia ja royal.uk luettu suoraan. Tarkista HRP-viitteet ennen julkaisua.",
+        "Korppien lukumäärää ei kerrota (vaihtelee, seitsemän tai kuusi). Taru merkitty taruksi; Wikipedian mukaan Towerin virallinen historioitsija pitää tarua viktoriaanisena keksintönä, mutta tieto on vain yhdessä lähteessä, joten jätetty pois.",
+        "Ei isoisäviittausta.",
+        "Kruununjalokivien vuodet 1660/1661 (Wikipedia, royal.uk); osa kokoelmasta on myöhempää. Korppiuskomus kirjattu ensi kerran 1944; tuotujen korppien vanhin maininta 1918. Lisäkuva Tower-of-London-0006.jpg: Shard ei ole kuvassa, mutta Tower Bridge saattaa; vaihdettavissa."
+      ],
+      "sanoja": 68
+    },
+    {
+      "nro": 7,
+      "nimi": "Tower Bridge",
+      "q": "Q83125",
+      "lat": 51.50556,
+      "lon": -0.07528,
+      "H_m": null,
+      "H_lahteet": [],
+      "kerronta": "Tower Bridge on Thamesin ylittävä silta, jonka keskiosa jakautuu kahteen siipeen, ja ne nousevat pystyyn laivojen tieltä. Sillan suunnittelivat arkkitehti Horace Jones ja insinööri John Wolfe Barry, ja kun Jones kuoli vuonna 1887, Barry vei työn loppuun. Silta vihittiin käyttöön vuonna 1894. Tornien yläosia yhdistävät kävelysillat, jotka suljettiin yleisöltä vuonna 1910 ja avattiin uudelleen vuonna 1982. Joulukuussa 1952 linja-auton kuljettaja Albert Gunter huomasi sillan alkavan nousta bussin alla, kiihdytti ja ylitti avautuvan raon, ja palkkioksi hän sai kymmenen puntaa ja vapaapäivän.",
+      "virkkeet": [
+        "Tower Bridge on Thamesin ylittävä silta, jonka keskiosa jakautuu kahteen siipeen, ja ne nousevat pystyyn laivojen tieltä.",
+        "Sillan suunnittelivat arkkitehti Horace Jones ja insinööri John Wolfe Barry, ja kun Jones kuoli vuonna 1887, Barry vei työn loppuun.",
+        "Silta vihittiin käyttöön vuonna 1894.",
+        "Tornien yläosia yhdistävät kävelysillat, jotka suljettiin yleisöltä vuonna 1910 ja avattiin uudelleen vuonna 1982.",
+        "Joulukuussa 1952 linja-auton kuljettaja Albert Gunter huomasi sillan alkavan nousta bussin alla, kiihdytti ja ylitti avautuvan raon, ja palkkioksi hän sai kymmenen puntaa ja vapaapäivän."
+      ],
+      "faktat": [
+        {
+          "vaite": "Sillan keskiosa koostuu kahdesta nostosiivestä (bascule), jotka nousevat laivojen tieltä.",
+          "lahde1": "https://en.wikipedia.org/wiki/Tower_Bridge",
+          "lahde2": "https://www.towerbridge.org.uk/whats-inside"
+        },
+        {
+          "vaite": "Horace Jones kuoli 21.5.1887, ja John Wolfe Barry sai tehtäväkseen viedä sillan valmiiksi; Barry oli nimitetty valvomaan rakentamista Jonesin kanssa (Jones arkkitehti, Barry insinööri).",
+          "lahde1": "https://www.towerbridge.org.uk/stories/sir-horace-jones",
+          "lahde2": "https://en.wikipedia.org/wiki/Tower_Bridge"
+        },
+        {
+          "vaite": "Silta avattiin yleisölle ja vihittiin käyttöön vuonna 1894 (30.6.1894 Walesin prinssi).",
+          "lahde1": "https://en.wikipedia.org/wiki/Tower_Bridge",
+          "lahde2": "https://www.towerbridge.org.uk/whats-inside"
+        },
+        {
+          "vaite": "Tornien väliset korkeat kävelysillat suljettiin yleisöltä vuonna 1910 ja avattiin uudelleen vuonna 1982 (osana Tower Bridge Exhibitionia). Sulkemisen syytä ei mainita kappaleessa, koska lähteet ovat ristiriitaiset.",
+          "lahde1": "https://www.towerbridge.org.uk/whats-inside",
+          "lahde2": "https://en.wikipedia.org/wiki/Tower_Bridge"
+        },
+        {
+          "vaite": "30.12.1952 linja-auton 78 kuljettaja Albert Gunter ylitti avautumaan alkaneen sillan raon kiihdyttämällä; hän sai 10 punnan palkkion ja vapaapäivän.",
+          "lahde1": "https://www.towerbridge.org.uk/stories/bus-jump",
+          "lahde2": "https://en.wikipedia.org/wiki/Albert_Gunter"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "commons_tiedosto": "Tower Bridge, II. (open), London, England-LCCN2002696928.jpg",
+          "tekija": "Detroit Publishing Co. (Photochrom Print Collection, Library of Congress)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_Bridge,_II._(open),_London,_England-LCCN2002696928.jpg",
+          "leveys": 3680,
+          "selite": "Tower Bridge 1890-luvun värikuvassa, nostosiivet pystyssä ja höyrylaiva ohittamassa.",
+          "virke": 1,
+          "aihe": "avautuva keskiosa"
+        },
+        {
+          "commons_tiedosto": "Tower Bridge, III. (closed), London, England-LCCN2002696929.jpg",
+          "tekija": "Detroit Publishing Co. (Photochrom Print Collection, Library of Congress)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_Bridge,_III._(closed),_London,_England-LCCN2002696929.jpg",
+          "leveys": 3691,
+          "selite": "Sama silta suljettuna: tornien välissä näkyy ylhäällä kävelysilta.",
+          "virke": 4,
+          "aihe": "tornien välinen kävelysilta"
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Tower Bridge RMG PW2267.tiff",
+          "tekija": "William Lionel Wyllie (1851-1931)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_RMG_PW2267.tiff",
+          "leveys": 3800,
+          "selite": "Wyllien laverrus sillasta Thamesin laivaliikenteen keskellä, savua ja proomuja."
+        },
+        {
+          "commons_tiedosto": "Tower Bridge RMG PW0770.jpg",
+          "tekija": "William Lionel Wyllie (1851-1931)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_RMG_PW0770.jpg",
+          "leveys": 1280,
+          "selite": "Wyllien vedos Tower Bridgestä ja joen purjealuksista."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "TÄRKEÄ: Commonsissa tiedostonimet London-TowerBridge-1900-Open.jpg ja -Closed.jpg ovat keskenään väärin päin (Open-tiedostossa silta on kiinni). Siksi tarinakuvat on valittu LOC:n oikein nimetyistä tiedostoista (II open, III closed); samat valokuvat.",
+        "Kuvista jätetty pois ilmakuvat, joissa näkyy City Hall tai The Shard (elävien suunnittelijoiden rakennuksia), samoin 2012-valokuva, jossa näkyy Gherkin.",
+        "Sillan nostojen määrää tai tornien korkeutta ei mainita (ei kahta lähdettä).",
+        "Linja-auton pomppu: lähteissä eroavat raon leveys (3-6 jalkaa) ja loukkaantumiset, joten kappale ei kerro niitä. Syytä (vartijan unohdus vs. varoitusten ajoitus) ei kerrota. Ei bussivalokuvaa, koska sellaista ei ole (levinnyt kuva on väärennös).",
+        "Kappaleessa ei mainita Toweria (edellinen pysähdys 300 m päässä). Ei viitettä isoisään.",
+        "Tarinakuvien (LOC) alareunan painettu tekstirivi rajattava pois. Lisäkuva \"viewed from glass walkway\" poistettu (BIGBUS- ja Thames Clippers -tekstit). Commonsin London-TowerBridge-1900-Open/Closed.jpg -tiedostot ovat väärin päin: käytetään LOC-tiedostoja."
+      ],
+      "sanoja": 81
+    },
+    {
+      "nro": 8,
+      "nimi": "Greenwichin kuninkaallinen observatorio",
+      "q": "Q192988",
+      "lat": 51.47783,
+      "lon": -0.00139,
+      "H_m": null,
+      "H_lahteet": [],
+      "kerronta": "Greenwichin kuninkaallinen observatorio seisoo joen yllä kohoavan puiston kukkulalla, ja sen katolla erottuu punainen pallo. Se on aikapallo, joka nousee mastoa pitkin ja putoaa yleensä tasan yhdeltä iltapäivällä, ja sen avulla Thamesin laivat tarkistivat kellonsa jo vuodesta 1833. Observatorion vanhimman osan, Flamsteed Housen, suunnitteli Christopher Wren, ja kuningas Kaarle toinen määräsi sen rakennettavaksi vuonna 1675, jotta merellä osattaisiin määrittää pituusaste. Vuonna 1884 kansainvälinen konferenssi valitsi juuri Greenwichin läpi kulkevan pituuspiirin koko maailman nollapiiriksi. Kukkulan juurella joen rannalla on kuivatelakassa vuonna 1869 vesille laskettu teeklipperi Cutty Sark.",
+      "virkkeet": [
+        "Greenwichin kuninkaallinen observatorio seisoo joen yllä kohoavan puiston kukkulalla, ja sen katolla erottuu punainen pallo.",
+        "Se on aikapallo, joka nousee mastoa pitkin ja putoaa yleensä tasan yhdeltä iltapäivällä, ja sen avulla Thamesin laivat tarkistivat kellonsa jo vuodesta 1833.",
+        "Observatorion vanhimman osan, Flamsteed Housen, suunnitteli Christopher Wren, ja kuningas Kaarle toinen määräsi sen rakennettavaksi vuonna 1675, jotta merellä osattaisiin määrittää pituusaste.",
+        "Vuonna 1884 kansainvälinen konferenssi valitsi juuri Greenwichin läpi kulkevan pituuspiirin koko maailman nollapiiriksi.",
+        "Kukkulan juurella joen rannalla on kuivatelakassa vuonna 1869 vesille laskettu teeklipperi Cutty Sark."
+      ],
+      "faktat": [
+        {
+          "vaite": "Punainen aikapallo on Flamsteed Housen katolla ja putoaa kello 13 (GMT/BST); pallo on ollut käytössä vuodesta 1833. Se ei toimi liian tuulisella säällä, siksi 'yleensä'.",
+          "lahde1": "https://www.rmg.co.uk/royal-observatory/attractions/greenwich-time-ball",
+          "lahde2": "https://www.rmg.co.uk/stories/space-astronomy/history-royal-observatory"
+        },
+        {
+          "vaite": "Aikapallon avulla Thamesin laivat tarkistivat kellonsa.",
+          "lahde1": "https://www.rmg.co.uk/royal-observatory/attractions/greenwich-time-ball",
+          "lahde2": "https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich"
+        },
+        {
+          "vaite": "Christopher Wren suunnitteli observatorion alkuperäisen osan Flamsteed Housen (Robert Hookea avustajana, ei mainita kappaleessa).",
+          "lahde1": "https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich",
+          "lahde2": "https://www.rmg.co.uk/royal-observatory/history"
+        },
+        {
+          "vaite": "Kuningas Kaarle II käski rakentaa observatorion vuonna 1675 pituusasteen määrittämiseksi merenkulun parantamiseksi.",
+          "lahde1": "https://www.rmg.co.uk/royal-observatory/history",
+          "lahde2": "https://www.rmg.co.uk/stories/space-astronomy/history-royal-observatory"
+        },
+        {
+          "vaite": "Kansainvälinen meridiaanikonferenssi valitsi Greenwichin pituuspiirin maailman nollameridiaaniksi vuonna 1884.",
+          "lahde1": "https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich",
+          "lahde2": "https://www.rmg.co.uk/royal-observatory/history"
+        },
+        {
+          "vaite": "Teeklipperi Cutty Sark laskettiin vesille 1869 Dumbartonissa, ja se on ollut kuivatelakassa Greenwichissä vuodesta 1957.",
+          "lahde1": "https://www.rmg.co.uk/collections/objects/rmgc-object-14750",
+          "lahde2": "https://en.wikipedia.org/wiki/Cutty_Sark"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "commons_tiedosto": "Time ball Greenwich 2011.jpg",
+          "tekija": "Perituss",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Time_ball_Greenwich_2011.jpg",
+          "leveys": 5184,
+          "selite": "Punainen aikapallo mastossaan Flamsteed Housen tornin päällä.",
+          "virke": 2,
+          "aihe": "aikapallo katolla"
+        },
+        {
+          "commons_tiedosto": "The Royal Observatory, Greenwich RMG PU8920.tiff",
+          "tekija": "John Varley (1778-1842)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Royal_Observatory,_Greenwich_RMG_PU8920.tiff",
+          "leveys": 4800,
+          "selite": "Varleyn vesiväri observatoriosta kukkulalla, taustalla Thamesin laakso.",
+          "virke": 3,
+          "aihe": "Wrenin observatorio kukkulalla"
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Flamsteed House, Royal Observatory, Greenwich.jpg",
+          "tekija": "Poliphilo",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flamsteed_House,_Royal_Observatory,_Greenwich.jpg",
+          "leveys": 2048,
+          "selite": "Flamsteed House tiilirakennuksena, katolla aikapallo ja kupolit."
+        },
+        {
+          "commons_tiedosto": "The clipper Cutty Sark RMG BHC3277.tiff",
+          "tekija": "John Fraser",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_clipper_Cutty_Sark_RMG_BHC3277.tiff",
+          "leveys": 6957,
+          "selite": "John Fraserin maalaus Cutty Sark -teeklipperistä täysissä purjeissa."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Kappaleessa ei väitetä kuulijan seisovan paikalla. Ensimmäinen virke yhdistää joen (edellinen pysähdys) kukkulalle nousuun. Ei viitettä isoisään.",
+        "Vihreä laser ja Octagon Room jätettiin pois: laserin vuosi vain yhdestä lähteestä (Wikipedia, 16.12.1999), Octagon Roomin kuvissa on ihmisiä lähietäisyydeltä.",
+        "Old Royal Naval College jätettiin pois, koska Wrenin osuus (Hawksmoorin ym. kanssa) olisi vaatinut tarkempaa varmistusta kuin kappaleen tila sallii. Cutty Sarkin kuvasta kelpasi vain maalaus (Commonsin 'Cutty Sark for Maritime Greenwich' on asemakilpi).",
+        "RMG:n sivu ilmoittaa observatorion sulkeutuvan kunnostukseen 2.11.2026: kappale ei mainitse aukioloja. Aikapallon pudotus voi jäädä väliin tuulella, siksi 'yleensä'.",
+        "Cutty Sark -virke: 'vuonna 1869 vesille laskettu' RMG:n mukaan; 1957 kuivatelakkavuotta ei kerrota (lähteet 1954/1957).",
+        "Tarinakuva virke 2: aikapallo CC0-valokuva on otettu aidan raoista, mutta ihmisiä ei ole.",
+        "RMG ilmoittaa observatorion sulkeutuvan kunnostukseen 2.11.2026 (kappale ei mainitse aukioloja)."
+      ],
+      "sanoja": 86
+    }
+  ]
+}
