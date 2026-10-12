@@ -79,3 +79,43 @@ Tarkistus 12.10.: natiivin ja workerin retkikunnan päätepisteet täsmäävät.
 - **WebSocket iOS-taustalla:** käyttöjärjestelmä katkaisee yhteyden. Ratkaisu on yhteys kiinni taustalla ja uusi yhteys palatessa.
 - **Kustannus:** jos Durable Objects ei kuulu nykyiseen Cloudflare-tasoon, vaihtoehtona on HTTP-pollaus 1 Hz nykyiseen workeriin (`/pallot/paikka`, D1 ei käy, joten KV tai muisti). Pollaus on raskaampi, joten päätös tehdään ennen toteutusta (Julkaisija tarkistaa tason).
 - **Kehysero:** jos pallon sijainti lasketaan kaupunkikohtaisesta origosta, lat/lon/alt-viesti on riippumaton laitteiden LOD-tasosta.
+
+## 7. Pallokilpa (omistaja 13.1x, PT): retkikunnan kilpailu kipissä
+
+> "Kipissä voisi olla retkikunnalle oma kilpailu missä pitäisi käydä keräämässä ilmapallot opaskierroksen kohteista. Ja se joka on nopein voittaa jne. Siinä voisi olla suunta ja etäisyys avustin käytössä. Saisiko kompassia hyödynnettyä tässä?"
+
+### Säännöt
+- Jokaisen opaskierroksen kohteen yllä leijuu ilmapallo (kohde-lista = kaupungin kierros, sama kuin metrokartassa). Pelaajat lentävät vapaasti ja keräävät pallot **missä järjestyksessä tahansa**. Kilpailu päättyy, kun kaikki on kerätty; kello käy aloitusmerkistä viimeiseen palloon.
+- **Keräys:** oma pallo (kaupunkikameran silmä, luku 4) tulee 60 metrin säteelle ilmapallosta (3D-etäisyys; ilmapallo leijuu 50 m kohteen katon yläpuolella). Kerätty pallo poksahtaa (olemassa oleva tehoste) ja katoaa vain keränneeltä; muiden pallot pysyvät.
+- **Kilpailun aikana:** kierroksen kerronta ja kohdekortit ovat pois, ja kohteeseen lentäminen listan tai metrokartan kautta on pois päältä (vapaa lento ainoa liike). Metrokartta näyttää kerätyt kuitattuina (✓) ja jäljellä olevat.
+- **Keskeytys:** pelaaja voi lopettaa (ei tulosta); kierros jatkuu siitä, mihin se jäi ennen kilpailua.
+
+### Aloitus: yhteislähtö retkikunnalle
+- Kuka tahansa retkikunnan jäsen kaupungin pallonäkymässä voi kutsua kilpailuun. Muut samassa kaupunkihuoneessa (luku 2) näkevät kutsun ja vastaavat "Mukaan". Kutsuja aloittaa, kun haluaa (enintään 60 s odotus).
+- Durable Object -huone antaa **yhteisen aloitusajan** (nyt + 5 s) ja lähettää lähtölaskennan; kaikki siirretään kierroksen aloituspisteeseen samalle korkeudelle ennen merkkiä (reilu lähtö).
+- **Yksin pelaava** (ei retkikuntaa tai huoneessa vain itse): sama kilpailu paikallisesti ilman verkkoa, vastassa oma paras aika (haamu = oman parhaan reitin pallo, valinnainen).
+
+### Kompassi: suunta ja etäisyys (olemassa olevat pohjat)
+- Korin kompassi (`PalloKori.SeuraavaSuunta`, joka nyt osoittaa kierroksen seuraavaan kohteeseen) osoittaa kilpailun aikana **lähimpään keräämättömään** palloon. Lähin lasketaan 3D-etäisyytenä joka ruutu; vaihtuu, kun toinen tulee lähemmäs (hystereesi 10 %, ettei neula hypi).
+- Etäisyys metreinä (alle 1 km: 10 m:n tarkkuus, muuten 0,1 km) kompassin vieressä olemassa olevalla tekstipohjalla. Linssiseppä valitsee pohjan (korin kompassin merkki ja metrolinjan rivin teksti); puuttuva pohja → PT/omistaja (UI-POHJAT).
+- Kello ja kerätyt (esim. 5/12) samaan riviin.
+
+### Tulostaulu ja pisteet (talous)
+- Tulokset samassa Durable Object -huoneessa: aika ja kerätyt per jäsen; huone pitää retkikunnan **parhaat ajat kaupungeittain** (SQLite-tallennus, muutama rivi; luku 2:n "ei historiaa" koskee sijainteja, ei tuloksia). Taulukko näytetään kilpailun lopussa olemassa olevalla kortti- tai listapohjalla (Natiivi-UI).
+- **Palkinto** (talous 300, aarretehtävien × 0,4 -linja): kaikki pallot kerätty = **£20 kerran kaupunkia kohden** (≈ ⅓ matkaa), retkikunnan nopein **+£10**. Ennätyksistä ei rahaa (ei farmausta); oma paras aika ja retkikunnan ennätys merkitään matkakirjaan.
+- Huijauksen esto kevyesti: asiakas ilmoittaa keräyksen aikaleimalla, huone tarkistaa, ettei peräkkäisten keräysten nopeus ylitä vapaan lennon enimmäisnopeutta.
+
+### Yksityisyys
+- Sama kuin luvuissa 2–3: vain oma retkikunta näkee pallot, nimimerkit ja ajat; sijainteja ei tallenneta; ajat ovat retkikunnan sisäisiä (ei julkista tulostaulua). Yksin pelaavan ajat pysyvät laitteella.
+
+### Kulutus ja työmäärä
+- Kilpailu lisää huoneeseen vain harvat tapahtumat (kutsu, valmis, lähtö, keräys, maali); sijainnit kulkevat jo 1 Hz:n linjalla. Free-tason ylitys: kilpailu jatkuu paikallisesti (yksinpeli), tulostaulu jää päivittämättä.
+
+| Osa | Tekijä | Arvio |
+|---|---|---|
+| Worker: kilpailun tila huoneessa, yhteislähtö, tulokset ja ennätykset, nopeustarkistus, testit | Pelikoodari | 0,5 pv |
+| Kilpailumoottori puhtaana C#:na (säännöt, kello, keräys, lähin pallo + hystereesi, palkinto, yksinpeli), Peli-testit | Pelikoodari | 1 pv |
+| Ilmapallot kohteiden yllä, poksahdus, korin kompassin kilpailutila, metrokartan kuittaus, listalennon esto, aloituspiste | Linssiseppä | 1–1,5 pv |
+| Kutsu, lähtölaskenta ja tulostaulu olemassa olevilla pohjilla | Natiivi-UI | 0,5 pv |
+| Kahden simulaattorin kilpailutesti | Laitetestaaja | 0,5 pv |
+| **Yhteensä (luvun 5 lisäksi)** | | **noin 3,5–4 pv; juna 185 yhdessä pallojen kanssa tai 186** |
