@@ -455,72 +455,72 @@
       "tapahtuma": "nouto",
       "vari": 0,
       "vari_nimi": "punainen",
-      "teksti": "Punainen poksauttaa!",
-      "merkkeja": 20,
-      "kesto_arvio_s": 1.4
+      "teksti": "Punainen sieppaa pallon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
     },
     {
       "tunniste": "pulu-kisa-nouto-2-sininen",
       "tapahtuma": "nouto",
       "vari": 1,
       "vari_nimi": "sininen",
-      "teksti": "Sininen poksauttaa!",
-      "merkkeja": 19,
-      "kesto_arvio_s": 1.4
+      "teksti": "Sininen sieppaa pallon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
     },
     {
       "tunniste": "pulu-kisa-nouto-2-keltainen",
       "tapahtuma": "nouto",
       "vari": 2,
       "vari_nimi": "keltainen",
-      "teksti": "Keltainen poksauttaa!",
-      "merkkeja": 21,
-      "kesto_arvio_s": 1.5
+      "teksti": "Keltainen sieppaa pallon!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
     },
     {
       "tunniste": "pulu-kisa-nouto-2-vihrea",
       "tapahtuma": "nouto",
       "vari": 3,
       "vari_nimi": "vihrea",
-      "teksti": "Vihreä poksauttaa!",
-      "merkkeja": 18,
-      "kesto_arvio_s": 1.3
+      "teksti": "Vihreä sieppaa pallon!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
     },
     {
       "tunniste": "pulu-kisa-nouto-2-oranssi",
       "tapahtuma": "nouto",
       "vari": 4,
       "vari_nimi": "oranssi",
-      "teksti": "Oranssi poksauttaa!",
-      "merkkeja": 19,
-      "kesto_arvio_s": 1.4
+      "teksti": "Oranssi sieppaa pallon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
     },
     {
       "tunniste": "pulu-kisa-nouto-2-violetti",
       "tapahtuma": "nouto",
       "vari": 5,
       "vari_nimi": "violetti",
-      "teksti": "Violetti poksauttaa!",
-      "merkkeja": 20,
-      "kesto_arvio_s": 1.4
+      "teksti": "Violetti sieppaa pallon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
     },
     {
       "tunniste": "pulu-kisa-nouto-2-valkoinen",
       "tapahtuma": "nouto",
       "vari": 6,
       "vari_nimi": "valkoinen",
-      "teksti": "Valkoinen poksauttaa!",
-      "merkkeja": 21,
-      "kesto_arvio_s": 1.5
+      "teksti": "Valkoinen sieppaa pallon!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
     },
     {
       "tunniste": "pulu-kisa-nouto-2-musta",
       "tapahtuma": "nouto",
       "vari": 7,
       "vari_nimi": "musta",
-      "teksti": "Musta poksauttaa!",
-      "merkkeja": 17,
-      "kesto_arvio_s": 1.2
+      "teksti": "Musta sieppaa pallon!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
     },
     {
       "tunniste": "pulu-kisa-kaasu-punainen",

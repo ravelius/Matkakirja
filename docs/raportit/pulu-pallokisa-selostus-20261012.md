@@ -2,7 +2,7 @@
 
 Pulu selostaa retkikunnan pallokisaa (suunnitelma `pallot-nakyviin-suunnitelma-20261012.md` luku 7, PR #4501). Tämä on käsikirjoitus omistajan hyväksyttäväksi äänisivun Tekstit-sivulla; Äänittäjä generoi vasta hyväksynnän ja omistajan luvan jälkeen (maksullinen generointi). Koneluettava: `pulu-pallokisa-selostus-20261012.json`.
 
-**Rajat:** 74 leikettä: 7 tapahtumaa × 8 väriä (nouto kahtena versiona = 64 väriä sisältävää leikettä) + 10 yleistä. Jokainen leike alle 2 s (≤ 27 merkkiä; puhenopeus noin 14 merkkiä/s; pisin on "Keltainen hakee viimeistä!", 26 merkkiä, ~1.9 s). Yhteensä 1618 merkkiä.
+**Rajat:** 74 leikettä: 7 tapahtumaa × 8 väriä (nouto kahtena versiona = 64 väriä sisältävää leikettä) + 10 yleistä. Jokainen leike alle 2 s (≤ 27 merkkiä; puhenopeus noin 14 merkkiä/s; pisin on "Keltainen hakee viimeistä!", 26 merkkiä, ~1.9 s). Yhteensä 1650 merkkiä.
 **Värit (Pelikoodari):** 0 punainen · 1 sininen · 2 keltainen · 3 vihreä · 4 oranssi · 5 violetti · 6 valkoinen · 7 musta. Genetiivi (kaasu-tapahtumassa): Punaisen, Sinisen, Keltaisen, Vihreän, Oranssin, Violetin, Valkoisen, Mustan.
 **Sävy:** Pulun innostunut, lyhyt selostajan ääni ("Kääk!" säästeliäästi), ei alentuvaa; yksi lause per leike. Nimeämiskaava `pulu-kisa-<tapahtuma>-<vari>`.
 **Soitto (Pelikoodari):** vähintään noin 12 s väli; tärkeys voitto > johtoon nousu > viimeinen pallo > tiukka > nousu > nouto > kaasu; vanhentunut tapahtuma pudotetaan; ei päällekkäin muun puheen kanssa.
@@ -15,7 +15,7 @@ Pulu selostaa retkikunnan pallokisaa (suunnitelma `pallot-nakyviin-suunnitelma-2
 | viimeinen | pelaaja hakee viimeistä palloa (yksi jäljellä) | Punainen hakee viimeistä! · Musta hakee viimeistä! |
 | tiukka | ero johtajaan yksi pallo | Punainen on kintereillä! · Musta on kintereillä! |
 | nousu | pelaaja nousee sijoilla (ohittaa jonkun) | Punainen kirii kiinni! · Musta kirii kiinni! |
-| nouto | pelaaja nappaa pallon (tavallinen) | Punainen nappaa pallon! · Musta nappaa pallon!<br>Punainen poksauttaa! · Musta poksauttaa! |
+| nouto | pelaaja nappaa pallon (tavallinen) | Punainen nappaa pallon! · Musta nappaa pallon!<br>Punainen sieppaa pallon! · Musta sieppaa pallon! |
 | kaasu | pelaajan kaasu vähissä (alle 20 %; vain jos moottori lähettää tapahtuman) | Punaisen kaasu vähissä! · Mustan kaasu vähissä! |
 | voitto | pelaaja keräsi viimeisen pallon ensimmäisenä / voittaa | Punainen voittaa kisan! · Musta voittaa kisan! |
 
@@ -63,14 +63,14 @@ Pulu selostaa retkikunnan pallokisaa (suunnitelma `pallot-nakyviin-suunnitelma-2
 | pulu-kisa-nouto-1-violetti | Violetti nappaa pallon! | 23 |
 | pulu-kisa-nouto-1-valkoinen | Valkoinen nappaa pallon! | 24 |
 | pulu-kisa-nouto-1-musta | Musta nappaa pallon! | 20 |
-| pulu-kisa-nouto-2-punainen | Punainen poksauttaa! | 20 |
-| pulu-kisa-nouto-2-sininen | Sininen poksauttaa! | 19 |
-| pulu-kisa-nouto-2-keltainen | Keltainen poksauttaa! | 21 |
-| pulu-kisa-nouto-2-vihrea | Vihreä poksauttaa! | 18 |
-| pulu-kisa-nouto-2-oranssi | Oranssi poksauttaa! | 19 |
-| pulu-kisa-nouto-2-violetti | Violetti poksauttaa! | 20 |
-| pulu-kisa-nouto-2-valkoinen | Valkoinen poksauttaa! | 21 |
-| pulu-kisa-nouto-2-musta | Musta poksauttaa! | 17 |
+| pulu-kisa-nouto-2-punainen | Punainen sieppaa pallon! | 24 |
+| pulu-kisa-nouto-2-sininen | Sininen sieppaa pallon! | 23 |
+| pulu-kisa-nouto-2-keltainen | Keltainen sieppaa pallon! | 25 |
+| pulu-kisa-nouto-2-vihrea | Vihreä sieppaa pallon! | 22 |
+| pulu-kisa-nouto-2-oranssi | Oranssi sieppaa pallon! | 23 |
+| pulu-kisa-nouto-2-violetti | Violetti sieppaa pallon! | 24 |
+| pulu-kisa-nouto-2-valkoinen | Valkoinen sieppaa pallon! | 25 |
+| pulu-kisa-nouto-2-musta | Musta sieppaa pallon! | 21 |
 | pulu-kisa-kaasu-punainen | Punaisen kaasu vähissä! | 23 |
 | pulu-kisa-kaasu-sininen | Sinisen kaasu vähissä! | 22 |
 | pulu-kisa-kaasu-keltainen | Keltaisen kaasu vähissä! | 24 |
