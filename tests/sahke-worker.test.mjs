@@ -68,6 +68,16 @@ function teeVarasto() {
     async lisaaJasen(rivi) {
       jasenet.push({ ...rivi, ikkuna: 0, laskuri: 0 });
     },
+    async poistaJasen(koodi, jasenId) {
+      const i = jasenet.findIndex((j) => j.koodi === koodi && j.jasenId === jasenId);
+      if (i >= 0) jasenet.splice(i, 1);
+    },
+    async poistaRetkikunta(koodi) {
+      for (const taulu of [jasenet, sahkeet, apupyynnot, apuvastaukset]) {
+        for (let i = taulu.length - 1; i >= 0; i--) if (taulu[i].koodi === koodi) taulu.splice(i, 1);
+      }
+      retkikunnat.delete(koodi);
+    },
     async paivitaKirjoitusIkkuna(koodi, jasenId, ikkuna, laskuri) {
       const rivi = jasenet.find((j) => j.koodi === koodi && j.jasenId === jasenId);
       if (rivi) Object.assign(rivi, { ikkuna, laskuri });
@@ -726,4 +736,41 @@ test('vanhan aakkoston koodi (S tai 5) kelpaa yhä tilakyselyyn', async () => {
     { metodi: 'GET', otsakkeet: { 'x-sahke-avain': ilves.avain } }, apurit);
   assert.equal(tila.status, 200, JSON.stringify(tila.data));
   assert.equal(normalisoiKoodi('as5d-2s'), 'AS5D2S');
+});
+
+/*
+ * EROAMINEN (Julkaisijan löydös 12.10., PT): paikka ja nimimerkki vapautuvat, tyhjä retkikunta poistuu.
+ */
+test('eroa vapauttaa paikan ja nimimerkin; kahdeksan liittymis–eroamiskierrosta ei täytä retkikuntaa', async () => {
+  const apurit = { varasto: teeVarasto(), nyt: teeKello().nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit);
+  for (let kierros = 0; kierros < 12; kierros++) {
+    // eslint-disable-next-line no-await-in-loop
+    const liittyja = await aja('/retkikunta/liity', { runko: { koodi, nimimerkki: 'Rohkea Kompassi' } }, apurit);
+    assert.equal(liittyja.status, 200, `kierros ${kierros}: ${JSON.stringify(liittyja.data)}`);
+    // eslint-disable-next-line no-await-in-loop
+    const ero = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: liittyja.data.jasenId, avain: liittyja.data.avain } }, apurit);
+    assert.equal(ero.status, 200);
+    assert.deepEqual(ero.data, { ok: true, jaljella: 1 });
+  }
+  assert.equal(apurit.varasto.jasenet.filter((j) => j.koodi === koodi).length, 1, 'vain perustaja jäljellä');
+  const tila = await aja(`/retkikunta/tila?koodi=${koodi}&jasenId=${ilves.jasenId}`,
+    { metodi: 'GET', otsakkeet: { 'x-sahke-avain': ilves.avain } }, apurit);
+  assert.equal(tila.status, 200);
+});
+
+test('eroa: väärä avain 401, viimeinen jäsen poistaa retkikunnan, eronneen tunnukset eivät enää kelpaa', async () => {
+  const apurit = { varasto: teeVarasto(), nyt: teeKello().nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit);
+  const vaara = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: 'x'.repeat(32) } }, apurit);
+  assert.equal(vaara.status, 401);
+  const ylim = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: ilves.avain, syy: 'x' } }, apurit);
+  assert.equal(ylim.status, 400);
+  const ero = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: ilves.avain } }, apurit);
+  assert.deepEqual(ero.data, { ok: true, jaljella: 0 });
+  assert.equal(apurit.varasto.retkikunnat.has(koodi), false, 'tyhjä retkikunta poistettu');
+  const uudelleen = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: ilves.avain } }, apurit);
+  assert.equal(uudelleen.status, 401, 'eronnut ei voi enää kirjoittaa');
+  const liity = await aja('/retkikunta/liity', { runko: { koodi, nimimerkki: 'Rohkea Kompassi' } }, apurit);
+  assert.notEqual(liity.status, 200, 'poistettuun retkikuntaan ei voi liittyä');
 });

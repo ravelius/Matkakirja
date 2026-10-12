@@ -205,6 +205,22 @@ export function teeVarasto(db) {
       return (tulos?.results ?? []).map(apuvastausOlio);
     },
 
+    /** Eroaminen (POST /retkikunta/eroa): jäsenen rivi pois, jolloin paikka ja nimimerkki vapautuvat. */
+    async poistaJasen(koodi, jasenId) {
+      await db.prepare('DELETE FROM jasenet WHERE koodi = ? AND jasen_id = ?').bind(koodi, jasenId).run();
+    },
+
+    /** Tyhjä retkikunta pois sisältöineen (viimeinen jäsen erosi). Jäsenet ensin, kuten siivouksessa. */
+    async poistaRetkikunta(koodi) {
+      await db.batch([
+        db.prepare('DELETE FROM jasenet WHERE koodi = ?').bind(koodi),
+        db.prepare('DELETE FROM sahkeet WHERE koodi = ?').bind(koodi),
+        db.prepare('DELETE FROM apuvastaukset WHERE koodi = ?').bind(koodi),
+        db.prepare('DELETE FROM apupyynnot WHERE koodi = ?').bind(koodi),
+        db.prepare('DELETE FROM retkikunnat WHERE koodi = ?').bind(koodi),
+      ]);
+    },
+
     async siivoa(sisaltoRaja, retkikuntaRaja) {
       /*
        * Järjestys on tärkeä: jäsenet ennen retkikuntia, jotta
