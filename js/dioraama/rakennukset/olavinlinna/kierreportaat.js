@@ -49,7 +49,8 @@ const A1 = askelKulma(TASANNE_1), A2 = askelKulma(TASANNE_2) - 360; // 339,1° (
 // 0,26 m seinästä sisään (reseptit-kalusteet2.mjs: seinasoihtu). r = seinäpinta 5,5.
 // 12.10. (#4417): sisätilassa ihralamppu (liekin tyvi 0,25 m seinästä, 0,01 m origon alapuolella), ei soihtua.
 const soihtuLiekki = (a, y) => P(5.5 - 0.25, a, +(y - 0.01).toFixed(3));
-const soihtu = (a, y) => ({ resepti: 'ihralamppu', paikka: P(5.5, a, y), suunta: a + 180 });
+// v48w (13.10., botti 86/90 pimeät): kuilun lamput kirkkaammiksi kuin entiset soihdut (soihtu 0,7 / 1,4).
+const soihtu = (a, y) => ({ resepti: 'ihralamppu', paikka: P(5.5, a, y), suunta: a + 180, voima: 0.85, sade: 1.9 });
 const seinalle = (resepti, a, y, muut = {}) => ({ resepti, paikka: P(5.5, a, y), suunta: a + 180, ...muut });
 
 const TAULU = {
@@ -147,6 +148,8 @@ export const TILA = {
     { paikka: P(2.6, 320, 5.9), sade: 6, voima: 1.0, vari: LAMMIN, lepatus: 0.25 },
     // Rengin lyhty etelän tasanteella.
     { paikka: [P(2.7, 160, Y2)[0], +(Y2 + 1.3).toFixed(2), P(2.7, 160, Y2)[2]], sade: 5, voima: 0.6, vari: '#ffb35c', lepatus: 0.2 },
+    // v48w: yläpään lampun (60°, y 13) hehku harjan ja muurikäytävän ulospääsylle (botti 86/90).
+    { paikka: P(4.9, 60, 13.6), sade: 6, voima: 1.1, vari: LAMMIN, lepatus: 0.25 },
     // Ampumaraoista keilat (päivänvalo, ei lämpöä). Voima viritetty kuten keittiössä (käänteisneliövaimennus).
     {
       tyyppi: 'keila', paikka: P(5.35, 285, 12.55), kohti: P(3.0, 335, Y1), kulma: 24, sade: 9, voima: 150, vari: '#ffe2b0',

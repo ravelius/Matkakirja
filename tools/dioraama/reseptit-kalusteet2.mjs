@@ -293,7 +293,7 @@ export function kynttilakruunu({ sade = 0.35, ketju = 0.6, kynttilia = 5 } = {})
  * keskipiste seinän pinnalla (w = 0), kaikki w ≥ 0. Liekin tyvi paikallisesti [0, −0,01, 0,23]. `.valo`: sade 1,1, voima 0,45,
  * vari #ffb060. Roolit: rauta (pidike), savi (kuppi), liekki (hehkuva).
  */
-export function ihralamppu() {
+export function ihralamppu({ voima = 0.45, sade = 1.1 } = {}) {
   const k = [];
   k.push(...L(-0.045, 0.045, -0.08, 0.06, 0, 0.02, { etu: 'rauta', yla: 'rauta', ala: 'rauta', vasen: 'rauta', oikea: 'rauta' }));
   k.push(...putki([0, -0.06, 0.02], [0, -0.06, 0.2], 0.011, 0.011, 6, 'rauta'));          // vaakavarsi
@@ -301,7 +301,7 @@ export function ihralamppu() {
   k.push(...putki([0, -0.075, 0.23], [0, -0.035, 0.23], 0.03, 0.05, 10, 'savi'));         // kuppi
   k.push(...putki([0, -0.035, 0.23], [0, -0.03, 0.23], 0.05, 0.044, 10, 'savi', { paatyA: false }));
   k.push(...putki([0, -0.03, 0.25], [0, 0.03, 0.255], 0.01, 0, 6, 'liekki'));             // sydänliekki nokassa
-  k.valo = { paikka_paikallinen: [0, 0.01, 0.25], sade: 1.1, voima: 0.45, vari: '#ffb060' };
+  k.valo = { paikka_paikallinen: [0, 0.01, 0.25], sade, voima, vari: '#ffb060' }; // v48w: kierreportaissa voimakkaampi
   return k;
 }
 
