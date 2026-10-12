@@ -1,0 +1,2286 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e11",
+  "city": "belmopan",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+  "assets": [
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "belmopan-traveler-20261012-v1-cd79b1",
+      "galleryImageID": "belmopan-traveler-20261012-v1-cd79b1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ee58670ea15d79ba1b257a08a5032dc396b6d0d413279e883dd9d91a46880f31",
+      "exportSHA256": "8444fe9e8d8195b60fb709ca6d08c058732c825fb967cf544fa872812cf04f12",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "17f8c1339cfded23d5f618792615df2eb0223227305b63d30b9f325af9c40a09",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-traveler-20261012-v1-cd79b1/image.png",
+            "nativeSHA256": "ee58670ea15d79ba1b257a08a5032dc396b6d0d413279e883dd9d91a46880f31",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Belmopanin keskustan kierrokseen kuuluvat Ring Roadin puistot ja markkinapaikat. Kaupunkiin tullaan maanteitse, ja keskustassa voi liikkua kävellen tai taksilla. Markkinoille saapuu väkeä myös ympäröivistä kylistä ja kaupungeista. Guanacasten kansallispuisto sopii lähialueen metsäretkeen. St. Herman’s Blue Hole -puiston luolat ja metsäallas puolestaan ovat erillinen retkikohde Hummingbird Highwayn varrella.\n\nKeskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. General close view of moist tropical forest understory, irregular tree trunks, naturally varied green leaves and leaf litter, a modest gap through vegetation. No identifiable national park, signs, buildings, people, giant fantasy leaves or repeated texture. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Belmopanin keskustan kierrokseen kuuluvat Ring Roadin puistot ja markkinapaikat. Kaupunkiin tullaan maanteitse, ja keskustassa voi liikkua kävellen tai taksilla. Markkinoille saapuu väkeä myös ympäröivistä kylistä ja kaupungeista. Guanacasten kansallispuisto sopii lähialueen metsäretkeen. St. Herman’s Blue Hole -puiston luolat ja metsäallas puolestaan ovat erillinen retkikohde Hummingbird Highwayn varrella.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Belmopan",
+                  "taitto": "opas",
+                  "teksti": "Tutustu suunnitellun pääkaupungin keskustaan ja jatka lähimetsän poluille.",
+                  "nosto": "Ring Road, markkinat ja Guanacasten puisto sopivat kaupungin kierrokseen; kauempien luolien retki suunnitellaan erikseen.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Belmopaniin tullaan maanteitse esimerkiksi Belize Citystä. Kaupunkia palvelevat George Price Highway ja Hummingbird Highway, ja keskustassa on linja-autoterminaali. Paikalliseen liikkumiseen voi käyttää taksia tai kävellä. Sisämaan retkien lähtöpaikat ja paluuyhteys on syytä sopia erikseen, sillä kaikki luontokohteet eivät ole kaupungin kävelykeskustassa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Keskustan kierros",
+                      "teksti": "Ring Road näyttää suunnitellun pääkaupungin perusrakenteen. Sen sisällä on hallintorakennuksia ja puistoaluetta, mutta kaupungin arkiseen kierrokseen kuuluvat myös markkinapaikat. Markkinoilla myydään ruokaa, kasviksia, vaatteita ja pieniä tavaroita. Lähiseutujen asukkaat tulevat sinne myös linja-autolla, joten torilla kohtaa kaupungin lisäksi sen ympäristön.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Metsä ja luolaretki",
+                      "teksti": "Guanacasten kansallispuisto on Belmopanin lähialueen metsäretkikohde, jossa on ylläpidettyjä polkuja. St. Herman’s Blue Hole -puiston luolat ja sisämaan Blue Hole sijaitsevat kauempana Hummingbird Highwayn varrella ja kuuluvat erilliseen retkeen. Crystal Caveen pääsee vain hyväksytyn oppaan kanssa. Varaa luolalle sille tarkoitettu opastettu retki, älä käsittele sitä tavallisena puistokävelynä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Belmopanissa on pitkä sadekausi ja sitä lyhyempi kuiva kausi. Kuivana kautenakin voi sataa, joten se ei tarkoita varmuutta sateettomista päivistä. Puistokierroksen ja luolaretken toteutuminen on erillinen asia kuin kaupungissa liikkuminen. Varmista retken järjestäjältä sen toteutuminen ennen lähtöä: retkiä ei järjestetä välttämättä jokaisena päivänä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Keskustan markkinat",
+                        "tahdet": 3,
+                        "selite": "Tuotteita, ruokaa ja kohtaamisia kaupungin sekä lähiseutujen väen kanssa."
+                      },
+                      {
+                        "mita": "Ring Road",
+                        "tahdet": 2,
+                        "selite": "Suunnitellun keskustan perusrakenne erottuu kehätien ympärillä."
+                      },
+                      {
+                        "mita": "Guanacasten kansallispuisto",
+                        "tahdet": 3,
+                        "selite": "Lähialueen metsäpolut ja ympäristöopetus tuovat luontoretken lähelle."
+                      },
+                      {
+                        "mita": "Sisämaan Blue Hole",
+                        "tahdet": 3,
+                        "selite": "Metsäallas kuuluu maan alla kulkevaan vesireittiin."
+                      },
+                      {
+                        "mita": "Opastettu luolaretki",
+                        "tahdet": 2,
+                        "selite": "St. Hermanin ja Crystal Caven luolastoissa kohtaavat karsti ja mayakulttuurin historia."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Blue Hole -nimet",
+                        "teksti": "St. Herman’s Blue Hole sijaitsee sisämaassa; matkavarausta tehdessä tarkista kohteen koko nimi."
+                      },
+                      {
+                        "otsikko": "Retki on erillinen matka",
+                        "teksti": "St. Herman’s Blue Hole -puistoon suuntaudutaan Hummingbird Highwayta pitkin, ja paluuyhteys sovitaan erikseen."
+                      },
+                      {
+                        "otsikko": "Luolan opastus",
+                        "teksti": "Crystal Caveen mennään hyväksytyn oppaan kanssa."
+                      },
+                      {
+                        "otsikko": "Sateita myös kuivana kautena",
+                        "teksti": "Kuiva kausi on sadekautta lyhyempi, ja myös sen aikana voi sataa."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-traveler-20261012-v1-cd79b1/image.png",
+              "detail": "original",
+              "observations": "Pystykuvassa sammaloitunut runko, saniaisia, lehtikasveja ja kariketta metsän sisällä. Pintojen vaihtelu ja valon suunta uskottavia. Ei kasvoja, rakennuksia, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Trooppinen metsä liittyy Belmopanin oppaan luontoretkeen. Kuvateksti erottaa yleishavainteen tietyn puistopolun valokuvasta. Native pysty 1024×1536, suhde 0,667; SHA täsmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+        "fileSHA256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "belmopan-traveler-20261012-v1-cd79b1",
+          "sha256": "ee58670ea15d79ba1b257a08a5032dc396b6d0d413279e883dd9d91a46880f31",
+          "verdict": "accepted",
+          "reason": "Trooppinen metsä liittyy Belmopanin oppaan luontoretkeen. Kuvateksti erottaa yleishavainteen tietyn puistopolun valokuvasta. Native pysty 1024×1536, suhde 0,667; SHA täsmää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-traveler-20261012-v1-cd79b1/image.png",
+            "nativeSHA256": "ee58670ea15d79ba1b257a08a5032dc396b6d0d413279e883dd9d91a46880f31",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Belmopanin keskustan kierrokseen kuuluvat Ring Roadin puistot ja markkinapaikat. Kaupunkiin tullaan maanteitse, ja keskustassa voi liikkua kävellen tai taksilla. Markkinoille saapuu väkeä myös ympäröivistä kylistä ja kaupungeista. Guanacasten kansallispuisto sopii lähialueen metsäretkeen. St. Herman’s Blue Hole -puiston luolat ja metsäallas puolestaan ovat erillinen retkikohde Hummingbird Highwayn varrella.\n\nKeskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. General close view of moist tropical forest understory, irregular tree trunks, naturally varied green leaves and leaf litter, a modest gap through vegetation. No identifiable national park, signs, buildings, people, giant fantasy leaves or repeated texture. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Belmopanin keskustan kierrokseen kuuluvat Ring Roadin puistot ja markkinapaikat. Kaupunkiin tullaan maanteitse, ja keskustassa voi liikkua kävellen tai taksilla. Markkinoille saapuu väkeä myös ympäröivistä kylistä ja kaupungeista. Guanacasten kansallispuisto sopii lähialueen metsäretkeen. St. Herman’s Blue Hole -puiston luolat ja metsäallas puolestaan ovat erillinen retkikohde Hummingbird Highwayn varrella.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Belmopan",
+                  "taitto": "opas",
+                  "teksti": "Tutustu suunnitellun pääkaupungin keskustaan ja jatka lähimetsän poluille.",
+                  "nosto": "Ring Road, markkinat ja Guanacasten puisto sopivat kaupungin kierrokseen; kauempien luolien retki suunnitellaan erikseen.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Belmopaniin tullaan maanteitse esimerkiksi Belize Citystä. Kaupunkia palvelevat George Price Highway ja Hummingbird Highway, ja keskustassa on linja-autoterminaali. Paikalliseen liikkumiseen voi käyttää taksia tai kävellä. Sisämaan retkien lähtöpaikat ja paluuyhteys on syytä sopia erikseen, sillä kaikki luontokohteet eivät ole kaupungin kävelykeskustassa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Keskustan kierros",
+                      "teksti": "Ring Road näyttää suunnitellun pääkaupungin perusrakenteen. Sen sisällä on hallintorakennuksia ja puistoaluetta, mutta kaupungin arkiseen kierrokseen kuuluvat myös markkinapaikat. Markkinoilla myydään ruokaa, kasviksia, vaatteita ja pieniä tavaroita. Lähiseutujen asukkaat tulevat sinne myös linja-autolla, joten torilla kohtaa kaupungin lisäksi sen ympäristön.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Metsä ja luolaretki",
+                      "teksti": "Guanacasten kansallispuisto on Belmopanin lähialueen metsäretkikohde, jossa on ylläpidettyjä polkuja. St. Herman’s Blue Hole -puiston luolat ja sisämaan Blue Hole sijaitsevat kauempana Hummingbird Highwayn varrella ja kuuluvat erilliseen retkeen. Crystal Caveen pääsee vain hyväksytyn oppaan kanssa. Varaa luolalle sille tarkoitettu opastettu retki, älä käsittele sitä tavallisena puistokävelynä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Belmopanissa on pitkä sadekausi ja sitä lyhyempi kuiva kausi. Kuivana kautenakin voi sataa, joten se ei tarkoita varmuutta sateettomista päivistä. Puistokierroksen ja luolaretken toteutuminen on erillinen asia kuin kaupungissa liikkuminen. Varmista retken järjestäjältä sen toteutuminen ennen lähtöä: retkiä ei järjestetä välttämättä jokaisena päivänä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Keskustan markkinat",
+                        "tahdet": 3,
+                        "selite": "Tuotteita, ruokaa ja kohtaamisia kaupungin sekä lähiseutujen väen kanssa."
+                      },
+                      {
+                        "mita": "Ring Road",
+                        "tahdet": 2,
+                        "selite": "Suunnitellun keskustan perusrakenne erottuu kehätien ympärillä."
+                      },
+                      {
+                        "mita": "Guanacasten kansallispuisto",
+                        "tahdet": 3,
+                        "selite": "Lähialueen metsäpolut ja ympäristöopetus tuovat luontoretken lähelle."
+                      },
+                      {
+                        "mita": "Sisämaan Blue Hole",
+                        "tahdet": 3,
+                        "selite": "Metsäallas kuuluu maan alla kulkevaan vesireittiin."
+                      },
+                      {
+                        "mita": "Opastettu luolaretki",
+                        "tahdet": 2,
+                        "selite": "St. Hermanin ja Crystal Caven luolastoissa kohtaavat karsti ja mayakulttuurin historia."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Blue Hole -nimet",
+                        "teksti": "St. Herman’s Blue Hole sijaitsee sisämaassa; matkavarausta tehdessä tarkista kohteen koko nimi."
+                      },
+                      {
+                        "otsikko": "Retki on erillinen matka",
+                        "teksti": "St. Herman’s Blue Hole -puistoon suuntaudutaan Hummingbird Highwayta pitkin, ja paluuyhteys sovitaan erikseen."
+                      },
+                      {
+                        "otsikko": "Luolan opastus",
+                        "teksti": "Crystal Caveen mennään hyväksytyn oppaan kanssa."
+                      },
+                      {
+                        "otsikko": "Sateita myös kuivana kautena",
+                        "teksti": "Kuiva kausi on sadekautta lyhyempi, ja myös sen aikana voi sataa."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-traveler-20261012-v1-cd79b1/image.png",
+              "detail": "original",
+              "observations": "Pystykuvassa sammaloitunut runko, saniaisia, lehtikasveja ja kariketta metsän sisällä. Pintojen vaihtelu ja valon suunta uskottavia. Ei kasvoja, rakennuksia, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:22:02.876956+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+            "sha256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+            "sha256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png?t=8444fe9e8d8195b6",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+        "sha256": "8444fe9e8d8195b60fb709ca6d08c058732c825fb967cf544fa872812cf04f12",
+        "bytes": 2950869,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "belmopan-traveler-20261012-v1-cd79b1",
+        "nativeSHA256": "ee58670ea15d79ba1b257a08a5032dc396b6d0d413279e883dd9d91a46880f31",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "belmopan",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:22:43.750904+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-traveler-20261012-v1-cd79b1-ee58670ea15d.png",
+        "sha256": "8444fe9e8d8195b60fb709ca6d08c058732c825fb967cf544fa872812cf04f12",
+        "bytes": 2950869,
+        "SHAReadAt": "2026-10-12T19:32:10.258205+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ee58670ea15d79ba1b257a08a5032dc396b6d0d413279e883dd9d91a46880f31",
+        "rgbPixelSHA256": "9b51c7a3802e63ac6ed09530751f15b344e30f6ab8d9e2141ba68cc1f9a7e2f8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "17f8c1339cfded23d5f618792615df2eb0223227305b63d30b9f325af9c40a09"
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "belmopan-o4-20261012-v1-2a160c",
+      "galleryImageID": "belmopan-o4-20261012-v1-2a160c",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista.",
+        "lyhyt": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista.",
+        "lyhyt": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b94023d9a5c830080451df8df7bb2e690492f3fcc63b2f2b2cbe6fac3bdd759d",
+      "exportSHA256": "c0e7fe747b656c4c80e681ed08c8020ba243e984f547e3d5a1ec6aa6c2d9a0f4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "9d6dacfa4ac4356db104ee0331e5a4787c691f6c9266d33ff1d1839fb079794d",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-o4-20261012-v1-2a160c/image.png",
+            "nativeSHA256": "b94023d9a5c830080451df8df7bb2e690492f3fcc63b2f2b2cbe6fac3bdd759d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial photograph of a small anonymous produce stall tabletop with fresh tomatoes, bell peppers and onions in simple baskets, natural imperfect vegetables, soft daylight. Only the produce and tabletop, no surrounding identifiable architecture, no people, no prices or signs. This is a general illustration of produce sold at a market, not a picture of Belmopan market itself.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-o4-20261012-v1-2a160c/image.png",
+              "detail": "original",
+              "observations": "Koreissa punaisia tomaatteja ja kelta- sekä punasipuleita; puulaatikossa erivärisiä paprikoita, taustalla yrttejä. Kasvisten koko, kuoren sävyt ja kuluma vaihtelevat; korit sekä puu uskottavia. Ei ihmisiä, kylttejä, tekstiä tai tunnuksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Yleinen kasvismyynti vastaa O4-ruokajaksoa. Kuvateksti erottaa havainteen Belmopanin torin valokuvasta. Native-SHA ja toimituskokoinen PNG täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+        "fileSHA256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "belmopan-o4-20261012-v1-2a160c",
+          "sha256": "b94023d9a5c830080451df8df7bb2e690492f3fcc63b2f2b2cbe6fac3bdd759d",
+          "verdict": "accepted",
+          "reason": "Yleinen kasvismyynti vastaa O4-ruokajaksoa. Kuvateksti erottaa havainteen Belmopanin torin valokuvasta. Native-SHA ja toimituskokoinen PNG täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-o4-20261012-v1-2a160c/image.png",
+            "nativeSHA256": "b94023d9a5c830080451df8df7bb2e690492f3fcc63b2f2b2cbe6fac3bdd759d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva torilla myytävistä kasviksista, ei valokuva Belmopanin torista.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial photograph of a small anonymous produce stall tabletop with fresh tomatoes, bell peppers and onions in simple baskets, natural imperfect vegetables, soft daylight. Only the produce and tabletop, no surrounding identifiable architecture, no people, no prices or signs. This is a general illustration of produce sold at a market, not a picture of Belmopan market itself.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Keskustan markkinoilla myydään ruokaa ja tuoreita kasviksia. Belmopanissa on myös kiinalaisten omistamia ravintoloita, joiden tarjonnassa on paikallista belizeläistä ruokaa. Matkan ruokatauko voi siten löytyä sekä torilta että ravintolasta; omistajan tausta ei yksin kerro keittiön sisällöstä.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-o4-20261012-v1-2a160c/image.png",
+              "detail": "original",
+              "observations": "Koreissa punaisia tomaatteja ja kelta- sekä punasipuleita; puulaatikossa erivärisiä paprikoita, taustalla yrttejä. Kasvisten koko, kuoren sävyt ja kuluma vaihtelevat; korit sekä puu uskottavia. Ei ihmisiä, kylttejä, tekstiä tai tunnuksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:16:27.566476+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+            "sha256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+            "sha256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png?t=c0e7fe747b656c4c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+        "sha256": "c0e7fe747b656c4c80e681ed08c8020ba243e984f547e3d5a1ec6aa6c2d9a0f4",
+        "bytes": 2513314,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "belmopan-o4-20261012-v1-2a160c",
+        "nativeSHA256": "b94023d9a5c830080451df8df7bb2e690492f3fcc63b2f2b2cbe6fac3bdd759d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "belmopan",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:19:29.248546+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-o4-20261012-v1-2a160c-b94023d9a5c8.png",
+        "sha256": "c0e7fe747b656c4c80e681ed08c8020ba243e984f547e3d5a1ec6aa6c2d9a0f4",
+        "bytes": 2513314,
+        "SHAReadAt": "2026-10-12T18:29:57.875865+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b94023d9a5c830080451df8df7bb2e690492f3fcc63b2f2b2cbe6fac3bdd759d",
+        "rgbPixelSHA256": "cf73b6ca31b57d8bdce6f51615c3ad7adfa5c9122906d1d8ad8694080f9b59a5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "9d6dacfa4ac4356db104ee0331e5a4787c691f6c9266d33ff1d1839fb079794d"
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "belmopan-k2-20261012-v1-ecd8bd",
+      "galleryImageID": "belmopan-k2-20261012-v1-ecd8bd",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä.",
+        "lyhyt": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä.",
+        "lyhyt": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ba9c54081e398892bcb0f43f61ff9dbe2dd12e531f6170b642110b045d39aa11",
+      "exportSHA256": "2d4fff14ccf47ab2fe3ea8a4db8791ef4a8dd3e2aa035985b4b5a50b53290555",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+        "semanticContextSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+        "subjectTitle": "Jokien nimet samassa sanassa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-k2-20261012-v1-ecd8bd/image.png",
+            "nativeSHA256": "ba9c54081e398892bcb0f43f61ff9dbe2dd12e531f6170b642110b045d39aa11",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Belmopanin nimi on koottu sanoista Belize ja Mopan. Molemmat viittaavat seudun jokiin: Mopan laskee Belize-jokeen. Nimi ei siis ole sattumalta samanlainen kuin maan nimi, vaan siinä yhdistetään kaksi vesistön nimeä. Kaupunki itse sijaitsee Cayon piirikunnassa Belize-joen lähellä, sisämaassa Karibianmeren rannikosta. Hallintokaupungin nimi palauttaa huomion maastoon sen ympärillä. Kun sanan jakaa osiin, kartalta löytyy selitys, joka jää helposti virastojen ja pääkaupunkiaseman varjoon."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close overhead natural editorial photograph of two small watercourses meeting into one channel on an anonymous earthy streambed, physically coherent flowing water and irregular stones. No named river geography, city, map labels, bridge or built structure.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Jokien nimet samassa sanassa",
+                "teksti": "Belmopanin nimi on koottu sanoista Belize ja Mopan. Molemmat viittaavat seudun jokiin: Mopan laskee Belize-jokeen. Nimi ei siis ole sattumalta samanlainen kuin maan nimi, vaan siinä yhdistetään kaksi vesistön nimeä. Kaupunki itse sijaitsee Cayon piirikunnassa Belize-joen lähellä, sisämaassa Karibianmeren rannikosta. Hallintokaupungin nimi palauttaa huomion maastoon sen ympärillä. Kun sanan jakaa osiin, kartalta löytyy selitys, joka jää helposti virastojen ja pääkaupunkiaseman varjoon.",
+                "wiki": "Belmopan",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-k2-20261012-v1-ecd8bd/image.png",
+              "detail": "original",
+              "observations": "Kaksi kivien rajaamaa pientä virtaa yhtyy etualan uomaksi. Veden vaahto, virtaussuunnat, märät kivet ja rantakasvit vaihtelevat uskottavasti ilman toistuvaa pintakuviota. Ei kasvoja, rakennuksia, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kahden vesiuoman yhtyminen havainnollistaa jokien nimiyhteyttä. Kuvateksti rajaa sen yleiseksi havainteeksi eikä todelliseksi Belize- tai Mopanjoen näkymäksi. Mitat ja native-SHA täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+        "fileSHA256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "belmopan-k2-20261012-v1-ecd8bd",
+          "sha256": "ba9c54081e398892bcb0f43f61ff9dbe2dd12e531f6170b642110b045d39aa11",
+          "verdict": "accepted",
+          "reason": "Kahden vesiuoman yhtyminen havainnollistaa jokien nimiyhteyttä. Kuvateksti rajaa sen yleiseksi havainteeksi eikä todelliseksi Belize- tai Mopanjoen näkymäksi. Mitat ja native-SHA täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-k2-20261012-v1-ecd8bd/image.png",
+            "nativeSHA256": "ba9c54081e398892bcb0f43f61ff9dbe2dd12e531f6170b642110b045d39aa11",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva vesiuomien yhtymisestä, ei Belize- tai Mopanjoen dokumentoitu näkymä.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Belmopanin nimi on koottu sanoista Belize ja Mopan. Molemmat viittaavat seudun jokiin: Mopan laskee Belize-jokeen. Nimi ei siis ole sattumalta samanlainen kuin maan nimi, vaan siinä yhdistetään kaksi vesistön nimeä. Kaupunki itse sijaitsee Cayon piirikunnassa Belize-joen lähellä, sisämaassa Karibianmeren rannikosta. Hallintokaupungin nimi palauttaa huomion maastoon sen ympärillä. Kun sanan jakaa osiin, kartalta löytyy selitys, joka jää helposti virastojen ja pääkaupunkiaseman varjoon."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close overhead natural editorial photograph of two small watercourses meeting into one channel on an anonymous earthy streambed, physically coherent flowing water and irregular stones. No named river geography, city, map labels, bridge or built structure.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Jokien nimet samassa sanassa",
+                "teksti": "Belmopanin nimi on koottu sanoista Belize ja Mopan. Molemmat viittaavat seudun jokiin: Mopan laskee Belize-jokeen. Nimi ei siis ole sattumalta samanlainen kuin maan nimi, vaan siinä yhdistetään kaksi vesistön nimeä. Kaupunki itse sijaitsee Cayon piirikunnassa Belize-joen lähellä, sisämaassa Karibianmeren rannikosta. Hallintokaupungin nimi palauttaa huomion maastoon sen ympärillä. Kun sanan jakaa osiin, kartalta löytyy selitys, joka jää helposti virastojen ja pääkaupunkiaseman varjoon.",
+                "wiki": "Belmopan",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-k2-20261012-v1-ecd8bd/image.png",
+              "detail": "original",
+              "observations": "Kaksi kivien rajaamaa pientä virtaa yhtyy etualan uomaksi. Veden vaahto, virtaussuunnat, märät kivet ja rantakasvit vaihtelevat uskottavasti ilman toistuvaa pintakuviota. Ei kasvoja, rakennuksia, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:16:15.062756+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+            "sha256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+            "sha256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png?t=2d4fff14ccf47ab2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+        "sha256": "2d4fff14ccf47ab2fe3ea8a4db8791ef4a8dd3e2aa035985b4b5a50b53290555",
+        "bytes": 3642640,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "belmopan-k2-20261012-v1-ecd8bd",
+        "nativeSHA256": "ba9c54081e398892bcb0f43f61ff9dbe2dd12e531f6170b642110b045d39aa11",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "belmopan",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:19:27.576051+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-k2-20261012-v1-ecd8bd-ba9c54081e39.png",
+        "sha256": "2d4fff14ccf47ab2fe3ea8a4db8791ef4a8dd3e2aa035985b4b5a50b53290555",
+        "bytes": 3642640,
+        "SHAReadAt": "2026-10-12T18:29:57.766192+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ba9c54081e398892bcb0f43f61ff9dbe2dd12e531f6170b642110b045d39aa11",
+        "rgbPixelSHA256": "6fcb23990749654abb8addd29ea7e3572d0120c7b7db5369a8a1b5b2833cacf1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "targetAfterSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8",
+      "contextAfterSHA256": "622e2ef5afc52b17f19f51e88ed686dbdbc3e11f483870a9289315b4d3e615f8"
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "belmopan-l1-20261012-v1-1af59a",
+      "galleryImageID": "belmopan-l1-20261012-v1-1af59a",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva.",
+        "lyhyt": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva.",
+        "lyhyt": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "20439b449be5a9c62f44e8b18b77941db4cb87f66e905e90a249daad0e8065e8",
+      "exportSHA256": "e4ec73d4126e3beeab0c198fb01cbe55c6a713a0c2a3a66b178730e75e0d5ccf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+        "semanticContextSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+        "subjectTitle": "Huono tukkipuu sai puiston",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l1-20261012-v1-1af59a/image.png",
+            "nativeSHA256": "20439b449be5a9c62f44e8b18b77941db4cb87f66e905e90a249daad0e8065e8",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Guanacasten kansallispuisto sai nimensä suuresta guanacaste-puusta. Se säästyi aikanaan hakkuulta, koska haarautunut runko heikensi sen arvoa puutavarana. Metsätalouden kannalta hankalasta puusta tuli siis suojelualueen nimenantaja. Puisto sijaitsee Belmopanin lähellä Roaring Creekin sillan tuntumassa, päätien pohjoispuolella. Alue tuli suojelun piiriin vasta 1900-luvun jälkipuoliskolla, joten nykyinen kansallispuisto ei kuulu isoisän matkavuoteen 1873. Haarautunut runko antoi puulle uuden roolin: sahatavaran sijasta se tunnettiin suojelualueen nimenantajana."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural editorial photograph of the sturdy forked trunk of an anonymous broadleaf tropical tree, two major branches separating low above the ground, genuine irregular bark. No exact guanacaste specimen or park claim, no carvings, people or buildings.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Huono tukkipuu sai puiston",
+                "teksti": "Guanacasten kansallispuisto sai nimensä suuresta guanacaste-puusta. Se säästyi aikanaan hakkuulta, koska haarautunut runko heikensi sen arvoa puutavarana. Metsätalouden kannalta hankalasta puusta tuli siis suojelualueen nimenantaja. Puisto sijaitsee Belmopanin lähellä Roaring Creekin sillan tuntumassa, päätien pohjoispuolella. Alue tuli suojelun piiriin vasta 1900-luvun jälkipuoliskolla, joten nykyinen kansallispuisto ei kuulu isoisän matkavuoteen 1873. Haarautunut runko antoi puulle uuden roolin: sahatavaran sijasta se tunnettiin suojelualueen nimenantajana.",
+                "wiki": "Guanacaste National Park (Belize)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l1-20261012-v1-1af59a/image.png",
+              "detail": "original",
+              "observations": "Lähikuva vahvasta Y-muotoon haarautuvasta puunrungosta vihreässä ympäristössä. Kaarna muodostaa erikokoisia halkeamia ja läiskiä, haaraliitos on yhtenäinen ja uskottava. Ei ihmisiä, kylttejä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Rungon haarautuminen havainnollistaa L1-noston puutavaratarinaa. Kuvateksti ei väitä kuvaa Guanacasten nimipuuksi eikä määritä lajia. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+        "fileSHA256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "belmopan-l1-20261012-v1-1af59a",
+          "sha256": "20439b449be5a9c62f44e8b18b77941db4cb87f66e905e90a249daad0e8065e8",
+          "verdict": "accepted",
+          "reason": "Rungon haarautuminen havainnollistaa L1-noston puutavaratarinaa. Kuvateksti ei väitä kuvaa Guanacasten nimipuuksi eikä määritä lajia. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l1-20261012-v1-1af59a/image.png",
+            "nativeSHA256": "20439b449be5a9c62f44e8b18b77941db4cb87f66e905e90a249daad0e8065e8",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva puun rungon haarautumisesta, ei Guanacasten puiston nimipuun valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Guanacasten kansallispuisto sai nimensä suuresta guanacaste-puusta. Se säästyi aikanaan hakkuulta, koska haarautunut runko heikensi sen arvoa puutavarana. Metsätalouden kannalta hankalasta puusta tuli siis suojelualueen nimenantaja. Puisto sijaitsee Belmopanin lähellä Roaring Creekin sillan tuntumassa, päätien pohjoispuolella. Alue tuli suojelun piiriin vasta 1900-luvun jälkipuoliskolla, joten nykyinen kansallispuisto ei kuulu isoisän matkavuoteen 1873. Haarautunut runko antoi puulle uuden roolin: sahatavaran sijasta se tunnettiin suojelualueen nimenantajana."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural editorial photograph of the sturdy forked trunk of an anonymous broadleaf tropical tree, two major branches separating low above the ground, genuine irregular bark. No exact guanacaste specimen or park claim, no carvings, people or buildings.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Huono tukkipuu sai puiston",
+                "teksti": "Guanacasten kansallispuisto sai nimensä suuresta guanacaste-puusta. Se säästyi aikanaan hakkuulta, koska haarautunut runko heikensi sen arvoa puutavarana. Metsätalouden kannalta hankalasta puusta tuli siis suojelualueen nimenantaja. Puisto sijaitsee Belmopanin lähellä Roaring Creekin sillan tuntumassa, päätien pohjoispuolella. Alue tuli suojelun piiriin vasta 1900-luvun jälkipuoliskolla, joten nykyinen kansallispuisto ei kuulu isoisän matkavuoteen 1873. Haarautunut runko antoi puulle uuden roolin: sahatavaran sijasta se tunnettiin suojelualueen nimenantajana.",
+                "wiki": "Guanacaste National Park (Belize)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l1-20261012-v1-1af59a/image.png",
+              "detail": "original",
+              "observations": "Lähikuva vahvasta Y-muotoon haarautuvasta puunrungosta vihreässä ympäristössä. Kaarna muodostaa erikokoisia halkeamia ja läiskiä, haaraliitos on yhtenäinen ja uskottava. Ei ihmisiä, kylttejä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:16:39.192176+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+            "sha256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+            "sha256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png?t=e4ec73d4126e3bee",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+        "sha256": "e4ec73d4126e3beeab0c198fb01cbe55c6a713a0c2a3a66b178730e75e0d5ccf",
+        "bytes": 3387704,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "belmopan-l1-20261012-v1-1af59a",
+        "nativeSHA256": "20439b449be5a9c62f44e8b18b77941db4cb87f66e905e90a249daad0e8065e8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "belmopan",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:19:30.952175+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-l1-20261012-v1-1af59a-20439b449be5.png",
+        "sha256": "e4ec73d4126e3beeab0c198fb01cbe55c6a713a0c2a3a66b178730e75e0d5ccf",
+        "bytes": 3387704,
+        "SHAReadAt": "2026-10-12T18:29:57.991822+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "20439b449be5a9c62f44e8b18b77941db4cb87f66e905e90a249daad0e8065e8",
+        "rgbPixelSHA256": "105de1822585977ca074f3974ab1457d25e5adf3975504f1c5279b2bc6561fac",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "targetAfterSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db",
+      "contextAfterSHA256": "55270f3dfeabd37f83120cbe1a0b308d868c432668a97d353cf58c6c46b417db"
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "belmopan-l2-20261012-v1-c0235f",
+      "galleryImageID": "belmopan-l2-20261012-v1-c0235f",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+        "lyhyt": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3d71a567fc7cfbb3dbbcf7a76523b7023014ab664d9ce3875d955872b1ea66cc",
+      "exportSHA256": "ac407aa535c3fefb576a833190e85492dca88bebc3b357516a433dcac7c88aea",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
+        "semanticContextSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
+        "subjectTitle": "Metsään pääsee kaupungin laidalta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l2-20261012-v1-c0235f/image.png",
+            "nativeSHA256": "3d71a567fc7cfbb3dbbcf7a76523b7023014ab664d9ce3875d955872b1ea66cc",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Guanacasten kansallispuistossa on ylläpidettyjä kävelypolkuja ja ympäristöopetukseen tarkoitettu keskus. Metsässä kasvaa esimerkiksi mahonkia sekä monia muita puulajeja. Alueelta on havaintoja muun muassa valkohäntäpeuroista, jaguarundeista ja vyötiäisistä. Myös linnusto kuuluu puiston luontoon, joten polulla voi keskittyä kuuntelemiseen ja katseluun. Puisto on myös lintuharrastajien retkikohde. Alue kuuluu Belize Audubon Societyn hoitamiin suojelualueisiin. Belmopanin luontokierros voi alkaa aivan lähialueelta: tämän metsän vuoksi ei tarvitse lähteä pitkälle sisämaan matkalle."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. General close view of moist tropical forest understory, irregular tree trunks, naturally varied green leaves and leaf litter, a modest gap through vegetation. No identifiable national park, signs, buildings, people, giant fantasy leaves or repeated texture.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Metsään pääsee kaupungin laidalta",
+                "teksti": "Guanacasten kansallispuistossa on ylläpidettyjä kävelypolkuja ja ympäristöopetukseen tarkoitettu keskus. Metsässä kasvaa esimerkiksi mahonkia sekä monia muita puulajeja. Alueelta on havaintoja muun muassa valkohäntäpeuroista, jaguarundeista ja vyötiäisistä. Myös linnusto kuuluu puiston luontoon, joten polulla voi keskittyä kuuntelemiseen ja katseluun. Puisto on myös lintuharrastajien retkikohde. Alue kuuluu Belize Audubon Societyn hoitamiin suojelualueisiin. Belmopanin luontokierros voi alkaa aivan lähialueelta: tämän metsän vuoksi ei tarvitse lähteä pitkälle sisämaan matkalle.",
+                "wiki": "Guanacaste National Park (Belize)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l2-20261012-v1-c0235f/image.png",
+              "detail": "original",
+              "observations": "Leveitä vihreitä lehtiä, liaaneja, runkoja, juuria ja kariketta tiheässä metsässä. Lehdet, kaarna, valoaukot ja sammal vaihtelevat luontevasti, ilman näkyvää kopioituvaa pintaa. Ei ihmisiä, rakennuksia, kylttejä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Trooppisen metsän kasvillisuus vastaa L2-noston luontoaihetta. Kuvateksti erottaa yleishavainteen tietyn puistopolun valokuvasta. Native-PNG:n SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+        "fileSHA256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "belmopan-l2-20261012-v1-c0235f",
+          "sha256": "3d71a567fc7cfbb3dbbcf7a76523b7023014ab664d9ce3875d955872b1ea66cc",
+          "verdict": "accepted",
+          "reason": "Trooppisen metsän kasvillisuus vastaa L2-noston luontoaihetta. Kuvateksti erottaa yleishavainteen tietyn puistopolun valokuvasta. Native-PNG:n SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l2-20261012-v1-c0235f/image.png",
+            "nativeSHA256": "3d71a567fc7cfbb3dbbcf7a76523b7023014ab664d9ce3875d955872b1ea66cc",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva trooppisen metsän kasvillisuudesta, ei tietyn puistopolun valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSha256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetText": "Guanacasten kansallispuistossa on ylläpidettyjä kävelypolkuja ja ympäristöopetukseen tarkoitettu keskus. Metsässä kasvaa esimerkiksi mahonkia sekä monia muita puulajeja. Alueelta on havaintoja muun muassa valkohäntäpeuroista, jaguarundeista ja vyötiäisistä. Myös linnusto kuuluu puiston luontoon, joten polulla voi keskittyä kuuntelemiseen ja katseluun. Puisto on myös lintuharrastajien retkikohde. Alue kuuluu Belize Audubon Societyn hoitamiin suojelualueisiin. Belmopanin luontokierros voi alkaa aivan lähialueelta: tämän metsän vuoksi ei tarvitse lähteä pitkälle sisämaan matkalle."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. General close view of moist tropical forest understory, irregular tree trunks, naturally varied green leaves and leaf litter, a modest gap through vegetation. No identifiable national park, signs, buildings, people, giant fantasy leaves or repeated texture.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+              "contentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Metsään pääsee kaupungin laidalta",
+                "teksti": "Guanacasten kansallispuistossa on ylläpidettyjä kävelypolkuja ja ympäristöopetukseen tarkoitettu keskus. Metsässä kasvaa esimerkiksi mahonkia sekä monia muita puulajeja. Alueelta on havaintoja muun muassa valkohäntäpeuroista, jaguarundeista ja vyötiäisistä. Myös linnusto kuuluu puiston luontoon, joten polulla voi keskittyä kuuntelemiseen ja katseluun. Puisto on myös lintuharrastajien retkikohde. Alue kuuluu Belize Audubon Societyn hoitamiin suojelualueisiin. Belmopanin luontokierros voi alkaa aivan lähialueelta: tämän metsän vuoksi ei tarvitse lähteä pitkälle sisämaan matkalle.",
+                "wiki": "Guanacaste National Park (Belize)",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/assets/belmopan-l2-20261012-v1-c0235f/image.png",
+              "detail": "original",
+              "observations": "Leveitä vihreitä lehtiä, liaaneja, runkoja, juuria ja kariketta tiheässä metsässä. Lehdet, kaarna, valoaukot ja sammal vaihtelevat luontevasti, ilman näkyvää kopioituvaa pintaa. Ei ihmisiä, rakennuksia, kylttejä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:16:49.964602+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+            "sha256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+            "sha256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png?t=ac407aa535c3fefb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+        "sha256": "ac407aa535c3fefb576a833190e85492dca88bebc3b357516a433dcac7c88aea",
+        "bytes": 3261971,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "belmopan-l2-20261012-v1-c0235f",
+        "nativeSHA256": "3d71a567fc7cfbb3dbbcf7a76523b7023014ab664d9ce3875d955872b1ea66cc",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "belmopan",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:19:32.555952+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/belmopan/belmopan-l2-20261012-v1-c0235f-3d71a567fc7c.png",
+        "sha256": "ac407aa535c3fefb576a833190e85492dca88bebc3b357516a433dcac7c88aea",
+        "bytes": 3261971,
+        "SHAReadAt": "2026-10-12T18:29:58.115568+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "3d71a567fc7cfbb3dbbcf7a76523b7023014ab664d9ce3875d955872b1ea66cc",
+        "rgbPixelSHA256": "ddb3cad2a470fcc6ffd3f6b3cc04df7fe4c37542acf4d31b3532d8952d8cec7e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "targetAfterSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667",
+      "contextAfterSHA256": "edc9ef98129380c0d58f97371bb93f99f7a5547305b1bdbf787d86ba823f0667"
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e11-belmopan-photo-d3956640dc812975",
+      "galleryImageID": "capital-cc-e11-belmopan-photo-d3956640dc812975",
+      "commonsFile": "St. Herman's Blue Hole.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
+        "suora": true,
+        "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
+        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "tiedosto": "St. Herman's Blue Hole.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
+        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "tiedosto": "St. Herman's Blue Hole.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
+        "suora": true,
+        "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
+        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "tiedosto": "St. Herman's Blue Hole.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d3956640dc812975a1feebebb4bbedf648b1c9aa5ff5c1b9ec2ca7bf74bc69bc",
+      "exportSHA256": "d3956640dc812975a1feebebb4bbedf648b1c9aa5ff5c1b9ec2ca7bf74bc69bc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e11/belmopan/e5efe32686bbc57f174cf8d7440ca4c0e6b53eca9b0f107e2563f1f4f9b7a0a3.jpg",
+      "dimensions": [
+        5083,
+        3554
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+        "semanticContextSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+        "subjectTitle": "belmopan — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Haakon S. Krohn",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Herman%27s_Blue_Hole.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/St._Herman%27s_Blue_Hole.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Commonsin nimenomainen Author/Artist ja lisenssitemplate; ei uploaderista pääteltyä nimeä.",
+            "workLayer": "Pääkohde luonnollinen allas, kallio ja kasvillisuus; ei nimettyä taideteosta tai suojattua rakennusta luontonimellä. Opaste on luonnollinen paikan turvallisuusmerkintä, ei lisätty teksti tai mainos. Tarkka St. Hermanin Blue Hole -paikka Commons-lähteestä ja kaupungin nykyisestä luonto-oppaasta; ei Belmopanin keskustaksi väittämistä.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/St._Herman%27s_Blue_Hole_National_Park",
+              "https://en.wikipedia.org/wiki/Belmopan",
+              "https://en.wikipedia.org/wiki/St._Herman%27s_Blue_Hole_National_Park",
+              "https://commons.wikimedia.org/wiki/File:St._Herman%27s_Blue_Hole.jpg"
+            ],
+            "visualReview": "Katsottu itse. Ei päälle lisättyä tekstiä, vesileimaa, kehystä tai mainos/pakkausaihetta. Mahdolliset ihmiset vain etäisiä eikä valituissa kuvissa luettavia kasvopiirteitä; alkuperäisen pixeltarkastus erikseen missä tarvittiin. PHOTO-kuvassa ei näkyviä ihmisiä.",
+            "reuse": "Ei tiedostonimeä e11/js:ssä, eikä samaa tiedostoa tämän kaupungin muussa paikassa."
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa-evidence/blue-hole-native.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5083,
+              3554
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Herman%27s_Blue_Hole.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c18350698de9109df983e85bf17ae996756ae430a4734a9398d318f4193cda80.html",
+            "sourceSHA256": "bb31f864fdbe9bc0cbb57423c1daf217a23860f01c023edf4d79698552b5e2fc",
+            "authorsFromSource": [
+              "Haakon S. Krohn"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description St. Herman's Blue Hole.jpg",
+                "Norsk bokmål: Cenoten i St. Herman's Blue Hole nasjonalpark i Belize Español: El cenote del parque nacional St. Herman's Blue Hole en Belice English: The cenote in St. Herman's Blue Hole National Park, Belize"
+              ],
+              [
+                "Date",
+                "30 July 2015"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Haakon S. Krohn"
+              ],
+              [
+                "Date and time of data generation",
+                "15:39, 30 July 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "15:39, 30 July 2015"
+              ],
+              [
+                "Date metadata was last modified",
+                "15:50, 13 August 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+            "currentContentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/dcc5241d646b6e03740dedc80b6e15b5cc6d2ec9eb59efebbfdeabdcf0e99f4c.body",
+            "placeSourceUrl": "https://en.wikipedia.org/wiki/St._Herman%27s_Blue_Hole_National_Park",
+            "placeBoundary": "Named park 19km southeast of Belmopan, an existing guide destination; not downtown or Guanacaste.",
+            "reviewedCandidateRecordSHA256": "8319264d60cecc7ec97eee11f1b5d079d078db246cb2b6e407cfb82116d5f3f1",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-selection.json"
+          },
+          "qaReason": "Alkuperäinen aito St.Hermanin Blue Hole -altaan valokuva katsottu. Luonnollinen vesi, kallio, kasvillisuus ja tavalliset askelmat; ei ihmisiä, tunnistettavia kasvoja, watermarkia tai teospääaihetta. Kuvan reunalla oleva turvallisuusopaste kuuluu fyysiseen paikkaan, ei lisätty grafiikka/mainos. Commons Description yksilöi tämän kansallispuiston cenoten, ja erillinen puiston paikkalähde sitoo sen19km Belmopanista kaakkoon. Nykyinen Belmopanin opas käsittelee juuri tätä erillistä Hummingbird Highwayn retkeä. Kuvateksti sanoo lähiseudun, ei kaupungin keskustaa, Guanacastea tai merellistä Great Blue Holea. Haakon S.Krohn/Own work/CC BY-SA3.0,5083×3554 ja30.7.2015 varmennettu. PHOTOssa ei panoraama- tai tuoreuspakkoa, eikä altaan nykyisestä uimakelpoisuudesta tehdä lupausta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+        "fileSHA256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "St. Herman's Blue Hole.jpg",
+          "sha256": "d3956640dc812975a1feebebb4bbedf648b1c9aa5ff5c1b9ec2ca7bf74bc69bc",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen aito St.Hermanin Blue Hole -altaan valokuva katsottu. Luonnollinen vesi, kallio, kasvillisuus ja tavalliset askelmat; ei ihmisiä, tunnistettavia kasvoja, watermarkia tai teospääaihetta. Kuvan reunalla oleva turvallisuusopaste kuuluu fyysiseen paikkaan, ei lisätty grafiikka/mainos. Commons Description yksilöi tämän kansallispuiston cenoten, ja erillinen puiston paikkalähde sitoo sen19km Belmopanista kaakkoon. Nykyinen Belmopanin opas käsittelee juuri tätä erillistä Hummingbird Highwayn retkeä. Kuvateksti sanoo lähiseudun, ei kaupungin keskustaa, Guanacastea tai merellistä Great Blue Holea. Haakon S.Krohn/Own work/CC BY-SA3.0,5083×3554 ja30.7.2015 varmennettu. PHOTOssa ei panoraama- tai tuoreuspakkoa, eikä altaan nykyisestä uimakelpoisuudesta tehdä lupausta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa-evidence/blue-hole-native.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              5083,
+              3554
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Herman%27s_Blue_Hole.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/c18350698de9109df983e85bf17ae996756ae430a4734a9398d318f4193cda80.html",
+            "sourceSHA256": "bb31f864fdbe9bc0cbb57423c1daf217a23860f01c023edf4d79698552b5e2fc",
+            "authorsFromSource": [
+              "Haakon S. Krohn"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description St. Herman's Blue Hole.jpg",
+                "Norsk bokmål: Cenoten i St. Herman's Blue Hole nasjonalpark i Belize Español: El cenote del parque nacional St. Herman's Blue Hole en Belice English: The cenote in St. Herman's Blue Hole National Park, Belize"
+              ],
+              [
+                "Date",
+                "30 July 2015"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Haakon S. Krohn"
+              ],
+              [
+                "Date and time of data generation",
+                "15:39, 30 July 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "15:39, 30 July 2015"
+              ],
+              [
+                "Date metadata was last modified",
+                "15:50, 13 August 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+            "currentContentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/dcc5241d646b6e03740dedc80b6e15b5cc6d2ec9eb59efebbfdeabdcf0e99f4c.body",
+            "placeSourceUrl": "https://en.wikipedia.org/wiki/St._Herman%27s_Blue_Hole_National_Park",
+            "placeBoundary": "Named park 19km southeast of Belmopan, an existing guide destination; not downtown or Guanacaste.",
+            "reviewedCandidateRecordSHA256": "8319264d60cecc7ec97eee11f1b5d079d078db246cb2b6e407cfb82116d5f3f1",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-selection.json"
+          },
+          "reviewedAt": "2026-10-12T19:56:24.861253+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+            "sha256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+            "sha256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "belmopan",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "St. Herman's Blue Hole.jpg",
+        "sha256": "d3956640dc812975a1feebebb4bbedf648b1c9aa5ff5c1b9ec2ca7bf74bc69bc",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:St._Herman%27s_Blue_Hole.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/St._Herman%27s_Blue_Hole.jpg",
+        "author": "Haakon S. Krohn",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 5083,
+        "height": 3554,
+        "originalSHA256": "d3956640dc812975a1feebebb4bbedf648b1c9aa5ff5c1b9ec2ca7bf74bc69bc",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg",
+        "bytes": 11736697,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:57:08.500205+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "St. Herman's Blue Hole.jpg",
+        "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
+        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Haakon S. Krohn, Commons (CC BY-SA 3.0)",
+        "selite": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "lyhyt": "St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.",
+        "tiedosto": "St. Herman's Blue Hole.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "targetAfterSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183",
+      "contextAfterSHA256": "080037dc54bd3d30288dfffe228081c0acc84c9498a806674a21ec59e18fb183"
+    },
+    {
+      "era": "e11",
+      "city": "belmopan",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e11-belmopan-c1-55cb3cc14b84117b",
+      "galleryImageID": "capital-cc-e11-belmopan-c1-55cb3cc14b84117b",
+      "commonsFile": "Aerials Belize WHwy 04.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
+        "suora": true,
+        "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "tiedosto": "Aerials Belize WHwy 04.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "tiedosto": "Aerials Belize WHwy 04.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
+        "suora": true,
+        "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "tiedosto": "Aerials Belize WHwy 04.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "55cb3cc14b84117bce8c4704f7ab49eaf7fcf53b8a8befbbc54986ddcb776ef6",
+      "exportSHA256": "55cb3cc14b84117bce8c4704f7ab49eaf7fcf53b8a8befbbc54986ddcb776ef6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-gap-evidence-job19/e76191d08741d00c.jpg",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+      "sourceContentSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+        "semanticContextSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+        "subjectTitle": "Belmopan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Denis Barthel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerials_Belize_WHwy_04.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Aerials_Belize_WHwy_04.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Denis Barthelin nimenomainen Author-rivi, Own work, CC BY-SA 4.0. Lisenssisivu ja alkuperäinen6000×4000tallennettu.",
+            "workLayer": "Kuvan pääaihe kaupungin kokonaisasettelu: katuverkko, pienet katot ja rakentamattomat viheralueet. Ei erillistä tunnistettavaa veistosta, seinämaalausta tai rajattua nimettyä rakennusteosta. Rakennuksia ei nimetä eikä teoksen yksityiskohtia jäljennetä itsenäiseksi kuva-aiheeksi. Tämä on täsmäkuvan havainto, ei maan kaikkien teosten blanket-PD-väite.",
+            "timeScope": "Kuvaus9.7.2015; historiallinen nykykaupungin näkymä, ei tuoreeksi tai vuoden1873kuvaksi nimetty.",
+            "location": "Kuvaajan Commons Description: Aerial of Belize, Belmopan.",
+            "primaryBuildingPhotoEvidence": {
+              "url": "https://www.belipo.bz/wp-content/uploads/2024/01/Cap_252_Copyright_Act-Revised-2020.pdf",
+              "file": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-gap-evidence-job19/belize-copyright-2020.pdf",
+              "section": "78(1)-(3)",
+              "finding": "Publicly visible building photography and publication of copies; actual depicted subject checked separately, no mural/artwork blanket authorization."
+            }
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-gap-evidence-job19/e76191d08741d00c.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              6000,
+              4000
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerials_Belize_WHwy_04.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/5cb183ff88c82ff61f29c029b14e90eef64b9ec68ac65983344e099dd10171ac.html",
+            "sourceSHA256": "4e49efeb283f5ee07b30c9f51206e8cd3fe329d4320ddaf35d0404cd5c603cfe",
+            "authorsFromSource": [
+              "Denis Barthel"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceFields": [
+              [
+                "Description Aerials Belize WHwy 04.jpg",
+                "English: Aerial of Belize, Belmopan The production, editing or release of this file was supported by the Community-Budget of Wikimedia Deutschland . To see other files made with the support of Wikimedia Deutschland, please see the category Supported by Wikimedia Deutschland . العربية ∙ বাংলা ∙ Deutsch ∙ English ∙ Esperanto ∙ français ∙ हिन्दी ∙ magyar ∙ Bahasa Indonesia ∙ italiano ∙ 日本語 ∙ македонски ∙ മലയാളം ∙ Bahasa Melayu ∙ Nederlands ∙ português ∙ română ∙ русский ∙ slovenščina ∙ svenska ∙ தமிழ் ∙ українська ∙ 中文 ∙ +/−"
+              ],
+              [
+                "Date",
+                "9 July 2015, 21:53:18"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Denis Barthel"
+              ],
+              [
+                "Date and time of data generation",
+                "21:53, 9 July 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "21:53, 9 July 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+            "currentContentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "layoutScope": "Full real city layout, no isolated work crop and no blanket PD/FOP grant.",
+            "reviewedCandidateRecordSHA256": "53e46233cd43195abf9bfb3845d2cfd3ce24ba6a30e1006355f1f5b314f5af7e",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-gap-selection.json"
+          },
+          "qaReason": "Aito laaja Belmopanin ilmakuva katsottu. Tiestö, korttelit, pienet kattopinnat, viheralueet ja rakentamattomat kentät näyttävät todellisen kaupunkiasettelun; ei yksittäisen nimetyn omaperäisen rakennuksen, veistoksen tai muraalin pääaihetta. Riittävä laatu katu- ja aluekokonaisuuden erottamiseen, ei kasvopiirteitä, lisättyä tekstiä, watermarkia tai kehystä. Kuvan luonnollinen ilmakuvasävy säilyy. Source Description Aerial of Belize,Belmopan yksilöi juuri pääkaupungin; ei pelkästä WHwy-tiedostonimestä pääteltyä paikkaa. Denis Barthel/Own work/CC BY-SA4.0,6000×4000 ja9.7.2015 varmennettu. Vuosi2015 kirjataan, ei tuoreus- tai1873 rekonstruktioväitettä. Täsmäkuvan koko kaupungin sommittelu hyväksytty; erillisiä taloja/taideteoksia isolointiin tai niiden yleiseen PD-statukseen ei anneta lupaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+        "fileSHA256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Aerials Belize WHwy 04.jpg",
+          "sha256": "55cb3cc14b84117bce8c4704f7ab49eaf7fcf53b8a8befbbc54986ddcb776ef6",
+          "verdict": "accepted",
+          "reason": "Aito laaja Belmopanin ilmakuva katsottu. Tiestö, korttelit, pienet kattopinnat, viheralueet ja rakentamattomat kentät näyttävät todellisen kaupunkiasettelun; ei yksittäisen nimetyn omaperäisen rakennuksen, veistoksen tai muraalin pääaihetta. Riittävä laatu katu- ja aluekokonaisuuden erottamiseen, ei kasvopiirteitä, lisättyä tekstiä, watermarkia tai kehystä. Kuvan luonnollinen ilmakuvasävy säilyy. Source Description Aerial of Belize,Belmopan yksilöi juuri pääkaupungin; ei pelkästä WHwy-tiedostonimestä pääteltyä paikkaa. Denis Barthel/Own work/CC BY-SA4.0,6000×4000 ja9.7.2015 varmennettu. Vuosi2015 kirjataan, ei tuoreus- tai1873 rekonstruktioväitettä. Täsmäkuvan koko kaupungin sommittelu hyväksytty; erillisiä taloja/taideteoksia isolointiin tai niiden yleiseen PD-statukseen ei anneta lupaa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-gap-evidence-job19/e76191d08741d00c.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              6000,
+              4000
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerials_Belize_WHwy_04.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/5cb183ff88c82ff61f29c029b14e90eef64b9ec68ac65983344e099dd10171ac.html",
+            "sourceSHA256": "4e49efeb283f5ee07b30c9f51206e8cd3fe329d4320ddaf35d0404cd5c603cfe",
+            "authorsFromSource": [
+              "Denis Barthel"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceFields": [
+              [
+                "Description Aerials Belize WHwy 04.jpg",
+                "English: Aerial of Belize, Belmopan The production, editing or release of this file was supported by the Community-Budget of Wikimedia Deutschland . To see other files made with the support of Wikimedia Deutschland, please see the category Supported by Wikimedia Deutschland . العربية ∙ বাংলা ∙ Deutsch ∙ English ∙ Esperanto ∙ français ∙ हिन्दी ∙ magyar ∙ Bahasa Indonesia ∙ italiano ∙ 日本語 ∙ македонски ∙ മലയാളം ∙ Bahasa Melayu ∙ Nederlands ∙ português ∙ română ∙ русский ∙ slovenščina ∙ svenska ∙ தமிழ் ∙ українська ∙ 中文 ∙ +/−"
+              ],
+              [
+                "Date",
+                "9 July 2015, 21:53:18"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Denis Barthel"
+              ],
+              [
+                "Date and time of data generation",
+                "21:53, 9 July 2015"
+              ],
+              [
+                "Date and time of digitizing",
+                "21:53, 9 July 2015"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/belmopan/sisalto.json",
+            "currentContentSHA256": "59df58409949af380019155e347b90814df82e03e178f7d5c56e206734971eda",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "layoutScope": "Full real city layout, no isolated work crop and no blanket PD/FOP grant.",
+            "reviewedCandidateRecordSHA256": "53e46233cd43195abf9bfb3845d2cfd3ce24ba6a30e1006355f1f5b314f5af7e",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/cc-gap-selection.json"
+          },
+          "reviewedAt": "2026-10-12T20:14:43.681434+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/qa.json",
+            "sha256": "c19fa0d21ba92457eca9b32e8cf6acc17151225ba9e74ad2db262d0f3119dbc3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/belmopan/illustration-qa-extra.json",
+            "sha256": "6c0a912772b7dcb81931d2faebe586faa77cd85e20d7386b9ba51b6d895155ed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "belmopan",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Aerials Belize WHwy 04.jpg",
+        "sha256": "55cb3cc14b84117bce8c4704f7ab49eaf7fcf53b8a8befbbc54986ddcb776ef6",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aerials_Belize_WHwy_04.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Aerials_Belize_WHwy_04.jpg",
+        "author": "Denis Barthel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 6000,
+        "height": 4000,
+        "originalSHA256": "55cb3cc14b84117bce8c4704f7ab49eaf7fcf53b8a8befbbc54986ddcb776ef6",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/c1-55cb3cc14b84117bce8c.jpg",
+        "bytes": 12199485,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:15:46.918464+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Aerials Belize WHwy 04.jpg",
+        "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Denis Barthel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "lyhyt": "Belmopanin katuja, kortteleita ja viheralueita ilmasta vuonna 2015.",
+        "tiedosto": "Aerials Belize WHwy 04.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "c7c34dfc84a3c5e3d1550f023c2fc6a117730992fc289df990de8e74585f0373",
+      "targetAfterSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a",
+      "contextAfterSHA256": "a7727ca4172d4bcbf84805fcf98e69c05fa0d78554b2725fe35d2fc44b94a88a"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

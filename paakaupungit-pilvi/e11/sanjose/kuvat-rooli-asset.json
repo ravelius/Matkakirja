@@ -1,0 +1,2245 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e11",
+  "city": "sanjose",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+  "assets": [
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "sanjose-traveler-20261012-v1-f253af",
+      "galleryImageID": "sanjose-traveler-20261012-v1-f253af",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b1b81909ef853aa54cc463f59dabd62cfb5682283558cf7087d54b9292e7bbbd",
+      "exportSHA256": "eaed214fa5ff5ceed5608aacff11adc0856071366a4c0421e1a50f86817c733a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-traveler-20261012-v1-f253af/image.png",
+            "nativeSHA256": "b1b81909ef853aa54cc463f59dabd62cfb5682283558cf7087d54b9292e7bbbd",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "San Josén keskustassa teatteri, museot ja kauppahalli mahtuvat samaan kaupunkikävelyyn. Mercado Central tarjoaa ruokapaikkoja sekä kahvia ja muita ostoksia. Barrio Amónissa nähtävää ovat vanhat asuintalot. Kaupunkiseudun bussit ja lähijunat jatkavat keskustan ulkopuolelle. La Sabanan puisto on vaihtoehto sisätiloissa vietetyn museopäivän jälkeen.\n\nMercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "San Josén keskustassa teatteri, museot ja kauppahalli mahtuvat samaan kaupunkikävelyyn. Mercado Central tarjoaa ruokapaikkoja sekä kahvia ja muita ostoksia. Barrio Amónissa nähtävää ovat vanhat asuintalot. Kaupunkiseudun bussit ja lähijunat jatkavat keskustan ulkopuolelle. La Sabanan puisto on vaihtoehto sisätiloissa vietetyn museopäivän jälkeen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan San José",
+                  "taitto": "opas",
+                  "teksti": "Kulje San Joséssa torin, teatterin ja vanhojen asuintalojen kautta.",
+                  "nosto": "Keskustan kohteet avaavat sekä kaupungin omaa historiaa että sitä paljon vanhempia kulttuureja.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Juan Santamarían kansainvälinen lentoasema sijaitsee Alajuelassa pääkaupungin ulkopuolella. Sieltä pääsee San Joséen bussilla tai taksilla. Keskustan nähtävyyksien välillä voi kävellä, ja kauemmas liikutaan busseilla tai lähijunalla. Kaupunkiseudun useat bussiterminaalit palvelevat eri suuntia, joten oikea lähtöpaikka kannattaa tarkistaa erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Teatterin ympärillä",
+                      "teksti": "Kansallisteatteri ja Plaza de la Cultura ovat keskustassa. Teatteriin voi tutustua myös vierailukohteena, ja aukion alla toimii esikolumbiaaninen kultamuseo. Näin samaan kävelyyn mahtuu kaksi eri aikajanaa: kahvitalouden rakennuttama kulttuuritalo ja paljon kaupunkia vanhempia esineitä. Näyttelykäynnin ja esityksen saatavuus kannattaa tarkistaa suoraan kohteesta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Taloja ja kokoelmia",
+                      "teksti": "Barrio Amónin vanhat asuintalot tarjoavat kävelyaiheen keskustan pohjoispuolella. Kansallismuseo puolestaan toimii Bellavistan entisessä kasarmissa. Museon rakennus ja sen esikolumbiaaniset kokoelmat kertovat eri ajanjaksoista. Kaupungin länsipuolella La Sabanan puisto antaa tilaa ulkoilulle, jos museokierroksen jälkeen kaipaa toisenlaista ympäristöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Mercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "San Josén ilmastossa erottuvat kuivempi ja sateisempi kausi. Illat voivat tuntua viileiltä, vaikka päivä olisi lämmin. Sadekaudella museot ja teatteri tarjoavat sisätiloissa nähtävää, mutta päivän kävelysää kannattaa tarkistaa erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Mercado Central",
+                        "tahdet": 3,
+                        "selite": "Kauppahallin käytävillä yhdistyvät ruokaostokset ja pienet ruokapaikat."
+                      },
+                      {
+                        "mita": "Kansallisteatteri",
+                        "tahdet": 3,
+                        "selite": "Kahvitalouden aikakauden kulttuuritalo toimii edelleen teatterina."
+                      },
+                      {
+                        "mita": "Kultamuseo",
+                        "tahdet": 3,
+                        "selite": "Aukion alla esitellään esikolumbiaanisia kultaesineitä."
+                      },
+                      {
+                        "mita": "Barrio Amón",
+                        "tahdet": 2,
+                        "selite": "Vanhoissa asuintaloissa näkyy kahviyrittäjien vauraus."
+                      },
+                      {
+                        "mita": "La Sabana",
+                        "tahdet": 2,
+                        "selite": "Keskustan länsipuolella sijaitseva puisto sopii ulkoiluun."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Lentoasema on Alajuelassa",
+                        "teksti": "Juan Santamarían lentoasema sijaitsee eri kaupungissa kuin San Josén keskusta."
+                      },
+                      {
+                        "otsikko": "Terminaali riippuu suunnasta",
+                        "teksti": "San Joséssa eri bussiyhtiöillä ja reiteillä on eri lähtöpaikkoja."
+                      },
+                      {
+                        "otsikko": "Soda on ruokapaikka",
+                        "teksti": "Perinteistä ateriaa etsivä voi suunnata sodan pöytään."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-traveler-20261012-v1-f253af/image.png",
+              "detail": "original",
+              "observations": "Säkissä vihreitä paahtamattomia papuja, pöydällä paahdettuja papuja ja lehtiä. Papujen uurteet, pinnat ja säkin kuidut uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kahvipavut liittyvät San Josén oppaan torituotteisiin ja faktapohjaan. Kuvateksti erottaa havainteen tietyn kauppiaan valokuvasta. Native pysty 1024×1536, suhde 0,667; SHA täsmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "sanjose-traveler-20261012-v1-f253af",
+          "sha256": "b1b81909ef853aa54cc463f59dabd62cfb5682283558cf7087d54b9292e7bbbd",
+          "verdict": "accepted",
+          "reason": "Kahvipavut liittyvät San Josén oppaan torituotteisiin ja faktapohjaan. Kuvateksti erottaa havainteen tietyn kauppiaan valokuvasta. Native pysty 1024×1536, suhde 0,667; SHA täsmää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-traveler-20261012-v1-f253af/image.png",
+            "nativeSHA256": "b1b81909ef853aa54cc463f59dabd62cfb5682283558cf7087d54b9292e7bbbd",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "San Josén keskustassa teatteri, museot ja kauppahalli mahtuvat samaan kaupunkikävelyyn. Mercado Central tarjoaa ruokapaikkoja sekä kahvia ja muita ostoksia. Barrio Amónissa nähtävää ovat vanhat asuintalot. Kaupunkiseudun bussit ja lähijunat jatkavat keskustan ulkopuolelle. La Sabanan puisto on vaihtoehto sisätiloissa vietetyn museopäivän jälkeen.\n\nMercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "San Josén keskustassa teatteri, museot ja kauppahalli mahtuvat samaan kaupunkikävelyyn. Mercado Central tarjoaa ruokapaikkoja sekä kahvia ja muita ostoksia. Barrio Amónissa nähtävää ovat vanhat asuintalot. Kaupunkiseudun bussit ja lähijunat jatkavat keskustan ulkopuolelle. La Sabanan puisto on vaihtoehto sisätiloissa vietetyn museopäivän jälkeen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan San José",
+                  "taitto": "opas",
+                  "teksti": "Kulje San Joséssa torin, teatterin ja vanhojen asuintalojen kautta.",
+                  "nosto": "Keskustan kohteet avaavat sekä kaupungin omaa historiaa että sitä paljon vanhempia kulttuureja.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Juan Santamarían kansainvälinen lentoasema sijaitsee Alajuelassa pääkaupungin ulkopuolella. Sieltä pääsee San Joséen bussilla tai taksilla. Keskustan nähtävyyksien välillä voi kävellä, ja kauemmas liikutaan busseilla tai lähijunalla. Kaupunkiseudun useat bussiterminaalit palvelevat eri suuntia, joten oikea lähtöpaikka kannattaa tarkistaa erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Teatterin ympärillä",
+                      "teksti": "Kansallisteatteri ja Plaza de la Cultura ovat keskustassa. Teatteriin voi tutustua myös vierailukohteena, ja aukion alla toimii esikolumbiaaninen kultamuseo. Näin samaan kävelyyn mahtuu kaksi eri aikajanaa: kahvitalouden rakennuttama kulttuuritalo ja paljon kaupunkia vanhempia esineitä. Näyttelykäynnin ja esityksen saatavuus kannattaa tarkistaa suoraan kohteesta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Taloja ja kokoelmia",
+                      "teksti": "Barrio Amónin vanhat asuintalot tarjoavat kävelyaiheen keskustan pohjoispuolella. Kansallismuseo puolestaan toimii Bellavistan entisessä kasarmissa. Museon rakennus ja sen esikolumbiaaniset kokoelmat kertovat eri ajanjaksoista. Kaupungin länsipuolella La Sabanan puisto antaa tilaa ulkoilulle, jos museokierroksen jälkeen kaipaa toisenlaista ympäristöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Mercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "San Josén ilmastossa erottuvat kuivempi ja sateisempi kausi. Illat voivat tuntua viileiltä, vaikka päivä olisi lämmin. Sadekaudella museot ja teatteri tarjoavat sisätiloissa nähtävää, mutta päivän kävelysää kannattaa tarkistaa erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Mercado Central",
+                        "tahdet": 3,
+                        "selite": "Kauppahallin käytävillä yhdistyvät ruokaostokset ja pienet ruokapaikat."
+                      },
+                      {
+                        "mita": "Kansallisteatteri",
+                        "tahdet": 3,
+                        "selite": "Kahvitalouden aikakauden kulttuuritalo toimii edelleen teatterina."
+                      },
+                      {
+                        "mita": "Kultamuseo",
+                        "tahdet": 3,
+                        "selite": "Aukion alla esitellään esikolumbiaanisia kultaesineitä."
+                      },
+                      {
+                        "mita": "Barrio Amón",
+                        "tahdet": 2,
+                        "selite": "Vanhoissa asuintaloissa näkyy kahviyrittäjien vauraus."
+                      },
+                      {
+                        "mita": "La Sabana",
+                        "tahdet": 2,
+                        "selite": "Keskustan länsipuolella sijaitseva puisto sopii ulkoiluun."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Lentoasema on Alajuelassa",
+                        "teksti": "Juan Santamarían lentoasema sijaitsee eri kaupungissa kuin San Josén keskusta."
+                      },
+                      {
+                        "otsikko": "Terminaali riippuu suunnasta",
+                        "teksti": "San Joséssa eri bussiyhtiöillä ja reiteillä on eri lähtöpaikkoja."
+                      },
+                      {
+                        "otsikko": "Soda on ruokapaikka",
+                        "teksti": "Perinteistä ateriaa etsivä voi suunnata sodan pöytään."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-traveler-20261012-v1-f253af/image.png",
+              "detail": "original",
+              "observations": "Säkissä vihreitä paahtamattomia papuja, pöydällä paahdettuja papuja ja lehtiä. Papujen uurteet, pinnat ja säkin kuidut uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:54:13.271493+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png?t=eaed214fa5ff5cee",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+        "sha256": "eaed214fa5ff5ceed5608aacff11adc0856071366a4c0421e1a50f86817c733a",
+        "bytes": 2488465,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-traveler-20261012-v1-f253af",
+        "nativeSHA256": "b1b81909ef853aa54cc463f59dabd62cfb5682283558cf7087d54b9292e7bbbd",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:54:40.553137+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-traveler-20261012-v1-f253af-b1b81909ef85.png",
+        "sha256": "eaed214fa5ff5ceed5608aacff11adc0856071366a4c0421e1a50f86817c733a",
+        "bytes": 2488465,
+        "SHAReadAt": "2026-10-12T19:54:33.897132+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b1b81909ef853aa54cc463f59dabd62cfb5682283558cf7087d54b9292e7bbbd",
+        "rgbPixelSHA256": "7215ec35e53ee0194803505fb191b603bbbb9a35cbf3b9647aa35082f1c04223",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "sanjose-o4-20261012-v1-9c3fde",
+      "galleryImageID": "sanjose-o4-20261012-v1-9c3fde",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät.",
+        "lyhyt": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät.",
+        "lyhyt": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5ad11a741df31fdd2a16a94089db2720228638919b81ee2cde649942a342e57e",
+      "exportSHA256": "d9e03bc70336a76c73d5504649af3381673876a0b7ee02b9933e46b936230c39",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-o4-20261012-v1-9c3fde/image.png",
+            "nativeSHA256": "5ad11a741df31fdd2a16a94089db2720228638919b81ee2cde649942a342e57e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Mercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Costa Rican gallo pinto in a simple plate: cooked rice mixed with black beans, distinct grains and real bean skins, modest natural portion. No meat, egg or unmentioned side dishes. Close three-quarter editorial food photograph, soft daylight and unbranded tabletop.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Mercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-o4-20261012-v1-9c3fde/image.png",
+              "detail": "original",
+              "observations": "Lautasella kypsää riisiä ja mustia papuja, hieman pienempiä maustepaloja. Yksittäiset jyvät ja pavut vaihtelevat asennon, pinnan ja koon mukaan. Astia ja päivänvalo luontevia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Riisi ja mustat pavut vastaavat O4-jakson ja faktapohjan gallo pinto -kuvausta. Yleinen havainne ei väitä annosta Mercado Centralin tietyn sodan valokuvaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "sanjose-o4-20261012-v1-9c3fde",
+          "sha256": "5ad11a741df31fdd2a16a94089db2720228638919b81ee2cde649942a342e57e",
+          "verdict": "accepted",
+          "reason": "Riisi ja mustat pavut vastaavat O4-jakson ja faktapohjan gallo pinto -kuvausta. Yleinen havainne ei väitä annosta Mercado Centralin tietyn sodan valokuvaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-o4-20261012-v1-9c3fde/image.png",
+            "nativeSHA256": "5ad11a741df31fdd2a16a94089db2720228638919b81ee2cde649942a342e57e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva gallo pintosta, jossa riisi ja mustat pavut yhdistyvät.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Mercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Costa Rican gallo pinto in a simple plate: cooked rice mixed with black beans, distinct grains and real bean skins, modest natural portion. No meat, egg or unmentioned side dishes. Close three-quarter editorial food photograph, soft daylight and unbranded tabletop.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Mercado Centralin sodas-ruokapaikoissa voi tutustua perinteisiin aterioihin. Gallo pinto yhdistää riisin ja mustat pavut; sitä syödään usein aamiaisella. Casado-annokseen kuuluu tavallisesti riisiä, papuja, lihaa ja lisukkeita. Casado tarkoittaa espanjaksi naimisissa olevaa. Kahvi kuuluu torin myytäviin tuotteisiin.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-o4-20261012-v1-9c3fde/image.png",
+              "detail": "original",
+              "observations": "Lautasella kypsää riisiä ja mustia papuja, hieman pienempiä maustepaloja. Yksittäiset jyvät ja pavut vaihtelevat asennon, pinnan ja koon mukaan. Astia ja päivänvalo luontevia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:22:22.231419+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png?t=d9e03bc70336a76c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+        "sha256": "d9e03bc70336a76c73d5504649af3381673876a0b7ee02b9933e46b936230c39",
+        "bytes": 2148046,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-o4-20261012-v1-9c3fde",
+        "nativeSHA256": "5ad11a741df31fdd2a16a94089db2720228638919b81ee2cde649942a342e57e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:28:07.448250+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-o4-20261012-v1-9c3fde-5ad11a741df3.png",
+        "sha256": "d9e03bc70336a76c73d5504649af3381673876a0b7ee02b9933e46b936230c39",
+        "bytes": 2148046,
+        "SHAReadAt": "2026-10-12T18:29:58.975010+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5ad11a741df31fdd2a16a94089db2720228638919b81ee2cde649942a342e57e",
+        "rgbPixelSHA256": "3449f737edacc4d445c48bfb0040cdc855d5886834cc0b045a3b40802e48283f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "sanjose-k3-20261012-v1-449dab",
+      "galleryImageID": "sanjose-k3-20261012-v1-449dab",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "lyhyt": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+      "exportSHA256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+        "semanticContextSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+        "subjectTitle": "Kahvikauppa näkyy taloissa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+            "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Kahvikauppa näkyy taloissa",
+                "teksti": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "San José, Costa Rica"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+              "detail": "original",
+              "observations": "Painamattomassa säkissä vihertäviä paahtamattomia kahvipapuja ja vieressä ruskeita paahdettuja papuja. Uurteet, sävyt ja koot vaihtelevat; säkin kudos ja pöytä luontevia. Ei rakennuksia, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kahvipavut havainnollistavat K3-noston kahvikaupasta syntynyttä vaurautta. Kuvateksti ei väitä kuvaa tietyn kauppiaan tai Barrio Amónin valokuvaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "sanjose-k3-20261012-v1-449dab",
+          "sha256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+          "verdict": "accepted",
+          "reason": "Kahvipavut havainnollistavat K3-noston kahvikaupasta syntynyttä vaurautta. Kuvateksti ei väitä kuvaa tietyn kauppiaan tai Barrio Amónin valokuvaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+            "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvin raaka-aineesta ja paahdetuista pavuista; ei tietyn kahvikauppiaan valokuva.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial still life of green unroasted coffee beans in a plain woven sack beside a small pile of roasted brown coffee beans. Two material stages with realistic bean shapes and restrained natural light. No building, logos, readable labels or imagined historical trade scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Kahvikauppa näkyy taloissa",
+                "teksti": "Barrio Amón syntyi Costa Rican pääkaupungin San Josén koillisosaan 1800-luvun lopulla. Nimi tulee ranskalaisesta kahviyrittäjästä Amón Fasileau-Duplantierista, joka kehitti aluetta. Kahvikaupasta vaurastuneiden asukkaiden taloissa näkyy uusklassismia ja viktoriaanisia piirteitä. Julkisivut erottuivat vanhoista saviseinätaloista, mutta niiden takana säilyi usein siirtomaa-ajan huonejärjestys. Uusi tyyli tuli siis toisinaan ennen uutta pohjapiirrosta.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "San José, Costa Rica"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k3-20261012-v1-449dab/image.png",
+              "detail": "original",
+              "observations": "Painamattomassa säkissä vihertäviä paahtamattomia kahvipapuja ja vieressä ruskeita paahdettuja papuja. Uurteet, sävyt ja koot vaihtelevat; säkin kudos ja pöytä luontevia. Ei rakennuksia, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:21:06.374271+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png?t=bf1c45dd6455a575",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "sha256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
+        "bytes": 2723489,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-k3-20261012-v1-449dab",
+        "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:23:02.776268+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k3-20261012-v1-449dab-5d05aa0d2a28.png",
+        "sha256": "bf1c45dd6455a575b42443a5809fd3b6bb34b8dc8d835c576998867108429128",
+        "bytes": 2723489,
+        "SHAReadAt": "2026-10-12T18:29:58.873392+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5d05aa0d2a2834ec4c959428518aa8f7a4f3cf2e37dadffa39d3bc0bb7f7d327",
+        "rgbPixelSHA256": "f5dc590a997f86fdddb1e54644206ced1bad6cac56e41b32b597fa535426dcec",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "targetAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+      "contextAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "sanjose-l4-20261012-v1-be96f1",
+      "galleryImageID": "sanjose-l4-20261012-v1-be96f1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+        "lyhyt": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+      "exportSHA256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+        "semanticContextSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+        "subjectTitle": "Aukion alla on kultaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+            "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of small irregular pieces of plain gold metal on a neutral dark worktop, natural warm metallic reflections, no coins, figurines, jewellery, engraving, pre-Columbian artifact reproduction or museum scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Aukion alla on kultaa",
+                "teksti": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Pre-Columbian Gold Museum"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+              "detail": "original",
+              "observations": "Tummalla pinnalla erikokoisia epäsäännöllisiä kullanvärisiä metallikappaleita. Kiilto, pienet uurteet ja kappaleiden muodot vaihtelevat, ilman koristehahmoja tai toistokuviota. Ei ihmisiä, tekstiä, logoja tai nimettyä teosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kultamateriaali havainnollistaa L4-noston metallityöaihetta. Kuva ei jäljennä museoesinettä, ja kuvateksti rajaa sen pois Kultamuseon kokoelman dokumentoinnista. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "sanjose-l4-20261012-v1-be96f1",
+          "sha256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+          "verdict": "accepted",
+          "reason": "Kultamateriaali havainnollistaa L4-noston metallityöaihetta. Kuva ei jäljennä museoesinettä, ja kuvateksti rajaa sen pois Kultamuseon kokoelman dokumentoinnista. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+            "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kultamateriaalista, ei Kultamuseon kokoelman esineistä.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of small irregular pieces of plain gold metal on a neutral dark worktop, natural warm metallic reflections, no coins, figurines, jewellery, engraving, pre-Columbian artifact reproduction or museum scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Aukion alla on kultaa",
+                "teksti": "Esikolumbiaaninen kultamuseo sijaitsee Plaza de la Culturan alla San Josén keskustassa. Museon kokoelmaan kuuluu ennen eurooppalaisten tuloa valmistettuja kultaisia esineitä, kuten eläinhahmoja ja ihmisfiguureja. Museo on Costa Rican keskuspankin hallinnoima. Kulta oli myös vallan tunnus, ja kokoelmassa esitellään aikakauden metallityötä. Katutason alapuolella avautuu näkymä esineisiin, joissa käsityö, eläinaiheet ja eri yhteisöjen elämä kohtaavat.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Pre-Columbian Gold Museum"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l4-20261012-v1-be96f1/image.png",
+              "detail": "original",
+              "observations": "Tummalla pinnalla erikokoisia epäsäännöllisiä kullanvärisiä metallikappaleita. Kiilto, pienet uurteet ja kappaleiden muodot vaihtelevat, ilman koristehahmoja tai toistokuviota. Ei ihmisiä, tekstiä, logoja tai nimettyä teosta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:23:07.396622+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png?t=35aa02675aa2f000",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "sha256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
+        "bytes": 1998087,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-l4-20261012-v1-be96f1",
+        "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:28:08.726075+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l4-20261012-v1-be96f1-53cc7b87d420.png",
+        "sha256": "35aa02675aa2f000f4bf7338afcc1e975ccee4598bac76ee87431879be37e0b5",
+        "bytes": 1998087,
+        "SHAReadAt": "2026-10-12T18:29:59.069900+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "53cc7b87d42017306bf2ee94478ca38db4992cf501a8f8cc69dc67c58068f9e0",
+        "rgbPixelSHA256": "975d42bb9e1da96417f75c8ebffa14f838614db99c4137cdf92a500a8b87f5cd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "targetAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+      "contextAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "sanjose-k2-20261012-v1-ff1054",
+      "galleryImageID": "sanjose-k2-20261012-v1-ff1054",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta.",
+        "lyhyt": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta.",
+        "lyhyt": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4dbf19b51a4ea451bbba9460637ff7b1dc34e2f0ca3e626f02ccf0992f549f43",
+      "exportSHA256": "958a8e6ff275cc7388ccf96ee4d120af60b77b839ab0b140c94252441048a084",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+        "semanticContextSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+        "subjectTitle": "Tori on kokonainen kortteli",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k2-20261012-v1-ff1054/image.png",
+            "nativeSHA256": "4dbf19b51a4ea451bbba9460637ff7b1dc34e2f0ca3e626f02ccf0992f549f43",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Mercado Central on katettu kauppahalli Avenida Centralin varrella. Se levittäytyy kokonaisen korttelin alueelle, ja sisällä kulku jatkuu kapeiden käytävien verkostona. Myynnissä on lihaa, kalaa, kasviksia, kahvia ja kukkia, mutta myös satuloita ja käsitöitä. Samaan halliin kuuluvat pienet ruokapaikat, sodas, joissa ostoskierros voi vaihtua ateriaksi. Keskustori perustettiin 1800-luvun loppupuolella: isoisän matkavuoden 1873 kaupunki oli vielä ilman tätä nykyistä hallia."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. One ordinary unbranded brown leather riding saddle resting securely on a plain wooden saddle stand. Medium close still-life photograph, believable curved leather panels and stitching, a single physically coherent pair of stirrup leathers and metal stirrups. Plain neutral room and soft daylight. No people, horses, text, brands, decorations, market stall, identifiable building or location.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Tori on kokonainen kortteli",
+                "teksti": "Mercado Central on katettu kauppahalli Avenida Centralin varrella. Se levittäytyy kokonaisen korttelin alueelle, ja sisällä kulku jatkuu kapeiden käytävien verkostona. Myynnissä on lihaa, kalaa, kasviksia, kahvia ja kukkia, mutta myös satuloita ja käsitöitä. Samaan halliin kuuluvat pienet ruokapaikat, sodas, joissa ostoskierros voi vaihtua ateriaksi. Keskustori perustettiin 1800-luvun loppupuolella: isoisän matkavuoden 1873 kaupunki oli vielä ilman tätä nykyistä hallia.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "San José Central Market"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k2-20261012-v1-ff1054/image.png",
+              "detail": "original",
+              "observations": "Ruskea ratsastussatula puutelineellä, näkyvät jalustimet ja hihnat. Nahka, ompeleet, metallipinnat ja kokonaismuoto uskottavia. Ei hevosta, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Satula on K2-noston nimenomainen torituote, ja kuvateksti rajaa kuvan esinehavainteeksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "sanjose-k2-20261012-v1-ff1054",
+          "sha256": "4dbf19b51a4ea451bbba9460637ff7b1dc34e2f0ca3e626f02ccf0992f549f43",
+          "verdict": "accepted",
+          "reason": "Satula on K2-noston nimenomainen torituote, ja kuvateksti rajaa kuvan esinehavainteeksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k2-20261012-v1-ff1054/image.png",
+            "nativeSHA256": "4dbf19b51a4ea451bbba9460637ff7b1dc34e2f0ca3e626f02ccf0992f549f43",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva ratsastussatulasta, yhdestä Mercado Centralin tekstissä mainitusta myyntituotteesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Mercado Central on katettu kauppahalli Avenida Centralin varrella. Se levittäytyy kokonaisen korttelin alueelle, ja sisällä kulku jatkuu kapeiden käytävien verkostona. Myynnissä on lihaa, kalaa, kasviksia, kahvia ja kukkia, mutta myös satuloita ja käsitöitä. Samaan halliin kuuluvat pienet ruokapaikat, sodas, joissa ostoskierros voi vaihtua ateriaksi. Keskustori perustettiin 1800-luvun loppupuolella: isoisän matkavuoden 1873 kaupunki oli vielä ilman tätä nykyistä hallia."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. One ordinary unbranded brown leather riding saddle resting securely on a plain wooden saddle stand. Medium close still-life photograph, believable curved leather panels and stitching, a single physically coherent pair of stirrup leathers and metal stirrups. Plain neutral room and soft daylight. No people, horses, text, brands, decorations, market stall, identifiable building or location.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Tori on kokonainen kortteli",
+                "teksti": "Mercado Central on katettu kauppahalli Avenida Centralin varrella. Se levittäytyy kokonaisen korttelin alueelle, ja sisällä kulku jatkuu kapeiden käytävien verkostona. Myynnissä on lihaa, kalaa, kasviksia, kahvia ja kukkia, mutta myös satuloita ja käsitöitä. Samaan halliin kuuluvat pienet ruokapaikat, sodas, joissa ostoskierros voi vaihtua ateriaksi. Keskustori perustettiin 1800-luvun loppupuolella: isoisän matkavuoden 1873 kaupunki oli vielä ilman tätä nykyistä hallia.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "San José Central Market"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-k2-20261012-v1-ff1054/image.png",
+              "detail": "original",
+              "observations": "Ruskea ratsastussatula puutelineellä, näkyvät jalustimet ja hihnat. Nahka, ompeleet, metallipinnat ja kokonaismuoto uskottavia. Ei hevosta, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T20:03:31.664787+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png?t=958a8e6ff275cc73",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+        "sha256": "958a8e6ff275cc7388ccf96ee4d120af60b77b839ab0b140c94252441048a084",
+        "bytes": 2124868,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-k2-20261012-v1-ff1054",
+        "nativeSHA256": "4dbf19b51a4ea451bbba9460637ff7b1dc34e2f0ca3e626f02ccf0992f549f43",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T20:03:57.559260+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-k2-20261012-v1-ff1054-4dbf19b51a4e.png",
+        "sha256": "958a8e6ff275cc7388ccf96ee4d120af60b77b839ab0b140c94252441048a084",
+        "bytes": 2124868,
+        "SHAReadAt": "2026-10-12T20:03:52.527034+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4dbf19b51a4ea451bbba9460637ff7b1dc34e2f0ca3e626f02ccf0992f549f43",
+        "rgbPixelSHA256": "5a7469bbae7aa9992a635cbe167f7facf435071610f64280e3e67e057f493bf5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "targetAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+      "contextAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "sanjose-l2-20261012-v1-6f6a57",
+      "galleryImageID": "sanjose-l2-20261012-v1-6f6a57",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvipavuista, vientituotteesta joka osallistui San Josén kansallisteatterin rahoitukseen.",
+        "lyhyt": "Kahvi muuttui näyttämöksi."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kahvipavuista, vientituotteesta joka osallistui San Josén kansallisteatterin rahoitukseen.",
+        "lyhyt": "Kahvi muuttui näyttämöksi."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fc135663c388942c05a752636ef1a6ecb47fe12c1625373ec751df53b37a7bc3",
+      "exportSHA256": "569fd52538d0eb1d0e4d5b7a67d510bcc3c2a3ae74bd7ec990ca93cb8a518c74",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+        "semanticContextSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+        "subjectTitle": "Kahvi muuttui näyttämöksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l2-20261012-v1-6f6a57/image.png",
+            "nativeSHA256": "fc135663c388942c05a752636ef1a6ecb47fe12c1625373ec751df53b37a7bc3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvipavuista, vientituotteesta joka osallistui San Josén kansallisteatterin rahoitukseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Kansallisteatteri valmistui San Josén keskustaan 1800-luvun lopulla. Sen rahoitukseen käytettiin kahvin vientiveroa, joten ulkomaille lähtevä maataloustuote osallistui kotikaupungin kulttuuritalon rakentamiseen. Teatterin sisällä Aleardo Villan maalaus yhdistää kahvin ja banaanit samaan allegoriaan. Rakennus palvelee yhä esityksiä, eikä sen tarina pääty vihkiäisiin. Kaupungin kahvitaloudesta jäänyt jälki on täällä katsomo, näyttämö ja kansallisen kulttuurielämän tila.",
+              "sourcePage": "https://en.wikipedia.org/wiki/National_Theatre_of_Costa_Rica",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/coffee-source-job19.html",
+              "sourceSnapshotSha256": "373dc9eea072cbdff107bdb0d32a10559aeb84c394b5aa9a2a6315fbabb0faf3",
+              "sourceClaim": "Coffee export tax participated in construction financing; coffee beans are a general subject illustration only."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A small loose pile of unbranded roasted coffee beans on an ordinary plain ceramic saucer, a few beans resting beside it on a clean neutral tabletop. Medium close editorial food photograph. Every bean has naturally varied wrinkles, its characteristic central groove and imperfect roasting color. Soft window light. No coffee bag, cup, labels, money, theatre, stage, painting, building, market stall, signs or people. The subject only illustrates coffee as an export commodity.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Kahvi muuttui näyttämöksi",
+                "teksti": "Kansallisteatteri valmistui San Josén keskustaan 1800-luvun lopulla. Sen rahoitukseen käytettiin kahvin vientiveroa, joten ulkomaille lähtevä maataloustuote osallistui kotikaupungin kulttuuritalon rakentamiseen. Teatterin sisällä Aleardo Villan maalaus yhdistää kahvin ja banaanit samaan allegoriaan. Rakennus palvelee yhä esityksiä, eikä sen tarina pääty vihkiäisiin. Kaupungin kahvitaloudesta jäänyt jälki on täällä katsomo, näyttämö ja kansallisen kulttuurielämän tila.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "National Theatre of Costa Rica"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l2-20261012-v1-6f6a57/image.png",
+              "detail": "original",
+              "observations": "Vaalealla lautasella ruskeita paahdettuja kahvipapuja, muutamia erillisiä papuja vieressä. Uurteet, paahdon sävyt ja papujen asennot vaihtelevat luonnollisesti. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kahviaihe liittyy L2:n teatterin rahoitusnostoon ja faktapohjaan. Havainne ei esitä historiallista vientierää eikä teatterin taideteosta. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kahvipavuista, vientituotteesta joka osallistui San Josén kansallisteatterin rahoitukseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+        "fileSHA256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "sanjose-l2-20261012-v1-6f6a57",
+          "sha256": "fc135663c388942c05a752636ef1a6ecb47fe12c1625373ec751df53b37a7bc3",
+          "verdict": "accepted",
+          "reason": "Kahviaihe liittyy L2:n teatterin rahoitusnostoon ja faktapohjaan. Havainne ei esitä historiallista vientierää eikä teatterin taideteosta. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l2-20261012-v1-6f6a57/image.png",
+            "nativeSHA256": "fc135663c388942c05a752636ef1a6ecb47fe12c1625373ec751df53b37a7bc3",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva kahvipavuista, vientituotteesta joka osallistui San Josén kansallisteatterin rahoitukseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSha256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetText": "Kansallisteatteri valmistui San Josén keskustaan 1800-luvun lopulla. Sen rahoitukseen käytettiin kahvin vientiveroa, joten ulkomaille lähtevä maataloustuote osallistui kotikaupungin kulttuuritalon rakentamiseen. Teatterin sisällä Aleardo Villan maalaus yhdistää kahvin ja banaanit samaan allegoriaan. Rakennus palvelee yhä esityksiä, eikä sen tarina pääty vihkiäisiin. Kaupungin kahvitaloudesta jäänyt jälki on täällä katsomo, näyttämö ja kansallisen kulttuurielämän tila.",
+              "sourcePage": "https://en.wikipedia.org/wiki/National_Theatre_of_Costa_Rica",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/coffee-source-job19.html",
+              "sourceSnapshotSha256": "373dc9eea072cbdff107bdb0d32a10559aeb84c394b5aa9a2a6315fbabb0faf3",
+              "sourceClaim": "Coffee export tax participated in construction financing; coffee beans are a general subject illustration only."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A small loose pile of unbranded roasted coffee beans on an ordinary plain ceramic saucer, a few beans resting beside it on a clean neutral tabletop. Medium close editorial food photograph. Every bean has naturally varied wrinkles, its characteristic central groove and imperfect roasting color. Soft window light. No coffee bag, cup, labels, money, theatre, stage, painting, building, market stall, signs or people. The subject only illustrates coffee as an export commodity.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+              "contentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Kahvi muuttui näyttämöksi",
+                "teksti": "Kansallisteatteri valmistui San Josén keskustaan 1800-luvun lopulla. Sen rahoitukseen käytettiin kahvin vientiveroa, joten ulkomaille lähtevä maataloustuote osallistui kotikaupungin kulttuuritalon rakentamiseen. Teatterin sisällä Aleardo Villan maalaus yhdistää kahvin ja banaanit samaan allegoriaan. Rakennus palvelee yhä esityksiä, eikä sen tarina pääty vihkiäisiin. Kaupungin kahvitaloudesta jäänyt jälki on täällä katsomo, näyttämö ja kansallisen kulttuurielämän tila.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "National Theatre of Costa Rica"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/assets/sanjose-l2-20261012-v1-6f6a57/image.png",
+              "detail": "original",
+              "observations": "Vaalealla lautasella ruskeita paahdettuja kahvipapuja, muutamia erillisiä papuja vieressä. Uurteet, paahdon sävyt ja papujen asennot vaihtelevat luonnollisesti. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:59:30.773188+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png?t=569fd52538d0eb1d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+        "sha256": "569fd52538d0eb1d0e4d5b7a67d510bcc3c2a3ae74bd7ec990ca93cb8a518c74",
+        "bytes": 2235558,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "sanjose-l2-20261012-v1-6f6a57",
+        "nativeSHA256": "fc135663c388942c05a752636ef1a6ecb47fe12c1625373ec751df53b37a7bc3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T20:00:35.130230+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/sanjose/sanjose-l2-20261012-v1-6f6a57-fc135663c388.png",
+        "sha256": "569fd52538d0eb1d0e4d5b7a67d510bcc3c2a3ae74bd7ec990ca93cb8a518c74",
+        "bytes": 2235558,
+        "SHAReadAt": "2026-10-12T19:59:36.678066+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fc135663c388942c05a752636ef1a6ecb47fe12c1625373ec751df53b37a7bc3",
+        "rgbPixelSHA256": "6d69555159f762b34ca83e839d8cc1b6e52362057cdaddedc680a57662e562d7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "targetAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+      "contextAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a"
+    },
+    {
+      "era": "e11",
+      "city": "sanjose",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e11-sanjose-c1-039ca7a531f86d4d",
+      "galleryImageID": "capital-cc-e11-sanjose-c1-039ca7a531f86d4d",
+      "commonsFile": "San Jose, Costa Rica Astronaut Image.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+      "exportSHA256": "039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-evidence-job19/e5e1842978bc9ee4.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+        "semanticContextSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+        "subjectTitle": "San José",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/San_Jose%2C_Costa_Rica_Astronaut_Image.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Commonsin nimenomainen NASA Astronauts -Author sekä astronauttikuvien Public domain / PD NASA-AP -lisenssimalline. Source on NASAn ISS027-E-9396-kuvatietue. Ei uploaderista arvattu tekijä.",
+            "workLayer": "Laaja ylhäältä otettu kaupungin maantieteellisen kokonaisasettelun kuva. Katot ovat pieniä tasopintoja; ei julkisivuja, seinämaalauksia tai veistoksia. La Sabanan puisto ja liikenneverkko erottuvat. Yksittäistä nykyistä rakennusta ei eristetä eikä nimetä teoskuvan pääaiheeksi. Täsmäkuvahavainto, ei Costa Rican blanket-FOP-väite.",
+            "timeScope": "NASA Expedition27 / kuvaus30.3.2011. Ei väitettä vuoden1873näkymästä eikä opaskuvan tuoreudesta.",
+            "location": "English: The city of San José, Costa Rica photographed by the Expedition 27 crew on board the International Space Station. Showing La Sabana Metropolitan Park in lower (southern) section."
+          },
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:11:07.719044+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-evidence-job19/e5e1842978bc9ee4.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/acdea488e4cad18c08f99b60942df2a068083fcb404bb798f0573ec665a2de47.html",
+            "savedSourceSHA256": "49352a00ececf5da4ce7a224c0e66b6f060cdc89c6dfaa29cc177b0f1c2e4708",
+            "authorVerified": "NASA Astronauts",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg#Licensing",
+            "captureDate": "30 March 2011",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+            "sourceContentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+            "captionFi": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+            "depictedWorkLayer": "Valokuvakerros: Author NASA Astronauts ja erillinen PD-USGov-NASA-AP-lisenssilausuma luettu alkuperäisestä tiedostosivusta; PhotoID-tunniste ei yksin ole vapautus. Lähde Image Science & Analysis Laboratory, Johnson Space Center, ISS027-E-9396. Commonsin nykyinen Spideog-versio on kontrastikorjattu, lähdekuvan tekstiselitteestä rajattu ja180astetta käännetty9.11.2012 tiedostohistorian mukaan; näitä ei kutsuta QA:n tekemiksi muokkauksiksi. Erillinen teoskerros: katot pieninä tasopintoina, laaja maantieteellinen kaupunkiasettelu, puisto ja katuverkko; yksittäistä julkisivu-/taideteosta ei eroteta eikä nimetä pääaiheeksi. Ei Costa Rican yleistä panoraamaoikeusväitettä. NASA:n jo luettu alkuperäinen mediaohje: asiallinen käyttö ja NASA-credit, ei endorsement-väitettä taiNASA-tunnuksia.",
+            "duplicateInCity": false,
+            "sourceRevision": 968995894,
+            "photoIdentifier": "ISS027-E-9396",
+            "creditForPublication": "NASA Astronauts / Johnson Space Center; Commons contrast/crop/rotation version by Spideog (2012)",
+            "sourceFileVersion": "9 November2012 larger source, contrast to offset haze, caption removed, rotated180degrees; actual inspected bytes039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+            "primaryMediaPolicy": {
+              "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+              "sha256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+              "readPersonallyEarlierInQA": true
+            }
+          },
+          "qaReason": "Todellinen San Josén kaupunkialue avaruusasemalta30.3.2011. Commonsin alkuperäinen Description ja NASA-kuvatunnus ISS027-E-9396 sitovat kuvan juuri kaupunkiin. Katuverkko, rakentuneen alueen kokonaisasettelu ja La Sabanan vihreä alue erottuvat; ilmakehähuntu ja pehmeä yksityiskohta kirjataan. Ei kasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Kuvateksti nimeää vuoden2011 eikä väitä kuvaa nykyhetken tai1873näkymäksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+        "fileSHA256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "San Jose, Costa Rica Astronaut Image.jpg",
+          "sha256": "039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+          "verdict": "accepted",
+          "reason": "Todellinen San Josén kaupunkialue avaruusasemalta30.3.2011. Commonsin alkuperäinen Description ja NASA-kuvatunnus ISS027-E-9396 sitovat kuvan juuri kaupunkiin. Katuverkko, rakentuneen alueen kokonaisasettelu ja La Sabanan vihreä alue erottuvat; ilmakehähuntu ja pehmeä yksityiskohta kirjataan. Ei kasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Kuvateksti nimeää vuoden2011 eikä väitä kuvaa nykyhetken tai1873näkymäksi.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:11:07.719044+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/cc-gap-evidence-job19/e5e1842978bc9ee4.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/acdea488e4cad18c08f99b60942df2a068083fcb404bb798f0573ec665a2de47.html",
+            "savedSourceSHA256": "49352a00ececf5da4ce7a224c0e66b6f060cdc89c6dfaa29cc177b0f1c2e4708",
+            "authorVerified": "NASA Astronauts",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg#Licensing",
+            "captureDate": "30 March 2011",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
+            "sourceContentSHA256": "35d2ffc26f60141ecea7437c6cac39bb478751aa02b7153cc8f176dfd394db41",
+            "captionFi": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+            "depictedWorkLayer": "Valokuvakerros: Author NASA Astronauts ja erillinen PD-USGov-NASA-AP-lisenssilausuma luettu alkuperäisestä tiedostosivusta; PhotoID-tunniste ei yksin ole vapautus. Lähde Image Science & Analysis Laboratory, Johnson Space Center, ISS027-E-9396. Commonsin nykyinen Spideog-versio on kontrastikorjattu, lähdekuvan tekstiselitteestä rajattu ja180astetta käännetty9.11.2012 tiedostohistorian mukaan; näitä ei kutsuta QA:n tekemiksi muokkauksiksi. Erillinen teoskerros: katot pieninä tasopintoina, laaja maantieteellinen kaupunkiasettelu, puisto ja katuverkko; yksittäistä julkisivu-/taideteosta ei eroteta eikä nimetä pääaiheeksi. Ei Costa Rican yleistä panoraamaoikeusväitettä. NASA:n jo luettu alkuperäinen mediaohje: asiallinen käyttö ja NASA-credit, ei endorsement-väitettä taiNASA-tunnuksia.",
+            "duplicateInCity": false,
+            "sourceRevision": 968995894,
+            "photoIdentifier": "ISS027-E-9396",
+            "creditForPublication": "NASA Astronauts / Johnson Space Center; Commons contrast/crop/rotation version by Spideog (2012)",
+            "sourceFileVersion": "9 November2012 larger source, contrast to offset haze, caption removed, rotated180degrees; actual inspected bytes039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+            "primaryMediaPolicy": {
+              "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/3aa18b8cf5eec20a276488e95397d97fc996b7905b00a7f8e9506779a7154a3c.body",
+              "sha256": "0301e542ec426cb505d11c255a88be46c50d5a89aba6f0d31b3acad16087dee6",
+              "readPersonallyEarlierInQA": true
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/qa.json",
+            "sha256": "9485f5d294395ca8ff84933c9cee4d177fe3b3d86bff057c8d38b80f816860dc"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/sanjose/illustration-qa-extra.json",
+            "sha256": "20cd1ad9dbdef53c8620b54bfe006fbb09a5c5d383b687ea82c0c78ec9dd6e8b"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "sanjose",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "San Jose, Costa Rica Astronaut Image.jpg",
+        "sha256": "039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/San_Jose%2C_Costa_Rica_Astronaut_Image.jpg",
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:San_Jose,_Costa_Rica_Astronaut_Image.jpg#Licensing",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "039ca7a531f86d4deeb6d34f543ccd51055a5eee248a0c7ea2e0a72b0188bbe9",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/c1-039ca7a531f86d4deeb6.jpg",
+        "bytes": 1665996,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:11:23.557441+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg",
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "lyhyt": "San Josén kaupunkialue avaruusasemalta kuvattuna vuonna 2011.",
+        "tiedosto": "San Jose, Costa Rica Astronaut Image.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "targetAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+      "contextAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

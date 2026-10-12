@@ -95,11 +95,10 @@
     "ByWard Marketissa voi ostaa tuottajien tuotteita ja käsitöitä; markkinahallin ympärillä on myös ravintolakortteleita."
   ],
   "valokuva": {
-    "vuosi": "",
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": ""
+    "tiedosto": "The Rideau Falls.JPG",
+    "lyhyt": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
+    "selite": "Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.",
+    "lahde": "Óðinn, Commons (CC BY-SA 2.5 ca)"
   },
   "kaupunkilehti": [
     {
@@ -108,22 +107,22 @@
       "johdanto": "Kaupan vanhat vesireitit, parlamentin kirjasto ja tutkimustilan pellot kertovat Ottawasta eri puolia.",
       "kansikuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Downtown Ottawa 2022.jpg",
+          "lyhyt": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
+          "selite": "Ottawan keskusta liittyy jokien ympärille kasvaneeseen pääkaupunkiin.",
+          "lahde": "Harleyd613, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Dow's Lake aerial view 2025.jpg",
+          "lyhyt": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
+          "selite": "Dows Lake kuuluu Ottawan kanavavesistön ja kaupunkirantojen maisemaan.",
+          "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
         },
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Central Experimental Farm aerial view 2025.jpg",
+          "lyhyt": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
+          "selite": "Central Experimental Farm säilyttää viljelyn tutkimusalueen Ottawan kaupunkirakenteen keskellä.",
+          "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
         }
       ],
       "nostot": [
@@ -140,10 +139,10 @@
           "otsikko": "Kirjat rautaovien takana",
           "teksti": "Parlamenttikirjasto liittyy päärakennukseen käytävällä. Kun parlamentin keskusrakennus paloi 1900-luvun alussa, kirjaston rautaovet suljettiin ennen kuin tuli levisi sen puolelle. Erillinen rakennus ja suljetut ovet auttoivat säästämään kokoelman. Ulkoa kirjasto kuuluu parlamenttikukkulan uusgoottilaiseen rakennusryhmään; sisällä lukusalin seiniä kiertävät koristeelliset puupaneelit. Kirjastolaitos palvelee parlamenttia tiedon kokoajana ja tutkimuspalveluna. Isoisän matkavuonna 1873 nykyinen kirjastorakennus ei ollut vielä valmis.",
           "wiki": "Library of Parliament",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Ottawa - ON - Library of Parliament.jpg",
+          "lyhyt": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
+          "selite": "Parlamentin kirjastotalo kuuluu Ottawan historialliseen uusgoottilaiseen arkkitehtuuriin.",
+          "lahde": "Wladyslaw ( talk ), Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "otsikko": "Kauppakassi kuuluu pääkaupunkiin",
@@ -380,10 +379,10 @@
       "teksti": "Dominion Arboretum on Central Experimental Farmin puiden ja pensaiden tutkimuskokoelma. Se sijaitsee kumpuilevalla maalla Prince of Wales Driven, Dows Laken ja Rideau-kanavan välissä. Kokoelman tarkoitus on arvioida kasvien kestävyyttä paikallisissa oloissa. Kävelijälle paikka avautuu puistona, mutta sen puut ovat myös tutkimusaineistoa.\n\nArboretum perustettiin 1800-luvun lopulla, joten isoisän matkavuonna 1873 nykyistä tutkimuspuistoa ei vielä ollut. Maaston synnyttämä pienilmasto on mahdollistanut seudulle tavallista arempien kasvien kasvattamisen. Kokoelmassa on esimerkiksi magnolioita ja atsaleoita. Kanavan toisella puolella on Carleton University. Näiden rantojen ympärillä kasvien tutkimus, kaupunkipuisto ja korkeakouluympäristö ovat nykyisin lähekkäin.",
       "kuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Dominion Arboretum 2025.JPG",
+          "lyhyt": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
+          "selite": "Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.",
+          "lahde": "Canmenwalker, Wikimedia Commons (CC BY 4.0)"
         }
       ],
       "lahde": "Wikipedia"

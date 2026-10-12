@@ -1,0 +1,2573 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e11",
+  "city": "portauprince",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+  "assets": [
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "portauprince-traveler-20261012-v1-77aa15",
+      "galleryImageID": "portauprince-traveler-20261012-v1-77aa15",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+        "lyhyt": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+        "lyhyt": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "99996271fdd708a60f7e6321bd17769bd13a7305ef9083a1b643a7c997cad50e",
+      "exportSHA256": "f0394631c5233ed145e58223f7d280169f3074265ec68c70ac2417e7ad24678e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "fc70c9408b6a33c91b91c530c356dd4233a1dc9c794596f9a87083a8ddfffa01",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-traveler-20261012-v1-77aa15/image.png",
+            "nativeSHA256": "99996271fdd708a60f7e6321bd17769bd13a7305ef9083a1b643a7c997cad50e",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Port-au-Princeen matkustaminen on tällä hetkellä erittäin vaarallista. Tavallista omatoimista kaupunkilomaa ei voi suositella. Jos matka on välttämätön, kuljetukset ja majoitus on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa. Historiallinen nähtävyysluettelo ei kerro, mihin voi tänään turvallisesti päästä. Kaupungin rakennusperintöön ja ruokakulttuuriin voi tutustua myös etäältä.\n\nFritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural food photograph of Haitian pikliz in an unlabelled clear glass jar and a small plain bowl: fine shredded cabbage, carrot, onion, bell pepper, garlic and a modest amount of chopped Scotch bonnet chilli, lightly glistening in a vinegar brine. Varied real vegetable cuts, not plastic strands. No text or brands. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Port-au-Princeen matkustaminen on tällä hetkellä erittäin vaarallista. Tavallista omatoimista kaupunkilomaa ei voi suositella. Jos matka on välttämätön, kuljetukset ja majoitus on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa. Historiallinen nähtävyysluettelo ei kerro, mihin voi tänään turvallisesti päästä. Kaupungin rakennusperintöön ja ruokakulttuuriin voi tutustua myös etäältä.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Port-au-Prince",
+                  "taitto": "opas",
+                  "teksti": "Tutustu satamakaupungin rakennusperintöön ja haitilaisen pöydän makuihin.",
+                  "nosto": "Matkustaminen kaupunkiin on tällä hetkellä erittäin vaarallista; kulttuuriaiheet eivät ole käyntisuosituksia.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Kaupungin kansainvälinen lentoasema on Toussaint Louverture International Airport. Port-au-Princen paikallisliikenteeseen kuuluvat tap-tapit, mutta niiden käyttöä ei nykyisessä turvallisuustilanteessa voi suositella. Välttämättömän matkan kuljetukset on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa; saapumista ei pidä rakentaa tavallisen omatoimisen kaupunkimatkan varaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Koristeellisen talon tekniikka",
+                      "teksti": "Pacot, Turgeau ja Bois-Verna kuuluvat Port-au-Princen piparkakkutalojen kaupunginosiin. Vanhojen talojen koristekuvioiden rinnalla kannattaa huomata rakennustavan periaate: korkeat huoneet ja säleikkunat liittyvät ilman kulkuun. Talojen historiaan voi perehtyä myös valokuvien ja rakennusperinnön esittelyjen avulla. Nykyinen käyntimahdollisuus on selvitettävä erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Tori ja kulttuurin muisti",
+                      "teksti": "Marché en Fer kertoo metallirakentamisesta ja kaupankäynnistä, MUPANAH puolestaan Haitin historiasta ja kulttuurista. Molemmat ovat kaupungin tunnettuja paikkoja, mutta kohdeluettelosta ei voi päätellä niiden nykyistä saavutettavuutta. Erityisesti vanhoissa matkaoppaissa mainittu rakennus saattaa olla vaurioitunut tai sen käyttö muuttunut.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Fritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Sää ja matkustusajankohta",
+                      "teksti": "Port-au-Princen ilmasto on trooppinen. Pelkkä vuodenaika ei kuitenkaan tee matkasta tällä hetkellä turvallista: kulkuyhteydet ja mahdollisuus järjestää turvallinen liikkuminen ratkaisevat matkan toteuttamisen. Matkustusajankohtaa ei siksi voi suositella tavallisen kaupunkiloman tapaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Piparkakkutalojen rakennusperintö",
+                        "tahdet": 3,
+                        "selite": "Puurakentamisessa kohtaavat koristeellinen käsityö ja lämpimän ilmaston ratkaisut."
+                      },
+                      {
+                        "mita": "Rautatorin historia",
+                        "tahdet": 3,
+                        "selite": "Pariisissa valmistetun metallirakennuksen vaiheisiin kuuluu monta uutta alkua."
+                      },
+                      {
+                        "mita": "MUPANAHin kulttuurihistoria",
+                        "tahdet": 2,
+                        "selite": "Museon aiheina ovat Haitin historia ja kulttuuri."
+                      },
+                      {
+                        "mita": "Haitilainen keittiö",
+                        "tahdet": 3,
+                        "selite": "Paistetut ruoat, tuliset lisukkeet ja keittoperinteet tarjoavat erilaisia makuja."
+                      },
+                      {
+                        "mita": "Tap-tapien perinne",
+                        "tahdet": 2,
+                        "selite": "Paikallinen yhteiskyyti kuuluu kaupungin liikenteeseen."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Matkustaminen on erittäin vaarallista",
+                        "teksti": "Port-au-Princeen ei pidä suunnitella tavallista omatoimista lomaa; mahdollinen välttämätön matka vaatii erilliset turvallisuusjärjestelyt."
+                      },
+                      {
+                        "otsikko": "Vanha kohdetieto ei riitä",
+                        "teksti": "Museon tai historiallisen rakennuksen maininta ei takaa käyntimahdollisuutta; kohteen saavutettavuus on selvitettävä erikseen."
+                      },
+                      {
+                        "otsikko": "Kielet ja raha",
+                        "teksti": "Haitinkreoli ja ranska ovat Haitin virallisia kieliä, ja maan valuutta on gourde."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-traveler-20261012-v1-77aa15/image.png",
+              "detail": "original",
+              "observations": "Etiketitön lasipurkki ja kulho säilöttyjä kasvissuikaleita, rinnalla kaali, porkkana, sipuli, valkosipuli ja chilejä. Pinnat, lasi ja kasvimuodot uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Pikliz liittyy Port-au-Princen oppaan ruoka-aiheeseen ja faktapohjaan. Rehellinen havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "portauprince-traveler-20261012-v1-77aa15",
+          "sha256": "99996271fdd708a60f7e6321bd17769bd13a7305ef9083a1b643a7c997cad50e",
+          "verdict": "accepted",
+          "reason": "Pikliz liittyy Port-au-Princen oppaan ruoka-aiheeseen ja faktapohjaan. Rehellinen havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-traveler-20261012-v1-77aa15/image.png",
+            "nativeSHA256": "99996271fdd708a60f7e6321bd17769bd13a7305ef9083a1b643a7c997cad50e",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Port-au-Princeen matkustaminen on tällä hetkellä erittäin vaarallista. Tavallista omatoimista kaupunkilomaa ei voi suositella. Jos matka on välttämätön, kuljetukset ja majoitus on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa. Historiallinen nähtävyysluettelo ei kerro, mihin voi tänään turvallisesti päästä. Kaupungin rakennusperintöön ja ruokakulttuuriin voi tutustua myös etäältä.\n\nFritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural food photograph of Haitian pikliz in an unlabelled clear glass jar and a small plain bowl: fine shredded cabbage, carrot, onion, bell pepper, garlic and a modest amount of chopped Scotch bonnet chilli, lightly glistening in a vinegar brine. Varied real vegetable cuts, not plastic strands. No text or brands. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Port-au-Princeen matkustaminen on tällä hetkellä erittäin vaarallista. Tavallista omatoimista kaupunkilomaa ei voi suositella. Jos matka on välttämätön, kuljetukset ja majoitus on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa. Historiallinen nähtävyysluettelo ei kerro, mihin voi tänään turvallisesti päästä. Kaupungin rakennusperintöön ja ruokakulttuuriin voi tutustua myös etäältä.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Port-au-Prince",
+                  "taitto": "opas",
+                  "teksti": "Tutustu satamakaupungin rakennusperintöön ja haitilaisen pöydän makuihin.",
+                  "nosto": "Matkustaminen kaupunkiin on tällä hetkellä erittäin vaarallista; kulttuuriaiheet eivät ole käyntisuosituksia.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Kaupungin kansainvälinen lentoasema on Toussaint Louverture International Airport. Port-au-Princen paikallisliikenteeseen kuuluvat tap-tapit, mutta niiden käyttöä ei nykyisessä turvallisuustilanteessa voi suositella. Välttämättömän matkan kuljetukset on järjestettävä etukäteen luotettavan paikallisen toimijan kanssa; saapumista ei pidä rakentaa tavallisen omatoimisen kaupunkimatkan varaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Koristeellisen talon tekniikka",
+                      "teksti": "Pacot, Turgeau ja Bois-Verna kuuluvat Port-au-Princen piparkakkutalojen kaupunginosiin. Vanhojen talojen koristekuvioiden rinnalla kannattaa huomata rakennustavan periaate: korkeat huoneet ja säleikkunat liittyvät ilman kulkuun. Talojen historiaan voi perehtyä myös valokuvien ja rakennusperinnön esittelyjen avulla. Nykyinen käyntimahdollisuus on selvitettävä erikseen.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Tori ja kulttuurin muisti",
+                      "teksti": "Marché en Fer kertoo metallirakentamisesta ja kaupankäynnistä, MUPANAH puolestaan Haitin historiasta ja kulttuurista. Molemmat ovat kaupungin tunnettuja paikkoja, mutta kohdeluettelosta ei voi päätellä niiden nykyistä saavutettavuutta. Erityisesti vanhoissa matkaoppaissa mainittu rakennus saattaa olla vaurioitunut tai sen käyttö muuttunut.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Fritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Sää ja matkustusajankohta",
+                      "teksti": "Port-au-Princen ilmasto on trooppinen. Pelkkä vuodenaika ei kuitenkaan tee matkasta tällä hetkellä turvallista: kulkuyhteydet ja mahdollisuus järjestää turvallinen liikkuminen ratkaisevat matkan toteuttamisen. Matkustusajankohtaa ei siksi voi suositella tavallisen kaupunkiloman tapaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Piparkakkutalojen rakennusperintö",
+                        "tahdet": 3,
+                        "selite": "Puurakentamisessa kohtaavat koristeellinen käsityö ja lämpimän ilmaston ratkaisut."
+                      },
+                      {
+                        "mita": "Rautatorin historia",
+                        "tahdet": 3,
+                        "selite": "Pariisissa valmistetun metallirakennuksen vaiheisiin kuuluu monta uutta alkua."
+                      },
+                      {
+                        "mita": "MUPANAHin kulttuurihistoria",
+                        "tahdet": 2,
+                        "selite": "Museon aiheina ovat Haitin historia ja kulttuuri."
+                      },
+                      {
+                        "mita": "Haitilainen keittiö",
+                        "tahdet": 3,
+                        "selite": "Paistetut ruoat, tuliset lisukkeet ja keittoperinteet tarjoavat erilaisia makuja."
+                      },
+                      {
+                        "mita": "Tap-tapien perinne",
+                        "tahdet": 2,
+                        "selite": "Paikallinen yhteiskyyti kuuluu kaupungin liikenteeseen."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Matkustaminen on erittäin vaarallista",
+                        "teksti": "Port-au-Princeen ei pidä suunnitella tavallista omatoimista lomaa; mahdollinen välttämätön matka vaatii erilliset turvallisuusjärjestelyt."
+                      },
+                      {
+                        "otsikko": "Vanha kohdetieto ei riitä",
+                        "teksti": "Museon tai historiallisen rakennuksen maininta ei takaa käyntimahdollisuutta; kohteen saavutettavuus on selvitettävä erikseen."
+                      },
+                      {
+                        "otsikko": "Kielet ja raha",
+                        "teksti": "Haitinkreoli ja ranska ovat Haitin virallisia kieliä, ja maan valuutta on gourde."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-traveler-20261012-v1-77aa15/image.png",
+              "detail": "original",
+              "observations": "Etiketitön lasipurkki ja kulho säilöttyjä kasvissuikaleita, rinnalla kaali, porkkana, sipuli, valkosipuli ja chilejä. Pinnat, lasi ja kasvimuodot uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:52:32.153859+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png?t=f0394631c5233ed1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+        "sha256": "f0394631c5233ed145e58223f7d280169f3074265ec68c70ac2417e7ad24678e",
+        "bytes": 2404441,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-traveler-20261012-v1-77aa15",
+        "nativeSHA256": "99996271fdd708a60f7e6321bd17769bd13a7305ef9083a1b643a7c997cad50e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:53:29.790963+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-traveler-20261012-v1-77aa15-99996271fdd7.png",
+        "sha256": "f0394631c5233ed145e58223f7d280169f3074265ec68c70ac2417e7ad24678e",
+        "bytes": 2404441,
+        "SHAReadAt": "2026-10-12T19:52:33.459540+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "99996271fdd708a60f7e6321bd17769bd13a7305ef9083a1b643a7c997cad50e",
+        "rgbPixelSHA256": "f238e5e2f99c0f95a538d314c70d69d2d037aac67e95cb155626908447235dcf",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "fc70c9408b6a33c91b91c530c356dd4233a1dc9c794596f9a87083a8ddfffa01"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "portauprince-o4-20261012-v1-8179ad",
+      "galleryImageID": "portauprince-o4-20261012-v1-8179ad",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva paistetusta keittobanaanista ja pikliz-lisukkeesta.",
+        "lyhyt": "Havainnekuva paistetusta keittobanaanista ja pikliz-lisukkeesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva paistetusta keittobanaanista ja pikliz-lisukkeesta.",
+        "lyhyt": "Havainnekuva paistetusta keittobanaanista ja pikliz-lisukkeesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "af6b033d0644847e516a3d86ffe3773b5ea2681ceb72d1d05dd11d4c4ddb3b4d",
+      "exportSHA256": "7474824ec75d525135063fb4153f8c6bf708bee6a461029721fbedc474ed2369",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "665549bf6f6e1bcee9766a1aa8e5889a2b282d9cca0a7012a859114ee0ee3ef4",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-o4-20261012-v1-8179ad/image.png",
+            "nativeSHA256": "af6b033d0644847e516a3d86ffe3773b5ea2681ceb72d1d05dd11d4c4ddb3b4d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva paistetusta keittobanaanista ja pikliz-lisukkeesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Fritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close overhead editorial food photograph of a modest serving of crisp flattened green-plantain rounds with a small separate bowl of pikliz on a plain tabletop. Distinct plantain fibres, imperfect frying edges, realistic vegetable texture. No people, branding or place claim.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Fritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-o4-20261012-v1-8179ad/image.png",
+              "detail": "original",
+              "observations": "Lautasella litteäksi painettuja kullanruskeita keittobanaanipaloja, vieressä kulhollinen kaali-porkkana-paprikamaista lisuketta. Paistopinnat, banaanin keskukset ja leikatut kasvissuikaleet uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Paistettu keittobanaani ja pikliz vastaavat O4-ruokajaksoa ja faktapohjaa. Rehellinen yleishavainne ei esitä tiettyä ruokapaikkaa. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva paistetusta keittobanaanista ja pikliz-lisukkeesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "portauprince-o4-20261012-v1-8179ad",
+          "sha256": "af6b033d0644847e516a3d86ffe3773b5ea2681ceb72d1d05dd11d4c4ddb3b4d",
+          "verdict": "accepted",
+          "reason": "Paistettu keittobanaani ja pikliz vastaavat O4-ruokajaksoa ja faktapohjaa. Rehellinen yleishavainne ei esitä tiettyä ruokapaikkaa. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-o4-20261012-v1-8179ad/image.png",
+            "nativeSHA256": "af6b033d0644847e516a3d86ffe3773b5ea2681ceb72d1d05dd11d4c4ddb3b4d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva paistetusta keittobanaanista ja pikliz-lisukkeesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Fritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close overhead editorial food photograph of a modest serving of crisp flattened green-plantain rounds with a small separate bowl of pikliz on a plain tabletop. Distinct plantain fibres, imperfect frying edges, realistic vegetable texture. No people, branding or place claim.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Fritay tarkoittaa monenlaisten paistettujen ruokien joukkoa. Griot on sianliharuoka, ja sen kanssa tarjotaan usein pikliziä, chilillä maustettua vihanneslisuketta. Keittobanaanista valmistetaan paistettuja paloja, ja joumou-keitto liittyy yhteiseen itsenäisyyspäivän ateriaan. Näihin makuihin voi tutustua haitilaisessa ravintolassa tai kotikeittiössä myös ilman matkaa kaupunkiin.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-o4-20261012-v1-8179ad/image.png",
+              "detail": "original",
+              "observations": "Lautasella litteäksi painettuja kullanruskeita keittobanaanipaloja, vieressä kulhollinen kaali-porkkana-paprikamaista lisuketta. Paistopinnat, banaanin keskukset ja leikatut kasvissuikaleet uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:35:25.258712+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png?t=7474824ec75d5251",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+        "sha256": "7474824ec75d525135063fb4153f8c6bf708bee6a461029721fbedc474ed2369",
+        "bytes": 2622576,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-o4-20261012-v1-8179ad",
+        "nativeSHA256": "af6b033d0644847e516a3d86ffe3773b5ea2681ceb72d1d05dd11d4c4ddb3b4d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:35:41.623669+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-o4-20261012-v1-8179ad-af6b033d0644.png",
+        "sha256": "7474824ec75d525135063fb4153f8c6bf708bee6a461029721fbedc474ed2369",
+        "bytes": 2622576,
+        "SHAReadAt": "2026-10-12T18:35:35.992989+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "af6b033d0644847e516a3d86ffe3773b5ea2681ceb72d1d05dd11d4c4ddb3b4d",
+        "rgbPixelSHA256": "b552cab1152381fd864f010822589ad6cb844f83c4f265136a0ba6662ad72cbd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "665549bf6f6e1bcee9766a1aa8e5889a2b282d9cca0a7012a859114ee0ee3ef4"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "portauprince-k2-20261012-v1-7d774d",
+      "galleryImageID": "portauprince-k2-20261012-v1-7d774d",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautaisesta rakennusmateriaalista, ei Rautatorin todellinen rakenne.",
+        "lyhyt": "Havainnekuva rautaisesta rakennusmateriaalista, ei Rautatorin todellinen rakenne."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautaisesta rakennusmateriaalista, ei Rautatorin todellinen rakenne.",
+        "lyhyt": "Havainnekuva rautaisesta rakennusmateriaalista, ei Rautatorin todellinen rakenne."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b3d4e1c76374789ca90f64bb286316e317b72df33859db8d258041667f2a218e",
+      "exportSHA256": "e307c7fcdc0c75db5765e9c61b2089fdb0bb06de5a7e28ed77bb0074e0201a84",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
+        "semanticContextSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
+        "subjectTitle": "Aseman ainekset päätyivät toriksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k2-20261012-v1-7d774d/image.png",
+            "nativeSHA256": "b3d4e1c76374789ca90f64bb286316e317b72df33859db8d258041667f2a218e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva rautaisesta rakennusmateriaalista, ei Rautatorin todellinen rakenne.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Rautatorin rakennus valmistettiin Pariisissa alun perin Kairon rautatieasemaa varten. Suunnitelman peruunnuttua metallirakennus ostettiin Haitiin, missä siitä tuli Marché en Fer. Torihallit yhdistää portti, jonka yllä ovat kupolikattoiset tornit ja kello. Tämä 1800-luvun lopun rakennus ei vielä kuulunut isoisän matkavuoden kaupunkiin. Myöhemmissä korjauksissa on käytetty maanjäristyksessä vaurioituneista rakennuksista talteen otettuja tiiliä: myös korjausmateriaali kantaa kaupungin historiaa."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of ordinary plain iron structural components on a neutral workbench: a short simple iron bar and a small basic riveted junction, varied matte dark metal surface. No ornament, market architecture, train station or exact historic component.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Aseman ainekset päätyivät toriksi",
+                "teksti": "Rautatorin rakennus valmistettiin Pariisissa alun perin Kairon rautatieasemaa varten. Suunnitelman peruunnuttua metallirakennus ostettiin Haitiin, missä siitä tuli Marché en Fer. Torihallit yhdistää portti, jonka yllä ovat kupolikattoiset tornit ja kello. Tämä 1800-luvun lopun rakennus ei vielä kuulunut isoisän matkavuoden kaupunkiin. Myöhemmissä korjauksissa on käytetty maanjäristyksessä vaurioituneista rakennuksista talteen otettuja tiiliä: myös korjausmateriaali kantaa kaupungin historiaa.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Marché en Fer"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k2-20261012-v1-7d774d/image.png",
+              "detail": "original",
+              "observations": "Lähikuva tummasta metalliprofiilien liitoksesta, niitti-/pulttikannoista ja irtonaisesta metallikappaleesta pöydällä. Kulumat, ruoste ja metallin kiilto vaihtelevat luontevasti. Ei tunnistettavaa rakennusta, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Rautainen rakennusmateriaali liittyy nykyisen K2-noston metallirakennukseen. Kuvateksti rajaa pois Rautatorin todellisen rakenneosan. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rautaisesta rakennusmateriaalista, ei Rautatorin todellinen rakenne.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "portauprince-k2-20261012-v1-7d774d",
+          "sha256": "b3d4e1c76374789ca90f64bb286316e317b72df33859db8d258041667f2a218e",
+          "verdict": "accepted",
+          "reason": "Rautainen rakennusmateriaali liittyy nykyisen K2-noston metallirakennukseen. Kuvateksti rajaa pois Rautatorin todellisen rakenneosan. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k2-20261012-v1-7d774d/image.png",
+            "nativeSHA256": "b3d4e1c76374789ca90f64bb286316e317b72df33859db8d258041667f2a218e",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva rautaisesta rakennusmateriaalista, ei Rautatorin todellinen rakenne.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Rautatorin rakennus valmistettiin Pariisissa alun perin Kairon rautatieasemaa varten. Suunnitelman peruunnuttua metallirakennus ostettiin Haitiin, missä siitä tuli Marché en Fer. Torihallit yhdistää portti, jonka yllä ovat kupolikattoiset tornit ja kello. Tämä 1800-luvun lopun rakennus ei vielä kuulunut isoisän matkavuoden kaupunkiin. Myöhemmissä korjauksissa on käytetty maanjäristyksessä vaurioituneista rakennuksista talteen otettuja tiiliä: myös korjausmateriaali kantaa kaupungin historiaa."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial material photograph of ordinary plain iron structural components on a neutral workbench: a short simple iron bar and a small basic riveted junction, varied matte dark metal surface. No ornament, market architecture, train station or exact historic component.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[1]",
+              "targetText": {
+                "otsikko": "Aseman ainekset päätyivät toriksi",
+                "teksti": "Rautatorin rakennus valmistettiin Pariisissa alun perin Kairon rautatieasemaa varten. Suunnitelman peruunnuttua metallirakennus ostettiin Haitiin, missä siitä tuli Marché en Fer. Torihallit yhdistää portti, jonka yllä ovat kupolikattoiset tornit ja kello. Tämä 1800-luvun lopun rakennus ei vielä kuulunut isoisän matkavuoden kaupunkiin. Myöhemmissä korjauksissa on käytetty maanjäristyksessä vaurioituneista rakennuksista talteen otettuja tiiliä: myös korjausmateriaali kantaa kaupungin historiaa.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Marché en Fer"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k2-20261012-v1-7d774d/image.png",
+              "detail": "original",
+              "observations": "Lähikuva tummasta metalliprofiilien liitoksesta, niitti-/pulttikannoista ja irtonaisesta metallikappaleesta pöydällä. Kulumat, ruoste ja metallin kiilto vaihtelevat luontevasti. Ei tunnistettavaa rakennusta, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:27:02.003857+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png?t=e307c7fcdc0c75db",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+        "sha256": "e307c7fcdc0c75db5765e9c61b2089fdb0bb06de5a7e28ed77bb0074e0201a84",
+        "bytes": 2279553,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-k2-20261012-v1-7d774d",
+        "nativeSHA256": "b3d4e1c76374789ca90f64bb286316e317b72df33859db8d258041667f2a218e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:28:05.762926+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-k2-20261012-v1-7d774d-b3d4e1c76374.png",
+        "sha256": "e307c7fcdc0c75db5765e9c61b2089fdb0bb06de5a7e28ed77bb0074e0201a84",
+        "bytes": 2279553,
+        "SHAReadAt": "2026-10-12T18:29:58.665549+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b3d4e1c76374789ca90f64bb286316e317b72df33859db8d258041667f2a218e",
+        "rgbPixelSHA256": "b721afbacd12d4fe6c1153fa445b5913b9d6ecd13d69605c129c507e656008ae",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20",
+      "contextAfterSHA256": "ad7e82fcf9fc7c2b8bf6d6498d3f0a9e3cb9696afbf24758c1c58d726d724c20"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "portauprince-k3-20261012-v1-788939",
+      "galleryImageID": "portauprince-k3-20261012-v1-788939",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Yleistetty havainnekuva säleikkunasta rakennuksen ilmanvaihdon aiheeseen.",
+        "lyhyt": "Yleistetty havainnekuva säleikkunasta rakennuksen ilmanvaihdon aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Yleistetty havainnekuva säleikkunasta rakennuksen ilmanvaihdon aiheeseen.",
+        "lyhyt": "Yleistetty havainnekuva säleikkunasta rakennuksen ilmanvaihdon aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "11ef36e91a8fe5eb2ed1228324147b52d27ccacd8b2f0b492e8c638faa521efd",
+      "exportSHA256": "45b9f4979262262316746396a3e23d52801f11c58328fe9d4074a46d5729f524",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
+        "semanticContextSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
+        "subjectTitle": "Piparkakku ei ole tässä leivonnainen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k3-20261012-v1-788939/image.png",
+            "nativeSHA256": "11ef36e91a8fe5eb2ed1228324147b52d27ccacd8b2f0b492e8c638faa521efd",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Yleistetty havainnekuva säleikkunasta rakennuksen ilmanvaihdon aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Port-au-Princen piparkakkutalojen nimi viittaa koristeellisiin puuosiin, ei keittiöön. Suuria taloja rakennettiin muun muassa Pacotin, Turgeaun ja Bois-Vernan kaupunginosiin 1800-luvun lopulla ja 1900-luvun alussa. Ulkomaiset rakennustyylit kohtasivat haitilaisten arkkitehtien ja puuseppien taidot. Talojen tunnusmerkkejä ovat pitsimäiset puukuviot, suuret ovet, korkeat huoneet ja syvät verannat. Koristeellisen julkisivun takana on myös ilmastoon sovitettua tekniikkaa: säleikkunat päästävät ilmaa kulkemaan."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural photograph of an anonymous simple wooden louvered window from inside, plain horizontal movable slats and soft daylight through them. No decorated house facade, protected ornamental fretwork, real place or identifiable people. This illustrates a functional ventilation element only.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Piparkakku ei ole tässä leivonnainen",
+                "teksti": "Port-au-Princen piparkakkutalojen nimi viittaa koristeellisiin puuosiin, ei keittiöön. Suuria taloja rakennettiin muun muassa Pacotin, Turgeaun ja Bois-Vernan kaupunginosiin 1800-luvun lopulla ja 1900-luvun alussa. Ulkomaiset rakennustyylit kohtasivat haitilaisten arkkitehtien ja puuseppien taidot. Talojen tunnusmerkkejä ovat pitsimäiset puukuviot, suuret ovet, korkeat huoneet ja syvät verannat. Koristeellisen julkisivun takana on myös ilmastoon sovitettua tekniikkaa: säleikkunat päästävät ilmaa kulkemaan.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Gingerbread house (architecture)"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k3-20261012-v1-788939/image.png",
+              "detail": "original",
+              "observations": "Lähikuva puisesta säleikkunasta, säleiden välistä näkyy valoa ja epäterävää kasvillisuutta. Säleet, kehys ja puunsyyt ovat luontevia ja rakenne avoin ilman kululle. Ei koristeellista nimettyä teosta, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Säleikkunan ilmanvaihto on K3-noston nimenomainen yleinen tekniikka-aihe. Kuvateksti ei nimeä kuvan rakennusta tai väitä sitä haitilaisen talon todelliseksi ikkunaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yleistetty havainnekuva säleikkunasta rakennuksen ilmanvaihdon aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "portauprince-k3-20261012-v1-788939",
+          "sha256": "11ef36e91a8fe5eb2ed1228324147b52d27ccacd8b2f0b492e8c638faa521efd",
+          "verdict": "accepted",
+          "reason": "Säleikkunan ilmanvaihto on K3-noston nimenomainen yleinen tekniikka-aihe. Kuvateksti ei nimeä kuvan rakennusta tai väitä sitä haitilaisen talon todelliseksi ikkunaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k3-20261012-v1-788939/image.png",
+            "nativeSHA256": "11ef36e91a8fe5eb2ed1228324147b52d27ccacd8b2f0b492e8c638faa521efd",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Yleistetty havainnekuva säleikkunasta rakennuksen ilmanvaihdon aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Port-au-Princen piparkakkutalojen nimi viittaa koristeellisiin puuosiin, ei keittiöön. Suuria taloja rakennettiin muun muassa Pacotin, Turgeaun ja Bois-Vernan kaupunginosiin 1800-luvun lopulla ja 1900-luvun alussa. Ulkomaiset rakennustyylit kohtasivat haitilaisten arkkitehtien ja puuseppien taidot. Talojen tunnusmerkkejä ovat pitsimäiset puukuviot, suuret ovet, korkeat huoneet ja syvät verannat. Koristeellisen julkisivun takana on myös ilmastoon sovitettua tekniikkaa: säleikkunat päästävät ilmaa kulkemaan."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural photograph of an anonymous simple wooden louvered window from inside, plain horizontal movable slats and soft daylight through them. No decorated house facade, protected ornamental fretwork, real place or identifiable people. This illustrates a functional ventilation element only.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Piparkakku ei ole tässä leivonnainen",
+                "teksti": "Port-au-Princen piparkakkutalojen nimi viittaa koristeellisiin puuosiin, ei keittiöön. Suuria taloja rakennettiin muun muassa Pacotin, Turgeaun ja Bois-Vernan kaupunginosiin 1800-luvun lopulla ja 1900-luvun alussa. Ulkomaiset rakennustyylit kohtasivat haitilaisten arkkitehtien ja puuseppien taidot. Talojen tunnusmerkkejä ovat pitsimäiset puukuviot, suuret ovet, korkeat huoneet ja syvät verannat. Koristeellisen julkisivun takana on myös ilmastoon sovitettua tekniikkaa: säleikkunat päästävät ilmaa kulkemaan.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Gingerbread house (architecture)"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-k3-20261012-v1-788939/image.png",
+              "detail": "original",
+              "observations": "Lähikuva puisesta säleikkunasta, säleiden välistä näkyy valoa ja epäterävää kasvillisuutta. Säleet, kehys ja puunsyyt ovat luontevia ja rakenne avoin ilman kululle. Ei koristeellista nimettyä teosta, ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:29:30.265001+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png?t=45b9f49792622623",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+        "sha256": "45b9f4979262262316746396a3e23d52801f11c58328fe9d4074a46d5729f524",
+        "bytes": 1939907,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-k3-20261012-v1-788939",
+        "nativeSHA256": "11ef36e91a8fe5eb2ed1228324147b52d27ccacd8b2f0b492e8c638faa521efd",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:31:23.645063+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-k3-20261012-v1-788939-11ef36e91a8f.png",
+        "sha256": "45b9f4979262262316746396a3e23d52801f11c58328fe9d4074a46d5729f524",
+        "bytes": 1939907,
+        "SHAReadAt": "2026-10-12T18:29:58.765954+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "11ef36e91a8fe5eb2ed1228324147b52d27ccacd8b2f0b492e8c638faa521efd",
+        "rgbPixelSHA256": "1e4902746d6cf924351656a14deb283fa4307a941bfa9cf040b9dcb14a4593e2",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be",
+      "contextAfterSHA256": "7cb9003fbe89cf0610ff5bfc54c68c93b8478ce2379471ee4e7e85eaa19f58be"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "portauprince-l1-20261012-v1-1c03f7",
+      "galleryImageID": "portauprince-l1-20261012-v1-1c03f7",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva fritayn paistetuista ruoista: keittobanaania, taikinapaloja ja kanaa.",
+        "lyhyt": "Havainnekuva fritayn paistetuista ruoista: keittobanaania, taikinapaloja ja kanaa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva fritayn paistetuista ruoista: keittobanaania, taikinapaloja ja kanaa.",
+        "lyhyt": "Havainnekuva fritayn paistetuista ruoista: keittobanaania, taikinapaloja ja kanaa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a159ba5cd7c8849045239110e2fbb5ab8319f5ffadef46c298d4eaf7c5741a1d",
+      "exportSHA256": "fda93eb480e42bbe695bf5ea8e656a67bfaec0dc74060f22301c9ad504bbe1c2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
+        "semanticContextSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
+        "subjectTitle": "Fritay on ruokien perhe",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l1-20261012-v1-1c03f7/image.png",
+            "nativeSHA256": "a159ba5cd7c8849045239110e2fbb5ab8319f5ffadef46c298d4eaf7c5741a1d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva fritayn paistetuista ruoista: keittobanaania, taikinapaloja ja kanaa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Fritay ei tarkoita yhtä ainoaa ruokalajia vaan haitilaiseen kulttuuriin liittyvää katuruokien joukkoa. Siihen kuuluu esimerkiksi paistettua lihaa, kanaa, taikinapaloja ja keittobanaania. Ruokia tarjoillaan toreilla, juhlissa ja festivaaleilla, joten sama sana kattaa sekä arkisia aterioita että yhteisiä juhlapöytiä. Keittobanaanista valmistetaan niin makeita kuin vihreästä banaanista tehtyjä paistettuja paloja. Fritayn rinnalle voidaan tarjota pikliziä: saman aterian paistetut ruoat ja vihanneslisuke ovat eri asioita."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A modest Haitian fritay assortment on plain paper: golden fried green plantain rounds, a few fried dough pieces and pieces of cooked fried chicken. Individual varied natural frying textures, close food photograph, no people, signs or festival reconstruction.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Fritay on ruokien perhe",
+                "teksti": "Fritay ei tarkoita yhtä ainoaa ruokalajia vaan haitilaiseen kulttuuriin liittyvää katuruokien joukkoa. Siihen kuuluu esimerkiksi paistettua lihaa, kanaa, taikinapaloja ja keittobanaania. Ruokia tarjoillaan toreilla, juhlissa ja festivaaleilla, joten sama sana kattaa sekä arkisia aterioita että yhteisiä juhlapöytiä. Keittobanaanista valmistetaan niin makeita kuin vihreästä banaanista tehtyjä paistettuja paloja. Fritayn rinnalle voidaan tarjota pikliziä: saman aterian paistetut ruoat ja vihanneslisuke ovat eri asioita.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Fritay"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l1-20261012-v1-1c03f7/image.png",
+              "detail": "original",
+              "observations": "Paperilla paistettuja keittobanaaniviipaleita, epäsäännöllisiä taikinapaloja ja kypsiä kanapaloja. Paistovärit, kanan pinta ja banaanin leikkausrakenne uskottavia. Ei ihmisiä, tekstiä, logoja tai pakkauksen painatusta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Paistetut keittobanaanit, taikinapalat ja kana havainnollistavat L1:n fritay-ruokien joukkoa. Kuvateksti vastaa annosta eikä esitä tiettyä ruokapaikkaa. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva fritayn paistetuista ruoista: keittobanaania, taikinapaloja ja kanaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "portauprince-l1-20261012-v1-1c03f7",
+          "sha256": "a159ba5cd7c8849045239110e2fbb5ab8319f5ffadef46c298d4eaf7c5741a1d",
+          "verdict": "accepted",
+          "reason": "Paistetut keittobanaanit, taikinapalat ja kana havainnollistavat L1:n fritay-ruokien joukkoa. Kuvateksti vastaa annosta eikä esitä tiettyä ruokapaikkaa. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l1-20261012-v1-1c03f7/image.png",
+            "nativeSHA256": "a159ba5cd7c8849045239110e2fbb5ab8319f5ffadef46c298d4eaf7c5741a1d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva fritayn paistetuista ruoista: keittobanaania, taikinapaloja ja kanaa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Fritay ei tarkoita yhtä ainoaa ruokalajia vaan haitilaiseen kulttuuriin liittyvää katuruokien joukkoa. Siihen kuuluu esimerkiksi paistettua lihaa, kanaa, taikinapaloja ja keittobanaania. Ruokia tarjoillaan toreilla, juhlissa ja festivaaleilla, joten sama sana kattaa sekä arkisia aterioita että yhteisiä juhlapöytiä. Keittobanaanista valmistetaan niin makeita kuin vihreästä banaanista tehtyjä paistettuja paloja. Fritayn rinnalle voidaan tarjota pikliziä: saman aterian paistetut ruoat ja vihanneslisuke ovat eri asioita."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A modest Haitian fritay assortment on plain paper: golden fried green plantain rounds, a few fried dough pieces and pieces of cooked fried chicken. Individual varied natural frying textures, close food photograph, no people, signs or festival reconstruction.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Fritay on ruokien perhe",
+                "teksti": "Fritay ei tarkoita yhtä ainoaa ruokalajia vaan haitilaiseen kulttuuriin liittyvää katuruokien joukkoa. Siihen kuuluu esimerkiksi paistettua lihaa, kanaa, taikinapaloja ja keittobanaania. Ruokia tarjoillaan toreilla, juhlissa ja festivaaleilla, joten sama sana kattaa sekä arkisia aterioita että yhteisiä juhlapöytiä. Keittobanaanista valmistetaan niin makeita kuin vihreästä banaanista tehtyjä paistettuja paloja. Fritayn rinnalle voidaan tarjota pikliziä: saman aterian paistetut ruoat ja vihanneslisuke ovat eri asioita.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Fritay"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l1-20261012-v1-1c03f7/image.png",
+              "detail": "original",
+              "observations": "Paperilla paistettuja keittobanaaniviipaleita, epäsäännöllisiä taikinapaloja ja kypsiä kanapaloja. Paistovärit, kanan pinta ja banaanin leikkausrakenne uskottavia. Ei ihmisiä, tekstiä, logoja tai pakkauksen painatusta.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:36:40.840500+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png?t=fda93eb480e42bbe",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+        "sha256": "fda93eb480e42bbe695bf5ea8e656a67bfaec0dc74060f22301c9ad504bbe1c2",
+        "bytes": 2537248,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-l1-20261012-v1-1c03f7",
+        "nativeSHA256": "a159ba5cd7c8849045239110e2fbb5ab8319f5ffadef46c298d4eaf7c5741a1d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:37:42.050958+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l1-20261012-v1-1c03f7-a159ba5cd7c8.png",
+        "sha256": "fda93eb480e42bbe695bf5ea8e656a67bfaec0dc74060f22301c9ad504bbe1c2",
+        "bytes": 2537248,
+        "SHAReadAt": "2026-10-12T18:36:44.085885+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a159ba5cd7c8849045239110e2fbb5ab8319f5ffadef46c298d4eaf7c5741a1d",
+        "rgbPixelSHA256": "ef8ba75cdc07077690a0e7ee160338c28a0558408b3cfa0ccd450c30b45d9090",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db",
+      "contextAfterSHA256": "66c60e831bf777efd7394c800ecd758c37ae924c1c4b17971c2823f6c130c1db"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "portauprince-l2-20261012-v1-f8fef2",
+      "galleryImageID": "portauprince-l2-20261012-v1-f8fef2",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+        "lyhyt": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+        "lyhyt": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b54a5d90fe4ec9311150b89e046bfe7de101ef79c90dc93c294ddd2d2f1e4622",
+      "exportSHA256": "171cf029dc11b3bb5a3e068a3f7fc8728811bd23c865ada12016c022f4142da4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
+        "semanticContextSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
+        "subjectTitle": "Pikliz antaa aterialle potkun",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l2-20261012-v1-f8fef2/image.png",
+            "nativeSHA256": "b54a5d90fe4ec9311150b89e046bfe7de101ef79c90dc93c294ddd2d2f1e4622",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Pikliz on haitilainen vihanneslisuke, jonka pohjana käytetään kaalia, porkkanaa, sipulia ja paprikaa. Mukaan lisätään valkosipulia ja tulisia Scotch bonnet -chilejä, ja vihannekset säilötään etikkaan tai sitrusmehuun. Lisuketta syödään esimerkiksi paistetun sianlihan, naudanlihan ja keittobanaanin kanssa, mutta myös riisi ja pavut saavat siitä maustetta. Pikliz valmistetaan perinteisesti kotona, vaikka sitä tuotetaan myös teollisesti. Purkkiin ei siis kätkeydy yksi tarkka resepti: koostumuksessa on myös paikallista vaihtelua."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural food photograph of Haitian pikliz in an unlabelled clear glass jar and a small plain bowl: fine shredded cabbage, carrot, onion, bell pepper, garlic and a modest amount of chopped Scotch bonnet chilli, lightly glistening in a vinegar brine. Varied real vegetable cuts, not plastic strands. No text or brands.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Pikliz antaa aterialle potkun",
+                "teksti": "Pikliz on haitilainen vihanneslisuke, jonka pohjana käytetään kaalia, porkkanaa, sipulia ja paprikaa. Mukaan lisätään valkosipulia ja tulisia Scotch bonnet -chilejä, ja vihannekset säilötään etikkaan tai sitrusmehuun. Lisuketta syödään esimerkiksi paistetun sianlihan, naudanlihan ja keittobanaanin kanssa, mutta myös riisi ja pavut saavat siitä maustetta. Pikliz valmistetaan perinteisesti kotona, vaikka sitä tuotetaan myös teollisesti. Purkkiin ei siis kätkeydy yksi tarkka resepti: koostumuksessa on myös paikallista vaihtelua.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Pikliz"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l2-20261012-v1-f8fef2/image.png",
+              "detail": "original",
+              "observations": "Etiketittömässä lasipurkissa ja kulhossa vaaleaa kaalia, porkkanaa sekä paprika-/sipulisuikaleita, taustalla kokonaisia aineksia. Lasin kierre ja heijastus, märät suikaleet sekä astiat uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Säilötty vihanneslisuke ja taustan raaka-aineet vastaavat L2:n pikliz-kuvausta. Kuvateksti ilmoittaa havainteen, ei valmistajan pakkauskuvaa. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "portauprince-l2-20261012-v1-f8fef2",
+          "sha256": "b54a5d90fe4ec9311150b89e046bfe7de101ef79c90dc93c294ddd2d2f1e4622",
+          "verdict": "accepted",
+          "reason": "Säilötty vihanneslisuke ja taustan raaka-aineet vastaavat L2:n pikliz-kuvausta. Kuvateksti ilmoittaa havainteen, ei valmistajan pakkauskuvaa. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l2-20261012-v1-f8fef2/image.png",
+            "nativeSHA256": "b54a5d90fe4ec9311150b89e046bfe7de101ef79c90dc93c294ddd2d2f1e4622",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva piklizistä, chilillä maustetusta säilötystä vihanneslisukkeesta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Pikliz on haitilainen vihanneslisuke, jonka pohjana käytetään kaalia, porkkanaa, sipulia ja paprikaa. Mukaan lisätään valkosipulia ja tulisia Scotch bonnet -chilejä, ja vihannekset säilötään etikkaan tai sitrusmehuun. Lisuketta syödään esimerkiksi paistetun sianlihan, naudanlihan ja keittobanaanin kanssa, mutta myös riisi ja pavut saavat siitä maustetta. Pikliz valmistetaan perinteisesti kotona, vaikka sitä tuotetaan myös teollisesti. Purkkiin ei siis kätkeydy yksi tarkka resepti: koostumuksessa on myös paikallista vaihtelua."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural food photograph of Haitian pikliz in an unlabelled clear glass jar and a small plain bowl: fine shredded cabbage, carrot, onion, bell pepper, garlic and a modest amount of chopped Scotch bonnet chilli, lightly glistening in a vinegar brine. Varied real vegetable cuts, not plastic strands. No text or brands.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Pikliz antaa aterialle potkun",
+                "teksti": "Pikliz on haitilainen vihanneslisuke, jonka pohjana käytetään kaalia, porkkanaa, sipulia ja paprikaa. Mukaan lisätään valkosipulia ja tulisia Scotch bonnet -chilejä, ja vihannekset säilötään etikkaan tai sitrusmehuun. Lisuketta syödään esimerkiksi paistetun sianlihan, naudanlihan ja keittobanaanin kanssa, mutta myös riisi ja pavut saavat siitä maustetta. Pikliz valmistetaan perinteisesti kotona, vaikka sitä tuotetaan myös teollisesti. Purkkiin ei siis kätkeydy yksi tarkka resepti: koostumuksessa on myös paikallista vaihtelua.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Pikliz"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l2-20261012-v1-f8fef2/image.png",
+              "detail": "original",
+              "observations": "Etiketittömässä lasipurkissa ja kulhossa vaaleaa kaalia, porkkanaa sekä paprika-/sipulisuikaleita, taustalla kokonaisia aineksia. Lasin kierre ja heijastus, märät suikaleet sekä astiat uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:38:13.566004+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png?t=171cf029dc11b3bb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+        "sha256": "171cf029dc11b3bb5a3e068a3f7fc8728811bd23c865ada12016c022f4142da4",
+        "bytes": 2217642,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-l2-20261012-v1-f8fef2",
+        "nativeSHA256": "b54a5d90fe4ec9311150b89e046bfe7de101ef79c90dc93c294ddd2d2f1e4622",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:38:47.485733+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l2-20261012-v1-f8fef2-b54a5d90fe4e.png",
+        "sha256": "171cf029dc11b3bb5a3e068a3f7fc8728811bd23c865ada12016c022f4142da4",
+        "bytes": 2217642,
+        "SHAReadAt": "2026-10-12T18:38:38.774201+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b54a5d90fe4ec9311150b89e046bfe7de101ef79c90dc93c294ddd2d2f1e4622",
+        "rgbPixelSHA256": "4dc33673c292ca325dce0cf611395f44f8c7ee90e8a772379c5b401adfbf5d54",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac",
+      "contextAfterSHA256": "611eda182da707303eabe25f65730a3b573f1fe68597b49ce3e26b5e4247e1ac"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "portauprince-l3-20261012-v1-53f1e2",
+      "galleryImageID": "portauprince-l3-20261012-v1-53f1e2",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva griot-sianlihasta piklizin ja paistetun keittobanaanin kanssa.",
+        "lyhyt": "Havainnekuva griot-sianlihasta piklizin ja paistetun keittobanaanin kanssa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva griot-sianlihasta piklizin ja paistetun keittobanaanin kanssa.",
+        "lyhyt": "Havainnekuva griot-sianlihasta piklizin ja paistetun keittobanaanin kanssa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b814d4c359520b8926140fa39c5a0e848f6fb9a333f1d862c511a0694bc49aed",
+      "exportSHA256": "206b6f86a2a6c704333ee04ddaecdbb022055b25ad02b93983b3a60379ff564f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
+        "semanticContextSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
+        "subjectTitle": "Griot saa seurakseen piklizin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l3-20261012-v1-53f1e2/image.png",
+            "nativeSHA256": "b814d4c359520b8926140fa39c5a0e848f6fb9a333f1d862c511a0694bc49aed",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva griot-sianlihasta piklizin ja paistetun keittobanaanin kanssa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Griot on haitilainen sianliharuoka, jota tarjotaan usein juhlissa. Liha maustetaan sitrusmehulla ja mausteilla ennen kypsentämistä ja paistamista. Rapeaksi valmistetut palat saavat tavallisesti seurakseen riisiä ja papuja, paistettua keittobanaania sekä pikliz-vihanneslisuketta. Annoksessa griot on lihaa ja pikliz sen mausteinen kumppani, joten nimet eivät tarkoita samaa ruokalajia. Griotia voidaan tarjota myös Fèt Gede -juhlassa, jossa muistetaan edesmenneitä. Ruoka yhdistää näin arkisen keittiötaidon ja yhteisen juhlan."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Haitian griot: irregular pieces of cooked pork with a browned crisp exterior, served on a plain plate with a small separate portion of shredded pikliz and a few flattened fried plantain rounds. Close natural editorial food image, no people or signage.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Griot saa seurakseen piklizin",
+                "teksti": "Griot on haitilainen sianliharuoka, jota tarjotaan usein juhlissa. Liha maustetaan sitrusmehulla ja mausteilla ennen kypsentämistä ja paistamista. Rapeaksi valmistetut palat saavat tavallisesti seurakseen riisiä ja papuja, paistettua keittobanaania sekä pikliz-vihanneslisuketta. Annoksessa griot on lihaa ja pikliz sen mausteinen kumppani, joten nimet eivät tarkoita samaa ruokalajia. Griotia voidaan tarjota myös Fèt Gede -juhlassa, jossa muistetaan edesmenneitä. Ruoka yhdistää näin arkisen keittiötaidon ja yhteisen juhlan.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Griot (food)"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l3-20261012-v1-53f1e2/image.png",
+              "detail": "original",
+              "observations": "Lautasella rapeapintaisia lihapaloja, kasvissuikaleita ja litteitä paistettuja banaanipaloja. Lihan syyt, rasvakerrokset ja paistopinnat uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Paistetut sianlihapalat, pikliz ja keittobanaani vastaavat L3:n griot-aihetta. Rehellinen havainne ei esitä tiettyä juhlaa tai ravintolaa. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva griot-sianlihasta piklizin ja paistetun keittobanaanin kanssa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "portauprince-l3-20261012-v1-53f1e2",
+          "sha256": "b814d4c359520b8926140fa39c5a0e848f6fb9a333f1d862c511a0694bc49aed",
+          "verdict": "accepted",
+          "reason": "Paistetut sianlihapalat, pikliz ja keittobanaani vastaavat L3:n griot-aihetta. Rehellinen havainne ei esitä tiettyä juhlaa tai ravintolaa. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l3-20261012-v1-53f1e2/image.png",
+            "nativeSHA256": "b814d4c359520b8926140fa39c5a0e848f6fb9a333f1d862c511a0694bc49aed",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva griot-sianlihasta piklizin ja paistetun keittobanaanin kanssa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Griot on haitilainen sianliharuoka, jota tarjotaan usein juhlissa. Liha maustetaan sitrusmehulla ja mausteilla ennen kypsentämistä ja paistamista. Rapeaksi valmistetut palat saavat tavallisesti seurakseen riisiä ja papuja, paistettua keittobanaania sekä pikliz-vihanneslisuketta. Annoksessa griot on lihaa ja pikliz sen mausteinen kumppani, joten nimet eivät tarkoita samaa ruokalajia. Griotia voidaan tarjota myös Fèt Gede -juhlassa, jossa muistetaan edesmenneitä. Ruoka yhdistää näin arkisen keittiötaidon ja yhteisen juhlan."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Haitian griot: irregular pieces of cooked pork with a browned crisp exterior, served on a plain plate with a small separate portion of shredded pikliz and a few flattened fried plantain rounds. Close natural editorial food image, no people or signage.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Griot saa seurakseen piklizin",
+                "teksti": "Griot on haitilainen sianliharuoka, jota tarjotaan usein juhlissa. Liha maustetaan sitrusmehulla ja mausteilla ennen kypsentämistä ja paistamista. Rapeaksi valmistetut palat saavat tavallisesti seurakseen riisiä ja papuja, paistettua keittobanaania sekä pikliz-vihanneslisuketta. Annoksessa griot on lihaa ja pikliz sen mausteinen kumppani, joten nimet eivät tarkoita samaa ruokalajia. Griotia voidaan tarjota myös Fèt Gede -juhlassa, jossa muistetaan edesmenneitä. Ruoka yhdistää näin arkisen keittiötaidon ja yhteisen juhlan.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Griot (food)"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l3-20261012-v1-53f1e2/image.png",
+              "detail": "original",
+              "observations": "Lautasella rapeapintaisia lihapaloja, kasvissuikaleita ja litteitä paistettuja banaanipaloja. Lihan syyt, rasvakerrokset ja paistopinnat uskottavia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:49:54.432375+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png?t=206b6f86a2a6c704",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+        "sha256": "206b6f86a2a6c704333ee04ddaecdbb022055b25ad02b93983b3a60379ff564f",
+        "bytes": 2511423,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-l3-20261012-v1-53f1e2",
+        "nativeSHA256": "b814d4c359520b8926140fa39c5a0e848f6fb9a333f1d862c511a0694bc49aed",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:50:33.579356+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l3-20261012-v1-53f1e2-b814d4c35952.png",
+        "sha256": "206b6f86a2a6c704333ee04ddaecdbb022055b25ad02b93983b3a60379ff564f",
+        "bytes": 2511423,
+        "SHAReadAt": "2026-10-12T19:50:31.045300+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b814d4c359520b8926140fa39c5a0e848f6fb9a333f1d862c511a0694bc49aed",
+        "rgbPixelSHA256": "c6e386c10f8a1cb7028baa8e0cea10247b00870d023ce659d1d0710b0c674303",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817",
+      "contextAfterSHA256": "bf251517049d0d9e13b493a7aff924bffcb46572be5fe0e64d39e45f4afb2817"
+    },
+    {
+      "era": "e11",
+      "city": "portauprince",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "portauprince-l4-20261012-v1-ba25c5",
+      "galleryImageID": "portauprince-l4-20261012-v1-ba25c5",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva joumou-kurpitsakeitosta, jossa on vihanneksia, lihaa ja pastaa.",
+        "lyhyt": "Havainnekuva joumou-kurpitsakeitosta, jossa on vihanneksia, lihaa ja pastaa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva joumou-kurpitsakeitosta, jossa on vihanneksia, lihaa ja pastaa.",
+        "lyhyt": "Havainnekuva joumou-kurpitsakeitosta, jossa on vihanneksia, lihaa ja pastaa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "41496f0f6eee6fcf05c30e0c9463c596e4973feb9f9707561a0945e3a6a0e192",
+      "exportSHA256": "35404b5bd00e8e0529e94099038a0d303560733b4d2f88560c8349b1ac00c358",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+      "sourceContentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
+        "semanticContextSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
+        "subjectTitle": "Keittokattila muistuttaa vapaudesta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l4-20261012-v1-ba25c5/image.png",
+            "nativeSHA256": "41496f0f6eee6fcf05c30e0c9463c596e4973feb9f9707561a0945e3a6a0e192",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva joumou-kurpitsakeitosta, jossa on vihanneksia, lihaa ja pastaa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Joumou on kurpitsasta, vihanneksista, lihasta, pastasta ja mausteista valmistettu haitilainen keitto. Siirtomaakaudella keitto oli varattu orjanomistajille. Haitin itsenäistyttyä siitä tuli vapauden ja ihmisarvon symboli. Keitto kuuluu erityisesti itsenäisyyspäivän yhteiseen ateriaan, mutta sitä valmistetaan myös sunnuntaiaamuisin. Sen tekemiseen osallistutaan perheissä eri tavoin, raaka-aineiden hankinnasta ruoan valmistamiseen. Yhden kattilan äärelle mahtuu sekä historia että yhdessä tekeminen."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A bowl of Haitian soup joumou: warm pumpkin-based broth with modest beef pieces, vegetables and a little short pasta. Real soup consistency, subdued natural orange-gold color, simple pot in the softly blurred background. No people, historical scene, symbols or readable text.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Keittokattila muistuttaa vapaudesta",
+                "teksti": "Joumou on kurpitsasta, vihanneksista, lihasta, pastasta ja mausteista valmistettu haitilainen keitto. Siirtomaakaudella keitto oli varattu orjanomistajille. Haitin itsenäistyttyä siitä tuli vapauden ja ihmisarvon symboli. Keitto kuuluu erityisesti itsenäisyyspäivän yhteiseen ateriaan, mutta sitä valmistetaan myös sunnuntaiaamuisin. Sen tekemiseen osallistutaan perheissä eri tavoin, raaka-aineiden hankinnasta ruoan valmistamiseen. Yhden kattilan äärelle mahtuu sekä historia että yhdessä tekeminen.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Soup joumou"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l4-20261012-v1-ba25c5/image.png",
+              "detail": "original",
+              "observations": "Kulhossa kellanoranssia keittoa, kurpitsa-/kasvispaloja, kypsää lihaa ja makaronia; taustalla kattila ja kurpitsa. Ruoan rakenteet sekä astiat luontevia. Ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kurpitsakeitto lihalla, vihanneksilla ja pastalla vastaa L4:n joumou-aihetta ja UNESCO-lähteeseen sidottua faktapohjaa. Rehellinen havainne; native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva joumou-kurpitsakeitosta, jossa on vihanneksia, lihaa ja pastaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+        "fileSHA256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "portauprince-l4-20261012-v1-ba25c5",
+          "sha256": "41496f0f6eee6fcf05c30e0c9463c596e4973feb9f9707561a0945e3a6a0e192",
+          "verdict": "accepted",
+          "reason": "Kurpitsakeitto lihalla, vihanneksilla ja pastalla vastaa L4:n joumou-aihetta ja UNESCO-lähteeseen sidottua faktapohjaa. Rehellinen havainne; native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l4-20261012-v1-ba25c5/image.png",
+            "nativeSHA256": "41496f0f6eee6fcf05c30e0c9463c596e4973feb9f9707561a0945e3a6a0e192",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva joumou-kurpitsakeitosta, jossa on vihanneksia, lihaa ja pastaa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSha256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetText": "Joumou on kurpitsasta, vihanneksista, lihasta, pastasta ja mausteista valmistettu haitilainen keitto. Siirtomaakaudella keitto oli varattu orjanomistajille. Haitin itsenäistyttyä siitä tuli vapauden ja ihmisarvon symboli. Keitto kuuluu erityisesti itsenäisyyspäivän yhteiseen ateriaan, mutta sitä valmistetaan myös sunnuntaiaamuisin. Sen tekemiseen osallistutaan perheissä eri tavoin, raaka-aineiden hankinnasta ruoan valmistamiseen. Yhden kattilan äärelle mahtuu sekä historia että yhdessä tekeminen."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A bowl of Haitian soup joumou: warm pumpkin-based broth with modest beef pieces, vegetables and a little short pasta. Real soup consistency, subdued natural orange-gold color, simple pot in the softly blurred background. No people, historical scene, symbols or readable text.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/sisalto.json",
+              "contentSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Keittokattila muistuttaa vapaudesta",
+                "teksti": "Joumou on kurpitsasta, vihanneksista, lihasta, pastasta ja mausteista valmistettu haitilainen keitto. Siirtomaakaudella keitto oli varattu orjanomistajille. Haitin itsenäistyttyä siitä tuli vapauden ja ihmisarvon symboli. Keitto kuuluu erityisesti itsenäisyyspäivän yhteiseen ateriaan, mutta sitä valmistetaan myös sunnuntaiaamuisin. Sen tekemiseen osallistutaan perheissä eri tavoin, raaka-aineiden hankinnasta ruoan valmistamiseen. Yhden kattilan äärelle mahtuu sekä historia että yhdessä tekeminen.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Soup joumou"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/portauprince/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/assets/portauprince-l4-20261012-v1-ba25c5/image.png",
+              "detail": "original",
+              "observations": "Kulhossa kellanoranssia keittoa, kurpitsa-/kasvispaloja, kypsää lihaa ja makaronia; taustalla kattila ja kurpitsa. Ruoan rakenteet sekä astiat luontevia. Ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:50:46.154514+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/qa.json",
+            "sha256": "6f470b65e941cd9063ab78db3d28caaeb67357ee1e1dcbeca85bf178ba316f44"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/portauprince/illustration-qa-extra.json",
+            "sha256": "ae5114e00860f976df4edf9f734a3b8ff9af9eea3962e5c72b16ca266ab81903"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png?t=35404b5bd00e8e05",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+        "sha256": "35404b5bd00e8e0529e94099038a0d303560733b4d2f88560c8349b1ac00c358",
+        "bytes": 2287965,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "portauprince-l4-20261012-v1-ba25c5",
+        "nativeSHA256": "41496f0f6eee6fcf05c30e0c9463c596e4973feb9f9707561a0945e3a6a0e192",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "portauprince",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:51:36.056770+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/portauprince/portauprince-l4-20261012-v1-ba25c5-41496f0f6eee.png",
+        "sha256": "35404b5bd00e8e0529e94099038a0d303560733b4d2f88560c8349b1ac00c358",
+        "bytes": 2287965,
+        "SHAReadAt": "2026-10-12T19:51:31.725542+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "41496f0f6eee6fcf05c30e0c9463c596e4973feb9f9707561a0945e3a6a0e192",
+        "rgbPixelSHA256": "424f75643294b4f2d8bcee4fbd18fcffbdf0dd34dcece78df9b24651f5002d0b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "984cc5837fec83ba9b86638b13dae4ce1c9a5b03bbde6a4b1b5faf7033c4034a",
+      "targetAfterSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617",
+      "contextAfterSHA256": "fba1d4d1f173a831f8382a535b35dc2aea108726628455e8660f07958253e617"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

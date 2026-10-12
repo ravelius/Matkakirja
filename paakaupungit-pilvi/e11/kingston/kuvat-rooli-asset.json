@@ -1,0 +1,2644 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e11",
+  "city": "kingston",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+  "assets": [
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "kingston-traveler-20261012-v1-30ae1f",
+      "galleryImageID": "kingston-traveler-20261012-v1-30ae1f",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+        "lyhyt": "Havainnekuva jerk-kanasta riisin ja papujen kanssa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+        "lyhyt": "Havainnekuva jerk-kanasta riisin ja papujen kanssa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fbfd56e255fc91c39b4f2c6a989db8ffb6c0ab476beb85b0b169c1f4cdf643c3",
+      "exportSHA256": "25f85f6bdc8bced96819ab6b05ce5dc8609dee4ce6fc673f412d0fe178a83347",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "21c83ed3a79975f3da0414202a813f81f205f0d91b919fd075e19c97f143b57d",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-traveler-20261012-v1-30ae1f/image.png",
+            "nativeSHA256": "fbfd56e255fc91c39b4f2c6a989db8ffb6c0ab476beb85b0b169c1f4cdf643c3",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Kingstonissa historiallinen Downtown ja uudempi New Kingston ovat eri alueita. Päivän kohteet kannattaa ryhmitellä niiden sijainnin mukaan. Liikkuminen vaatii huolellista turvallisuussuunnittelua: vältä kävelyä ja bussimatkoja pimeällä ja käytä luotettavia, luvallisia kuljetuksia. Devon House ja Hope Gardens tarjoavat näkökulmia rakentamiseen ja puutarhakulttuuriin. Musiikkihistoriaan tutustuminen täydentää kuvaa kaupungista studioiden ja äänentoiston keskuksena.\n\nKingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Jamaican jerk chicken served with a modest portion of rice and beans on a plain plate. Natural browned grilled chicken skin with limited char, distinct rice grains and beans, no garnish towers or extra food. Close natural editorial food image, not a restaurant document. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Kingstonissa historiallinen Downtown ja uudempi New Kingston ovat eri alueita. Päivän kohteet kannattaa ryhmitellä niiden sijainnin mukaan. Liikkuminen vaatii huolellista turvallisuussuunnittelua: vältä kävelyä ja bussimatkoja pimeällä ja käytä luotettavia, luvallisia kuljetuksia. Devon House ja Hope Gardens tarjoavat näkökulmia rakentamiseen ja puutarhakulttuuriin. Musiikkihistoriaan tutustuminen täydentää kuvaa kaupungista studioiden ja äänentoiston keskuksena.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Kingston",
+                  "taitto": "opas",
+                  "teksti": "Yhdistä satamakaupungin historia puutarhoihin ja musiikin tekemisen paikkoihin.",
+                  "nosto": "Downtown, New Kingston ja rannikon kohteet muodostavat eri retkiä; suunnittele kuljetukset etukäteen.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Norman Manleyn kansainvälinen lentoasema sijaitsee Palisadoesin kannaksella. Kingstonin bussiliikenteessä toimii JUTC, ja kaupungissa on sekä tavallisia takseja että määrättyjä reittejä kulkevia yhteistakseja. Valitse luotettava, luvallinen kuljetus ja sovi määränpää sekä hinta ennen lähtöä; vältä kävelyä ja bussimatkoja pimeällä. Downtown ja New Kingston kannattaa käsitellä eri alueina päivän suunnitelmassa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Downtown ja sataman puoli",
+                      "teksti": "Vanhan Kingstonin ruutukaava kertoo satamakaupungin suunnittelusta. North-, East-, West- ja Harbour-kadut liittyvät sen historialliseen rajaukseen. Palisadoesin hiekkakannas puolestaan selittää luonnonsataman suojaa ja Port Royalin sijaintia. Näiden paikkojen välillä on oikeita siirtymiä: niitä ei kannata suunnitella yhdeksi lyhyeksi keskustakävelyksi.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Talo ja puutarha",
+                      "teksti": "Devon House esittelee George Stiebelin asuinympäristöä, ja sen pihalla on myös kauppoja ja ruokapaikkoja. Hope Gardensissa kasvien koeviljelyn historia liittyy puutarhakulttuuriin. Molemmat ovat kaupungin tunnettuja tutustumiskohteita, mutta ajantasaiset käyntimahdollisuudet ja kuljetus kannattaa selvittää ennen lähtöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Kingstonin ilmasto on trooppinen, ja siinä erottuvat kuivempi ja sateisempi kausi. Tropiikin hurrikaanikaudella voimakkaat sääilmiöt voivat vaikuttaa matkustamiseen. Suunnittele ulkoilukohteet joustavasti ja tarkista paikallinen säätilanne lähellä lähtöä. Vuoriston ja rannikon olosuhteita ei pidä pitää automaattisesti samanlaisina.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Devon House",
+                        "tahdet": 3,
+                        "selite": "Vanha asuintalo kertoo Kingstonin kauppias- ja rakennushistoriasta."
+                      },
+                      {
+                        "mita": "Hope Gardens",
+                        "tahdet": 3,
+                        "selite": "Puutarhan taustalla on sekä kasvien kokeilua että puutarhakulttuuria."
+                      },
+                      {
+                        "mita": "Historiallinen Downtown",
+                        "tahdet": 2,
+                        "selite": "Vanhan ytimen ruutukaava liittyy satamakaupungin kasvuun."
+                      },
+                      {
+                        "mita": "Palisadoes ja satamamaantiede",
+                        "tahdet": 2,
+                        "selite": "Pitkä hiekkakannas selittää sataman ja lentoaseman sijainnin."
+                      },
+                      {
+                        "mita": "Musiikin tuotantohistoria",
+                        "tahdet": 3,
+                        "selite": "Sound system -kulttuuri ja studiotyö ovat osa Kingstonin musiikkiperintöä."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Useita keskuksia",
+                        "teksti": "Downtown ja New Kingston ovat eri alueita, joten retkiä ei kannata suunnitella yhden keskustakävelyn varaan."
+                      },
+                      {
+                        "otsikko": "Sovi kuljetus etukäteen",
+                        "teksti": "Käytä luotettavia, luvallisia kuljetuksia. Vältä kävelyä ja bussimatkoja pimeällä ja selvitä kohteen saavutettavuus ennen lähtöä."
+                      },
+                      {
+                        "otsikko": "Kieli ja valuutta",
+                        "teksti": "Virallinen kieli on englanti, arjessa puhutaan laajasti jamaikanpatois’ta ja valuutta on Jamaikan dollari."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-traveler-20261012-v1-30ae1f/image.png",
+              "detail": "original",
+              "observations": "Lautasella kypsä jerk-maustettu kanan reisikoipi ja riisi-papuseos. Paistopinnan vaihtelu, jyvät ja papujen muodot uskottavia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Jerk-kana riisin ja papujen kanssa vastaa Kingstonin oppaan ruoka-aihetta sekä faktapohjaa. Rehellinen havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+        "fileSHA256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "kingston-traveler-20261012-v1-30ae1f",
+          "sha256": "fbfd56e255fc91c39b4f2c6a989db8ffb6c0ab476beb85b0b169c1f4cdf643c3",
+          "verdict": "accepted",
+          "reason": "Jerk-kana riisin ja papujen kanssa vastaa Kingstonin oppaan ruoka-aihetta sekä faktapohjaa. Rehellinen havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-traveler-20261012-v1-30ae1f/image.png",
+            "nativeSHA256": "fbfd56e255fc91c39b4f2c6a989db8ffb6c0ab476beb85b0b169c1f4cdf643c3",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Kingstonissa historiallinen Downtown ja uudempi New Kingston ovat eri alueita. Päivän kohteet kannattaa ryhmitellä niiden sijainnin mukaan. Liikkuminen vaatii huolellista turvallisuussuunnittelua: vältä kävelyä ja bussimatkoja pimeällä ja käytä luotettavia, luvallisia kuljetuksia. Devon House ja Hope Gardens tarjoavat näkökulmia rakentamiseen ja puutarhakulttuuriin. Musiikkihistoriaan tutustuminen täydentää kuvaa kaupungista studioiden ja äänentoiston keskuksena.\n\nKingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Jamaican jerk chicken served with a modest portion of rice and beans on a plain plate. Natural browned grilled chicken skin with limited char, distinct rice grains and beans, no garnish towers or extra food. Close natural editorial food image, not a restaurant document. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Kingstonissa historiallinen Downtown ja uudempi New Kingston ovat eri alueita. Päivän kohteet kannattaa ryhmitellä niiden sijainnin mukaan. Liikkuminen vaatii huolellista turvallisuussuunnittelua: vältä kävelyä ja bussimatkoja pimeällä ja käytä luotettavia, luvallisia kuljetuksia. Devon House ja Hope Gardens tarjoavat näkökulmia rakentamiseen ja puutarhakulttuuriin. Musiikkihistoriaan tutustuminen täydentää kuvaa kaupungista studioiden ja äänentoiston keskuksena.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Kingston",
+                  "taitto": "opas",
+                  "teksti": "Yhdistä satamakaupungin historia puutarhoihin ja musiikin tekemisen paikkoihin.",
+                  "nosto": "Downtown, New Kingston ja rannikon kohteet muodostavat eri retkiä; suunnittele kuljetukset etukäteen.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Norman Manleyn kansainvälinen lentoasema sijaitsee Palisadoesin kannaksella. Kingstonin bussiliikenteessä toimii JUTC, ja kaupungissa on sekä tavallisia takseja että määrättyjä reittejä kulkevia yhteistakseja. Valitse luotettava, luvallinen kuljetus ja sovi määränpää sekä hinta ennen lähtöä; vältä kävelyä ja bussimatkoja pimeällä. Downtown ja New Kingston kannattaa käsitellä eri alueina päivän suunnitelmassa.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Downtown ja sataman puoli",
+                      "teksti": "Vanhan Kingstonin ruutukaava kertoo satamakaupungin suunnittelusta. North-, East-, West- ja Harbour-kadut liittyvät sen historialliseen rajaukseen. Palisadoesin hiekkakannas puolestaan selittää luonnonsataman suojaa ja Port Royalin sijaintia. Näiden paikkojen välillä on oikeita siirtymiä: niitä ei kannata suunnitella yhdeksi lyhyeksi keskustakävelyksi.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Talo ja puutarha",
+                      "teksti": "Devon House esittelee George Stiebelin asuinympäristöä, ja sen pihalla on myös kauppoja ja ruokapaikkoja. Hope Gardensissa kasvien koeviljelyn historia liittyy puutarhakulttuuriin. Molemmat ovat kaupungin tunnettuja tutustumiskohteita, mutta ajantasaiset käyntimahdollisuudet ja kuljetus kannattaa selvittää ennen lähtöä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Kingstonin ilmasto on trooppinen, ja siinä erottuvat kuivempi ja sateisempi kausi. Tropiikin hurrikaanikaudella voimakkaat sääilmiöt voivat vaikuttaa matkustamiseen. Suunnittele ulkoilukohteet joustavasti ja tarkista paikallinen säätilanne lähellä lähtöä. Vuoriston ja rannikon olosuhteita ei pidä pitää automaattisesti samanlaisina.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Devon House",
+                        "tahdet": 3,
+                        "selite": "Vanha asuintalo kertoo Kingstonin kauppias- ja rakennushistoriasta."
+                      },
+                      {
+                        "mita": "Hope Gardens",
+                        "tahdet": 3,
+                        "selite": "Puutarhan taustalla on sekä kasvien kokeilua että puutarhakulttuuria."
+                      },
+                      {
+                        "mita": "Historiallinen Downtown",
+                        "tahdet": 2,
+                        "selite": "Vanhan ytimen ruutukaava liittyy satamakaupungin kasvuun."
+                      },
+                      {
+                        "mita": "Palisadoes ja satamamaantiede",
+                        "tahdet": 2,
+                        "selite": "Pitkä hiekkakannas selittää sataman ja lentoaseman sijainnin."
+                      },
+                      {
+                        "mita": "Musiikin tuotantohistoria",
+                        "tahdet": 3,
+                        "selite": "Sound system -kulttuuri ja studiotyö ovat osa Kingstonin musiikkiperintöä."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Useita keskuksia",
+                        "teksti": "Downtown ja New Kingston ovat eri alueita, joten retkiä ei kannata suunnitella yhden keskustakävelyn varaan."
+                      },
+                      {
+                        "otsikko": "Sovi kuljetus etukäteen",
+                        "teksti": "Käytä luotettavia, luvallisia kuljetuksia. Vältä kävelyä ja bussimatkoja pimeällä ja selvitä kohteen saavutettavuus ennen lähtöä."
+                      },
+                      {
+                        "otsikko": "Kieli ja valuutta",
+                        "teksti": "Virallinen kieli on englanti, arjessa puhutaan laajasti jamaikanpatois’ta ja valuutta on Jamaikan dollari."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-traveler-20261012-v1-30ae1f/image.png",
+              "detail": "original",
+              "observations": "Lautasella kypsä jerk-maustettu kanan reisikoipi ja riisi-papuseos. Paistopinnan vaihtelu, jyvät ja papujen muodot uskottavia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:37:54.206996+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png?t=25f85f6bdc8bced9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+        "sha256": "25f85f6bdc8bced96819ab6b05ce5dc8609dee4ce6fc673f412d0fe178a83347",
+        "bytes": 2271894,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "kingston-traveler-20261012-v1-30ae1f",
+        "nativeSHA256": "fbfd56e255fc91c39b4f2c6a989db8ffb6c0ab476beb85b0b169c1f4cdf643c3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "kingston",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:38:43.273290+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-traveler-20261012-v1-30ae1f-fbfd56e255fc.png",
+        "sha256": "25f85f6bdc8bced96819ab6b05ce5dc8609dee4ce6fc673f412d0fe178a83347",
+        "bytes": 2271894,
+        "SHAReadAt": "2026-10-12T19:38:38.905025+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "fbfd56e255fc91c39b4f2c6a989db8ffb6c0ab476beb85b0b169c1f4cdf643c3",
+        "rgbPixelSHA256": "078681bf8a6a233f5a89b435f5572aafd28842c3d89261f94cf4d5adfa706cd9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "21c83ed3a79975f3da0414202a813f81f205f0d91b919fd075e19c97f143b57d"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "kingston-o4-20261012-v1-6ea301",
+      "galleryImageID": "kingston-o4-20261012-v1-6ea301",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+        "lyhyt": "Havainnekuva jerk-kanasta riisin ja papujen kanssa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+        "lyhyt": "Havainnekuva jerk-kanasta riisin ja papujen kanssa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b74f82eee2e2a4274fca0ad7144d9e141170fe9ee459250eff01d8a3514b0def",
+      "exportSHA256": "746f5d9c3dd98e72093333339e4ae6eda059596bc5f2103e69cd9f0c5730a747",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "066f6558e83a427e21c15bbefd789846f263f396b438e78abd641bf7260ed674",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-o4-20261012-v1-6ea301/image.png",
+            "nativeSHA256": "b74f82eee2e2a4274fca0ad7144d9e141170fe9ee459250eff01d8a3514b0def",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Jamaican jerk chicken served with a modest portion of rice and beans on a plain plate. Natural browned grilled chicken skin with limited char, distinct rice grains and beans, no garnish towers or extra food. Close natural editorial food image, not a restaurant document.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-o4-20261012-v1-6ea301/image.png",
+              "detail": "original",
+              "observations": "Lautasella kaksi kypsää maustettua kanapalaa ja riisi-papuseosta. Kanan paistopinnat, riisinjyvät ja papujen pinnat vaihtelevat luontevasti. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Jerk-kana, riisi ja pavut vastaavat O4:n sekä faktapohjan ruoka-aihetta. Havainnekuvateksti ei esitä nimetyn ravintolan annosta. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+        "fileSHA256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "kingston-o4-20261012-v1-6ea301",
+          "sha256": "b74f82eee2e2a4274fca0ad7144d9e141170fe9ee459250eff01d8a3514b0def",
+          "verdict": "accepted",
+          "reason": "Jerk-kana, riisi ja pavut vastaavat O4:n sekä faktapohjan ruoka-aihetta. Havainnekuvateksti ei esitä nimetyn ravintolan annosta. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-o4-20261012-v1-6ea301/image.png",
+            "nativeSHA256": "b74f82eee2e2a4274fca0ad7144d9e141170fe9ee459250eff01d8a3514b0def",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva jerk-kanasta riisin ja papujen kanssa.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Jamaican jerk chicken served with a modest portion of rice and beans on a plain plate. Natural browned grilled chicken skin with limited char, distinct rice grains and beans, no garnish towers or extra food. Close natural editorial food image, not a restaurant document.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Kingstonin ruokapaikoissa voi maistaa jerk-maustettua kanaa, riisiä ja papuja sekä patties-leivonnaisia. Ackee and saltfish yhdistää ackeen ja suolakalan. Devon Housen pihapiiri tunnetaan myös jäätelöstä, ja kaupungissa on sekä paikallisia pikaruokapaikkoja että ravintoloita. Ruoan nimet auttavat lukemaan ruokalistaa; yksi kaupungin maku ei edusta kaikkia keittiöitä.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-o4-20261012-v1-6ea301/image.png",
+              "detail": "original",
+              "observations": "Lautasella kaksi kypsää maustettua kanapalaa ja riisi-papuseosta. Kanan paistopinnat, riisinjyvät ja papujen pinnat vaihtelevat luontevasti. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:23:25.769938+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png?t=746f5d9c3dd98e72",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+        "sha256": "746f5d9c3dd98e72093333339e4ae6eda059596bc5f2103e69cd9f0c5730a747",
+        "bytes": 2293953,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "kingston-o4-20261012-v1-6ea301",
+        "nativeSHA256": "b74f82eee2e2a4274fca0ad7144d9e141170fe9ee459250eff01d8a3514b0def",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "kingston",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T19:24:32.616032+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-o4-20261012-v1-6ea301-b74f82eee2e2.png",
+        "sha256": "746f5d9c3dd98e72093333339e4ae6eda059596bc5f2103e69cd9f0c5730a747",
+        "bytes": 2293953,
+        "SHAReadAt": "2026-10-12T19:32:10.590659+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b74f82eee2e2a4274fca0ad7144d9e141170fe9ee459250eff01d8a3514b0def",
+        "rgbPixelSHA256": "c947e6aafd5033398f4a4cba58a32ff06c931642ed3efba8289f7a1f822d3cb2",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "066f6558e83a427e21c15bbefd789846f263f396b438e78abd641bf7260ed674"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "kingston-k4-20261012-v1-41ff76",
+      "galleryImageID": "kingston-k4-20261012-v1-41ff76",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ananaksesta Hopen koeviljelyhistorian aiheeseen.",
+        "lyhyt": "Havainnekuva ananaksesta Hopen koeviljelyhistorian aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ananaksesta Hopen koeviljelyhistorian aiheeseen.",
+        "lyhyt": "Havainnekuva ananaksesta Hopen koeviljelyhistorian aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "03b4a4903eb7006b0407b3067f432343dd4c79cbd2c232e0468bc062a88c241f",
+      "exportSHA256": "9679d676e60e0345c8b6ddf6389be2e85ce6f668b522aa45363015afe6c1d986",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
+        "semanticContextSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
+        "subjectTitle": "Puutarhassa kokeiltiin viljelyä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-k4-20261012-v1-41ff76/image.png",
+            "nativeSHA256": "03b4a4903eb7006b0407b3067f432343dd4c79cbd2c232e0468bc062a88c241f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva ananaksesta Hopen koeviljelyhistorian aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Hope Gardensin puutarhan taustalla on muutakin kuin puistokävelyä. Alueella toimi kasvien tuonti- ja koeviljelypaikka, jossa kokeiltiin esimerkiksi ananasta, kaakaota, kahvia ja tupakkaa. Varsinaisen kasvitieteellisen puutarhan suunnitteluun osallistui väkeä Englannin Kew Gardensista. Puutarhassa on sekä muualta tuotuja kasveja että Jamaikan omia puita, ja sen tunnettuja osia ovat orkideatalo, palmukäytävä ja lummeallas. Koristepuutarha ja hyötykasvien tutkiminen kuuluvat siis saman paikan historiaan."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural editorial photograph of a single ripe whole pineapple with a crown of varied real green leaves, resting on a plain neutral tabletop. Natural asymmetric fruit skin and restrained light. No plant label, botanical garden, exact specimen or plantation scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Puutarhassa kokeiltiin viljelyä",
+                "teksti": "Hope Gardensin puutarhan taustalla on muutakin kuin puistokävelyä. Alueella toimi kasvien tuonti- ja koeviljelypaikka, jossa kokeiltiin esimerkiksi ananasta, kaakaota, kahvia ja tupakkaa. Varsinaisen kasvitieteellisen puutarhan suunnitteluun osallistui väkeä Englannin Kew Gardensista. Puutarhassa on sekä muualta tuotuja kasveja että Jamaikan omia puita, ja sen tunnettuja osia ovat orkideatalo, palmukäytävä ja lummeallas. Koristepuutarha ja hyötykasvien tutkiminen kuuluvat siis saman paikan historiaan.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Hope Botanical Gardens"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-k4-20261012-v1-41ff76/image.png",
+              "detail": "original",
+              "observations": "Kokonainen pystyasentoinen ananas neutraalilla pinnalla. Kuoren silmut, kellanvihreät sävyt ja lehtien kuluma vaihtelevat uskottavasti. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Ananas on K4:n faktapohjassa nimetty Hopen koeviljelykasvi. Kuvateksti ei väitä kuvaa puutarhan tietystä yksilöstä. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva ananaksesta Hopen koeviljelyhistorian aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+        "fileSHA256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "kingston-k4-20261012-v1-41ff76",
+          "sha256": "03b4a4903eb7006b0407b3067f432343dd4c79cbd2c232e0468bc062a88c241f",
+          "verdict": "accepted",
+          "reason": "Ananas on K4:n faktapohjassa nimetty Hopen koeviljelykasvi. Kuvateksti ei väitä kuvaa puutarhan tietystä yksilöstä. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-k4-20261012-v1-41ff76/image.png",
+            "nativeSHA256": "03b4a4903eb7006b0407b3067f432343dd4c79cbd2c232e0468bc062a88c241f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva ananaksesta Hopen koeviljelyhistorian aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Hope Gardensin puutarhan taustalla on muutakin kuin puistokävelyä. Alueella toimi kasvien tuonti- ja koeviljelypaikka, jossa kokeiltiin esimerkiksi ananasta, kaakaota, kahvia ja tupakkaa. Varsinaisen kasvitieteellisen puutarhan suunnitteluun osallistui väkeä Englannin Kew Gardensista. Puutarhassa on sekä muualta tuotuja kasveja että Jamaikan omia puita, ja sen tunnettuja osia ovat orkideatalo, palmukäytävä ja lummeallas. Koristepuutarha ja hyötykasvien tutkiminen kuuluvat siis saman paikan historiaan."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close natural editorial photograph of a single ripe whole pineapple with a crown of varied real green leaves, resting on a plain neutral tabletop. Natural asymmetric fruit skin and restrained light. No plant label, botanical garden, exact specimen or plantation scene.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[3]",
+              "targetText": {
+                "otsikko": "Puutarhassa kokeiltiin viljelyä",
+                "teksti": "Hope Gardensin puutarhan taustalla on muutakin kuin puistokävelyä. Alueella toimi kasvien tuonti- ja koeviljelypaikka, jossa kokeiltiin esimerkiksi ananasta, kaakaota, kahvia ja tupakkaa. Varsinaisen kasvitieteellisen puutarhan suunnitteluun osallistui väkeä Englannin Kew Gardensista. Puutarhassa on sekä muualta tuotuja kasveja että Jamaikan omia puita, ja sen tunnettuja osia ovat orkideatalo, palmukäytävä ja lummeallas. Koristepuutarha ja hyötykasvien tutkiminen kuuluvat siis saman paikan historiaan.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Hope Botanical Gardens"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-k4-20261012-v1-41ff76/image.png",
+              "detail": "original",
+              "observations": "Kokonainen pystyasentoinen ananas neutraalilla pinnalla. Kuoren silmut, kellanvihreät sävyt ja lehtien kuluma vaihtelevat uskottavasti. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:22:31.266149+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png?t=9679d676e60e0345",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+        "sha256": "9679d676e60e0345c8b6ddf6389be2e85ce6f668b522aa45363015afe6c1d986",
+        "bytes": 2005353,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "kingston-k4-20261012-v1-41ff76",
+        "nativeSHA256": "03b4a4903eb7006b0407b3067f432343dd4c79cbd2c232e0468bc062a88c241f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "kingston",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T19:22:45.763920+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-k4-20261012-v1-41ff76-03b4a4903eb7.png",
+        "sha256": "9679d676e60e0345c8b6ddf6389be2e85ce6f668b522aa45363015afe6c1d986",
+        "bytes": 2005353,
+        "SHAReadAt": "2026-10-12T19:32:10.422439+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "03b4a4903eb7006b0407b3067f432343dd4c79cbd2c232e0468bc062a88c241f",
+        "rgbPixelSHA256": "1040eb1386db1ba1b897c80ffc8f91eb0b95c1f09a7750e0e819fa21a71cadfb",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1",
+      "contextAfterSHA256": "0df8b0f96e969917aac48b94bd8ed47fd4b6cf2b240c58fc259902b3534182a1"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "kingston-l1-20261012-v3-9f2001",
+      "galleryImageID": "kingston-l1-20261012-v3-9f2001",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sound system -äänentoiston kaiuttimesta, ei tietyn ryhmän laitteistosta.",
+        "lyhyt": "Havainnekuva sound system -äänentoiston kaiuttimesta, ei tietyn ryhmän laitteistosta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sound system -äänentoiston kaiuttimesta, ei tietyn ryhmän laitteistosta.",
+        "lyhyt": "Havainnekuva sound system -äänentoiston kaiuttimesta, ei tietyn ryhmän laitteistosta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c921a9e21407ccd1f3b01711047733ecfedb45f560d75c3d001cecb475e684b9",
+      "exportSHA256": "27670f90f2c112663a1bca87fc4d598a8b68f62b7f50a734d974a495ddc0f777",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9b54a40c834dc429d37e8607ffe333d405d8abe551858fa3100947fbbbc022a4",
+        "semanticContextSHA256": "9b54a40c834dc429d37e8607ffe333d405d8abe551858fa3100947fbbbc022a4",
+        "subjectTitle": "Kaiutin ei soita yksin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l1-20261012-v3-9f2001/image.png",
+            "nativeSHA256": "c921a9e21407ccd1f3b01711047733ecfedb45f560d75c3d001cecb475e684b9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva sound system -äänentoiston kaiuttimesta, ei tietyn ryhmän laitteistosta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Jamaikalainen sound system tarkoittaa laitteiston lisäksi ihmisten ryhmää: levyjen soittajia, ääniteknikoita ja mikrofonin ääressä esiintyviä MC-hahmoja. Kingstonissa järjestettiin katutansseja kuljettamalla paikalle levysoittimet, generaattori ja suuret kaiuttimet. Aluksi ohjelmistoon kuului amerikkalaista rhythm and bluesia, myöhemmin yhä enemmän paikallista musiikkia. Selector valitsee soitettavat levyt, kun taas deejay voi puhua musiikin päälle. Samassa illassa tarvitaan siis sekä sopiva levy että taito saada se elämään yleisölle."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Entirely new original landscape 1536x1024 PNG/sRGB. A tight natural editorial photograph of only a generic plain wooden loudspeaker cabinet, showing one large black paper woofer cone and one small round tweeter. Empty neutral grey background. ONLY the wooden box, circular speaker parts and ordinary screws. No turntable, no electronics displays, no cartridge, no records, no record shelf, no framed picture or art, no plant, no people. Absolutely zero printed or engraved marks, letters, numbers, symbols or logos anywhere. Real irregular wood grain, matte black cone materials, believable geometry, soft side daylight. Generic speaker illustration for a sound-system equipment topic, not a particular branded product.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Kaiutin ei soita yksin",
+                "teksti": "Jamaikalainen sound system tarkoittaa laitteiston lisäksi ihmisten ryhmää: levyjen soittajia, ääniteknikoita ja mikrofonin ääressä esiintyviä MC-hahmoja. Kingstonissa järjestettiin katutansseja kuljettamalla paikalle levysoittimet, generaattori ja suuret kaiuttimet. Aluksi ohjelmistoon kuului amerikkalaista rhythm and bluesia, myöhemmin yhä enemmän paikallista musiikkia. Selector valitsee soitettavat levyt, kun taas deejay voi puhua musiikin päälle. Samassa illassa tarvitaan siis sekä sopiva levy että taito saada se elämään yleisölle.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Sound system (Jamaican)"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l1-20261012-v3-9f2001/image.png",
+              "detail": "original",
+              "observations": "Puukotelossa basso-/keskiäänielementti ja pieni diskanttielementti. Elementtien kiinnitykset, kalvot, reunukset ja puun pinta uskottavia. Ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Kaiuttimen yleishavainne liittyy L1-noston äänentoistoon. Uusi kuvateksti rajaa kuvan kaiuttimeen eikä väitä sitä tietyn ryhmän koko laitteistoksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva sound system -äänentoiston kaiuttimesta, ei tietyn ryhmän laitteistosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+        "fileSHA256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "kingston-l1-20261012-v3-9f2001",
+          "sha256": "c921a9e21407ccd1f3b01711047733ecfedb45f560d75c3d001cecb475e684b9",
+          "verdict": "accepted",
+          "reason": "Kaiuttimen yleishavainne liittyy L1-noston äänentoistoon. Uusi kuvateksti rajaa kuvan kaiuttimeen eikä väitä sitä tietyn ryhmän koko laitteistoksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l1-20261012-v3-9f2001/image.png",
+            "nativeSHA256": "c921a9e21407ccd1f3b01711047733ecfedb45f560d75c3d001cecb475e684b9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva sound system -äänentoiston kaiuttimesta, ei tietyn ryhmän laitteistosta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Jamaikalainen sound system tarkoittaa laitteiston lisäksi ihmisten ryhmää: levyjen soittajia, ääniteknikoita ja mikrofonin ääressä esiintyviä MC-hahmoja. Kingstonissa järjestettiin katutansseja kuljettamalla paikalle levysoittimet, generaattori ja suuret kaiuttimet. Aluksi ohjelmistoon kuului amerikkalaista rhythm and bluesia, myöhemmin yhä enemmän paikallista musiikkia. Selector valitsee soitettavat levyt, kun taas deejay voi puhua musiikin päälle. Samassa illassa tarvitaan siis sekä sopiva levy että taito saada se elämään yleisölle."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Entirely new original landscape 1536x1024 PNG/sRGB. A tight natural editorial photograph of only a generic plain wooden loudspeaker cabinet, showing one large black paper woofer cone and one small round tweeter. Empty neutral grey background. ONLY the wooden box, circular speaker parts and ordinary screws. No turntable, no electronics displays, no cartridge, no records, no record shelf, no framed picture or art, no plant, no people. Absolutely zero printed or engraved marks, letters, numbers, symbols or logos anywhere. Real irregular wood grain, matte black cone materials, believable geometry, soft side daylight. Generic speaker illustration for a sound-system equipment topic, not a particular branded product.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Kaiutin ei soita yksin",
+                "teksti": "Jamaikalainen sound system tarkoittaa laitteiston lisäksi ihmisten ryhmää: levyjen soittajia, ääniteknikoita ja mikrofonin ääressä esiintyviä MC-hahmoja. Kingstonissa järjestettiin katutansseja kuljettamalla paikalle levysoittimet, generaattori ja suuret kaiuttimet. Aluksi ohjelmistoon kuului amerikkalaista rhythm and bluesia, myöhemmin yhä enemmän paikallista musiikkia. Selector valitsee soitettavat levyt, kun taas deejay voi puhua musiikin päälle. Samassa illassa tarvitaan siis sekä sopiva levy että taito saada se elämään yleisölle.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Sound system (Jamaican)"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l1-20261012-v3-9f2001/image.png",
+              "detail": "original",
+              "observations": "Puukotelossa basso-/keskiäänielementti ja pieni diskanttielementti. Elementtien kiinnitykset, kalvot, reunukset ja puun pinta uskottavia. Ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:28:08.472094+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png?t=27670f90f2c11266",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+        "sha256": "27670f90f2c112663a1bca87fc4d598a8b68f62b7f50a734d974a495ddc0f777",
+        "bytes": 1975729,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "kingston-l1-20261012-v3-9f2001",
+        "nativeSHA256": "c921a9e21407ccd1f3b01711047733ecfedb45f560d75c3d001cecb475e684b9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "kingston",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T19:29:08.323265+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l1-20261012-v3-9f2001-c921a9e21407.png",
+        "sha256": "27670f90f2c112663a1bca87fc4d598a8b68f62b7f50a734d974a495ddc0f777",
+        "bytes": 1975729,
+        "SHAReadAt": "2026-10-12T19:32:10.851253+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c921a9e21407ccd1f3b01711047733ecfedb45f560d75c3d001cecb475e684b9",
+        "rgbPixelSHA256": "be7715ac1790586b0fc7b6cc011715fd23f40a941635c2933d5d76a6d534fed9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "9b54a40c834dc429d37e8607ffe333d405d8abe551858fa3100947fbbbc022a4",
+      "contextAfterSHA256": "9b54a40c834dc429d37e8607ffe333d405d8abe551858fa3100947fbbbc022a4"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "kingston-l2-20261012-v2-993e1d",
+      "galleryImageID": "kingston-l2-20261012-v2-993e1d",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva skan rytmissä käytettävistä kitarasta ja pianosta.",
+        "lyhyt": "Havainnekuva skan rytmissä käytettävistä kitarasta ja pianosta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva skan rytmissä käytettävistä kitarasta ja pianosta.",
+        "lyhyt": "Havainnekuva skan rytmissä käytettävistä kitarasta ja pianosta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "78ade5f2e81b90e159cbcae3f82f01db98d45c303969e9f1501718a2cd9dc76f",
+      "exportSHA256": "603bd4b69db75b7b73b484e3645a8b91659cd6884baf77a1e50175ea6eefd378",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
+        "semanticContextSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
+        "subjectTitle": "Ska löysi oman takapotkunsa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l2-20261012-v2-993e1d/image.png",
+            "nativeSHA256": "78ade5f2e81b90e159cbcae3f82f01db98d45c303969e9f1501718a2cd9dc76f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva skan rytmissä käytettävistä kitarasta ja pianosta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Ska yhdisti Jamaikan mentoa amerikkalaiseen jazziin ja rhythm and bluesiin. Sen tunnusmerkkejä ovat liikkuva bassolinja ja väli-iskuille osuvat painotukset, joita kitara ja piano voivat korostaa. Kingstonin studioissa, kuten Studio Onessa ja Federal Recordsissa, tehtiin varhaisia ska-äänityksiä. Sound system -toimijoista tuli myös omien levyjen tuottajia, joten tanssi-illan musiikkia ei enää vain tuotu ulkomailta. Syntyi paikallista ohjelmistoa, jonka rytmi kulki myöhemmin myös Britanniaan ja muihin maihin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Entirely new original landscape 1536x1024 PNG/sRGB. A close natural editorial still-life photograph of a generic unbranded acoustic guitar beside a simple unbranded upright piano whose KEYBOARD FALLBOARD IS COMPLETELY CLOSED. The guitar's body, sound hole and six strings are visible; its headstock is outside the frame. The piano keyboard is entirely concealed behind a plain closed wooden cover; absolutely no keys are visible. Natural wooden surfaces, soft neutral daylight, plain empty rehearsal-space backdrop. No letters, digits, logos, embossing, readable or blurred text, decorative art, framed pictures, records, sheet music, performers or hands. Do not depict a named studio or an exact commercial instrument model. Generic guitar-and-piano illustration for ska rhythm.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Ska löysi oman takapotkunsa",
+                "teksti": "Ska yhdisti Jamaikan mentoa amerikkalaiseen jazziin ja rhythm and bluesiin. Sen tunnusmerkkejä ovat liikkuva bassolinja ja väli-iskuille osuvat painotukset, joita kitara ja piano voivat korostaa. Kingstonin studioissa, kuten Studio Onessa ja Federal Recordsissa, tehtiin varhaisia ska-äänityksiä. Sound system -toimijoista tuli myös omien levyjen tuottajia, joten tanssi-illan musiikkia ei enää vain tuotu ulkomailta. Syntyi paikallista ohjelmistoa, jonka rytmi kulki myöhemmin myös Britanniaan ja muihin maihin.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Ska"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l2-20261012-v2-993e1d/image.png",
+              "detail": "original",
+              "observations": "Akustinen kitara telineessä, suljettu pystypiano ja penkki. Kitaran kuusi kieltä, tallakiinnitykset ja näkyvät soitinliitokset uskottavia; puun pinnat luontevia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Uusi soitinhavainne poistaa ensimmäisen version koskettimistovirheen suljetulla pianokannella. Kitara ja piano liittyvät L2:n ska-aiheeseen. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva skan rytmissä käytettävistä kitarasta ja pianosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+        "fileSHA256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "kingston-l2-20261012-v2-993e1d",
+          "sha256": "78ade5f2e81b90e159cbcae3f82f01db98d45c303969e9f1501718a2cd9dc76f",
+          "verdict": "accepted",
+          "reason": "Uusi soitinhavainne poistaa ensimmäisen version koskettimistovirheen suljetulla pianokannella. Kitara ja piano liittyvät L2:n ska-aiheeseen. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l2-20261012-v2-993e1d/image.png",
+            "nativeSHA256": "78ade5f2e81b90e159cbcae3f82f01db98d45c303969e9f1501718a2cd9dc76f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva skan rytmissä käytettävistä kitarasta ja pianosta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Ska yhdisti Jamaikan mentoa amerikkalaiseen jazziin ja rhythm and bluesiin. Sen tunnusmerkkejä ovat liikkuva bassolinja ja väli-iskuille osuvat painotukset, joita kitara ja piano voivat korostaa. Kingstonin studioissa, kuten Studio Onessa ja Federal Recordsissa, tehtiin varhaisia ska-äänityksiä. Sound system -toimijoista tuli myös omien levyjen tuottajia, joten tanssi-illan musiikkia ei enää vain tuotu ulkomailta. Syntyi paikallista ohjelmistoa, jonka rytmi kulki myöhemmin myös Britanniaan ja muihin maihin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Entirely new original landscape 1536x1024 PNG/sRGB. A close natural editorial still-life photograph of a generic unbranded acoustic guitar beside a simple unbranded upright piano whose KEYBOARD FALLBOARD IS COMPLETELY CLOSED. The guitar's body, sound hole and six strings are visible; its headstock is outside the frame. The piano keyboard is entirely concealed behind a plain closed wooden cover; absolutely no keys are visible. Natural wooden surfaces, soft neutral daylight, plain empty rehearsal-space backdrop. No letters, digits, logos, embossing, readable or blurred text, decorative art, framed pictures, records, sheet music, performers or hands. Do not depict a named studio or an exact commercial instrument model. Generic guitar-and-piano illustration for ska rhythm.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[1]",
+              "targetText": {
+                "otsikko": "Ska löysi oman takapotkunsa",
+                "teksti": "Ska yhdisti Jamaikan mentoa amerikkalaiseen jazziin ja rhythm and bluesiin. Sen tunnusmerkkejä ovat liikkuva bassolinja ja väli-iskuille osuvat painotukset, joita kitara ja piano voivat korostaa. Kingstonin studioissa, kuten Studio Onessa ja Federal Recordsissa, tehtiin varhaisia ska-äänityksiä. Sound system -toimijoista tuli myös omien levyjen tuottajia, joten tanssi-illan musiikkia ei enää vain tuotu ulkomailta. Syntyi paikallista ohjelmistoa, jonka rytmi kulki myöhemmin myös Britanniaan ja muihin maihin.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Ska"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l2-20261012-v2-993e1d/image.png",
+              "detail": "original",
+              "observations": "Akustinen kitara telineessä, suljettu pystypiano ja penkki. Kitaran kuusi kieltä, tallakiinnitykset ja näkyvät soitinliitokset uskottavia; puun pinnat luontevia. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:45:45.503452+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png?t=603bd4b69db75b7b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+        "sha256": "603bd4b69db75b7b73b484e3645a8b91659cd6884baf77a1e50175ea6eefd378",
+        "bytes": 2221572,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "kingston-l2-20261012-v2-993e1d",
+        "nativeSHA256": "78ade5f2e81b90e159cbcae3f82f01db98d45c303969e9f1501718a2cd9dc76f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "kingston",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T19:46:43.716939+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l2-20261012-v2-993e1d-78ade5f2e81b.png",
+        "sha256": "603bd4b69db75b7b73b484e3645a8b91659cd6884baf77a1e50175ea6eefd378",
+        "bytes": 2221572,
+        "SHAReadAt": "2026-10-12T19:45:48.868483+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "78ade5f2e81b90e159cbcae3f82f01db98d45c303969e9f1501718a2cd9dc76f",
+        "rgbPixelSHA256": "fcadcf20576a9db14cf745c96cd51452f2362af094d78f370e461481d9541eb3",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01",
+      "contextAfterSHA256": "2512b804edba225f9c8fbd56fb920ce3ff146367a78e7f85ed52a3fb08b80e01"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "kingston-l3-20261012-v1-ed41e4",
+      "galleryImageID": "kingston-l3-20261012-v1-ed41e4",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva basson kielistä rocksteadyn bassolinjan aiheeseen.",
+        "lyhyt": "Havainnekuva basson kielistä rocksteadyn bassolinjan aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva basson kielistä rocksteadyn bassolinjan aiheeseen.",
+        "lyhyt": "Havainnekuva basson kielistä rocksteadyn bassolinjan aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4d1d0f0a468925462748d44bd23238016bb315f94af81930f57d7fdc6c7156fb",
+      "exportSHA256": "12a460631227b19ad567b5b4e21b5e0d0b4140ba73d2f65d5c8b85505d68695c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
+        "semanticContextSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
+        "subjectTitle": "Rocksteady rauhoitti vauhtia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l3-20261012-v1-ed41e4/image.png",
+            "nativeSHA256": "4d1d0f0a468925462748d44bd23238016bb315f94af81930f57d7fdc6c7156fb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva basson kielistä rocksteadyn bassolinjan aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Skan jälkeen kehittynyt rocksteady kulki hitaammassa tempossa. Pienemmät yhtyeet ja rauhallisempi vauhti nostivat bassolinjaa entistä enemmän esiin; kitara saattoi kaksintaa sitä vaimennetuilla sävelillä. Laulussa kuuluivat soul-vaikutteet ja lauluryhmien harmoniat, ja monet kappaleet käsittelivät rakkautta. Studio One ja Treasure Isle olivat tärkeitä levymerkkejä. Laulun, kitaran ja basson väliset suhteet saivat uusia painotuksia, joista tuli osa myöhempää jamaikalaista soundia."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial photograph of a generic unbranded bass guitar string area and fingerboard, four metal strings at physically plausible spacing, real worn wood and metal, instrument cropped so no distinctive full product silhouette or logo. No musicians or sheet music. Only the specified instrument or equipment in a plain neutral setting. No framed pictures, artwork, posters, record library, readable or blurred lettering, logos, or decorative props.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Rocksteady rauhoitti vauhtia",
+                "teksti": "Skan jälkeen kehittynyt rocksteady kulki hitaammassa tempossa. Pienemmät yhtyeet ja rauhallisempi vauhti nostivat bassolinjaa entistä enemmän esiin; kitara saattoi kaksintaa sitä vaimennetuilla sävelillä. Laulussa kuuluivat soul-vaikutteet ja lauluryhmien harmoniat, ja monet kappaleet käsittelivät rakkautta. Studio One ja Treasure Isle olivat tärkeitä levymerkkejä. Laulun, kitaran ja basson väliset suhteet saivat uusia painotuksia, joista tuli osa myöhempää jamaikalaista soundia.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Rocksteady"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l3-20261012-v1-ed41e4/image.png",
+              "detail": "original",
+              "observations": "Lähikuva neljästä bassokielestä, kaulasta, nauhoista ja mikrofoniosista. Kielet jatkuvat yhtenäisinä; metallin, puun ja kuluneen pinnan rakenne uskottava. Ei käsiä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Basson kielten esinehavainne vastaa L3:n bassolinja-aihetta. Kuvateksti ei nimeä soitinta artistin tai yhtyeen omaksi. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva basson kielistä rocksteadyn bassolinjan aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+        "fileSHA256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "kingston-l3-20261012-v1-ed41e4",
+          "sha256": "4d1d0f0a468925462748d44bd23238016bb315f94af81930f57d7fdc6c7156fb",
+          "verdict": "accepted",
+          "reason": "Basson kielten esinehavainne vastaa L3:n bassolinja-aihetta. Kuvateksti ei nimeä soitinta artistin tai yhtyeen omaksi. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l3-20261012-v1-ed41e4/image.png",
+            "nativeSHA256": "4d1d0f0a468925462748d44bd23238016bb315f94af81930f57d7fdc6c7156fb",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva basson kielistä rocksteadyn bassolinjan aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Skan jälkeen kehittynyt rocksteady kulki hitaammassa tempossa. Pienemmät yhtyeet ja rauhallisempi vauhti nostivat bassolinjaa entistä enemmän esiin; kitara saattoi kaksintaa sitä vaimennetuilla sävelillä. Laulussa kuuluivat soul-vaikutteet ja lauluryhmien harmoniat, ja monet kappaleet käsittelivät rakkautta. Studio One ja Treasure Isle olivat tärkeitä levymerkkejä. Laulun, kitaran ja basson väliset suhteet saivat uusia painotuksia, joista tuli osa myöhempää jamaikalaista soundia."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial photograph of a generic unbranded bass guitar string area and fingerboard, four metal strings at physically plausible spacing, real worn wood and metal, instrument cropped so no distinctive full product silhouette or logo. No musicians or sheet music. Only the specified instrument or equipment in a plain neutral setting. No framed pictures, artwork, posters, record library, readable or blurred lettering, logos, or decorative props.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Rocksteady rauhoitti vauhtia",
+                "teksti": "Skan jälkeen kehittynyt rocksteady kulki hitaammassa tempossa. Pienemmät yhtyeet ja rauhallisempi vauhti nostivat bassolinjaa entistä enemmän esiin; kitara saattoi kaksintaa sitä vaimennetuilla sävelillä. Laulussa kuuluivat soul-vaikutteet ja lauluryhmien harmoniat, ja monet kappaleet käsittelivät rakkautta. Studio One ja Treasure Isle olivat tärkeitä levymerkkejä. Laulun, kitaran ja basson väliset suhteet saivat uusia painotuksia, joista tuli osa myöhempää jamaikalaista soundia.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Rocksteady"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l3-20261012-v1-ed41e4/image.png",
+              "detail": "original",
+              "observations": "Lähikuva neljästä bassokielestä, kaulasta, nauhoista ja mikrofoniosista. Kielet jatkuvat yhtenäisinä; metallin, puun ja kuluneen pinnan rakenne uskottava. Ei käsiä, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:32:29.015988+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png?t=12a460631227b19a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+        "sha256": "12a460631227b19ad567b5b4e21b5e0d0b4140ba73d2f65d5c8b85505d68695c",
+        "bytes": 2172081,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "kingston-l3-20261012-v1-ed41e4",
+        "nativeSHA256": "4d1d0f0a468925462748d44bd23238016bb315f94af81930f57d7fdc6c7156fb",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "kingston",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T19:32:45.973826+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l3-20261012-v1-ed41e4-4d1d0f0a4689.png",
+        "sha256": "12a460631227b19ad567b5b4e21b5e0d0b4140ba73d2f65d5c8b85505d68695c",
+        "bytes": 2172081,
+        "SHAReadAt": "2026-10-12T19:32:40.269072+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4d1d0f0a468925462748d44bd23238016bb315f94af81930f57d7fdc6c7156fb",
+        "rgbPixelSHA256": "c91f7044031296830c827ee1e521f0ccfa2434b8427dded23c43fcb238f4e4cd",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e",
+      "contextAfterSHA256": "0a175906294b8a9df23f1f5d7ae643e675fdd83399aeebd38d214ae8951e5e7e"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "kingston-l4-20261012-v1-88199c",
+      "galleryImageID": "kingston-l4-20261012-v1-88199c",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva miksauspöydästä dubin äänenkäsittelyn aiheeseen.",
+        "lyhyt": "Havainnekuva miksauspöydästä dubin äänenkäsittelyn aiheeseen."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva miksauspöydästä dubin äänenkäsittelyn aiheeseen.",
+        "lyhyt": "Havainnekuva miksauspöydästä dubin äänenkäsittelyn aiheeseen."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5cb6938b7a8a4b2a46afbd636a7a507d63ad7937caac4b940fba7e8fbebeffa1",
+      "exportSHA256": "23381e8e491f19b3290dbed967cd6978b1eb57562d57775f26258c3b84485e8e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
+        "semanticContextSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
+        "subjectTitle": "Miksauspöydästä tuli soitin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l4-20261012-v1-88199c/image.png",
+            "nativeSHA256": "5cb6938b7a8a4b2a46afbd636a7a507d63ad7937caac4b940fba7e8fbebeffa1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva miksauspöydästä dubin äänenkäsittelyn aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Dubissa valmis äänitys muuttuu uuden työn raaka-aineeksi. Laulu voidaan poistaa kokonaan tai osittain, rumpuja ja bassoa korostaa sekä ääniä tuoda mukaan ja häivyttää pois. Kaiku ja viive muuttavat niiden tilaa ja kestoa. Kingstonin studiokulttuurissa esimerkiksi King Tubby ja Lee ”Scratch” Perry käyttivät miksauspöytää soittimen tavoin. Sound system -illat puolestaan suosivat omia, muista erottuvia versioita. Uutta musiikkia syntyi siis myös järjestämällä ja käsittelemällä jo äänitettyjä osia, ilman että koko yhtye soitti kaiken uudelleen."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial photograph of an anonymous simple analogue audio mixing console: a few faders, irregularly set plain knobs and small indicator lights, physically believable metal and matte plastic. No logos, readable labels, screens, album artwork or people. Do not reproduce a particular engineer's actual console. Only the specified instrument or equipment in a plain neutral setting. No framed pictures, artwork, posters, record library, readable or blurred lettering, logos, or decorative props. The panel surfaces are completely unprinted: absolutely no letters, digits, scale ticks, symbols or engraving anywhere. Show only plain physical faders, knobs and tiny unlabelled lights.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Miksauspöydästä tuli soitin",
+                "teksti": "Dubissa valmis äänitys muuttuu uuden työn raaka-aineeksi. Laulu voidaan poistaa kokonaan tai osittain, rumpuja ja bassoa korostaa sekä ääniä tuoda mukaan ja häivyttää pois. Kaiku ja viive muuttavat niiden tilaa ja kestoa. Kingstonin studiokulttuurissa esimerkiksi King Tubby ja Lee ”Scratch” Perry käyttivät miksauspöytää soittimen tavoin. Sound system -illat puolestaan suosivat omia, muista erottuvia versioita. Uutta musiikkia syntyi siis myös järjestämällä ja käsittelemällä jo äänitettyjä osia, ilman että koko yhtye soitti kaiken uudelleen.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Dub music"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l4-20261012-v1-88199c/image.png",
+              "detail": "original",
+              "observations": "Lähikuva säätönupeista, liukusäätimistä ja merkkivaloista. Osat liittyvät pintaan uskottavasti ja metallin sekä muovin pinnat luontevia. Ei ihmisiä, luettavaa tekstiä, numeroita, logoja tai albumiteoksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Miksauspöydän esinehavainne vastaa L4:n dubin äänenkäsittelyä. Kuvateksti ei esitä tietyn tuottajan oikeaa laitetta. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva miksauspöydästä dubin äänenkäsittelyn aiheeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+        "fileSHA256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "kingston-l4-20261012-v1-88199c",
+          "sha256": "5cb6938b7a8a4b2a46afbd636a7a507d63ad7937caac4b940fba7e8fbebeffa1",
+          "verdict": "accepted",
+          "reason": "Miksauspöydän esinehavainne vastaa L4:n dubin äänenkäsittelyä. Kuvateksti ei esitä tietyn tuottajan oikeaa laitetta. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l4-20261012-v1-88199c/image.png",
+            "nativeSHA256": "5cb6938b7a8a4b2a46afbd636a7a507d63ad7937caac4b940fba7e8fbebeffa1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva miksauspöydästä dubin äänenkäsittelyn aiheeseen.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetText": "Dubissa valmis äänitys muuttuu uuden työn raaka-aineeksi. Laulu voidaan poistaa kokonaan tai osittain, rumpuja ja bassoa korostaa sekä ääniä tuoda mukaan ja häivyttää pois. Kaiku ja viive muuttavat niiden tilaa ja kestoa. Kingstonin studiokulttuurissa esimerkiksi King Tubby ja Lee ”Scratch” Perry käyttivät miksauspöytää soittimen tavoin. Sound system -illat puolestaan suosivat omia, muista erottuvia versioita. Uutta musiikkia syntyi siis myös järjestämällä ja käsittelemällä jo äänitettyjä osia, ilman että koko yhtye soitti kaiken uudelleen."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Close editorial photograph of an anonymous simple analogue audio mixing console: a few faders, irregularly set plain knobs and small indicator lights, physically believable metal and matte plastic. No logos, readable labels, screens, album artwork or people. Do not reproduce a particular engineer's actual console. Only the specified instrument or equipment in a plain neutral setting. No framed pictures, artwork, posters, record library, readable or blurred lettering, logos, or decorative props. The panel surfaces are completely unprinted: absolutely no letters, digits, scale ticks, symbols or engraving anywhere. Show only plain physical faders, knobs and tiny unlabelled lights.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+              "contentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[3]",
+              "targetText": {
+                "otsikko": "Miksauspöydästä tuli soitin",
+                "teksti": "Dubissa valmis äänitys muuttuu uuden työn raaka-aineeksi. Laulu voidaan poistaa kokonaan tai osittain, rumpuja ja bassoa korostaa sekä ääniä tuoda mukaan ja häivyttää pois. Kaiku ja viive muuttavat niiden tilaa ja kestoa. Kingstonin studiokulttuurissa esimerkiksi King Tubby ja Lee ”Scratch” Perry käyttivät miksauspöytää soittimen tavoin. Sound system -illat puolestaan suosivat omia, muista erottuvia versioita. Uutta musiikkia syntyi siis myös järjestämällä ja käsittelemällä jo äänitettyjä osia, ilman että koko yhtye soitti kaiken uudelleen.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Dub music"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/assets/kingston-l4-20261012-v1-88199c/image.png",
+              "detail": "original",
+              "observations": "Lähikuva säätönupeista, liukusäätimistä ja merkkivaloista. Osat liittyvät pintaan uskottavasti ja metallin sekä muovin pinnat luontevia. Ei ihmisiä, luettavaa tekstiä, numeroita, logoja tai albumiteoksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:35:40.560342+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png?t=23381e8e491f19b3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+        "sha256": "23381e8e491f19b3290dbed967cd6978b1eb57562d57775f26258c3b84485e8e",
+        "bytes": 1875376,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "kingston-l4-20261012-v1-88199c",
+        "nativeSHA256": "5cb6938b7a8a4b2a46afbd636a7a507d63ad7937caac4b940fba7e8fbebeffa1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "kingston",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:35:55.290128+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/kingston/kingston-l4-20261012-v1-88199c-5cb6938b7a8a.png",
+        "sha256": "23381e8e491f19b3290dbed967cd6978b1eb57562d57775f26258c3b84485e8e",
+        "bytes": 1875376,
+        "SHAReadAt": "2026-10-12T19:35:46.368971+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5cb6938b7a8a4b2a46afbd636a7a507d63ad7937caac4b940fba7e8fbebeffa1",
+        "rgbPixelSHA256": "1d46a212d205a7bbef6c51bb6163e9296ad590370df543792b728d4e596a9b63",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2",
+      "contextAfterSHA256": "b413d8a563e09c3e3b5a7bf8becd34d33dd0caa948b5df077b07987dcb0dd7c2"
+    },
+    {
+      "era": "e11",
+      "city": "kingston",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e11-kingston-photo-a4dd2aa111218028",
+      "galleryImageID": "capital-cc-e11-kingston-photo-a4dd2aa111218028",
+      "commonsFile": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
+        "suora": true,
+        "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+        "selite": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "lyhyt": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+        "vuosi": "2009"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+        "selite": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "lyhyt": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+        "vuosi": "2009"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
+        "suora": true,
+        "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+        "selite": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "lyhyt": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+        "vuosi": "2009"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+      "exportSHA256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/45df75bafa855efc.jpg",
+      "dimensions": [
+        2400,
+        1608
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+      "sourceContentSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e0d4b58ec2dc9ea2a24c06350fd85a08435dfe1de9f54edd0f6151572ec71ddf",
+        "semanticContextSHA256": "e0d4b58ec2dc9ea2a24c06350fd85a08435dfe1de9f54edd0f6151572ec71ddf",
+        "subjectTitle": "kingston — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Katinka Zuchowicz Photography",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2%282%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photo": "Katinka Zuchowicz Photography; nimenomainen Author/Artist, source Own work, valokuvan kaupallisen käytön salliva Commons-lisenssi tarkistettu.",
+            "location": "English: A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
+            "timeScope": "May 2009; kuvausvuosi kirjataan eikä vanhaa kuvaa kutsuta tuoreeksi.",
+            "workLayer": "Luonnonmaisema pääaiheena, ei rajattua taideteosta, veistosta tai seinämaalausta."
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2(2).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2%282%29.jpg",
+              "author": "Katinka Zuchowicz Photography",
+              "artistFieldSource": "Author table",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "width": 2400,
+              "height": 1608,
+              "captionFi": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+              "date": "May 2009",
+              "sourceEvidence": {
+                "metadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/45df75bafa855efc.metadata.json",
+                "snapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/da2a27c08e78da61edbd4d9706ade6495c9ff9596b5aa1dc0d3cdfd2e5b3e688.html",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+                "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+                "description": "English: A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
+                "source": "Own work"
+              },
+              "rightsEvidence": {
+                "photo": "Katinka Zuchowicz Photography; nimenomainen Author/Artist, source Own work, valokuvan kaupallisen käytön salliva Commons-lisenssi tarkistettu.",
+                "location": "English: A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
+                "timeScope": "May 2009; kuvausvuosi kirjataan eikä vanhaa kuvaa kutsuta tuoreeksi.",
+                "workLayer": "Luonnonmaisema pääaiheena, ei rajattua taideteosta, veistosta tai seinämaalausta."
+              },
+              "visualReview": {
+                "observed": "Luonnollinen kivikkoinen ranta, vettä ja vuoristoinen horisontti. Pilvinen ja tumma mutta yksityiskohdat erottuvat. Ei kasvoja, taidetta, lisättyä tekstiä tai vesileimaa.",
+                "at": "2026-10-12T20:10:29.312201+00:00"
+              },
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/45df75bafa855efc.jpg",
+              "nativeSha256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+              "sha256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e11/kingston/PHOTO/owner.json",
+              "reviewState": "candidate",
+              "selectedAt": "2026-10-12T20:10:29.312223+00:00",
+              "selectedByJob": 19
+            },
+            "candidateFingerprintSHA256": "c3e55a3836cf1627abe22f0968f3ad3aaa147b25345a6ba36066d450d8720527",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+            "currentContentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen 2400×1608 JPEGin. Kivikkoinen rantaviiva, vesi, vuoristoinen horisontti ja pilvet muodostavat pääaiheen. Etuala on tumma mutta kivet, rantapuu ja veden rakenne erottuvat. Ei ihmisiä, kasvoja, patsaita, maalauksia, kuvan päälle lisättyä tekstiä, vesileimaa tai kehystä. Aito luonnon-/rannikkokuva, ei AI tai nimetyn rakennuksen jäljennös.",
+            "reviewedAt": "2026-10-12T20:15:13.472184+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/45df75bafa855efc.jpg",
+            "pixelSHA256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/da2a27c08e78da61edbd4d9706ade6495c9ff9596b5aa1dc0d3cdfd2e5b3e688.html",
+            "sourceMetadata": {
+              "author": [
+                "Katinka Zuchowicz Photography"
+              ],
+              "licenses": [
+                "CC BY-SA 3.0",
+                "GFDL"
+              ],
+              "dimensions": [
+                2400,
+                1608
+              ],
+              "sourceSHA256": "be258e5d136d16770fd69077a4a048eb2173a336a2710aac9d5dc084b770268e"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M10344317\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":17.9440226,\"lon\":-76.7481762},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjec",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"307c389a-2a2d-48a4-9d48-a46da89a5883\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Jamaica_Palisadoes_Kingston;_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2(2).jpg\",\"wgTitle\":\"Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg\",\"wgCurRevisionId\":1071090513,\"wgRevisionId\":1071090513,\"wgArticleId\":10344317,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Items with VRTS permission confirmed\",\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-3.0\",\"License migration redundant\",\"GFDL\",\"Self-published work\",\"Media needing category review as of 3 February 2017\",\"Ambiguous equipment in Exif\",\"Landscapes of Jamaica\",\"Ports and harbours ",
+            "sourceAuthorExcerpt": "Author Katinka Zuchowicz Photography Permission ( Reusing this file ) .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-que",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 643 pixels . Other resolutions: 330 × 221 pixels | 1,280 × 858 pixels | 2,400 × 1,608 pixels . Original file (2,400 × 1,608 pixels, file size: 3.27 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuc",
+            "sourceCameralocationExcerpt": "Camera location 17° 56′ 38.48″ N, 76° 44′ 53.43″ W View this and other nearby images on: OpenStreetMap 17.944023; -76.748176 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true Permission is granted to copy, distribute and/",
+            "actualDimensions": [
+              2400,
+              1608
+            ],
+            "photographedAt": "2009-05",
+            "sourceDescriptionExact": "A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
+            "photoNotTraveler": true,
+            "depictedWorkAssessment": "Luonnollinen ranta, vesi ja vuoristoinen horisontti pääaiheina; ei tunnistettavaa itsenäistä teospääaihetta.",
+            "manifestFragment": "cc-gap-selection.json"
+          },
+          "qaReason": "Aito Palisadoesin ranta ja Harbor Viewn suunta Kingstonissa sopivat PHOTO-paikkaan. Alkuperäinen Description nimeää täsmäpaikan, Author Katinka Zuchowicz Photography, Own work ja CC BY-SA 3.0 todettu. Toukokuun 2009 selite vastaa lähdettä. Alkuperäiset 2400×1608 mitat sekä SHA täsmäävät; ei tunnistettavia kasvoja, teospääaihetta tai vesileimaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+        "fileSHA256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+          "verdict": "accepted",
+          "reason": "Aito Palisadoesin ranta ja Harbor Viewn suunta Kingstonissa sopivat PHOTO-paikkaan. Alkuperäinen Description nimeää täsmäpaikan, Author Katinka Zuchowicz Photography, Own work ja CC BY-SA 3.0 todettu. Toukokuun 2009 selite vastaa lähdettä. Alkuperäiset 2400×1608 mitat sekä SHA täsmäävät; ei tunnistettavia kasvoja, teospääaihetta tai vesileimaa.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "commonsFile": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2(2).jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2%282%29.jpg",
+              "author": "Katinka Zuchowicz Photography",
+              "artistFieldSource": "Author table",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "width": 2400,
+              "height": 1608,
+              "captionFi": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+              "date": "May 2009",
+              "sourceEvidence": {
+                "metadata": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/45df75bafa855efc.metadata.json",
+                "snapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/da2a27c08e78da61edbd4d9706ade6495c9ff9596b5aa1dc0d3cdfd2e5b3e688.html",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+                "contentSha256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+                "description": "English: A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
+                "source": "Own work"
+              },
+              "rightsEvidence": {
+                "photo": "Katinka Zuchowicz Photography; nimenomainen Author/Artist, source Own work, valokuvan kaupallisen käytön salliva Commons-lisenssi tarkistettu.",
+                "location": "English: A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
+                "timeScope": "May 2009; kuvausvuosi kirjataan eikä vanhaa kuvaa kutsuta tuoreeksi.",
+                "workLayer": "Luonnonmaisema pääaiheena, ei rajattua taideteosta, veistosta tai seinämaalausta."
+              },
+              "visualReview": {
+                "observed": "Luonnollinen kivikkoinen ranta, vettä ja vuoristoinen horisontti. Pilvinen ja tumma mutta yksityiskohdat erottuvat. Ei kasvoja, taidetta, lisättyä tekstiä tai vesileimaa.",
+                "at": "2026-10-12T20:10:29.312201+00:00"
+              },
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/45df75bafa855efc.jpg",
+              "nativeSha256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+              "sha256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e11/kingston/PHOTO/owner.json",
+              "reviewState": "candidate",
+              "selectedAt": "2026-10-12T20:10:29.312223+00:00",
+              "selectedByJob": 19
+            },
+            "candidateFingerprintSHA256": "c3e55a3836cf1627abe22f0968f3ad3aaa147b25345a6ba36066d450d8720527",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/kingston/sisalto.json",
+            "currentContentSHA256": "518a0088c017671fc78592970253bbe9f2cbdce80eec5522b66f67de75721d03",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen 2400×1608 JPEGin. Kivikkoinen rantaviiva, vesi, vuoristoinen horisontti ja pilvet muodostavat pääaiheen. Etuala on tumma mutta kivet, rantapuu ja veden rakenne erottuvat. Ei ihmisiä, kasvoja, patsaita, maalauksia, kuvan päälle lisättyä tekstiä, vesileimaa tai kehystä. Aito luonnon-/rannikkokuva, ei AI tai nimetyn rakennuksen jäljennös.",
+            "reviewedAt": "2026-10-12T20:15:13.472184+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/cc-gap-evidence-job19/45df75bafa855efc.jpg",
+            "pixelSHA256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/da2a27c08e78da61edbd4d9706ade6495c9ff9596b5aa1dc0d3cdfd2e5b3e688.html",
+            "sourceMetadata": {
+              "author": [
+                "Katinka Zuchowicz Photography"
+              ],
+              "licenses": [
+                "CC BY-SA 3.0",
+                "GFDL"
+              ],
+              "dimensions": [
+                2400,
+                1608
+              ],
+              "sourceSHA256": "be258e5d136d16770fd69077a4a048eb2173a336a2710aac9d5dc084b770268e"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":600,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M10344317\",\"wgEditSubmitButtonLabelPublish\":true,\"wgCoordinates\":{\"lat\":17.9440226,\"lon\":-76.7481762},\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjec",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"307c389a-2a2d-48a4-9d48-a46da89a5883\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Jamaica_Palisadoes_Kingston;_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2(2).jpg\",\"wgTitle\":\"Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg\",\"wgCurRevisionId\":1071090513,\"wgRevisionId\":1071090513,\"wgArticleId\":10344317,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Items with VRTS permission confirmed\",\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-3.0\",\"License migration redundant\",\"GFDL\",\"Self-published work\",\"Media needing category review as of 3 February 2017\",\"Ambiguous equipment in Exif\",\"Landscapes of Jamaica\",\"Ports and harbours ",
+            "sourceAuthorExcerpt": "Author Katinka Zuchowicz Photography Permission ( Reusing this file ) .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-que",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 643 pixels . Other resolutions: 330 × 221 pixels | 1,280 × 858 pixels | 2,400 × 1,608 pixels . Original file (2,400 × 1,608 pixels, file size: 3.27 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuc",
+            "sourceCameralocationExcerpt": "Camera location 17° 56′ 38.48″ N, 76° 44′ 53.43″ W View this and other nearby images on: OpenStreetMap 17.944023; -76.748176 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following licenses: This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/3.0 CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 true true Permission is granted to copy, distribute and/",
+            "actualDimensions": [
+              2400,
+              1608
+            ],
+            "photographedAt": "2009-05",
+            "sourceDescriptionExact": "A picture of the Harbour View at the Palisadoes in Kingston, Jamaica, taken in May 2009.",
+            "photoNotTraveler": true,
+            "depictedWorkAssessment": "Luonnollinen ranta, vesi ja vuoristoinen horisontti pääaiheina; ei tunnistettavaa itsenäistä teospääaihetta.",
+            "manifestFragment": "cc-gap-selection.json"
+          },
+          "reviewedAt": "2026-10-12T20:15:13.495122+00:00",
+          "sha256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/qa.json",
+            "sha256": "a35b849755c94e0a0c266d9cff399cb17204e8eedb104aabb5f956f9eca0196b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/kingston/illustration-qa-extra.json",
+            "sha256": "a8807109eb98d9b9c07ba96de91773c2ddb63a58e0d7c7720e11cca7c87d4cc6"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e11",
+        "city": "kingston",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+        "sha256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Jamaica_Palisadoes_Kingston%3B_Harbor_View_Photo_Katinka_Zuchowicz_Photography_DSC_8572-2%282%29.jpg",
+        "author": "Katinka Zuchowicz Photography",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 2400,
+        "height": 1608,
+        "originalSHA256": "a4dd2aa111218028028f48cc667159599a9aa9d3a4a0698dabe0f89ea8539a51",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg",
+        "bytes": 3425785,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:15:31.911794+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+        "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+        "selite": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "lyhyt": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "vuosi": "2009"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)",
+        "selite": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "lyhyt": "Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.",
+        "tiedosto": "Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg",
+        "vuosi": "2009"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f9b89a396555b3f04baf049c201a547f65b0263355d1f76b075951e01e0e70e3",
+      "targetAfterSHA256": "e0d4b58ec2dc9ea2a24c06350fd85a08435dfe1de9f54edd0f6151572ec71ddf",
+      "contextAfterSHA256": "e0d4b58ec2dc9ea2a24c06350fd85a08435dfe1de9f54edd0f6151572ec71ddf"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

@@ -1,0 +1,1111 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e11",
+  "city": "santodomingo",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+  "assets": [
+    {
+      "era": "e11",
+      "city": "santodomingo",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "santodomingo-o4-20261012-v1-688227",
+      "galleryImageID": "santodomingo-o4-20261012-v1-688227",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "135794cd3f74c0775c90bcfcb9dec2b84ea1da751d8b5a90c122dbe036de2364",
+      "exportSHA256": "0261dd54429070c1a028d1bc2c5318758947143da326ee97a04fdcf4ebcd4e12",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+      "sourceContentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "ea1f31d33c155164e1e1c8861b0a54d4d31b99c79b3bde49dbfcd627642f5e4f",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-o4-20261012-v1-688227/image.png",
+            "nativeSHA256": "135794cd3f74c0775c90bcfcb9dec2b84ea1da751d8b5a90c122dbe036de2364",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSha256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetText": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A simple Dominican-style lunch plate with separate modest portions of white rice, stewed beans, cooked chicken and fresh green salad. Close natural editorial food photography, plain ceramic and tabletop; no restaurant name, prices, extra decorative ingredients or people.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-o4-20261012-v1-688227/image.png",
+              "detail": "original",
+              "observations": "Lautasella riisiä, kastikkeessa olevia papuja, kypsä kanan reisikoipi ja vihreää salaattia tomaatin sekä sipulin kanssa. Ruoan muodot ja pintojen vaihtelu uskottavia, kana ei näytä anatomisesti ylimääräiseltä. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Riisi, pavut, kana ja salaatti vastaavat O4-jakson plato del día -aihetta ja faktapohjaa. Yleinen havainne ei esitä tietyn comedorin annosta. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/illustration-qa-extra.json",
+        "fileSHA256": "628f83538566ffecd200f479dfec21434875d93a2f31a886815ebc1f5d890d30",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "santodomingo-o4-20261012-v1-688227",
+          "sha256": "135794cd3f74c0775c90bcfcb9dec2b84ea1da751d8b5a90c122dbe036de2364",
+          "verdict": "accepted",
+          "reason": "Riisi, pavut, kana ja salaatti vastaavat O4-jakson plato del día -aihetta ja faktapohjaa. Yleinen havainne ei esitä tietyn comedorin annosta. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-o4-20261012-v1-688227/image.png",
+            "nativeSHA256": "135794cd3f74c0775c90bcfcb9dec2b84ea1da751d8b5a90c122dbe036de2364",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSha256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetText": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A simple Dominican-style lunch plate with separate modest portions of white rice, stewed beans, cooked chicken and fresh green salad. Close natural editorial food photography, plain ceramic and tabletop; no restaurant name, prices, extra decorative ingredients or people.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-o4-20261012-v1-688227/image.png",
+              "detail": "original",
+              "observations": "Lautasella riisiä, kastikkeessa olevia papuja, kypsä kanan reisikoipi ja vihreää salaattia tomaatin sekä sipulin kanssa. Ruoan muodot ja pintojen vaihtelu uskottavia, kana ei näytä anatomisesti ylimääräiseltä. Ei ihmisiä, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:24:28.196671+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/qa.json",
+            "sha256": "1398d84b5d147b7e9030ea9d485b53b84516c0843ede707a72e6461d22af9ac2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/illustration-qa-extra.json",
+            "sha256": "628f83538566ffecd200f479dfec21434875d93a2f31a886815ebc1f5d890d30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png?t=0261dd54429070c1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+        "sha256": "0261dd54429070c1a028d1bc2c5318758947143da326ee97a04fdcf4ebcd4e12",
+        "bytes": 2337578,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "santodomingo-o4-20261012-v1-688227",
+        "nativeSHA256": "135794cd3f74c0775c90bcfcb9dec2b84ea1da751d8b5a90c122dbe036de2364",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "santodomingo",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:28:10.402710+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-o4-20261012-v1-688227-135794cd3f74.png",
+        "sha256": "0261dd54429070c1a028d1bc2c5318758947143da326ee97a04fdcf4ebcd4e12",
+        "bytes": 2337578,
+        "SHAReadAt": "2026-10-12T18:29:59.591940+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "135794cd3f74c0775c90bcfcb9dec2b84ea1da751d8b5a90c122dbe036de2364",
+        "rgbPixelSHA256": "57e621d35f008283ab8ccde0051129715f3d7aa69a0321aa4f89acb33f521817",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "ea1f31d33c155164e1e1c8861b0a54d4d31b99c79b3bde49dbfcd627642f5e4f"
+    },
+    {
+      "era": "e11",
+      "city": "santodomingo",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "santodomingo-l1-20261012-v1-006517",
+      "galleryImageID": "santodomingo-l1-20261012-v1-006517",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta.",
+        "lyhyt": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta.",
+        "lyhyt": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "cb2f1694f2aa9d4659efd74acf14fa591384798ceddca84f620f92dba7962be9",
+      "exportSHA256": "b8266b2e5dd458be4fc27f64bb99d5eb31ef4992231daba5b6872e6b4d2b76e6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+      "sourceContentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
+        "semanticContextSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
+        "subjectTitle": "Korallikivi vartioi satamaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-l1-20261012-v1-006517/image.png",
+            "nativeSHA256": "cb2f1694f2aa9d4659efd74acf14fa591384798ceddca84f620f92dba7962be9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSha256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetText": "Ozaman linnoitus rakennettiin 1500-luvun alussa kaupungin sataman sisääntulon vartiointiin. Sen keskeinen rakenne on Torre del Homenaje, jykevä kivitorni, ja rakentamiseen käytettiin merestä saatua korallikiveä. Rakennustyössä käytettiin orjuutettuja ihmisiä, myös taínoja. Linnoitus kertoo siten sekä hallinnon puolustusrakentamisesta että niiden ihmisten työstä, jotka sen toteuttivat. Myöhemmin rakennus palveli myös vankilana; nykyään se kuuluu vanhan keskustan historiallisiin kohteisiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Macro editorial photograph of one irregular pale coral limestone building-stone sample on neutral ground. Natural sedimentary pores and small believable fossil coral fragments; matte chalky worn surface, varied pore sizes, no synthetic sponge pattern. No fort, carving, text or artwork. The subject is a generic building material sample.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Korallikivi vartioi satamaa",
+                "teksti": "Ozaman linnoitus rakennettiin 1500-luvun alussa kaupungin sataman sisääntulon vartiointiin. Sen keskeinen rakenne on Torre del Homenaje, jykevä kivitorni, ja rakentamiseen käytettiin merestä saatua korallikiveä. Rakennustyössä käytettiin orjuutettuja ihmisiä, myös taínoja. Linnoitus kertoo siten sekä hallinnon puolustusrakentamisesta että niiden ihmisten työstä, jotka sen toteuttivat. Myöhemmin rakennus palveli myös vankilana; nykyään se kuuluu vanhan keskustan historiallisiin kohteisiin.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Fortaleza Ozama"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-l1-20261012-v1-006517/image.png",
+              "detail": "original",
+              "observations": "Neutraalilla pöydällä vaalea huokoinen kivilohko, jossa erikokoisia onkaloita ja fossiilista korallirakennetta muistuttavia jälkiä. Pintojen vaihtelu luonnollista, ei toistokuviota. Ei rakennusta, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Korallikivi havainnollistaa L1-noston rakennusmateriaalia. Kuvateksti erottaa materiaalihavainteen Ozaman linnoituksen todellisesta kivipinnasta. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/illustration-qa-extra.json",
+        "fileSHA256": "628f83538566ffecd200f479dfec21434875d93a2f31a886815ebc1f5d890d30",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "santodomingo-l1-20261012-v1-006517",
+          "sha256": "cb2f1694f2aa9d4659efd74acf14fa591384798ceddca84f620f92dba7962be9",
+          "verdict": "accepted",
+          "reason": "Korallikivi havainnollistaa L1-noston rakennusmateriaalia. Kuvateksti erottaa materiaalihavainteen Ozaman linnoituksen todellisesta kivipinnasta. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-l1-20261012-v1-006517/image.png",
+            "nativeSHA256": "cb2f1694f2aa9d4659efd74acf14fa591384798ceddca84f620f92dba7962be9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva korallikivestä rakennusmateriaalina, ei Ozaman linnoituksen todellinen kivipinta.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSha256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetText": "Ozaman linnoitus rakennettiin 1500-luvun alussa kaupungin sataman sisääntulon vartiointiin. Sen keskeinen rakenne on Torre del Homenaje, jykevä kivitorni, ja rakentamiseen käytettiin merestä saatua korallikiveä. Rakennustyössä käytettiin orjuutettuja ihmisiä, myös taínoja. Linnoitus kertoo siten sekä hallinnon puolustusrakentamisesta että niiden ihmisten työstä, jotka sen toteuttivat. Myöhemmin rakennus palveli myös vankilana; nykyään se kuuluu vanhan keskustan historiallisiin kohteisiin."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, landscape 3:2, preferably 1536x1024 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. Macro editorial photograph of one irregular pale coral limestone building-stone sample on neutral ground. Natural sedimentary pores and small believable fossil coral fragments; matte chalky worn surface, varied pore sizes, no synthetic sponge pattern. No fort, carving, text or artwork. The subject is a generic building material sample.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[0]",
+              "targetText": {
+                "otsikko": "Korallikivi vartioi satamaa",
+                "teksti": "Ozaman linnoitus rakennettiin 1500-luvun alussa kaupungin sataman sisääntulon vartiointiin. Sen keskeinen rakenne on Torre del Homenaje, jykevä kivitorni, ja rakentamiseen käytettiin merestä saatua korallikiveä. Rakennustyössä käytettiin orjuutettuja ihmisiä, myös taínoja. Linnoitus kertoo siten sekä hallinnon puolustusrakentamisesta että niiden ihmisten työstä, jotka sen toteuttivat. Myöhemmin rakennus palveli myös vankilana; nykyään se kuuluu vanhan keskustan historiallisiin kohteisiin.",
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": "",
+                "wiki": "Fortaleza Ozama"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-l1-20261012-v1-006517/image.png",
+              "detail": "original",
+              "observations": "Neutraalilla pöydällä vaalea huokoinen kivilohko, jossa erikokoisia onkaloita ja fossiilista korallirakennetta muistuttavia jälkiä. Pintojen vaihtelu luonnollista, ei toistokuviota. Ei rakennusta, kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:25:51.771775+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/qa.json",
+            "sha256": "1398d84b5d147b7e9030ea9d485b53b84516c0843ede707a72e6461d22af9ac2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/illustration-qa-extra.json",
+            "sha256": "628f83538566ffecd200f479dfec21434875d93a2f31a886815ebc1f5d890d30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png?t=b8266b2e5dd458be",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+        "sha256": "b8266b2e5dd458be4fc27f64bb99d5eb31ef4992231daba5b6872e6b4d2b76e6",
+        "bytes": 2624177,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "santodomingo-l1-20261012-v1-006517",
+        "nativeSHA256": "cb2f1694f2aa9d4659efd74acf14fa591384798ceddca84f620f92dba7962be9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "santodomingo",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:28:12.331793+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-l1-20261012-v1-006517-cb2f1694f2aa.png",
+        "sha256": "b8266b2e5dd458be4fc27f64bb99d5eb31ef4992231daba5b6872e6b4d2b76e6",
+        "bytes": 2624177,
+        "SHAReadAt": "2026-10-12T18:29:59.715482+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "cb2f1694f2aa9d4659efd74acf14fa591384798ceddca84f620f92dba7962be9",
+        "rgbPixelSHA256": "944021e3d403662d7464306db006eaa5e35a5d413808b00dc056ada0d4aa21ef",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "targetAfterSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0",
+      "contextAfterSHA256": "9c6215fd991fc34b73f70b2f640bbe93b9eba4e0031d17ab9fa04dd9fc3f70c0"
+    },
+    {
+      "era": "e11",
+      "city": "santodomingo",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "santodomingo-traveler-20261012-v1-2c9d14",
+      "galleryImageID": "santodomingo-traveler-20261012-v1-2c9d14",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+        "lyhyt": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0ae4585810ace70198d4e51c899dab3340487d835582c3e997b2e940e36ce678",
+      "exportSHA256": "00d06c9484e3606c302e8f16f789119c4223c3c72dd4762d944c32d91d71c312",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+      "sourceContentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "8acd6a2b70bf0bee4cfac8746b210ed266fb3aed1cc0e63f2f7b8f2bde715b03",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectScope": "general original illustration; no exact city/site appearance claim",
+            "noProtectedWorks": true,
+            "noNamedPeople": true,
+            "photoSlot": false
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-traveler-20261012-v1-2c9d14/image.png",
+            "nativeSHA256": "0ae4585810ace70198d4e51c899dab3340487d835582c3e997b2e940e36ce678",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSha256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetText": "Santo Domingon vanhan keskustan museot ja kivirakennukset sopivat kävelykierroksen aiheeksi. Calle El Conde jatkaa kierrosta kauppojen ja ruokapaikkojen välissä. Malecónin varrella näkyy Karibianmeri. Joen toisella puolella Santo Domingo Estessä sijaitsevat Los Tres Ojosin luolajärvet. Pidemmät siirtymät ja illan paluumatka kannattaa suunnitella etukäteen.\n\nComedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A simple Dominican-style lunch plate with separate modest portions of white rice, stewed beans, cooked chicken and fresh green salad. Close natural editorial food photography, plain ceramic and tabletop; no restaurant name, prices, extra decorative ingredients or people. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Santo Domingon vanhan keskustan museot ja kivirakennukset sopivat kävelykierroksen aiheeksi. Calle El Conde jatkaa kierrosta kauppojen ja ruokapaikkojen välissä. Malecónin varrella näkyy Karibianmeri. Joen toisella puolella Santo Domingo Estessä sijaitsevat Los Tres Ojosin luolajärvet. Pidemmät siirtymät ja illan paluumatka kannattaa suunnitella etukäteen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Santo Domingo",
+                  "taitto": "opas",
+                  "teksti": "Seuraa Santo Domingossa vanhan keskustan katuja ja Ozaman rantoja.",
+                  "nosto": "Historiallisen kävelyn rinnalle voi valita meribulevardin tai joen toisella puolella sijaitsevat luolajärvet.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Las Américasin kansainvälinen lentoasema sijaitsee Santo Domingon itäpuolella. Kaupungissa on metro ja bussiliikennettä, mutta historiallinen keskusta sopii myös kävelykierrokseen. Pidempiin siirtymiin ja illan paluumatkaan voi varata virallisen taksin. Kadunylityksissä tarvitaan tarkkaavaisuutta: suurten väylien liikenne ja jalkakäytävien kunto vaihtelevat.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Vanhan keskustan kivitalot",
+                      "teksti": "Zona Colonialissa linnoitus, katedraali ja Alcázar-palatsi kuuluvat historialliseen kokonaisuuteen. Calle El Conden kaupat ja ruokapaikat antavat kävelylle toisenlaisen rytmin kuin museohuoneet. Museo Casas Reales sijaitsee myös vanhassa keskustassa. Tarkista museoiden ajankohtainen käyntitilanne ennen kierrosta, sillä kunnostus voi rajoittaa pääsyä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Meri ja luolajärvet",
+                      "teksti": "Malecónilta näkee Karibianmerelle, ja bulevardin varrella on kävelyosuuksia, kahviloita ja puistoja. Los Tres Ojosin luolajärvet sijaitsevat puolestaan Santo Domingo Este -kunnassa Ozaman itäpuolella. Luolissa liikutaan portaissa, joten kohde vaatii muuta kuin tasaista kaupunkikävelyä. Järviä ja meribulevardia ei kannata ajatella saman vanhan keskustan korttelin kohteina.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Santo Domingo on lämmin trooppinen rannikkokaupunki, jossa on myös sateisempi kausi. Hirmumyrskyt voivat vaikuttaa matkasuunnitelmiin, joten ajankohtaisia säävaroituksia on hyvä seurata ennen lähtöä ja matkan aikana. Museot ja kulttuuripaikat antavat vaihtoehtoja ulkona kulkemiselle. Suunnittele vanhan keskustan kävely ja pidemmät siirtymät päivän sään mukaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Zona Colonial",
+                        "tahdet": 3,
+                        "selite": "Vanhan keskustan ruutukaava ja kivirakennukset muodostavat maailmanperintökohteen."
+                      },
+                      {
+                        "mita": "Calle El Conde",
+                        "tahdet": 3,
+                        "selite": "Kävelykadulla vanha kauppareitti jatkuu kauppojen ja ruokapaikkojen välissä."
+                      },
+                      {
+                        "mita": "Ozaman linnoitus",
+                        "tahdet": 2,
+                        "selite": "Joen äärellä oleva kivirakennus vartioi aikanaan satamaa."
+                      },
+                      {
+                        "mita": "Malecón",
+                        "tahdet": 2,
+                        "selite": "Meribulevardi yhdistää Karibianmeren näkymän kaupungin julkiseen elämään."
+                      },
+                      {
+                        "mita": "Los Tres Ojos",
+                        "tahdet": 2,
+                        "selite": "Santo Domingo Esten luolajärville kuljetaan portaita pitkin."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Varaa siirtymälle oikea kulku",
+                        "teksti": "Pidempiin matkoihin ja illan paluuseen voi varata virallisen taksin."
+                      },
+                      {
+                        "otsikko": "Luolissa on portaita",
+                        "teksti": "Los Tres Ojos vaatii portaissa kulkemista, joten se ei ole tasainen kävelyreitti."
+                      },
+                      {
+                        "otsikko": "Museon tilanne voi vaihtua",
+                        "teksti": "Tarkista ajankohtainen käyntitilanne ja mahdolliset kunnostustyöt kohteesta."
+                      },
+                      {
+                        "otsikko": "Seuraa säävaroituksia",
+                        "teksti": "Hirmumyrskyt ja rankkasateet voivat vaikuttaa siirtymiin ja lentoliikenteeseen."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-traveler-20261012-v1-2c9d14/image.png",
+              "detail": "original",
+              "observations": "Riisiä, papuja, kypsää kanaa ja salaattia lautasella. Ruoan rakenteet, leikatut kasvikset ja astiat uskottavia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Päivän annoksen ainekset vastaavat Santo Domingon oppaan ruokateemaa. Rehellinen havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/illustration-qa-extra.json",
+        "fileSHA256": "628f83538566ffecd200f479dfec21434875d93a2f31a886815ebc1f5d890d30",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "santodomingo-traveler-20261012-v1-2c9d14",
+          "sha256": "0ae4585810ace70198d4e51c899dab3340487d835582c3e997b2e940e36ce678",
+          "verdict": "accepted",
+          "reason": "Päivän annoksen ainekset vastaavat Santo Domingon oppaan ruokateemaa. Rehellinen havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-traveler-20261012-v1-2c9d14/image.png",
+            "nativeSHA256": "0ae4585810ace70198d4e51c899dab3340487d835582c3e997b2e940e36ce678",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva päivän annoksesta: riisiä, papuja, kanaa ja salaattia.",
+            "sourceEvidence": {
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSha256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetText": "Santo Domingon vanhan keskustan museot ja kivirakennukset sopivat kävelykierroksen aiheeksi. Calle El Conde jatkaa kierrosta kauppojen ja ruokapaikkojen välissä. Malecónin varrella näkyy Karibianmeri. Joen toisella puolella Santo Domingo Estessä sijaitsevat Los Tres Ojosin luolajärvet. Pidemmät siirtymät ja illan paluumatka kannattaa suunnitella etukäteen.\n\nComedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja."
+            },
+            "rightsEvidence": {
+              "subjectScope": "general original illustration; no exact city/site appearance claim",
+              "noProtectedWorks": true,
+              "noNamedPeople": true,
+              "photoSlot": false
+            },
+            "prompt": "Use case: photorealistic-natural. Asset: a Finnish educational city magazine subject illustration, clearly labelled as an illustration outside the pixels. New original image, portrait 2:3, preferably 1024x1536 PNG with sRGB. Natural editorial photography, believable materials, restrained color, soft daylight, realistic scale. No text, logos, watermarks, frames, identifiable people, invented city panorama or copyrighted artwork. A simple Dominican-style lunch plate with separate modest portions of white rice, stewed beans, cooked chicken and fresh green salad. Close natural editorial food photography, plain ceramic and tabletop; no restaurant name, prices, extra decorative ingredients or people. Native vertical portrait composition, 2:3 aspect ratio, 1024x1536 pixels. Compose the subject for a magazine travel-column portrait. This is an illustration, never a documentary photo of the city.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/sisalto.json",
+              "contentSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Santo Domingon vanhan keskustan museot ja kivirakennukset sopivat kävelykierroksen aiheeksi. Calle El Conde jatkaa kierrosta kauppojen ja ruokapaikkojen välissä. Malecónin varrella näkyy Karibianmeri. Joen toisella puolella Santo Domingo Estessä sijaitsevat Los Tres Ojosin luolajärvet. Pidemmät siirtymät ja illan paluumatka kannattaa suunnitella etukäteen.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Santo Domingo",
+                  "taitto": "opas",
+                  "teksti": "Seuraa Santo Domingossa vanhan keskustan katuja ja Ozaman rantoja.",
+                  "nosto": "Historiallisen kävelyn rinnalle voi valita meribulevardin tai joen toisella puolella sijaitsevat luolajärvet.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Las Américasin kansainvälinen lentoasema sijaitsee Santo Domingon itäpuolella. Kaupungissa on metro ja bussiliikennettä, mutta historiallinen keskusta sopii myös kävelykierrokseen. Pidempiin siirtymiin ja illan paluumatkaan voi varata virallisen taksin. Kadunylityksissä tarvitaan tarkkaavaisuutta: suurten väylien liikenne ja jalkakäytävien kunto vaihtelevat.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Vanhan keskustan kivitalot",
+                      "teksti": "Zona Colonialissa linnoitus, katedraali ja Alcázar-palatsi kuuluvat historialliseen kokonaisuuteen. Calle El Conden kaupat ja ruokapaikat antavat kävelylle toisenlaisen rytmin kuin museohuoneet. Museo Casas Reales sijaitsee myös vanhassa keskustassa. Tarkista museoiden ajankohtainen käyntitilanne ennen kierrosta, sillä kunnostus voi rajoittaa pääsyä.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Meri ja luolajärvet",
+                      "teksti": "Malecónilta näkee Karibianmerelle, ja bulevardin varrella on kävelyosuuksia, kahviloita ja puistoja. Los Tres Ojosin luolajärvet sijaitsevat puolestaan Santo Domingo Este -kunnassa Ozaman itäpuolella. Luolissa liikutaan portaissa, joten kohde vaatii muuta kuin tasaista kaupunkikävelyä. Järviä ja meribulevardia ei kannata ajatella saman vanhan keskustan korttelin kohteina.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Mitä täällä syödään",
+                      "teksti": "Comedor on ruokapaikka, jossa plato del día tarkoittaa päivän annosta. Ateriaan kuuluu usein riisiä, papuja, salaattia sekä lihaa tai kanaa. Mofongo puolestaan valmistetaan ruokabanaanista. Santo Domingon ruokatarjontaan kuuluu myös eri maiden keittiöitä, joten keskustan aterioita ei tarvitse rajata yhteen ruokalajiin. El Conden ympäristöstä ja Malecónilta löytyy ruokapaikkoja.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Santo Domingo on lämmin trooppinen rannikkokaupunki, jossa on myös sateisempi kausi. Hirmumyrskyt voivat vaikuttaa matkasuunnitelmiin, joten ajankohtaisia säävaroituksia on hyvä seurata ennen lähtöä ja matkan aikana. Museot ja kulttuuripaikat antavat vaihtoehtoja ulkona kulkemiselle. Suunnittele vanhan keskustan kävely ja pidemmät siirtymät päivän sään mukaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Zona Colonial",
+                        "tahdet": 3,
+                        "selite": "Vanhan keskustan ruutukaava ja kivirakennukset muodostavat maailmanperintökohteen."
+                      },
+                      {
+                        "mita": "Calle El Conde",
+                        "tahdet": 3,
+                        "selite": "Kävelykadulla vanha kauppareitti jatkuu kauppojen ja ruokapaikkojen välissä."
+                      },
+                      {
+                        "mita": "Ozaman linnoitus",
+                        "tahdet": 2,
+                        "selite": "Joen äärellä oleva kivirakennus vartioi aikanaan satamaa."
+                      },
+                      {
+                        "mita": "Malecón",
+                        "tahdet": 2,
+                        "selite": "Meribulevardi yhdistää Karibianmeren näkymän kaupungin julkiseen elämään."
+                      },
+                      {
+                        "mita": "Los Tres Ojos",
+                        "tahdet": 2,
+                        "selite": "Santo Domingo Esten luolajärville kuljetaan portaita pitkin."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Varaa siirtymälle oikea kulku",
+                        "teksti": "Pidempiin matkoihin ja illan paluuseen voi varata virallisen taksin."
+                      },
+                      {
+                        "otsikko": "Luolissa on portaita",
+                        "teksti": "Los Tres Ojos vaatii portaissa kulkemista, joten se ei ole tasainen kävelyreitti."
+                      },
+                      {
+                        "otsikko": "Museon tilanne voi vaihtua",
+                        "teksti": "Tarkista ajankohtainen käyntitilanne ja mahdolliset kunnostustyöt kohteesta."
+                      },
+                      {
+                        "otsikko": "Seuraa säävaroituksia",
+                        "teksti": "Hirmumyrskyt ja rankkasateet voivat vaikuttaa siirtymiin ja lentoliikenteeseen."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/santodomingo/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/assets/santodomingo-traveler-20261012-v1-2c9d14/image.png",
+              "detail": "original",
+              "observations": "Riisiä, papuja, kypsää kanaa ja salaattia lautasella. Ruoan rakenteet, leikatut kasvikset ja astiat uskottavia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T19:56:51.073568+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/qa.json",
+            "sha256": "1398d84b5d147b7e9030ea9d485b53b84516c0843ede707a72e6461d22af9ac2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/santodomingo/illustration-qa-extra.json",
+            "sha256": "628f83538566ffecd200f479dfec21434875d93a2f31a886815ebc1f5d890d30"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png?t=00d06c9484e3606c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+        "sha256": "00d06c9484e3606c302e8f16f789119c4223c3c72dd4762d944c32d91d71c312",
+        "bytes": 2431535,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "santodomingo-traveler-20261012-v1-2c9d14",
+        "nativeSHA256": "0ae4585810ace70198d4e51c899dab3340487d835582c3e997b2e940e36ce678",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e11",
+        "city": "santodomingo",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:58:03.374973+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e11/santodomingo/santodomingo-traveler-20261012-v1-2c9d14-0ae4585810ac.png",
+        "sha256": "00d06c9484e3606c302e8f16f789119c4223c3c72dd4762d944c32d91d71c312",
+        "bytes": 2431535,
+        "SHAReadAt": "2026-10-12T19:56:59.765806+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0ae4585810ace70198d4e51c899dab3340487d835582c3e997b2e940e36ce678",
+        "rgbPixelSHA256": "0bcddbb7630d2580de204f3acba82170ed2d5d69f56d2157fc3537ec6761a80d",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "bdf344d93321b1250f4e2901ed791aac7c5a3e81ee8523f79222048583b085f1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "8acd6a2b70bf0bee4cfac8746b210ed266fb3aed1cc0e63f2f7b8f2bde715b03"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
