@@ -97,8 +97,26 @@ Tarkistus 12.10.: natiivin ja workerin retkikunnan päätepisteet täsmäävät.
 
 ### Kompassi: suunta ja etäisyys (olemassa olevat pohjat)
 - Korin kompassi (`PalloKori.SeuraavaSuunta`, joka nyt osoittaa kierroksen seuraavaan kohteeseen) osoittaa kilpailun aikana **lähimpään keräämättömään** palloon. Lähin lasketaan 3D-etäisyytenä joka ruutu; vaihtuu, kun toinen tulee lähemmäs (hystereesi 10 %, ettei neula hypi).
-- Etäisyys metreinä (alle 1 km: 10 m:n tarkkuus, muuten 0,1 km) kompassin vieressä olemassa olevalla tekstipohjalla. Linssiseppä valitsee pohjan (korin kompassin merkki ja metrolinjan rivin teksti); puuttuva pohja → PT/omistaja (UI-POHJAT).
-- Kello ja kerätyt (esim. 5/12) samaan riviin.
+- Etäisyys metreinä (alle 1 km: 10 m:n tarkkuus, muuten 0,1 km), kerätyt ja kello metrolinjan olemassa olevassa otsikkorivissä, esim. "5/12 · 340 m · 2.41" (Natiivi-UI; korin kompassi on 3D-esine, joten tekstiä ei sen viereen; LS1:n tarkennukset alla).
+
+### Linssisepän tarkennukset (LS1 12.10.)
+- **Kompassi:** `PalloKori.SeuraavaSuunta` on vaakasuuntima (°, 0 = pohjoinen); kilpailumoottori asettaa sen lähimmän keräämättömän
+  pallon suuntaan (lähin 3D:nä, hystereesi 10 % moottorissa). Kilpailun ajaksi kierroksen oma asetus ohitetaan, ja paluu palauttaa sen.
+  Kun pallo on alle 150 m:n päässä, neula osoittaa yhä vaakasuuntaa (pallo näkyy jo kuvassa).
+- **Etäisyys-, kello- ja keräysteksti:** olemassa oleva **metrolinjan otsikkorivi** (kierroslistan "Kaupunkikierros"-rivi, `mk-aikajana-havainne__kuvateksti`)
+  vaihtuu kilpailun ajaksi muotoon "5/12 · 340 m · 2.41". Ei uutta pohjaa kompassin viereen (korin kompassi on 3D-esine, ei UI:ta).
+  Natiivi-UI toteuttaa; jos PT haluaa tekstin kompassiin, se on uusi pohja → omistaja.
+- **Keräys ja korkeudet:** 60 m 3D-säde ja ilmapallo 50 m katon yllä sopivat vapaan lennon rajoihin (alin 40 m maasta, rakennusväli
+  12 + 3 m, `OpasValys`): pallon luo pääsee aina ilman, että kamera menee katon läpi. Katon korkeus kohteen korkeusmallista
+  (`OpasSovitin.OmaMaanpintaDtm` + kohteen korkeus_m, sama kuin pysähdyksen kehyksessä); korkeat kohteet (Eiffel 330 m) → pallo 380 m:ssä.
+- **Ilmapallot:** samaa koristepallomallia pienempänä (kuori ~6 m), paletti kohteen järjestysnumerosta; poksahdus olemassa olevalla
+  tehosteella (ElavatElementit) + ääni ElavatAanetista. Kiinnitys `CesiumGlobeAnchor`illa kuten jäsenpallot.
+- **Metrokartta ja listalento:** kilpailun ajaksi `OpasSovitin.KilpailuKaynnissa` (kuten `EtsintaKaynnissa`): `VapaaKohteeseen` ja
+  `KierrosKohteeseen` palauttavat false, NUI näyttää ✓ kerätyille (moottorin lista). Kierroksen kerronta, kuvakortit ja kohteen
+  korostus pois samoin kuin etsinnässä (katso ja löydä v2 -mekanismi `OpasSovitin.Etsinta` uudelleen).
+- **Yhteinen aloitus:** kaikki tumman siirtoruudun kautta kierroksen 1. kohteen yleiskuvaan 300 m:n korkeudelle samaan suuntaan
+  (sama siirto kuin etsinnän aloituksessa); lähtölaskennan ajan ohjaus lukittu. Keskeytys → paluulento keskeytyskohtaan (olemassa oleva).
+- **Arvio:** 1,5 pv (kuten taulukossa), riippuu siitä, että katso ja löydä v2 (184) on rungossa.
 
 ### Tulostaulu ja pisteet (talous)
 - Tulokset samassa Durable Object -huoneessa: aika ja kerätyt per jäsen; huone pitää retkikunnan **parhaat ajat kaupungeittain** (SQLite-tallennus, muutama rivi; luku 2:n "ei historiaa" koskee sijainteja, ei tuloksia). Taulukko näytetään kilpailun lopussa olemassa olevalla kortti- tai listapohjalla (Natiivi-UI).
@@ -115,7 +133,7 @@ Tarkistus 12.10.: natiivin ja workerin retkikunnan päätepisteet täsmäävät.
 |---|---|---|
 | Worker: kilpailun tila huoneessa, yhteislähtö, tulokset ja ennätykset, nopeustarkistus, testit | Pelikoodari | 0,5 pv |
 | Kilpailumoottori puhtaana C#:na (säännöt, kello, keräys, lähin pallo + hystereesi, palkinto, yksinpeli), Peli-testit | Pelikoodari | 1 pv |
-| Ilmapallot kohteiden yllä, poksahdus, korin kompassin kilpailutila, metrokartan kuittaus, listalennon esto, aloituspiste | Linssiseppä | 1–1,5 pv |
+| Ilmapallot kohteiden yllä, poksahdus, korin kompassin kilpailutila, metrokartan kuittaus, listalennon esto, aloituspiste | Linssiseppä | 1,5 pv |
 | Kutsu, lähtölaskenta ja tulostaulu olemassa olevilla pohjilla | Natiivi-UI | 0,5 pv |
 | Kahden simulaattorin kilpailutesti | Laitetestaaja | 0,5 pv |
 | **Yhteensä (luvun 5 lisäksi)** | | **noin 3,5–4 pv; juna 185 yhdessä pallojen kanssa tai 186** |
