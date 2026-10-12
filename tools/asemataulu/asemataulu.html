@@ -233,6 +233,11 @@ section.kiinni > :not(:first-child) { display: none !important; }
 section:not(.kiinni) .yhteenveto { display: none; }
 .otsikkonappi.taitto[aria-expanded] { text-decoration: none; }
 .otsikkonappi.taitto[aria-expanded="false"] { color: var(--himmea); }
+/* Vaatii toimia (omistaja 12.10. 10.3x, Raamattu ASEMATAULU: VAATII TOIMIA): rooli, jolla on omistajalle kysymys tai pyyntö,
+   joka vaatii hänen toimiaan. Yhteenvedossa punaisella ja lihavoituna vain silloin, kun niitä on; roolikortti punaisella taustalla. */
+.toimia { color: var(--punainen); font-weight: 700; }
+.rooli.tila-toimia { background: var(--punainen); color: var(--paperi); }
+.rooli.tila-toimia .r-teksti, .rooli.tila-toimia .r-effort { color: var(--paperi); }
 </style>
 
 <main class="wrap">
@@ -264,7 +269,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     <div class="roolit" id="laitteet"></div>
   </section>
   <section class="kortti" id="roolit-osio" hidden>
-    <h2><button type="button" class="otsikkonappi taitto" data-osio="roolit-osio" aria-expanded="true">Roolit</button> <span class="kysymykset" id="roolimaara"></span> <span class="kysymykset yhteenveto" id="roolit-yhteenveto"></span></h2>
+    <h2><button type="button" class="otsikkonappi taitto" data-osio="roolit-osio" aria-expanded="true">Roolit</button> <span class="kysymykset" id="roolimaara"></span></h2>
     <div id="roolit"></div>
   </section>
   <section class="kortti" id="huom-osio" hidden>
@@ -616,10 +621,22 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var ro = $('roolit');
     ro.replaceChildren();
     var roolit = ((r && r.rivit) || []).slice();
+    // Vaatii toimia (omistaja 12.10. 10.3x): rooli kirjoittaa itse talo/toimi-<rooli> {rooli, kysymys, ts} heti, kun sillä on omistajalle
+    // kysymys tai pyyntö, joka vaatii hänen toimiaan (tai viestii Postivahdille, joka kirjoittaa sen), ja poistaa dokumentin, kun asia
+    // on hoidettu. Postivahdin tila "kysyy" lasketaan samaksi.
+    var toimet = {};
+    Object.keys(tila).forEach(function (k) {
+      if (k.indexOf('toimi-') !== 0) return;
+      var d = tila[k];
+      if (d && d.kysymys && String(d.kysymys).trim()) toimet[String(d.rooli || k.slice(6))] = d;
+    });
+    var vaatii = function (x) { return !!toimet[x.nimi] || String(x.tila || '') === 'kysyy'; };
+    var nimetR = {};
+    roolit.forEach(function (x) { nimetR[x.nimi] = 1; });
+    Object.keys(toimet).forEach(function (n) { if (!nimetR[n]) roolit.push({ nimi: n, tila: 'kysyy' }); });
     $('roolit-osio').hidden = roolit.length === 0;
-    $('roolimaara').textContent = roolit.length ? '(' + roolit.length + ')' : '';
     var SONNET = { 'Postivahti': 1, 'Sisältökirjuri': 1, 'Laitetestaaja': 1 };
-    var jarj = function (x) { var s = String(x.tila || 'lepo'); return s === 'kysyy' ? 0 : s === 'odottaa' ? 1 : s === 'työ' ? 2 : 3; };
+    var jarj = function (x) { var s = String(x.tila || 'lepo'); return vaatii(x) ? -1 : s === 'odottaa' ? 1 : s === 'työ' ? 2 : 3; };
     roolit.sort(function (a, b) { return jarj(a) - jarj(b); });
     var ruudukko = luo('div', 'roolit');
     // "Työ käynnissä" korvataan tehtävän lyhyellä nimellä (Päätoimittajan tehtavat-dokumentti); muut tilatekstit (odottaa erää, levossa) sellaisinaan. Kellonaika piilossa (omistaja 10.10. 15.5x).
@@ -627,14 +644,14 @@ section:not(.kiinni) .yhteenveto { display: none; }
     roolit.forEach(function (x) {
       var malli = String(x.malli || (SONNET[x.nimi] ? 'Sonnet' : 'Opus')).toLowerCase();
       var s = String(x.tila || 'lepo');
-      var kortti = luo('div', 'rooli ' + (s === 'kysyy' ? 'tila-kysyy' : s === 'työ' ? 'tila-tyo' : s === 'odottaa' ? 'tila-odottaa' : 'tila-lepo'));
+      var kortti = luo('div', 'rooli ' + (vaatii(x) ? 'tila-toimia' : s === 'työ' ? 'tila-tyo' : s === 'odottaa' ? 'tila-odottaa' : 'tila-lepo'));
       var paa = luo('div', 'r-paa');
       paa.append(luo('span', 'piste' + (malli.indexOf('sonnet') >= 0 ? ' sonnet' : '')), luo('span', '', x.nimi || ''));
       // Effort-taso nimen perässä pienemmällä, ei lihavoituna (omistaja 10.10. 22.5x); Postivahti vie kentän effort sessionimestä.
       if (x.effort) paa.append(luo('span', 'r-effort', '(' + x.effort + ')'));
       kortti.append(paa);
       var tyossa = s === 'työ' || /työ käynnissä/i.test(String(x.teksti || ''));
-      var selite = (tyossa && tehtavat[x.nimi]) || x.teksti;
+      var selite = toimet[x.nimi] ? 'Vaatii toimia: ' + toimet[x.nimi].kysymys : (tyossa && tehtavat[x.nimi]) || x.teksti;
       if (selite) kortti.append(luo('div', 'r-teksti', selite));
       ruudukko.append(kortti);
     });
@@ -643,11 +660,22 @@ section:not(.kiinni) .yhteenveto { display: none; }
     // Pienennetyn osion yhteenveto otsikkorivillä (omistaja 11.10. 19.3x).
     var tyonAlla = tlRivit.filter(function (x) { return /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
     $('tyolista-yhteenveto').textContent = '(työn alla ' + tyonAlla + ')';
-    var kaytossa = lr.filter(function (x) { return x.tila === 'käytössä'; }).map(function (x) { return x.nimi; });
-    $('laitteet-yhteenveto').textContent = kaytossa.length ? '(käytössä: ' + kaytossa.join(', ') + ')' : '(kaikki vapaana)';
-    var lk = function (t) { return roolit.filter(function (x) { return String(x.tila || 'lepo') === t; }).length; };
-    var ro2 = [['työssä', lk('työ')], ['odottaa', lk('odottaa')], ['kysyy', lk('kysyy')]].filter(function (x) { return x[1]; });
-    $('roolit-yhteenveto').textContent = ro2.length ? ro2.map(function (x) { return x[0] + ' ' + x[1]; }).join(', ') : 'kaikki levossa';
+    // Laitteiden käyttö prosentteina (omistaja 12.10. 10.3x): nimi ja prosessorin käyttö, kun Postivahti on mitannut sen.
+    var kaytossaP = lr.filter(function (x) { return x.tila === 'käytössä'; }).map(function (x) {
+      return x.nimi + (typeof x.prosessori === 'number' ? ' ' + Math.max(0, Math.min(100, Math.round(x.prosessori))) + ' %' : '');
+    });
+    $('laitteet-yhteenveto').textContent = kaytossaP.length ? '(käytössä: ' + kaytossaP.join(', ') + ')' : '(kaikki vapaana)';
+    // Roolit (omistaja 12.10. 10.3x): "(1/13 käytössä, vaatii toimia: 1)"; vaatii toimia punaisella ja lihavoituna vain, kun niitä on.
+    var rm = $('roolimaara');
+    rm.replaceChildren();
+    var perus = roolit.filter(function (x) { return nimetR[x.nimi]; });
+    if (perus.length) {
+      var tyoN = perus.filter(function (x) { return String(x.tila || 'lepo') === 'työ'; }).length;
+      var toimiaN = roolit.filter(vaatii).length;
+      rm.append(document.createTextNode('(' + tyoN + '/' + perus.length + ' käytössä'));
+      if (toimiaN) { rm.append(document.createTextNode(', ')); rm.append(luo('span', 'toimia', 'vaatii toimia: ' + toimiaN)); }
+      rm.append(document.createTextNode(')'));
+    }
     var hu = $('huom');
     hu.replaceChildren();
     var hr = (h && h.rivit) || [];

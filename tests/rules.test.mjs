@@ -665,8 +665,8 @@ test('pankin apua ei enää ole: rahaton pelaaja ei saa rahaa vuoron alussa', ()
   assert.equal(p.money, 0);
 });
 
-test('aloitusraha on 400 puntaa', () => {
-  assert.equal(START_MONEY, 400);
+test('aloitusraha on 300 puntaa (juna 183)', () => {
+  assert.equal(START_MONEY, 300);
 });
 
 /** Yksinpeli maailmankartalla, pelaaja kaupungissa (vaellus). */

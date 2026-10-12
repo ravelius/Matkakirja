@@ -22,8 +22,9 @@
  * Trajcinema, CC BY 4.0. Ei tunnistettavia yksityishenkilöitä (satama-
  * ja puutarhamaisema).
  *
- * ÄÄNITETTÄ EI VIELÄ OLE — puuttuva tiedosto on hiljainen (js/luenta.js
- * playDiaryVoice), samoin kuin muilla kevyillä pakeilla.
+ * ÄÄNITE (Äänittäjä 11.10.2026): isoisän luenta on generoitu tästä
+ * luenta-kentästä ja viety ämpäriin polkuun audio/puhe-fokus-matkakirja-valletta.mp3
+ * (aikaleimat assets/aikaleimat/). Kesto ja polku: js/media.js HORATIO_TUOTANTO.
  */
 export const FOKUSVIRTA_VALLETTA = {
   kaupunki: 'valletta',
@@ -40,8 +41,9 @@ export const FOKUSVIRTA_VALLETTA = {
       + 'Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden '
       + 'purkamisesta on puhuttu täällä useaan otteeseen — paikallinen '
       + 'upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.',
-    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääntä EI ole generoitu, omistajan lupa vaaditaan). */
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääni generoitu 11.10.2026 tästä tekstistä). */
     luenta: "[warmly] Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. [curious] Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — [softly] paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.",
+    aanite: 'assets/audio/puhe-fokus-matkakirja-valletta.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

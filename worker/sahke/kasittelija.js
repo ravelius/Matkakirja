@@ -33,6 +33,7 @@
  *   POST /sahke             {koodi, jasenId, avain, pohjaId, paikkaId}
  *   POST /apu/kysy          {koodi, jasenId, avain, apuId, kysymys, vaihtoehdot}
  *   POST /apu/vastaa        {koodi, jasenId, avain, apuId, veikkaus}
+ *   POST /retkikunta/eroa   {koodi, jasenId, avain} — paikka ja nimimerkki vapaiksi, tyhjä retkikunta pois
  *
  * TURVA: jokainen kirjoitus (ja tilannekuvan luku) vaatii kolmikon
  * koodi + jasenId + avain. Avain on jäsenkohtainen salaisuus, joka
@@ -83,11 +84,19 @@ export const JASENIA_ENINTAAN = 8;
 /*
  * LIITTYMISKOODI luetaan ääneen ja näpytellään puhelimella, joten
  * aakkostosta puuttuvat sekoittuvat merkit I, O, 0 ja 1 (sama
- * aakkosto kuin pro-koodeissa). 32 merkkiä jakaa 256 tasan, joten
- * arvonta ei vinoudu. Kuusi merkkiä = noin miljardi koodia.
+ * aakkosto kuin pro-koodeissa). Kuusi merkkiä = noin 730 miljoonaa koodia.
+ *
+ * ARVONTA ILMAN S:ÄÄ JA 5:TÄ (PT 12.10., kiire): asiakkaiden koodikenttä
+ * (web js/sahke.js SAHKE_KOODIN_MERKIT, natiivi SahkeVakiot.KoodinMerkit)
+ * suodattaa pois myös S:n ja 5:n, joten noin kolmannes vanhan aakkoston
+ * koodeista ei mennyt kenttään ja liittyminen epäonnistui. Arvonta käyttää
+ * nyt asiakkaiden aakkostoa (30 merkkiä, hylkäysotanta: ei vinoumaa).
+ * TARKISTUS hyväksyy yhä vanhan aakkoston, jotta jo perustetut koodit
+ * (S tai 5 mukana) toimivat perustajan omalla laitteella.
  */
 export const KOODIN_PITUUS = 6;
 const KOODIN_MERKIT = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+export const KOODIN_ARVONTAMERKIT = 'ABCDEFGHJKLMNPQRTUVWXYZ2346789';
 
 /** Jäsentunnus on julkinen retkikunnan sisällä; avain ei ole koskaan. */
 const TUNNUKSEN_MERKIT = 'abcdefghijkmnpqrstuvwxyz23456789';
@@ -212,7 +221,19 @@ function arvo(merkit, pituus) {
   return ulos;
 }
 
-export function teeKoodi() { return arvo(KOODIN_MERKIT, KOODIN_PITUUS); }
+/** Tasajakauma mille tahansa aakkoston koolle: tavut ≥ suurin monikerta hylätään. */
+function arvoTasan(merkit, pituus) {
+  const katto = 256 - (256 % merkit.length);
+  let ulos = '';
+  while (ulos.length < pituus) {
+    const tavut = new Uint8Array(pituus * 2);
+    crypto.getRandomValues(tavut);
+    for (const tavu of tavut) if (tavu < katto && ulos.length < pituus) ulos += merkit[tavu % merkit.length];
+  }
+  return ulos;
+}
+
+export function teeKoodi() { return arvoTasan(KOODIN_ARVONTAMERKIT, KOODIN_PITUUS); }
 export function teeJasenId() { return arvo(TUNNUKSEN_MERKIT, JASENTUNNUKSEN_PITUUS); }
 export function teeAvain() { return arvo(TUNNUKSEN_MERKIT, AVAIMEN_PITUUS); }
 
@@ -552,6 +573,27 @@ async function avaaKirjoitus(pyynto, varasto, kors, nyt, sallitutKentat) {
   return { runko, jasen: loyto.jasen };
 }
 
+/**
+ * POST /retkikunta/eroa (Julkaisijan löydös 12.10., PT): ennen tätä ero tapahtui vain asiakkaassa, joten paikka ja
+ * nimimerkki jäivät varatuiksi ja kahdeksan liittymis–eroamiskerran jälkeen retkikunta oli pysyvästi täynnä (409).
+ * Jäsenen rivi poistetaan; jos ketään ei jää, retkikunta sisältöineen poistetaan. Vanhat asiakkaat (TF 183) eivät
+ * kutsu reittiä, joten muutos on yhteensopiva; hiljentynyt retkikunta poistuu edelleen siivouksessa (30 vrk).
+ * Ei kirjoitusrajoitinta: ero on kertaluonteinen, ja sen jälkeen tunnukset eivät enää kelpaa.
+ */
+async function eroa(pyynto, varasto, kors) {
+  let runko;
+  try { runko = await pyynto.json(); } catch { return vastaa({ virhe: 'Runko ei jäsenny' }, { status: 400, ...kors }); }
+  const ylimaarainen = ylimaarainenKentta(runko, ['koodi', 'jasenId', 'avain']);
+  if (ylimaarainen) return vastaa({ virhe: `Tuntematon kenttä: ${ylimaarainen}` }, { status: 400, ...kors });
+  const loyto = await tunnista(varasto, runko);
+  if (!loyto) return vastaa({ virhe: 'Tunnukset eivät täsmää.' }, { status: 401, ...kors });
+  const { koodi, jasenId } = loyto.jasen;
+  await varasto.poistaJasen(koodi, jasenId);
+  const jaljella = await varasto.haeJasenet(koodi);
+  if (jaljella.length === 0) await varasto.poistaRetkikunta(koodi);
+  return vastaa({ ok: true, jaljella: jaljella.length }, kors);
+}
+
 /** POST /sahke — valkolistattu pohja ja pelin kaupunkitunnus, ei muuta. */
 async function sahke(pyynto, varasto, kors, nyt) {
   const avattu = await avaaKirjoitus(pyynto, varasto, kors, nyt,
@@ -752,6 +794,8 @@ export async function kasittele(pyynto, env, apurit = {}) {
       return pyynto.method === 'POST' ? luo(pyynto, varasto, kors, nyt) : vain('POST');
     case '/retkikunta/liity':
       return pyynto.method === 'POST' ? liity(pyynto, varasto, kors, nyt) : vain('POST');
+    case '/retkikunta/eroa':
+      return pyynto.method === 'POST' ? eroa(pyynto, varasto, kors) : vain('POST');
     case '/retkikunta/tila':
       return pyynto.method === 'GET' ? tila(pyynto, url, varasto, kors, nyt) : vain('GET');
     case '/sahke':

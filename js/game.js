@@ -16,10 +16,10 @@ import { pulmanGeneraattori } from './pulmageneraattorit.js';
 import { taytaPohja } from './tekstipohja.js';
 import { HINTATASOT } from './packs/hintatasot.js';
 
-// 300 → 400 (omistaja 27.9.2026 klo 10.3x, talouden vaihe 1): päiväkulut alkavat
-// heti, joten aloituskassan on kestettävä ensimmäinen viikko ja yksi lento.
-export const START_MONEY = 400;
-export const SEA_FARE = 100; // laivamatkan hinta vuorolta
+// 400 → 300 (omistaja 11.10.2026 klo 22.4x PT:n kautta, juna 183): alkuraha 300 kaikille,
+// ja matkustus kalliimmaksi (js/rules.js). Ennen 300 → 400 (27.9.2026, talouden vaihe 1).
+export const START_MONEY = 300;
+export const SEA_FARE = 200; // laivamatkan hinta vuorolta (= SEA_FEE)
 /*
  * BUSSILIPPU 50 puntaa (js/rules.js BUS_FARE) — vietynä tästä, koska
  * peli-ikkuna ja käyttöliittymä lukevat matkahinnat game.js:stä

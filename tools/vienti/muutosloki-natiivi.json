@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (183)",
+   "paiva": "2026-10-12",
+   "teksti": "Matka alkaa Euroopasta, ensimmäinen aarre on Kolme veljestä -riipus ja alkuraha on £300. ISS:lle lennetään raketilla Andøyasta Pulu kyljessä. Uutta myös aarretehtävät, lautapelien opastus, taidehalli ja yhtenäiset kohdekartat, ja kaupunkiin saapuminen on sujuvampi."
+  },
+  {
    "versio": "1.1 (182)",
    "paiva": "2026-10-11",
    "teksti": "Matka alkaa Ateenasta, Pariisista tai Tukholmasta uudella introlla, ja Pulu opastaa alussa. Olavinlinnaa pääsee pelaamaan nostokortista, ja kukkaro näyttää rahan muutokset. Taidemuseossa teokset näkyvät läheltä, ja uusia linssejä löytyy viidestä kaupungista."
