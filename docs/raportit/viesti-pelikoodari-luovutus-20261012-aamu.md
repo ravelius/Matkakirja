@@ -45,3 +45,10 @@ Tila: JONO TYHJÄ (PT kirjasi, lepo). PT herättää, kun Codexin pääkaupunkie
 - Pallot näkyviin (#4501 hyväksytty, juna 185): toteutus retkikuntatestin jälkeen. Hibernation-WebSocket, 1 Hz vain pallonäkymässä, yhteys kiinni muuten, Free-tason ylitys → hallittu siirtymä ilman palloja. Nimilappu vain omalle retkikunnalle, Googlen nimeäminen aina näkyvissä.
 - Shakki: kartoitus #4503 (docs).
 - Äänisivu: nopeat introt Pelissä (90), kippi + jazz palautettu Odottaa-osioon (46).
+
+## Tila 12.10. ilta
+- Juna 184 (NS:llä): d3dea2004 (sähke aloituskaupunki + lokit), 51fd69084 (tupla-8), fdce53c2c (jäsenlista + eroa), cd364de79 (pelit-laskuri + vastustajarivi).
+- Workerit: #4507 (koodi ilman S/5, julkaistu), #4509 (eroa, mergetty), #4508 web tupla-8 junan mukana, #4513 pallot + kisa (DO-migraatio odottaa PT:n kuittausta → Julkaisija).
+- Aarretehtävät 184: pelikoodari/aarre-lajit-184 (Valinta, Kartta + NUI karttavalinta 559496447 yhdistetty 99c8a1a17, palkkiot × 0,4, testikartta-komento). NUI kuvaa Kartta-lajin.
+- Pallokisa 184 (lippu.pallokisa): proto pelikoodari/pallokisa-184 0e050ce92 = moottori Linssit/Ydin/Pallokisa (Pallokisa, Kaasu, KisaSelostus, PelaajaVarit, KisaViestit, PalloPuskuri) + Scripts/Peli PalloYhteys (ClientWebSocket) + PallokisaOhjain + NUI:n UI. LS1 kytkee Aloita/Paivita/Muut. Selostus odottaa SK:n käsikirjoitusta ja omistajan hyväksyntää (lippu.pallokisa-selostus). Värit: 0 punainen · 1 sininen · 2 keltainen · 3 vihreä · 4 oranssi · 5 violetti · 6 valkoinen · 7 musta.
+- Seuraava: #4513 deployn jälkeen LT:n kahden simun kisatesti (viive lokiin, tavoite < 0,5 s).
