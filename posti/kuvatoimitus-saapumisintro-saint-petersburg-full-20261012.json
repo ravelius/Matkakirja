@@ -6,6 +6,130 @@
   "productionComplete": true,
   "assets": [
     {
+      "id": "saint-petersburg-intro-4-v3",
+      "slot": 4,
+      "cityName": "Pietari",
+      "gameCityId": "pietari",
+      "mediaSlug": "saint-petersburg",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/saint-petersburg-4-vasilinsaaren-arki-native-v3.png",
+      "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+      "bytes": 2754211,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+      "r2Key": "julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: one completely NEW Saint Petersburg travel-game arrival intro slot 4 illustration, current day. Generate from scratch, no editing or reuse of a previous composition. Native PNG 1536x1024 pixels, landscape 3:2, opaque RGB sRGB.\nScene: an ordinary enclosed old residential courtyard on Vasilievsky Island in Saint Petersburg, with anonymous simple three-storey nineteenth-century plaster apartment walls in subdued pale ochre and grey-beige, plain rectangular sash windows. Quiet everyday life. This is a plausible anonymous courtyard, not one named building or an asserted exact site photograph.\nComposition: eye-level 40mm camera at one corner looking obliquely into the open courtyard. A very simple plain plaster wall with ordinary rectangular windows closes the far background. Two small distant adult residents walk away, seen strictly from behind, in completely plain current-day casual jackets and trousers. People are small and the city courtyard is the main subject; no recognizable face. One ordinary deciduous tree with asymmetric real branching grows from an irregular soil patch toward the left, subtle scattered natural leaves on uneven ordinary paving.\nCritical redesigned layout: the camera views ONLY bare rendered wall stretches and ordinary window bays. ALL entrances are outside the frame. No visible doorway at any depth, no arched passage, no archway, no gate, no arcade, no through-street, no visible doorbell or intercom. No wall-mounted fixtures whatsoever: no panels, address/name plates, plaques, electrical boxes, signs, labels, notices, stickers, mailboxes, door hardware, bells, intercoms, traffic markers, drainpipes or cables. Even the farthest wall is completely bare apart from plain windows. No rectangular fitting or dark marked patch anywhere on a wall. Entirely unmarked plaster surfaces, not decorated, not scrawled on, no letter-like weathering shapes.\nCamera style: natural diffuse overcast late-spring morning light, moderate natural depth of field, muted genuine color, believable scale and perspective, fine irregular plaster and stone textures, individually varied bark and leaves. Looks like an ordinary unprocessed real camera photograph. Natural candid daily life, no staged postcard glamour, no HDR, CGI, illustration, painterly effect, plastic material or stamped foliage.\nAbsolute exclusions in the WHOLE frame, near and far: NO writing, text, letters, numbers, house numbers, symbols, logos, brands, recognizable brand stripes, watermarks or borders. No cars, bicycles, motorbikes, buses, boats or any transportation or traffic surface visible. No commercial premises, merchandise, products, food or drinks. No palace, church, recognizable monument, landmark, named modern architect work, artwork, statue, mural, war or military subjects. Window interiors plain and free of posters or patterned displays. No foreground face. No added decorative objects. Walls must remain completely clear and unmarked throughout the entire image.",
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/en/leisure/places/tp-202016-andreevskiy-bulvar-peshekhodnaya-zona-na-6-7-liniyakh-vasilevskogo-ostrova/",
+          "publisher": "Saint Petersburg official city tourism portal",
+          "readAt": "2026-10-12T20:20:10.899844+00:00",
+          "readFacts": "Vasilievsky Island lines run between the Neva and Smolenka; ordinary stone streetscape developed in nineteenth and early twentieth centuries. Scene is an anonymous typical residential courtyard, not a named monument or reproduced design. Modern memorial sculptures/tram and all named landmarks excluded."
+        }
+      ],
+      "caption": "Arkinen kävelyhetki Pietarin Vasilinsaaren tavallisella asuinpihalla. Havainnekuva.",
+      "QA": {
+        "id": "saint-petersburg-intro-4-v3",
+        "slot": 4,
+        "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+        "approvedForTechnicalDelivery": true,
+        "approvedForDelivery": true,
+        "wholeFrameInspected": true,
+        "fullFrameInspected": true,
+        "nativeDetailInspected": true,
+        "nativeDetailsInspected": true,
+        "reviewedAt": "2026-10-12T20:29:52.866775+00:00",
+        "reviewer": "north-session-owner-independent-of-generator",
+        "reason": "PASS: täysin uusi tavallinen rapattu Vasilinsaaren asuinpiha. Kaikki paneelit, kilvet, ovikellot ja holvien merkintäpaikat poistettu sommittelusta; kuvassa vain paljaat seinät ja tavalliset ikkunat, puu ja selin kävelevät ihmiset. Koko takaseinä, kaikki ikkunavälit, sivuseinät ja puunkuori tarkastettu natiivina, ei tekstiä/numeroita/logoja, liikennevälineitä tai sotaa/sotilaita.",
+        "detailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/session-owner-review/detail-1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/session-owner-review/detail-2.png"
+        ],
+        "ownerAcceptanceRequired": false,
+        "ownerAcceptanceVerified": false,
+        "deliveryAuthorizedByOwner": true
+      },
+      "R2Proof": {
+        "checkedAt": "2026-10-12T20:30:12.939293+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+        "bytes": 2754211,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+            "http": 200,
+            "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+            "bytes": 2754211,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png?verify=qa-followup-4bddb4d0e6c8c1c9-1791837012939321000",
+            "http": 200,
+            "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+            "bytes": 2754211,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "assetVersion": 3,
+      "supersedes": {
+        "id": "saint-petersburg-intro-4-v2",
+        "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
+        "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/saint-petersburg/manifest.json",
+        "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/qa.json"
+      },
+      "supersedesSHA256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
+      "rejectedQAPointer": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/rejected-qa.json",
+      "priorSlotGenerationCalls": 2,
+      "actualNewCallsThisRound": 1,
+      "exportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/saint-petersburg-4-vasilinsaaren-arki-native-v3.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+        "bytes": 2754211,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "ownerAcceptanceRequired": false,
+      "ownerAcceptanceVerified": false,
+      "deliveryAuthorizedByOwner": true,
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
       "id": "saint-petersburg-intro-5-v1",
       "slot": 5,
       "cityName": "Pietari",
@@ -372,26 +496,7 @@
       }
     }
   ],
-  "omittedItems": [
-    {
-      "id": "saint-petersburg-intro-4-v2",
-      "slot": 4,
-      "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
-      "fullFrameInspected": true,
-      "nativeDetailsInspected": true,
-      "approvedForDelivery": false,
-      "reason": "Ei QA-hyväksyntää: valitunv2:n takaseinällä näkyy pieni merkitty osoitekilven kaltainen paneeli. Pending-quality-fix; v2 on jo laatukorjaus, joten tarvitaan jatkopäätös.",
-      "observations": [
-        "Valittu v2: fotorealistinen tavallinen asuinpiha/kadun sisäinen asuinmiljöö, kolme henkilöä selin ja geneerinen polkupyörä. Luonnollinen kiveys, rappaus, puunkuori ja lehdet; koherentti valo ja perspektiivi.",
-        "HYLKÄYS: takaseinällä ikkunan yläoikean puolen ja holvikäytävän välissä noin x948..958 y489..502 on pieni vaalea/sinikehyksinen osoitekilven kaltainen merkintä, jonka sisällä näkyy tumma kirjain-/numeromainen kuvio. Tarkkaa numeroa ei tulkita, mutta merkitty kilpi rikkoo no address numbers/text -vaatimusta.",
-        "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-rear-wall-plaque.png; laajempi konteksti /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-bark-leaves.png",
-        "Henkilöt, pyörä, muut seinäpinnat ja kuori/lehtikuvio tarkastettu: ei muuta selvää logoa, muovisuutta tai leimattua pintaa.",
-        "V2 on jo yksi tarpeellinen kokonaan uusi laatukorjaus. Tila pending-quality-fix; jatkotapa kuuluu koordinaattorin päätökseen, ei automaattista uutta generointia tai paikallista rasterikorjausta.",
-        "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-people-bike-walls.png",
-        "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
-      ]
-    }
-  ],
+  "omittedItems": [],
   "generatedImageCount": 5,
   "missingSlots": [],
   "builtInToolOnly": true,
@@ -473,11 +578,29 @@
       ]
     }
   ],
-  "pendingQualityFixSlots": [
-    4
+  "supplementalSources": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/manifest.json",
+      "sha256": "0cdf675b4467c467e194bdfebeb73ab5848684b864cdb1bbefb25a28d968761e",
+      "assetID": "saint-petersburg-intro-4-v3",
+      "slot": 4,
+      "additionalCalls": 1
+    }
   ],
-  "allRequestedSlotsDelivered": false,
-  "actualCalls": 6,
+  "deliveryRepairSelection": {
+    "reportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/repair-qa-20261012.json",
+    "reportSHA256": "4749509afb93bdc034cfcf1ab5ae8c0dce4714591883aad97cf0e0551bd22a32",
+    "ids": [
+      "saint-petersburg-intro-4-v3"
+    ],
+    "selectedAt": "2026-10-12T21:27:26.652874+00:00"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "gameIntegrated": false,
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 7,
   "deliveryQAEvidence": {
     "mediaSlug": "saint-petersburg",
     "gameCityId": "pietari",
@@ -491,21 +614,59 @@
     ],
     "assets": [
       {
-        "id": "saint-petersburg-intro-4-v2",
+        "id": "saint-petersburg-intro-4-v3",
         "slot": 4,
-        "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
+        "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/saint-petersburg-4/saint-petersburg-4-vasilinsaaren-arki-native-v3.png",
         "fullFrameInspected": true,
         "nativeDetailsInspected": true,
-        "approvedForDelivery": false,
-        "reason": "Ei QA-hyväksyntää: valitunv2:n takaseinällä näkyy pieni merkitty osoitekilven kaltainen paneeli. Pending-quality-fix; v2 on jo laatukorjaus, joten tarvitaan jatkopäätös.",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa korjaus-QA:ssa: aiempi merkintäongelma puuttuu ja koko uuden kuvan fotorealismi-, henkilö- ja ei-tekstiä/logoja-vaatimukset täyttyvät. Päätös on sidottu actual final SHA256:een.",
         "observations": [
-          "Valittu v2: fotorealistinen tavallinen asuinpiha/kadun sisäinen asuinmiljöö, kolme henkilöä selin ja geneerinen polkupyörä. Luonnollinen kiveys, rappaus, puunkuori ja lehdet; koherentti valo ja perspektiivi.",
-          "HYLKÄYS: takaseinällä ikkunan yläoikean puolen ja holvikäytävän välissä noin x948..958 y489..502 on pieni vaalea/sinikehyksinen osoitekilven kaltainen merkintä, jonka sisällä näkyy tumma kirjain-/numeromainen kuvio. Tarkkaa numeroa ei tulkita, mutta merkitty kilpi rikkoo no address numbers/text -vaatimusta.",
-          "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-rear-wall-plaque.png; laajempi konteksti /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-bark-leaves.png",
-          "Henkilöt, pyörä, muut seinäpinnat ja kuori/lehtikuvio tarkastettu: ei muuta selvää logoa, muovisuutta tai leimattua pintaa.",
-          "V2 on jo yksi tarpeellinen kokonaan uusi laatukorjaus. Tila pending-quality-fix; jatkotapa kuuluu koordinaattorin päätökseen, ei automaattista uutta generointia tai paikallista rasterikorjausta.",
-          "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-people-bike-walls.png",
-          "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
+          "Uusi final ja alkuperäinen native avattu erikseen kokonaisina tools.view_image detail original. Molemmat puoliskot kattavat kaikki julkisivut ja kehysreunat natiivipikseleinä; ihmiset ja vaatetus tarkastettu erillisessä lähirajauksessa.",
+          "Vanhan v2:n takaseinän merkitty osoitekilpi ei esiinny uudessa v3-koostumuksessa. Takaseinä on suljettu paljas ikkunajulkisivu; holvikäytävä ja sisäänkäyntialueet on jätetty kokonaan pois. Koko kehyksessä ei havaittu osoite-/nimikilpeä, kirjoitusta, numeroa, tarraa, paneelimerkintää, logoa tai brändikuviota.",
+          "Kaksi aikuista nähdään kokonaan selin, eikä kasvoja näy. Geneerisissä vaatteissa ja laukussa ei ole merkintöjä; näkyvät vartalot ja raajat ovat anatomisesti uskottavat. Ihmiset ovat asuinmiljöölle alisteisia.",
+          "Luonnollinen haarautuva puu, epäsäännöllinen kuori/lehdistö, vaihtelevat rappauskulumat ja pihakivet. Ei leimattua pintaa tai muovisuutta; johdonmukainen hajavalo ja perspektiivi. Ei ajoneuvoja, ruokaa, eläimiä, taidetta, palatsia, kirkkoa, muistomerkkiä, sotilasaihetta tai nimettyä modernia suunnittelukohdetta.",
+          "Nimetön tyypillinen Vasilinsaaren asuinpiha on havainnollistus, ei täsmällisen tunnetun rakennuksen paikkavalokuva. Hyväksyntä koskee vain Pietari4-v3:n uusia final-tavuja; v2:n hylkäys säilyy aiemmassa SHA:ssaan."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/repair-crops/slot4-v3-left-bark-walls.png",
+            "sha256": "18159d4a9c21833fd11d715152ca28da81182bb335f745dddac5045101477964",
+            "originalPixelBox": [
+              0,
+              0,
+              800,
+              1024
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/repair-crops/slot4-v3-right-bare-walls.png",
+            "sha256": "af2c473bbfbe3de3d4a216e783932e2c0af879367d4e6349034280b0b86f39d1",
+            "originalPixelBox": [
+              736,
+              0,
+              1536,
+              1024
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/repair-crops/slot4-v3-people-clothes.png",
+            "sha256": "cba9d416f368a56f34cbd6f483426d65e788f0ac23e41f5fcc2e9a1860f8ccb5",
+            "originalPixelBox": [
+              830,
+              580,
+              1080,
+              860
+            ],
+            "resized": false,
+            "inspected": true
+          }
         ]
       },
       {
@@ -580,18 +741,50 @@
     "ownerAcceptance": false,
     "gameIntegrated": false,
     "reviewedAt": "2026-10-12T18:09:45.571895+00:00",
-    "sourceManifestSha256": "827379afe584d85c1a1e39848457b38d6de45eccdcd2f7e61d00f6c4cb3a1843"
+    "sourceManifestSha256": "827379afe584d85c1a1e39848457b38d6de45eccdcd2f7e61d00f6c4cb3a1843",
+    "repairQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/repair-qa-20261012.json",
+    "repairQASHA256": "4749509afb93bdc034cfcf1ab5ae8c0dce4714591883aad97cf0e0551bd22a32",
+    "ownerAcceptanceRequired": false
   },
   "deliveryR2Proof": {
     "mediaSlug": "saint-petersburg",
-    "verifiedAt": "2026-10-12T18:17:11.505162+00:00",
+    "verifiedAt": "2026-10-12T21:27:33.417682+00:00",
     "assets": [
+      {
+        "id": "saint-petersburg-intro-4-v3",
+        "slot": 4,
+        "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+        "bytes": 2754211,
+        "verifiedAt": "2026-10-12T21:27:31.688348+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+            "http": 200,
+            "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+            "bytes": 2754211,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png?delivery-verify=4bddb4d0e6c8c1c9-1791840451688343000",
+            "http": 200,
+            "sha256": "4bddb4d0e6c8c1c99f6ffb1b647b245982548f8a0d680b74a9eb2deb71097960",
+            "bytes": 2754211,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
       {
         "id": "saint-petersburg-intro-5-v1",
         "slot": 5,
         "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
         "bytes": 2599299,
-        "verifiedAt": "2026-10-12T18:17:09.452758+00:00",
+        "verifiedAt": "2026-10-12T21:27:31.688437+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
@@ -604,7 +797,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png?delivery-verify=0b1f22abdffd08ce-1791829029452753000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png?delivery-verify=0b1f22abdffd08ce-1791840451688435000",
             "http": 200,
             "sha256": "0b1f22abdffd08ce67ad6a86a90338b1e92aa6acac49bc6a7cbba8ee5733f0e4",
             "bytes": 2599299,
@@ -620,7 +813,7 @@
         "slot": 6,
         "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
         "bytes": 2300027,
-        "verifiedAt": "2026-10-12T18:17:09.452886+00:00",
+        "verifiedAt": "2026-10-12T21:27:31.688512+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png",
@@ -633,7 +826,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png?delivery-verify=21a22a5c30d3f730-1791829029452884000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-6-jelaginin-puistojuhla-intro-v1.png?delivery-verify=21a22a5c30d3f730-1791840451688511000",
             "http": 200,
             "sha256": "21a22a5c30d3f730abac3d96cd2cd6c6a01f81dbb1b38d5967620fa14fe5ba81",
             "bytes": 2300027,
@@ -649,7 +842,7 @@
         "slot": 7,
         "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
         "bytes": 2453962,
-        "verifiedAt": "2026-10-12T18:17:09.461057+00:00",
+        "verifiedAt": "2026-10-12T21:27:32.468309+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
@@ -662,7 +855,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png?delivery-verify=304ea74d18337161-1791829029461041000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png?delivery-verify=304ea74d18337161-1791840452468299000",
             "http": 200,
             "sha256": "304ea74d1833716173e30c1701f00b6f6a3077b292c4dc57af6c608e04216743",
             "bytes": 2453962,
@@ -678,7 +871,7 @@
         "slot": 8,
         "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
         "bytes": 2373904,
-        "verifiedAt": "2026-10-12T18:17:10.361792+00:00",
+        "verifiedAt": "2026-10-12T21:27:32.497876+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png",
@@ -691,7 +884,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png?delivery-verify=87ea55e1e3bd5d23-1791829030361783000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/saint-petersburg/20261012-full/saint-petersburg-8-moika-sininen-silta-1873-intro-v1.png?delivery-verify=87ea55e1e3bd5d23-1791840452497870000",
             "http": 200,
             "sha256": "87ea55e1e3bd5d23ec72484aced47e68553e37c47649ca2203ad840a2458e7b3",
             "bytes": 2373904,
@@ -723,13 +916,11 @@
   "stages": {
     "generated": null,
     "NAS": 5,
-    "QA": 4,
-    "R2": 4,
+    "QA": 5,
+    "R2": 5,
     "Git": "this handoff",
     "gallery": "pending"
   },
-  "ownerAcceptance": false,
-  "ownerAcceptanceRequired": false,
   "ownerReviewBeforeGameDelivery": false,
   "ownerAuthorization": {
     "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
@@ -772,6 +963,5 @@
     "ownerAcceptanceNotImpliedByAuthorization": true
   },
   "gameIntegrationAllowedWithoutOwnerAcceptance": true,
-  "gameIntegrated": false,
-  "deliveredAt": "2026-10-12T20:05:04.821130+00:00"
+  "deliveredAt": "2026-10-12T21:28:31.542596+00:00"
 }

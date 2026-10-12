@@ -5,6 +5,135 @@
   "updatedAt": "2026-10-12T17:28:10.185904+00:00",
   "assets": [
     {
+      "id": "helsinki-4-asuinalueen-arki-intro-v2",
+      "slot": 4,
+      "cityName": "Helsinki",
+      "gameCityId": "helsinki",
+      "mediaSlug": "helsinki",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/helsinki-4-asuinalueen-arki-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/native/helsinki-4-asuinalueen-arki-intro-v2-native.png",
+      "r2Key": "julisteet/saapumisintro/helsinki/20261012-full/helsinki-4-asuinalueen-arki-intro-v2.png",
+      "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Create one ENTIRELY NEW complete camera-looking photograph-like illustration of present-day Helsinki, not an edit and not a reuse of any previously shown image. Final native image must be exactly1536x1024 landscape3:2, opaque RGB sRGB PNG. Ordinary anonymous old Helsinki residential pedestrian lane, modest three-and-four-storey pale cream, soft gray and muted sage plaster apartment facades with simple windows, rough dark granite foundation blocks and everyday granite paving. Standing eye-level35mm camera view diagonally along the residential block into depth, a new composition with the lane and old homes as the main subject. Two very small distant adults walking away at least40meters from the camera, in plain ordinary modern coats, completely from behind, faces and clothing details unreadable. Calm Nordic weekday morning, soft natural overcast daylight, restrained authentic colors and moderate camera contrast. Individual naturally worn plaster, irregular stone edges and mortar, a few naturally asymmetrical trees with individualized irregular leaves; real camera depth and texture. STRICT OBJECT REMOVAL THROUGH NEW COMPOSITION: There are no bicycles, bicycle baskets, cars, vans, motorcycles, scooters, buses, trams, boats or other vehicles anywhere, foreground or background; do not place any vehicle or basket in the distance. Keep the foreground simple: bare paving, blank plaster, plain windows and unmarked doors, a few natural tree trunks. All walls, doors and windows are completely unmarked. No signs, signposts, plaques, empty sign panels, number plates, address numbers, street names, stickers, decals, posters, labels, letterboxes, intercom panels, shop fronts, awnings, graffiti, painted markings, patterned clothing or brand details. No text, letters, numerals, logos, emblems, branding, trademarks, watermarks or borders anywhere, including tiny background details. Plain unlettered timber door panels and bare window glass, no decorations or labels. No food, art, sculpture, famous landmarks, named contemporary architect-designed works, military elements or recognizable real faces. No HDR, CGI, painted or cinematic look, plastic material, stamped foliage or mechanically repeated textures. Do not draw any caption. Generate only this one complete fresh scene.",
+      "sources": [
+        {
+          "url": "https://historia.hel.fi/en/alueet/southern/kaivopuisto",
+          "title": "City of Helsinki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978271+00:00",
+          "readFacts": [
+            "Spa company established in 1834; spa opened1838, park built on rugged seashore cliffs.",
+            "Regular steamship traffic Helsinki Tallinn Saint Petersburg began1837.",
+            "Ursa observatory opened1926, excluded from1873.",
+            "Landscape heavily redeveloped around1900; historical frame restricts to bare coastal rock and water without later park design."
+          ],
+          "periodReference": "Page contains 1852–1855 landscape and1872 painting; not identical shore view; no exact1873 photo located."
+        },
+        {
+          "url": "https://www.hel.fi/fi/kulttuuri-ja-vapaa-aika/ulkoilu-puistot-ja-luontokohteet/puistot/kaivopuisto",
+          "title": "Helsingin kaupunki: Kaivopuisto",
+          "readAt": "2026-10-12T17:21:15.978437+00:00",
+          "readFacts": [
+            "Kaivopuisto lies at the sea in southern Helsinki; rocky high points have sea views.",
+            "Harakka island is close to Kaivopuisto; coastal route borders park.",
+            "Ursa observatory1926 excluded; all buildings, statues, piers and contemporary shore furniture excluded in restricted historical seaward crop."
+          ]
+        }
+      ],
+      "caption": "Helsingin asuinkadun rauhallista arkea. Havainnekuva.",
+      "QA": {
+        "id": "helsinki-4-asuinalueen-arki-intro-v2",
+        "slot": 4,
+        "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+        "approvedForTechnicalDelivery": true,
+        "approvedForDelivery": true,
+        "wholeFrameInspected": true,
+        "fullFrameInspected": true,
+        "nativeDetailInspected": true,
+        "nativeDetailsInspected": true,
+        "reviewedAt": "2026-10-12T20:29:52.590593+00:00",
+        "reviewer": "north-session-owner-independent-of-generator",
+        "reason": "PASS: täysin uusi tavallisen Helsingin asuinkadun näkymä. Polkupyörät, korit ja ajoneuvot puuttuvat kokonaan. Lähiovet, syöksytorvet, seinät, etäinen taustaseinä ja puunkuori tarkastettu natiivina: ei kirjain-/numeromerkkiä, tarraa, osoitekilpeä tai logoa. Pienet ihmiset selin, luonnollinen kameravalo ja epäsäännölliset aidot pinnat.",
+        "detailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/session-owner-review/detail-1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/session-owner-review/detail-2.png"
+        ],
+        "ownerAcceptanceRequired": false,
+        "ownerAcceptanceVerified": false,
+        "deliveryAuthorizedByOwner": true
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-4-asuinalueen-arki-intro-v2.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T20:30:04.199959+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+        "bytes": 2918556,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-4-asuinalueen-arki-intro-v2.png",
+            "http": 200,
+            "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+            "bytes": 2918556,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-4-asuinalueen-arki-intro-v2.png?verify=qa-followup-4d615b69a8a05eb4-1791837004199989000",
+            "http": 200,
+            "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+            "bytes": 2918556,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "assetVersion": 2,
+      "supersedes": {
+        "id": "helsinki-4-asuinalueen-arki-intro-v1",
+        "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
+        "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/helsinki/manifest.json",
+        "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/qa.json"
+      },
+      "technicalExport": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/native/helsinki-4-asuinalueen-arki-intro-v2-native.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/helsinki-4-asuinalueen-arki-intro-v2.png",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+        "bytes": 2918556,
+        "format": "PNG",
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "technicalExport": {
+          "pixelValuesUnchanged": true,
+          "resized": false,
+          "retouched": false,
+          "colorConverted": false,
+          "onlyOpaqueAlphaRemovedIfPresent": true
+        },
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        }
+      },
+      "sourceContextInheritedFromSupersededAsset": true,
+      "ownerAcceptanceRequired": false,
+      "deliveryAuthorizedByOwner": true,
+      "publicationVerified": false,
+      "bytes": 2918556
+    },
+    {
       "id": "helsinki-5-kaivopuiston-meri-intro-v1",
       "slot": 5,
       "cityName": "Helsinki",
@@ -353,28 +482,9 @@
       "bytes": 2769576
     }
   ],
-  "omittedItems": [
-    {
-      "id": "helsinki-4-asuinalueen-arki-intro-v1",
-      "slot": 4,
-      "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
-      "fullFrameInspected": true,
-      "nativeDetailsInspected": true,
-      "approvedForDelivery": false,
-      "reason": "Hylätty toimituksesta: lähimmän pyörän mustassa etukorissa näkyy vaalea kirjainmainen logo-/tekstimerkki. Ensimmäinen candidate jää pending-quality-fix; kokonaan uusi tarpeellinen korjaus on sallittu.",
-      "observations": [
-        "Koko kehys: fotorealistinen asuinkatu, johdonmukainen perspektiivi ja pehmeä luonnonvalo. Kaksi pientä kävelijää selin.",
-        "Puiden kuori ja lehdet, kiveys, rappaus sekä ajoneuvojen pinnat tarkastettu natiivikokoisina; ei havaittua kaarnaleimaa tai muovisuutta.",
-        "HYLKÄYS: lähimmän polkupyörän mustan etukorin yläreunassa, noin x=651..677 y=599..611, näkyy vaalea noin kolmikirjaiminen BLC:n kaltainen logo-/tekstimerkki. Merkki rikkoo no text/logos -vaatimusta, vaikka tarkkaa tuotemerkkiä ei voida tunnistaa.",
-        "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-bike-basket-mark.png",
-        "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-people-bikes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-tree-cars-leaves.png",
-        "Tämä ensimmäinen candidate jää pending-quality-fix. Yksi kokonaan uusi tarpeellinen laatukorjaus kuuluu owner-order.jsonin rootWorkflowPolicyCorrectioniin; tätä tiedostoa ei retusoida eikä toimiteta.",
-        "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
-      ]
-    }
-  ],
+  "omittedItems": [],
   "existingDeliveredSlots": [],
-  "allRequestedSlotsDelivered": false,
+  "allRequestedSlotsDelivered": true,
   "ownerAcceptanceVerified": false,
   "gameIntegrationVerified": false,
   "publicationVerified": false,
@@ -398,10 +508,28 @@
       ]
     }
   ],
-  "pendingQualityFixSlots": [
-    4
+  "supplementalSources": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/manifest.json",
+      "sha256": "5116a6ff0395b2bcc0016ba577b4ac330e3931da32ee6a2e8375384bcb2c7c3c",
+      "assetID": "helsinki-4-asuinalueen-arki-intro-v2",
+      "slot": 4,
+      "additionalCalls": 1
+    }
   ],
-  "actualCalls": 5,
+  "deliveryRepairSelection": {
+    "reportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/repair-qa-20261012.json",
+    "reportSHA256": "a38e7f9df563233b208c8330af0a7f5a4e5013bac4db5772ad58e3c6cb2fbc95",
+    "ids": [
+      "helsinki-4-asuinalueen-arki-intro-v2"
+    ],
+    "selectedAt": "2026-10-12T21:27:26.561661+00:00"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "gameIntegrated": false,
+  "pendingQualityFixSlots": [],
+  "actualCalls": 6,
   "deliveryQAEvidence": {
     "mediaSlug": "helsinki",
     "gameCityId": "helsinki",
@@ -414,21 +542,59 @@
     ],
     "assets": [
       {
-        "id": "helsinki-4-asuinalueen-arki-intro-v1",
+        "id": "helsinki-4-asuinalueen-arki-intro-v2",
         "slot": 4,
-        "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
+        "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/helsinki-4-asuinalueen-arki-intro-v2.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/helsinki-4/native/helsinki-4-asuinalueen-arki-intro-v2-native.png",
         "fullFrameInspected": true,
         "nativeDetailsInspected": true,
-        "approvedForDelivery": false,
-        "reason": "Hylätty toimituksesta: lähimmän pyörän mustassa etukorissa näkyy vaalea kirjainmainen logo-/tekstimerkki. Ensimmäinen candidate jää pending-quality-fix; kokonaan uusi tarpeellinen korjaus on sallittu.",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa korjaus-QA:ssa: aiempi merkintäongelma puuttuu ja koko uuden kuvan fotorealismi-, henkilö- ja ei-tekstiä/logoja-vaatimukset täyttyvät. Päätös on sidottu actual final SHA256:een.",
         "observations": [
-          "Koko kehys: fotorealistinen asuinkatu, johdonmukainen perspektiivi ja pehmeä luonnonvalo. Kaksi pientä kävelijää selin.",
-          "Puiden kuori ja lehdet, kiveys, rappaus sekä ajoneuvojen pinnat tarkastettu natiivikokoisina; ei havaittua kaarnaleimaa tai muovisuutta.",
-          "HYLKÄYS: lähimmän polkupyörän mustan etukorin yläreunassa, noin x=651..677 y=599..611, näkyy vaalea noin kolmikirjaiminen BLC:n kaltainen logo-/tekstimerkki. Merkki rikkoo no text/logos -vaatimusta, vaikka tarkkaa tuotemerkkiä ei voida tunnistaa.",
-          "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-bike-basket-mark.png",
-          "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-people-bikes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-tree-cars-leaves.png",
-          "Tämä ensimmäinen candidate jää pending-quality-fix. Yksi kokonaan uusi tarpeellinen laatukorjaus kuuluu owner-order.jsonin rootWorkflowPolicyCorrectioniin; tätä tiedostoa ei retusoida eikä toimiteta.",
-          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
+          "Uusi final ja alkuperäinen native avattu erikseen kokonaisina tools.view_image detail original. Kummankin puoliskon päällekkäiset natiivirajaukset kattavat koko kehysalueen; kaukaiset ihmiset ja pienet julkisivuyksityiskohdat tarkastettu erikseen.",
+          "Vanhan v1:n pyöränkorin vaalea kirjain-/logomerkki on poistunut kokonaan uudella koostumuksella: kuvassa ei ole polkupyöriä, koreja tai muita ajoneuvoja. Paljaat ovet, ikkunat, putket, kaukaiset seinät ja äärireunat tarkastettu; ei havaittua tekstiä, numeroita, osoitekilpiä, tarroja, logoja tai brändikuvioita.",
+          "Puiden kuori ja oksat, vaihtelevat lehdet, graniittisokkelit, rappaus ja katukivet näyttävät luonnollisilta. Ei kaarnaleimaa, toistettua orgaanista pintaa tai muovimaisuutta. Pehmeä päivänvalo, varjot ja perspektiivi ovat johdonmukaiset.",
+          "Kaksi ihmistä ovat pieniä ja kokonaan selin; kasvojen yksityiskohtia ei näy. Näkyvät raajat ja vaatteet ovat uskottavat. Ei ruokaa, eläimiä, muistomerkkejä, tunnistettavia maamerkkejä tai teoksia. Nimetöntä vanhaa asuinmiljöötä ei esitetä täsmällisen osoitteen dokumenttina.",
+          "Hyväksyntä koskee vain Helsinki4-v2:n uusia final-tavuja. V1:n hylkäys säilyy aiemmassa SHA:ssaan."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/repair-crops/slot4-v2-left-walls-windows.png",
+            "sha256": "1f4e7b4bfb94fbb393762c74d13fcb3f774a74676944fba832eed9f06037119d",
+            "originalPixelBox": [
+              0,
+              0,
+              800,
+              1024
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/repair-crops/slot4-v2-right-tree-facades.png",
+            "sha256": "9aad2f2fa494ac61e23a58bd018016095dffffce1a1ce75e796f7fa582a5e037",
+            "originalPixelBox": [
+              736,
+              0,
+              1536,
+              1024
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/repair-crops/slot4-v2-far-people-wall.png",
+            "sha256": "88dfdc44b326233b535a2cace426405d405fc45a07162ab1be5a14fa6484a77d",
+            "originalPixelBox": [
+              995,
+              430,
+              1330,
+              690
+            ],
+            "resized": false,
+            "inspected": true
+          }
         ]
       },
       {
@@ -502,18 +668,50 @@
     "ownerAcceptance": false,
     "gameIntegrated": false,
     "reviewedAt": "2026-10-12T17:32:53.715300+00:00",
-    "sourceManifestSha256": "f183f9713861ea39223760409ae3104a66dde166f5e51a88612bf7e46830bf8c"
+    "sourceManifestSha256": "f183f9713861ea39223760409ae3104a66dde166f5e51a88612bf7e46830bf8c",
+    "repairQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/repair-qa-20261012.json",
+    "repairQASHA256": "a38e7f9df563233b208c8330af0a7f5a4e5013bac4db5772ad58e3c6cb2fbc95",
+    "ownerAcceptanceRequired": false
   },
   "deliveryR2Proof": {
     "mediaSlug": "helsinki",
-    "verifiedAt": "2026-10-12T17:36:19.506866+00:00",
+    "verifiedAt": "2026-10-12T21:27:33.794261+00:00",
     "assets": [
+      {
+        "id": "helsinki-4-asuinalueen-arki-intro-v2",
+        "slot": 4,
+        "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+        "bytes": 2918556,
+        "verifiedAt": "2026-10-12T21:27:31.768157+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-4-asuinalueen-arki-intro-v2.png",
+            "http": 200,
+            "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+            "bytes": 2918556,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-4-asuinalueen-arki-intro-v2.png?delivery-verify=4d615b69a8a05eb4-1791840451768152000",
+            "http": 200,
+            "sha256": "4d615b69a8a05eb4b5579ab0ea5c57dd8d18983253220296adca4862dcd3e84e",
+            "bytes": 2918556,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
       {
         "id": "helsinki-5-kaivopuiston-meri-intro-v1",
         "slot": 5,
         "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
         "bytes": 2572119,
-        "verifiedAt": "2026-10-12T17:36:18.208520+00:00",
+        "verifiedAt": "2026-10-12T21:27:31.768280+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png",
@@ -526,7 +724,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png?delivery-verify=9b4be9b210cec326-1791826578208514000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png?delivery-verify=9b4be9b210cec326-1791840451768278000",
             "http": 200,
             "sha256": "9b4be9b210cec326f0bc039561c21c714cdecc7e19e4f9c6d7bac0eef9417ef4",
             "bytes": 2572119,
@@ -542,7 +740,7 @@
         "slot": 6,
         "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
         "bytes": 2110146,
-        "verifiedAt": "2026-10-12T17:36:18.208804+00:00",
+        "verifiedAt": "2026-10-12T21:27:31.768347+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png",
@@ -555,7 +753,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png?delivery-verify=a7949fd582d2c4cd-1791826578208803000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-6-kesajuhla-intro-v1.png?delivery-verify=a7949fd582d2c4cd-1791840451768345000",
             "http": 200,
             "sha256": "a7949fd582d2c4cd943abf539b8a45357cc9b058185fc2ba9c8ebc3854723854",
             "bytes": 2110146,
@@ -571,7 +769,7 @@
         "slot": 7,
         "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
         "bytes": 2474965,
-        "verifiedAt": "2026-10-12T17:36:18.209259+00:00",
+        "verifiedAt": "2026-10-12T21:27:33.049864+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png",
@@ -584,7 +782,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png?delivery-verify=1241bd799aa2f2ee-1791826578209233000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png?delivery-verify=1241bd799aa2f2ee-1791840453049857000",
             "http": 200,
             "sha256": "1241bd799aa2f2ee77a35271e3b173625fedd562048b8b2c1c786b6b063e4432",
             "bytes": 2474965,
@@ -600,7 +798,7 @@
         "slot": 8,
         "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
         "bytes": 2769576,
-        "verifiedAt": "2026-10-12T17:36:18.843483+00:00",
+        "verifiedAt": "2026-10-12T21:27:33.208373+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png",
@@ -613,7 +811,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png?delivery-verify=97c3e903a1f7fa87-1791826578843465000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/helsinki/20261012-full/helsinki-8-kaivopuisto-1873-intro-v1.png?delivery-verify=97c3e903a1f7fa87-1791840453208366000",
             "http": 200,
             "sha256": "97c3e903a1f7fa87927f5c2fa89b71705494830554f70ff93133323c1316fee9",
             "bytes": 2769576,
@@ -645,13 +843,11 @@
   "stages": {
     "generated": null,
     "NAS": 5,
-    "QA": 4,
-    "R2": 4,
+    "QA": 5,
+    "R2": 5,
     "Git": "this handoff",
     "gallery": "pending"
   },
-  "ownerAcceptance": false,
-  "ownerAcceptanceRequired": false,
   "ownerReviewBeforeGameDelivery": false,
   "ownerAuthorization": {
     "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
@@ -694,6 +890,5 @@
     "ownerAcceptanceNotImpliedByAuthorization": true
   },
   "gameIntegrationAllowedWithoutOwnerAcceptance": true,
-  "gameIntegrated": false,
-  "deliveredAt": "2026-10-12T20:05:03.831574+00:00"
+  "deliveredAt": "2026-10-12T21:28:31.459377+00:00"
 }

@@ -64,28 +64,9 @@
     "helsinki": {
       "gameCityId": "helsinki",
       "mediaSlug": "helsinki",
-      "acceptedAssets": 4,
-      "omittedItems": [
-        {
-          "id": "helsinki-4-asuinalueen-arki-intro-v1",
-          "slot": 4,
-          "sha256": "d5de2da9e2fe98c2115aa5e8f29cf32956179968efa14b50c99aa5d4f215dbd7",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "Hylätty toimituksesta: lähimmän pyörän mustassa etukorissa näkyy vaalea kirjainmainen logo-/tekstimerkki. Ensimmäinen candidate jää pending-quality-fix; kokonaan uusi tarpeellinen korjaus on sallittu.",
-          "observations": [
-            "Koko kehys: fotorealistinen asuinkatu, johdonmukainen perspektiivi ja pehmeä luonnonvalo. Kaksi pientä kävelijää selin.",
-            "Puiden kuori ja lehdet, kiveys, rappaus sekä ajoneuvojen pinnat tarkastettu natiivikokoisina; ei havaittua kaarnaleimaa tai muovisuutta.",
-            "HYLKÄYS: lähimmän polkupyörän mustan etukorin yläreunassa, noin x=651..677 y=599..611, näkyy vaalea noin kolmikirjaiminen BLC:n kaltainen logo-/tekstimerkki. Merkki rikkoo no text/logos -vaatimusta, vaikka tarkkaa tuotemerkkiä ei voida tunnistaa.",
-            "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-bike-basket-mark.png",
-            "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-people-bikes.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/helsinki/crops/slot4-tree-cars-leaves.png",
-            "Tämä ensimmäinen candidate jää pending-quality-fix. Yksi kokonaan uusi tarpeellinen laatukorjaus kuuluu owner-order.jsonin rootWorkflowPolicyCorrectioniin; tätä tiedostoa ei retusoida eikä toimiteta.",
-            "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description ja Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. SHA256 alkuperäisistä final-tavuista vastaa manifestia."
-          ]
-        }
-      ],
-      "actualCalls": 5,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-helsinki-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -93,47 +74,9 @@
     "copenhagen": {
       "gameCityId": "kobenhavn",
       "mediaSlug": "copenhagen",
-      "acceptedAssets": 4,
-      "omittedItems": [
-        {
-          "id": "copenhagen-4-pyorailyarki-intro-v2",
-          "slot": 4,
-          "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "Toisen ehdokkaan taustakatossa (kehyksen noin x780–850,y280–340) on terävästi rajattuja vaaleita kaarevia/viivamaisia merkkejä, jotka näyttävät maalatulta graffitilta tai tekstimäiseltä kuviolta. Kirjoituksettomuutta ei voi varmistaa tästä natiiviyksityiskohdasta. Nykyinen v2 jää pending-quality-fix/needs-owner-next-decision kahden yrityksen jälkeen.",
-          "observations": [
-            "Koko kehys ja natiivirajaukset ihmisistä/pyörästä, julkisivusta/lehdistöstä sekä taustan kattolappeesta tarkastettu.",
-            "Etualan parkkeeratut tunnukselliset pyörät on poistettu, ja kaukainen pyöräilijä sekä kävelijät näkyvät selin.",
-            "Katossa on vaalea, selvärajainen kaareva viivakuvio, joka erottuu punaisesta kattotiiliverkosta. Tästä ei voi nimetä varmaa luettavaa sanaa tai brändiä, mutta kuvio näyttää lisätyltä merkiltä eikä satunnaiselta luonnolliselta kulumalta.",
-            "Muissa tarkastetuissa pinnoissa ei näkyvää tekstiä/logoa; lehdistö ja katugeometria uskottavia.",
-            "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
-          ],
-          "nativeDetailCrops": [
-            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-people.png",
-            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-foliage-facade.png",
-            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-roof.png"
-          ],
-          "technicalEvidence": {
-            "bytes": 2987082,
-            "dimensions": [
-              1536,
-              1024
-            ],
-            "mode": "RGB",
-            "format": "PNG",
-            "opaque": true,
-            "profileDescription": "sRGB built-in",
-            "provenanceMetadataPass": true,
-            "captionPass": true
-          },
-          "status": "pending-quality-fix",
-          "nextDecision": "needs-owner-next-decision",
-          "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
-        }
-      ],
-      "actualCalls": 7,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 8,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-copenhagen-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -496,28 +439,9 @@
     "saint-petersburg": {
       "gameCityId": "pietari",
       "mediaSlug": "saint-petersburg",
-      "acceptedAssets": 4,
-      "omittedItems": [
-        {
-          "id": "saint-petersburg-intro-4-v2",
-          "slot": 4,
-          "sha256": "4ebdeace9757f8b0cf6cdf03c24245a844978f636b0a95bca636ec51b01f52cd",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "Ei QA-hyväksyntää: valitunv2:n takaseinällä näkyy pieni merkitty osoitekilven kaltainen paneeli. Pending-quality-fix; v2 on jo laatukorjaus, joten tarvitaan jatkopäätös.",
-          "observations": [
-            "Valittu v2: fotorealistinen tavallinen asuinpiha/kadun sisäinen asuinmiljöö, kolme henkilöä selin ja geneerinen polkupyörä. Luonnollinen kiveys, rappaus, puunkuori ja lehdet; koherentti valo ja perspektiivi.",
-            "HYLKÄYS: takaseinällä ikkunan yläoikean puolen ja holvikäytävän välissä noin x948..958 y489..502 on pieni vaalea/sinikehyksinen osoitekilven kaltainen merkintä, jonka sisällä näkyy tumma kirjain-/numeromainen kuvio. Tarkkaa numeroa ei tulkita, mutta merkitty kilpi rikkoo no address numbers/text -vaatimusta.",
-            "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-rear-wall-plaque.png; laajempi konteksti /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-bark-leaves.png",
-            "Henkilöt, pyörä, muut seinäpinnat ja kuori/lehtikuvio tarkastettu: ei muuta selvää logoa, muovisuutta tai leimattua pintaa.",
-            "V2 on jo yksi tarpeellinen kokonaan uusi laatukorjaus. Tila pending-quality-fix; jatkotapa kuuluu koordinaattorin päätökseen, ei automaattista uutta generointia tai paikallista rasterikorjausta.",
-            "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/saint-petersburg/crops/slot4-people-bike-walls.png",
-            "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
-          ]
-        }
-      ],
-      "actualCalls": 6,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 7,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-saint-petersburg-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -573,5 +497,5 @@
       "gameIntegrated": false
     }
   },
-  "updatedAt": "2026-10-12T20:49:00.621109+00:00"
+  "updatedAt": "2026-10-12T21:28:31.544066+00:00"
 }

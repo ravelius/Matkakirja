@@ -5,6 +5,118 @@
   "updatedAt": "2026-10-12T17:37:56.452814+00:00",
   "assets": [
     {
+      "id": "copenhagen-4-pyorailyarki-intro-v3",
+      "slot": 4,
+      "cityName": "Kööpenhamina",
+      "gameCityId": "kobenhavn",
+      "mediaSlug": "copenhagen",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/copenhagen-4-pyorailyarki-intro-v3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/native/copenhagen-4-pyorailyarki-intro-v3-native.png",
+      "r2Key": "julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png",
+      "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Copenhagen arrival intro slot4, necessary whole-new delivery QA replacement v3. Generate exactly ONE completely new camera-photorealistic illustrative image, native landscape1536x1024 PNG opaque RGB sRGB. Contemporary Copenhagen ordinary old residential lane: anonymous tall modest nineteenth-century brick and plain plaster apartment facades, pale cream and brown brick, simple rectangular windows, blank understated ground-floor doors, naturally irregular climbing shrubs and street trees. A long quiet narrow lane extends into distance; ONE extremely distant commuter cycling AWAY and two much smaller distant pedestrians walking AWAY, all tiny back-view silhouettes. The bicycle itself occupies LESS THAN30pixels of the1536x1024 image, ideally15–22pixels; no visible frame detail, badges, baskets, decals, logos, registration markings or recognizable clothing branding. Absolutely no other bicycles and no parked or close bicycles. Camera at eye height approximately1.4m, slightly downward angle,35mm natural perspective. Framing is STRICT: ALL roofs, roof edges, roof slopes, roof tiles and roof surfaces are entirely OUTSIDE the image or completely hidden behind dense irregular natural tree canopy. Near buildings rise beyond the top frame and only their lower facade floors are visible. The upper frame is filled by natural leafy branches; distant lane terminates in leafy trees, never a visible distant rooftop. ZERO visible roof tiles anywhere. NO painted roofs, graffiti, murals, architectural lettering, decorative labels or marks. All visible walls, doors, jambs and window surrounds are plain material surfaces with NO plaques, engraved decorations, letters, numerals, house numbers, doorbell labels, stickers, signs, mail-slot lettering, crests, emblems, brands, advertisements or poster-like rectangles. Doors have plain unmarked timber panels and one basic handle only. No vehicles or cars. No food, sculpture, protected artwork, famous landmarks, churches, canals, castles or named modern architect-designed works. Gentle overcast Nordic daylight, candid ordinary weekday calm, subdued authentic cream/gray/brown and muted natural greens, real-camera exposure and focus, irregular weathering in bricks and stone paving, genuinely varied leaves and branches. No HDR, CGI, illustration/painting appearance, glossy plastic textures, artificial vignette, repeated stamped leaves or ornamental text-like cracks. Absolutely no writing, letters, digits, logos, trademarks, brand patterns, address numbers, signs, watermarks or borders anywhere in the WHOLE frame. Do not add captions. Entirely new generation from this text, NO edit or reference image, NO recoloring or retouching of earlier outputs.",
+      "sources": [
+        {
+          "url": "https://slks.dk/fileadmin/user_upload/0_SLKS/Dokumenter/Om_styrelsen/udbud/Bilag_11_Frederiksberg_Have._Baerende_bevaringsvaerdier_-_2014.pdf",
+          "title": "Slots- og Kulturstyrelsen: Frederiksberg Have, Bærende bevaringsværdier2014",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Gardens redesign began1798; fountains/basins changed into open canal with islands and bridges1798–1804.",
+            "Restricted view of winding canal, banks and tree groups therefore existed in1873.",
+            "All buildings/pavilions/bridges/zoo structures/signs excluded from chosen framing."
+          ],
+          "periodReference": "Official document provides garden history and plans, no exact1873 same-view photograph found.",
+          "localReadPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/references/frederiksberg-historie-read.txt"
+        },
+        {
+          "url": "https://stadsarkivet.frederiksberg.dk/brug-stadsarkivet/byvandringer/oestturen",
+          "title": "Frederiksberg municipal archive: Østturen",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Frederiksberg garden changed from symmetrical Baroque plan to English landscape style1795–1804.",
+            "Søndre Fasanvej extended and developed almost200years after1682; modern surrounding blocks excluded."
+          ]
+        },
+        {
+          "url": "https://www.visitcopenhagen.com/copenhagen/planning/frederiksberg-garden-gdk412226",
+          "title": "VisitCopenhagen Frederiksberg Garden",
+          "readAt": "2026-10-12T17:27:24.744751+00:00",
+          "readFacts": [
+            "Canals used for rowing, small islands and mature trees; park used as outing place for centuries.",
+            "Chinese pavilion dates1799 per tourismpage but not in image; no architecture date reliance."
+          ]
+        }
+      ],
+      "caption": "Kööpenhaminan asuinkadun pyöräilyarkea. Havainnekuva.",
+      "QA": {
+        "id": "copenhagen-4-pyorailyarki-intro-v3",
+        "slot": 4,
+        "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+        "approvedForTechnicalDelivery": true,
+        "approvedForDelivery": true,
+        "wholeFrameInspected": true,
+        "fullFrameInspected": true,
+        "nativeDetailInspected": true,
+        "nativeDetailsInspected": true,
+        "reviewedAt": "2026-10-12T20:29:52.697129+00:00",
+        "reviewer": "north-session-owner-independent-of-generator",
+        "reason": "PASS: täysin uusi arkinen asuinkatu, katot ja kattotiilet poissa koko kehyksestä. Läheisiä pyöriä ei ole; pieni kaukainen selin pyöräilijä ja kaksi kävelijää. Pyörän näkyvä geometria hieman yli30px on oma promptin framing-proxy, ei omistajan vaatimus: natiivissa ei tunnusta, merkkiä tai kirjoitusta. Kaikki lähi-/taustaovet, seinät, lehdet, puunkuori ja mahdolliset kilpipaikat tarkastettu; ei tekstiä/logoja/graffitia.",
+        "detailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/session-owner-review/detail-1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/session-owner-review/detail-2.png"
+        ],
+        "ownerAcceptanceRequired": false,
+        "ownerAcceptanceVerified": false,
+        "deliveryAuthorizedByOwner": true
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png",
+      "R2Proof": {
+        "checkedAt": "2026-10-12T20:30:09.540117+00:00",
+        "preflightHttp": 404,
+        "origin": "https://matkakirja.app",
+        "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+        "bytes": 3317040,
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png",
+            "http": 200,
+            "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+            "bytes": 3317040,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png?verify=qa-followup-56b901b867c82c56-1791837009540144000",
+            "http": 200,
+            "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+            "bytes": 3317040,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "supersedes": {
+        "id": "copenhagen-4-pyorailyarki-intro-v2",
+        "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
+        "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/copenhagen/manifest.json",
+        "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/qa.json"
+      },
+      "supersedesSHA256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
+      "supersedesQAPointer": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/rejected-qa.json",
+      "ownerAcceptanceRequired": false,
+      "deliveryAuthorizedByOwner": true,
+      "publicationVerified": false,
+      "bytes": 3317040
+    },
+    {
       "id": "copenhagen-5-frederiksbergin-kanava-intro-v1",
       "slot": 5,
       "cityName": "Kööpenhamina",
@@ -385,47 +497,9 @@
       "bytes": 3173837
     }
   ],
-  "omittedItems": [
-    {
-      "id": "copenhagen-4-pyorailyarki-intro-v2",
-      "slot": 4,
-      "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
-      "fullFrameInspected": true,
-      "nativeDetailsInspected": true,
-      "approvedForDelivery": false,
-      "reason": "Toisen ehdokkaan taustakatossa (kehyksen noin x780–850,y280–340) on terävästi rajattuja vaaleita kaarevia/viivamaisia merkkejä, jotka näyttävät maalatulta graffitilta tai tekstimäiseltä kuviolta. Kirjoituksettomuutta ei voi varmistaa tästä natiiviyksityiskohdasta. Nykyinen v2 jää pending-quality-fix/needs-owner-next-decision kahden yrityksen jälkeen.",
-      "observations": [
-        "Koko kehys ja natiivirajaukset ihmisistä/pyörästä, julkisivusta/lehdistöstä sekä taustan kattolappeesta tarkastettu.",
-        "Etualan parkkeeratut tunnukselliset pyörät on poistettu, ja kaukainen pyöräilijä sekä kävelijät näkyvät selin.",
-        "Katossa on vaalea, selvärajainen kaareva viivakuvio, joka erottuu punaisesta kattotiiliverkosta. Tästä ei voi nimetä varmaa luettavaa sanaa tai brändiä, mutta kuvio näyttää lisätyltä merkiltä eikä satunnaiselta luonnolliselta kulumalta.",
-        "Muissa tarkastetuissa pinnoissa ei näkyvää tekstiä/logoa; lehdistö ja katugeometria uskottavia.",
-        "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
-      ],
-      "nativeDetailCrops": [
-        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-people.png",
-        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-foliage-facade.png",
-        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-roof.png"
-      ],
-      "technicalEvidence": {
-        "bytes": 2987082,
-        "dimensions": [
-          1536,
-          1024
-        ],
-        "mode": "RGB",
-        "format": "PNG",
-        "opaque": true,
-        "profileDescription": "sRGB built-in",
-        "provenanceMetadataPass": true,
-        "captionPass": true
-      },
-      "status": "pending-quality-fix",
-      "nextDecision": "needs-owner-next-decision",
-      "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
-    }
-  ],
+  "omittedItems": [],
   "existingDeliveredSlots": [],
-  "allRequestedSlotsDelivered": false,
+  "allRequestedSlotsDelivered": true,
   "ownerAcceptanceVerified": false,
   "gameIntegrationVerified": false,
   "publicationVerified": false,
@@ -468,10 +542,28 @@
       "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
     }
   ],
-  "pendingQualityFixSlots": [
-    4
+  "supplementalSources": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/manifest.json",
+      "sha256": "800272dc029d6759cd42576104fae46ceeaca50a832be57afc74a7a3b449a26f",
+      "assetID": "copenhagen-4-pyorailyarki-intro-v3",
+      "slot": 4,
+      "additionalCalls": 1
+    }
   ],
-  "actualCalls": 7,
+  "deliveryRepairSelection": {
+    "reportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/repair-qa-20261012.json",
+    "reportSHA256": "e4fb598daafe70fb104871251bd9e3d6391bdf4f1a00bd1bc3f3b19db4a119b4",
+    "ids": [
+      "copenhagen-4-pyorailyarki-intro-v3"
+    ],
+    "selectedAt": "2026-10-12T21:27:26.605024+00:00"
+  },
+  "ownerAcceptance": false,
+  "ownerAcceptanceRequired": false,
+  "gameIntegrated": false,
+  "pendingQualityFixSlots": [],
+  "actualCalls": 8,
   "deliveryQAEvidence": {
     "mediaSlug": "copenhagen",
     "gameCityId": "kobenhavn",
@@ -487,41 +579,72 @@
     "sourceManifestSha256": "b52386570af9e351cf7176063a8080c28bce2b884dfa1803061b307103cffce1",
     "assets": [
       {
-        "id": "copenhagen-4-pyorailyarki-intro-v2",
+        "id": "copenhagen-4-pyorailyarki-intro-v3",
         "slot": 4,
-        "sha256": "d7a494c44013c74f07d3974245370a596212559d3c6eacb60028f119ea255571",
+        "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/copenhagen-4-pyorailyarki-intro-v3.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/north/delivery-qa-repairs-20261012/copenhagen-4/native/copenhagen-4-pyorailyarki-intro-v3-native.png",
         "fullFrameInspected": true,
         "nativeDetailsInspected": true,
-        "approvedForDelivery": false,
-        "reason": "Toisen ehdokkaan taustakatossa (kehyksen noin x780–850,y280–340) on terävästi rajattuja vaaleita kaarevia/viivamaisia merkkejä, jotka näyttävät maalatulta graffitilta tai tekstimäiseltä kuviolta. Kirjoituksettomuutta ei voi varmistaa tästä natiiviyksityiskohdasta. Nykyinen v2 jää pending-quality-fix/needs-owner-next-decision kahden yrityksen jälkeen.",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty riippumattomassa korjaus-QA:ssa: aiempi merkintäongelma puuttuu ja koko uuden kuvan fotorealismi-, henkilö- ja ei-tekstiä/logoja-vaatimukset täyttyvät. Päätös on sidottu actual final SHA256:een.",
         "observations": [
-          "Koko kehys ja natiivirajaukset ihmisistä/pyörästä, julkisivusta/lehdistöstä sekä taustan kattolappeesta tarkastettu.",
-          "Etualan parkkeeratut tunnukselliset pyörät on poistettu, ja kaukainen pyöräilijä sekä kävelijät näkyvät selin.",
-          "Katossa on vaalea, selvärajainen kaareva viivakuvio, joka erottuu punaisesta kattotiiliverkosta. Tästä ei voi nimetä varmaa luettavaa sanaa tai brändiä, mutta kuvio näyttää lisätyltä merkiltä eikä satunnaiselta luonnolliselta kulumalta.",
-          "Muissa tarkastetuissa pinnoissa ei näkyvää tekstiä/logoa; lehdistö ja katugeometria uskottavia.",
-          "PNG RGB opaque1536x1024, embedded sRGB, required Description/Source provenance metadata, caption ends Havainnekuva."
+          "Uusi final ja alkuperäinen native avattu erikseen kokonaisina tools.view_image detail original. Molemmat puoliskot kattavat koko kuvan natiivipikseleinä; pyöräilijä, kävelijät ja oikean julkisivun pieni vaalea alue tarkastettu erikseen.",
+          "Vanhan v2:n taustakaton graffiti-/tekstinomainen kuvio puuttuu: uusia katto- ja tiilipintoja ei näy, vaan yläreunan ja kaukaisen katupään peittää luonnollinen lehdistö. Kaikki näkyvät ovet, seinät, ikkunanpielet, putket ja reunat ovat ilman havaittua kirjoitusta, numeroita, kylttejä, tarroja, logoja tai brändikuvioita.",
+          "Oikealla puun vieressä näkyvä pieni vaalea kolmionmuotoinen alue liittyy puun takaisen ikkunan valkoiseen ulkonevaan pieli-/lautapintaan. Rajauksessa se jatkuu muun valkoisen ikkunarakenteen suuntaan; ei puun pinnalle painettua merkintää, paperi-ilmoitusta tai kirjoitusta.",
+          "Yksi hyvin pieni kaukainen pyöräilijä ja kaksi kävelijää ovat selin. Pyörän vähäisissä yksityiskohdissa ei ole logoa, rekisterimerkintää tai korikirjoitusta; kasvoja ei näy. Kasvit, puunkuori, kukat, tiili, rappaus ja kiveys vaihtelevat luonnollisesti. Kameraperspektiivi ja pehmeä päivänvalo ovat uskottavat.",
+          "Ei ruokaa, eläimiä, julkista taidetta, kirkkoa, linnanäkymää, monumenttia tai tunnistettavaa modernia arkkitehtuuriteosta. Hyväksyntä koskee vain Copenhagen4-v3:n uusia final-tavuja; v2:n hylkäys säilyy aiemmassa SHA:ssaan."
         ],
-        "nativeDetailCrops": [
-          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-people.png",
-          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-foliage-facade.png",
-          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/crops/4-v2-roof.png"
-        ],
-        "technicalEvidence": {
-          "bytes": 2987082,
-          "dimensions": [
-            1536,
-            1024
-          ],
-          "mode": "RGB",
-          "format": "PNG",
-          "opaque": true,
-          "profileDescription": "sRGB built-in",
-          "provenanceMetadataPass": true,
-          "captionPass": true
-        },
-        "status": "pending-quality-fix",
-        "nextDecision": "needs-owner-next-decision",
-        "uncertainty": "No specific readable word or brand identified; visible painted glyph-like roof marks fail conservative no-text screening."
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/repair-crops/slot4-v3-left-walls-doors.png",
+            "sha256": "e52a9d35471c2c477eb4ae9b14468c07424d55a9ea2a560d5bce7d2dcae2a139",
+            "originalPixelBox": [
+              0,
+              0,
+              800,
+              1024
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/repair-crops/slot4-v3-right-trees-doors.png",
+            "sha256": "f0c322529ee10428a913413db3a5fae43137a088cb5b47be484235d319afafc3",
+            "originalPixelBox": [
+              736,
+              0,
+              1536,
+              1024
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/repair-crops/slot4-v3-cyclist-people.png",
+            "sha256": "06b9a18ffd697be1a1356953168f00b392fde2320891d1bd0aede3ece2411da6",
+            "originalPixelBox": [
+              785,
+              460,
+              970,
+              640
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/repair-crops/slot4-v3-tree-pale-patch.png",
+            "sha256": "b24b5c503f0687150d6d62925820b48c32977b1634aa09b99056c3b6115f7411",
+            "originalPixelBox": [
+              1185,
+              460,
+              1280,
+              560
+            ],
+            "resized": false,
+            "inspected": true
+          }
+        ]
       },
       {
         "id": "copenhagen-5-frederiksbergin-kanava-intro-v1",
@@ -729,18 +852,50 @@
         "Puistopari on havainnollistava rekonstruktio, ei1873 topografinen mittaus.",
         "Slot4v2:n kattomerkin tulkinta on epävarma; rajaus talletettu päätöstä varten."
       ]
-    }
+    },
+    "repairQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/copenhagen/repair-qa-20261012.json",
+    "repairQASHA256": "e4fb598daafe70fb104871251bd9e3d6391bdf4f1a00bd1bc3f3b19db4a119b4",
+    "ownerAcceptanceRequired": false
   },
   "deliveryR2Proof": {
     "mediaSlug": "copenhagen",
-    "verifiedAt": "2026-10-12T17:42:34.832564+00:00",
+    "verifiedAt": "2026-10-12T21:27:33.741057+00:00",
     "assets": [
+      {
+        "id": "copenhagen-4-pyorailyarki-intro-v3",
+        "slot": 4,
+        "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+        "bytes": 3317040,
+        "verifiedAt": "2026-10-12T21:27:31.775682+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png",
+            "http": 200,
+            "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+            "bytes": 3317040,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png?delivery-verify=56b901b867c82c56-1791840451775677000",
+            "http": 200,
+            "sha256": "56b901b867c82c56940e876f1f7e380834a235486f32f6dcd8bae887c1b02bc3",
+            "bytes": 3317040,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
       {
         "id": "copenhagen-5-frederiksbergin-kanava-intro-v1",
         "slot": 5,
         "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
         "bytes": 3127882,
-        "verifiedAt": "2026-10-12T17:42:33.674759+00:00",
+        "verifiedAt": "2026-10-12T21:27:31.775823+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png",
@@ -753,7 +908,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png?delivery-verify=347fb2b098939292-1791826953674754000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png?delivery-verify=347fb2b098939292-1791840451775820000",
             "http": 200,
             "sha256": "347fb2b0989392927a4c196f20c4adc64ef8efb0efffca0bf9fc3b52b6ec7481",
             "bytes": 3127882,
@@ -769,7 +924,7 @@
         "slot": 6,
         "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
         "bytes": 2104426,
-        "verifiedAt": "2026-10-12T17:42:33.675042+00:00",
+        "verifiedAt": "2026-10-12T21:27:31.775887+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png",
@@ -782,7 +937,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png?delivery-verify=f98cf13cea620820-1791826953675040000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-6-korttelijuhla-intro-v1.png?delivery-verify=f98cf13cea620820-1791840451775885000",
             "http": 200,
             "sha256": "f98cf13cea620820788128bb7d26826875c5509bd37eff5cd5acdfe9bc1b05c9",
             "bytes": 2104426,
@@ -798,7 +953,7 @@
         "slot": 7,
         "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
         "bytes": 2432242,
-        "verifiedAt": "2026-10-12T17:42:33.675702+00:00",
+        "verifiedAt": "2026-10-12T21:27:32.690982+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png",
@@ -811,7 +966,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png?delivery-verify=dd8ae38a02da95c3-1791826953675700000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png?delivery-verify=dd8ae38a02da95c3-1791840452690975000",
             "http": 200,
             "sha256": "dd8ae38a02da95c39ef9e14c7437c07a74749cc7f679013e0d74a8b7eea66a6f",
             "bytes": 2432242,
@@ -827,7 +982,7 @@
         "slot": 8,
         "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
         "bytes": 3173837,
-        "verifiedAt": "2026-10-12T17:42:34.239027+00:00",
+        "verifiedAt": "2026-10-12T21:27:33.005950+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png",
@@ -840,7 +995,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png?delivery-verify=0da22ab1835dce21-1791826954239019000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/copenhagen/20261012-full/copenhagen-8-frederiksberg-1873-intro-v1.png?delivery-verify=0da22ab1835dce21-1791840453005942000",
             "http": 200,
             "sha256": "0da22ab1835dce21dd0de0d061924f9cd8af4634160440ceed3fd5cc2671df39",
             "bytes": 3173837,
@@ -872,13 +1027,11 @@
   "stages": {
     "generated": null,
     "NAS": 5,
-    "QA": 4,
-    "R2": 4,
+    "QA": 5,
+    "R2": 5,
     "Git": "this handoff",
     "gallery": "pending"
   },
-  "ownerAcceptance": false,
-  "ownerAcceptanceRequired": false,
   "ownerReviewBeforeGameDelivery": false,
   "ownerAuthorization": {
     "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
@@ -921,6 +1074,5 @@
     "ownerAcceptanceNotImpliedByAuthorization": true
   },
   "gameIntegrationAllowedWithoutOwnerAcceptance": true,
-  "gameIntegrated": false,
-  "deliveredAt": "2026-10-12T20:05:03.856540+00:00"
+  "deliveredAt": "2026-10-12T21:28:31.491190+00:00"
 }
