@@ -65506,3 +65506,6 @@ export const NAHTAVYYSJUTUT = {
     },
   },
 };
+
+// Islannin kohdekartta = Reykjavikin kartta (js/packs/maakartat.js KAUPUNKIKARTAT.islanti); jutut samat (Karttaseppä 12.10.2026).
+NAHTAVYYSJUTUT.islanti = NAHTAVYYSJUTUT.reykjavik;
