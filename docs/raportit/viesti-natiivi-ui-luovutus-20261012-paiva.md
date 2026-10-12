@@ -30,4 +30,7 @@ Ajoskriptit tämän session scratchpadissa: /private/tmp/claude-502/-Users-Share
   PT:llä kuittauksessa. Paluun valmistuminen testissä = "opas: saapui" (LS1). Kun metro yhdistetään LS1:n
   184-haaraan linssiseppa/katso2-yhd-184 (53d2f08cc), EtsintaKaynnissa-määrittely pidetään VAIN OpasSovitin.Etsinta.cs:ssä
   (183:n aina-false-versio pois); VapaaKohteeseen palauttaa siellä false etsinnän aikana.
+- **Aarretehtävän Kartta-laji** (omistajan lupa 14.2x, juna 184): natiivi-ui/aarre-kartta-184 559496447 (worktree
+  wt/proto-natiivi-ui-aarrekartta): Kohdekartan.AvaaValinta + Kohdekartta.Paikka. Pelikoodari yhdistää pelikoodari/aarre-lajit-184:ään
+  → kuvat iPhone + iPad (Pariisi Notre-Dame -testitehtävä) PT:lle Julkaisijan vuorolla.
 - **184**: varivakiot 2c2054d8a + web #4482; museo-nyt-184 b2599db7f; Pelikoodarin säädin-paperi 028764614.
