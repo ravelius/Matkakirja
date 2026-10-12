@@ -271,45 +271,9 @@
     "madrid": {
       "gameCityId": "madrid",
       "mediaSlug": "madrid",
-      "acceptedAssets": 3,
-      "omittedItems": [
-        {
-          "id": "madrid-4-lavapies-arki-intro-v1",
-          "slot": 4,
-          "sha256": "a3a18ae7166612964ccfbfa493cee14ca27678b3e159c082de4ce47f87882085",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "Pending-quality-fix: aivan oikeassa kehysreunassa osittainen paperilappu tummine kirjoitus-/kuviomaisine jälkineen; koko kehyksen ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa.",
-          "observations": [
-            "Koko1536x1024 kehys sekä oikean seinän/putken/kehysreunan lapun, kaukaisten ihmisten/puun ja parvekekasvien natiivirajaukset tarkastettu.",
-            "Aivan oikeassa kehysreunassa näkyy osittainen valkoinen oveen kiinnitetty paperilappu, jossa on tummia kirjoitus-/kuviomaisia viivoja. Ei-tekstiä/merkintöjä-ehtoa ei voida vahvistaa koko kehykselle; varsinainen merkintä ei ole kokonaisena luettavissa.",
-            "Oikean syöksytorven valkoiset jäljet näyttävät maalipinnan kulumalta, eikä niitä käytetty hylkäyksen perusteena.",
-            "Muuten koherentti kameranäkymä, kulunut rappaus, luonnolliset parvekekasvit/puut ja pienet selin olevat ihmiset. Ei ruokaa tai tunnistettavia brändikuvioita havaittu.",
-            "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
-          ],
-          "status": "pending-quality-fix",
-          "necessaryWholeNewQualityRetryAllowed": true
-        },
-        {
-          "id": "madrid-7-latina-ilta-intro-v1",
-          "slot": 7,
-          "sha256": "37d36fdce445cc35debfeb44b2871cd0f0146249e66eab5238d252cdd7144d87",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "Pending-quality-fix: lähivasemman syöksytorven näkyvä suorakaiteinen tarra sisältää kirjain-/numeromaisia kuvioita.",
-          "observations": [
-            "Koko1536x1024 kehys sekä lähivasemman syöksytorvitarrojen, ovien/julkisivujen ja kaukaisten ihmisten/puun natiivirajaukset tarkastettu.",
-            "Lähivasemman syöksytorven kohdalla x270,y545–620 on selkeä pitkä suorakaiteinen vaalea tarra, jossa tummia kirjain-/numeromaisia kuvioita. Ei-tekstiä/merkintöjä-ehto ei täyty.",
-            "Muuten kamera-fotorealismi, luonnollinen kasvillisuus ja koherentti hämärävalotus/perspektiivi. Kaksi pientä ihmistä selin, ei ruokaa tai tunnistettavaa brändikuviota havaittu.",
-            "Alkuperäisten PNG-tavujen SHA256 vastaa manifestia. RGBopaque1536x1024 sRGB, Description/Source-provenance ja Havainnekuva.-kuvateksti varmennettu; native/export-pikselit identtiset."
-          ],
-          "status": "pending-quality-fix",
-          "necessaryWholeNewQualityRetryAllowed": true
-        }
-      ],
-      "actualCalls": 5,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 7,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-madrid-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -609,5 +573,5 @@
       "gameIntegrated": false
     }
   },
-  "updatedAt": "2026-10-12T20:05:04.986246+00:00"
+  "updatedAt": "2026-10-12T20:49:00.621109+00:00"
 }
