@@ -28,3 +28,16 @@ Edellinen: viesti-natiivi-ui-luovutus-20261012-ilta.md (säännöt, ajoskriptit)
 - 185: natiivi-ui/metro-veto-185 391d61cd1 (metrokartan veto, sk-metroveto), natiivi-ui/lopeta-kisa-185 e9412bebc. Kuvat iPhone + iPad PT:lle.
 - Codex-kuvaketilaus kaikista (~60): SK claude/postilaatikko 68bdcb0ed → toimitus posti/kuvakkeet-20261012-kaikki/, kytke erinä
   (lista /Users/Shared/Claude/proto-3d/lokit/natiivi-ui-kuvakelista-20261012.md). 19 muuta b4623de49:n kuvaketta junaan 185.
+
+## PÄIVITYS 13.10. 00.3x — JUNA 186 (numerointi: 184.1 = build 185, kertyvä juna 186)
+KUITATTU 186:een: metro-veto-185 391d61cd1, lopeta-kisa-185 e9412bebc, kisa-korjaus-186 96294c7c2 (Googlen laatat pois → Lahde.Ion;
+tulostaulu väistää metrolinjan; CesiumKaupunki.Sulje palauttaa TrueOriginin → nappula näkyy kipistä palatessa, LS2 katselmoi; nimet
+väistävät kaupunkipalloja; regressioskenaario tyokalut/todistusajo/skenaariot/kaupunki-nappula-paluu.txt).
+PT:LLÄ KUITATTAVANA: museo-pulu-186 8378bf49b + b2d45f317 (MuseoTila, museo-kysymykset.json-moduuli SK:lta tulossa, konteksti museo + teos;
+todiste todistus-museopulu-ipad-20261012-2350), salikuvat-186 b2b99a7f2 (7 salikuvaa Resources/Museo/alankomaat/nayttelykuvat,
+todiste natiivi-ui-salikuvat186-20261013-0030).
+MUUT: Pont du Gardin nimi → Karttaseppä karttaseppa/mallinimet-pallot-186 6a69acbec. SK:n Codex-tilaus ~60 kuvaketta (68bdcb0ed) →
+kytke toimitukset posti/kuvakkeet-20261012-kaikki/. SK:n museo-kysymykset.json → tarkista moduulin avainmuoto (teoksen id / _museo).
+Rahan tulo + Aloita kisa iPhone pelaajatilassa TF:n jälkeen (sk-raha, sk-aloitakisa korjattu).
+Skenaarioiden opit: museon VALITSE NÄYTTELY sulkeutuu vain rivin napautuksella; ikäraja "ui ikaraja aikuinen"; chat "ui chat";
+metrolinjan kosketusala ei näy ui-puussa (veto asemanimistä); palkintosivulla kaksi Jatka matkaa -napautusta.
