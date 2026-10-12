@@ -36,3 +36,14 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   epäonnistuessa Postivahdille "VAATII TOIMIA: Siirtoseppä: …"; hoidettuna dokumentti pois.
 - SÄÄNTÖ (omistaja 12.10. 11.1x, sitova): omistajalle kuvat TÄYDELLÄ TARKKUUDELLA, yksittäin tai kuvapari nykyinen | uusi natiivikorkeudella;
   EI pienennettyjä monen ruudun arkkeja (PT:lle tarkistukseen saa). Merkintä isona alareunaan.
+
+## PÄIVITYS 12.10. ~12.00 (PT:n korjauslista: EI 183:een ennen näitä)
+
+- **a9705f172** linnahaaraan (tarkista.sh 0, Linssit 1540/1540 puhtaalla kopiolla): aloitus- ja jatkonäkymä keskialueen syvyys ≥ 4 m tai
+  paras mahdollinen (24 suuntaa, `NakymaKorjaus`); botti hylkää "aloituksessa katsoo seinään". Köysilasku/ote-kiipeily: 6 s paikallaan →
+  seuraava ote kimaltaa (valovihje, `PakotaKohteeseen`; teksti vaatisi UI-pohjan → PT:ltä). fd7ed85fe: kiipeily 1. persoonassa.
+- Botti a9705f172 + v48o irrallisena: lokit/siirtoseppa-botti-nakyma/ (yhteenveto.txt). Vanha fp-odottaja lopetettu.
+- Punaiset konsolirivit = Unityn "multisampled texture … non-multisampled sampler" (kartan ElavaKerros). Korjaus 8cffad7da vain juna 183:ssa
+  (natiiviseppa/msaa-183), ei masterissa 182 → PT:lle ehdotettu vahdin listaan.
+- Seuraavaksi: botti 17/17 → Julkaisijalta hiljainen ikkuna (ennakkoilmoitettu) → LT-uusinta → PT. LT:n menetelmä (napautuskävely, ovet, vedot) 184.
+- Tarkistus puhtaalla kopiolla vaatii `git init -q` kopioon (Linssit-testit/kaanna.sh käyttää git rev-parsea).
