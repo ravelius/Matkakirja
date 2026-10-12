@@ -1,0 +1,784 @@
+{
+  "updatedAt": "2026-10-12T21:35:12.747820+00:00",
+  "sourceSnapshot": "batch-0016",
+  "sourceSnapshotRoleBindings": 829,
+  "releaseCount": 3,
+  "assets": [
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-c2-cff10e64146a0bd7",
+      "galleryImageID": "capital-cc-e04-rabat-c2-cff10e64146a0bd7",
+      "commonsFile": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
+        "suora": true,
+        "lahde": "Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rabatin medinaa rajaa Andalusialainen muuri, joka rakennettiin laajemman keskiaikaisen almohadikaupungin sisäpuolelle.",
+        "lyhyt": "Medina kasvoi vanhemman kaupunkihankkeen sisään.",
+        "tiedosto": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rabatin medinaa rajaa Andalusialainen muuri, joka rakennettiin laajemman keskiaikaisen almohadikaupungin sisäpuolelle.",
+        "lyhyt": "Medina kasvoi vanhemman kaupunkihankkeen sisään.",
+        "tiedosto": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
+        "suora": true,
+        "lahde": "Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rabatin medinaa rajaa Andalusialainen muuri, joka rakennettiin laajemman keskiaikaisen almohadikaupungin sisäpuolelle.",
+        "lyhyt": "Medina kasvoi vanhemman kaupunkihankkeen sisään.",
+        "tiedosto": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+      "exportSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+      "dimensions": [
+        3456,
+        2304
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "07917343c26613236b9ec010586eacbb036280f6f938575128665d9b9b175ab7",
+        "semanticContextSHA256": "07917343c26613236b9ec010586eacbb036280f6f938575128665d9b9b175ab7",
+        "subjectTitle": "Rabat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Adam Jones, Ph.D.",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Late-Afternoon_View_over_Medina_(Old_City)_-_From_Hotel_Majestic_-_Rabat_-_Morocco.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Late-Afternoon_View_over_Medina_%28Old_City%29_-_From_Hotel_Majestic_-_Rabat_-_Morocco.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-02.jpg",
+            "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Late-Afternoon_View_over_Medina_(Old_City)_-_From_Hotel_Majestic_-_Rabat_-_Morocco.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-02.html",
+            "sourceHTMLSHA256": "3720e5817e3322944f338cb409592c23cb7c69e435074e8797c614d3d3d18833",
+            "author": "Adam Jones, Ph.D.",
+            "license": "CC BY-SA 3.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3456,
+            "height": 2304,
+            "ratio": 1.5,
+            "date": [
+              "6 June 2010, 10:37:22"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+            "originalSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436"
+          },
+          "qaReason": "Koko alkuperäinen 3456×2304-kuva katsottu. Ihmiset ovat pieniä ja kasvojen hienopiirteet pikselöityneitä/epätarkkoja; ei tunnistettavaa lähikasvoa. Aito medinan yleisnäkymä ja vanha muuri, credit/lisenssi vastaavat alkuperäislähdettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rabatin medinaa rajaa Andalusialainen muuri, joka rakennettiin laajemman keskiaikaisen almohadikaupungin sisäpuolelle.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg",
+          "verdict": "accepted",
+          "reason": "Koko alkuperäinen 3456×2304-kuva katsottu. Ihmiset ovat pieniä ja kasvojen hienopiirteet pikselöityneitä/epätarkkoja; ei tunnistettavaa lähikasvoa. Aito medinan yleisnäkymä ja vanha muuri, credit/lisenssi vastaavat alkuperäislähdettä.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-02.jpg",
+            "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Late-Afternoon_View_over_Medina_(Old_City)_-_From_Hotel_Majestic_-_Rabat_-_Morocco.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-02.html",
+            "sourceHTMLSHA256": "3720e5817e3322944f338cb409592c23cb7c69e435074e8797c614d3d3d18833",
+            "author": "Adam Jones, Ph.D.",
+            "license": "CC BY-SA 3.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3456,
+            "height": 2304,
+            "ratio": 1.5,
+            "date": [
+              "6 June 2010, 10:37:22"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+            "originalSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436"
+          },
+          "auditTrail": [
+            {
+              "at": "2026-10-12T18:02:06.762511+00:00",
+              "previousVerdict": "blocked",
+              "previousReason": "Kansikuva nähty myös koko alkuperäisessä 3456×2304-kuvassa. Katutason väkijoukossa on kameran suuntaan katsovia henkilöitä; kasvojen luettavuus tarvitsee vielä päätöksen alkuperäisistä pikseleistä ennen hyväksyntää.",
+              "changeReason": "Alkuperäiset pikselit katsottu turvallisessa checkpointissa"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg",
+        "sha256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Late-Afternoon_View_over_Medina_(Old_City)_-_From_Hotel_Majestic_-_Rabat_-_Morocco.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Late-Afternoon_View_over_Medina_%28Old_City%29_-_From_Hotel_Majestic_-_Rabat_-_Morocco.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Adam Jones, Ph.D.",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3456,
+        "height": 2304,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
+        "bytes": 3245551,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:53.608334+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg",
+        "lahde": "Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rabatin medinaa rajaa Andalusialainen muuri, joka rakennettiin laajemman keskiaikaisen almohadikaupungin sisäpuolelle.",
+        "lyhyt": "Medina kasvoi vanhemman kaupunkihankkeen sisään."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Rabatin medinaa rajaa Andalusialainen muuri, joka rakennettiin laajemman keskiaikaisen almohadikaupungin sisäpuolelle.",
+        "lyhyt": "Medina kasvoi vanhemman kaupunkihankkeen sisään.",
+        "tiedosto": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "07917343c26613236b9ec010586eacbb036280f6f938575128665d9b9b175ab7",
+      "contextAfterSHA256": "07917343c26613236b9ec010586eacbb036280f6f938575128665d9b9b175ab7",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "nativeQAHashResolved": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+      "nativeQAHashSource": "qaEvidence.item.evidence.originalSHA256",
+      "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+      "existingOriginalQAReused": true,
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg",
+          "http": 200,
+          "sha256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+          "bytes": 3245551,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c2-cff10e64146a0bd73c1e.jpg?gallery-verify=cff10e64146a0bd7-1791840719227794000",
+          "http": 200,
+          "sha256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+          "bytes": 3245551,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "sha256 field absent; originalSHA256 and originalViewedPath were already recorded"
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "L3",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-l3-fa054ee4a589e63d",
+      "galleryImageID": "capital-cc-e04-rabat-l3-fa054ee4a589e63d",
+      "commonsFile": "Sala Colonia, Morocco (32853576932).jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
+        "suora": true,
+        "lahde": "Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Chellahin kaivetuissa rakennusjäännöksissä säilyy roomalaisen Sala Colonian kerros myöhemmän marinidien raunioalueen rinnalla.",
+        "lyhyt": "Sala Colonia on Chellahin antiikin kaupunkikerros.",
+        "tiedosto": "Sala Colonia, Morocco (32853576932).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Chellahin kaivetuissa rakennusjäännöksissä säilyy roomalaisen Sala Colonian kerros myöhemmän marinidien raunioalueen rinnalla.",
+        "lyhyt": "Sala Colonia on Chellahin antiikin kaupunkikerros.",
+        "tiedosto": "Sala Colonia, Morocco (32853576932).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
+        "suora": true,
+        "lahde": "Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Chellahin kaivetuissa rakennusjäännöksissä säilyy roomalaisen Sala Colonian kerros myöhemmän marinidien raunioalueen rinnalla.",
+        "lyhyt": "Sala Colonia on Chellahin antiikin kaupunkikerros.",
+        "tiedosto": "Sala Colonia, Morocco (32853576932).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+      "exportSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/L3-original.jpg",
+      "dimensions": [
+        3177,
+        4805
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
+        "semanticContextSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
+        "subjectTitle": "Antiikin kaupunki, keskiajan hautausmaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Carole Raddato from FRANKFURT, Germany",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sala_Colonia,_Morocco_(32853576932).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Sala_Colonia%2C_Morocco_%2832853576932%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-54.jpg",
+            "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/L3-original.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Sala_Colonia,_Morocco_(32853576932).jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-54.html",
+            "sourceHTMLSHA256": "531406c1ecf1891347ae4e6150ce5caa52da853d61b0aaed1af77d6de5915107",
+            "author": "Carole Raddato from FRANKFURT, Germany",
+            "license": "CC BY-SA 2.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3177,
+            "height": 4805,
+            "ratio": 0.6611862643080125,
+            "date": [
+              "15 February 2017, 13:19"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+            "originalSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+            "jpegExifOrientation": 6,
+            "nativeDisplayedDimensions": [
+              4805,
+              3177
+            ],
+            "sourceEncodedDimensions": [
+              3177,
+              4805
+            ]
+          },
+          "qaReason": "Alkuperäinen kuva katsottu. Raunioiden takana olevat vierailijat ovat etäällä, selin/sivuttain; kasvot eivät erotu tunnistettavasti. Sala Colonian rakenteet vastaavat aihetta. CC-pysty/asento ei hylkäysperuste."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Chellahin kaivetuissa rakennusjäännöksissä säilyy roomalaisen Sala Colonian kerros myöhemmän marinidien raunioalueen rinnalla.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "commonsFile": "Sala Colonia, Morocco (32853576932).jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen kuva katsottu. Raunioiden takana olevat vierailijat ovat etäällä, selin/sivuttain; kasvot eivät erotu tunnistettavasti. Sala Colonian rakenteet vastaavat aihetta. CC-pysty/asento ei hylkäysperuste.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-54.jpg",
+            "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/L3-original.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Sala_Colonia,_Morocco_(32853576932).jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-54.html",
+            "sourceHTMLSHA256": "531406c1ecf1891347ae4e6150ce5caa52da853d61b0aaed1af77d6de5915107",
+            "author": "Carole Raddato from FRANKFURT, Germany",
+            "license": "CC BY-SA 2.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3177,
+            "height": 4805,
+            "ratio": 0.6611862643080125,
+            "date": [
+              "15 February 2017, 13:19"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+            "originalSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+            "jpegExifOrientation": 6,
+            "nativeDisplayedDimensions": [
+              4805,
+              3177
+            ],
+            "sourceEncodedDimensions": [
+              3177,
+              4805
+            ]
+          },
+          "auditTrail": [
+            {
+              "at": "2026-10-12T18:02:06.762511+00:00",
+              "previousVerdict": "blocked",
+              "previousReason": "Sala Colonian arkeologinen rakenne ja palmu vastaavat nostoa. Taustan vierailijoiden kasvo-/profiilipäätös tehdään vielä alkuperäisessä 3177×4805-kuvassa. Pysty 0.661 ei itsessään hylkäysperuste.",
+              "changeReason": "Alkuperäiset pikselit katsottu turvallisessa checkpointissa"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "commonsFile": "Sala Colonia, Morocco (32853576932).jpg",
+        "sha256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sala_Colonia,_Morocco_(32853576932).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Sala_Colonia%2C_Morocco_%2832853576932%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Carole Raddato from FRANKFURT, Germany",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+        "width": 3177,
+        "height": 4805,
+        "originalSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
+        "bytes": 10666586,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:11:58.497766+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Sala Colonia, Morocco (32853576932).jpg",
+        "lahde": "Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Chellahin kaivetuissa rakennusjäännöksissä säilyy roomalaisen Sala Colonian kerros myöhemmän marinidien raunioalueen rinnalla.",
+        "lyhyt": "Sala Colonia on Chellahin antiikin kaupunkikerros."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Chellahin kaivetuissa rakennusjäännöksissä säilyy roomalaisen Sala Colonian kerros myöhemmän marinidien raunioalueen rinnalla.",
+        "lyhyt": "Sala Colonia on Chellahin antiikin kaupunkikerros.",
+        "tiedosto": "Sala Colonia, Morocco (32853576932).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
+      "contextAfterSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "nativeQAHashResolved": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+      "nativeQAHashSource": "qaEvidence.item.evidence.originalSHA256",
+      "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/L3-original.jpg",
+      "existingOriginalQAReused": true,
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg",
+          "http": 200,
+          "sha256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+          "bytes": 10666586,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/l3-fa054ee4a589e63d107b.jpg?gallery-verify=fa054ee4a589e63d-1791840719547902000",
+          "http": 200,
+          "sha256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
+          "bytes": 10666586,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "sha256 field absent; originalSHA256 and originalViewedPath were already recorded"
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "N2",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-n2-1e534244a1db91b8",
+      "galleryImageID": "capital-cc-e04-rabat-n2-1e534244a1db91b8",
+      "commonsFile": "Boats in Bouregreg (2).jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Bou Regreg -joen suisto\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Bou Regreg -joen suisto",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
+        "suora": true,
+        "lahde": "MarwanAndrew, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.",
+        "lyhyt": "Bou Regreg laskee mereen Rabatin ja Salén välissä.",
+        "tiedosto": "Boats in Bouregreg (2).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "MarwanAndrew, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.",
+        "lyhyt": "Bou Regreg laskee mereen Rabatin ja Salén välissä.",
+        "tiedosto": "Boats in Bouregreg (2).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
+        "suora": true,
+        "lahde": "MarwanAndrew, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.",
+        "lyhyt": "Bou Regreg laskee mereen Rabatin ja Salén välissä.",
+        "tiedosto": "Boats in Bouregreg (2).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
+      "exportSHA256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/N2-original.jpg",
+      "dimensions": [
+        3872,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4c376a78913ec6b1b1f21cc517ec21ff6fd4ebe912d9a5b2da47a6e5b7e810c8",
+        "semanticContextSHA256": "c7fa36142476274e2c3bf3fb89c2da26a80866fe5ac7f934d622719b46f1f717",
+        "subjectTitle": "Bou Regreg -joen suisto",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "MarwanAndrew",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Boats_in_Bouregreg_(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Boats_in_Bouregreg_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-18.jpg",
+            "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/N2-original.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Boats_in_Bouregreg_(2).jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-18.html",
+            "sourceHTMLSHA256": "adb85653031cb648d8a1cd7a04e724a492ff6e4dc916de858792cb0eda6d6947",
+            "author": "MarwanAndrew",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3872,
+            "height": 2592,
+            "ratio": 1.4938271604938271,
+            "date": [
+              "1 January 2009, 05:50:09"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+            "originalSHA256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326"
+          },
+          "qaReason": "Alkuperäisessä 3872×2592-kuvassa oikean reunan veneilijän kasvot jäävät lippalakin varjoon ja suuntautuvat alas; ei luettavaa kasvonpiirteiden kokonaisuutta. Veneet ja Bou Regregin kasbah-ympäristö vastaavat suistoaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Bou Regreg -joen suisto\"].kuvat[0]",
+          "commonsFile": "Boats in Bouregreg (2).jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäisessä 3872×2592-kuvassa oikean reunan veneilijän kasvot jäävät lippalakin varjoon ja suuntautuvat alas; ei luettavaa kasvonpiirteiden kokonaisuutta. Veneet ja Bou Regregin kasbah-ympäristö vastaavat suistoaihetta.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-18.jpg",
+            "originalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/N2-original.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Boats_in_Bouregreg_(2).jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-18.html",
+            "sourceHTMLSHA256": "adb85653031cb648d8a1cd7a04e724a492ff6e4dc916de858792cb0eda6d6947",
+            "author": "MarwanAndrew",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 3872,
+            "height": 2592,
+            "ratio": 1.4938271604938271,
+            "date": [
+              "1 January 2009, 05:50:09"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T18:02:06.762511+00:00",
+            "originalSHA256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326"
+          },
+          "auditTrail": [
+            {
+              "at": "2026-10-12T18:02:06.762511+00:00",
+              "previousVerdict": "blocked",
+              "previousReason": "Veneet Bou Regregillä ja kasbah taustalla vastaavat suistoaihetta, ei modernia siltaa päämotiivina. Oikean reunan veneilijän kasvoprofiili tarvitsee alkuperäiskoon tarkistuksen.",
+              "changeReason": "Alkuperäiset pikselit katsottu turvallisessa checkpointissa"
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Bou Regreg -joen suisto\"].kuvat[0]",
+        "commonsFile": "Boats in Bouregreg (2).jpg",
+        "sha256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Boats_in_Bouregreg_(2).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Boats_in_Bouregreg_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "MarwanAndrew",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3872,
+        "height": 2592,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
+        "bytes": 2413829,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:06:08.571636+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Boats in Bouregreg (2).jpg",
+        "lahde": "MarwanAndrew, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.",
+        "lyhyt": "Bou Regreg laskee mereen Rabatin ja Salén välissä."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "MarwanAndrew, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.",
+        "lyhyt": "Bou Regreg laskee mereen Rabatin ja Salén välissä.",
+        "tiedosto": "Boats in Bouregreg (2).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "4c376a78913ec6b1b1f21cc517ec21ff6fd4ebe912d9a5b2da47a6e5b7e810c8",
+      "contextAfterSHA256": "c7fa36142476274e2c3bf3fb89c2da26a80866fe5ac7f934d622719b46f1f717",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "nativeQAHashResolved": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
+      "nativeQAHashSource": "qaEvidence.item.evidence.originalSHA256",
+      "nativeOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/N2-original.jpg",
+      "existingOriginalQAReused": true,
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg",
+          "http": 200,
+          "sha256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
+          "bytes": 2413829,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg?gallery-verify=1e534244a1db91b8-1791840719205808000",
+          "http": 200,
+          "sha256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
+          "bytes": 2413829,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "sha256 field absent; originalSHA256 and originalViewedPath were already recorded"
+    }
+  ],
+  "effectiveQualifiedOriginalSnapshotBindings": 758,
+  "effectiveRemainingOriginalSnapshotHolds": 71,
+  "instructions": [
+    "Add only these three exact-version Rabat runtime bindings to the previously qualified755 snapshot handoff.",
+    "This reuses existing full-original QA evidence and corrects a schema join; it does not approve preview-only QA.",
+    "The exact Bissau PHOTO rights hold and other remaining snapshot holds continue. Preserve text, maps and other media."
+  ],
+  "ownerAcceptanceRequired": false,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false
+}
