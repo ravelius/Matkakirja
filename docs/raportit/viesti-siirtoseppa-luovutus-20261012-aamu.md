@@ -47,3 +47,13 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   (natiiviseppa/msaa-183), ei masterissa 182 → PT:lle ehdotettu vahdin listaan.
 - Seuraavaksi: botti 17/17 → Julkaisijalta hiljainen ikkuna (ennakkoilmoitettu) → LT-uusinta → PT. LT:n menetelmä (napautuskävely, ovet, vedot) 184.
 - Tarkistus puhtaalla kopiolla vaatii `git init -q` kopioon (Linssit-testit/kaanna.sh käyttää git rev-parsea).
+
+## PÄIVITYS 12.10. 14.15: BOTTI 17/17 (669e31396 + v48p)
+
+- Linnahaara **669e31396** (kaikki tarkistettu puhtaalla kopiolla): e15ac178e ahdas aloitus → reitillä ≥ 1,5 m; 4c7476569 botin takakuvavika vain
+  kiipeilyssä (K3-kaukokuva ei vika); 41c6d58dc näkymäsuunta vain EnsiVika-turvallinen; 669e31396 kiipeilyn lopussa (komero, pako) ilman ensiaskelehtoa.
+- Paketti **siirtoseppa/v48p fb151114c** (LR: väljät asut + kevennys, pala c09695d47f8023dc, nyky d157042efd7826d8), vahdissa v48o:n tilalla.
+  MH-tarkistus: 11/11 hahmoa, puhe/ilmeet ok, muisti ~1344 Mt ennallaan (lokit/siirtoseppa-botti-v48p/mh-yhteenveto.txt).
+- natiiviseppa/msaa-183 vahdissa → kehittäjäkonsolin MSAA-rivit 0.
+- **LT-appi** lokit/olavinlinna-auto-1012-1346 → Julkaisija järjestää hiljaisen ikkunan. LT:n jälkeen tunnus NS:lle **junaan 184** (183 lähti ilman linnaa).
+- PT: köysilaskun valovihje riittää, ei tekstikehotetta.
