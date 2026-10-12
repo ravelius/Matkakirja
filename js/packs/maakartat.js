@@ -19758,6 +19758,13 @@ export const KAUPUNKIKARTAT = {
 };
 
 /*
+ * PELIN KAUPUNKI "ISLANTI" = REYKJAVIKIN KARTTA (Karttaseppä 12.10.2026, PT + SK #4523). Laudalla
+ * Islanti on maan niminen kaupunki (js/packs/europe.js id 'islanti'), mutta kohdekartta tehtiin
+ * avaimella reykjavik, jota peli ei käytä: kartta ei näkynyt. Aarretehtävien erä 3 tarvitsee sen.
+ */
+KAUPUNKIKARTAT.islanti = KAUPUNKIKARTAT.reykjavik;
+
+/*
  * Lambertin tasapinta-azimutaalinen projektio (LAEA).
  *
  * Käytössä VAIN Venäjällä, koska sille ei ole olemassa tasavälistä
