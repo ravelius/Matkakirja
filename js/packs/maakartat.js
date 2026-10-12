@@ -19755,6 +19755,31 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  lappi: {
+    /*
+     * Rovaniemi, pelin kaupunki "Lappi" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 4 tarvitsee
+     * kohdekartan). Koordinaatit OSM:stä (nimi-haku 12.10.2026). Tekstit ja nostot täydentää Sisältökirjuri.
+     */
+    polku: 'assets/kartat/lappi-keskusta.png',
+    varikartta: 'assets/kartat/lappi-varikartta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 66.512, etela: 66.490, lansi: 25.705, ita: 25.760 },
+    piirtoRajat: { pohjoinen: 66.5186, etela: 66.4834, lansi: 25.6885, ita: 25.7765 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartan alue on Rovaniemen keskusta Kemijoen ja Ounasjoen '
+      + 'yhtymäkohdassa. Pohjoisessa Ounasjoen rannalla on Arktikum, idässä '
+      + 'Jätkänkynttilä-silta ylittää Kemijoen ja etelässä ovat Alvar Aallon '
+      + 'suunnittelemat kaupungintalo ja Lappia-talo sekä kaupungin kirkko. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Arktikum', lat: 66.50754, lon: 25.72598, wiki: 'Arktikum' },
+      { nimi: 'Lordin aukio', tyyppi: 'aukio', lat: 66.50252, lon: 25.7305, wiki: 'Lordin aukio' },
+      { nimi: 'Jätkänkynttilä', lat: 66.5029, lon: 25.74227, wiki: 'Jätkänkynttilä (silta)' },
+      { nimi: 'Rovaniemen kaupungintalo', lat: 66.49642, lon: 25.72501, wiki: 'Rovaniemen kaupungintalo' },
+      { nimi: 'Lappia-talo', lat: 66.49701, lon: 25.72043, wiki: 'Lappia-talo' },
+      { nimi: 'Rovaniemen kirkko', lat: 66.49462, lon: 25.72879, wiki: 'Rovaniemen kirkko' },
+    ],
+  },
 };
 
 /*

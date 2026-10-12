@@ -725,6 +725,15 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     laajennus: 1.6,
   },
+  lappi: {
+    /*
+     * Rovaniemi, pelin kaupunki "Lappi" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 4).
+     * Kemijoen ja Ounasjoen yhtymäkohta: keskusta niemellä, Arktikum pohjoisessa, Jätkänkynttilä-silta
+     * idässä Kemijoen yli, Aallon keskus (kaupungintalo, Lappia-talo) ja kirkko etelässä. 2,4 × 2,4 km.
+     */
+    rajat: { pohjoinen: 66.512, etela: 66.490, lansi: 25.705, ita: 25.760 },
+    laajennus: 1.6,
+  },
   valletta: {
     /*
      * Vallettan koko ydinniemi (21.9.2026; omistajan päätös
