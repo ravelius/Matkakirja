@@ -146,3 +146,15 @@ SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb 
 - SÄÄNTÖ (omistaja 12.10. 11.1x): omistajalle kuvat TÄYDELLÄ TARKKUUDELLA (yksittäinen pelikuva natiivikoossa tai pari nykyinen | uusi
   vierekkäin natiivikorkeudella, merkintä isona alareunaan, JPEG 90). Pienennetyt monen ruudun arkit vain PT:lle, täysikokoiset samalla.
 - KESKEN 11.2x: raketti v2 (agentti; _valmiit/iss-raketti-v2/ raketti.py:stä, solmut/origot/LOD ennallaan LS2:n RakettiMallille).
+
+## JATKO 12.10. ~14.5x
+- VIETY: v48p (asut + kevennys; 1499 c09695d47f8023dc / NYKY d157042efd7826d8; Siirtoseppä: 11/11 latautuu, visemit, muisti ennallaan),
+  v48q = v48p + vartijoiden rautahattu ja keihäs/hilpari (ase-luu, piilotus skaalalla istumaleikkeissä), portinvartijan avaimet,
+  sileät kengät: 1499 d5afe736572c06bb / NYKY 5943527a63233fd8 → Siirtoseppä ottaa omistajan pelikuvat (11 paria v48o | v48q).
+- Asut: linna-hahmot/vaatteet-v1/ (lahde/aja.py <id>, asut.py, vertailu.py; lähtö metahuman-<id>-v1/glb/). Paketointi + kevennys:
+  scratchpad vie_v48q.zsh -malli (mh_kevenna.py → hahmot/, ASTC kopio, vanhat hahmot/ennen-v48q/). Jäljellä: vartijoiden
+  risti-istunta (housut takin läpi ≤ 7 cm), apulaisen luutatyö hihansuu ~2 cm. Siivottava lopuksi: vaatteet-v1/tyo/ testikansiot.
+- Raketti v2 (_valmiit/iss-raketti-v2/): syy sahalaitaan float-tarkkuus (origo maapallon keskellä); LS2 kytki origon siirron ja
+  vaihe A:n (8d4d6a4cb, 1ee153c20). Vaihe B (tekstuurit) LS2:lla 184:ään PT:n päätöksellä.
+- KESKEN: koehuone v3 (varraspaisti + padat, LS2:n pyyntö) ja sen jälkeen päiväleivonta (agentti).
+- Agenttiohjeisiin aina: skriptit tiedostosta, ei rm, ei cd/&&-ketjuja (lupakyselyt pysäyttivät omistajan 11.00–11.27).
