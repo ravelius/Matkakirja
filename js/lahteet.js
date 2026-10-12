@@ -318,6 +318,11 @@ export const LAHTEET = [
         lisenssi: 'ODbL (Open Database License)',
       },
       {
+        nimi: 'Paikallisaarteiden valokuvat — kymmenen pääkaupunkimaata (Albania, Andorra, Valko-Venäjä, Liechtenstein, Monaco, Moldova, Pohjois-Makedonia, Montenegro, San Marino, Serbia)',
+        tekija: 'Wikimedia Commons ja Metropolitan Museum of Art (Open Access): Antidiskriminator (byrek, PD), Metropolitan Museum of Art (Vrapin aarre, CC0), Kronologiko (trinxat, CC BY-SA 4.0), Zinneke (Casa de la Vall, CC BY-SA 3.0), Tess Mattew (draniki, CC BY-SA 4.0), Jauhienij (Slutskin vyö, PD), Schofför (Ribel, CC BY-SA 3.0), JoachimKohler-HB (Gutenbergin linna, CC BY-SA 4.0), Lemone (barbagiuai, CC BY-SA 4.0), Tangopaso (Sainte-Dévoten reliikki, PD), Endangered Snowdrop (mărțișor, CC BY-SA 4.0), Petru I Mușatin grosi (PD, kolikot), Наташа Величковска (tavče gravče, CC BY-SA 4.0), Dumbarton Oaks (Mikael VIII:n hyperpyron, PD) ja Enrico Dandolon grosso (PD), VitisArchivum (vranac, CC BY-SA 4.0), BuhaM (Doclea, CC BY-SA 4.0), Mooonswimmer (Torta Tre Monti, CC BY 4.0), San Marinon Statuta 1600 (PD), Verica 1966 (ajvar, CC BY-SA 4.0), Miroslavin evankeliumi (PD)',
+        lisenssi: 'Public domain, CC0, CC BY 4.0, CC BY-SA 3.0/4.0 (tekijä nimetään; BY-SA: sama lisenssi jatkossa)',
+      },
+      {
         nimi: 'Havainnekuvat — tekoälyllä tuotettu kuvitus',
         tekija: 'Pelin oma tuotanto (Gemini-kuvamallit, jokainen kuva katsottu ennen '
           + 'käyttöä): nähtävyyksien loistoaikakuvat, kohdekarttojen pienoispiirrokset, '
