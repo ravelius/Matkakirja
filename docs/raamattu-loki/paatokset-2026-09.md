@@ -13834,3 +13834,125 @@ Vain lokiin (docs-PR 11.10. yö 2, kipin ohjaimet): Raamattua ei muutettu; linja
 12.10. 00.1x OMISTAJA (chat) sanatarkasti: "Se kolkuta kolkuta oli hauska, sen voi jättää" → kolmas korjaus peruttu: vaiheen 8 Pulun repliikki on "Kirjekyyhky tuo postia avaruuteen! Kolkuta, kolkuta!" v3:n otosta, ja voimassa ovat kaksi korjausta (Max Livia; Cupolasta näkyy Maa ja sen ohut sininen ilmakehä). Käsikirjoitus päivitetty: 6 muuttunutta repliikkiä äänitetään uudelleen, muut 12 v3:n otoista.
 
 Junaan 183 (ks. JUNA 183 VASTA KUN KAIKKI ON VALMISTA, EI KELLONAIKARAJAA).
+
+## TAIDEHALLIN OHJAUS: NÄYTTELYVALIKKO ALUSSA, ☰:SSÄ KAIKKI NÄYTTELYT, TEOSTEN NIMILISTA JA SIIRRY-NAPPI, SUURENNUS ELEILLÄ, KÄVELY TEOKSEN LUO (omistaja 12.10.2026 klo 00.1x) (12.10.2026 klo 01.50)
+
+12.10. 00.1x OMISTAJA (chat) sanatarkasti: "Taidehallissa pitää olla alussa valikko mistä saa valita mitä näyttelyä haluaa katsoa. Ota kaikki napit pois esityksen ajaksi.  Hampurilaisen kautta näkyy kaikki näyttelyt ja pelaaja voi sitä kautta vaihtaa huonetta. Teoksen nimen ylä ja alapuolella voisi näkyä edellisen ja seuraavan teoksen nimet hyvin pienellä. Napauttamalla mitä tahansa niitä vasemmalle sivulle levittäytyy kaikki teoksien nimet ja niitä voisi kelata vetämällä sormea nimien päällä. Valittu nimi näkyisi aina suurimmalla ja viereiset nimet vähän suuremmalla.  Nimien koot muuttuisivat pehmeästi animoiden. Pelaaja pääsisi siirtymään teokseen klikkaamalla uudelleen valittua teosta. Jos pelaaja ei tee mitään 1.5sek sisällä, teoksen nimen oik puolelle tulee siirry nappi jota painamalla teokseen pääsee myös. Teoksen kuvan Suurentaminen onnistuisi tupla napautuksella tai nipistys eleellä. Siirtyminen toisen teoksen luo valinnan jälkeen tapahtuu niin että henkilö kävelee uuden teoksen luo automaattisesti. Mitä olet mieltä?" → PT: hyvä, tehdään (NUI: valikko, ☰-näyttelyt, nimilista kipin pysäkkilistan pohjalta, Siirry, eleet; LS2: kävely pelaajan silmin + suurennus eleillä, suurennuslasinappi pois); PT:n lisäehdotus: nimilistan avaus pysäyttää kertojan ja sulkeminen jatkaa. Juna 183 ei odota tätä (mukaan jos ehtii ennen lukitusta), muuten 184. RAAMATTUUN (taidemuseo/taidehalli: ohjaimet esityksen aikana).
+
+Tarkennus 12.10. klo 00.2x: tauko jää näkyviin esityksen aikana ja pysäyttää kertojan ja tekstityksen (ks. TAUKO PYSÄYTTÄÄ KERTOJAN JA TEKSTITYKSEN KAIKISSA ESITYKSISSÄ).
+
+Toteutus (kesken 12.10. klo 01.3x): Natiivi-UI natiivi-ui/kippi-taidehalli-183 (alkuvalikko, ☰:n näyttelyt, nimilista ja Siirry 622ee5953; esityksen aikana vain ⏸ ja ☰ fc0e46072) ja Linssiseppä 2 linssiseppa2/taidehalli-183 (kävely pelaajan silmin, suurennus tuplanapautuksella ja nipistyksellä 6be55b774). Junaan 183, jos ehtii ennen lukitusta, muuten 184.
+
+Raamattuun (docs-PR 12.10. yö, taidehalli): Ydinajatus, NATIIVI PELI ETUSIJALLE, TAIDEMUSEO-LINSSI: TAIDEHALLIN OHJAUS (korvaa ZOOM-NAPIN; info-nappia ei näytetä esityksen aikana; MAITTAIN-kohdan napista kuuluva esittely viittaa ohjaukseen). PT:n lisäehdotus (nimilistan avaus pysäyttää kertojan, sulkeminen jatkaa) vain lokissa.
+
+## DIALOGIT YHTENÄ OTTONA: KAHDEN TAI USEAMMAN ÄÄNEN KESKUSTELU YHTENÄ DIALOGIOTTONA AIKALEIMOIN, EI REPLIIKKI KERRALLAAN (omistaja 12.10.2026 klo 00.1x) (12.10.2026 klo 01.50)
+
+12.10. 00.1x OMISTAJA (chat) sanatarkasti: "Äänitä kumpikin repliikki yhtenä pitkänä dialogi ottona jotta rytmi säilyy luontevana" → raketin selostus v6: koko dialogi (18 repliikkiä, William + Livia) YHTENÄ dialogigenerointina aikaleimoin (Äänittäjä), LS2 ajoittaa vaiheet repliikkien alkuihin. RAAMATTUUN (äänet, jatke 3.10. "yksi pitkä teksti kerralla" -säännölle): kahden tai useamman äänen keskustelu generoidaan yhtenä dialogiottona, ei repliikki kerrallaan.
+
+Rinnakkainen lainaus samalta minuutilta ("Se kolkuta kolkuta oli hauska, sen voi jättää") on kirjattu jo kirjaukseen RAKETIN SELOSTUS V2 (#4464). Tämä kumoaa siinä kirjatun äänitystavan (6 muuttunutta repliikkiä uudelleen, muut 12 v3:n otoista): kaikki 18 repliikkiä ovat nyt samassa otossa. Jatkaa kirjauksia OMISTAJA: SOKRATEEN KERTOJA YHTENÄ OTTONA (3.10.) ja OMISTAJA: LINNAN KOHTAUKSET — KESKUSTELU YHTENÄ OTTONA (5.10.).
+
+Toteutus (kesken 12.10. klo 01.3x): Äänittäjä v6 (121,8 s, puheentunnistus 18/18) → Linssiseppä 2 (yksi dialogiraita, sytytys kertojan sanaan ja vaiheet repliikkien alkuun, 3f7942bee), junaan 183.
+
+Raamattuun (docs-PR 12.10. yö, taidehalli): Äänet ja luennat, ÄÄNET PCM:NÄ, PAKKAUS KERRAN: DIALOGIT YHTENÄ OTTONA.
+
+## TAUKO PYSÄYTTÄÄ KERTOJAN JA TEKSTITYKSEN KAIKISSA ESITYKSISSÄ; TAIDEHALLIN ESITYKSESSÄ NÄKYVISSÄ TAUKO JA ☰ (omistaja 12.10.2026 klo 00.2x) (12.10.2026 klo 01.50)
+
+12.10. 00.2x OMISTAJA (chat) sanatarkasti: "Jätä kuitenkin se pause nappi ja silloin kertojan ääni pitää myös katketa. Nykyisessä pause ei toiminut niim" → taidehallin esityksen aikana näkyvissä tauko + ☰; tauko pysäyttää kertojan ja tekstityksen, toisto jatkaa samasta kohdasta (nykyisen museon vika → NUI/LS2 korjaus junaan 183; kipin tauko tarkistetaan äänellä). RAAMATTUUN (taidehalli + kaikki esitykset: tauko pysäyttää kertojan).
+
+Toteutus junassa 183: Linssiseppä 2 00f83a6da (museo: tauko pysäyttää kertojan heti ja jatko soittaa samasta kohdasta, tekstitys pysyy virkkeessä tauon ajan) ja Natiivi-UI c8214dceb (⏸ vaihtuu ▶:ksi tauolla).
+
+Raamattuun (docs-PR 12.10. yö, taidehalli): Arkkikirjasto, LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA: TAUKO PYSÄYTTÄÄ KERTOJAN JA TEKSTITYKSEN (kaikki esitykset ja kierrokset); taidehallin tauko ja ☰: TAIDEHALLIN OHJAUS.
+
+## KIPPI: AURINKONAPPI POISTUU KOKONAAN, ☰ OIKEAAN YLÄKULMAAN KAIKISSA TILOISSA (omistaja 12.10.2026 klo 00.2x) (12.10.2026 klo 01.50)
+
+12.10. 00.2x OMISTAJA (chat) sanatarkasti: "Olihan kipissä sää nappi aina siellä hampurilaisen sisällä valikkona? Eli nappi poistuu kokonaan" + "Hampurilainen näkyi oudon keskellä. Pitäisi olla oik yläkulmassa. Näytä vielä vedokset napeista" → ☀-nappi poistuu kokonaan (vain ☰ "Aika ja sää" kaikissa tiloissa), ☰ kiinni oikeaan yläkulmaan kaikissa tiloissa (NUI), vedokset 6 tilasta iPhone + iPad omistajalle. (Raamattu: kuvakytkin ☰:ssä kirjattu #4464:ään.)
+
+Toteutus junassa 183: Natiivi-UI kippi-ui-183 (☰ turva-alueen oikeaan yläkulmaan kaikissa tiloissa ja säävihje ☰:n luo 28b30cddf; ☀ ei koskaan yläkulmassa 144198cc8; junaan c8214dceb).
+
+Raamattuun: ei muutosta tässä docs-PR:ssä; Karttalinssit, ELÄVÄ OPAS sanoo jo, että Aika ja sää on ☰-valikossa ilman erillistä ☾/☀-nappia ja hampurilainen on oikeassa yläkulmassa (docs-PR 11.10. yö 2, #4464).
+
+## MAPTERHORN EUROOPAN MAAN KORKEUSLÄHTEEKSI JA GLO-30 VARALLE; MERET OMINA LINSSEINÄ IDEANA (omistaja 12.10.2026 klo 03.5x) (12.10.2026 klo 05.21)
+
+12.10. 03.5x OMISTAJA (chat) Mapterhornista (linkki github.com/bertt/cesium-mapterhorn-provider: CesiumJS-liitännäinen, avoimet korkeuslaatat) sanatarkasti: "Onko meille hyötyä?" + "Onko vain eurooppa ja mistä meren aineisto?" + "Linsseissä koko maapallo on käytössä. Ja pian aloitetaan laajennus Euroopan ulkopuolelle joka tapauksessa. Ja meristä olisi kiinnostavaa tehdä omia linssejä. Mutta nyt tuo avaruus aluksen laukaisupaikan parannus kiinnostaa eniten" → PT: liitännäinen on tehty selainkartalle eikä sovi Unity-peliin, mutta aineistosta on hyötyä: Mapterhorn (Kartverket 1 m, Lantmäteriet, swisstopo, IGN ym., globaali GLO-30) Euroopan maan korkeuslähteeksi ja Copernicus GLO-30 varalle alueille, joilta kansallinen malli puuttuu; merenpohja GEBCO:sta (kaikki meret, noin 450 m) ja EMODnetistä (Euroopan meret, noin 115 m) merilinsseihin myöhemmin; Andøyan laukaisupaikka v2 1 m:n maastolla junaan 183.
+
+Karttaseppä kirjasi lähteet ja lisenssit (proto-3d/_lahteet/mapterhorn/LAHTEET.md): Mapterhorn on paljas maa ilman rakennuksia, puita ja merenpohjaa; Euroopan lähteet ovat kaikki avoimia (CC BY 4.0, CC0, Licence Ouverte 2.0, DL-DE BY/Zero, swisstopo OGD, OGL), ja krediitit annetaan lähdekohtaisesti vientipaketin LAHTEET.md:hen (krediitit.py). Euroopan ulkopuolella USA:n, Kanadan, Uuden-Seelannin ja Australian lähteet ovat avoimia; Japani vaatii erillisen tarkistuksen ennen vientiä. Vertailu 12.10. (Andøya, Tukholman Södermalm, Lauterbrunnen): Mapterhornin z15 0,8–1,6 m/px, GLO-30 30 m; erotuksen mediaani 4–8 m, koska GLO-30 on pintamalli (talot ja puut mukana).
+
+Toteutus junassa 183: Linssiseppä 2 iss-raketti 981857ac3 (Andøyan alusta v2: Kartverketin 1 m:n maastomalli Mapterhornin kautta 691a83616).
+
+Vain lokiin (docs-PR 12.10. aamu): Raamattua ei muutettu (Karttalinssit, ELÄVÄ OPAS mainitsee yhä pallokaupunkien maastomalliksi Copernicus GLO-30:n ja kehityskaupungeissa tarkemmat kansalliset mallit).
+
+## JUNA 183 JULKAISTAAN VASTA OMISTAJAN PYYNNÖSTÄ, KAIKKI MAHDOLLINEN MUKAAN; PULU RAKETIN KYLJESSÄ KASVOT KULKUSUUNTAAN (omistaja 12.10.2026 klo 04.0x) (12.10.2026 klo 05.21)
+
+12.10. 04.0x OMISTAJA (chat) sanatarkasti: "Otetaan kaikki mahdolliset mukaan jo seuraavaan junaan" + "Julkaise vasta sitten kun pyydän. Ehdit ottaa kaiken mukaan" → juna 183 laajenee (Andøya v2, MetaHuman-laatu, kaariluennat, saapumisen tarkkuus, taidehallin korjaukset, Pulu kulkusuuntaan, lautapelien opastus); EI lukitusta, TestFlightia eikä junan web-mergejä ennen omistajan pyyntöä. Kun omistaja pyytää, Päätoimittaja välittää Natiivisepälle ja Julkaisijalle sanatarkasti "OMISTAJA PYYSI JULKAISUA"; siihen asti kuitatut kootaan runkoon ja testit ja muistimittaus tehdään valmiiksi, ja kun kaikki on valmista, omistajalle yksi rivi: juna 183 on valmis julkaistavaksi.
+
+Korvaa 11.10. klo 22.3x linjan "julkaise lopuksi 183" ja yövaltuutuksen junan julkaisuosan (ks. JUNA 183 OMISTAJAN LUVALLA, KUN ILLAN ERÄT OVAT VALMIIT ja YÖN VALTUUTUS PÄÄTOIMITTAJALLE 11.–12.10.2026); jatkaa kirjausta JUNA 183 VASTA KUN KAIKKI ON VALMISTA, EI KELLONAIKARAJAA.
+
+12.10. 04.0x OMISTAJA (chat) sanatarkasti: "Pyydä kodexilta lisää pulun kuvia jotta se istuu paremmin avaruusaluksen kyytiin kasvot sen kulkusuuntaan nähden, ei kameraan. Kaikki mitä tarvitset että näyttäisi luonnollisemmalta" → Codex-tilaus 8 kuvaa (posti/fable-codex-pulu-raketti-20261012.md, 99cac747d): Pulu istuu raketin kyljessä kuin ratsastaja ja katsoo kärkeä kohti eikä kameraan (perusratsastus sivulta, viistosti edestä ja viistosti takaa; max-Q runkoa vasten painuneena; irtoaminen vilkuttaen putoavalle vaiheelle; tähdet; laskeutuminen raketin kylkeen; yöversio alustalle valonheittimien valossa). Linssiseppä 2 kytkee: kuvan yläreuna raketin akselin suuntaan, kuva valitaan lennon vaiheen ja kamerakulman mukaan.
+
+Toteutus junassa 183: Linssiseppä 2 iss-raketti 981857ac3 (Pulu v2 valmiina Codexin kuville); kuvat junaan 183, kun Codex toimittaa ne.
+
+Vain lokiin (docs-PR 12.10. aamu): Raamattua ei muutettu; julkaisulinja koskee junaa 183 ja on voimassa tämän kirjauksen (ja Päätoimittajan muistin julkaisu-vasta-omistajan-pyynnosta) varassa, ja Ydinajatus, TYÖTAPA JA SESSIOT: KEHITYSTAHTI (junat tarpeen mukaan) on ennallaan.
+
+## TAIDEHALLI: NÄYTTELYIDEN SELITYKSET VALIKKOON, NIMILISTAN VALITTU NIMI ISOMMAKSI, SIIRRY-NAPPI LÄPINÄKYVÄKSI JA TEKSTI KESKELLE (omistaja 12.10.2026 klo 04.2x) (12.10.2026 klo 05.21)
+
+12.10. 04.2x OMISTAJA (chat, kuva nimilistasta) sanatarkasti: "Kabineteista pitää olla selitykset ja korjaa tämä kuvan näkymä. Teksti saisi olla valitussa kohteessa isompi ja nappi läpinäkyvä ja teksti keskitetty" → nimilistassa valitun teoksen nimi selvästi isommaksi ja Siirry-nappi läpinäkyväksi samalla tyylillä kuin taidehallin ⏸ ja ☰, teksti keskelle; Sisältökirjuri kirjoitti jokaiselle seitsemälle näyttelylle (kabinetille) lyhyen selityksen siitä, mitä huoneessa on, ja se näkyy alkuvalikossa näyttelyn nimen alla sekä ☰ › Näyttelyt -valikossa.
+
+Toteutus junassa 183: Sisältökirjuri #4476 (docs/raportit/taidehalli-nayttelyselitykset-20261012.json, 7 näyttelyä; PT muokkasi kahta selitystä, m3 ja kg) ja Natiivi-UI 157f041e8 (valittu nimi korostuskokoon, Siirry läpinäkyvänä kuten ⏸/☰ ja teksti keskelle, selitykset alkuvalikkoon ja ☰ › Näyttelyt) sekä jatkokorjaus f6e89433d (valittu nimi vähintään 1,5 × viereiset, ja jos se ei mahdu, kahdelle riville).
+
+Vain lokiin (docs-PR 12.10. aamu): Raamattua ei muutettu; Ydinajatus, NATIIVI PELI ETUSIJALLE, TAIDEMUSEO-LINSSI: TAIDEHALLIN OHJAUS kattaa jo alkuvalikon, nimilistan ja Siirry-napin (#4474).
+
+## LINNAPELI KOHTI KINGDOM COME DELIVERANCE 2:N TASOA: KEITTIÖN KOEHUONE ENSIN; LAUKAISUPAIKAN VÄRIT TARKEMMIKSI MAAPINNOILLA (omistaja 12.10.2026 klo 04.2x) (12.10.2026 klo 05.21)
+
+12.10. 04.2x OMISTAJA (chat) sanatarkasti: "Miten saadaan linnapelistä yhtä hieno kuin kingdom come deliverance 2?" → PT: iPadilla täysin samaan ei päästä, mutta lähikuvissa saman tunnelman voi saada; suurimmat erot tärkein ensin: valo (kimpoava valo, pehmeästi tummuvat nurkat, valokeilat pölyn läpi), pinnat (valokuvista tehdyt kivi-, puu- ja rappauspinnat, saumoissa likaa ja kulumaa), muodot (epätasaiset kiviportaat, pyöristetyt reunat, oikeat holvikaaret), esineet (astiat, ruoka, työkalut, kankaat), ihmiset (MetaHumanit, hiukset, luonnolliset liikkeet liikekirjastoista) ja ilma (savu, pöly, soihtujen värinä, yhtenäinen värisävy). Suositus: ensin yksi koehuone, linnan keittiö, tälle tasolle uusimmille iPadeille (vanhemmille kevyempi versio kuten MetaHumaneissa) ja omistajalle ennen/jälkeen-pari; jos tulos miellyttää, sama huone kerrallaan muuhun linnaan. Linnanrakentaja aloittaa, kun junan 183 linnatyöt ovat valmiit.
+
+12.10. 04.2x OMISTAJA (chat) sanatarkasti: "Saako värit tarkemmiksi myös?" → PT: ei Norjan ilmakuvista, koska tarkat ilmakuvat eivät ole avoimia kaupalliseen käyttöön (lisenssi on tarkoitettu viranomaisille); Kartverketin lupa on omistajan päätös, koska se on yhteydenotto talon ulkopuolelle. Laukaisupaikan värit tarkemmiksi lähellä maapinnoilla: maahan oikeat pintakuviot (nurmi, kallio, sora, hiekka, alustalle betoni) rinteen jyrkkyyden ja korkeuden mukaan uudesta 1 m:n maastosta ilmaisista valokuvapinnoista, ja satelliittikuva sävyttää pintoja kauempana. Linssiseppä 2 tekee maapinnat ja alustan rakennukset (betonikenttä, valomastot, huoltorakennus) ja ennen/jälkeen-kuvan omistajalle.
+
+Koehuone tehdään vain ilmaisilla ja omilla aineistoilla (ks. TOISTAISEKSI EI OSTOJA), ja laukaisupaikan pintakuviot ovat ilmaisia valokuvapintoja.
+
+Vain lokiin (docs-PR 12.10. aamu): Raamattua ei muutettu; linja odottaa koehuoneen kuvia.
+
+## LAUTAPELIT: OPASTETTU ENSIMMÄINEN PELI MYLLYYN JA TAVLIIN; AARRETEHTÄVIEN KOKEILU ATEENASSA, PARIISISSA JA TUKHOLMASSA (omistaja 12.10.2026 klo 04.3x–04.4x) (12.10.2026 klo 05.21)
+
+12.10. 04.3x OMISTAJA (chat) sanatarkasti: "Onko lautapeleissä tarpeeksi selkeät ohjeet alussa miten niitä pelataan ja voisiko niitä tehdä lisää" → PT: ei ole (alussa yksi lause ja säännöt tiiviinä kappaleena napin takana; Tavlia ei niillä opi); OPASTETTU ENSIMMÄINEN PELI Myllyyn ja Tavliin junaan 183 (Pelikoodari + Natiivi-UI): vinkki kerran juuri kun sääntö tulee vastaan, laudan korostus, ohita, säännöt-korttiin kuvat ja lempeä botti. Seuraavat pelit katalogista: Hnefatafl, Mangala sekä korttipelit Briscola ja Schnapsen (pihapelit kuten kyykkä ja pétanque vaativat heittofysiikkaa ja ovat isompia töitä).
+
+12.10. 04.3x OMISTAJA (chat, samassa viestissä) sanatarkasti: "Miten parantaisit aarre kysymys tehtäviä?" → PT:n ehdotus: aarrekysymykset ovat nyt tietovisaa (neljä vaihtoehtoa), ja ne muutetaan tehtäviksi, joiden vastaus löytyy kaupungista eikä muistista. 12.10. 04.4x OMISTAJA (chat) "Joo" PT:n ehdotukseen: AARRETEHTÄVIEN KOKEILU aloituskaupungeissa Ateena, Pariisi ja Tukholma: vähemmän muistitietovisaa, tilalle KATSO JA LÖYDÄ (napauta kaupunkinäkymästä), AIKAJANA, ARVIO liukusäätimellä tai isoisän SALAKIRJOITUS; väärän vastauksen jälkeen kohtaamisen henkilön vihje (toinen yritys tuottaa vähemmän); jokainen kaupunki antaa palan isoisän KERÄÄNTYVÄÄN ARVOITUKSEEN. Kehityslipun takana, omistaja näkee pelikuvat ennen peliin vientiä (Sisältökirjuri sisältö, Pelikoodari moottori, Natiivi-UI näkymät, Linssiseppä kohteen napautus).
+
+Toteutus (kesken 12.10. klo 05.1x): lautapelien opastus Pelikoodari pelikoodari/lautapeliopas-183 (logiikka 129a74d1e) ja Natiivi-UI natiivi-ui/lautapeliopas-183 (Myllyn ja Tavlin säännöt-kortit kuvin 48c759063 ja 6017d9465, korostus ja ohjekupla 88794c0ad), junaan 183. Aarretehtävät: Sisältökirjuri #4477 ja #4478 (docs/raportit/aarretehtavat-kokeilu-20261012.json ja .md: kaksi tehtävää kaupunkia kohti, Ateenassa aikajana, Pariisissa arvio ja Tukholmassa salakirjoitus, sekä kerääntyvän arvoituksen kolme palaa) ja Pelikoodari pelikoodari/aarretehtavat-koe (moottori 8cfc8dfdd, näkymät olemassa olevilla pohjilla ja kehityslippu c654c26b6).
+
+Vain lokiin (docs-PR 12.10. aamu): Raamattua ei muutettu (aarretehtävät ovat kokeilu kehityslipun takana).
+
+## TAIDEHALLIN ILME JA ELÄMÄ -PILOTTI KUNNIAGALLERIASSA, TERÄVÄT SEINÄT JA LÄHESTYMINEN ULKOA MUSEUMPLEININ YLI (omistaja 12.10.2026 klo 04.4x–04.5x) (12.10.2026 klo 05.21)
+
+12.10. 04.4x OMISTAJA (chat) sanatarkasti: "Miten taide näyttelyn tilan saisi oleellisesti paremman näköiseksi?" (04.47) + "On myös vähän kuolleen näköinen" (04.48) → TAIDEHALLIN ILME -PILOTTI: Linssiseppä tekee ensin yhden näkymän (Kunniagalleria kohti Yövartiota) museokuvan tasolle: valo (kattoikkunat, valokeila jokaiselle maalaukselle, pehmeästi tummuvat nurkat), seinät (sileä tumma maali, koristemaalaukset, holvikatto), pilarit ja kaaret oikeaksi tiileksi ja kiveksi, lattian hillitty kiilto, listat, karniisit, ovenpielet ja teoskyltit; ELÄMÄÄ: 4–8 nykyajan kävijää (kävelevät hitaasti ja pysähtyvät maalausten eteen), vartija, pöly valokeiloissa, äänimaisema (askeleita puulattialla, hiljaista puheensorinaa, kaukainen ovi; Äänittäjä olemassa olevista museoäänistä). Linssiseppä tekee ensin lyhyen suunnitelman kävijöiden reiteistä ja muistinkäytöstä, jotta peli pysyy kevyenä. Sisältökirjuri oikeat vertailukuvat samasta paikasta; omistajalle kuvasarja nyt | uusi | oikea museo; jos miellyttää, sama muihin saleihin.
+
+12.10. 04.5x OMISTAJA (chat) sanatarkasti: "Korjaa liian epäterävä seinä myös sitten siinä isossa parannuksessa taidehalliin." (04.55) → pilottiin terävät seinät: lähikuvan kestävä maalipinta oikean museon sävyssä, ei sumene viistosta katsottuna; sama tarkistus pilareille ja kaarille.
+
+12.10. 04.5x OMISTAJA (chat) sanatarkasti: "Menen takaisin nukkumaan. Toimi itsenäisesti" (04.56) + "Viimeinen : Tee taidehalliin löhestymiskuva ulkoa" (04.57) → TAIDEHALLIN LÄHESTYMINEN ULKOA: kamera lentää Museumpleinin yli kohti Rijksmuseumin julkisivua, laskeutuu holvikäytävän kohdalle ja liukuu sisään Kunniagalleriaan Yövartion suuntaan; ensimmäisellä käynnillä koko lento, myöhemmin lyhyt versio, ohitettava (Linssiseppä); kuvat ja lyhyt video omistajalle aamulla.
+
+Pilotti tehdään vain vapaasti lisensoiduilla ja omilla aineistoilla (ks. TOISTAISEKSI EI OSTOJA).
+
+Vain lokiin (docs-PR 12.10. aamu): Raamattua ei muutettu; pilotti odottaa omistajan kuvasarjaa.
+
+## TOISTAISEKSI EI OSTOJA: PILOTIT VAIN VAPAASTI LISENSOIDUILLA JA OMILLA AINEISTOILLA; CC0-, CC BY- JA PD-AINEISTOT SAA LADATA ILMAN ERILLISTÄ LUPAA (omistaja 12.10.2026 klo 04.5x) (12.10.2026 klo 05.21)
+
+12.10. 04.5x OMISTAJA (chat) sanatarkasti: "Ei osteta mitään vielä" (04.51; vastaus Päätoimittajan listaan omistajan kysymykseen "Tarvitsetko näihin lupia minulta?" (04.50), jossa PT oli maininnut, että museon kävijöihin tai linnan esineisiin voisi ostaa valmiin paketin) → pilotit (taidehallin ilme ja elämä, linnan keittiön koehuone) tehdään vain ilmaisilla ja omilla aineistoilla (CC0/PD/CC BY -pinnat, omat mallit, MetaHuman-hahmot); ei ostosuosituksia ennen kuin omistaja avaa asian.
+
+12.10. 04.5x OMISTAJA (Linnanrakentajan sessio, n. 04.52, PT:n ehdottama rivi) sanatarkasti: "Saat ladata vapaasti lisensoituja aineistoja (CC0, CC BY, PD)." → roolit lataavat CC0-, CC BY- ja PD-aineistoja (mallit, pinnat, äänet) ilman erillistä lupaa; CC BY:stä tekijä, teos, lisenssi ja linkki LAHTEET.md:hen; ei NC-, ND- tai SA-ehtoisia eikä maksullisia; robots.txt ensin. Täydentää 11.10. 23.4x "aina saa ladata" -linjaa (ks. LATAUKSET PYSYVÄLLÄ LUVALLA: OMISTAJALTA EI KYSYTÄ LATAUSLUPIA). Lupa ei koske maksullista generointia (UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN LUPAA ennallaan).
+
+Raamattuun (docs-PR 12.10. aamu): Ydinajatus, UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN LUPAA: MAKSULLISET LÄHTEET (TOISTAISEKSI EI OSTOJA: ostoehdotuksia ei tuoda ennen kuin omistaja itse avaa asian; pilotit vain vapaasti lisensoiduilla (CC0, CC BY, PD) ja omilla aineistoilla, jotka roolit saavat ladata ilman erillistä lupaa).
+
+## ASEMATAULU: VAATII TOIMIA JA LAITTEIDEN PROSENTIT (12.10.2026 klo 10.31)
+
+Omistaja 12.10.2026 klo 10.3x (kuvakaappaus Asemataulun otsikoista "Laitteet (käytössä: iPad, Blender, Unity)" ja "Roolit (13) työssä 1"), sanatarkasti: "laitteissa voisi näkyä prosenttimäärät käytöstä ja roolit muodossa (1/13 käytössä, vaatii toimia: 1). Tuo vaatii huomiota tulisi punaisella ja boldattuna ja näkyisi vain siinä tapauksessa että jollain sessiolla on kysymys minulle, joka vaatii toimia. Sessioille pitää sanoa, että heidän pitää itse päivittää tämä taululle tai viestiä postivahdille, koska on todella tärkeää että se nousee heti näkyviin. jos roolit ovat avattuna, niin silloin toimia tarvitaan sessioiden taustaväri on punaiselle. kirjaa tämä selkeästi raamattuun jotta tämä varmasti toteutuu myös jatkossa." TOTEUTUS (Päätoimittaja, sivu versio 57): jokainen sessio kirjoittaa omaan dokumenttiinsa talo/toimi-<rooli> {rooli, kysymys, ts} heti, kun sillä on omistajalle toimia vaativa kysymys tai pyyntö (tai viestii Postivahdille "VAATII TOIMIA: <rooli>: <asia>"), ja poistaa dokumentin, kun asia on hoidettu; sivu laskee nämä ja Postivahdin tilan "kysyy"; Roolit-otsikko (T/N käytössä, vaatii toimia: V) punaisella ja lihavoituna vain kun V > 0; avatussa osiossa kortti punaisella pohjalla ja kysymys kortissa; Laitteet-otsikossa prosessorin käyttöprosentit. Linjaus Raamatun ASEMATAULU-kohdassa VAATII TOIMIA.
+
+## SIIRTOPROMPTI 50 %:SSA OMISTAJAN PÄÄTILILLÄ (12.10.2026 klo 10.31)
+
+Omistaja 12.10.2026 klo 10.3x, sanatarkasti: "tee siirtoprompti kun tämän tilin käyttö on 50%, vaihdan silloin toiselle tilille. Tarvitsen tätä tiliä myös muihin juttuihin viikon aikana, mutta muut tilit ovat pelkkää koodausta varten, joten siksi tämä erikoisjärjestely." → Päätoimittaja kirjoittaa siirtopromptin, kun tämän tilin viikkokäyttö on 50 %, ja kertoo siitä omistajalle yhdellä rivillä; Postivahti hälyttää 50 %:ssa. Muilla tileillä raja on edelleen 99 %. Linjaus Raamatun VIIKKOKIINTIÖ-kohdassa.
+
+## UI-POHJAT: AARRETEHTÄVÄN ARVIOKORTIN SÄÄDINRIVI PERGAMENTILLA (12.10.2026 klo 10.33)
+
+Päätoimittaja 12.10.2026 klo 05.3x (UI-POHJAT, omistajan tarkennus 9.10. vastaava tilanne): aarretehtävien arviokortti VISA-nostossa käyttää säädinriviä (mk-saadinrivi); nimen ja arvon paperimuunnos laajennetaan olemassa olevasta päävalikon pergamenttisäännöstä (.mk-paavalikko--pergamentti → var(--map-ink-85)) valitsimeen .mk-nosto-visa .mk-saadinrivi__nimi/__arvo; ei uutta tyyliä (NUI:n kysymys, PT hyväksyi; omistajalle kerrottu jälkikäteen aamun yhteenvedossa 12.10. klo 09.5x).
+
+## KREIKKA: MUISTOMERKKIEN KUVAT PIILOON KREIKAN APP STORESSA (12.10.2026 klo 11.47)
+
+Omistaja 12.10.2026 klo 11.5x, sanatarkasti: "piilotetaan ne kreikan app storessa". Tausta: Sisältökirjurin selvitys (PR #4492, docs/raportit/kreikka-kulttuuriperintolaki-20261012.md, ei oikeudellinen neuvo): Kreikan laki 3028/2002 (nyk. 4858/2021 art. 46, päätös 436630/2023) vaatii ennakkoluvan ja maksun valtion muistomerkkien kuvaamiseen kaupalliseen levitykseen, myös video ja 3D. Linjaus Italian tapaan: Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas (Ateena ym.) piilotetaan vain Kreikan App Storessa (storefront GRC), muualla kaikki ennallaan. Kuumailmapallokierros tehdään Ateenan sijaan Prahaan (PT 11.5x). Toteutus: Sisältökirjuri listaa Kreikan muistomerkkisisällön, Natiiviseppä tekee App Storen maan tunnistuksen ja yleisen alueellisen piilotuksen (juna 184).

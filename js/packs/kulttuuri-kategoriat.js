@@ -5732,11 +5732,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tukholma-ilta.png',
-          lyhyt: 'Riddarholmenin kirkko, Ruotsin kuninkaiden hautakirkko, sai valurautaisen pitsitornin 1846.',
+          lyhyt: 'Riddarholmenin kirkko, Ruotsin kuninkaiden hautakirkko, sai valurautaisen pitsitornin 1838–1840.',
           selite: 'Riddarholmenin kirkko on Tukholman vanhimpia '
             + 'rakennuksia ja Ruotsin kuninkaiden hautakirkko '
             + '1600-luvulta asti — sen valurautainen pitsitorni nousi '
-            + 'tulipalon jälkeen 1846.',
+            + '1835 tuhoutuneen tornin tilalle 1838–1840.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -138393,10 +138393,10 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kruunu, jota varjeltiin kuin vankia',
-          teksti: 'Pyhän Martinin tuomiokirkosta tuli Unkarin kuninkaiden kruunajaiskirkko vuonna 1563, kun osmanit olivat vallanneet vanhan kruunajaiskaupungin Székesfehérvárin. Ensimmäisenä kruunattiin Maximilian II, jonka päähän Pyhän Tapanin kruunu asetettiin 1563. Lähteen mukaan kruunu oli Pressburgin linnassa noin vuodesta 1552 1780-luvulle, ja sitä vartioivat kruunuvartijat ja jalkaväkimiehet. Habsburg-kuninkaat eivät saaneet pitää kruunua itse, vaan he pääsivät sen luo vain kruunajaisissa. Nykyään tornin huipulla on kullattu jäljennös, joka asetettiin paikalleen 1846.',
+          teksti: 'Pyhän Martinin tuomiokirkosta tuli Unkarin kuninkaiden kruunajaiskirkko vuonna 1563, kun osmanit olivat vallanneet vanhan kruunajaiskaupungin Székesfehérvárin. Ensimmäisenä kruunattiin Maximilian II, jonka päähän Pyhän Tapanin kruunu asetettiin 1563. Lähteen mukaan kruunu oli Pressburgin linnassa noin vuodesta 1552 1780-luvulle, ja sitä vartioivat kruunuvartijat ja jalkaväkimiehet. Habsburg-kuninkaat eivät saaneet pitää kruunua itse, vaan he pääsivät sen luo vain kruunajaisissa. Nykyään tornin huipulla on kullattu jäljennös, joka asetettiin paikalleen 1840-luvun lopulla.',
           tiedosto: 'Bratislava Saint Martin\'s Cathedral Tower 01.jpg',
           lyhyt: 'Pyhän Martinin tuomiokirkon torni, jonka huipulla on Pyhän Tapanin kruunun jäljennös.',
-          selite: 'Tornin kullattu kruununjäljennös asetettiin paikalleen 1846.',
+          selite: 'Tornin kullattu kruununjäljennös asetettiin paikalleen 1840-luvun lopulla.',
           lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'St Martin\'s Cathedral, Bratislava',
         },

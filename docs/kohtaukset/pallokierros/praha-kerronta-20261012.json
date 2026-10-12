@@ -1,0 +1,977 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "kaupunki": "praha",
+  "huomio": "Prahan pallokierros (PT 12.10.2026; kippi Prahaan Ateenan tilalle). Kertoja ja kuvat tarkistettu itsenäisellä Sonnet-kierroksella; ääni vasta omistajan luvalla; toteutus LS1. Kuvat vain PD/CC0/CC BY. Isoisäviittaus vain pysäkillä 6.",
+  "muistettavat": [
+    "Praha on joen ja kukkuloiden kaupunki: Vltava kaartuu keskustan läpi, ja linna, Petřín ja Vyšehrad katsovat sitä kukkuloilta.",
+    "Kaksi rantaa ja yksi silta: Hradčany ja Malá Strana länsirannalla, Vanhakaupunki itärannalla; Kaarlensilta (1357) oli vuoteen 1841 asti Vltavan ainoa ylityspaikka.",
+    "Prahassa monta aikaa on samassa kuvassa: kello vuodelta 1410, keskiaikainen synagoga, katedraali joka valmistui vasta 1929 ja Venceslauksen aukio 1968 ja 1989."
+  ],
+  "avaus": {
+    "virkkeet": [
+      "Tervetuloa Prahaan.",
+      "Ylhäältä kaupunki näyttää punakattoiselta mereltä, jonka läpi Vltava kaartuu leveänä mutkana ja jota rajaavat kukkulat ja lukemattomat tornit.",
+      "Kierros alkaa Petřínin kukkulalta, josta koko kaupunki avautuu kerralla."
+    ],
+    "kerronta": "Tervetuloa Prahaan. Ylhäältä kaupunki näyttää punakattoiselta mereltä, jonka läpi Vltava kaartuu leveänä mutkana ja jota rajaavat kukkulat ja lukemattomat tornit. Kierros alkaa Petřínin kukkulalta, josta koko kaupunki avautuu kerralla."
+  },
+  "loppu": {
+    "kerronta": "Kierros päättyy tähän kallioon, ja alhaalla Vltava virtaa pohjoiseen kohti Kaarlensiltaa ja Prahan linnaa, joiden ohi kierros kulki."
+  },
+  "metrokartta": [
+    {
+      "nro": 1,
+      "nimi": "Petřínin näkötorni",
+      "selite": "Petřínin näkötorni kohoaa Vltavan länsirannalla"
+    },
+    {
+      "nro": 2,
+      "nimi": "Malá Strana",
+      "selite": "Malá Strana levittäytyy Vltavan länsirannalle Prahan linnan juurelle"
+    },
+    {
+      "nro": 3,
+      "nimi": "Prahan linna ja Pyhän Vituksen katedraali",
+      "selite": "Prahan linna on Guinnessin ennätyskirjan mukaan maailman suurin muinainen linna"
+    },
+    {
+      "nro": 4,
+      "nimi": "Kaarlensilta",
+      "selite": "Kaarlensilta on nykyään vain jalankulkijoiden käytössä"
+    },
+    {
+      "nro": 5,
+      "nimi": "Josefov ja Vanhauusi synagoga",
+      "selite": "Josefov"
+    },
+    {
+      "nro": 6,
+      "nimi": "Vanhankaupungin aukio ja astronominen kello",
+      "selite": "Vanhankaupungin aukiota hallitsevat Týnin kirkon kaksi tornia"
+    },
+    {
+      "nro": 7,
+      "nimi": "Venceslauksen aukio ja Kansallismuseo",
+      "selite": "Venceslauksen aukio on oikeastaan pitkä"
+    },
+    {
+      "nro": 8,
+      "nimi": "Vyšehrad",
+      "selite": "Vyšehrad kohoaa Vltavan yläpuolella kallioisella kukkulalla"
+    }
+  ],
+  "reitti": [
+    {
+      "mista": "Petřínin näkötorni",
+      "mihin": "Malá Strana",
+      "matka_m": 806,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Malá Strana",
+      "mihin": "Prahan linna ja Pyhän Vituksen katedraali",
+      "matka_m": 352,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Prahan linna ja Pyhän Vituksen katedraali",
+      "mihin": "Kaarlensilta",
+      "matka_m": 942,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Kaarlensilta",
+      "mihin": "Josefov ja Vanhauusi synagoga",
+      "matka_m": 622,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Josefov ja Vanhauusi synagoga",
+      "mihin": "Vanhankaupungin aukio ja astronominen kello",
+      "matka_m": 341,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Vanhankaupungin aukio ja astronominen kello",
+      "mihin": "Venceslauksen aukio ja Kansallismuseo",
+      "matka_m": 670,
+      "tyyppi": "lento"
+    },
+    {
+      "mista": "Venceslauksen aukio ja Kansallismuseo",
+      "mihin": "Vyšehrad",
+      "matka_m": 2079,
+      "tyyppi": "lento"
+    }
+  ],
+  "pysahdykset": [
+    {
+      "nro": 1,
+      "nimi": "Petřínin näkötorni",
+      "q": "Q12256",
+      "lat": 50.083544,
+      "lon": 14.39505,
+      "H_m": 58.7,
+      "H_lahteet": [
+        "https://www.prague.eu/",
+        "Seznam Zprávy (Petřínin mittaus 2021)"
+      ],
+      "kerronta": "Petřínin näkötorni kohoaa Vltavan länsirannalla, Petřínin metsäisen kukkulan laella. Torni on teräsrakennelma, joka on noin viisi kertaa pienempi kuin Eiffel-torni, ja samankaltaisuus on tarkoituksellinen. Tšekkiläisten turistien klubin jäsenet näkivät Eiffel-tornin Pariisin maailmannäyttelyssä vuonna 1889 ja päättivät rakentaa Prahaan oman, ja se valmistui jo vuonna 1891 Prahan juhlanäyttelyä varten. Vuodesta 1953 torni toimi myös Prahan television lähetysmastona, kunnes Žižkovin televisiotorni otti tehtävän hoitaakseen vuonna 1992. Samalla kukkulalla kulkee keskiaikainen muuri, jonka keisari Kaarle neljäs rakennutti 1360-luvulla ja jota kutsutaan nälkämuuriksi.",
+      "virkkeet": [
+        "Petřínin näkötorni kohoaa Vltavan länsirannalla, Petřínin metsäisen kukkulan laella.",
+        "Torni on teräsrakennelma, joka on noin viisi kertaa pienempi kuin Eiffel-torni, ja samankaltaisuus on tarkoituksellinen.",
+        "Tšekkiläisten turistien klubin jäsenet näkivät Eiffel-tornin Pariisin maailmannäyttelyssä vuonna 1889 ja päättivät rakentaa Prahaan oman, ja se valmistui jo vuonna 1891 Prahan juhlanäyttelyä varten.",
+        "Vuodesta 1953 torni toimi myös Prahan television lähetysmastona, kunnes Žižkovin televisiotorni otti tehtävän hoitaakseen vuonna 1992.",
+        "Samalla kukkulalla kulkee keskiaikainen muuri, jonka keisari Kaarle neljäs rakennutti 1360-luvulla ja jota kutsutaan nälkämuuriksi."
+      ],
+      "faktat": [
+        {
+          "vaite": "Torni rakennettiin vuonna 1891 (työ alkoi maaliskuussa, avajaiset 20. elokuuta) jubileumnäyttelyä varten",
+          "lahde1": "https://en.wikipedia.org/wiki/Pet%C5%99%C3%ADn_Lookout_Tower",
+          "lahde2": "https://www.prague.eu/cs/objekt/mista/116/petrinska-rozhledna"
+        },
+        {
+          "vaite": "Tšekkiläisten turistien klubin jäsenet saivat idean Eiffel-tornista Pariisin maailmannäyttelyssä vuonna 1889",
+          "lahde1": "https://en.wikipedia.org/wiki/Pet%C5%99%C3%ADn_Lookout_Tower",
+          "lahde2": "https://goout.net/cs/petrinska-rozhledna/vzatg/"
+        },
+        {
+          "vaite": "Torni on Eiffel-tornin noin 1:5-kokoinen jäljitelmä, ristikkorakenteinen teräsrakennelma",
+          "lahde1": "https://www.prague.eu/cs/objekt/mista/116/petrinska-rozhledna",
+          "lahde2": "https://goout.net/cs/petrinska-rozhledna/vzatg/"
+        },
+        {
+          "vaite": "Torni toimi Prahan televisiolähettimenä vuodesta 1953 siihen asti kun Žižkovin televisiotorni valmistui vuoden 1992 lopulla",
+          "lahde1": "https://en.wikipedia.org/wiki/Pet%C5%99%C3%ADn_Lookout_Tower",
+          "lahde2": "https://goout.net/cs/petrinska-rozhledna/vzatg/"
+        },
+        {
+          "vaite": "Nälkämuuri rakennettiin Petřínille Kaarle IV:n käskystä 1360-luvulla (1360 tai 1361-1362); nimi liittyy nälänhätään",
+          "lahde1": "https://en.wikipedia.org/wiki/Pet%C5%99%C3%ADn",
+          "lahde2": "https://www.atlasobscura.com/places/hunger-wall-prague-czechia"
+        },
+        {
+          "vaite": "Petřín on 327 metriä merenpinnan yläpuolella ja noin 130 metriä Vltavan yläpuolella (ei käytetty tekstissä)",
+          "lahde1": "https://en.wikipedia.org/wiki/Pet%C5%99%C3%ADn",
+          "lahde2": "https://www.prague.eu/cs/objekt/mista/116/petrinska-rozhledna"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 2,
+          "aihe": "Petřínin torni Eiffel-tornin pienoisversiona",
+          "commons_tiedosto": "Petřín Lookout Tower - Prague, Czech Republic - May 17, 2019.jpg",
+          "tekija": "Giorgio Galeotti",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_Lookout_Tower_-_Prague,_Czech_Republic_-_May_17,_2019.jpg",
+          "leveys": 4008,
+          "selite": "Petřínin ristikkorakenteinen terästorni, Eiffel-tornin pienoisjäljitelmä, puiden keskellä."
+        },
+        {
+          "virke": 5,
+          "aihe": "Nälkämuuri Petřínillä",
+          "commons_tiedosto": "Praha, Smíchov, Kinského zahrada, Hladová zeď.jpg",
+          "tekija": "Aktron",
+          "lisenssi": "CC BY 3.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Praha,_Sm%C3%ADchov,_Kinsk%C3%A9ho_zahrada,_Hladov%C3%A1_zd.jpg",
+          "leveys": null,
+          "selite": "Nälkämuuri Petřínin rinteellä."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Stefanik Observatory from Rose Garden pan.jpg",
+          "tekija": "Mojmir Churavy",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stefanik_Observatory_from_Rose_Garden_pan.jpg",
+          "leveys": 10876,
+          "selite": "Štefánikin tähtitorni Petřínin kukkulalla, näkymä ruusutarhan pohjoisreunalta."
+        },
+        {
+          "commons_tiedosto": "Praha from Petřín Tower 1993 02.jpg",
+          "tekija": "Infrogmation of New Orleans",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Praha_from_Pet%C5%99%C3%ADn_Tower_1993_02.jpg",
+          "leveys": 5836,
+          "selite": "Näkymä Petřínin tornista kohti Prahan linnaa vuonna 1993."
+        },
+        {
+          "commons_tiedosto": "Lascar Petřínská rozhledna (Petřín Lookout Tower) (4504587238).jpg",
+          "tekija": "Jorge Láscar",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Pet%C5%99%C3%ADnsk%C3%A1_rozhledna_(Pet%C5%99%C3%ADn_Lookout_Tower)_(4504587238).jpg",
+          "leveys": 2136,
+          "selite": "Petřínin näkötorni kukkulan laella."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Korkeus: virallinen prague.eu (mittaus 2021) 58,70 m alkuperäisen rakenteen korkeimpaan kohtaan; Wikipedia ja goout 63,5 m (todennäköisesti antennin kanssa). H_m = 58,7; tekstissä ei lukua.",
+        "Tekstissä ei mainita köysirataa: se on ollut pitkään huollossa, avaus 2026 epävarma. Tarinakuva 2 on vain nälkämuurin läpiajon vuoksi; tarkista ettei kuvassa ole matkustajien lähikuvia (ei tiedossa).",
+        "Nälkämuurin alkuvuosi vaihtelee lähteissä (1360/1361), päättyminen 1362 yhteinen; teksti sanoo vain 1360-luvulla. Nimitys 'nälkämuuri' on kirjoittajan suomennos (Hunger Wall), tarkista Wikipedia-suomennos.",
+        "Žižkovin tornin avaus: 'myöhään 1992' (Wikipedia), teksti sanoo vuonna 1992.",
+        "Isoisäviittausta ei (vain pysähdys 6).",
+        "Korkeus 58,7 m (prague.eu, Seznam Zprávy; Wikipedia ja goout antavat 63,5 m, todennäköisesti antennin kanssa). \"Nälkämuuri\" on oma suomennos (tarkistettava). Tarinakuvan 5 uusi tiedosto tarkistettava katsomalla (LS1)."
+      ],
+      "sanoja": 79
+    },
+    {
+      "nro": 2,
+      "nimi": "Malá Strana",
+      "q": "Q753289",
+      "lat": 50.088056,
+      "lon": 14.403889,
+      "H_m": null,
+      "H_lahteet": [],
+      "kerronta": "Malá Strana levittäytyy Vltavan länsirannalle Prahan linnan juurelle, ja sen punaisten kattojen yli nousee vihreä kupoli. Kupoli kuuluu Pyhän Nikolauksen kirkolle, jonka rakensivat barokkiarkkitehti Kryštof Dientzenhofer ja hänen poikansa Kilián Ignác, ja kirkko valmistui 1700-luvun puolivälissä. Kirkon vieressä oleva kellotorni on erillinen rakennus, ja se toimi aikanaan palovartiotornina. Kerrotaan, että Wolfgang Amadeus Mozart soitti kirkon urkuja vieraillessaan Prahassa vuonna 1787. Kaupunginosan perusti kuningas Ottokar toinen vuonna 1257, ja sen ilmeen ovat muovanneet erityisesti barokkirakennukset.",
+      "virkkeet": [
+        "Malá Strana levittäytyy Vltavan länsirannalle Prahan linnan juurelle, ja sen punaisten kattojen yli nousee vihreä kupoli.",
+        "Kupoli kuuluu Pyhän Nikolauksen kirkolle, jonka rakensivat barokkiarkkitehti Kryštof Dientzenhofer ja hänen poikansa Kilián Ignác, ja kirkko valmistui 1700-luvun puolivälissä.",
+        "Kirkon vieressä oleva kellotorni on erillinen rakennus, ja se toimi aikanaan palovartiotornina.",
+        "Kerrotaan, että Wolfgang Amadeus Mozart soitti kirkon urkuja vieraillessaan Prahassa vuonna 1787.",
+        "Kaupunginosan perusti kuningas Ottokar toinen vuonna 1257, ja sen ilmeen ovat muovanneet erityisesti barokkirakennukset."
+      ],
+      "faktat": [
+        {
+          "vaite": "Pyhän Nikolauksen kirkon kupoli on vihreä ja hallitsee kaupunginosan siluettia",
+          "lahde1": "https://www.lonelyplanet.com/pois/1241114",
+          "lahde2": "https://www.gpsmycity.com/attractions/church-of-st-nicholas-(lesser-town)-3226.html"
+        },
+        {
+          "vaite": "Kirkon suunnittelivat ja rakensivat Kryštof Dientzenhofer ja hänen poikansa Kilián Ignác Dientzenhofer; kupoli suljettiin 1751 ja kirkko valmistui/vihittiin 1752",
+          "lahde1": "http://prague.eu/cs/objekt/mista/166/kostel-sv-mikulase-mala-strana",
+          "lahde2": "https://aviewoncities.com/prague/st-nicholas-church-lesser-town"
+        },
+        {
+          "vaite": "Kellotorni on erillinen rakennus (valmistui noin 1752-1755, Lurago) ja toimi palovartiotornina, Prahan viimeisenä hälytystornina",
+          "lahde1": "https://cs.wikipedia.org/wiki/Kostel_svat%C3%A9ho_Mikul%C3%A1%C5%A1e_(Mal%C3%A1_Strana)",
+          "lahde2": "https://prague.eu/cs/co-chram-to-original/"
+        },
+        {
+          "vaite": "Mozart soitti kirkon urkuja vuonna 1787 Prahan-vierailullaan",
+          "lahde1": "https://www.seznamzpravy.cz/clanek/regiony-zpravy-praha-chram-svateho-mikulase-je-povazovan-za-nejvyznamnejsi-barokni-stavbu-prahy-236342",
+          "lahde2": "https://cs.wikipedia.org/wiki/Kostel_svat%C3%A9ho_Mikul%C3%A1%C5%A1e_(Mal%C3%A1_Strana)"
+        },
+        {
+          "vaite": "Kaupunginosan perusti kuningas Ottokar II vuonna 1257",
+          "lahde1": "https://en.wikipedia.org/wiki/Mal%C3%A1_Strana",
+          "lahde2": "https://www.praha1.cz/mestska-cast/o-mestske-casti/historie/"
+        },
+        {
+          "vaite": "Tulipalo vuonna 1541 johti uudelleenrakentamiseen renessanssityylillä ja barokki tuli vallitsevaksi",
+          "lahde1": "https://en.wikipedia.org/wiki/Mal%C3%A1_Strana",
+          "lahde2": "https://prague.org/lesser-town/"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 1,
+          "aihe": "punaiset katot ja kupoli",
+          "commons_tiedosto": "View from Prague Castle 2010.jpg",
+          "tekija": "Perituss",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_from_Prague_Castle_2010.jpg",
+          "leveys": 7900,
+          "selite": "Malá Stranan punaisia kattoja linnan suunnasta katsottuna."
+        },
+        {
+          "virke": 3,
+          "aihe": "kupoli ja erillinen kellotorni",
+          "commons_tiedosto": "Dome and Tower of St. Nicholas Church - Malá Strana, Prague, Czech Republic - May 17, 2019.jpg",
+          "tekija": "Giorgio Galeotti",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_and_Tower_of_St._Nicholas_Church_-_Mal%C3%A1_Strana,_Prague,_Czech_Republic_-_May_17,_2019.jpg",
+          "leveys": 4016,
+          "selite": "Pyhän Nikolauksen kirkon kupoli ja erillinen kellotorni ylhäältä katsottuna."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "ETH-BIB-Prag, Haradschin-Inlandflüge-LBS MH01-006369.tif",
+          "tekija": "Walter Mittelholzer",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ETH-BIB-Prag,_Haradschin-Inlandfl%C3%BCge-LBS_MH01-006369.tif",
+          "leveys": 6299,
+          "selite": "Ilmakuva Malá Stranasta ja Hradčanysta vuodelta 1931."
+        },
+        {
+          "commons_tiedosto": "Malá Strana from Petřín.jpg",
+          "tekija": "Perituss",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mal%C3%A1_Strana_from_Pet%C5%99%C3%ADn.jpg",
+          "leveys": 5184,
+          "selite": "Malá Strana ja Prahan linna Petřínin kukkulalta katsottuna."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Mitat (ei tekstissä): kupoli 70 m ulkoa, kupolin ja lyhdyn kanssa 79 m (prague.eu, aviewoncities); kellotornin korkeus 79 m (Seznam Zprávy, aviewoncities) vs. 65 m (sama Seznam, StB-tarkkailupiste) - ristiriita, jätetty pois.",
+        "Kellotorni: cs.wikipedia ja prague.eu (Co chrám, to originál) kertovat palovartiotehtävästä; StB:n tarkkailupisteestä (1952-1989/90) ei kirjoitettu, vaikka varmistettu kahdesta lähteestä (Seznam Zprávy, cs.wikipedia), koska poliittinen sivupolku ei sovi 45 sekuntiin.",
+        "Torni- ja kirkon valmistumisvuosi vaihtelee (1752 / 1755), siksi teksti sanoo '1700-luvun puolivälissä'.",
+        "Mozart 1787: kolme lähdettä (Seznam Zprávy, cs.wikipedia, aviewoncities); prague.eu-sivu ei mainitse.",
+        "Tarinakuva 2 (Galeotti): taustalla Žižkovin televisiotorni, ei pääkohde; vaihtoehto giggel 'Prag - Kuppel und Glockenturm der St.-Nikolaus-Kirche' (CC BY 3.0, 1583 px).",
+        "Isoisäviittausta ei.",
+        "1541-palon toinen lähde (prague.org/lesser-town) vain hakutuloksen tiivistelmästä; Wikipedia-artikkeli suoraan luettu. Jos halutaan tiukka kaksoislähde, jätä virkkeen 5 jälkipuolisko pois.",
+        "Galeotti-tarinakuvassa näkyy taustalla Žižkovin televisiotorni (vaihtoehto: giggelin kuva). Čertovka-yökuva poistettu."
+      ],
+      "sanoja": 74
+    },
+    {
+      "nro": 3,
+      "nimi": "Prahan linna ja Pyhän Vituksen katedraali",
+      "q": "Q193369 / Q5949",
+      "lat": 50.09,
+      "lon": 14.4,
+      "H_m": 96.5,
+      "H_lahteet": [
+        "https://prague.eu/cs/objevujte/prazsky-hrad-katedrala-sv-vita-vaclava-a-vojtecha/",
+        "https://www.denik.cz/cestovani/kostely-cesko-20210113.html",
+        "https://structurae.net/de/bauwerke/veitsdom"
+      ],
+      "kerronta": "Prahan linna on Guinnessin ennätyskirjan mukaan maailman suurin muinainen linna, ja se on yhä Tšekin presidentin virka-asunto. Linnan sisällä kohoaa Pyhän Vituksen katedraali, ja ylhäältä näkee, että se on rakennettu kahdessa vaiheessa. Itäpää tukikaarineen on peräisin keskiajalta, kun taas länsiosa tornipareineen valmistui vasta 1800-luvun lopulla ja 1900-luvun alussa. Rakentaminen alkoi vuonna 1344 Arrasin Matthiasin johdolla, Peter Parler jatkoi työtä, ja kirkko valmistui lopullisesti vuonna 1929, melkein kuusisataa vuotta myöhemmin.",
+      "virkkeet": [
+        "Prahan linna on Guinnessin ennätyskirjan mukaan maailman suurin muinainen linna, ja se on yhä Tšekin presidentin virka-asunto.",
+        "Linnan sisällä kohoaa Pyhän Vituksen katedraali, ja ylhäältä näkee, että se on rakennettu kahdessa vaiheessa.",
+        "Itäpää tukikaarineen on peräisin keskiajalta, kun taas länsiosa tornipareineen valmistui vasta 1800-luvun lopulla ja 1900-luvun alussa.",
+        "Rakentaminen alkoi vuonna 1344 Arrasin Matthiasin johdolla, Peter Parler jatkoi työtä, ja kirkko valmistui lopullisesti vuonna 1929, melkein kuusisataa vuotta myöhemmin."
+      ],
+      "faktat": [
+        {
+          "vaite": "Guinnessin ennätyskirjan mukaan Prahan linna on maailman suurin muinainen linna",
+          "lahde1": "https://en.wikipedia.org/wiki/Prague_Castle",
+          "lahde2": "https://www.guinnessworldrecords.com/world-records/69343-largest-ancient-castle"
+        },
+        {
+          "vaite": "Linna on Tšekin tasavallan presidentin virka-asunto ja työpaikka",
+          "lahde1": "https://en.wikipedia.org/wiki/Prague_Castle",
+          "lahde2": "https://www.expats.cz/czech-news/article/cnn-prague-castle-is-one-of-the-most-beautiful-castles-in-the-world"
+        },
+        {
+          "vaite": "Katedraalin rakentaminen alkoi vuonna 1344; ensimmäinen rakennusmestari Matias Arraslainen (kuolemaansa 1352 asti), jonka jälkeen Peter Parler",
+          "lahde1": "https://en.wikipedia.org/wiki/St._Vitus_Cathedral",
+          "lahde2": "https://prague.eu/cs/objevujte/prazsky-hrad-katedrala-sv-vita-vaclava-a-vojtecha/"
+        },
+        {
+          "vaite": "Itäpää (kuori) on goottilaista keskiaikaa, länsiosa tornipareineen rakennettiin 1800-luvun jälkipuoliskolla ja 1900-luvun alussa (Mocker, Hilbert)",
+          "lahde1": "https://en.wikipedia.org/wiki/St._Vitus_Cathedral",
+          "lahde2": "https://prague.eu/cs/objevujte/prazsky-hrad-katedrala-sv-vita-vaclava-a-vojtecha/"
+        },
+        {
+          "vaite": "Katedraali vihittiin 12. toukokuuta 1929 ja oli silloin valmis, lähes 600 vuotta rakentamisen alun jälkeen",
+          "lahde1": "https://en.wikipedia.org/wiki/St._Vitus_Cathedral",
+          "lahde2": "https://prague.eu/cs/objevujte/prazsky-hrad-katedrala-sv-vita-vaclava-a-vojtecha/"
+        },
+        {
+          "vaite": "Eteläinen päätorni on 96,5 m, länsitornit 82 m (ei tekstissä)",
+          "lahde1": "https://prague.eu/cs/objevujte/prazsky-hrad-katedrala-sv-vita-vaclava-a-vojtecha/",
+          "lahde2": "https://structurae.net/de/bauwerke/veitsdom"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 2,
+          "aihe": "katedraali linnan sisällä ilmasta",
+          "commons_tiedosto": "ETH-BIB-Prag, Haradschin, St.Veit, Moldau-Inlandflüge-LBS MH01-006370.tif",
+          "tekija": "Walter Mittelholzer",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ETH-BIB-Prag,_Haradschin,_St.Veit,_Moldau-Inlandfl%C3%BCge-LBS_MH01-006370.tif",
+          "leveys": 6316,
+          "selite": "Vuoden 1931 ilmakuva Prahan linnasta ja Pyhän Vituksen katedraalista Vltavan rannalla."
+        },
+        {
+          "virke": 3,
+          "aihe": "itäpää tukikaarineen",
+          "commons_tiedosto": "St. Vitus from the back - panoramio.jpg",
+          "tekija": "Qaalvin",
+          "lisenssi": "CC BY 3.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Vitus_from_the_back_-_panoramio.jpg",
+          "leveys": 2048,
+          "selite": "Pyhän Vituksen katedraalin itäpää tukikaarineen takaa katsottuna."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "ETH-BIB-Prag, Dom St. Veit, Moldau-Inlandflüge-LBS MH01-006306.tif",
+          "tekija": "Walter Mittelholzer",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ETH-BIB-Prag,_Dom_St._Veit,_Moldau-Inlandfl%C3%BCge-LBS_MH01-006306.tif",
+          "leveys": 6410,
+          "selite": "Ilmakuva Pyhän Vituksen katedraalista ja Vltavasta, noin 1931."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Pääkoordinaatti on linna (Q193369, 50,09 / 14,4); katedraali Q5949 on 50,090833 / 14,400556.",
+        "Torni: prague.eu, Deník ja Structurae 96,5 m (eteläinen päätorni); Wikipedia 102,8 m (todennäköisesti ristin kanssa). H_m = 96,5.",
+        "Tekstissä vain ulkopuoli; Parlerin verkkoholvi ja muut sisätilat jätetty pois säännön mukaan. Linnan vaihtovartiotilaisuus jätetty pois (aikataulutieto).",
+        "Wikipedia: Parler johti työtä 1352 alkaen; kuolinvuosi vaihtelee (1397/1399), ei mainita.",
+        "'Vihittiin lopullisesti 1929': vihkiäiset 12.5.1929 (Wikipedia, prague.eu); virallinen avaus 28.9.1929 joissain lähteissä.",
+        "Kuvat 1931 ilmakuvia (Mittelholzer kuoli 1937): ETH-Bibliothek, PD-old-80; tarkista valmistumisen jälkeinen tila: katedraali valmistui 1929, joten kuva sopii.",
+        "Isoisäviittausta ei.",
+        "Poistettu lisäkuvat: Rijksmuseum RP-F-F12806 (selite väärä, tekstiä) ja St. Vitus (44) (kasvoja alareunassa). Vain linnan ulkopuoli julkisilta paikoilta; ei sisätiloja. Korkeus 96,5 m (lähteet 96,5; Wikipedia 102,8)."
+      ],
+      "sanoja": 69
+    },
+    {
+      "nro": 4,
+      "nimi": "Kaarlensilta",
+      "q": "Q204871",
+      "lat": 50.086389,
+      "lon": 14.411944,
+      "H_m": null,
+      "H_lahteet": [],
+      "kerronta": "Kaarlensilta on nykyään vain jalankulkijoiden käytössä, ja sen päissä kohoavat sillantornit ja reunoilla seisoo tumma patsasrivi. Rakentaminen alkoi vuonna 1357 keisari Kaarle neljännen aikana, ja vuoteen 1841 asti silta oli Vltavan ainoa ylityspaikka Prahassa. Tunnetuin patsaista esittää Johannes Nepomukilaista, jonka kuningas käski heittää sillalta jokeen vuonna 1393, ja patsas pystytettiin vuonna 1683. Kävijät silittävät sen jalustan pronssireliefiä tuurin toivossa. Monet muista patsaista ovat nykyään kopioita, ja alkuperäisiä säilytetään museossa.",
+      "virkkeet": [
+        "Kaarlensilta on nykyään vain jalankulkijoiden käytössä, ja sen päissä kohoavat sillantornit ja reunoilla seisoo tumma patsasrivi.",
+        "Rakentaminen alkoi vuonna 1357 keisari Kaarle neljännen aikana, ja vuoteen 1841 asti silta oli Vltavan ainoa ylityspaikka Prahassa.",
+        "Tunnetuin patsaista esittää Johannes Nepomukilaista, jonka kuningas käski heittää sillalta jokeen vuonna 1393, ja patsas pystytettiin vuonna 1683.",
+        "Kävijät silittävät sen jalustan pronssireliefiä tuurin toivossa.",
+        "Monet muista patsaista ovat nykyään kopioita, ja alkuperäisiä säilytetään museossa."
+      ],
+      "faktat": [
+        {
+          "vaite": "Silta on nykyään vain jalankulkijoiden käytössä (autoliikenne päättyi 1960-luvulla, 1965).",
+          "lahde1": "https://en.wikipedia.org/wiki/Charles_Bridge",
+          "lahde2": "https://prague.eu/en/objevujte/charles-bridge-karluv-most/"
+        },
+        {
+          "vaite": "Sillan päissä on sillantornit (Vanhankaupungin sillantorni; Pikkukaupungin tornit toisessa päässä); silta on patsasgalleria molemmin puolin.",
+          "lahde1": "https://www.visitczechia.com/en-US/Things-to-Do/Places/Landmarks/Urban-architecture/c-prague-charles-bridge-and-bridge-towers",
+          "lahde2": "https://prague.eu/en/objevujte/old-town-bridge-tower-staromestska-mostecka-vez/"
+        },
+        {
+          "vaite": "Rakentaminen alkoi vuonna 1357 Kaarle IV:n aikana.",
+          "lahde1": "https://en.wikipedia.org/wiki/Charles_Bridge",
+          "lahde2": "https://prague.eu/en/objevujte/charles-bridge-karluv-most/"
+        },
+        {
+          "vaite": "Silta oli Vltavan ainoa ylityspaikka Prahassa vuoteen 1841 (Ketjusilta), eli 1840-luvulle asti.",
+          "lahde1": "https://en.wikipedia.org/wiki/Charles_Bridge",
+          "lahde2": "https://prague.eu/en/objevujte/strelecky-island-strelecky-ostrov/"
+        },
+        {
+          "vaite": "Johannes Nepomukilainen kuoli vuonna 1393: kuningas Wenceslaus IV:n käskystä hänet heitettiin Kaarlensillalta Vltavaan.",
+          "lahde1": "https://en.wikipedia.org/wiki/John_of_Nepomuk",
+          "lahde2": "https://prague.eu/en/objevujte/charles-bridge-karluv-most/"
+        },
+        {
+          "vaite": "Nepomukin patsas pystytettiin sillalle vuonna 1683 (Jan Brokoff).",
+          "lahde1": "https://en.wikipedia.org/wiki/John_of_Nepomuk",
+          "lahde2": "https://prague.eu/en/objevujte/charles-bridge-karluv-most/"
+        },
+        {
+          "vaite": "Jalustan pronssireliefiä silitetään onnen vuoksi (tapa nuori, 1990-luvulta; esitetään tapana, ei historiana).",
+          "lahde1": "https://www.visitczechia.com/en-US/Things-to-Do/Places/Landmarks/Urban-architecture/c-prague-charles-bridge-and-bridge-towers",
+          "lahde2": "https://www.visitczechia.com/en-us/news/2023/03/n-jan-nepomucky-his-life-and-legacy"
+        },
+        {
+          "vaite": "Patsaita on korvattu kopioilla vuodesta 1965; alkuperäisiä säilytetään museon Lapidariumissa ja Vyšehradin kasemateissa.",
+          "lahde1": "https://en.wikipedia.org/wiki/Charles_Bridge",
+          "lahde2": "https://www.britannica.com/place/Charles-Bridge"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 1,
+          "aihe": "Kaarlensilta ilmasta: tornit päissä ja patsasrivi reunoilla",
+          "commons_tiedosto": "Prague-Drone-011 (32945285022).jpg",
+          "tekija": "CucombreLibre from New York, NY, USA",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague-Drone-011_(32945285022).jpg",
+          "leveys": 2991,
+          "selite": "Kaarlensilta ylhäältä päin, Pikkukaupungin ja Vanhankaupungin välillä."
+        },
+        {
+          "virke": 3,
+          "aihe": "Johannes Nepomukilaisen patsas sillan reunalla",
+          "commons_tiedosto": "Statue of John of Nepomuk on Charles Bridge.jpg",
+          "tekija": "Bjørn Erik Pedersen",
+          "lisenssi": "CC BY 3.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_John_of_Nepomuk_on_Charles_Bridge.jpg",
+          "leveys": 4672,
+          "selite": "Johannes Nepomukilaisen patsas Kaarlensillalla, taustalla linnan torni."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Old Town Bridge Tower 2010.jpg",
+          "tekija": "Perituss",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_Bridge_Tower_2010.jpg",
+          "leveys": 5184,
+          "selite": "Vanhankaupungin sillantorni, sillan itäpään portti."
+        },
+        {
+          "commons_tiedosto": "Early Morning Charles Bridge (51622809874).jpg",
+          "tekija": "Bradley Weber",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Early_Morning_Charles_Bridge_(51622809874).jpg",
+          "leveys": 4077,
+          "selite": "Kaarlensilta varhain aamulla, patsaat ja lyhdyt."
+        },
+        {
+          "commons_tiedosto": "Charles Bridge statue, Prague pic1.JPG",
+          "tekija": "Alf van Beem",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_statue,_Prague_pic1.JPG",
+          "leveys": 1842,
+          "selite": "Barokkipatsas Kaarlensillan reunalla."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Jalankulkijasillan toisena lähteenä Prahan matkailutoimiston sivu (implisiittinen: autot loppuivat 1965); Britannican patsaskopiot vain hakutuloksen tiivistelmästä (sivu antoi 403).",
+        "Pronssireliefin silittäminen on lähteiden mukaan nuori tapa (1990-luvulta), siksi kappale kertoo vain, mitä kävijät tekevät, ei vanhasta perinteestä.",
+        "Nepomuk-patsaan lähdeparit eivät riippumattomuudeltaan täysin vahvoja (Wikipedia + Prahan matkailusivusto).",
+        "Ei toista aarretehtävän tekstejä (tehtävä käyttää siltaa; kappale kertoo tornit, Nepomuk, kopiot).",
+        "Nepomukin patsaan kuvassa ei kasvoja lähietäisyydeltä; drone-kuvassa pieniä ihmishahmoja kaukana."
+      ],
+      "sanoja": 69
+    },
+    {
+      "nro": 5,
+      "nimi": "Josefov ja Vanhauusi synagoga",
+      "q": "Q443107",
+      "lat": 50.09,
+      "lon": 14.418611,
+      "H_m": null,
+      "H_lahteet": [],
+      "kerronta": "Josefov, Prahan entinen juutalaiskortteli, on nykyään tiivis kerrostalojen alue, koska suuri osa vanhasta korttelista purettiin ja rakennettiin uusiksi 1800-luvun lopulla ja 1900-luvun alussa. Keskiaikainen Vanhauusi synagoga säästyi, ja sen korkean katon päädyssä erottuu porrastettu tiilireuna. Rakennus valmistui 1200-luvulla ja on yhä käytössä, joten se kuuluu Euroopan vanhimpiin toimiviin synagogiin. Alun perin sitä kutsuttiin uudeksi synagogaksi, ja vanhauusi siitä tuli 1500-luvulla, kun lähistölle rakennettiin nuorempia synagogia. Taru kertoo, että rabbi Löwin savesta muovaama Golem lepää yhä ullakolla.",
+      "virkkeet": [
+        "Josefov, Prahan entinen juutalaiskortteli, on nykyään tiivis kerrostalojen alue, koska suuri osa vanhasta korttelista purettiin ja rakennettiin uusiksi 1800-luvun lopulla ja 1900-luvun alussa.",
+        "Keskiaikainen Vanhauusi synagoga säästyi, ja sen korkean katon päädyssä erottuu porrastettu tiilireuna.",
+        "Rakennus valmistui 1200-luvulla ja on yhä käytössä, joten se kuuluu Euroopan vanhimpiin toimiviin synagogiin.",
+        "Alun perin sitä kutsuttiin uudeksi synagogaksi, ja vanhauusi siitä tuli 1500-luvulla, kun lähistölle rakennettiin nuorempia synagogia.",
+        "Taru kertoo, että rabbi Löwin savesta muovaama Golem lepää yhä ullakolla."
+      ],
+      "faktat": [
+        {
+          "vaite": "Suuri osa Josefovin vanhasta korttelista purettiin ja uusittiin 1893-1913 (1800-luvun lopulla ja 1900-luvun alussa) Pariisia esikuvana käyttäen.",
+          "lahde1": "https://en.wikipedia.org/wiki/Josefov,_Prague",
+          "lahde2": "https://www.jewishmuseum.cz/novinky/453-150/josefov-a-complete-guide-to-prague-s-jewish-quarter"
+        },
+        {
+          "vaite": "Vain muutama pyhä paikka säilyi purkamisesta, mm. Vanhauusi synagoga ja vanha hautausmaa.",
+          "lahde1": "https://www.jewishmuseum.cz/novinky/453-150/josefov-a-complete-guide-to-prague-s-jewish-quarter",
+          "lahde2": "https://en.wikipedia.org/wiki/Josefov,_Prague"
+        },
+        {
+          "vaite": "Synagogan katto on korkea ja päädyt ovat tiiltä (myöhäisgoottilaiset, 'crowfoot'-päädyt, eli porrastetut); kuvista nähtävissä porrastettu reuna.",
+          "lahde1": "https://prague.eu/en/objevujte/old-new-synagogue-staronova-synagoga/",
+          "lahde2": "https://www.visitczechia.com/en-us/things-to-do/places/landmarks/jewish-monuments/c-prague-old-new-synagogue"
+        },
+        {
+          "vaite": "Synagoga valmistui 1200-luvulla (noin 1270) ja on yhä toimiva; Jewish Museum ja Wikipedia kutsuvat sitä Euroopan vanhimmaksi toimivaksi/säilyneeksi (prague.eu: Keski-Euroopan vanhin), siksi kappaleessa 'yksi vanhimmista'.",
+          "lahde1": "https://www.jewishmuseum.cz/en/explore/sites/old-new-synagogue/",
+          "lahde2": "https://en.wikipedia.org/wiki/Old_New_Synagogue"
+        },
+        {
+          "vaite": "Nimi: alun perin Uusi tai Suuri synagoga; Vanhauusi 1500-luvun lopulla, kun nuorempia synagogia rakennettiin.",
+          "lahde1": "https://www.jewishmuseum.cz/en/explore/sites/old-new-synagogue/",
+          "lahde2": "https://en.wikipedia.org/wiki/Old_New_Synagogue"
+        },
+        {
+          "vaite": "Golem on taru: rabbi Löwin tekemä savihahmo, jonka kerrotaan lepäävän synagogan ullakolla (ullakko ei ole yleisölle avoin; 2014 tutkimuksessa jälkiä ei löytynyt).",
+          "lahde1": "https://www.jewishmuseum.cz/en/explore/sites/old-new-synagogue/",
+          "lahde2": "https://en.wikipedia.org/wiki/Old_New_Synagogue"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 1,
+          "aihe": "Pařížská-katu ja tiivis kerrostalokortteli ylhäältä (Josefovin uusi katuverkko)",
+          "commons_tiedosto": "Praha, kostel sv. Mikuláše a Pařížská z věže Staroměstské radnice.jpg",
+          "tekija": "Jorge Láscar from Australia",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Praha,_kostel_sv._Mikul%C3%A1%C5%A1e_a_Pa%C5%99%C3%AD%C5%BEsk%C3%A1_z_v%C4%9B%C5%BEe_Starom%C4%9Bstsk%C3%A9_radnice.jpg",
+          "leveys": 3216,
+          "selite": "Pařížská-katu ja Pyhän Nikolauksen kirkko Vanhankaupungin raatihuoneen tornista; Josefov alla."
+        },
+        {
+          "virke": 2,
+          "aihe": "Vanhauusi synagogan jyrkkä katto ja porrastettu tiilipääty",
+          "commons_tiedosto": "Old - New Synagogue 1 (2541636232).jpg",
+          "tekija": "Tony Hisgett from Birmingham, UK",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_-_New_Synagogue_1_(2541636232).jpg",
+          "leveys": 3456,
+          "selite": "Vanhauusi synagoga: porrastettu tiilipääty kerrostalojen keskellä."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Old-New Synagogue, Prague, built around 1270 (3) (26185419645).jpg",
+          "tekija": "Richard Mortel from Riyadh, Saudi Arabia",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old-New_Synagogue,_Prague,_built_around_1270_(3)_(26185419645).jpg",
+          "leveys": 5818,
+          "selite": "Vanhauusi synagogan tiilipääty lähempää."
+        },
+        {
+          "commons_tiedosto": "Prague. Old synagogue-oldest in the world LCCN94512605.jpg",
+          "tekija": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague._Old_synagogue-oldest_in_the_world_LCCN94512605.jpg",
+          "leveys": 3269,
+          "selite": "Vanhauusi synagoga vanhassa valokuvassa, Yhdysvaltain kongressin kirjasto."
+        },
+        {
+          "commons_tiedosto": "Old Jewish Cemetery, Prague, Czech Republic (73114871).jpg",
+          "tekija": "Emmanuel DYAN from Paris, France",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Jewish_Cemetery,_Prague,_Czech_Republic_(73114871).jpg",
+          "leveys": 2048,
+          "selite": "Vanha juutalaishautausmaa Josefovissa: hautakivet ahtaassa jonossa."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Holokausti jätetty pois (kappale ei sitä vaadi); rabbi Löwin Golem merkitty taruksi ('Taru kertoo').",
+        "Kappaleen 'yksi Euroopan vanhimmista toimivista' on varovaisempi kuin lähteet, koska prague.eu sanoo Keski-Euroopan vanhin.",
+        "Hautausmaakuvassa pieni ihminen taustalla; tarkista ennen käyttöä. Hautausmaa mainitaan vain lisäkuvana, ei tekstissä.",
+        "Ei mainita aukioloja eikä muita lukuja kuin vuosisadat.",
+        "Tarinakuva 1: Pyhän Nikolauksen kirkko hallitsee kuvaa, ei Josefov; vapaata Josefov-ilmakuvaa ei löytynyt. Holokausti jätetty pois tarkoituksella. Synagogan nimen alkuperä on lähteissä kiistanalainen: virke väittää vain ajankohdan."
+      ],
+      "sanoja": 76
+    },
+    {
+      "nro": 6,
+      "nimi": "Vanhankaupungin aukio ja astronominen kello",
+      "q": "Q421678",
+      "lat": 50.0875,
+      "lon": 14.421389,
+      "H_m": 80,
+      "H_lahteet": [
+        "https://en.wikipedia.org/wiki/Church_of_Our_Lady_before_T%C3%BDn",
+        "https://prague.eu/en/objevujte/church-of-our-lady-before-tyn-chram-matky-bozi-pred-tynem/"
+      ],
+      "kerronta": "Vanhankaupungin aukiota hallitsevat Týnin kirkon kaksi tornia, jotka ovat kahdeksankymmentä metriä korkeat ja joita kutsutaan Aatamiksi ja Eevaksi. Raatihuoneen eteläseinässä käy kello vuodelta 1410, ja sen viisarit näyttävät auringon ja kuun paikan taivaalla. Tunnin täyttyessä luuranko soittaa kelloa ja apostolit kulkevat kellon yläpuolisissa ikkunoissa. Isoisäsi näki saman näytöksen vuonna 1873 ja unohti verrata kelloa taskukelloonsa. Týnin kirkossa lepää tanskalainen tähtitieteilijä Tyko Brahe, joka kuoli Prahassa vuonna 1601.",
+      "virkkeet": [
+        "Vanhankaupungin aukiota hallitsevat Týnin kirkon kaksi tornia, jotka ovat kahdeksankymmentä metriä korkeat ja joita kutsutaan Aatamiksi ja Eevaksi.",
+        "Raatihuoneen eteläseinässä käy kello vuodelta 1410, ja sen viisarit näyttävät auringon ja kuun paikan taivaalla.",
+        "Tunnin täyttyessä luuranko soittaa kelloa ja apostolit kulkevat kellon yläpuolisissa ikkunoissa.",
+        "Isoisäsi näki saman näytöksen vuonna 1873 ja unohti verrata kelloa taskukelloonsa.",
+        "Týnin kirkossa lepää tanskalainen tähtitieteilijä Tyko Brahe, joka kuoli Prahassa vuonna 1601."
+      ],
+      "faktat": [
+        {
+          "vaite": "Týnin kirkon tornit ovat 80 metriä korkeat.",
+          "lahde1": "https://en.wikipedia.org/wiki/Church_of_Our_Lady_before_T%C3%BDn",
+          "lahde2": "https://prague.eu/en/objevujte/church-of-our-lady-before-tyn-chram-matky-bozi-pred-tynem/"
+        },
+        {
+          "vaite": "Týnin torneja kutsutaan Aatamiksi (eteläinen, hieman korkeampi) ja Eevaksi (pohjoinen).",
+          "lahde1": "https://prague.eu/en/objevujte/church-of-our-lady-before-tyn-chram-matky-bozi-pred-tynem/",
+          "lahde2": "https://alle.travel/en/prague/sights/church-of-our-lady-before-tyn/info"
+        },
+        {
+          "vaite": "Kello on Vanhankaupungin raatihuoneen etelänpuoleisessa seinässä ja ajoittuu vuoteen 1410.",
+          "lahde1": "https://en.wikipedia.org/wiki/Prague_astronomical_clock",
+          "lahde2": "http://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem"
+        },
+        {
+          "vaite": "Kellotaulu näyttää auringon ja kuun paikan (kultainen aurinkoviisari ja kuun varsi).",
+          "lahde1": "https://en.wikipedia.org/wiki/Prague_astronomical_clock",
+          "lahde2": "https://prague.eu/en/about-the-old-town-astronomical-clock/"
+        },
+        {
+          "vaite": "Tunnin lyödessä luuranko vetää/soittaa kelloa ja apostolit kulkevat yläikkunoissa (kaksitoista apostolia).",
+          "lahde1": "https://en.wikipedia.org/wiki/Prague_astronomical_clock",
+          "lahde2": "http://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem"
+        },
+        {
+          "vaite": "Tyko Brahe, tanskalainen tähtitieteilijä, kuoli Prahassa 24.10.1601 ja hänen hautakivensä on Týnin kirkossa.",
+          "lahde1": "https://en.wikipedia.org/wiki/Tycho_Brahe",
+          "lahde2": "https://prague.eu/en/tycho-brahe/"
+        },
+        {
+          "vaite": "Isoisän merkintä 1873: luuranko soitti, apostolit kulkivat, taskukelloa ei tullut verratuksi (pelin aineisto, praha.json isoisa).",
+          "lahde1": "/Users/Shared/Claude/proto-3d/_tyo/opas-esittely/pohja/praha.json",
+          "lahde2": ""
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 1,
+          "aihe": "Vanhankaupungin aukio ylhäältä: raatihuoneen torni ja Týnin tornit",
+          "commons_tiedosto": "Prague old town square panorama.jpg",
+          "tekija": "Estec GmbH, Billig Hotel in Prag",
+          "lisenssi": "CC BY 3.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_old_town_square_panorama.jpg",
+          "leveys": 3543,
+          "selite": "Vanhankaupungin aukio, raatihuoneen torni ja Týnin kirkon kaksi tornia ylhäältä."
+        },
+        {
+          "virke": 2,
+          "aihe": "Astronominen kello: kaksi kellotaulua raatihuoneen seinässä",
+          "commons_tiedosto": "Prague Astronomical Clock, Prague Orloj picture-004.JPG",
+          "tekija": "Alf van Beem",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Astronomical_Clock,_Prague_Orloj_picture-004.JPG",
+          "leveys": 2736,
+          "selite": "Astronominen kello Vanhankaupungin raatihuoneen etelänpuoleisessa seinässä."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Prague Astronomical Clock, Prague Orloj picture-001.JPG",
+          "tekija": "AlfvanBeem",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Astronomical_Clock,_Prague_Orloj_picture-001.JPG",
+          "leveys": 2736,
+          "selite": "Raatihuoneen torni ja astronominen kello alhaalta."
+        },
+        {
+          "commons_tiedosto": "Church of the Virgin Mary Before Tyn and Old Town Hall (8347995505).jpg",
+          "tekija": "Steve Collis from Melbourne, Australia",
+          "lisenssi": "CC BY 2.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_the_Virgin_Mary_Before_Tyn_and_Old_Town_Hall_(8347995505).jpg",
+          "leveys": 1600,
+          "selite": "Vanhankaupungin aukio illalla: Týnin kirkko ja raatihuone."
+        },
+        {
+          "commons_tiedosto": "Prague - Church of Our Lady before Týn.jpg",
+          "tekija": "P. Hughes",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_-_Church_of_Our_Lady_before_T%C3%BDn.jpg",
+          "leveys": 2848,
+          "selite": "Týnin kirkon tornit ja kukkaistutus aukiolla."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Isoisäviittaus (virke 4) vain merkinnän sisältöön: kello, luuranko, apostolit, taskukello, vuosi 1873; ei vuodenaikaa, säätä eikä tunteita.",
+        "Kelloa ei väitetä maailman vanhimmaksi toimivaksi (Padova kiistää; lähteet eroavat). Hanuš-sokeutuslegenda jätetty pois.",
+        "Apostolien lähikuvia ei ole valittu: nykyiset puuhahmot ovat vuoden 1948 jälkeistä Vojtěch Suchardan työtä (kuoli 1968, suoja voimassa); kellon kokokuvat ovat OK. Karelj-sarjan apostolikuvia ei siksi suositella.",
+        "Aatamin ja Eevan tarkkaa paksuus/korkeuserosta ei kerrota; kappale sanoo vain, että tornien nimet ovat Aatami ja Eeva.",
+        "Brahen 'kuoli Prahassa 1601' varmistettu Wikipedia + prague.eu; hautakivi Týnin kirkossa Wikipedia + prague.eu."
+      ],
+      "sanoja": 67
+    },
+    {
+      "nro": 7,
+      "nimi": "Venceslauksen aukio ja Kansallismuseo",
+      "q": "Q847613 / Q188112",
+      "lat": 50.082308,
+      "lon": 14.426141,
+      "H_m": null,
+      "H_lahteet": [],
+      "kerronta": "Venceslauksen aukio on oikeastaan pitkä, loivasti nouseva bulevardi, jonka yläpäätä hallitsee Kansallismuseon kupoli. Museon tummuneessa hiekkakivijulkisivussa näkyy yhä paikattuja luodinjälkiä elokuulta 1968, jolloin Varsovan liiton joukot miehittivät Tšekkoslovakian. Museon edessä seisoo Josef Václav Myslbekin veistämä ratsastajapatsas Pyhästä Venceslauksesta, maan suojeluspyhimyksestä. Alue oli 1300-luvulta lähtien hevostori, ja nimen Pyhän Venceslauksen aukio se sai vuonna 1848. Marraskuussa 1989 sametvallankumouksen aikana aukiolle kokoontui iltaa toisensa jälkeen satoja tuhansia ihmisiä.",
+      "virkkeet": [
+        "Venceslauksen aukio on oikeastaan pitkä, loivasti nouseva bulevardi, jonka yläpäätä hallitsee Kansallismuseon kupoli.",
+        "Museon tummuneessa hiekkakivijulkisivussa näkyy yhä paikattuja luodinjälkiä elokuulta 1968, jolloin Varsovan liiton joukot miehittivät Tšekkoslovakian.",
+        "Museon edessä seisoo Josef Václav Myslbekin veistämä ratsastajapatsas Pyhästä Venceslauksesta, maan suojeluspyhimyksestä.",
+        "Alue oli 1300-luvulta lähtien hevostori, ja nimen Pyhän Venceslauksen aukio se sai vuonna 1848.",
+        "Marraskuussa 1989 sametvallankumouksen aikana aukiolle kokoontui iltaa toisensa jälkeen satoja tuhansia ihmisiä."
+      ],
+      "faktat": [
+        {
+          "vaite": "Aukio on noin 750 metriä pitkä, loivasti ylämäkeen nouseva bulevardi, jonka yläpäässä Kansallismuseo sijaitsee.",
+          "lahde1": "https://en.wikipedia.org/wiki/Wenceslas_Square",
+          "lahde2": "https://fi.wikipedia.org/wiki/Venceslauksen_aukio"
+        },
+        {
+          "vaite": "Kansallismuseon päärakennuksen (Josef Schulz, uusrenessanssi, valmistui 1891) keskellä on kupoli; museo hallitsee aukion yläpäätä.",
+          "lahde1": "https://en.wikipedia.org/wiki/National_Museum_(Prague)",
+          "lahde2": "https://pragitecture.eu/?p=8503"
+        },
+        {
+          "vaite": "Museon julkisivuun ammuttiin 21.8.1968 Varsovan liiton miehityksen aikana; korjaukset 1970–1972, paikat näkyvät yhä tummuneessa hiekkakivessä.",
+          "lahde1": "https://muzeum3000.nm.cz/national-museum-news/traces-of-shooting-from-1968-will-not-be-covered-by-the-reconstruction",
+          "lahde2": "https://en.wikipedia.org/wiki/National_Museum_(Prague)"
+        },
+        {
+          "vaite": "Myslbekin ratsastajapatsas Pyhästä Venceslauksesta on museon edessä (Myslbek k. 1922, patsas PD). Vuosi jätetty pois: lähteet 1912/1913/1924.",
+          "lahde1": "https://prague.eu/en/objevujte/statue-of-st-wenceslas/",
+          "lahde2": "https://pragitecture.eu/?p=41"
+        },
+        {
+          "vaite": "Alue oli Hevostori (Koňský trh) Uudenkaupungin perustamisesta 1348 alkaen.",
+          "lahde1": "https://en.wikipedia.org/wiki/Wenceslas_Square",
+          "lahde2": "https://prague.eu/cs/objevujte/vaclavske-namesti/"
+        },
+        {
+          "vaite": "Pyhä Venceslaus on Tšekin maiden suojeluspyhimys (aukion nimen perusta).",
+          "lahde1": "https://fi.wikipedia.org/wiki/Venceslauksen_aukio",
+          "lahde2": "https://prague.eu/cs/objevujte/vaclavske-namesti/"
+        },
+        {
+          "vaite": "Nimi Pyhän Venceslauksen aukio annettiin vuonna 1848 (Havlíček Borovskýn ehdotus).",
+          "lahde1": "https://en.wikipedia.org/wiki/Wenceslas_Square",
+          "lahde2": "https://prague.eu/cs/objevujte/vaclavske-namesti/"
+        },
+        {
+          "vaite": "Marraskuussa 1989 aukiolla oli päivittäin satojatuhansia mielenosoittajia (sametvallankumous).",
+          "lahde1": "https://fi.wikipedia.org/wiki/Venceslauksen_aukio",
+          "lahde2": "https://www.expats.cz/czech-news/article/chronology-protest-people-places-dates-velvet-revolution"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 1,
+          "aihe": "Venceslauksen aukio ylhäältä, bulevardi ja patsas",
+          "commons_tiedosto": "Wenceslas square Prague.jpg",
+          "tekija": "Szombat78",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wenceslas_square_Prague.jpg",
+          "leveys": 3468,
+          "selite": "Näkymä Kansallismuseolta alas Venceslauksen aukion pitkää bulevardia."
+        },
+        {
+          "virke": 1,
+          "aihe": "Kansallismuseon kupoli ja julkisivun yläosa",
+          "commons_tiedosto": "National-Museum-Prague-2012.jpg",
+          "tekija": "Acediscovery",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National-Museum-Prague-2012.jpg",
+          "leveys": 3648,
+          "selite": "Kansallismuseon kupoli ja tummuneen hiekkakiven julkisivun yläosa."
+        },
+        {
+          "commons_tiedosto": "Saint Venceslaus by J. V. Myslbek.jpg",
+          "tekija": "tuntematon (kirja 1924, kuvattu patsas Josef Václav Myslbek)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Venceslaus_by_J._V._Myslbek.jpg",
+          "leveys": 1897,
+          "selite": "Myslbekin Pyhän Venceslauksen ratsastajapatsas lähikuvassa.",
+          "virke": 3,
+          "aihe": "Venceslauksen patsas"
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Nationaal museum op het Wenceslasplein in Praag, RP-F-F16048.jpg",
+          "tekija": "tuntematon valokuvaaja (Rijksmuseum), 1880–1920",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nationaal_museum_op_het_Wenceslasplein_in_Praag,_RP-F-F16048.jpg",
+          "leveys": 6804,
+          "selite": "Kansallismuseo vanhassa valokuvassa vuosien 1880 ja 1920 välillä."
+        },
+        {
+          "commons_tiedosto": "ETH-BIB-Prag, Winzelsplatz, Landesmuseum, Hauptbahnhrof-Inlandflüge-LBS MH01-006366.tif",
+          "tekija": "Walter Mittelholzer (k. 1937)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ETH-BIB-Prag,_Winzelsplatz,_Landesmuseum,_Hauptbahnhrof-Inlandfl%C3%BCge-LBS_MH01-006366.tif",
+          "leveys": 6462,
+          "selite": "Ilmakuva Prahan keskustasta vuodelta 1931, Wenzelsplatzin ja museon seutu."
+        }
+      ],
+      "havainnekuva_tarpeet": [
+        "Lähikuva Kansallismuseon julkisivun paikatuista luodinjäljistä (vaalea täyte tummassa hiekkakivessä): Commonsista ei löytynyt vapaata kuvaa, jossa jäljet erottuisivat."
+      ],
+      "huomiot": [
+        "Kappaleessa ei lukua patsaan valmistumisvuodelle: lähteet antavat 1912, 1913 ja 1924.",
+        "Julkisivun luodinjäljistä lähteet eivät tiedä aiheuttajaa (nm.cz: syy todennäköisesti jää selvittämättä), siksi teksti sanoo vain, että julkisivuun ammuttiin ja jäljet on paikattu.",
+        "Kupolin vihreyttä ei mainita tekstissä (lähteet sanovat lasikupoli). Palachin muistomerkki jätetty pois tarkoituksella (aihe liian raskas 4-5 virkkeeseen).",
+        "Isoisäviittausta ei ole (vain pysähdys 6). Kappale ei toista pysähdyksen 6 aloitusta. Dome avattu yleisölle 2019: ei mainittu.",
+        "Tarinakuva 1 (Wenceslas square Prague.jpg): rajaa oikean reunan kaupalliset kyltit pois. Luodinjälkiä ei ole vapaassa kuvassa (kuva näyttää kupolin)."
+      ],
+      "sanoja": 66
+    },
+    {
+      "nro": 8,
+      "nimi": "Vyšehrad",
+      "q": "Q616334",
+      "lat": 50.064427,
+      "lon": 14.417644,
+      "H_m": 58,
+      "H_lahteet": [
+        "https://en.wikipedia.org/wiki/Basilica_of_St._Peter_and_St._Paul,_Prague",
+        "https://virtualni.praha.eu/towers/church-of-st-peter-and-paul-at-vysehrad"
+      ],
+      "kerronta": "Vyšehrad kohoaa Vltavan yläpuolella kallioisella kukkulalla, jonka linnoitusmuurien yli näkyvät Pyhän Pietarin ja Pyhän Paavalin kirkon kaksi tornia. Kirkko sai nykyisen neogoottilaisen asunsa 1800-luvun lopun ja 1900-luvun alun uudistuksessa, ja sen vieressä on hautausmaa, jonne on haudattu muun muassa Bedřich Smetana ja Antonín Dvořák. Smetana sävelsi vuonna 1874 kukkulasta sävelrunon Vyšehrad, jonka alussa harput soivat tarun laulajan äänenä. Taru kertoo myös, että ruhtinatar Libuše ennusti täältä Prahalle suuren tulevaisuuden.",
+      "virkkeet": [
+        "Vyšehrad kohoaa Vltavan yläpuolella kallioisella kukkulalla, jonka linnoitusmuurien yli näkyvät Pyhän Pietarin ja Pyhän Paavalin kirkon kaksi tornia.",
+        "Kirkko sai nykyisen neogoottilaisen asunsa 1800-luvun lopun ja 1900-luvun alun uudistuksessa, ja sen vieressä on hautausmaa, jonne on haudattu muun muassa Bedřich Smetana ja Antonín Dvořák.",
+        "Smetana sävelsi vuonna 1874 kukkulasta sävelrunon Vyšehrad, jonka alussa harput soivat tarun laulajan äänenä.",
+        "Taru kertoo myös, että ruhtinatar Libuše ennusti täältä Prahalle suuren tulevaisuuden."
+      ],
+      "faktat": [
+        {
+          "vaite": "Vyšehrad on linnoitettu kukkula Vltavan varrella; nykyinen barokkilinnoitus 1600-luvulta (muurit, bastionit).",
+          "lahde1": "https://en.wikipedia.org/wiki/Vy%C5%A1ehrad",
+          "lahde2": "https://www.visitczechia.com/en-US/Things-to-Do/Places/Landmarks/Castles-and-Ruins/c-prague-vysehrad"
+        },
+        {
+          "vaite": "Pyhän Pietarin ja Paavalin kirkon kaksi tornia (noin 58 m) ovat neogoottilaisen uudistuksen tulosta; uudistus kesti 1800-luvun lopulta 1900-luvun alkuun (1885/1887–1903).",
+          "lahde1": "https://en.wikipedia.org/wiki/Basilica_of_St._Peter_and_St._Paul,_Prague",
+          "lahde2": "https://virtualni.praha.eu/towers/church-of-st-peter-and-paul-at-vysehrad"
+        },
+        {
+          "vaite": "Vyšehradin hautausmaalle on haudattu Smetana ja Dvořák (myös Mucha, Čapek).",
+          "lahde1": "https://en.wikipedia.org/wiki/Vy%C5%A1ehrad",
+          "lahde2": "https://www.visitczechia.com/en-US/Things-to-Do/Places/Landmarks/Castles-and-Ruins/c-prague-vysehrad"
+        },
+        {
+          "vaite": "Smetanan sävelruno Vyšehrad (Má vlastin ensimmäinen) sävellettiin 1874 ja alkaa harpuilla, jotka viittaavat tarun laulajaan Lumíriin.",
+          "lahde1": "https://en.wikipedia.org/wiki/M%C3%A1_vlast",
+          "lahde2": "https://classicalexburns.com/2020/01/14/bedrich-smetana-vysehrad-a-castle-in-ruins/"
+        },
+        {
+          "vaite": "Taru: ruhtinatar Libuše ennusti Vyšehradilta Prahan suuren tulevaisuuden (taru, ei historiaa).",
+          "lahde1": "https://www.visitczechia.com/en-US/Things-to-Do/Places/Landmarks/Castles-and-Ruins/c-prague-vysehrad",
+          "lahde2": "https://english.radio.cz/node/8686727"
+        }
+      ],
+      "tarinakuvat": [
+        {
+          "virke": 1,
+          "aihe": "Vyšehradin kallio, muurit ja kirkon kaksi tornia Vltavan yli",
+          "commons_tiedosto": "Vysehrad as seen over the Vltava from Cisarska louka 731.jpg",
+          "tekija": "Miaow Miaow (oletettu)",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vysehrad_as_seen_over_the_Vltava_from_Cisarska_louka_731.jpg",
+          "leveys": 1984,
+          "selite": "Vyšehradin kallio, linnoituksen muuri ja kirkon tornit Vltavan toiselta rannalta."
+        },
+        {
+          "virke": 2,
+          "aihe": "Smetanan hauta ja kirkon tornit hautausmaalla",
+          "commons_tiedosto": "Vyšehrad Cemetery 03.jpg",
+          "tekija": "Derbrauni",
+          "lisenssi": "CC BY 4.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vy%C5%A1ehrad_Cemetery_03.jpg",
+          "leveys": 1816,
+          "selite": "Bedřich Smetanan hautamuistomerkki Vyšehradin hautausmaalla, taustalla kirkon tornit."
+        }
+      ],
+      "lisakuvat": [
+        {
+          "commons_tiedosto": "Peter and Paul Vysehrad 1.jpg",
+          "tekija": "Perituss",
+          "lisenssi": "CC0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Peter_and_Paul_Vysehrad_1.jpg",
+          "leveys": 5184,
+          "selite": "Pyhän Pietarin ja Paavalin kirkon kaksi neogoottilaista tornia."
+        },
+        {
+          "commons_tiedosto": "Vysehrad Prague CZ from Podoli 086.jpg",
+          "tekija": "Miaow Miaow",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vysehrad_Prague_CZ_from_Podoli_086.jpg",
+          "leveys": 1961,
+          "selite": "Vyšehradin linnoituksen muuri ja kirkon tornit Podolín suunnasta."
+        },
+        {
+          "commons_tiedosto": "Vysehrad Rock Prague CZ.jpg",
+          "tekija": "Miaow Miaow",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vysehrad_Rock_Prague_CZ.jpg",
+          "leveys": 1984,
+          "selite": "Vyšehradin kallio Vltavan yllä; kuvatekstissä Libuše-taruun liittyvä Libušin kylpy."
+        }
+      ],
+      "havainnekuva_tarpeet": [],
+      "huomiot": [
+        "Tornien rakennusvuosi jätetty pois (lähteet: 1885–1887 / 1887–1903); teksti sanoo 1800-luvun lopun ja 1900-luvun alun uudistus.",
+        "Libuše on taru: teksti sanoo 'taru kertoo'. Vyšehradin sijainti Vltavan itärannalla jätetty pois, koska vahvistus vain yhdestä lähteestä.",
+        "Smetanan haudan kuvassa on pronssinen muotokuvareliefi (veistos, ei elävä henkilö); jos halutaan varman päälle, käytä lisäkuvaa c3 (tornit) sen tilalla.",
+        "Kierroksen viimeinen: ei erillistä päätöslausetta, koska jokaisen virkkeen pitää kertoa jotain uutta. Jos haluat lopetuksen, PT lisää rivin.",
+        "Isoisäviittausta ei ole (vain pysähdys 6).",
+        "Smetanan haudan tarinakuva on kapea ja pitkä (1816 × 4032): suunnittele rajaus. Reliefi on veistos, ei elävä henkilö."
+      ],
+      "sanoja": 69
+    }
+  ]
+}

@@ -169,6 +169,10 @@ details.juna .runko-tl .teksti { flex: 1 1 220px; min-width: 0; }
 .tf-paneeli { padding-left: 0; }
 .tf-paneeli { font-size: 0.85rem; gap: 4px; }
 .tf-paneeli .teksti { white-space: pre-line; }
+.osio-otsikko { font-weight: 700; color: var(--muste); }
+/* Työlista (omistaja 12.10. 15.1x): leipäteksti samankokoisena kuin junassa, otsikot vain vähän leipätekstiä isompina. */
+#tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti, #valmistuneet .runko .tilanne { font-size: 0.85rem; }
+#tyolista details.juna.iso .otsikko { font-size: 0.95rem; }
 .rooli, .rooli.sonnet { background: var(--t-lepo); }
 .rooli.tila-tyo { background: var(--t-tyo); }
 .rooli.tila-odottaa { background: var(--t-odottaa); }
@@ -209,6 +213,13 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 /* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
 #tyolista details.juna { margin-left: 0.8em; }
 #tyolista details.juna .runko { padding-left: 2.1em; }
+/* Rivitys (omistaja 12.10. 12.3x: "tee paremmin toimiva rivitys"): väkänen pysyy vasemmalla, pitkä otsikko rivittyy omassa
+   sarakkeessaan ja edistyspalkki pysyy ensimmäisen rivin oikeassa reunassa; mikään osa ei putoa omalle rivilleen. */
+#tyolista details.juna > summary { flex-wrap: nowrap; align-items: flex-start; }
+#tyolista details.juna > summary::before { flex: none; line-height: 1.35; }
+#tyolista details.juna > summary .otsikko { flex: 1 1 auto; min-width: 0; line-height: 1.35; overflow-wrap: anywhere; }
+#tyolista details.juna > summary .symboli { flex: none; line-height: 1.35; }
+#tyolista details.juna > summary .edistys { flex: none; align-self: flex-start; margin-top: 0.22em; }
 /* Rivinvaihdot säilyvät (Bugikorjaukset-paketin vika per rivi, omistaja 10.10. 17.0x) */
 #tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti { white-space: pre-line; }
 /* Valmistuneet työlistan alla (omistaja 10.10. 16.3x) */
@@ -233,6 +244,11 @@ section.kiinni > :not(:first-child) { display: none !important; }
 section:not(.kiinni) .yhteenveto { display: none; }
 .otsikkonappi.taitto[aria-expanded] { text-decoration: none; }
 .otsikkonappi.taitto[aria-expanded="false"] { color: var(--himmea); }
+/* Vaatii toimia (omistaja 12.10. 10.3x, Raamattu ASEMATAULU: VAATII TOIMIA): rooli, jolla on omistajalle kysymys tai pyyntö,
+   joka vaatii hänen toimiaan. Yhteenvedossa punaisella ja lihavoituna vain silloin, kun niitä on; roolikortti punaisella taustalla. */
+.toimia { color: var(--punainen); font-weight: 700; }
+.rooli.tila-toimia { background: var(--punainen); color: var(--paperi); }
+.rooli.tila-toimia .r-teksti, .rooli.tila-toimia .r-effort { color: var(--paperi); }
 </style>
 
 <main class="wrap">
@@ -264,7 +280,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     <div class="roolit" id="laitteet"></div>
   </section>
   <section class="kortti" id="roolit-osio" hidden>
-    <h2><button type="button" class="otsikkonappi taitto" data-osio="roolit-osio" aria-expanded="true">Roolit</button> <span class="kysymykset" id="roolimaara"></span> <span class="kysymykset yhteenveto" id="roolit-yhteenveto"></span></h2>
+    <h2><button type="button" class="otsikkonappi taitto" data-osio="roolit-osio" aria-expanded="true">Roolit</button> <span class="kysymykset" id="roolimaara"></span></h2>
     <div id="roolit"></div>
   </section>
   <section class="kortti" id="huom-osio" hidden>
@@ -345,7 +361,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
       d.append(su);
       var runko = luo('div', 'runko' + (aktiivinen ? ' runko-tl' : ''));
       if (r.teksti) runko.append(luo('div', 'teksti', r.teksti));
-      if (r.tilanne) runko.append(luo('div', 'tilanne', r.tilanne));
+      var tl = r.tilanne ? jasennelty('tilanne', r.tilanne, true) : null;
+      if (tl) runko.append(tl);
       if (r.lisa && aktiivinen) {
         var vs = luo('div', 'vastuut');
         String(r.lisa).split(',').map(function (x) { return x.trim(); }).filter(Boolean).forEach(function (n) {
@@ -380,6 +397,55 @@ section:not(.kiinni) .yhteenveto { display: none; }
   // Sinulle-osion auki/kiinni muistetaan katsojan selaimessa (vain mukavuus; ilman tallennusta kiinni).
   var viestitAuki = false;
   try { viestitAuki = localStorage.getItem('sinulle-auki') === '1'; } catch (e) { viestitAuki = false; }
+  // Osio-otsikot (omistaja 12.10. 14.5x: "valmiina ja työn alla saa olla boldattuna ja laita työn alla ylimmäiseksi ja lisää yksi
+  // tyhjä rivi ennen valmiina riviä"): rivin alun Työn alla / Valmiina / Korjatut / Uutta / Junassa N lihavoituna, Työn alla -osio
+  // ensimmäisenä ja osioiden väliin tyhjä rivi. Kirjoittajat jatkavat entisellä muodolla; järjestys tehdään vain näytöllä.
+  // Otsikko voi jatkua ennen kaksoispistettä, esim. "Valmiina junassa 183 (julkaistaan pyynnöstäsi):".
+  var OSIO_OTSIKKO = /^\s*(Työn alla|Valmiina|Korjatut|Uutta|Junassa\s+\d+)\b[^:\n]{0,60}:/i;
+  var TYON_ALLA = /^\s*Työn alla/i;
+  // Työlistassa vain keskeneräiset (omistaja 12.10. 15.1x: "valmiita ei tarvitse näyttää, vain keskeneräiset"): rivi, jonka tilanteessa
+  // on osio-otsikoita mutta ei Työn alla -osiota, on valmis ja siirtyy Valmistuneisiin.
+  function vainValmiita(r) {
+    var otsikot = String(r.tilanne || '').split('\n').filter(function (x) { return OSIO_OTSIKKO.test(x); });
+    return otsikot.length > 0 && !otsikot.some(function (x) { return TYON_ALLA.test(x); });
+  }
+  function jasennelty(luokka, teksti, vainKesken) {
+    var e = luo('div', luokka);
+    var rivit = String(teksti).split('\n');
+    var alku = [], osiot = [];
+    rivit.forEach(function (rivi) {
+      if (OSIO_OTSIKKO.test(rivi)) osiot.push([rivi]);
+      else if (osiot.length) osiot[osiot.length - 1].push(rivi);
+      else alku.push(rivi);
+    });
+    if (!osiot.length) { e.textContent = String(teksti); return e; }
+    if (vainKesken) {
+      osiot = osiot.filter(function (o) { return TYON_ALLA.test(o[0]); });
+      while (alku.length && !alku[alku.length - 1].trim()) alku.pop();
+      if (!osiot.length && !alku.length) return null;
+    }
+    var tyonAlla = function (o) { return TYON_ALLA.test(o[0]) ? 0 : 1; };
+    osiot = osiot.map(function (o, i) { return { o: o, i: i }; })
+      .sort(function (a, b) { return tyonAlla(a.o) - tyonAlla(b.o) || a.i - b.i; })
+      .map(function (x) { return x.o; });
+    var ensimmainen = true;
+    var lisaa = function (rivi) {
+      if (!ensimmainen) e.append(document.createTextNode('\n'));
+      ensimmainen = false;
+      var m = rivi.match(OSIO_OTSIKKO);
+      if (m) {
+        e.append(luo('strong', 'osio-otsikko', rivi.slice(0, m[0].length).trim()));
+        if (rivi.length > m[0].length) e.append(document.createTextNode(rivi.slice(m[0].length)));
+      } else e.append(document.createTextNode(rivi));
+    };
+    alku.forEach(lisaa);
+    osiot.forEach(function (o, i) {
+      while (o.length > 1 && !o[o.length - 1].trim()) o.pop();
+      if (i > 0 || alku.length) lisaa('');
+      o.forEach(lisaa);
+    });
+    return e;
+  }
   // Linkit napautettaviksi (https://…); muu teksti sellaisenaan, ei HTML:ää.
   function linkitetty(teksti) {
     var f = document.createDocumentFragment();
@@ -430,7 +496,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
         sailio.append(solu);
       } else sailio.append(b);
       if (valittuJuna === nimi) {
-        if (r.teksti) paneeli.append(luo('div', 'teksti', r.teksti));
+        if (r.teksti) paneeli.append(jasennelty('teksti', r.teksti));
         if (r.lisa) paneeli.append(luo('div', 'lisa', r.lisa));
       }
     });
@@ -542,7 +608,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     kyL.hidden = !(kysymysAuki && kyN && Array.isArray(ky));
     // Valmistuneet erikseen työlistan alle; otsikon napautus näyttää ne (omistaja 10.10. 16.3x).
     var tlRivit = (t && t.rivit) || [];
-    var onValmis = function (r) { return /^valmis/i.test(String(r.tila || '')); };
+    var onValmis = function (r) { return /^valmis/i.test(String(r.tila || '')) || vainValmiita(r); };
     taittuvat($('tyolista'), tlRivit.filter(function (r) { return !onValmis(r); }), 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
     var valmiitTl = tlRivit.filter(onValmis);
     $('valmistuneet-otsikko').hidden = valmiitTl.length === 0;
@@ -563,7 +629,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
       d.append(su);
       var runko = luo('div', 'runko');
       if (r.teksti) runko.append(luo('div', 'teksti', r.teksti));
-      if (r.tilanne) runko.append(luo('div', 'tilanne', r.tilanne));
+      if (r.tilanne) runko.append(jasennelty('tilanne', r.tilanne));
       d.append(runko);
       vs.append(d);
     });
@@ -616,10 +682,22 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var ro = $('roolit');
     ro.replaceChildren();
     var roolit = ((r && r.rivit) || []).slice();
+    // Vaatii toimia (omistaja 12.10. 10.3x): rooli kirjoittaa itse talo/toimi-<rooli> {rooli, kysymys, ts} heti, kun sillä on omistajalle
+    // kysymys tai pyyntö, joka vaatii hänen toimiaan (tai viestii Postivahdille, joka kirjoittaa sen), ja poistaa dokumentin, kun asia
+    // on hoidettu. Postivahdin tila "kysyy" lasketaan samaksi.
+    var toimet = {};
+    Object.keys(tila).forEach(function (k) {
+      if (k.indexOf('toimi-') !== 0) return;
+      var d = tila[k];
+      if (d && d.kysymys && String(d.kysymys).trim()) toimet[String(d.rooli || k.slice(6))] = d;
+    });
+    var vaatii = function (x) { return !!toimet[x.nimi] || String(x.tila || '') === 'kysyy'; };
+    var nimetR = {};
+    roolit.forEach(function (x) { nimetR[x.nimi] = 1; });
+    Object.keys(toimet).forEach(function (n) { if (!nimetR[n]) roolit.push({ nimi: n, tila: 'kysyy' }); });
     $('roolit-osio').hidden = roolit.length === 0;
-    $('roolimaara').textContent = roolit.length ? '(' + roolit.length + ')' : '';
     var SONNET = { 'Postivahti': 1, 'Sisältökirjuri': 1, 'Laitetestaaja': 1 };
-    var jarj = function (x) { var s = String(x.tila || 'lepo'); return s === 'kysyy' ? 0 : s === 'odottaa' ? 1 : s === 'työ' ? 2 : 3; };
+    var jarj = function (x) { var s = String(x.tila || 'lepo'); return vaatii(x) ? -1 : s === 'odottaa' ? 1 : s === 'työ' ? 2 : 3; };
     roolit.sort(function (a, b) { return jarj(a) - jarj(b); });
     var ruudukko = luo('div', 'roolit');
     // "Työ käynnissä" korvataan tehtävän lyhyellä nimellä (Päätoimittajan tehtavat-dokumentti); muut tilatekstit (odottaa erää, levossa) sellaisinaan. Kellonaika piilossa (omistaja 10.10. 15.5x).
@@ -627,27 +705,38 @@ section:not(.kiinni) .yhteenveto { display: none; }
     roolit.forEach(function (x) {
       var malli = String(x.malli || (SONNET[x.nimi] ? 'Sonnet' : 'Opus')).toLowerCase();
       var s = String(x.tila || 'lepo');
-      var kortti = luo('div', 'rooli ' + (s === 'kysyy' ? 'tila-kysyy' : s === 'työ' ? 'tila-tyo' : s === 'odottaa' ? 'tila-odottaa' : 'tila-lepo'));
+      var kortti = luo('div', 'rooli ' + (vaatii(x) ? 'tila-toimia' : s === 'työ' ? 'tila-tyo' : s === 'odottaa' ? 'tila-odottaa' : 'tila-lepo'));
       var paa = luo('div', 'r-paa');
       paa.append(luo('span', 'piste' + (malli.indexOf('sonnet') >= 0 ? ' sonnet' : '')), luo('span', '', x.nimi || ''));
       // Effort-taso nimen perässä pienemmällä, ei lihavoituna (omistaja 10.10. 22.5x); Postivahti vie kentän effort sessionimestä.
       if (x.effort) paa.append(luo('span', 'r-effort', '(' + x.effort + ')'));
       kortti.append(paa);
       var tyossa = s === 'työ' || /työ käynnissä/i.test(String(x.teksti || ''));
-      var selite = (tyossa && tehtavat[x.nimi]) || x.teksti;
+      var selite = toimet[x.nimi] ? 'Vaatii toimia: ' + toimet[x.nimi].kysymys : (tyossa && tehtavat[x.nimi]) || x.teksti;
       if (selite) kortti.append(luo('div', 'r-teksti', selite));
       ruudukko.append(kortti);
     });
     ro.append(ruudukko);
 
     // Pienennetyn osion yhteenveto otsikkorivillä (omistaja 11.10. 19.3x).
-    var tyonAlla = tlRivit.filter(function (x) { return /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
+    var tyonAlla = tlRivit.filter(function (x) { return !onValmis(x) && /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
     $('tyolista-yhteenveto').textContent = '(työn alla ' + tyonAlla + ')';
-    var kaytossa = lr.filter(function (x) { return x.tila === 'käytössä'; }).map(function (x) { return x.nimi; });
-    $('laitteet-yhteenveto').textContent = kaytossa.length ? '(käytössä: ' + kaytossa.join(', ') + ')' : '(kaikki vapaana)';
-    var lk = function (t) { return roolit.filter(function (x) { return String(x.tila || 'lepo') === t; }).length; };
-    var ro2 = [['työssä', lk('työ')], ['odottaa', lk('odottaa')], ['kysyy', lk('kysyy')]].filter(function (x) { return x[1]; });
-    $('roolit-yhteenveto').textContent = ro2.length ? ro2.map(function (x) { return x[0] + ' ' + x[1]; }).join(', ') : 'kaikki levossa';
+    // Laitteiden käyttö prosentteina (omistaja 12.10. 10.3x): nimi ja prosessorin käyttö, kun Postivahti on mitannut sen.
+    var kaytossaP = lr.filter(function (x) { return x.tila === 'käytössä'; }).map(function (x) {
+      return x.nimi + (typeof x.prosessori === 'number' ? ' ' + Math.max(0, Math.min(100, Math.round(x.prosessori))) + ' %' : '');
+    });
+    $('laitteet-yhteenveto').textContent = kaytossaP.length ? '(käytössä: ' + kaytossaP.join(', ') + ')' : '(kaikki vapaana)';
+    // Roolit (omistaja 12.10. 10.3x): "(1/13 käytössä, vaatii toimia: 1)"; vaatii toimia punaisella ja lihavoituna vain, kun niitä on.
+    var rm = $('roolimaara');
+    rm.replaceChildren();
+    var perus = roolit.filter(function (x) { return nimetR[x.nimi]; });
+    if (perus.length) {
+      var tyoN = perus.filter(function (x) { return String(x.tila || 'lepo') === 'työ'; }).length;
+      var toimiaN = roolit.filter(vaatii).length;
+      rm.append(document.createTextNode('(' + tyoN + '/' + perus.length + ' käytössä'));
+      if (toimiaN) { rm.append(document.createTextNode(', ')); rm.append(luo('span', 'toimia', 'vaatii toimia: ' + toimiaN)); }
+      rm.append(document.createTextNode(')'));
+    }
     var hu = $('huom');
     hu.replaceChildren();
     var hr = (h && h.rivit) || [];

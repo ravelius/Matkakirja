@@ -13,6 +13,7 @@
  * Sidokset ja muuttujat:
  *   SAHKE           D1-tietokanta (rakenne: worker/sahke/skeema.sql)
  *   SAHKE_ORIGINIT  muuttuja: sallitut originit pilkulla erotettuna
+ *   PALLOT          Durable Object (pallohuone.js): retkikunnan kaupunkihuoneet, pallot näkyviin (juna 185)
  *   SAHKE_NATIIVIT  muuttuja (vapaaehtoinen): natiivin iOS-pelin sallitut
  *                   bundle id:t pilkulla erotettuna (otsake
  *                   x-matkakirja-natiivi + User-Agent). Puuttuva tai tyhjä
@@ -23,6 +24,9 @@
  */
 
 import { kasittele, siivoaYmparisto } from './kasittelija.js';
+
+// Durable Object -luokka (wrangler.toml: [[durable_objects.bindings]] PALLOT, SQLite-luokka Free-tasolla).
+export { PalloHuone } from './pallohuone.js';
 
 export default {
   async fetch(pyynto, env) {

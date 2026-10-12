@@ -234,7 +234,7 @@ vaadi('star: ei pergamenttiarkkia', !tahti.plansiNakyy);
 vaadi('star: pohja ei vaalene', !tahti.kirkas);
 vaadi('star: aarrekuva latautui', tahti.ladattu, tahti.kuva);
 vaadi('star: kuva on laudan pääaarrekuva',
-  /assets\/aarteet\/aarre-europe-star\.jpg$/.test(tahti.kuva ?? ''), tahti.kuva);
+  /assets\/aarteet\/aarre-europe-kolme-veljesta\.jpg$/.test(tahti.kuva ?? ''), tahti.kuva);
 vaadi('star: otsake on Aarnin luettelo', tahti.otsake === 'Aarnin luettelo', tahti.otsake);
 vaadi('star: alaotsake on manner ja unohdettu aarre',
   tahti.alaotsake === 'EUROOPPA · UNOHDETTU AARRE', tahti.alaotsake);
