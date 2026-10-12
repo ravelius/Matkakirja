@@ -82,7 +82,7 @@ export const FOKUSVIRTA_VALLETTA = {
     varmistus: 'Haluatko varmasti tavata Ritan juuri nyt?',
     teksti: 'Rita nojaa lippukoppiin vanhan kuninkaallisen oopperatalon '
       + 'paikalla. Isoisän käyntivuonna talo oli juuri palanut sisältä '
-      + 'tyhjäksi — se pysyi kiinni lähes viisi vuotta, eikä hän olisi '
+      + 'tyhjäksi — se pysyi kiinni yli neljä vuotta, eikä hän olisi '
       + 'voinut nähdä yhtään esitystä siellä syyskuussa 1873. Rita '
       + 'haluaa tietää, tunteeko tulija maailman muutenkin kuin '
       + 'julisteista, ennen kuin kertoo mistä liekit silloin lähtivät.',
