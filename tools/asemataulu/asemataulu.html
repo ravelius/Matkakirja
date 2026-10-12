@@ -246,6 +246,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
 .otsikkonappi.taitto[aria-expanded="false"] { color: var(--himmea); }
 /* Sinulle ja Valmistuneet kiinni harmaina kuten muut otsikot (omistaja 12.10. 20.5x). */
 .otsikkonappi[aria-expanded="false"] { color: var(--himmea); }
+/* Avatussa otsikossa ei alleviivausta (omistaja 12.10. 20.5x). */
+.otsikkonappi[aria-expanded="true"] { text-decoration: none; }
 /* Vaatii toimia (omistaja 12.10. 10.3x, Raamattu ASEMATAULU: VAATII TOIMIA): rooli, jolla on omistajalle kysymys tai pyyntö,
    joka vaatii hänen toimiaan. Yhteenvedossa punaisella ja lihavoituna vain silloin, kun niitä on; roolikortti punaisella taustalla. */
 .toimia { color: var(--punainen); font-weight: 700; }
