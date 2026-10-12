@@ -80,3 +80,14 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   **mh-koko** (veneyö-soutaja + 10 hahmoa + istuva vartija, kavely seis 300) molemmilla apeilla rinnakkain (65 s väli) → mh-parit.py (raakakuvat, kuvat/raaka)
   → itsetarkistus → koko sarja PT:lle. 16 hyvää v48r-paria: lokit/siirtoseppa-mh-omistaja/omistajalle/ (vanhentuvat v48s:n myötä).
 - Askel 0 -arkki: PT:llä 1729-versio (8/10); uusi arkki 986f1b23e-botista (scratchpad askel0-arkki.py).
+
+## PÄIVITYS 12.10. 20.3x (uusi tili)
+
+- BOTTI 17/17 986f1b23e + v48r (A 1934, B 1952; B uusittu, launchd_sim kaatui kuormassa). Askel 0 -arkki lokit/siirtoseppa-askel0/askel0-arkki-986f.jpg
+  7/10: kirkkotorni ja tott-kammio = KÄDESSÄ OLEVA TARJOTIN peitti ruudun (ei pöytä), keittiö = partiovartija kävelee 0,7 m:n päähän.
+- Linnahaara **34cdce650** (puhdas kopio 1540/1540): TarjotinSiirto + KantoHeti, SeikkailuVartijat.TulevaKatseessa (4 s), lyhty v2
+  (aanet/olavinlinna-lyhty-v2/manifest.json). Kaikujen CC BY -nimeäminen webin lahteet.js:ään → PT.
+- **v48s** siirtoseppa/v48s f8c27b0fe (pala c68f0392dff4ea5d, nyky 6a73746cefcb1d22), vahdissa. MH-appi lokit/olavinlinna-mh-v48s-1012-2005.
+- Odottajat irrallaan: lokit/siirtoseppa-mh-omistaja/aja4.sh (`touch lupa4` = SIMU NYT 2) → kansiot4.txt → mh-parit.py <v48o> <v48s> <out> v48o v48s;
+  lokit/siirtoseppa-botti-nakyma/odota-ja-aja.sh (34cdce650 + v48s, `touch lupa` = SIMU NYT 1) → yhteenveto.txt → uusi askel 0 -arkki → PT → LT 5.
+- Tarkistusskripti: scratchpad tarkista-puhdas.sh <repo> <puu|commit> <kohde> (git write-tree indeksistä ennen committia).
