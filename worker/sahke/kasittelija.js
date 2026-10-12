@@ -34,6 +34,7 @@
  *   POST /apu/kysy          {koodi, jasenId, avain, apuId, kysymys, vaihtoehdot}
  *   POST /apu/vastaa        {koodi, jasenId, avain, apuId, veikkaus}
  *   POST /retkikunta/eroa   {koodi, jasenId, avain} — paikka ja nimimerkki vapaiksi, tyhjä retkikunta pois
+ *   GET  /pallot?koodi=&jasenId=&kaupunki=  WebSocket-päivitys retkikunnan kaupunkihuoneeseen (pallohuone.js, juna 185)
  *
  * TURVA: jokainen kirjoitus (ja tilannekuvan luku) vaatii kolmikon
  * koodi + jasenId + avain. Avain on jäsenkohtainen salaisuus, joka
@@ -56,6 +57,7 @@
  * wrangleria ja ilman D1:tä (tests/sahke-worker.test.mjs).
  */
 
+import { PALLO_JASEN_OTSAKE } from './pallohuone.js';
 import { normalisoiNimimerkki } from './nimimerkit.js';
 import { teeVarasto } from './varasto.js';
 
@@ -594,6 +596,36 @@ async function eroa(pyynto, varasto, kors) {
   return vastaa({ ok: true, jaljella: jaljella.length }, kors);
 }
 
+/** Kaupunkitunnus huoneen avaimeen: pelin kaupunki-id (pienet kirjaimet, numerot, viiva). */
+export const KAUPUNKI_MUOTO = /^[a-z0-9-]{2,40}$/;
+
+/**
+ * GET /pallot — retkikunnan pallot näkyviin (suunnitelma #4501, juna 185). Tunnistus kuten /retkikunta/tila
+ * (avain otsakkeessa; selaimen WebSocket ei voi asettaa otsakkeita, joten kysely kelpaa), sitten pyyntö
+ * Durable Object -huoneeseen "<koodi>:<kaupunki>". Vain oman retkikunnan jäsenet pääsevät huoneeseen.
+ * Ilman PALLOT-sidosta (vanha julkaisu) tai Free-tason ylittyessä asiakas saa virheen ja jatkaa ilman palloja.
+ */
+async function pallot(pyynto, url, env, varasto, kors) {
+  if ((pyynto.headers.get('upgrade') ?? '').toLowerCase() !== 'websocket') {
+    return vastaa({ virhe: 'Vain WebSocket' }, { status: 426, ...kors });
+  }
+  const kaupunki = String(url.searchParams.get('kaupunki') ?? '');
+  if (!KAUPUNKI_MUOTO.test(kaupunki)) return vastaa({ virhe: 'Tuntematon kaupunki' }, { status: 400, ...kors });
+  const loyto = await tunnista(varasto, {
+    koodi: url.searchParams.get('koodi'),
+    jasenId: url.searchParams.get('jasenId'),
+    avain: pyynto?.headers?.get?.(AVAIN_OTSAKE) || url.searchParams.get('avain'),
+  });
+  if (!loyto) return vastaa({ virhe: 'Tunnukset eivät täsmää.' }, { status: 401, ...kors });
+  if (!env?.PALLOT) return vastaa({ virhe: 'Pallot eivät ole käytössä' }, { status: 503, ...kors });
+  const { koodi, jasenId } = loyto.jasen;
+  const otsakkeet = new Headers(pyynto.headers);
+  otsakkeet.set(PALLO_JASEN_OTSAKE, jasenId);
+  otsakkeet.delete(AVAIN_OTSAKE);
+  const huone = env.PALLOT.get(env.PALLOT.idFromName(`${koodi}:${kaupunki}`));
+  return huone.fetch(new Request(pyynto.url, { method: 'GET', headers: otsakkeet }));
+}
+
 /** POST /sahke — valkolistattu pohja ja pelin kaupunkitunnus, ei muuta. */
 async function sahke(pyynto, varasto, kors, nyt) {
   const avattu = await avaaKirjoitus(pyynto, varasto, kors, nyt,
@@ -804,6 +836,8 @@ export async function kasittele(pyynto, env, apurit = {}) {
       return pyynto.method === 'POST' ? apuKysy(pyynto, varasto, kors, nyt) : vain('POST');
     case '/apu/vastaa':
       return pyynto.method === 'POST' ? apuVastaa(pyynto, varasto, kors, nyt) : vain('POST');
+    case '/pallot':
+      return pyynto.method === 'GET' ? pallot(pyynto, url, env, varasto, kors) : vain('GET');
     default:
       return vastaa({ virhe: 'Tuntematon reitti' }, { status: 404, ...kors });
   }
