@@ -4366,6 +4366,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/lissabon-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
+    piirtoRajat: { pohjoinen: 38.7334, etela: 38.6966, lansi: -9.16025, ita: -9.10825 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -4457,6 +4458,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/barcelona-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
+    piirtoRajat: { pohjoinen: 41.42265, etela: 41.35785, lansi: 2.13158, ita: 2.21382 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -4515,6 +4517,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/granada-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
+    piirtoRajat: { pohjoinen: 37.1935, etela: 37.1615, lansi: -3.612, ita: -3.572 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -4589,6 +4592,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/edinburgh-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    piirtoRajat: { pohjoinen: 55.9675, etela: 55.9355, lansi: -3.2296, ita: -3.1464 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
@@ -4646,6 +4650,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/marseille-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    piirtoRajat: { pohjoinen: 43.3155, etela: 43.2675, lansi: 5.3306, ita: 5.4074 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
@@ -5093,6 +5098,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/dublin-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+    piirtoRajat: { pohjoinen: 53.361, etela: 53.329, lansi: -6.309, ita: -6.229 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
@@ -6230,6 +6236,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/madrid-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 40.43, etela: 40.406, lansi: -3.72, ita: -3.675 },
+    piirtoRajat: { pohjoinen: 40.4372, etela: 40.3988, lansi: -3.7335, ita: -3.6615 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -6451,6 +6458,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/venetsia-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    piirtoRajat: { pohjoinen: 45.45055, etela: 45.42095, lansi: 12.30455, ita: 12.36295 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
@@ -6670,6 +6678,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/krakova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
+    piirtoRajat: { pohjoinen: 50.0756, etela: 50.0404, lansi: 19.9117, ita: 19.9693 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
     esittely: 'Kartan alue on Krakovan vanhakaupunki ja sen eteläpuoli. '
@@ -6729,6 +6738,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/varsova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
+    piirtoRajat: { pohjoinen: 52.2616, etela: 52.2184, lansi: 20.98645, ita: 21.05605 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
     esittely: 'Kartan alue on Varsovan keskusta Veikselin länsirannalla. '
@@ -6800,6 +6810,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/tallinna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
+    piirtoRajat: { pohjoinen: 59.45635, etela: 59.42515, lansi: 24.71505, ita: 24.78145 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
@@ -6875,6 +6886,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/sofia-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
+    piirtoRajat: { pohjoinen: 42.7122, etela: 42.6738, lansi: 23.3021, ita: 23.3549 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
@@ -7124,6 +7136,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/sarajevo-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
+    piirtoRajat: { pohjoinen: 43.8691, etela: 43.8499, lansi: 18.4021, ita: 18.4549 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
@@ -7210,6 +7223,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/kiova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
+    piirtoRajat: { pohjoinen: 50.479, etela: 50.431, lansi: 30.487, ita: 30.551 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
@@ -7285,6 +7299,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/pietari-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
+    piirtoRajat: { pohjoinen: 59.965, etela: 59.909, lansi: 30.2651, ita: 30.3659 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kanavien ja katujen viivastoja.
@@ -7379,6 +7394,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/moskova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
+    piirtoRajat: { pohjoinen: 55.7748, etela: 55.7252, lansi: 37.5759, ita: 37.6591 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä värejä.
@@ -7477,6 +7493,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/odessa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
+    piirtoRajat: { pohjoinen: 46.5115, etela: 46.4555, lansi: 30.7084, ita: 30.7916 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
@@ -7544,6 +7561,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/oslo-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    piirtoRajat: { pohjoinen: 59.9231, etela: 59.8959, lansi: 10.69925, ita: 10.77525 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
      * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
@@ -7670,6 +7688,7 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
     },
+    piirtoRajat: { pohjoinen: 37.4005, etela: 37.3685, lansi: -6.02429, ita: -5.96781 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     esittely: 'Kartan alue on Sevillan vanhakaupunki Guadalquivirin '
       + 'itärannalla ja joen toisella puolella Trianan kaupunginosa. '
       + 'Kaupunki kasvoi jokisatamasta, jota hallitsivat vuorotellen '
@@ -8765,6 +8784,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/dubrovnik-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    piirtoRajat: { pohjoinen: 42.64582, etela: 42.63718, lansi: 18.10011, ita: 18.11819 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -8816,6 +8836,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/riika-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
+    piirtoRajat: { pohjoinen: 56.9605, etela: 56.9365, lansi: 24.07925, ita: 24.14085 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
@@ -8857,6 +8878,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/vilna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
+    piirtoRajat: { pohjoinen: 54.69325, etela: 54.66525, lansi: 25.25825, ita: 25.31825 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
@@ -8916,6 +8938,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/tromssa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    piirtoRajat: { pohjoinen: 69.6638, etela: 69.6302, lansi: 18.9142, ita: 19.0358 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -14721,6 +14744,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/bergen-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
+    piirtoRajat: { pohjoinen: 60.4058, etela: 60.3802, lansi: 5.28745, ita: 5.34905 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
       + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy veteen '
       + 'Nordnesin kapea niemi, lahden itärannalla erottuvat '
@@ -16571,6 +16595,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 20.432,
       ita: 20.4723,
     },
+    piirtoRajat: { pohjoinen: 44.846, etela: 44.7836, lansi: 20.41991, ita: 20.48439 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Belgradin linnoitus',
@@ -16630,6 +16655,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 17.096,
       ita: 17.1208,
     },
+    piirtoRajat: { pohjoinen: 48.15577, etela: 48.13513, lansi: 17.08856, ita: 17.12824 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Bratislavan linna',
@@ -16681,6 +16707,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 28.8241,
       ita: 28.8508,
     },
+    piirtoRajat: { pohjoinen: 47.03447, etela: 47.00423, lansi: 28.81609, ita: 28.85881 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Kristuksen syntymän katedraali',
@@ -16732,6 +16759,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 27.543,
       ita: 27.579,
     },
+    piirtoRajat: { pohjoinen: 53.91824, etela: 53.88816, lansi: 27.5322, ita: 27.5898 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Kolminaisuuden esikaupunki',
@@ -16785,6 +16813,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 19.24465,
       ita: 19.2664,
     },
+    piirtoRajat: { pohjoinen: 42.45306, etela: 42.4282, lansi: 19.23812, ita: 19.27293 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Sahat kula -kellotorni',
@@ -16831,6 +16860,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 21.42807,
       ita: 21.44059,
     },
+    piirtoRajat: { pohjoinen: 42.00951, etela: 41.98971, lansi: 21.42431, ita: 21.44435 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Kivisilta',
@@ -16883,6 +16913,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 19.8145,
       ita: 19.8297,
     },
+    piirtoRajat: { pohjoinen: 41.33652, etela: 41.31668, lansi: 19.80994, ita: 19.83426 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Skanderbeg-aukio',
@@ -16940,6 +16971,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 15.9691,
       ita: 15.9836,
     },
+    piirtoRajat: { pohjoinen: 45.82283, etela: 45.80027, lansi: 15.96475, ita: 15.98795 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Kivinen portti',
@@ -16981,6 +17013,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 1.4906,
       ita: 1.5405,
     },
+    piirtoRajat: { pohjoinen: 42.52199, etela: 42.48151, lansi: 1.47563, ita: 1.55547 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Casa de la Vall',
@@ -17016,6 +17049,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 7.4403,
       ita: 7.4636,
     },
+    piirtoRajat: { pohjoinen: 46.9529, etela: 46.9417, lansi: 7.43331, ita: 7.47059 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Zytglogge',
@@ -17056,6 +17090,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 7.4102,
       ita: 7.4326,
     },
+    piirtoRajat: { pohjoinen: 43.74648, etela: 43.72312, lansi: 7.40348, ita: 7.43932 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Monte Carlon kasino',
@@ -17108,6 +17143,7 @@ export const KAUPUNKIKARTAT = {
       lansi: -21.9487,
       ita: -21.9005,
     },
+    piirtoRajat: { pohjoinen: 64.16095, etela: 64.11855, lansi: -21.96316, ita: -21.88604 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Hallgrímskirkja',
@@ -17155,6 +17191,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 12.443,
       ita: 12.4563,
     },
+    piirtoRajat: { pohjoinen: 43.94326, etela: 43.92374, lansi: 12.43901, ita: 12.46029 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Guaitan torni',
@@ -17209,6 +17246,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 9.4985,
       ita: 9.53,
     },
+    piirtoRajat: { pohjoinen: 47.1492, etela: 47.1268, lansi: 9.48905, ita: 9.53945 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Vaduzin linna',
@@ -19675,6 +19713,7 @@ export const KAUPUNKIKARTAT = {
       lansi: 12.4467,
       ita: 12.4605,
     },
+    piirtoRajat: { pohjoinen: 41.91095, etela: 41.89575, lansi: 12.44256, ita: 12.46464 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Pietarinkirkko',

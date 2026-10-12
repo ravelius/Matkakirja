@@ -174,6 +174,7 @@ const KAUPUNGIT = {
     // ja Retiron puisto tuo itälaitaan ison vihreän vastapainon
     // ruutukaavalle.
     rajat: { pohjoinen: 40.43, etela: 40.406, lansi: -3.72, ita: -3.675 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   tukholma: {
     // Kaupungintalolta Skansenille: Gamla stanin saari keskellä,
@@ -226,6 +227,7 @@ const KAUPUNGIT = {
     // laguuniMaa: laguuni täytetään ja maa piirretään katuverkosta
     // leveällä vedolla (px 1600 px:n kuvassa; 22 px ≈ 40 m).
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     laguuniMaa: 22,
   },
   praha: {
@@ -343,6 +345,7 @@ const KAUPUNGIT = {
     // vaikka se on lehden kansikuva. Sisään ottaminen olisi työntänyt
     // Guinnessin kuvan reunaan. Croke Park on 634 m pohjoiseen.
     rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   ateena: {
     // Ateenassa ei ole jokea eikä rantaa, joten kuvan selkäranka on
@@ -392,6 +395,8 @@ const KAUPUNGIT = {
     // reunuksella, jossa se ei syö kuvan ydintä.
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
     laajennus: 1.6,
+    // Reunuksella täyttö kääntyi väärin päin (maa vedeksi) → laajempi rantahaku kuten Bergenissä.
+    meriHaku: 0.05,
     meri: true,
     kainalot: [
       {
@@ -435,6 +440,7 @@ const KAUPUNGIT = {
     // mutta kainalo keskelle avomerta näyttäisi oudolta, ja saari on
     // niin pieni ettei siitä tulisi tunnistettavaa minikarttaa.
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   edinburgh: {
@@ -450,6 +456,7 @@ const KAUPUNGIT = {
     //
     // Ei meri: true — rajaus ei ulotu Forthin lahdelle asti.
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   lissabon: {
     // Baixan ruudukko keskellä, Alfama oikealla ja Bairro Alto
@@ -462,6 +469,7 @@ const KAUPUNGIT = {
     // ja mukaan ottaminen vaatisi 9 km leveän kuvan. Kumpikin on
     // lehden kohde, joten se on kerrottava lehden puolella.
     rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   barcelona: {
@@ -476,6 +484,7 @@ const KAUPUNGIT = {
     // Park Güell jää 630 m pohjoisrajan yläpuolelle: mukaan ottaminen
     // liimaisi sen ja Kolumbuksen patsaan kumpikin omaan laitaansa.
     rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   granada: {
@@ -491,6 +500,8 @@ const KAUPUNGIT = {
     //
     // Ei merta — Granada on 60 km sisämaassa.
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
+    maanalaisetVedet: true, // Darro tahallaan näkyvissä (ks. yllä); PT päättää 12.10.2026
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   istanbul: {
     /*
@@ -592,6 +603,7 @@ const KAUPUNGIT = {
     //
     // Auschwitz on 65 km länteen eikä ole kaupunkikartan kohde.
     rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   varsova: {
     // Veiksel tulee ylhäältä ja poistuu oikeasta alanurkasta vinona
@@ -612,6 +624,7 @@ const KAUPUNGIT = {
     // vasemman reunan yli. Łazienki, POLIN ja kansannousun museo
     // osoittavat kolmeen muuhun suuntaan.
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   oslo: {
     // Vuonon peruka ja sen ympärille kiertyvä keskusta: kuninkaanlinna
@@ -625,6 +638,7 @@ const KAUPUNGIT = {
     // kolminkertaistaisi rajauksen. Lehden laivaosasto kertoo niistä,
     // ja kartan esittely sanoo, mihin suuntaan ne jäävät.
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   sevilla: {
@@ -655,6 +669,7 @@ const KAUPUNGIT = {
     rajat: {
       pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
     },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   tampere: {
     /*
@@ -798,6 +813,7 @@ const KAUPUNGIT = {
     // `footway` (jota ei). Stradun näkyy siksi kuvassa leveänä
     // suorana, ja siitä lähtevät portaikot kylkiluina.
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   riika: {
@@ -811,6 +827,7 @@ const KAUPUNGIT = {
     // jolloin vanhakaupungin kujat sulaisivat yhdeksi täpläksi.
     // Kartan juoni on vanhakaupunki, kuten lehdenkin.
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   vilna: {
     // Vanhakaupunki kahden joen kainalossa: Neris ylhäällä, Vilnia
@@ -829,6 +846,7 @@ const KAUPUNGIT = {
     // Eteläreuna 54.6705 eikä 54.6725: Aamuportin numeroympyrä jäi
     // muuten kiinni kuvan alareunaan (mitattu selaimessa).
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     palvelutiet: true,
   },
   tromssa: {
@@ -849,6 +867,9 @@ const KAUPUNGIT = {
     // Tarkistettu vesitarkistimella (tools/tarkista-karttapisteet.mjs),
     // ettei täyttö valu kummankaan rannan päälle.
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+    // Reunuksella täyttö kääntyi väärin päin (maa vedeksi) → laajempi rantahaku kuten Bergenissä.
+    meriHaku: 0.05,
     meri: 'maa',
   },
   tallinna: {
@@ -887,6 +908,7 @@ const KAUPUNGIT = {
     // ei ole katuverkkoa, on paperia. Jos laulukenttä halutaan kartalle,
     // se vaatii työkaluun rakennusten piirron — ei uutta rajausta.
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   sofia: {
@@ -913,6 +935,7 @@ const KAUPUNGIT = {
     // katuverkkoa, eli ruudusta tulisi tyhjä paperi kuten Tallinnan
     // laulukentästä.
     rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   bukarest: {
     // Kaksi juonta samassa kuvassa. Dâmbovița kulkee halki
@@ -971,6 +994,7 @@ const KAUPUNGIT = {
     // Bobirata jää 1,47 km kaakkoon ja ylös vuorelle, Bijela tabija
     // 98,5 %:n kohdalle eli käytännössä ulos.
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   kiova: {
     // Kaksikerroksinen kaupunki, ei joki: Kiovan maamerkit ovat jonossa
@@ -1005,6 +1029,7 @@ const KAUPUNGIT = {
     // 30.549–30.567 ajettiin: 222 elementtiä ja lähes tyhjä paperi.
     // Lavran kujat ovat footway ja patsas seisoo museopuistossa.
     rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   pietari: {
     // Kanavakaaret ovat kuvan juoni: Moika, Gribojedovin kanava ja
@@ -1029,6 +1054,7 @@ const KAUPUNGIT = {
     // mutka ja pari katua, itse katedraali on rakennus jota ei piirretä.
     // Lisäksi Pietarissa ei ole tyhjää nurkkaa mihin ruutu sopisi.
     rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   moskova: {
     // TÄMÄ RAJAUS ON TAHALLAAN ISOMPI KUIN PITÄISI, ja syy on mitattu.
@@ -1052,6 +1078,8 @@ const KAUPUNGIT = {
     // yliopisto (8 km) ja VDNH (9 km) ovat liian kaukana ja puiston
     // keskellä. Kaikki kolme ovat lehden juttuja, ei kartan kohteita.
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
+    maanalaisetVedet: true, // Neglinnaja tahallaan näkyvissä (ks. yllä); PT päättää 12.10.2026
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   odessa: {
     // Kolmiosainen kuva: oikea kolmannes merta, yläreunassa satama
@@ -1075,6 +1103,7 @@ const KAUPUNGIT = {
     // satama piirtyy nurinpäin: altaat täyttyvät ja laiturit jäävät
     // paperiksi. Pinta-alavaroitusta ei tule.
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   dubai: {
@@ -5156,7 +5185,10 @@ const KAUPUNGIT = {
      * lippua kuvan koko keskiosa olisi paperin värinen.
      */
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
+    // Reunuksella täyttö peitti 132 % (rantaviiva katkeaa laatikkoon) → laajempi rantahaku.
+    meriHaku: 0.05,
   },
   tanger: {
     /*
@@ -6099,48 +6131,62 @@ const KAUPUNGIT = {
    */
   belgrad: {
     rajat: { pohjoinen: 44.8343, etela: 44.7953, lansi: 20.432, ita: 20.4723 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   bratislava: {
     rajat: { pohjoinen: 48.1519, etela: 48.139, lansi: 17.096, ita: 17.1208 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   chisinau: {
     rajat: { pohjoinen: 47.0288, etela: 47.0099, lansi: 28.8241, ita: 28.8508 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   minsk: {
     rajat: { pohjoinen: 53.9126, etela: 53.8938, lansi: 27.543, ita: 27.579 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   podgorica: {
     rajat: { pohjoinen: 42.4484, etela: 42.43286, lansi: 19.24465, ita: 19.2664 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   skopje: {
     rajat: { pohjoinen: 42.0058, etela: 41.99342, lansi: 21.42807, ita: 21.44059 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   tirana: {
     rajat: { pohjoinen: 41.3328, etela: 41.3204, lansi: 19.8145, ita: 19.8297 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   zagreb: {
     rajat: { pohjoinen: 45.8186, etela: 45.8045, lansi: 15.9691, ita: 15.9836 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   andorralavella: {
     // Etelä- ja länsireunaa laskettu (Karttaseppä 11.10.): Santa Coloma osui mittakaavajanan päälle.
     rajat: { pohjoinen: 42.5144, etela: 42.4891, lansi: 1.4906, ita: 1.5405 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   bern: {
     rajat: { pohjoinen: 46.9508, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   monaco: {
     rajat: { pohjoinen: 43.7421, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   reykjavik: {
     rajat: { pohjoinen: 64.153, etela: 64.1265, lansi: -21.9487, ita: -21.9005 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   sanmarino: {
     rajat: { pohjoinen: 43.9396, etela: 43.9274, lansi: 12.443, ita: 12.4563 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   vaduz: {
     rajat: { pohjoinen: 47.145, etela: 47.131, lansi: 9.4985, ita: 9.53 }, // PT 12.10.2026: länteen Reinille ja Sevelenin sillalle, linna rinteessä (oli 47.1421/47.1335/9.5185/9.5284)
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   /*
    * PÄÄKAUPUNKIPISTEET e03 (Päätoimittaja 11.10.2026, Kaukasus ja Lähi-itä): rajat sisalto.json:n kohdekartasta. Rannikolla meri-lippu.
@@ -6326,6 +6372,7 @@ const KAUPUNGIT = {
   // VATIKAANI (PT 11.10.2026, juna 183): Euroopan viimeinen pääkaupunkipiste ilman karttaa.
   vatikaanivaltio: {
     rajat: { pohjoinen: 41.9081, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
 };
 
@@ -6975,6 +7022,7 @@ function piirretytRajat({ rajat, laajennus = 1 }) {
  * kainalokartat — kainalossa vain x ja y osoittavat pieneen ruutuun
  * pääkuvan sisällä.
  */
+let PIDA_MAANALAISET = false;
 function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null, laguuniMaa = 0) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = {
@@ -6986,7 +7034,21 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null,
   const katuViivat = [];
   let laguuniTaytetty = false;
   const laatikonAla = (rajat.ita - rajat.lansi) * (rajat.pohjoinen - rajat.etela);
+  let maanalaisiaPois = 0;
   for (const e of elementit) {
+    /*
+     * MAANALAISET VEDET POIS (PT 12.10.2026, erä 184; LS2:n löydös Pariisin
+     * katetusta Canal Saint-Martinista). Vesi, jolla on tunnel (ei no),
+     * covered=yes tai location=underground, ei näy kaupungissa, joten sitä ei
+     * piirretä. Poikkeus kaupunkikohtaisella lipulla maanalaisetVedet: true
+     * (Granadan Darro, Moskovan Neglinnaja: tahallaan näkyvissä, ks. rivit).
+     */
+    const tg = e.tags ?? {};
+    if (!PIDA_MAANALAISET && (tg.waterway || tg.natural === 'water' || tg.water)
+      && ((tg.tunnel && tg.tunnel !== 'no') || tg.covered === 'yes' || tg.location === 'underground')) {
+      maanalaisiaPois += 1;
+      continue;
+    }
     /*
      * Vesirelaatio TÄYTETÄÄN, ei piirretä nauhana. Aiemmin jäsenpolut
      * työnnettiin joet-listaan, jolloin Marseillen Vanhasatama —
@@ -7187,6 +7249,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null,
     }
   }
   if (laguuniTaytetty) for (const geom of katuViivat) kerrokset.maaveto.push(`<polyline points="${pisteet(geom)}"/>`);
+  if (maanalaisiaPois) console.log(`  maanalaisia vesiä pois: ${maanalaisiaPois}`);
   return kerrokset;
 }
 
@@ -7329,8 +7392,9 @@ function piirraKainalo(kainalo, elementit, W, H, ydinW, rauniokaupunki = false) 
 
 function piirra(kaupunki, elementit, kainaloAineistot = [], rantaLaaja = null) {
   const {
-    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false, laguuniMaa = 0,
+    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false, laguuniMaa = 0, maanalaisetVedet = false,
   } = KAUPUNGIT[kaupunki];
+  PIDA_MAANALAISET = maanalaisetVedet;
   const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
   // Ydinrajaus pysyy 1600 pikselinä myös laajennetussa kuvassa, ks.
   // tiedoston alun kommentti.
