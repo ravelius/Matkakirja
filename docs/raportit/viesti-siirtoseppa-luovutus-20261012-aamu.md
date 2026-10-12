@@ -91,3 +91,13 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Odottajat irrallaan: lokit/siirtoseppa-mh-omistaja/aja4.sh (`touch lupa4` = SIMU NYT 2) → kansiot4.txt → mh-parit.py <v48o> <v48s> <out> v48o v48s;
   lokit/siirtoseppa-botti-nakyma/odota-ja-aja.sh (34cdce650 + v48s, `touch lupa` = SIMU NYT 1) → yhteenveto.txt → uusi askel 0 -arkki → PT → LT 5.
 - Tarkistusskripti: scratchpad tarkista-puhdas.sh <repo> <puu|commit> <kohde> (git write-tree indeksistä ennen committia).
+
+## PÄIVITYS 12.10. 22.5x
+
+- **Juna 184** sai linnan 34cdce650 + v48s f8c27b0fe + lyhty v2 (omistaja: testit TF:n jälkeen). BOTTI 17/17 34cdce650 + v48s, askel 0 -arkki 9/10.
+- Linnahaara **9f41b0fcb** (junaan 186, kun koko botti läpi): d233a28bb vartijat-lokirivit, 6ec8a24e0 ReittiPaikka ohittaa partion pysähdyspisteen
+  (< 0,8 m; keittiön aloitus → pelaaja-14, askel 0 puhdas, PT tarkisti), 9f41b0fcb katso v: näkyvään malliin (vartija2).
+- **MH**: omistaja valitsi 22.4x UUDET ASUT (v48s); parit lokit/siirtoseppa-mh-omistaja/parit5/ (20). Seuraavaksi LR v48t → kiinnitä (kiinnita-paketti.sh v48t v48s …)
+  → parit v48s2 (vahdin klooni 9f41b0fcb + v48s) | v48t + uusinnat soutaja ja vartija2 (mh-koko: odota 10 s veneessä).
+- Odottaja lokit/siirtoseppa-botti-nakyma/odota-ja-aja.sh (9f41b0fcb + v48s, `touch lupa` = SIMU NYT 1) → yhteenveto.txt + askel0-arkki → PT + NS.
+- Julkaisijan jono: TF 185 → NS → LS1 → vahti 9f41b0fcb; simut: LT 185 (60–90 min) → botti → MH.
