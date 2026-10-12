@@ -1,0 +1,323 @@
+{
+  "taskNumber": 80,
+  "task": "saapumisintro-pilotti-20261012",
+  "city": "paris",
+  "date": "20261012",
+  "sourceVersions": {
+    "taskNumber": 80,
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-pilotti-20261012.md",
+    "sourceCommit": "06bfbb9df7fd1801cd80349df67a552b3e3e11be",
+    "sourceBlob": "60fa5a010975f3954aff11073da44aa9a5f93d15",
+    "sourceSHA256": "2b1f770c31ca57a09192303f03a0e9c12199b5aa1f8d38a1af7a19b855557537",
+    "sourceReadInFull": true
+  },
+  "requestedImages": 5,
+  "generationLimit": 5,
+  "generationCalls": 5,
+  "generationRequestsIssued": 5,
+  "issuedImageIds": [
+    "paris-4-mouffetard",
+    "paris-5-pont-royal",
+    "paris-6-pain-croissants",
+    "paris-7-pont-neuf-soir",
+    "paris-8-pont-royal-1873"
+  ],
+  "successfulDeliverables": 3,
+  "state": "3-R2-byte-verified-assets-2-confirmed-QA-omissions-ready-for-root-mailbox-handoff",
+  "assets": [
+    {
+      "id": "paris-5-pont-royal",
+      "number": 5,
+      "filename": "paris-5-pont-royal.png",
+      "r2Key": "julisteet/saapumisintro/paris/20261012/paris-5-pont-royal.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012/paris-5-pont-royal.png?t=9151481502be550c",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012/paris-5-pont-royal.png",
+      "sha256": "9151481502be550c1488a968f7c045b2d00fcfad2e9e9876090f3807da9607d7",
+      "bytes": 2586908,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "canonicalHttp": 200,
+      "canonicalMIME": "image/png",
+      "canonicalCORS": "https://matkakirja.app",
+      "canonicalReadbackByteExact": true,
+      "canonicalSHA256": "9151481502be550c1488a968f7c045b2d00fcfad2e9e9876090f3807da9607d7",
+      "verifiedAt": "2026-10-12T09:39:43.495708+00:00",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "colorMode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationTool": "builtin image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: camera-looking Paris arrival landscape, opaque 1536 x 1024.\nPrimary request: A quiet present-day summer late-morning view of the Seine and the real Pont Royal in Paris. Reference image 1 is ONLY a structural reference for the real bridge, not an image to copy. Make a completely new full natural-color photograph.\nGeography and camera: camera on the LEFT/SOUTH bank, Quai Anatole-France, about 90 metres downstream/west of Pont Royal, slightly elevated above the low quay, looking northeast across the river toward the bridge and the RIGHT/NORTH bank at the southeast edge of the Tuileries Garden. This is not a right-bank viewpoint. The bridge crosses diagonally from the near left-bank end at image right to the far right-bank end in the middle-left. Show all five masonry arches; the central arch is a little higher and wider, weathered pale stone piers and a simple solid stone parapet. On the far bank behind the bridge, a tree row leads leftward along the pale stone embankment toward the Tuileries Garden. Only a narrow sliver of the historic Pavillon de Flore at the far right edge; trees, bridge and water are the main subjects. Do not invent another palace across the opposite bank.\nComposition: 3:2 horizontal, eye level about 3 metres above low-quay level, 40 mm normal full-frame camera lens; near-bank pale stone quay enters lower right, calm Seine fills the lower half, bridge centered in middle distance, modest tree line and a lot of quiet morning sky. One tiny plain unmarked tourist boat far away, no visible passengers or faces. This exact camera position and bridge geometry must be reusable for an 1873 reconstruction.\nPhotography: ordinary natural soft summer morning, muted realistic greens and limestone, water grey-green with many irregular small ripples and imperfect reflections. Individual varied leaves rather than repeated tree balls. Subtle worn stone texture, no HDR, no illustration, no dramatic grading, no oversaturation or smooth plastic surfaces.\nAvoid: any text, numbers, letters, signs, labels, logos, watermarks, frames, banners, billboards, murals, identifiable people, cars in foreground, modern sculptural furniture. No Louvre glass pyramid, Eiffel Tower, Sacré-Cœur, modern bridge, feeding birds, or busy scene. No reproduced artwork.",
+      "caption": "Seine ja Pont Royal kesäaamuna vasemmalta rannalta katsottuna. Havainnekuva.",
+      "references": [
+        {
+          "url": "https://www.afgc.asso.fr/history-heritage/pont-royal-a-paris/",
+          "publisher": "Association Française de Génie Civil",
+          "role": "Bridge structure facts and viewed morphology reference",
+          "imageInput": true,
+          "photographer": "ENPC",
+          "observed": "Five masonry arches, slightly higher central arch, solid parapet; bridge built 1685-1689."
+        },
+        {
+          "url": "https://parisjetaime.com/transport/pont-royal-p1883",
+          "publisher": "Paris je t’aime official tourist office",
+          "role": "text-only location and five arches verification",
+          "imageInput": false
+        },
+        {
+          "url": "https://a06-v7.apps.paris.fr/a06/jsp/site/plugins/odjcp/DoDownload.jsp?id_entite=53554&id_type_entite=6",
+          "publisher": "Ville de Paris",
+          "role": "Viewed map page 2; left-bank camera and right-bank Tuileries arrangement",
+          "imageInput": false,
+          "observed": "Quai Anatole France downstream of Pont Royal on left bank; Tuileries Garden opposite on right bank."
+        }
+      ],
+      "rawSHA256": "5018924732421f9dcceaccdb12d2cc94db446df645ec2a91e2930784e39c72be",
+      "rootQA": {
+        "reviewer": "Parent root full-image review passed; Paris city agent checked native surface crops",
+        "parentRootReviewed": true,
+        "approvedForDeliveryByCityAgent": true,
+        "observations": [
+          "Camera-looking photograph with natural water ripples and varied tree leaves; native water and tree crops show no cloned or mechanical repetition.",
+          "Five rounded stone arches, central span slightly higher; solid stone parapet matches bridge reference.",
+          "Tree line on opposite right bank and a sliver of Pavillon de Flore at right; near-left-bank quay at lower right.",
+          "One small tourist boat far behind first arch; no visible lettering or identifiable people.",
+          "Geography is illustrative, exact surveying accuracy is not claimed."
+        ],
+        "approvedForDeliveryByRoot": true
+      },
+      "technicalQA": true,
+      "visualQA": true,
+      "contentAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootVisuallyReviewed": true,
+      "ownerAcceptanceVerified": false
+    },
+    {
+      "id": "paris-6-pain-croissants",
+      "number": 6,
+      "filename": "paris-6-pain-croissants.png",
+      "r2Key": "julisteet/saapumisintro/paris/20261012/paris-6-pain-croissants.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012/paris-6-pain-croissants.png?t=36bee3e992e66158",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012/paris-6-pain-croissants.png",
+      "sha256": "36bee3e992e66158756b7af040504df0163b48eee1a4ddd5688d1c7f86809b69",
+      "bytes": 2654482,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "canonicalHttp": 200,
+      "canonicalMIME": "image/png",
+      "canonicalCORS": "https://matkakirja.app",
+      "canonicalReadbackByteExact": true,
+      "canonicalSHA256": "36bee3e992e66158756b7af040504df0163b48eee1a4ddd5688d1c7f86809b69",
+      "verifiedAt": "2026-10-12T09:43:10.934593+00:00",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "colorMode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationTool": "builtin image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Paris arrival illustration, opaque 1536 x 1024 horizontal.\nPrimary request: A genuine-camera-looking close photograph of a fresh French baguette, exactly two butter croissants and one plain ceramic cup of black coffee with a plain brown paper bakery bag beside them on an old wooden bakery counter in present-day Paris. No people. The baguette has a crisp warm tan crust with irregular authentic diagonal scored cuts; the two croissants have visibly flaky uneven buttery lamination and slightly different crescent shapes.\nComposition and camera: 3:2 horizontal close-up from a gently oblique overhead angle, 50 mm lens, enough depth of field for the bread textures and the coffee cup rim to read naturally; modest soft blur only at the far rear of the old counter. The baguette runs diagonally across the counter; two croissants beside it; coffee cup behind them; plain unprinted paper bag at the side. No other bakery display in the background.\nLighting and style: soft window daylight from one side, quiet naturally warm morning inside a small old bakery, natural colors and ordinary camera exposure; subdued light rather than staged advertising gloss. Not a painting, not a 3D render, not HDR, no cinematic grading.\nMaterials: truly irregular wood grain with knots and small worn scratches, dry porous crispy bread crust, varied individual thin pastry flakes, slight realistic sheen on liquid coffee. Wood lines must not repeat mechanically; croissants must not be identical copies, neither plastic nor inflated. No invented extra croissant, no cutlery or packaging labels.\nAvoid: absolutely any letters, numbers, words, bakery name, signage, price, logo, label, watermark, border, face or person. Plain unprinted cup, bag and setting. No reproduced artwork. A completely new image.",
+      "caption": "Patonki, kaksi voisarvea ja kahvi pariisilaisen leipomon puutiskillä. Havainnekuva.",
+      "references": [
+        {
+          "url": "https://ich.unesco.org/en/RL/artisanal-know-how-and-culture-of-baguette-bread-01883",
+          "publisher": "UNESCO Intangible Cultural Heritage",
+          "role": "Baguette cultural subject support; no image input",
+          "imageInput": false
+        }
+      ],
+      "rawSHA256": "8ab6197a46fcac88af99dfed47f4a95a0b2427c29220c1555d14a1a83323d498",
+      "rootQA": {
+        "reviewer": "Parent root full-image review passed; Paris city agent checked native surface crops",
+        "parentRootReviewed": true,
+        "approvedForDeliveryByCityAgent": true,
+        "observations": [
+          "Exactly one baguette, two different croissants, one plain cup of coffee and unprinted paper bag.",
+          "Viewed native wood and croissant crops: irregular wood grain, knots, scratches and varied pastry laminations; no mechanical repetition.",
+          "Camera-looking close-up with natural window light; no text, logo, people or identifiable protected artwork."
+        ],
+        "approvedForDeliveryByRoot": true
+      },
+      "technicalQA": true,
+      "visualQA": true,
+      "contentAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootVisuallyReviewed": true,
+      "ownerAcceptanceVerified": false
+    },
+    {
+      "id": "paris-7-pont-neuf-soir",
+      "number": 7,
+      "filename": "paris-7-pont-neuf-soir.png",
+      "r2Key": "julisteet/saapumisintro/paris/20261012/paris-7-pont-neuf-soir.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012/paris-7-pont-neuf-soir.png?t=d9f392947d685bbe",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012/paris-7-pont-neuf-soir.png",
+      "sha256": "d9f392947d685bbe52dcedded40c4d273523a0a89dfacc9e24fc6dca1eaeeddb",
+      "bytes": 2666561,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "canonicalHttp": 200,
+      "canonicalMIME": "image/png",
+      "canonicalCORS": "https://matkakirja.app",
+      "canonicalReadbackByteExact": true,
+      "canonicalSHA256": "d9f392947d685bbe52dcedded40c4d273523a0a89dfacc9e24fc6dca1eaeeddb",
+      "verifiedAt": "2026-10-12T09:47:42.876592+00:00",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "colorMode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "generationTool": "builtin image_gen",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Paris arrival landscape, opaque 1536 x 1024.\nPrimary request: A quiet camera-looking present-day photograph of the real Pont Neuf and Seine at the blue hour, viewed from the southern waterside edge of Square du Vert-Galant at the western tip of Île de la Cité. Reference image 1 is ONLY a bridge morphology guide: make a completely new full image from the requested position and at dusk. The bridge is bare historic stone, no temporary artistic installation.\nGeography and composition: Camera on the south edge of the island’s low stone quay near the tip, looking southeast/upstream toward the five-arch SOUTHERN branch of Pont Neuf connecting the island to the LEFT bank. The bridge’s island end enters at image left, its left-bank end is at the middle-right; an oblique view shows the five round stone arches and sturdy round cutwaters receding gently. A small strip of square foliage and low worn island-quay stone at left foreground; the water fills most of the lower half. Old generic left-bank apartment facades beyond the bridge, no famous landmark, no modern commercial building. 3:2 landscape, normal 40 mm lens, standing camera about 1.6 metres above the low quay, plausible human-scale bridge. A few simple antique-style street lanterns on the bridge glow softly warm; no complex show lighting. One tiny plain riverboat with warm cabin windows farther away on the river, no lettering or passengers visible.\nLight and style: early blue hour with a still readable soft blue-grey sky, warm ordinary street lamps, quiet irregular reflections in the Seine, naturally subdued colors, slightly imperfect water surface and physical exposure. Fine varied limestone weathering and individual tree leaves. No artificial repeating wave patterns, no repeated tree leaves, no smooth computer-rendered water, no HDR, no cinematic neon blue or orange, no oversaturation. Believable ordinary camera photograph.\nAvoid: absolutely all text, letters, numbers, logos, signs, advertising, shop lights, modern murals, watermarks, borders, recognizable faces, prominent people, Eiffel Tower, Notre-Dame, light shows, illuminated artwork, bridge wrapping, or an installation. No reproduced artwork.",
+      "caption": "Pont Neuf ja Seinen lämmin heijastus sinisellä hetkellä Square du Vert-Galantin luona. Havainnekuva.",
+      "references": [
+        {
+          "url": "https://www.afgc.asso.fr/history-heritage/pont-neuf-a-paris/",
+          "publisher": "Association Française de Génie Civil",
+          "role": "Viewed reference for southern bridge arches, piers, parapet and old lantern shape",
+          "imageInput": true,
+          "photographer": "ENPC",
+          "observed": "Two branches, five arches on the southern small branch and seven on the northern branch."
+        },
+        {
+          "url": "https://www.paris.fr/lieux/square-du-vert-galant-2825",
+          "publisher": "Ville de Paris",
+          "role": "Text-only position of Square du Vert-Galant at island tip and foliage setting",
+          "imageInput": false
+        },
+        {
+          "url": "https://parisjetaime.com/transport/pont-neuf-p1877",
+          "publisher": "Paris je t’aime official tourist office",
+          "role": "Text-only bridge location and viewpoint support",
+          "imageInput": false
+        }
+      ],
+      "rawSHA256": "75f35feb364c2c87a7a1b781b44a25f78cfe7daf0a32da0c8de1ce72a7c21555",
+      "rootQA": {
+        "reviewer": "Parent root full-image review passed; Paris city agent checked native surface crops",
+        "parentRootReviewed": true,
+        "approvedForDeliveryByCityAgent": true,
+        "observations": [
+          "Five arches of the southern Pont Neuf branch shown from the island square side, old stone projections and simple antique lanterns.",
+          "Viewed native water and tree crops: irregular ripples and reflections, varied leaf clusters without evident cloning.",
+          "Blue hour light remains photographic and natural, warm ordinary lanterns and distant cabin windows; no lighting show.",
+          "Native boat crop shows no discernible writing or people; full image contains no text, logo, watermark, identifiable face or protected contemporary artwork."
+        ],
+        "approvedForDeliveryByRoot": true
+      },
+      "technicalQA": true,
+      "visualQA": true,
+      "contentAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootVisuallyReviewed": true,
+      "ownerAcceptanceVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "paris-4-mouffetard",
+      "number": 4,
+      "generated": true,
+      "generationCalls": 1,
+      "r2Uploaded": false,
+      "reason": "Small pale lettering on an awning violates the absolute text-free requirement. One call only; no retry.",
+      "rawSHA256": "c8f6a1793f146a4d7de3d37704b95eb714bb548dd54fe891ed38d5e858993e22",
+      "parentRootReviewed": true,
+      "observations": [
+        "Root parent confirmed pale writing on central-left awning in full raw and native-pixel crop.",
+        "Fruit and wood native crop appears varied and plausible without mechanical clone patterns.",
+        "No identifiable faces; full output is camera-looking and natural colors."
+      ],
+      "supportingSources": []
+    },
+    {
+      "id": "paris-8-pont-royal-1873",
+      "number": 8,
+      "generated": true,
+      "generationCalls": 1,
+      "r2Uploaded": false,
+      "reason": "Pavillon de Flore has a restored intact mansard roof belonging to restoration after 1873; strict period validation fails.",
+      "rawSHA256": "f64037d181dce0cbc5670fc7ba9185a70aa86c2c8b09842e01df00b08c54b257",
+      "parentRootReviewed": true,
+      "observations": [
+        "Matches the broad modern5 bridge and river composition; five arches, lower-right near quay, opposite-bank ruins.",
+        "Native water crop shows varied ripples without mechanical repetition; steam launch and cargo barge look period-plausible, no discernible text or faces.",
+        "Standing Tuileries walls are roofless but the far-right Pavillon de Flore has an intact mansard roof.",
+        "The 1871 museum photo PH17352 shows damaged exposed roof framing. Archival research paragraphs9-11 records 1874 restoration and 1876 completion for the pavilion roof/north face.",
+        "Therefore the intact restored roof cannot be accepted as 1873; no R2 upload, no retry."
+      ],
+      "supportingSources": [
+        "https://journals.openedition.org/lha/pdf/387",
+        "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/palais-des-tuileries-angle-sud-de-la-facade-sur-le-jardin-pavillon-de-flore"
+      ]
+    }
+  ],
+  "allReadbacksByteExact": true,
+  "cacheBustedAndCanonicalReadbacksVerified": true,
+  "r2PreflightAll404": true,
+  "contentEditing": false,
+  "contentAcceptanceVerified": false,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "mailboxSent": false,
+  "mainMerged": false,
+  "versionChanged": false,
+  "parentRootFinalReviewPending": false,
+  "createdAt": "2026-10-12T09:58:15.263361+00:00",
+  "mailboxTarget": "posti/kuvatoimitus-saapumisintro-paris-20261012.json",
+  "reportTarget": "posti/codex-fable-saapumisintro-paris-20261012.md",
+  "parentRootFinalReviewPassed": true,
+  "updatedAt": "2026-10-12T09:59:33.832142+00:00",
+  "imageCount": 3,
+  "rootVisuallyReviewed": true,
+  "productionComplete": true,
+  "allReturnedImagesProcessed": true,
+  "editorAcceptance": false
+}
