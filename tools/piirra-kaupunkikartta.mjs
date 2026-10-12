@@ -493,14 +493,13 @@ const KAUPUNGIT = {
     // joka erottaa Albaicínin ja Alhambran kukkulat toisistaan. Genil
     // kulkee alalaidassa.
     //
-    // Darron kaupunkiosuus on OSM:ssä tunnel=culvert mutta piirtyy
-    // avoimena jokena. Se jätettiin tahallaan: se selittää miksi
-    // Reyes Católicos kaartaa juuri noin, ja ilman sitä Granadalta
-    // katoaisi yksi harvoista tunnistettavista piirteistä.
+    // Darron kaupunkiosuus on OSM:ssä tunnel=culvert (katettu Reyes
+    // Católicosin alle), joten se EI piirry (PT 12.10.2026: maanalaiset
+    // vedet pois kaikissa kaupungeissa). Avoin osa Paseo de los Tristesillä
+    // jää näkyviin.
     //
     // Ei merta — Granada on 60 km sisämaassa.
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
-    maanalaisetVedet: true, // Darro tahallaan näkyvissä (ks. yllä); PT päättää 12.10.2026
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   istanbul: {
@@ -1065,12 +1064,9 @@ const KAUPUNGIT = {
     // 0,292 ja joki piirtyy yhtenäisenä täytettynä nauhana.
     // ÄLÄ PIENENNÄ RAJAUSTA. Isompi on tässä parempi kartta.
     //
-    // Kremlin ympäri kiertävä vesijuova EI ole vallihauta vaan
-    // Neglinnaja-joki, joka on OSM:ssä tunnel=culvert mutta piirtyy
-    // avoimena kahtena haarana (läntinen Aleksanterin puutarhan
-    // kohdalla, itäinen Kremlin itämuurin ohi Zarjadjeen eli vanhan
-    // Alevizin vallihaudan reittiä). Jätetty tahallaan, sama ratkaisu
-    // kuin Granadan Darrolla — se selittää Kremlin muodon.
+    // Neglinnaja-joki kiertää Kremlin putkessa (OSM tunnel=culvert), joten
+    // se EI piirry (PT 12.10.2026: maanalaiset vedet pois kaikissa
+    // kaupungeissa; ennen tätä se piirtyi avoimena juovana Kremlin ympäri).
     //
     // EI meri-lippua: nolla rantaviivapolkua.
     //
@@ -1078,7 +1074,6 @@ const KAUPUNGIT = {
     // yliopisto (8 km) ja VDNH (9 km) ovat liian kaukana ja puiston
     // keskellä. Kaikki kolme ovat lehden juttuja, ei kartan kohteita.
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
-    maanalaisetVedet: true, // Neglinnaja tahallaan näkyvissä (ks. yllä); PT päättää 12.10.2026
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   odessa: {
@@ -7041,7 +7036,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null,
      * katetusta Canal Saint-Martinista). Vesi, jolla on tunnel (ei no),
      * covered=yes tai location=underground, ei näy kaupungissa, joten sitä ei
      * piirretä. Poikkeus kaupunkikohtaisella lipulla maanalaisetVedet: true
-     * (Granadan Darro, Moskovan Neglinnaja: tahallaan näkyvissä, ks. rivit).
+     * (PT 12.10.: ei yhtään poikkeusta; Darro ja Neglinnaja samaan sääntöön).
      */
     const tg = e.tags ?? {};
     if (!PIDA_MAANALAISET && (tg.waterway || tg.natural === 'water' || tg.water)
