@@ -2,8 +2,9 @@
 
 PT/omistaja 12.10.: Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas piiloon vain Kreikan App Storessa (Raamattu #4493, perustelu `kreikka-kulttuuriperintolaki-20261012.md`). Koneluettava lista natiiville: `kreikka-piilotuslista-20261012.json` (muoto `{"alkiot":[{"maa":"GRC","kohteet":[...]}]}`; kohdetyypit `opas:`, `tehtava:`, `kuva:`). Ei oikeudellinen neuvo; rajaus on varovainen: mukana kaikki, joissa Kreikan valtion omistama muistomerkki tai museoesine on kuvan aihe.
 
-## Päälista (74 kohdetta)
+## Päälista (75 kohdetta)
 - **Opas:** `opas:ateena`, `opas:kreeta` (Kreeta mukana, koska opas kulkee Knossoksen, Koulesin linnoituksen ja Heraklionin muurien kautta; kuvat `data/oppaan-kuvat/kaupungit/ateena.json` ja `kreeta.json` poistuvat oppaan mukana, joten niille ei ole omia `kuva:`-rivejä).
+- **Karttamalli:** `maamerkki:ateena` (kartan Ateenan Akropolis-malli, Kartta/Maamerkit FBX, 3D-kuvaus; NS 12.10.).
 - **Aarretehtävät:** `tehtava:ateena:katso` (Zeuksen temppeli, katso ja löydä -kuvakohde). `tehtava:ateena:aikajana` EI ole listalla (PT 12.10.: laki koskee kuvia, ei tekstiä; aikajanassa ei ole kuvia).
 - **Kuvat, Ateena:** neljä herokuvaa (Akropolis, Parthenon, Zeuksen temppeli, Panathinaiko), Hefaistoksen temppeli, Akropolis Hymettos-vuorelta, Ateena yöllä (Akropolis), Parthenonin länsijulkisivu, Herodes Atticuksen odeion, Kallimarmaron stadion, 1890-luvun photochrom (Akropolis ja Theseion), Akropolis Monastirakin aukiolta, karyatidit (Akropolis-museo), Tuulten torni (2), Akropoliin oliivipuu, Nike-temppeli (2), Syntagman metron arkeologinen kokoelma, Propylaia, Akropolis (Athens-13), Erekhtheion, Panathinaikon panoraama, Parthenon etelästä, Zeuksen temppeli (2), Pnyxin Bema.
 - **Kuvat, Kreeta:** Koulesin linnoitus ja Rethymnonin linnoitus (herokuvat), Knossoksen rauniot ja pohjoinen sisäänkäynti, härkähyppyfresko (Heraklionin museo), Faistoksen levy, Koules-valokuva.
