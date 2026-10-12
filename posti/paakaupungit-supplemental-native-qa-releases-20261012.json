@@ -1,0 +1,2124 @@
+{
+  "updatedAt": "2026-10-12T21:42:27.111089+00:00",
+  "sourceSnapshot": "batch-0016",
+  "sourceSnapshotRoleBindings": 829,
+  "releaseCount": 5,
+  "addedIDs": [
+    "capital-cc-e04-monrovia-photo-c151f0bf12330eec",
+    "capital-cc-e04-rabat-photo-94f135d13d027ffb",
+    "capital-cc-e04-tunis-photo-fc208a7a51424245",
+    "capital-cc-e04-rabat-c1-a6e5f596accfa6be",
+    "capital-cc-e04-rabat-c3-d8ca4878f6a5442a"
+  ],
+  "assets": [
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e04-monrovia-photo-c151f0bf12330eec",
+      "galleryImageID": "capital-cc-e04-monrovia-photo-c151f0bf12330eec",
+      "commonsFile": "Liberia, Africa - panoramio (270).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg",
+        "suora": true,
+        "lahde": "blk24ga, Commons (CC BY 3.0)",
+        "selite": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+        "lyhyt": "Palmut ja Atlantti Monroviassa vuonna 2013.",
+        "tiedosto": "Liberia, Africa - panoramio (270).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "blk24ga, Commons (CC BY 3.0)",
+        "selite": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+        "lyhyt": "Palmut ja Atlantti Monroviassa vuonna 2013.",
+        "tiedosto": "Liberia, Africa - panoramio (270).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg",
+        "suora": true,
+        "lahde": "blk24ga, Commons (CC BY 3.0)",
+        "selite": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+        "lyhyt": "Palmut ja Atlantti Monroviassa vuonna 2013.",
+        "tiedosto": "Liberia, Africa - panoramio (270).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+      "exportSHA256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/7faa4559b11bb53fc17ac5416eb675e4615dddad9e53d78512b75805cd5cbf90.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        4928,
+        3264
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
+        "semanticContextSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
+        "subjectTitle": "monrovia — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "blk24ga",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Liberia,_Africa_-_panoramio_(270).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Liberia%2C_Africa_-_panoramio_%28270%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Liberia,_Africa_-_panoramio_(270).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-31.html",
+            "sourceSHA256": "93a9b7fc6a88b11dd04e526614df8433ed5f17ce8aba14a6aa2606592b69f6a4",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "blk24ga"
+              }
+            ],
+            "license": "CC BY 3.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by/3.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 4928,
+            "height": 3264,
+            "displayRatio": 1.509804,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-31.jpg",
+            "previewSHA256": "a0f51d051c270ac06f7836ebad1cf8ceec3336057410d796e72d07609aa5c082",
+            "capturedDate": "Taken on 15 July 2013",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          },
+          "qaReason": "Aito Monrovian rannikon valokuva katsottu: palmut ja Atlantti, ei kasvoja, logoja, vesileimaa tai suojattua teosta pääaiheena. Lähdesivun camera location sijoittaa Ducorin mäelle Monroviaan; Author blk24ga, CC BY 3.0, alkuperäinen leveys 4928 ja kuvausvuosi 2013. PHOTO ei vaadi tuoreutta tai panoraamaa; tässä paikkasidonnainen luontovalokuva sopii nykyiseen kuvatekstiin."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+        "fileSHA256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Liberia, Africa - panoramio (270).jpg",
+          "verdict": "accepted",
+          "reason": "Aito Monrovian rannikon valokuva katsottu: palmut ja Atlantti, ei kasvoja, logoja, vesileimaa tai suojattua teosta pääaiheena. Lähdesivun camera location sijoittaa Ducorin mäelle Monroviaan; Author blk24ga, CC BY 3.0, alkuperäinen leveys 4928 ja kuvausvuosi 2013. PHOTO ei vaadi tuoreutta tai panoraamaa; tässä paikkasidonnainen luontovalokuva sopii nykyiseen kuvatekstiin.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Liberia,_Africa_-_panoramio_(270).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-31.html",
+            "sourceSHA256": "93a9b7fc6a88b11dd04e526614df8433ed5f17ce8aba14a6aa2606592b69f6a4",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "blk24ga"
+              }
+            ],
+            "license": "CC BY 3.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by/3.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 4928,
+            "height": 3264,
+            "displayRatio": 1.509804,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-31.jpg",
+            "previewSHA256": "a0f51d051c270ac06f7836ebad1cf8ceec3336057410d796e72d07609aa5c082",
+            "capturedDate": "Taken on 15 July 2013",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "1cd9928a3ccb4b124b5062c402aa398c9793f1fc547462c87ffd3faed9413477"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "3a0a53f06cfe290923773ecf0d952fdf9ea66624c2870783b27b5afe8106db4f"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Liberia, Africa - panoramio (270).jpg",
+        "sha256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Liberia,_Africa_-_panoramio_(270).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Liberia%2C_Africa_-_panoramio_%28270%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "blk24ga",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+        "width": 4928,
+        "height": 3264,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg",
+        "bytes": 1597595,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:42.973127+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Liberia, Africa - panoramio (270).jpg",
+        "lahde": "blk24ga, Commons (CC BY 3.0)",
+        "selite": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+        "lyhyt": "Palmut ja Atlantti Monroviassa vuonna 2013.",
+        "vuosi": "2013"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "blk24ga, Commons (CC BY 3.0)",
+        "selite": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+        "lyhyt": "Palmut ja Atlantti Monroviassa vuonna 2013.",
+        "tiedosto": "Liberia, Africa - panoramio (270).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
+      "contextAfterSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Liberia, Africa - panoramio (270).jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Liberia,_Africa_-_panoramio_(270).jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/7faa4559b11bb53fc17ac5416eb675e4615dddad9e53d78512b75805cd5cbf90.org&utm_campaign=index&utm_content=original",
+        "sha256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "reason": "Alkuperäinen 4928×3264 Monrovian rannikkovalokuva sekä neljä skaalaamatonta natiivirajausta tarkastettu. Palmut, meri ja laivat näyttävät luonnollisesti kuvatuilta; ei tunnistettavia kasvoja, vesileimaa tai suojattua teosta pääaiheena. Lähteen Monrovia-paikkatieto ja 15.7.2013-kuvauspäivä tukevat nykyistä selitettä. Tallennettu tiedoston oma Commons-lisenssi on CC BY 3.0, tekijä/attribuutio blk24ga.",
+        "evidence": {
+          "roleHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "roleHandoffSHA256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+          "roleAssetId": "capital-cc-e04-monrovia-photo-c151f0bf12330eec",
+          "expectedNativeSHA256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+          "actualNativeSHAMatchesHandoff": true,
+          "primaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+          "primaryQASHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
+          "previousPrimaryVerdict": "accepted",
+          "previousEvidenceWasPreviewOnly": true,
+          "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-31.html",
+          "sourceSHA256": "93a9b7fc6a88b11dd04e526614df8433ed5f17ce8aba14a6aa2606592b69f6a4",
+          "sourcePageRead": true,
+          "sourceCheckPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json",
+          "sourceCheckSHA256": "f92e43ef608e8455a0eaad8898c20deb3de517a5e012de2d9da75f133574600b",
+          "sourceCheckRead": true,
+          "author": "blk24ga",
+          "attribution": "blk24ga",
+          "license": "CC BY 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by/3.0/deed.en",
+          "licenseScope": "Tiedoston oma Attribution 3.0 Unported -lisenssiosa; Commonsin alatunnisteen CC0/CC BY-SA -tekstit eivät ole valokuvan lisenssi.",
+          "capturedDate": "2013-07-15",
+          "panoramioLicenseReview": "Tallennettu Commons-sivu kertoo Panoramio upload botin vahvistaneen saman lisenssin 28.2.2017.",
+          "sourceEXIFCopyrightHolder": "jbdodane",
+          "authorBasis": "Tiedoston Commons Author- ja Attribution-kentät blk24ga; EXIF-kenttä on kirjattu erikseen eikä korvaa tiedoston lisenssiattribuutiota.",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+          "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+          "currentTarget": {
+            "tiedosto": "Liberia, Africa - panoramio (270).jpg",
+            "lyhyt": "Palmut ja Atlantti Monroviassa vuonna 2013.",
+            "selite": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+            "lahde": "blk24ga, Commons (CC BY 3.0)",
+            "vuosi": "2013"
+          },
+          "placeEvidence": {
+            "sourceTags": [
+              "Monrovia",
+              "Travel",
+              "Vai Town Bridge"
+            ],
+            "sourceCameraLocation": "6°19′13.04″ N, 10°48′47.08″ W",
+            "sourceCameraLocationDecimal": [
+              6.320288,
+              -10.813078
+            ],
+            "captionAssessment": "Nykyinen selite kertoo Monrovian rannikon palmuista ja Atlantista vuonna 2013. Ei väitettä nykyhetkestä tai nimetyistä laivoista/rakennuksista."
+          },
+          "rightsLayers": {
+            "photograph": "Tiedoston oma tallennettu CC BY 3.0 -lisenssi ja blk24ga-attribuutio luettu.",
+            "depictedWorksAndArchitecture": "Pääaiheena luonnonmaisema. Pienet etäiset laivat, rantamuuri ja osittain kasvillisuuden peittämä pelkistetty kattopinta ovat toiminnallisia sivuaiheita; ei näkyvää taideteosta tai tunnistettavaa monumenttia pääaiheena.",
+            "peopleAndFaces": "Pienissä kaukaisissa veneissä mahdolliset henkilöt jäävät vain muutamiksi pikseleiksi. Ei tunnistettavaa kasvokuvaa tai henkilöä pääaiheena.",
+            "textAndMarks": "Ei vesileimaa tai valokuvan päälle lisättyä tekstiä. Ei luettavaa brändiä pääaiheena; laivojen mastojen pienet merkit eivät ole laatuhylkäyksen peruste."
+          },
+          "originalPixelsViewed": true
+        },
+        "technical": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 4928,
+          "height": 3264,
+          "byteSize": 1597595,
+          "originalUntouched": true
+        },
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-PHOTO-crops/ships-and-sea.png",
+            "box": [
+              1100,
+              1500,
+              2700,
+              2100
+            ],
+            "sha256": "8a9cf2dd2349bfae510f425e7a71dfde94a2805f4335ebd8fca120fcfae6a67c",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-PHOTO-crops/right-shore-and-boats.png",
+            "box": [
+              2700,
+              2100,
+              4928,
+              3264
+            ],
+            "sha256": "3b440d70052b2f9092dc45665a2e424739a8d7f4f74b56a7974d0685745011d1",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-PHOTO-crops/palms-and-foreground.png",
+            "box": [
+              0,
+              1900,
+              2600,
+              3264
+            ],
+            "sha256": "3c515b67991bcb7ae7a586ec5f385232658c434bdea1e84699c133f8a5e2596a",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-PHOTO-crops/incidental-roof.png",
+            "box": [
+              2500,
+              2700,
+              3700,
+              3264
+            ],
+            "sha256": "80f7d8a49555b00498294ad60e83ac2941fa817a07e1b937f6ab3b412f873bfc",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          }
+        ],
+        "observations": [
+          "Kasvillisuuden lehtien ja palmujen vaihtelu on luonnollista; ei toistuvaa generoitua kuviota tai deformaatioita.",
+          "Meren valon, horisontin, etäisyysudun, laivojen ja kasvillisuuden perspektiivi on koherentti.",
+          "Rantamuuri ja katon reunat näkyvät natiivirajauksessa; niissä ei havaittu taideteosta, kasvokuvaa tai vesileimaa.",
+          "Kuva on jonkin verran utuinen ja lehvästössä näkyy tavallista valokuvan pakkaus-/terävöitysjälkeä. Se ei piilota PHOTO-aihetta eikä muodosta olennaista laatupoikkeamaa."
+        ],
+        "reviewedAt": "2026-10-12T21:32:59.675342+00:00",
+        "gameIntegrated": false,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-PHOTO.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-monrovia-PHOTO.json",
+      "supplementalQAFileSHA256": "06235de2f8f97170a5ad6e101f37b774df553fba836bab0f7355393e2ce8104a",
+      "nativeQAHashResolved": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg",
+          "http": 200,
+          "sha256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+          "bytes": 1597595,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg?gallery-verify=c151f0bf12330eec-1791841161649682000",
+          "http": 200,
+          "sha256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+          "bytes": 1597595,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-photo-94f135d13d027ffb",
+      "galleryImageID": "capital-cc-e04-rabat-photo-94f135d13d027ffb",
+      "commonsFile": "Chellah-Storks.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg",
+        "suora": true,
+        "lahde": "Steven C. Price, Commons (CC BY-SA 4.0)",
+        "selite": "Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.",
+        "lyhyt": "Chellahin puissa pesii haikaroita.",
+        "tiedosto": "Chellah-Storks.jpg",
+        "vuosi": "2007"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Steven C. Price, Commons (CC BY-SA 4.0)",
+        "selite": "Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.",
+        "lyhyt": "Chellahin puissa pesii haikaroita.",
+        "tiedosto": "Chellah-Storks.jpg",
+        "vuosi": "2007"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg",
+        "suora": true,
+        "lahde": "Steven C. Price, Commons (CC BY-SA 4.0)",
+        "selite": "Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.",
+        "lyhyt": "Chellahin puissa pesii haikaroita.",
+        "tiedosto": "Chellah-Storks.jpg",
+        "vuosi": "2007"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+      "exportSHA256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/ccfb5ac0b78e9b61ac5657f6b5e68cfd145a31ca9fa06cd04ab96dac887361b4.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        1920,
+        2560
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
+        "semanticContextSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
+        "subjectTitle": "rabat — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Steven C. Price",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah-Storks.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Chellah-Storks.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-14.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah-Storks.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-14.html",
+            "sourceHTMLSHA256": "746f85d293d2cc1d32a3bce43f2c5306aeae7eaf9a9c396d9ef7aa53a2c59e3b",
+            "author": "Steven C. Price",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 1920,
+            "height": 2560,
+            "ratio": 0.75,
+            "date": [
+              "2 March 2007"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          },
+          "qaReason": "Aito Chellahissa kuvattu haikarayhdyskunta vastaa paikallista kuvatekstiä; todellinen kaupunkiin sidottu luontovalokuva. Ei panoraama-/tuoreusvaatimusta PHOTOlle; 1920px leveys kelpaa, pysty ei hylkäysperuste."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Chellah-Storks.jpg",
+          "verdict": "accepted",
+          "reason": "Aito Chellahissa kuvattu haikarayhdyskunta vastaa paikallista kuvatekstiä; todellinen kaupunkiin sidottu luontovalokuva. Ei panoraama-/tuoreusvaatimusta PHOTOlle; 1920px leveys kelpaa, pysty ei hylkäysperuste.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-14.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah-Storks.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-14.html",
+            "sourceHTMLSHA256": "746f85d293d2cc1d32a3bce43f2c5306aeae7eaf9a9c396d9ef7aa53a2c59e3b",
+            "author": "Steven C. Price",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 1920,
+            "height": 2560,
+            "ratio": 0.75,
+            "date": [
+              "2 March 2007"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Chellah-Storks.jpg",
+        "sha256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah-Storks.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Chellah-Storks.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Steven C. Price",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1920,
+        "height": 2560,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg",
+        "bytes": 3598083,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:06:15.516342+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Chellah-Storks.jpg",
+        "lahde": "Steven C. Price, Commons (CC BY-SA 4.0)",
+        "selite": "Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.",
+        "lyhyt": "Chellahin puissa pesii haikaroita.",
+        "vuosi": "2007"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Steven C. Price, Commons (CC BY-SA 4.0)",
+        "selite": "Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.",
+        "lyhyt": "Chellahin puissa pesii haikaroita.",
+        "tiedosto": "Chellah-Storks.jpg",
+        "vuosi": "2007"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
+      "contextAfterSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Chellah-Storks.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah-Storks.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/ccfb5ac0b78e9b61ac5657f6b5e68cfd145a31ca9fa06cd04ab96dac887361b4.org&utm_campaign=index&utm_content=original",
+        "sha256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "reason": "Alkuperäinen 1920×2560 Chellahin haikaravalokuva sekä kolme skaalaamatonta natiivirajausta tarkastettu. Lintujen, pesien ja puiden yksityiskohdat ovat luonnollisia. Koko ruudussa ei ole ihmisiä, suojattua arkkitehtuuria tai taideteosta, vesileimaa tai luettavaa logoa. Steven C. Pricen oma työ, tiedoston CC BY-SA 4.0 ja 2.3.2007-päiväys tukevat nykyistä PHOTO-kohdetta ja selitettä. Pystymuoto ei ole tämän roolin laatupoikkeama.",
+        "evidence": {
+          "roleHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "roleHandoffSHA256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+          "roleAssetId": "capital-cc-e04-rabat-photo-94f135d13d027ffb",
+          "expectedNativeSHA256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+          "actualNativeSHAMatchesHandoff": true,
+          "primaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+          "primaryQASHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+          "previousPrimaryVerdict": "accepted",
+          "previousEvidenceWasPreviewOnly": true,
+          "previousOriginalViewedPath": null,
+          "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-14.html",
+          "sourceSHA256": "746f85d293d2cc1d32a3bce43f2c5306aeae7eaf9a9c396d9ef7aa53a2c59e3b",
+          "sourcePageRead": true,
+          "sourceDescription": "Nesting Chellah Storks, Rabat, Morocco",
+          "sourceOrigin": "Own work",
+          "author": "Steven C. Price",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "licenseScope": "Tiedoston oma Attribution-Share Alike 4.0 International -lisenssiosa; Commonsin alatunnisteen CC0 ei ole valokuvan lisenssi.",
+          "capturedDate": "2007-03-02",
+          "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+          "rightsSourceSHA256": "73b493506ab9c0985354f5742a0556f3e84c80a872ba920d0cae34a68234fc31",
+          "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+          "copyrightRuleSourceSHA256": "632d315136b06f8bf0b32bb817860cba3e332b1290a51903f57abaafec7de289",
+          "savedRightsEvidenceRead": true,
+          "captionAssessment": "Tiedoston oma kuvaus nimeää Chellahin pesivät haikarat Rabatissa. Nykyinen selite puissa olevista pesistä vastaa näkyvää kuvaa; vuosi 2007 vastaa lähteen päiväystä.",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+          "currentContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+          "currentTarget": {
+            "tiedosto": "Chellah-Storks.jpg",
+            "lyhyt": "Chellahin puissa pesii haikaroita.",
+            "selite": "Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.",
+            "lahde": "Steven C. Price, Commons (CC BY-SA 4.0)",
+            "vuosi": "2007"
+          },
+          "rightsLayers": {
+            "photograph": "Steven C. Pricen oma työ, tiedoston CC BY-SA 4.0 luettu.",
+            "depictedWorksAndArchitecture": "Koko kehys ja natiivirajaukset sisältävät puut, oksat, pesät, linnut ja taivaan. Ei näkyvää arkkitehtuuria, rauniota, minareettia tai taideteosta; kuvan hyväksyntä ei perustu Marokon panoramapoikkeuksen laajentamiseen. Tallennettu fop-morocco.html:n rajoitus huomioitu.",
+            "peopleAndFaces": "Ei ihmisiä tai kasvoja.",
+            "textAndMarks": "Ei tekstiä, vesileimaa tai luettavia logoja. Pesä- ja oksarakenteisiin tarttuneet pienet tummat/vaaleat materiaalit ovat luonnollisesti kuvattuja yksityiskohtia, eivät kuvassa näkyvää brändiä tai taideteosta."
+          },
+          "originalPixelsViewed": true
+        },
+        "technical": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 1920,
+          "height": 2560,
+          "byteSize": 3598083,
+          "originalUntouched": true
+        },
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-PHOTO-crops/upper-storks-and-nests.png",
+            "box": [
+              1020,
+              200,
+              1840,
+              1150
+            ],
+            "sha256": "37ccb998d6a72afd96762cc720b230e5d3f463ca4dbd23119527547dfcee6d10",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-PHOTO-crops/lower-storks-and-tree.png",
+            "box": [
+              180,
+              1150,
+              1430,
+              2130
+            ],
+            "sha256": "07e77b731da642aa81bb6fe72ac1153dec9f8c3df184037f354402719b1262ff",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-PHOTO-crops/lower-edge-and-branches.png",
+            "box": [
+              0,
+              1900,
+              1920,
+              2560
+            ],
+            "sha256": "6fe3216120ebd75b513dfa907d52fe5d15d18bc7bc4b48021a10df60efef668d",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          }
+        ],
+        "observations": [
+          "Linnuilla on luonnolliset pitkät nokat, kaulat, jalat ja höyhenpeite; eri yksilöiden päällekkäisyys selittää kuvassa näkyvät osittaiset muodot.",
+          "Pesien oksien vaihtelu, puunkuori, taustataivas ja valo ovat koherentteja.",
+          "Alkuperäisessä näkyy lievää pehmeyttä ja vaaleiden höyhenten paikallista kirkastumista. Haikara- ja pesäaihe säilyy selkeänä eikä laatu estä PHOTO-käyttöä.",
+          "Aiempi hyväksyntä oli preview-pohjainen; tämä raportti sitoo alkuperäisen katselun varsinaisista tavuista laskettuun SHA256:een."
+        ],
+        "reviewedAt": "2026-10-12T21:34:15.078562+00:00",
+        "gameIntegrated": false,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-PHOTO.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-PHOTO.json",
+      "supplementalQAFileSHA256": "f234410dc4e7c441e8863c463ccf4bc3dc5b5cdcd8cd0e1b15c09d86ab5e678e",
+      "nativeQAHashResolved": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg",
+          "http": 200,
+          "sha256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+          "bytes": 3598083,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg?gallery-verify=94f135d13d027ffb-1791841161634079000",
+          "http": 200,
+          "sha256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
+          "bytes": 3598083,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "tunis",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e04-tunis-photo-fc208a7a51424245",
+      "galleryImageID": "capital-cc-e04-tunis-photo-fc208a7a51424245",
+      "commonsFile": "View over the Medina of Tunis 02.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg",
+        "suora": true,
+        "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
+        "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+        "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
+        "tiedosto": "View over the Medina of Tunis 02.jpg",
+        "vuosi": "2019"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
+        "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+        "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
+        "tiedosto": "View over the Medina of Tunis 02.jpg",
+        "vuosi": "2019"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg",
+        "suora": true,
+        "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
+        "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+        "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
+        "tiedosto": "View over the Medina of Tunis 02.jpg",
+        "vuosi": "2019"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+      "exportSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/ced22b42ae4589ce09dca3cd69881c233dedb0aa95b2ee40e07a0e8dae01604b.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        5472,
+        3648
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+        "semanticContextSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+        "subjectTitle": "tunis — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Kritzolina",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:View_over_the_Medina_of_Tunis_02.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/View_over_the_Medina_of_Tunis_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-51.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:View_over_the_Medina_of_Tunis_02.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-51.html",
+            "sourceHTMLSHA256": "fd0f6bff60ae10f3a5cd3a8de96b80857a742f8d4ab14cda66e4fa7c42a6e34f",
+            "author": "Kritzolina",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 5472,
+            "height": 3648,
+            "ratio": 1.5,
+            "date": [
+              "11 June 2019, 17:30:00"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          },
+          "qaReason": "Lähdesivu nimeää kuvauksen Panorama Cafelta Tunisin medinan yli, Date 11.6.2019. Aito kaupunkiin sidottu valokuva ja selite vastaa näkymää; PHOTOn ei edellytetä olevan nykyoppaan tuore kuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+        "fileSHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "View over the Medina of Tunis 02.jpg",
+          "verdict": "accepted",
+          "reason": "Lähdesivu nimeää kuvauksen Panorama Cafelta Tunisin medinan yli, Date 11.6.2019. Aito kaupunkiin sidottu valokuva ja selite vastaa näkymää; PHOTOn ei edellytetä olevan nykyoppaan tuore kuva.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/preview-51.jpg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:View_over_the_Medina_of_Tunis_02.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-51.html",
+            "sourceHTMLSHA256": "fd0f6bff60ae10f3a5cd3a8de96b80857a742f8d4ab14cda66e4fa7c42a6e34f",
+            "author": "Kritzolina",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 5472,
+            "height": 3648,
+            "ratio": 1.5,
+            "date": [
+              "11 June 2019, 17:30:00"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+            "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md — erilliset vanhat rakennusosat, maasivun PD/FOP-polku ja WIPO/DCAF alkuperäislain tallenteet; ei blanket-lupaa nykytaiteelle",
+            "reviewedAt": "2026-10-12T17:59:55.961756+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+            "sha256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "View over the Medina of Tunis 02.jpg",
+        "sha256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:View_over_the_Medina_of_Tunis_02.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/View_over_the_Medina_of_Tunis_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Kritzolina",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 5472,
+        "height": 3648,
+        "originalSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg",
+        "bytes": 7988736,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:12:26.449671+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "View over the Medina of Tunis 02.jpg",
+        "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
+        "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+        "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
+        "vuosi": "2019"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
+        "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+        "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
+        "tiedosto": "View over the Medina of Tunis 02.jpg",
+        "vuosi": "2019"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "targetAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+      "contextAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "tunis",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "View over the Medina of Tunis 02.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:View_over_the_Medina_of_Tunis_02.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/tunis/ced22b42ae4589ce09dca3cd69881c233dedb0aa95b2ee40e07a0e8dae01604b.org&utm_campaign=index&utm_content=original",
+        "sha256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "reason": "Alkuperäisen 5472×3648 kattomaiseman koko kehys, viisi skaalaamatonta natiivirajausta ja tiedoston sisäinen pienempi rinnakkaiskehys tarkastettu. Aito ja koherentti kaupunkivalokuva; ei tunnistettavia kasvoja, vesileimaa tai modernia taide-/monumenttiteosta pääaiheena. Lähdesivu, Kritzolina-attribuutio, tiedoston CC BY-SA 4.0 ja 11.6.2019-päiväys vastaavat nykyistä PHOTO-kohdetta. Pieni ATB-kyltti sekä epäterävä alakulman kaakelikatkelma on arvioitu ja kirjattu sivuaiheiksi, ei piilotettu. Tallennettu rakennusten oikeuspolku sekä erillisten taide-/perinneosien rajat luettu.",
+        "evidence": {
+          "roleHandoffPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+          "roleHandoffSHA256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+          "roleAssetId": "capital-cc-e04-tunis-photo-fc208a7a51424245",
+          "expectedNativeSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+          "actualNativeSHAMatchesHandoff": true,
+          "primaryQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/tunis/qa.json",
+          "primaryQASHA256": "98d1fc32f764942c9b9562b0279212c0a7f3d3f1480672cb4f63eca4fe330a85",
+          "previousPrimaryVerdict": "accepted",
+          "previousEvidenceWasPreviewOnly": true,
+          "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/candidate-51.html",
+          "sourceSHA256": "fd0f6bff60ae10f3a5cd3a8de96b80857a742f8d4ab14cda66e4fa7c42a6e34f",
+          "sourcePageRead": true,
+          "sourceDescription": "View over the Medina of Tunis from Panorama Cafe",
+          "sourceOrigin": "Own work",
+          "author": "Kritzolina",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "licenseScope": "Tiedoston oma Attribution-Share Alike 4.0 International -lisenssiosa; Commonsin alatunnisteen CC0 ei ole valokuvan lisenssi.",
+          "capturedDate": "2019-06-11T17:30:00",
+          "rightsLayerReview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/kuvat.md",
+          "rightsLayerReviewSHA256": "f73a0c4f9e054eb54c2fb0ff50b7de5fad73819594e929e1cac6b257ef1b9bbb",
+          "rightsLayerRelevantLines": [
+            13,
+            25,
+            274,
+            282
+          ],
+          "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/faktapohja.md",
+          "rightsSourceSHA256": "5309af5a3be4ab40070e07454d10587ee38585ed9d4159d6788a283ed58e6ddf",
+          "savedRightsEvidenceRead": true,
+          "savedPrimaryLawEvidence": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/law1889-wipo1889.txt",
+              "sha256": "dd2c1f2128d231823ca9ccb1d58830821231a16213f3c14c7da779130df318a2",
+              "readSections": [
+                "arkkitehtuurin suunnitelmat/piirrokset/mallit"
+              ],
+              "sourceNature": "Aiemmin tallennettu lähdeteksti; ei uusia verkkohakuja."
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/law1966-wipo1967.txt",
+              "sha256": "3730e7e1e7f1915fd6b9e0bb08a151671630112b0f3762015d61d449e725e745",
+              "readSections": [
+                "Article 1: architecture construction itself",
+                "Article 37: non-retroactivity for works already in public domain"
+              ],
+              "sourceNature": "Aiemmin tallennettu lähdeteksti; ei uusia verkkohakuja."
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/tunis-B/law1994-2009-html.txt",
+              "sha256": "9569ab053675f84136158fb32454e3b023da148bb6fa4a82467238f74bbe87b2",
+              "readSections": [
+                "Art. 10(g), pysyvästi julkisessa paikassa olevat teokset ja museo-/galleria-/taideperintöraja",
+                "Arabian الفصل 7, kansantaiteen perintömääritelmä ja taloudellinen hyödyntäminen"
+              ],
+              "sourceNature": "Aiemmin tallennettu lähdeteksti; ei uusia verkkohakuja."
+            }
+          ],
+          "captionAssessment": "Lähdesivu nimeää medinan ja Panorama Cafen kuvauspaikkana. Nykyinen selite koskee vuoden 2019 medinan kattojen kokonaisuutta; se ei väitä kuvan olevan nykyhetken kuva tai nimetyn tornin rakennusikätodiste.",
+          "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
+          "currentContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+          "currentTarget": {
+            "tiedosto": "View over the Medina of Tunis 02.jpg",
+            "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
+            "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+            "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
+            "vuosi": "2019"
+          },
+          "rightsLayers": {
+            "photograph": "Kritzolinan oma työ, tiedoston CC BY-SA 4.0 luettu.",
+            "architecture": "Laaja medinan kattokudos, vanhoja torneja ja tavallista nykyistä katto-/asuinkorttelirakennetta. Tallennetun kuvat.md:n kohdekohtainen vanhan alkuperäisen arkkitehtuurin PD-polku on erotettu kuvaajan lisenssistä; WIPO 1889/1966 ja DCAF 1994/2009 -tallenteiden relevantit osat luettu. Yksittäisen modernin rakennuksen, monumentin tai arkkitehtuuriteoksen lähikuva ei ole kuvan aihe. Kattojen antennit, ilmastointilaitteet, johdot, eristimet ja satelliittilautaset ovat toiminnallisia sivuaiheita.",
+            "artAndDecorativeFragments": "Oikeassa alakulmassa on rajautunut, selvästi epäterävä sinikeltaisen kaakelikuviopinnan katkelma; sinisessä kaiteessa ja ikkunaritilässä näkyy yksinkertaisia rullamuotoja. Ne ovat kaupunkinäkymän sivuun jääviä pieniä rakennus-/terassiyksityiskohtia, eivät kuvan pääaihe tai tunnistettavan itsenäisen teoksen lähikuva. Niiden ikää, tekijää tai omaa lisenssiä ei päätellä vanhojen talojen PD-polusta eikä kuvaajan lisenssistä. Tallennetut art7/art10(g):n rajat huomioitu; hyväksyntä koskee tätä muuttamatonta laajaa PHOTO-ruutua, ei koristeen erillistä toimituskäyttöä tai tästä tehtyä teoslähikuvaa.",
+            "peopleAndFaces": "Koko ruudussa ja natiivirajauksissa ei havaittu tunnistettavia ihmisiä tai kasvoja.",
+            "textAndMarks": "Kaukana katolla on pieni luonnollisesti kuvattu ATB-kyltti ja kattolaitteissa pieniä merkintöjä. Ne eivät ole päämotiivi. Ei päälle lisättyä tekstiä tai vesileimaa; tavallinen kuvattu kyltin teksti ei yksin hylkää CC-valokuvaa."
+          },
+          "originalPixelsViewed": true
+        },
+        "technical": {
+          "formatDetectedByPillow": "MPO",
+          "mime": "image/jpeg",
+          "mode": "RGB",
+          "width": 5472,
+          "height": 3648,
+          "byteSize": 7988736,
+          "containerFrameCount": 2,
+          "primaryFrameIndex": 0,
+          "secondaryFrameDimensions": [
+            1620,
+            1080
+          ],
+          "originalUntouched": true
+        },
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO-crops/historic-towers-and-mid-distance.png",
+            "sourceFrame": 0,
+            "box": [
+              1950,
+              1250,
+              4350,
+              2000
+            ],
+            "sha256": "074197c128ac16efed3944d2ab87dfd6421d0fa8b45b9efea37f5f0d49a9ee66",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO-crops/right-dome-and-background.png",
+            "sourceFrame": 0,
+            "box": [
+              4300,
+              1250,
+              5472,
+              2400
+            ],
+            "sha256": "d4c80bd4b24a3b1957c55c4f55957b73441a724ea1bedcb6f61312cfd119b2a2",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO-crops/foreground-roofs-and-fittings.png",
+            "sourceFrame": 0,
+            "box": [
+              0,
+              2300,
+              2600,
+              3648
+            ],
+            "sha256": "1185695d8fa81fc49f3ade3933bd1d0f3753120c8f87edcdb7512c104fc1e5d8",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO-crops/right-foreground-rail-and-tiles.png",
+            "sourceFrame": 0,
+            "box": [
+              4400,
+              2800,
+              5472,
+              3648
+            ],
+            "sha256": "ee0b9e0ac9edfe22c40a0f0e00161a1b4b46977052aceb4061d7712bda3a9124",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO-crops/mid-roofs-and-ordinary-sign.png",
+            "sourceFrame": 0,
+            "box": [
+              2900,
+              1400,
+              3800,
+              2050
+            ],
+            "sha256": "26b7cf0ad45d1e4f22ab5f5ae20ecac7de8d825b6e90d0571b703828cfef12a1",
+            "resized": false,
+            "inspectedAtNativePixels": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO-crops/embedded-secondary-frame-native.png",
+            "sourceFrame": 1,
+            "box": [
+              0,
+              0,
+              1620,
+              1080
+            ],
+            "sha256": "ec105812f7958dffb657e5565b8ceb3839d3363b7c1c698a4cf85760f42496e5",
+            "resized": false,
+            "inspectedAtNativePixels": true,
+            "purpose": "Alkuperäisen JPEG/MPO-tiedoston sisäinen pienempi rinnakkaiskehys; sama kaupunkinäkymä, ei erillinen tuotantovariantti."
+          }
+        ],
+        "observations": [
+          "Arkkitehtuuri, kerrostuvat kattotasot, seinien kuluma, tekniset laitteet ja johdot ovat kamerakuvassa luonnollisia; perspektiivi ja valo koherentteja.",
+          "Etäisyysutu, taivaan vähäinen pöly-/pintajälki sekä etualan epäterävä kaide ja kaakelikatkelma eivät estä medinan kattomaiseman tunnistamista.",
+          "Kyltti ja rakennuspintojen pienet merkit on nähty alkuperäiskoossa; tavallinen luonnollisesti kuvattu teksti ei ole sama asia kuin päälle lisätty kuvaleima.",
+          "Alkuperäinen tunnistuu Pillowssa JPEG/MPO-tiedostoksi, jossa on 5472×3648 pääkehys ja samaa kuvaa esittävä 1620×1080 sisäinen rinnakkaiskehys. Molemmat nähty; alkuperäisiä tavuja ei muutettu."
+        ],
+        "reviewedAt": "2026-10-12T21:37:27.828535+00:00",
+        "gameIntegrated": false,
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-tunis-PHOTO.json",
+      "supplementalQAFileSHA256": "9787885b43034bc177e45ff49c6252019926fc627193c7cb84793c1aab71f79e",
+      "nativeQAHashResolved": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg",
+          "http": 200,
+          "sha256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+          "bytes": 7988736,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg?gallery-verify=fc208a7a51424245-1791841162228937000",
+          "http": 200,
+          "sha256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+          "bytes": 7988736,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-c1-a6e5f596accfa6be",
+      "galleryImageID": "capital-cc-e04-rabat-c1-a6e5f596accfa6be",
+      "commonsFile": "Rabat panorama.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg",
+        "suora": true,
+        "lahde": "Boushabe.ahl.ali, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Udayan kasbah on linnoitettu kaupunginosa Bou Regreg -joen suulla, missä Rabatin historiallinen ydin kohtaa Atlantin.",
+        "lyhyt": "Udayan kasbah hallitsee Bou Regreg -joen suuta.",
+        "tiedosto": "Rabat panorama.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Boushabe.ahl.ali, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Udayan kasbah on linnoitettu kaupunginosa Bou Regreg -joen suulla, missä Rabatin historiallinen ydin kohtaa Atlantin.",
+        "lyhyt": "Udayan kasbah hallitsee Bou Regreg -joen suuta.",
+        "tiedosto": "Rabat panorama.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg",
+        "suora": true,
+        "lahde": "Boushabe.ahl.ali, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Udayan kasbah on linnoitettu kaupunginosa Bou Regreg -joen suulla, missä Rabatin historiallinen ydin kohtaa Atlantin.",
+        "lyhyt": "Udayan kasbah hallitsee Bou Regreg -joen suuta.",
+        "tiedosto": "Rabat panorama.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+      "exportSHA256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/4fcb8b4b4cca0a2f15a19e870ffacdc93287e8b0c272ee5d2016b0ed85340c8b.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        4928,
+        3264
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
+        "semanticContextSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
+        "subjectTitle": "Rabat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Boushabe.ahl.ali",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rabat_panorama.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Rabat_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-23.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rabat_panorama.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-23.html",
+            "sourceHTMLSHA256": "43d11121d62477dfb08b99bf53af1ec8349d587175b8d15bb69d1bfc8bfb7af7",
+            "author": "Boushabe.ahl.ali",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 4928,
+            "height": 3264,
+            "ratio": 1.5098039215686274,
+            "date": [
+              "20 August 2013, 12:29:45"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          },
+          "qaReason": "Bou Regreg ja Udayan kasbahin muurit muodostavat laajan aidon Rabatin kaupunkinäkymän; taustaihmiset hyvin pieniä, ei luettavia kasvonpiirteitä. Historiallinen kasbah on aihe, ei moderni silta tai teatteri."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Udayan kasbah on linnoitettu kaupunginosa Bou Regreg -joen suulla, missä Rabatin historiallinen ydin kohtaa Atlantin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Rabat panorama.jpg",
+          "verdict": "accepted",
+          "reason": "Bou Regreg ja Udayan kasbahin muurit muodostavat laajan aidon Rabatin kaupunkinäkymän; taustaihmiset hyvin pieniä, ei luettavia kasvonpiirteitä. Historiallinen kasbah on aihe, ei moderni silta tai teatteri.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-23.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rabat_panorama.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-23.html",
+            "sourceHTMLSHA256": "43d11121d62477dfb08b99bf53af1ec8349d587175b8d15bb69d1bfc8bfb7af7",
+            "author": "Boushabe.ahl.ali",
+            "license": "CC BY-SA 4.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 4928,
+            "height": 3264,
+            "ratio": 1.5098039215686274,
+            "date": [
+              "20 August 2013, 12:29:45"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Rabat panorama.jpg",
+        "sha256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rabat_panorama.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Rabat_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Boushabe.ahl.ali",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4928,
+        "height": 3264,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg",
+        "bytes": 9590677,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:51.784219+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Rabat panorama.jpg",
+        "lahde": "Boushabe.ahl.ali, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Udayan kasbah on linnoitettu kaupunginosa Bou Regreg -joen suulla, missä Rabatin historiallinen ydin kohtaa Atlantin.",
+        "lyhyt": "Udayan kasbah hallitsee Bou Regreg -joen suuta."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Boushabe.ahl.ali, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Udayan kasbah on linnoitettu kaupunginosa Bou Regreg -joen suulla, missä Rabatin historiallinen ydin kohtaa Atlantin.",
+        "lyhyt": "Udayan kasbah hallitsee Bou Regreg -joen suuta.",
+        "tiedosto": "Rabat panorama.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
+      "contextAfterSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Rabat panorama.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rabat_panorama.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/4fcb8b4b4cca0a2f15a19e870ffacdc93287e8b0c272ee5d2016b0ed85340c8b.org&utm_campaign=index&utm_content=original",
+        "sha256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+        "actualSHA256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty alkuperäinen4928×3264 CC-valokuva: koko kehys ja kuusi natiivirajausta näyttävät Bou Regreg -joen suun, Udayan kasbahin ja rannan kaupunkimaiseman. Ihmiset ovat pieniä ilman erotettavia kasvonpiirteitä. Lähdesivun luokat, tekijä, kuvausvuosi2013 ja CC BY-SA4.0 tukevat nykyistä kansiroolia. Kuvan oikeuskerrokset arvioitu erikseen valokuvan lisenssistä; ei näkyvää pääaiheista nykytaidetta tai yksittäisen nykyarkkitehtuuriteoksen toisintoa.",
+        "observations": [
+          "Koko NAS-original avattu tools.view_image detail original. Työkalu näytti koko kehyksen3903×2585:een pienennettynä; kuusi erillistä skaalaamatonta natiivirajausta tarkastettu samassa original-detailissä. SHA256 laskettiin originalin tavuista, ei previewsta.",
+          "Rannalla, veneiden luona ja muurien lähellä olevat ihmiset jäävät pieniksi. Pään/kasvojen alueet ovat muutaman pehmeän pikselin kokoisia; silmiä, suuta tai tunnistettavia kasvonpiirteitä ei erota. Ei lähikasvoja tai poseerattua henkilömuotokuvaa.",
+          "Kasbahin laaja historiallinen muuristö ja asuinalue näkyvät jokisuun, rannan ja veneiden osana. Kuva ei ole yksittäisen porttireliefin, mosaiikin, veistoksen, nykyisen teatterin tai sillan pääaiheinen toisinto. Etualan tavallinen rakennus, laiturit ja vesijetit ovat maiseman sivuosia.",
+          "Kuvan valokuvaoikeus tulee tekijän omasta CC BY-SA4.0 Licensing-grantista. Marokon tallennetun alkuperäislain art20:n sivuosarajaus ja historiallisten muotojen lähteistetty tunnistus arvioitiin erikseen. Valokuvan CC-lisenssiä tai rakennuksen ikää ei käytetä kaikkien rakennus-/restaurointi-/folklorekerrosten yleislupana. Näkyvässä kuvassa ei havaita pääaiheista erillistä nykyteosta tai kopioitavaa perinnekuviopintaa.",
+          "Commonsin Description-kentässä on ristiriitainen dar'a river -sanamuoto. Sitä ei kopioida paikkaselitteeseen. Sama tallennettu sivu luokittelee kuvan River Bou Regreg ja Kasbah of the Udayas -luokkiin; tiedoston nimi, näkyvä linnoitettu jokisuumaisema sekä faktapohjan ja kasbah-lähdesnapshotin kohdetunnistus tukevat Rabatin Udayan kasbahia. Ei uusia karttakoordinaatteja tai Draa-jokiväitettä.",
+          "Date-kenttä20August2013 ja kuvan EXIF-kuvausaika tukevat vuotta2013. Kuvan muokkausaikaleima2016 ei ole kuvausvuosi. Nykyinen selite ei väitä näkymää vuodelta1873 tai tämän päivän rannan palvelutilanteeksi.",
+          "Päivänvalokuvassa on selvästi sinertävää etäisyyshuntua, hienoa kohinaa ja pehmeitä kaukaisia yksityiskohtia; taivasta on runsaasti. Kasbah, joen suu, ranta ja veneet erottuvat silti dokumentaariseen verkkokansikäyttöön. Ei kuvarikkoa, väärää orientaatiota, lisättyä tekstiä tai vesileimaa. Tavallinen valokuvaan kuuluva luonnollinen teksti ei olisi yksin hylkäysperuste.",
+          "Tallennetun tiedostosivun Author-rivi on Boushabe.ahl.ali, Source Own work, Licensing CC BY-SA4.0. Commons-sivudatan CC0 ei ole valokuvan lisenssi. Nykyisen sisältökohteen credit vastaa tekijää ja lisenssiä."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1-crops/minaret-and-houses.png",
+            "sha256": "4c1524d70b695a3b4b53ece666d420cc2a26149768e55bdf4c77d339e12b2191",
+            "originalPixelBox": [
+              1100,
+              1480,
+              2400,
+              2300
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1-crops/kasbah-fortress.png",
+            "sha256": "ea066a069be3b2834a8a4849b5eb6d7b6c1cc50ed92f99b45dddeb2f56ba5871",
+            "originalPixelBox": [
+              2450,
+              1600,
+              3860,
+              2260
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1-crops/beach-people-boats.png",
+            "sha256": "eac7762985a293a99fe3b877a3b2ac6ac42e592203650689ab900f463d6bd1cf",
+            "originalPixelBox": [
+              1800,
+              2160,
+              3000,
+              2460
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1-crops/left-bank-people.png",
+            "sha256": "7bcc9b3c700758bb33b2721c8631a8b25b9f1346997255543cf221058b9de9f4",
+            "originalPixelBox": [
+              0,
+              2090,
+              1100,
+              2450
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1-crops/foreground-jetskis-and-piers.png",
+            "sha256": "12f741e1d6bc40aed8a26cb6dc53a1f240d6b8fd8d623408054d6b8bd9323d28",
+            "originalPixelBox": [
+              400,
+              2570,
+              1500,
+              3000
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1-crops/right-beach-people.png",
+            "sha256": "98fff4aa88c75b75db567ca9053a9c53a4f715b3ea43e4b9bed8427f775c2faa",
+            "originalPixelBox": [
+              3050,
+              2150,
+              4250,
+              2430
+            ],
+            "resized": false,
+            "inspected": true
+          }
+        ],
+        "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+        "currentContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+        "currentTarget": {
+          "tiedosto": "Rabat panorama.jpg",
+          "lyhyt": "Udayan kasbah hallitsee Bou Regreg -joen suuta.",
+          "selite": "Udayan kasbah on linnoitettu kaupunginosa Bou Regreg -joen suulla, missä Rabatin historiallinen ydin kohtaa Atlantin.",
+          "lahde": "Boushabe.ahl.ali, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        "evidence": {
+          "sourceEvidence": [
+            {
+              "kind": "role-asset-handoff",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+              "sha256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+              "sourceRoleID": "capital-cc-e04-rabat-c1-a6e5f596accfa6be",
+              "originalSHA256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+              "slot": "C1",
+              "previewOnlyEvidenceBeforeThisReview": true,
+              "originalViewedPathBeforeThisReview": null
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+              "sha256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]"
+            },
+            {
+              "kind": "saved-original-Commons-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-23.html",
+              "sha256": "43d11121d62477dfb08b99bf53af1ec8349d587175b8d15bb69d1bfc8bfb7af7",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Rabat_panorama.jpg",
+              "description": "Français : dar'a river.Rabat. Morocco",
+              "date": "20 August 2013, 12:29:45",
+              "author": "Boushabe.ahl.ali",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "categories": [
+                "River Bou Regreg",
+                "Kasbah of the Udayas"
+              ],
+              "readMethod": "Paikallinen tallennettu HTML; ei uutta hakua tai lähdesivun päivitystä"
+            },
+            {
+              "kind": "historical-identity-fact-sheet",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "sha256": "73b493506ab9c0985354f5742a0556f3e84c80a872ba920d0cae34a68234fc31"
+            },
+            {
+              "kind": "historical-identity-source-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-A/Kasbah_of_the_Udayas.txt",
+              "sha256": "68ed446ec14c1972fb4421cb00604fb6958da744ad0bccb63813960f9f2e1747"
+            },
+            {
+              "kind": "UNESCO-primary-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-A/unesco.txt",
+              "sha256": "967b6c8a43eb258fbef3cdc62476932b01bbed9469e5a88b44d207b048990f51",
+              "sourcePage": "https://whc.unesco.org/en/list/1401/"
+            },
+            {
+              "kind": "Morocco-copyright-rule-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+              "sha256": "632d315136b06f8bf0b32bb817860cba3e332b1290a51903f57abaafec7de289"
+            },
+            {
+              "kind": "Morocco-primary-law-English-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sha256": "c72b96d2127c07df6d8c85f2a35d0d1fd2a33218f586fd9746957bb91e1455ee",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/2985"
+            },
+            {
+              "kind": "Morocco-primary-law-consolidated-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/current-law-read.txt",
+              "sha256": "d88a09160d309507da97a1b9eaaba5fc0d6dd411bf1f03ae47db7409ec2b6ed6",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/19766"
+            }
+          ],
+          "sourceLicenseLayer": {
+            "author": "Boushabe.ahl.ali",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Rabat_panorama.jpg",
+            "source": "Own work",
+            "fileLicensingGrantRead": true,
+            "commonsFooterLicenseExcluded": true
+          },
+          "rightsAssessment": {
+            "photoLayer": "Tiedostosivun varsinainen kuvaajan CC-lisenssi ja tekijärivi luettu paikallisesta HTML:stä.",
+            "depictedWorkLayer": "Laaja jokisuun kaupunkimaisema: lähteistetty historiallinen kasbah ja asuinalue, ei erillistä hallitsevaa nykyistä luovaa teoskerrosta. Sivussa olevat nykyrakenteet arvioitu art20:n kohdekohtaisena sivuosana; ei blanket-FoP- tai blanket-PD-väitettä.",
+            "personLayer": "Ei tunnistettavia kasvoja",
+            "newCreativeOrFolkloreLayerObserved": false,
+            "historicalTermAndIncidentalScopeReadSeparatelyFromPhotoCC": true
+          },
+          "technicalDetails": {
+            "width": 4928,
+            "height": 3264,
+            "bytes": 9590677,
+            "format": "JPEG",
+            "mode": "RGB",
+            "exifOrientation": 1,
+            "dateTime": "2016:05:11 14:24:51",
+            "dateTimeOriginal": "2013:08:20 12:29:45",
+            "cameraMake": "NIKON CORPORATION",
+            "cameraModel": "NIKON D5100",
+            "decodedSuccessfully": true,
+            "actualOriginalSHA1": "8f5635abdc0a017d145a1ade77b76c9458f48bea",
+            "originalRasterChanged": false
+          },
+          "inspectionMethod": {
+            "tool": "tools.view_image",
+            "detail": "original",
+            "fullOriginalPathOpened": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/4fcb8b4b4cca0a2f15a19e870ffacdc93287e8b0c272ee5d2016b0ed85340c8b.org&utm_campaign=index&utm_content=original",
+            "fullFrameDisplayPixels": [
+              3903,
+              2585
+            ],
+            "nativeCropsUnscaled": true,
+            "previewWasNotUsedForNewVisualAcceptance": true
+          },
+          "primaryQAUnchangedSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+          "existingCompleteRowSkipped": {
+            "slot": "C2",
+            "commonsFile": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg",
+            "sha256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+            "primaryQAVerdict": "accepted",
+            "primaryQAOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+            "primaryQAOriginalSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+            "actualOriginalSHA256VerifiedNow": true
+          },
+          "originalPixelsViewed": true
+        },
+        "reviewedAt": "2026-10-12T21:34:41.653455+00:00",
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C1.json",
+      "supplementalQAFileSHA256": "c24f9bcd2f68aec33ed682a796fca939cdb7bfa8c32a0878a4e8bd4b957b8c24",
+      "nativeQAHashResolved": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg",
+          "http": 200,
+          "sha256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+          "bytes": 9590677,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c1-a6e5f596accfa6be5162.jpg?gallery-verify=a6e5f596accfa6be-1791841162134978000",
+          "http": 200,
+          "sha256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
+          "bytes": 9590677,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    },
+    {
+      "era": "e04",
+      "city": "rabat",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e04-rabat-c3-d8ca4878f6a5442a",
+      "galleryImageID": "capital-cc-e04-rabat-c3-d8ca4878f6a5442a",
+      "commonsFile": "Chellah (Sala Colonia) 3.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg",
+        "suora": true,
+        "lahde": "Sabrine S. Hakam, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Chellahissa antiikin Salan rakennusjäännökset ja marinidien myöhempi hautausmaa ovat saman historiallisen alueen kerroksia.",
+        "lyhyt": "Chellahin rauniot kuuluvat useaan aikakauteen.",
+        "tiedosto": "Chellah (Sala Colonia) 3.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Sabrine S. Hakam, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Chellahissa antiikin Salan rakennusjäännökset ja marinidien myöhempi hautausmaa ovat saman historiallisen alueen kerroksia.",
+        "lyhyt": "Chellahin rauniot kuuluvat useaan aikakauteen.",
+        "tiedosto": "Chellah (Sala Colonia) 3.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg",
+        "suora": true,
+        "lahde": "Sabrine S. Hakam, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Chellahissa antiikin Salan rakennusjäännökset ja marinidien myöhempi hautausmaa ovat saman historiallisen alueen kerroksia.",
+        "lyhyt": "Chellahin rauniot kuuluvat useaan aikakauteen.",
+        "tiedosto": "Chellah (Sala Colonia) 3.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+      "exportSHA256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/eedfd596a460d0a3f56eeb27f52a63063f1e4f148b31bde30a9996f73d1bdeaa.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        2560,
+        1920
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+      "sourceContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a3a116f35e450224b1fe81e591e0a5888e8b96318e139a510c5cb8893dbbe304",
+        "semanticContextSHA256": "a3a116f35e450224b1fe81e591e0a5888e8b96318e139a510c5cb8893dbbe304",
+        "subjectTitle": "Rabat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Sabrine S. Hakam",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_(Sala_Colonia)_3.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Chellah_%28Sala_Colonia%29_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-11.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_(Sala_Colonia)_3.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-11.html",
+            "sourceHTMLSHA256": "bbe7533679509c19c97426bd4b4145f723513fb889bcfa4b7b28c899cf162ba6",
+            "author": "Sabrine S. Hakam",
+            "license": "CC BY-SA 3.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 2560,
+            "height": 1920,
+            "ratio": 1.3333333333333333,
+            "date": [
+              "18 August 2010, 16:35:14"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          },
+          "qaReason": "Chellahin laaja raunioalue ja reunamuuri näkyvät, ei ihmiskasvoja/nykyteoksia; kansirooliin sopiva oikea paikkavalokuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Chellahissa antiikin Salan rakennusjäännökset ja marinidien myöhempi hautausmaa ovat saman historiallisen alueen kerroksia.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+        "fileSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Chellah (Sala Colonia) 3.jpg",
+          "verdict": "accepted",
+          "reason": "Chellahin laaja raunioalue ja reunamuuri näkyvät, ei ihmiskasvoja/nykyteoksia; kansirooliin sopiva oikea paikkavalokuva.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/preview-11.jpg",
+            "originalViewedPath": null,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_(Sala_Colonia)_3.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-11.html",
+            "sourceHTMLSHA256": "bbe7533679509c19c97426bd4b4145f723513fb889bcfa4b7b28c899cf162ba6",
+            "author": "Sabrine S. Hakam",
+            "license": "CC BY-SA 3.0",
+            "licenseUrls": [
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "https://creativecommons.org/licenses/by-sa/4.0/",
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ],
+            "width": 2560,
+            "height": 1920,
+            "ratio": 1.3333333333333333,
+            "date": [
+              "18 August 2010, 16:35:14"
+            ],
+            "rightsSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+            "copyrightRuleSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+            "reviewedAt": "2026-10-12T17:49:31.500544+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+            "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Chellah (Sala Colonia) 3.jpg",
+        "sha256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_(Sala_Colonia)_3.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Chellah_%28Sala_Colonia%29_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Sabrine S. Hakam",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 2560,
+        "height": 1920,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg",
+        "bytes": 2043406,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:55.331066+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Chellah (Sala Colonia) 3.jpg",
+        "lahde": "Sabrine S. Hakam, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Chellahissa antiikin Salan rakennusjäännökset ja marinidien myöhempi hautausmaa ovat saman historiallisen alueen kerroksia.",
+        "lyhyt": "Chellahin rauniot kuuluvat useaan aikakauteen."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Sabrine S. Hakam, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Chellahissa antiikin Salan rakennusjäännökset ja marinidien myöhempi hautausmaa ovat saman historiallisen alueen kerroksia.",
+        "lyhyt": "Chellahin rauniot kuuluvat useaan aikakauteen.",
+        "tiedosto": "Chellah (Sala Colonia) 3.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+      "targetAfterSHA256": "a3a116f35e450224b1fe81e591e0a5888e8b96318e139a510c5cb8893dbbe304",
+      "contextAfterSHA256": "a3a116f35e450224b1fe81e591e0a5888e8b96318e139a510c5cb8893dbbe304",
+      "sourceCommit": "02a5f093c0a7497eb32614ad4be44f92a58b4f93",
+      "sourceBranch": "paakaupungit-e04-codex",
+      "supplementalNativeQA": {
+        "era": "e04",
+        "city": "rabat",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Chellah (Sala Colonia) 3.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_(Sala_Colonia)_3.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/eedfd596a460d0a3f56eeb27f52a63063f1e4f148b31bde30a9996f73d1bdeaa.org&utm_campaign=index&utm_content=original",
+        "sha256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+        "actualSHA256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+        "sha256CalculatedFromOriginalBytes": true,
+        "originalPixelsViewed": true,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "Hyväksytty alkuperäinen2560×1920 CC-valokuva: koko kehys ja kolme natiivirajausta näyttävät Chellahin/Sala Colonian pelkistetyt vanhat rauniorakenteet sekä historiallisen reunamuurin. Ei ihmisiä tai kasvoja eikä näkyvää erillistä nykytaideteosta. Tallennettu lähde nimeää Chellahin, tekijän Sabrine S. Hakamin, vuoden2010 ja kuvan CC BY-SA3.0:n; nykyinen kansiselite vastaa lähteistettyä historiallista aihetta.",
+        "observations": [
+          "Koko NAS-original2560×1920 avattu tools.view_image detail original ja tarkastettu kokonaan. Kolme skaalaamatonta natiivirajausta tarkastettu samalla original-detailillä. SHA256 laskettiin alkuperäisestä JPEG-tiedostosta.",
+          "Koko kuvassa ja natiivirajauksissa ei ole ihmisiä tai kasvoja. Kasvillisuus, kivien kuluminen, jäkälä ja halkeamat ovat luonnollisia valokuvattuja pintoja.",
+          "Pääaihe on pelkistettyjen antiikin rauniorakenteiden, kivikolumnifragmenttien ja vanhan Chellahin muurin muodostama historiallinen alue. Kuvassa ei näy erillistä uutta veistosta, reliefiä, mosaiikkia, maalausta tai kopioitavaa perinnekuviopintaa. Kuvassa ei ole ornamentoidun minareetin pääaiheista taidepintaa.",
+          "Sala Colonian raunioiden ja marinidien myöhemmän muurin/hautakokonaisuuden historiallinen kohdetunnistus luettu faktapohjasta ja Chellah-lähdesnapshotista; vanhan julkiseksi tehdyn historial­lisen muodon suoja-aikaperuste erotettu kuvaajan CC-luvasta tallennetun lain art27/28:n avulla. Ei väitettä että kaikki vanhan kohteen mahdolliset restauroinnit olisivat vapaita. Tässä näkyvät vanhat rakenteelliset muodot eivät osoita erillistä nykyistä luovaa lisäteosta.",
+          "Kuvassa on pieniä käyntikohteen opastauluja; natiivirajauksessa ne ovat pieniä ja tekstisisältö jää lukemattomaksi/ylivalottuneeksi. Ne ovat sivuosia laajassa raunioaluekuvassa eivätkä sisällä näkyvää hallitsevaa kuvitusteosta. Tavallinen opastusteksti valokuvassa ei yksin estä hyväksyntää.",
+          "Kuva on vanhan puhelinkameran dokumentaarinen valokuva: hieman pehmeä, kohinainen taivas ja niukka sävyvara. Muuri, rauniot, kivifragmentit ja ympäristö erottuvat riittävästi verkkokansirooliin. Ei merkittävää kuvarikkoa, väärää kääntöä, lisättyä vesileimaa tai logopainatusta.",
+          "Source Description nimeää Chellah(SalaColonia), Date18August2010 ja Morocco photographs taken on2010-08-18 -luokka tukevat paikkaa ja vuotta. Sivun Ambiguous location in EXIF -varoitus ja nollakoordinaatit kirjattu: paikkasidos perustuu kohteen nimeämiseen ja tunnistamiseen, ei virheelliseen EXIF-paikkaan. Karttapisteitä ei luotu.",
+          "Tallennetun tiedostosivun Author-rivi on Sabrine S. Hakam, Source Own work, Licensing CC BY-SA3.0. Sivun yleistä CC0-/CC BY-SA4.0-tekstilupaa ei käytetä valokuvan lisenssinä. Nykyinen credit vastaa tekijää ja lisenssiä. Nykyinen selite ei väitä2010kaivettua raunioasettelua vuodeksi1873 tai tuoreeksi opaspalvelutiedoksi."
+        ],
+        "nativeCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C3-crops/columns-and-small-signs.png",
+            "sha256": "af0f62546fd442e2ebdd1e47b01309d68b05f311bc18079ee0209e848871f0eb",
+            "originalPixelBox": [
+              1600,
+              890,
+              2330,
+              1330
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C3-crops/wall-and-vegetation.png",
+            "sha256": "61647fb1c501f2279f631376a1e2a9c4e5537f3bc28d5c9b48efbda9698cc455",
+            "originalPixelBox": [
+              1290,
+              360,
+              2110,
+              960
+            ],
+            "resized": false,
+            "inspected": true
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C3-crops/ruin-stones-and-reeds.png",
+            "sha256": "16c38f8354974e3f25cecbc2ccbbdb4ede25f0f7061f8e381699508dca5fad86",
+            "originalPixelBox": [
+              0,
+              820,
+              950,
+              1690
+            ],
+            "resized": false,
+            "inspected": true
+          }
+        ],
+        "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+        "currentContentSHA256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+        "currentTarget": {
+          "tiedosto": "Chellah (Sala Colonia) 3.jpg",
+          "lyhyt": "Chellahin rauniot kuuluvat useaan aikakauteen.",
+          "selite": "Chellahissa antiikin Salan rakennusjäännökset ja marinidien myöhempi hautausmaa ovat saman historiallisen alueen kerroksia.",
+          "lahde": "Sabrine S. Hakam, Wikimedia Commons (CC BY-SA 3.0)"
+        },
+        "evidence": {
+          "sourceEvidence": [
+            {
+              "kind": "role-asset-handoff",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/role-asset-handoff.json",
+              "sha256": "53466167bed4fab6dd14069583f2d65e19c1913a5db8692b9e26ca58c67129e4",
+              "sourceRoleID": "capital-cc-e04-rabat-c3-d8ca4878f6a5442a",
+              "originalSHA256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0"
+            },
+            {
+              "kind": "current-primary-QA",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa.json",
+              "sha256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+              "slot": "C3",
+              "previewOnlyEvidenceBeforeThisReview": true,
+              "originalViewedPathBeforeThisReview": null
+            },
+            {
+              "kind": "current-content-target",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
+              "sha256": "e8cfe0f7c8812af898b31384847454b7c834f303ca358cb8b73b2abff43ea233",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]"
+            },
+            {
+              "kind": "saved-original-Commons-page",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/candidate-11.html",
+              "sha256": "bbe7533679509c19c97426bd4b4145f723513fb889bcfa4b7b28c899cf162ba6",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_(Sala_Colonia)_3.jpg",
+              "description": "English: Chellah (Sala Colonia).",
+              "date": "18 August 2010, 16:35:14",
+              "author": "Sabrine S. Hakam",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "categories": [
+                "Chellah",
+                "Morocco photographs taken on 2010-08-18",
+                "Ambiguous location in EXIF"
+              ],
+              "readMethod": "Paikallinen tallennettu HTML; ei uutta hakua tai lähdesivun päivitystä"
+            },
+            {
+              "kind": "historical-identity-fact-sheet",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/faktapohja.md",
+              "sha256": "73b493506ab9c0985354f5742a0556f3e84c80a872ba920d0cae34a68234fc31"
+            },
+            {
+              "kind": "historical-identity-source-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-A/Chellah.txt",
+              "sha256": "36c032ce4f925ba9eb30db7227110bbdcf517d8c49f31b8e774d0ca942b1ffbc"
+            },
+            {
+              "kind": "UNESCO-primary-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-A/unesco.txt",
+              "sha256": "967b6c8a43eb258fbef3cdc62476932b01bbed9469e5a88b44d207b048990f51",
+              "sourcePage": "https://whc.unesco.org/en/list/1401/"
+            },
+            {
+              "kind": "Morocco-copyright-rule-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/rabat-B/fop-morocco.html",
+              "sha256": "632d315136b06f8bf0b32bb817860cba3e332b1290a51903f57abaafec7de289"
+            },
+            {
+              "kind": "Morocco-primary-law-English-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/law-morocco.txt",
+              "sha256": "c72b96d2127c07df6d8c85f2a35d0d1fd2a33218f586fd9746957bb91e1455ee",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/2985"
+            },
+            {
+              "kind": "Morocco-primary-law-consolidated-snapshot",
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/cc-evidence/current-law-read.txt",
+              "sha256": "d88a09160d309507da97a1b9eaaba5fc0d6dd411bf1f03ae47db7409ec2b6ed6",
+              "sourcePage": "https://www.wipo.int/wipolex/en/legislation/details/19766"
+            }
+          ],
+          "sourceLicenseLayer": {
+            "author": "Sabrine S. Hakam",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Chellah_(Sala_Colonia)_3.jpg",
+            "source": "Own work",
+            "fileLicensingGrantRead": true,
+            "commonsFooterLicenseExcluded": true
+          },
+          "rightsAssessment": {
+            "photoLayer": "Tiedostosivun varsinainen kuvaajan CC-lisenssi ja tekijärivi luettu paikallisesta HTML:stä.",
+            "depictedWorkLayer": "Tunnistettu antiikin Sala Colonian vanha rauniorakenne ja Chellahin historiallinen muuri; lähteistetty kohde ja vanhan julkisen muodon suoja-aikaperuste erillään2010valokuvan CC-luvasta. Ei näkyvää erillistä uutta taide-/folklorepintaa.",
+            "personLayer": "Ei ihmisiä tai kasvoja",
+            "newCreativeOrFolkloreLayerObserved": false,
+            "historicalTermAndIncidentalScopeReadSeparatelyFromPhotoCC": true
+          },
+          "technicalDetails": {
+            "width": 2560,
+            "height": 1920,
+            "bytes": 2043406,
+            "format": "JPEG",
+            "mode": "RGB",
+            "exifOrientation": 1,
+            "dateTime": "2010:08:18 16:35:14",
+            "dateTimeOriginal": "2010:08:18 16:35:14",
+            "cameraMake": "SAMSUNG            ",
+            "cameraModel": "GT-S8000           ",
+            "decodedSuccessfully": true,
+            "actualOriginalSHA1": "305e3be5e7242859c5c1262a29b4c3136e5759df",
+            "originalRasterChanged": false
+          },
+          "inspectionMethod": {
+            "tool": "tools.view_image",
+            "detail": "original",
+            "fullOriginalPathOpened": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/rabat/eedfd596a460d0a3f56eeb27f52a63063f1e4f148b31bde30a9996f73d1bdeaa.org&utm_campaign=index&utm_content=original",
+            "fullFrameDisplayPixels": [
+              2560,
+              1920
+            ],
+            "nativeCropsUnscaled": true,
+            "previewWasNotUsedForNewVisualAcceptance": true
+          },
+          "primaryQAUnchangedSHA256": "d20f19d9af8eb32ebee6f8691c4099b2a9698842d8e77e5a93dc4f789ea00c8e",
+          "existingCompleteRowSkipped": {
+            "slot": "C2",
+            "commonsFile": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg",
+            "sha256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+            "primaryQAVerdict": "accepted",
+            "primaryQAOriginalViewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/rabat/qa-evidence/C2-original-correct.jpg",
+            "primaryQAOriginalSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
+            "actualOriginalSHA256VerifiedNow": true
+          },
+          "originalPixelsViewed": true
+        },
+        "reviewedAt": "2026-10-12T21:34:41.740769+00:00",
+        "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C3.json"
+      },
+      "supplementalQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/capital-native-qa/e04-rabat-C3.json",
+      "supplementalQAFileSHA256": "9b9897e1374149f0b76bb2c418d08f8c8a0b65a319766fc2c51bad7cfc44e1dc",
+      "nativeQAHashResolved": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+      "deliveryR2Reads": [
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg",
+          "http": 200,
+          "sha256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+          "bytes": 2043406,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        },
+        {
+          "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/c3-d8ca4878f6a5442a07ec.jpg?gallery-verify=d8ca4878f6a5442a-1791841162283957000",
+          "http": 200,
+          "sha256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
+          "bytes": 2043406,
+          "mime": "image/jpeg",
+          "requestOrigin": "https://matkakirja.app",
+          "byteExact": true
+        }
+      ],
+      "previousHoldCause": "Primary QA inspected only a preview; full original is now independently inspected."
+    }
+  ],
+  "effectiveQualifiedOriginalSnapshotBindings": 763,
+  "effectiveRemainingOriginalSnapshotHolds": 66,
+  "instructions": [
+    "Add these exact-version originals to the previously qualified755 handoff and three Rabat schema releases. Use their embedded full-native QA; do not infer approval for other preview-only images.",
+    "The exact Bissau PHOTO rights hold remains active. Preserve captions, text, maps and all other images."
+  ],
+  "ownerAcceptanceRequired": false,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false
+}
