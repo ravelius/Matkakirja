@@ -1,0 +1,551 @@
+{
+  "taskNumbers": [
+    86,
+    87
+  ],
+  "city": "stockholm",
+  "source86": {
+    "taskNumber": 86,
+    "taskId": "pilotin80korjaus",
+    "receivedAt": "2026-10-12T13:59:14.814692+00:00",
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+    "sourceCommit": "12a76cb745373a5c352c7d5ad7f723660d43df86",
+    "sourceBlob": "b3b54728c303d893cd0bdb0d1df16cf6ac6bf463",
+    "sourceSHA256": "f0d9964a17cd15a314d6230aca9eaa0b8e1e4c8df1fbf888eeeab7c175ed167c",
+    "sourceReadInFull": true,
+    "productionStarted": false,
+    "maximumGenerationCalls": 9,
+    "oneCallPerSubject": true,
+    "additionalVariantsAllowed": false,
+    "sourceSupersedesOldExcludedDecision": true,
+    "sixOtherPilotDeliveriesRetained": true,
+    "remaining210WaitForOwner": true,
+    "gameIntegrated": false,
+    "published": false,
+    "mailboxDeliveryConfirmed": false
+  },
+  "source87": {
+    "taskNumber": 87,
+    "correctsTaskNumber": 86,
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+    "sourceCommit": "c68cb436bebec63456d5add1254c1ced1eb3e377",
+    "sourceBlob": "4d89af370541cb8ec8dca5c33645e37631d7db13",
+    "sourceSHA256": "7679afb03d11c126f177910b48dd54d9512bad92d6c2b537f40d51cec6467bf8",
+    "sourceReadInFull": true,
+    "receivedAt": "2026-10-12T14:27:57.781661+00:00",
+    "application": "Applied to existing direct human food-shop workers; no historical/city subjects rerun. Paris/Stockholm already aligned. Athens latest subject specifically Greek bakery not souvlaki store, one new source-aligned subject needed.",
+    "standaloneDuplicateQueueCreated": false,
+    "original86PhaseActualCalls": 9,
+    "latestHumanShopPhaseInitialCalls": 5,
+    "laterRequiredCorrectionsObservedOrAuthorized": 3,
+    "neverClaimCombinedCallsWithinNine": true,
+    "effective87SubjectCoverage": "six retained history/city subjects plus three latest shop-food subjects; original discarded food candidates preserved and actual generation calls tracked separately",
+    "reviewSitePublished": false,
+    "gameIntegrated": false,
+    "mailboxDeliveryConfirmed": false
+  },
+  "latestHumanInstructionApplied": true,
+  "foodCityBackdropRequired": false,
+  "foodStyle": "cafe/bakery/shop interiors with naturally integrated beautiful food displays",
+  "original86PhaseActualCalls": 9,
+  "laterHumanFoodShopPhaseActualCalls": 8,
+  "allUniqueBuiltinCallsAcrossChangingThisTurnBriefs": 26,
+  "assets": [
+    {
+      "id": "stockholm-4-monteliusvagen-v2",
+      "taskNumber": 86,
+      "city": "stockholm",
+      "cityFi": "Tukholma",
+      "caption": "Monteliusvägenin puinen reitti ja näkymä Riddarfjärdenin yli Riddarholmenille. Havainnekuva.",
+      "sourceOrderPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/source.md",
+      "sourceOrderSHA256": "f0d9964a17cd15a314d6230aca9eaa0b8e1e4c8df1fbf888eeeab7c175ed167c",
+      "sourceReadFully": true,
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Stockholm everyday city arrival illustration,1536x1024 opaque landscape.\nPrimary request: A convincing real-camera documentary view from the start of a wooden-deck section of MONTELIUSVÄGEN on MARIABERGET, Södermalm, Stockholm, with two people seen ONLY FROM BEHIND stopping to look across Riddarfjärden toward Riddarholmen and Gamla stan. Contemporary representative city illustration, not a claim of exact live restoration conditions on a particular date.\nGeographic camera: Eye-height about1.6m on the cliff path from the western section, looking EAST-NORTHEAST toward Riddarholmen and Gamla stan. This is the SOUTH shore/cliff of the lake. When looking east, the lake and waterside safety railing are on the LEFT; hillside private gardens and old house edges are on the RIGHT. The pathway curves naturally forward along the cliff. Keep real level water horizon and elevated view down to the water, not a flat quay at water level.\nForeground/path: Narrow plausible weathered timber boardwalk/deck section with rough stone/cliff and natural shrubs below, a simple weathered wooden top safety rail with unobtrusive dark mesh infill along the lakeside. Hint of plain historic garden fence/hill vegetation on the landward side, not a row of novel luxury houses. Do not copy any exact source photograph composition or protected artwork.\nPeople: Two ordinary adults farther down the path at middle distance, plain anonymous jackets, both fully turned away and looking across the water, with credible quiet posture and correct anatomy. They are a small part of the photograph and do not block the whole skyline. No visible faces or profile faces, no posing for camera, no branded clothing.\nCity backdrop/geometry: Across broad Mälaren/Riddarfjärden water, Riddarholmen appears to the LEFT of Gamla stan, with compact historic stone/plaster buildings, brick church shaft and slender historic Riddarholmskyrkan Gothic open-lattice spire above the island's roofs. Gamla stan's denser old roofs and distant old church towers recede farther RIGHT. Correct island/water alignment from Södermalm, not a Skeppsholmen viewpoint, not an east-side Skeppsbron waterfront facsimile. Exclude Kungsholmen's City Hall sector by aiming east/northeast.\nLighting/photo: Warm but restrained late-afternoon natural daylight, highly photorealistic35mm full-frame travel-documentary camera look with moderate/deep f/8 focus, natural unposed walking composition. Same single physical exposure for foreground, people, water and city; plausible shadow directions and scale, natural water ripples, imperfect weathered wood and ordinary leaves without repeated embossed organic texture. No HDR, hyper-polish, fake blur, illustration, painting, CGI or pasted-in skyline.\nABSOLUTE exclusions: NO STOCKHOLM CITY HALL/Stadshuset tower anywhere, not even on the far edge. No Börshuset sign, route sign, graffiti, lettering, labels, digits, logos, advertising, menu, plaque, watermark, border or frame anywhere. No visible identifiable faces, no contemporary protected artworks or named modern designs. Avoid unnecessary boats or foreground props. Full1536x1024 landscape, opaque.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Stockholm everyday city arrival illustration,1536x1024 opaque landscape.\nPrimary request: A convincing real-camera documentary view from the start of a wooden-deck section of MONTELIUSVÄGEN on MARIABERGET, Södermalm, Stockholm, with two people seen ONLY FROM BEHIND stopping to look across Riddarfjärden toward Riddarholmen and Gamla stan. Contemporary representative city illustration, not a claim of exact live restoration conditions on a particular date.\nGeographic camera: Eye-height about1.6m on the cliff path from the western section, looking EAST-NORTHEAST toward Riddarholmen and Gamla stan. This is the SOUTH shore/cliff of the lake. When looking east, the lake and waterside safety railing are on the LEFT; hillside private gardens and old house edges are on the RIGHT. The pathway curves naturally forward along the cliff. Keep real level water horizon and elevated view down to the water, not a flat quay at water level.\nForeground/path: Narrow plausible weathered timber boardwalk/deck section with rough stone/cliff and natural shrubs below, a simple weathered wooden top safety rail with unobtrusive dark mesh infill along the lakeside. Hint of plain historic garden fence/hill vegetation on the landward side, not a row of novel luxury houses. Do not copy any exact source photograph composition or protected artwork.\nPeople: Two ordinary adults farther down the path at middle distance, plain anonymous jackets, both fully turned away and looking across the water, with credible quiet posture and correct anatomy. They are a small part of the photograph and do not block the whole skyline. No visible faces or profile faces, no posing for camera, no branded clothing.\nCity backdrop/geometry: Across broad Mälaren/Riddarfjärden water, Riddarholmen appears to the LEFT of Gamla stan, with compact historic stone/plaster buildings, brick church shaft and slender historic Riddarholmskyrkan Gothic open-lattice spire above the island's roofs. Gamla stan's denser old roofs and distant old church towers recede farther RIGHT. Correct island/water alignment from Södermalm, not a Skeppsholmen viewpoint, not an east-side Skeppsbron waterfront facsimile. Exclude Kungsholmen's City Hall sector by aiming east/northeast.\nLighting/photo: Warm but restrained late-afternoon natural daylight, highly photorealistic35mm full-frame travel-documentary camera look with moderate/deep f/8 focus, natural unposed walking composition. Same single physical exposure for foreground, people, water and city; plausible shadow directions and scale, natural water ripples, imperfect weathered wood and ordinary leaves without repeated embossed organic texture. No HDR, hyper-polish, fake blur, illustration, painting, CGI or pasted-in skyline.\nABSOLUTE exclusions: NO STOCKHOLM CITY HALL/Stadshuset tower anywhere, not even on the far edge. No Börshuset sign, route sign, graffiti, lettering, labels, digits, logos, advertising, menu, plaque, watermark, border or frame anywhere. No visible identifiable faces, no contemporary protected artworks or named modern designs. Avoid unnecessary boats or foreground props. Full1536x1024 landscape, opaque.",
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Stockholm everyday city arrival illustration,1536x1024 opaque landscape.\nPrimary request: A convincing real-camera documentary view from the start of a wooden-deck section of MONTELIUSVÄGEN on MARIABERGET, Södermalm, Stockholm, with two people seen ONLY FROM BEHIND stopping to look across Riddarfjärden toward Riddarholmen and Gamla stan. Contemporary representative city illustration, not a claim of exact live restoration conditions on a particular date.\nGeographic camera: Eye-height about1.6m on the cliff path from the western section, looking EAST-NORTHEAST toward Riddarholmen and Gamla stan. This is the SOUTH shore/cliff of the lake. When looking east, the lake and waterside safety railing are on the LEFT; hillside private gardens and old house edges are on the RIGHT. The pathway curves naturally forward along the cliff. Keep real level water horizon and elevated view down to the water, not a flat quay at water level.\nForeground/path: Narrow plausible weathered timber boardwalk/deck section with rough stone/cliff and natural shrubs below, a simple weathered wooden top safety rail with unobtrusive dark mesh infill along the lakeside. Hint of plain historic garden fence/hill vegetation on the landward side, not a row of novel luxury houses. Do not copy any exact source photograph composition or protected artwork.\nPeople: Two ordinary adults farther down the path at middle distance, plain anonymous jackets, both fully turned away and looking across the water, with credible quiet posture and correct anatomy. They are a small part of the photograph and do not block the whole skyline. No visible faces or profile faces, no posing for camera, no branded clothing.\nCity backdrop/geometry: Across broad Mälaren/Riddarfjärden water, Riddarholmen appears to the LEFT of Gamla stan, with compact historic stone/plaster buildings, brick church shaft and slender historic Riddarholmskyrkan Gothic open-lattice spire above the island's roofs. Gamla stan's denser old roofs and distant old church towers recede farther RIGHT. Correct island/water alignment from Södermalm, not a Skeppsholmen viewpoint, not an east-side Skeppsbron waterfront facsimile. Exclude Kungsholmen's City Hall sector by aiming east/northeast.\nLighting/photo: Warm but restrained late-afternoon natural daylight, highly photorealistic35mm full-frame travel-documentary camera look with moderate/deep f/8 focus, natural unposed walking composition. Same single physical exposure for foreground, people, water and city; plausible shadow directions and scale, natural water ripples, imperfect weathered wood and ordinary leaves without repeated embossed organic texture. No HDR, hyper-polish, fake blur, illustration, painting, CGI or pasted-in skyline.\nABSOLUTE exclusions: NO STOCKHOLM CITY HALL/Stadshuset tower anywhere, not even on the far edge. No Börshuset sign, route sign, graffiti, lettering, labels, digits, logos, advertising, menu, plaque, watermark, border or frame anywhere. No visible identifiable faces, no contemporary protected artworks or named modern designs. Avoid unnecessary boats or foreground props. Full1536x1024 landscape, opaque.",
+          "transparent_background": false
+        }
+      },
+      "generationOutputExecutionId": "50a15e3e-0cbc-46b2-aeac-666da659226d",
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Underlying request ID not exposed; actual output execution UUID/native file recorded.",
+      "generationCallsForAsset": 1,
+      "builtinDefaultOutputPath": "/Users/samireivinen/.codex/generated_images/01a13027-00b0-7af1-b2e4-9b601509dd59/exec-50a15e3e-0cbc-46b2-aeac-666da659226d.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/native/stockholm-4-monteliusvagen-v2.png",
+      "nativeSHA256": "952458343fedc9d7ce50ed830b8e7ae30a5cb37d3f8af558675da5216bd182d1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/final/stockholm-4-monteliusvagen-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/final/stockholm-4-monteliusvagen-v2.png",
+      "sha256": "0d58b8b1d287fd1855eaed0629a9525f5e8d1a27a6b0f097fb95682f09ff6315",
+      "bytes": 2992118,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "mode": "RGB",
+      "iccProfile": "sRGB",
+      "pixelsUnchanged": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/sa-arbetar-staden/natur-parker-och-gronomraden/parkplan-sodermalm-del-2---grona-gaturum-och-parkstrak-del-1.pdf",
+          "role": "Stockholm city primary parkplan, printed pages216–217 / PDF20–21: route lies south of lake, crosses partly wooden decks, from Kattgrändwest to Skolgrändeast, cliff vegetation and mixed gravel/decks/rails, view to Riddarfjärden and old town. Text/map/photo factual inspection only, not sent to image generation."
+        },
+        {
+          "url": "https://www.visitstockholm.com/o/monteliusvagen/",
+          "role": "Official city tourism source confirms Mälaren/Riddarholmen view and safety railing; camera excludes CityHall by turning east/northeast."
+        }
+      ],
+      "references": [
+        {
+          "sourceURL": "https://start.stockholm/globalassets/start/om-stockholms-stad/sa-arbetar-staden/natur-parker-och-gronomraden/parkplan-sodermalm-del-2---grona-gaturum-och-parkstrak-del-1.pdf",
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/references/parkplan-sodermalm.pdf",
+          "sha256": "83cc6ed5ca6318da0384354592bc0d647924395931cab3beb1f8f03ad2b0c542",
+          "role": "Stockholm city primary parkplan, printed pages216–217 / PDF20–21: route lies south of lake, crosses partly wooden decks, from Kattgrändwest to Skolgrändeast, cliff vegetation and mixed gravel/decks/rails, view to Riddarfjärden and old town. Text/map/photo factual inspection only, not sent to image generation.",
+          "license": "No reuse licence asserted; inspection only",
+          "passedToGeneration": false,
+          "viewedBeforeUse": true,
+          "renderedPagesViewed": [
+            20,
+            21
+          ],
+          "geometryInference": "City map has lake north of path, Kattgrändwest/Skolgrändeast. Camera from west looking east/northeast puts lake left and hill/gardens right. Riddarholmen lies west/left of Gamlastan; CityHall on Kungsholmen northwest is excluded by east/northeast framing."
+        },
+        {
+          "sourceURL": "https://www.visitstockholm.com/o/monteliusvagen/",
+          "role": "Official city tourism source confirms Mälaren/Riddarholmen view and safety railing; camera excludes CityHall by turning east/northeast.",
+          "passedToGeneration": false,
+          "liveRead20261012": true
+        }
+      ],
+      "referenceImagesPassed": [],
+      "workerQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "nativeCropsInspected": [
+          "wood",
+          "people-close",
+          "island",
+          "leaves-stone"
+        ],
+        "geometryCheckedAgainstPrimarySource": true,
+        "geometry": "Wooden deck at elevated south shore, lake/rail left, land/garden right while looking east/northeast; Riddarholmen church island left of Gamlastan. CityHall northwest sector not in frame.",
+        "noCityHallIdentified": true,
+        "facesOnlyBacks": true,
+        "noTextOrSignsIdentified": true,
+        "surfaceTextureNatural": true,
+        "cameraLooking": true,
+        "limits": "Representative contemporary illustrative skyline, not live proof of2026 church restoration conditions."
+      },
+      "ownerReviewPending": true,
+      "parentRootReviewPending": true,
+      "gameIntegrationVerified": false,
+      "publicationVerified": false,
+      "createdAt": "2026-10-12T14:18:10.086632+00:00",
+      "selectionStatus": "worker-passed-parent-review-pending",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png?t=0d58b8b1d287fd18",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+        "sha256": "0d58b8b1d287fd1855eaed0629a9525f5e8d1a27a6b0f097fb95682f09ff6315",
+        "bytes": 2992118,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:19:23.740785+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "bytes": 2992118,
+          "sha256": "0d58b8b1d287fd1855eaed0629a9525f5e8d1a27a6b0f097fb95682f09ff6315",
+          "byteExactReadback": true
+        }
+      },
+      "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png?t=0d58b8b1d287fd18",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+      "r2ByteExactVerified": true,
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-4-monteliusvagen-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/stockholm-worker/manifest.json"
+    },
+    {
+      "id": "stockholm-6-fika-cafe-display-v3",
+      "replaces": "stockholm-6-dalahast-city-v2",
+      "supersedesCandidates": [
+        "stockholm-6-kanelbulle-oven-v2",
+        "stockholm-6-fika-candid-city-v3"
+      ],
+      "taskId": "owner-food-shops-feedback-20261012",
+      "city": "stockholm",
+      "cityFi": "Tukholma",
+      "caption": "Kaneli- ja kardemummapullat ruotsalaisen fika-kahvilan myyntivitriinissä. Havainnekuva.",
+      "sourceInstruction": "voisi ennemmin näyttää jotain kahvilaa tai myymälää jossa ruoat olisivat kauniisti esillä. kaupunkia ei tarvitse näyttää",
+      "sourcePreviousInstruction": "ruokakuvat ovat edelleen päälle liimatun näköisiä",
+      "sourceAssignmentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/stockholm/assignment.json",
+      "sourceAssignmentSHA256": "de12aff67d7381107cca7310b2e2e8f2b7580108c54e35bb1a512776a6de3e1d",
+      "phaseSeparateFromOrder86": true,
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Swedish fika café interior illustration,1536x1024 opaque landscape.\nPrimary request: Photograph a welcoming ordinary SWEDISH FIKA CAFÉ with cinnamon/cardamom buns beautifully presented FOR SALE INSIDE ITS REAL GLASS DISPLAY COUNTER. Food is part of a believable physical café room, not a food foreground pasted over scenery. This replaces the former oven/hand/coffee/table ideas entirely.\nCamera and framing: Normal real-camera documentary interior photograph, eye level about1.6m,35mm full-frame perspective, photographer standing2–3METRES BACK from the sales counter. Medium-wide view includes the whole modest counter display as well as part of the wood-furnished café seating area beyond and beside it. Pastries are small to medium objects at middle distance, NOT giant sharp hero buns at the lens. No close-up food shot, overhead tabletop or close hands.\nSingle coherent room: A modest wood-fronted glass café vitrine stands naturally in the room with visible base, corners, shelf supports and plausible glass reflections. Inside it are a few plain commercial baking/display trays holding Swedish cinnamon and cardamom buns, neatly and professionally arranged with enough space to see their hand-shaped individual variation. Some are curled spirals, some gently twisted knots, visibly real baked golden-brown pastry with restrained coarse sugar. No cloned identical buns. All food sits physically ON the display shelves/trays behind glass at normal scale.\nEnvironment: Inviting ordinary Scandinavian café, simple warm wood counter, plain wooden café chairs and a few modest empty tables in the same physical room. Use restrained natural wood, pale plaster and small practical everyday interior details. Beautiful living commercial presentation is allowed, but it must look like an actual modest café rather than a styled studio set, luxury showroom or museum of props. No named designer furniture or recognisable modern design replica.\nLighting and optics: Natural daylight from an ordinary side window, softly illuminating counter, pastries and seating area together as ONE SINGLE CAMERA EXPOSURE. Show only simple light through the window; no city backdrop or landmark is required or desirable. Real moderate f/5.6 depth of field, believable perspective and proportional sharpness at each distance. Pastries behind the glass should have the same natural optical softness and light as their surroundings, with faint plausible reflections, not cut-out hyper-sharp foreground. No focus stacking, fake pasted background, cinematic HDR or plastic CGI.\nAvoid completely: No oven tray removal, hands presenting food, isolated forearms, big foreground pastries, plate arrangement, coffee-cup+serving-tray still life, Dala horse, toy or travel souvenir. No visible people or faces. NO text, letters, digits, menus, prices, labels, price tickets, signs, chalkboard lettering, logos, brand marks, packaging words, watermark or frame anywhere. Choose an angle that excludes all signage and register displays. No copyrighted contemporary artwork or modern designer copies. No painting or illustration. Preserve the entire1536x1024 opaque landscape.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Swedish fika café interior illustration,1536x1024 opaque landscape.\nPrimary request: Photograph a welcoming ordinary SWEDISH FIKA CAFÉ with cinnamon/cardamom buns beautifully presented FOR SALE INSIDE ITS REAL GLASS DISPLAY COUNTER. Food is part of a believable physical café room, not a food foreground pasted over scenery. This replaces the former oven/hand/coffee/table ideas entirely.\nCamera and framing: Normal real-camera documentary interior photograph, eye level about1.6m,35mm full-frame perspective, photographer standing2–3METRES BACK from the sales counter. Medium-wide view includes the whole modest counter display as well as part of the wood-furnished café seating area beyond and beside it. Pastries are small to medium objects at middle distance, NOT giant sharp hero buns at the lens. No close-up food shot, overhead tabletop or close hands.\nSingle coherent room: A modest wood-fronted glass café vitrine stands naturally in the room with visible base, corners, shelf supports and plausible glass reflections. Inside it are a few plain commercial baking/display trays holding Swedish cinnamon and cardamom buns, neatly and professionally arranged with enough space to see their hand-shaped individual variation. Some are curled spirals, some gently twisted knots, visibly real baked golden-brown pastry with restrained coarse sugar. No cloned identical buns. All food sits physically ON the display shelves/trays behind glass at normal scale.\nEnvironment: Inviting ordinary Scandinavian café, simple warm wood counter, plain wooden café chairs and a few modest empty tables in the same physical room. Use restrained natural wood, pale plaster and small practical everyday interior details. Beautiful living commercial presentation is allowed, but it must look like an actual modest café rather than a styled studio set, luxury showroom or museum of props. No named designer furniture or recognisable modern design replica.\nLighting and optics: Natural daylight from an ordinary side window, softly illuminating counter, pastries and seating area together as ONE SINGLE CAMERA EXPOSURE. Show only simple light through the window; no city backdrop or landmark is required or desirable. Real moderate f/5.6 depth of field, believable perspective and proportional sharpness at each distance. Pastries behind the glass should have the same natural optical softness and light as their surroundings, with faint plausible reflections, not cut-out hyper-sharp foreground. No focus stacking, fake pasted background, cinematic HDR or plastic CGI.\nAvoid completely: No oven tray removal, hands presenting food, isolated forearms, big foreground pastries, plate arrangement, coffee-cup+serving-tray still life, Dala horse, toy or travel souvenir. No visible people or faces. NO text, letters, digits, menus, prices, labels, price tickets, signs, chalkboard lettering, logos, brand marks, packaging words, watermark or frame anywhere. Choose an angle that excludes all signage and register displays. No copyrighted contemporary artwork or modern designer copies. No painting or illustration. Preserve the entire1536x1024 opaque landscape.",
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: completely NEW Matkakirja Swedish fika café interior illustration,1536x1024 opaque landscape.\nPrimary request: Photograph a welcoming ordinary SWEDISH FIKA CAFÉ with cinnamon/cardamom buns beautifully presented FOR SALE INSIDE ITS REAL GLASS DISPLAY COUNTER. Food is part of a believable physical café room, not a food foreground pasted over scenery. This replaces the former oven/hand/coffee/table ideas entirely.\nCamera and framing: Normal real-camera documentary interior photograph, eye level about1.6m,35mm full-frame perspective, photographer standing2–3METRES BACK from the sales counter. Medium-wide view includes the whole modest counter display as well as part of the wood-furnished café seating area beyond and beside it. Pastries are small to medium objects at middle distance, NOT giant sharp hero buns at the lens. No close-up food shot, overhead tabletop or close hands.\nSingle coherent room: A modest wood-fronted glass café vitrine stands naturally in the room with visible base, corners, shelf supports and plausible glass reflections. Inside it are a few plain commercial baking/display trays holding Swedish cinnamon and cardamom buns, neatly and professionally arranged with enough space to see their hand-shaped individual variation. Some are curled spirals, some gently twisted knots, visibly real baked golden-brown pastry with restrained coarse sugar. No cloned identical buns. All food sits physically ON the display shelves/trays behind glass at normal scale.\nEnvironment: Inviting ordinary Scandinavian café, simple warm wood counter, plain wooden café chairs and a few modest empty tables in the same physical room. Use restrained natural wood, pale plaster and small practical everyday interior details. Beautiful living commercial presentation is allowed, but it must look like an actual modest café rather than a styled studio set, luxury showroom or museum of props. No named designer furniture or recognisable modern design replica.\nLighting and optics: Natural daylight from an ordinary side window, softly illuminating counter, pastries and seating area together as ONE SINGLE CAMERA EXPOSURE. Show only simple light through the window; no city backdrop or landmark is required or desirable. Real moderate f/5.6 depth of field, believable perspective and proportional sharpness at each distance. Pastries behind the glass should have the same natural optical softness and light as their surroundings, with faint plausible reflections, not cut-out hyper-sharp foreground. No focus stacking, fake pasted background, cinematic HDR or plastic CGI.\nAvoid completely: No oven tray removal, hands presenting food, isolated forearms, big foreground pastries, plate arrangement, coffee-cup+serving-tray still life, Dala horse, toy or travel souvenir. No visible people or faces. NO text, letters, digits, menus, prices, labels, price tickets, signs, chalkboard lettering, logos, brand marks, packaging words, watermark or frame anywhere. Choose an angle that excludes all signage and register displays. No copyrighted contemporary artwork or modern designer copies. No painting or illustration. Preserve the entire1536x1024 opaque landscape.",
+          "transparent_background": false
+        }
+      },
+      "generationCallsForAsset": 1,
+      "generationOutputExecutionId": "c76f8c53-3ed3-444a-a287-5d89b3104ebb",
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Underlying request ID not exposed; actual output execution UUID and native path recorded.",
+      "builtinDefaultOutputPath": "/Users/samireivinen/.codex/generated_images/01a13027-00b0-7af1-b2e4-9b601509dd59/exec-c76f8c53-3ed3-444a-a287-5d89b3104ebb.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/stockholm/native/stockholm-6-fika-cafe-display-v3.png",
+      "nativeSHA256": "1ec5040094408dc7ebd78628621f302093586d47f97f3fa9360d55aecfac1f54",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/stockholm/final/stockholm-6-fika-cafe-display-v3.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/stockholm/final/stockholm-6-fika-cafe-display-v3.png",
+      "sha256": "9704684a0ccdc1980d25e1cd569272f8e4981ff0f000d12083936b40154cfb1e",
+      "bytes": 2310904,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "mode": "RGB",
+      "iccProfile": "sRGB",
+      "pixelsUnchanged": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "type": "direct-owner-instruction",
+          "text": "voisi ennemmin näyttää jotain kahvilaa tai myymälää jossa ruoat olisivat kauniisti esillä. kaupunkia ei tarvitse näyttää",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/stockholm/assignment.json"
+        }
+      ],
+      "references": [],
+      "referenceImagesPassed": [],
+      "workerQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "nativeCropsInspected": [
+          "food",
+          "glass",
+          "furniture",
+          "plants",
+          "wood"
+        ],
+        "samePhysicalRoom": true,
+        "middleDistanceFoodDisplay": true,
+        "plausibleGlassShelfAndTraySupports": true,
+        "naturalCoherentLightingAndDepth": true,
+        "foodNotPastedForeground": true,
+        "noTextPricesSignsOrLogoIdentified": true,
+        "peopleAbsent": true,
+        "noNamedDesignerCopiesIdentified": true,
+        "naturalWoodAndPlantTextures": true,
+        "notes": "Professional cinnamon/cardamom bun display on actual vitrine trays/shelves with glass frame/reflections and visible café seating/floor. Pastries remain proportional to the room and share its daylight/depth. Minor other anonymous baked goods in the vitrine do not alter the fika subject. No hands, oven, Dala horse, coffee-tray setup or city backdrop."
+      },
+      "ownerReviewPending": true,
+      "parentRootReviewPending": true,
+      "gameIntegrationVerified": false,
+      "publicationVerified": false,
+      "createdAt": "2026-10-12T14:23:44.231309+00:00",
+      "selectionStatus": "worker-passed-parent-review-pending",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/stockholm/20261012-v3/stockholm-6-fika-cafe-display-v3.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v3/stockholm-6-fika-cafe-display-v3.png?t=9704684a0ccdc198",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v3/stockholm-6-fika-cafe-display-v3.png",
+        "sha256": "9704684a0ccdc1980d25e1cd569272f8e4981ff0f000d12083936b40154cfb1e",
+        "bytes": 2310904,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:24:58.220088+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "bytes": 2310904,
+          "sha256": "9704684a0ccdc1980d25e1cd569272f8e4981ff0f000d12083936b40154cfb1e",
+          "byteExactReadback": true
+        }
+      },
+      "r2Key": "julisteet/saapumisintro/stockholm/20261012-v3/stockholm-6-fika-cafe-display-v3.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v3/stockholm-6-fika-cafe-display-v3.png?t=9704684a0ccdc198",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v3/stockholm-6-fika-cafe-display-v3.png",
+      "r2ByteExactVerified": true,
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v3/stockholm-6-fika-cafe-display-v3.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/stockholm/manifest.json"
+    },
+    {
+      "id": "stockholm-8-strommen-1873-bw-v2",
+      "replaces": "stockholm-8-strommen-1873",
+      "city": "stockholm",
+      "cityFi": "Tukholma",
+      "historical": true,
+      "caption": "Strömmen, Gamla stan ja Kuninkaanlinna vuonna 1873, mustavalkoinen historiallinen rekonstruktio. Havainnekuva.",
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: completely NEW Stockholm1873 arrival reconstruction, opaque1536x1024 landscape, PURE NEUTRAL BLACK AND WHITE PHOTOGRAPH.\nPrimary request: Generate a new photographic reconstruction of Strömmen, Gamla stan and the Royal Palace in STOCKHOLM IN THE EXACT YEAR1873. Entire output must be genuinely neutral monochrome: black, white and neutral grays ONLY, with equal R,G,B values everywhere. ZERO sepia, yellowing, brown, cyan, blue, warm-gray or color tint. Do not imitate an aged stained print or tinted paper. This is a newly generated scene, not a grayscale filter or recoloring of an existing image.\nCamera: Use precisely the same western Skeppsholmen waterfront eye-level direction as Image1, looking west-northwest, same50mm perspective and level horizon. Old-town waterfront runs horizontally across the middle. Massive Royal Palace is at far right. Water fills lower half, with diagonal near stone quay appearing only in bottom right.\nInput images: Image1 is my modern blue-hour illustration ONLY for camera/framing; NEVER copy any modern vessel, lamps, street fittings, electrical glow, roofs altered after1873 or present-day Tyska tower from it. Image2 is a native crop of Carl Johan Billmark's1868 Stadsmuseet lithograph: factual pre1873 old-town skyline and building-massing context ONLY. Do not copy lithograph style, aerial viewpoint, inscriptions, brown color, damaged paper, canvas or border. Historical constraints override all modern reference details.\nRequired1873 architecture: Dense old Skeppsbron merchant-house waterfront with compact1870s façades and pitched roofs. Low massive eighteenth-century Royal Palace east/southeast face at far right, stopping the frame there. Storkyrkan's pale square old tower behind northern roofs. Riddarholmskyrkan farther left BEHIND old-town roofs, with correct slender open cast-iron Gothic lattice needle, tiny corner pinnacles and partly occluded brick shaft; do not relocate it to the quay. If Tyska church is visible, it must be the smaller PRE1878 seventeenth-century timber/copper spire, largely lost among distant roofs as in1868 reference, NEVER today's much taller1880s tower.\nHarbour: Modest unmarked nineteenth-century steam passenger vessel with low hull, simple funnel, sparse smoke, period rigging and no modern enclosed ferry superstructure. Small working sailboat farther left and tiny wooden rowboat at distance. Near quay at bottom right has only a few ordinary closed timber crates and wooden barrels, with two tiny1870s dockworkers far along quay seen from behind, plain dark coats/trousers/caps, no distinguishable faces.\nPhotographic treatment: Real-camera-looking high-detail NEUTRAL BLACK AND WHITE reconstruction in soft daylight, photographic gray tonal separation, plausible old plaster and wood, irregular modest water ripples and reflections, light harbor haze. No drawing, lithograph, painting, illustration, CGI, embossed repetitive textures, heavy grain, HDR or fake antique paper.\nABSOLUTE1873 exclusions: NO City Hall/Stadshuset1923, Grand Hôtel, any Blasieholmen buildings, modern parliament, present-day tall Tyska spire, late nineteenth-century new towers, high-rise, automobiles, buses, motorcycles, modern ferry, motorboat, asphalt, electric streetlamps, wires, electric illumination, glowing windows, neon, illuminated sign, modern railing or contemporary bollard. Right edge stops at Royal Palace; no Blasieholmen. Daylight only, no lit gas or electric lamps. NO text, letters, signs, numbers, labels, logos, branded objects, watermark, frame, modern protected artwork or copied museum artifact. Photographic neutral grayscale only, entire1536x1024 composition.",
+      "prompt": "Use case: historical-scene.\nAsset type: completely NEW Stockholm1873 arrival reconstruction, opaque1536x1024 landscape, PURE NEUTRAL BLACK AND WHITE PHOTOGRAPH.\nPrimary request: Generate a new photographic reconstruction of Strömmen, Gamla stan and the Royal Palace in STOCKHOLM IN THE EXACT YEAR1873. Entire output must be genuinely neutral monochrome: black, white and neutral grays ONLY, with equal R,G,B values everywhere. ZERO sepia, yellowing, brown, cyan, blue, warm-gray or color tint. Do not imitate an aged stained print or tinted paper. This is a newly generated scene, not a grayscale filter or recoloring of an existing image.\nCamera: Use precisely the same western Skeppsholmen waterfront eye-level direction as Image1, looking west-northwest, same50mm perspective and level horizon. Old-town waterfront runs horizontally across the middle. Massive Royal Palace is at far right. Water fills lower half, with diagonal near stone quay appearing only in bottom right.\nInput images: Image1 is my modern blue-hour illustration ONLY for camera/framing; NEVER copy any modern vessel, lamps, street fittings, electrical glow, roofs altered after1873 or present-day Tyska tower from it. Image2 is a native crop of Carl Johan Billmark's1868 Stadsmuseet lithograph: factual pre1873 old-town skyline and building-massing context ONLY. Do not copy lithograph style, aerial viewpoint, inscriptions, brown color, damaged paper, canvas or border. Historical constraints override all modern reference details.\nRequired1873 architecture: Dense old Skeppsbron merchant-house waterfront with compact1870s façades and pitched roofs. Low massive eighteenth-century Royal Palace east/southeast face at far right, stopping the frame there. Storkyrkan's pale square old tower behind northern roofs. Riddarholmskyrkan farther left BEHIND old-town roofs, with correct slender open cast-iron Gothic lattice needle, tiny corner pinnacles and partly occluded brick shaft; do not relocate it to the quay. If Tyska church is visible, it must be the smaller PRE1878 seventeenth-century timber/copper spire, largely lost among distant roofs as in1868 reference, NEVER today's much taller1880s tower.\nHarbour: Modest unmarked nineteenth-century steam passenger vessel with low hull, simple funnel, sparse smoke, period rigging and no modern enclosed ferry superstructure. Small working sailboat farther left and tiny wooden rowboat at distance. Near quay at bottom right has only a few ordinary closed timber crates and wooden barrels, with two tiny1870s dockworkers far along quay seen from behind, plain dark coats/trousers/caps, no distinguishable faces.\nPhotographic treatment: Real-camera-looking high-detail NEUTRAL BLACK AND WHITE reconstruction in soft daylight, photographic gray tonal separation, plausible old plaster and wood, irregular modest water ripples and reflections, light harbor haze. No drawing, lithograph, painting, illustration, CGI, embossed repetitive textures, heavy grain, HDR or fake antique paper.\nABSOLUTE1873 exclusions: NO City Hall/Stadshuset1923, Grand Hôtel, any Blasieholmen buildings, modern parliament, present-day tall Tyska spire, late nineteenth-century new towers, high-rise, automobiles, buses, motorcycles, modern ferry, motorboat, asphalt, electric streetlamps, wires, electric illumination, glowing windows, neon, illuminated sign, modern railing or contemporary bollard. Right edge stops at Royal Palace; no Blasieholmen. Daylight only, no lit gas or electric lamps. NO text, letters, signs, numbers, labels, logos, branded objects, watermark, frame, modern protected artwork or copied museum artifact. Photographic neutral grayscale only, entire1536x1024 composition.",
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: historical-scene.\nAsset type: completely NEW Stockholm1873 arrival reconstruction, opaque1536x1024 landscape, PURE NEUTRAL BLACK AND WHITE PHOTOGRAPH.\nPrimary request: Generate a new photographic reconstruction of Strömmen, Gamla stan and the Royal Palace in STOCKHOLM IN THE EXACT YEAR1873. Entire output must be genuinely neutral monochrome: black, white and neutral grays ONLY, with equal R,G,B values everywhere. ZERO sepia, yellowing, brown, cyan, blue, warm-gray or color tint. Do not imitate an aged stained print or tinted paper. This is a newly generated scene, not a grayscale filter or recoloring of an existing image.\nCamera: Use precisely the same western Skeppsholmen waterfront eye-level direction as Image1, looking west-northwest, same50mm perspective and level horizon. Old-town waterfront runs horizontally across the middle. Massive Royal Palace is at far right. Water fills lower half, with diagonal near stone quay appearing only in bottom right.\nInput images: Image1 is my modern blue-hour illustration ONLY for camera/framing; NEVER copy any modern vessel, lamps, street fittings, electrical glow, roofs altered after1873 or present-day Tyska tower from it. Image2 is a native crop of Carl Johan Billmark's1868 Stadsmuseet lithograph: factual pre1873 old-town skyline and building-massing context ONLY. Do not copy lithograph style, aerial viewpoint, inscriptions, brown color, damaged paper, canvas or border. Historical constraints override all modern reference details.\nRequired1873 architecture: Dense old Skeppsbron merchant-house waterfront with compact1870s façades and pitched roofs. Low massive eighteenth-century Royal Palace east/southeast face at far right, stopping the frame there. Storkyrkan's pale square old tower behind northern roofs. Riddarholmskyrkan farther left BEHIND old-town roofs, with correct slender open cast-iron Gothic lattice needle, tiny corner pinnacles and partly occluded brick shaft; do not relocate it to the quay. If Tyska church is visible, it must be the smaller PRE1878 seventeenth-century timber/copper spire, largely lost among distant roofs as in1868 reference, NEVER today's much taller1880s tower.\nHarbour: Modest unmarked nineteenth-century steam passenger vessel with low hull, simple funnel, sparse smoke, period rigging and no modern enclosed ferry superstructure. Small working sailboat farther left and tiny wooden rowboat at distance. Near quay at bottom right has only a few ordinary closed timber crates and wooden barrels, with two tiny1870s dockworkers far along quay seen from behind, plain dark coats/trousers/caps, no distinguishable faces.\nPhotographic treatment: Real-camera-looking high-detail NEUTRAL BLACK AND WHITE reconstruction in soft daylight, photographic gray tonal separation, plausible old plaster and wood, irregular modest water ripples and reflections, light harbor haze. No drawing, lithograph, painting, illustration, CGI, embossed repetitive textures, heavy grain, HDR or fake antique paper.\nABSOLUTE1873 exclusions: NO City Hall/Stadshuset1923, Grand Hôtel, any Blasieholmen buildings, modern parliament, present-day tall Tyska spire, late nineteenth-century new towers, high-rise, automobiles, buses, motorcycles, modern ferry, motorboat, asphalt, electric streetlamps, wires, electric illumination, glowing windows, neon, illuminated sign, modern railing or contemporary bollard. Right edge stops at Royal Palace; no Blasieholmen. Daylight only, no lit gas or electric lamps. NO text, letters, signs, numbers, labels, logos, branded objects, watermark, frame, modern protected artwork or copied museum artifact. Photographic neutral grayscale only, entire1536x1024 composition.",
+          "transparent_background": false,
+          "referenced_image_paths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/final/stockholm-7-strommen-soir.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/references/billmark-oldtown-inspection.png"
+          ]
+        }
+      },
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Underlying tool request ID not exposed; actual output execution UUID and native path preserved.",
+      "generationOutputExecutionId": "fe9e8dc0-a9f5-46f3-a636-5d341214372f",
+      "generationCallsForAsset": 1,
+      "builtinDefaultOutputPath": "/Users/samireivinen/.codex/generated_images/01a13027-00b0-7af1-b2e4-9b601509dd59/exec-fe9e8dc0-a9f5-46f3-a636-5d341214372f.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/native/stockholm-8-strommen-1873-bw-v2.png",
+      "nativeSHA256": "0151414d054688355884e8134b64939485f19c6954199ad1f0f923063efa0a93",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/final/stockholm-8-strommen-1873-bw-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/final/stockholm-8-strommen-1873-bw-v2.png",
+      "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+      "bytes": 2138527,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "mode": "RGB",
+      "iccProfile": "sRGB",
+      "pixelsUnchanged": true,
+      "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "chromaMeasurement": {
+        "definition": "per pixel max(R,G,B)-min(R,G,B); unaltered generated pixels",
+        "maxChannelSpan": 9,
+        "meanChannelSpan": 0.8533293406168619,
+        "equalRGBFraction": 0.333981196085612,
+        "spanAtMost1Fraction": 0.8426926930745443,
+        "spanAtMost3Fraction": 0.9958120981852213,
+        "RGBMeans": [
+          148.76673952738443,
+          148.4062410990397,
+          148.4490737915039
+        ],
+        "exactNeutralMonochrome": false,
+        "noLocalGrayscaleConversion": true
+      },
+      "sources": [
+        {
+          "label": "Panorama över Stockholm på 1860-talet (Fogelvue över Stockholm)",
+          "url": "https://stockholmskallan.stockholm.se/post/33295"
+        },
+        {
+          "label": "Riddarholmskyrkan",
+          "url": "https://www.sfv.se/vara-fastigheter/sverige/stockholms-lan/riddarholmen/riddarholms-kyrkan"
+        },
+        {
+          "label": "History – The Royal Palace",
+          "url": "https://www.kungligaslotten.se/english/royal-palaces-and-sites/the-royal-palace/history.html"
+        },
+        {
+          "label": "Stadshusets invigning",
+          "url": "https://stadshuset.stockholm/utforska-stadshuset/stadshusets-historia/stadshusets-invigning/"
+        },
+        {
+          "label": "14 juni på Grand Hôtel",
+          "url": "https://grandhotel.se/14-juni-pa-grand-hotel"
+        },
+        {
+          "label": "Tyska S:ta Gertruds kyrka",
+          "url": "https://www.svenskakyrkan.se/Sve/Bin%C3%A4rfiler/Filer/C066B8F8-94F9-4CBE-B77F-1FEF4BAAFFDA.pdf"
+        }
+      ],
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/final/stockholm-7-strommen-soir.png",
+          "role": "Image1: previously generated modern camera/framing reference ONLY; no modern detail authority",
+          "license": "Own previous AI illustrative candidate",
+          "sourceURL": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-7-strommen-soir.png",
+          "passedToGeneration": true,
+          "viewedBeforeUse": true
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/references/billmark-oldtown-inspection.png",
+          "role": "Image2: native crop of Billmark1868 lithograph, skyline/massing facts ONLY; not composition/artistic style/colour",
+          "license": "CC-BY as stated by collection; artist died1870; source credits retained",
+          "author": "Carl Johan Billmark (1804–1870)",
+          "title": "Panorama över Stockholm på1860-talet (Fogelvue över Stockholm)",
+          "date": 1868,
+          "collection": "Stadsmuseet",
+          "sourceURL": "https://stockholmskallan.stockholm.se/post/33295",
+          "passedToGeneration": true,
+          "viewedBeforeUse": true,
+          "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/references/stockholmskallan-33295-1868.jpg",
+          "originalSHA256": "d315b4f98e95b0ef5e86ad36863fe4970b7a4fed65ab9edceadf49e38f1ec6b1"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/stockholm/references/sfv-riddarholmskyrkan-inspection.jpg",
+          "role": "Factual spire morphology inspection only; not supplied to generation",
+          "license": "No reuse licence asserted; inspection only",
+          "author": "Alexandru Babos",
+          "sourceURL": "https://www.sfv.se/vara-fastigheter/sverige/stockholms-lan/riddarholmen/riddarholms-kyrkan",
+          "passedToGeneration": false,
+          "viewedBeforeUse": true
+        }
+      ],
+      "workerQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "nativeCropsInspected": [
+          "lower",
+          "skyline",
+          "steamship",
+          "spire",
+          "cargo"
+        ],
+        "photorealistic": true,
+        "historicalConstraintsReviewed": true,
+        "noVisibleTextOrModernObjectsIdentified": true,
+        "neutralMonochromeVisualReview": true,
+        "noSepiaOrVisibleColourCast": true,
+        "chromaMeasurementRecordedWithoutEditing": true,
+        "bitExactNeutralRGB": false,
+        "chromaLimitNote": "Visually neutral; tiny generated RGB channel variation remains and is fully recorded, no local grayscale conversion. Parent decides final chroma acceptance.",
+        "observations": "Same western Skeppsholmen direction as modern framing reference. Low RoyalPalace on right; slender Gothic lattice spire behind old town, pale Storkyrkan tower; small far-left pre1878Tyska-like spire rather than tall modern tower. Period-looking low steamship, sail/rowing boats, workers from behind; no modern electrical or motor objects identified. Rough crates, barrels and water look naturally varied."
+      },
+      "createdAt": "2026-10-12T14:01:36.388015+00:00",
+      "ownerReviewPending": true,
+      "gameIntegrationVerified": false,
+      "publicationVerified": false,
+      "selectionStatus": "worker-passed-parent-review-pending",
+      "sharedWithOrder86WithoutDuplicateGeneration": true,
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png?t=e3a15cece00fefec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+        "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+        "bytes": 2138527,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:30:10.225226+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+          "bytes": 2138527,
+          "byteExactReadback": true
+        }
+      },
+      "r2Key": "julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png?t=e3a15cece00fefec",
+      "r2ByteExactVerified": true,
+      "previousR2OwnerFeedbackDelivery": {
+        "r2Key": "julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png?t=e3a15cece00fefec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012/stockholm-8-strommen-1873-bw-v2.png",
+        "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+        "bytes": 2138527,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:04:50.110844+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "bytes": 2138527,
+          "sha256": "e3a15cece00fefec3b276085a44e154e0c9155979667f5425ce0defdbe258b64",
+          "byteExactReadback": true
+        }
+      },
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "rootReviewedForOwnerPreview": true,
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261012-v2/stockholm-8-strommen-1873-bw-v2.png",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/stockholm-tunis/manifest.json"
+    }
+  ],
+  "currentNewCityAssets": 3,
+  "retainedAcceptedExistingOtherPilotIDs": [
+    "stockholm-5-djurgarden-kanava",
+    "stockholm-7-strommen-soir"
+  ],
+  "allCurrentNewAssetsR2ByteVerified": true,
+  "rootWholeAndNativeReviewPassedForOwnerReview": true,
+  "reviewSite": {
+    "status": "succeeded",
+    "project_id": "appgprj_6a95d7decd848191b2ee8a680b8c8263",
+    "version_id": "appgprj_6a95d7decd848191b2ee8a680b8c8263~appgver_59f6053b7cf881919c842f43df4968cb",
+    "deployment_id": "appgdep_6accf114da348191a330b2bb1079b47d",
+    "source_commit": "d0ad6ca9556a38a63107e8ab230d51030642205f",
+    "archive": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/food-shop-review-20261012/site-deploy.tar.gz",
+    "updated_at": "2026-10-12T14:39:47.741989+00:00",
+    "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site",
+    "reviewURL": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site?category=havainnekuvat-20261012",
+    "audience": "existing owner-private custom audience preserved",
+    "nativeSuccessVerified": true
+  },
+  "ownerAcceptanceVerified": false,
+  "editorAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "gamePublished": false,
+  "remaining210WaitingForOwnerPilotAcceptance": true,
+  "createdAt": "2026-10-12T14:43:23.587757+00:00"
+}

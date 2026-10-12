@@ -1,0 +1,487 @@
+{
+  "taskNumbers": [
+    86,
+    87
+  ],
+  "city": "athens",
+  "source86": {
+    "taskNumber": 86,
+    "taskId": "pilotin80korjaus",
+    "receivedAt": "2026-10-12T13:59:14.814692+00:00",
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+    "sourceCommit": "12a76cb745373a5c352c7d5ad7f723660d43df86",
+    "sourceBlob": "b3b54728c303d893cd0bdb0d1df16cf6ac6bf463",
+    "sourceSHA256": "f0d9964a17cd15a314d6230aca9eaa0b8e1e4c8df1fbf888eeeab7c175ed167c",
+    "sourceReadInFull": true,
+    "productionStarted": false,
+    "maximumGenerationCalls": 9,
+    "oneCallPerSubject": true,
+    "additionalVariantsAllowed": false,
+    "sourceSupersedesOldExcludedDecision": true,
+    "sixOtherPilotDeliveriesRetained": true,
+    "remaining210WaitForOwner": true,
+    "gameIntegrated": false,
+    "published": false,
+    "mailboxDeliveryConfirmed": false
+  },
+  "source87": {
+    "taskNumber": 87,
+    "correctsTaskNumber": 86,
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+    "sourceCommit": "c68cb436bebec63456d5add1254c1ced1eb3e377",
+    "sourceBlob": "4d89af370541cb8ec8dca5c33645e37631d7db13",
+    "sourceSHA256": "7679afb03d11c126f177910b48dd54d9512bad92d6c2b537f40d51cec6467bf8",
+    "sourceReadInFull": true,
+    "receivedAt": "2026-10-12T14:27:57.781661+00:00",
+    "application": "Applied to existing direct human food-shop workers; no historical/city subjects rerun. Paris/Stockholm already aligned. Athens latest subject specifically Greek bakery not souvlaki store, one new source-aligned subject needed.",
+    "standaloneDuplicateQueueCreated": false,
+    "original86PhaseActualCalls": 9,
+    "latestHumanShopPhaseInitialCalls": 5,
+    "laterRequiredCorrectionsObservedOrAuthorized": 3,
+    "neverClaimCombinedCallsWithinNine": true,
+    "effective87SubjectCoverage": "six retained history/city subjects plus three latest shop-food subjects; original discarded food candidates preserved and actual generation calls tracked separately",
+    "reviewSitePublished": false,
+    "gameIntegrated": false,
+    "mailboxDeliveryConfirmed": false
+  },
+  "latestHumanInstructionApplied": true,
+  "foodCityBackdropRequired": false,
+  "foodStyle": "cafe/bakery/shop interiors with naturally integrated beautiful food displays",
+  "original86PhaseActualCalls": 9,
+  "laterHumanFoodShopPhaseActualCalls": 8,
+  "allUniqueBuiltinCallsAcrossChangingThisTurnBriefs": 26,
+  "assets": [
+    {
+      "id": "athens-6-koulouri-bakery-display-v4",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "replacementRole": "Athens arrival food image6; latest87 cafe-bakery topic",
+      "caption": "Koulouri-seesamikiehkurat ja bougatsa kreikkalaisen kahvila-leipomon tiskissä. Havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival food illustration, ONE entirely new1536 x1024 opaque RGB landscape camera photograph.\nPrimary request: a small Greek CAFE-BAKERY interior with sesame-covered koulouri bread rings in woven baskets and bougatsa pastries in a sweets display case. This is an inviting ordinary bakery, not a lunch shop or taverna. Show the room and its actual bakery counter in one coherent real-camera exposure.\nComposition/viewpoint: customer standing INSIDE the cafe-bakery about2.5–3metres from the display counter, eye level, slightly sideways, normal38mm lens. A modest pale natural-stone counter, a low rectangular glass pastry case, visible counter base, simple cream-plaster walls, warm plain shelves and some open floor create a believable physical room. Food remains at middle distance INSIDE or ON the real counter, small relative to the whole scene, not a huge close foreground product. Counter, baskets, case and room must all share one physically coherent perspective, scale and lighting.\nGreek bakery food: two ordinary shallow woven baskets at counter height hold several traditional koulouri: relatively thin circular golden bread rings with generous open centers and naturally irregular sesame seeds, not thick American bagels. The rings are attractively stacked for bakery service. Beside them, the low glass pastry display case contains golden flaky bougatsa in rectangular pieces, thin folded filo layers with a modest pale custard filling visible at a few cut edges, lightly dusted with powdered sugar. A few simple bakery sweets may sit farther inside the case. Food looks fresh and professionally cared for as part of the real cafe-bakery display, with ordinary tray supports and glass reflections, not a decorative table still life. Keep ring bread and bougatsa clearly readable without impossible macro sharpness.\nLighting/style: warm natural window light entering from the side, supplemented by restrained warm indoor light; no city visible through windows (soft diffuse glass or interior reflection only). True-to-life white balance and one camera exposure over the whole room and food. Natural moderate/deep focus, normal optical softness toward the back, no focus-stacked edge-to-edge detail. Subtle pale-stone veining, irregular crust/flakes/seeds, believable basket weave, restrained glass glare, natural shadows. Cozy honest documentary bakery photography, no HDR, cinema grading, waxy CGI, pasted foreground cutouts or overly glossy food-ad styling.\nStrict constraints: no people, faces, hands or kitchen-in-use action. No grill, meat skewers, gyros rotisserie, salads, taverna interior or food hero in the foreground. No staged cup-and-tray arrangement. NO text, Greek letters, numbers, menus, signs, price tags, paper labels, bakery name, logos, branding on any machine or packaging, poster, watermark or border anywhere. No protected modern artwork or recognizable named designer furniture. No street, square, bridge, city facade or added background layer. Produce the entire new scene from scratch, not a correction of existing pixels or a recoloring.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival food illustration, ONE entirely new1536 x1024 opaque RGB landscape camera photograph.\nPrimary request: a small Greek CAFE-BAKERY interior with sesame-covered koulouri bread rings in woven baskets and bougatsa pastries in a sweets display case. This is an inviting ordinary bakery, not a lunch shop or taverna. Show the room and its actual bakery counter in one coherent real-camera exposure.\nComposition/viewpoint: customer standing INSIDE the cafe-bakery about2.5–3metres from the display counter, eye level, slightly sideways, normal38mm lens. A modest pale natural-stone counter, a low rectangular glass pastry case, visible counter base, simple cream-plaster walls, warm plain shelves and some open floor create a believable physical room. Food remains at middle distance INSIDE or ON the real counter, small relative to the whole scene, not a huge close foreground product. Counter, baskets, case and room must all share one physically coherent perspective, scale and lighting.\nGreek bakery food: two ordinary shallow woven baskets at counter height hold several traditional koulouri: relatively thin circular golden bread rings with generous open centers and naturally irregular sesame seeds, not thick American bagels. The rings are attractively stacked for bakery service. Beside them, the low glass pastry display case contains golden flaky bougatsa in rectangular pieces, thin folded filo layers with a modest pale custard filling visible at a few cut edges, lightly dusted with powdered sugar. A few simple bakery sweets may sit farther inside the case. Food looks fresh and professionally cared for as part of the real cafe-bakery display, with ordinary tray supports and glass reflections, not a decorative table still life. Keep ring bread and bougatsa clearly readable without impossible macro sharpness.\nLighting/style: warm natural window light entering from the side, supplemented by restrained warm indoor light; no city visible through windows (soft diffuse glass or interior reflection only). True-to-life white balance and one camera exposure over the whole room and food. Natural moderate/deep focus, normal optical softness toward the back, no focus-stacked edge-to-edge detail. Subtle pale-stone veining, irregular crust/flakes/seeds, believable basket weave, restrained glass glare, natural shadows. Cozy honest documentary bakery photography, no HDR, cinema grading, waxy CGI, pasted foreground cutouts or overly glossy food-ad styling.\nStrict constraints: no people, faces, hands or kitchen-in-use action. No grill, meat skewers, gyros rotisserie, salads, taverna interior or food hero in the foreground. No staged cup-and-tray arrangement. NO text, Greek letters, numbers, menus, signs, price tags, paper labels, bakery name, logos, branding on any machine or packaging, poster, watermark or border anywhere. No protected modern artwork or recognizable named designer furniture. No street, square, bridge, city facade or added background layer. Produce the entire new scene from scratch, not a correction of existing pixels or a recoloring.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-8e62b40e-954d-4125-b20c-a361b85baab6.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/athens/raw/athens-6-koulouri-bakery-display-v4.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/athens/final/athens-6-koulouri-bakery-display-v4.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/athens/final/athens-6-koulouri-bakery-display-v4.png",
+      "sha256": "b82a505960931864dd7bd74f43b6bf06ad0149c56abbde5305cd4c069d97cc13",
+      "rawSHA256": "fa8d8d96a8c7cf9192607e71cb491a5971f7d1f1cb6e516dc484d235e59ab443",
+      "bytes": 2295246,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "type": "Latest pinned feedback87 source; full file read",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/athens/sources/source-87-c68cb436.md",
+          "commit": "c68cb436bebec63456d5add1254c1ced1eb3e377",
+          "blob": "4d89af370541cb8ec8dca5c33645e37631d7db13",
+          "sha256": "7679afb03d11c126f177910b48dd54d9512bad92d6c2b537f40d51cec6467bf8",
+          "fullSourceRead": true,
+          "subject": "Athens6 cafe-bakery: koulouri rings in basket, bougatsa/sweets display, warm interior light, no taverna"
+        },
+        {
+          "title": "Traditional Athenian Bakeries You Must Try",
+          "url": "https://www.thisisathens.org/cafes-bakeries/best-traditional-bakeries",
+          "publisher": "Official Athens Guide",
+          "role": "Primary textual food context: koulouri are sesame-covered bread rings; no source image passed"
+        }
+      ],
+      "references": [],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "actualRequest": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival food illustration, ONE entirely new1536 x1024 opaque RGB landscape camera photograph.\nPrimary request: a small Greek CAFE-BAKERY interior with sesame-covered koulouri bread rings in woven baskets and bougatsa pastries in a sweets display case. This is an inviting ordinary bakery, not a lunch shop or taverna. Show the room and its actual bakery counter in one coherent real-camera exposure.\nComposition/viewpoint: customer standing INSIDE the cafe-bakery about2.5–3metres from the display counter, eye level, slightly sideways, normal38mm lens. A modest pale natural-stone counter, a low rectangular glass pastry case, visible counter base, simple cream-plaster walls, warm plain shelves and some open floor create a believable physical room. Food remains at middle distance INSIDE or ON the real counter, small relative to the whole scene, not a huge close foreground product. Counter, baskets, case and room must all share one physically coherent perspective, scale and lighting.\nGreek bakery food: two ordinary shallow woven baskets at counter height hold several traditional koulouri: relatively thin circular golden bread rings with generous open centers and naturally irregular sesame seeds, not thick American bagels. The rings are attractively stacked for bakery service. Beside them, the low glass pastry display case contains golden flaky bougatsa in rectangular pieces, thin folded filo layers with a modest pale custard filling visible at a few cut edges, lightly dusted with powdered sugar. A few simple bakery sweets may sit farther inside the case. Food looks fresh and professionally cared for as part of the real cafe-bakery display, with ordinary tray supports and glass reflections, not a decorative table still life. Keep ring bread and bougatsa clearly readable without impossible macro sharpness.\nLighting/style: warm natural window light entering from the side, supplemented by restrained warm indoor light; no city visible through windows (soft diffuse glass or interior reflection only). True-to-life white balance and one camera exposure over the whole room and food. Natural moderate/deep focus, normal optical softness toward the back, no focus-stacked edge-to-edge detail. Subtle pale-stone veining, irregular crust/flakes/seeds, believable basket weave, restrained glass glare, natural shadows. Cozy honest documentary bakery photography, no HDR, cinema grading, waxy CGI, pasted foreground cutouts or overly glossy food-ad styling.\nStrict constraints: no people, faces, hands or kitchen-in-use action. No grill, meat skewers, gyros rotisserie, salads, taverna interior or food hero in the foreground. No staged cup-and-tray arrangement. NO text, Greek letters, numbers, menus, signs, price tags, paper labels, bakery name, logos, branding on any machine or packaging, poster, watermark or border anywhere. No protected modern artwork or recognizable named designer furniture. No street, square, bridge, city facade or added background layer. Produce the entire new scene from scratch, not a correction of existing pixels or a recoloring.",
+          "transparent_background": false
+        },
+        "executionUUID": "8e62b40e-954d-4125-b20c-a361b85baab6",
+        "inputImageCount": 0,
+        "wholeNewGeneration": true,
+        "newSource87SubjectCorrection": true,
+        "notDuplicateRouting": true,
+        "nativeCopyByteExact": true,
+        "pixelsUnchangedFromNative": true,
+        "creativePixelEditsPerformed": false,
+        "noImageAPIOrRunwayUsed": true
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/bakery-koulouri-baskets.png",
+          "qa/bakery-bougatsa-case.png",
+          "qa/bakery-room-olive.png",
+          "qa/bakery-counter-stone.png",
+          "qa/bakery-window.png"
+        ],
+        "passedForOwnerReview": true,
+        "roomFoodIntegrationPassed": true,
+        "photorealismPassed": true,
+        "organicTexturePassed": true,
+        "noTextOrSignsObserved": true,
+        "noFacesOrPeopleObserved": true,
+        "latestBakerySubjectPassed": true,
+        "noCityViewObserved": true,
+        "observations": [
+          "Cafe-bakery front interior, pale natural-stone counter with two sesame-covered ring-bread baskets and glass bougatsa/sweets case",
+          "Koulouri, pastries, basket reflection, glass edges and counter supports share one room perspective and illumination",
+          "Warm window/interior light, natural optical softness toward back; no isolated front hero food or pasted city background",
+          "Native sesame, bread crust, pastry surface, leaves, stone texture and glass reflections inspected; no stamped organic defect established",
+          "No grill, gyro rotisserie, souvlaki tray, salads, taverna kitchen, people, labels, price cards or recognizable brands",
+          "Window is diffused/soft; no readable street or city panorama"
+        ],
+        "limits": [
+          "Anonymous illustrative cafe-bakery, not a real surveyed address or recipe-certification photograph; owner aesthetic approval pending"
+        ]
+      },
+      "rootReviewPending": true,
+      "selected": true,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v4/athens-6-koulouri-bakery-display-v4.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v4/athens-6-koulouri-bakery-display-v4.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v4/athens-6-koulouri-bakery-display-v4.png?t=b82a505960931864",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v4/athens-6-koulouri-bakery-display-v4.png",
+        "sha256": "b82a505960931864dd7bd74f43b6bf06ad0149c56abbde5305cd4c069d97cc13",
+        "bytes": 2295246,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v4/athens-6-koulouri-bakery-display-v4.png?t=b82a505960931864",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v4/athens-6-koulouri-bakery-display-v4.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "b82a505960931864dd7bd74f43b6bf06ad0149c56abbde5305cd4c069d97cc13",
+        "bytes": 2295246,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T14:31:48.270571+00:00"
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v4/athens-6-koulouri-bakery-display-v4.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/athens/manifest.json"
+    },
+    {
+      "id": "athens-7-lycabettus-rooftops-v2",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "replaces": "athens-7-akropolis-soir",
+      "caption": "Ateenan katot sinisellä hetkellä Lykavittos-kukkulalta; Akropolis kaukana kuvan reunassa. Havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens evening-city arrival illustration, ONE completely NEW opaque landscape photograph,1536 x 1024.\nPrimary request: the rooftops and lights of present-day Athens at BLUE HOUR, seen downhill from a pine-covered path/slope of Lycabettus Hill, with no people.\nCorrect viewpoint: Lycabettus lies NORTHEAST of the Acropolis. Camera is on Lycabettus looking outward SOUTH/SOUTHWEST across the city from appreciably higher and further away than the Acropolis. A wide carpet of pale Athens residential blocks and rooftops fills the valley below. The Acropolis rock is a SMALL DISTANT warm-lit feature near the RIGHT EDGE of the frame, not a close dominant rock. From this northeast-side vantage the distant Parthenon shows a coherent northeast/eastward perspective rather than a southwest Philopappou facade. Keep its roofless ancient columns small at this distance; no scaffolding. Do not show Lycabettus itself as a separate distant hill because the photographer is standing on it. This is NOT an Areopagus or southwest Philopappou view.\nComposition: a few sparse natural pine branches and rocky slope edge occupy the immediate lower/left foreground; the broad white/cream city rooftops, ordinary balconies and some warm window lights below are the main subject. They recede naturally toward a quiet distant horizon under a blue evening sky. Acropolis illumination is simple subdued generic warm light, not a reproduction of any named modern lighting show or designed light installation. No recognisable modern signature landmark or protected modern artwork is featured.\nCamera/style: an authentic35mm travel photograph from standing eye height on the slope, coherent perspective and city scale, sensible optical softness at long distance. Cool blue-hour ambient light mixed with gentle warm ordinary windows, restrained color and contrast, plausible low-light exposure without extreme glowing yellow lighting. Real irregular pine needles, branches, bark and rock; buildings varied, not repeating stamp rows. Documentary photography, no dramatic fantasy skyline, cinematic HDR, hyper-detailed miniature city or painterly CGI.\nStrict constraints: no people, identifiable faces, text, Greek letters, numbers, advertisements, restaurant signs, logos, branded rooftop equipment, billboards, watermarks or frame. No visible Parthenon scaffolding, no giant foreground Acropolis, invented towers or extra temples. No collage or use of old image pixels. Keep city and skyline legible, not abstract bokeh.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-db25e255-e837-4397-a63b-9d0798a91b64.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/raw/athens-7-lycabettus-rooftops-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "candidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/final/athens-7-lycabettus-rooftops-v2.png",
+      "rawSHA256": "f8f58e453a1ef25ee23a33250543567b2e6a0e5c44907f334bd3258429264324",
+      "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+      "bytes": 2769797,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "title": "Lycabettus Hill",
+          "url": "https://www.thisisathens.org/sights/lycabettus-hill",
+          "publisher": "Official Athens Guide",
+          "role": "Lycabettus elevated city panorama; read live12Oct2026"
+        },
+        {
+          "title": "Great City Walks to do in Athens",
+          "url": "https://www.thisisathens.org/activities/sports-outdoors/city-walks",
+          "publisher": "Official Athens Guide",
+          "role": "Lycabettus northeast of Acropolis and paths through pine/cypress/eucalyptus; read live12Oct2026"
+        },
+        {
+          "title": "Pinned feedback86",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/source.md",
+          "commit": "12a76cb745373a5c352c7d5ad7f723660d43df86",
+          "blob": "b3b54728c303d893cd0bdb0d1df16cf6ac6bf463",
+          "role": "Exact blue-hour rooftop city from Lycabettus slope, small warm-lit Acropolis at frame edge"
+        }
+      ],
+      "references": [],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "db25e255-e837-4397-a63b-9d0798a91b64",
+        "actualRequest": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens evening-city arrival illustration, ONE completely NEW opaque landscape photograph,1536 x 1024.\nPrimary request: the rooftops and lights of present-day Athens at BLUE HOUR, seen downhill from a pine-covered path/slope of Lycabettus Hill, with no people.\nCorrect viewpoint: Lycabettus lies NORTHEAST of the Acropolis. Camera is on Lycabettus looking outward SOUTH/SOUTHWEST across the city from appreciably higher and further away than the Acropolis. A wide carpet of pale Athens residential blocks and rooftops fills the valley below. The Acropolis rock is a SMALL DISTANT warm-lit feature near the RIGHT EDGE of the frame, not a close dominant rock. From this northeast-side vantage the distant Parthenon shows a coherent northeast/eastward perspective rather than a southwest Philopappou facade. Keep its roofless ancient columns small at this distance; no scaffolding. Do not show Lycabettus itself as a separate distant hill because the photographer is standing on it. This is NOT an Areopagus or southwest Philopappou view.\nComposition: a few sparse natural pine branches and rocky slope edge occupy the immediate lower/left foreground; the broad white/cream city rooftops, ordinary balconies and some warm window lights below are the main subject. They recede naturally toward a quiet distant horizon under a blue evening sky. Acropolis illumination is simple subdued generic warm light, not a reproduction of any named modern lighting show or designed light installation. No recognisable modern signature landmark or protected modern artwork is featured.\nCamera/style: an authentic35mm travel photograph from standing eye height on the slope, coherent perspective and city scale, sensible optical softness at long distance. Cool blue-hour ambient light mixed with gentle warm ordinary windows, restrained color and contrast, plausible low-light exposure without extreme glowing yellow lighting. Real irregular pine needles, branches, bark and rock; buildings varied, not repeating stamp rows. Documentary photography, no dramatic fantasy skyline, cinematic HDR, hyper-detailed miniature city or painterly CGI.\nStrict constraints: no people, identifiable faces, text, Greek letters, numbers, advertisements, restaurant signs, logos, branded rooftop equipment, billboards, watermarks or frame. No visible Parthenon scaffolding, no giant foreground Acropolis, invented towers or extra temples. No collage or use of old image pixels. Keep city and skyline legible, not abstract bokeh.",
+          "transparent_background": false
+        },
+        "inputImageCount": 0,
+        "wholeNewGeneration": true,
+        "nativeCopyByteExact": true,
+        "pixelsUnchangedFromNative": true,
+        "creativeEditsPerformed": false
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/lycabettus-acropolis.png",
+          "qa/lycabettus-pine-rock.png",
+          "qa/lycabettus-city.png"
+        ],
+        "photorealismPassed": true,
+        "naturalOrganicTexturePassed": true,
+        "noEstablishedTextPassed": true,
+        "noPeopleObserved": true,
+        "viewpointPassed": true,
+        "passedForDelivery": true,
+        "observations": [
+          "Elevated Lycabettus northeast vantage across pale city rooftops toward southwest; Acropolis distant at right edge",
+          "Blue-hour sky, pine branches and irregular rocky slope foreground, warm ordinary windows",
+          "No visible Parthenon scaffolding, readable signs, faces, invented foreground Lycabettus or large close Acropolis",
+          "Individual city blocks, pine needles and rocks show coherent photographic detail, without stamped repetition"
+        ]
+      },
+      "rootReviewPending": false,
+      "selected": true,
+      "omitted": false,
+      "omitReason": null,
+      "r2Uploaded": true,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png?t=6a0357837e30bbec",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+        "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+        "bytes": 2769797,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png?t=6a0357837e30bbec",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "6a0357837e30bbec2931788f364bcb3020ace96b04e9892aad946f519219339d",
+        "bytes": 2769797,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T14:07:41.789641+00:00"
+      },
+      "replacementScope": "New gallery addition for prior omitted pilot role7; not replacing an earlier delivered live asset",
+      "rootReview": {
+        "wholeFrameInspected": true,
+        "passedForOwnerReview": true,
+        "nativeCropWorkerEvidenceRetained": true
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-7-lycabettus-rooftops-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/athens-worker/manifest.json"
+    },
+    {
+      "id": "athens-8-akropolis-1873-bw-v2",
+      "replaces": "athens-8-akropolis-1873",
+      "city": "athens",
+      "cityFi": "Ateena",
+      "caption": "Akropolis Filopappou-kukkulalta vuonna 1873; uusi mustavalkoinen rekonstruktio ja Frankkien torni Propylaian vieressä. Havainnekuva.",
+      "prompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: Matkakirja Athens arrival illustration, year 1873, ONE completely NEW camera-looking opaque landscape image, 1536 x 1024.\nPrimary request: a NEUTRAL BLACK-AND-WHITE documentary photographic reconstruction of the Acropolis seen northeast from the southwest slope of Philopappou Hill in 1873. Generate the entire new scene from scratch. This is not a conversion, filter, edit or recoloring of a previous image; retain no earlier pixels.\nInput images: reference1 is an earlier generated1873 Athens illustration; use ONLY its southwest camera location, overall landmark scale and framing as a loose factual/composition guide. Reference2 is a Getty book page with Dimitrios Constantin's ca1860–1865 southwest Acropolis photograph; use ONLY the factual ruined geometry and Frankish Tower location in its photo, never its printed captions, border or sepia tone. Reference3 is William J. Stillman's Getty1870 Musaeum Hill historical photo; use ONLY period factual topography, tower position and open bare slope. These are factual references, not stylistic image-edit targets. Do not copy source pixels or paper artifacts.\nScene and period: dry rocky Philopappou slope with a naturally worn unpaved route, one sparse irregular olive tree to the left and a few low wild shrubs. The Acropolis dominates the middle distance. Propylaea western gateway is on the LEFT; roofless damaged Parthenon is right of center. Lycabettus hill may appear far right. Small old Athens has scattered low one- and two-storey plaster houses with tiled roofs, mostly to the right below and beyond the rock; no present-day city sprawl. South slopes are largely bare with period masonry ruins and rubble.\nCRITICAL archaeological geometry: a tall plain rectangular medieval Frankish Tower stands at the southwest/southern wing of the Propylaea western gateway, at the FAR LEFT END of the Acropolis and far LEFT of the Parthenon, matching the historical photograph references. Simple near-flat top, plain masonry, no elaborate battlements, domes or pointed roof. Temple of Athena Nike is a small temple on the southwest bastion next to/in front of that western gateway cluster in its first rebuilt1835–1836 form. Parthenon is ROOFLESS and visibly broken, with west columns and the long southern colonnade having large missing middle sections and irregular broken entablature, not a continuous restored row; no later marble infills or rebuilt columns. Do not invent intact Classical architecture.\nCamera and monochrome: a real camera-looking view, ordinary45mm perspective, subdued natural late-afternoon daylight rendered solely as clean neutral grayscale. ALL tones must be achromatic neutral black, white and gray, with equal red/green/blue component values; ABSOLUTELY NO sepia, brown, warm tint, blue tint, tinted highlights, color, duotone or color wash. Full rich grayscale detail without heavy fake aging, scratches, print borders, HDR or theatrical contrast. Natural optical softness and irregular limestone, bark and vegetation textures; no stamped organic patterns.\nYear1873 exclusions: no Zappeion, modern apartments, Acropolis Museum, automobiles, asphalt, electricity wires/poles/lamps, floodlights, antennas, solar panels, cranes, scaffolding, modern rails, concretepaths, modern restorations or modern clothes. No people needed. No text, letters, numbers, signs, logos, watermarks, frame or collage. No museum-artifact replica, painterly rendering or CGI.",
+      "generationPrompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: Matkakirja Athens arrival illustration, year 1873, ONE completely NEW camera-looking opaque landscape image, 1536 x 1024.\nPrimary request: a NEUTRAL BLACK-AND-WHITE documentary photographic reconstruction of the Acropolis seen northeast from the southwest slope of Philopappou Hill in 1873. Generate the entire new scene from scratch. This is not a conversion, filter, edit or recoloring of a previous image; retain no earlier pixels.\nInput images: reference1 is an earlier generated1873 Athens illustration; use ONLY its southwest camera location, overall landmark scale and framing as a loose factual/composition guide. Reference2 is a Getty book page with Dimitrios Constantin's ca1860–1865 southwest Acropolis photograph; use ONLY the factual ruined geometry and Frankish Tower location in its photo, never its printed captions, border or sepia tone. Reference3 is William J. Stillman's Getty1870 Musaeum Hill historical photo; use ONLY period factual topography, tower position and open bare slope. These are factual references, not stylistic image-edit targets. Do not copy source pixels or paper artifacts.\nScene and period: dry rocky Philopappou slope with a naturally worn unpaved route, one sparse irregular olive tree to the left and a few low wild shrubs. The Acropolis dominates the middle distance. Propylaea western gateway is on the LEFT; roofless damaged Parthenon is right of center. Lycabettus hill may appear far right. Small old Athens has scattered low one- and two-storey plaster houses with tiled roofs, mostly to the right below and beyond the rock; no present-day city sprawl. South slopes are largely bare with period masonry ruins and rubble.\nCRITICAL archaeological geometry: a tall plain rectangular medieval Frankish Tower stands at the southwest/southern wing of the Propylaea western gateway, at the FAR LEFT END of the Acropolis and far LEFT of the Parthenon, matching the historical photograph references. Simple near-flat top, plain masonry, no elaborate battlements, domes or pointed roof. Temple of Athena Nike is a small temple on the southwest bastion next to/in front of that western gateway cluster in its first rebuilt1835–1836 form. Parthenon is ROOFLESS and visibly broken, with west columns and the long southern colonnade having large missing middle sections and irregular broken entablature, not a continuous restored row; no later marble infills or rebuilt columns. Do not invent intact Classical architecture.\nCamera and monochrome: a real camera-looking view, ordinary45mm perspective, subdued natural late-afternoon daylight rendered solely as clean neutral grayscale. ALL tones must be achromatic neutral black, white and gray, with equal red/green/blue component values; ABSOLUTELY NO sepia, brown, warm tint, blue tint, tinted highlights, color, duotone or color wash. Full rich grayscale detail without heavy fake aging, scratches, print borders, HDR or theatrical contrast. Natural optical softness and irregular limestone, bark and vegetation textures; no stamped organic patterns.\nYear1873 exclusions: no Zappeion, modern apartments, Acropolis Museum, automobiles, asphalt, electricity wires/poles/lamps, floodlights, antennas, solar panels, cranes, scaffolding, modern rails, concretepaths, modern restorations or modern clothes. No people needed. No text, letters, numbers, signs, logos, watermarks, frame or collage. No museum-artifact replica, painterly rendering or CGI.",
+      "nativePath": "/Users/samireivinen/.codex/generated_images/01a13027-ba6f-7e73-b43b-b6f7c589b3b7/exec-30c08db3-b1d2-47fb-8c24-372028634b1d.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/raw/athens-8-akropolis-1873-bw-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/final/athens-8-akropolis-1873-bw-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/final/athens-8-akropolis-1873-bw-v2.png",
+      "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+      "rawSHA256": "8330997162669c0cde2e4456cce6b74fc2bc8e402295d501f844acdf1ab85815",
+      "bytes": 3133937,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sources": [
+        {
+          "label": "View of the Acropolis from the Musaeum Hill",
+          "url": "https://www.getty.edu/art/collection/object/106RZN"
+        },
+        {
+          "label": "Antiquity & Photography: Early Views of Ancient Mediterranean Sites",
+          "url": "https://d2aohiyo3d3idm.cloudfront.net/publications/virtuallibrary/0892368055.pdf"
+        },
+        {
+          "label": "Athena Nike Temple. East frieze. Corner block a",
+          "url": "https://www.theacropolismuseum.gr/en/athena-nike-temple-east-frieze-corner-block"
+        },
+        {
+          "label": "Temple of Athena Nike",
+          "url": "https://www.ysma.gr/en/monuments/temple-of-athena-nike/"
+        },
+        {
+          "label": "Church of Agios Georgios Lycabettus",
+          "url": "https://www.thisisathens.org/attractions/agios-georgios-lycabettus-church"
+        }
+      ],
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/final/athens-8-akropolis-1873.png",
+          "sha256": "6362004fa8ad7fa5dab636f7c14327814fe44be61a3d69ecca4919a59a6bb55b",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/references/getty-139.png",
+          "sha256": "c191012ed3e512468253a634e6663f4f46875b902e80bd38d7d2c4ff2242c685",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/athens/references/getty-stillman-1870.jpg",
+          "sha256": "a3beb2df1cd55dd66aa7c0d72e688fcf617cb4c0eefd2274c9daaa31ff898d80",
+          "viewedBeforeGeneration": true,
+          "role": "Composition or factual historical geometry only; not pixel edits, style copying or sepia"
+        }
+      ],
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "callsForAsset": 1,
+        "executionUUID": "30c08db3-b1d2-47fb-8c24-372028634b1d",
+        "entireNewGenerationRequested": true,
+        "pixelsUnchangedFromNative": true,
+        "grayscaleConversionPerformed": false
+      },
+      "workerQA": {
+        "wholeFrameInspected": true,
+        "nativeCropsInspected": [
+          "qa/bw-gateway-parthenon.png",
+          "qa/bw-town-hill.png",
+          "qa/bw-bark-rocks.png"
+        ],
+        "photorealismPassed": true,
+        "neutralBWVisualPassed": true,
+        "exactEqualRGB": false,
+        "chromaMeasurement": {
+          "metric": "max(R,G,B)-min(R,G,B) per native pixel; analysis only, no conversion",
+          "nativeRGB": true,
+          "equalRGBPixelPercent": 16.542879740397133,
+          "meanChannelSpread": 2.030008316040039,
+          "p99ChannelSpread": 7.0,
+          "maxChannelSpread": 20,
+          "pixelsWithSpreadGreaterThan2": 504804,
+          "grayscaleConversionPerformed": false,
+          "nativePixelsPreserved": true
+        },
+        "historicalObservations": [
+          "Frankish Tower on western-left Propylaea gateway cluster, left of Parthenon",
+          "Athena Nike temple present at western bastion",
+          "Roofless damaged Parthenon with substantial missing southern colonnade sections",
+          "Small low-rise old town, bare unpaved slopes; no established modern lamps/vehicles/scaffolding/apartments observed",
+          "Irregular rocks, bark and vegetation without repeating stamped pattern"
+        ],
+        "limits": [
+          "Archival-guided reconstruction, not a measured archaeological survey",
+          "Native low RGB differences are measured explicitly; no grayscale conversion or retouch performed"
+        ]
+      },
+      "rootReviewPending": false,
+      "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png?t=39af8718dc223976",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+        "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+        "bytes": 3133937,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200
+      },
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png?t=39af8718dc223976",
+      "canonicalURL": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "canonicalReadback": {
+        "http": 200,
+        "sha256": "39af8718dc223976a4768c22ca345e12a6367266d01f231caf3b98786074a99a",
+        "bytes": 3133937,
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "checkedAtUTC": "2026-10-12T14:00:57.273679+00:00"
+      },
+      "rootReview": {
+        "independentFullNativeImageViewed": true,
+        "acceptedForOwnerReview": true,
+        "scope": "visual neutral black-and-white, period geometry",
+        "rawChromaDifferenceDisclosed": true,
+        "exactEqualRGBClaimed": false,
+        "grayscaleConversionPerformed": false,
+        "note": "Source86 requests pure grayscale. Native low channel differences remain disclosed in workerQA; no visible sepia/color observed; root authorized no additional generation."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261012-v2/athens-8-akropolis-1873-bw-v2.png",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-mustavalko-ruoka-uusinta-20261012/athens/manifest.json"
+    }
+  ],
+  "currentNewCityAssets": 3,
+  "retainedAcceptedExistingOtherPilotIDs": [
+    "athens-4-plaka",
+    "athens-5-filopappou"
+  ],
+  "allCurrentNewAssetsR2ByteVerified": true,
+  "rootWholeAndNativeReviewPassedForOwnerReview": true,
+  "reviewSite": {
+    "status": "succeeded",
+    "project_id": "appgprj_6a95d7decd848191b2ee8a680b8c8263",
+    "version_id": "appgprj_6a95d7decd848191b2ee8a680b8c8263~appgver_59f6053b7cf881919c842f43df4968cb",
+    "deployment_id": "appgdep_6accf114da348191a330b2bb1079b47d",
+    "source_commit": "d0ad6ca9556a38a63107e8ab230d51030642205f",
+    "archive": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/food-shop-review-20261012/site-deploy.tar.gz",
+    "updated_at": "2026-10-12T14:39:47.741989+00:00",
+    "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site",
+    "reviewURL": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site?category=havainnekuvat-20261012",
+    "audience": "existing owner-private custom audience preserved",
+    "nativeSuccessVerified": true
+  },
+  "ownerAcceptanceVerified": false,
+  "editorAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "gamePublished": false,
+  "remaining210WaitingForOwnerPilotAcceptance": true,
+  "createdAt": "2026-10-12T14:43:23.587757+00:00"
+}

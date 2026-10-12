@@ -1,0 +1,445 @@
+{
+  "taskNumbers": [
+    86,
+    87
+  ],
+  "city": "paris",
+  "source86": {
+    "taskNumber": 86,
+    "taskId": "pilotin80korjaus",
+    "receivedAt": "2026-10-12T13:59:14.814692+00:00",
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+    "sourceCommit": "12a76cb745373a5c352c7d5ad7f723660d43df86",
+    "sourceBlob": "b3b54728c303d893cd0bdb0d1df16cf6ac6bf463",
+    "sourceSHA256": "f0d9964a17cd15a314d6230aca9eaa0b8e1e4c8df1fbf888eeeab7c175ed167c",
+    "sourceReadInFull": true,
+    "productionStarted": false,
+    "maximumGenerationCalls": 9,
+    "oneCallPerSubject": true,
+    "additionalVariantsAllowed": false,
+    "sourceSupersedesOldExcludedDecision": true,
+    "sixOtherPilotDeliveriesRetained": true,
+    "remaining210WaitForOwner": true,
+    "gameIntegrated": false,
+    "published": false,
+    "mailboxDeliveryConfirmed": false
+  },
+  "source87": {
+    "taskNumber": 87,
+    "correctsTaskNumber": 86,
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-palaute-20261012.md",
+    "sourceCommit": "c68cb436bebec63456d5add1254c1ced1eb3e377",
+    "sourceBlob": "4d89af370541cb8ec8dca5c33645e37631d7db13",
+    "sourceSHA256": "7679afb03d11c126f177910b48dd54d9512bad92d6c2b537f40d51cec6467bf8",
+    "sourceReadInFull": true,
+    "receivedAt": "2026-10-12T14:27:57.781661+00:00",
+    "application": "Applied to existing direct human food-shop workers; no historical/city subjects rerun. Paris/Stockholm already aligned. Athens latest subject specifically Greek bakery not souvlaki store, one new source-aligned subject needed.",
+    "standaloneDuplicateQueueCreated": false,
+    "original86PhaseActualCalls": 9,
+    "latestHumanShopPhaseInitialCalls": 5,
+    "laterRequiredCorrectionsObservedOrAuthorized": 3,
+    "neverClaimCombinedCallsWithinNine": true,
+    "effective87SubjectCoverage": "six retained history/city subjects plus three latest shop-food subjects; original discarded food candidates preserved and actual generation calls tracked separately",
+    "reviewSitePublished": false,
+    "gameIntegrated": false,
+    "mailboxDeliveryConfirmed": false
+  },
+  "latestHumanInstructionApplied": true,
+  "foodCityBackdropRequired": false,
+  "foodStyle": "cafe/bakery/shop interiors with naturally integrated beautiful food displays",
+  "original86PhaseActualCalls": 9,
+  "laterHumanFoodShopPhaseActualCalls": 8,
+  "allUniqueBuiltinCallsAcrossChangingThisTurnBriefs": 26,
+  "assets": [
+    {
+      "id": "paris-4-luxembourg-candid-v2",
+      "city": "paris",
+      "cityFi": "Pariisi",
+      "caption": "Lukijoita Jardin du Luxembourgin keskialtaan äärellä Pariisissa. Havainnekuva.",
+      "historical": false,
+      "sources": [
+        {
+          "title": "Authorized task86 addition – Luxembourg everyday life",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/../source.md",
+          "support": "Central basin, green metal chairs, back-facing readers, distant child, chestnut trees, eye-height soft-afternoon view."
+        },
+        {
+          "title": "Sénat – Official Jardin du Luxembourg visitor brochure",
+          "url": "https://jardin.senat.fr/fileadmin/Jardin/Accueil_Jardin/Brochure_Jardin_maj2022.pdf",
+          "support": "Official park map and grand basin context, mobile seating and tree-lined garden. Factual/context source only; no source photograph passed or copied."
+        },
+        {
+          "title": "Jardin du Luxembourg official site",
+          "url": "https://jardin.senat.fr/",
+          "support": "Verified garden identity and outdoor setting, no exhibition art reproduced."
+        }
+      ],
+      "refs": [],
+      "prompt": "Use case: photorealistic-natural. Generate one completely NEW original full-colour present-day candid documentary photograph, visibly real-camera quality, landscape 1536 x 1024 opaque RGB sRGB PNG. Natural subdued colours, ordinary human eye-level perspective, plausible single-camera geometry, realistic scale and physical textures. No food advertising look or posed product still-life. Natural irregular detail rather than cloned/embossed vegetation, repeating stamped organic surfaces, CGI, illustration, artificial HDR or cinematic grading. No text, letters, digits, signage, menus, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Do not depict protected contemporary artworks/design products or reproduce an existing photograph.\nScene: a quiet ordinary afternoon beside the broad shallow octagonal central basin of Jardin du Luxembourg, Paris, viewed from its pale stone rim at normal standing eye height, 35mm camera. Primary subject: everyday readers relaxing near the basin. Three or four simple ANONYMOUS OLD-FASHIONED green painted iron garden chairs are informally scattered on pale gravel; one back-facing adult sits in the nearer left chair reading a small blank-covered book mostly hidden by their body, another back-facing adult sits farther away, and a tiny child well in the distance by the opposite rim is seen from behind. No faces anywhere. Chair construction MUST be generic straight iron geometry that predates modern designer products: slender tubular/rod iron frame, simple straight four legs, narrow VERTICAL round iron rods in the back, plain functional seat, NO broad curved horizontal back/seat slats, NO contemporary ergonomic design-chair shapes, NO brands or logos. This is an anonymous illustrative historical-type park chair, not a replica of the actual branded present-day chairs. Natural worn green paint and very modest rust, no ornate decorative designs. The basin occupies the middle/right of frame, with believable shallow water and low clipped simple stone rim; its straight octagonal edges appear correctly foreshortened from eye height. Broad garden paths and mature chestnut trees provide the upper background, soft dappled late-afternoon light, natural irregular leaves and branches. Face the camera toward the tree-lined part of the garden so the Luxembourg Palace, sculpted statues, plinths and decorative artworks are ALL OUT OF FRAME. No kiosks, signs, awnings or printed clothing. A calm spontaneous park photograph with credible chair/person scale and varied gravel/tree/water texture, not a formal symmetrical postcard.",
+      "sourceSHA256": "f0d9964a17cd15a314d6230aca9eaa0b8e1e4c8df1fbf888eeeab7c175ed167c",
+      "generatedDefaultPath": "/Users/samireivinen/.codex/generated_images/01a13028-0737-70a0-8d6a-6c29ad607efc/exec-6aa418aa-67ca-4961-9c62-0df1370a4420.png",
+      "rawPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/native/paris-4-luxembourg-candid-v2.png",
+      "nativeSHA256": "405dfd7e264bfef16cde4e4bb55d4d22c671676e70d8adc992e18e5560eae726",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/final/paris-4-luxembourg-candid-v2.png",
+      "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+      "bytes": 2994469,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "format": "PNG",
+      "icc": "sRGB",
+      "description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "pixelArrayPreserved": true,
+      "tool": "builtin image_gen",
+      "actualRequestIDFromSavedOutput": "exec-6aa418aa-67ca-4961-9c62-0df1370a4420",
+      "copiedNativeOriginal": true,
+      "copiedAt": "2026-10-12T14:06:31.646468+00:00",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/final/paris-4-luxembourg-candid-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/native/paris-4-luxembourg-candid-v2.png",
+      "generationProvenance": {
+        "mode": "builtin-image_gen",
+        "actualRequestId": "exec-6aa418aa-67ca-4961-9c62-0df1370a4420",
+        "referenceImagesPassed": 0,
+        "wholeNewImage": true,
+        "noCropRetouchStretch": true,
+        "pixelArrayPreserved": true
+      },
+      "workerQA": {
+        "id": "paris-4-luxembourg-candid-v2",
+        "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+        "passedForOwnerReview": true,
+        "wholeFrameReviewed": true,
+        "nativeCrops": [
+          "texture-left",
+          "texture-right",
+          "center-detail"
+        ],
+        "anonymousHistoricalTypeChairs": true,
+        "modernDesignReproductionObserved": false,
+        "notes": "Anonymous generic straight tubular iron frames and vertical rod backs, rather than modern designer-chair horizontal flat slats. Near readers face away; tiny background heads have no identifiable facial features in native crops. Credible person/chair scale, varied natural gravel/foliage/trunk/water textures. Octagonal rim is partly foreshortened/cropped, palace and sculptures excluded; no named chair-product or exact photographic reconstruction claimed."
+      },
+      "status": "R2-delivered-owner-review-pending",
+      "omitted": false,
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png?t=c192f95c08fc92e9",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+        "bytes": 2994469,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadbackHttp": 200,
+        "canonicalByteExact": true,
+        "canonicalMIME": "image/png",
+        "canonicalCORS": "https://matkakirja.app"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationVerified": false,
+      "sitePublicationVerified": false,
+      "delivery": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png?t=c192f95c08fc92e9",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+        "sha256": "c192f95c08fc92e99fa2c00fe53a2e8c36c29f1120bfc9527ba09024b65da0ea",
+        "bytes": 2994469,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadbackHttp": 200,
+        "canonicalByteExact": true,
+        "canonicalMIME": "image/png",
+        "canonicalCORS": "https://matkakirja.app"
+      },
+      "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png?t=c192f95c08fc92e9",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-4-luxembourg-candid-v2.png",
+      "rootVisualReview": {
+        "decision": "PASS for owner review",
+        "source": "Parent collaboration review message",
+        "wholeFrameViewed": true,
+        "reason": "Anonymous vertical-rod chairs and no identifiable facial features."
+      },
+      "generationPrompt": "Use case: photorealistic-natural. Generate one completely NEW original full-colour present-day candid documentary photograph, visibly real-camera quality, landscape 1536 x 1024 opaque RGB sRGB PNG. Natural subdued colours, ordinary human eye-level perspective, plausible single-camera geometry, realistic scale and physical textures. No food advertising look or posed product still-life. Natural irregular detail rather than cloned/embossed vegetation, repeating stamped organic surfaces, CGI, illustration, artificial HDR or cinematic grading. No text, letters, digits, signage, menus, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Do not depict protected contemporary artworks/design products or reproduce an existing photograph.\nScene: a quiet ordinary afternoon beside the broad shallow octagonal central basin of Jardin du Luxembourg, Paris, viewed from its pale stone rim at normal standing eye height, 35mm camera. Primary subject: everyday readers relaxing near the basin. Three or four simple ANONYMOUS OLD-FASHIONED green painted iron garden chairs are informally scattered on pale gravel; one back-facing adult sits in the nearer left chair reading a small blank-covered book mostly hidden by their body, another back-facing adult sits farther away, and a tiny child well in the distance by the opposite rim is seen from behind. No faces anywhere. Chair construction MUST be generic straight iron geometry that predates modern designer products: slender tubular/rod iron frame, simple straight four legs, narrow VERTICAL round iron rods in the back, plain functional seat, NO broad curved horizontal back/seat slats, NO contemporary ergonomic design-chair shapes, NO brands or logos. This is an anonymous illustrative historical-type park chair, not a replica of the actual branded present-day chairs. Natural worn green paint and very modest rust, no ornate decorative designs. The basin occupies the middle/right of frame, with believable shallow water and low clipped simple stone rim; its straight octagonal edges appear correctly foreshortened from eye height. Broad garden paths and mature chestnut trees provide the upper background, soft dappled late-afternoon light, natural irregular leaves and branches. Face the camera toward the tree-lined part of the garden so the Luxembourg Palace, sculpted statues, plinths and decorative artworks are ALL OUT OF FRAME. No kiosks, signs, awnings or printed clothing. A calm spontaneous park photograph with credible chair/person scale and varied gravel/tree/water texture, not a formal symmetrical postcard.",
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-worker/manifest.json"
+    },
+    {
+      "id": "paris-6-boulangerie-interior-v3",
+      "city": "paris",
+      "cityFi": "Pariisi",
+      "replaces": "paris-6-pain-croissants-city-v2",
+      "caption": "Patongit, maalaisleivät ja voisarvet esillä pariisilaisessa leipomossa. Havainnekuva.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Paris food image, whole new original camera-looking documentary photograph, opaque 1536x1024 landscape.\nPrimary request: Show a small welcoming French neighbourhood BAKERY INTERIOR where baguettes, rustic loaves and croissants are beautifully and credibly displayed as part of the shop. The viewer should feel physically inside one real bakery. No city view is required. The food must NOT look like a close foreground layer pasted onto a background.\nScene-first composition: A modest long bread counter and shelving form one coherent room. From an ordinary customer's standing eye height, approximately2.5 metres from the counter, view slightly diagonally along the shop: simple worn wooden bread shelves at the back with loosely varied baguettes and rounded sourdough loaves; a restrained glass display case at mid-distance holding several hand-baked croissants and small pastries in ordinary shallow trays; some natural walking space and believable room depth. Food belongs in real fixtures at MIDDLE DISTANCE, with full counter edges, shelf supports and contact shadows visible. No enormous loaf, paper bag, plate, floating product or isolated hand fills the foreground. No dramatic foreground-background split.\nStyle: a convincing casual 35mm full-frame camera interior photograph, one physically plausible single exposure. Natural restrained colour and ordinary photographic detail, slight normal depth-of-field falloff only at the far shelf; not every crumb and far wall equally hyper-sharp. No composite, food advert, staged still-life, close product macro, wide-angle distortion, HDR, focus stacking, fake blur or render aesthetic.\nLighting: soft window daylight from outside the frame to one side, gently mixed with a few modest warm interior lamps; every shelf, bread, glass reflection and counter shares the same light, colour temperature and perspective. No spotlight separating the food from the room.\nFood and material detail: appealing hand-baked loaves with differing crust cracks/scoring, a few croissants of naturally different size and curl, realistic flaky edges; trays are modestly filled and slightly asymmetric, nothing mechanically cloned. Genuine worn timber, irregular pale stone floor, simple plaster walls, real glass thickness and coherent subtle reflections; no repetitive embossed wood grain or plastic pastry textures.\nConstraints: anonymous original bakery setting, no actual named shop, no recognizable copyrighted contemporary artwork or named designer furnishings. No people or hands needed; no faces. Absolutely no readable text, glyphs, numbers, price cards, product labels, menu board, signs, logos, packaging branding, watermark, border or frame anywhere. No visible street or monument required, no food held up to the camera. An attractive lived-in shop presentation, food and room seen together at human scale, fully original new generation. Whole1536x1024 opaque image.",
+      "sources": [
+        {
+          "url": "https://ich.unesco.org/en/RL/artisanal-know-how-and-culture-of-baguette-bread-01883",
+          "title": "UNESCO – Baguette bread",
+          "role": "general food subject context, no reference photograph composition copied"
+        }
+      ],
+      "taskId": "owner-food-shops-feedback-20261012",
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Paris food image, whole new original camera-looking documentary photograph, opaque 1536x1024 landscape.\nPrimary request: Show a small welcoming French neighbourhood BAKERY INTERIOR where baguettes, rustic loaves and croissants are beautifully and credibly displayed as part of the shop. The viewer should feel physically inside one real bakery. No city view is required. The food must NOT look like a close foreground layer pasted onto a background.\nScene-first composition: A modest long bread counter and shelving form one coherent room. From an ordinary customer's standing eye height, approximately2.5 metres from the counter, view slightly diagonally along the shop: simple worn wooden bread shelves at the back with loosely varied baguettes and rounded sourdough loaves; a restrained glass display case at mid-distance holding several hand-baked croissants and small pastries in ordinary shallow trays; some natural walking space and believable room depth. Food belongs in real fixtures at MIDDLE DISTANCE, with full counter edges, shelf supports and contact shadows visible. No enormous loaf, paper bag, plate, floating product or isolated hand fills the foreground. No dramatic foreground-background split.\nStyle: a convincing casual 35mm full-frame camera interior photograph, one physically plausible single exposure. Natural restrained colour and ordinary photographic detail, slight normal depth-of-field falloff only at the far shelf; not every crumb and far wall equally hyper-sharp. No composite, food advert, staged still-life, close product macro, wide-angle distortion, HDR, focus stacking, fake blur or render aesthetic.\nLighting: soft window daylight from outside the frame to one side, gently mixed with a few modest warm interior lamps; every shelf, bread, glass reflection and counter shares the same light, colour temperature and perspective. No spotlight separating the food from the room.\nFood and material detail: appealing hand-baked loaves with differing crust cracks/scoring, a few croissants of naturally different size and curl, realistic flaky edges; trays are modestly filled and slightly asymmetric, nothing mechanically cloned. Genuine worn timber, irregular pale stone floor, simple plaster walls, real glass thickness and coherent subtle reflections; no repetitive embossed wood grain or plastic pastry textures.\nConstraints: anonymous original bakery setting, no actual named shop, no recognizable copyrighted contemporary artwork or named designer furnishings. No people or hands needed; no faces. Absolutely no readable text, glyphs, numbers, price cards, product labels, menu board, signs, logos, packaging branding, watermark, border or frame anywhere. No visible street or monument required, no food held up to the camera. An attractive lived-in shop presentation, food and room seen together at human scale, fully original new generation. Whole1536x1024 opaque image.",
+          "transparent_background": false
+        }
+      },
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Tool does not expose underlying request identifier; actual output execution UUID and native path recorded.",
+      "generationOutputExecutionId": "a17884c6-f39f-4869-8019-7855ab31edc3",
+      "generationCallOrdinal": 1,
+      "generationCallsForAsset": 1,
+      "builtinDefaultOutputPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a17884c6-f39f-4869-8019-7855ab31edc3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/paris/native/paris-6-boulangerie-interior-v3.png",
+      "nativeSHA256": "1ccac310c760fa4cd3e63643572f20b201a9bafd8c70551d237360abe5286f2f",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/paris/final/paris-6-boulangerie-interior-v3.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/paris/final/paris-6-boulangerie-interior-v3.png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mode": "RGB",
+      "format": "PNG",
+      "iccProfile": "sRGB",
+      "sha256": "368bee13a822ec8cb41c4f6c4c6eaa08a120e34e9c64ed10ba9fa34ec81aa4c6",
+      "bytes": 2539985,
+      "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "referenceImagesPassed": [],
+      "createdAt": "2026-10-12T14:27:57.703435+00:00",
+      "workerVisualQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "nativeCropsInspected": true,
+        "sameRoomCameraLightPerspective": true,
+        "noPastedForeground": true,
+        "naturalWoodAndFoodTexture": true,
+        "noVisibleTextOrLogoIdentified": true,
+        "ownerAcceptanceVerified": false
+      },
+      "ownerReviewPending": true,
+      "gameIntegrationVerified": false,
+      "publicationVerified": false,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "rootReviewedForOwnerPreview": true,
+      "independentAgentReviewPassed": true,
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v3/paris-6-boulangerie-interior-v3.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v3/paris-6-boulangerie-interior-v3.png?t=368bee13a822ec8c",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v3/paris-6-boulangerie-interior-v3.png",
+        "sha256": "368bee13a822ec8cb41c4f6c4c6eaa08a120e34e9c64ed10ba9fa34ec81aa4c6",
+        "bytes": 2539985,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "checkedAt": "2026-10-12T14:30:07.632790+00:00",
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "sha256": "368bee13a822ec8cb41c4f6c4c6eaa08a120e34e9c64ed10ba9fa34ec81aa4c6",
+          "bytes": 2539985,
+          "byteExactReadback": true
+        }
+      },
+      "r2Key": "julisteet/saapumisintro/paris/20261012-v3/paris-6-boulangerie-interior-v3.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v3/paris-6-boulangerie-interior-v3.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v3/paris-6-boulangerie-interior-v3.png?t=368bee13a822ec8c",
+      "r2ByteExactVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Paris food image, whole new original camera-looking documentary photograph, opaque 1536x1024 landscape.\nPrimary request: Show a small welcoming French neighbourhood BAKERY INTERIOR where baguettes, rustic loaves and croissants are beautifully and credibly displayed as part of the shop. The viewer should feel physically inside one real bakery. No city view is required. The food must NOT look like a close foreground layer pasted onto a background.\nScene-first composition: A modest long bread counter and shelving form one coherent room. From an ordinary customer's standing eye height, approximately2.5 metres from the counter, view slightly diagonally along the shop: simple worn wooden bread shelves at the back with loosely varied baguettes and rounded sourdough loaves; a restrained glass display case at mid-distance holding several hand-baked croissants and small pastries in ordinary shallow trays; some natural walking space and believable room depth. Food belongs in real fixtures at MIDDLE DISTANCE, with full counter edges, shelf supports and contact shadows visible. No enormous loaf, paper bag, plate, floating product or isolated hand fills the foreground. No dramatic foreground-background split.\nStyle: a convincing casual 35mm full-frame camera interior photograph, one physically plausible single exposure. Natural restrained colour and ordinary photographic detail, slight normal depth-of-field falloff only at the far shelf; not every crumb and far wall equally hyper-sharp. No composite, food advert, staged still-life, close product macro, wide-angle distortion, HDR, focus stacking, fake blur or render aesthetic.\nLighting: soft window daylight from outside the frame to one side, gently mixed with a few modest warm interior lamps; every shelf, bread, glass reflection and counter shares the same light, colour temperature and perspective. No spotlight separating the food from the room.\nFood and material detail: appealing hand-baked loaves with differing crust cracks/scoring, a few croissants of naturally different size and curl, realistic flaky edges; trays are modestly filled and slightly asymmetric, nothing mechanically cloned. Genuine worn timber, irregular pale stone floor, simple plaster walls, real glass thickness and coherent subtle reflections; no repetitive embossed wood grain or plastic pastry textures.\nConstraints: anonymous original bakery setting, no actual named shop, no recognizable copyrighted contemporary artwork or named designer furnishings. No people or hands needed; no faces. Absolutely no readable text, glyphs, numbers, price cards, product labels, menu board, signs, logos, packaging branding, watermark, border or frame anywhere. No visible street or monument required, no food held up to the camera. An attractive lived-in shop presentation, food and room seen together at human scale, fully original new generation. Whole1536x1024 opaque image.",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/ruokamyymalat-omistajapalaute-20261012/paris/manifest.json"
+    },
+    {
+      "folder": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history",
+      "id": "paris-8-pont-royal-1873-bw-v2",
+      "replaces": null,
+      "city": "paris",
+      "cityFi": "Pariisi",
+      "sourcePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ca798535-822a-448f-9966-333bcedba819.png",
+      "prompt": "Use case: historical-scene.\nAsset type: Matkakirja Paris arrival image number 8, a new BLACK AND WHITE photograph-like reconstruction of Pont Royal and the Tuileries ruins in the year 1873. One image only, 1536x1024 opaque.\nImage roles: Image1 is my generated present-day Pont Royal river view, used ONLY to match the left-bank eye-level camera position and five-arch bridge/river framing. Its restored far-right Louvre/Pavillon roof is NOT historical evidence and MUST NOT be retained. Image2 is Pierre Emonts's July1871 public-domain/CC0 Musée Carnavalet photo PH17352: factual source for the burnt Pavillon de Flore and adjacent Tuileries ruin, especially its exposed burnt open roof framework and surviving chimney masonry. Image3 is Carnavalet PH34628 from1883: factual supporting evidence for standing roofless Tuileries walls only; do not copy1883 demolition work or its camera angle. All are visual/factual references, not images to edit. No source pixels, museum photo framing, annotations, paper border, sepia or text reproduced.\nCamera and scene: the same general LEFT BANK river position as Image1 looking across the Seine at Pont Royal, eye height about3m above low-quay level, normal40mm lens. Five real modest low stone arches aligned horizontally across the middle of frame, river foreground, diagonal simple stone quay lower right, opposite riverbank and the old Tuileries site behind. Plausible small wood workboat or unmarked nineteenth-century steam launch is enough, no modern boats; no people or faces necessary.\nCRITICAL YEAR1873 ROOF CONDITION: behind the opposite-bank trees the standing Tuileries palace wings are an abandoned burnt ruin after the1871 fire, long old masonry walls with black empty window openings, collapsed floors, broken parapets and NO INTACT ROOF. The taller PAVILLON DE FLORE AT THE FAR RIGHT MUST ALSO HAVE A BURNT-DAMAGED ROOF: open skeletal partly collapsed old roof rafters and standing large pale chimney stacks as in Image2, gaps clearly exposing pale sky through the missing roofing. Do NOT draw the smooth intact high slate mansard roof, clean continuous roof slopes, decorative intact ridge, completed restored roof or modern Louvre silhouette from Image1. This is before1874–1876 restoration. The surviving pavilion facade can stand but its roof is distinctly incomplete and wrecked, not restored. The original long central Tuileries ruins remain present in1873; no claim that demolition has already removed them.\nPhotographic medium: genuinely camera-like mid-nineteenth-century collodion/albumen-photo feel in NEUTRAL BLACK AND WHITE ONLY. All rendered pixels should be black, white, achromatic neutral gray, no brown/sepia/blue/green tint, no coloured foliage or water. Soft restrained contrast, very subtle fine photographic grain and barely perceptible natural lens-edge darkening; not old paper, damage, heavy vignetting or an illustration. Quiet pale natural daylight with believable soft shadows, organic irregular stone, wood and water ripple textures, mild period harbour haze.\nRestrictions: no intact restored far-right roof, no1890s/modern urban details, Eiffel Tower, modern museum/glass pyramid, motorboats, modern tourists, automobiles, modern streetlamps, cables, advertising or signs. No visible letters, words, numbers, logos, brands, watermarks, borders, faces, modern protected artwork or named designer objects. Completely new whole-scene generation, no local editing or recolouring of any reference. Retain full1536x1024 landscape.",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/final/paris-5-pont-royal.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH17352-1871.jpg",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH34628-1883.jpg"
+      ],
+      "generationCalls": 1,
+      "selected": true,
+      "historical": true,
+      "taskNumber": 86,
+      "caption": "Pont Royal ja katottomat Tuileries’n rauniot Seinen rannalla vuonna 1873. Havainnekuva.",
+      "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+      "sources": [
+        {
+          "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/palais-des-tuileries-angle-sud-de-la-facade-sur-le-jardin-pavillon-de-flore",
+          "title": "Musée Carnavalet PH17352, July1871",
+          "license": "CC0 Paris Musées",
+          "role": "factual burnt roof geometry"
+        },
+        {
+          "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/facade-en-ruines-du-palais-des-tuileries-sur-le-jardin-des-tuileriers-1er",
+          "title": "Musée Carnavalet PH34628,1883",
+          "license": "CC0 Paris Musées",
+          "role": "roofless surviving wall geometry only; not1883 demolition state"
+        }
+      ],
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/native/paris-8-pont-royal-1873-bw-v2.png",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/final/paris-8-pont-royal-1873-bw-v2.png",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/final/paris-8-pont-royal-1873-bw-v2.png",
+      "generationMode": "builtin-image_gen",
+      "generationIntent": "whole-new generation",
+      "generationOutputExecutionId": "ca798535-822a-448f-9966-333bcedba819",
+      "generationToolCallId": null,
+      "generationToolCallIdNote": "Underlying request identifier not exposed; actual returned native execution id recorded.",
+      "referenceImagesPassed": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/final/paris-5-pont-royal.png",
+          "sha256": "9151481502be550c1488a968f7c045b2d00fcfad2e9e9876090f3807da9607d7",
+          "visuallyInspected": true
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH17352-1871.jpg",
+          "sha256": "8bffa5c66c003b43c46854796cf38a45de7b56bb978e286b801a404e1521bc78",
+          "visuallyInspected": true
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH34628-1883.jpg",
+          "sha256": "9148059fe0bd50360b75c4fda7611ad479efd3c0b847d4aafb137c62c14d3514",
+          "visuallyInspected": true
+        }
+      ],
+      "generationRequest": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: historical-scene.\nAsset type: Matkakirja Paris arrival image number 8, a new BLACK AND WHITE photograph-like reconstruction of Pont Royal and the Tuileries ruins in the year 1873. One image only, 1536x1024 opaque.\nImage roles: Image1 is my generated present-day Pont Royal river view, used ONLY to match the left-bank eye-level camera position and five-arch bridge/river framing. Its restored far-right Louvre/Pavillon roof is NOT historical evidence and MUST NOT be retained. Image2 is Pierre Emonts's July1871 public-domain/CC0 Musée Carnavalet photo PH17352: factual source for the burnt Pavillon de Flore and adjacent Tuileries ruin, especially its exposed burnt open roof framework and surviving chimney masonry. Image3 is Carnavalet PH34628 from1883: factual supporting evidence for standing roofless Tuileries walls only; do not copy1883 demolition work or its camera angle. All are visual/factual references, not images to edit. No source pixels, museum photo framing, annotations, paper border, sepia or text reproduced.\nCamera and scene: the same general LEFT BANK river position as Image1 looking across the Seine at Pont Royal, eye height about3m above low-quay level, normal40mm lens. Five real modest low stone arches aligned horizontally across the middle of frame, river foreground, diagonal simple stone quay lower right, opposite riverbank and the old Tuileries site behind. Plausible small wood workboat or unmarked nineteenth-century steam launch is enough, no modern boats; no people or faces necessary.\nCRITICAL YEAR1873 ROOF CONDITION: behind the opposite-bank trees the standing Tuileries palace wings are an abandoned burnt ruin after the1871 fire, long old masonry walls with black empty window openings, collapsed floors, broken parapets and NO INTACT ROOF. The taller PAVILLON DE FLORE AT THE FAR RIGHT MUST ALSO HAVE A BURNT-DAMAGED ROOF: open skeletal partly collapsed old roof rafters and standing large pale chimney stacks as in Image2, gaps clearly exposing pale sky through the missing roofing. Do NOT draw the smooth intact high slate mansard roof, clean continuous roof slopes, decorative intact ridge, completed restored roof or modern Louvre silhouette from Image1. This is before1874–1876 restoration. The surviving pavilion facade can stand but its roof is distinctly incomplete and wrecked, not restored. The original long central Tuileries ruins remain present in1873; no claim that demolition has already removed them.\nPhotographic medium: genuinely camera-like mid-nineteenth-century collodion/albumen-photo feel in NEUTRAL BLACK AND WHITE ONLY. All rendered pixels should be black, white, achromatic neutral gray, no brown/sepia/blue/green tint, no coloured foliage or water. Soft restrained contrast, very subtle fine photographic grain and barely perceptible natural lens-edge darkening; not old paper, damage, heavy vignetting or an illustration. Quiet pale natural daylight with believable soft shadows, organic irregular stone, wood and water ripple textures, mild period harbour haze.\nRestrictions: no intact restored far-right roof, no1890s/modern urban details, Eiffel Tower, modern museum/glass pyramid, motorboats, modern tourists, automobiles, modern streetlamps, cables, advertising or signs. No visible letters, words, numbers, logos, brands, watermarks, borders, faces, modern protected artwork or named designer objects. Completely new whole-scene generation, no local editing or recolouring of any reference. Retain full1536x1024 landscape.",
+          "transparent_background": false,
+          "referenced_image_paths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/final/paris-5-pont-royal.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH17352-1871.jpg",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-pilotti-20261012/paris/references/tuileries-PH34628-1883.jpg"
+          ]
+        }
+      },
+      "nativeSHA256": "a5e937ff4bf578ab431f0d490a85036c79f9386283ac32eee7b18952bb021f98",
+      "sha256": "4279006c44d25d64fd1105b94d92431040ec65cc46a2077645769b5e92f86932",
+      "bytes": 2432467,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "iccProfile": "sRGB",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "pixelsChangedByExport": false,
+      "nativeChroma": {
+        "meanChannelSpread": 1.56365966796875,
+        "maximumChannelSpread": 18,
+        "pctSpreadAtMost3": 92.15621948242188,
+        "allChannelsIdentical": false,
+        "localGrayscaleConversion": false
+      },
+      "workerVisualQA": {
+        "passed": true,
+        "fullImageInspected": true,
+        "visualMonochromeNeutral": true,
+        "rootNativeQAComplete": true,
+        "rootWholeFrameReviewed": true,
+        "rootNativeCropReviewed": true
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "createdAt": "2026-10-12T14:10:35.952432+00:00",
+      "rootReviewNote": "Far-right Pavillon roof is visibly burnt and open; chimney stacks and framework match1871 factual source; central standing walls roofless. Five arches, period vessel, no modern objects. Native roof and water reviewed; visually neutral monochrome, numeric channels not identical and no local grayscale conversion.",
+      "r2": {
+        "r2Key": "julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png?t=4279006c44d25d64",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+        "sha256": "4279006c44d25d64fd1105b94d92431040ec65cc46a2077645769b5e92f86932",
+        "bytes": 2432467,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalReadback": {
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "bytes": 2432467,
+          "sha256": "4279006c44d25d64fd1105b94d92431040ec65cc46a2077645769b5e92f86932",
+          "byteExactReadback": true,
+          "checkedAt": "2026-10-12T14:12:31.234171+00:00"
+        }
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/paris/20261012-v2/paris-8-pont-royal-1873-bw-v2.png?t=4279006c44d25d64",
+      "r2ByteExactVerified": true,
+      "rootReviewedForOwnerPreview": true,
+      "rootWholeFrameReviewed": true,
+      "rootNativeCropReviewed": true,
+      "generationPrompt": "Use case: historical-scene.\nAsset type: Matkakirja Paris arrival image number 8, a new BLACK AND WHITE photograph-like reconstruction of Pont Royal and the Tuileries ruins in the year 1873. One image only, 1536x1024 opaque.\nImage roles: Image1 is my generated present-day Pont Royal river view, used ONLY to match the left-bank eye-level camera position and five-arch bridge/river framing. Its restored far-right Louvre/Pavillon roof is NOT historical evidence and MUST NOT be retained. Image2 is Pierre Emonts's July1871 public-domain/CC0 Musée Carnavalet photo PH17352: factual source for the burnt Pavillon de Flore and adjacent Tuileries ruin, especially its exposed burnt open roof framework and surviving chimney masonry. Image3 is Carnavalet PH34628 from1883: factual supporting evidence for standing roofless Tuileries walls only; do not copy1883 demolition work or its camera angle. All are visual/factual references, not images to edit. No source pixels, museum photo framing, annotations, paper border, sepia or text reproduced.\nCamera and scene: the same general LEFT BANK river position as Image1 looking across the Seine at Pont Royal, eye height about3m above low-quay level, normal40mm lens. Five real modest low stone arches aligned horizontally across the middle of frame, river foreground, diagonal simple stone quay lower right, opposite riverbank and the old Tuileries site behind. Plausible small wood workboat or unmarked nineteenth-century steam launch is enough, no modern boats; no people or faces necessary.\nCRITICAL YEAR1873 ROOF CONDITION: behind the opposite-bank trees the standing Tuileries palace wings are an abandoned burnt ruin after the1871 fire, long old masonry walls with black empty window openings, collapsed floors, broken parapets and NO INTACT ROOF. The taller PAVILLON DE FLORE AT THE FAR RIGHT MUST ALSO HAVE A BURNT-DAMAGED ROOF: open skeletal partly collapsed old roof rafters and standing large pale chimney stacks as in Image2, gaps clearly exposing pale sky through the missing roofing. Do NOT draw the smooth intact high slate mansard roof, clean continuous roof slopes, decorative intact ridge, completed restored roof or modern Louvre silhouette from Image1. This is before1874–1876 restoration. The surviving pavilion facade can stand but its roof is distinctly incomplete and wrecked, not restored. The original long central Tuileries ruins remain present in1873; no claim that demolition has already removed them.\nPhotographic medium: genuinely camera-like mid-nineteenth-century collodion/albumen-photo feel in NEUTRAL BLACK AND WHITE ONLY. All rendered pixels should be black, white, achromatic neutral gray, no brown/sepia/blue/green tint, no coloured foliage or water. Soft restrained contrast, very subtle fine photographic grain and barely perceptible natural lens-edge darkening; not old paper, damage, heavy vignetting or an illustration. Quiet pale natural daylight with believable soft shadows, organic irregular stone, wood and water ripple textures, mild period harbour haze.\nRestrictions: no intact restored far-right roof, no1890s/modern urban details, Eiffel Tower, modern museum/glass pyramid, motorboats, modern tourists, automobiles, modern streetlamps, cables, advertising or signs. No visible letters, words, numbers, logos, brands, watermarks, borders, faces, modern protected artwork or named designer objects. Completely new whole-scene generation, no local editing or recolouring of any reference. Retain full1536x1024 landscape.",
+      "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/saapumisintro-palaute-v2-20261012/paris-history/manifest.json"
+    }
+  ],
+  "currentNewCityAssets": 3,
+  "retainedAcceptedExistingOtherPilotIDs": [
+    "paris-5-pont-royal",
+    "paris-7-pont-neuf-soir"
+  ],
+  "allCurrentNewAssetsR2ByteVerified": true,
+  "rootWholeAndNativeReviewPassedForOwnerReview": true,
+  "reviewSite": {
+    "status": "succeeded",
+    "project_id": "appgprj_6a95d7decd848191b2ee8a680b8c8263",
+    "version_id": "appgprj_6a95d7decd848191b2ee8a680b8c8263~appgver_59f6053b7cf881919c842f43df4968cb",
+    "deployment_id": "appgdep_6accf114da348191a330b2bb1079b47d",
+    "source_commit": "d0ad6ca9556a38a63107e8ab230d51030642205f",
+    "archive": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/food-shop-review-20261012/site-deploy.tar.gz",
+    "updated_at": "2026-10-12T14:39:47.741989+00:00",
+    "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site",
+    "reviewURL": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site?category=havainnekuvat-20261012",
+    "audience": "existing owner-private custom audience preserved",
+    "nativeSuccessVerified": true
+  },
+  "ownerAcceptanceVerified": false,
+  "editorAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "gamePublished": false,
+  "remaining210WaitingForOwnerPilotAcceptance": true,
+  "createdAt": "2026-10-12T14:43:23.587757+00:00"
+}
