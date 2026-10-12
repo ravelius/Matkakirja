@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 11.10.2026 00.5x)
+# Linnanrakentajan aloitusviesti (päivitetty 12.10.2026 19.3x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (11.10. 16.1x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-ilta.md` KOKONAAN: vientijono v47r→s→t
+1. **NYT (12.10. 19.3x, tilinvaihto):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261012-ilta.md` KOKONAAN: pysyvät säännöt
+   (Asemataulu VAATII TOIMIA, kuvat omistajalle täysikokoisina pelikuvina, agenttien komentosäännöt), Olavinlinna v48m–s tunnuksineen
+   (v48s-vienti kesken → tunnukset Siirtosepälle ja PT:lle), asut vaatteet-v1/, raketti- ja karttamallit, koehuone, jono.
+1p. **(vanha) 11.10. 16.1x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-ilta.md` KOKONAAN: vientijono v47r→s→t
    taustalla (tunnukset Siirtosepälle yhtenä viestinä kun v47t valmis), jumikorjausten tila, jono: botin uudet mallikohdat → Pariisi
    v3c/v3d (LS2:n kuvat) → soutajan kasvot + eleet yhdistys ja vienti (junaan 183) → raketti.
 1q. **(vanha) 11.10. 13.xx, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-iltapaiva.md` KOKONAAN (viestiraja: lähettämättä
