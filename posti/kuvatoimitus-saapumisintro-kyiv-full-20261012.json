@@ -2,7 +2,7 @@
   "cityName": "Kiova",
   "gameCityId": "kiova",
   "mediaSlug": "kyiv",
-  "status": "worker-complete-awaiting-session-owner-QA-and-R2",
+  "status": "root-QA-and-R2-verified-ready-for-delivery-coordinator",
   "assets": [
     {
       "id": "kyiv-intro-4-v1",
@@ -50,7 +50,8 @@
           "notes": "Whole native frame and bicycle detail inspected. Three people from behind, no faces, vehicles, text, address numbers or logos. Bicycle detail crop confirms bare generic frame without lettering. Natural old residential street, plausible camera light and irregular foliage.",
           "ownerEditorialAcceptance": "pending"
         },
-        "ownerEditorialAcceptance": "pending"
+        "ownerEditorialAcceptance": "not-required-for-delivery",
+        "ownerAcceptanceRequired": false
       },
       "R2Proof": {
         "status": "verified",
@@ -149,7 +150,8 @@
           "notes": "Full native frame: sandy natural riverbank right with willow, forested bank opposite and tiny distant paddlers. No text, brands, faces, structures or repeated organic stamps. Establishes same-view1873 pair.",
           "ownerEditorialAcceptance": "pending"
         },
-        "ownerEditorialAcceptance": "pending"
+        "ownerEditorialAcceptance": "not-required-for-delivery",
+        "ownerAcceptanceRequired": false
       },
       "R2Proof": {
         "status": "verified",
@@ -238,7 +240,8 @@
           "notes": "Whole native frame: cheerful adult courtyard party, fictional red-haired adult foreground, generic contemporary clothing, all footwear excluded. No text, logos, branding or food; natural skin and warm ordinary lamps.",
           "ownerEditorialAcceptance": "pending"
         },
-        "ownerEditorialAcceptance": "pending"
+        "ownerEditorialAcceptance": "not-required-for-delivery",
+        "ownerAcceptanceRequired": false
       },
       "R2Proof": {
         "status": "verified",
@@ -275,6 +278,165 @@
           }
         ]
       }
+    },
+    {
+      "id": "kyiv-intro-7-v2",
+      "slot": 7,
+      "attempt": 2,
+      "cityName": "Kiova",
+      "gameCityId": "kiova",
+      "mediaSlug": "kyiv",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/kyiv-7-podil-iltavalot-intro-v2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/kyiv-7-podil-iltavalot-native-v2.png",
+      "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+      "bytes": 2671526,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "pixelExactMetadataExport": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: Matkakirja Kyiv arrival intro slot7, necessary whole-new quality repair, attempt2. Create an entirely new image.\nScene: present-day Kyiv, a quiet private residential courtyard in Podil at blue hour. Ordinary anonymous old nineteenth-century cream and faded ochre plaster houses, natural uneven weathering and simple timber-framed apartment windows. No named building, church, famous landmark or contemporary designed architecture.\nComposition: a candid 50mm real-camera view from a slightly raised courtyard landing, looking gently diagonally upward through irregular lime-tree branches toward the SECOND AND THIRD FLOOR windows of two old houses. Several warm domestic windows at different depths and a small wedge of natural deep-blue evening sky. Crop the lower edge ABOVE all ground-floor openings and entrance level. The whole frame shows ONLY upper-storey windows, simple plain upper plaster walls, tree branches and evening sky. Keep vertical building edges and building corners OUT of frame so there are NO rainwater pipes. Absolutely NO ground-floor walls, doors, entrances, gates, gateposts, frontage pavement or street fixtures anywhere in the frame. No humans necessary.\nLight and mood: warm ordinary window light balanced with soft cool natural twilight, quiet lived-in city evening, understated available-light exposure, soft shadow detail and a little real camera grain. Muted authentic cream, warm amber, grey-green leaves and cool dusk blues. Naturally varied leaves, bark and plaster, no stamped or repeated organic patterns.\nCRITICAL REPAIR CONSTRAINT: there must be NO address plaque, house number, sign, sticker, label, utility marking, plate, wall attachment or place where an address plate normally sits anywhere. Completely blank upper walls. NO lettering, numerals, words, logos, brands, stripes, graffiti, artwork, watermark or border, even tiny or blurry marks. No food, drinks, cars or vehicles. No close people or faces. No war damage, soldiers, weapons, military uniforms or political symbols.\nStyle and output: indistinguishable from a real candid camera photograph, photorealistic natural textures, no HDR, CGI, painting, excessive saturation or artificial plastic surfaces. One opaque RGB sRGB landscape PNG, exactly1536x1024pixels.",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/prompt-slot7-attempt2.txt",
+      "briefPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/brief-slot7.json",
+      "sources": [
+        {
+          "url": "https://guide.kyivcity.gov.ua/en/places/vulytsya-petra-sahaydachnoho",
+          "publisher": "Kyiv city official tourism portal",
+          "readFacts": [
+            "Podil redevelopment after1811 fire laid outSahaidachnogo Street in1810s",
+            "Many eighteenth- and nineteenth-century houses preserved"
+          ],
+          "checkedAt": "2026-10-12",
+          "application": "ordinary old anonymous residential fabric; no exact named building or street-address depiction"
+        }
+      ],
+      "caption": "Podilin asuinpihan ikkunavalot Kiovassa. Havainnekuva.",
+      "QA": {
+        "workerReview": {
+          "reviewedAt": "2026-10-12T20:21:07.539615+00:00",
+          "status": "requires-independent-mark-check",
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "inspectionMethod": "Original native full frame plus four unscaled quadrant crops and one unscaled plaster-detail crop",
+          "checks": {
+            "oldPlaqueLocationAbsent": true,
+            "allGroundFloorDoorwaysAbsent": true,
+            "rainwaterPipesAbsent": true,
+            "addressPlaquesAndBlankPlaqueMountsAbsent": true,
+            "stickersSignsLabelsLogosAndGraffitiAbsent": true,
+            "noPeopleOrCloseFaces": true,
+            "noFoodWarSoldiersOrProtectedModernArt": true,
+            "naturalLightAndMutedColors": true,
+            "realisticIrregularPlasterBarkLeaves": true,
+            "opaqueRGB1536x1024sRGB": true,
+            "exactMetadata": true,
+            "pixelUnchangedExport": true
+          },
+          "attentionPoints": [
+            {
+              "region": [
+                1340,
+                65,
+                1410,
+                125
+              ],
+              "pointApprox": [
+                1367,
+                104
+              ],
+              "description": "Small dark loop at end of natural irregular plaster crack above upper-right window can resemble numeral6. No plaque or text-like attachment. Requires independent root judgment under strict no-glyph condition; not asserted delivery approved.",
+              "cropPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/qa-crops/upper-window-plaster-detail.png"
+            }
+          ],
+          "cropPaths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/qa-crops/lower-left.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/qa-crops/lower-right.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/qa-crops/upper-left.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/qa-crops/upper-right.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/qa-crops/upper-window-plaster-detail.png"
+          ],
+          "deliveryApprovedByWorker": false,
+          "approvedForRootReview": true,
+          "additionalGenerationRequested": false
+        },
+        "rootSessionReview": {
+          "reviewedAt": "2026-10-12T20:33:07.304388+00:00",
+          "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame plus four native quadrant crops and enlarged plaster diagnostic inspected. New view eliminates all ground-floor entrances, pipes, address plates, stickers and plaque mounts. Tiny dark curl at1367/104 is continuous with an irregular plaster crack running from the molding seam; there is no separate plaque, painted typographic glyph or text grouping. Natural wall weathering passes. No people/food/logos/military; restrained window-light camera rendering.",
+          "ownerEditorialAcceptance": "not-required-for-delivery"
+        },
+        "independentProducerRootReview": {
+          "reviewedAt": "2026-10-12T20:33:07.304388+00:00",
+          "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+          "approvedForTechnicalDelivery": true,
+          "fullFrameInspected": true,
+          "nativeResolutionDetailsInspected": true,
+          "reviewMethod": "view_image original native resolution",
+          "notes": "Whole native frame plus four native quadrant crops and enlarged plaster diagnostic inspected. New view eliminates all ground-floor entrances, pipes, address plates, stickers and plaque mounts. Tiny dark curl at1367/104 is continuous with an irregular plaster crack running from the molding seam; there is no separate plaque, painted typographic glyph or text grouping. Natural wall weathering passes. No people/food/logos/military; restrained window-light camera rendering.",
+          "ownerEditorialAcceptance": "not-required-for-delivery",
+          "deliveryCoordinatorReview": "pending-SHA-specific-recheck",
+          "priorIndependentFailureCorrected": true
+        },
+        "ownerAcceptanceRequired": false,
+        "ownerEditorialAcceptance": "not-required-for-delivery"
+      },
+      "R2Proof": {
+        "status": "verified",
+        "verifiedAt": "2026-10-12T20:33:09.898744+00:00",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png",
+        "r2Key": "julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png",
+        "preflightHttp": 404,
+        "immutableNoOverwrite": true,
+        "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+        "bytes": 2671526,
+        "canonicalAndCacheBustedByteExact": true,
+        "reads": [
+          {
+            "kind": "canonical",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+            "bytes": 2671526,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          },
+          {
+            "kind": "cacheBusted",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png?t=70617899e6c748d7",
+            "http": 200,
+            "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+            "bytes": 2671526,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExactReadback": true
+          }
+        ]
+      },
+      "generationTool": "builtin image_gen",
+      "generationRound": "repair-round-20261012",
+      "replacementOfSha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/qa-slot7-v2.json",
+      "ownerAcceptanceRequired": false,
+      "ownerReviewBeforeGameDelivery": false,
+      "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+      "ownerAuthorizationSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/review-gate.json",
+      "status": "producer-root-QA-approved-awaiting-R2"
     },
     {
       "id": "kyiv-intro-8-v1",
@@ -337,7 +499,8 @@
           "notes": "Full native frame and modern5 comparison: same right sandy bank, willow and north-northeast river orientation, forested opposite bank. Visually neutral black-and-white, distant period rower with hidden face; no bridges, electric lights, modern clothes, text or structures. Three historical sources read before call; vegetation reconstructed.",
           "ownerEditorialAcceptance": "pending"
         },
-        "ownerEditorialAcceptance": "pending"
+        "ownerEditorialAcceptance": "not-required-for-delivery",
+        "ownerAcceptanceRequired": false
       },
       "R2Proof": {
         "status": "verified",
@@ -376,31 +539,143 @@
       }
     }
   ],
-  "omittedItems": [
-    {
-      "id": "kyiv-intro-7-v1",
-      "slot": 7,
-      "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
-      "fullFrameInspected": true,
-      "nativeDetailsInspected": true,
-      "approvedForDelivery": false,
-      "reason": "Hylätty toimituksesta: vasemman etualan sadevesiputken takaisessa seinäkilvessä näkyy numero5:n kaltainen merkki. Pending-quality-fix.",
-      "observations": [
-        "Muuten fotorealistinen Podilin iltakatu: pienet selin kävelevät henkilöt, uskottavat lämpimät valot ja märän kadun heijastukset, koherentti perspektiivi.",
-        "HYLKÄYS: vasemman etualan sadevesiputken taakse kiinnitetyssä pienessä vaaleassa seinäkilvessä näkyy tumma numero5:n kaltainen merkki noin x190..198 y539..550. No text/digits -vaatimus ei täyty.",
-        "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-plaque-mark.png",
-        "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-pipe-wall.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-doors-people.png",
-        "Ensimmäinen candidate jää pending-quality-fix. Owner-order.jsonin rootWorkflowPolicyCorrection sallii yhden tarpeellisen kokonaan uuden laatukorjauksen; alkuperäistä rasteria ei retusoida eikä tätä candidatea toimiteta.",
-        "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat."
-      ]
-    }
-  ],
+  "omittedItems": [],
   "generatedImageCount": 5,
   "missingSlots": [],
   "builtInToolOnly": true,
   "ownerEditorialAcceptance": "pending",
   "gameIntegration": "pending",
   "productionComplete": true,
+  "rejectedCandidates": [
+    {
+      "slot": 7,
+      "reason": "Hylätty toimituksesta: vasemman etualan sadevesiputken takaisessa seinäkilvessä näkyy numero5:n kaltainen merkki. Pending-quality-fix.",
+      "asset": {
+        "id": "kyiv-intro-7-v1",
+        "slot": 7,
+        "cityName": "Kiova",
+        "gameCityId": "kiova",
+        "mediaSlug": "kyiv",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/kyiv-7-podil-iltavalot-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/kyiv-7-podil-iltavalot-native-v1.png",
+        "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+        "bytes": 2582555,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "pixelExactMetadataExport": true,
+        "metadata": {
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+        },
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v1.png",
+        "r2Key": "julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v1.png",
+        "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja Kyiv arrival intro slot 7. Current-day quiet residential street in Kyiv Podil at blue hour after light rain. Different scene from slot 4: a street bend framed obliquely by plain anonymous nineteenth-century three-storey pale stucco facades and old brick boundary walls, irregular patches of damp paving reflect a few warm apartment windows and simple generic street lanterns. Small distant pedestrians seen from behind, no close face. At street level 50mm lens, grounded understated exposure with dark shadows and cool natural twilight, no spectacular landmarks, skyline, churches or statues, no cars in foreground, no food or drink. Real-camera photorealism, plausible candid travel photography, natural illumination, muted true colors, fine irregular real material textures, no HDR, no illustration, no CGI, no plastic skin, no identical stamped leaves. Landscape 1536x1024 pixels, opaque RGB sRGB. No text of any kind anywhere, no lettering, address numbers, signs, logos, brands, graphic stripes, artwork, graffiti, watermark or frame. No recognizable real person. No military, weapons, violence, war damage or soldiers.",
+        "sources": [
+          {
+            "url": "https://guide.kyivcity.gov.ua/en/places/vulytsya-petra-sahaydachnoho",
+            "publisher": "Kyiv city official tourism portal",
+            "readFacts": "Podil street grid redeveloped in 1810s after 1811 fire, with many surviving 18th–19th-century houses; supports anonymous Podil residential setting, no exact building claim."
+          }
+        ],
+        "caption": "Ikkunavalot syttyvät Kiovan Podilin vanhalla asuinkadulla. Havainnekuva.",
+        "QA": {
+          "workerReview": {
+            "reviewedAt": "2026-10-12T17:26:42.686569+00:00",
+            "fullFrameInspected": true,
+            "nativeResolutionDetailsInspected": true,
+            "approvedForRootReview": true,
+            "notes": "Full frame and native details: rear-facing distant pedestrians, subtle practical lamplight, wet irregular paving, no discernible lettering logos close faces or food."
+          },
+          "rootSessionReview": {
+            "reviewedAt": "2026-10-12T20:14:40.377735+00:00",
+            "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+            "approvedForTechnicalDelivery": false,
+            "fullFrameInspected": true,
+            "nativeResolutionDetailsInspected": true,
+            "reviewMethod": "view_image original native resolution",
+            "notes": "Withdraw previous producer approval: Hylätty toimituksesta: vasemman etualan sadevesiputken takaisessa seinäkilvessä näkyy numero5:n kaltainen merkki. Pending-quality-fix.",
+            "ownerEditorialAcceptance": "pending"
+          },
+          "ownerEditorialAcceptance": "pending",
+          "independentDeliveryReview": {
+            "id": "kyiv-intro-7-v1",
+            "slot": 7,
+            "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+            "fullFrameInspected": true,
+            "nativeDetailsInspected": true,
+            "approvedForDelivery": false,
+            "reason": "Hylätty toimituksesta: vasemman etualan sadevesiputken takaisessa seinäkilvessä näkyy numero5:n kaltainen merkki. Pending-quality-fix.",
+            "observations": [
+              "Muuten fotorealistinen Podilin iltakatu: pienet selin kävelevät henkilöt, uskottavat lämpimät valot ja märän kadun heijastukset, koherentti perspektiivi.",
+              "HYLKÄYS: vasemman etualan sadevesiputken taakse kiinnitetyssä pienessä vaaleassa seinäkilvessä näkyy tumma numero5:n kaltainen merkki noin x190..198 y539..550. No text/digits -vaatimus ei täyty.",
+              "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-plaque-mark.png",
+              "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-pipe-wall.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-doors-people.png",
+              "Ensimmäinen candidate jää pending-quality-fix. Owner-order.jsonin rootWorkflowPolicyCorrection sallii yhden tarpeellisen kokonaan uuden laatukorjauksen; alkuperäistä rasteria ei retusoida eikä tätä candidatea toimiteta.",
+              "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat."
+            ]
+          }
+        },
+        "R2Proof": {
+          "status": "verified",
+          "verifiedAt": "2026-10-12T17:30:49.659452+00:00",
+          "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v1.png",
+          "r2Key": "julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v1.png",
+          "preflightHttp": 404,
+          "immutableNoOverwrite": true,
+          "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+          "bytes": 2582555,
+          "canonicalAndCacheBustedByteExact": true,
+          "reads": [
+            {
+              "kind": "canonical",
+              "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v1.png",
+              "http": 200,
+              "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+              "bytes": 2582555,
+              "mime": "image/png",
+              "cors": "https://matkakirja.app",
+              "requestOrigin": "https://matkakirja.app",
+              "byteExactReadback": true
+            },
+            {
+              "kind": "cacheBusted",
+              "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v1.png?t=129dac1a9618bacd",
+              "http": 200,
+              "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+              "bytes": 2582555,
+              "mime": "image/png",
+              "cors": "https://matkakirja.app",
+              "requestOrigin": "https://matkakirja.app",
+              "byteExactReadback": true
+            }
+          ]
+        }
+      },
+      "rejectedAt": "2026-10-12T20:14:40.393668+00:00",
+      "source": "independent-delivery-QA"
+    }
+  ],
+  "ownerAcceptanceRequired": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
+  "ownerReviewBeforeGameDelivery": false,
+  "ownerAuthorizationSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/review-gate.json",
+  "repairHistory": [
+    {
+      "round": "repair-round-20261012-owner-sleep",
+      "slot": 7,
+      "selectedSha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+      "selectedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/east/kyiv/repair-round-20261012/kyiv-7-podil-iltavalot-intro-v2.png",
+      "additionalActualGenerationCalls": 1,
+      "previousCandidatePreserved": true,
+      "ownerApprovalGateRemoved": true,
+      "updatedAt": "2026-10-12T20:33:07.360340+00:00"
+    }
+  ],
   "rejectedCandidateHistory": [
     {
       "id": "kyiv-intro-7-v1",
@@ -420,11 +695,20 @@
       ]
     }
   ],
-  "pendingQualityFixSlots": [
-    7
-  ],
-  "allRequestedSlotsDelivered": false,
-  "actualCalls": 5,
+  "supplementalSources": [],
+  "deliveryRepairSelection": {
+    "reportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/repair-qa-20261012.json",
+    "reportSHA256": "a7f06ac46e5f7975ee451d16ec07ea0e6fc980305d8b0066265fef9b8e086988",
+    "ids": [
+      "kyiv-intro-7-v2"
+    ],
+    "selectedAt": "2026-10-12T21:38:15.067375+00:00"
+  },
+  "ownerAcceptance": false,
+  "gameIntegrated": false,
+  "pendingQualityFixSlots": [],
+  "allRequestedSlotsDelivered": true,
+  "actualCalls": 6,
   "deliveryQAEvidence": {
     "mediaSlug": "kyiv",
     "gameCityId": "kiova",
@@ -486,20 +770,30 @@
         ]
       },
       {
-        "id": "kyiv-intro-7-v1",
+        "id": "kyiv-intro-7-v2",
         "slot": 7,
-        "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
+        "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+        "nativeSHA256": "e6f8a93ada07b34d863e03edf84a83fc00066246b0d557393be99e5dd46266c4",
         "fullFrameInspected": true,
         "nativeDetailsInspected": true,
-        "approvedForDelivery": false,
-        "reason": "Hylätty toimituksesta: vasemman etualan sadevesiputken takaisessa seinäkilvessä näkyy numero5:n kaltainen merkki. Pending-quality-fix.",
+        "approvedForDelivery": true,
+        "reason": "QA-hyväksytty: uusi ylöspäin rajattu Podilin asuinpihan iltanäkymä poistaa vanhan osoitekilven; koko ruutu ja natiivit ikkunaseinän yksityiskohdat ovat merkitsemättömiä.",
         "observations": [
-          "Muuten fotorealistinen Podilin iltakatu: pienet selin kävelevät henkilöt, uskottavat lämpimät valot ja märän kadun heijastukset, koherentti perspektiivi.",
-          "HYLKÄYS: vasemman etualan sadevesiputken taakse kiinnitetyssä pienessä vaaleassa seinäkilvessä näkyy tumma numero5:n kaltainen merkki noin x190..198 y539..550. No text/digits -vaatimus ei täyty.",
-          "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-plaque-mark.png",
-          "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-pipe-wall.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-doors-people.png",
-          "Ensimmäinen candidate jää pending-quality-fix. Owner-order.jsonin rootWorkflowPolicyCorrection sallii yhden tarpeellisen kokonaan uuden laatukorjauksen; alkuperäistä rasteria ei retusoida eikä tätä candidatea toimiteta.",
-          "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat."
+          "Koko1536x1024-natiivikuva katsottu original-detailillä; oikean ylä- ja alakulman768x512-rajaukset katsottu ilman skaalausta.",
+          "Ikkunavalot, kulunut rappaus, puun runko ja vaihtelevat lehdet muodostavat uskottavan rauhallisen kameranäkymän. Ei havaittua tekstiä, numerokilpeä, logoa, brändiä, vesileimaa, kuvateosta, ruokaa tai tunnistettavaa henkilöä.",
+          "Uusi sommittelu näyttää asuinpihan yläjulkisivut; aiemmin hylätty numero5:n kaltainen seinäkilpi ei sisälly tähän kokonaan uuteen kuvaan. Tavallinen nimetön vanha rakennuskanta sopii tallennettuun Podil-lähdetaustaan."
+        ],
+        "nativeFinalRGBIdentical": true,
+        "technicalValidationPass": true,
+        "inspectionCrops": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/repair-crops-root/detail-upper-right.png",
+            "sha256": "cff540fd996a289089f8f53bcdd8d6992fd2e0af97ce4b85443351b951a5484b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/repair-crops-root/detail-lower-right.png",
+            "sha256": "07f53dd0c47fa896e1020906b6f6824b0a84d3bb34be363a17a110ca1b38ed1b"
+          }
         ]
       },
       {
@@ -526,18 +820,21 @@
     "ownerAcceptance": false,
     "gameIntegrated": false,
     "reviewedAt": "2026-10-12T17:38:14.885512+00:00",
-    "sourceManifestSha256": "baf3f0cc59d494a8e77b5ea2f813d307b4caef3eaa73875534e2a4b92cc0db3a"
+    "sourceManifestSha256": "baf3f0cc59d494a8e77b5ea2f813d307b4caef3eaa73875534e2a4b92cc0db3a",
+    "repairQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/repair-qa-20261012.json",
+    "repairQASHA256": "a7f06ac46e5f7975ee451d16ec07ea0e6fc980305d8b0066265fef9b8e086988",
+    "ownerAcceptanceRequired": false
   },
   "deliveryR2Proof": {
     "mediaSlug": "kyiv",
-    "verifiedAt": "2026-10-12T17:38:59.321487+00:00",
+    "verifiedAt": "2026-10-12T21:38:37.792646+00:00",
     "assets": [
       {
         "id": "kyiv-intro-4-v1",
         "slot": 4,
         "sha256": "2e826c88da520d01e4c94b9a428fe33969d8b4d044bbaed8e6380dbf18cdcc37",
         "bytes": 2889644,
-        "verifiedAt": "2026-10-12T17:38:58.228300+00:00",
+        "verifiedAt": "2026-10-12T21:38:36.401608+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-4-podil-arki-intro-v1.png",
@@ -550,7 +847,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-4-podil-arki-intro-v1.png?delivery-verify=2e826c88da520d01-1791826738228294000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-4-podil-arki-intro-v1.png?delivery-verify=2e826c88da520d01-1791841116401604000",
             "http": 200,
             "sha256": "2e826c88da520d01e4c94b9a428fe33969d8b4d044bbaed8e6380dbf18cdcc37",
             "bytes": 2889644,
@@ -566,7 +863,7 @@
         "slot": 5,
         "sha256": "a65d0928366c516e2877c3b8d21c94a17043da79086a140d87b732dcb77008c3",
         "bytes": 2630936,
-        "verifiedAt": "2026-10-12T17:38:58.228679+00:00",
+        "verifiedAt": "2026-10-12T21:38:36.401802+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-5-trukhaniv-luonnonranta-intro-v1.png",
@@ -579,7 +876,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-5-trukhaniv-luonnonranta-intro-v1.png?delivery-verify=a65d0928366c516e-1791826738228676000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-5-trukhaniv-luonnonranta-intro-v1.png?delivery-verify=a65d0928366c516e-1791841116401800000",
             "http": 200,
             "sha256": "a65d0928366c516e2877c3b8d21c94a17043da79086a140d87b732dcb77008c3",
             "bytes": 2630936,
@@ -595,7 +892,7 @@
         "slot": 6,
         "sha256": "062edfa0ec7822464a731c53280ce1c2c3ce2573728f3a4bcf895afcdd1b0c43",
         "bytes": 1993966,
-        "verifiedAt": "2026-10-12T17:38:58.228824+00:00",
+        "verifiedAt": "2026-10-12T21:38:36.402306+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-6-podil-kesajuhla-intro-v1.png",
@@ -608,10 +905,39 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-6-podil-kesajuhla-intro-v1.png?delivery-verify=062edfa0ec782246-1791826738228821000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-6-podil-kesajuhla-intro-v1.png?delivery-verify=062edfa0ec782246-1791841116402304000",
             "http": 200,
             "sha256": "062edfa0ec7822464a731c53280ce1c2c3ce2573728f3a4bcf895afcdd1b0c43",
             "bytes": 1993966,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "kyiv-intro-7-v2",
+        "slot": 7,
+        "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+        "bytes": 2671526,
+        "verifiedAt": "2026-10-12T21:38:37.126692+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png",
+            "http": 200,
+            "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+            "bytes": 2671526,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png?delivery-verify=70617899e6c748d7-1791841117126685000",
+            "http": 200,
+            "sha256": "70617899e6c748d71defd992f9545011dcb6afb6d4225c061276b690ccce7d81",
+            "bytes": 2671526,
             "mime": "image/png",
             "cors": "https://matkakirja.app",
             "requestOrigin": "https://matkakirja.app",
@@ -624,7 +950,7 @@
         "slot": 8,
         "sha256": "55aea56dc9b6cfce4b668565d82b3b72ba4dca023cc49b65d5cc14f6f882bf4c",
         "bytes": 2675605,
-        "verifiedAt": "2026-10-12T17:38:58.745994+00:00",
+        "verifiedAt": "2026-10-12T21:38:37.218643+00:00",
         "reads": [
           {
             "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-8-trukhaniv-1873-intro-v1.png",
@@ -637,7 +963,7 @@
             "byteExact": true
           },
           {
-            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-8-trukhaniv-1873-intro-v1.png?delivery-verify=55aea56dc9b6cfce-1791826738745983000",
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/kyiv/20261012-full/kyiv-8-trukhaniv-1873-intro-v1.png?delivery-verify=55aea56dc9b6cfce-1791841117218637000",
             "http": 200,
             "sha256": "55aea56dc9b6cfce4b668565d82b3b72ba4dca023cc49b65d5cc14f6f882bf4c",
             "bytes": 2675605,
@@ -669,14 +995,11 @@
   "stages": {
     "generated": null,
     "NAS": 5,
-    "QA": 4,
-    "R2": 4,
+    "QA": 5,
+    "R2": 5,
     "Git": "this handoff",
     "gallery": "pending"
   },
-  "ownerAcceptance": false,
-  "ownerAcceptanceRequired": false,
-  "ownerReviewBeforeGameDelivery": false,
   "ownerAuthorization": {
     "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
     "receivedAt": "2026-10-12T20:00:14.684809+00:00",
@@ -717,7 +1040,5 @@
     "R2ByteVerificationStillRequired": true,
     "ownerAcceptanceNotImpliedByAuthorization": true
   },
-  "gameIntegrationAllowedWithoutOwnerAcceptance": true,
-  "gameIntegrated": false,
-  "deliveredAt": "2026-10-12T20:05:04.654194+00:00"
+  "deliveredAt": "2026-10-12T21:40:41.217008+00:00"
 }

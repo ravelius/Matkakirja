@@ -304,27 +304,9 @@
     "kyiv": {
       "gameCityId": "kiova",
       "mediaSlug": "kyiv",
-      "acceptedAssets": 4,
-      "omittedItems": [
-        {
-          "id": "kyiv-intro-7-v1",
-          "slot": 7,
-          "sha256": "129dac1a9618bacd5e9fe781dff0eeffbcbfdd7960de10bd1a1d07da118b847a",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "Hylätty toimituksesta: vasemman etualan sadevesiputken takaisessa seinäkilvessä näkyy numero5:n kaltainen merkki. Pending-quality-fix.",
-          "observations": [
-            "Muuten fotorealistinen Podilin iltakatu: pienet selin kävelevät henkilöt, uskottavat lämpimät valot ja märän kadun heijastukset, koherentti perspektiivi.",
-            "HYLKÄYS: vasemman etualan sadevesiputken taakse kiinnitetyssä pienessä vaaleassa seinäkilvessä näkyy tumma numero5:n kaltainen merkki noin x190..198 y539..550. No text/digits -vaatimus ei täyty.",
-            "Todiste: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-plaque-mark.png",
-            "Lisärajaukset: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-pipe-wall.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/kyiv/crops/slot7-doors-people.png",
-            "Ensimmäinen candidate jää pending-quality-fix. Owner-order.jsonin rootWorkflowPolicyCorrection sallii yhden tarpeellisen kokonaan uuden laatukorjauksen; alkuperäistä rasteria ei retusoida eikä tätä candidatea toimiteta.",
-            "Tekninen tarkastus: PNG RGB opaque1536x1024, sRGB ICC; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat."
-          ]
-        }
-      ],
-      "actualCalls": 5,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-kyiv-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -352,32 +334,9 @@
     "crete": {
       "gameCityId": "kreeta",
       "mediaSlug": "crete",
-      "acceptedAssets": 4,
-      "omittedItems": [
-        {
-          "id": "crete-intro-8-v1",
-          "slot": 8,
-          "sha256": "02291f5e7e54b2ede010165cbc36e4e7de5f838bfc0c5e7b9db0b50cdfb312e8",
-          "fullFrameInspected": true,
-          "nativeDetailsInspected": true,
-          "approvedForDelivery": false,
-          "reason": "Hylätty parivastaavuudesta: pysyvän paljaan kallionenäkkeen sijainti ja muoto poikkeavat modernista slot5:stä, vaikka briefi vaatii saman muuttumattoman kalliogeometrian. Neutraali mustavalkoisuus ja muistomerkkien poissulku läpäisevät. Pending-quality-fix.",
-          "observations": [
-            "Visuaalisesti neutraali mustavalkoinen, ei havaittavaa seepiaa tai muuta värisävyä. Muistomerkkien poissulku täyttyy: järvi ja luonto ilman rakennuksia, kirkkoja, linnoituksia, raunioita tai patsaita.",
-            "Vesi, kaislat, rantakivet ja kuivien rinteiden hajanaiset pensaat näyttävät luonnollisilta. Pieni kaukainen mies selin paidassa, liivissä ja löysissä housuissa on aikakaudelle uskottava; kasvot eivät erotu. Ei kirjoitusta, logoja tai modernia infrastuktuuria.",
-            "HYLKÄYS: samaa muuttumatonta kalliomaastoa/samaa framingia edellyttävä5/8pari ei täyty. Slot5:n paljas läheisempi kallionenäkkeen huippu noin x940,y210 on slot8:ssa siirtynyt noin x725,y230 ja sen kallio-/rinneprofiili on muuttunut. Myös keskitaustan harjanteen muoto ja sen suhde kallionenäkkeeseen poikkeavat.",
-            "Tämä ei ole pelkkä kasvillisuuden tai vedenpinnan historiallinen vaihtelu. Producerbriefin viimeinen kappale edellyttää Fixed terrain silhouette / This rock geometry is unchanged in1873 ja kieltää eri laakson keksimisen. Yleinen WSW-suunta ja korkein huippu vasemmalla säilyvät, mutta niiden säilyminen yksin ei vahvista vaadittua maastoparia.",
-            "Vertailutodisteet: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot5-hill-rock-geometry.png; /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-hill-rock-geometry.png",
-            "Brief, historical-sources.json ja kaksi tutkimuslähdettä luettu verkosta. Vuoden2021 tutkimuksesta luettu kohdat5.1.5 ja5.2 sekä järvialtaan kuvaus;2003 tutkimuksesta luettu tiivistelmä ja Kournas-Delphinos-alueen järvi/pohjoisbarrier-kuvaus. Ne tukevat vanhaa luonnollista järviallasta ja harvaa pensas-/oliivikasvillisuutta, eivät kuvan muuttunutta yksittäistä kalliogeometriaa.",
-            "Apokoronasin kunnan lähdesivu aikakatkaisi verkkohakuyrityksen; sen kirjattu tuottajan lähdenäyttö luettiin historical-sources.jsonista. Kaksi muuta primaarilähdettä saatiin luettua suoraan.",
-            "Period exclusions tarkastettu: ei taloja/asumuksia, modernia turismia, pohjoista muokattua pato-/purkurakennetta, teitä, kaiteita, kahviloita, pedaaliveneitä, autoja, koneita, sähköjohtoja, valoja tai muovia. Täsmällistä1873-rantakuvaa ei briefin mukaan löytynyt; vedenpinta ja yksittäiset kaislat ovat tulkintaa.",
-            "Ensimmäinen candidate jää pending-quality-fix; yksi tarpeellinen kokonaan uusi laatukorjaus on rootWorkflowPolicyCorrectionin mukaan sallittu. Tässä QA:ssa ei tehdä generointia tai rasterimuokkausta.",
-            "Lisärajaus: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/crete/crops/slot8-reeds-period-walker.png",
-            "Tekninen tarkastus: PNG RGB opaque1536x1024 sRGB; Description/Source ovat vaadittu provenance; kuvateksti päättyy Havainnekuva. Alkuperäisten final-tavujen SHA256 vastaa manifestia; native/final-pikselit samat. QA-hyväksyntä koskee kuvasivun pending-arviointiin soveltuvuutta; omistajahyväksyntä ja pelitoimitus ovat erilliset."
-          ]
-        }
-      ],
-      "actualCalls": 5,
+      "acceptedAssets": 5,
+      "omittedItems": [],
+      "actualCalls": 6,
       "manifestPath": "posti/kuvatoimitus-saapumisintro-crete-full-20261012.json",
       "ownerAcceptance": false,
       "gameIntegrated": false
@@ -463,5 +422,5 @@
       "gameIntegrated": false
     }
   },
-  "updatedAt": "2026-10-12T21:29:34.418301+00:00"
+  "updatedAt": "2026-10-12T21:40:41.257430+00:00"
 }

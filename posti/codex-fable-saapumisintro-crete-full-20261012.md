@@ -1,6 +1,6 @@
 # Kreeta: saapumisintron kuvat 4–8
 
-Kanoninen gameCityId `kreeta`, mediaSlug `crete`. Uusia hyväksyttyjä kuvia 4/5; omit 1. Actual calls: 5. Säilytettyjä aiempia kuvia 0.
+Kanoninen gameCityId `kreeta`, mediaSlug `crete`. Uusia hyväksyttyjä kuvia 5/5; omit 0. Actual calls: 6. Säilytettyjä aiempia kuvia 0.
 
 QA: koko kehys ja natiivikoon yksityiskohdat tarkastettu. PNG RGB opaque 1536×1024 sRGB; Description/Source: Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Canonical + cachebusted R2 GET: samat tavut, SHA256, image/png ja Origin https://matkakirja.app CORS.
 
@@ -18,9 +18,8 @@ Roolit: 4 arki; 5 vesi/luonto; 6 moderni juhla/tapahtuma ilman ruokaa; 7 ilta; 8
 - 7: Ikkunavalot Hanian tavallisella asuinkujalla Kreetalla. Havainnekuva.
   URL: https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png
   R2: `julisteet/saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png` · SHA256 `f93a051b07f5e4a10fcfe0d9bf2eecc0dba95fe23d233a7b39fc776b030b82db` · 2747320 tavua
-
-Omit:
-
-- 8: Hylätty parivastaavuudesta: pysyvän paljaan kallionenäkkeen sijainti ja muoto poikkeavat modernista slot5:stä, vaikka briefi vaatii saman muuttumattoman kalliogeometrian. Neutraali mustavalkoisuus ja muistomerkkien poissulku läpäisevät. Pending-quality-fix.
+- 8: Kournasjärven luonnonranta Kreetalla vuonna 1873. Havainnekuva.
+  URL: https://media.matkakirja.app/julisteet/saapumisintro/crete/20261012-full/crete-8-kournasjarvi-1873-intro-v2.png
+  R2: `julisteet/saapumisintro/crete/20261012-full/crete-8-kournasjarvi-1873-intro-v2.png` · SHA256 `31351dc44b018e318880244003119c982b6b0d407f9132b3cb9ed13a3705ffbc` · 2980575 tavua
 
 Omistaja on vapauttanut henkilökohtaisen hyväksynnän ja sallinut pelitoimituksen sekä integraation. QA ja R2-todisteet pakolliset. Henkilökohtainen hyväksyntä: ei varmennettu. Pelin integraatio: ei varmennettu.
