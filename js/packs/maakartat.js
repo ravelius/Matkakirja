@@ -5431,6 +5431,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/budapest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    piirtoRajat: { pohjoinen: 47.5215, etela: 47.4735, lansi: 19.001, ita: 19.097 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * Kainalokartta Sankarien aukiosta. Se on lehden kansikuva mutta
      * 3 km koilliseen, ja päärajaukseen ottaminen olisi työntänyt
@@ -5440,7 +5441,7 @@ export const KAUPUNKIKARTAT = {
      */
     kainalot: [
       { rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
-        x: 70, y: 3, leveys: 28, korkeus: 30.56 },
+        x: 62.5, y: 20.625, leveys: 17.5, korkeus: 19.1 },
     ],
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
@@ -7021,9 +7022,10 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/bukarest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    piirtoRajat: { pohjoinen: 44.4508, etela: 44.4172, lansi: 26.0713, ita: 26.1177 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kainalot: [
       { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
-        x: 3, y: 9, leveys: 26, korkeus: 24.86 },
+        x: 20.625, y: 24.375, leveys: 16.25, korkeus: 15.54 },
     ],
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN

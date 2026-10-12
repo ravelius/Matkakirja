@@ -261,7 +261,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        avaamisen jälkeen). Aarteen jälkeen matkakirja näyttää kaupungin tavallisen saapumismerkinnän; natiivin pitää
  *        sietää kentän puuttuminen (kenttä oli valinnainen).
  */
-export const SKEEMAVERSIO_TARKKA = '1.64';
+/*
+ *   1.65 tarinakaari.aanet { kohtaaminen, aarre } = { url, kesto } | null: kaaren kohtaamis- ja aarreluennan tallenteet
+ *        (js/packs/tarinakaari.js kaariAanite; PT 12.10.2026, juna 184). Natiivi soittaa ne kysymyksen avautuessa ja
+ *        paljastuksessa saapumisen tallenteen tavoin; vanhat buildit ohittavat kentän (lukijaääni kuten ennen).
+ */
+export const SKEEMAVERSIO_TARKKA = '1.65';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

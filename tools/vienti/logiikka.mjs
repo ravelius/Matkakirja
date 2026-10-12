@@ -87,6 +87,7 @@ export const LOGIIKKA = {
   [`${P}paivan-kuvat.js#paivanKuva`]: kuollut,
   [`${P}viritysaanet.js#arvoViritysaani`]: saanto('Satunnainen VIRITYSAANET-alkio, ei sama kuin edellinen.'),
   [`${P}viritysaanet.js#viritysPolku`]: saanto("'assets/audio/' + aani.tiedosto"),
+  [`${P}tarinakaari.js#kaariAanite`]: saanto('Kaaren osan (kohtaaminen | aarre) tallenne { polku, kesto } tai null: null, jos kohde puuttuu, luennat === false tai osa on mykistetty; polku assets/audio/puhe-kaari-<osa>-<id>.mp3, korjatuille (KAARI_AANITTEET_V2) -v2-pääte ja kesto. Natiivi saa valmiin tuloksen tarinakaari-rivin aanet-kentässä (skeema 1.65).'),
   [`${P}tarinakaari.js#kaariLuentaSoi`]: saanto('Soi, jos kohde on olemassa eikä (kohde.mykistetyt ?? []) sisällä osaa (saapuminen | kohtaaminen | aarre).'),
 
   [`${P}fokuskohteet-bgr.js#bgrFokuskohteet`]: fokusPoiminta,

@@ -281,10 +281,11 @@ const KAUPUNGIT = {
     // kohteita. Kainalo ottaa mukaan myös Városligetin ja Széchenyin
     // kylpylän, eli lehden kolmas koillinen kohde näkyy sekin.
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, erä 184); kainalo siirretty ydinalaan
     kainalot: [
       {
         rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
-        x: 70, y: 3, leveys: 28, suunta: '3 km koilliseen',
+        x: 62.5, y: 20.625, leveys: 17.5, suunta: '3 km koilliseen',
       },
     ],
   },
@@ -975,10 +976,11 @@ const KAUPUNGIT = {
     // Unirii-bulevardin suihkulähdealtaat natural=water-monikulmioina —
     // juuri ne tekevät bulevardista kuvassa katkoviivamaisen ketjun.
     rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, erä 184); kainalo siirretty ydinalaan
     kainalot: [
       {
         rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
-        x: 3, y: 9, leveys: 26, suunta: '1 km pohjoiseen',
+        x: 20.625, y: 24.375, leveys: 16.25, suunta: '1 km pohjoiseen',
       },
     ],
   },

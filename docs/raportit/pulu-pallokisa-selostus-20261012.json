@@ -1,0 +1,760 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Pulun pallokisan selostus (PT 12.10./13.x; PR #4501 luku 7). Valmiit kokonaiset lauseet, alle 2 s per leike (≤ 27 merkkiä, ~14 merkkiä/s). Värit Pelikoodarin mukaan: 0 punainen, 1 sininen, 2 keltainen, 3 vihreä, 4 oranssi, 5 violetti, 6 valkoinen, 7 musta. Tapahtumajono: vähintään 12 s väli; tärkeys voitto > johto > viimeinen > tiukka > nousu > nouto > kaasu; vanhentunut pudotetaan. Hyväksyntä: omistaja äänisivun Tekstit-sivulla; generointi Äänittäjä omistajan luvalla.",
+  "varit": [
+    {
+      "nro": 0,
+      "nimi": "punainen",
+      "nom": "Punainen",
+      "gen": "Punaisen"
+    },
+    {
+      "nro": 1,
+      "nimi": "sininen",
+      "nom": "Sininen",
+      "gen": "Sinisen"
+    },
+    {
+      "nro": 2,
+      "nimi": "keltainen",
+      "nom": "Keltainen",
+      "gen": "Keltaisen"
+    },
+    {
+      "nro": 3,
+      "nimi": "vihrea",
+      "nom": "Vihreä",
+      "gen": "Vihreän"
+    },
+    {
+      "nro": 4,
+      "nimi": "oranssi",
+      "nom": "Oranssi",
+      "gen": "Oranssin"
+    },
+    {
+      "nro": 5,
+      "nimi": "violetti",
+      "nom": "Violetti",
+      "gen": "Violetin"
+    },
+    {
+      "nro": 6,
+      "nimi": "valkoinen",
+      "nom": "Valkoinen",
+      "gen": "Valkoisen"
+    },
+    {
+      "nro": 7,
+      "nimi": "musta",
+      "nom": "Musta",
+      "gen": "Mustan"
+    }
+  ],
+  "tapahtumat": [
+    {
+      "avain": "johto",
+      "kuvaus": "pelaaja nousee johtoon (eniten palloja)",
+      "tarkeys": 1
+    },
+    {
+      "avain": "viimeinen",
+      "kuvaus": "pelaaja hakee viimeistä palloa (yksi jäljellä)",
+      "tarkeys": 2
+    },
+    {
+      "avain": "tiukka",
+      "kuvaus": "ero johtajaan yksi pallo",
+      "tarkeys": 3
+    },
+    {
+      "avain": "nousu",
+      "kuvaus": "pelaaja nousee sijoilla (ohittaa jonkun)",
+      "tarkeys": 4
+    },
+    {
+      "avain": "nouto",
+      "kuvaus": "pelaaja nappaa pallon (tavallinen)",
+      "tarkeys": 5
+    },
+    {
+      "avain": "kaasu",
+      "kuvaus": "pelaajan kaasu vähissä (alle 20 %; vain jos moottori lähettää tapahtuman)",
+      "tarkeys": 6
+    },
+    {
+      "avain": "voitto",
+      "kuvaus": "pelaaja keräsi viimeisen pallon ensimmäisenä / voittaa",
+      "tarkeys": 0
+    }
+  ],
+  "leikkeet": [
+    {
+      "tunniste": "pulu-kisa-johto-punainen",
+      "tapahtuma": "johto",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punainen menee johtoon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-johto-sininen",
+      "tapahtuma": "johto",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sininen menee johtoon!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-johto-keltainen",
+      "tapahtuma": "johto",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltainen menee johtoon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-johto-vihrea",
+      "tapahtuma": "johto",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreä menee johtoon!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-johto-oranssi",
+      "tapahtuma": "johto",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssi menee johtoon!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-johto-violetti",
+      "tapahtuma": "johto",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetti menee johtoon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-johto-valkoinen",
+      "tapahtuma": "johto",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoinen menee johtoon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-johto-musta",
+      "tapahtuma": "johto",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Musta menee johtoon!",
+      "merkkeja": 20,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-punainen",
+      "tapahtuma": "viimeinen",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punainen hakee viimeistä!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-sininen",
+      "tapahtuma": "viimeinen",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sininen hakee viimeistä!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-keltainen",
+      "tapahtuma": "viimeinen",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltainen hakee viimeistä!",
+      "merkkeja": 26,
+      "kesto_arvio_s": 1.9
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-vihrea",
+      "tapahtuma": "viimeinen",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreä hakee viimeistä!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-oranssi",
+      "tapahtuma": "viimeinen",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssi hakee viimeistä!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-violetti",
+      "tapahtuma": "viimeinen",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetti hakee viimeistä!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-valkoinen",
+      "tapahtuma": "viimeinen",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoinen hakee viimeistä!",
+      "merkkeja": 26,
+      "kesto_arvio_s": 1.9
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-musta",
+      "tapahtuma": "viimeinen",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Musta hakee viimeistä!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-punainen",
+      "tapahtuma": "tiukka",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punainen on kintereillä!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-sininen",
+      "tapahtuma": "tiukka",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sininen on kintereillä!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-keltainen",
+      "tapahtuma": "tiukka",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltainen on kintereillä!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-vihrea",
+      "tapahtuma": "tiukka",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreä on kintereillä!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-oranssi",
+      "tapahtuma": "tiukka",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssi on kintereillä!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-violetti",
+      "tapahtuma": "tiukka",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetti on kintereillä!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-valkoinen",
+      "tapahtuma": "tiukka",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoinen on kintereillä!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
+    },
+    {
+      "tunniste": "pulu-kisa-tiukka-musta",
+      "tapahtuma": "tiukka",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Musta on kintereillä!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-punainen",
+      "tapahtuma": "nousu",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punainen kirii kiinni!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-sininen",
+      "tapahtuma": "nousu",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sininen kirii kiinni!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-keltainen",
+      "tapahtuma": "nousu",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltainen kirii kiinni!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-vihrea",
+      "tapahtuma": "nousu",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreä kirii kiinni!",
+      "merkkeja": 20,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-oranssi",
+      "tapahtuma": "nousu",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssi kirii kiinni!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-violetti",
+      "tapahtuma": "nousu",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetti kirii kiinni!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-valkoinen",
+      "tapahtuma": "nousu",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoinen kirii kiinni!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nousu-musta",
+      "tapahtuma": "nousu",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Musta kirii kiinni!",
+      "merkkeja": 19,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-punainen",
+      "tapahtuma": "nouto",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punainen nappaa pallon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-sininen",
+      "tapahtuma": "nouto",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sininen nappaa pallon!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-keltainen",
+      "tapahtuma": "nouto",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltainen nappaa pallon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-vihrea",
+      "tapahtuma": "nouto",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreä nappaa pallon!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-oranssi",
+      "tapahtuma": "nouto",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssi nappaa pallon!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-violetti",
+      "tapahtuma": "nouto",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetti nappaa pallon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-valkoinen",
+      "tapahtuma": "nouto",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoinen nappaa pallon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-1-musta",
+      "tapahtuma": "nouto",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Musta nappaa pallon!",
+      "merkkeja": 20,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-punainen",
+      "tapahtuma": "nouto",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punainen sieppaa pallon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-sininen",
+      "tapahtuma": "nouto",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sininen sieppaa pallon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-keltainen",
+      "tapahtuma": "nouto",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltainen sieppaa pallon!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-vihrea",
+      "tapahtuma": "nouto",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreä sieppaa pallon!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-oranssi",
+      "tapahtuma": "nouto",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssi sieppaa pallon!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-violetti",
+      "tapahtuma": "nouto",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetti sieppaa pallon!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-valkoinen",
+      "tapahtuma": "nouto",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoinen sieppaa pallon!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
+    },
+    {
+      "tunniste": "pulu-kisa-nouto-2-musta",
+      "tapahtuma": "nouto",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Musta sieppaa pallon!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-punainen",
+      "tapahtuma": "kaasu",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punaisen kaasu vähissä!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-sininen",
+      "tapahtuma": "kaasu",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sinisen kaasu vähissä!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-keltainen",
+      "tapahtuma": "kaasu",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltaisen kaasu vähissä!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-vihrea",
+      "tapahtuma": "kaasu",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreän kaasu vähissä!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-oranssi",
+      "tapahtuma": "kaasu",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssin kaasu vähissä!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-violetti",
+      "tapahtuma": "kaasu",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetin kaasu vähissä!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-valkoinen",
+      "tapahtuma": "kaasu",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoisen kaasu vähissä!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-kaasu-musta",
+      "tapahtuma": "kaasu",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Mustan kaasu vähissä!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-punainen",
+      "tapahtuma": "voitto",
+      "vari": 0,
+      "vari_nimi": "punainen",
+      "teksti": "Punainen voittaa kisan!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-sininen",
+      "tapahtuma": "voitto",
+      "vari": 1,
+      "vari_nimi": "sininen",
+      "teksti": "Sininen voittaa kisan!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-keltainen",
+      "tapahtuma": "voitto",
+      "vari": 2,
+      "vari_nimi": "keltainen",
+      "teksti": "Keltainen voittaa kisan!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-vihrea",
+      "tapahtuma": "voitto",
+      "vari": 3,
+      "vari_nimi": "vihrea",
+      "teksti": "Vihreä voittaa kisan!",
+      "merkkeja": 21,
+      "kesto_arvio_s": 1.5
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-oranssi",
+      "tapahtuma": "voitto",
+      "vari": 4,
+      "vari_nimi": "oranssi",
+      "teksti": "Oranssi voittaa kisan!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-violetti",
+      "tapahtuma": "voitto",
+      "vari": 5,
+      "vari_nimi": "violetti",
+      "teksti": "Violetti voittaa kisan!",
+      "merkkeja": 23,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-valkoinen",
+      "tapahtuma": "voitto",
+      "vari": 6,
+      "vari_nimi": "valkoinen",
+      "teksti": "Valkoinen voittaa kisan!",
+      "merkkeja": 24,
+      "kesto_arvio_s": 1.7
+    },
+    {
+      "tunniste": "pulu-kisa-voitto-musta",
+      "tapahtuma": "voitto",
+      "vari": 7,
+      "vari_nimi": "musta",
+      "teksti": "Musta voittaa kisan!",
+      "merkkeja": 20,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-kisa-lahtolaskenta",
+      "tapahtuma": "lahtolaskenta",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Kolme, kaksi, yksi!",
+      "merkkeja": 19,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-kisa-alku",
+      "tapahtuma": "alku",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Kisa alkaa! Kääk!",
+      "merkkeja": 17,
+      "kesto_arvio_s": 1.2
+    },
+    {
+      "tunniste": "pulu-kisa-puolivali",
+      "tapahtuma": "puolivali",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Puoli matkaa takana!",
+      "merkkeja": 20,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-kisa-viimeinen-yleinen",
+      "tapahtuma": "viimeinen-yleinen",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Enää yksi pallo jäljellä!",
+      "merkkeja": 25,
+      "kesto_arvio_s": 1.8
+    },
+    {
+      "tunniste": "pulu-kisa-maali",
+      "tapahtuma": "maali",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Kaikki pallot kerätty!",
+      "merkkeja": 22,
+      "kesto_arvio_s": 1.6
+    },
+    {
+      "tunniste": "pulu-kisa-tasapeli",
+      "tapahtuma": "tasapeli",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Aivan tasan! Kääk!",
+      "merkkeja": 18,
+      "kesto_arvio_s": 1.3
+    },
+    {
+      "tunniste": "pulu-kisa-ennatys",
+      "tapahtuma": "ennatys",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Uusi ennätys!",
+      "merkkeja": 13,
+      "kesto_arvio_s": 0.9
+    },
+    {
+      "tunniste": "pulu-kisa-yksinpeli",
+      "tapahtuma": "yksinpeli",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Nyt voitetaan oma ennätys!",
+      "merkkeja": 26,
+      "kesto_arvio_s": 1.9
+    },
+    {
+      "tunniste": "pulu-kisa-keskeytys",
+      "tapahtuma": "keskeytys",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Kisa keskeytyy.",
+      "merkkeja": 15,
+      "kesto_arvio_s": 1.1
+    },
+    {
+      "tunniste": "pulu-kisa-hyva-aika",
+      "tapahtuma": "hyva-aika",
+      "vari": null,
+      "vari_nimi": null,
+      "teksti": "Mikä aika! Kääk!",
+      "merkkeja": 16,
+      "kesto_arvio_s": 1.1
+    }
+  ]
+}

@@ -13956,3 +13956,19 @@ Päätoimittaja 12.10.2026 klo 05.3x (UI-POHJAT, omistajan tarkennus 9.10. vasta
 ## KREIKKA: MUISTOMERKKIEN KUVAT PIILOON KREIKAN APP STORESSA (12.10.2026 klo 11.47)
 
 Omistaja 12.10.2026 klo 11.5x, sanatarkasti: "piilotetaan ne kreikan app storessa". Tausta: Sisältökirjurin selvitys (PR #4492, docs/raportit/kreikka-kulttuuriperintolaki-20261012.md, ei oikeudellinen neuvo): Kreikan laki 3028/2002 (nyk. 4858/2021 art. 46, päätös 436630/2023) vaatii ennakkoluvan ja maksun valtion muistomerkkien kuvaamiseen kaupalliseen levitykseen, myös video ja 3D. Linjaus Italian tapaan: Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas (Ateena ym.) piilotetaan vain Kreikan App Storessa (storefront GRC), muualla kaikki ennallaan. Kuumailmapallokierros tehdään Ateenan sijaan Prahaan (PT 11.5x). Toteutus: Sisältökirjuri listaa Kreikan muistomerkkisisällön, Natiiviseppä tekee App Storen maan tunnistuksen ja yleisen alueellisen piilotuksen (juna 184).
+
+## ASEMATAULU: TILIKOHTAINEN KOPIO JOKAISELLE TILILLE (omistaja 12.10.2026 klo 19.3x–19.4x) (12.10.2026 klo 19.43)
+
+Tilinvaihdossa 12.10. klo 19.2x (tili samireivinen@gmail.com) omistaja jakoi päätilin Asemataulun uudelle tilille ("nyt asemataulun pitäisi näkyä"). Sivu aukesi muokkausoikeudella, mutta sen tietokanta ei: ArtifactData vastasi "shared with you from another organization … doesn't let invited editors use artifact data from Claude Code", eikä ArtifactComments watch toiminut. Omistaja valitsi kortilla 19.35 "Kopio tälle tilille" → https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy julkaistiin repon tools/asemataulu/asemataulu.html:stä ja täytettiin edellisen Päätoimittajan 19.15-tietokantaviennistä.
+
+Omistaja 19.3x sanatarkasti: "Voiko asemataulun tallentaa repoon että jokainen tili voisi ottaa ajantasaisen version sitä kautta käyttöön?" → PT: sivu on jo repossa; tiedot pidetään Macin tiedostoissa Matkakirja-fable/scratchpad/asemataulu/data/talo/*.json (PT kirjoittaa ensin tiedostoon ja vie file_path-kentällä), jolloin jokainen tili julkaisee oman kopionsa repon sivusta ja täyttää sen yhdellä batchilla; osoitteet tileittäin tiedostossa scratchpad/asemataulu/osoitteet.md.
+
+Omistaja 19.4x sanatarkasti: "hyvä. jatkossa muut tilit voisivat luoda taulun samalla tavalla. kirjaa raamattuun" → Raamattu ASEMATAULU TILIKOHTAINEN.
+
+## TILIN VIIKKORAJA 99 % (GMAIL-TILI) (omistaja 12.10.2026 klo 19.35) (12.10.2026 klo 19.43)
+
+Omistaja kortilla: tilin samireivinen@gmail.com (koodaustili, Max; viikko nollautuu maanantaisin klo 03.59) viikkoraja on 99 % kuten muilla koodaustileillä: Postivahti hälyttää 96 %:ssa ja 99 %:ssa, ja 99 %:ssa Päätoimittaja kertoo omistajalle yhden rivin (ei siirtopromptia). Päätilin 50 %:n sääntö (SIIRTOPROMPTI 50 %:SSA OMISTAJAN PÄÄTILILLÄ) ennallaan.
+
+## JUNA 184 JULKAISTAAN HETI, KUN KIPIN PALLOKISA TOIMII JA PULUN RAKETTI ON MUKANA (omistaja 12.10.2026 klo 19.4x) (12.10.2026 klo 19.43)
+
+Omistaja sanatarkasti: "184 voi julkaista heti kun kipin kilpailu on toiminnassa". Heti perään sanatarkasti: "Tai pulun raketti täytyy saada mukaan myös". Tämä on junan 184 julkaisupyyntö ehdolla: kun kipin pallokisa toimii JA Pulun raketin 184-työt ovat mukana (kumpikin Laitetestaajan ajo läpi ja Päätoimittajan kuittaus), Natiiviseppä lukitsee junan 184 → muistiportti → BUILD → TF, ja Julkaisija tekee junan web-merget; mikä ei silloin ole kuitattu, jää junaan 185. Pallokisan ja raketin erät (Pelikoodari, Natiivi-UI, Linssiseppä, Linssiseppä 2) nostettiin käännös- ja simujonon kärkeen. PT välitti ehdon sanatarkasti Natiivisepälle ja Julkaisijalle 19.4x.

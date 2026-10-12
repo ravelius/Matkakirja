@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (184)",
+   "paiva": "2026-10-12",
+   "teksti": "Kuumailmapallolla kilpaillaan nyt muita pelaajia vastaan: valikosta Aloita kisa, ja Pulu selostaa. Uutta myös pallokierrokset Lontoossa ja Prahassa, aarretehtävät kymmeneen kaupunkiin ja Pulu raketissa uusissa asennoissa. ISS-ohjaamosta pääsee aina pois Puluun napauttamalla."
+  },
+  {
    "versio": "1.1 (183)",
    "paiva": "2026-10-12",
    "teksti": "Matka alkaa Euroopasta, ensimmäinen aarre on Kolme veljestä -riipus ja alkuraha on £300. ISS:lle lennetään raketilla Andøyasta Pulu kyljessä. Uutta myös aarretehtävät, lautapelien opastus, taidehalli ja yhtenäiset kohdekartat, ja kaupunkiin saapuminen on sujuvampi."
