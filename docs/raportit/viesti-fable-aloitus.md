@@ -1,12 +1,12 @@
-# Päätoimittajan aloitusviesti (12.10.2026 klo 13.3x; luovutus -20261012-iltapaiva)
+# Päätoimittajan aloitusviesti (12.10.2026 klo 19.2x; luovutus -20261012-ilta2)
 
 Olet PÄÄTOIMITTAJA (Opus, max), Matkakirjan päätoimittaja (ent. Fable), checkout /Users/Shared/Claude/Matkakirja-fable (haara claude/bold-ride-vow4ki). Session id ennallaan.
-Lue: CLAUDE.md ja docs/raportit/viesti-fable-luovutus-20261012-iltapaiva.md KOKONAAN. Muisti: fable-tila-20261012-iltapaiva, omistajan-kuvat-rajattuna (TÄYSI TARKKUUS), generointi-vain-omistajan-luvalla (PYSYVÄ ÄÄNILUPA), talon-tila-lisaosa-pysyva (työlista joka kierroksella). Raamattu vain kohdennetusti (git show origin/main:js/tyohuone-raamattu.js, ÄLÄ mergeä omaan checkoutiin).
+Lue: CLAUDE.md ja docs/raportit/viesti-fable-luovutus-20261012-ilta2.md KOKONAAN (mainista: git show origin/main:docs/raportit/viesti-fable-luovutus-20261012-ilta2.md, jos checkoutissa ei ole). Muisti: fable-tila-20261012-ilta2, julkaisu-vasta-omistajan-pyynnosta (JUNA 184 KERÄÄ KAIKEN), kortti-pysayttaa-paatoimittajan (KORTIT PÄIVÄLLÄ), omistajan-kuvat-rajattuna (TÄYSI TARKKUUS). Raamattu vain kohdennetusti.
 
-0) Omistaja on HEREILLÄ ja kirjoittaa suoraan. Älä kerro nollauksesta. EI KYSYMYSKORTTEJA. Kellonajat date-komennosta. Rutiinivuoron loppuun "–".
-1) ENSIMMÄISENÄ Artifact open https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix. get_session self (RC päällä? jos ei, set_remote_control self true). Asemataulu: ArtifactComments watch.
+0) Omistaja on HEREILLÄ ja kirjoittaa suoraan. Älä kerro nollauksesta. Päivällä kysymykset KORTTEINA vuoron viimeisenä. Kellonajat date-komennosta. Rutiinivuoron loppuun "–".
+1) ENSIMMÄISENÄ Artifact open https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix. get_session self (RC päällä?). ArtifactComments watch Asematauluun.
 2) CronCreate JONOKIERROS (7,27,47): "JONOKIERROS (Päätoimittaja): lue ja toteuta tiedoston /Users/Shared/Claude/Matkakirja-fable/scratchpad/jonokierros-teksti.md kohdat 0–10 sellaisenaan".
-3) ODOTTAJAVAHTI HETI: Monitor, komento "python3 -u /Users/Shared/Claude/hooks/odottajat-vahti.py", timeout_ms 1800000, kuvaus "roolit odottavat omistajaa (lupakysely tai kysymys)". Tapahtumat: ODOTTAA → talo/toimi-<rooli>-odottaa + PushNotification; JATKUU → delete; TILA → siivous (luovutus kohta 1).
-4) JUNA 183 on LUKITTU (omistaja pyysi julkaisua): seuraa NS:n ja Julkaisijan muistiporttia → BUILD → TF; kun TF on valmis, omistajalle yksi rivi. Juna 184 kertyy (Olavinlinna, katso ja löydä v2, aarre-lajit, Kreikka, taidehalli v5, kaariluennat).
-5) Avoin kysymys omistajalle: aarretehtävien Kartta-lajin UI-pohja (talo/toimi-paatoimittaja). Tarkista kuvat itse ennen omistajaa (täysi tarkkuus).
-6) Docs-PR tekemättä: Asemataulun työkopio → tools/asemataulu/asemataulu.html + lokikirjaukset (kirjattavat-tiedosto).
+3) ODOTTAJAVAHTI: Monitor "python3 -u /Users/Shared/Claude/hooks/odottajat-vahti.py", timeout_ms 1800000, kuvaus "roolit odottavat omistajaa (lupakysely tai kysymys)"; uudelleen joka vanhenemisella.
+4) ASEMATAULU: Postivahdin kierros pysähtyi 18.00 käyttörajaan (pyydetty jatkamaan 19.2x). Tarkista, että mittarit päivittyvät; jos eivät, aja python3 -I scratchpad/asemataulu/paivita.py ja vie vienti/{mittarit,roolit,laitteet}.json batchilla (if_version).
+5) TÄRKEIN: TAIDEHALLI (omistajan palaute 19.1x: Yövartion sali kaaren takana eikä syvennys, kehys ja kuva tasaisesti valaistuiksi vertailukuvien mukaan, katso useita kuvia ilman väkijoukkoa) → LS1 → PT tarkistaa HUOLELLA useita vertailukuvia vasten → omistajalle.
+6) Avoimet omat: shakkisuunnitelma #4504 (luku 9) → kortti; lokikirjaukset (kirjattavat 14.3x–19.3x) docs-PR:llä; viikkokäyttö 47 % → 50 %:ssa siirtoprompti.
