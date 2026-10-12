@@ -1,4 +1,4 @@
-# Linssisepän luovutus 11.10.2026 ilta (päivitetty 17.0x, nollaus PT:n pyynnöstä)
+# Linssisepän luovutus 11.10.2026 ilta (päivitetty 12.10. 09.3x)
 
 Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto (paikalliset haarat, ei pushia). Simu- ja käännösvuorot vain Julkaisijalta;
 **LS1 = käännöslinja 2** (`PROTO_LINJA=2`), linja 1 vain Julkaisijan luvalla (ilman PROTO_LINJA:a). Ajoskriptit ja skenaariot:
@@ -26,6 +26,22 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   (malli testihaarassa linssiseppa/testi-182-houkuttimet 4a075e90d, wt proto-linssiseppa-testi182h). Arkit
   lokit/todistus-houkuttimet-iphone-182d-20261011-1652/arkki-houkuttimet-iphone.jpg (+ ipad-182d-1654).
   Avoin (ei pyydetty): tavalliset himmeät pisteet jäävät iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle.
+
+## Lisäys 12.10. 09.3x (184-pilotit; JULKAISU VASTA OMISTAJAN PYYNNÖSTÄ)
+- **Lähestyminen → 184** (PT 07.5x): proto linssiseppa/museo-lahestyminen-183 (wt proto-linssiseppa-lahestyminen) **52ad8fedd**
+  (⊃ 95% -portti cf32bd1b6, QA "museo lahestyminen odotus <s>" 98d11e333, lataus lokiin/s, pelin kartta pois Googlen kuvasta).
+  EI 183:een. Kylmä Amsterdam simulla 95 % vasta 25–60 s:ssa → 184:n RAKENNE: lento alkaa korkealta ja laskeutuu laattojen tahdissa
+  (latausaika lennon sisällä, ei esilatausta valikossa = ei lisämuistia; PT hyväksyi). Esikatselu (toinen käynti) PT:llä:
+  lokit/esikatselu-lahestyminen-184/puhdas/. AVOIN: pienet vaaleat raidalliset laatat leijuvat julkisivun edessä (myös Pariisin
+  oppaassa Louvren pihalla) — EI puut, EI nostot; piirtyy kalvon (Overlay) päälle → UI tai erillinen kamera; selvitä.
+  Ketjut/skenaariot: tyokalut/linssiseppa-ajot/ketju-esikatselu2-184.zsh, sk-esikatselu-{iphone,ipad}.txt (kuormaportti load < 40).
+- **Katso ja löydä 184** linssiseppa/katso-loyda-184 **9612b59f0** (köysi ei peitä kohdetta: kori kääntyy vain pelaajan vedosta).
+  Skenaario sk-katso-184.txt korjattu (tehtävä Louvressa); uusinta ajamatta.
+- **Taidehalli v3/v4 (museopilotti)**: Blender-kuvasarja _valmiit/taidemuseo-alankomaat-v3/esikatselu/v3/vertailu-kg-yovartio.png
+  (EI omistajalle, PT 09.1x: vain pelikuvat). Agentti tekee v4: värit valokuvasta (≤ 10 %/kanava), muisti lod0 ≤ 25 / lod1 ≤ 10 Mt,
+  paketti taidemuseo/alankomaat/sali-v4/ (+ simun JPEG-vara). Unity: linssiseppa/museo-sali3-184 (wt proto-linssiseppa-sali3,
+  pohja museo-elama-184 68e7c5da6) **a0aaf4bd7** kehityslippu "museo sali uusi|vanha|lippu". Toinen agentti: teoskuvien kaukokarsinta
+  samassa puussa. NS budjetti: museoajon huippu ≤ 2,57 Gt (nyt 2671/2700). Sitten vienti Julkaisijalla, iPad-ajo, NYT|UUSI|OIKEA pelistä.
 
 ## Lisäys 12.10. 02.0x (juna 183)
 - **KIPPI-183 LOPULLINEN** linssiseppa/kippi-183 **f6e438497** (juna-183 493efdebe + ikkunat-183 + kippi-katse-183 + kippi-autot-183 +
