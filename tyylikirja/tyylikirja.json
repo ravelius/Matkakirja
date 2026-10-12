@@ -457,7 +457,13 @@
     "pergamentti-varjo": "#4a2e0c",
     "pergamentti-tahra": "#9e7a4d",
     "aloitus-portti": "#241a12",
-    "maakunnat-tausta": "#120c04"
+    "maakunnat-tausta": "#120c04",
+    "pergamentti-ramppi-1": "#d8ac66",
+    "pergamentti-ramppi-2": "#d8a66a",
+    "pergamentti-ramppi-3": "#c69c6a",
+    "pergamentti-ramppi-4": "#8e7252",
+    "pergamentti-ramppi-5": "#5a472e",
+    "iss-tahti": "#fff5e0"
   },
   "kentta": {
     "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026; arvot omistajan mallikuvasta, Pelikoodari): tekstikenttä, alue ja valinta lomakkeissa. Korkeus = osuma-ala, alue 2 × korkeus; teksti Luku 16, vihje kursiivina.",
