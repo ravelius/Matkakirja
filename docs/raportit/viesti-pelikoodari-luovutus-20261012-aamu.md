@@ -31,3 +31,7 @@ Tila: JONO TYHJÄ (PT kirjasi, lepo). PT herättää, kun Codexin pääkaupunkie
   ArtifactData set url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix, kokoelma "talo", doc_id "toimi-pelikoodari",
   data {rooli: "Pelikoodari", kysymys: "<yksi rivi: mitä ja missä ikkunassa>", ts: <ms>}; epäonnistuu → Postivahdille
   "VAATII TOIMIA: Pelikoodari: <asia>". Hoidettu → get → delete if_version.
+- OMISTAJAN KUVAT TÄYDELLÄ TARKKUUDELLA (omistaja 12.10. 11.1x, PT): yksittäin tai kuvapari nykyinen | uusi natiivikorkeudella,
+  merkintä isona alareunaan, JPEG laatu 90. Pienennettyjä monen ruudun arkkeja EI omistajalle; PT:lle saa arkin, täysikokoiset samalla.
+- Aarretehtävät käyttöön: ecdcb9e7f KUITATTU 183 (omistajan kyllä 11.2x). SK suunnittelee kaikkiin Euroopan kaupunkeihin + 2–3 uutta
+  lajia; moottorin uudet lajit vasta suunnitelman hyväksynnän jälkeen. Katso ja löydä v2: pelikoodari/katso-v2 f7162ddc4 (LS1 yhdistää).
