@@ -133,15 +133,42 @@ Tarkistus 12.10.: natiivin ja workerin retkikunnan päätepisteet täsmäävät.
 ### Yksityisyys
 - Sama kuin luvuissa 2–3: vain oma retkikunta näkee pallot, nimimerkit ja ajat; sijainteja ei tallenneta; ajat ovat retkikunnan sisäisiä (ei julkista tulostaulua). Yksin pelaavan ajat pysyvät laitteella.
 
+### Reaaliaikainen kisa (omistaja 15.5x, PT): noudot heti kaikille
+- Kisa kulkee samassa Durable Object -huoneessa (luku 2; WebSocket, hibernation, Free-taso). Oma nouto lähetetään heti: `{tyyppi: "nouto", j, n, ts}`; huone lisää palvelinajan ja välittää sen muille. **Tavoiteviive alle 0,5 s**; asiakas kirjaa lokiin viiveen (vastaanotto − palvelinaika, kellojen ero korjattuna yhteyden alussa).
+- Katkos: asiakas yhdistää uudelleen porrastetusti ja saa huoneelta tilannekuvan (pallomäärät); välissä kisa jatkuu paikallisesti, eikä mikään nouto katoa (asiakas lähettää kertyneet uudelleen, huone ei laske samaa palloa kahdesti: noudon tunnus = pallon järjestysnumero).
+- **Kilpailijan nouto:** lyhyt äänimerkki, joka eroaa omasta noudosta (Äänittäjä: `kisa-nouto-muu`, oma `kisa-nouto-oma`), ja viesti "Punainen · Utelias Ilves nouti pallon (3)" olemassa olevalla sähkeliuska- tai ilmoituspohjalla (NUI).
+- **Yläreunassa kaikkien pallomäärät** värimerkein olemassa olevalla yläpalkin pohjalla (NUI); puuttuva pohja → PT ennen omaa ratkaisua.
+
+### Kaasu (omistaja 16.0x, PT): nopeus maksaa
+- Tankki 0–1. **Kulutus kasvaa nopeuden neliönä**: täydellä vauhdilla tankki tyhjenee noin 90 sekunnissa, puolivauhdilla noin kuudessa minuutissa, ja paikallaan leijuminen ei kuluta. Tasapaino: täyttä vauhtia jaksaa 2–3 pallonväliä, risteilyvauhti (noin 60 %) riittää lähes palloilla itsellään.
+- **Kaasu ei lopu koskaan kokonaan:** tyhjällä tankilla pallo liukuu noin 30 %:n huippunopeudella.
+- **Pullot ovat henkilökohtaisia:** pelaajan tankin laskiessa alle 30 % hänen eteensä ilmestyy kevyesti hehkuva kaasupullo 100–200 metrin päähän (enintään yksi kerrallaan); pullo antaa +40 %. Muut eivät näe toistensa pulloja, joten niistä ei kilpailla.
+- **Ilmapallon nouto antaa +15 %** (omistaja 16.0x): palkki nousee näkyvästi ja reunahehku on kulta. Pullot jäävät tarpeellisiksi pitkillä väleillä ja kovalla vauhdilla.
+- Mittari vasemmassa reunassa (NUI, valmis: natiivi-ui/kaasumittari-184 361f54c65; `KaasuMittari.Lue`, vihreä → keltainen alle 0,5 → punainen alle 0,2, paletin värit). Polttimen suhahdus kiihdyttäessä ja pullon poiminta: Äänittäjä. Vain pallopelissä, ei kertojan kaupunkikierroksella.
+
+### Reunahehku ja äänet (omistaja 16.0x, PT)
+- Pehmeä reunahehku noin 300 ms (ei vilkkuva välähdys): **kaasu = vihreä** (sama kuin mittarissa), **oma ilmapallo = kulta**; värit paletista, toteutus NUI:n olemassa olevalla pohjalla. Äänet Äänittäjän erässä (`kisa-nouto-oma`, `kisa-nouto-muu`, `kisa-kaasu`, `kisa-poltin`).
+
+### Pelaajan väri ja nimikyltti (omistaja 16.0x, PT; LS1:n kanssa sovittu)
+- Väri = jäsenen paikka retkikunnan jäsenlistassa (liittymisjärjestys, sama kaikilla laitteilla; `Sahkepinta.JasenVari(jasenId)` → 0–7). Värisokeille erottuva Okabe–Ito-pohjainen sarja, puhutut nimet Pulun selostukseen:
+  0 punainen D55E00 · 1 sininen 0072B2 · 2 keltainen F0E442 · 3 vihreä 009E73 · 4 oranssi E69F00 · 5 violetti CC79A7 · 6 valkoinen F2F2F2 (punainen kärki) · 7 musta 1A1A1A (kultainen vaakavyö). Kuvio on toinen tunniste värin rinnalla.
+- Värillinen kuumailmapallo (8 versiota samasta mallista) ja nimikyltti 4 m kuoren yläpuolella: LS1 (kipin pallomalli) ja NUI (kyltin pohja). Nimikyltti erottaa pelaajat aina, myös värin lisäksi.
+
+### Pulun selostus (omistaja 16.0x, PT)
+- Tapahtumajono: vähintään noin 12 s väli, tärkeysjärjestys **johtoon nousu > viimeinen pallo > tiukka tilanne (ero yksi pallo) > nouto**; vanhentunut tapahtuma pudotetaan (ei jälkijunassa). Selostus soi kertojan säätimellä eikä päällekkäin muun puheen kanssa.
+- Valmiit kokonaiset lauseet värin mukaan, esim. "Punainen menee johtoon!", ei palasista koottuja. Nimeämiskaava `pulu-kisa-<tapahtuma>-<vari>`; tapahtumat johto, viimeinen, tiukka, nouto, voitto × 8 väriä = 40 leikettä + yleiset (alku, maali). SK kirjoittaa käsikirjoituksen, omistaja hyväksyy äänisivun Tekstit-sivulla, Äänittäjä generoi (maksullinen generointi omistajan luvalla).
+
 ### Kulutus ja työmäärä
 - Kilpailu lisää huoneeseen vain harvat tapahtumat (kutsu, valmis, lähtö, keräys, maali); sijainnit kulkevat jo 1 Hz:n linjalla. Free-tason ylitys: kilpailu jatkuu paikallisesti (yksinpeli), tulostaulu jää päivittämättä.
 
 | Osa | Tekijä | Arvio |
 |---|---|---|
-| Worker: kilpailun tila huoneessa, yhteislähtö, tulokset ja ennätykset, nopeustarkistus, testit | Pelikoodari | 0,5 pv |
-| Kilpailumoottori puhtaana C#:na (säännöt, kello, keräys, lähin pallo + hystereesi, palkinto, yksinpeli), Peli-testit | Pelikoodari | 1 pv |
+| Worker: kilpailun tila huoneessa, yhteislähtö, reaaliaikaiset noudot (tunnus, ei kaksoislaskentaa), tulokset ja ennätykset, nopeustarkistus, testit | Pelikoodari | 1 pv |
+| Kilpailumoottori puhtaana C#:na (säännöt, kello, keräys, lähin pallo + hystereesi, palkinto, yksinpeli, kaasu ja pullot, jäsenväri, selostusjono), Peli-testit | Pelikoodari | 2 pv |
 | Ilmapallot kohteiden yllä, korin kompassin kilpailutila, metrokartan kuittaus, listalennon esto, aloituspiste | Linssiseppä | 1,5 pv |
 | Keräyslento korin reunaan, nippu LS2:n köysikoodilla (narut, heilunta tuulessa, pallojen erotus), muiden nippu viestin `n`:stä | Linssiseppä (köysi: LS2) | +0,5–1 pv |
-| Kutsu, lähtölaskenta ja tulostaulu olemassa olevilla pohjilla | Natiivi-UI | 0,5 pv |
+| Kutsu, lähtölaskenta, tulostaulu, kaasumittari (valmis), reunahehku, yläreunan pallomäärät, noutoviesti, nimikyltti olemassa olevilla pohjilla | Natiivi-UI | 1,5 pv |
+| Värilliset pallot (8 versiota + kuviot), kaasupullot hehkuineen, nimikyltin kiinnitys | Linssiseppä | +1 pv |
+| Kisan äänet ja Pulun selostus (SK käsikirjoitus, Äänittäjä generointi omistajan luvalla) | SK + Äänittäjä | 1 pv |
 | Kahden simulaattorin kilpailutesti | Laitetestaaja | 0,5 pv |
-| **Yhteensä (luvun 5 lisäksi)** | | **noin 4–5 pv (nippu +0,5–1 pv); juna 185 yhdessä pallojen kanssa tai 186** |
+| **Yhteensä (luvun 5 lisäksi)** | | **noin 8–9 pv (omistajan lisäykset 15.5x–16.0x); omistajan mukaan juna 184, osat rinnakkain** |
