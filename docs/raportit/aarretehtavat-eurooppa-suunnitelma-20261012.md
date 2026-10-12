@@ -12,7 +12,7 @@ Sisältökirjuri 12.10.2026 (PT:n tilaus; omistaja 12.10. klo 11.2x: "aarreteht�
 | Saapumisintro (nopea intro) | 45 |
 | Tehtäviä yhteensä | **114** (pelilaudan 50 kaupunkia × 2 + pääkaupunkipisteet 14 × 1); valmiina pilotissa 6, uusia **108** |
 | Lajit | 4 nykyistä + 2 moottorin lisäystä, jotka kattavat 3 uutta lajia (luku 3) |
-| Palkkiot yhteensä (oletushinnoin) | noin 8 500 £ + maan aarteen bonukset (luku 6) |
+| Palkkiot yhteensä (oletushinnoin) | noin 8 500 £; erillisiä bonuksia ei tehdä (luku 6) |
 
 ## 2. Kaupunkilista ja tehtävät
 
@@ -93,20 +93,21 @@ Henkilö: jokaisessa kaupungissa tehtävän antaa kaupungin oma kohtaamishahmo (
 
 Nykyiset (moottorissa): **Katso ja löydä**, **Aikajana**, **Arvio**, **Salakirjoitus**. Uudet 3 lajia, jotka vaativat moottoriin vain **kaksi uutta `TehtavaLaji`-arvoa** (Valinta ja Kartta):
 
-1. **1873 vs. nyt** (Valinta + kuva): näytetään kaupungin 1873-havainnekuva (saapumisintron kuva 8, kun pilotti on hyväksytty) ja kysytään: "Mikä näistä ei vielä ollut paikalla 1873?" Kolme vaihtoehtoa, yksi oikea. Faktat ovat samoja, jotka on jo varmistettu kahdesta lähteestä kuvan 8 ohjeissa (esim. Pariisi: Eiffel-torni 1889 ei vielä, Tuileries-rauniot kyllä). Ei kuvaa → ei tehtävää, joten vain introkaupungeille (45), alkuun 3 pilottia.
+1. **1873 vs. nyt** (Valinta + kuva): näytetään kaupungin 1873-havainnekuva (saapumisintron kuva 8, kun pilotti on hyväksytty) ja kysytään: "Mikä näistä ei vielä ollut paikalla 1873?" Kolme vaihtoehtoa, yksi oikea. Faktat ovat samoja, jotka on jo varmistettu kahdesta lähteestä kuvan 8 ohjeissa (esim. Pariisi: Eiffel-torni 1889 ei vielä, Tuileries-rauniot kyllä). Ei kuvaa → ei tehtävää: **vain kaupunkeihin, joissa intron kuva 8 on hyväksytty** (PT 12.10.); alkuun korkeintaan 3 pilottia, ja vasta kun omistaja on hyväksynyt kuvat.
 2. **Kuuntele** (Valinta + ääni): soitetaan kaupungin olemassa oleva isoisän luenta (`puhe-europe-saapuminen-<id>`, 41 kaupunkia) ja kysytään yksi asia luennasta tai paikasta, jonka luennassa mainitaan. Ei uusia ääniä, ei generointia.
 3. **Vanha kartta** (Kartta): PD-karttakuva (Commons, 1800-luku, esim. Baedeker tai kaupunkikartta); "Napauta kohtaa, jossa …" (tähtäin sallii toleranssin). Vain jos kaupungille löytyy vapaasti lisensoitu kartta; muuten Aikajana.
 
 **Etsi kartalta** = sama Kartta-laji nykyaikaisella kohdekartalla (KAUPUNKIKARTAT, 60 Euroopan kaupungilla on kohteet nimillä ja koordinaateilla). Moottorimuutos: **Valinta** (kysymys + 3–4 vaihtoehtoa + oikea + valinnainen kuva tai ääni) ja **Kartta** (kuva tai kohdekartta + oikea piste + toleranssi). Pelikoodari tekee ne suunnitelman hyväksynnän jälkeen. Aikajana, Arvio ja Salakirjoitus toimivat sellaisinaan.
 
-## 4. Miten tehtävät johtavat maan aarteeseen (ehdotus; PT hyväksyy tarinaosan)
+## 4. Maan aarrevihje (PT:n päätös 12.10.: nykyinen aarremekaniikka ei muutu)
 
-Kanoni (tarina.md): Euroopan unohdettu aarre on **Kolme veljestä**; mysteeri on tuntematon kulkija; paikallisaarteet ovat **maan pari (pieni + iso)** (`js/packs/paikallisaarteet.js`, 29 maata kirjoitettu). Ehdotus:
+Kanoni ja mekaniikka: Euroopan unohdettu aarre on **Kolme veljestä** (tarina.md); mysteeri on tuntematon kulkija; **paikallisaarteet ovat maan pari (pieni + iso)** (`js/packs/paikallisaarteet.js`) ja löytyvät **laudalta kuten nyt** (Raamattu, AARTEET). Tehtävät eivät muuta sitä eivätkä korvaa löytöä, vaan antavat **vihjeen**:
 
-- **Kolme veljestä pysyy pilotissa:** Ateenan, Pariisin ja Tukholman palat (arvoituksen kolme kaistaa) kokoavat Euroopan unohdetun aarteen jäljen, kuten kokeilussa. Muut maat eivät lisää Kolme veljestä -paloja eivätkä paljasta kulkijan henkilöllisyyttä.
-- **Jokainen maa antaa oman aarrejäljen:** kun pelaaja on ratkaissut maan tehtävistä **3** (tai kaikki, jos maalla on vähemmän), maan tehtävien palat (yksi rivi per tehtävä isoisän sivulle) muodostavat **aarrevihjeen**, joka paljastaa maan ison paikallisaarteen kätkökaupungin (maan kaupunki, jossa kätkö on) ja antaa **aarrekartan palan + bonuksen**. Pieni aarre löytyy aina laudan satunnaisesta kätköstä kuten nyt; iso aarre aukeaa vihjeellä. Näin ei tarvita uutta mekaniikkaa: vihje on teksti + merkintä.
-- Maat, joilla on vain yksi kaupunki (suurin osa), antavat 2 tehtävää = 2 palaa; monikaupunkimaat (ESP, ITA 4 kaupunkia, FIN, NOR 3) vaativat vain 3 tehtävää, jotta kaikkea ei tarvitse tehdä.
-- **10 maalla** (ALB, AND, BLR, LIE, MCO, MDA, MKD, MNE, SMR, SRB; kaikki pääkaupunkipisteitä) **ei ole vielä paikallisaarretta** (`paikallisaarteet.js`: 35 maata kirjoitettu, 44 tarvitaan); pari (pieni + iso, tosi fakta, kuva Codexilta vain luvalla) kirjoitetaan samassa erässä, tai maa jää ilman aarrejälkeä, kunnes pari on kirjoitettu (PT päättää).
+- Kun pelaaja on ratkaissut maan tehtävistä **3** (tai kaikki, jos maalla on vähemmän), isoisän merkintä paljastaa maan **ison paikallisaarteen kaupungin**, ja kaupunki **merkitään kartalle isoisän merkinnällä**. Ilman vihjettä iso aarre löytyy edelleen laudalta kuten nyt.
+- **Vihje tulee kolmessa tasossa maan tehtävistä riippumatta järjestyksestä:** 1. tehtävä → ensimmäinen merkintärivi (arvoituksenomainen, ei kaupunkia), 2. tehtävä → toinen rivi (lähempi), 3. tehtävä → kolmas rivi, joka nimeää kaupungin. Datassa maa-arvoitus: `iso3`, `kaupunki`, `vihjeet[3]`; moottori laskee maan ratkaistut tehtävät. Maat, joilla on vain kaksi tehtävää (yksikaupunkimaa), saavat vihjeen kahdesta tehtävästä: 2. rivi nimeää kaupungin.
+- Kaupunki on se, jonka legendaan iso aarre sopii (esim. Rudolf II:n kabinetti → Praha; Caravaggion varastettu maalaus → Palermo eli "Sisilia"; Ivalojoen kultahippu → Lappi; hansakauppiaan hopeakätkö → Tallinna; Wilhelm Tellin varsijousi → Alpit). Taru merkitään tarukseksi (ei esitetä löytönä).
+- **Kolme veljestä pysyy pilotissa:** Ateenan, Pariisin ja Tukholman palat kokoavat Euroopan unohdetun aarteen jäljen; muut maat eivät lisää Kolme veljestä -paloja eivätkä paljasta kulkijan henkilöllisyyttä.
+- **10 maalla** (ALB, AND, BLR, LIE, MCO, MDA, MKD, MNE, SMR, SRB; kaikki pääkaupunkipisteitä) ei ole vielä paikallisaarreparia (`paikallisaarteet.js`: 35 maata kirjoitettu, 44 tarvitaan). **Parit kirjoitetaan tekstinä samassa projektissa** (tosi fakta; legendat merkitään taruiksi; kuvat vain Commonsin PD/CC0/CC BY -kuvista; Codex vasta omistajan luvalla).
 
 ## 5. Faktojen tarkistus
 
@@ -116,7 +117,7 @@ Kanoni (tarina.md): Euroopan unohdettu aarre on **Kolme veljestä**; mysteeri on
 
 ## 6. Palkkiot ja vaikeustaso
 
-- **Palkkiot** (moottorin oletukset, talous 300: yksi tehtävä ≈ yksi kyyti tai bussi): Katso 60, Etsi kartalta 60, Valinta 60, Kuuntele 70, Aikajana 80, Vanha kartta 90, Arvio 100, Salakirjoitus 120; toinen yritys puolet. Oletushinnoin kaikki 114 tehtävää antavat noin 8 500 £, eli keskimäärin ~75 £ per tehtävä ja ~150 £ per kaupunki. Maan aarteen löytö antaa erillisen bonuksen (ehdotus: 300 £ pieni, 600 £ iso paikallisaarre; PT/talousvastaava päättää).
+- **Palkkiot** (moottorin oletukset, talous 300: yksi tehtävä ≈ yksi kyyti tai bussi): Katso 60, Etsi kartalta 60, Valinta 60, Kuuntele 70, Aikajana 80, Vanha kartta 90, Arvio 100, Salakirjoitus 120; toinen yritys puolet. Oletushinnoin kaikki 114 tehtävää antavat noin 8 500 £, eli keskimäärin ~75 £ per tehtävä ja ~150 £ per kaupunki. **Erillisiä bonuksia ei tehdä** (PT 12.10.): vihje ja aarteen oma arvo (500–800 p) riittävät. Tehtäväpalkkiot oletuksin; Pelikoodari tarkistaa talouden tasapainon ennen kytkentää.
 - **Vaikeustaso 13+ ja aikuiset (ei lastenpeli):** taso 1 = Katso, Etsi kartalta, Valinta, Kuuntele (kohde tai vastaus löytyy kaupungista tai luennasta); taso 2 = Aikajana, Arvio, Vanha kartta (vaatii tietoa tai päättelyä); taso 3 = Salakirjoitus, 1873 vs. nyt (vaatii huolellista lukua). Jokaisessa kaupungissa a = taso 1 ja b = taso 1–3. Väärä vastaus → vihje henkilön äänellä, toinen yritys; tiesitko-teksti ≤ 160 merkkiä.
 - Ei tapaturmia, väkivaltaa tai poliittisesti arkoja kysymyksiä (Kiova, Odessa, Moskova, Minsk: vain kulttuuri- ja historia-aiheita 13+).
 
@@ -127,10 +128,10 @@ Kanoni (tarina.md): Euroopan unohdettu aarre on **Kolme veljestä**; mysteeri on
 3. **Loput erinä** (noin 10 kaupunkia/erä, 5–6 erää): ensin 3D-kaupungit (37), sitten ei-3D-kaupungit (13), lopuksi pääkaupunkipisteet (14).
 4. Pelikoodari tekee moottorin uudet lajit vasta hyväksynnän jälkeen; Natiivi-UI näkymät; Linssiseppä 3D-tunnisteet (Katso).
 
-## 8. PT:n päätettävää
+## 8. PT:n päätökset 12.10. (kaikki hyväksytty)
 
-1. Hyväksytäänkö 114 tehtävän laajuus (2 per pelilaudan kaupunki, 1 per pääkaupunkipiste)?
-2. Hyväksytäänkö maan aarrejälki (luku 4): 3 tehtävää per maa → ison paikallisaarteen kätkökaupunki + bonus; ja 10 puuttuvan maan paikallisaarteiden kirjoittaminen samassa projektissa?
-3. Hyväksytäänkö uudet lajit (1873 vs. nyt, Kuuntele, Vanha kartta) ja moottorin kaksi lisäystä (Valinta, Kartta)?
-4. Mallierän viisi kaupunkia (Praha, Rooma, Helsinki, Tallinna, Bern) kelpaavat?
-5. Bonukset: 300 £ pieni / 600 £ iso paikallisaarre?
+1. 114 tehtävää: kyllä.
+2. Maan aarrejälki muutettuna: vihje, ei mekaniikan muutosta (luku 4); 10 puuttuvan maan parit tekstinä.
+3. Uudet lajit ja moottorin lisäykset (Valinta, Kartta): kyllä; 1873 vs. nyt vain hyväksytyn intron kuvan 8 kaupunkeihin.
+4. Mallierä: Praha, Rooma, Helsinki, Tallinna, Bern: kyllä. Tuotos: `aarretehtavat-eurooppa-malli-20261012.json/.md` ja faktaliite.
+5. Erillisiä bonuksia ei tehdä.
