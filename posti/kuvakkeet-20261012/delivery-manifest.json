@@ -1,0 +1,202 @@
+{
+  "taskNumber": 85,
+  "taskId": "kuvakkeet-20261012",
+  "preparedAt": "2026-10-12T13:31:24.799772+00:00",
+  "receivedAt": "2026-10-12T13:15:32.621252+00:00",
+  "productionStartedAt": "2026-10-12T13:18:24.435483+00:00",
+  "sourcePath": "posti/fable-codex-kuvakkeet-20261012.md",
+  "sourceCommit": "23a88ef420284f801a5c5bec08d11b93223acd17",
+  "sourceBlob": "fd3b970e10737ee74ce5ecfa59cf4645b65987a4",
+  "sourceSHA256": "6ff094e40a7f851b10311a48ec908864d72425eadabd69d260e25fa98b8b4f41",
+  "referencePath": "posti/kuvakkeet-20261012/ikonit-viiva-tyyliviite.png",
+  "referenceBlob": "6ebf16d18c521162367c76ac596ff71dc8a2a481",
+  "referenceSHA256": "9e39b982bc6957ca007b4a7c9672b907b69460c50b14b8b4502041d9b1bf41a6",
+  "originalHandAuthoredSVGCount": 24,
+  "oneLineBodyCount": 24,
+  "csharpAssignmentCount": 24,
+  "parallelVectorAgents": 3,
+  "ImageGenCalls": 0,
+  "usedExternalIconLibraries": false,
+  "svgWrapperStyle": {
+    "viewBox": "0 0 24 24",
+    "stroke": "currentColor",
+    "stroke-width": "1.75",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    "fill": "none"
+  },
+  "deliveryFolder": "posti/kuvakkeet-20261012/",
+  "files": [
+    {
+      "path": "kaasu.svg",
+      "bytes": 296,
+      "sha256": "50e82dc63ec3bb579c69cc1e83f67176d9babe7fdf9171115611f59034bdc652"
+    },
+    {
+      "path": "pallo.svg",
+      "bytes": 375,
+      "sha256": "8c5cca01586ee4f59c9a754becaa64ae070c3794e03da7beb4381692f1f4c8c2"
+    },
+    {
+      "path": "lippu.svg",
+      "bytes": 316,
+      "sha256": "b0d1f489ffd08860501cc1f29d0dc2a04ce07df040054cb9aaceb603371f88b3"
+    },
+    {
+      "path": "ajastin.svg",
+      "bytes": 275,
+      "sha256": "a9d54c6260171073ebac63d78063df45d3b977eb2c575a9f0a6c61ab6b17a2ff"
+    },
+    {
+      "path": "nouto.svg",
+      "bytes": 299,
+      "sha256": "76221776c67c24501423c4cce1a969152ca8dac235c2836a737eed6ad34472f9"
+    },
+    {
+      "path": "jasenet.svg",
+      "bytes": 415,
+      "sha256": "e8e1b61b94c47594297039a766342eaeb96237a0a5943ca38d7611830993e7c8"
+    },
+    {
+      "path": "kopioi.svg",
+      "bytes": 251,
+      "sha256": "22d22cc22e3cb352a4b272adc6f471ab15e9a4e46f8b9590a73d5edda4610e2a"
+    },
+    {
+      "path": "jaa-koodi.svg",
+      "bytes": 381,
+      "sha256": "1cc62e70597022bba0f5046b8a652da885c933a42574e916f7b8a3efa9f5bd5c"
+    },
+    {
+      "path": "valinta.svg",
+      "bytes": 345,
+      "sha256": "9d27ec72e8206dd97d3ac647d473e494f96dd5d4e9eccea91b285d7af1a65a29"
+    },
+    {
+      "path": "aikajana.svg",
+      "bytes": 370,
+      "sha256": "835026bdce4e2c062b861b5d5569d52cd81673d2e64fccedc46216e0b478cbba"
+    },
+    {
+      "path": "vanha-kartta.svg",
+      "bytes": 280,
+      "sha256": "e5dfaa42808bdd4e8314c49a0a25e89a9ced7446679c815f9d5e5fba805027ac"
+    },
+    {
+      "path": "arvio.svg",
+      "bytes": 307,
+      "sha256": "f5997ae87d350807a2adb91181006b976ed19c28f5b141203acf4422917a7add"
+    },
+    {
+      "path": "salakirjoitus.svg",
+      "bytes": 336,
+      "sha256": "3e843264efe1f1583217975a57465def16da2139207fc81fd60c76abe334e444"
+    },
+    {
+      "path": "taso.svg",
+      "bytes": 322,
+      "sha256": "ed9a508c2e42a5bb4ccd6721c9190882b5448b2e78accff1fefb6974841cded2"
+    },
+    {
+      "path": "vihje.svg",
+      "bytes": 357,
+      "sha256": "ccea7427515ea0ff11ea64c693af7ebaa6360974324c4a364783717867fc0028"
+    },
+    {
+      "path": "kumoa.svg",
+      "bytes": 297,
+      "sha256": "71c6fea4b0c964591b23701ad5756d8590861d9df1add689c6096993e81d8e38"
+    },
+    {
+      "path": "historia.svg",
+      "bytes": 378,
+      "sha256": "a9a35bda3a5a5037b73cad09f3559d3cae669e8cf66ce2e3f092ab40cf42268c"
+    },
+    {
+      "path": "shakki.svg",
+      "bytes": 333,
+      "sha256": "8f6c7058b355b1ffd47dfa046cec1446a2c3b197e80528a01ea650f01f6f9a6c"
+    },
+    {
+      "path": "kiipea.svg",
+      "bytes": 266,
+      "sha256": "0dc223908905da604e28589689cd9e9345ca1da32a5942cfddac9d42170fcc2d"
+    },
+    {
+      "path": "avaa.svg",
+      "bytes": 247,
+      "sha256": "a0e4ce96157fcac10b3ba3805fdbcfba6bac3bf083b40e12d10febd21764d9a7"
+    },
+    {
+      "path": "lyhty.svg",
+      "bytes": 351,
+      "sha256": "3c5d635dc8dceadbef8be3dbd8c41371f5aef5a277c4601cac35c65eea55b772"
+    },
+    {
+      "path": "kello.svg",
+      "bytes": 241,
+      "sha256": "6e7d8fc9dda7bf77a60c0b07230c481c1fe6163938983e447e94b58bc331b3a3"
+    },
+    {
+      "path": "lukko.svg",
+      "bytes": 350,
+      "sha256": "6f85c1952d23116a59cb4f432e11f0fd533b21f6ce38bd444a610fbd8bfec905"
+    },
+    {
+      "path": "ok.svg",
+      "bytes": 249,
+      "sha256": "eafd8db585c6584850211da1cb6b648b1a48de611edfee9f7a6bcd262fe6dcbe"
+    },
+    {
+      "path": "bodies.json",
+      "bytes": 4247,
+      "sha256": "e41f99e997f518da631553bad4a4abd57bd7d633c5ae98f5a454019abb53fff9"
+    },
+    {
+      "path": "ikonit-viiva-sisallot.cs.txt",
+      "bytes": 4388,
+      "sha256": "3dfa9db220f2de5db9edb3ca8edd7a196ad23c1d1ae32d7945e7b5e93c176de0"
+    },
+    {
+      "path": "ikonit-viiva-yhteenveto.png",
+      "bytes": 93304,
+      "sha256": "106e30f48d938e0387d679e80da38635a5c789516bce21efc99274e76ed02dff"
+    },
+    {
+      "path": "order.json",
+      "bytes": 222,
+      "sha256": "5b0b3275cf6a603e6ee7105cd733ea20c8eb1c5d4fda91fe074edeea79e1745c"
+    },
+    {
+      "path": "gas-channel-proof.json",
+      "bytes": 193,
+      "sha256": "97e32d4c1b36c0540cc234ef4535eb3825c887afbe60a4c55d920456367d7d67"
+    },
+    {
+      "path": "structural-qa.json",
+      "bytes": 11163,
+      "sha256": "744aa4ca9cf144a6b3c9b1e48ed84184c229c5109b68e355a7239261bad52c8f"
+    },
+    {
+      "path": "visual-qa.json",
+      "bytes": 953,
+      "sha256": "d9683f0af3cf3270984f2f0d90096bef8bbf6dcec0b2551f1380445a9af3a53f"
+    },
+    {
+      "path": "small-sizes-light.png",
+      "bytes": 25666,
+      "sha256": "fc9d88afd24a11575f1b14119d6e939c9acc1e865cb5aaafea58ac8674652bd2"
+    },
+    {
+      "path": "small-sizes-dark.png",
+      "bytes": 25629,
+      "sha256": "99772f3903059388cf6cf1b51047860cb0b2c431c1d4d1fe6b1861b371edef66"
+    }
+  ],
+  "technicalVerificationPassed": true,
+  "visualVerificationPassedForOwnerReview": true,
+  "ownerAcceptanceVerified": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false
+}

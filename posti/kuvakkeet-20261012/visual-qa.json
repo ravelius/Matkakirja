@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-12T13:31:24.799772+00:00",
+  "reviewer": "root",
+  "independentReviewer": "europe_amsterdam_sample",
+  "all24Reviewed": true,
+  "nativeSizes": [
+    20,
+    22,
+    24,
+    28,
+    48
+  ],
+  "backgrounds": [
+    "light",
+    "dark"
+  ],
+  "sourceReferenceViewed": true,
+  "recognizableForOwnerReview": true,
+  "lineWeightAndSpacingMatchReference": true,
+  "independentReviewerOutcome": "all 24 ready for owner review; no concrete correction required",
+  "gasChannelInkPixels": 0,
+  "ownerAcceptanceVerified": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "notes": {
+    "jaa-koodi": "Original tag with outgoing arrow; distinct from existing Jaa and delivered as optional choice.",
+    "lippu": "Filled flag cloth is the explicitly requested exception to small fill details.",
+    "smallSizes": "small-sizes sheets have three rows: 20, 22 and 28; column order follows order.json."
+  }
+}

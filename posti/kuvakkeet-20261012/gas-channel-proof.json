@@ -1,0 +1,16 @@
+{
+  "rectangleInViewBox": {
+    "x": [
+      9,
+      15
+    ],
+    "y": [
+      7,
+      19
+    ]
+  },
+  "scale": 10,
+  "maximumAlphaInBand": 0,
+  "nonzeroPixelsInBand": 0,
+  "passed": true
+}
