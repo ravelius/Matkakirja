@@ -95,10 +95,10 @@
     "Akandassa ja Pongarassa metsät yhdistyvät lietteisiin ja hiekkaisiin rantoihin."
   ],
   "valokuva": {
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": ""
+    "tiedosto": "Les cocos de Libreville.jpg",
+    "lyhyt": "Librevillen rannalla kasvaa kookospalmuja.",
+    "selite": "Librevillen rannalla kasvaa kookospalmuja.",
+    "lahde": "ArnoBOUJIKA, Commons (CC0)"
   },
   "kaupunkilehti": [
     {
@@ -107,10 +107,10 @@
       "johdanto": "Vapaa kaupunki sai nimensä asukkaidensa historiasta. Nykyinen Libreville avautuu estuaarille ja ulottuu torilta puututkimuksen metsään.",
       "kansikuvat": [
         {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Libreville, Gabon.JPG",
+          "lyhyt": "Libreville sijaitsee Gabonin estuaarin pohjoisrannalla.",
+          "selite": "Libreville sijaitsee Gabonin estuaarin pohjoisrannalla.",
+          "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "",
@@ -139,10 +139,10 @@
           "otsikko": "Veden äärellä on monta rantaa",
           "teksti": "Librevillen edessä avautuva Gabonin estuaari vastaanottaa jokien vettä ja liittyy Guineanlahteen. Komo laskee siihen, ja lähteet mainitsevat myös Ebe-joen. Kaupunki ja sen satama sijaitsevat pohjoisrannalla, jonka yläpuolella maasto nousee kukkuloiksi ja tasanteeksi. Bord de mer on nykyinen rannalla oleskelun ja kävelyn alue. Etelämpänä Owendo muodostaa oman satama- ja rautatieympäristönsä. Kun rannikkoa seuraa nimien avulla, keskustan ranta ja tavaraliikenteen alue erottuvat toisistaan.",
           "wiki": "Gabon Estuary",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "Le Komo 1.JPG",
+          "lyhyt": "Komojoen vesi liittyy Gabonin estuaariin.",
+          "selite": "Komojoen vesi liittyy Gabonin estuaariin.",
+          "lahde": "Ballot 2, Wikimedia Commons (CC0)"
         },
         {
           "otsikko": "Metsä, jolla on tutkimustehtävä",
@@ -165,10 +165,10 @@
       ],
       "matkailijalle": {
         "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
+          "tiedosto": "À la plage de Libreville.jpg",
+          "lyhyt": "Kookospähkinä Librevillen rannalla.",
+          "selite": "Kookospähkinä Librevillen rannalla.",
+          "lahde": "ArnoBOUJIKA, Wikimedia Commons (CC0)"
         },
         "kappale": "Librevillen rantaan voi tutustua Bord de merin alueella. Mont-Bouët'n torin ympärillä toimii myös ravintoloita ja muita kauppoja. Sibangin opastettu metsäkäynti sovitaan ennen lähtöä. Pointe Denisin vastaranta ja kansallispuistot tarvitsevat erillisen kuljetusjärjestelyn. Veneellä tehtävää retkeä suunnitellessa varmistetaan myös paluu. Ranskan kielestä on hyötyä kaupungissa asioidessa.",
         "artikkeli": {

@@ -1,0 +1,2500 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e06",
+  "city": "kinshasa",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+  "assets": [
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "job14-e06-kinshasa-k4-v01",
+      "galleryImageID": "job14-e06-kinshasa-k4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvin tutkimisesta.",
+        "lyhyt": "Havainnekuva kasvin tutkimisesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvin tutkimisesta.",
+        "lyhyt": "Havainnekuva kasvin tutkimisesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+      "exportSHA256": "eb3fadfb455c7adf2db7ceb6efbdb136e93f740b73cdda892117253ef813fcf8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8875adf7955cf6b01b93493e38a75c571204afdc79ba4e24a23211c72ac68b57",
+        "semanticContextSHA256": "8875adf7955cf6b01b93493e38a75c571204afdc79ba4e24a23211c72ac68b57",
+        "subjectTitle": "Puutarha tekee tiedettä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruoka-, kasvi-, materiaali- tai tavallisen käyttöesineen havainnollistus. Ei visuaalista kuva-inputtia, tunnistettavaa nykyteosta, koristetta, kasvoja tai nimettyä rakennusta/asettelua. Ei tietyn paikan autenttisen ulkonäön väitettä.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-cca4604896361b5f75e95a778fe75ffdaa3a310138a064ca8b33ad3a84897b48.json",
+              "sourceSHA256": "cca4604896361b5f75e95a778fe75ffdaa3a310138a064ca8b33ad3a84897b48",
+              "assetID": "job14-e06-kinshasa-k4-v01",
+              "nativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Kasvin tutkimisen yleishavainne vastaa K4:n kasvitieteellistä/opetuksellista aihetta.",
+              "reviewedAt": "2026-10-12T18:57:59.484971+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-k4-v01/image.png",
+                "nativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Lehdellinen oksanäyte, suurennuslasi, tavallinen kirja ja kynä, kuoripala/kuivattua kasvia. Lehtisuonet ja ruodit, oksan silmut sekä linssin heijastukset luonnolliset; ei kasvolähikuvaa, tekstiä tai logoa.",
+                "captionFi": "Havainnekuva kasvin tutkimisesta.",
+                "sourceAndTargetCheckFi": "Luettu K4 Puutarha tekee tiedettä ja faktapohjan kasvitieteellinen-/ympäristökasvatuksen tehtävä sekä näytekokoelmat. CaptionFi Havainnekuva kasvin tutkimisesta ei nimeä kasvilajia, Kinshasan puutarhan näytettä tai tutkimustulosta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[0].nostot[3]",
+                    "text": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa Kasa-Vubun varrella, eläintarhaa vastapäätä. 1900-luvun alkupuolella syntynyt puutarha kuuluu ICCN:n hallintaan. Sen tehtävä ei ole vain tarjota vihreää ympäristöä: kasvikokoelmia käytetään myös tieteessä ja opetuksessa. Puutarhaan kuuluu taimisto, siemenpankki ja herbaario. Samassa kaupungin paikassa voi siksi kohdata sekä eläviä kasveja että niiden tutkimusta varten säilytettävää aineistoa, kahdenlaista kasvien muistia."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-k4-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T19:04:41.792971+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Kasvin tutkimisen yleishavainne vastaa K4:n kasvitieteellistä/opetuksellista aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kasvin tutkimisesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "job14-e06-kinshasa-k4-v01",
+          "commonsFile": null,
+          "sha256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Kasvin tutkimisen yleishavainne vastaa K4:n kasvitieteellistä/opetuksellista aihetta.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-cca4604896361b5f75e95a778fe75ffdaa3a310138a064ca8b33ad3a84897b48.json",
+              "sourceSHA256": "cca4604896361b5f75e95a778fe75ffdaa3a310138a064ca8b33ad3a84897b48",
+              "assetID": "job14-e06-kinshasa-k4-v01",
+              "nativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Kasvin tutkimisen yleishavainne vastaa K4:n kasvitieteellistä/opetuksellista aihetta.",
+              "reviewedAt": "2026-10-12T18:57:59.484971+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-k4-v01/image.png",
+                "nativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Lehdellinen oksanäyte, suurennuslasi, tavallinen kirja ja kynä, kuoripala/kuivattua kasvia. Lehtisuonet ja ruodit, oksan silmut sekä linssin heijastukset luonnolliset; ei kasvolähikuvaa, tekstiä tai logoa.",
+                "captionFi": "Havainnekuva kasvin tutkimisesta.",
+                "sourceAndTargetCheckFi": "Luettu K4 Puutarha tekee tiedettä ja faktapohjan kasvitieteellinen-/ympäristökasvatuksen tehtävä sekä näytekokoelmat. CaptionFi Havainnekuva kasvin tutkimisesta ei nimeä kasvilajia, Kinshasan puutarhan näytettä tai tutkimustulosta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[0].nostot[3]",
+                    "text": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa Kasa-Vubun varrella, eläintarhaa vastapäätä. 1900-luvun alkupuolella syntynyt puutarha kuuluu ICCN:n hallintaan. Sen tehtävä ei ole vain tarjota vihreää ympäristöä: kasvikokoelmia käytetään myös tieteessä ja opetuksessa. Puutarhaan kuuluu taimisto, siemenpankki ja herbaario. Samassa kaupungin paikassa voi siksi kohdata sekä eläviä kasveja että niiden tutkimusta varten säilytettävää aineistoa, kahdenlaista kasvien muistia."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-k4-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T19:04:41.792971+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png?t=eb3fadfb455c7adf",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+        "sha256": "eb3fadfb455c7adf2db7ceb6efbdb136e93f740b73cdda892117253ef813fcf8",
+        "bytes": 2652545,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 200,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": null,
+        "assetID": "job14-e06-kinshasa-k4-v01",
+        "nativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:59:59.211763+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-k4-v01-4df5092b76dc.png",
+        "sha256": "eb3fadfb455c7adf2db7ceb6efbdb136e93f740b73cdda892117253ef813fcf8",
+        "bytes": 2652545,
+        "SHAReadAt": "2026-10-12T19:03:33.221473+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4df5092b76dccf01b4fa7243a01b5c104f78f5e94571844a3bec0b7b8e6a177c",
+        "rgbPixelSHA256": "77a52afd7b062d16b3b66be84dcd1d88100bcacf3b49c60ef311d041ca5af33a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "8875adf7955cf6b01b93493e38a75c571204afdc79ba4e24a23211c72ac68b57",
+      "contextAfterSHA256": "8875adf7955cf6b01b93493e38a75c571204afdc79ba4e24a23211c72ac68b57"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "job14-e06-kinshasa-l1-v01",
+      "galleryImageID": "job14-e06-kinshasa-l1-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva taimien kasvattamisesta.",
+        "lyhyt": "Havainnekuva taimien kasvattamisesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva taimien kasvattamisesta.",
+        "lyhyt": "Havainnekuva taimien kasvattamisesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+      "exportSHA256": "8f123cb18a3b742934aee28f63f0f7c76ec3d58f416e51a207ea00d2ac5e7f3b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
+        "semanticContextSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
+        "subjectTitle": "Taimisto kasvattaa kaupunkia vihreäksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin luonto-/ruoka-/materiaali-/arkiesinehavainnollistus. Ei kuva-inputtia tai tietyn paikan/arkkitehtuurin/taideteoksen jäljennöstä, tunnistettavaa ihmistä, koristekuviota, tekstiä tai logoa. Ei väitettä oikeasta paikkavalokuvasta tai tietystä reseptistä.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-b3935728a59f7102a3a2066bfe9f8642f69cdd038f2c1451e7695f1d73229cf3.json",
+              "sourceSHA256": "b3935728a59f7102a3a2066bfe9f8642f69cdd038f2c1451e7695f1d73229cf3",
+              "assetID": "job14-e06-kinshasa-l1-v01",
+              "nativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Taimikasvatuksen yleishavainne vastaa L1:n puutarhan lisäämis-/hoitotyötä.",
+              "reviewedAt": "2026-10-12T18:35:07.125887+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l1-v01/image.png",
+                "nativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Taimia tavallisissa ruukuissa ja istutuslaatikoissa, multa ja kastelukannu. Kasvien varret/lehtiruodit, ruukut ja maan kosteus luontevat; ei kasvolähikuvaa, käsiä, tekstiä tai brändiä.",
+                "captionFi": "Havainnekuva taimien kasvattamisesta.",
+                "sourceAndTargetCheckFi": "Luettu L1 Taimisto kasvattaa kaupunkia vihreäksi ja faktapohjan T1 kylvö/pistokkaat/uudelleenistutus/kastelu. CaptionFi Havainnekuva taimien kasvattamisesta; ei Kinshasan puutarhan todellinen taimilajisto, ruukkuerä tai rakennus.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[1].nostot[0]",
+                    "text": "Kasvitieteellisen puutarhan taimisto huolehtii kasvien lisäämisestä ja kasvattamisesta. Työhön kuuluu kylvöä, pistokkaiden käyttöä, uudelleenistutusta, kastelua ja kompostin käsittelyä. Osa kasvatetuista kasveista päätyy myyntiin kaupungin vihertämistä varten. Puutarhan merkitys ei siis pysähdy sen aitaan: siellä kasvatettu taimi voi jatkaa elämäänsä muualla kaupungissa. Kasvikokoelman taustalla on päivittäistä työtä, jonka tarkoitus on pitää kasvit elävinä ja tuottaa uusia taimia."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l1-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T18:38:21.540708+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Taimikasvatuksen yleishavainne vastaa L1:n puutarhan lisäämis-/hoitotyötä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva taimien kasvattamisesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "job14-e06-kinshasa-l1-v01",
+          "commonsFile": null,
+          "sha256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Taimikasvatuksen yleishavainne vastaa L1:n puutarhan lisäämis-/hoitotyötä.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-b3935728a59f7102a3a2066bfe9f8642f69cdd038f2c1451e7695f1d73229cf3.json",
+              "sourceSHA256": "b3935728a59f7102a3a2066bfe9f8642f69cdd038f2c1451e7695f1d73229cf3",
+              "assetID": "job14-e06-kinshasa-l1-v01",
+              "nativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Taimikasvatuksen yleishavainne vastaa L1:n puutarhan lisäämis-/hoitotyötä.",
+              "reviewedAt": "2026-10-12T18:35:07.125887+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l1-v01/image.png",
+                "nativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Taimia tavallisissa ruukuissa ja istutuslaatikoissa, multa ja kastelukannu. Kasvien varret/lehtiruodit, ruukut ja maan kosteus luontevat; ei kasvolähikuvaa, käsiä, tekstiä tai brändiä.",
+                "captionFi": "Havainnekuva taimien kasvattamisesta.",
+                "sourceAndTargetCheckFi": "Luettu L1 Taimisto kasvattaa kaupunkia vihreäksi ja faktapohjan T1 kylvö/pistokkaat/uudelleenistutus/kastelu. CaptionFi Havainnekuva taimien kasvattamisesta; ei Kinshasan puutarhan todellinen taimilajisto, ruukkuerä tai rakennus.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[1].nostot[0]",
+                    "text": "Kasvitieteellisen puutarhan taimisto huolehtii kasvien lisäämisestä ja kasvattamisesta. Työhön kuuluu kylvöä, pistokkaiden käyttöä, uudelleenistutusta, kastelua ja kompostin käsittelyä. Osa kasvatetuista kasveista päätyy myyntiin kaupungin vihertämistä varten. Puutarhan merkitys ei siis pysähdy sen aitaan: siellä kasvatettu taimi voi jatkaa elämäänsä muualla kaupungissa. Kasvikokoelman taustalla on päivittäistä työtä, jonka tarkoitus on pitää kasvit elävinä ja tuottaa uusia taimia."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l1-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T18:38:21.540708+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png?t=8f123cb18a3b7429",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+        "sha256": "8f123cb18a3b742934aee28f63f0f7c76ec3d58f416e51a207ea00d2ac5e7f3b",
+        "bytes": 2501802,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kinshasa-l1-v01",
+        "nativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:35:38.518273+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l1-v01-aab35c6663a8.png",
+        "sha256": "8f123cb18a3b742934aee28f63f0f7c76ec3d58f416e51a207ea00d2ac5e7f3b",
+        "bytes": 2501802,
+        "SHAReadAt": "2026-10-12T18:35:35.425946+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "aab35c6663a8aa78b677b0d338dff33690ac68ecb769173d9c0959fb1867efc1",
+        "rgbPixelSHA256": "c16a1ec60d471e47a49015204fefdae1af3285ee899506bbd26d606cbbfb7916",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0",
+      "contextAfterSHA256": "5e3469eb500a800f4631c8cf481b26761b5cd6c1ec0b5160e0bda9ca1e9689c0"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "job14-e06-kinshasa-l2-v01",
+      "galleryImageID": "job14-e06-kinshasa-l2-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä.",
+        "lyhyt": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä.",
+        "lyhyt": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d4bca0ebf02cd415bfefda4a6df4b5f8746bc5deb7030a538cbba9d5e7f6ab60",
+      "exportSHA256": "aa8b305158c635fcebb6496d8bf5d725b8288db131d5d12c12bb602549b01949",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
+        "semanticContextSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
+        "subjectTitle": "Kaikki kasvitieto ei ole vihreää",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnon/ruoan/materiaalin/tavanomaisen esineen aihe. Ei kuva-inputtia, nimettyä arkkitehtuuria, suojattua nykyteosta, tunnistettavaa ihmistä, modernia koristetta tai logoa. Ei todistus tietyn paikan todellisesta ulkonäöstä.",
+          "QA": {
+            "type": "illustration",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l2-v01/image.png",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "sourceEvidenceRead": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e06/lahteet/Kinshasa_Botanical_Garden.txt",
+                "line": 114,
+                "supports": "Garden includes a nursery, seed bank, herbarium and arboretum"
+              }
+            ],
+            "sourceEvidenceProducer": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "text": "Puutarhan kasvikokoelma ei koostu vain kasvavista puista. Siemenpankissa säilytetään siemeniä, herbaariossa kasvinäytteitä ja arboretumissa eläviä puita. Arboretumin painotus on kotoperäisessä kasvistossa, ja osassa kasveista on nimikilvet. Elävä kokoelma ja säilytetyt näytteet palvelevat kasvitiedettä sekä ympäristökasvatusta eri tavoin. Nimiä lukemalla puu muuttuu yksittäisestä vihreästä hahmosta tunnistettavaksi lajiksi, jonka voi liittää laajempaan kasvien maailmaan."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnon/ruoan/materiaalin/tavanomaisen esineen aihe. Ei kuva-inputtia, nimettyä arkkitehtuuria, suojattua nykyteosta, tunnistettavaa ihmistä, modernia koristetta tai logoa. Ei todistus tietyn paikan todellisesta ulkonäöstä.",
+            "captionFi": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä.",
+            "checkedAt": "2026-10-12T18:07:29.751639+00:00",
+            "colourSpace": "Native RGB PNG; embedded ICC/sRGB tag not independently confirmed, no ICC verification claim",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Itse katsottu alkuperäinen kuva: kuiva lehtioksan näyte paperilla ja erilaisia ruskeita siemeniä kirkkaissa lasiastioissa. Kuivuneiden lehtien suonet/reunat, oksan liitokset, siementen muodot ja astioiden reunat/varjot ovat johdonmukaisia. Ei nimilappuja, luettavaa tekstiä, logoa, kasvoja tai taideteosta. Vastaa L2:n herbaario- ja siemenpankkiaihetta sekä puutarhan lähteen kokoelmia. Yleinen tutkimusasetelma, ei kyseisen laitoksen todellisen näytteen, kasvilajin tai tilan dokumenttikuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "job14-e06-kinshasa-l2-v01",
+          "commonsFile": null,
+          "sha256": "d4bca0ebf02cd415bfefda4a6df4b5f8746bc5deb7030a538cbba9d5e7f6ab60",
+          "verdict": "accepted",
+          "reason": "Itse katsottu alkuperäinen kuva: kuiva lehtioksan näyte paperilla ja erilaisia ruskeita siemeniä kirkkaissa lasiastioissa. Kuivuneiden lehtien suonet/reunat, oksan liitokset, siementen muodot ja astioiden reunat/varjot ovat johdonmukaisia. Ei nimilappuja, luettavaa tekstiä, logoa, kasvoja tai taideteosta. Vastaa L2:n herbaario- ja siemenpankkiaihetta sekä puutarhan lähteen kokoelmia. Yleinen tutkimusasetelma, ei kyseisen laitoksen todellisen näytteen, kasvilajin tai tilan dokumenttikuva.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "type": "illustration",
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l2-v01/image.png",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "sourceEvidenceRead": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/e06/lahteet/Kinshasa_Botanical_Garden.txt",
+                "line": 114,
+                "supports": "Garden includes a nursery, seed bank, herbarium and arboretum"
+              }
+            ],
+            "sourceEvidenceProducer": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "text": "Puutarhan kasvikokoelma ei koostu vain kasvavista puista. Siemenpankissa säilytetään siemeniä, herbaariossa kasvinäytteitä ja arboretumissa eläviä puita. Arboretumin painotus on kotoperäisessä kasvistossa, ja osassa kasveista on nimikilvet. Elävä kokoelma ja säilytetyt näytteet palvelevat kasvitiedettä sekä ympäristökasvatusta eri tavoin. Nimiä lukemalla puu muuttuu yksittäisestä vihreästä hahmosta tunnistettavaksi lajiksi, jonka voi liittää laajempaan kasvien maailmaan."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+              }
+            ],
+            "rightsEvidence": "Yleistetty luonnon/ruoan/materiaalin/tavanomaisen esineen aihe. Ei kuva-inputtia, nimettyä arkkitehtuuria, suojattua nykyteosta, tunnistettavaa ihmistä, modernia koristetta tai logoa. Ei todistus tietyn paikan todellisesta ulkonäöstä.",
+            "captionFi": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä.",
+            "checkedAt": "2026-10-12T18:07:29.751639+00:00",
+            "colourSpace": "Native RGB PNG; embedded ICC/sRGB tag not independently confirmed, no ICC verification claim",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "additionalIndependentReviews": [
+            {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-0e23b0e47fa39ce8cb14ff15da04e8b82b48e796f4527c5b91dc12746d44bf0b.json",
+              "sourceSHA256": "0e23b0e47fa39ce8cb14ff15da04e8b82b48e796f4527c5b91dc12746d44bf0b",
+              "assetID": "job14-e06-kinshasa-l2-v01",
+              "nativeSHA256": "d4bca0ebf02cd415bfefda4a6df4b5f8746bc5deb7030a538cbba9d5e7f6ab60",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Kasvinäyte- ja siemenhavainne vastaa L2:n säilytettyjen kokoelmien aihetta.",
+              "reviewedAt": "2026-10-12T18:22:12.212967+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l2-v01/image.png",
+                "nativeSHA256": "d4bca0ebf02cd415bfefda4a6df4b5f8746bc5deb7030a538cbba9d5e7f6ab60",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Kuivattu lehdellinen oksa paperilla, siemeniä lasipulloissa ja irrallaan. Kuivien lehtien suonitus/repeämät, oksan liittymät, siemenet ja lasi uskottavat; ei tekstiä/etikettejä, tunnistettavaa taideteosta tai kasvoja.",
+                "captionFi": "Havainnekuva kasvinäytteiden ja siementen säilyttämisestä.",
+                "sourceAndTargetCheckFi": "Luettu L2 Kaikki kasvitieto ei ole vihreää ja faktapohjan siemenpankki-/herbaarioaihe. CaptionFi Havainnekuva kasvinäytteiden ja siementen säilyttämisestä ei väitä Kinshasan puutarhan todelliseksi näytteeksi tai lajille nimettyä kasvia.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[1].nostot[1]",
+                    "text": "Puutarhan kasvikokoelma ei koostu vain kasvavista puista. Siemenpankissa säilytetään siemeniä, herbaariossa kasvinäytteitä ja arboretumissa eläviä puita. Arboretumin painotus on kotoperäisessä kasvistossa, ja osassa kasveista on nimikilvet. Elävä kokoelma ja säilytetyt näytteet palvelevat kasvitiedettä sekä ympäristökasvatusta eri tavoin. Nimiä lukemalla puu muuttuu yksittäisestä vihreästä hahmosta tunnistettavaksi lajiksi, jonka voi liittää laajempaan kasvien maailmaan."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png?t=aa8b305158c635fc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+        "sha256": "aa8b305158c635fcebb6496d8bf5d725b8288db131d5d12c12bb602549b01949",
+        "bytes": 2452130,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kinshasa-l2-v01",
+        "nativeSHA256": "d4bca0ebf02cd415bfefda4a6df4b5f8746bc5deb7030a538cbba9d5e7f6ab60",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:10:54.534654+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l2-v01-d4bca0ebf02c.png",
+        "sha256": "aa8b305158c635fcebb6496d8bf5d725b8288db131d5d12c12bb602549b01949",
+        "bytes": 2452130,
+        "SHAReadAt": "2026-10-12T18:29:47.762524+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d4bca0ebf02cd415bfefda4a6df4b5f8746bc5deb7030a538cbba9d5e7f6ab60",
+        "rgbPixelSHA256": "1f6181802aaeaec3e24671fd6210a768667d43993f7e5563b79934592b820047",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682",
+      "contextAfterSHA256": "54d252263d587106c59ea600ce608a520077203db506609fd98c66336e722682"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "job14-e06-kinshasa-l3-v01",
+      "galleryImageID": "job14-e06-kinshasa-l3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva bonobosta metsäympäristössä.",
+        "lyhyt": "Havainnekuva bonobosta metsäympäristössä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva bonobosta metsäympäristössä.",
+        "lyhyt": "Havainnekuva bonobosta metsäympäristössä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+      "exportSHA256": "a3c3e7d0d1f868588490410076a865f19c06eb9f115a1955a50c02b85592d184",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6b252719d936f808c17c9a3a160e08ee7d94a65b6570b4c3f0058d05fd9ec171",
+        "semanticContextSHA256": "6b252719d936f808c17c9a3a160e08ee7d94a65b6570b4c3f0058d05fd9ec171",
+        "subjectTitle": "Metsä on hoidettu suojapaikka",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin luonto-/ruoka-/materiaali-/arkiesinehavainnollistus. Ei kuva-inputtia tai tietyn paikan/arkkitehtuurin/taideteoksen jäljennöstä, tunnistettavaa ihmistä, koristekuviota, tekstiä tai logoa. Ei väitettä oikeasta paikkavalokuvasta tai tietystä reseptistä.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-6913b676f4c9cb8e020c5b029d164a93908fca37a3b5eb851fa913765c59cf24.json",
+              "sourceSHA256": "6913b676f4c9cb8e020c5b029d164a93908fca37a3b5eb851fa913765c59cf24",
+              "assetID": "job14-e06-kinshasa-l3-v01",
+              "nativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Bonobon yleishavainne vastaa L3:n eläin-/metsäaihetta ilman suojapaikan dokumentointiväitettä.",
+              "reviewedAt": "2026-10-12T18:49:03.552609+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l3-v01/image.png",
+                "nativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Yksi istuva bonobo metsässä; tumma kasvonaama, pitkä karva/raajat, kädet ja jalat. Näkyvät sormet/varpaat ovat luontevasti osin päällekkäin, ei ylimääräistä raajaa tai selvästi vääristynyttä kättä. Turkki vaihtelee luonnollisesti, ei pintatoistoa. Ei ihmisia, tekstiä/logoja tai kehystä.",
+                "captionFi": "Havainnekuva bonobosta metsäympäristössä.",
+                "sourceAndTargetCheckFi": "Luettu L3 Metsä on hoidettu suojapaikka ja faktapohjan T3/K10-K11 bonobojen metsäinen elinympäristö. CaptionFi Havainnekuva bonobosta metsäympäristössä ei nimeä yksilöä, Lola ya Bonobon todellista maisemaa tai väitä eläintä siellä valokuvatuksi. Käynti-/valokuvaoikeuksista ei johdeta tämän yleiskuvituksen aitousväitettä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                    "text": "Lola ya Bonobo sijaitsee Kinshasan eteläpuolella, lähellä Lukayan pieniä putouksia. Metsäisessä suojapaikassa hoidetaan bonoboja puoli-luonnollisessa ympäristössä. Eläimet elävät ryhmissä ja käyttävät metsää, mutta kyse ei ole vapaasti luonnossa elävästä populaatiosta. Osa kuntoutetuista bonoboista voidaan palauttaa toisaalla sijaitsevaan luonnonympäristöön. Suojapaikan ja palautusalueen ero on olennainen: suojelutyö ei tarkoita vain sitä, että yhden metsän portti avataan."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Lola_ya_Bonobo"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l3-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T18:56:45.409416+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Bonobon yleishavainne vastaa L3:n eläin-/metsäaihetta ilman suojapaikan dokumentointiväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva bonobosta metsäympäristössä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "job14-e06-kinshasa-l3-v01",
+          "commonsFile": null,
+          "sha256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Bonobon yleishavainne vastaa L3:n eläin-/metsäaihetta ilman suojapaikan dokumentointiväitettä.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-6913b676f4c9cb8e020c5b029d164a93908fca37a3b5eb851fa913765c59cf24.json",
+              "sourceSHA256": "6913b676f4c9cb8e020c5b029d164a93908fca37a3b5eb851fa913765c59cf24",
+              "assetID": "job14-e06-kinshasa-l3-v01",
+              "nativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Bonobon yleishavainne vastaa L3:n eläin-/metsäaihetta ilman suojapaikan dokumentointiväitettä.",
+              "reviewedAt": "2026-10-12T18:49:03.552609+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l3-v01/image.png",
+                "nativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Yksi istuva bonobo metsässä; tumma kasvonaama, pitkä karva/raajat, kädet ja jalat. Näkyvät sormet/varpaat ovat luontevasti osin päällekkäin, ei ylimääräistä raajaa tai selvästi vääristynyttä kättä. Turkki vaihtelee luonnollisesti, ei pintatoistoa. Ei ihmisia, tekstiä/logoja tai kehystä.",
+                "captionFi": "Havainnekuva bonobosta metsäympäristössä.",
+                "sourceAndTargetCheckFi": "Luettu L3 Metsä on hoidettu suojapaikka ja faktapohjan T3/K10-K11 bonobojen metsäinen elinympäristö. CaptionFi Havainnekuva bonobosta metsäympäristössä ei nimeä yksilöä, Lola ya Bonobon todellista maisemaa tai väitä eläintä siellä valokuvatuksi. Käynti-/valokuvaoikeuksista ei johdeta tämän yleiskuvituksen aitousväitettä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                    "text": "Lola ya Bonobo sijaitsee Kinshasan eteläpuolella, lähellä Lukayan pieniä putouksia. Metsäisessä suojapaikassa hoidetaan bonoboja puoli-luonnollisessa ympäristössä. Eläimet elävät ryhmissä ja käyttävät metsää, mutta kyse ei ole vapaasti luonnossa elävästä populaatiosta. Osa kuntoutetuista bonoboista voidaan palauttaa toisaalla sijaitsevaan luonnonympäristöön. Suojapaikan ja palautusalueen ero on olennainen: suojelutyö ei tarkoita vain sitä, että yhden metsän portti avataan."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Lola_ya_Bonobo"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l3-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T18:56:45.409416+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png?t=a3c3e7d0d1f86858",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+        "sha256": "a3c3e7d0d1f868588490410076a865f19c06eb9f115a1955a50c02b85592d184",
+        "bytes": 2643697,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kinshasa-l3-v01",
+        "nativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:49:19.650273+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l3-v01-70761f8fe506.png",
+        "sha256": "a3c3e7d0d1f868588490410076a865f19c06eb9f115a1955a50c02b85592d184",
+        "bytes": 2643697,
+        "SHAReadAt": "2026-10-12T19:03:32.952378+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "70761f8fe5061ddee79bcd78cb732e82c221a73b51a3a40815bbea2dd7ffc7a3",
+        "rgbPixelSHA256": "57932bd89ff6322a5090aaab2b534a0e6da9921fed9c8061a3d8fa5b3f71a8b6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "6b252719d936f808c17c9a3a160e08ee7d94a65b6570b4c3f0058d05fd9ec171",
+      "contextAfterSHA256": "6b252719d936f808c17c9a3a160e08ee7d94a65b6570b4c3f0058d05fd9ec171"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "job14-e06-kinshasa-l4-v03",
+      "galleryImageID": "job14-e06-kinshasa-l4-v03",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puhelinkuvauksen välineestä.",
+        "lyhyt": "Havainnekuva puhelinkuvauksen välineestä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puhelinkuvauksen välineestä.",
+        "lyhyt": "Havainnekuva puhelinkuvauksen välineestä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+      "exportSHA256": "4a9f9ed066782407916c292dc9b1c3e259692636feac09381365a262626b483b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
+        "semanticContextSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
+        "subjectTitle": "Suojelu tarvitsee myös kuulijoita",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruoka-, kasvi-, materiaali- tai tavallisen käyttöesineen havainnollistus. Ei visuaalista kuva-inputtia, tunnistettavaa nykyteosta, koristetta, kasvoja tai nimettyä rakennusta/asettelua. Ei tietyn paikan autenttisen ulkonäön väitettä.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad.json",
+              "sourceSHA256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad",
+              "assetID": "job14-e06-kinshasa-l4-v03",
+              "nativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Uusi tekstittömän puhelimen havainne vastaa L4:n puhelinkuvausaihetta; v1/v2 jäävät hylätyiksi.",
+              "reviewedAt": "2026-10-12T19:05:14.678045+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l4-v03/image.png",
+                "nativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Yksi merkinnätön puhelin takapuolelta, yksi objektiivi ja pieni salamapinta. Yhtenäinen runko, luonteva matta/metallipinta ja kameraliittymä, ei tekstiä/logoja, karttaa, käsiä tai ihmisiä.",
+                "captionFi": "Havainnekuva puhelinkuvauksen välineestä.",
+                "sourceAndTargetCheckFi": "Luettu L4 Suojelu tarvitsee myös kuulijoita ja faktapohjan T4 henkilökohtaisen kuvaamisen/ammattilaiskuvaamisen ero. CaptionFi Havainnekuva puhelinkuvauksen välineestä ei nimeä valmistajaa, suojapaikan hyväksyttyä laitemallia tai todellista kuvaustilannetta. Tämä uusi native-SHA tarkistettu erikseen.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                    "text": "Lola ya Bonobon työhön kuuluu opetusta ja opastettuja vierailuja. Paikalliset kouluryhmät, lapset ja aikuiset tutustuvat bonoboihin sekä luonnonvarojen suojeluun. Henkilökunta ja oppaat tekevät eläinten hoidon rinnalla työtä sen eteen, että suojelun merkitys avautuu ihmisille. Vierailuun ei kuulu eläimiin koskemista. Myös kuvaamisella on omat sääntönsä: henkilökohtainen puhelinkuvaus ja ammattilaiskuvaus käsitellään eri tavoin, ja jälkimmäinen edellyttää paikan ennakkolupaa."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://www.bonobos.org/visit-lola-ya-bonobo/"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l4-v03/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T19:19:46.707426+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Uusi tekstittömän puhelimen havainne vastaa L4:n puhelinkuvausaihetta; v1/v2 jäävät hylätyiksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puhelinkuvauksen välineestä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "job14-e06-kinshasa-l4-v03",
+          "commonsFile": null,
+          "sha256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Uusi tekstittömän puhelimen havainne vastaa L4:n puhelinkuvausaihetta; v1/v2 jäävät hylätyiksi.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad.json",
+              "sourceSHA256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad",
+              "assetID": "job14-e06-kinshasa-l4-v03",
+              "nativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Uusi tekstittömän puhelimen havainne vastaa L4:n puhelinkuvausaihetta; v1/v2 jäävät hylätyiksi.",
+              "reviewedAt": "2026-10-12T19:05:14.678045+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l4-v03/image.png",
+                "nativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Yksi merkinnätön puhelin takapuolelta, yksi objektiivi ja pieni salamapinta. Yhtenäinen runko, luonteva matta/metallipinta ja kameraliittymä, ei tekstiä/logoja, karttaa, käsiä tai ihmisiä.",
+                "captionFi": "Havainnekuva puhelinkuvauksen välineestä.",
+                "sourceAndTargetCheckFi": "Luettu L4 Suojelu tarvitsee myös kuulijoita ja faktapohjan T4 henkilökohtaisen kuvaamisen/ammattilaiskuvaamisen ero. CaptionFi Havainnekuva puhelinkuvauksen välineestä ei nimeä valmistajaa, suojapaikan hyväksyttyä laitemallia tai todellista kuvaustilannetta. Tämä uusi native-SHA tarkistettu erikseen.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                    "text": "Lola ya Bonobon työhön kuuluu opetusta ja opastettuja vierailuja. Paikalliset kouluryhmät, lapset ja aikuiset tutustuvat bonoboihin sekä luonnonvarojen suojeluun. Henkilökunta ja oppaat tekevät eläinten hoidon rinnalla työtä sen eteen, että suojelun merkitys avautuu ihmisille. Vierailuun ei kuulu eläimiin koskemista. Myös kuvaamisella on omat sääntönsä: henkilökohtainen puhelinkuvaus ja ammattilaiskuvaus käsitellään eri tavoin, ja jälkimmäinen edellyttää paikan ennakkolupaa."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://www.bonobos.org/visit-lola-ya-bonobo/"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-l4-v03/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T19:19:46.707426+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png?t=4a9f9ed066782407",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+        "sha256": "4a9f9ed066782407916c292dc9b1c3e259692636feac09381365a262626b483b",
+        "bytes": 1830505,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kinshasa-l4-v03",
+        "nativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T19:05:31.078881+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-l4-v03-12d9cbe02f28.png",
+        "sha256": "4a9f9ed066782407916c292dc9b1c3e259692636feac09381365a262626b483b",
+        "bytes": 1830505,
+        "SHAReadAt": "2026-10-12T19:32:03.988913+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "12d9cbe02f28e5c56aaf38f4b4260317724f7a4f225bba2cec588cf3a48f82c3",
+        "rgbPixelSHA256": "61420161724f5ac2787374ea13a50020e12f3d432afbf83f10f370bce7de3c42",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a",
+      "contextAfterSHA256": "b88669f3d19b34efbc6b53bb6b1e64424020abd23193a91b2ff4c7ff36793f7a"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "N2",
+      "type": "illustration",
+      "assetID": "job14-e06-kinshasa-n2-v01",
+      "galleryImageID": "job14-e06-kinshasa-n2-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Kinshasan kasvitieteellinen puutarha\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Kinshasan kasvitieteellinen puutarha",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvin lisäämisestä pistokkaasta.",
+        "lyhyt": "Havainnekuva kasvin lisäämisestä pistokkaasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kasvin lisäämisestä pistokkaasta.",
+        "lyhyt": "Havainnekuva kasvin lisäämisestä pistokkaasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+      "exportSHA256": "4a0b041e0199d65dd780b71db70e000194c040f2334b0d96975ef8acd8725c2c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "bbf91c8f5b4f081969792caf7d486981f5b788935bbfd8bdc18ce035b9de181c",
+        "subjectTitle": "Kinshasan kasvitieteellinen puutarha",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruoka-, kasvi-, materiaali- tai tavallisen käyttöesineen havainnollistus. Ei visuaalista kuva-inputtia, tunnistettavaa nykyteosta, koristetta, kasvoja tai nimettyä rakennusta/asettelua. Ei tietyn paikan autenttisen ulkonäön väitettä.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad.json",
+              "sourceSHA256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad",
+              "assetID": "job14-e06-kinshasa-n2-v01",
+              "nativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Pistokashavainne sopii olemassa olevan puutarhakohteen N2-tekstiin.",
+              "reviewedAt": "2026-10-12T19:16:06.484297+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-n2-v01/image.png",
+                "nativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Juurtunut lehtipistokas vedessä tavallisessa lasissa. Juuret liittyvät varren solmukohtiin, lehdet/vesi/lasi uskottavat; ei tekstiä, logoja tai ihmisiä.",
+                "captionFi": "Havainnekuva kasvin lisäämisestä pistokkaasta.",
+                "sourceAndTargetCheckFi": "N2:n puutarhaobjekti ja tyhjä kuvat[0] olemassa; teksti sekä faktapohjan T1 nimeävät pistokaslisäyksen. CaptionFi havainne, ei puutarhan lajisto-/näyte-/työmenetelmäkuva tai kasvin hoito-ohje.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.nahtavyydet[\"Kinshasan kasvitieteellinen puutarha\"]",
+                    "text": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa, Kasa-Vubun varrella eläintarhaa vastapäätä. Puutarha syntyi 1900-luvun alkupuolella ja kuuluu ICCN:n hallintaan. Isoisän matkavuonna 1873 tätä nykyistä kokoelmaa ei siis ollut. Kohteen kiinnostus on kasvien kasvattamisessa, säilyttämisessä ja tutkimuksessa.\n\nTaimistossa kasveja lisätään esimerkiksi siemenistä ja pistokkaista, ja osa taimista kasvatetaan kaupungin vihertämistä varten. Kokoelmiin kuuluu myös siemenpankki, herbaario ja arboretum, jossa painottuu kotoperäinen kasvisto. Nimillä varustetut kasvit ja opetustoiminta yhdistävät puutarhan ympäristökasvatukseen. Paikka on samalla elävä kasvikokoelma ja tietoa säilyttävä tutkimusympäristö."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-n2-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T19:19:46.712846+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Pistokashavainne sopii olemassa olevan puutarhakohteen N2-tekstiin."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kasvin lisäämisestä pistokkaasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Kinshasan kasvitieteellinen puutarha\"].kuvat[0]",
+          "assetID": "job14-e06-kinshasa-n2-v01",
+          "commonsFile": null,
+          "sha256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Pistokashavainne sopii olemassa olevan puutarhakohteen N2-tekstiin.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-1",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/extra-84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad.json",
+              "sourceSHA256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad",
+              "assetID": "job14-e06-kinshasa-n2-v01",
+              "nativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Pistokashavainne sopii olemassa olevan puutarhakohteen N2-tekstiin.",
+              "reviewedAt": "2026-10-12T19:16:06.484297+00:00",
+              "visualReviewEvidence": {
+                "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-n2-v01/image.png",
+                "nativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "manifestHashMatches": true,
+                "personallyViewed": true,
+                "viewTool": "view_image",
+                "visualFindingsFi": "Juurtunut lehtipistokas vedessä tavallisessa lasissa. Juuret liittyvät varren solmukohtiin, lehdet/vesi/lasi uskottavat; ei tekstiä, logoja tai ihmisiä.",
+                "captionFi": "Havainnekuva kasvin lisäämisestä pistokkaasta.",
+                "sourceAndTargetCheckFi": "N2:n puutarhaobjekti ja tyhjä kuvat[0] olemassa; teksti sekä faktapohjan T1 nimeävät pistokaslisäyksen. CaptionFi havainne, ei puutarhan lajisto-/näyte-/työmenetelmäkuva tai kasvin hoito-ohje.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                "sourceEvidence": [
+                  {
+                    "type": "currentContent",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+                    "sha256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                    "jsonPath": "$.nahtavyydet[\"Kinshasan kasvitieteellinen puutarha\"]",
+                    "text": "Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa, Kasa-Vubun varrella eläintarhaa vastapäätä. Puutarha syntyi 1900-luvun alkupuolella ja kuuluu ICCN:n hallintaan. Isoisän matkavuonna 1873 tätä nykyistä kokoelmaa ei siis ollut. Kohteen kiinnostus on kasvien kasvattamisessa, säilyttämisessä ja tutkimuksessa.\n\nTaimistossa kasveja lisätään esimerkiksi siemenistä ja pistokkaista, ja osa taimista kasvatetaan kaupungin vihertämistä varten. Kokoelmiin kuuluu myös siemenpankki, herbaario ja arboretum, jossa painottuu kotoperäinen kasvisto. Nimillä varustetut kasvit ja opetustoiminta yhdistävät puutarhan ympäristökasvatukseen. Paikka on samalla elävä kasvikokoelma ja tietoa säilyttävä tutkimusympäristö."
+                  },
+                  {
+                    "type": "factSheet",
+                    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                    "sha256": "ff86b3dfd30551b653a3f829cff42c462798c82412394696038c623fa340006b",
+                    "sourceUrl": "https://en.wikipedia.org/wiki/Kinshasa_Botanical_Garden"
+                  }
+                ]
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/assets/job14-e06-kinshasa-n2-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "checkedAt": "2026-10-12T19:19:46.712846+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png?t=4a0b041e0199d65d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+        "sha256": "4a0b041e0199d65dd780b71db70e000194c040f2334b0d96975ef8acd8725c2c",
+        "bytes": 2072633,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-kinshasa-n2-v01",
+        "nativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Kinshasan kasvitieteellinen puutarha\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T19:16:41.146726+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png",
+        "sha256": "4a0b041e0199d65dd780b71db70e000194c040f2334b0d96975ef8acd8725c2c",
+        "bytes": 2072633,
+        "SHAReadAt": "2026-10-12T19:32:04.124571+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b5a8c01434270056b35273035de5e1872cd0651796f2bafa3f4cbf5e350095e6",
+        "rgbPixelSHA256": "eb01146c3119696277f2cbe499a820b2fe5a71bfbef348f538ff76263c6aa939",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "bbf91c8f5b4f081969792caf7d486981f5b788935bbfd8bdc18ce035b9de181c"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e06-kinshasa-photo-d5ff66f962055c9a",
+      "galleryImageID": "capital-cc-e06-kinshasa-photo-d5ff66f962055c9a",
+      "commonsFile": "Forest near Kinshasa.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
+        "suora": true,
+        "lahde": "David Tansey, Commons (CC BY 2.0)",
+        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
+        "lyhyt": "Metsää ja vettä Kinshasan lähistöllä.",
+        "tiedosto": "Forest near Kinshasa.jpg",
+        "vuosi": "2012"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "David Tansey, Commons (CC BY 2.0)",
+        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
+        "lyhyt": "Metsää ja vettä Kinshasan lähistöllä.",
+        "tiedosto": "Forest near Kinshasa.jpg",
+        "vuosi": "2012"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
+        "suora": true,
+        "lahde": "David Tansey, Commons (CC BY 2.0)",
+        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
+        "lyhyt": "Metsää ja vettä Kinshasan lähistöllä.",
+        "tiedosto": "Forest near Kinshasa.jpg",
+        "vuosi": "2012"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+      "exportSHA256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/de822d62413430c5-preview.jpg",
+      "dimensions": [
+        4272,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d16ba80da1c27b4e416e9f773b68f5d6ac139dd4e27623cea6b6eda0ab352e41",
+        "semanticContextSHA256": "d16ba80da1c27b4e416e9f773b68f5d6ac139dd4e27623cea6b6eda0ab352e41",
+        "subjectTitle": "kinshasa — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "David Tansey",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Forest_near_Kinshasa.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Forest_near_Kinshasa.jpg",
+        "rightsEvidence": {
+          "selection": "Author David Tansey ja CC BY 2.0 -lisenssi luettu tiedostosivulta, Flickr-alkuperäiskrediitti. Description Forest near Kinshasa paikantaa metsän kaupungin lähiseudulle; ei väitetä keskustaksi, kasvipuutarhaksi, Ma Valléeksi tai Lola ya Bonoboksi. Pääaihe elävä metsä, palmut ja luonnonvesi; ei ihmisteoksia tai kaupallisen kuvausluvan erikseen vaativan nimetyn suojapaikan väitettä.",
+          "QA": {
+            "author": "David Tansey",
+            "license": "CC BY 2.0",
+            "width": 4272,
+            "height": 2848,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/de822d62413430c5-preview.jpg",
+            "nativeSHA256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/6f6b283b4add1a041946247dbc5b9e48623fca91a46ba8ae4a0a5957a67045a3.html",
+            "sourceSnapshotSHA256": "6f6b283b4add1a041946247dbc5b9e48623fca91a46ba8ae4a0a5957a67045a3",
+            "sourceRowsRead": {
+              "Description Forest near Kinshasa.jpg": "English: Forest near Kinshasa",
+              "Date": "27 December 2012, 09:01:29",
+              "Source": "https://www.flickr.com/photos/djtansey/8345419817/",
+              "Author": "David Tansey"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "David Tansey",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY 2.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,272",
+              "2,848"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/de822d62413430c5-preview.jpg\n  pixelWidth: 4272\n  pixelHeight: 2848\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              4272,
+              2848
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              4272,
+              2848
+            ],
+            "sourceDateRaw": "27 December 2012, 09:01:29",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito elävä metsä, palmut, vesipinta ja heijastukset. Luonnolliset tummanvihreät sävyt, pieni kirkas taivas ja vähäinen reunan pehmeys; metsä/vesi-aihe erottuu, ei hylätyn BOT039-kuvan rajua värikäsittelyä/reunavirheitä. Ei ihmisiä, overlayta, vesileimaa tai ihmisteoksia pääaiheena. Description Forest near Kinshasa ja alkuperäiset Nature of Kinshasa/Forests in DRC -kategoriat luettu itse; caption Kinshasan lähistöllä vastaa lähdettä, ei väitetä keskustaksi tai nimetyksi Ma Vallée/Lola/puutarhakohteeksi. David Tansey/CC BY2.0 tiedostosivun Author/licensetpl, FlickreviewR2-vahvistus29.1.2024 luettu itse. Native4272×2848 ja SHA tarkistettu, kuvaus27.12.2012, ei tuoreusväitettä. Korvaa laatusyystä hylätynBOT039:n; vanhatLola/BOTversiot säilyvät historiassa.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "sourceCategoriesPersonallyRead": [
+              "Forests in the Democratic Republic of the Congo",
+              "Nature of Kinshasa"
+            ],
+            "flickrLicenseReviewPersonallyRead": true,
+            "flickrLicenseReviewDate": "29 January 2024",
+            "notDocumentaryImageOfSpecificProtectedFacility": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Forest_near_Kinshasa.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-selection.json",
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "photoDate": "27 December 2012, 09:01:29",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Forest_near_Kinshasa.jpg",
+            "captionFi": "Metsää ja vettä Kinshasan lähistöllä.",
+            "checkedAt": "2026-10-12T20:05:17.661519+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Oma natiivin silmätarkistus: aito elävä metsä, palmut, vesipinta ja heijastukset. Luonnolliset tummanvihreät sävyt, pieni kirkas taivas ja vähäinen reunan pehmeys; metsä/vesi-aihe erottuu, ei hylätyn BOT039-kuvan rajua värikäsittelyä/reunavirheitä. Ei ihmisiä, overlayta, vesileimaa tai ihmisteoksia pääaiheena. Description Forest near Kinshasa ja alkuperäiset Nature of Kinshasa/Forests in DRC -kategoriat luettu itse; caption Kinshasan lähistöllä vastaa lähdettä, ei väitetä keskustaksi tai nimetyksi Ma Vallée/Lola/puutarhakohteeksi. David Tansey/CC BY2.0 tiedostosivun Author/licensetpl, FlickreviewR2-vahvistus29.1.2024 luettu itse. Native4272×2848 ja SHA tarkistettu, kuvaus27.12.2012, ei tuoreusväitettä. Korvaa laatusyystä hylätynBOT039:n; vanhatLola/BOTversiot säilyvät historiassa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Metsää ja vettä Kinshasan lähistöllä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "assetID": null,
+          "commonsFile": "Forest near Kinshasa.jpg",
+          "sha256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: aito elävä metsä, palmut, vesipinta ja heijastukset. Luonnolliset tummanvihreät sävyt, pieni kirkas taivas ja vähäinen reunan pehmeys; metsä/vesi-aihe erottuu, ei hylätyn BOT039-kuvan rajua värikäsittelyä/reunavirheitä. Ei ihmisiä, overlayta, vesileimaa tai ihmisteoksia pääaiheena. Description Forest near Kinshasa ja alkuperäiset Nature of Kinshasa/Forests in DRC -kategoriat luettu itse; caption Kinshasan lähistöllä vastaa lähdettä, ei väitetä keskustaksi tai nimetyksi Ma Vallée/Lola/puutarhakohteeksi. David Tansey/CC BY2.0 tiedostosivun Author/licensetpl, FlickreviewR2-vahvistus29.1.2024 luettu itse. Native4272×2848 ja SHA tarkistettu, kuvaus27.12.2012, ei tuoreusväitettä. Korvaa laatusyystä hylätynBOT039:n; vanhatLola/BOTversiot säilyvät historiassa.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "David Tansey",
+            "license": "CC BY 2.0",
+            "width": 4272,
+            "height": 2848,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/de822d62413430c5-preview.jpg",
+            "nativeSHA256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/6f6b283b4add1a041946247dbc5b9e48623fca91a46ba8ae4a0a5957a67045a3.html",
+            "sourceSnapshotSHA256": "6f6b283b4add1a041946247dbc5b9e48623fca91a46ba8ae4a0a5957a67045a3",
+            "sourceRowsRead": {
+              "Description Forest near Kinshasa.jpg": "English: Forest near Kinshasa",
+              "Date": "27 December 2012, 09:01:29",
+              "Source": "https://www.flickr.com/photos/djtansey/8345419817/",
+              "Author": "David Tansey"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "David Tansey",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY 2.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,272",
+              "2,848"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/de822d62413430c5-preview.jpg\n  pixelWidth: 4272\n  pixelHeight: 2848\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              4272,
+              2848
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              4272,
+              2848
+            ],
+            "sourceDateRaw": "27 December 2012, 09:01:29",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito elävä metsä, palmut, vesipinta ja heijastukset. Luonnolliset tummanvihreät sävyt, pieni kirkas taivas ja vähäinen reunan pehmeys; metsä/vesi-aihe erottuu, ei hylätyn BOT039-kuvan rajua värikäsittelyä/reunavirheitä. Ei ihmisiä, overlayta, vesileimaa tai ihmisteoksia pääaiheena. Description Forest near Kinshasa ja alkuperäiset Nature of Kinshasa/Forests in DRC -kategoriat luettu itse; caption Kinshasan lähistöllä vastaa lähdettä, ei väitetä keskustaksi tai nimetyksi Ma Vallée/Lola/puutarhakohteeksi. David Tansey/CC BY2.0 tiedostosivun Author/licensetpl, FlickreviewR2-vahvistus29.1.2024 luettu itse. Native4272×2848 ja SHA tarkistettu, kuvaus27.12.2012, ei tuoreusväitettä. Korvaa laatusyystä hylätynBOT039:n; vanhatLola/BOTversiot säilyvät historiassa.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "sourceCategoriesPersonallyRead": [
+              "Forests in the Democratic Republic of the Congo",
+              "Nature of Kinshasa"
+            ],
+            "flickrLicenseReviewPersonallyRead": true,
+            "flickrLicenseReviewDate": "29 January 2024",
+            "notDocumentaryImageOfSpecificProtectedFacility": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Forest_near_Kinshasa.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-selection.json",
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "photoDate": "27 December 2012, 09:01:29",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Forest_near_Kinshasa.jpg",
+            "captionFi": "Metsää ja vettä Kinshasan lähistöllä.",
+            "checkedAt": "2026-10-12T20:05:17.661519+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "previousCandidateReviews": [
+            {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "assetID": null,
+              "commonsFile": "Lr new best bonobo pics20.jpg",
+              "sha256": "29fe48ae912eed611eea5177014ca1729236d31c34143ab455f44789c25e43d1",
+              "verdict": "blocked",
+              "reason": "Oma silmätarkistus ja alkuperäislähteen tarkistus tehty: kaksi bonoboa Lola ya Bonobossa, hoitajan kasvot poissa. Vanessawoods/Own work ja maailmanlaajuinen PD-self luettu valokuvan lisenssistä; 1280×853, päiväys11/6/2002 säilyy tulkitsematta kuukausi-/päiväjärjestystä. BLOCKED rajatusta paikkalupasyystä: kaupungin lähteistetty projektirajaus pitää Lolan kaupallisen kuvan/paikkaluvan avoimena ja paikan Photography Policy vaatii ammattilaiskuvaukselle ennakkoluvan, henkilökohtaiset puhelinkuvat vain omaan käyttöön. Tämän nimenomaisen2002 kuvan luvasta ei ole näyttöä. Nykykäytäntöä ei väitetä automaattisesti vanhaaPD-kuvaa kieltäväksi laiksi; tarkistaja tarvitsee dokumentoidun perusteen projektin paikkalupaportin ratkaisemiseen tai toisen PHOTO-ehdokkaan.",
+              "required": true,
+              "status": "reviewed",
+              "evidence": {
+                "era": "e06",
+                "city": "kinshasa",
+                "commonsFile": "Lr new best bonobo pics20.jpg",
+                "rows": {
+                  "Description Lr new best bonobo pics20.jpg": "English: mwanda and lomela at Lola ya Bonobo sanctuary",
+                  "Date": "11/6/2002",
+                  "Source": "Own work",
+                  "Author": "Vanessawoods"
+                },
+                "licenses": [
+                  "Public domain"
+                ],
+                "licenseUrls": [
+                  "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "https://creativecommons.org/licenses/by-sa/4.0/"
+                ],
+                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/7ddcd67847388d23e6596b5ae30f4d05dd2b8745ec50bf0f10cc23f01eea6ddb.html",
+                "sourceSnapshotSHA256": "7ddcd67847388d23e6596b5ae30f4d05dd2b8745ec50bf0f10cc23f01eea6ddb",
+                "sourceOriginalFileDimensions": [
+                  "1,280",
+                  "853"
+                ],
+                "nativeSHA256": "29fe48ae912eed611eea5177014ca1729236d31c34143ab455f44789c25e43d1",
+                "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/dac6f57f86a7642b-preview.jpg",
+                "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/dac6f57f86a7642b-preview.jpg\n  pixelWidth: 1280\n  pixelHeight: 853\n  format: jpeg\n  profile: Camera RGB Profile\n",
+                "author": "Vanessawoods",
+                "license": "PD",
+                "width": 1280,
+                "height": 853,
+                "sourcePDStatement": "I, the copyright holder of this work, release this work into the public domain . This applies worldwide. In some countries this may not be legally possible; if so: I grant anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 19:38, 11 August 2008 1,280 × 853 (129 KB) Vanessawoods~commonswiki ( talk | contribs ) {{Information |Description={{en|1=mwanda and lomela at Lola ya Bonobo sanctuary}} |Source=Own work by uploader |Author= Vanessawoods |Date= |Permission= |other_versions= }} <!--{{ImageUpload|full}}--> You cannot overwrite this file. File usage on Commons The following page uses this file: Category:Lola ya bonobo File usage on other wikis The following other wikis use this file: Usage on bn.wikivoyage.org কিনশাসা Usage on ceb.wikipedia.org Lola ya Bonobo Usage on de.wikivoyage.org Kinshasa Usage on en.wikipedia.org Demonic Males Lola ya Bonobo User talk:Blofeld of SPECTRE/ArchiveAug",
+                "sitePolicySource": "https://www.bonobos.org/visit-lola-ya-bonobo/",
+                "sitePolicySnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/site-policy-b9fc63db167b2808ade75adf8365aba2e69a27a64d40a1b75b7832d62f9ab70a.txt",
+                "sitePolicySHA256": "b9fc63db167b2808ade75adf8365aba2e69a27a64d40a1b75b7832d62f9ab70a",
+                "sitePolicyLines": "105-108",
+                "projectScopeSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/faktapohja.md",
+                "sourceDateRaw": "11/6/2002",
+                "visualReview": "Oma silmätarkistus ja alkuperäislähteen tarkistus tehty: kaksi bonoboa Lola ya Bonobossa, hoitajan kasvot poissa. Vanessawoods/Own work ja maailmanlaajuinen PD-self luettu valokuvan lisenssistä; 1280×853, päiväys11/6/2002 säilyy tulkitsematta kuukausi-/päiväjärjestystä. BLOCKED rajatusta paikkalupasyystä: kaupungin lähteistetty projektirajaus pitää Lolan kaupallisen kuvan/paikkaluvan avoimena ja paikan Photography Policy vaatii ammattilaiskuvaukselle ennakkoluvan, henkilökohtaiset puhelinkuvat vain omaan käyttöön. Tämän nimenomaisen2002 kuvan luvasta ei ole näyttöä. Nykykäytäntöä ei väitetä automaattisesti vanhaaPD-kuvaa kieltäväksi laiksi; tarkistaja tarvitsee dokumentoidun perusteen projektin paikkalupaportin ratkaisemiseen tai toisen PHOTO-ehdokkaan.",
+                "visuallyReviewed": true,
+                "originalPixelsViewed": true,
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Lr_new_best_bonobo_pics20.jpg",
+                "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                "photoDate": "11/6/2002",
+                "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Lr_new_best_bonobo_pics20.jpg",
+                "captionFi": "Lola ya Bonobo on Kinshasan lähellä sijaitseva bonobojen suojapaikka.",
+                "checkedAt": "2026-10-12T19:23:14.460803+00:00",
+                "published": false,
+                "gameIntegrated": false,
+                "ownerAcceptance": false
+              }
+            },
+            {
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "assetID": null,
+              "commonsFile": "BOT 039.jpg",
+              "sha256": "f53c099ed3a8c9f455478ec01ada6676ecf46c113a3baf7568feeef4de2902ff",
+              "verdict": "rejected",
+              "reason": "REJECTED oman natiivin2747×1819 silmätarkistuksen kuvanlaadun vuoksi: suuri keskinen/ylöpuolinen taivasalue on täysin valkoinen, kasvillisuuden sävyt voimakkaasti ylikylläiset ja lehtien rajoissa laajasti näkyvät punaiset/syaanit reunat. Yhdistelmä tekee tästä PHOTO-kuvasta liian raskaan ja epäluontevan. Tekijä Leon Bilili/CC BY-SA4.0 ja suora Category:Kinshasa Botanical Garden ovat kunnossa; ei oikeus-/paikkasidontahylkäys eikä Lolan lupaportti. Pienillä reunan ihmisillä ei erotu tunnistettavia kasvonpiirteitä. Tarvitaan uusi erillinen aito CC-ehdokas, tasaisempi valotus ja luonnollisemmat kasvillisuuden sävyt. Vanhaa ei muokata eikä korvata AI:lla.",
+              "required": true,
+              "status": "reviewed",
+              "evidence": {
+                "author": "Leon Bilili",
+                "license": "CC BY-SA 4.0",
+                "width": 2747,
+                "height": 1819,
+                "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/fad2adb97783b9f5-preview.jpg",
+                "nativeSHA256": "f53c099ed3a8c9f455478ec01ada6676ecf46c113a3baf7568feeef4de2902ff",
+                "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/986e515c678d42326722fcec0d365317af460f5416a26f56931dfa2b9ec36f4c.html",
+                "sourceSnapshotSHA256": "986e515c678d42326722fcec0d365317af460f5416a26f56931dfa2b9ec36f4c",
+                "sourceRowsRead": {
+                  "Description BOT 039.jpg": "Français : Une Photo prise en 2022",
+                  "Date": "15 August 2022, 08:15:33",
+                  "Source": "Own work",
+                  "Author": "Leon Bilili"
+                },
+                "licenseTemplatesRead": [
+                  "CC BY-SA 4.0"
+                ],
+                "sourceOriginalFileDimensions": [
+                  "2,747",
+                  "1,819"
+                ],
+                "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/fad2adb97783b9f5-preview.jpg\n  pixelWidth: 2747\n  pixelHeight: 1819\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+                "sourceDateRaw": "15 August 2022, 08:15:33",
+                "gameReuseIndependentlyChecked": true,
+                "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/js/packs",
+                "gameReuseFilesRead": 373,
+                "gameReuseMatches": [],
+                "duplicateCitySlots": [],
+                "visualReview": "REJECTED oman natiivin2747×1819 silmätarkistuksen kuvanlaadun vuoksi: suuri keskinen/ylöpuolinen taivasalue on täysin valkoinen, kasvillisuuden sävyt voimakkaasti ylikylläiset ja lehtien rajoissa laajasti näkyvät punaiset/syaanit reunat. Yhdistelmä tekee tästä PHOTO-kuvasta liian raskaan ja epäluontevan. Tekijä Leon Bilili/CC BY-SA4.0 ja suora Category:Kinshasa Botanical Garden ovat kunnossa; ei oikeus-/paikkasidontahylkäys eikä Lolan lupaportti. Pienillä reunan ihmisillä ei erotu tunnistettavia kasvonpiirteitä. Tarvitaan uusi erillinen aito CC-ehdokas, tasaisempi valotus ja luonnollisemmat kasvillisuuden sävyt. Vanhaa ei muokata eikä korvata AI:lla.",
+                "originalDetailViewed": true,
+                "sourceCategoryPersonallyRead": "Kinshasa Botanical Garden",
+                "depictedWorkLayerIndependentlyReviewed": true,
+                "qualityFaults": [
+                  "Laaja sävytön valkoinen taivas",
+                  "Kasvillisuuden voimakas ylikylläisyys",
+                  "Punaiset/syaanit reunat lehdissä"
+                ],
+                "visuallyReviewed": true,
+                "originalPixelsViewed": true,
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:BOT_039.jpg",
+                "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+                "photoDate": "15 August 2022, 08:15:33",
+                "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/BOT_039.jpg",
+                "captionFi": "Puustoa Kinshasan kasvitieteellisessä puutarhassa.",
+                "checkedAt": "2026-10-12T19:33:10.449628+00:00",
+                "published": false,
+                "gameIntegrated": false,
+                "ownerAcceptance": false
+              }
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Forest near Kinshasa.jpg",
+        "sha256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Forest_near_Kinshasa.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Forest_near_Kinshasa.jpg",
+        "author": "David Tansey",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 4272,
+        "height": 2848,
+        "originalSHA256": "d5ff66f962055c9aa088c1834770f7e5c072ae6831e563f340793461323302b2",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg",
+        "bytes": 4199355,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:06:18.467582+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Forest near Kinshasa.jpg",
+        "lahde": "David Tansey, Commons (CC BY 2.0)",
+        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
+        "lyhyt": "Metsää ja vettä Kinshasan lähistöllä.",
+        "vuosi": "2012"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "David Tansey, Commons (CC BY 2.0)",
+        "selite": "Metsää ja vettä Kinshasan lähistöllä.",
+        "lyhyt": "Metsää ja vettä Kinshasan lähistöllä.",
+        "tiedosto": "Forest near Kinshasa.jpg",
+        "vuosi": "2012"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "d16ba80da1c27b4e416e9f773b68f5d6ac139dd4e27623cea6b6eda0ab352e41",
+      "contextAfterSHA256": "d16ba80da1c27b4e416e9f773b68f5d6ac139dd4e27623cea6b6eda0ab352e41"
+    },
+    {
+      "era": "e06",
+      "city": "kinshasa",
+      "slot": "K2",
+      "type": "commons",
+      "assetID": "capital-cc-e06-kinshasa-k2-03b52939e928b3d4",
+      "galleryImageID": "capital-cc-e06-kinshasa-k2-03b52939e928b3d4",
+      "commonsFile": "Manguier kinshasa.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
+        "suora": true,
+        "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa ja polku Kinshasassa.",
+        "lyhyt": "Puustoa ja polku Kinshasassa.",
+        "tiedosto": "Manguier kinshasa.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa ja polku Kinshasassa.",
+        "lyhyt": "Puustoa ja polku Kinshasassa.",
+        "tiedosto": "Manguier kinshasa.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
+        "suora": true,
+        "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa ja polku Kinshasassa.",
+        "lyhyt": "Puustoa ja polku Kinshasassa.",
+        "tiedosto": "Manguier kinshasa.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+      "exportSHA256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/4bb0dfe2b9747a5e-preview.jpg",
+      "dimensions": [
+        1200,
+        1600
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/kinshasa/sisalto.json",
+      "sourceContentSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3d6ecbfd91225bfa9a7d0bd021c60df201fe993cdc7838374b1de513656338b9",
+        "semanticContextSHA256": "3d6ecbfd91225bfa9a7d0bd021c60df201fe993cdc7838374b1de513656338b9",
+        "subjectTitle": "Kaupunki jatkuu maakuntana",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Max.kit",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Manguier_kinshasa.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Manguier_kinshasa.jpg",
+        "rightsEvidence": {
+          "selection": "Author Max.kit, Own work ja CC BY-SA 4.0 tiedostosivulta. Description manguier kinshasa ja kaupungin Nature of Kinshasa -luokka paikantavat kuvan Kinshasaan. K2 käsittelee maaseutua sisältävää kaupunki-maakuntaa; luonnonpuusto ja polku vastaavat tätä aihetta. Ei väitetä kasvipuutarhaa, named sanctuaryä tai tiettyä puulajia pelkän Mangroves-luokan perusteella. Ei ihmisteoksia.",
+          "QA": {
+            "author": "Max.kit",
+            "license": "CC BY-SA 4.0",
+            "width": 1200,
+            "height": 1600,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/4bb0dfe2b9747a5e-preview.jpg",
+            "nativeSHA256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/e056b2aa01a35c0bacf41496accda7faf83113e3c4e0a2793bbb384a3ae1dc7b.html",
+            "sourceSnapshotSHA256": "e056b2aa01a35c0bacf41496accda7faf83113e3c4e0a2793bbb384a3ae1dc7b",
+            "sourceRowsRead": {
+              "Description Manguier kinshasa.jpg": "Français : manguier kinshasa",
+              "Date": "21 November 2016, 15:04:24",
+              "Source": "Own work",
+              "Author": "Max.kit"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "Max.kit",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,200",
+              "1,600"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/4bb0dfe2b9747a5e-preview.jpg\n  pixelWidth: 1600\n  pixelHeight: 1200\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              1600,
+              1200
+            ],
+            "exifOrientation": 6,
+            "orientationAppliedDimensions": [
+              1200,
+              1600
+            ],
+            "sourceDateRaw": "21 November 2016, 15:04:24",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: puustoa, avoin vihreä ympäristö ja hiekkapolku. Kaukana olevat polunkulkijat selin, kasvonpiirteet eivät erotu. Ei overlayta, vesileimaa, mainoskuvaa tai ihmisteoksia pääaiheena. Sopii nykyiseenK2-kaupunki-maakunta -nostoon, joka erottaa tiiviin keskustan maaseutumaisista alueista. Description manguier kinshasa ja Nature of Kinshasa -paikkaluokka; kasvilajin nimeä ei päätellä Mangroves-luokasta eikä nimetä suojapaikkaa. Max.kit/Own work/CC BY-SA4.0 Author/licensetpl luettu itse. JPEG-tallennetut1600×1200, EXIF Orientation6, oikein päin1200×1600; lähteen original1200×1600, leveys1200 täyttäärajan. Pysty sallittuK-roolissa, kuvaus21.11.2016, ei tuoreopaskuva.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Manguier_kinshasa.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-selection.json",
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "photoDate": "21 November 2016, 15:04:24",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Manguier_kinshasa.jpg",
+            "captionFi": "Puustoa ja polku Kinshasassa.",
+            "checkedAt": "2026-10-12T20:14:31.534615+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Oma natiivin silmätarkistus: puustoa, avoin vihreä ympäristö ja hiekkapolku. Kaukana olevat polunkulkijat selin, kasvonpiirteet eivät erotu. Ei overlayta, vesileimaa, mainoskuvaa tai ihmisteoksia pääaiheena. Sopii nykyiseenK2-kaupunki-maakunta -nostoon, joka erottaa tiiviin keskustan maaseutumaisista alueista. Description manguier kinshasa ja Nature of Kinshasa -paikkaluokka; kasvilajin nimeä ei päätellä Mangroves-luokasta eikä nimetä suojapaikkaa. Max.kit/Own work/CC BY-SA4.0 Author/licensetpl luettu itse. JPEG-tallennetut1600×1200, EXIF Orientation6, oikein päin1200×1600; lähteen original1200×1600, leveys1200 täyttäärajan. Pysty sallittuK-roolissa, kuvaus21.11.2016, ei tuoreopaskuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puustoa ja polku Kinshasassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+        "fileSHA256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": null,
+          "commonsFile": "Manguier kinshasa.jpg",
+          "sha256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: puustoa, avoin vihreä ympäristö ja hiekkapolku. Kaukana olevat polunkulkijat selin, kasvonpiirteet eivät erotu. Ei overlayta, vesileimaa, mainoskuvaa tai ihmisteoksia pääaiheena. Sopii nykyiseenK2-kaupunki-maakunta -nostoon, joka erottaa tiiviin keskustan maaseutumaisista alueista. Description manguier kinshasa ja Nature of Kinshasa -paikkaluokka; kasvilajin nimeä ei päätellä Mangroves-luokasta eikä nimetä suojapaikkaa. Max.kit/Own work/CC BY-SA4.0 Author/licensetpl luettu itse. JPEG-tallennetut1600×1200, EXIF Orientation6, oikein päin1200×1600; lähteen original1200×1600, leveys1200 täyttäärajan. Pysty sallittuK-roolissa, kuvaus21.11.2016, ei tuoreopaskuva.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Max.kit",
+            "license": "CC BY-SA 4.0",
+            "width": 1200,
+            "height": 1600,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/4bb0dfe2b9747a5e-preview.jpg",
+            "nativeSHA256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa-evidence/e056b2aa01a35c0bacf41496accda7faf83113e3c4e0a2793bbb384a3ae1dc7b.html",
+            "sourceSnapshotSHA256": "e056b2aa01a35c0bacf41496accda7faf83113e3c4e0a2793bbb384a3ae1dc7b",
+            "sourceRowsRead": {
+              "Description Manguier kinshasa.jpg": "Français : manguier kinshasa",
+              "Date": "21 November 2016, 15:04:24",
+              "Source": "Own work",
+              "Author": "Max.kit"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "Max.kit",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "1,200",
+              "1,600"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-work/4bb0dfe2b9747a5e-preview.jpg\n  pixelWidth: 1600\n  pixelHeight: 1200\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              1600,
+              1200
+            ],
+            "exifOrientation": 6,
+            "orientationAppliedDimensions": [
+              1200,
+              1600
+            ],
+            "sourceDateRaw": "21 November 2016, 15:04:24",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: puustoa, avoin vihreä ympäristö ja hiekkapolku. Kaukana olevat polunkulkijat selin, kasvonpiirteet eivät erotu. Ei overlayta, vesileimaa, mainoskuvaa tai ihmisteoksia pääaiheena. Sopii nykyiseenK2-kaupunki-maakunta -nostoon, joka erottaa tiiviin keskustan maaseutumaisista alueista. Description manguier kinshasa ja Nature of Kinshasa -paikkaluokka; kasvilajin nimeä ei päätellä Mangroves-luokasta eikä nimetä suojapaikkaa. Max.kit/Own work/CC BY-SA4.0 Author/licensetpl luettu itse. JPEG-tallennetut1600×1200, EXIF Orientation6, oikein päin1200×1600; lähteen original1200×1600, leveys1200 täyttäärajan. Pysty sallittuK-roolissa, kuvaus21.11.2016, ei tuoreopaskuva.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Manguier_kinshasa.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/cc-selection.json",
+            "currentContentSHA256": "e88d5eedad9cce664e6a7a0e0d0a0e0ec12c7c44741f0a8f27022a3801070ef9",
+            "photoDate": "21 November 2016, 15:04:24",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Manguier_kinshasa.jpg",
+            "captionFi": "Puustoa ja polku Kinshasassa.",
+            "checkedAt": "2026-10-12T20:14:31.534615+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/qa.json",
+            "sha256": "9bea9f478db2b316504abd22018dc10f3a763b9910364aeac83740531e5625cd"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/kinshasa/illustration-qa-extra.json",
+            "sha256": "84a38b923607a518dc18903be8cedde1de968f3bef51c069a3854b87b7c3dbad"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "kinshasa",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "commonsFile": "Manguier kinshasa.jpg",
+        "sha256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Manguier_kinshasa.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Manguier_kinshasa.jpg",
+        "author": "Max.kit",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 1200,
+        "height": 1600,
+        "originalSHA256": "03b52939e928b3d45de44d3672ff7b865af4b978e45f27d927c77ada01ca6898",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/k2-03b52939e928b3d45de4.jpg",
+        "bytes": 1119612,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:15:49.806965+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Manguier kinshasa.jpg",
+        "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa ja polku Kinshasassa.",
+        "lyhyt": "Puustoa ja polku Kinshasassa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Max.kit, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa ja polku Kinshasassa.",
+        "lyhyt": "Puustoa ja polku Kinshasassa.",
+        "tiedosto": "Manguier kinshasa.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "e91814769945f919b97e5540ad6133387684d3a71a150588e315e5feac9c4b79",
+      "targetAfterSHA256": "3d6ecbfd91225bfa9a7d0bd021c60df201fe993cdc7838374b1de513656338b9",
+      "contextAfterSHA256": "3d6ecbfd91225bfa9a7d0bd021c60df201fe993cdc7838374b1de513656338b9"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

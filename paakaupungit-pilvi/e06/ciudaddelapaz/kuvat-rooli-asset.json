@@ -1,0 +1,1950 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e06",
+  "city": "ciudaddelapaz",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+  "assets": [
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-o4-v01",
+      "galleryImageID": "job14-e06-ciudaddelapaz-o4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kansainvälisen buffetin ruoista.",
+        "lyhyt": "Havainnekuva kansainvälisen buffetin ruoista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kansainvälisen buffetin ruoista.",
+        "lyhyt": "Havainnekuva kansainvälisen buffetin ruoista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "aaebe2360baacadeec00ed812faeee3f5baa8076ee50d677ec4bd10b45867a02",
+      "exportSHA256": "a7568abf4922d5571483643562bcefa0da992e7ad4e147ec4187dec4a3701197",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "1da4e67b83fa2bf620bbb3679a41375cd0d8800c5ae8ca27fe4b05be2abd707e",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnon/ruoan/materiaalin/tavanomaisen esineen aihe. Ei kuva-inputtia, nimettyä arkkitehtuuria, suojattua nykyteosta, tunnistettavaa ihmistä, modernia koristetta tai logoa. Ei todistus tietyn paikan todellisesta ulkonäöstä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-o4-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva kansainvälisen buffetin ruoista.",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "text": "Grand Hotel Djiblohon Mariposa tarjoaa kansainvälistä buffet- ja à la carte -ruokailua. Saman hotellin L’Incanto painottaa italialaista ruokaa ja LOM afrikkalaisia makuja. Nämä ruokailupaikat ovat hotellin yhteydessä. Varmista ruokailun saatavuus ja varausjärjestelyt hotellilta matkaa suunnitellessasi."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://grandhoteldjibloho.com/dining-outlets/mariposa/"
+              }
+            ],
+            "rightsScope": "generic food/functional dishes, no named hotel artwork or interior",
+            "currentContentSHA256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+            "targetStillExists": true
+          },
+          "qaReason": "Juuri aloitettu buffet-ehdokas viimeistelty omaan QA:han: yhtenäinen ruoka-asetelma riisiä, kasviksia ja kypsää ruokaa tavallisissa tarjoiluastioissa, luonnolliset pinnat ja käyttökelpoiset ottimet. Ei henkilöitä, ruokanimikylttejä, logoja, hotellin arkkitehtuuria tai koristeita. Caption on kansainvälisen buffetin yleishavainne, ei Mariposan oikea ruokalista tai kuva. Muut uudet kuvitukset jätetään lisätarkistajan jonoon."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kansainvälisen buffetin ruoista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+        "fileSHA256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "verdict": "accepted",
+          "reason": "Juuri aloitettu buffet-ehdokas viimeistelty omaan QA:han: yhtenäinen ruoka-asetelma riisiä, kasviksia ja kypsää ruokaa tavallisissa tarjoiluastioissa, luonnolliset pinnat ja käyttökelpoiset ottimet. Ei henkilöitä, ruokanimikylttejä, logoja, hotellin arkkitehtuuria tai koristeita. Caption on kansainvälisen buffetin yleishavainne, ei Mariposan oikea ruokalista tai kuva. Muut uudet kuvitukset jätetään lisätarkistajan jonoon.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-o4-v01/image.png",
+            "width": 1536,
+            "height": 1024,
+            "fullNativeImageViewed": true,
+            "captionFi": "Havainnekuva kansainvälisen buffetin ruoista.",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "text": "Grand Hotel Djiblohon Mariposa tarjoaa kansainvälistä buffet- ja à la carte -ruokailua. Saman hotellin L’Incanto painottaa italialaista ruokaa ja LOM afrikkalaisia makuja. Nämä ruokailupaikat ovat hotellin yhteydessä. Varmista ruokailun saatavuus ja varausjärjestelyt hotellilta matkaa suunnitellessasi."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://grandhoteldjibloho.com/dining-outlets/mariposa/"
+              }
+            ],
+            "rightsScope": "generic food/functional dishes, no named hotel artwork or interior",
+            "currentContentSHA256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:20:42.731729+00:00",
+          "assetID": "job14-e06-ciudaddelapaz-o4-v01",
+          "sha256": "aaebe2360baacadeec00ed812faeee3f5baa8076ee50d677ec4bd10b45867a02"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png?t=a7568abf4922d557",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+        "sha256": "a7568abf4922d5571483643562bcefa0da992e7ad4e147ec4187dec4a3701197",
+        "bytes": 2446346,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-o4-v01",
+        "nativeSHA256": "aaebe2360baacadeec00ed812faeee3f5baa8076ee50d677ec4bd10b45867a02",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:22:40.965489+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o4-v01-aaebe2360baa.png",
+        "sha256": "a7568abf4922d5571483643562bcefa0da992e7ad4e147ec4187dec4a3701197",
+        "bytes": 2446346,
+        "SHAReadAt": "2026-10-12T18:29:47.276628+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "aaebe2360baacadeec00ed812faeee3f5baa8076ee50d677ec4bd10b45867a02",
+        "rgbPixelSHA256": "69860238efe76511cf68ea5db60dba11b1c5a8e1385672118b7347092b87f922",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "1da4e67b83fa2bf620bbb3679a41375cd0d8800c5ae8ca27fe4b05be2abd707e"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-k2-v01",
+      "galleryImageID": "job14-e06-ciudaddelapaz-k2-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sademetsän kasvillisuudesta.",
+        "lyhyt": "Havainnekuva sademetsän kasvillisuudesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sademetsän kasvillisuudesta.",
+        "lyhyt": "Havainnekuva sademetsän kasvillisuudesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "919cf3712da3ebcc62a01bbae0e38475759b5a925a708ffa329742fc644c4188",
+      "exportSHA256": "c1d84714ea303ba20be77303fae9f97f5d057f0224e07447f4a9a58b7027e443",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
+        "semanticContextSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
+        "subjectTitle": "Pääkaupunki vaihtoi maisemaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruoka-, kasvi-, materiaali- tai tavallisen käyttöesineen havainnollistus. Ei visuaalista kuva-inputtia, tunnistettavaa nykyteosta, koristetta, kasvoja tai nimettyä rakennusta/asettelua. Ei tietyn paikan autenttisen ulkonäön väitettä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-k2-v01/image.png",
+            "nativeSHA256": "919cf3712da3ebcc62a01bbae0e38475759b5a925a708ffa329742fc644c4188",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Suuria lehtiä, köynnöksiä, saniaisia ja runkoja kosteassa metsässä. Lehdet/ruodit, kosteus ja kuori luontevat, ei synteettistä toistopintaa tai merkintöjä/ihmisiä.",
+            "captionFi": "Havainnekuva sademetsän kasvillisuudesta.",
+            "sourceAndTargetCheckFi": "K2 ja faktapohja nimeävät sademetsäisen sisämaan. CaptionFi Havainnekuva sademetsän kasvillisuudesta; ei Ciudad de la Pazin täsmämaisema, alueen kotoperäisen lajiston tunnistuskuva tai vuoden 1873 näkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "text": "Malabosta Ciudad de la Paziin siirtyessä vaihtuu paljon enemmän kuin katuosoite. Malabo on Bioko-saarella, Ciudad de la Paz puolestaan Río Munissa, maan mantereen puoleisessa sisämaassa. Uuden kaupungin lähistöllä sijaitsee Mengomeyén. Saari ja manner kuuluvat samaan valtioon, mutta niiden välillä on todellinen maantieteellinen ero. Uusi pääkaupunki ei siis ole laajennettu Malabo: sen ympäristö on sademetsäinen sisämaa, ei entisen pääkaupungin saari."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ]
+          },
+          "qaReason": "Sademetsän yleishavainne vastaa K2:n ympäristötyyppiä yleisellä kuvatekstillä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva sademetsän kasvillisuudesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "job14-e06-ciudaddelapaz-k2-v01",
+          "sha256": "919cf3712da3ebcc62a01bbae0e38475759b5a925a708ffa329742fc644c4188",
+          "verdict": "accepted",
+          "reason": "Sademetsän yleishavainne vastaa K2:n ympäristötyyppiä yleisellä kuvatekstillä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-k2-v01/image.png",
+            "nativeSHA256": "919cf3712da3ebcc62a01bbae0e38475759b5a925a708ffa329742fc644c4188",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Suuria lehtiä, köynnöksiä, saniaisia ja runkoja kosteassa metsässä. Lehdet/ruodit, kosteus ja kuori luontevat, ei synteettistä toistopintaa tai merkintöjä/ihmisiä.",
+            "captionFi": "Havainnekuva sademetsän kasvillisuudesta.",
+            "sourceAndTargetCheckFi": "K2 ja faktapohja nimeävät sademetsäisen sisämaan. CaptionFi Havainnekuva sademetsän kasvillisuudesta; ei Ciudad de la Pazin täsmämaisema, alueen kotoperäisen lajiston tunnistuskuva tai vuoden 1873 näkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "text": "Malabosta Ciudad de la Paziin siirtyessä vaihtuu paljon enemmän kuin katuosoite. Malabo on Bioko-saarella, Ciudad de la Paz puolestaan Río Munissa, maan mantereen puoleisessa sisämaassa. Uuden kaupungin lähistöllä sijaitsee Mengomeyén. Saari ja manner kuuluvat samaan valtioon, mutta niiden välillä on todellinen maantieteellinen ero. Uusi pääkaupunki ei siis ole laajennettu Malabo: sen ympäristö on sademetsäinen sisämaa, ei entisen pääkaupungin saari."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T19:14:42.104817+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png?t=c1d84714ea303ba2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+        "sha256": "c1d84714ea303ba20be77303fae9f97f5d057f0224e07447f4a9a58b7027e443",
+        "bytes": 3012842,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-k2-v01",
+        "nativeSHA256": "919cf3712da3ebcc62a01bbae0e38475759b5a925a708ffa329742fc644c4188",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T19:14:49.107399+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k2-v01-919cf3712da3.png",
+        "sha256": "c1d84714ea303ba20be77303fae9f97f5d057f0224e07447f4a9a58b7027e443",
+        "bytes": 3012842,
+        "SHAReadAt": "2026-10-12T19:32:03.717526+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "919cf3712da3ebcc62a01bbae0e38475759b5a925a708ffa329742fc644c4188",
+        "rgbPixelSHA256": "78a0698517616ca30b22aeaabe7119f413ba30994a235b5eff3729fb32c7bcea",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0",
+      "contextAfterSHA256": "e90d2a3256de4050c736dcaf47dea4981ad8ad1af6d6b988dd5bd1bbfe9521f0"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-k3-v01",
+      "galleryImageID": "job14-e06-ciudaddelapaz-k3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva suunnittelun työvälineistä.",
+        "lyhyt": "Havainnekuva suunnittelun työvälineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva suunnittelun työvälineistä.",
+        "lyhyt": "Havainnekuva suunnittelun työvälineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "03f6df201ae17dcfddad09d41cd3a5e2d822074647aa21f610b2cf6c161fc8bc",
+      "exportSHA256": "da9a93c38bbb3dc1355feb1b291b34077f8e2e5ffe15c5b9943ea6f4296e04a3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bfe34ac5e76ca1223af5892d9a56a8f1802c1d39b22d0c785ce0f795207cdc7d",
+        "semanticContextSHA256": "bfe34ac5e76ca1223af5892d9a56a8f1802c1d39b22d0c785ce0f795207cdc7d",
+        "subjectTitle": "Kaava ennen kaupunkia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin luonto-/ruoka-/materiaali-/arkiesinehavainnollistus. Ei kuva-inputtia tai tietyn paikan/arkkitehtuurin/taideteoksen jäljennöstä, tunnistettavaa ihmistä, koristekuviota, tekstiä tai logoa. Ei väitettä oikeasta paikkavalokuvasta tai tietystä reseptistä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-k3-v01/image.png",
+            "nativeSHA256": "03f6df201ae17dcfddad09d41cd3a5e2d822074647aa21f610b2cf6c161fc8bc",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tyhjä ruutupaperi, kynä ja numeroimaton suora metalliviivain pöydällä. Paperin ruudukko on materiaalin luonteva rakenne, ei päälle lisätty teksti. Kynä, metallipinta ja sidottu vihko uskottavat; ei ihmisiä, logoja tai kaupungin piirrosta.",
+            "captionFi": "Havainnekuva suunnittelun työvälineistä.",
+            "sourceAndTargetCheckFi": "Luettu K3 Kaava ennen kaupunkia ja faktapohjan Planning and construction -aihe. CaptionFi Havainnekuva suunnittelun työvälineistä ei esitä FAT:n suojattua kaavaa, Ciudad de la Pazin todellista asettelua tai 1873-näkymää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "Ciudad de la Pazin kaupunginosia ei ole syntynyt vain talo kerrallaan vuosisatojen kuluessa. Nykyinen kaupunki on suunniteltu hallintokaupungiksi, ja suunnitelma kokoaa yhteen hallinnon tilat, asuinalueet sekä liikenneverkon. Kaupunkisuunnittelusta vastasi portugalilainen FAT eli Future Architecture Thinking. Rakentaminen on edennyt vaiheittain. Kaupungin tapauksessa kaava kertoo siksi myös tulevaisuudesta: jokainen piirretty alue ei tarkoita jo valmista kaupunginosaa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ]
+          },
+          "qaReason": "Suunnitteluvälineiden yleishavainne vastaa K3:n kaavoitusaihetta ja jättää nimetyn suunnitelman jäljentämättä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva suunnittelun työvälineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "job14-e06-ciudaddelapaz-k3-v01",
+          "sha256": "03f6df201ae17dcfddad09d41cd3a5e2d822074647aa21f610b2cf6c161fc8bc",
+          "verdict": "accepted",
+          "reason": "Suunnitteluvälineiden yleishavainne vastaa K3:n kaavoitusaihetta ja jättää nimetyn suunnitelman jäljentämättä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-k3-v01/image.png",
+            "nativeSHA256": "03f6df201ae17dcfddad09d41cd3a5e2d822074647aa21f610b2cf6c161fc8bc",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tyhjä ruutupaperi, kynä ja numeroimaton suora metalliviivain pöydällä. Paperin ruudukko on materiaalin luonteva rakenne, ei päälle lisätty teksti. Kynä, metallipinta ja sidottu vihko uskottavat; ei ihmisiä, logoja tai kaupungin piirrosta.",
+            "captionFi": "Havainnekuva suunnittelun työvälineistä.",
+            "sourceAndTargetCheckFi": "Luettu K3 Kaava ennen kaupunkia ja faktapohjan Planning and construction -aihe. CaptionFi Havainnekuva suunnittelun työvälineistä ei esitä FAT:n suojattua kaavaa, Ciudad de la Pazin todellista asettelua tai 1873-näkymää.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "Ciudad de la Pazin kaupunginosia ei ole syntynyt vain talo kerrallaan vuosisatojen kuluessa. Nykyinen kaupunki on suunniteltu hallintokaupungiksi, ja suunnitelma kokoaa yhteen hallinnon tilat, asuinalueet sekä liikenneverkon. Kaupunkisuunnittelusta vastasi portugalilainen FAT eli Future Architecture Thinking. Rakentaminen on edennyt vaiheittain. Kaupungin tapauksessa kaava kertoo siksi myös tulevaisuudesta: jokainen piirretty alue ei tarkoita jo valmista kaupunginosaa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:57:19.933039+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png?t=da9a93c38bbb3dc1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+        "sha256": "da9a93c38bbb3dc1355feb1b291b34077f8e2e5ffe15c5b9943ea6f4296e04a3",
+        "bytes": 2064629,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-k3-v01",
+        "nativeSHA256": "03f6df201ae17dcfddad09d41cd3a5e2d822074647aa21f610b2cf6c161fc8bc",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T18:58:11.514531+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k3-v01-03f6df201ae1.png",
+        "sha256": "da9a93c38bbb3dc1355feb1b291b34077f8e2e5ffe15c5b9943ea6f4296e04a3",
+        "bytes": 2064629,
+        "SHAReadAt": "2026-10-12T19:03:32.332140+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "03f6df201ae17dcfddad09d41cd3a5e2d822074647aa21f610b2cf6c161fc8bc",
+        "rgbPixelSHA256": "60082e94cab189ca6d10d936a24ca56295d9f22fe303bf72aebecd31b0049dd8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "bfe34ac5e76ca1223af5892d9a56a8f1802c1d39b22d0c785ce0f795207cdc7d",
+      "contextAfterSHA256": "bfe34ac5e76ca1223af5892d9a56a8f1802c1d39b22d0c785ce0f795207cdc7d"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-l3-v01",
+      "galleryImageID": "job14-e06-ciudaddelapaz-l3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva opiskelun työvälineistä.",
+        "lyhyt": "Havainnekuva opiskelun työvälineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva opiskelun työvälineistä.",
+        "lyhyt": "Havainnekuva opiskelun työvälineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "04040d557fd6c1dbc4d997e08d284ac0287fe7e2702e8bbc2815803f10bf7f31",
+      "exportSHA256": "774ed94c60c094787297add806d7ebb3b507573aa9a500c2e74632d0c8043316",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
+        "semanticContextSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
+        "subjectTitle": "Nuori kaupunki saa myös yliopiston",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin luonto-/ruoka-/materiaali-/arkiesinehavainnollistus. Ei kuva-inputtia tai tietyn paikan/arkkitehtuurin/taideteoksen jäljennöstä, tunnistettavaa ihmistä, koristekuviota, tekstiä tai logoa. Ei väitettä oikeasta paikkavalokuvasta tai tietystä reseptistä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-l3-v01/image.png",
+            "nativeSHA256": "04040d557fd6c1dbc4d997e08d284ac0287fe7e2702e8bbc2815803f10bf7f31",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nimetön kirjapino, tyhjä vihko, kaksi kynää ja pyyhekumi pöydällä; tavallinen muki/kasvi taustalla. Kirjojen sivut, kynät ja spiraali uskottavat. Ei lisättyä tekstiä, logoja, kasvoja tai kuvan reunakehystä. Taustan epäterävässä seinäkuvan fragmentissa ei tunnistettavaa nimettyä teosta.",
+            "captionFi": "Havainnekuva opiskelun työvälineistä.",
+            "sourceAndTargetCheckFi": "Luettu L3 Nuori kaupunki saa myös yliopiston ja faktapohjan C7-C9 AAUCA/koulutusaloja. CaptionFi Havainnekuva opiskelun työvälineistä ei väitä AAUCA:n luokkahuoneeksi, kurssikirjoiksi tai kampuksen autenttiseksi valokuvaksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "text": "Ciudad de la Pazissa toimii AAUCA, Keski-Afrikan afroamerikkalainen yliopisto. Sen pääkampus sijaitsee Djiblohon alueella, ja yliopiston historia kuuluu 2000-luvulle. Koulutustarjontaan kuuluvat talous- ja kauppatieteet, kasvatustiede ja humanistiset alat, tekniikka ja arkkitehtuuri sekä lääketiede ja biologia. Hallintokaupungin rinnalle kuuluu siis myös korkeakoulutuksen toimintaa. Kaupungin kehitystä voi seurata opetuksen kautta: usean alan opinnot kokoontuvat samaan nuoreen sisämaakaupunkiin."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://aaucauniversity.com/"
+              }
+            ]
+          },
+          "qaReason": "Opiskelutarvikkeiden yleishavainne vastaa L3:n yliopisto-/koulutusaihetta ilman kampusväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva opiskelun työvälineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "job14-e06-ciudaddelapaz-l3-v01",
+          "sha256": "04040d557fd6c1dbc4d997e08d284ac0287fe7e2702e8bbc2815803f10bf7f31",
+          "verdict": "accepted",
+          "reason": "Opiskelutarvikkeiden yleishavainne vastaa L3:n yliopisto-/koulutusaihetta ilman kampusväitettä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-l3-v01/image.png",
+            "nativeSHA256": "04040d557fd6c1dbc4d997e08d284ac0287fe7e2702e8bbc2815803f10bf7f31",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nimetön kirjapino, tyhjä vihko, kaksi kynää ja pyyhekumi pöydällä; tavallinen muki/kasvi taustalla. Kirjojen sivut, kynät ja spiraali uskottavat. Ei lisättyä tekstiä, logoja, kasvoja tai kuvan reunakehystä. Taustan epäterävässä seinäkuvan fragmentissa ei tunnistettavaa nimettyä teosta.",
+            "captionFi": "Havainnekuva opiskelun työvälineistä.",
+            "sourceAndTargetCheckFi": "Luettu L3 Nuori kaupunki saa myös yliopiston ja faktapohjan C7-C9 AAUCA/koulutusaloja. CaptionFi Havainnekuva opiskelun työvälineistä ei väitä AAUCA:n luokkahuoneeksi, kurssikirjoiksi tai kampuksen autenttiseksi valokuvaksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "text": "Ciudad de la Pazissa toimii AAUCA, Keski-Afrikan afroamerikkalainen yliopisto. Sen pääkampus sijaitsee Djiblohon alueella, ja yliopiston historia kuuluu 2000-luvulle. Koulutustarjontaan kuuluvat talous- ja kauppatieteet, kasvatustiede ja humanistiset alat, tekniikka ja arkkitehtuuri sekä lääketiede ja biologia. Hallintokaupungin rinnalle kuuluu siis myös korkeakoulutuksen toimintaa. Kaupungin kehitystä voi seurata opetuksen kautta: usean alan opinnot kokoontuvat samaan nuoreen sisämaakaupunkiin."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://aaucauniversity.com/"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:45:15.640206+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png?t=774ed94c60c09478",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+        "sha256": "774ed94c60c094787297add806d7ebb3b507573aa9a500c2e74632d0c8043316",
+        "bytes": 2081552,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-l3-v01",
+        "nativeSHA256": "04040d557fd6c1dbc4d997e08d284ac0287fe7e2702e8bbc2815803f10bf7f31",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:45:29.908061+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l3-v01-04040d557fd6.png",
+        "sha256": "774ed94c60c094787297add806d7ebb3b507573aa9a500c2e74632d0c8043316",
+        "bytes": 2081552,
+        "SHAReadAt": "2026-10-12T18:45:24.726240+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "04040d557fd6c1dbc4d997e08d284ac0287fe7e2702e8bbc2815803f10bf7f31",
+        "rgbPixelSHA256": "a288d4bd76a5b0b9b3edabf8f376c438d108f5cf2429deb8a2390b6a2ca70dca",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3",
+      "contextAfterSHA256": "a50b52cca40c1dd33e48fdaaaf5b3e934699e290710d1e445cba06a09acf62a3"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-l4-v01",
+      "galleryImageID": "job14-e06-ciudaddelapaz-l4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kokouksen välineistä.",
+        "lyhyt": "Havainnekuva kokouksen välineistä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kokouksen välineistä.",
+        "lyhyt": "Havainnekuva kokouksen välineistä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ea171bc9679fcc92a9414adbb290d141a4f286f4193096fb41236a5304d2d4da",
+      "exportSHA256": "69702169b9f3f82e3ac5022a8022b110674d1ce61f0b5e1515c95c442e2e8966",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
+        "semanticContextSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
+        "subjectTitle": "Kokouspaikka metsän keskellä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin luonto-/ruoka-/materiaali-/arkiesinehavainnollistus. Ei kuva-inputtia tai tietyn paikan/arkkitehtuurin/taideteoksen jäljennöstä, tunnistettavaa ihmistä, koristekuviota, tekstiä tai logoa. Ei väitettä oikeasta paikkavalokuvasta tai tietystä reseptistä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-l4-v01/image.png",
+            "nativeSHA256": "ea171bc9679fcc92a9414adbb290d141a4f286f4193096fb41236a5304d2d4da",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Bränditön mikrofoni johtoineen, vesilasi sekä tyhjä vihko ja kynä pöydällä. Mikrofonin säleikkö, liitos, lasi/neste ja vihkon sidonta uskottavat; ei tekstiä, logoja, henkilöitä tai kuvan kehystä.",
+            "captionFi": "Havainnekuva kokouksen välineistä.",
+            "sourceAndTargetCheckFi": "Luettu L4 Kokouspaikka metsän keskellä ja faktapohjan C12 kokouskeskuksen toiminnot. CaptionFi Havainnekuva kokouksen välineistä ei esitä Grand Hotel Djiblohon huonetta, laitteistoa, kokousta tai arkkitehtuuria.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "text": "Grand Hotel Djibloho rakennettiin sademetsäiseen ympäristöön myös kokoontumispaikaksi. Hotelliin liittyvän kongressikeskuksen tiloja voidaan käyttää kokouksiin, näyttelyihin, messuihin, juhla-aterioihin ja konsertteihin. Kokoushuoneiden lisäksi kokonaisuuteen kuuluu auditorio ja Salón Libertad -juhlasali, jota voi jakaa siirtoseinillä. Tilojen käyttötapa vaihtuu näin tapahtuman mukaan. Nuoren kaupungin palveluhistoriaan kuuluu majoituksen rinnalla tiloja, joissa vieraat voivat tavata ja työskennellä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://grandhoteldjibloho.com/events/"
+              }
+            ]
+          },
+          "qaReason": "Kokousvälineiden yleishavainne liittyy L4:n kokoontumis-/työskentelyaiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kokouksen välineistä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "job14-e06-ciudaddelapaz-l4-v01",
+          "sha256": "ea171bc9679fcc92a9414adbb290d141a4f286f4193096fb41236a5304d2d4da",
+          "verdict": "accepted",
+          "reason": "Kokousvälineiden yleishavainne liittyy L4:n kokoontumis-/työskentelyaiheeseen.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-l4-v01/image.png",
+            "nativeSHA256": "ea171bc9679fcc92a9414adbb290d141a4f286f4193096fb41236a5304d2d4da",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Bränditön mikrofoni johtoineen, vesilasi sekä tyhjä vihko ja kynä pöydällä. Mikrofonin säleikkö, liitos, lasi/neste ja vihkon sidonta uskottavat; ei tekstiä, logoja, henkilöitä tai kuvan kehystä.",
+            "captionFi": "Havainnekuva kokouksen välineistä.",
+            "sourceAndTargetCheckFi": "Luettu L4 Kokouspaikka metsän keskellä ja faktapohjan C12 kokouskeskuksen toiminnot. CaptionFi Havainnekuva kokouksen välineistä ei esitä Grand Hotel Djiblohon huonetta, laitteistoa, kokousta tai arkkitehtuuria.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[1].nostot[3]",
+                "text": "Grand Hotel Djibloho rakennettiin sademetsäiseen ympäristöön myös kokoontumispaikaksi. Hotelliin liittyvän kongressikeskuksen tiloja voidaan käyttää kokouksiin, näyttelyihin, messuihin, juhla-aterioihin ja konsertteihin. Kokoushuoneiden lisäksi kokonaisuuteen kuuluu auditorio ja Salón Libertad -juhlasali, jota voi jakaa siirtoseinillä. Tilojen käyttötapa vaihtuu näin tapahtuman mukaan. Nuoren kaupungin palveluhistoriaan kuuluu majoituksen rinnalla tiloja, joissa vieraat voivat tavata ja työskennellä."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://grandhoteldjibloho.com/events/"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:56:37.302433+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png?t=69702169b9f3f82e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+        "sha256": "69702169b9f3f82e3ac5022a8022b110674d1ce61f0b5e1515c95c442e2e8966",
+        "bytes": 2105510,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-l4-v01",
+        "nativeSHA256": "ea171bc9679fcc92a9414adbb290d141a4f286f4193096fb41236a5304d2d4da",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:57:03.418947+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-l4-v01-ea171bc9679f.png",
+        "sha256": "69702169b9f3f82e3ac5022a8022b110674d1ce61f0b5e1515c95c442e2e8966",
+        "bytes": 2105510,
+        "SHAReadAt": "2026-10-12T19:03:32.229441+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ea171bc9679fcc92a9414adbb290d141a4f286f4193096fb41236a5304d2d4da",
+        "rgbPixelSHA256": "51d6f28f7df313addf9084e673f5b30506adfe6797457e27887ab280e88babcc",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c",
+      "contextAfterSHA256": "c642de40a894b064ec498cdfe446a776508dab0b63c7920f6ba2ec99c2e2883c"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-o2-v01",
+      "galleryImageID": "job14-e06-ciudaddelapaz-o2-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sademetsän latvustosta.",
+        "lyhyt": "Havainnekuva sademetsän latvustosta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sademetsän latvustosta.",
+        "lyhyt": "Havainnekuva sademetsän latvustosta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0c50d5ffa9babff8d0c554116041abadcbf829a45515bf6a19c11b18c10080a9",
+      "exportSHA256": "4a7c230776d65051f132f1e28e9c3676677c3b29e7c289678660acc2af419bce",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "9a03c3637b12f11100dba24a65e2d61dfa120c3a575b19f0ed830b2b373bc28b",
+        "subjectTitle": "Kaupunki suunnitelmana",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonto-/materiaalin/tavanomaisen välineen havainnollistus. Ei kuva-inputtia, suojatun teoksen/kansi-/kaupunkikaavan jäljennöstä, kasvoja tai todellisen paikan tarkkaa asettelua. Drum-model kuvaa vain lähteen yleistä järjestysperiaatetta, ei nimettyä rituaaliesineistöä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-o2-v01/image.png",
+            "nativeSHA256": "0c50d5ffa9babff8d0c554116041abadcbf829a45515bf6a19c11b18c10080a9",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Runkoja, lehtiä ja latvusto alhaalta. Kuori/oksaliittymät ja valo luontevat, ei tekstiä, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva sademetsän latvustosta.",
+            "sourceAndTargetCheckFi": "O2/faktapohjan nykyinen sademetsäinen ympäristö luettu. CaptionFi havainne, ei Ciudad de la Pazin tarkka asettelu, paikallinen lajiluettelo tai 1873-näkymä. Eri latvustonäkökulma kuin K2:n aluskasvillisuus.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+                "text": "Nykyinen kaupunki on suunniteltu hallinnon, asumisen ja liikenteen kokonaisuudeksi. Sen ympärillä on sademetsää, ja rakentaminen on jatkunut eri vaiheissa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ]
+          },
+          "qaReason": "Latvuston yleishavainne vastaa O2:n sademetsäaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva sademetsän latvustosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "job14-e06-ciudaddelapaz-o2-v01",
+          "sha256": "0c50d5ffa9babff8d0c554116041abadcbf829a45515bf6a19c11b18c10080a9",
+          "verdict": "accepted",
+          "reason": "Latvuston yleishavainne vastaa O2:n sademetsäaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-o2-v01/image.png",
+            "nativeSHA256": "0c50d5ffa9babff8d0c554116041abadcbf829a45515bf6a19c11b18c10080a9",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Runkoja, lehtiä ja latvusto alhaalta. Kuori/oksaliittymät ja valo luontevat, ei tekstiä, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva sademetsän latvustosta.",
+            "sourceAndTargetCheckFi": "O2/faktapohjan nykyinen sademetsäinen ympäristö luettu. CaptionFi havainne, ei Ciudad de la Pazin tarkka asettelu, paikallinen lajiluettelo tai 1873-näkymä. Eri latvustonäkökulma kuin K2:n aluskasvillisuus.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1]",
+                "text": "Nykyinen kaupunki on suunniteltu hallinnon, asumisen ja liikenteen kokonaisuudeksi. Sen ympärillä on sademetsää, ja rakentaminen on jatkunut eri vaiheissa."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:06:48.276524+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png?t=4a7c230776d65051",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+        "sha256": "4a7c230776d65051f132f1e28e9c3676677c3b29e7c289678660acc2af419bce",
+        "bytes": 3527733,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-o2-v01",
+        "nativeSHA256": "0c50d5ffa9babff8d0c554116041abadcbf829a45515bf6a19c11b18c10080a9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-12T20:07:12.827416+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-o2-v01-0c50d5ffa9ba.png",
+        "sha256": "4a7c230776d65051f132f1e28e9c3676677c3b29e7c289678660acc2af419bce",
+        "bytes": 3527733,
+        "SHAReadAt": "2026-10-12T20:07:08.761522+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0c50d5ffa9babff8d0c554116041abadcbf829a45515bf6a19c11b18c10080a9",
+        "rgbPixelSHA256": "a8f06eb68f662aa39b4de52a0934bf8c3de3e5027e47de7caf40fcfa4b918df7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "9a03c3637b12f11100dba24a65e2d61dfa120c3a575b19f0ed830b2b373bc28b"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "job14-e06-ciudaddelapaz-k4-v01",
+      "galleryImageID": "job14-e06-ciudaddelapaz-k4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva lentokoneen siivestä.",
+        "lyhyt": "Havainnekuva lentokoneen siivestä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva lentokoneen siivestä.",
+        "lyhyt": "Havainnekuva lentokoneen siivestä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d68626b920d86b7826aad3c9925c3e00f3c975787f92654a2cbd6c7b84cdc5fa",
+      "exportSHA256": "999af32772716419ed6bdf60d774986ba5a709c72226bf304d2d540f6fdf7399",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
+        "semanticContextSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
+        "subjectTitle": "Lentokentän nimi on vihje",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonto-/materiaalin/tavanomaisen välineen havainnollistus. Ei kuva-inputtia, suojatun teoksen/kansi-/kaupunkikaavan jäljennöstä, kasvoja tai todellisen paikan tarkkaa asettelua. Drum-model kuvaa vain lähteen yleistä järjestysperiaatetta, ei nimettyä rituaaliesineistöä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-k4-v01/image.png",
+            "nativeSHA256": "d68626b920d86b7826aad3c9925c3e00f3c975787f92654a2cbd6c7b84cdc5fa",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Merkinnätön siipi, siivenkärki ja tavanomaiset laipparakenteet. Metalli/pilvet ja geometria uskottavat; ei logoja, tekstiä, ihmisia tai lentoasemarakennusta.",
+            "captionFi": "Havainnekuva lentokoneen siivestä.",
+            "sourceAndTargetCheckFi": "K4/faktapohjan lentoyhteys luettu. CaptionFi havainne, ei nimetty konemalli, GEM-lento, lentoreitti tai todellinen maastonäkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].nostot[3]",
+                "text": "Ciudad de la Pazin lentoyhteyksien portti sijaitsee Mengomeyénin lähellä. Sen virallinen nimi on President Obiang Nguema International Airport, ja kansainvälinen lentoasemakoodi on GEM. Kaupungin ja lentoaseman nimet ovat siis eri nimet, vaikka paikat liittyvät samaan sisämaan yhteyteen. Myös pääkaupungin aikaisemmat nimet Oyala ja Djibloho voivat näkyä matkatiedoissa. Paikkojen tunnistamisessa nimiä kannattaa lukea rinnakkain: kaupunki, lähiseudun paikkakunta ja lentokenttä ovat erillisiä kohteita."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/President_Obiang_Nguema_International_Airport"
+              }
+            ]
+          },
+          "qaReason": "Lentokoneen siiven yleishavainne vastaa K4:n lentoliikenneaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva lentokoneen siivestä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+        "fileSHA256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "job14-e06-ciudaddelapaz-k4-v01",
+          "sha256": "d68626b920d86b7826aad3c9925c3e00f3c975787f92654a2cbd6c7b84cdc5fa",
+          "verdict": "accepted",
+          "reason": "Lentokoneen siiven yleishavainne vastaa K4:n lentoliikenneaihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/assets/job14-e06-ciudaddelapaz-k4-v01/image.png",
+            "nativeSHA256": "d68626b920d86b7826aad3c9925c3e00f3c975787f92654a2cbd6c7b84cdc5fa",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Merkinnätön siipi, siivenkärki ja tavanomaiset laipparakenteet. Metalli/pilvet ja geometria uskottavat; ei logoja, tekstiä, ihmisia tai lentoasemarakennusta.",
+            "captionFi": "Havainnekuva lentokoneen siivestä.",
+            "sourceAndTargetCheckFi": "K4/faktapohjan lentoyhteys luettu. CaptionFi havainne, ei nimetty konemalli, GEM-lento, lentoreitti tai todellinen maastonäkymä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+                "sha256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+                "jsonPath": "$.kaupunkilehti[0].nostot[3]",
+                "text": "Ciudad de la Pazin lentoyhteyksien portti sijaitsee Mengomeyénin lähellä. Sen virallinen nimi on President Obiang Nguema International Airport, ja kansainvälinen lentoasemakoodi on GEM. Kaupungin ja lentoaseman nimet ovat siis eri nimet, vaikka paikat liittyvät samaan sisämaan yhteyteen. Myös pääkaupungin aikaisemmat nimet Oyala ja Djibloho voivat näkyä matkatiedoissa. Paikkojen tunnistamisessa nimiä kannattaa lukea rinnakkain: kaupunki, lähiseudun paikkakunta ja lentokenttä ovat erillisiä kohteita."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/faktapohja.md",
+                "sha256": "cf07636f5da0b3ef468810370222813bd77bd0869f21662c30f9c3dabef43472",
+                "sourceUrl": "https://en.wikipedia.org/wiki/President_Obiang_Nguema_International_Airport"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:04:45.353747+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png?t=999af32772716419",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+        "sha256": "999af32772716419ed6bdf60d774986ba5a709c72226bf304d2d540f6fdf7399",
+        "bytes": 1555558,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-ciudaddelapaz-k4-v01",
+        "nativeSHA256": "d68626b920d86b7826aad3c9925c3e00f3c975787f92654a2cbd6c7b84cdc5fa",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T20:05:12.789323+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/ciudaddelapaz/job14-e06-ciudaddelapaz-k4-v01-d68626b920d8.png",
+        "sha256": "999af32772716419ed6bdf60d774986ba5a709c72226bf304d2d540f6fdf7399",
+        "bytes": 1555558,
+        "SHAReadAt": "2026-10-12T20:05:07.743635+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d68626b920d86b7826aad3c9925c3e00f3c975787f92654a2cbd6c7b84cdc5fa",
+        "rgbPixelSHA256": "d71652f5f9c00eb6574d21ba35af88cd63f62e2258b5252d2a15a3ea030a97f1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180",
+      "contextAfterSHA256": "010ee4d053e4bacd61df8aff75263f969c8b8ad6452a252e1a7f6c560545e180"
+    },
+    {
+      "era": "e06",
+      "city": "ciudaddelapaz",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e06-ciudaddelapaz-photo-81779b596e9efa42",
+      "galleryImageID": "capital-cc-e06-ciudaddelapaz-photo-81779b596e9efa42",
+      "commonsFile": "Dschungel bei Oyala.JPG",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
+        "suora": true,
+        "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
+        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "lyhyt": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "tiedosto": "Dschungel bei Oyala.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
+        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "lyhyt": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "tiedosto": "Dschungel bei Oyala.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
+        "suora": true,
+        "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
+        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "lyhyt": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "tiedosto": "Dschungel bei Oyala.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+      "exportSHA256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/cc-work/7341926c51cb9284-preview.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/ciudaddelapaz/sisalto.json",
+      "sourceContentSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7c26d9c3b922239339822770757b929fe44626da532813d2850aae6757d87540",
+        "semanticContextSHA256": "7c26d9c3b922239339822770757b929fe44626da532813d2850aae6757d87540",
+        "subjectTitle": "ciudaddelapaz — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mehlauge",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dschungel_bei_Oyala.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Dschungel_bei_Oyala.JPG",
+        "rightsEvidence": {
+          "selection": "Author Mehlauge, CC BY-SA 3.0, tarkka linkki ja versio tiedostosivulla. Alkuperäinen kaupungin lähistöä nimeävä File:Dschungel bei Oyala.JPG ja kategoriat Oyala/Ciudad de la Paz; Description Landschaft im Hinterland von Äquatorialguinea. Aidon paikan luontoyksityiskohta, ei panoraamaksi nimetty metsä. Kasvillisuus/maasto, ei ihmisen taideteosta tai arkkitehtuuria.",
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dschungel_bei_Oyala.JPG",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/cc-work/7341926c51cb9284.html",
+            "sourceSHA256": "1e7558be8f65d8b62a6d808c41207eef3d5549d45fed9f0a3804661b50aecfdf",
+            "directAuthors": [
+              "Mehlauge"
+            ],
+            "directLicenses": [
+              "GFDL",
+              "CC BY-SA 3.0",
+              "CC BY-SA 3.0 de"
+            ],
+            "directRows": {
+              "Date": "4 September 2010"
+            },
+            "sourceOriginalDimensions": [
+              4000,
+              3000
+            ],
+            "localDimensions": [
+              4000,
+              3000
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/cc-work/7341926c51cb9284-preview.jpg",
+            "mediaSHA256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "fullImageViewed": true,
+            "captionFi": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+            "placeEvidence": {
+              "sourceTitle": "Dschungel bei Oyala",
+              "sourceCategories": [
+                "Ciudad de la Paz",
+                "Forests in Equatorial Guinea",
+                "Hills of Equatorial Guinea"
+              ],
+              "scope": "forest near the named former Oyala locality, not a 2026 city-centre or exact tourist entrance claim"
+            },
+            "currentContentSHA256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+            "targetStillExists": true
+          },
+          "qaReason": "Aito trooppisen kasvillisuuden ja metsäisen kallioisen mäen näkymä. Ei rakennus- tai teospääaihetta, kasvoja, tekstiä tai vesileimaa. Tiedostosivu nimeää Oyalan lähistön ja luokittelee kuvan Ciudad de la Paziin; author Mehlauge, CC BY-SA 3.0, 4000×3000 ja päiväys 4.9.2010 alkuperäisestä sivusta. PHOTO voi olla aito paikallinen luontokuva; caption ei väitä tätä vuoden 2026 keskustaksi tai nykyiseksi vierailupalveluksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+        "fileSHA256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "verdict": "accepted",
+          "reason": "Aito trooppisen kasvillisuuden ja metsäisen kallioisen mäen näkymä. Ei rakennus- tai teospääaihetta, kasvoja, tekstiä tai vesileimaa. Tiedostosivu nimeää Oyalan lähistön ja luokittelee kuvan Ciudad de la Paziin; author Mehlauge, CC BY-SA 3.0, 4000×3000 ja päiväys 4.9.2010 alkuperäisestä sivusta. PHOTO voi olla aito paikallinen luontokuva; caption ei väitä tätä vuoden 2026 keskustaksi tai nykyiseksi vierailupalveluksi.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Dschungel_bei_Oyala.JPG",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/cc-work/7341926c51cb9284.html",
+            "sourceSHA256": "1e7558be8f65d8b62a6d808c41207eef3d5549d45fed9f0a3804661b50aecfdf",
+            "directAuthors": [
+              "Mehlauge"
+            ],
+            "directLicenses": [
+              "GFDL",
+              "CC BY-SA 3.0",
+              "CC BY-SA 3.0 de"
+            ],
+            "directRows": {
+              "Date": "4 September 2010"
+            },
+            "sourceOriginalDimensions": [
+              4000,
+              3000
+            ],
+            "localDimensions": [
+              4000,
+              3000
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/cc-work/7341926c51cb9284-preview.jpg",
+            "mediaSHA256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "fullImageViewed": true,
+            "captionFi": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+            "placeEvidence": {
+              "sourceTitle": "Dschungel bei Oyala",
+              "sourceCategories": [
+                "Ciudad de la Paz",
+                "Forests in Equatorial Guinea",
+                "Hills of Equatorial Guinea"
+              ],
+              "scope": "forest near the named former Oyala locality, not a 2026 city-centre or exact tourist entrance claim"
+            },
+            "currentContentSHA256": "3039cb225df34f453ed506ad03870f7a9533e14a7b72e04e058618d636b156ef",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T18:20:42.682650+00:00",
+          "commonsFile": "Dschungel bei Oyala.JPG",
+          "sha256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/qa.json",
+            "sha256": "a6a86e7cd8174d6d4b5ffde36a10a90fc8b4571a1f89ddfc02fd3d7fe81b9769"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/ciudaddelapaz/illustration-qa-extra.json",
+            "sha256": "641b86e90affbe6171f97a55d0bc34af1e3de0dd9130e6963f8d10747183892d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "ciudaddelapaz",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Dschungel bei Oyala.JPG",
+        "sha256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dschungel_bei_Oyala.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Dschungel_bei_Oyala.JPG",
+        "author": "Mehlauge",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "81779b596e9efa426b6c8307b6c48ae3e8696b747c536f6a478846ee0af2581e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg",
+        "bytes": 2794729,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:24:56.992745+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Dschungel bei Oyala.JPG",
+        "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
+        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "lyhyt": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mehlauge, Commons (CC BY-SA 3.0)",
+        "selite": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "lyhyt": "Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.",
+        "tiedosto": "Dschungel bei Oyala.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "47e38962c98d602a84cfdcf267f30b8bb63841546623d08b72965b3604b09db5",
+      "targetAfterSHA256": "7c26d9c3b922239339822770757b929fe44626da532813d2850aae6757d87540",
+      "contextAfterSHA256": "7c26d9c3b922239339822770757b929fe44626da532813d2850aae6757d87540"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

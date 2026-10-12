@@ -1,0 +1,993 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e06",
+  "city": "gitega",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+  "assets": [
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-o4-v01",
+      "galleryImageID": "job14-e06-gitega-o4-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Burundin ruokakuvauksen raaka-aineista.",
+        "lyhyt": "Havainnekuva Burundin ruokakuvauksen raaka-aineista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Burundin ruokakuvauksen raaka-aineista.",
+        "lyhyt": "Havainnekuva Burundin ruokakuvauksen raaka-aineista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "33c94f7e5767d19279de0ba2a6ba3a3b38a0853fc5603b7ea3719cc5b12129be",
+      "exportSHA256": "ef857b252ea69d2ea00c71e44f0b80ffee4f408e1a389441e275a085d70233e3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "4a874ecc548bda5b90b303008832f2a4bddf16db88f207d72a4383926d48c422",
+        "subjectTitle": "Burundin ruoka taustaksi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin luonto-/ruoka-/materiaali-/arkiesinehavainnollistus. Ei kuva-inputtia tai tietyn paikan/arkkitehtuurin/taideteoksen jäljennöstä, tunnistettavaa ihmistä, koristekuviota, tekstiä tai logoa. Ei väitettä oikeasta paikkavalokuvasta tai tietystä reseptistä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-o4-v01/image.png",
+            "nativeSHA256": "33c94f7e5767d19279de0ba2a6ba3a3b38a0853fc5603b7ea3719cc5b12129be",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisissa astioissa punaisia papuja, banaaneja, bataatteja ja valkomaltoisia maniokin juuripaloja. Kasvien muodot ja kulumat, pavut ja astiat luontevat, ei nimettyä annosta, tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva Burundin ruokakuvauksen raaka-aineista.",
+            "sourceAndTargetCheckFi": "Luettu O4 Burundin ruoka taustaksi ja faktapohjan H12 papu/banaani/bataatti/maniokki. CaptionFi Havainnekuva Burundin ruokakuvauksen raaka-aineista rajaa maan ruokataustaan, ei Gitegan erikoisruokaan, paikalliseen ruokalistaan tai ravintolavalokuvaan.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "text": "Burundin yleiskeittiössä käytetään papuja, banaaneja, bataattia ja maniokkia. Ugali mainitaan maissi- tai maniokkijauhosta tehtävänä ruokana. Nämä ovat maan ruoka-aiheita, eivät vahvistettuja Gitegan erikoisannoksia tai tietyn kaupungin ravintolan nykyinen ruokalista."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Burundian_cuisine"
+              }
+            ]
+          },
+          "qaReason": "Papujen, banaanien, bataatin ja maniokin yleishavainne vastaa O4:n maan ruokataustaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Burundin ruokakuvauksen raaka-aineista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "job14-e06-gitega-o4-v01",
+          "sha256": "33c94f7e5767d19279de0ba2a6ba3a3b38a0853fc5603b7ea3719cc5b12129be",
+          "verdict": "accepted",
+          "reason": "Papujen, banaanien, bataatin ja maniokin yleishavainne vastaa O4:n maan ruokataustaa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-o4-v01/image.png",
+            "nativeSHA256": "33c94f7e5767d19279de0ba2a6ba3a3b38a0853fc5603b7ea3719cc5b12129be",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Tavallisissa astioissa punaisia papuja, banaaneja, bataatteja ja valkomaltoisia maniokin juuripaloja. Kasvien muodot ja kulumat, pavut ja astiat luontevat, ei nimettyä annosta, tekstiä/logoja tai ihmisiä.",
+            "captionFi": "Havainnekuva Burundin ruokakuvauksen raaka-aineista.",
+            "sourceAndTargetCheckFi": "Luettu O4 Burundin ruoka taustaksi ja faktapohjan H12 papu/banaani/bataatti/maniokki. CaptionFi Havainnekuva Burundin ruokakuvauksen raaka-aineista rajaa maan ruokataustaan, ei Gitegan erikoisruokaan, paikalliseen ruokalistaan tai ravintolavalokuvaan.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "text": "Burundin yleiskeittiössä käytetään papuja, banaaneja, bataattia ja maniokkia. Ugali mainitaan maissi- tai maniokkijauhosta tehtävänä ruokana. Nämä ovat maan ruoka-aiheita, eivät vahvistettuja Gitegan erikoisannoksia tai tietyn kaupungin ravintolan nykyinen ruokalista."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Burundian_cuisine"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:45:55.202790+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png?t=ef857b252ea69d2e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+        "sha256": "ef857b252ea69d2ea00c71e44f0b80ffee4f408e1a389441e275a085d70233e3",
+        "bytes": 2518843,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-o4-v01",
+        "nativeSHA256": "33c94f7e5767d19279de0ba2a6ba3a3b38a0853fc5603b7ea3719cc5b12129be",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:46:28.671540+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-o4-v01-33c94f7e5767.png",
+        "sha256": "ef857b252ea69d2ea00c71e44f0b80ffee4f408e1a389441e275a085d70233e3",
+        "bytes": 2518843,
+        "SHAReadAt": "2026-10-12T19:03:32.491330+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "33c94f7e5767d19279de0ba2a6ba3a3b38a0853fc5603b7ea3719cc5b12129be",
+        "rgbPixelSHA256": "785cb564696ec86eb0dd1dc10111139e6150fcf42947c14850812dd13540ead4",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "4a874ecc548bda5b90b303008832f2a4bddf16db88f207d72a4383926d48c422"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-l3-v01",
+      "galleryImageID": "job14-e06-gitega-l3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+        "lyhyt": "Havainnekuva puurummun rungosta ja nahkakalvosta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+        "lyhyt": "Havainnekuva puurummun rungosta ja nahkakalvosta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+      "exportSHA256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
+        "semanticContextSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
+        "subjectTitle": "Taito ei säily pelkässä esineessä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonnon/ruoan/materiaalin/tavanomaisen esineen aihe. Ei kuva-inputtia, nimettyä arkkitehtuuria, suojattua nykyteosta, tunnistettavaa ihmistä, modernia koristetta tai logoa. Ei todistus tietyn paikan todellisesta ulkonäöstä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l3-v01/image.png",
+            "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Yksinkertainen koristeeton puurunko, nahkakalvo ja kiristysnarut. Kalvon karva/epäsäännöllinen reuna, puun syyt ja naru luontevat, ei synteettisesti toistuvaa turkkia. Ei ihmisiä, logoja, tekstiä tai nimetyn nykyesineen koristelun kopioita.",
+            "captionFi": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+            "sourceAndTargetCheckFi": "Luettu L3 Taito ei säily pelkässä esineessä ja faktapohjan T3/H5-H6 puurunko-/eläinnahkamateriaali. CaptionFi Havainnekuva puurummun rungosta ja nahkakalvosta ei nimeä tiettyä Gishoran rumpua tai väitä Burundin yksilöidyn soittimen dokumentiksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "text": "Rumpuperinteen kantajiin kuuluu suojapaikkojen vartijasukujen jälkeläisiä. Taitoja opitaan harjoittelemalla ja myös muodollisessa opetuksessa; soittimien valmistustaito on osa samaa perinnettä. Puurungot ja eläinnahka liittyvät rumpujen materiaaleihin. Esineen säilyttäminen ei yksin jatka soiton taitoa, sillä siihen tarvitaan ihmisiä, jotka osaavat tehdä, soittaa ja opettaa. Sukupolvet kohtaavat käytännön työssä, jossa vanha osaaminen siirtyy uudelle tekijälle ja uuteen esitystilanteeseen."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ]
+          },
+          "qaReason": "Puurummun ja eläinnahkakalvon materiaalihavainne vastaa L3:n soittimen valmistustaitoa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "job14-e06-gitega-l3-v01",
+          "sha256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+          "verdict": "accepted",
+          "reason": "Puurummun ja eläinnahkakalvon materiaalihavainne vastaa L3:n soittimen valmistustaitoa.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-l3-v01/image.png",
+            "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Yksinkertainen koristeeton puurunko, nahkakalvo ja kiristysnarut. Kalvon karva/epäsäännöllinen reuna, puun syyt ja naru luontevat, ei synteettisesti toistuvaa turkkia. Ei ihmisiä, logoja, tekstiä tai nimetyn nykyesineen koristelun kopioita.",
+            "captionFi": "Havainnekuva puurummun rungosta ja nahkakalvosta.",
+            "sourceAndTargetCheckFi": "Luettu L3 Taito ei säily pelkässä esineessä ja faktapohjan T3/H5-H6 puurunko-/eläinnahkamateriaali. CaptionFi Havainnekuva puurummun rungosta ja nahkakalvosta ei nimeä tiettyä Gishoran rumpua tai väitä Burundin yksilöidyn soittimen dokumentiksi.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "text": "Rumpuperinteen kantajiin kuuluu suojapaikkojen vartijasukujen jälkeläisiä. Taitoja opitaan harjoittelemalla ja myös muodollisessa opetuksessa; soittimien valmistustaito on osa samaa perinnettä. Puurungot ja eläinnahka liittyvät rumpujen materiaaleihin. Esineen säilyttäminen ei yksin jatka soiton taitoa, sillä siihen tarvitaan ihmisiä, jotka osaavat tehdä, soittaa ja opettaa. Sukupolvet kohtaavat käytännön työssä, jossa vanha osaaminen siirtyy uudelle tekijälle ja uuteen esitystilanteeseen."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Drummers_of_Burundi"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T18:21:34.204643+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png?t=2a8ece634ab7b0f3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "sha256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
+        "bytes": 2426582,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-l3-v01",
+        "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:22:42.671822+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-l3-v01-2b2ebda07012.png",
+        "sha256": "2a8ece634ab7b0f3b3a6d4b7652085e701703941f87eb2aa33c4d76cff891690",
+        "bytes": 2426582,
+        "SHAReadAt": "2026-10-12T18:29:47.422406+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2b2ebda07012a83d4d627984dd058c0641657dc89cf26899d67aef6972b75a79",
+        "rgbPixelSHA256": "799f08fb60ab236561d8ac37c8d78df964581e692bf98128c98e530781be1da7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698",
+      "contextAfterSHA256": "28b213030f6409d6e146ae3257fa18c01c5a3f4cbe914dd09acab054aa562698"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "job14-e06-gitega-k3-v01",
+      "galleryImageID": "job14-e06-gitega-k3-v01",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kokoelmatiedon tallentamisesta kirjaan.",
+        "lyhyt": "Havainnekuva kokoelmatiedon tallentamisesta kirjaan."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kokoelmatiedon tallentamisesta kirjaan.",
+        "lyhyt": "Havainnekuva kokoelmatiedon tallentamisesta kirjaan."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "316cb374016e03cbb7cdc20e13002c59102e00e9180a1636a05643be1ae520e4",
+      "exportSHA256": "9c6bb78a29953fba026e8c4187149f7a2b3e8b9b228a0b9105ffe5fb7494431d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53",
+        "semanticContextSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53",
+        "subjectTitle": "Museo tallentaa myös arkisia esineitä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty luonto-/materiaalin/tavanomaisen välineen havainnollistus. Ei kuva-inputtia, suojatun teoksen/kansi-/kaupunkikaavan jäljennöstä, kasvoja tai todellisen paikan tarkkaa asettelua. Drum-model kuvaa vain lähteen yleistä järjestysperiaatetta, ei nimettyä rituaaliesineistöä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-k3-v01/image.png",
+            "nativeSHA256": "316cb374016e03cbb7cdc20e13002c59102e00e9180a1636a05643be1ae520e4",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nimetön suljettu kirja, paperikansioita ja tavallisia välineitä. Sivut, kansi ja paperi uskottavia; ei tekstiä, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva kokoelmatiedon tallentamisesta kirjaan.",
+            "sourceAndTargetCheckFi": "K3/faktapohjan museo/kokoelmaluettelo luettu. CaptionFi havainne, ei museon todellinen luettelo, asiakirja tai nykyteoksen jäljennös.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "Gitegan kansallismuseo syntyi 1900-luvun puolivälissä tallentamaan kansankulttuurin esineistöä. Kokoelmissa on etnografisia ja historiallisia esineitä sekä kuninkaallisen hovin aineistoa. Niistä julkaistiin myöhemmin myös kokoelmaluettelo. Arjen ja hovin rinnakkaisuus on kiinnostava: esinehistoria ei koostu vain hallitsijoiden tavaroista. Museon kokoelma voi säilyttää tietoa siitä, mitä ihmiset tekivät ja käyttivät, sekä siitä, millaiset esineet liittyivät kuninkaallisiin tehtäviin."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Burundi_National_Museum"
+              }
+            ]
+          },
+          "qaReason": "Kirja-/arkistomateriaalihavainne vastaa K3:n kokoelmaluettelon aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kokoelmatiedon tallentamisesta kirjaan.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+        "fileSHA256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "job14-e06-gitega-k3-v01",
+          "sha256": "316cb374016e03cbb7cdc20e13002c59102e00e9180a1636a05643be1ae520e4",
+          "verdict": "accepted",
+          "reason": "Kirja-/arkistomateriaalihavainne vastaa K3:n kokoelmaluettelon aihetta.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/assets/job14-e06-gitega-k3-v01/image.png",
+            "nativeSHA256": "316cb374016e03cbb7cdc20e13002c59102e00e9180a1636a05643be1ae520e4",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Nimetön suljettu kirja, paperikansioita ja tavallisia välineitä. Sivut, kansi ja paperi uskottavia; ei tekstiä, logoja tai ihmisia.",
+            "captionFi": "Havainnekuva kokoelmatiedon tallentamisesta kirjaan.",
+            "sourceAndTargetCheckFi": "K3/faktapohjan museo/kokoelmaluettelo luettu. CaptionFi havainne, ei museon todellinen luettelo, asiakirja tai nykyteoksen jäljennös.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+            "sourceEvidence": [
+              {
+                "type": "currentContent",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+                "sha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "text": "Gitegan kansallismuseo syntyi 1900-luvun puolivälissä tallentamaan kansankulttuurin esineistöä. Kokoelmissa on etnografisia ja historiallisia esineitä sekä kuninkaallisen hovin aineistoa. Niistä julkaistiin myöhemmin myös kokoelmaluettelo. Arjen ja hovin rinnakkaisuus on kiinnostava: esinehistoria ei koostu vain hallitsijoiden tavaroista. Museon kokoelma voi säilyttää tietoa siitä, mitä ihmiset tekivät ja käyttivät, sekä siitä, millaiset esineet liittyivät kuninkaallisiin tehtäviin."
+              },
+              {
+                "type": "factSheet",
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/faktapohja.md",
+                "sha256": "cf5f7aea275aae978ca52e7a166c46b0276fd1c093a4ad36c01d0056ddaa4c85",
+                "sourceUrl": "https://en.wikipedia.org/wiki/Burundi_National_Museum"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:08:25.664365+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png?t=9c6bb78a29953fba",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+        "sha256": "9c6bb78a29953fba026e8c4187149f7a2b3e8b9b228a0b9105ffe5fb7494431d",
+        "bytes": 1940240,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "job14-e06-gitega-k3-v01",
+        "nativeSHA256": "316cb374016e03cbb7cdc20e13002c59102e00e9180a1636a05643be1ae520e4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e06",
+        "city": "gitega",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T20:09:02.711863+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e06/gitega/job14-e06-gitega-k3-v01-316cb374016e.png",
+        "sha256": "9c6bb78a29953fba026e8c4187149f7a2b3e8b9b228a0b9105ffe5fb7494431d",
+        "bytes": 1940240,
+        "SHAReadAt": "2026-10-12T20:08:50.464027+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "316cb374016e03cbb7cdc20e13002c59102e00e9180a1636a05643be1ae520e4",
+        "rgbPixelSHA256": "8255b1542842358831d1025ff1c3f24e9362b479f8350203f20b1b2cf024080c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53",
+      "contextAfterSHA256": "b0066c1f4e36fd112047cb861da7a00d5fece08f5929eb4e953cfe0cbde9ec53"
+    },
+    {
+      "era": "e06",
+      "city": "gitega",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e06-gitega-photo-22acf96f809d00e8",
+      "galleryImageID": "capital-cc-e06-gitega-photo-22acf96f809d00e8",
+      "commonsFile": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/gitega/photo-22acf96f809d00e84615.jpg",
+        "suora": true,
+        "lahde": "Dave Proffer, Commons (CC BY 2.0)",
+        "selite": "Gitegassa kuvattuja kukkia.",
+        "lyhyt": "Gitegassa kuvattuja kukkia.",
+        "tiedosto": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+        "vuosi": "2007"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Dave Proffer, Commons (CC BY 2.0)",
+        "selite": "Gitegassa kuvattuja kukkia.",
+        "lyhyt": "Gitegassa kuvattuja kukkia.",
+        "tiedosto": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+        "vuosi": "2007"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/gitega/photo-22acf96f809d00e84615.jpg",
+        "suora": true,
+        "lahde": "Dave Proffer, Commons (CC BY 2.0)",
+        "selite": "Gitegassa kuvattuja kukkia.",
+        "lyhyt": "Gitegassa kuvattuja kukkia.",
+        "tiedosto": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+        "vuosi": "2007"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "22acf96f809d00e84615a535a46bcc43f31a00d3124068cc5505834b23a5ddda",
+      "exportSHA256": "22acf96f809d00e84615a535a46bcc43f31a00d3124068cc5505834b23a5ddda",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/gitega/photo-22acf96f809d00e84615.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/gitega/photo-22acf96f809d00e84615.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/cc-work/3548bfc700a145fb-preview.jpg",
+      "dimensions": [
+        3872,
+        2592
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/gitega/sisalto.json",
+      "sourceContentSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a10e49f7f3dd1d2f0cb3bc4bd9b6aa9ffda796e5f12a4f0d3d5a5d69079e96c0",
+        "semanticContextSHA256": "a10e49f7f3dd1d2f0cb3bc4bd9b6aa9ffda796e5f12a4f0d3d5a5d69079e96c0",
+        "subjectTitle": "gitega — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Dave Proffer",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_in_Gitega_Burundi_-Dave_Proffer.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Flowers_in_Gitega_Burundi_-Dave_Proffer.jpg",
+        "rightsEvidence": {
+          "selection": "Author Dave Proffer lähdesivulta, CC BY 2.0, Flickr-alkuperäislähde ja tarkka lisenssilinkki tallennettu. Alkuperäinen otsikko Flowers in Gitega Burundi -Dave Proffer.jpg ja Description Gitega paikantavat kuvauksen. Elävä kasvillisuus, ei rakennuksia/taideteoksia, ei kuvaajan arvaamista uploaderista.",
+          "QA": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/cc-work/3548bfc700a145fb-preview.jpg",
+            "nativeSha256": "22acf96f809d00e84615a535a46bcc43f31a00d3124068cc5505834b23a5ddda",
+            "actualWidth": 3872,
+            "actualHeight": 2592,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_in_Gitega_Burundi_-Dave_Proffer.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa-evidence/source-photo.html",
+            "sourcePageSha256": "cca53e8d8eb2414efe547127ebda09762af8814d00915fa1f92156762e6e6165",
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa-evidence/source-photo.json",
+            "author": "Dave Proffer",
+            "authorFieldVerified": true,
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceRows": [
+              [
+                "Description Flowers in Gitega Burundi -Dave Proffer.jpg",
+                "Gitega"
+              ],
+              [
+                "Date",
+                "25 March 2007, 14:09"
+              ],
+              [
+                "Source",
+                "Gitega"
+              ],
+              [
+                "Author",
+                "Dave Proffer"
+              ]
+            ],
+            "captureDate": "25 March 2007, 14:09",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "rightsEvidence": "Elävä kasvillisuus, ei kuvattua suojattua ihmisteosta. Valokuvan tekijä ja kaupallinen CC BY 2.0 erikseen varmennettu.",
+            "captionFi": "Gitegassa kuvattuja kukkia.",
+            "sourceContentSha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+            "formatRule": "Only TRAVELER requires portrait ratio 0.60–0.85. PHOTO may be a place-backed nature detail and is not required to be a current panorama."
+          },
+          "qaReason": "Alkuperäinen 3872×2592 kuva näyttää terävät punaiset/oranssit kukat ja vihreät lehdet. Description Gitega, valokuvan otsikko ja alkuperäinen Flickr-lähde paikantavat kuvan Gitegaan. Ei kasvoja, lisättyä tekstiä, logoja tai ihmisteoksia. Kasvilajia ei päätellä. Vuosi 2007 kirjataan; PHOTO ei vaadi nykyhetkeä eikä panoraamaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Gitegassa kuvattuja kukkia.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+        "fileSHA256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+          "sha256": "22acf96f809d00e84615a535a46bcc43f31a00d3124068cc5505834b23a5ddda",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3872×2592 kuva näyttää terävät punaiset/oranssit kukat ja vihreät lehdet. Description Gitega, valokuvan otsikko ja alkuperäinen Flickr-lähde paikantavat kuvan Gitegaan. Ei kasvoja, lisättyä tekstiä, logoja tai ihmisteoksia. Kasvilajia ei päätellä. Vuosi 2007 kirjataan; PHOTO ei vaadi nykyhetkeä eikä panoraamaa.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:16:46.248425+00:00",
+          "evidence": {
+            "personallyViewed": true,
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/cc-work/3548bfc700a145fb-preview.jpg",
+            "nativeSha256": "22acf96f809d00e84615a535a46bcc43f31a00d3124068cc5505834b23a5ddda",
+            "actualWidth": 3872,
+            "actualHeight": 2592,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_in_Gitega_Burundi_-Dave_Proffer.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa-evidence/source-photo.html",
+            "sourcePageSha256": "cca53e8d8eb2414efe547127ebda09762af8814d00915fa1f92156762e6e6165",
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa-evidence/source-photo.json",
+            "author": "Dave Proffer",
+            "authorFieldVerified": true,
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceRows": [
+              [
+                "Description Flowers in Gitega Burundi -Dave Proffer.jpg",
+                "Gitega"
+              ],
+              [
+                "Date",
+                "25 March 2007, 14:09"
+              ],
+              [
+                "Source",
+                "Gitega"
+              ],
+              [
+                "Author",
+                "Dave Proffer"
+              ]
+            ],
+            "captureDate": "25 March 2007, 14:09",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "rightsEvidence": "Elävä kasvillisuus, ei kuvattua suojattua ihmisteosta. Valokuvan tekijä ja kaupallinen CC BY 2.0 erikseen varmennettu.",
+            "captionFi": "Gitegassa kuvattuja kukkia.",
+            "sourceContentSha256": "28e4b2576af2048a97c0f43f1f7863361a7060218b7aa5f44c9e69dbffc0e340",
+            "formatRule": "Only TRAVELER requires portrait ratio 0.60–0.85. PHOTO may be a place-backed nature detail and is not required to be a current panorama."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/qa.json",
+            "sha256": "3edb39646e9a18d3e65e17429cb4e460f8ec1ca7975670134044a668b8af34f3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e06/gitega/illustration-qa-extra.json",
+            "sha256": "301703af2156e5a69dd198c4aae96db4e77f97874f14d480f417ae6fe70543f2"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e06",
+        "city": "gitega",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+        "sha256": "22acf96f809d00e84615a535a46bcc43f31a00d3124068cc5505834b23a5ddda",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Flowers_in_Gitega_Burundi_-Dave_Proffer.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Flowers_in_Gitega_Burundi_-Dave_Proffer.jpg",
+        "author": "Dave Proffer",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 3872,
+        "height": 2592,
+        "originalSHA256": "22acf96f809d00e84615a535a46bcc43f31a00d3124068cc5505834b23a5ddda",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/gitega/photo-22acf96f809d00e84615.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/gitega/photo-22acf96f809d00e84615.jpg",
+        "bytes": 2071430,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:17:52.860927+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+        "lahde": "Dave Proffer, Commons (CC BY 2.0)",
+        "selite": "Gitegassa kuvattuja kukkia.",
+        "lyhyt": "Gitegassa kuvattuja kukkia.",
+        "vuosi": "2007"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Dave Proffer, Commons (CC BY 2.0)",
+        "selite": "Gitegassa kuvattuja kukkia.",
+        "lyhyt": "Gitegassa kuvattuja kukkia.",
+        "tiedosto": "Flowers in Gitega Burundi -Dave Proffer.jpg",
+        "vuosi": "2007"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7b788bcb85e86c8dd4cd4c786b46c05e0c89f772e394b443ea6391ae3411dfc9",
+      "targetAfterSHA256": "a10e49f7f3dd1d2f0cb3bc4bd9b6aa9ffda796e5f12a4f0d3d5a5d69079e96c0",
+      "contextAfterSHA256": "a10e49f7f3dd1d2f0cb3bc4bd9b6aa9ffda796e5f12a4f0d3d5a5d69079e96c0"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
