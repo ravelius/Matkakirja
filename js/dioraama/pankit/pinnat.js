@@ -110,6 +110,10 @@ export const PINNAT = {
   iho2: { vari: '#dd9c78', toisto_m: 1.0, kuvio: { tyyppi: 'tasainen' } },
   // Erä 3 (docs/raportit/dioraama-rajapinnat-era3-20260929.md kohta 2, tools/dioraama/reseptit-kalusteet2.mjs):
   // linnan tilojen kalusteiden ja rekvisiitan pinnat. 'olki' (kuvio 'olki') on jo erän 2b rekvisiitasta.
+  // #4417 (12.10.2026, Sisältökirjurin totuustarkistus): kappelin kalkki ja vihkimisristien himmeät maalit.
+  kalkki: { vari: '#e4ddd0', toisto_m: 2.0, kuvio: { tyyppi: 'rappaus', koko_m: [1.2, 1.2], vaihtelu: 0.15 } },
+  okramaali: { vari: '#8e4f2e', toisto_m: 0.6, kuvio: { tyyppi: 'rappaus', koko_m: [0.4, 0.4], vaihtelu: 0.35 } },
+  harmaavihrea: { vari: '#7f8b77', toisto_m: 0.6, kuvio: { tyyppi: 'rappaus', koko_m: [0.4, 0.4], vaihtelu: 0.35 } },
   punamulta: { vari: '#8a2e20', toisto_m: 0.6, kuvio: { tyyppi: 'rappaus', koko_m: [0.4, 0.4], vaihtelu: 0.3 } },
   kulta: { vari: '#b8923a', toisto_m: 0.4, kuvio: { tyyppi: 'metalli', koko_m: [0.3, 0.3], vaihtelu: 0.2 } },
   aukko: { vari: '#1c1611', toisto_m: 1.0, kuvio: { tyyppi: 'tasainen' } },

@@ -103,6 +103,7 @@ PH = arg('--tekstuurit', '/Users/Shared/Claude/proto-3d/_lahteet/polyhaven')
 TEKSTUURIT = {
     'kivi': ('rustic_stone_wall', 2.5), 'leikkaus': ('stacked_stone_wall', 2.0),
     'rappaus': ('plastered_stone_wall', 2.5), 'kivilattia': ('slate_floor_02', 1.5),
+    'kalkki': ('white_rough_plaster', 2.0),   # #4417 (12.10.2026): kappelin valkoinen kalkkirappaus (Poly Haven CC0, Rob Tuytel)
     'lankku': ('rough_wood', 1.5), 'puu': ('wood_table_worn', 1.2), 'kallio': ('rock_face', 6.0),
     'metalli': ('rusty_metal_02', 1.0), 'rauta': ('rusty_metal_02', 1.0), 'kangas': ('hessian_230', 0.6),
     'tiili': ('medieval_red_brick', 2.0), 'katto': ('roof_slates_02', 2.0),
@@ -186,6 +187,7 @@ MATERIAALIT = {
     'leikkaus': dict(vari=srgb('#a99d8a'), kuvio='kivi', mittakaava=3.0, kumpu=0.3, karheus=0.9),
     'kivilattia': dict(vari=srgb('#7c7266'), kuvio='kivi', mittakaava=1.8, kumpu=0.25, karheus=0.85),
     'rappaus': dict(vari=srgb('#cdbfa6'), kuvio='kohina', mittakaava=6, kumpu=0.08, karheus=0.95, vaihtelu=0.12),
+    'kalkki': dict(vari=srgb('#e4ddd0'), kuvio='kohina', mittakaava=6, kumpu=0.1, karheus=0.95, vaihtelu=0.08),
     'lankku': dict(vari=srgb('#6e4c30'), kuvio='puu', mittakaava=3, kumpu=0.1, karheus=0.7),
     'puu': dict(vari=srgb('#5d402a'), kuvio='puu', mittakaava=5, kumpu=0.1, karheus=0.7),
     'hirsi': dict(vari=srgb('#6f6a61'), kuvio='puu', mittakaava=4, kumpu=0.12, karheus=0.85),  # harmaantunut hirsi (n1500)
@@ -229,8 +231,9 @@ for o in tilan + esineet + ([] if KUORI else massa):
 # pystysuoraan holviin (tangentti kompassista). Kuvat _valmiit-hakemistosta (polku kenttä kuva).
 VALMIIT = '/Users/Shared/Claude/proto-3d/_valmiit'
 maalaukset = tila.get('maalaukset') or []
-if maalaukset and 'rappaus' in valmiit:
-    m = valmiit['rappaus']; nt = m.node_tree; b = next(n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED')
+MPINTA = 'kalkki' if 'kalkki' in valmiit else 'rappaus'   # #4417: kappelin holvi on kalkkia
+if maalaukset and MPINTA in valmiit:
+    m = valmiit[MPINTA]; nt = m.node_tree; b = next(n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED')
     pohja = b.inputs['Base Color'].links[0].from_socket if b.inputs['Base Color'].links else None
     geo = solmu(nt, 'ShaderNodeNewGeometry', -600, 1200)
     for i, md in enumerate(maalaukset):

@@ -227,9 +227,9 @@ export function vihkimisristi({ sade = 0.4 } = {}) {
   const paks = 0.02, sis = sade * 0.86;
   // Rengas rakennetaan vaakatasoon (y = paksuus) ja käännetään pystyyn (+y → +w).
   const r = [
-    ...rengas({ rSisa: sis, rUlko: sade, y: paks, segmentit: 24, ylos: true, rooli: 'maali' }),
-    ...vaippa({ r: sade, y0: 0, y1: paks, segmentit: 24, ulos: true, rooli: 'maali' }),
-    ...vaippa({ r: sis, y0: 0, y1: paks, segmentit: 24, ulos: false, rooli: 'maali' }),
+    ...rengas({ rSisa: sis, rUlko: sade, y: paks, segmentit: 24, ylos: true, rooli: 'rengas' }),
+    ...vaippa({ r: sade, y0: 0, y1: paks, segmentit: 24, ulos: true, rooli: 'rengas' }),
+    ...vaippa({ r: sis, y0: 0, y1: paks, segmentit: 24, ulos: false, rooli: 'rengas' }),
   ];
   const k = kierraU(r, 90);
   const varsi = sis * 0.86, lev = sade * 0.09;
@@ -284,6 +284,24 @@ export function kynttilakruunu({ sade = 0.35, ketju = 0.6, kynttilia = 5 } = {})
     k.push(...siirra(kyn, [u, y0, w]));
   }
   k.valo = { paikka_paikallinen: [0, yR + 0.22, 0], sade: 1.3, voima: 0.65, vari: '#ffb070' };
+  return k;
+}
+
+/**
+ * Ihralamppu (#4417, 12.10.2026: soihtuja ei käytetty sisätiloissa; talivalo/ihralamppu, VERTAILU Hämeen linna): rautainen
+ * seinäpidike ja vaakavarsi, jonka päässä matala savikuppi ja sydänliekki. SEINÄÄN KIINNITETTÄVÄ: origo = pidikelevyn
+ * keskipiste seinän pinnalla (w = 0), kaikki w ≥ 0. Liekin tyvi paikallisesti [0, −0,01, 0,23]. `.valo`: sade 1,1, voima 0,45,
+ * vari #ffb060. Roolit: rauta (pidike), savi (kuppi), liekki (hehkuva).
+ */
+export function ihralamppu() {
+  const k = [];
+  k.push(...L(-0.045, 0.045, -0.08, 0.06, 0, 0.02, { etu: 'rauta', yla: 'rauta', ala: 'rauta', vasen: 'rauta', oikea: 'rauta' }));
+  k.push(...putki([0, -0.06, 0.02], [0, -0.06, 0.2], 0.011, 0.011, 6, 'rauta'));          // vaakavarsi
+  k.push(...putki([0, 0.04, 0.02], [0, -0.055, 0.17], 0.008, 0.008, 6, 'rauta'));         // tukivinoke
+  k.push(...putki([0, -0.075, 0.23], [0, -0.035, 0.23], 0.03, 0.05, 10, 'savi'));         // kuppi
+  k.push(...putki([0, -0.035, 0.23], [0, -0.03, 0.23], 0.05, 0.044, 10, 'savi', { paatyA: false }));
+  k.push(...putki([0, -0.03, 0.25], [0, 0.03, 0.255], 0.01, 0, 6, 'liekki'));             // sydänliekki nokassa
+  k.valo = { paikka_paikallinen: [0, 0.01, 0.25], sade: 1.1, voima: 0.45, vari: '#ffb060' };
   return k;
 }
 
@@ -671,16 +689,17 @@ export function nuolitynnyri({ sade = 0.2, korkeus = 0.45, nuolia = 12, siemen =
 }
 
 export const RESEPTIT = {
-  alttari, vihkimisristi, kirkonpenkki, kynttilakruunu, seinasoihtu, lyhty, arkku, keihasteline, kilpi, hakapyssy,
+  alttari, vihkimisristi, kirkonpenkki, kynttilakruunu, seinasoihtu, ihralamppu, lyhty, arkku, keihasteline, kilpi, hakapyssy,
   ruutitynnyri, pelilauta, pulpetti, kirja, koysikieppi, airot, verkko, kello, jalkajousi, nuolitynnyri,
 };
 
 export const OLETUSPINNAT = {
   alttari: { kivi: 'kivi', liina: 'kangas' },
-  vihkimisristi: { maali: 'punamulta' },
+  vihkimisristi: { maali: 'okramaali', rengas: 'harmaavihrea' }, // #4417: okranruskea risti, harmaanvihreä rengas
   kirkonpenkki: { puu: 'puu', lankku: 'lankku' },
   kynttilakruunu: { rauta: 'rauta', kynttila: 'vaha' },
   seinasoihtu: { rauta: 'rauta', puu: 'puu', kaare: 'kangas', liekki: 'hiillos' },
+  ihralamppu: { rauta: 'rauta', savi: 'savi', liekki: 'hiillos' },
   lyhty: { puu: 'puu', rauta: 'rauta', kynttila: 'vaha', liekki: 'hiillos' },
   arkku: { puu: 'puu', kansi: 'lankku', rauta: 'rauta' },
   keihasteline: { puu: 'puu', varsi: 'esine-puu', karki: 'esine-metalli' },

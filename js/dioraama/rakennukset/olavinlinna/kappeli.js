@@ -45,7 +45,7 @@ const seinalla = (resepti, a, r, extra = {}) => ({ resepti, paikka: pol(a, r, LA
 const ALTTARIT = [
   { a: 80, r: 3.5, leveys: 1.4, korkeus: 1.0, jalka: 0.36 },
   { a: 38, r: 3.5, leveys: 1.0, korkeus: 0.95, jalka: 0.28 },
-  { a: 322, r: 3.5, leveys: 1.0, korkeus: 0.95, jalka: 0.28 },
+  { a: 322, r: 3.72, leveys: 1.0, korkeus: 0.95, jalka: 0.28 }, // 12.10.: syvennyksen suulle
 ];
 const KYNTTILAN_KARKI = 0.98; // kynttilänjalan kynttilän yläpää (kerroin korkeus × 0,98)
 const LIEKIT = [];
@@ -91,9 +91,12 @@ liekki(paik(pulpKynt, 0, 0, 0.25 * KYNTTILAN_KARKI, 0), 1.4, 0.6);
 const RISTIT = [];
 // 7.10. E3: kaari-ovi (300°), kätkö (38,75°) ja oikea ikkuna (58,7°) vaativat välit: 12 ristiä näkyvälle kaarelle
 // (230…95) esteiden väleihin (kaari-ovi 291…309, hagioskooppi 3, kätkö 35…42, ikkuna 57…61).
-for (const a of [236, 252, 268, 284, 318, 333, 348, 13, 28, 49.5, 71, 87]) {
-  RISTIT.push({ resepti: 'vihkimisristi', paikka: pol(a, SEINA, 10.75), suunta: a + 180, sade: 0.26 }); // 7.10.: 0,34 → 0,26 (pienempi seinä)
-}
+// 12.10. (#4417, Sisältökirjurin totuustarkistus): ristit ovat pieniä (n. 0,3 m), himmeän okranruskeita harmaanvihreällä
+// renkaalla, ovenkaaren korkeudella tai ylempänä epäsäännöllisinä ryhminä (ennen 0,52 m kirkkaanpunaisia y 10,75).
+const RISTI_Y = [0.0, 0.14, 0.05, 0.2, -0.04, 0.1, 0.22, 0.02, 0.16, -0.02, 0.12, 0.06];
+[236, 252, 268, 284, 318, 333, 348, 13, 28, 49.5, 71, 87].forEach((a, i) => {
+  RISTIT.push({ resepti: 'vihkimisristi', paikka: pol(a, SEINA, r3(11.72 + RISTI_Y[i])), suunta: a + 180, sade: 0.15 });
+});
 
 // Hagioskooppirako (pohjaseinä 3°, kammion aukko) ja koillismuurin ainoa ahdas ikkuna (Aspelin 1875, Sisältökirjurin
 // lähdetarkistus #4129; Maconi 1910 ei näytä sitä): kivireunus laatoista. Ikkuna 58,7° ristien 49,4° ja 68° välissä, korkealla
@@ -107,7 +110,10 @@ const SYV = { a: 38.75, a0: 35.06, a1: 42.44, y0: LATTIA + 1.1, y1: LATTIA + 1.5
 // TULKINTA) luoteessa 300°, 1,05 × 2,4 m. Kävelyosa kappeli-kavely jatkaa portaat seinän sisään.
 const KAARIOVI = { a: 300, puoli: 7.75, y0: 9.0, y1: LATTIA + 2.4 };
 const IKKUNA = { a: 58.7, puoli: 1.92, y0: LATTIA + 1.5, y1: LATTIA + 2.3 };
+// 12.10. (#4417): sivualttari pohjoisseinän syvennyksessä (lähteissä kaksi; 38°:n kohdalla E3:n kätkö, joten vain 322°, TULKINTA).
+const SIVUSYV = { a: 322, puoli: 7.4, y0: LATTIA - 0.4, y1: LATTIA + 2.1, syvyys: 0.5 };
 const SEINAN_AUKOT = [
+  [SIVUSYV.a - SIVUSYV.puoli, SIVUSYV.a + SIVUSYV.puoli, SIVUSYV.y0, SIVUSYV.y1],
   [KAARIOVI.a - KAARIOVI.puoli, KAARIOVI.a + KAARIOVI.puoli, KAARIOVI.y0, KAARIOVI.y1],
   [SYV.a0, SYV.a1, SYV.y0, SYV.y1],
   [IKKUNA.a - IKKUNA.puoli, IKKUNA.a + IKKUNA.puoli, IKKUNA.y0, IKKUNA.y1],
@@ -124,7 +130,7 @@ function seinaAukoin() {
       .map(([a0, a1]) => [a0 < 230 ? a0 + 360 : a0, a1 < 230 ? a1 + 360 : a1]).sort((p, q) => p[0] - q[0]);
     let alku = 230;
     for (const [a0, a1] of [...esteet, [455, 455]]) {
-      if (a0 - alku > 0.01) osat.push({ resepti: 'torni', paikka: [CX, ya, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: r3(yb - ya), segmentit: 32, auki: { alku: r3(a0 - 360), loppu: r3(alku) } });
+      if (a0 - alku > 0.01) osat.push({ resepti: 'torni', paikka: [CX, ya, CZ], suunta: 0, sade: 6.6, paksuus: 2.7, korkeus: r3(yb - ya), segmentit: 32, auki: { alku: r3(a0 - 360), loppu: r3(alku) }, pinnat: { sisa: 'kalkki' } });
       alku = Math.max(alku, a1);
     }
   }
@@ -272,6 +278,10 @@ export const TILA = {
     // Seinä 2,7 m (sisäsäde 3,9) ja holvin yläpuolelle asti (y 9,0…15,6), ettei kennojen seinäkaarien yllä näy rakoa.
     // 7.10. E3: seinä (sisäsäde 3,9, y 9,0…15,6) aukkolistasta SEINAN_AUKOT: dioraaman leikkaus 95…230, kätkö, ikkuna ja kaari-ovi.
     ...seinaAukoin(),
+    // 12.10. (#4417): sivualttarin syvennys 322°: takaseinä, holvikatto (laatta) ja pohja, kalkittu
+    { resepti: 'laatta', paikka: pol(SIVUSYV.a, SEINA + SIVUSYV.syvyys + 0.03, SIVUSYV.y1), suunta: SIVUSYV.a + 180, leveys: 1.2, syvyys: 0.05, paksuus: r3(SIVUSYV.y1 - SIVUSYV.y0), pinnat: { yla: 'kalkki', ala: 'kalkki', sivu: 'kalkki' } },
+    { resepti: 'laatta', paikka: pol(SIVUSYV.a, SEINA + SIVUSYV.syvyys / 2, SIVUSYV.y1 + 0.04), suunta: SIVUSYV.a + 180, leveys: 1.2, syvyys: SIVUSYV.syvyys + 0.1, paksuus: 0.06, pinnat: { yla: 'kalkki', ala: 'kalkki', sivu: 'kalkki' } },
+    { resepti: 'laatta', paikka: pol(SIVUSYV.a, SEINA + SIVUSYV.syvyys / 2, LATTIA), suunta: SIVUSYV.a + 180, leveys: 1.2, syvyys: SIVUSYV.syvyys + 0.1, paksuus: 0.4, pinnat: { yla: 'kivi', ala: 'kivi', sivu: 'kivi' } },
     // syvennyksen takaseinä ja katto (lattia = alaosan yläreuna)
     { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys + 0.03, SYV.y1), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: 0.05, paksuus: SYV.y1 - SYV.y0, pinnat: KIVI },
     { resepti: 'laatta', paikka: pol(SYV.a, SEINA + SYV.syvyys / 2, SYV.y1 + 0.04), suunta: SYV.a + 180, leveys: SYV.leveys + 0.1, syvyys: SYV.syvyys + 0.1, paksuus: 0.06, pinnat: KIVI },
@@ -281,7 +291,7 @@ export const TILA = {
     // Ristiholvi (Maconi 1910): taitteet seinällä y 12,3, kennojen seinäkaaret y 13,8, laki y 15,0. Taitekulmat
     // 5° + 45°·j osuvat sektorin ruudukkoon (230° + 11,25°·i). Maalaukset (lehti- ja kukka-aiheet): holvi-pinta rappaus.
     { resepti: 'kupoli', paikka: [CX, HOLVI.lahto, CZ], suunta: 0, sade: SEINA - 0.06, korkeus: HOLVI.laki - HOLVI.lahto, paksuus: 0.3,
-      segmentit: 32, renkaat: 12, ristiholvi: { kulma: 5, nousu: 0.55, reuna: 0.25 }, auki: { alku: 95, loppu: 230 }, pinnat: { holvi: 'rappaus' } },
+      segmentit: 32, renkaat: 12, ristiholvi: { kulma: 5, nousu: 0.55, reuna: 0.25 }, auki: { alku: 95, loppu: 230 }, pinnat: { holvi: 'kalkki' } },
     ...ALTTARIPALIKAT,
     ...LATTIAJALAT,
     POLVITUOLI,

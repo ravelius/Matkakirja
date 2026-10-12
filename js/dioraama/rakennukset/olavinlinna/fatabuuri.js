@@ -188,12 +188,13 @@ const RIPUSTETUT = [
 ];
 const SOIHTU_Y = 2.25;
 const SOIHDUT = [
-  sein('seinasoihtu', 0, 5.455, { y: SOIHTU_Y }),
-  sein('seinasoihtu', 75, 5.455, { y: SOIHTU_Y + 0.1 }),
+  // 12.10. (#4417): sisätilassa ihralamppu, ei soihtua (soihdut vain ulkona).
+  sein('ihralamppu', 0, 5.455, { y: SOIHTU_Y }),
+  sein('ihralamppu', 75, 5.455, { y: SOIHTU_Y + 0.1 }),
   sein('rako', 312, 5.455, { y: 1.75, leveys: 0.22, korkeus: 1.0 }),
 ];
 // Soihdun liekin alapää maailmassa (paikallinen [0, 0,47, 0,262]) — liekki-billboard.
-const soihduLiekki = (a, y) => lok(pol(a, 5.455, 0), a + 180, 0, y + 0.47, 0.262);
+const soihduLiekki = (a, y) => lok(pol(a, 5.455, 0), a + 180, 0, y - 0.01, 0.25); // 12.10.: ihralampun nokka
 
 export const TILA = {
   id: 'fatabuuri',
@@ -271,8 +272,8 @@ export const TILA = {
     { aanet: ['ovi-puu'], valit_s: [30, 60] },
   ],
   liekit: [
-    { liekki: 'soihtu', paikka: soihduLiekki(0, SOIHTU_Y), koko: 1, vaihe: 0 },
-    { liekki: 'soihtu', paikka: soihduLiekki(75, SOIHTU_Y + 0.1), koko: 1, vaihe: 0.5 },
+    { liekki: 'kynttila', paikka: soihduLiekki(0, SOIHTU_Y), koko: 1.8, vaihe: 0 },
+    { liekki: 'kynttila', paikka: soihduLiekki(75, SOIHTU_Y + 0.1), koko: 1.8, vaihe: 0.5 },
     { liekki: 'kynttila', paikka: lok(LAMPPU, 0, 0.021, LAMPPU[1] + 0.102, 0), koko: 1, vaihe: 0.25 },
     { liekki: 'kynttila', paikka: [KYNTTILA_POYTA[0], r1(KYNTTILA_POYTA[1] + 0.167), KYNTTILA_POYTA[2]], koko: 1, vaihe: 0.6 },
   ],

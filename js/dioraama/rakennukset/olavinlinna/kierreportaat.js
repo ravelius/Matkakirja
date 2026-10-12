@@ -47,8 +47,9 @@ const A1 = askelKulma(TASANNE_1), A2 = askelKulma(TASANNE_2) - 360; // 339,1° (
 
 // Seinäsoihdun liekki (soihtu-billboard): soihtu on kalteva 15°, liekin tyvi ≈ 0,47 m origon yläpuolella ja
 // 0,26 m seinästä sisään (reseptit-kalusteet2.mjs: seinasoihtu). r = seinäpinta 5,5.
-const soihtuLiekki = (a, y) => P(5.5 - 0.262, a, +(y + 0.471).toFixed(3));
-const soihtu = (a, y) => ({ resepti: 'seinasoihtu', paikka: P(5.5, a, y), suunta: a + 180 });
+// 12.10. (#4417): sisätilassa ihralamppu (liekin tyvi 0,25 m seinästä, 0,01 m origon alapuolella), ei soihtua.
+const soihtuLiekki = (a, y) => P(5.5 - 0.25, a, +(y - 0.01).toFixed(3));
+const soihtu = (a, y) => ({ resepti: 'ihralamppu', paikka: P(5.5, a, y), suunta: a + 180 });
 const seinalle = (resepti, a, y, muut = {}) => ({ resepti, paikka: P(5.5, a, y), suunta: a + 180, ...muut });
 
 const TAULU = {
@@ -221,9 +222,9 @@ export const TILA = {
   ],
   tehosteet: [{ aanet: ['askel-porras-1', 'askel-porras-2'], valit_s: [5, 10], voimakkuus: 0.6 }],
   liekit: [
-    { liekki: 'soihtu', paikka: soihtuLiekki(270, 9.4), koko: 1, vaihe: 0 },
-    { liekki: 'soihtu', paikka: soihtuLiekki(335, 10.9), koko: 1, vaihe: 0.35 },
-    { liekki: 'soihtu', paikka: soihtuLiekki(60, 13), koko: 1, vaihe: 0.7 },
+    { liekki: 'kynttila', paikka: soihtuLiekki(270, 9.4), koko: 1.8, vaihe: 0 },
+    { liekki: 'kynttila', paikka: soihtuLiekki(335, 10.9), koko: 1.8, vaihe: 0.35 },
+    { liekki: 'kynttila', paikka: soihtuLiekki(60, 13), koko: 1.8, vaihe: 0.7 },
     { liekki: 'kynttila', paikka: P(2.55, 316, Y_LATTIA + 0.97), koko: 1, vaihe: 0.2 },
   ],
   kasikirjoitus: [

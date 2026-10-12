@@ -242,10 +242,11 @@ const PALIKAT = [
   { resepti: 'kilpi', paikka: [-10.2, 3.3, -18.5], suunta: 180 },
   { resepti: 'kilpi', paikka: [-21.7, 3.0, -11.3], suunta: 90 },
   { resepti: 'kilpi', paikka: [-21.7, 3.0, -13.6], suunta: 90 },
-  { resepti: 'seinasoihtu', paikka: [-20.8, 2.2, -18.5], suunta: 180 },
-  { resepti: 'seinasoihtu', paikka: [-8.7, 2.2, -18.5], suunta: 180 },
-  { resepti: 'seinasoihtu', paikka: [-21.7, 2.2, -12.45], suunta: 90 },
-  { resepti: 'seinasoihtu', paikka: [-7.8, 2.7, -14.4], suunta: 270 },
+  // 12.10. (#4417): sisätilassa ihralamput, ei soihtuja (soihdut vain ulkona).
+  { resepti: 'ihralamppu', paikka: [-20.8, 2.2, -18.5], suunta: 180 },
+  { resepti: 'ihralamppu', paikka: [-8.7, 2.2, -18.5], suunta: 180 },
+  { resepti: 'ihralamppu', paikka: [-21.7, 2.2, -12.45], suunta: 90 },
+  { resepti: 'ihralamppu', paikka: [-7.8, 2.7, -14.4], suunta: 270 },
 ];
 
 // Kynttilänjalkojen ja kruunun liekit sekä soihtujen liekit (sijainnit kuten yllä).
@@ -316,10 +317,10 @@ export const TILA = {
     { liekki: 'tulisija', paikka: [-15.25, 0.9, -17.75], koko: 0.85, vaihe: 0.35 },
     { liekki: 'tulisija', paikka: [-14.25, 0.9, -17.75], koko: 0.85, vaihe: 0.7 },
     // Seinäsoihdut (liekki ≈ 0,47 m pidikkeestä ja 0,26 m seinästä).
-    { liekki: 'soihtu', paikka: [-20.8, 2.67, -18.24], koko: 1, vaihe: 0.1 },
-    { liekki: 'soihtu', paikka: [-8.7, 2.67, -18.24], koko: 1, vaihe: 0.55 },
-    { liekki: 'soihtu', paikka: [-21.44, 2.67, -12.45], koko: 1, vaihe: 0.8 },
-    { liekki: 'soihtu', paikka: [-8.06, 3.17, -14.4], koko: 1, vaihe: 0.3 },
+    { liekki: 'kynttila', paikka: [-20.8, 2.19, -18.25], koko: 1.8, vaihe: 0.1 },
+    { liekki: 'kynttila', paikka: [-8.7, 2.19, -18.25], koko: 1.8, vaihe: 0.55 },
+    { liekki: 'kynttila', paikka: [-21.45, 2.19, -12.45], koko: 1.8, vaihe: 0.8 },
+    { liekki: 'kynttila', paikka: [-8.05, 2.69, -14.4], koko: 1.8, vaihe: 0.3 },
     ...KRUUNU_LIEKIT,
     ...kynttilaLiekit(POYTA_A.x, POYTA_A.z0, POYTA_A.z1),
     ...kynttilaLiekit(POYTA_B.x, POYTA_B.z0, POYTA_B.z1),
