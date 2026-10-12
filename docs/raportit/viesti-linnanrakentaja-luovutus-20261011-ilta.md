@@ -114,3 +114,16 @@ SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb 
 - v48f = aitan hoitaja v1b + kappalainen v1b (+ vesipoika, renki) junaan 183 jos ehtii ennen lukitusta, muuten 184.
 - Jumiagentti (v48c-kavely.py-muutokset) jäi jumiin; kytkin itse: 16:n pielileikkaus V48C_16-lipun taakse (katkaisi 15→16).
 - rakenna.mjs: tilan valoatlas.hdr (24dc95a94); vie-blender vie HDR-tiedostot.
+
+## JATKO 12.10. ~06.xx
+- VIETY: v48f (MH kappalainen/aitan hoitaja v1b), v48g (salin porraskanava 1,1 m), v48h (16: kierreportaan askelmat seinään asti,
+  kavely.py rivi ~596), v48i (55/61: salin ala-oven holvi YT + 2,45; CC on 1,75 + skin 0,03 → ulottuma 1,81: KÄYTÄ KORK=1.83
+  kapselireitti.py:ssä), v48j (86: muurinharja-tilan vanha seinä pois, tila_kaytava_pois.py ALUE+YMAX; MH v2 kaikille 11),
+  v48k = 17/17-ehdokas (harja-0: soihdun tolpalle näkymätön törmäys, kierreportaat-tilan palat pois harjalta):
+  1499 c58921fcb9d82780 / NYKY 0ed22c60646dbba2. Siirtoseppä: botti + pelikuvat.
+- MH: kaikki 11 v2 (linna-hahmot/metahuman-<id>-v1/, yhteinen ketju metahuman-ketju/); paketointi mh_pakettiin.zsh <id>.
+  NS:n materiaalikorjaus 64ec7994f (AlfaRaja + Cull MASK-korteille) junassa 183. Muisti v48d: +320 Mt / 9 MH, ei jetsameja.
+- KESKEN: keittiön koehuone (agentti; _valmiit/olavinlinna-keittio-koehuone-v1/; KCD2-taso, vain CC0/CC BY/PD — omistajan lupa 12.10.),
+  SK:n aineisto _tyo/sisaltokirjuri/vertailu/linnan-keittio-1499/, äänimaisema olavinlinna-keittio-aanimaisema-vienti-20261012.
+  Koehuoneen leivonta pid 46922 TAUOTETTU (kill -STOP) Julkaisijan hiljaisen ikkunan ajaksi → jatka kill -CONT 46922.
+- Jonossa: LS1:n museopilotin mallinnusapu (holvikatto, Cuypersin listat) linnatöiden jälkeen; MH-kevennys (sivuhahmojen tekstuurit 512).
