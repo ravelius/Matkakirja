@@ -1,0 +1,350 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "bamako",
+  "maa": "MLI",
+  "era": "e05",
+  "kaupunki": {
+    "id": "bamako",
+    "name": "Bamako",
+    "wiki": "Bamako",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 12.6458,
+      "lon": -7.9922
+    }
+  },
+  "artikkeli": {
+    "intro": "Bamako on **Nigerjoen kaupunki** Malin lounaisosassa. Joki, tasainen rantamaa ja pohjoisen kallioinen reuna antavat pääkaupungille erilaiset maisemat. Kaupunki oli olemassa jo vuonna 1873, ennen rautatietä ja siirtomaakauden hallintokeskusta. Paikalliseen perustamisperinteeseen kuuluu Niaré-suku, ja vanhaa hallintoyhteisöä kutsuttiin kafuksi.\n\nAluksi kaupunki kasvoi joen pohjoisrannalla, mutta myöhempi Bamako ulottuu myös etelään. Siltojen ja sotrama-pikkubussien avulla yhdistyvät rannat ja kaupunginosat. Toreilla ruoan rinnalla myydään käyttöesineitä, nahkatöitä ja soittimia, kun taas kansallismuseo kokoaa esineiden kautta maan historiaa.\n\n**Bamakon ikä ei ala rautatiestä**, vaikka yhteys Kayesin ja Dakarin suuntaan kuuluu sen myöhempään kasvuun. Nigerin rannalla kalastus ja pienet viljelypalstat tuovat elinkeinot lähelle kaupunkimaisemaa. Pohjoisen ylängön, puutarhojen ja jokitasangon ero auttaa ymmärtämään, miksi kaupunki näyttää eri suunnista erilaiselta.",
+    "teksti": "Bamakon paikallinen historia on vanhempi kuin sen asema siirtomaakauden pääkaupunkina. Vuonna 1873 täällä oli jo kaupunki, mutta myöhemmät rautatie- ja hallintorakennukset puuttuivat. Vanhan Niarélan kaupunginosan nimi kuuluu paikalliseen perustamisperinteeseen, eikä eri lähteiden erimielisistä vuosiluvuista tarvitse valita yhtä kaupungin syntymäpäiväksi.\n\nNigerjoen tasangolla kaupunki on pääosin tasaista, pohjoisessa maasto nousee kallioiseksi. Kasvu alkoi pohjoisrannalta ja ulottui myöhemmin joen yli. Rannat yhdistyvät siltojen kautta, mutta joki kuuluu kaupunkiin myös kalastuksena, viljelynä ja veneiden vesillelaskupaikkoina.\n\nMarkkinoiden käyttöesineet ja museon kokoelmat näyttävät arkisten tavaroiden kaksi puolta. Sama esine voi palvella päivän työtä tai säilyttää tietoa menneisyydestä. Bamakoon tutustuminen on kuitenkin erotettava matkapäätöksestä: matkailu Maliin ei ole nykyisessä turvallisuustilanteessa turvallista."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Bamako on?",
+      "options": [
+        "Mali",
+        "Niger",
+        "Tšad",
+        "Senegal"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupunki sijaitsee Länsi-Afrikan sisämaassa.",
+      "fact": "Bamako on Malin pääkaupunki Nigerjoen varrella.",
+      "source": "https://en.wikipedia.org/wiki/Bamako"
+    },
+    {
+      "q": "Mikä joki kulkee Bamakon läpi?",
+      "options": [
+        "Niger",
+        "Niili",
+        "Kongo",
+        "Zambezi"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupungin pohjoinen ja etelä yhdistyvät siltojen kautta.",
+      "fact": "Nigerin rantamaa kuuluu Bamakon maisemaan ja elinkeinoihin.",
+      "source": "https://en.wikipedia.org/wiki/Bamako"
+    },
+    {
+      "q": "Mihin tarkoitukseen sotramaa käytetään Bamakossa?",
+      "options": [
+        "Joukkoliikenteeseen",
+        "Kalankuljetukseen",
+        "Peltoviljelyyn",
+        "Radanrakennukseen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Ajoneuvo on pakettiauto tai pikkubussi.",
+      "fact": "Sotrama tarjoaa kaupungissa yhteistä matkustajakyytiä.",
+      "source": "https://en.wikipedia.org/wiki/Bamako"
+    },
+    {
+      "q": "Millä nimellä Bamakon vanhaa paikallista hallintoyhteisöä kutsuttiin?",
+      "options": [
+        "Kafu",
+        "Emiraatti",
+        "Prefektuuri",
+        "Kalifaatti"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimitys kuuluu kaupungin paikalliseen historiaan ennen siirtomaahallintoa.",
+      "fact": "Kafu tarkoittaa tässä vanhaa paikallista hallintoyhteisöä.",
+      "source": "https://en.wikipedia.org/wiki/Bamako"
+    },
+    {
+      "q": "Mikä suku kuuluu Bamakon paikalliseen perustamisperinteeseen?",
+      "options": [
+        "Niaré",
+        "Keïta",
+        "Kanté",
+        "Traoré"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Paikallinen kaupunki oli olemassa jo ennen rautatietä.",
+      "fact": "Niaré-suvun historia liittyy myös vanhaan Niarélan kaupunginosaan.",
+      "source": "https://en.wikipedia.org/wiki/Bamako"
+    }
+  ],
+  "tiedot": [
+    "Bamako kasvoi aluksi Nigerin pohjoisrannalla ja ulottui myöhemmin myös etelään.",
+    "Nigerin rannalla on kalastuksen lisäksi pieniä viljelypalstoja ja veneiden vesillelaskupaikkoja.",
+    "Rautatie kuuluu Bamakon myöhempään kasvuun; paikallinen kaupunki oli sitä vanhempi."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": "",
+    "vuosi": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Bamako",
+      "johdanto": "Nigerin varrella kaupunki oli olemassa ennen rautatietä. Sen arkea ja historiaa voi lukea yhtä hyvin soittimista, toreilta kuin jokirannalta.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Esineessä säilyy muutakin kuin muoto",
+          "teksti": "Malin kansallismuseo Bamakossa kokoaa arkeologista ja etnografista aineistoa maan historiasta. Esillä on soittimia, vaatteita ja rituaaliesineitä sekä pysyviä ja vaihtuvia näyttelyitä. Tavara voi näin kertoa siitä, miten sitä on käytetty, ei vain miltä se näyttää. Museon kokoelmien aikajana on paljon nykyistä museotaloa pidempi: esineen ikä ja sitä ympäröivän rakennuksen ikä ovat eri asioita. Soittimen ja vaatteen kautta historia tulee lähelle tavallista elämää, ilman että koko maa näyttäisi yhdeltä samanlaiselta yhteisöltä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "National Museum of Mali"
+        },
+        {
+          "otsikko": "Kiskot saapuivat valmiiseen kaupunkiin",
+          "teksti": "Bamako ei syntynyt rautatietyömaana. Kaupunki oli olemassa ennen kuin yhteys Kayesin suuntaan ja myöhemmin Dakariin liitti sen uudenlaiseen liikenneverkkoon. Dakar–Niger-radan reitillä ovat myös Kati, Négala ja Kita. Rautatie kuuluu Bamakon 1900-luvun alun kasvuun ja hallintokeskuksen vahvistumiseen, mutta paikallinen kaupunki on sitä vanhempi. Radan nimi kertoo yhteyden suunnasta, ei tämän päivän lähtöajasta: vanha rautatiehistoria ja nykyinen matkustajaliikenne pitää erottaa toisistaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bamako"
+        },
+        {
+          "otsikko": "Torilta lähtee myös soitin",
+          "teksti": "Bamako-Couran käsityömarkkinoilla myydään hopeakoruja, nahkatöitä, soittimia ja puuesineitä. Ne kuuluvat kaupungin toriverkostoon siinä missä keskustan suuri tori ja pienemmät kauppapaikat. Marché Rose puolestaan kantaa siirtomaa-ajalta periytyvää nimeä ja historiaa, vaikka rakennus on palon jälkeen rakennettu uudelleen. Vanhan torin nimi ei siis lupaa vanhaa julkisivua. Bamakon kauppapaikoissa erilaiset tavarat kohtaavat saman asiakkaan: ostos voi liittyä pukeutumiseen, musiikkiin tai päivän työhön.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bamako"
+        },
+        {
+          "otsikko": "Sotrama yhdistää kaupunginosia",
+          "teksti": "Sotrama on Bamakon joukkoliikenteessä käytetty pakettiauto tai pikkubussi, ja monet ajoneuvoista ovat yksityisessä omistuksessa. Kaupunki ei pysähdy Nigerin pohjoisrantaan: siltojen kautta liitetään toisiinsa myös eteläpuolen kaupunginosia. Maantieyhteydet jatkuvat muun muassa Katiin, Koulikoroon ja Ségouhun. Jokikaan ei silti tarkoita yhtä keskeytymätöntä turistilaivareittiä. Lähteissä kauemmas jatkuvan jokiliikenteen lähtöpaikka on Koulikoro, joka on eri paikka kuin Bamakon kaupunkiranta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bamako"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Matkailu Maliin ei ole tällä hetkellä turvallista. Bamakon maisemaa ja kulttuuria voi silti ymmärtää Nigerjoen, vanhan kaupungin ja kokoelmien kautta. Joki erottaa ja yhdistää kaupunginosia. Pohjoisen kukkulat ja puutarhat näyttävät toisen puolen tasaisesta rantakaupungista. Vanhojen matkaoppaiden reittejä tai aukioloaikoja ei pidä tulkita nykyiseksi matkasuositukseksi.",
+        "artikkeli": {
+          "nimi": "Matkailijan Bamako",
+          "taitto": "opas",
+          "teksti": "Bamakon paikat kertovat joen, paikallisen kaupungin ja myöhemmän hallintokeskuksen suhteesta.",
+          "nosto": "Matkailu Maliin ei ole nyt turvallista; alla olevat paikkatiedot auttavat ymmärtämään kaupunkia ja erottamaan historian tämän päivän matkapäätöksestä.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Bamakon lentoasema on Modibo Keita International Airport, tunnus BKO; vanhemmissa lähteissä käytetään nimeä Bamako–Sénou. Kaupungin arkeen kuuluvat sotrama-pikkubussit ja joen ylittävät sillat. Rautatiehistoria johtaa Kayesin ja Dakarin suuntaan, mutta se ei vahvista nykyisiä junavuoroja. Matkailu Maliin ei ole tällä hetkellä turvallista, joten kulkutapojen esittely ei ole suositus toteuttaa matkaa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Joki ja pohjoinen reuna",
+              "teksti": "Bamakon ympäristöä hahmottaa Nigerin tasangon ja pohjoisen ylängön ero. Point G:n kukkulalta on näkymä kaupunkiin, ja alueen luolat ovat puutarhan ja eläintarhan yläpuolella. Luolamaalauksille ei anneta tuntematonta ikää tai tekijää. Puistojen ja luolien käytännön pääsyä ei tässä luvata; paikkatietoa ei pidä sekoittaa nykyiseksi turvalliseksi retkisuunnitelmaksi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Markkinat ja kokoelmat",
+              "teksti": "Bamako-Couran käsityömarkkinoiden valikoimaan kuuluu nahkatöitä, hopeakoruja, soittimia ja puuesineitä. Malin kansallismuseo puolestaan esittelee arkeologista ja etnografista aineistoa sekä vaihtuvia näyttelyitä. Tavaroiden päivittäinen käyttö ja niiden säilyminen kokoelmissa avaavat kaupungin kulttuuria eri suunnista. Museon nykyisiä näyttelyitä tai vierailujärjestelyjä ei päätellä vanhasta rakennushistoriasta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä kaupungissa syödään",
+              "teksti": "Bamakon ruokapaikkojen kuvauksissa toistuvat riisi ja maapähkinäkastike sekä grillattu kala. Katukioskeista kerrotaan myös papuruokia, paistettua banaania ja munia. Ruokalajin nimi ei yksin kerro annoksen kaikkia aineksia tai tämänhetkistä saatavuutta. Maan vanhoja vilja-, suola- tai maustetarinoita ei tarvita jokaisen aterian yhteyteen: tässä kiinnostavaa on jokikaupungin arkinen ruoka.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin ja millä varauksilla",
+              "teksti": "Bamakon ilmastossa erottuvat sateisemmat ja kuivemmat jaksot. Joen tasanko ja rantaan rakentaminen ovat kaupungin maantiedettä, eivät yhden päivän sääennuste. Matkailu Maliin ei nykyisessä turvallisuustilanteessa ole turvallista. Vanhojen opaskuvausten perusteella ei voi luvata kuljetuksia, luolaretkiä tai puistokäyntejä. Mahdollista matkapäätöstä varten tarvitaan aina ajantasaiset viranomaisohjeet.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Nigerin jokimaisema",
+                "tahdet": 3,
+                "selite": "Joki liittyy kaupungin maastoon, työhön ja kasvuun."
+              },
+              {
+                "mita": "Point G:n näkymä",
+                "tahdet": 2,
+                "selite": "Pohjoinen kukkula erottaa ylängön tasaisesta jokikaupungista."
+              },
+              {
+                "mita": "Puutarhan kasvit",
+                "tahdet": 2,
+                "selite": "Kasvitieteellinen puutarha esittelee Malille tyypillistä kasvillisuutta."
+              },
+              {
+                "mita": "Markkinoiden tavarat",
+                "tahdet": 2,
+                "selite": "Käyttöesineet, soittimet ja nahkatyöt tuovat kaupan lähelle arkea."
+              },
+              {
+                "mita": "Museon kokoelmat",
+                "tahdet": 2,
+                "selite": "Esineet avaavat Malin arkeologista ja etnografista historiaa."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Matkailu ei ole turvallista",
+                "teksti": "Maliin kohdistuu koko maata koskeva matkustusvaroitus; tämä ei ole tavallisen lomamatkan suositus."
+              },
+              {
+                "otsikko": "Rata ei ole aikataulu",
+                "teksti": "Vanha Dakar-yhteys ei vahvista nykyistä matkustajavuoroa."
+              },
+              {
+                "otsikko": "Pääsy ei ole lupaus",
+                "teksti": "Puistoihin ja luoliin ei luvata nykyistä pääsyä tai turvallista retkeä."
+              },
+              {
+                "otsikko": "Joen paikat ovat eri asioita",
+                "teksti": "Koulikoron jokiliikenne ja Bamakon kaupunkiranta eivät ole sama lähtöpaikka."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Joen ja kallioiden välissä",
+      "johdanto": "Bamakon tasainen jokimaa ja pohjoinen kallioinen reuna ovat eri ympäristöjä. Luonto kuuluu kaupunkiin myös viljelypalstoina, kalastuksena ja puutarhojen kasveina.",
+      "tehtava": {
+        "kysymys": "Mikä maaston ominaisuus tekee Bamakon jokirannan rakentamisesta hankalaa?",
+        "vaihtoehdot": [
+          "Tulvatasanko",
+          "Hiekkadyynit",
+          "Jäätikkölaakso",
+          "Koralliriutta"
+        ],
+        "oikea": 0,
+        "fakta": "Joen rantamaa kuuluu veden vaikutuksesta muuttuvaan tasankoon, joten rakentaminen joutuu ottamaan vesistön huomioon."
+      },
+      "nostot": [
+        {
+          "otsikko": "Jokitasanko ei ole tyhjä rakennusmaa",
+          "teksti": "Bamako sijaitsee Nigerjoen tulvatasangolla. Tasainen maa on osa kaupungin maisemaa, mutta joen ja sen sivuhaarojen läheisyys vaikeuttaa rantaan rakentamista. Kaupunki kasvoi aluksi pohjoisrannalla ja ulottui myöhemmin siltojen kautta etelään. Tasangon pohjoispuolella maasto vaihtuu kohoavaksi kallioiseksi reunaksi. Saman kaupungin sisällä voi siten olla hyvin erilaisia maaston ehtoja: joen vieressä olennaista on veden paikka, pohjoisessa maaston nousu. Nigerin kaukainen sisämaan suisto on silti eri ympäristö kuin Bamako.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bamako"
+        },
+        {
+          "otsikko": "Point G avaa näkymän alaspäin",
+          "teksti": "Point G:n kukkula kohoaa Bamakon yläpuolelle, ja sieltä avautuu näkymä kaupunkiin. Sen ympäristö kuuluu pohjoiseen ylänköreunaan, joka erottuu Nigerin tasaisesta jokimaasta. Alueen luolat ovat kasvitieteellisen puutarhan ja eläintarhan yläpuolella. Lähteet mainitsevat myös kalliomaalauksia, mutta niiden ikää tai tekijöitä ei tässä tunneta. Luolan olemassaolo ja sen seinän kuva ovat eri havaintoja. Kukkulan maisemasta voi kertoa tekemättä maalaukselle omaa alkuperätarinaa tai olettamatta reittiä avoimeksi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bamako"
+        },
+        {
+          "otsikko": "Puutarhassa katsotaan lähelle",
+          "teksti": "Bamakon kasvitieteellinen puutarha sijaitsee kansallismuseon lähellä ja eläintarhan vieressä. Siellä esitellään Malille tyypillisiä kasveja osana laajempaa vihreää puistoaluetta. Polut tuovat kasvillisuuden lähelle kulkijaa, kun taas puutarhan yläpuolella pohjoinen ylänköreuna nostaa näkymän koko kaupungin mittakaavaan. Puutarha ja ympäröivä maasto näyttävät näin luonnon eri kokoisina: yhtäällä huomio kiinnittyy yksittäiseen kasviin, toisaalla kaupungin ja kallioiden suhteeseen. Yhden puun lajia ei silti arvata sen kuvasta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bamako"
+        },
+        {
+          "otsikko": "Niger on myös työpaikka",
+          "teksti": "Nigerissä harjoitetaan kaupallista kalastusta Bamakon kohdalla. Joen varressa on pieniä viljelypalstoja ja veneiden vesillelaskupaikkoja, joten rantamaisema kuuluu myös kaupungin työhön ja ruokaan. Paikallisista ruokapaikoista kerrotaan grillattua kalaa ja capitaine-nimellä tarjottua jokikalaa. Joen koko valuma-alueella kalastus ja viljely ovat tärkeitä elinkeinoja, mutta kaukaisen jokisuiston arkea ei pidä siirtää Bamakon rannalle. Kaupunkijoki on yhtä aikaa maisema, kulkemisen ympäristö ja elannon lähde.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Bamako"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": null,
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Modibo Keita International Airport (BKO)",
+    "huomiot": [
+      "Omistajan 12.10.2026 ohjaama C ennen erillisen kuvaputken valmistumista. Kuvat ovat avoimia kenttiä, eivät valintoja.",
+      "Kirjoitusluonnos ei ole kuva-, kartta-, D/E/F- tai julkaisuhyväksyntä.",
+      "A:n kaksi luontopistettä ovat vain Wikivoyagen tutkimuskoordinaatteja. Hyväksyttyjä oman WP/WD:n vapaita karttakohteita ei ole: kohdekartta:null ja nahtavyydet:{}; ei pistearvausta tai suojatun museon/katedraalin korviketta. Kartan lähdeportti ja kaikki kuvaroolit ovat avoimia.",
+      "Saatiedot:null: valmista 48/48 alkuperäistä asema-/kausivarmennusta ei ole käytettävissä. Auditointi erilliseen jonoon; saa.json ennallaan."
+    ]
+  }
+}
