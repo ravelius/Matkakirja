@@ -82,8 +82,10 @@ export function oktaKoodi([x, y, z]) {
  * @param {Array<[number, number, number]>} p.pisteet [u 0…1, v 0…1 (0 = etelä), korkeus m]
  * @param {Array<[number, number, number]>} p.kolmiot pisteindeksit, vastapäivään ylhäältä
  * @param {boolean} [p.normaalit] laajennus 1
+ * @param {Array<[number, number, number]>} [p.pisteNormaalit] ECEF-yksikkönormaali jokaiselle pisteelle (pisteet-järjestyksessä);
+ *   ilman sitä normaali lasketaan laatan omista kolmioista (laattarajalle jää varjostussauma).
  */
-export function koodaaLaatta({ alue, pisteet, kolmiot, normaalit = true }) {
+export function koodaaLaatta({ alue, pisteet, kolmiot, normaalit = true, pisteNormaalit = null }) {
   // PISTEET ENSIESIINTYMISJÄRJESTYKSEEN (high water mark vaatii sen).
   const uusi = new Int32Array(pisteet.length).fill(-1);
   const jarjestys = [];
@@ -136,8 +138,8 @@ export function koodaaLaatta({ alue, pisteet, kolmiot, normaalit = true }) {
   reuna((k) => k[1] === 32767);
 
   if (normaalit) {
-    const nn = xyz.map(() => [0, 0, 0]);
-    for (const [a, c, e] of kolmiotUusi) {
+    const nn = pisteNormaalit ? jarjestys.map((i) => [...pisteNormaalit[i]]) : xyz.map(() => [0, 0, 0]);
+    if (!pisteNormaalit) for (const [a, c, e] of kolmiotUusi) {
       const A = xyz[a]; const B = xyz[c]; const C = xyz[e];
       const ux = B[0] - A[0]; const uy = B[1] - A[1]; const uz = B[2] - A[2];
       const vx = C[0] - A[0]; const vy = C[1] - A[1]; const vz = C[2] - A[2];

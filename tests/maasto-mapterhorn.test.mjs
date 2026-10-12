@@ -91,3 +91,38 @@ test('teeLaatta: ruudukko 513 (z12 tasan näyttein) ei kaadu pinon ylitykseen', 
   const l = teeLaatta(dem, 12, 4256, 3461, 513);
   assert.ok(l.pisteita > 4 && l.hMax > 800 && l.hMax <= 1500);
 });
+
+test('ruudukonNormaalit: vierekkäisten laattojen rajalla sama normaali (LS2:n Lauterbrunnenin varjostussauma)', async () => {
+  const { ruudukonNormaalit, laatanAlue } = await import('../tools/maasto/tee-maasto.mjs');
+  const dem = { korkeus: (lon, lat) => 1500 + 900 * Math.sin(lon * 600) + 500 * Math.cos(lat * 450) };
+  const n = 65;
+  const normaalit = (x) => {
+    const a = laatanAlue(14, x, 12456); const vali = (a.east - a.west) / (n - 1);
+    const h = new Float32Array(n * n);
+    for (let j = 0; j < n; j += 1) for (let i = 0; i < n; i += 1) h[j * n + i] = dem.korkeus(a.west + i * vali, a.north - j * vali);
+    return ruudukonNormaalit(dem, a, n, vali, h);
+  };
+  const A = normaalit(17100); const B = normaalit(17101);
+  for (let j = 0; j < n; j += 1) {
+    const p = A[j * n + n - 1]; const q = B[j * n];
+    assert.ok(Math.hypot(p[0] - q[0], p[1] - q[1], p[2] - q[2]) < 1e-3, `rivi ${j}`);
+  }
+  // Tasainen maa: normaali = ylöspäin (ellipsoidin normaali).
+  const tasainen = { korkeus: () => 100 };
+  const a = laatanAlue(14, 17100, 12456); const vali = (a.east - a.west) / (n - 1);
+  const N = ruudukonNormaalit(tasainen, a, n, vali, new Float32Array(n * n).fill(100))[0];
+  const lat = a.north * Math.PI / 180; const lon = a.west * Math.PI / 180;
+  const U = [Math.cos(lat) * Math.cos(lon), Math.cos(lat) * Math.sin(lon), Math.sin(lat)];
+  assert.ok(Math.hypot(N[0] - U[0], N[1] - U[1], N[2] - U[2]) < 1e-9);
+});
+
+test('koodaaLaatta: pisteNormaalit kirjoitetaan sellaisenaan (oktaedrikoodattuna)', async () => {
+  const { koodaaLaatta, oktaKoodi } = await import('../tools/maasto/quantized-mesh.mjs');
+  const alue = { west: 7, south: 46, east: 7.01, north: 46.01 };
+  const pisteet = [[0, 0, 100], [1, 0, 120], [1, 1, 140], [0, 1, 110]];
+  const kolmiot = [[0, 1, 2], [0, 2, 3]];
+  const v = [0.6, 0, 0.8];
+  const b = koodaaLaatta({ alue, pisteet, kolmiot, pisteNormaalit: pisteet.map(() => v) });
+  const [x, y] = oktaKoodi(v);
+  for (let i = 0; i < 4; i += 1) { assert.equal(b[b.length - 8 + 2 * i], x); assert.equal(b[b.length - 7 + 2 * i], y); }
+});

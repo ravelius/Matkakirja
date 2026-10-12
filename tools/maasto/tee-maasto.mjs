@@ -8,7 +8,7 @@
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n]
  *        [--maailma 6] [--vain-maa-alkaen 7] [--glo30-kynnys 0.001]
  *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>] [--laatat <lista>]
- *        [--naytetaso 15]
+ *        [--naytetaso 15] [--dem-normaalit]
  *
  * TASAN NÄYTTEET (Karttaseppä 12.10.2026, LS2:n vuoristopilotti 3): `--naytetaso Z` näytteistää
  * jokaisen tason z < Z samalla välillä kuin taso Z (ruudukko (n−1)·2^(Z−z)+1, esim. z13 257, z14 129,
@@ -255,7 +255,34 @@ export function ruudukkoTasolle(n, z, naytetaso = null) {
   return (n - 1) * 2 ** (naytetaso - z) + 1;
 }
 
-export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5) {
+/*
+ * NORMAALIT KORKEUSMALLISTA (Karttaseppä 12.10.2026, LS2:n vuoristopilotti, Lauterbrunnenin sauma):
+ * kolmioista laskettu normaali on laattarajalla yksipuolinen, ja naapurilaatan normaali on eri, joten
+ * rajalle tulee varjostussauma. Tässä normaali lasketaan näyteruudukon keskeisdifferensseistä yhden
+ * näytteen reunuksella laatan ulkopuolelta, jolloin vierekkäiset laatat saavat rajalla saman normaalin.
+ */
+export function ruudukonNormaalit(dem, a, n, vali, h) {
+  const reunus = (i, j) => (i >= 0 && i < n && j >= 0 && j < n ? h[j * n + i] : dem.korkeus(a.west + i * vali, a.north - j * vali, vali));
+  const r = Math.PI / 180; const R = 6371008.8; const dN = vali * r * R;
+  const out = new Array(n * n);
+  for (let j = 0; j < n; j += 1) {
+    const lat = (a.north - j * vali) * r; const sf = Math.sin(lat); const cf = Math.cos(lat); const dE = dN * cf;
+    for (let i = 0; i < n; i += 1) {
+      const lon = (a.west + i * vali) * r; const sl = Math.sin(lon); const cl = Math.cos(lon);
+      const gE = (reunus(i + 1, j) - reunus(i - 1, j)) / (2 * dE);
+      const gN = (reunus(i, j - 1) - reunus(i, j + 1)) / (2 * dN);
+      // ENU (−gE, −gN, 1) → ECEF
+      const ex = -gE * -sl + -gN * -sf * cl + cf * cl;
+      const ey = -gE * cl + -gN * -sf * sl + cf * sl;
+      const ez = -gN * cf + sf;
+      const l = Math.hypot(ex, ey, ez);
+      out[j * n + i] = [ex / l, ey / l, ez / l];
+    }
+  }
+  return out;
+}
+
+export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5, { demNormaalit = false } = {}) {
   const a = laatanAlue(z, x, y);
   const vali = (a.east - a.west) / (n - 1);
   const h = new Float32Array(n * n);
@@ -274,7 +301,8 @@ export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5) {
     const [ax, ay] = P[p]; const [bx, by] = P[q]; const [cx, cy] = P[r];
     return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax) >= 0 ? [p, q, r] : [p, r, q];
   });
-  const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T });
+  const G = demNormaalit ? ruudukonNormaalit(dem, a, n, vali, h) : null;
+  const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T, pisteNormaalit: G && pisteet.map(([i, j]) => G[j * n + i]) });
   return { tavut: gzipSync(raaka, { level: 9 }), pisteita: P.length, kolmioita: T.length, hMax: h.reduce((m, v) => (v > m ? v : m), -Infinity) };
 }
 
@@ -475,6 +503,7 @@ export function lueAsetukset(argv) {
     laatat: arvo('laatat'),
     virhekerroin: Number(arvo('virhekerroin', 0.5)),
     naytetaso: arvo('naytetaso') === undefined ? null : Number(arvo('naytetaso')),
+    demNormaalit: argv.includes('--dem-normaalit'),
     vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
@@ -516,7 +545,7 @@ export async function aja(argv, loki = console.log) {
   const a = lueAsetukset(argv);
   const { tasot, alue, n, osa, osia, versio, maailma, vainMaaAlkaen, kynnys } = a;
   if ((!a.demKansio && !a.dem90Kansio) || (!a.ulos && !a.lista)) {
-    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--naytetaso 15] [--luettelo | --lista]');
+    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--naytetaso 15] [--dem-normaalit] [--luettelo | --lista]');
   }
   const { dem, maininta } = avaaLahteet(a);
   const lista = a.laatat ? lueLaattalista(readFileSync(a.laatat, 'utf8')) : null;
@@ -565,7 +594,7 @@ export async function aja(argv, loki = console.log) {
     const kansiot = new Set();
     for (const [x, y] of lista ? listanLaatatJarjestyksessa(lista.get(s.z) ?? [], s.z, osa, osia) : tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
       if (!kansiot.has(x)) { mkdirSync(join(a.ulos, String(s.z), String(x)), { recursive: true }); kansiot.add(x); }
-      const l = teeLaatta(dem, s.z, x, y, ruudukkoTasolle(n, s.z, a.naytetaso), a.virhekerroin);
+      const l = teeLaatta(dem, s.z, x, y, ruudukkoTasolle(n, s.z, a.naytetaso), a.virhekerroin, { demNormaalit: a.demNormaalit });
       writeFileSync(join(a.ulos, String(s.z), String(x), `${y}.terrain`), l.tavut);
       laattoja += 1; tasolla += 1; tavuja += l.tavut.length; kolmioita += l.kolmioita;
     }
