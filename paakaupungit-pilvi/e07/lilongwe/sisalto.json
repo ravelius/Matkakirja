@@ -1,0 +1,382 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "lilongwe",
+  "maa": "MWI",
+  "era": "e07",
+  "kaupunki": {
+    "id": "lilongwe",
+    "name": "Lilongwe",
+    "wiki": "Lilongwe",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": -13.9864,
+      "lon": 33.7681
+    }
+  },
+  "artikkeli": {
+    "intro": "Lilongwe on Malawin pääkaupunki **Lilongwe-joen varrella**, maan Central Regionissa. Sen kartalla kaupunginosan nimi voi olla Area ja numero. Vanha kaupallinen Old Town ja myöhemmin rakennettu City Centre ovat eri kaupunkikeskuksia, joissa asioidaan eri syistä. Toinen kokoaa kaupankäyntiä ja liikkumista, toinen hallintoa, toimistoja ja hotelleja.\n\nNykyisen taajaman kehitys alkoi 1900-luvun alussa, ja pääkaupunkivaihe tuli 1970-luvulla. Isoisän matkavuonna 1873 myöhempää suunniteltua hallintokeskustaa tai nykyistä luontokeskusta ei ollut. Kaupungin metsäalueella **Lingadzi-joki** tarjoaa oman luonnonympäristönsä: sama kaupunki sisältää metsää, luonnonvaraisia eläimiä ja erillisen, yleisöltä suljetun kuntoutusalueen. Ruokapöydässä nsima on muutakin kuin maissijauhosta tehty annos, sillä sen kulinaariseen perinteeseen kuuluvat myös maissin käsittely, lisukkeiden valinta ja yhteinen ateria.",
+    "teksti": "Old Town ja City Centre kuvaavat Lilongwen eri kasvuvaiheita. Vanha kaupallinen ydin liittyy tavaroiden ja ihmisten liikkumiseen; myöhempi pääkaupunkikeskus hallinnon ja toimistojen alueisiin. Area-numerot ovat osa kaupunginosien nimeämistä, mutta yhden numeron tunteminen ei vielä anna tarkkaa katuosoitetta.\n\nLilongwe toimii myös ympäröivän maatalousalueen tuotteiden markkinapaikkana. Kaupassa kohtaavat ruokaa ostavat asukkaat, raaka-aineiden käsittely ja kuljetus. Torikaupunki ei siten tarkoita vain yhtä hallia tai yksittäistä myyntipaikkaa.\n\nLilongwe Wildlife Centren metsäalue sijaitsee vanhan ja uuden keskustan välissä. Siellä kulkeva Lingadzi on eri joki kuin kaupungin nimen antanut Lilongwe-joki. Julkisessa metsässä voi tutustua luonnonympäristöön, mutta eläinkuntoutuksen sanctuary on suljettu yleisöltä eläinten villin käyttäytymisen säilyttämiseksi."
+  },
+  "kysymykset": [
+    {
+      "q": "Millä tavalla Lilongwen kaupunginosia nimetään?",
+      "options": [
+        "Area-sanalla ja numerolla",
+        "Alueen perustaneen suvun nimellä",
+        "Lähimmän vesiputouksen nimellä",
+        "Kirkon latinankielisellä nimellä"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kartalla alueen nimi voi olla hyvin lyhyt tunniste.",
+      "fact": "Lilongwen kaupunginosista käytetään Area-numeroita.",
+      "source": "https://en.wikipedia.org/wiki/Lilongwe"
+    },
+    {
+      "q": "Mistä Malawin nsima tavallisesti valmistetaan?",
+      "options": [
+        "Maissijauhosta",
+        "Riisijauhosta",
+        "Vehnäjauhosta",
+        "Hirssijauhosta"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Raaka-aine kuuluu maan viljely- ja varastointiperinteeseen.",
+      "fact": "Nsima valmistetaan maissijauhosta ja tarjoillaan lisukkeiden kanssa.",
+      "source": "https://en.wikipedia.org/wiki/Malawian_cuisine"
+    },
+    {
+      "q": "Miksi eläinkuntoutuksen sanctuary on yleisöltä suljettu?",
+      "options": [
+        "Villin käyttäytymisen säilyttämiseksi",
+        "Eläinten ihmiskontaktin lisäämiseksi",
+        "Kaikkien eläinten kesyttämiseksi",
+        "Eläinten esiintymistaitojen opettamiseksi"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Ihmiskontaktin rajoittaminen kuuluu kuntoutuksen tavoitteisiin.",
+      "fact": "Kuntoutuseläimille halutaan säilyttää villi käyttäytyminen.",
+      "source": "https://lilongwewildlife.org/visit/"
+    },
+    {
+      "q": "Mitä vervet-apinat poistavat toistensa turkista?",
+      "options": [
+        "Likaa ja loisia",
+        "Kaikki pitkät karvat",
+        "Hedelmien siemeniä",
+        "Puunkuoren suikaleita"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Toiminta on osa toisen eläimen turkista huolehtimista.",
+      "fact": "Turkinhoidossa poistetaan likaa ja loisia.",
+      "source": "https://en.wikipedia.org/wiki/Vervet_monkey"
+    },
+    {
+      "q": "Mikä muodostaa metsän canopyksi kutsutun elinympäristön?",
+      "options": [
+        "Puiden ylimmät latvukset",
+        "Rantavyöhykkeen kasvien juuret",
+        "Puiden runkojen tyviosat",
+        "Metsän maanalainen sienistö"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Ajattele metsän ylimpänä olevaa elinympäristöä.",
+      "fact": "Canopy on puiden latvusten muodostama metsän ylempi kerros.",
+      "source": "https://en.wikipedia.org/wiki/Canopy_(biology)"
+    }
+  ],
+  "tiedot": [
+    "Lilongwen metsäalueella elää luonnonvaraisia eläimiä samalla kun erillinen kuntoutusosa on yleisöltä suljettu.",
+    "Nsima voi tarkoittaa sekä ruokalajia että Malawin laajempaa kulinaarista perinnettä.",
+    "Lilongwen Old Town ja City Centre ovat eri kasvuvaiheiden kaupunkikeskuksia."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Lilongwe",
+      "johdanto": "Numeroidut kaupunginosat, torikauppa ja metsä vanhan sekä uuden keskustan välissä avaavat Lilongwen arkea.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Osoitteessa voi olla Area",
+          "teksti": "Lilongwen kaupunginosia nimetään Area-numeroilla. Numeron rinnalle tarvitaan silti paikan todellinen osoite, sillä kaupungissa on erilaisia keskuksia ja sektoreita. Old Town on vanhempi kaupankäynnin ja liikkumisen ydin, City Centre ja Capital Hill puolestaan liittyvät myöhempiin hallinnon, toimistojen ja hotellien alueisiin. Kaupungin suunnittelun sektorit eivät ole kasvaneet keskenään samalla tavalla. Lilongwen keskusta voi siis tarkoittaa eri toimintoja ja eri paikkoja sen mukaan, mitä kaupungissa etsii.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Lilongwe"
+        },
+        {
+          "otsikko": "Nsima alkaa jo pellolla",
+          "teksti": "Nsima on maissijauhosta valmistettu paksu ruoka, mutta Malawin kulinaarinen perinne alkaa paljon ennen tarjoilua. Siihen kuuluvat viljely, varastointi ja maissin käsittely sekä jauhamisen, lisukkeiden valinnan ja tarjoilun taidot. Lihan, papujen ja vihannesten kaltaiset lisukkeet täydentävät ateriaa. Yhteinen syöminen ja taitojen siirtyminen ovat osa samaa kokonaisuutta. Nsima voi siksi nimetä sekä lautasella olevan ruoan että pitkän käytännön ketjun, joka yhdistää pellon, keittiön ja ruokapöydän.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Malawian cuisine"
+        },
+        {
+          "otsikko": "Torikaupunki ulottuu pelloille",
+          "teksti": "Lilongween tulee viljelytuotteita ja eläimiä ympäröiviltä maatalousalueilta. Kaupungin markkinarooli sisältää asukkaiden ruokaostoksia, raaka-aineiden jatkokäsittelyä ja kuljetuksia. Old Town on vanhempi kaupallinen ydin, mutta kaikki kaupankäynti ei ole samaa toria. Kunnallisten toripaikkojen myyntipaikkamaksuja on kirjattu sähköisesti 2020-luvulla. Kaupankäynti yhdistää näin kaupungin palvelut sen ulkopuolella tehtyyn työhön: ruoka tulee torille jostakin ja voi jatkaa sieltä uuteen käsittelyvaiheeseen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Lilongwe"
+        },
+        {
+          "otsikko": "Suljettu ovi auttaa villiä eläintä",
+          "teksti": "Lilongwe Wildlife Centre kuntouttaa avun tarpeessa olevia villieläimiä. Tavoitteena on mahdollisuuksien mukaan hallittu palautuminen suojelluille alueille. Eläimille halutaan säilyttää villi käyttäytyminen, ja siksi ihmiskontaktia rajoitetaan: sanctuary eli kuntoutusalue on yleisöltä suljettu. Julkinen metsä- ja vierailualue on eri osa, jossa elää myös luonnonvaraisia eläimiä. Vierailija voi siis tutustua metsään ilman eläinhoitolan kierrosta. Sulku kuuluu tässä itse kuntoutuksen tarkoitukseen.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Lilongwe Wildlife Centre"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Lilongwen vanha ja uusi keskusta ovat erillisiä kaupunkialueita. Niiden välissä sijaitsevassa Wildlife Centren julkisessa metsässä voi tutustua luonnonympäristöön. Eläinkuntoutusalue on yleisöltä suljettu. Liikennejärjestelyissä käytetään luotettavia palveluja, ja pimeällä sekä yksin liikkumista vältetään. Kamuzun kansainvälinen lentoasema on kaupungin pohjoispuolella, erillään vanhasta keskustasta.",
+        "artikkeli": {
+          "nimi": "Matkailijan Lilongwe",
+          "taitto": "opas",
+          "teksti": "Yhdistä Old Townin kauppa-arki, nsima-perinne ja julkisen metsän luonto.",
+          "nosto": "Metsäkierros ja eläinkuntoutus ovat eri asioita; vanhan ja uuden keskustan sijainnit auttavat suunnittelussa.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Kamuzun kansainvälisen lentoaseman koodi on LLW. Kenttä sijaitsee kaupungin pohjoispuolella ja on erillinen paikka keskustasta. Matkustamiseen valitaan luotettava järjestely; vasemmanpuoleinen liikenne ja pimeällä liikkumisen välttäminen huomioidaan.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Vanha ja uusi keskusta",
+              "teksti": "Old Town on kaupungin vanhempi kaupallinen ydin, City Centre ja Capital Hill myöhempi hallinnon sekä toimistojen alue. Area-numero ei yksin kerro tarkkaa katuosoitetta tai kulkureittiä. Kierrokseen valitaan paikan todellinen osoite, ei pelkkä laajan kaupunginosan nimi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Nsima ja torikauppa",
+              "teksti": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Julkinen metsäalue",
+              "teksti": "Wildlife Centren metsäalue ja sen Lingadzi-joki ovat eri asia kuin eläinten suljettu sanctuary. Julkisilla reiteillä eläimille annetaan tilaa eikä niitä ruokita. Kielletyille alueille ei mennä. Pääsy- ja käyntijärjestelyt varmistetaan ylläpitäjältä ennen retkeä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ennen kaupunkikierrosta",
+              "teksti": "Lilongwessa noudatetaan tavanomaista varovaisuutta, ja liikennejärjestelyihin kiinnitetään huomiota. Pimeällä ja yksin liikkumista vältetään. Maahantulo- sekä muut matkan ehdot tarkistetaan ennen lähtöä; lentoasema- ja viranomaiskohteiden kuvausrajoitukset selvitetään erikseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Old Townin kauppa-arki",
+                "tahdet": 3,
+                "selite": "Vanha keskusta yhdistää torikaupan ja liikkumisen."
+              },
+              {
+                "mita": "Kaupunginosien eri kerrokset",
+                "tahdet": 2,
+                "selite": "Old Town ja City Centre kertovat eri kasvuvaiheista."
+              },
+              {
+                "mita": "Nsima-perinne",
+                "tahdet": 3,
+                "selite": "Ateria avaa maissin käsittelyn ja yhteisen syömisen taitoja."
+              },
+              {
+                "mita": "Julkinen metsäpolku",
+                "tahdet": 3,
+                "selite": "Ylläpitäjän ehdoin tehty kierros tutustuttaa metsään."
+              },
+              {
+                "mita": "Metsän luonnon tarkkailu",
+                "tahdet": 2,
+                "selite": "Puut ja linnut tarjoavat havaintoja ilman eläinkontaktia."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Liikenne",
+                "teksti": "Vasemmanpuoleinen liikenne ja luotettavat kuljetukset huomioidaan."
+              },
+              {
+                "otsikko": "Kuntoutusalue on suljettu",
+                "teksti": "Julkinen metsä ja eläinhoitola ovat eri käyntirooleja."
+              },
+              {
+                "otsikko": "Jokien nimet",
+                "teksti": "Metsässä kulkee Lingadzi, kaupungin nimi tulee Lilongwe-joesta."
+              },
+              {
+                "otsikko": "Lentoasema on erillinen paikka",
+                "teksti": "LLW sijaitsee kaupungin pohjoispuolella."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Metsä kaupungin keskellä",
+      "johdanto": "Lingadzin metsän puiden hedelmät, apinoiden toiminta ja lintujen pesät paljastavat elämää eri korkeuksilla.",
+      "tehtava": {
+        "kysymys": "Mikä sulkee hamerkopin risupesän yläpuolelta?",
+        "vaihtoehdot": [
+          "Kupolimainen katto",
+          "Avoin oksarengas",
+          "Puusta riippuva lehtiverho",
+          "Kallion luonnollinen holvi"
+        ],
+        "oikea": 0,
+        "fakta": "Tämän linnun pesä on katollinen rakennelma, jonka rakentamiseen osallistuu koko pari."
+      },
+      "nostot": [
+        {
+          "otsikko": "Puulla on siivet hedelmässä",
+          "teksti": "Lilongwe Wildlife Centren metsää kuvataan Acacia- ja Combretum-puiden ympäristöksi. Paikallinen vierailuopas tunnistaa Combretum molle -lajin, jonka englanninkielinen nimi on velvet bushwillow. Sen hedelmässä on siipimäisiä osia, joten puuta voi tarkastella myös hedelmän muodon kautta. Laji kasvaa laajasti länsi-, itä- ja eteläisessä Afrikassa; se ei ole vain Lilongwen oma puu. Se toimii myös eräiden perhosten toukkien ravintokasvina. Yhden puun ympärille liittyy siten muutakin elämää kuin sen omat lehdet.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Combretum molle"
+        },
+        {
+          "otsikko": "Apinaryhmä pitää turkista huolta",
+          "teksti": "Metsässä elää luonnonvaraisia vervet-apinoiden ryhmiä, erillään kuntoutuksessa olevista eläimistä. Ne liikkuvat päivällä ja nukkuvat puissa yöllä. Toistensa turkkia hoitaessaan apinat poistavat likaa ja loisia. Lajilla on myös erilaisia varoitusääniä eri tilanteita varten. Ravintoon kuuluu lehtiä, hedelmiä ja siemeniä, mutta se ei rajoitu pelkkiin kasveihin. Metsän vierailija antaa eläimille tilaa eikä ruoki niitä: luonnonvaraisen ryhmän arkea ei tarvitse muuttaa ihmisen kohtaamiseksi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Vervet monkey"
+        },
+        {
+          "otsikko": "Lintu rakentaa pesälle katon",
+          "teksti": "Lingadzi-joen linnustossa esiintyvä hamerkop on ruskea vesilintu. Se etsii ravintoa matalasta vedestä ja syö muun muassa kaloja sekä sammakkoeläimiä. Sen pesä on suuri risurakennelma, jossa on kupolimainen katto, ja molemmat parin linnut osallistuvat rakentamiseen. Pesä ei siis ole vain avoin kuppi oksien välissä. Lajia koskevissa kuvauksissa myös muut eläimet voivat käyttää sen pesiä. Metsässä katollinen risurakenne on kiinnostava havainto, vaikka sen rakentajaa ei näkisi joka käynnillä.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Hamerkop"
+        },
+        {
+          "otsikko": "Metsän ylin kerros on elintila",
+          "teksti": "Puulatvukset muodostavat metsän ylemmän kerroksen. Niissä elää lintuja, hyönteisiä ja muita eliöitä, samalla kun puut varjostavat alempia kasvustoja. Lilongwen metsäalueen vierailuopas esittelee tätä kerrosta havainnollistavan latvuspolun, jossa on käytetty myös kierrätettyä muovia. Ympäristökasvatus nostaa näin huomion maan pinnalta ylöspäin. Metsä ei ole vain runkojen välinen tila: latvuksessa on oma elinympäristönsä, jota voi tarkastella erillään suljetun eläinkuntoutusalueen toiminnasta.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Canopy (biology)"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Lilongwe Wildlife Centren julkinen metsä sijaitsee vanhan ja uuden keskustan välissä. Lingadzi-joki ja puusto muodostavat sen luonnonympäristön.",
+    "rajat": {
+      "pohjoinen": -13.96921,
+      "etela": -13.97521,
+      "lansi": 33.78077,
+      "ita": 33.78695
+    },
+    "kohteet": [
+      {
+        "nimi": "Lilongwe Wildlife Centren metsäalue",
+        "lat": -13.97221,
+        "lon": 33.78386,
+        "tyyppi": "luonto"
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Lilongwe Wildlife Centren metsäalue": {
+      "aika": "Nykyinen vierailu- ja kuntoutuskeskus 2000-luvulla",
+      "teksti": "Lilongwe Wildlife Centren metsäalue sijaitsee Old Townin ja City Centren välissä. Vierailualueelle tullaan Kenyatta Roadin kautta. Acacia- ja Combretum-puiden ympäristön läpi kulkee Lingadzi-joki. Metsässä on luonnonvaraisia vervet-apinoita, ja jokialueen linnustoon kuuluvat myös hamerkopit.\n\nJulkinen metsä ja yleisöltä suljettu eläinkuntoutusalue ovat eri osia. Kuntoutuksessa ihmiskontaktia rajoitetaan villin käyttäytymisen säilyttämiseksi; metsäalueen tehtäviin taas kuuluvat luontokävelyt ja ympäristökasvatus. Isoisän matkavuonna 1873 nykyistä keskusta ei ollut. Metsäkierroksen pääsyjärjestelyt varmistetaan ylläpitäjältä.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Kamuzu International Airport (LLW)",
+    "huomiot": [
+      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Eläinsanctuaryn sulku nykyiseltä ylläpitäjältä, ei vanhaa eläintarhakierroslupausta.",
+      "Kartta partial 1: A:ssa hyväksytty Wildlife Centren metsäalue. A:n täysi ydinkarttarajaus avoin; yhden kohteen laskennallinen rajat-laatikko vain tämän paikan ympärille, ei väite valmiista 6–8-kohteen kartasta.",
+      "Civo, Maula, tori ja hallintorakennukset pois historian/tekijöiden/pisteiden aukkojen vuoksi; Lilongwe-joen kaukaista suupistettä ei käytetty.",
+      "Kuvaputki avoin, kaikki kuvakentät tyhjiä. Nykyisiä eläinveistoksia tai latvuspolun suunnitteluteoksia ei ole hyväksytty luontokuviksi.",
+      "Sää null: A:ssa 1991–2020-otsikon ja 1961–1990-sadetaustan ristiriita. Ei käsin lukuja tai sään luonnehdintaa.",
+      "Kuntoutusalueen sulkukysymyksen source on nykyinen alkuperäinen ylläpitäjä P1; paikallinen tarkistin varoittaa Wikipedia-linkin puuttumisesta. WP S4 lisätaustana lahdesidoksissa; source-listan WP-osoite aiheutti alkuperäisessä tarkistimessa virheellisen metatekstilipun. Tarkistinta ei muutettu."
+    ]
+  }
+}

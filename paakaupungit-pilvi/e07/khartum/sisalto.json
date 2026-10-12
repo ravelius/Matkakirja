@@ -1,0 +1,422 @@
+{
+  "artikkeli": {
+    "intro": "Khartum on Sudanin pääkaupunki **Valkoisen ja Sinisen Niilin kohtaamisalueella**. Sen nimi voi tarkoittaa varsinaista kaupunkia tai yhteistä seutua Omdurmanin ja Bahrin kanssa. Joet erottavat nämä osat toisistaan, ja siltayhteydet ovat yhdistäneet niitä eri aikoina. Moderni Khartum syntyi 1800-luvun alussa hallinnon ja kaupan paikaksi. Sen synty ei kuitenkaan aloittanut koko seudun historiaa: Tutin saarella oli vanhempi kylä.\n\nIsoisän matkavuonna 1873 Khartum oli jo olemassa, mutta moni nykyään tunnettu laitos tuli myöhemmin. **Gordon Memorial College** kuului vasta 1900-luvun alun kaupunkiin ja kehittyi myöhemmin yliopiston edeltäjäksi. Tutin viljely, keskustan tuoteryhmittäiset markkinat ja kasvitieteelliset kokoelmat kertovat seudun erilaisista tehtävistä. Kansallismuseon muinaiset rakennukset puolestaan muistuttavat, että vanha rakennus voi saada paljon myöhemmin uuden sijainnin.",
+    "teksti": "Khartumin kaupunkiseudulla yksi nimi voi tarkoittaa eri laajuuksia. Varsinainen Khartum, Omdurman ja Bahri sijoittuvat jokien eri puolille. Khartumin keskustaa suunniteltiin uudelleen 1800-luvun lopulla, kun taas Bahrin kehitykseen liittyivät telakka ja rautatie.\n\nTuti on kaupunkien välissä oleva saari, jonka dokumentoitu historia yhdistää vanhan kylän ja viljelyn. Sitruspuut, vihannekset ja kasvitarhat kuuluivat saaren aiempaan maisemaan. Nykyistä toimintaa ei voi päätellä siitä, millainen saari oli vanhoissa kuvauksissa.\n\nCollegen, kasvitieteellisen puutarhan ja museoiden historia lisää kaupunkiin myöhempiä kerroksia. Nubian muinaiset temppelit siirrettiin museon puutarhaan alkuperäisiltä paikoiltaan. Rakennuksen ikä, laitoksen alku ja nykyisen sijainnin historia voivat näin olla kolme eri asiaa."
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Khartum",
+      "johdanto": "Joet erottavat Khartumin, Omdurmanin ja Bahrin, mutta niiden historia kuuluu samaan kaupunkiseutuun.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Yksi nimi, kolme kaupunkia",
+          "teksti": "Khartum voi tarkoittaa varsinaista kaupunkia tai koko Khartumin, Omdurmanin ja Bahrin seutua. Omdurman on Valkoisen Niilin länsipuolella, Bahri Sinisen Niilin pohjoispuolella ja varsinainen Khartum jokien välissä. Joet erottavat osia, joita siltayhteydet yhdistävät. Myös kaupunkien historia on erilainen: Khartumin keskustan katuverkkoa suunniteltiin uudelleen 1800-luvun lopulla, kun taas Bahrin kehitykseen liittyivät telakka ja rautatie. Nimen laajuus on hyvä tietää, kun puhutaan kaupungin koosta tai sijainnista.",
+          "wiki": "Khartoum",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Viljelysaari kaupunkien välissä",
+          "teksti": "Tutin saaren kylähistoria on modernia Khartumia vanhempi. Jokisaari sijaitsee kolmen kaupungin välissä, ja sen aiemmin dokumentoitu maisema yhdisti kylän, pellot ja kasvitarhat. Sitrus- ja limettipuut sekä vihannesviljely liittivät saaren kaupunkiseudun ruoantuotantoon. Ennen modernia siltaa yhteys kulki vettä pitkin. Tämä on saaren maataloushistoriaa, ei kuvaus sen nykyisestä toiminnasta. Tutin tarinassa kaupunkiseudun keskellä ollut maa ei ollut vain rakennustontti: sillä tuotettiin myös ruokaa.",
+          "wiki": "Tuti Island",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Tavara määrää torin suunnan",
+          "teksti": "Souq al Arabi on Khartumin keskustan dokumentoitu ulkoilmamarkkina, joka levittäytyy usealle korttelille. Myyjät sijoittuvat siellä tuoteryhmittäisiin osiin. Vanhoissa paikkakuvauksissa mainitaan esimerkiksi kultaan keskittyvä myyntialue. Kaupunkiseudun muut torit eivät ole saman paikan eri nimiä: Omdurmanin markkina ja Bahrin Saad Gishra ovat erillisiä kauppapaikkoja. Tuoteryhmät auttavat hahmottamaan torin rakennetta, mutta vanha kuvaus ei kerro, mitkä myyjät tai kojut toimivat juuri nyt.",
+          "wiki": "Souq al Arabi",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Mittaaja ja opettaja samassa collegessa",
+          "teksti": "Gordon Memorial College perustettiin Khartumiin 1900-luvun alussa. Sen opetukseen kuului aluksi alkeisopetusta, myöhemmin teknistä koulutusta apulaisinsinööreille ja maanmittaajille. Myös opettajia koulutettiin, ja ammatillisiin aloihin lisättiin kirjanpitoa, toimistotyötä sekä tiedettä. Opetus liittyi aikakauden hallinnon työtehtäviin. College yhdistyi myöhemmin lääketieteen koulun kanssa yliopistocollegeksi, josta kehittyi Khartumin yliopisto. Nykyisen yliopiston taustalla on siis useita opetuksen tehtäviä ja vaiheita.",
+          "wiki": "Gordon Memorial College",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Matkailu Khartumiin ei ole tällä hetkellä turvallista. Kaikkea Sudaniin matkustamista on vältettävä, ja maassa olevan tulee poistua välittömästi. Kaupungin paikkoihin voi tutustua niiden historian kautta. Vanhojen matkaoppaiden palvelut ja reitit eivät ole nykyisiä toimintalupauksia. Kohteiden pääsy ja liikenneyhteydet voivat olla estyneitä.",
+        "artikkeli": {
+          "nimi": "Matkailijan Khartum",
+          "taitto": "opas",
+          "teksti": "Kolmen kaupungin maantiede ja vanhat paikkakuvaukset auttavat ymmärtämään Khartumia.",
+          "nosto": "Kolmen kaupungin maantiede ja vanhat paikkakuvaukset auttavat ymmärtämään Khartumia.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Matkailu Khartumiin ei ole tällä hetkellä turvallista. Kaikkea Sudaniin matkustamista on vältettävä, ja maassa olevan tulee poistua välittömästi. Khartumin kansainvälinen lentoasema on suljettu. Puhelin- ja internetyhteyksissä voi olla katkoja. Maassa olevan on seurattava ajantasaisia poistumisohjeita; tämän oppaan kartta ei ole poistumisreitti.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Keskusta ja toripaikka",
+              "teksti": "Khartum, Omdurman ja Bahri ovat eri osia samaa seutua. Souq al Arabi on dokumentoitu keskustan kauppapaikka, jossa myyjät järjestyivät tuoteryhmiin. Joenvarsikadun vanhat paikkakuvaukset kertovat kaupunkihistoriasta, mutta ne eivät ole nykyisen kävelykierroksen ohjeita.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Saari, kasvit ja arkeologinen muisti",
+              "teksti": "Tutin aiempi viljelyhistoria kertoo ruoantuotannosta kaupunkien välissä. Kasvitieteellinen puutarha yhdisti kasvikokoelman tutkimukseen. Kansallismuseon puutarhaan siirrettiin muinaisia rakennuksia. Nykyinen matkustusrajoitus estää niiden suosittelemisen retkikohteiksi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ruokaperinne",
+              "teksti": "Gurasa on paksu vehnäpohjainen leipä tai lätty, jota tarjotaan kastikkeen kanssa. Paikallisissa ruokakuvauksissa kastikkeeseen liittyy esimerkiksi okraa ja lihaa. Vanhoista ravintolalistauksista ei voi päätellä nykyistä ruokalistaa tai aukioloa. Tutin hedelmä- ja vihannesviljely on puolestaan osa seudun maataloushistoriaa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ilmasto taustana",
+              "teksti": "Khartumin kuiva ja kuuma ympäristö kuuluu kaupungin maantieteeseen. Historialliset tulvat ovat silti vaikuttaneet sen rakentamiseen. Ilmaston kuvaus ei muuta nykyistä matkustusrajoitusta eikä kerro tietyn päivän oloista.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Kolmen kaupungin maantiede",
+                "tahdet": 3,
+                "selite": "Joet jäsentävät kaupunkiseudun eri osia."
+              },
+              {
+                "mita": "Tutin viljelyhistoria",
+                "tahdet": 3,
+                "selite": "Saari liittyi hedelmien ja vihannesten tuotantoon."
+              },
+              {
+                "mita": "Souq al Arabin rakenne",
+                "tahdet": 2,
+                "selite": "Tuoteryhmät jakoivat markkinan osiin."
+              },
+              {
+                "mita": "Siirrettyjen temppelien historia",
+                "tahdet": 2,
+                "selite": "Muinaiset rakenteet saivat myöhemmin uuden sijainnin."
+              },
+              {
+                "mita": "Kasvitieteellinen tieto",
+                "tahdet": 2,
+                "selite": "Puutarha yhdisti eläviä kasveja ja kokoelmatietoa."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Matkustaminen",
+                "teksti": "Kaupunkiin matkustamista on vältettävä."
+              },
+              {
+                "otsikko": "Yhteydet",
+                "teksti": "Puhelimen ja internetin toimivuuteen ei voi luottaa."
+              },
+              {
+                "otsikko": "Pääsy",
+                "teksti": "Matkustusrajoituksen aikana kohteisiin ei suunnitella vierailuja."
+              },
+              {
+                "otsikko": "Kuvaaminen",
+                "teksti": "Noudata kuvausrajoituksia; valtion rakennuksille ei oleteta kuvausoikeutta."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Rakennusten ja kokoelmien toinen elämä",
+      "johdanto": "Rakennusaine, käyttö ja sijainti voivat muuttua, vaikka vanhasta paikasta säilyy aineistoa.",
+      "nostot": [
+        {
+          "otsikko": "Tulva muutti rakennusaineita",
+          "teksti": "Khartum syntyi 1800-luvun alussa tukikohdasta, josta kasvoi hallinnon ja kaupan paikka. Kaupunkiin liittyivät myös karavaanireittien pysähdykset. Vuosisadan keskivaiheen tulvat ja jälleenrakentaminen muuttivat rakentamista: olki- ja ruokorakenteita korvattiin muta- ja kivirakenteilla. Kaupunkiin perustettiin konsulaatteja ja uskonnollisia laitoksia. Myöhemmän 1800-luvun uudelleenrakentaminen tuotti uuden katuverkon. Isoisän matkavuoden 1873 kaupunki ja nykyisestä kartasta tuttu keskusta eivät siten ole sama rakennusvaihe.",
+          "wiki": "Khartoum",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Elävän kasvin rinnalla on arkistokasvi",
+          "teksti": "Khartumin kansallisen kasvitieteellisen puutarhan kuvattuihin tehtäviin kuuluu elävien kasvien kokoelma ja herbaario, talletettu kasviaineisto. Myös siementen keruu, kasvien luokittelu ja tutkimuksen tietoaineisto kuuluvat laitoksen toimintaan. Tavoitteena on säilyttää kasvien geneettisiä resursseja sekä vaihtaa tietoa muiden puutarhojen ja tutkimuslaitosten kanssa. Mukana ovat myös taloudellisesti tärkeät kasvit. Puutarhan tehtävä ei näin rajoitu koristekukintaan: kasvista voi säilyä sekä elävä yksilö että tietoa kokoelmassa.",
+          "wiki": "Sudan National Botanical Garden",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Temppeli on vanha, sijainti uudempi",
+          "teksti": "Sudanin kansallismuseon puutarhaan siirrettiin muinaisia rakennuksia Nubian alueelta. Niitä pelastettiin paikoista, jotka jäivät Niilin padotuksen muodostaman järven vaikutusalueelle. Siirrettyihin rakennuksiin kuuluvat Buhenin temppeli sekä Akshan, Kumman ja Semnan rakennusosia. Ne pystytettiin uudelleen alkuperäisten suuntiensa mukaisesti. Vuonna 1873 rakennukset olivat vielä alkuperäisillä paikoillaan. Muinaisen seinän ikä ja sen Khartumin-sijainnin ikä ovat siis eri asioita.",
+          "wiki": "National Museum of Sudan",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Katedraali vaihtoi tehtävää",
+          "teksti": "Palatsimuseon rakennus valmistui 1900-luvun alkupuolella All Saints -anglikaanikatedraaliksi. Kirkollinen käyttö päättyi myöhemmin, ja korvaava kirkkopaikka perustettiin Al-Amaratiin. Vanha rakennus jäi välivaiheessa käyttämättä. Sen kellotorni poistettiin ennen museomuunnosta, ja talo sai uuden tehtävän museopaikkana. Rakennusta ei pidä sekoittaa viereisen palatsikokonaisuuden muihin taloihin. Isoisän matkavuonna 1873 tätä katedraalia ei vielä ollut; saman talon eri käyttötavat kuuluvat myöhempään kaupunkihistoriaan.",
+          "wiki": "Republican Palace Museum, Khartoum",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "tehtava": {
+        "kysymys": "Miksi muinaisia Nubian rakennuksia siirrettiin Khartumin museoalueelle?",
+        "vaihtoehdot": [
+          "Padotusjärven vuoksi",
+          "Torin laajentamiseksi",
+          "Collegen opetustiloiksi",
+          "Uuden rautatien asemiksi"
+        ],
+        "oikea": 0,
+        "fakta": "Niilin padotus uhkasi alkuperäisiä paikkoja, joten rakennuksia pelastettiin muualle."
+      }
+    }
+  ],
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Khartum on?",
+      "options": [
+        "Sudanin",
+        "Etelä-Sudanin",
+        "Etiopian",
+        "Eritrean"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maan pääkaupunkiseutu sijoittuu Niilin jokien äärelle.",
+      "fact": "Khartum on Sudanin pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Khartoum"
+    },
+    {
+      "q": "Mikä saari liittyy Khartumin seudun hedelmä- ja vihannesviljelyyn?",
+      "options": [
+        "Tuti",
+        "Santa Maria",
+        "Quail Island",
+        "Gorée"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Saari on kolmen kaupungin välissä.",
+      "fact": "Tutin aiemmissa paikkakuvauksissa viljely oli keskeistä.",
+      "source": "https://en.wikipedia.org/wiki/Tuti_Island"
+    },
+    {
+      "q": "Minkä perusteella Souq al Arabin myyjien osat järjestyvät?",
+      "options": [
+        "Tuoteryhmän",
+        "Sukunimen",
+        "Syntymävuoden",
+        "Veneen koon"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Torin eri osissa myydään erilaisia tavaroita.",
+      "fact": "Markkinan myyjät sijoittuvat tavararyhmittäin.",
+      "source": "https://en.wikipedia.org/wiki/Souq_al_Arabi"
+    },
+    {
+      "q": "Mikä täydentää puutarhan elävien kasvien kokoelmaa?",
+      "options": [
+        "Herbaario",
+        "Laivatelakka",
+        "Meteoriittikaivos",
+        "Tullivarasto"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Myös talletettu kasviaineisto on tietovaranto.",
+      "fact": "Puutarhan kuvattuihin tehtäviin kuuluu herbaario.",
+      "source": "https://en.wikipedia.org/wiki/Sudan_National_Botanical_Garden"
+    },
+    {
+      "q": "Mitä teknistä ammattialaa Gordon Memorial Collegessa opetettiin?",
+      "options": [
+        "Maanmittausta",
+        "Laivan luotsausta",
+        "Majakanvartiointia",
+        "Kullan kaiverrusta"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Koulutus liittyi maa-alueiden mittaamiseen.",
+      "fact": "College koulutti muun muassa tulevia maanmittaajia ja apulaisinsinöörejä.",
+      "source": "https://en.wikipedia.org/wiki/Gordon_Memorial_College"
+    }
+  ],
+  "tiedot": [
+    "Khartum voi tarkoittaa yhtä kaupunkia tai Khartumin, Omdurmanin ja Bahrin yhteistä seutua.",
+    "Tutin dokumentoitu viljelyhistoria kertoo ruoantuotannosta keskellä kaupunkiseutua.",
+    "Kansallismuseon puutarhaan siirrettyjen muinaisten rakennusten ikä on eri asia kuin niiden Khartumin-sijainnin ikä."
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Tutin saari, kasvitieteellinen puutarha ja toripaikka kertovat eri puolista kaupunkiseudun historiaa. Nykyistä pääsyä niihin ei luvata.",
+    "rajat": {
+      "pohjoinen": 15.62218,
+      "etela": 15.598,
+      "lansi": 32.5025,
+      "ita": 32.528
+    },
+    "kohteet": [
+      {
+        "nimi": "Tutin saari",
+        "tyyppi": "luonto",
+        "lat": 15.61918,
+        "lon": 32.5055
+      },
+      {
+        "nimi": "Kansallinen kasvitieteellinen puutarha",
+        "tyyppi": "luonto",
+        "lat": 15.60191,
+        "lon": 32.50913
+      },
+      {
+        "nimi": "Souq al Arabi",
+        "tyyppi": "aukio",
+        "lat": 15.601,
+        "lon": 32.525
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Tutin saari": {
+      "aika": "vanha kylä; myöhempiä yhteyksiä",
+      "teksti": "Tuti on oma jokisaarensa Khartumin, Omdurmanin ja Bahrin välissä. Sen kylähistoria edeltää modernia Khartumia. Aiemmissa paikkakuvauksissa pellot ja kasvitarhat levittäytyivät saaren eri osiin, ja viljely kuului keskeisiin maankäyttötapoihin. Sitrus- ja limettipuut sekä vihannekset liittivät saaren kaupunkiseudun ruoantuotantoon.\n\nEnnen modernia siltaa yhteydet kulkivat vesitse. Saari ja vanhempi kylä kuuluivat paikan historiaan jo ennen vuotta 1873, mutta nykyisen sillan tai yksittäisten talojen ikää ei voi siirtää tuohon vuoteen. Tämä on dokumentoitua maatalous- ja kylähistoriaa. Sen perusteella ei voi luvata samaa nykymaisemaa, toimivaa lauttaa tai turvallista saarikävelyä; matkailu Khartumiin ei tällä hetkellä ole turvallista.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Kansallinen kasvitieteellinen puutarha": {
+      "aika": "1900-luku",
+      "teksti": "Kansallinen kasvitieteellinen puutarha sijaitsee Khartumin Mogranin alueella. Sen dokumentoitu tehtävä yhdistää elävien kasvien kokoelman ja herbaarion. Siementen keruu, kasvien luokittelu, tutkimuksen tietoaineisto ja geneettisten resurssien säilyttäminen kuuluvat kuvattuihin toimintamuotoihin. Puutarhan työhön liittyvät myös koulutus ja tiedonvaihto muiden laitosten kanssa.\n\nKokoelman aiheita ovat koristekasvien lisäksi taloudellisesti tärkeät kasvit. Puutarhainstituutio kuuluu 1900-lukuun, eikä sitä ollut vuonna 1873.  Elävä kokoelma ja talletettu kasviaineisto ovat eri tapoja säilyttää kasveista tietoa.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Souq al Arabi": {
+      "aika": "dokumentoitu markkinapaikka",
+      "teksti": "Souq al Arabi on Khartumin keskustan dokumentoitu ulkoilmamarkkina. Sen alue levittäytyy usealle korttelille suuren moskeijan ja minibussiaseman eteläpuolelle. Myyjät sijoittuvat tuoteryhmittäisiin osiin. Vanhemmassa opaskuvauksessa mainitaan esimerkiksi kultaan ja koruihin liittyvä myyntialue.\n\nOmdurmanin markkina ja Bahrin Saad Gishra ovat muita kaupunkiseudun kauppapaikkoja. Niitä ei pidä yhdistää Souq al Arabin nimeen. Torin tarkkaa perustamisaikaa ei tunneta, eikä nykyinen korttelimuoto kerro, miltä kauppapaikka näytti vuonna 1873.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "ehdotukset": {
+    "lentoasema": null,
+    "huomiot": [
+      "KRT suljettu A:n 11.10.2026 luetun UM-tiedotteen mukaan.",
+      "Kartta partial 3/6–8: museo ja All Saints ehdollisia, jokisuun geometria avoin.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
+    ]
+  },
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "khartum",
+  "maa": "SDN",
+  "era": "e07",
+  "kaupunki": {
+    "id": "khartum",
+    "name": "Khartum",
+    "wiki": "Khartum",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 15.603,
+      "lon": 32.527
+    }
+  },
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "saatiedot": null
+}

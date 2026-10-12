@@ -1,0 +1,419 @@
+{
+  "artikkeli": {
+    "intro": "Mogadishu on Somalian pääkaupunki **Intian valtameren rannikolla**. Se oli jo vanha kaupunki isoisän matkavuonna 1873. Historialliseen ytimeen kuuluvat Hamar Weyne ja Shangani, joiden moskeijat ja kauppapaikat kertovat rannikon pitkästä asutuksesta. Nykyinen katedraali, rautatien historiallinen linja ja radioasema tulivat myöhemmin. Kaupungin historia jatkuu myös asukkaiden työssä ja arjen taidoissa.\n\nLiidon nimi kertoo rannan myöhemmästä käytöstä, kun kalatorin kehittäminen liittyy saaliin käsittelyyn ja säilyttämiseen. Radio Mogadishun arkistossa säilytetään musiikin lisäksi radioteatteria, kirjallisuutta ja urheilun ääniä. **Magneettinauhojen puhdistus ja digitointi** ovat osa tämän muistin hoitamista. Rakennuksillakin on eri vaiheensa: Garesasta tuli museon vanha koti, myöhemmin kokoelma siirtyi uuteen taloon, ja rannikon majakka on osittain sortuneena säilyttämistyön kohde.",
+    "teksti": "Mogadishun vanha rannikkokaupunki edeltää 1900-luvun siirtomaarakennuksia. Arba’a Rukunin alkuperäinen moskeija on keskiajalta, kun taas katedraalin esikuva on keskiaikaisessa Sisiliassa ja rakennus itse myöhemmältä ajalta. Samankaltainen tyyli ei tarkoita samaa ikää.\n\nKaupungin muistia on säilytetty myös rakennusten ulkopuolella. Radioarkiston magneettinauhoilla on kirjallisuutta, radioteatteria, musiikkia ja urheilua. Nauhojen puhdistus, arviointi ja digitointi tekevät säilyttämisestä konkreettista työtä.\n\nMogadishun museon kokoelma on muuttanut vanhasta Garesasta uudempaan taloon. Majakan rakenteita tutkitaan pitkäaikaisen säilyttämisen suunnittelemiseksi. Näissä paikoissa rakennuksen vaihe ja kulttuurimuistin jatkuminen eivät ole yksi ja sama asia."
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Mogadishu",
+      "johdanto": "Kaupungin arjesta kertovat ranta, kauppiaan työ ja tallennetut äänet; vanhat rakennukset ovat muuttuneet monella tavalla.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Ranta, jonka nimi on Liido",
+          "teksti": "Mogadishun Liido on kaupunkiranta vanhan ydinkeskustan pohjoisemmalla rannikolla. Sen nimi tulee italian lido-sanasta, joka tarkoittaa rantaa; paikallisessa käytössä kirjoitetaan Liido. Nykyinen nimetty ranta- ja palvelualue kehittyi siirtomaakaudella. Luonnon hiekkaranta ja sen ääreen myöhemmin rakennetut hotellit sekä ravintolat ovat eri kerroksia. Nimi kertoo rannikon käytön historiasta, mutta ei rannan nykyisestä turvallisuudesta. Paikka kuuluu kaupungin arkiseen rannikkoympäristöön Intian valtameren äärellä.",
+          "wiki": "Lido Beach, Mogadishu",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Ompelija oppi kauppaa äidiltään",
+          "teksti": "CISP:n julkaisuun haastateltu Dahabo kertoi vaatekauppiaan työstään Hamar Weynessä. Hän oppi kaupankäyntiä auttamalla äitinsä pienessä kaupassa. Työhön kuului tavaran hankkimista myytäväksi ja arkisten tuotteiden, kuten kahvin ja suolan, myyntiä. Myöhemmin hänellä oli oma liike, ja hän myös ompeli vaatteita sekä lakanoita. Tämä on yhden todellisen kauppiaan kertomus, ei kaikkien kaupungin naisten yhteinen elämäntarina. Kaupan ja käsityön taidot liittyivät hänen työssään toisiinsa: sama ihminen sekä hankki että valmisti myytävää.",
+          "wiki": "Mogadishu",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Ääni ei säily itsestään",
+          "teksti": "Radio Mogadishun arkistossa ääniä on tallennettu magneettinauhakeloille. Musiikin lisäksi aineistoon kuuluu radioteatteria, kirjallisuutta ja urheilutapahtumia. Nauhoja uhkaavat ikääntyminen ja kosteus. Säilyttämistyössä niitä puhdistetaan, niiden kuntoa arvioidaan ja ääniä digitoidaan myöhempää kuuntelua varten. Arkisto on siten myös materiaalien hoitoa, ei pelkkä hylly täynnä menneisyyttä. Digitointityö on kesken; kokoelman olemassaolo ei tarkoita, että kaikki vanhat tallenteet olisivat jo kuunneltavissa verkossa.",
+          "wiki": "Radio Mogadishu",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kalatori tarvitsee vedenpoiston",
+          "teksti": "Liido Fish Market on Mogadishun kalan rantautumispaikka. Sen kehittämissuunnitelmassa kalankäsittelyn rinnalle kuuluvat säilytys, jäähdytys ja hygienia. Kalan pesu ja alueen puhdistus tuottavat jätevettä, joten vedenpoiston järjestäminen on osa suunnittelua. Saaliin matka ei siis pääty siihen, että vene saapuu rantaan: myös käsittelypaikan toiminta vaikuttaa jatkoon. Kunnostus- ja laajennussuunnitelma kertoo näistä tavoitteista, mutta ei tarkoita, että kaikki uudet kylmätilat ja rakenteet olisivat jo valmistuneet.",
+          "wiki": "Mogadishu",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Mogadishuun matkustaminen ei ole tällä hetkellä turvallista, ja matkustamista tulee välttää. Kaupungin historiaan voi tutustua rakennusten vaiheiden ja säilyttämistyön kautta. Monet vanhat kohteet ovat vaurioituneita. Liikenne- ja terveyspalvelut ovat rajallisia. Tavallista konsulisuojaa ei voida tarjota suomalaisille.",
+        "artikkeli": {
+          "nimi": "Matkailijan Mogadishu",
+          "taitto": "opas",
+          "teksti": "Tunne rannikkokaupunki sen muistista, työstä ja tallenteiden säilyttämisestä.",
+          "nosto": "Tunne rannikkokaupunki sen muistista, työstä ja tallenteiden säilyttämisestä.",
+          "jaksot": [
+            {
+              "otsikko": "Nykyiset rajoitukset ensin",
+              "teksti": "Mogadishuun matkustaminen ei ole tällä hetkellä turvallista, ja matkustamista tulee välttää. Paikallisten liikenne- ja terveyspalvelujen saatavuuteen liittyy rajoitteita. Suomalaisille ei voida tarjota tavallista konsulisuojaa. Kaupungin historiaan voi tutustua myös tallenteiden ja vanhojen paikkakuvausten kautta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Vanhan kaupungin kerrokset",
+              "teksti": "Hamar Weyne ja Shangani ovat Mogadishun historiallisia alueita. Katedraalin rauniot ja osittain sortunut majakka kertovat rakennusten muuttuneesta tilasta. Raunioihin ei pidä suunnitella omatoimista käyntiä. Arkistokuvan ehjä rakennus kuuluu menneeseen vaiheeseen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Radio ja museo",
+              "teksti": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Rannikko ja kalatalous",
+              "teksti": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Lentoasema ja asiakirjat",
+              "teksti": "Mogadishun lentoasema on Aden Adden kansainvälinen lentoasema, jonka tunnus on MGQ. Maahantulosäännöt voivat muuttua nopeasti, joten ne tarkistetaan kohdemaan viranomaisilta. Välttämättömän matkan vakuutuksen tulee kattaa lentoevakuointi; tavallinen matkailureitti ei riitä valmisteluksi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Vanha rannikkokaupunki",
+                "tahdet": 3,
+                "selite": "Hamar Weyne ja Shangani kertovat historiallisesta ytimestä."
+              },
+              {
+                "mita": "Radion ääniperintö",
+                "tahdet": 3,
+                "selite": "Arkistossa säilytetään monenlaisia vanhoja ääniä."
+              },
+              {
+                "mita": "Museon eri rakennukset",
+                "tahdet": 2,
+                "selite": "Garesa ja myöhempi museo ovat eri paikkoja."
+              },
+              {
+                "mita": "Katedraalin arkkitehtuuri",
+                "tahdet": 2,
+                "selite": "Sisilialainen esikuva on rakennusta vanhempi."
+              },
+              {
+                "mita": "Historiallinen rata",
+                "tahdet": 2,
+                "selite": "Maataloustuotteet ja matkustajat kulkivat sisämaan yhteydellä."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Matkustaminen",
+                "teksti": "Mogadishuun matkustaminen ei ole tällä hetkellä turvallista, ja matkustamista tulee välttää."
+              },
+              {
+                "otsikko": "Rauniot",
+                "teksti": "Vaurioituneisiin rakenteisiin ei suunnitella omatoimisia käyntejä."
+              },
+              {
+                "otsikko": "Palvelut",
+                "teksti": "Liikenne- ja terveyspalvelujen saatavuus on rajallista."
+              },
+              {
+                "otsikko": "Museon paikat",
+                "teksti": "Vanha Garesa ja uudempi kansallismuseo ovat eri rakennuksia."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Rakennus vaihtaa tehtävää",
+      "johdanto": "Museo voi vaihtaa taloa, majakka muuttua tutkimuskohteeksi ja rautatie jäädä historiaan.",
+      "nostot": [
+        {
+          "otsikko": "Garesasta tuli museon vaihe",
+          "teksti": "Mogadishun ensimmäinen museo sijoitettiin Garesaan, aiempaan hallitsijan edustajan asuinrakennukseen. Museo aloitti siirtomaakaudella 1900-luvun alkupuolella. Myöhemmin kokoelma siirrettiin uudempaan kansallismuseorakennukseen, ja instituutio avattiin uudelleen kunnostusten jälkeen. Garesa ja uusi museo eivät siis ole sama talo. Museon esineryhmiin kuuluu vanhoja kolikoita ja keramiikkaa. Kokoelman ja museon nimi voivat jatkua, vaikka rakennus vaihtuu; rakennusten eri vaiheet auttavat erottamaan, mistä paikasta kulloinkin puhutaan.",
+          "wiki": "National Museum of Somalia",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Sortunut majakka tutkitaan ensin",
+          "teksti": "Mogadishun vanhan rannikkokaupungin majakka Al-Munaara on nykyisin osittain sortunut. Sen historiallinen tehtävä oli meriliikenteen opastaminen. Säilyttämistyössä rakenteen kuntoa ovat tutkineet rakennesuunnittelijat, säilyttämisarkkitehdit ja somalialaiset perintöalan ammattilaiset. Työhön kuuluu dokumentointia ja kiireellisiä tuentatoimia. Tutkimuksen avulla suunnitellaan pitkäaikaista säilyttämistä ja mahdollista restaurointia. Vanha ehjä valokuva ja nykyinen raunio kertovat eri vaiheista; tutkimus ei vielä ole valmis kunnostus.",
+          "wiki": "Mogadishu Lighthouse",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Rata jäi historialliseksi yhteydeksi",
+          "teksti": "Mogadishun vanha rata kulki Afgooyen kautta sisämaahan Villabruzziin, joka tunnetaan nykyään nimellä Jowhar. Rata rakennettiin 1900-luvun alkupuolella ja kuljetti matkustajia sekä maataloustuotteita. Satamayhteys palveli tavaroiden vientiä. Linja purettiin toisen maailmansodan aikana, joten sen historiallista reittiä ei pidä lukea nykyiseksi matkustajajunaksi. Isoisän matkavuonna 1873 tätä rataa ei vielä ollut. Rautatien tarina kertoo yhdestä kaupungin kuljetusvaiheesta, joka ei jatkunut muuttumattomana nykypäivään.",
+          "wiki": "Mogadishu–Villabruzzi Railway",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Sisilialainen esikuva valtameren äärellä",
+          "teksti": "Antonio Vandone suunnitteli Mogadishun katedraalin 1900-luvun alkupuolella. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus käytti normannivaikutteista historiallistyyliä. Alkuperäisen julkisivun sivuilla olivat tornit, pohja oli latinalainen risti ja sisätilassa pilarit sekä teräväkaaret erottivat laivoja. Nykyinen katedraali on raunioitunut. Se ei ollut keskiaikainen kirkko Mogadishussa, vaikka esikuva oli keskiajalta, eikä sitä ollut vuonna 1873. Rakennuksen oma ikä ja arkkitehtuurin esikuvan ikä ovat eri asioita.",
+          "wiki": "Mogadishu Cathedral",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "tehtava": {
+        "kysymys": "Millä nimellä vanhan radan päätepiste Villabruzzi tunnetaan nykyään?",
+        "vaihtoehdot": [
+          "Jowhar",
+          "Afgooye",
+          "Hamar Weyne",
+          "Shangani"
+        ],
+        "oikea": 0,
+        "fakta": "Historiallinen asemannimi viittaa nykyiseen Jowhariin; Afgooye oli radan varrella."
+      }
+    }
+  ],
+  "kysymykset": [
+    {
+      "q": "Minkä valtameren rannalla Mogadishu sijaitsee?",
+      "options": [
+        "Intian valtameren",
+        "Atlantin valtameren",
+        "Tyynen valtameren",
+        "Pohjoisen jäämeren"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupunki on Afrikan itärannikolla.",
+      "fact": "Mogadishun rannikko avautuu Intian valtamerelle.",
+      "source": "https://en.wikipedia.org/wiki/Mogadishu"
+    },
+    {
+      "q": "Millaiselle välineelle radioarkiston ääniä tallennettiin?",
+      "options": [
+        "Magneettinauhalle",
+        "Kivitaululle",
+        "Reikäkortille",
+        "Valokuvalevylle"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Arkistossa on keloja, joiden kuntoa arvioidaan.",
+      "fact": "Vanhoja tallenteita säilytetään nauhakeloilla.",
+      "source": "https://en.wikipedia.org/wiki/Radio_Mogadishu"
+    },
+    {
+      "q": "Millä saarella Mogadishun katedraalin esikuva on?",
+      "options": [
+        "Sisiliassa",
+        "Sardiniassa",
+        "Kreetalla",
+        "Kyproksella"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Esikuva on Cefalùn katedraali Italiassa.",
+      "fact": "Cefalù sijaitsee Sisiliassa.",
+      "source": "https://en.wikipedia.org/wiki/Mogadishu_Cathedral"
+    },
+    {
+      "q": "Mitä Garesalla ja myöhemmällä museotalolla on yhteistä?",
+      "options": [
+        "Saman museon historia",
+        "Sama rakennusrunko",
+        "Sama majakan valo",
+        "Sama rata-asema"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kokoelma siirtyi paikasta toiseen.",
+      "fact": "Museoinstituutio jatkui, vaikka rakennus vaihtui.",
+      "source": "https://en.wikipedia.org/wiki/National_Museum_of_Somalia"
+    },
+    {
+      "q": "Miksi kalatorin suunnittelussa tarvitaan vedenpoistoa?",
+      "options": [
+        "Pesuvesien johtamiseen",
+        "Laivojen polttoaineeksi",
+        "Radioarkiston jäähdytykseen",
+        "Majakan valon tuottamiseen"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Kalan käsittely ja alueen puhdistus tuottavat jätevettä.",
+      "fact": "Pesun ja puhdistuksen vedet on johdettava pois.",
+      "source": "https://www.fao.org/somalia/news/details/fao-joins-forces-with-japan-and-the-government-of-somalia-in-latest-step-to-boost-under-performing-fishing-industry/en"
+    }
+  ],
+  "tiedot": [
+    "Radioarkiston nauhojen kuntoa arvioidaan ja niitä puhdistetaan ennen digitointia.",
+    "Mogadishun katedraalin sisilialainen esikuva on rakennusta paljon vanhempi.",
+    "Garesa ja myöhempi kansallismuseotalo ovat eri rakennuksia, vaikka kuuluvat saman museon historiaan."
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Vanha moskeija, katedraalin rauniot ja Liidon ranta liittyvät rannikkokaupungin eri aikatasoihin. Nykyistä vierailupääsyä ei luvata.",
+    "rajat": {
+      "pohjoinen": 2.04275,
+      "etela": 2.0321,
+      "lansi": 45.33861,
+      "ita": 45.36672
+    },
+    "kohteet": [
+      {
+        "nimi": "Arba'a Rukun -moskeija",
+        "lat": 2.0351,
+        "lon": 45.3425
+      },
+      {
+        "nimi": "Mogadishun katedraalin rauniot",
+        "lat": 2.03574,
+        "lon": 45.34161
+      },
+      {
+        "nimi": "Liidon ranta",
+        "lat": 2.03975,
+        "lon": 45.36372,
+        "tyyppi": "luonto"
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Arba'a Rukun -moskeija": {
+      "aika": "keskiaika",
+      "teksti": "Arba'a Rukun on Shanganin historiallisessa kaupunginosassa oleva moskeija, joka tunnetaan myös nimellä Arba Rucun. Sen alkuperäinen rakennus on keskiajalta. Perustajaksi nimetään Khusra ibn Mubarak al-Shirazi, jonka nimi esiintyy rukoussyvennyksen eli mihrabin piirtokirjoituksessa.\n\nAlkuperäinen moskeija oli vanha jo vuonna 1873, mutta sen tarkkaa rakennustilaa tuolloin ei tunneta. Keskiaikainen alku, myöhemmät korjaukset ja nykyinen rukouspaikan käyttö kuuluvat saman paikan eri vaiheisiin. Kohde on eri moskeija kuin Fakhr al-Din, eikä sen historiaan pidä siirtää naapurikohteen yksityiskohtia.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Mogadishun katedraalin rauniot": {
+      "aika": "1900-luvun alkupuoli",
+      "teksti": "Mogadishun katedraalin alkuperäisen suunnitelman teki Antonio Vandone. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus edusti normannivaikutteista historiallistyyliä. Alkuperäisessä julkisivussa tornit olivat molemmilla sivuilla. Pohjamuoto oli latinalainen risti; sisätilan laivoja erottivat pilarit ja teräväkaaret.\n\nKatedraali rakennettiin 1900-luvun alkupuolen siirtomaakaudella. Sitä ei ollut vuonna 1873, eikä sen keskiaikainen esikuva tee Mogadishun rakennuksesta keskiaikaista. Nykyisin katedraali on raunioitunut. Sen historiallinen arkkitehtuuri ja tämän päivän vaurioitunut tila ovat molemmat osa paikan kertomusta. Rauniokohde ei kuitenkaan tarkoita avoinna olevaa vierailupaikkaa: matkailu Mogadishuun ei tällä hetkellä ole turvallista.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Liidon ranta": {
+      "aika": "luonnonranta; nimetty palvelualue 1900-luvulta",
+      "teksti": "Liido on Mogadishun hiekkaranta vanhan ydinkeskustan pohjoisemmalla rannikolla. Nimi tulee italian lido-sanasta, joka tarkoittaa rantaa. Paikallisessa käytössä kirjoitusasu on Liido. Luonnonrannan yhteyteen kehittyi siirtomaakaudella nimetty ranta- ja palvelualue, ja rannalla on ollut myöhempiä hotelli- ja ravintolarakennuksia.\n\nVuoden 1873 rannalle ei voi siirtää näitä nykyisiä palveluja tai olettaa sen nimeä, leveyttä ja yksityiskohtaista ulkoasua samoiksi. Ranta on luonnonpaikka kaupungin Intian valtameren rannikolla, mutta rakennukset ja rannikon palvelut kuuluvat omiin vaiheisiinsa. Liidon historiaa voi käsitellä kaupunkiympäristönä ilman uimisen tai paikalle pääsyn lupausta; matkailua Mogadishuun tulee tällä hetkellä välttää.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "ehdotukset": {
+    "lentoasema": "Aden Adde International Airport (MGQ)",
+    "huomiot": [
+      "Kartta partial 3/6–8. Majakan piste/tekijäketju, Garesan identiteetti ja Ansalotin paikallisfaktat avoinna.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
+      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
+      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
+      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
+    ]
+  },
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "mogadishu",
+  "maa": "SOM",
+  "era": "e07",
+  "kaupunki": {
+    "id": "mogadishu",
+    "name": "Mogadishu",
+    "wiki": "Mogadishu",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 2.0369,
+      "lon": 45.3387
+    }
+  },
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
+  },
+  "saatiedot": null
+}
