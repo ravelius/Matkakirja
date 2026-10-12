@@ -1,0 +1,129 @@
+{
+  "taskNumber": 77,
+  "task": "pulu-raketti-20261012",
+  "sourcePath": "posti/fable-codex-pulu-raketti-20261012.md",
+  "sourceCommit": "99cac747d9bb146ffb737cda41fc3c89708510fe",
+  "sourceBlob": "96d7f261ecc3f9133648f1a97dd8cfc25b3c68c1",
+  "sourceReadInFull": true,
+  "requestedImages": 8,
+  "imageCount": 1,
+  "generationRequestsIssued": 1,
+  "generationCallsCompleted": 1,
+  "generationLimit": 8,
+  "partialDelivery": true,
+  "productionComplete": false,
+  "allReturnedImagesProcessed": true,
+  "productionActive": false,
+  "waitingForOwnerFeedback": true,
+  "remainingUnissuedImages": 7,
+  "ownerFeedbackAfterEachImage": true,
+  "allContentConstraintsPassed": false,
+  "firstCandidateDeliveredPerOrderDespiteDeviations": true,
+  "allR2ReadbacksByteExact": true,
+  "gameIntegrated": false,
+  "published": false,
+  "assets": [
+    {
+      "id": "pulu-raketti-pito-profiili",
+      "filename": "pulu-raketti-pito-profiili.png",
+      "primaryLocalPath": "/Users/Shared/Claude/proto-3d/_tyo/codex-pulu-raketti-20261012/toimitus/pulu-raketti-pito-profiili.png",
+      "localDeliveryByteExactVerified": true,
+      "url": "https://media.matkakirja.app/karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png",
+      "r2Key": "karttanostot/20261012/pulu-raketti/pulu-raketti-pito-profiili.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "width": 1024,
+      "height": 1024,
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha": "straight",
+      "colorSpace": "sRGB",
+      "sha256": "e2c4c9af400ca37b4214c59b4affea6edc4cd233b93c72b37d381d6d5270e01e",
+      "bytes": 294481,
+      "kiinnityspiste_px": [
+        353,
+        490
+      ],
+      "kiinnityspiste_kuvaus": "Alempi vasemmalle ojennettu siipi/rukkanen. Vatsa ei tässä ehdokkaassa ole samassa kosketustasossa siipien kanssa.",
+      "kypara_keskipiste_px": [
+        534,
+        347
+      ],
+      "kypara_halkaisija_px": 300,
+      "kypara_mittaus": "Manuaalinen ulkokehän arvio, jonka perusteella koko sprite skaalattiin yhdenmukaisesti; ei automaattista kypäräsegmentointia.",
+      "katse": "Ylävasemmalle kohti kuvan yläreunaa, ei kameraan.",
+      "deviations": [
+        {
+          "type": "body-contact",
+          "detail": "Vatsa ei ole samassa vasemmanpuoleisessa pystysuorassa kosketustasossa siipien kanssa. Asento on osin kiipeävä; tilattu runkoon painautuminen ei täysin toteudu."
+        },
+        {
+          "type": "view-and-gaze",
+          "detail": "Kypärä ja visiiri ovat hieman etuviistossa ja katse ylävasemmalle; puhdas sivuprofiili ja aivan suora ylöspäin suunta eivät täysin toteudu."
+        },
+        {
+          "type": "identity-style",
+          "detail": "Uusi generointi lisää puvun ja kypärän yksityiskohtia sekä pehmeämpää varjostusta verrattuna viitteen yksinkertaiseen 2D-spriteen. Täsmällistä hahmo- ja piirrostyyliyhtäläisyyttä ei väitetä."
+        },
+        {
+          "type": "alpha-residue",
+          "detail": "Näkyvän alfa128-rajauksen ympärille jätetyn 4px marginaalin ulkopuolella 614 pikselissä on hyvin heikko alfa 1/255. Ei selvää valkoista haloa havaittu valkoisella ja tummalla taustalla, mutta täysin alfa0-taustaehto ei matalissa jäämissä toteudu."
+        }
+      ],
+      "allContentConstraintsPassed": false,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrationEligible": false,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "canonicalByteExactReadback": true
+    }
+  ],
+  "pendingImages": [
+    {
+      "id": "pulu-raketti-pito-34-edesta",
+      "filename": "pulu-raketti-pito-34-edesta.png",
+      "state": "waiting-for-owner-feedback-no-generation-issued",
+      "generationRequestsIssued": 0
+    },
+    {
+      "id": "pulu-raketti-pito-34-takaa",
+      "filename": "pulu-raketti-pito-34-takaa.png",
+      "state": "waiting-for-owner-feedback-no-generation-issued",
+      "generationRequestsIssued": 0
+    },
+    {
+      "id": "pulu-raketti-maxq",
+      "filename": "pulu-raketti-maxq.png",
+      "state": "waiting-for-owner-feedback-no-generation-issued",
+      "generationRequestsIssued": 0
+    },
+    {
+      "id": "pulu-raketti-irtoaminen",
+      "filename": "pulu-raketti-irtoaminen.png",
+      "state": "waiting-for-owner-feedback-no-generation-issued",
+      "generationRequestsIssued": 0
+    },
+    {
+      "id": "pulu-raketti-tahdet",
+      "filename": "pulu-raketti-tahdet.png",
+      "state": "waiting-for-owner-feedback-no-generation-issued",
+      "generationRequestsIssued": 0
+    },
+    {
+      "id": "pulu-raketti-laskeutuu",
+      "filename": "pulu-raketti-laskeutuu.png",
+      "state": "waiting-for-owner-feedback-no-generation-issued",
+      "generationRequestsIssued": 0
+    },
+    {
+      "id": "pulu-raketti-pito-profiili-yo",
+      "filename": "pulu-raketti-pito-profiili-yo.png",
+      "state": "waiting-for-owner-feedback-no-generation-issued",
+      "generationRequestsIssued": 0
+    }
+  ]
+}
