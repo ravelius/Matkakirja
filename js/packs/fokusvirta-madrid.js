@@ -1122,6 +1122,7 @@ export const FOKUSVIRTA_MADRID = {
     },
     {
       id: 'madridin-kaksi-joukkuetta',
+      wiki: ['Estadio Santiago Bernabéu', 'Plaza de Cibeles'],
       nimio: 'Kaksi joukkuetta',
       otsikko: 'Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka '
         + 'vaihtoi joukkuetta',
@@ -1187,6 +1188,7 @@ export const FOKUSVIRTA_MADRID = {
     },
     {
       id: 'palamaton-linna',
+      wiki: 'Palacio Real de Madrid',
       nimio: 'Palamaton linna',
       otsikko: 'Linna rakennettiin palamattomaksi',
       symboli: 'tekniikka',
@@ -1225,6 +1227,7 @@ export const FOKUSVIRTA_MADRID = {
     },
     {
       id: 'gran-vian-murto',
+      wiki: 'Alfonso XIII',
       nimio: 'Gran Vía',
       otsikko: 'Katu, joka murrettiin talojen läpi',
       symboli: 'kaupunki',

@@ -936,6 +936,7 @@ export const FOKUSVIRTA_WIEN = {
     },
     {
       id: 'taikahuilu-wiedenissa',
+      wiki: 'Taikahuilu',
       nimio: 'Taikahuilu',
       otsikko: 'Taikahuilu tehtiin esikaupungin teatteriin',
       symboli: 'kulttuuri',
@@ -1016,6 +1017,7 @@ export const FOKUSVIRTA_WIEN = {
     },
     {
       id: 'tonava-kaunoinen',
+      wiki: 'Johann Strauss nuorempi',
       nimio: 'Tonava kaunoinen',
       otsikko: 'Kaupunki sävelsi oman jokensa',
       symboli: 'kulttuuri',
